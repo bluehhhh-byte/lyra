@@ -18,8 +18,9 @@ async function api(action, body) {
   return data;
 }
 
+// text-base(16px) on mobile stops iOS focus-zoom; text-sm on ≥sm keeps the compact look
 const input =
-  "w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm outline-none focus:border-accent";
+  "w-full rounded-lg border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent";
 const btn =
   "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40";
 
