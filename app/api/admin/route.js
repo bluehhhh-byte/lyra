@@ -1,12 +1,15 @@
 import { readSong, writeSong, deleteSong } from "../../../lib/store";
 
-async function geminiText(key, prompt) {
+async function geminiText(key, prompt, json = false) {
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        ...(json ? { generationConfig: { responseMimeType: "application/json" } } : {}),
+      }),
     }
   );
   const data = await res.json();
@@ -149,85 +152,38 @@ ${body.lyrics}`;
 
   if (action === "autotag") {
     const { title, artist, lyrics, lang, year, genre } = body;
-    const tags = [];
-    tags.push({ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타");
+    // deterministic tags — always present even without Gemini
+    const tags = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
     if (year) tags.push(`${Math.floor(+year / 10) * 10}s`);
     if (genre) tags.push(genre.toLowerCase().replace(/\//g, "-"));
-    // Korean titles stay; others get a Korean title via Gemini (below)
     let titleKo = lang === "ko" ? title : "";
-    // mood tags via Gemini — best-effort, deterministic tags still returned on failure
+    let artistKo = "";
+    let comment = "";
+
+    // one combined Gemini call (avoids free-tier rate limits from many calls)
     const key = process.env.GEMINI_API_KEY;
     if (key && lyrics) {
       try {
-        const res = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              contents: [
-                {
-                  parts: [
-                    {
-                      text: `노래 "${title}" (${artist})의 가사를 읽고 감성/분위기 태그를 한국어로 정확히 2개만 골라줘. 예: 새벽감성, 그리움, 신나는, 위로, 애도, 설렘, 쓸쓸함, 벅참. 쉼표로만 구분해서 태그만 출력.\n\n가사:\n${lyrics.slice(0, 2000)}`,
-                    },
-                  ],
-                },
-              ],
-            }),
-          }
-        );
-        const data = await res.json();
-        const moods = data.candidates?.[0]?.content?.parts?.[0]?.text
-          ?.trim()
-          .split(",")
-          .map((t) => t.trim().replace(/[.\s]+$/, ""))
-          .filter((t) => t && t.length <= 10)
-          .slice(0, 2);
-        if (moods) tags.push(...moods);
-      } catch {}
-    }
-    if (key && !titleKo) {
-      try {
-        const res = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              contents: [
-                {
-                  parts: [
-                    {
-                      text: `노래 제목 "${title}"을(를) 한국어로 표기해줘. 고유명사/영어 제목은 한글 음역(예: Yesterday→예스터데이), 뜻이 있는 제목은 자연스럽게 번역. 제목만 출력.`,
-                    },
-                  ],
-                },
-              ],
-            }),
-          }
-        );
-        const data = await res.json();
-        const t = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim().split("\n")[0];
-        if (t) titleKo = t.replace(/^["']|["']$/g, "");
-      } catch {}
-    }
-    let comment = "";
-    if (key && lyrics) {
-      try {
-        const c = await geminiText(
+        const raw = await geminiText(
           key,
-          `노래 "${title}" (${artist})에 대한 개인 음악 블로그용 코멘트를 한국어로 1~2문장 써줘.
-가사의 의미와, 이 곡에 얽힌 실제 배경(작곡 계기, 유명한 일화, 세간의 해석)을 자연스럽게 녹여서.
-담백하고 개인적인 감상 톤. 과장·홍보 문구 금지. 코멘트 문장만 출력(따옴표·줄바꿈 없이).
-
+          `노래 "${title}" (${artist})에 대해 아래 스키마의 JSON으로 답해줘.
+- moods: 가사 기반 감성/분위기 태그 2개(한국어). 예: 새벽감성, 그리움, 신나는, 위로, 애도, 설렘, 쓸쓸함
+- titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
+- artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
+- comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장(담백한 톤)
 가사:
-${lyrics.slice(0, 2000)}`
+${lyrics.slice(0, 2000)}`,
+          true
         );
-        comment = c.replace(/\s*\n+\s*/g, " ").replace(/^["']|["']$/g, "").trim();
-      } catch {}
+        const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+        if (Array.isArray(json.moods))
+          tags.push(...json.moods.map((m) => String(m).trim()).filter((m) => m && m.length <= 10).slice(0, 2));
+        if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
+        if (json.artistKo) artistKo = String(json.artistKo).trim();
+        if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
+      } catch {} // Gemini 실패해도 국가·연도·장르 태그는 유지
     }
-    return Response.json({ tags, titleKo, comment });
+    return Response.json({ tags, titleKo, artistKo, comment });
   }
 
   if (action === "load") {
@@ -249,7 +205,7 @@ ${lyrics.slice(0, 2000)}`
   }
 
   if (action === "save") {
-    const { title, titleKo, artist, album, year, artwork, lang, tags, comment, lyrics, preview } = body;
+    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview } = body;
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -258,6 +214,7 @@ ${lyrics.slice(0, 2000)}`
 title: ${title}
 title_ko: ${titleKo || title}
 artist: ${artist}
+artist_ko: ${artistKo || ""}
 album: ${album}
 year: ${year || ""}
 artwork: ${artwork}

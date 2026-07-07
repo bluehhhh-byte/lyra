@@ -52,7 +52,15 @@ export default async function SongPage({ params }) {
               <p className="mt-1 text-lg text-muted">{song.title_ko}</p>
             )}
             <p className="mt-2 text-muted">
-              {[song.artist, song.album, song.year].filter(Boolean).join(" · ")}
+              {[
+                song.artist_ko && song.artist_ko !== song.artist
+                  ? `${song.artist} (${song.artist_ko})`
+                  : song.artist,
+                song.album,
+                song.year,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
             </p>
             <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
               {song.tags.map((t) => (

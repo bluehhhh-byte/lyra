@@ -62,25 +62,47 @@ export default function AdminForm() {
       if (offset === 0) setSong(null);
     })();
 
+  const [titleKo, setTitleKo] = useState("");
+  const [artistKo, setArtistKo] = useState("");
+
+  // country + decade — deterministic, always present even if Gemini is unavailable
+  const baseTags = (c) => {
+    const t = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
+    if (c?.year) t.push(`${Math.floor(+c.year / 10) * 10}s`);
+    return t;
+  };
+
+  // set country/year tags immediately, then let Gemini append moods + title + comment
+  const autotag = async (c, lyricsText) => {
+    setTags(baseTags(c).join(", ")); // guaranteed baseline
+    try {
+      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm } = await api("autotag", {
+        ...c,
+        lang,
+        lyrics: lyricsText,
+      });
+      if (auto?.length) setTags(auto.join(", ")); // server merges base + genre + moods
+      if (tko) setTitleKo(tko);
+      if (ako) setArtistKo(ako);
+      if (cm) setComment(cm);
+    } catch {} // Gemini 실패해도 국가·연도 태그는 이미 세팅됨
+  };
+
   const pick = (c) =>
     run("lyrics", async () => {
       setSong(c);
       setLyrics("");
+      setTitleKo("");
+      setArtistKo("");
+      setTags(baseTags(c).join(", ")); // country/year show up the moment a song is picked
       const { lyrics: found } = await api("lyrics", c);
-      if (found) setLyrics(found);
-      else setError("가사를 못 찾음 — 직접 붙여넣으세요");
+      if (found) {
+        setLyrics(found);
+        autotag(c, found); // tags + comment from lyrics, no translation needed
+      } else {
+        setError("가사를 못 찾음 — 직접 붙여넣은 뒤 '자동 생성'을 누르세요");
+      }
     })();
-
-  const [titleKo, setTitleKo] = useState("");
-
-  const autotag = async () => {
-    try {
-      const { tags: auto, titleKo: tko, comment: c } = await api("autotag", { ...song, lang, lyrics });
-      setTags(auto.join(", "));
-      if (tko) setTitleKo(tko);
-      if (c) setComment(c);
-    } catch {} // 태그·제목 자동생성 실패는 치명적이지 않음 — 직접 입력하면 됨
-  };
 
   const translate = run("translate", async () => {
     const { text } = await api("translate", {
@@ -90,13 +112,14 @@ export default function AdminForm() {
       lyrics,
     });
     setTranslated(text);
-    autotag();
+    autotag(song, lyrics);
   });
 
   const save = run("save", async () => {
     const { slug } = await api("save", {
       ...song,
       titleKo,
+      artistKo,
       lang,
       tags,
       comment,
@@ -170,22 +193,31 @@ export default function AdminForm() {
             value={lyrics}
             onChange={(e) => setLyrics(e.target.value)}
           />
-          {lang === "ko" ? (
+          <div className="mt-2 flex flex-wrap gap-2">
+            {lang === "ko" ? (
+              <button
+                className={btn}
+                disabled={!lyrics.trim() || busy}
+                onClick={() => {
+                  setTranslated(lyrics);
+                  autotag(song, lyrics);
+                }}
+              >
+                이대로 사용 (번역 없음)
+              </button>
+            ) : (
+              <button className={btn} disabled={!lyrics.trim() || busy} onClick={translate}>
+                {busy === "translate" ? "번역 중…" : "Gemini 번역 생성"}
+              </button>
+            )}
             <button
-              className={btn + " mt-2"}
+              className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
               disabled={!lyrics.trim() || busy}
-              onClick={() => {
-                setTranslated(lyrics);
-                autotag();
-              }}
+              onClick={() => run("autotag", () => autotag(song, lyrics))()}
             >
-              이대로 사용 (번역 없음)
+              {busy === "autotag" ? "생성 중…" : "태그·코멘트 자동생성"}
             </button>
-          ) : (
-            <button className={btn + " mt-2"} disabled={!lyrics.trim() || busy} onClick={translate}>
-              {busy === "translate" ? "번역 중…" : "Gemini 번역 생성"}
-            </button>
-          )}
+          </div>
         </section>
       )}
 
@@ -203,8 +235,9 @@ export default function AdminForm() {
           />
           <div className="mt-2 space-y-2">
             <input className={input} placeholder="한글 제목 (예: 예스터데이)" value={titleKo} onChange={(e) => setTitleKo(e.target.value)} />
-            <input className={input} placeholder="태그 (쉼표 구분: rock, 새벽감성)" value={tags} onChange={(e) => setTags(e.target.value)} />
-            <input className={input} placeholder="곡 코멘트 한 줄" value={comment} onChange={(e) => setComment(e.target.value)} />
+            <input className={input} placeholder="가수 한글 독음 (일본 아티스트만, 예: 요네즈 켄시)" value={artistKo} onChange={(e) => setArtistKo(e.target.value)} />
+            <input className={input} placeholder="태그 (쉼표 구분: 영미, 2010s, rock, 새벽감성)" value={tags} onChange={(e) => setTags(e.target.value)} />
+            <textarea className={input + " h-20"} placeholder="곡 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />
           </div>
           <button className={btn + " mt-3"} disabled={busy} onClick={save}>
             {busy === "save" ? "저장 중…" : "저장"}
