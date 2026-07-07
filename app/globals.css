@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0d0d0f;
+  --color-surface: #16161a;
+  --color-line: #26262c;
+  --color-ink: #ededf0;
+  --color-muted: #8a8a94;
+  --color-accent: #c8b6ff;
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo",
+    "Noto Sans KR", system-ui, sans-serif;
+  --font-serif: "Charter", "Iowan Old Style", Georgia, "Hiragino Mincho ProN",
+    "Noto Serif JP", "Noto Serif KR", serif;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0d0d0f;
+}
