@@ -1,7 +1,9 @@
 ---
 title: Creep
+title_ko: 크리프
 artist: Radiohead
 album: Pablo Honey
+year: 1992
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/28/7a/7c/287a7ca9-ed95-1a21-e3bb-4559a1a0ac0e/191404134351.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/8d/e0/bb/8de0bb10-0593-83cc-4d2c-4e9f6ea9b575/mzaf_16440589638018943894.plus.aac.p.m4a
 tags: [rock, 새벽감성, 1990s]

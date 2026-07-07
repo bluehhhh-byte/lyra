@@ -19,7 +19,12 @@ export default function RootLayout({ children }) {
           <Link href="/" className="text-lg font-bold tracking-tight">
             Lyra<span className="text-accent">.</span>
           </Link>
-          <p className="text-xs text-muted">가사 · 번역 컬렉션</p>
+          <nav className="flex items-baseline gap-4 text-xs text-muted">
+            <span>가사 · 번역 컬렉션</span>
+            <Link href="/admin" className="hover:text-accent">
+              관리자
+            </Link>
+          </nav>
         </header>
         <main className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">

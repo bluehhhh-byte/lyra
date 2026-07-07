@@ -1,7 +1,9 @@
 ---
 title: Yesterday
+title_ko: 예스터데이
 artist: The Beatles
 album: Help!
+year: 1965
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1a/19/db/1a19db26-17ad-b986-11a9-f72ac7a6194b/18UMGIM31214.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/69/2d/d1692d74-fe32-c676-7a1d-00deacae1644/mzaf_11316115358642175957.plus.aac.p.m4a
 tags: [classic, 잔잔한, 1960s]

@@ -1,7 +1,9 @@
 ---
 title: This Love
+title_ko: 디스 러브
 artist: Maroon 5
 album: Songs About Jane
+year: 2002
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/3e/25/d03e255d-e205-0e66-20f6-01e251896c25/14UMGIM27076.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/0b/8d/790b8d2f-dae6-9380-87ec-6acd52806e49/mzaf_4263648516794463383.plus.aac.p.m4a
 lang: en

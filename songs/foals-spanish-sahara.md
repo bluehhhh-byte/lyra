@@ -1,7 +1,9 @@
 ---
 title: Spanish Sahara
+title_ko: 스패니시 사하라
 artist: Foals
 album: Total Life Forever
+year: 2010
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/38/3d/16/383d16a4-0eae-5084-8b75-e07ea85dc033/190295006372.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/3c/98/c73c98f3-65c3-3664-e7bf-af3b67636c13/mzaf_17077244399841202634.plus.aac.p.m4a
 lang: en

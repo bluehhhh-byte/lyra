@@ -1,7 +1,9 @@
 ---
 title: Blueming
+title_ko: 블루밍
 artist: 아이유
 album: Love Poem - EP
+year: 2019
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b8/b8/18/b8b81899-a984-be85-5656-ec1f2fc10227/5_Love_poem.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/99/56/19/995619c5-5310-d3b0-de45-0ff352bc58d9/mzaf_11001517585085545132.plus.aac.p.m4a
 lang: ko

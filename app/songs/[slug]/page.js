@@ -48,9 +48,11 @@ export default async function SongPage({ params }) {
           />
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{song.title}</h1>
+            {song.title_ko && song.title_ko !== song.title && (
+              <p className="mt-1 text-lg text-muted">{song.title_ko}</p>
+            )}
             <p className="mt-2 text-muted">
-              {song.artist}
-              {song.album ? ` · ${song.album}` : ""}
+              {[song.artist, song.album, song.year].filter(Boolean).join(" · ")}
             </p>
             <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
               {song.tags.map((t) => (
@@ -73,7 +75,7 @@ export default async function SongPage({ params }) {
                 rel="noopener noreferrer"
                 className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
               >
-                ▶ YouTube에서 듣기
+                ▶ YouTube
               </a>
             </div>
           </div>

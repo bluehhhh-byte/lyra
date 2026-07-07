@@ -131,6 +131,8 @@ ${body.lyrics}`;
     tags.push({ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타");
     if (year) tags.push(`${Math.floor(+year / 10) * 10}s`);
     if (genre) tags.push(genre.toLowerCase().replace(/\//g, "-"));
+    // Korean titles stay; others get a Korean title via Gemini (below)
+    let titleKo = lang === "ko" ? title : "";
     // mood tags via Gemini — best-effort, deterministic tags still returned on failure
     const key = process.env.GEMINI_API_KEY;
     if (key && lyrics) {
@@ -163,7 +165,32 @@ ${body.lyrics}`;
         if (moods) tags.push(...moods);
       } catch {}
     }
-    return Response.json({ tags });
+    if (key && !titleKo) {
+      try {
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              contents: [
+                {
+                  parts: [
+                    {
+                      text: `노래 제목 "${title}"을(를) 한국어로 표기해줘. 고유명사/영어 제목은 한글 음역(예: Yesterday→예스터데이), 뜻이 있는 제목은 자연스럽게 번역. 제목만 출력.`,
+                    },
+                  ],
+                },
+              ],
+            }),
+          }
+        );
+        const data = await res.json();
+        const t = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim().split("\n")[0];
+        if (t) titleKo = t.replace(/^["']|["']$/g, "");
+      } catch {}
+    }
+    return Response.json({ tags, titleKo });
   }
 
   if (action === "load") {
@@ -185,15 +212,17 @@ ${body.lyrics}`;
   }
 
   if (action === "save") {
-    const { title, artist, album, artwork, lang, tags, comment, lyrics, preview } = body;
+    const { title, titleKo, artist, album, year, artwork, lang, tags, comment, lyrics, preview } = body;
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
       .replace(/^-|-$/g, "");
     const md = `---
 title: ${title}
+title_ko: ${titleKo || title}
 artist: ${artist}
 album: ${album}
+year: ${year || ""}
 artwork: ${artwork}
 preview: ${preview || ""}
 lang: ${lang}

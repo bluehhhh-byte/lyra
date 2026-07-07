@@ -1,7 +1,9 @@
 ---
 title: Lemon
+title_ko: 레몬
 artist: 米津玄師
 album: Lemon - Single
+year: 2018
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/86/b0/9d/86b09d63-367a-563a-1e24-d5d62c220ac8/jacket_SRCL09749B00Z_550.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/ae/4f/2c/ae4f2cec-ff1a-5aaa-b7c3-e3d6395bc599/mzaf_5136527227979827468.plus.aac.p.m4a
 lang: ja

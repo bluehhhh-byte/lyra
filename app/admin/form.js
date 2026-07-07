@@ -64,11 +64,14 @@ export default function AdminForm() {
       else setError("가사를 못 찾음 — 직접 붙여넣으세요");
     })();
 
+  const [titleKo, setTitleKo] = useState("");
+
   const autotag = async () => {
     try {
-      const { tags: auto } = await api("autotag", { ...song, lang, lyrics });
+      const { tags: auto, titleKo: tko } = await api("autotag", { ...song, lang, lyrics });
       setTags(auto.join(", "));
-    } catch {} // 태그 자동생성 실패는 치명적이지 않음 — 직접 입력하면 됨
+      if (tko) setTitleKo(tko);
+    } catch {} // 태그·제목 자동생성 실패는 치명적이지 않음 — 직접 입력하면 됨
   };
 
   const translate = run("translate", async () => {
@@ -85,6 +88,7 @@ export default function AdminForm() {
   const save = run("save", async () => {
     const { slug } = await api("save", {
       ...song,
+      titleKo,
       lang,
       tags,
       comment,
@@ -190,6 +194,7 @@ export default function AdminForm() {
             onChange={(e) => setTranslated(e.target.value)}
           />
           <div className="mt-2 space-y-2">
+            <input className={input} placeholder="한글 제목 (예: 예스터데이)" value={titleKo} onChange={(e) => setTitleKo(e.target.value)} />
             <input className={input} placeholder="태그 (쉼표 구분: rock, 새벽감성)" value={tags} onChange={(e) => setTags(e.target.value)} />
             <input className={input} placeholder="곡 코멘트 한 줄" value={comment} onChange={(e) => setComment(e.target.value)} />
           </div>

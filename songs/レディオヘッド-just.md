@@ -1,7 +1,9 @@
 ---
 title: Just
+title_ko: 저스트
 artist: レディオヘッド
 album: The Bends
+year: 1995
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a9/5c/1ba95cac-b245-d386-63fb-6b857aa9dce8/634904078065.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/03/a5/21/03a521e5-d3a4-87d4-4966-9530a1c79ae0/mzaf_1348815026268628507.plus.aac.p.m4a
 lang: en
