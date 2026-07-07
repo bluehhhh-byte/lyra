@@ -1,5 +1,18 @@
 import { readSong, writeSong, deleteSong } from "../../../lib/store";
 
+async function geminiText(key, prompt) {
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+    }
+  );
+  const data = await res.json();
+  return data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+}
+
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, GitHub commits on Vercel.
 export async function POST(req) {
@@ -199,7 +212,22 @@ ${body.lyrics}`;
         if (t) titleKo = t.replace(/^["']|["']$/g, "");
       } catch {}
     }
-    return Response.json({ tags, titleKo });
+    let comment = "";
+    if (key && lyrics) {
+      try {
+        const c = await geminiText(
+          key,
+          `노래 "${title}" (${artist})에 대한 개인 음악 블로그용 코멘트를 한국어로 1~2문장 써줘.
+가사의 의미와, 이 곡에 얽힌 실제 배경(작곡 계기, 유명한 일화, 세간의 해석)을 자연스럽게 녹여서.
+담백하고 개인적인 감상 톤. 과장·홍보 문구 금지. 코멘트 문장만 출력(따옴표·줄바꿈 없이).
+
+가사:
+${lyrics.slice(0, 2000)}`
+        );
+        comment = c.replace(/\s*\n+\s*/g, " ").replace(/^["']|["']$/g, "").trim();
+      } catch {}
+    }
+    return Response.json({ tags, titleKo, comment });
   }
 
   if (action === "load") {
@@ -237,7 +265,7 @@ preview: ${preview || ""}
 lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
 date: ${new Date().toISOString().slice(0, 10)}
-comment: ${comment || ""}
+comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 ---
 ${lyrics.trim()}
 `;

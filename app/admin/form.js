@@ -74,9 +74,10 @@ export default function AdminForm() {
 
   const autotag = async () => {
     try {
-      const { tags: auto, titleKo: tko } = await api("autotag", { ...song, lang, lyrics });
+      const { tags: auto, titleKo: tko, comment: c } = await api("autotag", { ...song, lang, lyrics });
       setTags(auto.join(", "));
       if (tko) setTitleKo(tko);
+      if (c) setComment(c);
     } catch {} // 태그·제목 자동생성 실패는 치명적이지 않음 — 직접 입력하면 됨
   };
 
