@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
+import LyricsView from "./lyrics-view";
 
 export function generateStaticParams() {
   return getAllSongs().map((s) => ({ slug: s.slug }));
@@ -25,10 +26,28 @@ export async function generateMetadata({ params }) {
   };
 }
 
+function relatedSongs(song, all) {
+  const tags = new Set(song.tags);
+  return all
+    .filter((s) => s.slug !== song.slug)
+    .map((s) => {
+      let score = 0;
+      if (s.artist === song.artist) score += 5;
+      score += s.tags.filter((t) => tags.has(t)).length;
+      return { s, score };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4)
+    .map((x) => x.s);
+}
+
 export default async function SongPage({ params }) {
   const { slug } = await params;
-  const song = getSong(decodeURIComponent(slug));
+  const all = getAllSongs();
+  const song = all.find((s) => s.slug === decodeURIComponent(slug));
   if (!song) notFound();
+  const related = relatedSongs(song, all);
 
   return (
     <article>
@@ -98,36 +117,31 @@ export default async function SongPage({ params }) {
       )}
 
       {/* lyrics */}
-      <div className="mx-auto max-w-2xl space-y-10">
-        {song.stanzas.map((stanza, i) => (
-          <section key={i}>
-            {stanza.section && (
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
-                {stanza.section}
-              </p>
-            )}
-            <div className="space-y-4">
-              {stanza.lines.map((line, j) => (
-                <div key={j}>
-                  <p lang={song.lang || "en"} className="font-serif text-lg leading-snug">
-                    {line.en}
-                  </p>
-                  {line.reading && (
-                    <p className="mt-0.5 text-xs text-muted/70">{line.reading}</p>
-                  )}
-                  {line.ko && <p className="mt-0.5 text-sm text-muted">{line.ko}</p>}
+      <LyricsView stanzas={song.stanzas} lang={song.lang} />
+
+      {/* related */}
+      {related.length > 0 && (
+        <div className="mx-auto mt-20 max-w-2xl">
+          <h2 className="mb-4 text-sm font-semibold text-muted">이런 곡도</h2>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
+            {related.map((s) => (
+              <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
+                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                  <img
+                    src={s.artwork}
+                    alt=""
+                    className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                  />
                 </div>
-              ))}
-            </div>
-            {stanza.note && (
-              <p className="mt-4 rounded-lg bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
-                <span className="mr-1.5 font-semibold text-accent">노트</span>
-                {stanza.note}
-              </p>
-            )}
-          </section>
-        ))}
-      </div>
+                <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">
+                  {s.title}
+                </h3>
+                <p className="truncate text-xs text-muted">{s.artist}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mx-auto mt-16 flex max-w-2xl justify-between">
         <Link href="/" className="text-sm text-muted hover:text-accent">
