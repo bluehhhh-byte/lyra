@@ -7,7 +7,13 @@ async function api(action, body) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ action, ...body }),
   });
-  const data = await res.json();
+  const text = await res.text();
+  let data = {};
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch {
+    data = { error: text.slice(0, 200) }; // HTML error page etc.
+  }
   if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
   return data;
 }

@@ -3,6 +3,15 @@ import { readSong, writeSong, deleteSong } from "../../../lib/store";
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, GitHub commits on Vercel.
 export async function POST(req) {
+  try {
+    return await handle(req);
+  } catch (e) {
+    // always return JSON so the client never hits an empty-body parse error
+    return Response.json({ error: e.message || "서버 오류" }, { status: 500 });
+  }
+}
+
+async function handle(req) {
   const { action, ...body } = await req.json();
 
   if (action === "search") {
