@@ -44,6 +44,20 @@ Yesterday, all my troubles seemed so far away
 - `+ 독음` = 바로 윗줄의 한글 발음 (일본어 곡), `// 텍스트` = 해당 연의 분석 노트
 - 일본어 곡은 frontmatter에 `lang: ja`
 
-## 배포
+## 배포 (Vercel)
 
-Vercel에 그대로 올리면 됨. DB·로그인 없음, 곡 추가는 로컬에서만.
+GitHub 저장소를 Vercel에 연결하면 push마다 자동 배포.
+
+**환경변수 (Vercel Project Settings → Environment Variables):**
+
+| 변수 | 용도 |
+|------|------|
+| `ADMIN_PASSWORD` | 온라인 admin 로그인 비밀번호 (필수, 없으면 admin 잠김) |
+| `GITHUB_TOKEN` | 곡 저장용. lyra 저장소 Contents 읽기·쓰기 권한 PAT (필수) |
+| `GITHUB_REPO` | `owner/repo` 예: `bluehhhh-byte/lyra` (필수) |
+| `GEMINI_API_KEY` | 번역·자동태그 (선택, 없으면 해당 기능만 비활성) |
+
+**온라인 admin 동작:**
+- `/admin` 접근 시 비밀번호 로그인. 로컬 dev(`npm run dev`)는 인증 없이 열림.
+- 온라인에서 곡 추가/수정/삭제 → GitHub에 커밋 → Vercel 자동 재배포(약 1분) 후 반영.
+- 서버리스 파일시스템은 읽기 전용이라 저장은 GitHub API 커밋으로 처리 (`lib/store.js`).

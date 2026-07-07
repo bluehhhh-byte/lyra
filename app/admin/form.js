@@ -197,9 +197,15 @@ export default function AdminForm() {
             {busy === "save" ? "저장 중…" : "저장"}
           </button>
           {savedSlug && (
-            <a href={`/songs/${savedSlug}`} className="ml-3 text-sm text-accent underline">
-              저장됨 → 페이지 보기
-            </a>
+            <span className="ml-3 text-sm text-muted">
+              저장됨 ✓{" "}
+              <a href={`/songs/${savedSlug}`} className="text-accent underline">
+                페이지 보기
+              </a>
+              <span className="block text-xs">
+                온라인 배포본은 재배포(약 1분) 후 반영됩니다.
+              </span>
+            </span>
           )}
         </section>
       )}

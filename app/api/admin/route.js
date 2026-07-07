@@ -1,11 +1,8 @@
-import fs from "fs";
-import path from "path";
+import { readSong, writeSong, deleteSong } from "../../../lib/store";
 
-// Dev-only admin API. Never available in production builds.
+// Auth is enforced by middleware.js (password cookie). Writes go through
+// lib/store — fs locally, GitHub commits on Vercel.
 export async function POST(req) {
-  if (process.env.NODE_ENV === "production") {
-    return Response.json({ error: "not found" }, { status: 404 });
-  }
   const { action, ...body } = await req.json();
 
   if (action === "search") {
@@ -169,29 +166,21 @@ ${body.lyrics}`;
     return Response.json({ tags });
   }
 
-  const songFile = (slug) => {
-    const safe = path.basename(String(slug)); // no path traversal
-    const file = path.join(process.cwd(), "songs", `${safe}.md`);
-    return fs.existsSync(file) ? file : null;
-  };
-
   if (action === "load") {
-    const file = songFile(body.slug);
-    if (!file) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
-    return Response.json({ raw: fs.readFileSync(file, "utf8") });
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    return Response.json({ raw: song.raw });
   }
 
   if (action === "update") {
-    const file = songFile(body.slug);
-    if (!file) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
-    fs.writeFileSync(file, body.raw);
+    if (!(await readSong(body.slug)))
+      return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    await writeSong(body.slug, body.raw, `edit(song): ${body.slug}`);
     return Response.json({ ok: true });
   }
 
   if (action === "delete") {
-    const file = songFile(body.slug);
-    if (!file) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
-    fs.unlinkSync(file);
+    await deleteSong(body.slug);
     return Response.json({ ok: true });
   }
 
@@ -214,8 +203,7 @@ comment: ${comment || ""}
 ---
 ${lyrics.trim()}
 `;
-    const file = path.join(process.cwd(), "songs", `${slug}.md`);
-    fs.writeFileSync(file, md);
+    await writeSong(slug, md, `add(song): ${slug}`);
     return Response.json({ slug });
   }
 

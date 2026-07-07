@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { getAllSongs } from "../../lib/songs";
 import AdminForm from "./form";
 
 export const metadata = { title: "곡 추가 | Lyra" };
+export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
 export default function AdminPage() {
-  if (process.env.NODE_ENV === "production") notFound();
   const songs = getAllSongs();
   return (
     <>
