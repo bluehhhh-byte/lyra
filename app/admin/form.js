@@ -195,16 +195,23 @@ export default function AdminForm() {
           />
           <div className="mt-2 flex flex-wrap gap-2">
             {lang === "ko" ? (
-              <button
-                className={btn}
-                disabled={!lyrics.trim() || busy}
-                onClick={() => {
-                  setTranslated(lyrics);
-                  autotag(song, lyrics);
-                }}
-              >
-                이대로 사용 (번역 없음)
-              </button>
+              <>
+                {/[a-zA-Z]/.test(lyrics) && (
+                  <button className={btn} disabled={!lyrics.trim() || busy} onClick={translate}>
+                    {busy === "translate" ? "번역 중…" : "영어 부분 번역"}
+                  </button>
+                )}
+                <button
+                  className={/[a-zA-Z]/.test(lyrics) ? "rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40" : btn}
+                  disabled={!lyrics.trim() || busy}
+                  onClick={() => {
+                    setTranslated(lyrics);
+                    autotag(song, lyrics);
+                  }}
+                >
+                  이대로 사용 (번역 없음)
+                </button>
+              </>
             ) : (
               <button className={btn} disabled={!lyrics.trim() || busy} onClick={translate}>
                 {busy === "translate" ? "번역 중…" : "Gemini 번역 생성"}

@@ -118,7 +118,23 @@ async function handle(req) {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
     const isJa = body.lang === "ja";
-    const prompt = `You are translating song lyrics to Korean for a personal lyrics-analysis blog.
+    const isKo = body.lang === "ko";
+    const prompt = isKo
+      ? `You are annotating Korean song lyrics for a Korean-speaking blog.
+Song: "${body.title}" by ${body.artist}. The lyrics are mostly Korean but may contain English words or lines.
+
+Output format — for each lyric line:
+1. The original line as-is.
+2. ONLY IF the line contains English words/phrases, add a "> " line rewriting the WHOLE line fully in natural Korean (translate the English parts, keep the Korean parts). If the line is already entirely Korean, output NO "> " line for it.
+
+Rules:
+- Keep section headers like [Verse 1] as-is on their own line. If a header is not bracketed, wrap it in brackets.
+- Keep blank lines between stanzas.
+- Output ONLY the interleaved lyrics, no commentary, no code fences.
+
+Lyrics:
+${body.lyrics}`
+      : `You are translating song lyrics to Korean for a personal lyrics-analysis blog.
 Song: "${body.title}" by ${body.artist}. Source language: ${isJa ? "Japanese" : "English"}.
 
 Output format — for each lyric line, output:
