@@ -7,19 +7,34 @@ const GROUPS = [
   { key: "country", label: "국가별" },
   { key: "decade", label: "연대별" },
   { key: "artist", label: "가수별" },
+  { key: "random", label: "랜덤" },
 ];
+
+const RANDOM_PICKS = 6;
 
 export default function Browse({ songs }) {
   const [q, setQ] = useState("");
   const [group, setGroup] = useState("none");
+  const [seed, setSeed] = useState(0); // bump to reshuffle random picks
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return needle ? songs.filter((s) => s.search.includes(needle)) : songs;
   }, [q, songs]);
 
+  // random picks — computed client-side (post-hydration, so no SSR mismatch)
+  const randomList = useMemo(() => {
+    const a = [...filtered];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a.slice(0, RANDOM_PICKS);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtered, seed]);
+
   const groups = useMemo(() => {
-    if (group === "none") return [["", filtered]];
+    if (group === "none" || group === "random") return [["", filtered]];
     const map = new Map();
     for (const s of filtered) {
       const k = s[group] || "기타";
@@ -66,35 +81,56 @@ export default function Browse({ songs }) {
         </p>
       )}
 
-      {groups.map(([name, list]) => (
-        <section key={name || "all"} className="mb-10">
-          {name && (
-            <h2 className="mb-4 text-sm font-semibold text-muted">
-              {name} <span className="text-xs">({list.length})</span>
-            </h2>
-          )}
-          <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
-            {list.map((s) => (
-              <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
-                <div className="overflow-hidden rounded-xl border border-line bg-surface">
-                  <img
-                    src={s.artwork}
-                    alt={`${s.title} album art`}
-                    className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">
-                  {s.title}
-                </h3>
-                <p className="mt-0.5 text-xs text-muted">
-                  {s.artist}
-                  {s.year ? ` · ${s.year}` : ""}
-                </p>
-              </Link>
-            ))}
+      {group === "random" && filtered.length > 0 ? (
+        <section className="mb-10">
+          <div className="mb-4 flex items-center gap-3">
+            <h2 className="text-sm font-semibold text-muted">랜덤 추천</h2>
+            <button
+              onClick={() => setSeed((n) => n + 1)}
+              className="rounded-full border border-line px-3 py-1 text-xs text-muted hover:text-accent"
+            >
+              다시 섞기 ↻
+            </button>
           </div>
+          <Grid list={randomList} />
         </section>
-      ))}
+      ) : (
+        groups.map(([name, list]) => (
+          <section key={name || "all"} className="mb-10">
+            {name && (
+              <h2 className="mb-4 text-sm font-semibold text-muted">
+                {name} <span className="text-xs">({list.length})</span>
+              </h2>
+            )}
+            <Grid list={list} />
+          </section>
+        ))
+      )}
     </>
+  );
+}
+
+function Grid({ list }) {
+  return (
+    <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+      {list.map((s) => (
+        <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
+          <div className="overflow-hidden rounded-xl border border-line bg-surface">
+            <img
+              src={s.artwork}
+              alt={`${s.title} album art`}
+              className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+          <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">
+            {s.title}
+          </h3>
+          <p className="mt-0.5 text-xs text-muted">
+            {s.artist}
+            {s.year ? ` · ${s.year}` : ""}
+          </p>
+        </Link>
+      ))}
+    </div>
   );
 }
