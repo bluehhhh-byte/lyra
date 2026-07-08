@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
 import LyricsView from "./lyrics-view";
+import SongNav from "./song-nav";
 
 export function generateStaticParams() {
   return getAllSongs().map((s) => ({ slug: s.slug }));
@@ -45,9 +46,13 @@ function relatedSongs(song, all) {
 export default async function SongPage({ params }) {
   const { slug } = await params;
   const all = getAllSongs();
-  const song = all.find((s) => s.slug === decodeURIComponent(slug));
+  const idx = all.findIndex((s) => s.slug === decodeURIComponent(slug));
+  const song = all[idx];
   if (!song) notFound();
   const related = relatedSongs(song, all);
+  const pick = (s) => s && { slug: s.slug, title: s.title };
+  const prev = pick(all[idx - 1]);
+  const next = pick(all[idx + 1]);
 
   return (
     <article>
@@ -142,6 +147,8 @@ export default async function SongPage({ params }) {
           </div>
         </div>
       )}
+
+      {(prev || next) && <SongNav prev={prev} next={next} />}
 
       <div className="mx-auto mt-16 flex max-w-2xl justify-between">
         <Link href="/" className="text-sm text-muted hover:text-accent">

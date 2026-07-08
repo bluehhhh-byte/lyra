@@ -3,7 +3,8 @@ import Browse from "./browse";
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
 
-export default function Home() {
+export default async function Home({ searchParams }) {
+  const { tag } = (await searchParams) || {};
   const songs = getAllSongs().map((s) => ({
     slug: s.slug,
     title: s.title,
@@ -30,5 +31,5 @@ export default function Home() {
       .toLowerCase(),
   }));
 
-  return <Browse songs={songs} />;
+  return <Browse songs={songs} initialTag={tag || ""} />;
 }
