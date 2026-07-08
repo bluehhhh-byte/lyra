@@ -76,7 +76,7 @@ export default function EditForm({ slug }) {
         </button>
         <button
           onClick={remove}
-          className="rounded-lg border border-red-400/40 px-4 py-2 text-sm text-red-400 hover:bg-red-400/10"
+          className="rounded-lg border border-red-600/40 px-4 py-2 text-sm text-red-600 hover:bg-red-600/10 dark:border-red-400/40 dark:text-red-400 dark:hover:bg-red-400/10"
         >
           삭제
         </button>

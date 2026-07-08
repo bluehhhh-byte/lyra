@@ -37,7 +37,7 @@ export default function Login() {
       >
         로그인
       </button>
-      {err && <p className="mt-3 text-sm text-red-400">{err}</p>}
+      {err && <p className="mt-3 text-sm text-red-600 dark:text-red-400">{err}</p>}
     </div>
   );
 }
