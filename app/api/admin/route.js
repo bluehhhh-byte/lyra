@@ -1,4 +1,5 @@
 import { readSong, writeSong, deleteSong } from "../../../lib/store";
+import { getAllSongs } from "../../../lib/songs";
 
 async function geminiText(key, prompt, json = false) {
   const res = await fetch(
@@ -15,6 +16,67 @@ async function geminiText(key, prompt, json = false) {
   const data = await res.json();
   return data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
 }
+
+// Kanji-or-kana artist names get a Korean reading; latin ones legitimately don't.
+export const needsReading = (artist) => /[぀-ヿ㐀-鿿]/.test(artist || "");
+
+// Shared by the add flow (`autotag`) and the backfill tool.
+async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
+  // deterministic tags — always present even without Gemini
+  const tags = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
+  if (year) tags.push(`${Math.floor(+year / 10) * 10}s`);
+  if (genre) tags.push(genre.toLowerCase().replace(/\//g, "-"));
+  let titleKo = lang === "ko" ? title : "";
+  let artistKo = "";
+  let comment = "";
+
+  // one combined Gemini call (avoids free-tier rate limits from many calls)
+  const key = process.env.GEMINI_API_KEY;
+  if (key && lyrics) {
+    try {
+      const raw = await geminiText(
+        key,
+        `노래 "${title}" (${artist})에 대해 아래 스키마의 JSON으로 답해줘.
+- moods: 가사 기반 감성/분위기 태그 2개(한국어). 예: 새벽감성, 그리움, 신나는, 위로, 애도, 설렘, 쓸쓸함
+- titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
+- artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
+- comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장(담백한 톤)
+가사:
+${lyrics.slice(0, 2000)}`,
+        true
+      );
+      const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+      if (Array.isArray(json.moods))
+        tags.push(...json.moods.map((m) => String(m).trim()).filter((m) => m && m.length <= 10).slice(0, 2));
+      if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
+      if (json.artistKo) artistKo = String(json.artistKo).trim();
+      if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
+    } catch {} // Gemini 실패해도 국가·연도·장르 태그는 유지
+  }
+  return { tags, titleKo, artistKo, comment };
+}
+
+const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
+const fmValue = (fm, key) => (fm.match(new RegExp(`^${key}:[ \\t]*(.*)$`, "m"))?.[1] || "").trim();
+const isBlank = (v) => !v || v === "[]";
+
+// Replace `key: …` in place, or insert it right after `after:` when absent.
+function setField(raw, key, value, after) {
+  const line = `${key}: ${value}`;
+  const existing = new RegExp(`^${key}:[ \\t]*.*$`, "m");
+  if (existing.test(raw)) return raw.replace(existing, line);
+  const anchor = new RegExp(`^(${after}:[ \\t]*.*)$`, "m");
+  return anchor.test(raw) ? raw.replace(anchor, `$1\n${line}`) : raw;
+}
+
+// The body interleaves translation (`>`), reading (`+`) and note (`//`) lines —
+// strip them so Gemini reads the original lyric, not our annotations.
+const originalLyrics = (body) =>
+  body
+    .split("\n")
+    .filter((l) => !/^\s*(>|\+|\/\/)/.test(l))
+    .join("\n")
+    .trim();
 
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, GitHub commits on Vercel.
@@ -176,39 +238,68 @@ ${body.lyrics}`;
   }
 
   if (action === "autotag") {
-    const { title, artist, lyrics, lang, year, genre } = body;
-    // deterministic tags — always present even without Gemini
-    const tags = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
-    if (year) tags.push(`${Math.floor(+year / 10) * 10}s`);
-    if (genre) tags.push(genre.toLowerCase().replace(/\//g, "-"));
-    let titleKo = lang === "ko" ? title : "";
-    let artistKo = "";
-    let comment = "";
+    return Response.json(await computeAuto(body));
+  }
 
-    // one combined Gemini call (avoids free-tier rate limits from many calls)
-    const key = process.env.GEMINI_API_KEY;
-    if (key && lyrics) {
-      try {
-        const raw = await geminiText(
-          key,
-          `노래 "${title}" (${artist})에 대해 아래 스키마의 JSON으로 답해줘.
-- moods: 가사 기반 감성/분위기 태그 2개(한국어). 예: 새벽감성, 그리움, 신나는, 위로, 애도, 설렘, 쓸쓸함
-- titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
-- artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
-- comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장(담백한 톤)
-가사:
-${lyrics.slice(0, 2000)}`,
-          true
-        );
-        const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
-        if (Array.isArray(json.moods))
-          tags.push(...json.moods.map((m) => String(m).trim()).filter((m) => m && m.length <= 10).slice(0, 2));
-        if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
-        if (json.artistKo) artistKo = String(json.artistKo).trim();
-        if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
-      } catch {} // Gemini 실패해도 국가·연도·장르 태그는 유지
+  // Which songs are missing generated metadata. `artist_ko` only counts as
+  // missing for kanji/kana artists — a latin name has no reading to give.
+  if (action === "audit") {
+    const list = getAllSongs()
+      .map((s) => {
+        const missing = [];
+        if (!s.tags?.length) missing.push("tags");
+        if (!s.comment) missing.push("comment");
+        if (!s.title_ko) missing.push("title_ko");
+        if (needsReading(s.artist) && !s.artist_ko) missing.push("artist_ko");
+        return { slug: s.slug, title: s.title, artist: s.artist, artwork: s.artwork, missing };
+      })
+      .filter((s) => s.missing.length);
+    return Response.json({ list });
+  }
+
+  // Fill only the blank fields of one song, leaving everything else untouched.
+  // ponytail: one commit (and one Vercel rebuild) per song. Fine for a few songs;
+  // batch through the git trees API if this ever runs over dozens.
+  if (action === "backfill") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+
+    const artist = fmValue(fm, "artist");
+    const auto = await computeAuto({
+      title: fmValue(fm, "title"),
+      artist,
+      lyrics: originalLyrics(bodyText),
+      lang: fmValue(fm, "lang") || "en",
+      year: fmValue(fm, "year"),
+      genre: "", // not stored per song; country + decade + moods are enough
+    });
+
+    let out = raw;
+    const filled = [];
+    if (isBlank(fmValue(fm, "tags")) && auto.tags.length) {
+      out = setField(out, "tags", `[${auto.tags.join(", ")}]`, "year");
+      filled.push("tags");
     }
-    return Response.json({ tags, titleKo, artistKo, comment });
+    if (isBlank(fmValue(fm, "comment")) && auto.comment) {
+      out = setField(out, "comment", auto.comment, "date");
+      filled.push("comment");
+    }
+    if (isBlank(fmValue(fm, "title_ko")) && auto.titleKo) {
+      out = setField(out, "title_ko", auto.titleKo, "title");
+      filled.push("title_ko");
+    }
+    if (needsReading(artist) && isBlank(fmValue(fm, "artist_ko")) && auto.artistKo) {
+      out = setField(out, "artist_ko", auto.artistKo, "artist");
+      filled.push("artist_ko");
+    }
+
+    if (!filled.length) return Response.json({ filled: [] });
+    await writeSong(body.slug, out, `chore(song): backfill ${filled.join(",")} — ${body.slug}`);
+    return Response.json({ filled });
   }
 
   if (action === "load") {
