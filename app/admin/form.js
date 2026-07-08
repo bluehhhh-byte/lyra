@@ -24,8 +24,15 @@ const input =
 const btn =
   "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40";
 
+const FIELDS = [
+  { key: "artist", label: "가수명", placeholder: "가수명 (예: 米津玄師)" },
+  { key: "title", label: "제목", placeholder: "곡 제목 (예: lemon)" },
+  { key: "all", label: "전체", placeholder: "곡명 아티스트 (예: lemon 米津玄師)" },
+];
+
 export default function AdminForm() {
   const [query, setQuery] = useState("");
+  const [field, setField] = useState("artist");
   const [candidates, setCandidates] = useState([]);
   const [more, setMore] = useState(null); // {hasMore, nextOffset}
   const [song, setSong] = useState(null); // picked candidate
@@ -52,7 +59,7 @@ export default function AdminForm() {
 
   const search = (offset = 0) =>
     run("search", async () => {
-      const { results, hasMore, nextOffset } = await api("search", { query, offset });
+      const { results, hasMore, nextOffset } = await api("search", { query, field, offset });
       setCandidates((prev) => {
         const base = offset === 0 ? [] : prev;
         const seen = new Set(base.map((c) => `${c.title}|${c.artist}`.toLowerCase()));
@@ -133,15 +140,30 @@ export default function AdminForm() {
       {/* 1. search */}
       <section>
         <Step n="1" label="곡 검색" />
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <select value={lang} onChange={(e) => setLang(e.target.value)} className={input + " w-28"}>
             <option value="en">영어</option>
             <option value="ja">일본어</option>
             <option value="ko">한국어</option>
           </select>
+          <select
+            value={field}
+            onChange={(e) => {
+              setField(e.target.value);
+              setCandidates([]); // stale results would mix with the next field's page
+              setMore(null);
+            }}
+            className={input + " w-28"}
+          >
+            {FIELDS.map((f) => (
+              <option key={f.key} value={f.key}>
+                {f.label}
+              </option>
+            ))}
+          </select>
           <input
-            className={input}
-            placeholder="곡명 아티스트 (예: lemon 米津玄師)"
+            className={input + " flex-1 basis-48"}
+            placeholder={FIELDS.find((f) => f.key === field).placeholder}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && search()}
@@ -150,6 +172,11 @@ export default function AdminForm() {
             {busy === "search" ? "…" : "검색"}
           </button>
         </div>
+        {more && candidates.length === 0 && (
+          <p className="mt-3 text-sm text-muted">
+            결과 없음 — 검색 필드를 바꿔보세요
+          </p>
+        )}
         {candidates.length > 0 && (
           <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto rounded-lg border border-line">
             {candidates.map((c, i) => (

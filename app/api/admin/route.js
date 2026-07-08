@@ -33,11 +33,18 @@ async function handle(req) {
   if (action === "search") {
     const PAGE = 25;
     const offset = body.offset || 0;
+    // Bias the iTunes match toward one field. `attribute` only *ranks* — it still
+    // returns off-field hits (artistTerm=radiohead yields "Nightly — radiohead"),
+    // so the chosen field is enforced again below.
+    const ATTR = { artist: "artistTerm", title: "songTerm" };
+    const FIELD_OF = { artist: (r) => r.artistName, title: (r) => r.trackName };
+    const attr = ATTR[body.field] ? `&attribute=${ATTR[body.field]}` : "";
+    const fieldOf = FIELD_OF[body.field]; // undefined = free-text, no filter
     // search US/KR/JP stores together — each store has a different catalog
     const stores = await Promise.all(
       ["US", "KR", "JP"].map((c) =>
         fetch(
-          `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}`
+          `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}${attr}`
         )
           .then((r) => r.json())
           .then((r) => r.results || [])
@@ -71,6 +78,7 @@ async function handle(req) {
     const seen = new Set();
     const results = [];
     for (const r of interleaved.sort((x, y) => score(y) - score(x))) {
+      if (fieldOf && !(fieldOf(r) || "").toLowerCase().includes(q)) continue;
       const key = `${r.trackName}|${r.artistName}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
