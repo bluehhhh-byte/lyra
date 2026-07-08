@@ -9,6 +9,7 @@ export default function sitemap() {
   return [
     { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/tags`, changeFrequency: "weekly", priority: 0.5 },
+    { url: `${SITE_URL}/stats`, changeFrequency: "weekly", priority: 0.4 },
     ...songs,
   ];
 }

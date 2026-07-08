@@ -37,6 +37,9 @@ export default function RootLayout({ children }) {
           </Link>
           <nav className="flex items-baseline gap-4 text-xs text-muted">
             <ThemeToggle />
+            <Link href="/stats" className="hover:text-accent">
+              통계
+            </Link>
             <Link href="/tags" className="hover:text-accent">
               태그
             </Link>
