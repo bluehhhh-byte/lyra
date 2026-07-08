@@ -20,7 +20,6 @@ const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between
 export default function LyricsView({ stanzas, lang }) {
   const [mode, setMode] = useState("both");
   const [size, setSize] = useState("m");
-  const [copied, setCopied] = useState(-1);
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
 
@@ -65,14 +64,6 @@ export default function LyricsView({ stanzas, lang }) {
     window.addEventListener("hashchange", jump);
     return () => window.removeEventListener("hashchange", jump);
   }, []);
-
-  const copyLink = (i) => {
-    const url = `${location.origin}${location.pathname}#v${i}`;
-    navigator.clipboard?.writeText(url);
-    history.replaceState(null, "", `#v${i}`);
-    setCopied(i);
-    setTimeout(() => setCopied((c) => (c === i ? -1 : c)), 1500);
-  };
 
   const s = SIZES[size];
 
@@ -129,21 +120,10 @@ export default function LyricsView({ stanzas, lang }) {
           <section
             key={i}
             id={`v${i}`}
-            className={`group relative scroll-mt-24 rounded-lg transition-colors duration-1000 ${
+            className={`scroll-mt-24 rounded-lg transition-colors duration-1000 ${
               active === i ? "bg-accent/10" : ""
             }`}
           >
-            {/* mobile has no hover and the -left-7 gutter falls off-screen, so the
-                button sits in the flow there; on ≥sm it moves to the gutter on hover */}
-            <button
-              onClick={() => copyLink(i)}
-              aria-label="이 구절 링크 복사"
-              title={copied === i ? "복사됨" : "이 구절 링크 복사"}
-              className="mb-1 block text-xs text-muted/40 transition hover:text-accent focus:opacity-100 sm:absolute sm:-left-7 sm:top-1 sm:mb-0 sm:opacity-0 sm:group-hover:opacity-100"
-            >
-              {copied === i ? "✓" : "🔗"}
-            </button>
-
             {stanza.section && (
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
                 {stanza.section}
