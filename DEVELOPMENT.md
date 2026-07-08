@@ -70,11 +70,18 @@ comment: 곡에 대한 한 줄 감상 (자동 생성, 수정 가능)
   로컬 dev는 `fs`로 직접 쓰기(즉시 반영). `GITHUB_TOKEN`·`GITHUB_REPO`로 분기.
 - **Gemini 호출 통합**: 태그·제목·독음·코멘트를 1회 JSON 호출로 묶어 무료 티어 rate limit 회피.
 - **모바일**: 입력창 글씨 16px(모바일)로 iOS 포커스 확대 방지, 핀치 줌은 유지.
-- **테마** (`globals.css`): 다크가 기본, `prefers-color-scheme: light`에서 `@theme` CSS 변수만
-  덮어쓴다. Tailwind v4 유틸리티가 전부 `var()`를 참조하므로 JS도 `dark:` 클래스도 필요 없다.
-  미디어쿼리는 특이성을 더하지 않으므로 `html` 규칙보다 **뒤에** 와야 한다.
-  에러 문구의 `red-400`만 라이트에서 대비가 모자라 `dark:` variant로 분기.
-  `viewport.colorScheme`로 네이티브 위젯(오디오 컨트롤·스크롤바·입력창)도 따라간다.
+- **테마** (`globals.css`): 다크가 기본. `@theme` CSS 변수만 덮어써서 전환한다 —
+  Tailwind v4 유틸리티가 전부 `var()`를 참조하므로 `dark:` 클래스가 필요 없다.
+  - 시스템 추종: `@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) }`
+  - 사용자 고정: `:root[data-theme="light"]` (헤더 토글 → `localStorage.lyra_theme`)
+  - 두 셀렉터 모두 `(0,2,0)`이라 `html` 규칙 `(0,0,1)`을 순서와 무관하게 이긴다.
+  - `layout.js`의 인라인 blocking 스크립트가 first paint 전에 `data-theme`를 찍어
+    플래시를 막는다. **`THEME_KEY`는 `lib/theme.js`(평범한 모듈)에 있어야 한다.**
+    `"use client"` 모듈의 non-component export는 서버에서 `undefined`가 된다
+    (`lib/theme.test.mjs`가 이걸 지킨다).
+  - 에러 문구의 `red-400`만 라이트에서 대비가 모자라 `dark:` variant로 분기.
+  - `viewport.colorScheme` + 고정 시 `style.colorScheme`으로 네이티브 위젯
+    (오디오 컨트롤·스크롤바·입력창)도 따라간다.
 
 ## 환경변수 (Vercel)
 
