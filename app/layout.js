@@ -5,9 +5,9 @@ import ThemeToggle from "./theme-toggle";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
 
-// Runs before the first paint, so a reader who pinned a theme never sees the
-// other one flash. Kept tiny and inline — a fetched script would be too late.
-const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)});if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}}catch(e){}`;
+// Runs before the first paint, so a reader who picked light never sees dark flash.
+// Dark is the default — anything but a stored "light" resolves to it.
+const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)})==="light"?"light":"dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}`;
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -21,8 +21,8 @@ export const metadata = {
 };
 
 // lets the UA theme native widgets too — the player's <audio> controls,
-// scrollbars, and the admin form inputs
-export const viewport = { colorScheme: "light dark" };
+// scrollbars, and the admin form inputs. Dark first: it is the default.
+export const viewport = { colorScheme: "dark light" };
 
 export default function RootLayout({ children }) {
   return (

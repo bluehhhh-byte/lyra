@@ -33,18 +33,12 @@ async function handle(req) {
   if (action === "search") {
     const PAGE = 25;
     const offset = body.offset || 0;
-    // Bias the iTunes match toward one field. `attribute` only *ranks* — it still
-    // returns off-field hits (artistTerm=radiohead yields "Nightly — radiohead"),
-    // so the chosen field is enforced again below.
-    const ATTR = { artist: "artistTerm", title: "songTerm" };
-    const FIELD_OF = { artist: (r) => r.artistName, title: (r) => r.trackName };
-    const attr = ATTR[body.field] ? `&attribute=${ATTR[body.field]}` : "";
-    const fieldOf = FIELD_OF[body.field]; // undefined = free-text, no filter
+    // free-text search across title and artist — iTunes matches both by default
     // search US/KR/JP stores together — each store has a different catalog
     const stores = await Promise.all(
       ["US", "KR", "JP"].map((c) =>
         fetch(
-          `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}${attr}`
+          `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}`
         )
           .then((r) => r.json())
           .then((r) => r.results || [])
@@ -58,17 +52,25 @@ async function handle(req) {
       const t = (r.trackName || "").toLowerCase();
       const a = (r.artistName || "").toLowerCase();
       let s = 0;
-      if (t === q || a === q) s += 100;
-      if (t.startsWith(q)) s += 40;
-      if (t.includes(q)) s += 30;
-      if (a.includes(q)) s += 20;
+      // tiers are exclusive — an exact title must not also collect startsWith+includes,
+      // or a song *named* "radiohead" outranks the band Radiohead.
+      if (a === q) s += 120; // a bare band name is almost always an artist search
+      else if (a.startsWith(q)) s += 50;
+      else if (a.includes(q)) s += 25;
+      if (t === q) s += 100;
+      else if (t.startsWith(q)) s += 40;
+      else if (t.includes(q)) s += 30;
       for (const w of words) {
         if (t.includes(w)) s += 10;
         if (a.includes(w)) s += 12;
       }
       // demote covers/karaoke — the original should win
-      if (/cover|karaoke|instrumental|tribute|music box|orgel|オルゴール|acapella/.test(`${t} ${a}`))
-        s -= 30;
+      if (
+        /cover|karaoke|instrumental|tribute|music box|orgel|オルゴール|カラオケ|原曲|歌ってみた|acapella/.test(
+          `${t} ${a}`
+        )
+      )
+        s -= 60;
       return s;
     };
     // interleave stores so same-score results from KR/JP aren't buried under US
@@ -78,7 +80,6 @@ async function handle(req) {
     const seen = new Set();
     const results = [];
     for (const r of interleaved.sort((x, y) => score(y) - score(x))) {
-      if (fieldOf && !(fieldOf(r) || "").toLowerCase().includes(q)) continue;
       const key = `${r.trackName}|${r.artistName}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);

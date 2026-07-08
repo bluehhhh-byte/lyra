@@ -24,15 +24,12 @@ const input =
 const btn =
   "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40";
 
-const FIELDS = [
-  { key: "artist", label: "가수명", placeholder: "가수명 (예: 米津玄師)" },
-  { key: "title", label: "제목", placeholder: "곡 제목 (예: lemon)" },
-  { key: "all", label: "전체", placeholder: "곡명 아티스트 (예: lemon 米津玄師)" },
-];
+// kana settles Japanese; hangul settles Korean. Kanji alone is ambiguous, so kana wins.
+const detectLang = (text) =>
+  /[぀-ヿ]/.test(text) ? "ja" : /[가-힣]/.test(text) ? "ko" : "en";
 
 export default function AdminForm() {
   const [query, setQuery] = useState("");
-  const [field, setField] = useState("artist");
   const [candidates, setCandidates] = useState([]);
   const [more, setMore] = useState(null); // {hasMore, nextOffset}
   const [song, setSong] = useState(null); // picked candidate
@@ -59,7 +56,7 @@ export default function AdminForm() {
 
   const search = (offset = 0) =>
     run("search", async () => {
-      const { results, hasMore, nextOffset } = await api("search", { query, field, offset });
+      const { results, hasMore, nextOffset } = await api("search", { query, offset });
       setCandidates((prev) => {
         const base = offset === 0 ? [] : prev;
         const seen = new Set(base.map((c) => `${c.title}|${c.artist}`.toLowerCase()));
@@ -73,19 +70,19 @@ export default function AdminForm() {
   const [artistKo, setArtistKo] = useState("");
 
   // country + decade — deterministic, always present even if Gemini is unavailable
-  const baseTags = (c) => {
-    const t = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
+  const baseTags = (c, lg) => {
+    const t = [{ ko: "한국", ja: "일본", en: "영미" }[lg] || "기타"];
     if (c?.year) t.push(`${Math.floor(+c.year / 10) * 10}s`);
     return t;
   };
 
   // set country/year tags immediately, then let Gemini append moods + title + comment
-  const autotag = async (c, lyricsText) => {
-    setTags(baseTags(c).join(", ")); // guaranteed baseline
+  const autotag = async (c, lyricsText, lg = lang) => {
+    setTags(baseTags(c, lg).join(", ")); // guaranteed baseline
     try {
       const { tags: auto, titleKo: tko, artistKo: ako, comment: cm } = await api("autotag", {
         ...c,
-        lang,
+        lang: lg,
         lyrics: lyricsText,
       });
       if (auto?.length) setTags(auto.join(", ")); // server merges base + genre + moods
@@ -101,11 +98,13 @@ export default function AdminForm() {
       setLyrics("");
       setTitleKo("");
       setArtistKo("");
-      setTags(baseTags(c).join(", ")); // country/year show up the moment a song is picked
+      setTags(baseTags(c, lang).join(", ")); // country/year show up the moment a song is picked
       const { lyrics: found } = await api("lyrics", c);
       if (found) {
+        const lg = detectLang(found); // script of the lyrics decides the translation mode
+        setLang(lg);
         setLyrics(found);
-        autotag(c, found); // tags + comment from lyrics, no translation needed
+        autotag(c, found, lg); // tags + comment from lyrics, no translation needed
       } else {
         setError("가사를 못 찾음 — 직접 붙여넣은 뒤 '자동 생성'을 누르세요");
       }
@@ -141,29 +140,9 @@ export default function AdminForm() {
       <section>
         <Step n="1" label="곡 검색" />
         <div className="flex flex-wrap gap-2">
-          <select value={lang} onChange={(e) => setLang(e.target.value)} className={input + " w-28"}>
-            <option value="en">영어</option>
-            <option value="ja">일본어</option>
-            <option value="ko">한국어</option>
-          </select>
-          <select
-            value={field}
-            onChange={(e) => {
-              setField(e.target.value);
-              setCandidates([]); // stale results would mix with the next field's page
-              setMore(null);
-            }}
-            className={input + " w-28"}
-          >
-            {FIELDS.map((f) => (
-              <option key={f.key} value={f.key}>
-                {f.label}
-              </option>
-            ))}
-          </select>
           <input
             className={input + " flex-1 basis-48"}
-            placeholder={FIELDS.find((f) => f.key === field).placeholder}
+            placeholder="곡명·가수 무엇이든 (예: lemon 米津玄師)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && search()}
@@ -173,9 +152,7 @@ export default function AdminForm() {
           </button>
         </div>
         {more && candidates.length === 0 && (
-          <p className="mt-3 text-sm text-muted">
-            결과 없음 — 검색 필드를 바꿔보세요
-          </p>
+          <p className="mt-3 text-sm text-muted">결과 없음 — 검색어를 바꿔보세요</p>
         )}
         {candidates.length > 0 && (
           <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto rounded-lg border border-line">
@@ -214,6 +191,18 @@ export default function AdminForm() {
       {song && (
         <section>
           <Step n="2" label={lang === "ko" ? "가사 확인" : "가사 확인 → Gemini 번역"} />
+          <div className="mb-2 flex items-center gap-2 text-xs text-muted">
+            <span>가사 언어 (자동 감지, 틀리면 바꾸세요)</span>
+            <select
+              value={lang}
+              onChange={(e) => setLang(e.target.value)}
+              className="rounded-lg border border-line bg-surface px-2 py-1 text-xs outline-none focus:border-accent"
+            >
+              <option value="en">영어</option>
+              <option value="ja">일본어</option>
+              <option value="ko">한국어</option>
+            </select>
+          </div>
           <textarea
             className={input + " h-56 font-mono text-xs"}
             placeholder={busy === "lyrics" ? "가사 불러오는 중…" : "가사를 못 찾으면 직접 붙여넣으세요"}

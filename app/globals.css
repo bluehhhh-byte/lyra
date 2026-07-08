@@ -32,16 +32,11 @@ html {
    through var(), so swapping the values here re-themes the whole site — no JS
    in the render path, no dark: variant on 200 class names.
 
-   Dark is the default (the @theme block above). Light applies when either:
-     a) the OS asks for light and the reader hasn't pinned dark, or
-     b) the reader pinned light.
-   `data-theme` is stamped on <html> by the blocking script in layout.js before
-   first paint, so there is no flash of the wrong theme.
+   Dark is the default (the @theme block above) and the OS preference is ignored —
+   light applies only when the reader picks it. `data-theme` is stamped on <html>
+   by the blocking script in layout.js before first paint, so there is no flash.
 
-   The declarations are duplicated on purpose: a media query can't be merged into
-   a plain selector list. Six lines beats a preprocessor.
-
-   Both selectors are (0,2,0) and beat the (0,0,1) `html` rule above regardless of
+   The selector is (0,2,0) and beats the (0,0,1) `html` rule above regardless of
    order — which is what lets -webkit-font-smoothing flip here. */
 :root[data-theme="light"] {
   --color-bg: #fdfdfc;
@@ -52,16 +47,4 @@ html {
   /* the dark accent is a pale lavender; on white it must carry white text */
   --color-accent: #6244cc;
   -webkit-font-smoothing: auto; /* antialiased renders dark-on-light too thin */
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --color-bg: #fdfdfc;
-    --color-surface: #f3f3f0;
-    --color-line: #e3e3dd;
-    --color-ink: #1b1b1d;
-    --color-muted: #66666e;
-    --color-accent: #6244cc;
-    -webkit-font-smoothing: auto;
-  }
 }
