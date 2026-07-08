@@ -20,7 +20,10 @@ export default function RootLayout({ children }) {
             Lyra<span className="text-accent">.</span>
           </Link>
           <nav className="flex items-baseline gap-4 text-xs text-muted">
-            <span>가사 · 번역 컬렉션</span>
+            <span className="hidden sm:inline">가사 · 번역 컬렉션</span>
+            <Link href="/tags" className="hover:text-accent">
+              태그
+            </Link>
             <Link href="/admin" className="hover:text-accent">
               관리자
             </Link>

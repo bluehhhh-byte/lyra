@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 
 const GROUPS = [
@@ -12,11 +12,25 @@ const GROUPS = [
 
 const RANDOM_PICKS = 6;
 
-export default function Browse({ songs, initialTag = "" }) {
-  const [q, setQ] = useState("");
+export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none" }) {
+  const [q, setQ] = useState(initialQ);
   const [tag, setTag] = useState(initialTag);
-  const [group, setGroup] = useState("none");
+  const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
+
+  // Mirror the filters into the URL so a refresh or a shared link lands on the
+  // same view. replaceState, not pushState — one history entry per keystroke
+  // would make the back button useless.
+  // ponytail: back/forward doesn't step through filter states. Switch to
+  // router.push + a debounce if that ever matters.
+  useEffect(() => {
+    const p = new URLSearchParams();
+    if (q) p.set("q", q);
+    if (tag) p.set("tag", tag);
+    if (group !== "none") p.set("group", group);
+    const qs = p.toString();
+    history.replaceState(null, "", qs ? `/?${qs}` : "/");
+  }, [q, tag, group]);
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
