@@ -20,7 +20,8 @@ export default function SongNav({ prev, next }) {
   }, [prev, next, router]);
 
   return (
-    <div className="mx-auto mt-16 flex max-w-2xl gap-3">
+    <>
+      <div className="mx-auto mt-16 flex max-w-2xl gap-3">
       {prev ? (
         <Link
           href={`/songs/${prev.slug}`}
@@ -43,6 +44,12 @@ export default function SongNav({ prev, next }) {
       ) : (
         <span className="flex-1" />
       )}
-    </div>
+      </div>
+      {/* the ←/→ shortcuts above are undiscoverable without this */}
+      <p className="mx-auto mt-3 hidden max-w-2xl text-center text-xs text-muted/60 sm:block">
+        <kbd className="rounded border border-line px-1">←</kbd>{" "}
+        <kbd className="rounded border border-line px-1">→</kbd> 키로 곡 이동
+      </p>
+    </>
   );
 }

@@ -7,10 +7,50 @@ const MODES = [
   { key: "trans", label: "번역만" },
 ];
 
+// one scale step per size — original stays a notch above the translation
+const SIZES = {
+  s: { orig: "text-base", reading: "text-[11px]", trans: "text-xs", gap: "space-y-3" },
+  m: { orig: "text-lg", reading: "text-xs", trans: "text-sm", gap: "space-y-4" },
+  l: { orig: "text-2xl", reading: "text-sm", trans: "text-base", gap: "space-y-5" },
+};
+const SIZE_KEYS = ["s", "m", "l"];
+
+const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between songs
+
 export default function LyricsView({ stanzas, lang }) {
   const [mode, setMode] = useState("both");
+  const [size, setSize] = useState("m");
   const [copied, setCopied] = useState(-1);
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
+  const [progress, setProgress] = useState(0);
+
+  // restore prefs after mount — reading localStorage during render breaks hydration
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+      if (MODES.some((m) => m.key === saved.mode)) setMode(saved.mode);
+      if (SIZES[saved.size]) setSize(saved.size);
+    } catch {} // corrupt value — fall back to defaults
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(STORE_KEY, JSON.stringify({ mode, size }));
+  }, [mode, size]);
+
+  // reading progress across the whole page
+  useEffect(() => {
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
   // on load / hash change: scroll to the linked stanza and flash it
   useEffect(() => {
@@ -34,22 +74,54 @@ export default function LyricsView({ stanzas, lang }) {
     setTimeout(() => setCopied((c) => (c === i ? -1 : c)), 1500);
   };
 
+  const s = SIZES[size];
+
   return (
     <div className="mx-auto max-w-2xl">
-      <div className="mb-8 flex justify-center gap-1.5">
-        {MODES.map((m) => (
-          <button
-            key={m.key}
-            onClick={() => setMode(m.key)}
-            className={`rounded-full border px-3 py-1 text-xs transition ${
-              mode === m.key
-                ? "border-accent bg-accent font-semibold text-bg"
-                : "border-line text-muted hover:text-ink"
-            }`}
-          >
-            {m.label}
-          </button>
-        ))}
+      {/* toolbar sticks so mode/size stay reachable deep into a long song */}
+      <div className="sticky top-0 z-20 mb-8 border-b border-line bg-bg/85 py-3 backdrop-blur">
+        <div className="mb-2.5 h-0.5 w-full rounded-full bg-line">
+          <div
+            className="h-full rounded-full bg-accent transition-[width] duration-150"
+            style={{ width: `${progress * 100}%` }}
+          />
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex gap-1.5">
+            {MODES.map((m) => (
+              <button
+                key={m.key}
+                onClick={() => setMode(m.key)}
+                className={`rounded-full border px-3 py-1 text-xs transition ${
+                  mode === m.key
+                    ? "border-accent bg-accent font-semibold text-bg"
+                    : "border-line text-muted hover:text-ink"
+                }`}
+              >
+                {m.label}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center gap-1.5">
+            {SIZE_KEYS.map((k) => (
+              <button
+                key={k}
+                onClick={() => setSize(k)}
+                aria-label={`글자 크기 ${k}`}
+                aria-pressed={size === k}
+                className={`rounded-full border px-2 py-1 leading-none transition ${
+                  k === "s" ? "text-[10px]" : k === "m" ? "text-xs" : "text-sm"
+                } ${
+                  size === k
+                    ? "border-accent bg-accent font-semibold text-bg"
+                    : "border-line text-muted hover:text-ink"
+                }`}
+              >
+                가
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="space-y-10">
@@ -61,12 +133,13 @@ export default function LyricsView({ stanzas, lang }) {
               active === i ? "bg-accent/10" : ""
             }`}
           >
-            {/* deep-link / copy button — appears on hover, sits in the left gutter */}
+            {/* mobile has no hover and the -left-7 gutter falls off-screen, so the
+                button sits in the flow there; on ≥sm it moves to the gutter on hover */}
             <button
               onClick={() => copyLink(i)}
               aria-label="이 구절 링크 복사"
               title={copied === i ? "복사됨" : "이 구절 링크 복사"}
-              className="absolute -left-7 top-1 text-xs text-muted/40 opacity-0 transition group-hover:opacity-100 hover:text-accent focus:opacity-100"
+              className="mb-1 block text-xs text-muted/40 transition hover:text-accent focus:opacity-100 sm:absolute sm:-left-7 sm:top-1 sm:mb-0 sm:opacity-0 sm:group-hover:opacity-100"
             >
               {copied === i ? "✓" : "🔗"}
             </button>
@@ -76,19 +149,19 @@ export default function LyricsView({ stanzas, lang }) {
                 {stanza.section}
               </p>
             )}
-            <div className="space-y-4">
+            <div className={s.gap}>
               {stanza.lines.map((line, j) => (
                 <div key={j}>
                   {mode !== "trans" && (
-                    <p lang={lang || "en"} className="font-serif text-lg leading-snug">
+                    <p lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
                       {line.en}
                     </p>
                   )}
                   {mode !== "trans" && line.reading && (
-                    <p className="mt-0.5 text-xs text-muted/70">{line.reading}</p>
+                    <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
                   )}
                   {mode !== "orig" && line.ko && (
-                    <p className={`text-sm text-muted ${mode === "both" ? "mt-0.5" : ""}`}>
+                    <p className={`text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}>
                       {line.ko}
                     </p>
                   )}
