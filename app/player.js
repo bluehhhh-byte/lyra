@@ -1,5 +1,6 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
+import Scope from "./scope";
 
 // The <audio> element lives here, in the layout — a client-side route change
 // re-renders the page but not this provider, so a preview keeps playing while
@@ -10,6 +11,7 @@ export const usePlayer = () => useContext(PlayerCtx);
 
 export default function PlayerProvider({ children }) {
   const [track, setTrack] = useState(null); // { slug, title, artist, artwork, preview }
+  const audioRef = useRef(null);
 
   return (
     <PlayerCtx.Provider value={{ track, setTrack }}>
@@ -22,10 +24,15 @@ export default function PlayerProvider({ children }) {
               <p className="truncate text-sm font-medium">{track.title}</p>
               <p className="truncate text-xs text-muted">{track.artist} · 미리듣기 30초</p>
             </div>
+            {/* the analyser reads samples only from a CORS-clean stream; Apple's
+                preview CDN sends Access-Control-Allow-Origin: *, so this is safe */}
+            <Scope key={`scope-${track.preview}`} audioRef={audioRef} />
             {/* remount on src change so the new preview autoplays */}
             <audio
               key={track.preview}
+              ref={audioRef}
               src={track.preview}
+              crossOrigin="anonymous"
               controls
               autoPlay
               onEnded={() => setTrack(null)}
