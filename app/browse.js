@@ -12,15 +12,18 @@ const GROUPS = [
 
 const RANDOM_PICKS = 6;
 
-export default function Browse({ songs }) {
+export default function Browse({ songs, initialTag = "" }) {
   const [q, setQ] = useState("");
+  const [tag, setTag] = useState(initialTag);
   const [group, setGroup] = useState("none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
-    return needle ? songs.filter((s) => s.search.includes(needle)) : songs;
-  }, [q, songs]);
+    return songs.filter(
+      (s) => (!tag || s.tags.includes(tag)) && (!needle || s.search.includes(needle))
+    );
+  }, [q, tag, songs]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -75,9 +78,25 @@ export default function Browse({ songs }) {
         </div>
       </div>
 
+      {tag && (
+        <div className="mb-6 flex items-center gap-2 text-sm">
+          <span className="text-muted">태그</span>
+          <button
+            onClick={() => setTag("")}
+            className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+          >
+            {tag} ✕
+          </button>
+        </div>
+      )}
+
       {filtered.length === 0 && (
         <p className="py-20 text-center text-sm text-muted">
-          {songs.length === 0 ? "아직 곡이 없습니다." : `"${q}" 검색 결과 없음`}
+          {songs.length === 0
+            ? "아직 곡이 없습니다."
+            : q
+              ? `"${q}" 검색 결과 없음`
+              : `'${tag}' 태그 곡 없음`}
         </p>
       )}
 
