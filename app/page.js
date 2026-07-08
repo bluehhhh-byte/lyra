@@ -4,7 +4,7 @@ import Browse from "./browse";
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
 
 export default async function Home({ searchParams }) {
-  const { tag } = (await searchParams) || {};
+  const { tag, q, group } = (await searchParams) || {};
   const songs = getAllSongs().map((s) => ({
     slug: s.slug,
     title: s.title,
@@ -31,5 +31,5 @@ export default async function Home({ searchParams }) {
       .toLowerCase(),
   }));
 
-  return <Browse songs={songs} initialTag={tag || ""} />;
+  return <Browse songs={songs} initialTag={tag || ""} initialQ={q || ""} initialGroup={group || "none"} />;
 }
