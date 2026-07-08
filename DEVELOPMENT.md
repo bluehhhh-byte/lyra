@@ -70,6 +70,11 @@ comment: 곡에 대한 한 줄 감상 (자동 생성, 수정 가능)
   로컬 dev는 `fs`로 직접 쓰기(즉시 반영). `GITHUB_TOKEN`·`GITHUB_REPO`로 분기.
 - **Gemini 호출 통합**: 태그·제목·독음·코멘트를 1회 JSON 호출로 묶어 무료 티어 rate limit 회피.
 - **모바일**: 입력창 글씨 16px(모바일)로 iOS 포커스 확대 방지, 핀치 줌은 유지.
+- **테마** (`globals.css`): 다크가 기본, `prefers-color-scheme: light`에서 `@theme` CSS 변수만
+  덮어쓴다. Tailwind v4 유틸리티가 전부 `var()`를 참조하므로 JS도 `dark:` 클래스도 필요 없다.
+  미디어쿼리는 특이성을 더하지 않으므로 `html` 규칙보다 **뒤에** 와야 한다.
+  에러 문구의 `red-400`만 라이트에서 대비가 모자라 `dark:` variant로 분기.
+  `viewport.colorScheme`로 네이티브 위젯(오디오 컨트롤·스크롤바·입력창)도 따라간다.
 
 ## 환경변수 (Vercel)
 

@@ -14,6 +14,10 @@ export const metadata = {
   },
 };
 
+// lets the UA theme native widgets too — the player's <audio> controls,
+// scrollbars, and the admin form inputs
+export const viewport = { colorScheme: "light dark" };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">

@@ -25,5 +25,25 @@ html {
 
 ::selection {
   background: var(--color-accent);
-  color: #0d0d0f;
+  color: var(--color-bg);
+}
+
+/* Tailwind v4 emits @theme tokens as vars on :root and every utility reads them
+   through var(), so swapping the values here re-themes the whole site — no JS,
+   no flash-of-wrong-theme, no dark: variant on 200 class names.
+   Must come after the html rule above: media queries add no specificity, so an
+   earlier -webkit-font-smoothing override would lose to the later declaration. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #fdfdfc;
+    --color-surface: #f3f3f0;
+    --color-line: #e3e3dd;
+    --color-ink: #1b1b1d;
+    --color-muted: #66666e;
+    /* the dark accent is a pale lavender; on white it must carry white text */
+    --color-accent: #6244cc;
+  }
+  html {
+    -webkit-font-smoothing: auto; /* antialiased renders dark-on-light too thin */
+  }
 }

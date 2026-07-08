@@ -290,7 +290,8 @@ export default function AdminForm() {
         </section>
       )}
 
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {/* red-400 only clears WCAG AA on the dark background */}
+      {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
     </div>
   );
 }
