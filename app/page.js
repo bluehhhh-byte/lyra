@@ -17,6 +17,8 @@ export default async function Home({ searchParams }) {
     country: COUNTRY[s.lang] || "기타",
     decade: s.year ? `${Math.floor(+s.year / 10) * 10}s` : "미상",
     // compact lowercase blob for client search (title/artist/album/tags/lyrics)
+    // ponytail: ships every song's full lyrics to the client. 11 songs = a few KB.
+    // Move search to a route handler (or a prebuilt index) past ~100 songs.
     search: [
       s.title,
       s.title_ko,
