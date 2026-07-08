@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
 import LyricsView from "./lyrics-view";
+import PlayButton from "./play-button";
 import SongNav from "./song-nav";
 
 export function generateStaticParams() {
@@ -99,7 +100,15 @@ export default async function SongPage({ params }) {
             </div>
             <div className="mt-4 flex items-center justify-center gap-3 sm:justify-start">
               {song.preview && (
-                <audio controls preload="none" src={song.preview} className="h-9 max-w-56" />
+                <PlayButton
+                  track={{
+                    slug: song.slug,
+                    title: song.title,
+                    artist: song.artist,
+                    artwork: song.artwork,
+                    preview: song.preview,
+                  }}
+                />
               )}
               <a
                 href={`https://www.youtube.com/results?search_query=${encodeURIComponent(`${song.artist} ${song.title}`)}`}
