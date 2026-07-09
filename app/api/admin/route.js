@@ -1,9 +1,9 @@
 import { readSong, writeSong, deleteSong } from "../../../lib/store";
 import { getAllSongs } from "../../../lib/songs";
 
-// the requality scan fans out across every song; give it room on Vercel.
-// It's best run locally anyway (like backfill), where no timeout applies.
-export const maxDuration = 60;
+// per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
+// a few times); 30s is ample and stays within hobby-plan limits.
+export const maxDuration = 30;
 
 async function geminiText(key, prompt, json = false) {
   const res = await fetch(
@@ -90,16 +90,20 @@ const originalLyrics = (body) =>
 const LRC = "https://lrclib.net/api";
 const DUR_BOUND = 15; // seconds
 const hasCJK = (s) => /[぀-ヿ㐀-鿿가-힣]/.test(s || "");
-// one retry — a transient network blip must not read as "no lyrics exist", which
-// is exactly the false-negative that made songs look un-findable.
-async function getJson(url) {
+// Per-fetch timeout so one slow/hung lrclib response can't stall the whole
+// request (this is what pushed a single song past the serverless limit).
+// One retry on a network error or 5xx — a transient blip must not read as "no
+// lyrics". A 429 is NOT retried: hammering a rate limit just burns the budget.
+async function getJson(url, timeoutMs = 4000) {
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      const r = await fetch(url);
+      const r = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
       if (r.ok) return await r.json();
-      if (r.status !== 429 && r.status < 500) return null; // 404 etc. — real "not found"
-    } catch {}
-    if (attempt === 0) await new Promise((res) => setTimeout(res, 400));
+      if (r.status < 500) return null; // 404/429 etc. — not worth a retry
+    } catch {
+      // network error / timeout → retry once
+    }
+    if (attempt === 0) await new Promise((res) => setTimeout(res, 300));
   }
   return null;
 }
@@ -116,11 +120,13 @@ const lrcCleanTitle = (t) =>
 const lrcCleanArtist = (a) => (a || "").split(/\s*[,&×]\s*|\s+(?:feat\.?|with|and the)\s+/i)[0].trim();
 
 // Same track id in the JP/KR store often carries the native title/artist.
-async function nativeMeta(trackId) {
+async function nativeMeta(trackId, left = () => 8000) {
   if (!trackId) return null;
   for (const country of ["JP", "KR"]) {
+    if (left() <= 0) break;
     const j = await getJson(
-      `https://itunes.apple.com/lookup?${new URLSearchParams({ id: trackId, country })}`
+      `https://itunes.apple.com/lookup?${new URLSearchParams({ id: trackId, country })}`,
+      Math.min(4000, left())
     );
     const r = j?.results?.[0];
     if (r && hasCJK(`${r.trackName}${r.artistName}`))
@@ -147,45 +153,43 @@ function nameCandidates(picked, native) {
 
 const withinBound = (rowDur, want) => !want || !rowDur || Math.abs(rowDur - want) <= DUR_BOUND;
 
-// bounded-concurrency map — lrclib rate-limits, and a 14-song serial scan overruns
-// the serverless timeout. 5 in flight finishes the requality scan in seconds.
-async function pmap(items, limit, fn) {
-  const out = new Array(items.length);
-  let i = 0;
-  await Promise.all(
-    Array.from({ length: Math.min(limit, items.length) }, async () => {
-      while (i < items.length) {
-        const idx = i++;
-        out[idx] = await fn(items[idx], idx);
-      }
-    })
-  );
-  return out;
-}
+const asLyric = (text, native) => ({
+  lyrics: text,
+  lines: text.split("\n").filter((l) => l.trim()).length,
+  native,
+});
 
-// Returns { lyrics, lines, native } or null. Stops at the first bounded hit.
-async function findLyrics({ title, artist, album, duration, trackId }) {
-  const native = hasCJK(`${title}${artist}`) ? null : await nativeMeta(trackId);
+// Returns { lyrics, lines, native } or null. Stops at the first bounded hit, and
+// abandons remaining candidates once the time budget is spent — so a slow lrclib
+// can't push the request past the serverless timeout. deadlineMs bounds the whole
+// lookup (default generous for the add flow; requality passes a tighter one).
+async function findLyrics({ title, artist, album, duration, trackId }, deadlineMs = 20000) {
+  const until = Date.now() + deadlineMs;
+  const left = () => until - Date.now();
+  const native =
+    hasCJK(`${title}${artist}`) || left() <= 0 ? null : await nativeMeta(trackId, left);
   // omit falsy fields — URLSearchParams stringifies undefined to the literal
   // "undefined", which corrupts lrclib's exact /get match for pre-change songs.
   const qs = (o) =>
     new URLSearchParams(Object.entries(o).filter(([, v]) => v != null && v !== "")).toString();
   for (const { t, a } of nameCandidates({ title, artist }, native)) {
-    const g = await getJson(`${LRC}/get?${qs({ artist_name: a, track_name: t, album_name: album, duration })}`);
-    if (g?.plainLyrics?.trim() && withinBound(g.duration, duration)) {
-      const text = g.plainLyrics.trim();
-      return { lyrics: text, lines: text.split("\n").filter((l) => l.trim()).length, native };
-    }
-    const list = (await getJson(`${LRC}/search?${qs({ track_name: t, artist_name: a })}`)) || [];
+    if (left() <= 0) break; // budget spent — stop rather than risk a timeout
+    const g = await getJson(
+      `${LRC}/get?${qs({ artist_name: a, track_name: t, album_name: album, duration })}`,
+      Math.min(4000, left())
+    );
+    if (g?.plainLyrics?.trim() && withinBound(g.duration, duration))
+      return asLyric(g.plainLyrics.trim(), native);
+    if (left() <= 0) break;
+    const list =
+      (await getJson(`${LRC}/search?${qs({ track_name: t, artist_name: a })}`, Math.min(4000, left()))) ||
+      [];
     const best = list
       .filter((r) => r.plainLyrics?.trim())
       .map((r) => ({ r, d: Math.abs((r.duration || 0) - (duration || 0)) }))
       .sort((x, y) => x.d - y.d)
       .find((x) => withinBound(x.r.duration, duration));
-    if (best) {
-      const text = best.r.plainLyrics.trim();
-      return { lyrics: text, lines: text.split("\n").filter((l) => l.trim()).length, native };
-    }
+    if (best) return asLyric(best.r.plainLyrics.trim(), native);
   }
   return null;
 }
@@ -303,30 +307,26 @@ async function handle(req) {
   }
 
   // #5 — a stored song may hold a partial transcription (iTunes' romanized name
-  // yields a shorter one). Re-query with every name and report a longer hit.
-  if (action === "requality") {
-    const scanned = await pmap(getAllSongs(), 5, async (s) => {
-      try {
-        const have = s.stanzas.reduce(
-          (n, st) => n + st.lines.filter((l) => l.en?.trim()).length,
-          0
-        );
-        const found = await findLyrics({
-          title: s.title,
-          artist: s.artist,
-          album: s.album,
-          duration: s.duration,
-          trackId: s.trackId,
-        });
-        // only surface a meaningfully fuller version (guards transcription noise)
-        return found && found.lines >= have + 5
-          ? { slug: s.slug, title: s.title, artist: s.artist, have, found: found.lines }
-          : null;
-      } catch {
-        return null; // one bad song must not abort the whole scan
-      }
+  // yields a shorter one). Scanning all songs in one request overruns the
+  // serverless timeout (FUNCTION_INVOCATION_TIMEOUT), so it's split: the client
+  // gets the roster instantly, then checks one song per request.
+  if (action === "requalityList") {
+    return Response.json({
+      songs: getAllSongs().map((s) => ({ slug: s.slug, title: s.title, artist: s.artist })),
     });
-    return Response.json({ list: scanned.filter(Boolean) });
+  }
+
+  if (action === "requalityOne") {
+    const s = getAllSongs().find((x) => x.slug === body.slug);
+    if (!s) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const have = s.stanzas.reduce((n, st) => n + st.lines.filter((l) => l.en?.trim()).length, 0);
+    const found = await findLyrics(
+      { title: s.title, artist: s.artist, album: s.album, duration: s.duration, trackId: s.trackId },
+      15000 // budget per song so a rescan stays snappy
+    );
+    // only surface a meaningfully fuller version (guards transcription noise)
+    const fuller = found && found.lines >= have + 5;
+    return Response.json({ have, found: fuller ? found.lines : null });
   }
 
   if (action === "translate") {
