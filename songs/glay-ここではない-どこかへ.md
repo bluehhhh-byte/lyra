@@ -8,7 +8,7 @@ genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/04/92/4d0492a2-11e1-e64a-181b-7118e0bc4f6b/6.HEAVY_GAUGE_itunes.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/25/3b/35253bed-202a-3af8-14ec-58d96abc934e/mzaf_12919756588202327135.plus.aac.p.m4a
 lang: ja
-tags: [일본, 1990s]
+tags: [일본, 1999, rock]
 date: 2026-07-07
 comment: 순수했던 시절을 뒤로하고 미지의 '어딘가'를 갈망하며, 인생이라는 항해를 시작하는 이들의 복합적인 감정을 담았다. 멤버들이 출연한 영화의 주제가로, 불안과 희망이 교차하는 청춘의 단면을 잘 보여준다.
 ---
