@@ -7,7 +7,7 @@ year: 2010
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/38/3d/16/383d16a4-0eae-5084-8b75-e07ea85dc033/190295006372.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/3c/98/c73c98f3-65c3-3664-e7bf-af3b67636c13/mzaf_17077244399841202634.plus.aac.p.m4a
 lang: en
-tags: [영미, 2010, 쓸쓸함, 고뇌]
+tags: [영미, 2010]
 date: 2026-07-07
 comment: 이 곡은 '스패니시 사하라'라는 상징적 공간에서 잊고 싶은 고통스러운 기억과 상실감을 애써 떨쳐내려는 간절한 염원을 담고 있습니다. '퓨리'나 '유령'처럼 반복되는 내면의 갈등 묘사가 인상적입니다.
 ---
