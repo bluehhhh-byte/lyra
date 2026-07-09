@@ -1,6 +1,10 @@
 import { readSong, writeSong, deleteSong } from "../../../lib/store";
 import { getAllSongs } from "../../../lib/songs";
 
+// the requality scan fans out across every song; give it room on Vercel.
+// It's best run locally anyway (like backfill), where no timeout applies.
+export const maxDuration = 60;
+
 async function geminiText(key, prompt, json = false) {
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
@@ -78,6 +82,114 @@ const originalLyrics = (body) =>
     .join("\n")
     .trim();
 
+// ── lyrics lookup (lrclib) ────────────────────────────────────────────────
+// iTunes' US store hands back romanized/translated titles ("Through the Night"
+// for 밤편지, "Akuro No Oka" for アクロの丘) while lrclib is indexed under the
+// native title. Measured hit rate jumped 12/16 → 15/16 by trying the native
+// name too. A ±15s duration bound keeps a wrong-length track's lyrics out.
+const LRC = "https://lrclib.net/api";
+const DUR_BOUND = 15; // seconds
+const hasCJK = (s) => /[぀-ヿ㐀-鿿가-힣]/.test(s || "");
+// one retry — a transient network blip must not read as "no lyrics exist", which
+// is exactly the false-negative that made songs look un-findable.
+async function getJson(url) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const r = await fetch(url);
+      if (r.ok) return await r.json();
+      if (r.status !== 429 && r.status < 500) return null; // 404 etc. — real "not found"
+    } catch {}
+    if (attempt === 0) await new Promise((res) => setTimeout(res, 400));
+  }
+  return null;
+}
+
+const lrcCleanTitle = (t) =>
+  (t || "")
+    .replace(
+      /\s*[\(\[][^)\]]*(remaster|live|acoustic|version|edit|mix|instrumental|deluxe|mono|stereo|feat|with|explicit|bonus)[^)\]]*[\)\]]/gi,
+      ""
+    )
+    .replace(/\s*-\s*(single|ep|remaster(ed)?( \d{4})?|live|radio edit|.*version).*$/i, "")
+    .replace(/\s*(feat\.?|ft\.?)\s+.*$/i, "")
+    .trim();
+const lrcCleanArtist = (a) => (a || "").split(/\s*[,&×]\s*|\s+(?:feat\.?|with|and the)\s+/i)[0].trim();
+
+// Same track id in the JP/KR store often carries the native title/artist.
+async function nativeMeta(trackId) {
+  if (!trackId) return null;
+  for (const country of ["JP", "KR"]) {
+    const j = await getJson(
+      `https://itunes.apple.com/lookup?${new URLSearchParams({ id: trackId, country })}`
+    );
+    const r = j?.results?.[0];
+    if (r && hasCJK(`${r.trackName}${r.artistName}`))
+      return { title: r.trackName, artist: r.artistName };
+  }
+  return null;
+}
+
+function nameCandidates(picked, native) {
+  const out = [];
+  const push = (t, a) => t && a && out.push({ t, a });
+  push(picked.title, picked.artist);
+  push(lrcCleanTitle(picked.title), lrcCleanArtist(picked.artist));
+  if (native) {
+    push(native.title, native.artist);
+    push(lrcCleanTitle(native.title), lrcCleanArtist(native.artist));
+  }
+  const seen = new Set();
+  return out.filter(({ t, a }) => {
+    const k = `${t}|${a}`.toLowerCase();
+    return seen.has(k) ? false : seen.add(k);
+  });
+}
+
+const withinBound = (rowDur, want) => !want || !rowDur || Math.abs(rowDur - want) <= DUR_BOUND;
+
+// bounded-concurrency map — lrclib rate-limits, and a 14-song serial scan overruns
+// the serverless timeout. 5 in flight finishes the requality scan in seconds.
+async function pmap(items, limit, fn) {
+  const out = new Array(items.length);
+  let i = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (i < items.length) {
+        const idx = i++;
+        out[idx] = await fn(items[idx], idx);
+      }
+    })
+  );
+  return out;
+}
+
+// Returns { lyrics, lines, native } or null. Stops at the first bounded hit.
+async function findLyrics({ title, artist, album, duration, trackId }) {
+  const native = hasCJK(`${title}${artist}`) ? null : await nativeMeta(trackId);
+  // omit falsy fields — URLSearchParams stringifies undefined to the literal
+  // "undefined", which corrupts lrclib's exact /get match for pre-change songs.
+  const qs = (o) =>
+    new URLSearchParams(Object.entries(o).filter(([, v]) => v != null && v !== "")).toString();
+  for (const { t, a } of nameCandidates({ title, artist }, native)) {
+    const g = await getJson(`${LRC}/get?${qs({ artist_name: a, track_name: t, album_name: album, duration })}`);
+    if (g?.plainLyrics?.trim() && withinBound(g.duration, duration)) {
+      const text = g.plainLyrics.trim();
+      return { lyrics: text, lines: text.split("\n").filter((l) => l.trim()).length, native };
+    }
+    const list = (await getJson(`${LRC}/search?${qs({ track_name: t, artist_name: a })}`)) || [];
+    const best = list
+      .filter((r) => r.plainLyrics?.trim())
+      .map((r) => ({ r, d: Math.abs((r.duration || 0) - (duration || 0)) }))
+      .sort((x, y) => x.d - y.d)
+      .find((x) => withinBound(x.r.duration, duration));
+    if (best) {
+      const text = best.r.plainLyrics.trim();
+      return { lyrics: text, lines: text.split("\n").filter((l) => l.trim()).length, native };
+    }
+  }
+  return null;
+}
+
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, GitHub commits on Vercel.
 export async function POST(req) {
@@ -145,12 +257,14 @@ async function handle(req) {
       const key = `${r.trackName}|${r.artistName}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
+      const art = r.artworkUrl100 || ""; // some tracks/regions omit artwork
       results.push({
+        trackId: r.trackId, // lets the lyrics step re-query the JP/KR store for native names
         title: r.trackName,
         artist: r.artistName,
         album: r.collectionName,
-        artwork: r.artworkUrl100.replace("100x100", "600x600"),
-        thumb: r.artworkUrl100,
+        artwork: art.replace("100x100", "600x600"),
+        thumb: art,
         duration: Math.round((r.trackTimeMillis || 0) / 1000),
         year: (r.releaseDate || "").slice(0, 4),
         genre: r.primaryGenreName || "",
@@ -165,24 +279,54 @@ async function handle(req) {
   }
 
   if (action === "lyrics") {
-    const { title, artist, album, duration } = body;
-    const qs = (o) => new URLSearchParams(o).toString();
-    // exact signature match first — usually the clean official transcription
-    let res = await fetch(
-      `https://lrclib.net/api/get?${qs({ artist_name: artist, track_name: title, album_name: album || "", duration })}`
-    );
-    if (res.ok) {
-      const { plainLyrics } = await res.json();
-      if (plainLyrics) return Response.json({ lyrics: plainLyrics.trim() });
-    }
-    // fallback: search and pick the closest-duration result that has lyrics
-    const list = await fetch(
-      `https://lrclib.net/api/search?${qs({ track_name: title, artist_name: artist })}`
-    ).then((r) => (r.ok ? r.json() : []));
-    const best = list
-      .filter((r) => r.plainLyrics)
-      .sort((a, b) => Math.abs(a.duration - duration) - Math.abs(b.duration - duration))[0];
-    return Response.json({ lyrics: best ? best.plainLyrics.trim() : null });
+    const found = await findLyrics(body);
+    if (found) return Response.json({ lyrics: found.lyrics });
+
+    // #3 — not on lrclib: hand back native-name search links so the user can
+    // grab the lyrics from the source and paste them, instead of a dead end.
+    const native = hasCJK(`${body.title}${body.artist}`)
+      ? null
+      : await nativeMeta(body.trackId);
+    const t = native?.title || body.title;
+    const a = native?.artist || body.artist;
+    const q = encodeURIComponent(`${t} ${a} 가사`);
+    return Response.json({
+      lyrics: null,
+      searchLinks: [
+        { label: "Google", url: `https://www.google.com/search?q=${q}` },
+        {
+          label: "lrclib",
+          url: `https://lrclib.net/search/${encodeURIComponent(`${t} ${a}`)}`,
+        },
+      ],
+    });
+  }
+
+  // #5 — a stored song may hold a partial transcription (iTunes' romanized name
+  // yields a shorter one). Re-query with every name and report a longer hit.
+  if (action === "requality") {
+    const scanned = await pmap(getAllSongs(), 5, async (s) => {
+      try {
+        const have = s.stanzas.reduce(
+          (n, st) => n + st.lines.filter((l) => l.en?.trim()).length,
+          0
+        );
+        const found = await findLyrics({
+          title: s.title,
+          artist: s.artist,
+          album: s.album,
+          duration: s.duration,
+          trackId: s.trackId,
+        });
+        // only surface a meaningfully fuller version (guards transcription noise)
+        return found && found.lines >= have + 5
+          ? { slug: s.slug, title: s.title, artist: s.artist, have, found: found.lines }
+          : null;
+      } catch {
+        return null; // one bad song must not abort the whole scan
+      }
+    });
+    return Response.json({ list: scanned.filter(Boolean) });
   }
 
   if (action === "translate") {
@@ -321,7 +465,7 @@ ${body.lyrics}`;
   }
 
   if (action === "save") {
-    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview } = body;
+    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration } = body;
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -331,10 +475,12 @@ title: ${title}
 title_ko: ${titleKo || title}
 artist: ${artist}
 artist_ko: ${artistKo || ""}
-album: ${album}
+album: ${album || ""}
 year: ${year || ""}
-artwork: ${artwork}
+artwork: ${artwork || ""}
 preview: ${preview || ""}
+trackId: ${trackId || ""}
+duration: ${duration || ""}
 lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
 date: ${new Date().toISOString().slice(0, 10)}

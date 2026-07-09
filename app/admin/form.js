@@ -41,6 +41,7 @@ export default function AdminForm() {
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [savedSlug, setSavedSlug] = useState("");
+  const [searchLinks, setSearchLinks] = useState(null); // shown when lyrics aren't found
 
   const run = (label, fn) => async () => {
     setBusy(label);
@@ -98,15 +99,16 @@ export default function AdminForm() {
       setLyrics("");
       setTitleKo("");
       setArtistKo("");
+      setSearchLinks(null);
       setTags(baseTags(c, lang).join(", ")); // country/year show up the moment a song is picked
-      const { lyrics: found } = await api("lyrics", c);
+      const { lyrics: found, searchLinks: links } = await api("lyrics", c);
       if (found) {
         const lg = detectLang(found); // script of the lyrics decides the translation mode
         setLang(lg);
         setLyrics(found);
         autotag(c, found, lg); // tags + comment from lyrics, no translation needed
       } else {
-        setError("가사를 못 찾음 — 직접 붙여넣은 뒤 '자동 생성'을 누르세요");
+        setSearchLinks(links || []); // not on lrclib — offer source links to paste from
       }
     })();
 
@@ -203,9 +205,27 @@ export default function AdminForm() {
               <option value="ko">한국어</option>
             </select>
           </div>
+          {searchLinks && (
+            <div className="mb-2 rounded-lg border border-line bg-surface px-3 py-2 text-xs">
+              <span className="text-muted">가사 DB에 없는 곡입니다. 원문을 찾아 아래에 붙여넣으세요:</span>{" "}
+              {searchLinks.map((l, i) => (
+                <a
+                  key={i}
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 text-accent hover:underline"
+                >
+                  {l.label} ↗
+                </a>
+              ))}
+            </div>
+          )}
           <textarea
             className={input + " h-56 font-mono text-xs"}
-            placeholder={busy === "lyrics" ? "가사 불러오는 중…" : "가사를 못 찾으면 직접 붙여넣으세요"}
+            placeholder={
+              busy === "lyrics" ? "가사 불러오는 중…" : "가사를 못 찾으면 직접 붙여넣으세요"
+            }
             value={lyrics}
             onChange={(e) => setLyrics(e.target.value)}
           />

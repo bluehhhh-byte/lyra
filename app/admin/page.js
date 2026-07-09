@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllSongs } from "../../lib/songs";
 import AdminForm from "./form";
 import Backfill from "./backfill";
+import Requality from "./requality";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
@@ -15,6 +16,9 @@ export default function AdminPage() {
 
       <h2 className="mb-3 mt-16 text-lg font-bold">누락 항목 보정</h2>
       <Backfill />
+
+      <h2 className="mb-3 mt-16 text-lg font-bold">가사 품질 재검사</h2>
+      <Requality />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({songs.length})</h2>
       <ul className="max-w-2xl divide-y divide-line rounded-lg border border-line">
