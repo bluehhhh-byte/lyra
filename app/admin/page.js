@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { getAllSongs } from "../../lib/songs";
 import AdminForm from "./form";
 import Backfill from "./backfill";
 import Requality from "./requality";
+import SongTools from "./song-tools";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
@@ -21,21 +21,16 @@ export default function AdminPage() {
       <Requality />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({songs.length})</h2>
-      <ul className="max-w-2xl divide-y divide-line rounded-lg border border-line">
-        {songs.map((s) => (
-          <li key={s.slug} className="flex items-center gap-3 px-3 py-2 text-sm">
-            <img src={s.artwork} alt="" className="h-9 w-9 rounded" />
-            <span className="flex-1">
-              <span className="font-medium">{s.title}</span>
-              <span className="text-muted"> — {s.artist}</span>
-              <span className="ml-2 text-xs text-muted">{s.tags.join(", ")}</span>
-            </span>
-            <Link href={`/admin/edit/${s.slug}`} className="text-accent hover:underline">
-              수정
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <SongTools
+        songs={songs.map((s) => ({
+          slug: s.slug,
+          title: s.title,
+          artist: s.artist,
+          artwork: s.artwork,
+          comment: s.comment || "",
+          hasTranslation: s.stanzas.some((st) => st.lines.some((l) => l.ko)),
+        }))}
+      />
     </>
   );
 }

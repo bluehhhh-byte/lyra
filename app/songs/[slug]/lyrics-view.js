@@ -140,14 +140,25 @@ export default function LyricsView({ stanzas, lang }) {
                   {mode !== "trans" && line.reading && (
                     <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
                   )}
-                  {mode !== "orig" && line.ko && (
-                    <p
-                      lang="ko"
-                      className={`font-batang text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
-                    >
-                      {line.ko}
-                    </p>
-                  )}
+                  {mode !== "orig" &&
+                    line.ko &&
+                    (/[가-힣]/.test(line.ko) ? (
+                      // Korean translation (EN/JA songs) → batang
+                      <p
+                        lang="ko"
+                        className={`font-batang text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
+                      >
+                        {line.ko}
+                      </p>
+                    ) : (
+                      // English translation (Korean songs) → latin serif, italic to set it apart
+                      <p
+                        lang="en"
+                        className={`font-serif italic text-muted/80 ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
+                      >
+                        {line.ko}
+                      </p>
+                    ))}
                 </div>
               ))}
             </div>

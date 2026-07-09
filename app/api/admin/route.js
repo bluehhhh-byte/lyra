@@ -6,23 +6,75 @@ import { getAllSongs } from "../../../lib/songs";
 export const maxDuration = 30;
 
 async function geminiText(key, prompt, json = false) {
-  const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        ...(json ? { generationConfig: { responseMimeType: "application/json" } } : {}),
-      }),
-    }
-  );
-  const data = await res.json();
-  return data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+  const body = JSON.stringify({
+    contents: [{ parts: [{ text: prompt }] }],
+    ...(json ? { generationConfig: { responseMimeType: "application/json" } } : {}),
+  });
+  // Gemini free tier throws intermittent 503 "high demand" / 429 spikes — retry
+  // with backoff so a single blip doesn't fail comment/translation generation.
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
+        { method: "POST", headers: { "Content-Type": "application/json" }, body }
+      );
+      if (res.ok) {
+        const data = await res.json();
+        const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+        if (text) return text;
+      } else if (res.status < 500 && res.status !== 429) {
+        return ""; // 400/401 etc. — a retry won't help
+      }
+    } catch {}
+    if (attempt < 2) await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
+  }
+  return "";
 }
 
 // Kanji-or-kana artist names get a Korean reading; latin ones legitimately don't.
 export const needsReading = (artist) => /[぀-ヿ㐀-鿿]/.test(artist || "");
+
+const commentPrompt = (title, artist, lyrics) =>
+  `노래 "${title}" (${artist})에 대한 개인 음악 블로그용 코멘트를 한국어 1~2문장으로 써줘. 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹여서. 반드시 음슴체(~함, ~음, ~됨)로 끝맺을 것. "~습니다/~합니다/~해요/~이다" 금지. 담백한 톤. 코멘트 문장만 출력.\n가사:\n${(lyrics || "").slice(0, 2000)}`;
+
+// Interleaved bilingual output. Korean songs get an English "> " line per lyric
+// (matching the EN/JA two-line layout); EN/JA songs get a Korean "> " line (+ 독음 for JA).
+async function translateLyrics(key, { title, artist, lang, lyrics }) {
+  const isJa = lang === "ja";
+  const isKo = lang === "ko";
+  const prompt = isKo
+    ? `You are annotating Korean song lyrics with an English translation for a bilingual lyrics blog, so Korean songs get the same two-line layout as English/Japanese ones.
+Song: "${title}" by ${artist}. The lyrics are Korean (possibly with some English).
+
+Output format — for each lyric line, output:
+1. The original line as-is.
+2. "> " followed by a natural English translation of that line. If the line is already fully English, still output the "> " line repeating it in clean English.
+
+Rules:
+- Keep section headers like [Verse 1] as-is on their own line. If a header is not bracketed, wrap it in brackets.
+- Keep blank lines between stanzas.
+- Translate naturally and poetically, preserving tone. Not word-for-word.
+- Output ONLY the interleaved lyrics, no commentary, no code fences.
+
+Lyrics:
+${lyrics}`
+    : `You are translating song lyrics to Korean for a personal lyrics-analysis blog.
+Song: "${title}" by ${artist}. Source language: ${isJa ? "Japanese" : "English"}.
+
+Output format — for each lyric line, output:
+1. The original line as-is
+${isJa ? '2. "+ " followed by the Korean pronunciation reading (한글 독음) of the line\n3. "> " followed by a natural Korean translation' : '2. "> " followed by a natural Korean translation'}
+
+Rules:
+- Keep section headers like [Verse 1] or [サビ] as-is on their own line. If a header is not bracketed, wrap it in brackets.
+- Keep blank lines between stanzas.
+- Translate naturally and poetically, preserving metaphor and tone. Not word-for-word.
+- Output ONLY the interleaved lyrics, no commentary, no code fences.
+
+Lyrics:
+${lyrics}`;
+  return geminiText(key, prompt);
+}
 
 // Shared by the add flow (`autotag`) and the backfill tool.
 async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
@@ -332,51 +384,7 @@ async function handle(req) {
   if (action === "translate") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const isJa = body.lang === "ja";
-    const isKo = body.lang === "ko";
-    const prompt = isKo
-      ? `You are annotating Korean song lyrics for a Korean-speaking blog.
-Song: "${body.title}" by ${body.artist}. The lyrics are mostly Korean but may contain English words or lines.
-
-Output format — for each lyric line:
-1. The original line as-is.
-2. ONLY IF the line contains English words/phrases, add a "> " line rewriting the WHOLE line fully in natural Korean (translate the English parts, keep the Korean parts). If the line is already entirely Korean, output NO "> " line for it.
-
-Rules:
-- Keep section headers like [Verse 1] as-is on their own line. If a header is not bracketed, wrap it in brackets.
-- Keep blank lines between stanzas.
-- Output ONLY the interleaved lyrics, no commentary, no code fences.
-
-Lyrics:
-${body.lyrics}`
-      : `You are translating song lyrics to Korean for a personal lyrics-analysis blog.
-Song: "${body.title}" by ${body.artist}. Source language: ${isJa ? "Japanese" : "English"}.
-
-Output format — for each lyric line, output:
-1. The original line as-is
-${isJa ? '2. "+ " followed by the Korean pronunciation reading (한글 독음) of the line\n3. "> " followed by a natural Korean translation' : '2. "> " followed by a natural Korean translation'}
-
-Rules:
-- Keep section headers like [Verse 1] or [サビ] as-is on their own line. If a header is not bracketed, wrap it in brackets.
-- Keep blank lines between stanzas.
-- Translate naturally and poetically, preserving metaphor and tone. Not word-for-word.
-- Output ONLY the interleaved lyrics, no commentary, no code fences.
-
-Lyrics:
-${body.lyrics}`;
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
-      }
-    );
-    if (!res.ok) {
-      return Response.json({ error: `Gemini ${res.status}: ${await res.text()}` }, { status: 502 });
-    }
-    const data = await res.json();
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+    const text = await translateLyrics(key, body);
     if (!text) return Response.json({ error: "Gemini 응답이 비었습니다" }, { status: 502 });
     return Response.json({ text });
   }
@@ -444,6 +452,57 @@ ${body.lyrics}`;
     if (!filled.length) return Response.json({ filled: [] });
     await writeSong(body.slug, out, `chore(song): backfill ${filled.join(",")} — ${body.slug}`);
     return Response.json({ filled });
+  }
+
+  // Regenerate ONLY the comment (음슴체), leaving lyrics and other fields intact.
+  if (action === "regenComment") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+    const comment = (
+      await geminiText(key, commentPrompt(fmValue(fm, "title"), fmValue(fm, "artist"), originalLyrics(bodyText)))
+    )
+      .replace(/\s*\n+\s*/g, " ")
+      .replace(/^["']|["']$/g, "")
+      .trim();
+    if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
+    await writeSong(body.slug, setField(raw, "comment", comment, "date"), `chore(song): regen comment — ${body.slug}`);
+    return Response.json({ comment });
+  }
+
+  // Add the "> " translation line to each lyric line — used to give a Korean song
+  // the same two-line layout as EN/JA songs. Only runs when translation is absent,
+  // so it never clobbers a song's existing (hand-edited) translation.
+  if (action === "addTranslation") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+    if (/^\s*>/m.test(bodyText))
+      return Response.json({ error: "이미 번역이 있는 곡입니다" }, { status: 409 });
+    const lang = fmValue(fm, "lang") || "ko";
+    const translated = await translateLyrics(key, {
+      title: fmValue(fm, "title"),
+      artist: fmValue(fm, "artist"),
+      lang,
+      lyrics: originalLyrics(bodyText),
+    });
+    if (!translated) return Response.json({ error: "번역 생성 실패" }, { status: 502 });
+    await writeSong(
+      body.slug,
+      `---\n${fm}\n---\n${translated.trim()}\n`,
+      `chore(song): add translation — ${body.slug}`
+    );
+    return Response.json({ ok: true });
   }
 
   if (action === "load") {
