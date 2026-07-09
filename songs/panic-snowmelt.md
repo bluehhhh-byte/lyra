@@ -9,7 +9,7 @@ genre: K-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/b4/d3/a9/b4d3a995-f7df-df32-ec66-38928b086af1/panic4.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8c/93/d4/8c93d4c9-b64a-339a-5242-184dd183cd47/mzaf_1870650337123428307.plus.aac.p.m4a
 lang: ko
-tags: [한국, 2000s, k-pop, 쓸쓸함, 미련]
+tags: [한국, 2005, k-pop, 쓸쓸함, 미련]
 date: 2026-07-08
 comment: 눈 녹는 풍경을 통해 사라져 가는 사랑과 이루어지지 못한 고백의 허무함을 쓸쓸하게 그려낸다. 아름다웠던 순간이 결국 흔적조차 남지 않는 흙탕물이 되어버리는 비유가 인상적이다.
 ---
