@@ -4,6 +4,7 @@ import PlayerProvider from "./player";
 import ThemeToggle from "./theme-toggle";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
+import { getAllSongs } from "../lib/songs";
 
 // Runs before the first paint, so a reader who picked light never sees dark flash.
 // Dark is the default — anything but a stored "light" resolves to it.
@@ -25,12 +26,24 @@ export const metadata = {
 export const viewport = { colorScheme: "dark light" };
 
 export default function RootLayout({ children }) {
+  // playlist for the player's prev/next + auto-advance — only songs with a preview,
+  // in the collection's default order (same as the home grid)
+  const playlist = getAllSongs()
+    .filter((s) => s.preview)
+    .map((s) => ({
+      slug: s.slug,
+      title: s.title,
+      artist: s.artist,
+      artwork: s.artwork,
+      preview: s.preview,
+    }));
+
   return (
     // the no-flash script mutates <html> before hydration — that mismatch is intended
     <html lang="ko" suppressHydrationWarning>
       <body className="font-sans min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
-        <PlayerProvider>
+        <PlayerProvider playlist={playlist}>
         <header className="mx-auto flex max-w-5xl items-baseline justify-between px-5 py-8">
           <Link href="/" className="text-lg font-bold tracking-tight">
             Lyra<span className="text-accent">.</span>
