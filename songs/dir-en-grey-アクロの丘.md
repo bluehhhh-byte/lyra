@@ -8,7 +8,7 @@ genre: Metal
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/1d/41/1e1d41cc-e600-8edf-242f-297f6c685d2b/4529123106674.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/62/03/d86203b3-d2c4-3139-2927-84fd447ffd85/mzaf_9222938714775326752.plus.aac.p.m4a
 lang: ja
-tags: [일본, 2010s, 그리움, 쓸쓸함]
+tags: [일본, 2018, metal, 그리움, 쓸쓸함]
 date: 2026-07-07
 comment: 이 곡은 잃어버린 사랑에 대한 깊은 그리움과 슬픔을 담고 있습니다. '아크로의 언덕'은 더 이상 닿을 수 없는 과거와 다시는 피어날 수 없는 꽃처럼 애틋한 재회를 갈망하는 화자의 마음을 상징하는 공간으로, 비극적인 상실감과 영원한 꿈속에서의 재회를 노래합니다.
 ---
