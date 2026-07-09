@@ -9,7 +9,7 @@ genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/88/65/60/8865600e-028c-d177-a00d-1200784873b0/jacket_MHCL02399B00Z_550.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/36/86/053686f4-67e1-bb72-339c-b063b92ebc98/mzaf_11069794315643340929.plus.aac.p.m4a
 lang: ja
-tags: [일본, 2013, rock, 후회, 상실감]
+tags: [일본, Rock, 2013]
 date: 2026-07-08
 comment: 이 곡은 자신의 미숙함으로 연인을 상처 주고 결국 잃게 된 과거를 후회하는 내용을 담고 있다. 꿈을 좇다 소중한 사랑을 놓친 화자의 뒤늦은 깨달음과 상실감이 절절하게 드러난다.
 ---
