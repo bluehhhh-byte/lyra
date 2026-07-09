@@ -9,7 +9,7 @@ genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/ef/ba/4befba54-93ec-a986-4937-faeebb89d949/4547366812398.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/4d/43/364d43b5-651a-f211-8d9f-0abe8fd90d76/mzaf_1698364775632233773.plus.aac.p.m4a
 lang: ja
-tags: [일본, 2026, rock, 절망, 고뇌]
+tags: [일본, Rock, 2026]
 date: 2026-07-09
 comment: 이 곡은 태양 없는 도시에서 삶의 이유를 묻고, 절망 속에서도 날카로운 이빨로 삶을 씹어 먹으라는 강렬한 메시지를 던짐. 무기력함 속에서 외치는 생존 의지가 인상 깊게 다가옴.
 ---
