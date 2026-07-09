@@ -15,6 +15,10 @@
     "Noto Sans KR", system-ui, sans-serif;
   --font-serif: "Charter", "Iowan Old Style", Georgia, "Hiragino Mincho ProN",
     "Noto Serif JP", "Noto Serif KR", serif;
+  /* Korean batang/myeongjo for the translated lyric line — system fonts only, no
+     web-font load: AppleMyungjo (macOS/iOS), Batang (Windows), Noto Serif CJK (Android). */
+  --font-batang: "AppleMyungjo", "Batang", "바탕", "Noto Serif KR", "Noto Serif CJK KR",
+    "Nanum Myeongjo", serif;
 }
 
 html {

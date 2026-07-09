@@ -141,7 +141,10 @@ export default function LyricsView({ stanzas, lang }) {
                     <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
                   )}
                   {mode !== "orig" && line.ko && (
-                    <p className={`text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}>
+                    <p
+                      lang="ko"
+                      className={`font-batang text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
+                    >
                       {line.ko}
                     </p>
                   )}
