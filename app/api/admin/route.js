@@ -35,7 +35,7 @@ async function geminiText(key, prompt, json = false) {
 export const needsReading = (artist) => /[぀-ヿ㐀-鿿]/.test(artist || "");
 
 const commentPrompt = (title, artist, lyrics) =>
-  `노래 "${title}" (${artist})에 대한 개인 음악 블로그용 코멘트를 한국어 1~2문장으로 써줘. 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹여서. 반드시 음슴체(~함, ~음, ~됨)로 끝맺을 것. "~습니다/~합니다/~해요/~이다" 금지. 담백한 톤. 코멘트 문장만 출력.\n가사:\n${(lyrics || "").slice(0, 2000)}`;
+  `노래 "${title}" (${artist})에 대한 개인 음악 블로그용 코멘트를 한국어 1~2문장으로 써줘. 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹여서. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤. 코멘트 문장만 출력.\n가사:\n${(lyrics || "").slice(0, 2000)}`;
 
 // Interleaved bilingual output. Korean songs get an English "> " line per lyric
 // (matching the EN/JA two-line layout); EN/JA songs get a Korean "> " line (+ 독음 for JA).
@@ -97,7 +97,7 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
 - moods: 가사 기반 감성/분위기 태그 2개(한국어). 예: 새벽감성, 그리움, 신나는, 위로, 애도, 설렘, 쓸쓸함
 - titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
 - artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
-- comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 음슴체(~함, ~음, ~됨)로 끝맺을 것. "~습니다/~합니다/~해요/~이다" 금지. 담백한 톤
+- comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤
 가사:
 ${lyrics.slice(0, 2000)}`,
         true
@@ -511,7 +511,7 @@ async function handle(req) {
     return Response.json({ updated });
   }
 
-  // Regenerate ONLY the comment (음슴체), leaving lyrics and other fields intact.
+  // Regenerate ONLY the comment ('~다'체), leaving lyrics and other fields intact.
   if (action === "regenComment") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
