@@ -1,6 +1,6 @@
 ---
 title: Won't Be Long
-title_ko: Won't Be Long
+title_ko: 오래 걸리지 않아
 artist: The Hives
 album: The Black and White Album
 year: 2007
@@ -8,9 +8,9 @@ genre: Alternative
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d0/81/26/d08126cf-9119-0488-c2c5-59add3d3039b/00602517474642.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/b3/27/fbb3276c-2716-809a-340f-ad8b58863ca7/mzaf_1571540578382921890.plus.aac.p.m4a
 lang: en
-tags: [영미, 2000s, 월드 뮤직]
+tags: [영미, 2007, alternative, 탈출, 좌절]
 date: 2026-07-07
-comment: 이 곡은 정체되고 답답한 현실에서 벗어나고자 하는 강렬한 의지와 탈출의 절박함을 담고 있다. '더 이상 버틸 수 없어 떠나야 한다'는 가사는 반복되는 비트와 맞물려 듣는 이에게도 시원한 해방감을 안겨준다.
+comment: 답답한 도시를 떠나고자 하는 강렬한 의지와 좌절감이 느껴짐. 익숙한 환경에서 스스로를 잃어버릴까 봐 서둘러 탈출을 감행하는 심정이 잘 드러남.
 ---
 No bright lights
 > 화려한 불빛도
