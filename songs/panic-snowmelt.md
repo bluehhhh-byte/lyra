@@ -1,6 +1,6 @@
 ---
-title: 눈녹 듯
-title_ko: 눈녹 듯
+title: 눈 녹듯
+title_ko: 눈 녹듯
 artist: Panic
 artist_ko: 
 album: Panic 04
