@@ -9,7 +9,7 @@ genre: Dance
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3e/dd/a2/3edda255-4daf-3736-aed2-68b09a29e879/23UM1IM07105.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d9/96/35/d9963518-bb15-62bb-ed01-59727bd89551/mzaf_2437765497179172014.plus.aac.p.m4a
 lang: en
-tags: [영미, 2020s, dance, 몽환적, 끌림]
+tags: [영미, 2023, dance, 몽환적, 끌림]
 date: 2026-07-08
 comment: 두 사람의 경계가 흐려지고 하나가 되는 깊은 관계 속에서 느끼는 몽환적인 몰입감을 담고 있습니다. 도망치고 싶다가도 결국 이끌림에 머물고 마는 사랑의 복합적인 감정을 섬세하게 표현한 곡입니다.
 ---
