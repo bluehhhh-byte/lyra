@@ -9,7 +9,7 @@ genre: Hard Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3a/dc/08/3adc08b0-e98c-b5dd-943e-a37c7ed06205/13UABIM03615.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/99/c3/09/99c3095f-9322-fbdb-2c2e-8451f0745668/mzaf_13126137212368357646.plus.aac.p.m4a
 lang: en
-tags: [영미, 1990s, hard rock, 쓸쓸함, 고뇌]
+tags: [영미, 1993, hard rock, 쓸쓸함, 고뇌]
 date: 2026-07-07
 comment: 이 곡은 세상과의 불화와 내면의 고뇌 속에서 진정한 자신을 찾으려는 갈망을 노래합니다. 제목 'Mayonaise'는 무작위로 붙여진 것으로 알려져 있는데, 이는 삶의 고통과 혼란이 때로는 특별한 의미 없이 찾아온다는 비극적 감성을 더욱 강조합니다.
 ---
