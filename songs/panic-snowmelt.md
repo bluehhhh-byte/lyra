@@ -1,6 +1,6 @@
 ---
-title: Snowmelt
-title_ko: Snowmelt
+title: 눈녹 듯
+title_ko: 눈녹 듯
 artist: Panic
 artist_ko: 
 album: Panic 04
