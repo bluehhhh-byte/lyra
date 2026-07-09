@@ -9,7 +9,7 @@ genre: K-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e4/0e/d4/e40ed47b-9192-223d-100e-81b87f422c07/PSY_COVER_4000x4000.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/81/0a/27810aa7-f444-778a-3716-76ac8c680494/mzaf_13911372632841396809.plus.aac.p.m4a
 lang: ko
-tags: [한국, 2010s]
+tags: [한국, 2017, k-pop]
 date: 2026-07-08
 comment: 이 곡은 한 편의 영화 같았던 관계의 마지막을 담담히 노래합니다. 이별의 아픔 속에서도 지나간 추억에 대한 그리움과 상대에 대한 감사함이 묻어나는 가사가 인상 깊습니다.
 ---
