@@ -5,6 +5,7 @@ artist: the HIATUS
 artist_ko: 
 album: ANOMALY
 year: 2010
+genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/v4/49/52/98/49529811-6c11-a0a3-a10d-74c34784536e/FLCF-4340.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/13/21/6e13218c-7990-eeda-ccc0-9262915d3ffe/mzaf_754711883527332955.plus.aac.p.m4a
 trackId: 647064803

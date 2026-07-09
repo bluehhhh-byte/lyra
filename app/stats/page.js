@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
-const isDecadeTag = (t) => /^\d{4}s$/.test(t);
+const isDecadeTag = (t) => /^\d{4}s?$/.test(t); // 2010s (legacy) or 2018 (exact year)
 const isCountryTag = (t) => Object.values(COUNTRY).includes(t) || t === "기타";
 
 // Map<key, count>, biggest first

@@ -5,6 +5,7 @@ artist: KREAM & Marlo Rex
 artist_ko: 
 album: Blur - Single
 year: 2023
+genre: Dance
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3e/dd/a2/3edda255-4daf-3736-aed2-68b09a29e879/23UM1IM07105.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d9/96/35/d9963518-bb15-62bb-ed01-59727bd89551/mzaf_2437765497179172014.plus.aac.p.m4a
 lang: en

@@ -73,7 +73,7 @@ export default function AdminForm() {
   // country + decade — deterministic, always present even if Gemini is unavailable
   const baseTags = (c, lg) => {
     const t = [{ ko: "한국", ja: "일본", en: "영미" }[lg] || "기타"];
-    if (c?.year) t.push(`${Math.floor(+c.year / 10) * 10}s`);
+    if (c?.year) t.push(String(c.year)); // exact release year, not the decade
     return t;
   };
 

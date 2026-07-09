@@ -5,6 +5,7 @@ artist: The Smashing Pumpkins
 artist_ko: 
 album: Siamese Dream
 year: 1993
+genre: Hard Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3a/dc/08/3adc08b0-e98c-b5dd-943e-a37c7ed06205/13UABIM03615.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/99/c3/09/99c3095f-9322-fbdb-2c2e-8451f0745668/mzaf_13126137212368357646.plus.aac.p.m4a
 lang: en

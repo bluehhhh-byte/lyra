@@ -5,6 +5,7 @@ artist: 羊文学
 artist_ko: 양문학
 album: Dogs - Single
 year: 2026
+genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/ef/ba/4befba54-93ec-a986-4937-faeebb89d949/4547366812398.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/4d/43/364d43b5-651a-f211-8d9f-0abe8fd90d76/mzaf_1698364775632233773.plus.aac.p.m4a
 lang: ja

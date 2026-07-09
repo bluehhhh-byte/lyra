@@ -5,6 +5,7 @@ artist: Panic
 artist_ko: 
 album: Panic 04
 year: 2005
+genre: K-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/b4/d3/a9/b4d3a995-f7df-df32-ec66-38928b086af1/panic4.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8c/93/d4/8c93d4c9-b64a-339a-5242-184dd183cd47/mzaf_1870650337123428307.plus.aac.p.m4a
 lang: ko

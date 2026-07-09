@@ -22,8 +22,31 @@ async function api(action, body) {
 // song that has none (used to give Korean songs the bilingual two-line layout).
 export default function SongTools({ songs }) {
   const [state, setState] = useState({}); // slug -> { busy, comment, msg, err }
+  const [bulk, setBulk] = useState(null); // {done, total} while regenerating all
 
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
+
+  const regenMeta = async (slug) => {
+    set(slug, { busy: "meta", err: "", msg: "" });
+    try {
+      const { updated } = await api("regenMeta", { slug });
+      set(slug, { msg: updated?.length ? `갱신: ${updated.join(", ")}` : "변경 없음" });
+    } catch (e) {
+      set(slug, { err: e.message });
+    } finally {
+      set(slug, { busy: "" });
+    }
+  };
+
+  // one song per request (timeout-safe), sequential to respect the Gemini rate limit
+  const regenAll = async () => {
+    for (let i = 0; i < songs.length; i++) {
+      setBulk({ done: i, total: songs.length });
+      await regenMeta(songs[i].slug);
+    }
+    setBulk({ done: songs.length, total: songs.length });
+    setTimeout(() => setBulk(null), 4000);
+  };
 
   const regen = async (slug) => {
     set(slug, { busy: "comment", err: "", msg: "" });
@@ -50,7 +73,20 @@ export default function SongTools({ songs }) {
   };
 
   return (
-    <ul className="max-w-2xl divide-y divide-line rounded-lg border border-line">
+    <div className="max-w-2xl">
+      <div className="mb-3 flex items-center gap-3">
+        <button
+          onClick={regenAll}
+          disabled={!!bulk}
+          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+        >
+          {bulk ? `전체 메타 재생성 중… ${bulk.done}/${bulk.total}` : "전체 메타 AI 재생성"}
+        </button>
+        <span className="text-xs text-muted">
+          태그·코멘트·한글제목·독음을 곡마다 새로 생성(덮어씀)
+        </span>
+      </div>
+      <ul className="divide-y divide-line rounded-lg border border-line">
       {songs.map((s) => {
         const st = state[s.slug] || {};
         return (
@@ -62,11 +98,18 @@ export default function SongTools({ songs }) {
                 <span className="text-muted"> — {s.artist}</span>
               </span>
               <button
+                onClick={() => regenMeta(s.slug)}
+                disabled={!!st.busy}
+                className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
+              >
+                {st.busy === "meta" ? "생성 중…" : "메타 재생성"}
+              </button>
+              <button
                 onClick={() => regen(s.slug)}
                 disabled={!!st.busy}
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
-                {st.busy === "comment" ? "생성 중…" : "코멘트 재생성"}
+                {st.busy === "comment" ? "생성 중…" : "코멘트"}
               </button>
               {!s.hasTranslation && (
                 <button
@@ -93,6 +136,7 @@ export default function SongTools({ songs }) {
           </li>
         );
       })}
-    </ul>
+      </ul>
+    </div>
   );
 }

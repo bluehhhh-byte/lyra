@@ -80,11 +80,12 @@ ${lyrics}`;
 async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
   // deterministic tags — always present even without Gemini
   const tags = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
-  if (year) tags.push(`${Math.floor(+year / 10) * 10}s`);
+  if (year) tags.push(String(year)); // exact release year, not the decade
   if (genre) tags.push(genre.toLowerCase().replace(/\//g, "-"));
   let titleKo = lang === "ko" ? title : "";
   let artistKo = "";
   let comment = "";
+  let moods = []; // returned separately so callers can preserve old moods when Gemini fails
 
   // one combined Gemini call (avoids free-tier rate limits from many calls)
   const key = process.env.GEMINI_API_KEY;
@@ -103,13 +104,14 @@ ${lyrics.slice(0, 2000)}`,
       );
       const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
       if (Array.isArray(json.moods))
-        tags.push(...json.moods.map((m) => String(m).trim()).filter((m) => m && m.length <= 10).slice(0, 2));
+        moods = json.moods.map((m) => String(m).trim()).filter((m) => m && m.length <= 10).slice(0, 2);
+      tags.push(...moods);
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
     } catch {} // Gemini 실패해도 국가·연도·장르 태그는 유지
   }
-  return { tags, titleKo, artistKo, comment };
+  return { tags, moods, titleKo, artistKo, comment };
 }
 
 const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -427,7 +429,7 @@ async function handle(req) {
       lyrics: originalLyrics(bodyText),
       lang: fmValue(fm, "lang") || "en",
       year: fmValue(fm, "year"),
-      genre: "", // not stored per song; country + decade + moods are enough
+      genre: fmValue(fm, "genre"), // stored on save; empty for pre-change songs
     });
 
     let out = raw;
@@ -452,6 +454,61 @@ async function handle(req) {
     if (!filled.length) return Response.json({ filled: [] });
     await writeSong(body.slug, out, `chore(song): backfill ${filled.join(",")} — ${body.slug}`);
     return Response.json({ filled });
+  }
+
+  // Regenerate ALL AI metadata (tags·comment·title_ko·artist_ko) for one song,
+  // OVERWRITING existing values. Lyrics and non-AI fields (album/year/artwork…)
+  // are untouched. Driven one song per request from the client (timeout-safe).
+  if (action === "regenMeta") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+    const artist = fmValue(fm, "artist");
+    const lang = fmValue(fm, "lang") || "en";
+    const auto = await computeAuto({
+      title: fmValue(fm, "title"),
+      artist,
+      lyrics: originalLyrics(bodyText),
+      lang,
+      year: fmValue(fm, "year"),
+      genre: fmValue(fm, "genre"),
+    });
+    let out = raw;
+    const updated = [];
+    // Rebuild tags = deterministic (country/year/genre) + moods. When Gemini gave
+    // no fresh moods (rate-limited/down), keep the song's existing moods instead of
+    // wiping them. Deterministic part (esp. the exact-year migration) always applies.
+    const deterministic = auto.tags.filter((t) => !auto.moods.includes(t)); // country/year/genre
+    const curTags = fmValue(fm, "tags").replace(/^\[|\]$/g, "").split(",").map((t) => t.trim()).filter(Boolean);
+    // existing mood/custom tags = current tags minus country, year/decade, and the fresh deterministic set
+    const oldMoods = curTags.filter(
+      (t) => !deterministic.includes(t) && !/^(한국|일본|영미|기타)$/.test(t) && !/^\d{4}s?$/.test(t)
+    );
+    const moods = auto.moods.length ? auto.moods : oldMoods;
+    const newTags = [...new Set([...deterministic, ...moods])];
+    if (newTags.length) {
+      out = setField(out, "tags", `[${newTags.join(", ")}]`, "year");
+      updated.push("tags");
+    }
+    if (auto.comment) {
+      out = setField(out, "comment", auto.comment, "date");
+      updated.push("comment");
+    }
+    // title_ko: for ko songs computeAuto returns the title itself — skip that no-op
+    if (auto.titleKo && auto.titleKo !== fmValue(fm, "title")) {
+      out = setField(out, "title_ko", auto.titleKo, "title");
+      updated.push("title_ko");
+    }
+    if (needsReading(artist) && auto.artistKo) {
+      out = setField(out, "artist_ko", auto.artistKo, "artist");
+      updated.push("artist_ko");
+    }
+    if (!updated.length) return Response.json({ updated: [] });
+    await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
+    return Response.json({ updated });
   }
 
   // Regenerate ONLY the comment (음슴체), leaving lyrics and other fields intact.
@@ -524,7 +581,7 @@ async function handle(req) {
   }
 
   if (action === "save") {
-    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration } = body;
+    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre } = body;
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -536,6 +593,7 @@ artist: ${artist}
 artist_ko: ${artistKo || ""}
 album: ${album || ""}
 year: ${year || ""}
+genre: ${genre || ""}
 artwork: ${artwork || ""}
 preview: ${preview || ""}
 trackId: ${trackId || ""}

@@ -5,6 +5,7 @@ artist: Lareine
 artist_ko: 라레인
 album: Lillie Charlotte within Metamorphose
 year: 2013
+genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/88/65/60/8865600e-028c-d177-a00d-1200784873b0/jacket_MHCL02399B00Z_550.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/36/86/053686f4-67e1-bb72-339c-b063b92ebc98/mzaf_11069794315643340929.plus.aac.p.m4a
 lang: ja
