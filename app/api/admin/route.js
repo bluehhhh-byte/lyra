@@ -76,16 +76,20 @@ ${lyrics}`;
   return geminiText(key, prompt);
 }
 
+// Genre tag: English, first letter capitalized (iTunes already gives "Rock",
+// "K-Pop", "R&B/Soul" — this just guarantees the leading cap).
+const capGenre = (g) => (g || "").trim().replace(/^./, (c) => c.toUpperCase());
+
 // Shared by the add flow (`autotag`) and the backfill tool.
+// Tags are country · genre · year only — no mood tags.
 async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
   // deterministic tags — always present even without Gemini
   const tags = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
+  if (genre) tags.push(capGenre(genre));
   if (year) tags.push(String(year)); // exact release year, not the decade
-  if (genre) tags.push(genre.toLowerCase().replace(/\//g, "-"));
   let titleKo = lang === "ko" ? title : "";
   let artistKo = "";
   let comment = "";
-  let moods = []; // returned separately so callers can preserve old moods when Gemini fails
 
   // one combined Gemini call (avoids free-tier rate limits from many calls)
   const key = process.env.GEMINI_API_KEY;
@@ -94,7 +98,6 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
       const raw = await geminiText(
         key,
         `노래 "${title}" (${artist})에 대해 아래 스키마의 JSON으로 답해줘.
-- moods: 가사 기반 감성/분위기 태그 2개(한국어). 예: 새벽감성, 그리움, 신나는, 위로, 애도, 설렘, 쓸쓸함
 - titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
 - artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
 - comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤
@@ -103,15 +106,12 @@ ${lyrics.slice(0, 2000)}`,
         true
       );
       const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
-      if (Array.isArray(json.moods))
-        moods = json.moods.map((m) => String(m).trim()).filter((m) => m && m.length <= 10).slice(0, 2);
-      tags.push(...moods);
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
-    } catch {} // Gemini 실패해도 국가·연도·장르 태그는 유지
+    } catch {} // Gemini 실패해도 국가·장르·연도 태그는 유지
   }
-  return { tags, moods, titleKo, artistKo, comment };
+  return { tags, titleKo, artistKo, comment };
 }
 
 const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -478,19 +478,10 @@ async function handle(req) {
     });
     let out = raw;
     const updated = [];
-    // Rebuild tags = deterministic (country/year/genre) + moods. When Gemini gave
-    // no fresh moods (rate-limited/down), keep the song's existing moods instead of
-    // wiping them. Deterministic part (esp. the exact-year migration) always applies.
-    const deterministic = auto.tags.filter((t) => !auto.moods.includes(t)); // country/year/genre
-    const curTags = fmValue(fm, "tags").replace(/^\[|\]$/g, "").split(",").map((t) => t.trim()).filter(Boolean);
-    // existing mood/custom tags = current tags minus country, year/decade, and the fresh deterministic set
-    const oldMoods = curTags.filter(
-      (t) => !deterministic.includes(t) && !/^(한국|일본|영미|기타)$/.test(t) && !/^\d{4}s?$/.test(t)
-    );
-    const moods = auto.moods.length ? auto.moods : oldMoods;
-    const newTags = [...new Set([...deterministic, ...moods])];
-    if (newTags.length) {
-      out = setField(out, "tags", `[${newTags.join(", ")}]`, "year");
+    // tags = country · genre · year only (deterministic). Overwrite fully so any
+    // legacy mood tags are dropped and the year migrates from decade to exact.
+    if (auto.tags.length) {
+      out = setField(out, "tags", `[${auto.tags.join(", ")}]`, "year");
       updated.push("tags");
     }
     if (auto.comment) {

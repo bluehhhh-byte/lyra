@@ -73,6 +73,7 @@ export default function AdminForm() {
   // country + decade — deterministic, always present even if Gemini is unavailable
   const baseTags = (c, lg) => {
     const t = [{ ko: "한국", ja: "일본", en: "영미" }[lg] || "기타"];
+    if (c?.genre) t.push(c.genre.trim().replace(/^./, (x) => x.toUpperCase())); // English, cap first
     if (c?.year) t.push(String(c.year)); // exact release year, not the decade
     return t;
   };
@@ -279,7 +280,7 @@ export default function AdminForm() {
           <div className="mt-2 space-y-2">
             <input className={input} placeholder="한글 제목 (예: 예스터데이)" value={titleKo} onChange={(e) => setTitleKo(e.target.value)} />
             <input className={input} placeholder="가수 한글 독음 (일본 아티스트만, 예: 요네즈 켄시)" value={artistKo} onChange={(e) => setArtistKo(e.target.value)} />
-            <input className={input} placeholder="태그 (쉼표 구분: 영미, 2010s, rock, 새벽감성)" value={tags} onChange={(e) => setTags(e.target.value)} />
+            <input className={input} placeholder="태그 (국적·장르·년도, 예: 영미, Rock, 2018)" value={tags} onChange={(e) => setTags(e.target.value)} />
             <textarea className={input + " h-20"} placeholder="곡 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />
           </div>
           <button className={btn + " mt-3"} disabled={busy} onClick={save}>
