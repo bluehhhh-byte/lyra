@@ -8,7 +8,7 @@ genre: Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/3e/25/d03e255d-e205-0e66-20f6-01e251896c25/14UMGIM27076.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/0b/8d/790b8d2f-dae6-9380-87ec-6acd52806e49/mzaf_4263648516794463383.plus.aac.p.m4a
 lang: en
-tags: [영미, 2002, pop, 쓸쓸함, 지침]
+tags: [영미, Pop, 2002]
 date: 2026-07-07
 comment: 떠나고 돌아오기를 반복하는 지친 관계 속에서 느끼는 고통과 공허함이 담긴 곡임. 애덤 리바인이 실제 이별 경험을 바탕으로 썼다고 밝혀 곡의 절절함이 더 와닿음.
 ---
