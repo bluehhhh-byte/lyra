@@ -1,6 +1,6 @@
 ---
 title: The Ivy
-title_ko: 담쟁이
+title_ko: 담쟁이덩굴
 artist: the HIATUS
 artist_ko: 
 album: ANOMALY
@@ -11,9 +11,9 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/
 trackId: 647064803
 duration: 249
 lang: en
-tags: [영미, 2010, rock, 쓸쓸함, 내적 치유]
+tags: [영미, Rock, 2010]
 date: 2026-07-09
-comment: 이 곡은 과거의 상처와 배신감 속에서도 내면의 힘을 통해 스스로를 구원하려는 의지를 담고 있다. 담쟁이처럼 굳건히 버티며 자신 안에서 치유를 찾아가는 과정을 담담히 그려낸다.
+comment: 이 곡은 한 사람에게서 받은 고통과 구원의 감정을 복합적으로 다룬다. 상대방이 남긴 상처에도 불구하고 '붙잡고 있으라'는 말에 죄를 뱉어내고 고통을 덜어내며 내면의 세계를 지키려는 노력을 그린다.
 ---
 Keep holding on
 > 계속 버텨 줘
