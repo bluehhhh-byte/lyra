@@ -9,7 +9,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/
 lang: en
 tags: [영미, 2000s, 월드 뮤직]
 date: 2026-07-07
-comment: 
+comment: 이 곡은 정체되고 답답한 현실에서 벗어나고자 하는 강렬한 의지와 탈출의 절박함을 담고 있다. '더 이상 버틸 수 없어 떠나야 한다'는 가사는 반복되는 비트와 맞물려 듣는 이에게도 시원한 해방감을 안겨준다.
 ---
 No bright lights
 > 화려한 불빛도
