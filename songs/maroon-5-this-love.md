@@ -9,7 +9,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/
 lang: en
 tags: [영미, 2000s]
 date: 2026-07-07
-comment: 
+comment: 이 곡은 반복되는 이별과 재회를 통해 지쳐가는 격정적인 관계의 아픔과 혼란을 담고 있습니다. 애덤 리바인은 과거 연인과의 파란만장했던 관계에서 영감을 받았다고 언급한 바 있습니다.
 ---
 [Verse 1]
 I was so high, I did not recognize
