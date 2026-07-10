@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/99/
 lang: en
 tags: [영미, Hard Rock, 1993]
 date: 2026-07-07
-comment: 곡 제목의 의도적인 오타와 솔직한 가사는 젊은 시절의 복잡하고 감상적인 투쟁을 완벽하게 담아낸다. '언젠가 할 수 있다면 그렇게 할 것이다'라는 반복되는 구절에서 상실감 속에서도 자신을 찾아가려는 진실한 노력이 느껴진다.
+comment: 이 곡은 빌리 코건의 깊은 내면의 고통과 자아를 찾아 헤매는 갈망을 담은 자전적인 고백이다. 힘든 삶 속에서도 '내가 할 수 있을 때, 나는 할 것이다'라며 포기하지 않는 그의 의지가 오롯이 느껴진다.
 ---
 Fool enough to almost be it
 > 너무 바보 같아 거의 그렇게 될 뻔했지
