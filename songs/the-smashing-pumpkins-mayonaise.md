@@ -1,6 +1,6 @@
 ---
 title: Mayonaise
-title_ko: 마요네즈
+title_ko: 메이요네즈
 artist: The Smashing Pumpkins
 artist_ko: 
 album: Siamese Dream
@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/99/
 lang: en
 tags: [영미, Hard Rock, 1993]
 date: 2026-07-07
-comment: 이 곡은 세상과의 불화와 내면의 고뇌 속에서 진정한 자신을 찾으려는 갈망을 노래합니다. 제목 'Mayonaise'는 무작위로 붙여진 것으로 알려져 있는데, 이는 삶의 고통과 혼란이 때로는 특별한 의미 없이 찾아온다는 비극적 감성을 더욱 강조합니다.
+comment: 곡 제목의 의도적인 오타와 솔직한 가사는 젊은 시절의 복잡하고 감상적인 투쟁을 완벽하게 담아낸다. '언젠가 할 수 있다면 그렇게 할 것이다'라는 반복되는 구절에서 상실감 속에서도 자신을 찾아가려는 진실한 노력이 느껴진다.
 ---
 Fool enough to almost be it
 > 너무 바보 같아 거의 그렇게 될 뻔했지
