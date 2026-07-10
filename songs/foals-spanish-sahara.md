@@ -9,7 +9,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/
 lang: en
 tags: [영미, 2010]
 date: 2026-07-07
-comment: 이 곡은 '스패니시 사하라'라는 상징적 공간에서 잊고 싶은 고통스러운 기억과 상실감을 애써 떨쳐내려는 간절한 염원을 담고 있습니다. '퓨리'나 '유령'처럼 반복되는 내면의 갈등 묘사가 인상적입니다.
+comment: Foals의 'Spanish Sahara'는 프론트맨의 상실 경험을 바탕으로, 실제 스페인 사하라처럼 황량한 내면에서 잊고 싶은 고통과 기억 사이를 헤매는 심정을 담담하게 그려낸다.
 ---
 So, I walked into the haze
 > 그래서, 난 아지랑이 속으로 걸어 들어갔지
