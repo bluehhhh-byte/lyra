@@ -1,6 +1,6 @@
 ---
 title: アクロの丘
-title_ko: アクロの丘
+title_ko: 아크로의 언덕
 artist: DIR EN GREY
 album: VESTIGE OF SCRATCHES
 year: 2018
@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/
 lang: ja
 tags: [일본, Metal, 2018]
 date: 2026-07-07
-comment: 이 곡은 잃어버린 사랑에 대한 깊은 그리움과 슬픔을 담고 있습니다. '아크로의 언덕'은 더 이상 닿을 수 없는 과거와 다시는 피어날 수 없는 꽃처럼 애틋한 재회를 갈망하는 화자의 마음을 상징하는 공간으로, 비극적인 상실감과 영원한 꿈속에서의 재회를 노래합니다.
+comment: 이 곡은 잃어버린 사랑에 대한 깊은 슬픔과 회한을 아름답게 그려낸다. '아크로의 언덕'이라는 상징적인 공간에서 영원한 재회를 꿈꾸는 화자의 애절한 마음이 담겨 있다.
 ---
 あの場所で出逢ったね 今ではもう 何も出来ないけれど
 + 아노 바쇼데 데앗타네 이마데와 모- 나니모 데키나이케레도
