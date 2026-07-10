@@ -1,8 +1,8 @@
 ---
 title: Dogs
-title_ko: 개들
+title_ko: 독스
 artist: 羊文学
-artist_ko: 히츠지분가쿠
+artist_ko: 양문학
 album: Dogs - Single
 year: 2026
 genre: Rock
@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/
 lang: ja
 tags: [일본, Rock, 2026]
 date: 2026-07-09
-comment: 이 곡은 태양 없는 도시에서 삶의 이유를 묻고, 절망 속에서도 날카로운 이빨로 삶을 씹어 먹으라는 강렬한 메시지를 던짐. 무기력함 속에서 외치는 생존 의지가 인상 깊게 다가옴.
+comment: 이 곡은 '태양 없는 도시'에서 존재의 이유를 찾아 절규하는 허무함과 삶의 정체 상태를 노래한다. 무기력함 속에서도 '어차피 개라면 이빨로 삶을 갉아먹으라'는 메시지처럼, 비루한 현실을 받아들이고 악착같이 살아가려는 다짐이 역설적으로 나타난다.
 ---
 やっと気づいた
 + 얏토 키즈이타

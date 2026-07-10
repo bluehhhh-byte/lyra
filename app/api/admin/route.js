@@ -77,8 +77,14 @@ ${lyrics}`;
 }
 
 // Genre tag: English, first letter capitalized (iTunes already gives "Rock",
-// "K-Pop", "R&B/Soul" — this just guarantees the leading cap).
-const capGenre = (g) => (g || "").trim().replace(/^./, (c) => c.toUpperCase());
+// "K-Pop", "R&B/Soul" — this just guarantees the leading cap). iTunes splits a
+// few genres out as siblings of Rock even though they're really Rock subgenres —
+// fold those back in so the tag reads as the parent genre.
+const GENRE_ALIAS = { alternative: "Rock", "alternative rock": "Rock", "indie rock": "Rock" };
+const capGenre = (g) => {
+  const t = (g || "").trim();
+  return GENRE_ALIAS[t.toLowerCase()] || t.replace(/^./, (c) => c.toUpperCase());
+};
 
 // Shared by the add flow (`autotag`) and the backfill tool.
 // Tags are country · genre · year only — no mood tags.

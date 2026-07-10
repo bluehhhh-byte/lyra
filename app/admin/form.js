@@ -70,10 +70,17 @@ export default function AdminForm() {
   const [titleKo, setTitleKo] = useState("");
   const [artistKo, setArtistKo] = useState("");
 
-  // country + decade — deterministic, always present even if Gemini is unavailable
+  // country + decade — deterministic, always present even if Gemini is unavailable.
+  // iTunes splits a few genres out as siblings of Rock even though they're really
+  // Rock subgenres — fold those back in so the tag reads as the parent genre.
+  const GENRE_ALIAS = { alternative: "Rock", "alternative rock": "Rock", "indie rock": "Rock" };
+  const capGenre = (g) => {
+    const t = g.trim();
+    return GENRE_ALIAS[t.toLowerCase()] || t.replace(/^./, (x) => x.toUpperCase());
+  };
   const baseTags = (c, lg) => {
     const t = [{ ko: "한국", ja: "일본", en: "영미" }[lg] || "기타"];
-    if (c?.genre) t.push(c.genre.trim().replace(/^./, (x) => x.toUpperCase())); // English, cap first
+    if (c?.genre) t.push(capGenre(c.genre));
     if (c?.year) t.push(String(c.year)); // exact release year, not the decade
     return t;
   };

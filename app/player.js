@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Scope from "./scope";
 
@@ -10,12 +10,51 @@ const PlayerCtx = createContext({ track: null, setTrack: () => {} });
 
 export const usePlayer = () => useContext(PlayerCtx);
 
+// Native <audio controls> renders the OS's own play button, which clashes with
+// any custom prev/next buttons sitting next to it — that mismatch is the "촌스러움"
+// being fixed here. So controls are fully custom: same icon-button family for
+// prev/play/next, sized so play reads as the primary action.
+function Icon({ d, size = 16 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d={d} />
+    </svg>
+  );
+}
+const ICONS = {
+  play: "M7 4l14 8-14 8z",
+  pause: "M6 4h4v16H6zM14 4h4v16h-4z",
+  prev: "M6 5h2v14H6zM20 5v14l-11-7z",
+  next: "M16 5h2v14h-2zM4 5l11 7-11 7z",
+  close: "M6.4 4.9L12 10.5l5.6-5.6 1.4 1.4L13.4 12l5.6 5.6-1.4 1.4L12 13.4l-5.6 5.6-1.4-1.4L10.6 12 5 6.4z",
+};
+
+function CircleButton({ icon, label, onClick, primary, size = 16 }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={label}
+      className={
+        primary
+          ? "flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-bg transition hover:opacity-90 active:scale-95"
+          : "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-muted transition hover:border-accent hover:text-accent active:scale-95"
+      }
+    >
+      <Icon d={ICONS[icon]} size={size} />
+    </button>
+  );
+}
+
 export default function PlayerProvider({ playlist = [], children }) {
   const [track, setTrack] = useState(null); // one of `playlist`, or null
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0); // 0..1
   const audioRef = useRef(null);
+  const barRef = useRef(null);
   const router = useRouter();
 
   const index = track ? playlist.findIndex((s) => s.slug === track.slug) : -1;
+  const hasNeighbors = index >= 0 && playlist.length > 1;
 
   // step to another track and follow it to its page, so the lyrics on screen
   // match what's playing. Playback continues across the client-side navigation.
@@ -26,57 +65,77 @@ export default function PlayerProvider({ playlist = [], children }) {
     router.push(`/songs/${next.slug}`);
   };
 
+  useEffect(() => {
+    setProgress(0);
+  }, [track?.preview]);
+
+  const seek = (clientX) => {
+    const el = barRef.current;
+    const audio = audioRef.current;
+    if (!el || !audio?.duration) return;
+    const rect = el.getBoundingClientRect();
+    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    audio.currentTime = ratio * audio.duration;
+  };
+
   return (
     <PlayerCtx.Provider value={{ track, setTrack }}>
       {children}
       {track && (
         <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 backdrop-blur">
+          {/* thin, clickable progress line spanning the whole bar — doubles as a seek control */}
+          <div
+            ref={barRef}
+            onClick={(e) => seek(e.clientX)}
+            className="absolute inset-x-0 top-0 h-3 -translate-y-1/2 cursor-pointer"
+          >
+            <div className="mt-1 h-[3px] bg-line">
+              <div
+                className="h-full bg-accent"
+                style={{ width: `${progress * 100}%`, transition: "width 150ms linear" }}
+              />
+            </div>
+          </div>
+
           <div className="mx-auto flex max-w-5xl items-center gap-2 px-5 py-3 sm:gap-3">
-            <img src={track.artwork} alt="" className="h-11 w-11 rounded" />
+            <img src={track.artwork} alt="" className="h-11 w-11 shrink-0 rounded" />
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{track.title}</p>
               <p className="truncate text-xs text-muted">{track.artist} · 미리듣기 30초</p>
             </div>
 
-            {index >= 0 && playlist.length > 1 && (
-              <button
-                onClick={() => go(-1)}
-                aria-label="이전 곡"
-                className="px-1 text-muted hover:text-accent"
-              >
-                ⏮
-              </button>
-            )}
+            <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+              {hasNeighbors && <CircleButton icon="prev" label="이전 곡" onClick={() => go(-1)} />}
+              <CircleButton
+                icon={playing ? "pause" : "play"}
+                label={playing ? "일시정지" : "재생"}
+                primary
+                size={18}
+                onClick={() => (playing ? audioRef.current?.pause() : audioRef.current?.play())}
+              />
+              {hasNeighbors && <CircleButton icon="next" label="다음 곡" onClick={() => go(1)} />}
+            </div>
 
             <Scope key={`scope-${track.preview}`} audioRef={audioRef} />
+
             {/* remount on src change so the new preview autoplays; on end, advance */}
             <audio
               key={track.preview}
               ref={audioRef}
               src={track.preview}
               crossOrigin="anonymous"
-              controls
               autoPlay
-              onEnded={() => (index >= 0 && playlist.length > 1 ? go(1) : setTrack(null))}
-              className="h-9 w-32 sm:w-64"
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+              onTimeUpdate={(e) => {
+                const a = e.currentTarget;
+                if (a.duration) setProgress(a.currentTime / a.duration);
+              }}
+              onEnded={() => (hasNeighbors ? go(1) : setTrack(null))}
+              className="hidden"
             />
 
-            {index >= 0 && playlist.length > 1 && (
-              <button
-                onClick={() => go(1)}
-                aria-label="다음 곡"
-                className="px-1 text-muted hover:text-accent"
-              >
-                ⏭
-              </button>
-            )}
-            <button
-              onClick={() => setTrack(null)}
-              aria-label="플레이어 닫기"
-              className="px-1 text-muted hover:text-accent"
-            >
-              ✕
-            </button>
+            <CircleButton icon="close" label="플레이어 닫기" onClick={() => setTrack(null)} />
           </div>
         </div>
       )}

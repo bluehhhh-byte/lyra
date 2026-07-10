@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/
 lang: en
 tags: [영미, Pop, 2002]
 date: 2026-07-07
-comment: 떠나고 돌아오기를 반복하는 지친 관계 속에서 느끼는 고통과 공허함이 담긴 곡임. 애덤 리바인이 실제 이별 경험을 바탕으로 썼다고 밝혀 곡의 절절함이 더 와닿음.
+comment: 이 곡은 애덤 리바인과 당시 여자친구와의 관계가 파탄 난 경험을 바탕으로 쓰였다고 한다. 끊임없이 상처 주고받는 위태로운 사랑의 역설적인 감정을 솔직하게 담아내고 있다.
 ---
 [Verse 1]
 I was so high, I did not recognize
