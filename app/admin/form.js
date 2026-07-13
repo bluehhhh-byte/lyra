@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { usePlayer } from "../player";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -24,11 +25,22 @@ const input =
 const btn =
   "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40";
 
-// kana settles Japanese; hangul settles Korean. Kanji alone is ambiguous, so kana wins.
-const detectLang = (text) =>
-  /[぀-ヿ]/.test(text) ? "ja" : /[가-힣]/.test(text) ? "ko" : "en";
+// Dominant script wins — one Japanese bridge in a Korean song must not flip the
+// whole song to `ja`. This only drives the country tag and the hero display;
+// translation itself is line-aware server-side. Kanji alone is ambiguous, so
+// only kana counts toward Japanese; ties keep the ja > ko > en priority.
+const detectLang = (text) => {
+  const n = (re) => (text.match(re) || []).length;
+  const ko = n(/[가-힣]/g);
+  const ja = n(/[぀-ヿ]/g);
+  const en = n(/[a-z]/gi);
+  if (ja && ja >= ko && ja >= en) return "ja";
+  if (ko && ko >= en) return "ko";
+  return "en";
+};
 
 export default function AdminForm() {
+  const { track, setTrack } = usePlayer(); // 검색 결과 미리듣기 — 전역 플레이어 재사용
   const [query, setQuery] = useState("");
   const [candidates, setCandidates] = useState([]);
   const [more, setMore] = useState(null); // {hasMore, nextOffset}
@@ -166,22 +178,45 @@ export default function AdminForm() {
         )}
         {candidates.length > 0 && (
           <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto rounded-lg border border-line">
-            {candidates.map((c, i) => (
-              <li key={i}>
-                <button
-                  onClick={() => pick(c)}
-                  className={`flex w-full items-center gap-3 px-3 py-2 text-left text-sm hover:bg-surface ${
-                    song === c ? "bg-surface text-accent" : ""
-                  }`}
-                >
-                  <img src={c.thumb} alt="" className="h-10 w-10 rounded" />
-                  <span>
-                    <span className="font-medium">{c.title}</span>
-                    <span className="text-muted"> — {c.artist} · {c.album}</span>
-                  </span>
-                </button>
-              </li>
-            ))}
+            {candidates.map((c, i) => {
+              // candidates have no slug yet — the playing row is matched by preview URL
+              const playing = !!c.preview && track?.preview === c.preview;
+              return (
+                <li key={i} className={`flex items-center ${song === c ? "bg-surface" : ""}`}>
+                  <button
+                    onClick={() => pick(c)}
+                    className={`flex min-w-0 flex-1 items-center gap-3 px-3 py-2 text-left text-sm hover:bg-surface ${
+                      song === c ? "text-accent" : ""
+                    }`}
+                  >
+                    <img src={c.thumb} alt="" className="h-10 w-10 rounded" />
+                    <span className="min-w-0">
+                      <span className="font-medium">{c.title}</span>
+                      <span className="text-muted"> — {c.artist} · {c.album}</span>
+                    </span>
+                  </button>
+                  {c.preview && (
+                    <button
+                      onClick={() =>
+                        setTrack(
+                          playing
+                            ? null
+                            : { slug: "", title: c.title, artist: c.artist, artwork: c.artwork || c.thumb, preview: c.preview }
+                        )
+                      }
+                      aria-label={playing ? "정지" : "미리듣기"}
+                      className={`mx-2 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs transition ${
+                        playing
+                          ? "border-accent bg-accent text-bg"
+                          : "border-line text-muted hover:border-accent hover:text-accent"
+                      }`}
+                    >
+                      {playing ? "■" : "▶"}
+                    </button>
+                  )}
+                </li>
+              );
+            })}
             {more?.hasMore && (
               <li>
                 <button
@@ -200,7 +235,7 @@ export default function AdminForm() {
       {/* 2. lyrics + translate */}
       {song && (
         <section>
-          <Step n="2" label={lang === "ko" ? "가사 확인" : "가사 확인 → Gemini 번역"} />
+          <Step n="2" label="가사 확인 → Gemini 번역" />
           <div className="mb-2 flex items-center gap-2 text-xs text-muted">
             <span>가사 언어 (자동 감지, 틀리면 바꾸세요)</span>
             <select
@@ -238,27 +273,19 @@ export default function AdminForm() {
             onChange={(e) => setLyrics(e.target.value)}
           />
           <div className="mt-2 flex flex-wrap gap-2">
-            {lang === "ko" ? (
-              <>
-                {/[a-zA-Z]/.test(lyrics) && (
-                  <button className={btn} disabled={!lyrics.trim() || busy} onClick={translate}>
-                    {busy === "translate" ? "번역 중…" : "영어 부분 번역"}
-                  </button>
-                )}
-                <button
-                  className={/[a-zA-Z]/.test(lyrics) ? "rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40" : btn}
-                  disabled={!lyrics.trim() || busy}
-                  onClick={() => {
-                    setTranslated(lyrics);
-                    autotag(song, lyrics);
-                  }}
-                >
-                  이대로 사용 (번역 없음)
-                </button>
-              </>
-            ) : (
-              <button className={btn} disabled={!lyrics.trim() || busy} onClick={translate}>
-                {busy === "translate" ? "번역 중…" : "Gemini 번역 생성"}
+            <button className={btn} disabled={!lyrics.trim() || busy} onClick={translate}>
+              {busy === "translate" ? "번역 중…" : "Gemini 번역 생성"}
+            </button>
+            {lang === "ko" && (
+              <button
+                className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+                disabled={!lyrics.trim() || busy}
+                onClick={() => {
+                  setTranslated(lyrics);
+                  autotag(song, lyrics);
+                }}
+              >
+                이대로 사용 (번역 없음)
               </button>
             )}
             <button

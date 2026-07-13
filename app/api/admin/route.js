@@ -37,33 +37,20 @@ export const needsReading = (artist) => /[぀-ヿ㐀-鿿]/.test(artist || "");
 const commentPrompt = (title, artist, lyrics) =>
   `노래 "${title}" (${artist})에 대한 개인 음악 블로그용 코멘트를 한국어 1~2문장으로 써줘. 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹여서. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤. 코멘트 문장만 출력.\n가사:\n${(lyrics || "").slice(0, 2000)}`;
 
-// Interleaved bilingual output. Korean songs get an English "> " line per lyric
-// (matching the EN/JA two-line layout); EN/JA songs get a Korean "> " line (+ 독음 for JA).
+// Line-aware bilingual output — one song may mix Korean, English and Japanese
+// lines (K-pop verse with an English hook, a Japanese bridge). Each line is
+// annotated toward "the other side": Korean → English, English/Japanese →
+// Korean (+ 독음 for Japanese). The parser and the renderer are already
+// per-line, so a single interleaved pass covers any mix; `lang` is only a hint.
 async function translateLyrics(key, { title, artist, lang, lyrics }) {
-  const isJa = lang === "ja";
-  const isKo = lang === "ko";
-  const prompt = isKo
-    ? `You are annotating Korean song lyrics with an English translation for a bilingual lyrics blog, so Korean songs get the same two-line layout as English/Japanese ones.
-Song: "${title}" by ${artist}. The lyrics are Korean (possibly with some English).
+  const prompt = `You are annotating song lyrics for a bilingual (Korean-centered) lyrics blog. A single song may mix Korean, English and Japanese lines.
+Song: "${title}" by ${artist}. Primary language hint: ${lang || "unknown"}.
 
-Output format — for each lyric line, output:
-1. The original line as-is.
-2. "> " followed by a natural English translation of that line. If the line is already fully English, still output the "> " line repeating it in clean English.
-
-Rules:
-- Keep section headers like [Verse 1] as-is on their own line. If a header is not bracketed, wrap it in brackets.
-- Keep blank lines between stanzas.
-- Translate naturally and poetically, preserving tone. Not word-for-word.
-- Output ONLY the interleaved lyrics, no commentary, no code fences.
-
-Lyrics:
-${lyrics}`
-    : `You are translating song lyrics to Korean for a personal lyrics-analysis blog.
-Song: "${title}" by ${artist}. Source language: ${isJa ? "Japanese" : "English"}.
-
-Output format — for each lyric line, output:
-1. The original line as-is
-${isJa ? '2. "+ " followed by the Korean pronunciation reading (한글 독음) of the line\n3. "> " followed by a natural Korean translation' : '2. "> " followed by a natural Korean translation'}
+For EACH lyric line, decide the line's dominant language, then output:
+- Korean line → the line as-is, then "> " followed by a natural English translation.
+- English line → the line as-is, then "> " followed by a natural Korean translation.
+- Japanese line → the line as-is, then "+ " followed by the Korean pronunciation reading (한글 독음) of the line, then "> " followed by a natural Korean translation.
+- A line mixing languages → judge by its dominant language and translate the WHOLE line (including the foreign words) by the rule above.
 
 Rules:
 - Keep section headers like [Verse 1] or [サビ] as-is on their own line. If a header is not bracketed, wrap it in brackets.
