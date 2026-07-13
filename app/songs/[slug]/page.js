@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
+import FavButton from "./fav-button";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
@@ -120,6 +121,7 @@ export default async function SongPage({ params }) {
                 ▶ YouTube
               </a>
               <ShareButton title={song.title} artist={song.artist} />
+              <FavButton slug={song.slug} />
             </div>
           </div>
         </div>
@@ -133,7 +135,11 @@ export default async function SongPage({ params }) {
       )}
 
       {/* lyrics */}
-      <LyricsView stanzas={song.stanzas} lang={song.lang} />
+      <LyricsView
+        stanzas={song.stanzas}
+        lang={song.lang}
+        song={{ slug: song.slug, title: song.title, artist: song.artist, artwork: song.artwork }}
+      />
 
       {/* related */}
       {related.length > 0 && (

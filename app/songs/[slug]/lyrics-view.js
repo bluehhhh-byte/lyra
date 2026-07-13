@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { shareStanzaCard } from "./lyric-card";
 
 const MODES = [
   { key: "both", label: "둘 다" },
@@ -17,7 +18,7 @@ const SIZE_KEYS = ["s", "m", "l"];
 
 const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between songs
 
-export default function LyricsView({ stanzas, lang }) {
+export default function LyricsView({ stanzas, lang, song }) {
   const [mode, setMode] = useState("both");
   const [size, setSize] = useState("m");
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
@@ -120,10 +121,22 @@ export default function LyricsView({ stanzas, lang }) {
           <section
             key={i}
             id={`v${i}`}
-            className={`scroll-mt-24 rounded-lg transition-colors duration-1000 ${
+            className={`group/stanza relative scroll-mt-24 rounded-lg transition-colors duration-1000 ${
               active === i ? "bg-accent/10" : ""
             }`}
           >
+            {song && stanza.lines.length > 0 && (
+              <button
+                onClick={() => shareStanzaCard({ song, stanza })}
+                aria-label="이 구절 이미지 카드로 공유"
+                title="가사 카드 공유"
+                className="absolute -top-1 right-0 rounded p-1 text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                </svg>
+              </button>
+            )}
             {stanza.section && (
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
                 {stanza.section}

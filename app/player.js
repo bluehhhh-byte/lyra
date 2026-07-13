@@ -92,6 +92,32 @@ export default function PlayerProvider({ playlist = [], children }) {
     setProgress(0);
   }, [track?.preview]);
 
+  // Lock-screen / control-center metadata and transport controls. Re-registered
+  // per track so the handlers close over the current index/shuffle.
+  useEffect(() => {
+    if (!("mediaSession" in navigator)) return;
+    const ms = navigator.mediaSession;
+    if (!track) {
+      ms.metadata = null;
+      return;
+    }
+    ms.metadata = new MediaMetadata({
+      title: track.title,
+      artist: track.artist,
+      album: "Lyra 미리듣기",
+      artwork: [{ src: track.artwork, sizes: "600x600", type: "image/jpeg" }],
+    });
+    ms.setActionHandler("play", () => audioRef.current?.play());
+    ms.setActionHandler("pause", () => audioRef.current?.pause());
+    ms.setActionHandler("previoustrack", hasNeighbors ? () => go(-1) : null);
+    ms.setActionHandler("nexttrack", hasNeighbors ? () => go(1) : null);
+    return () => {
+      for (const a of ["play", "pause", "previoustrack", "nexttrack"])
+        ms.setActionHandler(a, null);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [track, index, shuffle]);
+
   const seek = (clientX) => {
     const el = barRef.current;
     const audio = audioRef.current;
@@ -161,7 +187,15 @@ export default function PlayerProvider({ playlist = [], children }) {
               onPause={() => setPlaying(false)}
               onTimeUpdate={(e) => {
                 const a = e.currentTarget;
-                if (a.duration) setProgress(a.currentTime / a.duration);
+                if (!a.duration) return;
+                setProgress(a.currentTime / a.duration);
+                // soften the 30s preview's hard edges: ~1.5s fade-in, ~2.5s fade-out.
+                // ponytail: timeupdate fires ~4Hz so the ramp is stepped; iOS ignores
+                // element volume entirely — both fine for a preview.
+                a.volume = Math.max(
+                  0,
+                  Math.min(1, a.currentTime / 1.5, (a.duration - a.currentTime) / 2.5)
+                );
               }}
               onEnded={() => (hasNeighbors ? go(1) : setTrack(null))}
               className="hidden"
