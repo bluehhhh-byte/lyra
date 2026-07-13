@@ -8,7 +8,7 @@ genre: Alternative
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d0/81/26/d08126cf-9119-0488-c2c5-59add3d3039b/00602517474642.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/b3/27/fbb3276c-2716-809a-340f-ad8b58863ca7/mzaf_1571540578382921890.plus.aac.p.m4a
 lang: en
-tags: [영미, Alternative, 2007]
+tags: [영미, Rock, 2007]
 date: 2026-07-07
 comment: 이 곡은 정체되고 답답한 현재의 상황이나 장소를 벗어나고자 하는 갈망을 담고 있다. 화자는 자신이 증오하는 존재가 되었는지, 혹은 자신이 된 존재를 증오하는지 자문하며 떠날 준비를 마치는 모습이다.
 ---
