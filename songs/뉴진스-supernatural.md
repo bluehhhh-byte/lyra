@@ -84,11 +84,13 @@ Don't know what we've been sold
 + 미츠케라레루요, 소 잇츠 슈어
 > 찾을 수 있을 거야, 그러니 확실해
 
+[Interlude]
+It's supernatural
+> 초자연적인 일이야
+It's supernatural
+> 초자연적인 일이야
+
 [Bridge]
-It's supernatural
-> 초자연적인 일이야
-It's supernatural
-> 초자연적인 일이야
 거짓말 안 할래, 너도 말해
 > I won't lie, you speak up too.
 Attention we should pay, to what is coming through
