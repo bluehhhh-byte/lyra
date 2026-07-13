@@ -6,7 +6,13 @@ import Scope from "./scope";
 // The <audio> element lives here, in the layout — a client-side route change
 // re-renders the page but not this provider, so a preview keeps playing while
 // you page through songs (and while auto-advance navigates to the next one).
-const PlayerCtx = createContext({ track: null, setTrack: () => {} });
+const PlayerCtx = createContext({
+  track: null,
+  setTrack: () => {},
+  playlist: [],
+  shuffle: false,
+  setShuffle: () => {},
+});
 
 export const usePlayer = () => useContext(PlayerCtx);
 
@@ -26,18 +32,25 @@ const ICONS = {
   pause: "M6 4h4v16H6zM14 4h4v16h-4z",
   prev: "M6 5h2v14H6zM20 5v14l-11-7z",
   next: "M16 5h2v14h-2zM4 5l11 7-11 7z",
+  shuffle:
+    "M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z",
   close: "M6.4 4.9L12 10.5l5.6-5.6 1.4 1.4L13.4 12l5.6 5.6-1.4 1.4L12 13.4l-5.6 5.6-1.4-1.4L10.6 12 5 6.4z",
 };
 
-function CircleButton({ icon, label, onClick, primary, size = 16 }) {
+function CircleButton({ icon, label, onClick, primary, active, size = 16 }) {
   return (
     <button
       onClick={onClick}
       aria-label={label}
+      aria-pressed={active}
       className={
         primary
           ? "flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-bg transition hover:opacity-90 active:scale-95"
-          : "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-muted transition hover:border-accent hover:text-accent active:scale-95"
+          : `flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition active:scale-95 ${
+              active
+                ? "border-accent text-accent"
+                : "border-line text-muted hover:border-accent hover:text-accent"
+            }`
       }
     >
       <Icon d={ICONS[icon]} size={size} />
@@ -48,6 +61,7 @@ function CircleButton({ icon, label, onClick, primary, size = 16 }) {
 export default function PlayerProvider({ playlist = [], children }) {
   const [track, setTrack] = useState(null); // one of `playlist`, or null
   const [playing, setPlaying] = useState(false);
+  const [shuffle, setShuffle] = useState(false); // random order for prev/next/auto-advance
   const [progress, setProgress] = useState(0); // 0..1
   const audioRef = useRef(null);
   const barRef = useRef(null);
@@ -60,7 +74,16 @@ export default function PlayerProvider({ playlist = [], children }) {
   // match what's playing. Playback continues across the client-side navigation.
   const go = (delta) => {
     if (index < 0 || playlist.length === 0) return;
-    const next = playlist[(index + delta + playlist.length) % playlist.length];
+    let next;
+    if (shuffle && playlist.length > 1) {
+      // any random track but the current one
+      let j;
+      do j = Math.floor(Math.random() * playlist.length);
+      while (j === index);
+      next = playlist[j];
+    } else {
+      next = playlist[(index + delta + playlist.length) % playlist.length];
+    }
     setTrack(next);
     router.push(`/songs/${next.slug}`);
   };
@@ -79,7 +102,7 @@ export default function PlayerProvider({ playlist = [], children }) {
   };
 
   return (
-    <PlayerCtx.Provider value={{ track, setTrack }}>
+    <PlayerCtx.Provider value={{ track, setTrack, playlist, shuffle, setShuffle }}>
       {children}
       {track && (
         <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 backdrop-blur">
@@ -105,6 +128,15 @@ export default function PlayerProvider({ playlist = [], children }) {
             </div>
 
             <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+              {hasNeighbors && (
+                <CircleButton
+                  icon="shuffle"
+                  label={shuffle ? "셔플 끄기" : "셔플 켜기"}
+                  active={shuffle}
+                  size={14}
+                  onClick={() => setShuffle((s) => !s)}
+                />
+              )}
               {hasNeighbors && <CircleButton icon="prev" label="이전 곡" onClick={() => go(-1)} />}
               <CircleButton
                 icon={playing ? "pause" : "play"}

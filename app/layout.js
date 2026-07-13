@@ -19,6 +19,8 @@ export const metadata = {
     title: "Lyra — 가사 컬렉션",
     description: "좋아하는 노래의 가사와 한글 번역을 모아두는 곳",
   },
+  // iOS ignores the manifest — it needs its own meta tags to install standalone
+  appleWebApp: { capable: true, title: "Lyra", statusBarStyle: "black" },
 };
 
 // lets the UA theme native widgets too — the player's <audio> controls,

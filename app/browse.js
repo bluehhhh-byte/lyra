@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { usePlayer } from "./player";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -17,6 +18,14 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
   const [tag, setTag] = useState(initialTag);
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
+  const { playlist, setTrack, setShuffle } = usePlayer();
+
+  // radio mode — random starting track, player keeps advancing randomly
+  const startShuffle = () => {
+    if (!playlist.length) return;
+    setShuffle(true);
+    setTrack(playlist[Math.floor(Math.random() * playlist.length)]);
+  };
 
   // Mirror the filters into the URL so a refresh or a shared link lands on the
   // same view. replaceState, not pushState — one history entry per keystroke
@@ -75,7 +84,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
           placeholder="곡·가수·가사 검색"
           className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
-        <div className="flex gap-1.5">
+        <div className="flex flex-wrap gap-1.5">
           {GROUPS.map((g) => (
             <button
               key={g.key}
@@ -89,6 +98,14 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
               {g.label}
             </button>
           ))}
+          {playlist.length > 1 && (
+            <button
+              onClick={startShuffle}
+              className="rounded-full border border-line px-3 py-1 text-xs text-muted transition hover:border-accent hover:text-accent"
+            >
+              🔀 셔플 듣기
+            </button>
+          )}
         </div>
       </div>
 

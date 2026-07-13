@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
+import ShareButton from "./share-button";
 import SongNav from "./song-nav";
 
 export function generateStaticParams() {
@@ -118,6 +119,7 @@ export default async function SongPage({ params }) {
               >
                 ▶ YouTube
               </a>
+              <ShareButton title={song.title} artist={song.artist} />
             </div>
           </div>
         </div>
