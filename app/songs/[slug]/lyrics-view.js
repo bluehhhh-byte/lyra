@@ -23,7 +23,22 @@ export default function LyricsView({ stanzas, lang, song }) {
   const [size, setSize] = useState("m");
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
-  const [cardStanza, setCardStanza] = useState(null); // stanza being made into a share card
+  const [card, setCard] = useState(null); // { lines, initial } for the share-card modal
+
+  // the card picker offers every line in the song (section labels included for
+  // orientation); the clicked stanza's first lines are just the starting selection
+  const openCard = (idx) => {
+    const lines = [];
+    let start = 0;
+    stanzas.forEach((st, k) => {
+      if (k === idx) start = lines.length;
+      st.lines.forEach((l, j) =>
+        lines.push({ en: l.en, ko: l.ko, section: j === 0 ? st.section : "" })
+      );
+    });
+    const count = Math.min(4, stanzas[idx].lines.length);
+    setCard({ lines, initial: Array.from({ length: count }, (_, i) => start + i) });
+  };
 
   // restore prefs after mount — reading localStorage during render breaks hydration
   useEffect(() => {
@@ -152,7 +167,7 @@ export default function LyricsView({ stanzas, lang, song }) {
           >
             {song && stanza.lines.length > 0 && (
               <button
-                onClick={() => setCardStanza(stanza)}
+                onClick={() => openCard(i)}
                 aria-label="이 구절 이미지 카드로 공유"
                 title="가사 카드 공유"
                 className="absolute -top-1 right-0 rounded p-1 text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
@@ -210,8 +225,8 @@ export default function LyricsView({ stanzas, lang, song }) {
         ))}
       </div>
 
-      {cardStanza && (
-        <CardModal song={song} stanza={cardStanza} onClose={() => setCardStanza(null)} />
+      {card && (
+        <CardModal song={song} lines={card.lines} initial={card.initial} onClose={() => setCard(null)} />
       )}
     </div>
   );

@@ -75,20 +75,38 @@ function dominantColor(img) {
   return best;
 }
 
-async function drawCard({ song, lines }) {
+// mix a color toward white (w>0) or black (w<0) — for the gradient's two ends
+const mix = (c, w) => {
+  const t = w > 0 ? 255 : 0;
+  const f = Math.abs(w);
+  return `rgb(${(c.r + (t - c.r) * f) | 0},${(c.g + (t - c.g) * f) | 0},${(c.b + (t - c.b) * f) | 0})`;
+};
+
+async function drawCard({ song, lines, gradSpec }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // background — one flat color pulled from the artwork; plain dark fallback
+  // background — the artwork's dominant color, as a subtle gradient whose
+  // form (linear angle or radial center) is random per modal open
   let art = null;
   let bg = { r: 13, g: 13, b: 15 };
   try {
     art = await loadImage(song.artwork);
     bg = dominantColor(art) || bg;
   } catch {}
-  ctx.fillStyle = `rgb(${bg.r | 0},${bg.g | 0},${bg.b | 0})`;
+  const g = gradSpec || { linear: true, a: 0.9, x: 0.5, y: 0.3 };
+  const R = Math.hypot(W, H) / 2;
+  const grad = g.linear
+    ? ctx.createLinearGradient(
+        W / 2 - Math.cos(g.a) * R, H / 2 - Math.sin(g.a) * R,
+        W / 2 + Math.cos(g.a) * R, H / 2 + Math.sin(g.a) * R
+      )
+    : ctx.createRadialGradient(g.x * W, g.y * H, 0, g.x * W, g.y * H, R * 2);
+  grad.addColorStop(0, mix(bg, 0.14)); // gently lit end
+  grad.addColorStop(1, mix(bg, -0.18)); // gently shaded end
+  ctx.fillStyle = grad;
   ctx.fillRect(0, 0, W, H);
 
   // ink flips with the background's perceived brightness
@@ -171,17 +189,27 @@ async function shareBlob(blob, song) {
   URL.revokeObjectURL(url);
 }
 
-export default function CardModal({ song, stanza, onClose }) {
-  const [sel, setSel] = useState(() => new Set(stanza.lines.slice(0, 4).map((_, i) => i)));
+// `lines` is every line of the song (flattened; section set on stanza-opening
+// lines), so the picker can mix lines from anywhere. `initial` seeds the
+// selection with the stanza that was clicked.
+export default function CardModal({ song, lines: allLines, initial, onClose }) {
+  const [sel, setSel] = useState(() => new Set(initial));
   const [url, setUrl] = useState(null);
   const blobRef = useRef(null);
+  // one random gradient form per modal open — stable across line toggles
+  const [gradSpec] = useState(() => ({
+    linear: Math.random() < 0.5,
+    a: Math.random() * Math.PI * 2,
+    x: 0.15 + Math.random() * 0.7,
+    y: 0.15 + Math.random() * 0.7,
+  }));
 
   // re-render the preview whenever the selection changes
   useEffect(() => {
     let alive = true;
-    const lines = stanza.lines.filter((_, i) => sel.has(i));
+    const lines = allLines.filter((_, i) => sel.has(i));
     if (!lines.length) return;
-    drawCard({ song, lines }).then((blob) => {
+    drawCard({ song, lines, gradSpec }).then((blob) => {
       if (!alive || !blob) return;
       blobRef.current = blob;
       setUrl((old) => {
@@ -192,7 +220,7 @@ export default function CardModal({ song, stanza, onClose }) {
     return () => {
       alive = false;
     };
-  }, [sel, song, stanza]);
+  }, [sel, song, allLines]);
 
   useEffect(() => () => url && URL.revokeObjectURL(url), [url]);
 
@@ -223,10 +251,17 @@ export default function CardModal({ song, stanza, onClose }) {
           </div>
         )}
 
-        <p className="mb-1 mt-3 text-xs text-muted">포함할 줄 (최대 {MAX_PAIRS})</p>
-        <ul className="max-h-36 space-y-1 overflow-y-auto">
-          {stanza.lines.map((l, i) => (
+        <p className="mb-1 mt-3 text-xs text-muted">
+          포함할 줄 (최대 {MAX_PAIRS}) — 전체 가사에서 자유롭게
+        </p>
+        <ul className="max-h-48 space-y-1 overflow-y-auto">
+          {allLines.map((l, i) => (
             <li key={i}>
+              {l.section && (
+                <p className="mb-0.5 mt-2 text-[10px] font-semibold uppercase tracking-widest text-accent/70">
+                  {l.section}
+                </p>
+              )}
               <label className="flex cursor-pointer items-baseline gap-2 text-xs">
                 <input
                   type="checkbox"
