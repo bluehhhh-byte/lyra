@@ -10,9 +10,6 @@ import { getAllSongs } from "../lib/songs";
 // Dark is the default — anything but a stored "light" resolves to it.
 const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)})==="light"?"light":"dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}`;
 
-// offline support — skipped on localhost so dev never fights a stale cache
-const SW = `if("serviceWorker"in navigator&&location.hostname!=="localhost")navigator.serviceWorker.register("/sw.js").catch(function(){})`;
-
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Lyra — 가사 컬렉션",
@@ -48,7 +45,6 @@ export default function RootLayout({ children }) {
     <html lang="ko" suppressHydrationWarning>
       <body className="font-sans min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
-        <script dangerouslySetInnerHTML={{ __html: SW }} />
         <PlayerProvider playlist={playlist}>
         <header className="mx-auto flex max-w-5xl items-baseline justify-between px-5 py-8">
           <Link href="/" className="text-lg font-bold tracking-tight">

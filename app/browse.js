@@ -2,7 +2,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePlayer } from "./player";
-import { readFavs } from "../lib/favs";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -14,48 +13,12 @@ const GROUPS = [
 
 const RANDOM_PICKS = 6;
 
-// Deterministic daily pick — same quote for everyone all day, no reroll on
-// re-render. Client-only (date depends on the visitor's timezone).
-function DailyQuote({ quotes }) {
-  const [quote, setQuote] = useState(null);
-  useEffect(() => {
-    if (!quotes?.length) return;
-    const d = new Date();
-    const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-    setQuote(quotes[seed % quotes.length]);
-  }, [quotes]);
-  if (!quote) return null;
-  return (
-    <Link
-      href={`/songs/${quote.slug}`}
-      className="mb-8 block rounded-xl border border-line bg-surface px-5 py-4 transition hover:border-accent"
-    >
-      <p className="mb-2 text-xs font-semibold text-accent">오늘의 가사</p>
-      {quote.lines.map((l, i) => (
-        <div key={i}>
-          <p className="font-serif text-sm leading-relaxed">{l.en}</p>
-          {l.ko && <p className="text-xs leading-relaxed text-muted">{l.ko}</p>}
-        </div>
-      ))}
-      <p className="mt-2 text-xs text-muted">
-        {quote.title} — {quote.artist} →
-      </p>
-    </Link>
-  );
-}
-
-export default function Browse({ songs, quotes = [], initialTag = "", initialQ = "", initialGroup = "none" }) {
+export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none" }) {
   const [q, setQ] = useState(initialQ);
   const [tag, setTag] = useState(initialTag);
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
   const { playlist, setTrack, setShuffle } = usePlayer();
-  const [favs, setFavs] = useState(null); // Set after mount (localStorage is client-only)
-  const [favOnly, setFavOnly] = useState(false);
-
-  useEffect(() => {
-    setFavs(readFavs());
-  }, []);
 
   // radio mode — random starting track, player keeps advancing randomly
   const startShuffle = () => {
@@ -81,12 +44,9 @@ export default function Browse({ songs, quotes = [], initialTag = "", initialQ =
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return songs.filter(
-      (s) =>
-        (!tag || s.tags.includes(tag)) &&
-        (!needle || s.search.includes(needle)) &&
-        (!favOnly || favs?.has(s.slug))
+      (s) => (!tag || s.tags.includes(tag)) && (!needle || s.search.includes(needle))
     );
-  }, [q, tag, songs, favOnly, favs]);
+  }, [q, tag, songs]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -117,8 +77,6 @@ export default function Browse({ songs, quotes = [], initialTag = "", initialQ =
 
   return (
     <>
-      {/* only on the untouched home view — it yields to any active search/filter */}
-      {!q && !tag && group === "none" && !favOnly && <DailyQuote quotes={quotes} />}
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <input
           value={q}
@@ -148,22 +106,6 @@ export default function Browse({ songs, quotes = [], initialTag = "", initialQ =
               🔀 셔플 듣기
             </button>
           )}
-          {favs?.size > 0 && (
-            <button
-              onClick={() => {
-                setFavs(readFavs()); // re-read — hearts may have changed on song pages
-                setFavOnly((v) => !v);
-              }}
-              aria-pressed={favOnly}
-              className={`rounded-full border px-3 py-1 text-xs transition ${
-                favOnly
-                  ? "border-accent bg-accent font-semibold text-bg"
-                  : "border-line text-muted hover:text-ink"
-              }`}
-            >
-              ♥ 즐겨찾기
-            </button>
-          )}
         </div>
       </div>
 
@@ -185,9 +127,7 @@ export default function Browse({ songs, quotes = [], initialTag = "", initialQ =
             ? "아직 곡이 없습니다."
             : q
               ? `"${q}" 검색 결과 없음`
-              : favOnly
-                ? "조건에 맞는 즐겨찾기 곡 없음"
-                : `'${tag}' 태그 곡 없음`}
+              : `'${tag}' 태그 곡 없음`}
         </p>
       )}
 

@@ -7,27 +7,9 @@ const COUNTRY_TAGS = ["한국", "일본", "영미", "기타"];
 // fallback for songs saved before country tags existed
 const countryOf = (s) => s.tags.find((t) => COUNTRY_TAGS.includes(t)) || COUNTRY[s.lang] || "기타";
 
-// one pull-quote per song for the "오늘의 가사" card — a noted stanza first
-// (the owner marked it as meaningful), else the first short translated stanza
-function quoteOf(s) {
-  const cands = s.stanzas.filter(
-    (st) => st.lines.length > 0 && st.lines.length <= 4 && st.lines.some((l) => l.ko)
-  );
-  const st = cands.find((c) => c.note) || cands[0];
-  if (!st) return null;
-  return {
-    slug: s.slug,
-    title: s.title,
-    artist: s.artist,
-    lines: st.lines.slice(0, 2).map((l) => ({ en: l.en, ko: l.ko })),
-  };
-}
-
 export default async function Home({ searchParams }) {
   const { tag, q, group } = (await searchParams) || {};
-  const all = getAllSongs();
-  const quotes = all.map(quoteOf).filter(Boolean);
-  const songs = all.map((s) => ({
+  const songs = getAllSongs().map((s) => ({
     slug: s.slug,
     title: s.title,
     title_ko: s.title_ko || "",
@@ -55,13 +37,5 @@ export default async function Home({ searchParams }) {
       .toLowerCase(),
   }));
 
-  return (
-    <Browse
-      songs={songs}
-      quotes={quotes}
-      initialTag={tag || ""}
-      initialQ={q || ""}
-      initialGroup={group || "none"}
-    />
-  );
+  return <Browse songs={songs} initialTag={tag || ""} initialQ={q || ""} initialGroup={group || "none"} />;
 }
