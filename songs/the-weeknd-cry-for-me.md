@@ -15,6 +15,7 @@ tags: [영미, R&B/Soul, 2025]
 date: 2026-07-12
 comment: 이 곡은 헤어진 연인이 자신만큼 슬퍼하기를 바라는 간절한 마음을 담고 있다. 관계의 끝에서 느끼는 고통과 외로움, 그리고 남아있는 미련이 절절하게 드러나는 곡이다.
 ---
+[Intro]
 Ooh, yeah
 > Ooh, yeah
 Ooh, yeah
@@ -108,7 +109,7 @@ Girl, I'll cry for you
 Girl, I'll cry for you, ooh, yeah
 > 자기야, 널 위해 울게, ooh, yeah
 
-[Verse 3]
+[Bridge]
 Every time I hit the road, it takes a little piece of me
 > 길을 떠날 때마다, 내 일부를 잃어버려
 Kills me slowly (slowly)

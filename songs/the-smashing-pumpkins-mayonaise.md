@@ -14,13 +14,13 @@ tags: [영미, Hard Rock, 1993]
 date: 2026-07-07
 comment: 이 곡은 빌리 코건의 깊은 내면의 고통과 자아를 찾아 헤매는 갈망을 담은 자전적인 고백이다. 힘든 삶 속에서도 '내가 할 수 있을 때, 나는 할 것이다'라며 포기하지 않는 그의 의지가 오롯이 느껴진다.
 ---
+[Verse 1]
 Fool enough to almost be it
 > 너무 바보 같아 거의 그렇게 될 뻔했지
 Cool enough to not quite see it
 > 너무 쿨해서 제대로 보지 못했지
 Doomed
 > 파멸했어
-
 Pick your pocket, full of sorrow
 > 슬픔 가득한 네 주머니를 뒤져
 Run away with me tomorrow
@@ -28,6 +28,7 @@ Run away with me tomorrow
 June
 > 6월
 
+[Pre-Chorus]
 Try and ease the pain
 > 고통을 덜어내려 해봐
 Somehow, feel the same
@@ -37,13 +38,13 @@ Well, no one knows
 Where our secrets go
 > 우리의 비밀들이 어디로 가는지
 
+[Verse 2]
 I send a heart to all my dearies
 > 내 소중한 이들에게 마음을 보내
 When your life is so, so dreary
 > 너의 삶이 너무나도 쓸쓸할 때
 Dream
 > 꿈
-
 I'm rumored to the straight and narrow
 > 나는 바르게 산다고 소문났지만
 While the harlots of my perils
@@ -51,6 +52,7 @@ While the harlots of my perils
 Scream
 > 비명을 질러
 
+[Chorus]
 And I fail
 > 그리고 난 실패해
 But when I can, I will
@@ -60,6 +62,7 @@ Try to understand
 That when I can, I will
 > 할 수 있을 때면, 난 할 거야
 
+[Verse 3]
 Mother, weep the years I'm missing
 > 엄마, 내가 놓친 세월을 울어줘
 All our time can't be given
@@ -74,9 +77,10 @@ Out of hand and out of season
 > 통제 불능으로, 때아닌
 Out of love and out of feeling
 > 사랑도 없이, 감정도 없이
-
 So bad
 > 너무나도 나빠
+
+[Chorus]
 When I can, I will
 > 할 수 있을 때면, 난 할 거야
 Words defy the plans
@@ -84,6 +88,7 @@ Words defy the plans
 When I can, I will
 > 할 수 있을 때면, 난 할 거야
 
+[Bridge]
 Fool enough to almost be it
 > 너무 바보 같아 거의 그렇게 될 뻔했지
 And cool enough to not quite see it
@@ -92,7 +97,6 @@ Dull enough to always feel this
 > 너무 둔해서 항상 이걸 느껴
 Always old, I'll always feel this
 > 항상 늙었고, 난 항상 이걸 느낄 거야
-
 No more promise, no more sorrow
 > 더 이상의 약속도, 더 이상의 슬픔도 없어
 No longer will I follow
@@ -102,6 +106,7 @@ Can anybody hear me?
 I just want to be me
 > 난 그저 나 자신이고 싶어
 
+[Outro]
 When I can, I will
 > 할 수 있을 때면, 난 할 거야
 Try to understand

@@ -37,7 +37,7 @@ And I have no choice
 'Cause I won't say goodbye anymore
 > 더 이상 작별을 고하지 않을 테니까
 
-[Bridge]
+[Interlude]
 Whoa
 > 워어
 Whoa
@@ -71,7 +71,7 @@ And I have no choice
 'Cause I won't say goodbye anymore
 > 더 이상 작별을 고하지 않을 테니까
 
-[Bridge]
+[Interlude]
 Whoa
 > 워어
 Whoa
@@ -79,7 +79,7 @@ Whoa
 Whoa
 > 워어
 
-[Bridge 2]
+[Bridge]
 I'll fix these broken things, repair your broken wings
 > 이 부서진 것들을 고치고, 너의 부러진 날개를 수리할게
 And make sure everything's all right (it's all right, it's all right)
@@ -103,7 +103,7 @@ And I have no choice
 'Cause I won't say goodbye anymore
 > 더 이상 작별을 고하지 않을 테니까
 
-[Outro Chorus]
+[Outro]
 This love has taken its toll on me
 > 이 사랑은 나를 지치게 했어
 She said goodbye too many times before
@@ -113,6 +113,7 @@ And my heart is breakin' in front of me
 And she said goodbye too many times before
 > 그리고 그녀는 너무 여러 번 작별을 고했지
 
+[Outro]
 This love has taken its toll on me
 > 이 사랑은 나를 지치게 했어
 She said goodbye too many times before

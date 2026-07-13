@@ -14,6 +14,7 @@ tags: [한국, K-Pop, 2017]
 date: 2026-07-08
 comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온 사랑의 순간들을 아름다운 영화처럼 회고한다. 고통 속에서도 과거를 낭만적으로 받아들이고 담담하게 이별을 준비하는 모습이 인상적이다.
 ---
+[Chorus]
 너를 위해 부르는 내 마지막 노래
 > My last song, sung for you
 우리 이야기에 마침표를 찍으려고 해
@@ -23,6 +24,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 함께한 우리의 마지막 장면
 > Our final scene, shared together
 
+[Verse 1]
 안녕 우리 처음 만났던 그날의 모습은
 > Goodbye, the way we looked on the day we first met
 내 인생 가장 설레는 장면
@@ -31,6 +33,8 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > We lived a life like a single movie
 다시 안녕 이란 말로 우린 이별을 반겨
 > And with another goodbye, we welcome this farewell
+
+[Pre-Chorus]
 참 재밌었어 모든 순간들이
 > It was truly fun, every single moment
 많이 그리울거 같아 지난날들이
@@ -39,7 +43,6 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > I'll keep your last image in my eyes
 살다가 그리울 때마다 두 눈 감으리
 > And whenever I miss you in life, I'll close my eyes
-
 덕분에 내가 아직까지 살고 있는 거 같아
 > Thanks to you, I feel like I'm still alive
 덕분에 내가 앞으로도 살 수 있을 것 같아
@@ -48,6 +51,8 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > Just as we've lived knowing death
 이별을 알고 있는 채로 사랑한 우리
 > We loved each other knowing this farewell
+
+[Interlude]
 나의 낭만이었어
 > You were my romance
 파란 하늘이었어
@@ -57,6 +62,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 천국이었어
 > You were heaven
 
+[Chorus]
 너를 위해 부르는 내 마지막 노래
 > My last song, sung for you
 우리 이야기에 마침표를 찍으려고 해
@@ -66,6 +72,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 함께한 우리의 마지막 장면
 > Our final scene, shared together
 
+[Post-Chorus]
 우리에
 > Our
 기억에
@@ -76,7 +83,6 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > This feeling
 어떻게 기억될까
 > How will it be remembered?
-
 아름답게
 > Beautifully
 떠나는
@@ -88,6 +94,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 어떻게 기억할까
 > Remember it?
 
+[Verse 2]
 한동안 많이 외롭고 서럽고
 > For a while, I'll be very lonely and sorrowful
 마음이 찢어질 듯 저려도
@@ -100,6 +107,8 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > Though recalling them pains me
 익숙해지겠지
 > I'll get used to it
+
+[Pre-Chorus]
 아직 실감이 나질 않아서 슬프지만
 > I'm sad because it hasn't truly sunk in yet
 눈물을 흘리진 않을 거야
@@ -109,6 +118,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 머물러있지는 않을 거야
 > I won't stay
 
+[Pre-Chorus]
 덕분에 내가 아직까지 살고 있는 거 같아
 > Thanks to you, I feel like I'm still alive
 덕분에 내가 앞으로도 살 수 있을 것 같아
@@ -117,6 +127,8 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > Looking back, just as all past days were but a fleeting moment
 시간 앞에 또 익숙해질 간사한 우리
 > We, ever-fickle, will grow accustomed to time again
+
+[Bridge]
 그동안 고마웠어
 > Thank you for everything during this time
 우린 늘 한편이었어
@@ -126,6 +138,15 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 한편이었어
 > It was a single film
 
+[Bridge]
+기쁨 슬픔 희망 절망
+> Joy, sorrow, hope, despair
+그리움 아쉬움 고독 평화
+> Longing, regret, solitude, peace
+이 모든 감정 그 안에 그대가
+> In all these emotions, you
+존재했기에 버틸 수 있었어 난
+> Existed, and so I was able to endure
 기쁨 슬픔 희망 절망
 > Joy, sorrow, hope, despair
 그리움 아쉬움 고독 평화
@@ -135,15 +156,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 존재했기에 버틸 수 있었어 난
 > Existed, and so I was able to endure
 
-기쁨 슬픔 희망 절망
-> Joy, sorrow, hope, despair
-그리움 아쉬움 고독 평화
-> Longing, regret, solitude, peace
-이 모든 감정 그 안에 그대가
-> In all these emotions, you
-존재했기에 버틸 수 있었어 난
-> Existed, and so I was able to endure
-
+[Chorus]
 너를 위해 부르는 내 마지막 노래
 > My last song, sung for you
 우리 이야기에 마침표를 찍으려고 해
@@ -153,6 +166,7 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 함께한 우리의 마지막 장면
 > Our final scene, shared together
 
+[Outro]
 우리에
 > Our
 기억에
@@ -163,7 +177,6 @@ comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온
 > This feeling
 어떻게 기억될까
 > How will it be remembered?
-
 아름답게
 > Beautifully
 떠나는

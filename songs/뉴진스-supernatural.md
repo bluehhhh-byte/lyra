@@ -15,11 +15,13 @@ tags: [한국, K-Pop, 2024]
 date: 2026-07-13
 comment: 이 곡은 인연의 깊이와 운명적인 이끌림을 '초자연적'이라는 단어로 표현하고 있다. 영어와 일본어 가사가 혼재되어 있어, 이별과 재회를 오가는 연인의 복잡한 감정선을 다양한 언어로 섬세하게 담아내는 듯하다.
 ---
+[Intro]
 Come on (ah-ah)
 > 어서 와 (아-아)
 Come on (let's go)
 > 어서 와 (가자)
 
+[Verse 1]
 Stormy night, cloudy sky
 > 폭풍우 치는 밤, 흐린 하늘
 In the moment, you and I
@@ -29,6 +31,7 @@ One more chance, 너와 나
 다시 한번 만나게 서로에게 향하게
 > Once again, let us meet, let us turn to each other.
 
+[Pre-Chorus]
 My feeling's getting deeper
 > 내 감정은 점점 더 깊어져
 내 심박수를 믿어
@@ -38,6 +41,7 @@ My feeling's getting deeper
 I gotta see the meaning of it (come on)
 > 그 의미를 찾아야 해 (어서 와)
 
+[Chorus]
 I don't know what we've done
 > 우리가 뭘 했는지 모르겠어
 되돌아가긴 싫어, もう知っている
@@ -48,6 +52,7 @@ Don't know what we've been sold
 + 미츠케라레루요, 소 잇츠 슈어 (컴 온)
 > 찾을 수 있을 거야, 그러니 확실해 (어서 와)
 
+[Verse 2]
 Golden moon, diamond stars
 > 황금빛 달, 다이아몬드 별
 In a moment, you and I
@@ -58,6 +63,7 @@ Second chance, しょうがない
 + 모- 스코시 맛떼, 너와 내게 향하게 (에이)
 > 조금만 더 기다려 줘, 너와 나에게 향하게 (에이)
 
+[Pre-Chorus]
 My feeling's getting deeper (deeper)
 > 내 감정은 점점 더 깊어져 (더 깊이)
 내 심박수를 믿어 (믿어)
@@ -67,6 +73,7 @@ My feeling's getting deeper (deeper)
 I gotta see the meaning of it
 > 그 의미를 찾아야 해
 
+[Chorus]
 I don't know what we've done
 > 우리가 뭘 했는지 모르겠어
 되돌아가긴 싫어, もう知っている
@@ -77,11 +84,11 @@ Don't know what we've been sold
 + 미츠케라레루요, 소 잇츠 슈어
 > 찾을 수 있을 거야, 그러니 확실해
 
+[Bridge]
 It's supernatural
 > 초자연적인 일이야
 It's supernatural
 > 초자연적인 일이야
-
 거짓말 안 할래, 너도 말해
 > I won't lie, you speak up too.
 Attention we should pay, to what is coming through
@@ -91,6 +98,7 @@ Attention we should pay, to what is coming through
 It's crystal clear, love is here, sitting next to you
 > 너무나 명확해, 사랑이 여기 네 옆에 앉아 있어
 
+[Outro]
 私とあなた
 + 와타시토 아나타
 > 나와 너

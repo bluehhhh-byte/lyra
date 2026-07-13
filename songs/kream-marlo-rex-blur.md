@@ -14,6 +14,7 @@ tags: [한국, Dance, 2023]
 date: 2026-07-08
 comment: 이 곡은 사랑하는 사람과 경계가 모호해지는 감정을 섬세하게 그린다. 관계 속에서 자신을 잃을까 두려워하면서도 결국 상대에게 이끌리는 복합적인 심리가 담겨 있다.
 ---
+[Verse 1]
 Don't know where you end and I begin
 > 네가 끝나는 곳과 내가 시작하는 곳을 모르겠어
 Don't know what this is or what I'm in
@@ -21,6 +22,7 @@ Don't know what this is or what I'm in
 Got you on my mind, under my skin
 > 넌 내 마음속에, 내 피부 깊숙이 박혀 있어
 
+[Pre-Chorus]
 But when two become one
 > 하지만 둘이 하나가 될 때
 That's when I run
@@ -34,6 +36,7 @@ That's when I run
 This time, I'm gonna stay
 > 하지만 이번엔 머무를 거야
 
+[Chorus]
 I can feel my body blur into you
 > 내 몸이 너에게로 흐릿해지는 걸 느껴
 I can feel the colors start to fuse
@@ -42,17 +45,16 @@ As I feel my body blur into you
 > 내 몸이 너에게로 흐릿해지는 걸 느끼면서
 I'm into you
 > 난 너에게 빠져들어
-
 I'm into you, ooh
 > 난 너에게 빠져들어, ooh
 I'm into you, ooh
 > 난 너에게 빠져들어, ooh
-
 (I can feel my body)
 > (내 몸이 느껴져)
 (I can feel my body)
 > (내 몸이 느껴져)
 
+[Verse 2]
 Don't know where you end and I begin
 > 네가 끝나는 곳과 내가 시작하는 곳을 모르겠어
 You're everywhere I go, see you in everything
@@ -60,6 +62,7 @@ You're everywhere I go, see you in everything
 The closer that we get, I'm sinkin' in, in
 > 우리가 가까워질수록, 난 점점 빠져들어
 
+[Pre-Chorus]
 But when two become one
 > 하지만 둘이 하나가 될 때
 That's when I run
@@ -73,6 +76,7 @@ That's when I run
 This time, I'm gonna stay
 > 하지만 이번엔 머무를 거야
 
+[Chorus]
 I can feel my body blur into you
 > 내 몸이 너에게로 흐릿해지는 걸 느껴
 I can feel the colors start to fuse
@@ -81,12 +85,10 @@ As I feel my body blur into you
 > 내 몸이 너에게로 흐릿해지는 걸 느끼면서
 I'm into you
 > 난 너에게 빠져들어
-
 I'm into you, ooh
 > 난 너에게 빠져들어, ooh
 I'm into you, ooh
 > 난 너에게 빠져들어, ooh
-
 (I can feel my body)
 > (내 몸이 느껴져)
 (I can feel my body)
