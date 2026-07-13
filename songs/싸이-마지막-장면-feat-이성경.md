@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/
 lang: ko
 tags: [한국, K-Pop, 2017]
 date: 2026-07-08
-comment: 이 곡은 끝을 알면서도 사랑을 이어갔던 관계의 마지막 순간을 담담하게 그려낸다. 지난 추억에 대한 감사와 함께 다가올 이별의 아픔을 인정하고 익숙해지려는 마음이 잘 드러나는 가사이다.
+comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온 사랑의 순간들을 아름다운 영화처럼 회고한다. 고통 속에서도 과거를 낭만적으로 받아들이고 담담하게 이별을 준비하는 모습이 인상적이다.
 ---
 너를 위해 부르는 내 마지막 노래
 > My last song, sung for you
