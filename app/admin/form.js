@@ -86,13 +86,9 @@ export default function AdminForm() {
   // unavailable. Country follows the ARTIST's nationality (store genre, then
   // name script, then lyric language), not the lyric language — the server's
   // autotag mirrors this and can further correct it via Gemini.
-  // iTunes splits a few genres out as siblings of Rock even though they're really
-  // Rock subgenres — fold those back in so the tag reads as the parent genre.
-  const GENRE_ALIAS = { alternative: "Rock", "alternative rock": "Rock", "indie rock": "Rock" };
-  const capGenre = (g) => {
-    const t = g.trim();
-    return GENRE_ALIAS[t.toLowerCase()] || t.replace(/^./, (x) => x.toUpperCase());
-  };
+  // The store genre is a coarse placeholder ("K-Pop" for a heavy-metal band) —
+  // the server's autotag swaps in a specific subgenre from its vocabulary.
+  const capGenre = (g) => g.trim().replace(/^./, (x) => x.toUpperCase());
   const baseTags = (c, lg) => {
     const g = (c?.genre || "").toLowerCase();
     const country = g.includes("k-pop")

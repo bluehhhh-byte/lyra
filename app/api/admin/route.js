@@ -84,14 +84,26 @@ function normalizeInterleaved(text) {
     .join("\n");
 }
 
-// Genre tag: English, first letter capitalized (iTunes already gives "Rock",
-// "K-Pop", "R&B/Soul" — this just guarantees the leading cap). iTunes splits a
-// few genres out as siblings of Rock even though they're really Rock subgenres —
-// fold those back in so the tag reads as the parent genre.
-const GENRE_ALIAS = { alternative: "Rock", "alternative rock": "Rock", "indie rock": "Rock" };
+// Genre vocabulary — specific over broad ("Hard Rock", not "Rock"). Closed list
+// so the tag index doesn't sprout a synonym per song. The iTunes store genre is
+// only a hint: it files 시나위(헤비메탈) and 장기하(인디포크) both as "K-Pop",
+// so Gemini, which knows the act, picks from this list and the store genre is
+// just the fallback when Gemini is unavailable.
+const GENRES = [
+  // rock family
+  "Rock", "Hard Rock", "Alternative Rock", "Indie Rock", "Punk Rock", "Post-Punk",
+  "Post-Rock", "Grunge", "Shoegaze", "Emo", "Metal", "Heavy Metal", "Visual Kei",
+  // pop family
+  "Pop", "K-Pop", "J-Pop", "Indie Pop", "Dream Pop", "Synth-Pop", "City Pop", "Ballad", "Trot",
+  // rhythm / electronic / other
+  "R&B/Soul", "Hip-Hop", "Funk", "Disco", "Dance", "House", "Electronic",
+  "Folk", "Country", "Jazz", "Blues", "Classical", "Soundtrack",
+];
+const GENRE_INDEX = new Map(GENRES.map((g) => [g.toLowerCase(), g]));
+// map a free-form store genre onto the vocabulary; unknown ones just get capitalized
 const capGenre = (g) => {
   const t = (g || "").trim();
-  return GENRE_ALIAS[t.toLowerCase()] || t.replace(/^./, (c) => c.toUpperCase());
+  return GENRE_INDEX.get(t.toLowerCase()) || t.replace(/^./, (c) => c.toUpperCase());
 };
 
 // Country = artist nationality, NOT lyric language — an English-singing K-pop
@@ -112,9 +124,11 @@ function countryOf({ artist, genre, lang }) {
 // Tags are country · genre · year only — no mood tags.
 async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
   let country = countryOf({ artist, genre, lang }); // deterministic baseline
+  let genreTag = genre ? capGenre(genre) : ""; // store genre — the fallback
   let titleKo = lang === "ko" ? title : "";
   let artistKo = "";
   let comment = "";
+  let aiOk = false; // did the Gemini call actually return usable fields?
 
   // one combined Gemini call (avoids free-tier rate limits from many calls)
   const key = process.env.GEMINI_API_KEY;
@@ -124,6 +138,7 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
         key,
         `노래 "${title}" (${artist})에 대해 아래 스키마의 JSON으로 답해줘.
 - country: 아티스트의 국적 기준 분류 — "한국"|"일본"|"영미"|"기타" 중 하나. 가수의 출신·주 활동권 기준이며 가사 언어와 무관 (예: 뉴진스는 영어 가사여도 한국)
+- genre: 이 곡의 세부 장르를 아래 목록에서 정확히 하나만 골라라. 가능한 한 구체적으로 — 록이면 "Rock"보다 "Hard Rock"/"Alternative Rock"/"Indie Rock" 등 하위 장르를, 팝이면 아티스트 국적에 맞춰 "K-Pop"/"J-Pop"을 우선한다. 목록: ${GENRES.join(", ")}${genre ? `\n  (참고: 음원사 분류는 "${genre}"지만 부정확할 수 있다. 곡의 실제 사운드를 우선하라)` : ""}
 - titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
 - artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
 - comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤
@@ -132,7 +147,10 @@ ${lyrics.slice(0, 2000)}`,
         true
       );
       const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+      aiOk = true; // parsed a response — the tags below are AI-informed, not fallback
       if (COUNTRY_TAGS.includes(json.country)) country = json.country;
+      const g = GENRE_INDEX.get(String(json.genre || "").trim().toLowerCase());
+      if (g) genreTag = g; // only a vocabulary term wins over the store genre
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
@@ -142,12 +160,11 @@ ${lyrics.slice(0, 2000)}`,
   const tags = [country];
   // a Korean act released through the JP store carries a "J-Pop" store genre
   // (and vice versa) — realign the region-genre with the artist's country
-  let genreTag = genre ? capGenre(genre) : "";
   if (country === "한국" && genreTag === "J-Pop") genreTag = "K-Pop";
   if (country === "일본" && genreTag === "K-Pop") genreTag = "J-Pop";
   if (genreTag) tags.push(genreTag);
   if (year) tags.push(String(year)); // exact release year, not the decade
-  return { tags, titleKo, artistKo, comment };
+  return { tags, titleKo, artistKo, comment, aiOk };
 }
 
 const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -668,10 +685,16 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
       year: fmValue(fm, "year"),
       genre: fmValue(fm, "genre"),
     });
+    // When Gemini is down (quota/503), computeAuto's tags fall back to the coarse
+    // store genre + name-script country — worse than what's on disk. Refuse the
+    // whole overwrite so a rate-limited run can't silently degrade good metadata.
+    if (!auto.aiOk)
+      return Response.json({ error: "AI 호출 실패 (쿼터·과부하) — 기존 메타 유지" }, { status: 502 });
+
     let out = raw;
     const updated = [];
-    // tags = country · genre · year only (deterministic). Overwrite fully so any
-    // legacy mood tags are dropped and the year migrates from decade to exact.
+    // tags = country · genre · year only. Overwrite fully so any legacy mood tags
+    // are dropped and the year migrates from decade to exact.
     if (auto.tags.length) {
       out = setField(out, "tags", `[${auto.tags.join(", ")}]`, "year");
       updated.push("tags");
@@ -910,6 +933,7 @@ duration: ${duration || ""}
 lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
 date: ${new Date().toISOString().slice(0, 10)}
+published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 ---
 ${lyrics.trim()}
