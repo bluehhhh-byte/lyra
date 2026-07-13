@@ -85,13 +85,11 @@ Don't know what we've been sold
 + 미츠케라레루요, 소 잇츠 슈어
 > 찾을 수 있을 거야, 그러니 확실해
 
-[Interlude]
-It's supernatural
-> 초자연적인 일이야
-It's supernatural
-> 초자연적인 일이야
-
 [Bridge]
+It's supernatural
+> 초자연적인 일이야
+It's supernatural
+> 초자연적인 일이야
 거짓말 안 할래, 너도 말해
 > I won't lie, you speak up too.
 Attention we should pay, to what is coming through
@@ -100,11 +98,11 @@ Attention we should pay, to what is coming through
 > (다가오는 것에) 우리는 전혀 몰랐어 (몰랐어)
 It's crystal clear, love is here, sitting next to you
 > 너무나 명확해, 사랑이 여기 네 옆에 앉아 있어
-
-[Outro]
 私とあなた
 + 와타시토 아나타
 > 나와 너
+
+[Outro]
 Golden moon, diamond stars
 > 황금빛 달, 다이아몬드 별
 In a moment, we unite
