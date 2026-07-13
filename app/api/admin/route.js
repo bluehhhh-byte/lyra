@@ -448,6 +448,13 @@ async function handle(req) {
     return Response.json(await computeAuto(body));
   }
 
+  // A reading is only owed to Japanese-DOMINANT lines — a Korean/English line
+  // quoting a few kana words would get a nonsense duplicate reading.
+  const isJaLine = (s) =>
+    /[぀-ヿ]/.test(s) &&
+    !/[가-힣]/.test(s) &&
+    (s.match(/[぀-ヿ㐀-鿿]/g) || []).length >= (s.match(/[a-z]/gi) || []).length;
+
   // Format lint — catches the failure modes we've actually hit: original lines
   // whose translation is missing, Japanese lines without a reading, and Gemini's
   // inline ">"/"+" markers glued onto the lyric line (the supernatural bug).
@@ -459,7 +466,7 @@ async function handle(req) {
         // a Korean song with zero translations is a deliberate choice, not a defect
         const untranslated =
           s.lang === "ko" && translated === 0 ? 0 : lines.length - translated;
-        const noReading = lines.filter((l) => /[぀-ヿ]/.test(l.en) && !l.reading?.trim()).length;
+        const noReading = lines.filter((l) => isJaLine(l.en) && !l.reading?.trim()).length;
         const inline = lines.filter((l) => / [>+] /.test(l.en)).length;
         const issues = [];
         if (inline) issues.push(`인라인 마커 의심 ${inline}줄`);
@@ -469,6 +476,115 @@ async function handle(req) {
       })
       .filter((s) => s.issues.length);
     return Response.json({ report, total: getAllSongs().length });
+  }
+
+  // Auto-fix what lint found, one song per request (timeout-safe, one commit
+  // per song). Inline markers are split mechanically; missing translations and
+  // readings are generated ONLY for the lines that lack them — existing
+  // (hand-edited) annotations are never touched.
+  if (action === "lintFix") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw0 = song.raw.replace(/\r\n/g, "\n");
+    const m = raw0.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+    const fixed = [];
+
+    let fixedBody = normalizeInterleaved(bodyText);
+    if (fixedBody !== bodyText) fixed.push("인라인 마커 분리");
+
+    // a Korean song with no ">" lines at all chose "번역 없음" — respect that
+    const lang = fmValue(fm, "lang") || "en";
+    const skipTranslate = lang === "ko" && !/^\s*>/m.test(fixedBody);
+
+    const lines = fixedBody.split("\n");
+    const isOrig = (l) => {
+      const t = l.trim();
+      return (
+        t &&
+        !t.startsWith(">") &&
+        !t.startsWith("+") &&
+        !t.startsWith("//") &&
+        !(t.startsWith("[") && t.endsWith("]"))
+      );
+    };
+    const needs = []; // { i, text, wantReading, wantKo }
+    for (let i = 0; i < lines.length; i++) {
+      if (!isOrig(lines[i])) continue;
+      let hasKo = false;
+      let hasReading = false;
+      for (let j = i + 1; j < lines.length; j++) {
+        if (/^\s*>/.test(lines[j])) hasKo = true;
+        else if (/^\s*\+/.test(lines[j])) hasReading = true;
+        else break;
+      }
+      const text = lines[i].trim();
+      const wantReading = isJaLine(text) && !hasReading;
+      const wantKo = !hasKo && !skipTranslate;
+      if (wantReading || wantKo) needs.push({ i, text, wantReading, wantKo });
+    }
+
+    // no Gemini key → still save the mechanical fixes, just skip generation
+    const key = process.env.GEMINI_API_KEY;
+    if (needs.length && !key) {
+      fixed.push("번역·독음 생성 건너뜀 (GEMINI_API_KEY 없음)");
+      needs.length = 0;
+    }
+
+    if (needs.length) {
+      const prompt = `아래 JSON 배열의 각 가사 줄에 대해, 같은 순서·같은 길이의 JSON 배열로 답해줘.
+각 원소는 { "reading": "...", "ko": "..." } 형태.
+규칙:
+- 줄의 주 언어가 한국어 → ko에 자연스러운 영어 번역, reading은 빈 문자열
+- 영어 → ko에 자연스러운 한국어 번역, reading은 빈 문자열
+- 일본어 → reading에 한글 독음, ko에 자연스러운 한국어 번역
+- 시적 뉘앙스 유지, 직역 금지. JSON만 출력.
+곡: "${fmValue(fm, "title")}" (${fmValue(fm, "artist")})
+입력:
+${JSON.stringify(needs.map((n) => n.text))}`;
+      let arr;
+      try {
+        arr = JSON.parse((await geminiText(key, prompt, true)).replace(/^```json\s*|\s*```$/g, "").trim());
+      } catch {
+        return Response.json({ error: "Gemini 응답 파싱 실패" }, { status: 502 });
+      }
+      if (!Array.isArray(arr))
+        return Response.json({ error: "Gemini 응답 형식 오류" }, { status: 502 });
+
+      let addedKo = 0;
+      let addedReading = 0;
+      // bottom-up so earlier indexes stay valid while splicing
+      for (let k = needs.length - 1; k >= 0; k--) {
+        const n = needs[k];
+        const r = arr[k] || {};
+        const ins = [];
+        if (n.wantReading && r.reading?.trim()) {
+          ins.push(`+ ${String(r.reading).trim()}`);
+          addedReading++;
+        }
+        if (n.wantKo && r.ko?.trim()) {
+          ins.push(`> ${String(r.ko).trim()}`);
+          addedKo++;
+        }
+        if (!ins.length) continue;
+        // "+" sits right under the original; a lone ">" goes after existing "+" lines
+        let at = n.i + 1;
+        if (!n.wantReading) while (at < lines.length && /^\s*\+/.test(lines[at])) at++;
+        lines.splice(at, 0, ...ins);
+      }
+      if (addedKo) fixed.push(`번역 ${addedKo}줄 추가`);
+      if (addedReading) fixed.push(`독음 ${addedReading}줄 추가`);
+      fixedBody = lines.join("\n");
+    }
+
+    if (!fixed.length) return Response.json({ fixed: [] });
+    await writeSong(
+      body.slug,
+      `---\n${fm}\n---\n${fixedBody.replace(/\n*$/, "\n")}`,
+      `fix(song): lint autofix — ${body.slug}`
+    );
+    return Response.json({ fixed });
   }
 
   // Which songs are missing generated metadata. `artist_ko` only counts as
