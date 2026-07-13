@@ -745,6 +745,68 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
     return Response.json({ ok: true });
   }
 
+  // Re-stanza: sources disagree wildly on blank lines (lrclib often has none, or
+  // one per line), so the layout standard is the song's musical structure —
+  // Gemini decides only WHERE to break (contiguous group sizes + section label);
+  // the lyric lines themselves, with their >/+/// companions, move untouched.
+  if (action === "restanza") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+
+    // unit = one original line plus the annotation lines glued under it
+    const units = [];
+    for (const line of bodyText.split("\n")) {
+      if (!line.trim() || /^\[.*\]$/.test(line.trim())) continue; // old breaks/headers die here
+      if (/^\s*(>|\+|\/\/)/.test(line) && units.length) units[units.length - 1].push(line);
+      else units.push([line]);
+    }
+    if (units.length < 4)
+      return Response.json({ error: "가사가 너무 짧아 연 정리가 불필요" }, { status: 422 });
+
+    const numbered = units.map((u, i) => `${i + 1}. ${u[0]}`).join("\n");
+    const rawJson = await geminiText(
+      key,
+      `아래는 노래 "${fmValue(fm, "title")}" (${fmValue(fm, "artist")}) 가사의 원문 줄 목록이다 (총 ${units.length}줄).
+곡의 음악적 구조(verse/chorus/bridge 등)에 따라 앞에서부터 연속된 덩어리로 나눠라.
+JSON 배열로만 답하라: [{"label":"Verse 1","count":4}, ...]
+- count: 그 연에 속하는 줄 수. 모든 count의 합은 반드시 ${units.length}.
+- label: "Intro","Verse 1","Pre-Chorus","Chorus","Bridge","Outro","Interlude" 형식. 구조가 불분명한 연은 null.
+- 한 연은 보통 2~8줄. 줄 순서 변경·삭제·추가 금지.
+${numbered}`,
+      true
+    );
+    let groups;
+    try {
+      groups = JSON.parse(rawJson.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "연 구조 생성 실패" }, { status: 502 });
+    }
+    const counts = (Array.isArray(groups) ? groups : []).map((g) => Math.floor(g?.count) || 0);
+    if (counts.reduce((a, b) => a + b, 0) !== units.length || counts.some((c) => c < 1))
+      return Response.json({ error: "연 구조가 가사와 안 맞음 (재시도 요망)" }, { status: 502 });
+
+    let i = 0;
+    const out = groups.map((g, gi) => {
+      const label =
+        typeof g.label === "string" && /^[\w\s-]{2,20}$/.test(g.label.trim())
+          ? `[${g.label.trim()}]\n`
+          : "";
+      return label + units.slice(i, (i += counts[gi])).flat().join("\n");
+    });
+    await writeSong(
+      body.slug,
+      `---\n${fm}\n---\n${out.join("\n\n")}\n`,
+      `chore(song): restanza — ${body.slug}`
+    );
+    return Response.json({ stanzas: groups.length });
+  }
+
   if (action === "load") {
     const song = await readSong(body.slug);
     if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });

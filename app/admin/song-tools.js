@@ -60,6 +60,18 @@ export default function SongTools({ songs }) {
     }
   };
 
+  const restanza = async (slug) => {
+    set(slug, { busy: "stanza", err: "", msg: "" });
+    try {
+      const { stanzas } = await api("restanza", { slug });
+      set(slug, { msg: `연 ${stanzas}개로 재구성 (재배포 후 반영)` });
+    } catch (e) {
+      set(slug, { err: e.message });
+    } finally {
+      set(slug, { busy: "" });
+    }
+  };
+
   const addTrans = async (slug) => {
     set(slug, { busy: "trans", err: "", msg: "" });
     try {
@@ -110,6 +122,13 @@ export default function SongTools({ songs }) {
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
                 {st.busy === "comment" ? "생성 중…" : "코멘트"}
+              </button>
+              <button
+                onClick={() => restanza(s.slug)}
+                disabled={!!st.busy}
+                className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
+              >
+                {st.busy === "stanza" ? "정리 중…" : "연 정리"}
               </button>
               {!s.hasTranslation && (
                 <button
