@@ -106,9 +106,6 @@ export default function LyricsView({ stanzas, lang, song }) {
   }, []);
 
   const s = SIZES[size];
-  const sections = stanzas
-    .map((st, i) => ({ i, label: st.section }))
-    .filter((x) => x.label);
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -137,27 +134,6 @@ export default function LyricsView({ stanzas, lang, song }) {
             ))}
           </div>
           <div className="flex items-center gap-1.5">
-            {sections.length >= 2 && (
-              <select
-                value=""
-                onChange={(e) => {
-                  if (e.target.value === "") return;
-                  document
-                    .getElementById(`v${e.target.value}`)
-                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                  e.target.value = ""; // stay a jump menu, not a stateful select
-                }}
-                aria-label="섹션으로 이동"
-                className="max-w-28 rounded-full border border-line bg-surface px-2 py-1 text-xs text-muted outline-none focus:border-accent"
-              >
-                <option value="">이동 ▾</option>
-                {sections.map((x) => (
-                  <option key={x.i} value={x.i}>
-                    {x.label}
-                  </option>
-                ))}
-              </select>
-            )}
             {SIZE_KEYS.map((k) => (
               <button
                 key={k}
