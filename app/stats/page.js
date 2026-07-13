@@ -41,6 +41,30 @@ export default function StatsPage() {
 
   const untagged = songs.filter((s) => s.tags.length === 0).length;
 
+  // when entries were recorded — published (full timestamp) first, date as fallback.
+  // Everything is bucketed in KST, since that's when the writing actually happened.
+  const kst = (s) => {
+    const v = s.published || s.date;
+    if (!v) return null;
+    const d = new Date(v.length <= 10 ? `${v}T12:00:00+09:00` : v);
+    return isNaN(d) ? null : new Date(d.getTime() + 9 * 3600 * 1000); // shift, read via getUTC*
+  };
+  const stamps = songs.map(kst).filter(Boolean);
+  const byMonth = tally(stamps.map((d) => `${d.getUTCFullYear()}.${d.getUTCMonth() + 1}`)).sort(
+    (a, b) => a[0].localeCompare(b[0], undefined, { numeric: true })
+  );
+  const HOURS = [
+    ["새벽 0–6시", 0],
+    ["아침 6–12시", 6],
+    ["오후 12–18시", 12],
+    ["밤 18–24시", 18],
+  ];
+  const withTime = songs.filter((s) => (s.published || "").length > 10).map(kst).filter(Boolean);
+  const byHour = HOURS.map(([label, from]) => [
+    label,
+    withTime.filter((d) => d.getUTCHours() >= from && d.getUTCHours() < from + 6).length,
+  ]);
+
   if (songs.length === 0) {
     return <p className="py-20 text-center text-sm text-muted">아직 곡이 없습니다.</p>;
   }
@@ -79,6 +103,18 @@ export default function StatsPage() {
             <p className="text-sm text-muted">아직 태그가 없습니다.</p>
           )}
         </Section>
+
+        <Section title="월별 기록">
+          <Bars data={byMonth} total={stamps.length} />
+        </Section>
+
+        <Section title="기록 시간대">
+          {withTime.length ? (
+            <Bars data={byHour} total={withTime.length} />
+          ) : (
+            <p className="text-sm text-muted">시각이 기록된 곡이 아직 없습니다.</p>
+          )}
+        </Section>
       </div>
 
       {(readings > 0 || untagged > 0) && (
@@ -88,10 +124,13 @@ export default function StatsPage() {
         </p>
       )}
 
-      <div className="mt-10">
+      <div className="mt-10 flex items-center justify-between">
         <Link href="/" className="text-sm text-muted hover:text-accent">
           ← 컬렉션으로
         </Link>
+        <a href="/api/export" download className="text-sm text-muted hover:text-accent">
+          전체 가사 .md 다운로드 ↓
+        </a>
       </div>
     </>
   );
