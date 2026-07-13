@@ -23,7 +23,7 @@ export default function StatsPage() {
   const lines = songs.flatMap((s) => s.stanzas.flatMap((st) => st.lines));
   const translated = lines.filter((l) => l.ko).length;
   const readings = lines.filter((l) => l.reading).length;
-  const notes = songs.flatMap((s) => s.stanzas).filter((st) => st.note).length;
+  const stanzas = songs.flatMap((s) => s.stanzas).length;
 
   // country follows the artist-nationality tag; lyric language is only a
   // fallback for songs saved before country tags existed
@@ -56,7 +56,7 @@ export default function StatsPage() {
         <Stat label="곡" value={songs.length} />
         <Stat label="가사 줄" value={lines.length} />
         <Stat label="번역된 줄" value={translated} sub={pct(translated, lines.length)} />
-        <Stat label="해설 노트" value={notes} />
+        <Stat label="연" value={stanzas} />
       </div>
 
       <div className="grid gap-12 sm:grid-cols-2">

@@ -21,6 +21,9 @@ const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between
 export default function LyricsView({ stanzas, lang, song }) {
   const [mode, setMode] = useState("both");
   const [size, setSize] = useState("m");
+  const [notes, setNotes] = useState({}); // stanza index -> note, overriding the file
+  const [editing, setEditing] = useState(-1);
+  const [owner, setOwner] = useState(false); // see lyra_admin in app/api/login
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
   const [card, setCard] = useState(null); // { lines, initial } for the share-card modal
@@ -52,6 +55,26 @@ export default function LyricsView({ stanzas, lang, song }) {
   useEffect(() => {
     localStorage.setItem(STORE_KEY, JSON.stringify({ mode, size }));
   }, [mode, size]);
+
+  useEffect(() => {
+    setOwner(document.cookie.split("; ").includes("lyra_admin=1"));
+  }, []);
+
+  // note edits go straight to the file (a commit online), so the page shows the
+  // saved text right away instead of waiting for the redeploy
+  const saveNote = async (i, note) => {
+    const res = await fetch("/api/admin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "setNote", slug: song.slug, index: i, note }),
+    });
+    if (!res.ok) {
+      alert("노트 저장 실패 — 로그인이 만료됐을 수 있습니다");
+      return;
+    }
+    setNotes((n) => ({ ...n, [i]: note }));
+    setEditing(-1);
+  };
 
   // reading progress across the whole page
   useEffect(() => {
@@ -215,11 +238,35 @@ export default function LyricsView({ stanzas, lang, song }) {
                 </div>
               ))}
             </div>
-            {stanza.note && (
-              <p className="mt-4 rounded-lg bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
-                <span className="mr-1.5 font-semibold text-accent">노트</span>
-                {stanza.note}
-              </p>
+            {editing === i ? (
+              <NoteEditor
+                initial={notes[i] ?? stanza.note ?? ""}
+                onSave={(v) => saveNote(i, v)}
+                onCancel={() => setEditing(-1)}
+              />
+            ) : (
+              (notes[i] ?? stanza.note) && (
+                <p className="mt-4 rounded-lg bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
+                  <span className="mr-1.5 font-semibold text-accent">노트</span>
+                  {notes[i] ?? stanza.note}
+                  {owner && (
+                    <button
+                      onClick={() => setEditing(i)}
+                      className="ml-2 text-xs text-muted/60 hover:text-accent"
+                    >
+                      수정
+                    </button>
+                  )}
+                </p>
+              )
+            )}
+            {owner && editing !== i && !(notes[i] ?? stanza.note) && (
+              <button
+                onClick={() => setEditing(i)}
+                className="mt-3 text-xs text-muted/50 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
+              >
+                ✎ 노트 추가
+              </button>
             )}
           </section>
         ))}
@@ -228,6 +275,50 @@ export default function LyricsView({ stanzas, lang, song }) {
       {card && (
         <CardModal song={song} lines={card.lines} initial={card.initial} onClose={() => setCard(null)} />
       )}
+    </div>
+  );
+}
+
+// owner-only, inline: write the stanza's note without opening the markdown file
+function NoteEditor({ initial, onSave, onCancel }) {
+  const [text, setText] = useState(initial);
+  const [busy, setBusy] = useState(false);
+  const save = async (v) => {
+    setBusy(true);
+    await onSave(v);
+    setBusy(false);
+  };
+  return (
+    <div className="mt-4 rounded-lg bg-surface px-4 py-3">
+      <textarea
+        autoFocus
+        rows={3}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="이 구절에 대한 해설·감상"
+        className="w-full resize-none rounded border border-line bg-bg px-3 py-2 text-sm outline-none focus:border-accent"
+      />
+      <div className="mt-2 flex items-center gap-2">
+        <button
+          onClick={() => save(text.trim())}
+          disabled={busy}
+          className="rounded-lg bg-accent px-3 py-1 text-xs font-semibold text-bg disabled:opacity-40"
+        >
+          {busy ? "저장 중…" : "저장"}
+        </button>
+        <button onClick={onCancel} className="text-xs text-muted hover:text-accent">
+          취소
+        </button>
+        {initial && (
+          <button
+            onClick={() => save("")}
+            disabled={busy}
+            className="ml-auto text-xs text-muted/60 hover:text-red-400 disabled:opacity-40"
+          >
+            삭제
+          </button>
+        )}
+      </div>
     </div>
   );
 }

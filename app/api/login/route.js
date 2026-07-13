@@ -15,5 +15,10 @@ export async function POST(req) {
     path: "/",
     maxAge: 60 * 60 * 24 * 30,
   });
+  // UI-only hint: the real cookie is httpOnly, so a public (static) song page has
+  // no way to ask "is the owner reading this?" — this one is readable by JS and
+  // just reveals the note-edit affordance. Forging it grants nothing; the API is
+  // still gated by the httpOnly cookie in middleware.
+  jar.set("lyra_admin", "1", { sameSite: "lax", path: "/", maxAge: 60 * 60 * 24 * 30 });
   return Response.json({ ok: true });
 }

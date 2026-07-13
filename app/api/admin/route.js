@@ -745,6 +745,70 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
     return Response.json({ ok: true });
   }
 
+  // Stanza notes (`// …`). Two ways in: Gemini drafts them for the stanzas that
+  // carry the song's weight (regenNotes), and the song page saves a hand-written
+  // one for a single stanza (setNote). Both rewrite only the `//` lines.
+  if (action === "regenNotes" || action === "setNote") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+
+    // blocks match lib/songs.js stanzas: blank-line separated, `//` lines are the note
+    const blocks = bodyText.trim().split(/\n\s*\n/).map((b) => b.split("\n"));
+    const putNote = (i, note) => {
+      const keep = blocks[i].filter((l) => !/^\s*\/\//.test(l));
+      blocks[i] = note ? [...keep, `// ${note}`] : keep;
+    };
+    const commit = (msg) =>
+      writeSong(body.slug, `---\n${fm}\n---\n${blocks.map((b) => b.join("\n")).join("\n\n")}\n`, msg);
+
+    if (action === "setNote") {
+      const i = Math.floor(body.index);
+      if (!(i >= 0 && i < blocks.length))
+        return Response.json({ error: "연 번호가 범위를 벗어남" }, { status: 422 });
+      const note = String(body.note || "").replace(/\s*\n+\s*/g, " ").trim().slice(0, 400);
+      putNote(i, note);
+      await commit(`chore(song): ${note ? "edit" : "remove"} note — ${body.slug} #${i}`);
+      return Response.json({ note });
+    }
+
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const listed = blocks
+      .map((b, i) => {
+        const lines = b.filter((l) => !/^\s*(>|\+|\/\/|\[)/.test(l) && l.trim());
+        return `[${i}] ${lines.join(" / ")}`;
+      })
+      .join("\n");
+    const rawJson = await geminiText(
+      key,
+      `노래 "${fmValue(fm, "title")}" (${fmValue(fm, "artist")})의 연 목록이다.
+곡 전체에서 의미가 가장 깊은 연 2~3개만 골라 해설 노트를 써라.
+JSON 배열로만 답하라: [{"index":0,"note":"..."}]
+- index: 아래 대괄호 안의 연 번호.
+- note: 그 연의 표현·비유·곡 안에서의 역할을 짚는 해설 1~2문장. 반드시 평서문 '~다'체. 가사를 그대로 옮겨 적지 말 것.
+${listed}`,
+      true
+    );
+    let notes;
+    try {
+      notes = JSON.parse(rawJson.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "해설 생성 실패" }, { status: 502 });
+    }
+    const applied = (Array.isArray(notes) ? notes : []).filter(
+      (n) => Number.isInteger(n?.index) && n.index >= 0 && n.index < blocks.length && n.note
+    );
+    if (!applied.length) return Response.json({ error: "해설 생성 실패" }, { status: 502 });
+    for (const n of applied)
+      putNote(n.index, String(n.note).replace(/\s*\n+\s*/g, " ").trim().slice(0, 400));
+    await commit(`chore(song): regen notes — ${body.slug}`);
+    return Response.json({ notes: applied.length });
+  }
+
   // Re-stanza: sources disagree wildly on blank lines (lrclib often has none, or
   // one per line), so the layout standard is the song's musical structure —
   // Gemini decides only WHERE to break (contiguous group sizes + section label);

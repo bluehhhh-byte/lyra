@@ -60,6 +60,18 @@ export default function SongTools({ songs }) {
     }
   };
 
+  const notes = async (slug) => {
+    set(slug, { busy: "notes", err: "", msg: "" });
+    try {
+      const { notes: n } = await api("regenNotes", { slug });
+      set(slug, { msg: `해설 ${n}개 생성 (재배포 후 반영)` });
+    } catch (e) {
+      set(slug, { err: e.message });
+    } finally {
+      set(slug, { busy: "" });
+    }
+  };
+
   const restanza = async (slug) => {
     set(slug, { busy: "stanza", err: "", msg: "" });
     try {
@@ -122,6 +134,13 @@ export default function SongTools({ songs }) {
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
                 {st.busy === "comment" ? "생성 중…" : "코멘트"}
+              </button>
+              <button
+                onClick={() => notes(s.slug)}
+                disabled={!!st.busy}
+                className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
+              >
+                {st.busy === "notes" ? "생성 중…" : "해설"}
               </button>
               <button
                 onClick={() => restanza(s.slug)}
