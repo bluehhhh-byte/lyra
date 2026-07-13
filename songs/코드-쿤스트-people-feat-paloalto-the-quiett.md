@@ -1,6 +1,6 @@
 ---
 title: People (feat. Paloalto & The Quiett)
-title_ko: 피플
+title_ko: 사람들
 artist: 코드 쿤스트
 artist_ko: 
 album: People
@@ -13,7 +13,7 @@ duration: 220
 lang: en
 tags: [영미, K-Pop, 2020]
 date: 2026-07-12
-comment: 이 곡은 인간관계의 복잡함 속에서 자신의 솔직함과 타인과의 유대감을 고민하는 진솔한 마음을 담고 있다. 겉으로는 쿨한 척하지만 내면의 불안정함을 인정하며 결국 함께하는 사람들에게 감사하는 성숙한 시선을 보여준다.
+comment: 이 곡은 복잡한 인간관계 속에서 솔직한 자신과 사회적 자아 사이의 괴리를 다룬다. 타인과의 관계에서 오는 어려움과 그럼에도 불구하고 함께 존재함의 소중함을 담담하게 표현하고 있다.
 ---
 사람 만나기 싫을 때도 일하러 가야 돼
 > Even when I don't want to meet people, I have to go to work.
