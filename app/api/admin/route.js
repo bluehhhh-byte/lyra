@@ -46,10 +46,17 @@ async function translateLyrics(key, { title, artist, lang, lyrics }) {
   const prompt = `You are annotating song lyrics for a bilingual (Korean-centered) lyrics blog. A single song may mix Korean, English and Japanese lines.
 Song: "${title}" by ${artist}. Primary language hint: ${lang || "unknown"}.
 
-For EACH lyric line, decide the line's dominant language, then output:
-- Korean line → the line as-is, then "> " followed by a natural English translation.
-- English line → the line as-is, then "> " followed by a natural Korean translation.
-- Japanese line → the line as-is, then "+ " followed by the Korean pronunciation reading (한글 독음) of the line, then "> " followed by a natural Korean translation.
+For EACH lyric line, decide the line's dominant language, then output SEPARATE LINES (each annotation MUST start on its own new line — never append it to the original line):
+- Korean line →
+  1. the original line as-is
+  2. "> " + a natural English translation
+- English line →
+  1. the original line as-is
+  2. "> " + a natural Korean translation
+- Japanese line →
+  1. the original line as-is
+  2. "+ " + the Korean pronunciation reading (한글 독음) of the line
+  3. "> " + a natural Korean translation
 - A line mixing languages → judge by its dominant language and translate the WHOLE line (including the foreign words) by the rule above.
 
 Rules:
@@ -60,7 +67,21 @@ Rules:
 
 Lyrics:
 ${lyrics}`;
-  return geminiText(key, prompt);
+  return normalizeInterleaved(await geminiText(key, prompt));
+}
+
+// Safety net: Gemini occasionally appends the annotation to the original line
+// ("Come on > 어서 와") instead of starting a new one — the parser then treats
+// the whole thing as an original lyric. Split inline " > " / " + " markers back
+// onto their own lines. ponytail: a lyric legitimately containing " > " or " + "
+// would be over-split — hasn't happened in practice.
+function normalizeInterleaved(text) {
+  return (text || "")
+    .split("\n")
+    .flatMap((line) =>
+      /^\s*[>+\[]/.test(line) ? [line] : line.split(/ (?=[>+] )/)
+    )
+    .join("\n");
 }
 
 // Genre tag: English, first letter capitalized (iTunes already gives "Rock",
@@ -73,13 +94,24 @@ const capGenre = (g) => {
   return GENRE_ALIAS[t.toLowerCase()] || t.replace(/^./, (c) => c.toUpperCase());
 };
 
+// Country = artist nationality, NOT lyric language — an English-singing K-pop
+// group is still 한국 (뉴진스 must never read as 영미). Deterministic signals
+// first (store genre, name script); Gemini, which knows the artist, can
+// override; the lyric language is only the last resort.
+const COUNTRY_TAGS = ["한국", "일본", "영미", "기타"];
+function countryOf({ artist, genre, lang }) {
+  const g = (genre || "").toLowerCase();
+  if (g.includes("k-pop")) return "한국";
+  if (g.includes("j-pop") || g.includes("enka") || g.includes("anime")) return "일본";
+  if (/[가-힣]/.test(artist || "")) return "한국";
+  if (/[぀-ヿ㐀-鿿]/.test(artist || "")) return "일본";
+  return { ko: "한국", ja: "일본", en: "영미" }[lang] || "기타";
+}
+
 // Shared by the add flow (`autotag`) and the backfill tool.
 // Tags are country · genre · year only — no mood tags.
 async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
-  // deterministic tags — always present even without Gemini
-  const tags = [{ ko: "한국", ja: "일본", en: "영미" }[lang] || "기타"];
-  if (genre) tags.push(capGenre(genre));
-  if (year) tags.push(String(year)); // exact release year, not the decade
+  let country = countryOf({ artist, genre, lang }); // deterministic baseline
   let titleKo = lang === "ko" ? title : "";
   let artistKo = "";
   let comment = "";
@@ -91,6 +123,7 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
       const raw = await geminiText(
         key,
         `노래 "${title}" (${artist})에 대해 아래 스키마의 JSON으로 답해줘.
+- country: 아티스트의 국적 기준 분류 — "한국"|"일본"|"영미"|"기타" 중 하나. 가수의 출신·주 활동권 기준이며 가사 언어와 무관 (예: 뉴진스는 영어 가사여도 한국)
 - titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
 - artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
 - comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤
@@ -99,11 +132,21 @@ ${lyrics.slice(0, 2000)}`,
         true
       );
       const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+      if (COUNTRY_TAGS.includes(json.country)) country = json.country;
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
     } catch {} // Gemini 실패해도 국가·장르·연도 태그는 유지
   }
+
+  const tags = [country];
+  // a Korean act released through the JP store carries a "J-Pop" store genre
+  // (and vice versa) — realign the region-genre with the artist's country
+  let genreTag = genre ? capGenre(genre) : "";
+  if (country === "한국" && genreTag === "J-Pop") genreTag = "K-Pop";
+  if (country === "일본" && genreTag === "K-Pop") genreTag = "J-Pop";
+  if (genreTag) tags.push(genreTag);
+  if (year) tags.push(String(year)); // exact release year, not the decade
   return { tags, titleKo, artistKo, comment };
 }
 
@@ -256,7 +299,7 @@ async function handle(req) {
   const { action, ...body } = await req.json();
 
   if (action === "search") {
-    const PAGE = 25;
+    const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
     const offset = body.offset || 0;
     // free-text search across title and artist — iTunes matches both by default
     // search US/KR/JP stores together — each store has a different catalog
@@ -270,12 +313,22 @@ async function handle(req) {
           .catch(() => [])
       )
     );
+    // Normalize before matching — iTunes decorates names with (feat. …), curly
+    // quotes, brackets and hyphens that make honest matches miss.
+    const norm = (s) =>
+      (s || "")
+        .toLowerCase()
+        .normalize("NFKC")
+        .replace(/[’'ʻ´`"]/g, "")
+        .replace(/[()\[\]\-_.,!?~×&/]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
     // relevance: query matches in title and artist float to the top
-    const q = body.query.toLowerCase().trim();
-    const words = q.split(/\s+/).filter(Boolean);
+    const q = norm(body.query);
+    const words = q.split(" ").filter(Boolean);
     const score = (r) => {
-      const t = (r.trackName || "").toLowerCase();
-      const a = (r.artistName || "").toLowerCase();
+      const t = norm(r.trackName);
+      const a = norm(r.artistName);
       let s = 0;
       // tiers are exclusive — an exact title must not also collect startsWith+includes,
       // or a song *named* "radiohead" outranks the band Radiohead.
@@ -285,10 +338,17 @@ async function handle(req) {
       if (t === q) s += 100;
       else if (t.startsWith(q)) s += 40;
       else if (t.includes(q)) s += 30;
+      let hits = 0;
       for (const w of words) {
-        if (t.includes(w)) s += 10;
-        if (a.includes(w)) s += 12;
+        const inT = t.includes(w);
+        const inA = a.includes(w);
+        if (inT) s += 10;
+        if (inA) s += 12;
+        if (inT || inA) hits++;
       }
+      // "artist + part of the title" is the common query — every word landing
+      // somewhere (artist or title) is the strongest relevance signal there is
+      if (words.length > 1 && hits === words.length) s += 80;
       // demote covers/karaoke — the original should win
       if (
         /cover|karaoke|instrumental|tribute|music box|orgel|オルゴール|カラオケ|原曲|歌ってみた|acapella/.test(

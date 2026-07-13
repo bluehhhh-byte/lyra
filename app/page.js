@@ -2,6 +2,10 @@ import { getAllSongs } from "../lib/songs";
 import Browse from "./browse";
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
+const COUNTRY_TAGS = ["한국", "일본", "영미", "기타"];
+// the country tag tracks the artist's nationality; lyric language is only a
+// fallback for songs saved before country tags existed
+const countryOf = (s) => s.tags.find((t) => COUNTRY_TAGS.includes(t)) || COUNTRY[s.lang] || "기타";
 
 export default async function Home({ searchParams }) {
   const { tag, q, group } = (await searchParams) || {};
@@ -14,7 +18,7 @@ export default async function Home({ searchParams }) {
     year: s.year || "",
     artwork: s.artwork,
     tags: s.tags,
-    country: COUNTRY[s.lang] || "기타",
+    country: countryOf(s),
     decade: s.year ? `${Math.floor(+s.year / 10) * 10}s` : "미상",
     // compact lowercase blob for client search (title/artist/album/tags/lyrics)
     // ponytail: ships every song's full lyrics to the client. 11 songs = a few KB.

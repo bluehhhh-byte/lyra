@@ -25,7 +25,11 @@ export default function StatsPage() {
   const readings = lines.filter((l) => l.reading).length;
   const notes = songs.flatMap((s) => s.stanzas).filter((st) => st.note).length;
 
-  const byCountry = tally(songs.map((s) => COUNTRY[s.lang] || "기타"));
+  // country follows the artist-nationality tag; lyric language is only a
+  // fallback for songs saved before country tags existed
+  const byCountry = tally(
+    songs.map((s) => s.tags.find((t) => isCountryTag(t)) || COUNTRY[s.lang] || "기타")
+  );
   const byDecade = tally(songs.filter((s) => s.year).map((s) => `${Math.floor(+s.year / 10) * 10}s`)).sort(
     (a, b) => a[0].localeCompare(b[0])
   );

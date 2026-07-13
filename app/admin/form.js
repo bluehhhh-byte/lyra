@@ -82,7 +82,10 @@ export default function AdminForm() {
   const [titleKo, setTitleKo] = useState("");
   const [artistKo, setArtistKo] = useState("");
 
-  // country + decade — deterministic, always present even if Gemini is unavailable.
+  // country + genre + year — deterministic, always present even if Gemini is
+  // unavailable. Country follows the ARTIST's nationality (store genre, then
+  // name script, then lyric language), not the lyric language — the server's
+  // autotag mirrors this and can further correct it via Gemini.
   // iTunes splits a few genres out as siblings of Rock even though they're really
   // Rock subgenres — fold those back in so the tag reads as the parent genre.
   const GENRE_ALIAS = { alternative: "Rock", "alternative rock": "Rock", "indie rock": "Rock" };
@@ -91,8 +94,21 @@ export default function AdminForm() {
     return GENRE_ALIAS[t.toLowerCase()] || t.replace(/^./, (x) => x.toUpperCase());
   };
   const baseTags = (c, lg) => {
-    const t = [{ ko: "한국", ja: "일본", en: "영미" }[lg] || "기타"];
-    if (c?.genre) t.push(capGenre(c.genre));
+    const g = (c?.genre || "").toLowerCase();
+    const country = g.includes("k-pop")
+      ? "한국"
+      : g.includes("j-pop") || g.includes("enka") || g.includes("anime")
+        ? "일본"
+        : /[가-힣]/.test(c?.artist || "")
+          ? "한국"
+          : /[぀-ヿ㐀-鿿]/.test(c?.artist || "")
+            ? "일본"
+            : { ko: "한국", ja: "일본", en: "영미" }[lg] || "기타";
+    const t = [country];
+    let genreTag = c?.genre ? capGenre(c.genre) : "";
+    if (country === "한국" && genreTag === "J-Pop") genreTag = "K-Pop";
+    if (country === "일본" && genreTag === "K-Pop") genreTag = "J-Pop";
+    if (genreTag) t.push(genreTag);
     if (c?.year) t.push(String(c.year)); // exact release year, not the decade
     return t;
   };

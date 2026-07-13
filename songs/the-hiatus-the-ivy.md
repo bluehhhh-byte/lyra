@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/
 trackId: 647064803
 duration: 249
 lang: en
-tags: [영미, Rock, 2010]
+tags: [일본, Rock, 2010]
 date: 2026-07-09
 comment: 이 곡은 한 사람에게서 받은 고통과 구원의 감정을 복합적으로 다룬다. 상대방이 남긴 상처에도 불구하고 '붙잡고 있으라'는 말에 죄를 뱉어내고 고통을 덜어내며 내면의 세계를 지키려는 노력을 그린다.
 ---
