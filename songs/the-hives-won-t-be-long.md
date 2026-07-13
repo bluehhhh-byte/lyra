@@ -7,6 +7,7 @@ year: 2007
 genre: Alternative
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d0/81/26/d08126cf-9119-0488-c2c5-59add3d3039b/00602517474642.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/b3/27/fbb3276c-2716-809a-340f-ad8b58863ca7/mzaf_1571540578382921890.plus.aac.p.m4a
+trackId: 1443156446
 lang: en
 tags: [영미, Rock, 2007]
 date: 2026-07-07

@@ -7,6 +7,7 @@ year: 1999
 genre: Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/04/92/4d0492a2-11e1-e64a-181b-7118e0bc4f6b/6.HEAVY_GAUGE_itunes.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/25/3b/35253bed-202a-3af8-14ec-58d96abc934e/mzaf_12919756588202327135.plus.aac.p.m4a
+trackId: 989835113
 lang: ja
 tags: [일본, Rock, 1999]
 date: 2026-07-07

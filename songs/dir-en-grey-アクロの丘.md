@@ -7,6 +7,7 @@ year: 2018
 genre: Metal
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/1d/41/1e1d41cc-e600-8edf-242f-297f6c685d2b/4529123106674.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/62/03/d86203b3-d2c4-3139-2927-84fd447ffd85/mzaf_9222938714775326752.plus.aac.p.m4a
+trackId: 1483713068
 lang: ja
 tags: [일본, Metal, 2018]
 date: 2026-07-07
