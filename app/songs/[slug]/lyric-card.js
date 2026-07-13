@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-// Stanza → 1080×1350 share card (blurred album art behind the lines).
-// CardModal previews the card, lets the user pick which lines to include,
-// then hands the PNG to the native share sheet (download fallback).
-// All client-side, no deps.
+// Stanza → 1080×1350 share card (flat dominant-color background from the album
+// art, ink flips black/white to match). CardModal previews the card, lets the
+// user pick which lines to include, then hands the PNG to the native share
+// sheet (download fallback). All client-side, no deps.
 
 const W = 1080;
 const H = 1350;
@@ -47,23 +47,54 @@ function wrap(ctx, text, maxW) {
   return out;
 }
 
+// dominant color: downsample the art, bucket colors coarsely, score each bucket
+// by count × saturation so a vivid album color beats a big gray area, and return
+// the winning bucket's average. ponytail: 32-step quantization, no k-means.
+function dominantColor(img) {
+  const N = 32;
+  const c = document.createElement("canvas");
+  c.width = c.height = N;
+  const x = c.getContext("2d");
+  x.drawImage(img, 0, 0, N, N);
+  const px = x.getImageData(0, 0, N, N).data;
+  const buckets = new Map();
+  for (let i = 0; i < px.length; i += 4) {
+    const r = px[i], g = px[i + 1], b = px[i + 2];
+    const key = `${r >> 5},${g >> 5},${b >> 5}`;
+    const bk = buckets.get(key) || { r: 0, g: 0, b: 0, n: 0 };
+    bk.r += r; bk.g += g; bk.b += b; bk.n++;
+    buckets.set(key, bk);
+  }
+  let best = null, bestScore = -1;
+  for (const bk of buckets.values()) {
+    const r = bk.r / bk.n, g = bk.g / bk.n, b = bk.b / bk.n;
+    const sat = (Math.max(r, g, b) - Math.min(r, g, b)) / 255;
+    const score = bk.n * (0.15 + sat); // 0.15 keeps near-grays viable on mono art
+    if (score > bestScore) { bestScore = score; best = { r, g, b }; }
+  }
+  return best;
+}
+
 async function drawCard({ song, lines }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // background — blurred, darkened artwork; plain dark if the image won't load
-  ctx.fillStyle = "#0d0d0f";
-  ctx.fillRect(0, 0, W, H);
+  // background — one flat color pulled from the artwork; plain dark fallback
   let art = null;
+  let bg = { r: 13, g: 13, b: 15 };
   try {
     art = await loadImage(song.artwork);
-    const s = Math.max(W, H) * 1.3; // overscan so the blur has no hard edges
-    ctx.filter = "blur(60px) brightness(0.35)";
-    ctx.drawImage(art, (W - s) / 2, (H - s) / 2, s, s);
-    ctx.filter = "none";
+    bg = dominantColor(art) || bg;
   } catch {}
+  ctx.fillStyle = `rgb(${bg.r | 0},${bg.g | 0},${bg.b | 0})`;
+  ctx.fillRect(0, 0, W, H);
+
+  // ink flips with the background's perceived brightness
+  const dark = (0.299 * bg.r + 0.587 * bg.g + 0.114 * bg.b) / 255 < 0.55;
+  const ink = dark ? "#f4f4f6" : "#141416";
+  const inkDim = dark ? "rgba(244,244,246,0.62)" : "rgba(20,20,22,0.62)";
 
   // lyric lines — original (serif, bright) over translation (sans, dimmed);
   // shrink a step when more than 4 pairs are included
@@ -94,7 +125,7 @@ async function drawCard({ song, lines }) {
     ctx.font = b.dim
       ? `${b.size}px Pretendard, 'Apple SD Gothic Neo', sans-serif`
       : `600 ${b.size}px Georgia, 'Noto Serif KR', serif`;
-    ctx.fillStyle = b.dim ? "rgba(237,237,240,0.55)" : "#ededf0";
+    ctx.fillStyle = b.dim ? inkDim : ink;
     ctx.fillText(b.t, pad, y);
   }
 
@@ -110,13 +141,13 @@ async function drawCard({ song, lines }) {
     ctx.restore();
   }
   const tx = pad + (art ? 112 : 0);
-  ctx.fillStyle = "#ededf0";
+  ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.title, tx, fy + 38);
-  ctx.fillStyle = "rgba(237,237,240,0.55)";
+  ctx.fillStyle = inkDim;
   ctx.font = "28px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, tx, fy + 76);
-  ctx.fillStyle = "#c8b6ff";
+  ctx.fillStyle = ink;
   ctx.textAlign = "right";
   ctx.font = "600 30px Georgia, serif";
   ctx.fillText("Lyra.", W - pad, fy + 76);
