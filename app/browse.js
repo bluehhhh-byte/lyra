@@ -41,12 +41,16 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
     history.replaceState(null, "", qs ? `/?${qs}` : "/");
   }, [q, tag, group]);
 
+  const needle = q.trim().toLowerCase();
   const filtered = useMemo(() => {
-    const needle = q.trim().toLowerCase();
     return songs.filter(
-      (s) => (!tag || s.tags.includes(tag)) && (!needle || s.search.includes(needle))
+      (s) =>
+        (!tag || s.tags.includes(tag)) &&
+        (!needle ||
+          s.metaSearch.includes(needle) ||
+          s.lines.some((l) => l.toLowerCase().includes(needle)))
     );
-  }, [q, tag, songs]);
+  }, [needle, tag, songs]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -142,7 +146,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
               다시 섞기 ↻
             </button>
           </div>
-          <Grid list={randomList} />
+          <Grid list={randomList} needle={needle} />
         </section>
       ) : (
         groups.map(([name, list]) => (
@@ -152,7 +156,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
                 {name} <span className="text-xs">({list.length})</span>
               </h2>
             )}
-            <Grid list={list} />
+            <Grid list={list} needle={needle} />
           </section>
         ))
       )}
@@ -160,7 +164,25 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
   );
 }
 
-function Grid({ list }) {
+// why did this card match? — when the hit is in the lyrics (not title/artist),
+// show the matching line with the query highlighted
+function Snippet({ song, needle }) {
+  if (!needle || song.metaSearch.includes(needle)) return null;
+  const line = song.lines.find((l) => l.toLowerCase().includes(needle));
+  if (!line) return null;
+  const i = line.toLowerCase().indexOf(needle);
+  return (
+    <p className="mt-1 line-clamp-2 text-xs italic text-muted/80">
+      “{line.slice(0, i)}
+      <span className="not-italic font-semibold text-accent">
+        {line.slice(i, i + needle.length)}
+      </span>
+      {line.slice(i + needle.length)}”
+    </p>
+  );
+}
+
+function Grid({ list, needle }) {
   return (
     <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
       {list.map((s) => (
@@ -179,6 +201,7 @@ function Grid({ list }) {
             {s.artist}
             {s.year ? ` · ${s.year}` : ""}
           </p>
+          <Snippet song={s} needle={needle} />
         </Link>
       ))}
     </div>

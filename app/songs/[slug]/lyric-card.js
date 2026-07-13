@@ -1,11 +1,14 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 
-// Renders one stanza onto a 1080×1350 canvas (blurred album art behind the
-// lines) and hands it to the native share sheet — falls back to a download
-// where Web Share can't send files. All client-side, no deps.
+// Stanza → 1080×1350 share card (blurred album art behind the lines).
+// CardModal previews the card, lets the user pick which lines to include,
+// then hands the PNG to the native share sheet (download fallback).
+// All client-side, no deps.
 
 const W = 1080;
 const H = 1350;
+const MAX_PAIRS = 6;
 
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -44,7 +47,7 @@ function wrap(ctx, text, maxW) {
   return out;
 }
 
-async function drawCard({ song, stanza }) {
+async function drawCard({ song, lines }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -62,18 +65,23 @@ async function drawCard({ song, stanza }) {
     ctx.filter = "none";
   } catch {}
 
-  // lyric lines — original (serif, bright) over translation (sans, dimmed),
-  // capped at 4 pairs so the card never gets cramped
+  // lyric lines — original (serif, bright) over translation (sans, dimmed);
+  // shrink a step when more than 4 pairs are included
+  const pairs = lines.slice(0, MAX_PAIRS);
+  const big = pairs.length <= 4;
+  const oSize = big ? 52 : 42;
+  const tSize = big ? 36 : 30;
   const pad = 96;
   const maxW = W - pad * 2;
-  const pairs = stanza.lines.slice(0, 4);
   const blocks = [];
   for (const l of pairs) {
-    ctx.font = "600 52px Georgia, 'Noto Serif KR', serif";
-    for (const t of wrap(ctx, l.en, maxW)) blocks.push({ t, size: 52, gap: 66, dim: false });
+    ctx.font = `600 ${oSize}px Georgia, 'Noto Serif KR', serif`;
+    for (const t of wrap(ctx, l.en, maxW))
+      blocks.push({ t, size: oSize, gap: oSize + 14, dim: false });
     if (l.ko) {
-      ctx.font = "36px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-      for (const t of wrap(ctx, l.ko, maxW)) blocks.push({ t, size: 36, gap: 50, dim: true });
+      ctx.font = `${tSize}px Pretendard, 'Apple SD Gothic Neo', sans-serif`;
+      for (const t of wrap(ctx, l.ko, maxW))
+        blocks.push({ t, size: tSize, gap: tSize + 14, dim: true });
     }
     blocks.push({ t: "", size: 0, gap: 28 });
   }
@@ -93,11 +101,10 @@ async function drawCard({ song, stanza }) {
   // footer — small artwork, title/artist, wordmark
   const fy = H - 150;
   if (art) {
-    const r = 16;
     const size = 88;
     ctx.save();
     ctx.beginPath();
-    ctx.roundRect(pad, fy, size, size, r);
+    ctx.roundRect(pad, fy, size, size, 16);
     ctx.clip();
     ctx.drawImage(art, pad, fy, size, size);
     ctx.restore();
@@ -117,15 +124,12 @@ async function drawCard({ song, stanza }) {
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
 
-export async function shareStanzaCard({ song, stanza }) {
-  const blob = await drawCard({ song, stanza });
-  if (!blob) return;
+async function shareBlob(blob, song) {
   const file = new File([blob], `lyra-${song.slug}.png`, { type: "image/png" });
   if (navigator.canShare?.({ files: [file] })) {
     try {
       await navigator.share({ files: [file], title: `${song.title} — ${song.artist}` });
-      return;
-    } catch {} // dismissed the sheet → fall through to download? no — dismissal means stop
+    } catch {} // dismissed the sheet — nothing to do
     return;
   }
   const url = URL.createObjectURL(blob);
@@ -134,4 +138,93 @@ export async function shareStanzaCard({ song, stanza }) {
   a.download = file.name;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+export default function CardModal({ song, stanza, onClose }) {
+  const [sel, setSel] = useState(() => new Set(stanza.lines.slice(0, 4).map((_, i) => i)));
+  const [url, setUrl] = useState(null);
+  const blobRef = useRef(null);
+
+  // re-render the preview whenever the selection changes
+  useEffect(() => {
+    let alive = true;
+    const lines = stanza.lines.filter((_, i) => sel.has(i));
+    if (!lines.length) return;
+    drawCard({ song, lines }).then((blob) => {
+      if (!alive || !blob) return;
+      blobRef.current = blob;
+      setUrl((old) => {
+        if (old) URL.revokeObjectURL(old);
+        return URL.createObjectURL(blob);
+      });
+    });
+    return () => {
+      alive = false;
+    };
+  }, [sel, song, stanza]);
+
+  useEffect(() => () => url && URL.revokeObjectURL(url), [url]);
+
+  const toggle = (i) =>
+    setSel((old) => {
+      const next = new Set(old);
+      if (next.has(i)) next.delete(i);
+      else if (next.size < MAX_PAIRS) next.add(i);
+      return next.size ? next : old; // keep at least one line
+    });
+
+  return (
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
+      role="dialog"
+      aria-label="가사 카드 공유"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="max-h-full w-full max-w-sm overflow-y-auto rounded-2xl border border-line bg-bg p-4"
+      >
+        {url ? (
+          <img src={url} alt="가사 카드 미리보기" className="w-full rounded-xl border border-line" />
+        ) : (
+          <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">
+            카드 생성 중…
+          </div>
+        )}
+
+        <p className="mb-1 mt-3 text-xs text-muted">포함할 줄 (최대 {MAX_PAIRS})</p>
+        <ul className="max-h-36 space-y-1 overflow-y-auto">
+          {stanza.lines.map((l, i) => (
+            <li key={i}>
+              <label className="flex cursor-pointer items-baseline gap-2 text-xs">
+                <input
+                  type="checkbox"
+                  checked={sel.has(i)}
+                  onChange={() => toggle(i)}
+                  className="translate-y-0.5 accent-(--color-accent)"
+                />
+                <span className={`truncate ${sel.has(i) ? "" : "text-muted"}`}>{l.en}</span>
+              </label>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-4 flex gap-2">
+          <button
+            onClick={() => blobRef.current && shareBlob(blobRef.current, song)}
+            disabled={!url}
+            className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+          >
+            공유
+          </button>
+          <button
+            onClick={onClose}
+            className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent"
+          >
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }

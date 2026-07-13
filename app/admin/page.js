@@ -1,6 +1,7 @@
 import { getAllSongs } from "../../lib/songs";
 import AdminForm from "./form";
 import Backfill from "./backfill";
+import Lint from "./lint";
 import Requality from "./requality";
 import SongTools from "./song-tools";
 
@@ -16,6 +17,9 @@ export default function AdminPage() {
 
       <h2 className="mb-3 mt-16 text-lg font-bold">누락 항목 보정</h2>
       <Backfill />
+
+      <h2 className="mb-3 mt-16 text-lg font-bold">번역 형식 검사</h2>
+      <Lint />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">가사 품질 재검사</h2>
       <Requality />

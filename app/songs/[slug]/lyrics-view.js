@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { shareStanzaCard } from "./lyric-card";
+import CardModal from "./lyric-card";
 
 const MODES = [
   { key: "both", label: "둘 다" },
@@ -23,6 +23,7 @@ export default function LyricsView({ stanzas, lang, song }) {
   const [size, setSize] = useState("m");
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
+  const [cardStanza, setCardStanza] = useState(null); // stanza being made into a share card
 
   // restore prefs after mount — reading localStorage during render breaks hydration
   useEffect(() => {
@@ -67,6 +68,9 @@ export default function LyricsView({ stanzas, lang, song }) {
   }, []);
 
   const s = SIZES[size];
+  const sections = stanzas
+    .map((st, i) => ({ i, label: st.section }))
+    .filter((x) => x.label);
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -95,6 +99,27 @@ export default function LyricsView({ stanzas, lang, song }) {
             ))}
           </div>
           <div className="flex items-center gap-1.5">
+            {sections.length >= 2 && (
+              <select
+                value=""
+                onChange={(e) => {
+                  if (e.target.value === "") return;
+                  document
+                    .getElementById(`v${e.target.value}`)
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  e.target.value = ""; // stay a jump menu, not a stateful select
+                }}
+                aria-label="섹션으로 이동"
+                className="max-w-28 rounded-full border border-line bg-surface px-2 py-1 text-xs text-muted outline-none focus:border-accent"
+              >
+                <option value="">이동 ▾</option>
+                {sections.map((x) => (
+                  <option key={x.i} value={x.i}>
+                    {x.label}
+                  </option>
+                ))}
+              </select>
+            )}
             {SIZE_KEYS.map((k) => (
               <button
                 key={k}
@@ -127,7 +152,7 @@ export default function LyricsView({ stanzas, lang, song }) {
           >
             {song && stanza.lines.length > 0 && (
               <button
-                onClick={() => shareStanzaCard({ song, stanza })}
+                onClick={() => setCardStanza(stanza)}
                 aria-label="이 구절 이미지 카드로 공유"
                 title="가사 카드 공유"
                 className="absolute -top-1 right-0 rounded p-1 text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
@@ -184,6 +209,10 @@ export default function LyricsView({ stanzas, lang, song }) {
           </section>
         ))}
       </div>
+
+      {cardStanza && (
+        <CardModal song={song} stanza={cardStanza} onClose={() => setCardStanza(null)} />
+      )}
     </div>
   );
 }

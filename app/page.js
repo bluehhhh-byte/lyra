@@ -20,21 +20,15 @@ export default async function Home({ searchParams }) {
     tags: s.tags,
     country: countryOf(s),
     decade: s.year ? `${Math.floor(+s.year / 10) * 10}s` : "미상",
-    // compact lowercase blob for client search (title/artist/album/tags/lyrics)
-    // ponytail: ships every song's full lyrics to the client. 11 songs = a few KB.
-    // Move search to a route handler (or a prebuilt index) past ~100 songs.
-    search: [
-      s.title,
-      s.title_ko,
-      s.artist,
-      s.artist_ko,
-      s.album,
-      s.tags.join(" "),
-      ...s.stanzas.flatMap((st) => st.lines.flatMap((l) => [l.en, l.ko])),
-    ]
+    // meta and lyrics are searched separately so a lyric-only match can show
+    // WHICH line matched (snippet under the result card)
+    metaSearch: [s.title, s.title_ko, s.artist, s.artist_ko, s.album, s.tags.join(" ")]
       .filter(Boolean)
       .join(" ")
       .toLowerCase(),
+    // ponytail: ships every song's full lyrics to the client. ~20 songs = a few KB.
+    // Move search to a route handler (or a prebuilt index) past ~100 songs.
+    lines: s.stanzas.flatMap((st) => st.lines.flatMap((l) => [l.en, l.ko])).filter(Boolean),
   }));
 
   return <Browse songs={songs} initialTag={tag || ""} initialQ={q || ""} initialGroup={group || "none"} />;

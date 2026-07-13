@@ -448,6 +448,29 @@ async function handle(req) {
     return Response.json(await computeAuto(body));
   }
 
+  // Format lint — catches the failure modes we've actually hit: original lines
+  // whose translation is missing, Japanese lines without a reading, and Gemini's
+  // inline ">"/"+" markers glued onto the lyric line (the supernatural bug).
+  if (action === "lint") {
+    const report = getAllSongs()
+      .map((s) => {
+        const lines = s.stanzas.flatMap((st) => st.lines);
+        const translated = lines.filter((l) => l.ko?.trim()).length;
+        // a Korean song with zero translations is a deliberate choice, not a defect
+        const untranslated =
+          s.lang === "ko" && translated === 0 ? 0 : lines.length - translated;
+        const noReading = lines.filter((l) => /[぀-ヿ]/.test(l.en) && !l.reading?.trim()).length;
+        const inline = lines.filter((l) => / [>+] /.test(l.en)).length;
+        const issues = [];
+        if (inline) issues.push(`인라인 마커 의심 ${inline}줄`);
+        if (untranslated) issues.push(`번역 없음 ${untranslated}줄`);
+        if (noReading) issues.push(`독음 없음 ${noReading}줄`);
+        return { slug: s.slug, title: s.title, artist: s.artist, issues };
+      })
+      .filter((s) => s.issues.length);
+    return Response.json({ report, total: getAllSongs().length });
+  }
+
   // Which songs are missing generated metadata. `artist_ko` only counts as
   // missing for kanji/kana artists — a latin name has no reading to give.
   if (action === "audit") {

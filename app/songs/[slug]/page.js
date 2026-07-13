@@ -5,6 +5,7 @@ import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
 import SongNav from "./song-nav";
+import YouTubeEmbed from "./youtube-embed";
 
 export function generateStaticParams() {
   return getAllSongs().map((s) => ({ slug: s.slug }));
@@ -99,7 +100,7 @@ export default async function SongPage({ params }) {
                 </Link>
               ))}
             </div>
-            <div className="mt-4 flex items-center justify-center gap-3 sm:justify-start">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
               {song.preview && (
                 <PlayButton
                   track={{
@@ -111,14 +112,17 @@ export default async function SongPage({ params }) {
                   }}
                 />
               )}
-              <a
-                href={`https://www.youtube.com/results?search_query=${encodeURIComponent(`${song.artist} ${song.title}`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
-              >
-                ▶ YouTube
-              </a>
+              <YouTubeEmbed artist={song.artist} title={song.title} />
+              {song.trackId && (
+                <a
+                  href={`https://music.apple.com/kr/song/${song.trackId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
+                >
+                  ♪ Apple Music
+                </a>
+              )}
               <ShareButton title={song.title} artist={song.artist} />
             </div>
           </div>
