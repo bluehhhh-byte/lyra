@@ -30,6 +30,20 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// "2026년 7월 14일 22:03" in KST; drops the time for a date-only value
+function formatPublished(v) {
+  const d = new Date(v.length <= 10 ? `${v}T00:00:00+09:00` : v);
+  if (isNaN(d)) return v;
+  const withTime = v.length > 10;
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    ...(withTime ? { hour: "2-digit", minute: "2-digit", hour12: false } : {}),
+  }).format(d);
+}
+
 function relatedSongs(song, all) {
   const tags = new Set(song.tags);
   return all
@@ -142,6 +156,13 @@ export default async function SongPage({ params }) {
         lang={song.lang}
         song={{ slug: song.slug, title: song.title, artist: song.artist, artwork: song.artwork }}
       />
+
+      {/* when this entry went up — full datetime if recorded, else the date */}
+      {(song.published || song.date) && (
+        <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
+          기록 {formatPublished(song.published || song.date)}
+        </p>
+      )}
 
       {/* related */}
       {related.length > 0 && (
