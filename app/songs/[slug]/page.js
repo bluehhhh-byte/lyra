@@ -154,7 +154,13 @@ export default async function SongPage({ params }) {
       <LyricsView
         stanzas={song.stanzas}
         lang={song.lang}
-        song={{ slug: song.slug, title: song.title, artist: song.artist, artwork: song.artwork }}
+        song={{
+          slug: song.slug,
+          title: song.title,
+          artist: song.artist,
+          artwork: song.artwork,
+          year: song.year || "",
+        }}
       />
 
       {/* when this entry went up — full datetime if recorded, else the date */}

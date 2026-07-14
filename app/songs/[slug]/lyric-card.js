@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { buildCaption } from "../../../lib/caption";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal previews the card, lets the
@@ -290,7 +291,40 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
             닫기
           </button>
         </div>
+
+        <Caption song={song} />
       </div>
+    </div>
+  );
+}
+
+// Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
+// 타임스탬프를 다시 만든다.
+function Caption({ song }) {
+  const [text, setText] = useState(() => buildCaption(song));
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    const fresh = buildCaption(song); // 복사하는 순간의 년월일시로 갱신
+    setText(fresh);
+    try {
+      await navigator.clipboard.writeText(fresh);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {} // clipboard 차단 환경 — 아래 텍스트를 직접 복사하면 됨
+  };
+
+  return (
+    <div className="mt-4 border-t border-line pt-3">
+      <div className="mb-1.5 flex items-center justify-between">
+        <span className="text-xs font-semibold text-muted">인스타그램 캡션</span>
+        <button onClick={copy} className="text-xs text-accent hover:underline">
+          {copied ? "복사됨 ✓" : "복사"}
+        </button>
+      </div>
+      <pre className="whitespace-pre-wrap rounded-lg border border-line bg-surface px-3 py-2 font-sans text-xs leading-relaxed text-ink">
+        {text}
+      </pre>
     </div>
   );
 }
