@@ -54,19 +54,31 @@ async function drawCard({ song, lines }) {
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // background — the album cover, blurred and darkened so the lyrics stay legible
+  // background — the album cover, heavily blurred + darkened so the lyrics read.
+  // ctx.filter blur is unsupported on Safari/iOS, so the blur is done by drawing
+  // the art tiny (16px) and upscaling it — bilinear smoothing melts it into a
+  // soft wash in every browser. A dark scrim on top then guarantees contrast,
+  // whether or not the extra filter blur took effect.
   ctx.fillStyle = "#0d0d0f";
   ctx.fillRect(0, 0, W, H);
   let art = null;
   try {
     art = await loadImage(song.artwork);
-    const s = Math.max(W, H) * 1.3; // overscan so the blur has no hard edges
-    ctx.filter = "blur(60px) brightness(0.4)";
-    ctx.drawImage(art, (W - s) / 2, (H - s) / 2, s, s);
+    const D = 16; // smaller = blurrier
+    const tmp = document.createElement("canvas");
+    tmp.width = tmp.height = D;
+    tmp.getContext("2d").drawImage(art, 0, 0, D, D);
+    ctx.imageSmoothingEnabled = true;
+    const s = Math.max(W, H) * 1.4; // overscan so no hard edges
+    ctx.filter = "blur(40px)"; // extra softening where supported; ignored on Safari
+    ctx.drawImage(tmp, (W - s) / 2, (H - s) / 2, s, s);
     ctx.filter = "none";
   } catch {}
+  // dark scrim — the real legibility guarantee, applied regardless of blur support
+  ctx.fillStyle = "rgba(0,0,0,0.55)";
+  ctx.fillRect(0, 0, W, H);
 
-  // the blurred cover is darkened → light ink always reads
+  // scrimmed dark background → light ink always reads
   const ink = "#f4f4f6";
   const inkDim = "rgba(244,244,246,0.62)";
 
