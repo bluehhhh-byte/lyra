@@ -9,7 +9,7 @@ import { buildCaption } from "../../../lib/caption";
 
 const W = 1080;
 const H = 1350;
-const MAX_PAIRS = 6;
+const MAX_PAIRS = 10;
 
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -82,12 +82,15 @@ async function drawCard({ song, lines }) {
   const ink = "#f4f4f6";
   const inkDim = "rgba(244,244,246,0.62)";
 
-  // lyric lines — original (serif, bright) over translation (sans, dimmed);
-  // shrink a step when more than 4 pairs are included
+  // lyric lines — original (serif, bright) over translation (sans, dimmed).
+  // Type and stanza gap shrink in tiers as more pairs are picked, so up to 10
+  // still fit the card. ponytail: a line that wraps to 2 rows can push a very
+  // full card past the footer — fine at these counts, revisit if it bites.
   const pairs = lines.slice(0, MAX_PAIRS);
-  const big = pairs.length <= 4;
-  const oSize = big ? 52 : 42;
-  const tSize = big ? 36 : 30;
+  const n = pairs.length;
+  const oSize = n <= 4 ? 52 : n <= 7 ? 42 : 34;
+  const tSize = n <= 4 ? 36 : n <= 7 ? 30 : 24;
+  const stanzaGap = n <= 7 ? 28 : 16;
   const pad = 96;
   const maxW = W - pad * 2;
   const blocks = [];
@@ -100,9 +103,9 @@ async function drawCard({ song, lines }) {
       for (const t of wrap(ctx, l.ko, maxW))
         blocks.push({ t, size: tSize, gap: tSize + 14, dim: true });
     }
-    blocks.push({ t: "", size: 0, gap: 28 });
+    blocks.push({ t: "", size: 0, gap: stanzaGap });
   }
-  const totalH = blocks.reduce((n, b) => n + b.gap, 0);
+  const totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   let y = (H - 160 - totalH) / 2 + 40; // center in the space above the footer
   ctx.textAlign = "left";
   for (const b of blocks) {
