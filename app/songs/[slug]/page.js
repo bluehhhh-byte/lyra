@@ -181,6 +181,8 @@ export default async function SongPage({ params }) {
                   <img
                     src={s.artwork}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
                   />
                 </div>

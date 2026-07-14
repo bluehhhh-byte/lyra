@@ -116,7 +116,12 @@ export default function SongTools({ songs }) {
         return (
           <li key={s.slug} className="px-3 py-2 text-sm">
             <div className="flex items-center gap-3">
-              <img src={s.artwork} alt="" className="h-9 w-9 shrink-0 rounded" />
+              <img
+                src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
+                alt=""
+                loading="lazy"
+                className="h-9 w-9 shrink-0 rounded"
+              />
               <span className="min-w-0 flex-1">
                 <span className="font-medium">{s.title}</span>
                 <span className="text-muted"> — {s.artist}</span>

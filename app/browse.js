@@ -172,8 +172,12 @@ function Grid({ list, needle }) {
         <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
           <div className="overflow-hidden rounded-xl border border-line bg-surface">
             <img
-              src={s.artwork}
+              // grid cells render ≤ ~300px — 300px for 1x, the 600px original for retina
+              src={s.artwork.replace("600x600bb", "300x300bb")}
+              srcSet={`${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x`}
               alt={`${s.title} album art`}
+              loading="lazy"
+              decoding="async"
               className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
             />
           </div>
