@@ -11,10 +11,10 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ba/
 trackId: 1097863247
 duration: 356
 lang: en
-tags: [영미, Post-Rock, 2000]
+tags: [영미, Alternative Rock, 2000]
 date: 2026-07-13
 published: 2026-07-13T23:33:19.555Z
-comment: "I'm not here, this isn't happening"과 같은 가사는 압도적인 현실에서 벗어나고자 하는 해리감을 표현한다. 이 곡은 톰 요크가 투어 중 겪었던 초현실적인 경험과 몸에서 분리되는 듯한 감각에서 영감을 받은 것이다.
+comment: 이 곡은 투어 중 톰 요크가 겪은 극심한 스트레스와 현실로부터의 괴리감을 담고 있으며, 자신이 아닌 다른 존재처럼 세상을 바라보는 듯한 깊은 상실감을 표현한다.
 ---
 That there
 > 저것은
