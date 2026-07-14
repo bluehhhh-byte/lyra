@@ -16,6 +16,7 @@ date: 2026-07-14
 published: 2026-07-14T17:44:06.956Z
 comment: 이 곡은 화려했던 코파카바나 클럽을 배경으로 쇼걸 롤라가 사랑하는 토니를 잃고 비극적인 삶을 사는 과정을 드라마틱하게 그려내고 있다. 단순한 디스코 팝을 넘어 한 편의 영화 같은 서사를 담고 있어 듣는 이에게 깊은 여운을 남긴다.
 ---
+[Verse 1]
 Her name was Lola, she was a showgirl
 > 그녀의 이름은 롤라, 그녀는 쇼걸이었죠.
 With yellow feathers in her hair and a
@@ -28,6 +29,8 @@ And while she tried to be a star,
 > 스타가 되려 애쓰는 동안에도
 Tony always tended bar
 > 토니는 늘 바를 지켰죠.
+
+[Pre-Chorus]
 Across a crowded floor,
 > 사람들로 북적이는 마루를 가로질러
 they worked from eight til four
@@ -37,6 +40,7 @@ They were young and they had each other
 Who could ask for more?
 > 더 무엇을 바랄 수 있었을까요?
 
+[Chorus]
 At the Copa, Copacabana
 > 코파에서, 코파카바나에서
 The hottest spot north of Havana
@@ -48,6 +52,7 @@ Music and passion were always the fashion
 At the Copa .... they fell in love
 > 코파에서… 그들은 사랑에 빠졌죠.
 
+[Verse 2]
 His name was Rico, he wore a diamond
 > 그의 이름은 리코, 그는 다이아몬드를 찼죠.
 He was escorted to his chair,
@@ -60,6 +65,8 @@ But Rico went a bit too far,
 > 하지만 리코는 좀 지나쳤고
 Tony sailed across the bar
 > 토니는 바를 가로질러 날아갔죠.
+
+[Pre-Chorus]
 And then the punches flew
 > 그리고 주먹이 오가고
 and chairs were smashed in two
@@ -69,6 +76,7 @@ There was blood and a single gun shot
 But just who shot who?
 > 하지만 누가 누구를 쏘았을까요?
 
+[Chorus]
 At the Copa, Copacabana
 > 코파에서, 코파카바나에서
 The hottest spot north of Havana
@@ -80,6 +88,7 @@ Music and passion were always the fashion
 At the Copa .... she lost her love
 > 코파에서… 그녀는 사랑을 잃었죠.
 
+[Verse 3]
 Her name is Lola, she was a showgirl
 > 그녀의 이름은 롤라, 그녀는 쇼걸이었죠.
 But that was thirty years ago,
@@ -92,6 +101,8 @@ Still in the dress she used to wear,
 > 여전히 예전 그 드레스를 입고
 faded feathers in her hair
 > 머리엔 빛바랜 깃털이 꽂혀 있죠.
+
+[Pre-Chorus]
 She sits there so refined,
 > 그녀는 품위 있게 앉아
 and drinks herself half-blind
@@ -101,6 +112,7 @@ She lost her youth and she lost her Tony
 Now she's lost her mind!
 > 이제 그녀는 정신마저 잃었죠!
 
+[Outro]
 At the Copa, Copacabana
 > 코파에서, 코파카바나에서
 The hottest spot north of Havana
