@@ -48,72 +48,27 @@ function wrap(ctx, text, maxW) {
   return out;
 }
 
-// dominant color: downsample the art, bucket colors coarsely, score each bucket
-// by count × saturation so a vivid album color beats a big gray area, and return
-// the winning bucket's average. ponytail: 32-step quantization, no k-means.
-function dominantColor(img) {
-  const N = 32;
-  const c = document.createElement("canvas");
-  c.width = c.height = N;
-  const x = c.getContext("2d");
-  x.drawImage(img, 0, 0, N, N);
-  const px = x.getImageData(0, 0, N, N).data;
-  const buckets = new Map();
-  for (let i = 0; i < px.length; i += 4) {
-    const r = px[i], g = px[i + 1], b = px[i + 2];
-    const key = `${r >> 5},${g >> 5},${b >> 5}`;
-    const bk = buckets.get(key) || { r: 0, g: 0, b: 0, n: 0 };
-    bk.r += r; bk.g += g; bk.b += b; bk.n++;
-    buckets.set(key, bk);
-  }
-  let best = null, bestScore = -1;
-  for (const bk of buckets.values()) {
-    const r = bk.r / bk.n, g = bk.g / bk.n, b = bk.b / bk.n;
-    const sat = (Math.max(r, g, b) - Math.min(r, g, b)) / 255;
-    const score = bk.n * (0.15 + sat); // 0.15 keeps near-grays viable on mono art
-    if (score > bestScore) { bestScore = score; best = { r, g, b }; }
-  }
-  return best;
-}
-
-// mix a color toward white (w>0) or black (w<0) — for the gradient's two ends
-const mix = (c, w) => {
-  const t = w > 0 ? 255 : 0;
-  const f = Math.abs(w);
-  return `rgb(${(c.r + (t - c.r) * f) | 0},${(c.g + (t - c.g) * f) | 0},${(c.b + (t - c.b) * f) | 0})`;
-};
-
-async function drawCard({ song, lines, gradSpec }) {
+async function drawCard({ song, lines }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // background — the artwork's dominant color, as a subtle gradient whose
-  // form (linear angle or radial center) is random per modal open
+  // background — the album cover, blurred and darkened so the lyrics stay legible
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, 0, W, H);
   let art = null;
-  let bg = { r: 13, g: 13, b: 15 };
   try {
     art = await loadImage(song.artwork);
-    bg = dominantColor(art) || bg;
+    const s = Math.max(W, H) * 1.3; // overscan so the blur has no hard edges
+    ctx.filter = "blur(60px) brightness(0.4)";
+    ctx.drawImage(art, (W - s) / 2, (H - s) / 2, s, s);
+    ctx.filter = "none";
   } catch {}
-  const g = gradSpec || { linear: true, a: 0.9, x: 0.5, y: 0.3 };
-  const R = Math.hypot(W, H) / 2;
-  const grad = g.linear
-    ? ctx.createLinearGradient(
-        W / 2 - Math.cos(g.a) * R, H / 2 - Math.sin(g.a) * R,
-        W / 2 + Math.cos(g.a) * R, H / 2 + Math.sin(g.a) * R
-      )
-    : ctx.createRadialGradient(g.x * W, g.y * H, 0, g.x * W, g.y * H, R * 2);
-  grad.addColorStop(0, mix(bg, 0.14)); // gently lit end
-  grad.addColorStop(1, mix(bg, -0.18)); // gently shaded end
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, W, H);
 
-  // ink flips with the background's perceived brightness
-  const dark = (0.299 * bg.r + 0.587 * bg.g + 0.114 * bg.b) / 255 < 0.55;
-  const ink = dark ? "#f4f4f6" : "#141416";
-  const inkDim = dark ? "rgba(244,244,246,0.62)" : "rgba(20,20,22,0.62)";
+  // the blurred cover is darkened → light ink always reads
+  const ink = "#f4f4f6";
+  const inkDim = "rgba(244,244,246,0.62)";
 
   // lyric lines — original (serif, bright) over translation (sans, dimmed);
   // shrink a step when more than 4 pairs are included
@@ -197,20 +152,13 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [sel, setSel] = useState(() => new Set(initial));
   const [url, setUrl] = useState(null);
   const blobRef = useRef(null);
-  // one random gradient form per modal open — stable across line toggles
-  const [gradSpec] = useState(() => ({
-    linear: Math.random() < 0.5,
-    a: Math.random() * Math.PI * 2,
-    x: 0.15 + Math.random() * 0.7,
-    y: 0.15 + Math.random() * 0.7,
-  }));
 
   // re-render the preview whenever the selection changes
   useEffect(() => {
     let alive = true;
     const lines = allLines.filter((_, i) => sel.has(i));
     if (!lines.length) return;
-    drawCard({ song, lines, gradSpec }).then((blob) => {
+    drawCard({ song, lines }).then((blob) => {
       if (!alive || !blob) return;
       blobRef.current = blob;
       setUrl((old) => {
