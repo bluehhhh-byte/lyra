@@ -9,7 +9,7 @@ import { buildCaption } from "../../../lib/caption";
 
 const W = 1080;
 const H = 1350;
-const MAX_PAIRS = 10;
+const MAX_PAIRS = 15;
 
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -48,7 +48,7 @@ function wrap(ctx, text, maxW) {
   return out;
 }
 
-async function drawCard({ song, lines }) {
+async function drawCard({ song, lines, align = "left" }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -82,32 +82,51 @@ async function drawCard({ song, lines }) {
   const ink = "#f4f4f6";
   const inkDim = "rgba(244,244,246,0.62)";
 
-  // lyric lines — original (serif, bright) over translation (sans, dimmed).
-  // Type and stanza gap shrink in tiers as more pairs are picked, so up to 10
-  // still fit the card. ponytail: a line that wraps to 2 rows can push a very
-  // full card past the footer — fine at these counts, revisit if it bites.
-  const pairs = lines.slice(0, MAX_PAIRS);
-  const n = pairs.length;
-  const oSize = n <= 4 ? 52 : n <= 7 ? 42 : 34;
-  const tSize = n <= 4 ? 36 : n <= 7 ? 30 : 24;
-  const stanzaGap = n <= 7 ? 28 : 16;
   const pad = 96;
+
+  // wordmark — top-right, clear of the lyric block
+  ctx.fillStyle = ink;
+  ctx.textAlign = "right";
+  ctx.font = "600 34px Georgia, serif";
+  ctx.fillText("Lyra.", W - pad, 104);
+
+  // lyric lines — original (serif, bright) over translation (sans, dimmed).
+  // Size steps down with the pair count, then a shrink-to-fit loop handles
+  // what the tiers can't (wrapped lines, 15 dense pairs) — the fixed +14 line
+  // paddings don't scale linearly with the font, so one pass can land short.
+  const pairs = lines.slice(0, MAX_PAIRS);
+  const tiers = [[4, 52, 36], [7, 42, 30], [10, 34, 24], [15, 26, 18]];
+  let [, oSize, tSize] = tiers.find(([n]) => pairs.length <= n) || tiers.at(-1);
   const maxW = W - pad * 2;
-  const blocks = [];
-  for (const l of pairs) {
-    ctx.font = `600 ${oSize}px Georgia, 'Noto Serif KR', serif`;
-    for (const t of wrap(ctx, l.en, maxW))
-      blocks.push({ t, size: oSize, gap: oSize + 14, dim: false });
-    if (l.ko) {
-      ctx.font = `${tSize}px Pretendard, 'Apple SD Gothic Neo', sans-serif`;
-      for (const t of wrap(ctx, l.ko, maxW))
-        blocks.push({ t, size: tSize, gap: tSize + 14, dim: true });
+  const build = () => {
+    const blocks = [];
+    for (const l of pairs) {
+      ctx.font = `600 ${oSize}px Georgia, 'Noto Serif KR', serif`;
+      for (const t of wrap(ctx, l.en, maxW))
+        blocks.push({ t, size: oSize, gap: oSize + 14, dim: false });
+      if (l.ko) {
+        ctx.font = `${tSize}px Pretendard, 'Apple SD Gothic Neo', sans-serif`;
+        for (const t of wrap(ctx, l.ko, maxW))
+          blocks.push({ t, size: tSize, gap: tSize + 14, dim: true });
+      }
+      blocks.push({ t: "", size: 0, gap: Math.round(oSize * 0.55) });
     }
-    blocks.push({ t: "", size: 0, gap: stanzaGap });
+    return blocks;
+  };
+  let blocks = build();
+  const top = 150; // below the wordmark
+  const budget = H - 170 - top; // frame minus footer minus headroom
+  let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
+  for (let guard = 4; totalH > budget && guard > 0; guard--) {
+    const f = budget / totalH;
+    oSize = Math.max(16, Math.round(oSize * f));
+    tSize = Math.max(13, Math.round(tSize * f));
+    blocks = build();
+    totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   }
-  const totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
-  let y = (H - 160 - totalH) / 2 + 40; // center in the space above the footer
-  ctx.textAlign = "left";
+  let y = top + Math.max(0, (budget - totalH) / 2); // centered in the free space
+  ctx.textAlign = align;
+  const xText = align === "right" ? W - pad : pad;
   for (const b of blocks) {
     y += b.gap;
     if (!b.t) continue;
@@ -115,10 +134,10 @@ async function drawCard({ song, lines }) {
       ? `${b.size}px Pretendard, 'Apple SD Gothic Neo', sans-serif`
       : `600 ${b.size}px Georgia, 'Noto Serif KR', serif`;
     ctx.fillStyle = b.dim ? inkDim : ink;
-    ctx.fillText(b.t, pad, y);
+    ctx.fillText(b.t, xText, y);
   }
 
-  // footer — small artwork, title/artist, wordmark
+  // footer — small artwork, title/artist
   const fy = H - 150;
   if (art) {
     const size = 88;
@@ -130,16 +149,13 @@ async function drawCard({ song, lines }) {
     ctx.restore();
   }
   const tx = pad + (art ? 112 : 0);
+  ctx.textAlign = "left";
   ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.title, tx, fy + 38);
   ctx.fillStyle = inkDim;
   ctx.font = "28px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, tx, fy + 76);
-  ctx.fillStyle = ink;
-  ctx.textAlign = "right";
-  ctx.font = "600 30px Georgia, serif";
-  ctx.fillText("Lyra.", W - pad, fy + 76);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
@@ -165,15 +181,16 @@ async function shareBlob(blob, song) {
 // selection with the stanza that was clicked.
 export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [sel, setSel] = useState(() => new Set(initial));
+  const [align, setAlign] = useState("left");
   const [url, setUrl] = useState(null);
   const blobRef = useRef(null);
 
-  // re-render the preview whenever the selection changes
+  // re-render the preview whenever the selection or alignment changes
   useEffect(() => {
     let alive = true;
     const lines = allLines.filter((_, i) => sel.has(i));
     if (!lines.length) return;
-    drawCard({ song, lines }).then((blob) => {
+    drawCard({ song, lines, align }).then((blob) => {
       if (!alive || !blob) return;
       blobRef.current = blob;
       setUrl((old) => {
@@ -184,7 +201,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     return () => {
       alive = false;
     };
-  }, [sel, song, allLines]);
+  }, [sel, song, allLines, align]);
 
   useEffect(() => () => url && URL.revokeObjectURL(url), [url]);
 
@@ -215,9 +232,26 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           </div>
         )}
 
-        <p className="mb-1 mt-3 text-xs text-muted">
-          포함할 줄 (최대 {MAX_PAIRS}) — 전체 가사에서 자유롭게
-        </p>
+        <div className="mb-1 mt-3 flex items-center justify-between">
+          <p className="text-xs text-muted">포함할 줄 (최대 {MAX_PAIRS}) — 전체 가사에서 자유롭게</p>
+          <div className="flex gap-1">
+            {[["left", "좌"], ["right", "우"]].map(([k, label]) => (
+              <button
+                key={k}
+                onClick={() => setAlign(k)}
+                aria-label={`${label}측 정렬`}
+                aria-pressed={align === k}
+                className={`rounded-full border px-2.5 py-0.5 text-xs transition ${
+                  align === k
+                    ? "border-accent bg-accent font-semibold text-bg"
+                    : "border-line text-muted hover:text-accent"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
         <ul className="max-h-48 space-y-1 overflow-y-auto">
           {allLines.map((l, i) => (
             <li key={i}>
