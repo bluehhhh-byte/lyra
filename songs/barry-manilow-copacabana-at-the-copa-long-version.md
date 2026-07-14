@@ -1,5 +1,5 @@
 ---
-title: Copacabana (At the Copa) [Long Version]
+title: Copacabana (At the Copa)
 title_ko: 코파카바나
 artist: Barry Manilow
 artist_ko: 
