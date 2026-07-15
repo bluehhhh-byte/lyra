@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/b4/d3/a9/b4d3a995-f7
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8c/93/d4/8c93d4c9-b64a-339a-5242-184dd183cd47/mzaf_1870650337123428307.plus.aac.p.m4a
 trackId: 985060472
 lang: ko
-tags: [한국, K-Pop, 2005]
+tags: [한국, Alternative Rock, 2005]
 date: 2026-07-08
 published: 2026-07-08T04:20:14.000Z
 comment: 눈 위에 적은 사랑 고백이 녹아 사라지듯, 덧없이 사라져버린 관계와 흔적에 대한 상실감을 노래한다. 패닉의 데뷔 앨범에 실린 이 곡은 겨울의 쓸쓸한 정취를 절절하게 담고 있다.
