@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/88/65/60/8865600e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/36/86/053686f4-67e1-bb72-339c-b063b92ebc98/mzaf_11069794315643340929.plus.aac.p.m4a
 trackId: 1539118282
 lang: ja
-tags: [일본, Rock, 2013]
+tags: [일본, Visual Kei, 2013]
 date: 2026-07-08
 published: 2026-07-08T03:17:32.000Z
 comment: 이 곡은 사랑하는 사람에게 끊임없이 상처를 주면서도 자신의 꿈에만 몰두했던 화자의 내면을 깊이 파고든다. 헌신적인 사랑으로 상처받은 상대와 뒤늦게 그 사랑의 무게를 깨닫고 후회하는 화자의 비극적인 관계가 인상적이다.

@@ -100,10 +100,21 @@ const GENRES = [
   "Folk", "Country", "Jazz", "Blues", "Classical", "Soundtrack",
 ];
 const GENRE_INDEX = new Map(GENRES.map((g) => [g.toLowerCase(), g]));
+// Korean genre words map to the English vocabulary — a stray Hangul genre tag
+// ("얼터너티브") must never survive into the tag index.
+const KO_GENRE = new Map([
+  ["얼터너티브", "Alternative Rock"], ["얼터너티브 락", "Alternative Rock"], ["얼터너티브 록", "Alternative Rock"],
+  ["락", "Rock"], ["록", "Rock"], ["하드락", "Hard Rock"], ["하드 락", "Hard Rock"],
+  ["인디락", "Indie Rock"], ["인디 락", "Indie Rock"], ["인디 록", "Indie Rock"], ["인디록", "Indie Rock"],
+  ["펑크락", "Punk Rock"], ["펑크 락", "Punk Rock"], ["포스트펑크", "Post-Punk"], ["슈게이즈", "Shoegaze"],
+  ["메탈", "Metal"], ["헤비메탈", "Heavy Metal"], ["비주얼계", "Visual Kei"], ["비주얼 케이", "Visual Kei"],
+  ["발라드", "Ballad"], ["트로트", "Trot"], ["힙합", "Hip-Hop"], ["재즈", "Jazz"], ["블루스", "Blues"],
+  ["디스코", "Disco"], ["댄스", "Dance"], ["하우스", "House"], ["일렉트로닉", "Electronic"], ["포크", "Folk"],
+]);
 // map a free-form store genre onto the vocabulary; unknown ones just get capitalized
 const capGenre = (g) => {
   const t = (g || "").trim();
-  return GENRE_INDEX.get(t.toLowerCase()) || t.replace(/^./, (c) => c.toUpperCase());
+  return GENRE_INDEX.get(t.toLowerCase()) || KO_GENRE.get(t) || t.replace(/^./, (c) => c.toUpperCase());
 };
 
 // Country = artist nationality, NOT lyric language — an English-singing K-pop

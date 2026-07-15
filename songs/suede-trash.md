@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/60/
 trackId: 437633401
 duration: 246
 lang: en
-tags: [영미, 얼터너티브, 1996]
+tags: [영미, Alternative Rock, 1996]
 date: 2026-07-14
 published: 2026-07-14T04:03:29.681Z
 comment: 이 곡은 스스로를 사회의 '쓰레기'로 부르며 변두리에 있는 이들의 삶을 긍정하고 찬미하는 내용을 담고 있다. 스웨이드 특유의 퇴폐적이고도 아름다운 감성이 아웃사이더들의 연대를 노래하는 메시지와 어우러져 있다.
