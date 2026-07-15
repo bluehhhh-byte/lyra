@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/04/92/4d0492a2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/25/3b/35253bed-202a-3af8-14ec-58d96abc934e/mzaf_12919756588202327135.plus.aac.p.m4a
 trackId: 989835113
 lang: ja
-tags: [일본, Visual Kei, 1999]
+tags: [일본, J-Rock, 1999]
 date: 2026-07-07
 published: 2026-07-07T19:56:45.000Z
 comment: 이 곡은 순수했던 시절을 뒤로하고 미지의 어딘가로 나아가는 청춘의 고뇌와 희망을 담고 있다. 슬픔 가득한 세상에서 흔들림 없는 영혼으로 새로운 항해를 떠나는 다짐이 느껴지는 곡이다.

@@ -91,7 +91,7 @@ function normalizeInterleaved(text) {
 // just the fallback when Gemini is unavailable.
 const GENRES = [
   // rock family
-  "Rock", "Hard Rock", "Alternative Rock", "Indie Rock", "Punk Rock", "Post-Punk",
+  "Rock", "J-Rock", "Hard Rock", "Alternative Rock", "Indie Rock", "Punk Rock", "Post-Punk",
   "Post-Rock", "Grunge", "Shoegaze", "Emo", "Metal", "Heavy Metal", "Visual Kei",
   // pop family
   "Pop", "K-Pop", "J-Pop", "Indie Pop", "Dream Pop", "Synth-Pop", "City Pop", "Ballad", "Trot",
@@ -104,7 +104,7 @@ const GENRE_INDEX = new Map(GENRES.map((g) => [g.toLowerCase(), g]));
 // ("얼터너티브") must never survive into the tag index.
 const KO_GENRE = new Map([
   ["얼터너티브", "Alternative Rock"], ["얼터너티브 락", "Alternative Rock"], ["얼터너티브 록", "Alternative Rock"],
-  ["락", "Rock"], ["록", "Rock"], ["하드락", "Hard Rock"], ["하드 락", "Hard Rock"],
+  ["락", "Rock"], ["록", "Rock"], ["제이락", "J-Rock"], ["제이록", "J-Rock"], ["하드락", "Hard Rock"], ["하드 락", "Hard Rock"],
   ["인디락", "Indie Rock"], ["인디 락", "Indie Rock"], ["인디 록", "Indie Rock"], ["인디록", "Indie Rock"],
   ["펑크락", "Punk Rock"], ["펑크 락", "Punk Rock"], ["포스트펑크", "Post-Punk"], ["슈게이즈", "Shoegaze"],
   ["메탈", "Metal"], ["헤비메탈", "Heavy Metal"], ["비주얼계", "Visual Kei"], ["비주얼 케이", "Visual Kei"],
@@ -125,7 +125,7 @@ const COUNTRY_TAGS = ["한국", "일본", "영미", "기타"];
 function countryOf({ artist, genre, lang }) {
   const g = (genre || "").toLowerCase();
   if (g.includes("k-pop")) return "한국";
-  if (g.includes("j-pop") || g.includes("enka") || g.includes("anime")) return "일본";
+  if (g.includes("j-pop") || g.includes("j-rock") || g.includes("enka") || g.includes("anime")) return "일본";
   if (/[가-힣]/.test(artist || "")) return "한국";
   if (/[぀-ヿ㐀-鿿]/.test(artist || "")) return "일본";
   return { ko: "한국", ja: "일본", en: "영미" }[lang] || "기타";

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/1d/41/1e1d41cc-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/62/03/d86203b3-d2c4-3139-2927-84fd447ffd85/mzaf_9222938714775326752.plus.aac.p.m4a
 trackId: 1483713068
 lang: ja
-tags: [일본, Metal, 2018]
+tags: [일본, J-Rock, 2018]
 date: 2026-07-07
 published: 2026-07-07T21:57:22.000Z
 comment: 아크로의 언덕은 한신·아와지 대지진의 비극에서 영감을 받아 만들어졌다고 알려진 곡이다. 가사는 잃어버린 사랑에 대한 깊은 그리움과 함께 그 사람과 다시 만나고 싶어 하는 간절한 염원을 담고 있다.
