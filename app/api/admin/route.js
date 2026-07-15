@@ -1,5 +1,6 @@
 import { readSong, writeSong, deleteSong } from "../../../lib/store";
 import { getAllSongs } from "../../../lib/songs";
+import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
@@ -84,44 +85,13 @@ function normalizeInterleaved(text) {
     .join("\n");
 }
 
-// Genre vocabulary — specific over broad ("Hard Rock", not "Rock"). Closed list
-// so the tag index doesn't sprout a synonym per song. The iTunes store genre is
-// only a hint: it files 시나위(헤비메탈) and 장기하(인디포크) both as "K-Pop",
-// so Gemini, which knows the act, picks from this list and the store genre is
-// just the fallback when Gemini is unavailable.
-const GENRES = [
-  // rock family
-  "Rock", "J-Rock", "Hard Rock", "Alternative Rock", "Indie Rock", "Punk Rock", "Post-Punk",
-  "Post-Rock", "Grunge", "Shoegaze", "Emo", "Metal", "Heavy Metal", "Visual Kei",
-  // pop family
-  "Pop", "K-Pop", "J-Pop", "Indie Pop", "Dream Pop", "Synth-Pop", "City Pop", "Ballad", "Trot",
-  // rhythm / electronic / other
-  "R&B/Soul", "Hip-Hop", "Funk", "Disco", "Dance", "House", "Electronic",
-  "Folk", "Country", "Jazz", "Blues", "Classical", "Soundtrack",
-];
-const GENRE_INDEX = new Map(GENRES.map((g) => [g.toLowerCase(), g]));
-// Korean genre words map to the English vocabulary — a stray Hangul genre tag
-// ("얼터너티브") must never survive into the tag index.
-const KO_GENRE = new Map([
-  ["얼터너티브", "Alternative Rock"], ["얼터너티브 락", "Alternative Rock"], ["얼터너티브 록", "Alternative Rock"],
-  ["락", "Rock"], ["록", "Rock"], ["제이락", "J-Rock"], ["제이록", "J-Rock"], ["하드락", "Hard Rock"], ["하드 락", "Hard Rock"],
-  ["인디락", "Indie Rock"], ["인디 락", "Indie Rock"], ["인디 록", "Indie Rock"], ["인디록", "Indie Rock"],
-  ["펑크락", "Punk Rock"], ["펑크 락", "Punk Rock"], ["포스트펑크", "Post-Punk"], ["슈게이즈", "Shoegaze"],
-  ["메탈", "Metal"], ["헤비메탈", "Heavy Metal"], ["비주얼계", "Visual Kei"], ["비주얼 케이", "Visual Kei"],
-  ["발라드", "Ballad"], ["트로트", "Trot"], ["힙합", "Hip-Hop"], ["재즈", "Jazz"], ["블루스", "Blues"],
-  ["디스코", "Disco"], ["댄스", "Dance"], ["하우스", "House"], ["일렉트로닉", "Electronic"], ["포크", "Folk"],
-]);
-// map a free-form store genre onto the vocabulary; unknown ones just get capitalized
-const capGenre = (g) => {
-  const t = (g || "").trim();
-  return GENRE_INDEX.get(t.toLowerCase()) || KO_GENRE.get(t) || t.replace(/^./, (c) => c.toUpperCase());
-};
+// Genre vocabulary, capGenre, KO_GENRE, COUNTRY_TAGS, genreTagOf, genreIssue all
+// live in lib/genre.js (shared with the lint tool + unit-tested there).
 
 // Country = artist nationality, NOT lyric language — an English-singing K-pop
 // group is still 한국 (뉴진스 must never read as 영미). Deterministic signals
 // first (store genre, name script); Gemini, which knows the artist, can
 // override; the lyric language is only the last resort.
-const COUNTRY_TAGS = ["한국", "일본", "영미", "기타"];
 function countryOf({ artist, genre, lang }) {
   const g = (genre || "").toLowerCase();
   if (g.includes("k-pop")) return "한국";
@@ -160,8 +130,8 @@ ${lyrics.slice(0, 2000)}`,
       const json = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
       aiOk = true; // parsed a response — the tags below are AI-informed, not fallback
       if (COUNTRY_TAGS.includes(json.country)) country = json.country;
-      const g = GENRE_INDEX.get(String(json.genre || "").trim().toLowerCase());
-      if (g) genreTag = g; // only a vocabulary term wins over the store genre
+      const g = capGenre(json.genre); // maps Korean/casing onto the vocabulary
+      if (GENRES.includes(g)) genreTag = g; // only a vocabulary term wins over the store genre
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
@@ -500,7 +470,10 @@ async function handle(req) {
         if (inline) issues.push(`인라인 마커 의심 ${inline}줄`);
         if (untranslated) issues.push(`번역 없음 ${untranslated}줄`);
         if (noReading) issues.push(`독음 없음 ${noReading}줄`);
-        return { slug: s.slug, title: s.title, artist: s.artist, issues };
+        // genre sanity — flagged songs get a one-click 장르 재생성 in the UI
+        const gIssue = genreIssue(genreTagOf(s.tags));
+        if (gIssue) issues.push(`장르: ${gIssue}`);
+        return { slug: s.slug, title: s.title, artist: s.artist, issues, genreFix: !!gIssue };
       })
       .filter((s) => s.issues.length);
     return Response.json({ report, total: getAllSongs().length });
@@ -726,6 +699,37 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
     if (!updated.length) return Response.json({ updated: [] });
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
     return Response.json({ updated });
+  }
+
+  // Reclassify ONLY the genre (frontmatter `genre:` + the genre tag), leaving
+  // comment/title_ko/artist_ko/lyrics untouched. This is the targeted fix behind
+  // the lint tool's "장르 재생성" — cheaper and less destructive than regenMeta.
+  if (action === "regenGenre") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+    const auto = await computeAuto({
+      title: fmValue(fm, "title"),
+      artist: fmValue(fm, "artist"),
+      lyrics: originalLyrics(bodyText),
+      lang: fmValue(fm, "lang") || "en",
+      year: fmValue(fm, "year"),
+      genre: fmValue(fm, "genre"),
+    });
+    // genre judgment needs the model — a store-genre fallback is what we're fixing
+    if (!auto.aiOk)
+      return Response.json({ error: "AI 호출 실패 (쿼터·과부하) — 기존 장르 유지" }, { status: 502 });
+    const newGenre = genreTagOf(auto.tags);
+    const old = genreTagOf(getAllSongs().find((x) => x.slug === body.slug)?.tags || []);
+    // rewrite the whole tags line (country·genre·year) so the genre slot updates
+    // in place, and sync the frontmatter genre field to match
+    let out = setField(raw, "tags", `[${auto.tags.join(", ")}]`, "year");
+    if (newGenre) out = setField(out, "genre", newGenre, "year");
+    await writeSong(body.slug, out, `chore(song): regen genre — ${body.slug}`);
+    return Response.json({ genre: newGenre, changed: newGenre !== old });
   }
 
   // Regenerate ONLY the comment ('~다'체), leaving lyrics and other fields intact.

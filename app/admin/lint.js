@@ -43,11 +43,17 @@ export default function Lint() {
     const log = (slug, msg) => setFixLog((o) => ({ ...o, [slug]: msg }));
     for (const s of report) {
       log(s.slug, "수정 중…");
+      const done = [];
       try {
         const { fixed } = await api("lintFix", { slug: s.slug });
-        log(s.slug, fixed.length ? `✓ ${fixed.join(" · ")}` : "수정할 항목 없음");
+        done.push(...fixed);
+        if (s.genreFix) {
+          const { genre, changed } = await api("regenGenre", { slug: s.slug });
+          done.push(changed ? `장르 → ${genre}` : `장르 유지 (${genre})`);
+        }
+        log(s.slug, done.length ? `✓ ${done.join(" · ")}` : "수정할 항목 없음");
       } catch (e) {
-        log(s.slug, `✗ ${e.message}`);
+        log(s.slug, `${done.length ? `✓ ${done.join(" · ")} · ` : ""}✗ ${e.message}`);
       }
     }
     setBusy("");
@@ -56,9 +62,9 @@ export default function Lint() {
   return (
     <div className="max-w-2xl">
       <p className="mb-3 text-sm text-muted">
-        전 곡의 번역 형식을 검사한다 — 번역 빠진 줄, 독음 빠진 일본어 줄, 원문에 붙어버린{" "}
-        <code>&gt;</code>/<code>+</code> 마커. 자동 수정은 누락된 줄만 채우고 기존 번역은 건드리지
-        않는다.
+        전 곡의 번역 형식과 장르 태그를 검사한다 — 번역 빠진 줄, 독음 빠진 일본어 줄, 원문에
+        붙어버린 <code>&gt;</code>/<code>+</code> 마커, 그리고 비표준·한글·누락·뭉뚱그린(Rock/Pop)
+        장르. 자동 수정은 누락된 줄만 채우고(기존 번역 보존) 문제 있는 장르만 AI로 재분류한다.
       </p>
       <div className="flex gap-2">
         <button
