@@ -131,17 +131,18 @@ export default function PlayerProvider({ playlist = [], children }) {
     <PlayerCtx.Provider value={{ track, setTrack, playlist, shuffle, setShuffle }}>
       {children}
       {track && (
-        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 backdrop-blur">
+        <div className="fixed inset-x-0 bottom-0 z-30 translate-y-0 border-t border-line bg-surface/95 backdrop-blur transition-transform duration-300 ease-drawer starting:translate-y-full motion-reduce:transition-none">
           {/* thin, clickable progress line spanning the whole bar — doubles as a seek control */}
           <div
             ref={barRef}
             onClick={(e) => seek(e.clientX)}
             className="absolute inset-x-0 top-0 h-3 -translate-y-1/2 cursor-pointer"
           >
-            <div className="mt-1 h-[3px] bg-line">
+            <div className="mt-1 h-[3px] overflow-hidden bg-line">
+              {/* scaleX, not width — width re-layouts 4×/sec; transform stays on the GPU */}
               <div
-                className="h-full bg-accent"
-                style={{ width: `${progress * 100}%`, transition: "width 150ms linear" }}
+                className="h-full w-full origin-left bg-accent"
+                style={{ transform: `scaleX(${progress})`, transition: "transform 150ms linear" }}
               />
             </div>
           </div>

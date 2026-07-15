@@ -84,7 +84,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
             <button
               key={g.key}
               onClick={() => setGroup(g.key)}
-              className={`rounded-full border px-3 py-1 text-xs transition ${
+              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
                 group === g.key
                   ? "border-accent bg-accent font-semibold text-bg"
                   : "border-line text-muted hover:text-ink"
@@ -178,7 +178,7 @@ function Grid({ list, needle }) {
               alt={`${s.title} album art`}
               loading="lazy"
               decoding="async"
-              className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+              className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
             />
           </div>
           <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">

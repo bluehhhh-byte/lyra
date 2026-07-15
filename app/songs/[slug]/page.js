@@ -183,7 +183,7 @@ export default async function SongPage({ params }) {
                     alt=""
                     loading="lazy"
                     decoding="async"
-                    className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
                   />
                 </div>
                 <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">

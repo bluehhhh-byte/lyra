@@ -8,7 +8,7 @@ export default function PlayButton({ track }) {
   return (
     <button
       onClick={() => setTrack(playing ? null : track)}
-      className={`rounded-full border px-3 py-1.5 text-xs transition ${
+      className={`rounded-full border px-3 py-1.5 text-xs transition active:scale-[0.97] ${
         playing
           ? "border-accent bg-accent font-semibold text-bg"
           : "border-line bg-bg/50 text-muted hover:text-accent"

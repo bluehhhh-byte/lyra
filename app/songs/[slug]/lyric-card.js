@@ -216,13 +216,14 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
+      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4 opacity-100 transition-opacity duration-200 ease-out starting:opacity-0 motion-reduce:transition-none"
       role="dialog"
       aria-label="가사 카드 공유"
     >
+      {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-full w-full max-w-sm overflow-y-auto rounded-2xl border border-line bg-bg p-4"
+        className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
         {url ? (
           <img src={url} alt="가사 카드 미리보기" className="w-full rounded-xl border border-line" />
@@ -277,7 +278,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           <button
             onClick={() => blobRef.current && shareBlob(blobRef.current, song)}
             disabled={!url}
-            className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+            className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
           >
             공유
           </button>

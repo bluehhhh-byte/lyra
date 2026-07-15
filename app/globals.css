@@ -19,6 +19,10 @@
      web-font load: AppleMyungjo (macOS/iOS), Batang (Windows), Noto Serif CJK (Android). */
   --font-batang: "AppleMyungjo", "Batang", "바탕", "Noto Serif KR", "Noto Serif CJK KR",
     "Nanum Myeongjo", serif;
+  /* motion tokens — built-in CSS easings are too weak to feel intentional.
+     ease-out-strong: entrances/UI response. ease-drawer: iOS-like bottom sheet. */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 html {

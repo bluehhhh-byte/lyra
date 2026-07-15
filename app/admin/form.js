@@ -23,7 +23,7 @@ async function api(action, body) {
 const input =
   "w-full rounded-lg border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent";
 const btn =
-  "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40";
+  "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40";
 
 // Dominant script wins — one Japanese bridge in a Korean song must not flip the
 // whole song to `ja`. This only drives the country tag and the hero display;

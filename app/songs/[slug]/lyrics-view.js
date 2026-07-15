@@ -111,10 +111,12 @@ export default function LyricsView({ stanzas, lang, song }) {
     <div className="mx-auto max-w-2xl">
       {/* toolbar sticks so mode/size stay reachable deep into a long song */}
       <div className="sticky top-0 z-20 mb-8 border-b border-line bg-bg/85 py-3 backdrop-blur">
-        <div className="mb-2.5 h-0.5 w-full rounded-full bg-line">
+        <div className="mb-2.5 h-0.5 w-full overflow-hidden rounded-full bg-line">
+          {/* scroll-driven: transform tracks the scroll directly — a transition here
+              would just lag the input, and width would re-layout on every frame */}
           <div
-            className="h-full rounded-full bg-accent transition-[width] duration-150"
-            style={{ width: `${progress * 100}%` }}
+            className="h-full w-full origin-left rounded-full bg-accent"
+            style={{ transform: `scaleX(${progress})` }}
           />
         </div>
         <div className="flex items-center justify-between gap-2">
@@ -123,7 +125,7 @@ export default function LyricsView({ stanzas, lang, song }) {
               <button
                 key={m.key}
                 onClick={() => setMode(m.key)}
-                className={`rounded-full border px-3 py-1 text-xs transition ${
+                className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
                   mode === m.key
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
