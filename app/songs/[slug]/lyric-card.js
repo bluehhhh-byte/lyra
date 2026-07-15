@@ -126,7 +126,7 @@ async function drawCard({ song, lines, align = "left" }) {
   }
   let y = top + Math.max(0, (budget - totalH) / 2); // centered in the free space
   ctx.textAlign = align;
-  const xText = align === "right" ? W - pad : pad;
+  const xText = align === "right" ? W - pad : align === "center" ? W / 2 : pad;
   for (const b of blocks) {
     y += b.gap;
     if (!b.t) continue;
@@ -235,11 +235,11 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
         <div className="mb-1 mt-3 flex items-center justify-between">
           <p className="text-xs text-muted">포함할 줄 (최대 {MAX_PAIRS}) — 전체 가사에서 자유롭게</p>
           <div className="flex gap-1">
-            {[["left", "좌"], ["right", "우"]].map(([k, label]) => (
+            {[["left", "좌", "왼쪽"], ["center", "중", "가운데"], ["right", "우", "오른쪽"]].map(([k, label, name]) => (
               <button
                 key={k}
                 onClick={() => setAlign(k)}
-                aria-label={`${label}측 정렬`}
+                aria-label={`${name} 정렬`}
                 aria-pressed={align === k}
                 className={`rounded-full border px-2.5 py-0.5 text-xs transition ${
                   align === k
