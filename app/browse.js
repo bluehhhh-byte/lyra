@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import Carousel from "./carousel";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -73,11 +72,6 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
 
   return (
     <>
-      {/* the listening-room shelf greets the default view; any search/filter
-          means the reader is hunting, so it steps aside */}
-      {!q && !tag && group === "none" && songs.length > 0 && (
-        <Carousel songs={songs.slice(0, 8)} />
-      )}
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <input
           value={q}

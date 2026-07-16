@@ -4,7 +4,6 @@ import CardModal from "./lyric-card";
 
 const MODES = [
   { key: "both", label: "둘 다" },
-  { key: "reveal", label: "리딩" }, // 원문 위주 — 번역은 호버/탭했을 때만
   { key: "orig", label: "원문만" },
   { key: "trans", label: "번역만" },
 ];
@@ -185,52 +184,37 @@ export default function LyricsView({ stanzas, lang, song }) {
               </p>
             )}
             <div className={s.gap}>
-              {stanza.lines.map((line, j) => {
-                const reveal = mode === "reveal";
-                return (
-                  <div
-                    key={j}
-                    className={`lyric-line ${reveal ? "lyric-reveal" : ""}`}
-                    // touch has no hover — tap toggles; a re-render dropping the
-                    // class (mode/size change) is fine, it just re-hides
-                    onClick={reveal ? (e) => e.currentTarget.classList.toggle("open") : undefined}
-                    tabIndex={reveal ? 0 : undefined}
-                  >
-                    {mode !== "trans" && (
+              {stanza.lines.map((line, j) => (
+                <div key={j} className="lyric-line">
+                  {mode !== "trans" && (
+                    <p lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
+                      {line.en}
+                    </p>
+                  )}
+                  {mode !== "trans" && line.reading && (
+                    <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
+                  )}
+                  {mode !== "orig" &&
+                    line.ko &&
+                    (/[가-힣]/.test(line.ko) ? (
+                      // Korean translation (EN/JA songs) → batang
                       <p
-                        lang={lang || "en"}
-                        className={`font-serif leading-snug ${s.orig} ${reveal ? "orig-r" : ""}`}
+                        lang="ko"
+                        className={`font-batang text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
                       >
-                        {line.en}
+                        {line.ko}
                       </p>
-                    )}
-                    {mode !== "trans" && line.reading && (
-                      <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
-                    )}
-                    {mode !== "orig" && line.ko && (
-                      <div className={reveal ? "trans-r" : ""}>
-                        {/[가-힣]/.test(line.ko) ? (
-                          // Korean translation (EN/JA songs) → batang
-                          <p
-                            lang="ko"
-                            className={`font-batang text-muted ${s.trans} ${mode !== "trans" ? "mt-0.5" : ""}`}
-                          >
-                            {line.ko}
-                          </p>
-                        ) : (
-                          // English translation (Korean songs) → latin serif, italic to set it apart
-                          <p
-                            lang="en"
-                            className={`font-serif italic text-muted/80 ${s.trans} ${mode !== "trans" ? "mt-0.5" : ""}`}
-                          >
-                            {line.ko}
-                          </p>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+                    ) : (
+                      // English translation (Korean songs) → latin serif, italic to set it apart
+                      <p
+                        lang="en"
+                        className={`font-serif italic text-muted/80 ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
+                      >
+                        {line.ko}
+                      </p>
+                    ))}
+                </div>
+              ))}
             </div>
             {editing === i ? (
               <NoteEditor
