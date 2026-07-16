@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
+import Ambient from "../../ambient";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
@@ -73,6 +74,8 @@ export default async function SongPage({ params }) {
 
   return (
     <article>
+      {/* the whole page sits in this song's light */}
+      <Ambient artwork={song.artwork} slug={song.slug} />
       {/* hero */}
       <div className="relative mb-12 overflow-hidden rounded-2xl border border-line">
         <img
