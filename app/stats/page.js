@@ -136,13 +136,18 @@ export default function StatsPage() {
         </p>
       )}
 
-      <div className="mt-10 flex items-center justify-between">
+      <div className="mt-10 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
         <Link href="/" className="text-sm text-muted hover:text-accent">
           ← 컬렉션으로
         </Link>
-        <a href="/api/export" download className="text-sm text-muted hover:text-accent">
-          전체 가사 .md 다운로드 ↓
-        </a>
+        <div className="flex gap-4">
+          <a href="/api/export/stats" download className="text-sm text-muted hover:text-accent">
+            통계 .md 다운로드 ↓
+          </a>
+          <a href="/api/export" download className="text-sm text-muted hover:text-accent">
+            전체 가사 .md 다운로드 ↓
+          </a>
+        </div>
       </div>
     </>
   );
