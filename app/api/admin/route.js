@@ -85,6 +85,57 @@ function normalizeInterleaved(text) {
     .join("\n");
 }
 
+// Re-stanza a lyric body by musical structure — sources disagree wildly on blank
+// lines (lrclib often has none, or one per line), so the layout standard is the
+// song's structure. Gemini decides only WHERE to break (contiguous group sizes +
+// section label); the lyric lines, with their >/+/// companions, move untouched.
+// Returns the reorganized body, or null when it can't/shouldn't run (no key, too
+// short, or a response that doesn't match the lyrics). Shared by the restanza
+// action and the save flow (auto-restanza on publish).
+async function restanzaBody({ title, artist, bodyText, key }) {
+  if (!key) return null;
+  // unit = one original line plus the annotation lines glued under it
+  const units = [];
+  for (const line of bodyText.split("\n")) {
+    if (!line.trim() || /^\[.*\]$/.test(line.trim())) continue; // old breaks/headers die here
+    if (/^\s*(>|\+|\/\/)/.test(line) && units.length) units[units.length - 1].push(line);
+    else units.push([line]);
+  }
+  if (units.length < 4) return null; // too short to be worth reorganizing
+
+  const numbered = units.map((u, i) => `${i + 1}. ${u[0]}`).join("\n");
+  const rawJson = await geminiText(
+    key,
+    `아래는 노래 "${title}" (${artist}) 가사의 원문 줄 목록이다 (총 ${units.length}줄).
+곡의 음악적 구조(verse/chorus/bridge 등)에 따라 앞에서부터 연속된 덩어리로 나눠라.
+JSON 배열로만 답하라: [{"label":"Verse 1","count":4}, ...]
+- count: 그 연에 속하는 줄 수. 모든 count의 합은 반드시 ${units.length}.
+- label: "Intro","Verse 1","Pre-Chorus","Chorus","Bridge","Outro","Interlude" 형식. 구조가 불분명한 연은 null.
+- 한 연은 보통 2~8줄. 줄 순서 변경·삭제·추가 금지.
+${numbered}`,
+    true
+  );
+  let groups;
+  try {
+    groups = JSON.parse(rawJson.replace(/^```json\s*|\s*```$/g, "").trim());
+  } catch {
+    return null;
+  }
+  const counts = (Array.isArray(groups) ? groups : []).map((g) => Math.floor(g?.count) || 0);
+  if (counts.reduce((a, b) => a + b, 0) !== units.length || counts.some((c) => c < 1))
+    return null; // structure doesn't match the lyrics — leave the body as-is
+
+  let i = 0;
+  const out = groups.map((g, gi) => {
+    const label =
+      typeof g.label === "string" && /^[\w\s-]{2,20}$/.test(g.label.trim())
+        ? `[${g.label.trim()}]\n`
+        : "";
+    return label + units.slice(i, (i += counts[gi])).flat().join("\n");
+  });
+  return out.join("\n\n");
+}
+
 // Genre vocabulary, capGenre, KO_GENRE, COUNTRY_TAGS, genreTagOf, genreIssue all
 // live in lib/genre.js (shared with the lint tool + unit-tested there).
 
@@ -847,10 +898,8 @@ ${listed}`,
     return Response.json({ notes: applied.length });
   }
 
-  // Re-stanza: sources disagree wildly on blank lines (lrclib often has none, or
-  // one per line), so the layout standard is the song's musical structure —
-  // Gemini decides only WHERE to break (contiguous group sizes + section label);
-  // the lyric lines themselves, with their >/+/// companions, move untouched.
+  // Re-stanza one stored song on demand (the manual admin tool). The core logic
+  // lives in restanzaBody, shared with the auto-restanza on save.
   if (action === "restanza") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
@@ -860,53 +909,16 @@ ${listed}`,
     const m = raw.match(FM);
     if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
     const [, fm, bodyText] = m;
-
-    // unit = one original line plus the annotation lines glued under it
-    const units = [];
-    for (const line of bodyText.split("\n")) {
-      if (!line.trim() || /^\[.*\]$/.test(line.trim())) continue; // old breaks/headers die here
-      if (/^\s*(>|\+|\/\/)/.test(line) && units.length) units[units.length - 1].push(line);
-      else units.push([line]);
-    }
-    if (units.length < 4)
-      return Response.json({ error: "가사가 너무 짧아 연 정리가 불필요" }, { status: 422 });
-
-    const numbered = units.map((u, i) => `${i + 1}. ${u[0]}`).join("\n");
-    const rawJson = await geminiText(
+    const newBody = await restanzaBody({
+      title: fmValue(fm, "title"),
+      artist: fmValue(fm, "artist"),
+      bodyText,
       key,
-      `아래는 노래 "${fmValue(fm, "title")}" (${fmValue(fm, "artist")}) 가사의 원문 줄 목록이다 (총 ${units.length}줄).
-곡의 음악적 구조(verse/chorus/bridge 등)에 따라 앞에서부터 연속된 덩어리로 나눠라.
-JSON 배열로만 답하라: [{"label":"Verse 1","count":4}, ...]
-- count: 그 연에 속하는 줄 수. 모든 count의 합은 반드시 ${units.length}.
-- label: "Intro","Verse 1","Pre-Chorus","Chorus","Bridge","Outro","Interlude" 형식. 구조가 불분명한 연은 null.
-- 한 연은 보통 2~8줄. 줄 순서 변경·삭제·추가 금지.
-${numbered}`,
-      true
-    );
-    let groups;
-    try {
-      groups = JSON.parse(rawJson.replace(/^```json\s*|\s*```$/g, "").trim());
-    } catch {
-      return Response.json({ error: "연 구조 생성 실패" }, { status: 502 });
-    }
-    const counts = (Array.isArray(groups) ? groups : []).map((g) => Math.floor(g?.count) || 0);
-    if (counts.reduce((a, b) => a + b, 0) !== units.length || counts.some((c) => c < 1))
-      return Response.json({ error: "연 구조가 가사와 안 맞음 (재시도 요망)" }, { status: 502 });
-
-    let i = 0;
-    const out = groups.map((g, gi) => {
-      const label =
-        typeof g.label === "string" && /^[\w\s-]{2,20}$/.test(g.label.trim())
-          ? `[${g.label.trim()}]\n`
-          : "";
-      return label + units.slice(i, (i += counts[gi])).flat().join("\n");
     });
-    await writeSong(
-      body.slug,
-      `---\n${fm}\n---\n${out.join("\n\n")}\n`,
-      `chore(song): restanza — ${body.slug}`
-    );
-    return Response.json({ stanzas: groups.length });
+    if (!newBody)
+      return Response.json({ error: "연 정리 실패 — 가사가 짧거나 구조가 안 맞음" }, { status: 502 });
+    await writeSong(body.slug, `---\n${fm}\n---\n${newBody}\n`, `chore(song): restanza — ${body.slug}`);
+    return Response.json({ stanzas: newBody.split("\n\n").length });
   }
 
   if (action === "load") {
@@ -933,6 +945,18 @@ ${numbered}`,
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
       .replace(/^-|-$/g, "");
+    // auto-restanza on publish — reorganize the lyrics by musical structure.
+    // Best-effort: if Gemini is down or the body is too short, keep it as typed.
+    let lyricBody = lyrics.trim();
+    try {
+      const restanza = await restanzaBody({
+        title,
+        artist,
+        bodyText: lyricBody,
+        key: process.env.GEMINI_API_KEY,
+      });
+      if (restanza) lyricBody = restanza;
+    } catch {} // never block a publish on the layout pass
     const md = `---
 title: ${title}
 title_ko: ${titleKo || title}
@@ -951,7 +975,7 @@ date: ${new Date().toISOString().slice(0, 10)}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 ---
-${lyrics.trim()}
+${lyricBody}
 `;
     await writeSong(slug, md, `add(song): ${slug}`);
     return Response.json({ slug });
