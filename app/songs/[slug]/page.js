@@ -160,6 +160,8 @@ export default async function SongPage({ params }) {
           artist: song.artist,
           artwork: song.artwork,
           year: song.year || "",
+          album: song.album || "",
+          genre: song.genre || "",
         }}
       />
 

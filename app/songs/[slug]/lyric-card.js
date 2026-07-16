@@ -115,7 +115,7 @@ async function drawCard({ song, lines, align = "left" }) {
   };
   let blocks = build();
   const top = 150; // below the wordmark
-  const budget = H - 170 - top; // frame minus footer minus headroom
+  const budget = H - 190 - top; // frame minus the 3-line footer minus headroom
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   for (let guard = 4; totalH > budget && guard > 0; guard--) {
     const f = budget / totalH;
@@ -137,10 +137,10 @@ async function drawCard({ song, lines, align = "left" }) {
     ctx.fillText(b.t, xText, y);
   }
 
-  // footer — small artwork, title/artist
-  const fy = H - 150;
+  // footer — small artwork, then title / artist / album·year·genre
+  const fy = H - 170;
   if (art) {
-    const size = 88;
+    const size = 96;
     ctx.save();
     ctx.beginPath();
     ctx.roundRect(pad, fy, size, size, 16);
@@ -148,14 +148,20 @@ async function drawCard({ song, lines, align = "left" }) {
     ctx.drawImage(art, pad, fy, size, size);
     ctx.restore();
   }
-  const tx = pad + (art ? 112 : 0);
+  const tx = pad + (art ? 120 : 0);
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.title, tx, fy + 38);
+  ctx.fillText(song.title, tx, fy + 34);
   ctx.fillStyle = inkDim;
-  ctx.font = "28px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.artist, tx, fy + 76);
+  ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText(song.artist, tx, fy + 70);
+  const meta = [song.album, song.year, song.genre].filter(Boolean).join(" · ");
+  if (meta) {
+    ctx.fillStyle = "rgba(244,244,246,0.4)"; // a step dimmer than inkDim — tertiary info
+    ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    ctx.fillText(meta, tx, fy + 104);
+  }
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
