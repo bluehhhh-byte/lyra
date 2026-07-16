@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { getAllSongs } from "../../lib/songs";
+import { pct, Bars } from "./charts";
+import DrillSection from "./drilldown";
 
 export const metadata = {
   title: "컬렉션 통계 | Lyra",
@@ -33,11 +35,16 @@ export default function StatsPage() {
   const byDecade = tally(songs.filter((s) => s.year).map((s) => `${Math.floor(+s.year / 10) * 10}s`)).sort(
     (a, b) => a[0].localeCompare(b[0])
   );
+  // per-exact-year — the drill-down under 연대별
+  const byYear = tally(songs.filter((s) => s.year).map((s) => String(s.year))).sort((a, b) =>
+    a[0].localeCompare(b[0])
+  );
   const byArtist = tally(songs.map((s) => s.artist)).slice(0, 8);
   // country/decade already have their own sections — what's left is genre + mood
-  const byTag = tally(
+  const byTagAll = tally(
     songs.flatMap((s) => s.tags).filter((t) => !isDecadeTag(t) && !isCountryTag(t))
-  ).slice(0, 12);
+  );
+  const byTag = byTagAll.slice(0, 12);
 
   const untagged = songs.filter((s) => s.tags.length === 0).length;
 
@@ -88,21 +95,26 @@ export default function StatsPage() {
           <Bars data={byCountry} total={songs.length} />
         </Section>
 
-        <Section title="연대별" href="/?group=decade">
-          <Bars data={byDecade} total={songs.length} />
-        </Section>
+        <DrillSection
+          title="연대별"
+          coarse={byDecade}
+          fine={byYear}
+          fineLabel="연도별 보기"
+          total={songs.length}
+        />
 
         <Section title="가수별" href="/?group=artist">
           <Bars data={byArtist} total={songs.length} />
         </Section>
 
-        <Section title="태그">
-          {byTag.length ? (
-            <Bars data={byTag} total={songs.length} link={(t) => `/?tag=${encodeURIComponent(t)}`} />
-          ) : (
-            <p className="text-sm text-muted">아직 태그가 없습니다.</p>
-          )}
-        </Section>
+        <DrillSection
+          title="태그"
+          coarse={byTag}
+          fine={byTagAll}
+          fineLabel="전체 보기"
+          total={songs.length}
+          linkPrefix="/?tag="
+        />
 
         <Section title="월별 기록">
           <Bars data={byMonth} total={stamps.length} />
@@ -136,8 +148,6 @@ export default function StatsPage() {
   );
 }
 
-const pct = (n, total) => (total ? `${Math.round((n / total) * 100)}%` : "—");
-
 function Stat({ label, value, sub }) {
   return (
     <div className="rounded-xl border border-line bg-surface px-4 py-3">
@@ -166,37 +176,3 @@ function Section({ title, href, children }) {
   );
 }
 
-function Bars({ data, total, link }) {
-  const max = Math.max(...data.map(([, n]) => n), 1);
-  return (
-    <ul className="space-y-2">
-      {data.map(([label, n]) => {
-        const row = (
-          <>
-            <div className="mb-1 flex items-baseline justify-between gap-2 text-xs">
-              <span className="truncate">{label}</span>
-              <span className="shrink-0 tabular-nums text-muted">
-                {n} <span className="opacity-60">{pct(n, total)}</span>
-              </span>
-            </div>
-            {/* width is the only dynamic bit — inline style beats 100 arbitrary classes */}
-            <div className="h-1.5 overflow-hidden rounded-full bg-line">
-              <div className="h-full rounded-full bg-accent" style={{ width: `${(n / max) * 100}%` }} />
-            </div>
-          </>
-        );
-        return (
-          <li key={label}>
-            {link ? (
-              <Link href={link(label)} className="block hover:opacity-80">
-                {row}
-              </Link>
-            ) : (
-              row
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
