@@ -36,6 +36,27 @@ html {
   color: var(--color-bg);
 }
 
+/* iOS zooms the page when a focused form control is under 16px — the mono lyric
+   textareas (text-xs) trigger it. Force ≥16px on mobile only; the class beats an
+   element rule on specificity, so !important is required. Desktop keeps the
+   compact size (sm: utilities are ≥640px). */
+@media (max-width: 639px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Keyboard focus ring — visible for tab users, invisible for mouse/touch
+   (:focus-visible). The whole app is interactive pills and icon buttons that
+   had only the UA outline (often none). */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Tailwind v4 emits @theme tokens as vars on :root and every utility reads them
    through var(), so swapping the values here re-themes the whole site — no JS
    in the render path, no dark: variant on 200 class names.

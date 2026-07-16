@@ -185,8 +185,28 @@ export default function AdminForm() {
             {busy === "search" ? "…" : "검색"}
           </button>
         </div>
-        {more && candidates.length === 0 && (
-          <p className="mt-3 text-sm text-muted">결과 없음 — 검색어를 바꿔보세요</p>
+        {/* skeleton rows while the first page of a search is in flight */}
+        {busy === "search" && candidates.length === 0 && (
+          <ul className="mt-3 divide-y divide-line overflow-hidden rounded-lg border border-line" aria-hidden>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <li key={i} className="flex items-center gap-3 px-3 py-2">
+                <div className="h-10 w-10 shrink-0 animate-pulse rounded bg-surface" />
+                <div className="min-w-0 flex-1 space-y-1.5">
+                  <div className="h-3.5 w-2/5 animate-pulse rounded bg-surface" />
+                  <div className="h-3 w-3/5 animate-pulse rounded bg-surface" />
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+        {busy !== "search" && more && candidates.length === 0 && (
+          <p className="mt-3 text-sm text-muted" role="status">결과 없음 — 검색어를 바꿔보세요</p>
+        )}
+        {/* announce the result count to screen readers without a visual change */}
+        {candidates.length > 0 && (
+          <p className="sr-only" role="status" aria-live="polite">
+            검색 결과 {candidates.length}곡
+          </p>
         )}
         {candidates.length > 0 && (
           <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto rounded-lg border border-line">
@@ -347,7 +367,11 @@ export default function AdminForm() {
       )}
 
       {/* red-400 only clears WCAG AA on the dark background */}
-      {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
+      {error && (
+        <p className="text-sm text-red-600 dark:text-red-400" role="alert">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
