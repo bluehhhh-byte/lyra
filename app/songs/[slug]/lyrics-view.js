@@ -162,7 +162,7 @@ export default function LyricsView({ stanzas, lang, song }) {
           <section
             key={i}
             id={`v${i}`}
-            className={`group/stanza relative scroll-mt-24 rounded-lg transition-colors duration-1000 ${
+            className={`group/stanza reveal relative scroll-mt-24 rounded-lg transition-colors duration-1000 ${
               active === i ? "bg-accent/10" : ""
             }`}
           >
@@ -185,7 +185,7 @@ export default function LyricsView({ stanzas, lang, song }) {
             )}
             <div className={s.gap}>
               {stanza.lines.map((line, j) => (
-                <div key={j}>
+                <div key={j} className="lyric-line">
                   {mode !== "trans" && (
                     <p lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
                       {line.en}

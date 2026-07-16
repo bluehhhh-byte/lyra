@@ -77,3 +77,111 @@ html {
   --color-accent: #6244cc;
   -webkit-font-smoothing: auto; /* antialiased renders dark-on-light too thin */
 }
+
+/* ─── interaction layer ──────────────────────────────────────────────
+   All decorative. Every piece degrades to the static design: no JS beyond
+   one pointermove handler (spotlight) and the theme toggle's clip reveal. */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* grid cards cascade in on mount — --i set inline per card; the min() cap
+   keeps a long tail of cards from waiting seconds for their turn */
+.card-in {
+  animation: rise-in 0.55s var(--ease-out-strong) backwards;
+  animation-delay: min(calc(var(--i, 0) * 45ms), 500ms);
+}
+
+/* pointer spotlight — --mx/--my fed by ONE delegated handler on the grid,
+   not a listener per card */
+.spot {
+  position: relative;
+}
+.spot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    200px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklab, var(--color-accent) 22%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+@media (hover: hover) {
+  .spot:hover::after {
+    opacity: 1;
+  }
+}
+
+/* stanzas rise as they scroll into view — scroll-driven, so no
+   IntersectionObserver; browsers without support just render static.
+   `linear` is right here: progress maps to scroll, not to time. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: rise-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+}
+
+/* reading aid: hovering a line pair tints it so the eye can track
+   original ↔ translation. Hover devices only — touch gets no dead styles. */
+@media (hover: hover) {
+  .lyric-line {
+    margin-inline: -10px;
+    padding-inline: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  .lyric-line:hover {
+    background-color: color-mix(in oklab, var(--color-accent) 7%, transparent);
+  }
+}
+
+/* song hero: the blurred artwork slowly breathes. The base transform is the
+   resting state when the animation is off (reduced motion). */
+@keyframes ambient-drift {
+  0%,
+  100% {
+    transform: scale(1.25) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.45) rotate(4deg) translateY(-2%);
+  }
+  66% {
+    transform: scale(1.35) rotate(-3deg) translateY(2%);
+  }
+}
+.hero-ambient {
+  transform: scale(1.25);
+  animation: ambient-drift 24s ease-in-out infinite;
+}
+
+/* theme switch: the toggle animates ::view-transition-new(root) as an
+   expanding circle from the click point — kill the UA cross-fade so the
+   two snapshots don't blend mid-reveal */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-in,
+  .reveal,
+  .hero-ambient {
+    animation: none;
+  }
+}

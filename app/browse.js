@@ -165,12 +165,29 @@ function Snippet({ song, needle }) {
   );
 }
 
+// one delegated handler feeds every card's spotlight position via CSS vars
+function trackSpot(e) {
+  const card = e.target.closest?.(".spot");
+  if (!card) return;
+  const r = card.getBoundingClientRect();
+  card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  card.style.setProperty("--my", `${e.clientY - r.top}px`);
+}
+
 function Grid({ list, needle }) {
   return (
-    <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
-      {list.map((s) => (
-        <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
-          <div className="overflow-hidden rounded-xl border border-line bg-surface">
+    <div
+      onPointerMove={trackSpot}
+      className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4"
+    >
+      {list.map((s, i) => (
+        <Link
+          key={s.slug}
+          href={`/songs/${s.slug}`}
+          style={{ "--i": i }}
+          className="group card-in transition-transform duration-300 ease-out hover:-translate-y-1"
+        >
+          <div className="spot overflow-hidden rounded-xl border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
             <img
               // grid cells render ≤ ~300px — 300px for 1x, the 600px original for retina
               src={s.artwork.replace("600x600bb", "300x300bb")}

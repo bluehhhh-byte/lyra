@@ -79,7 +79,7 @@ export default async function SongPage({ params }) {
           src={song.artwork}
           alt=""
           aria-hidden
-          className="absolute inset-0 h-full w-full scale-125 object-cover opacity-40 blur-3xl"
+          className="hero-ambient absolute inset-0 h-full w-full object-cover opacity-40 blur-3xl"
         />
         <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
           <img

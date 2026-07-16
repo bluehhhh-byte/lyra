@@ -22,10 +22,32 @@ export default function ThemeToggle() {
     setMounted(true);
   }, []);
 
-  const next = () => {
+  const next = (e) => {
     const t = theme === "dark" ? "light" : "dark";
-    applyTheme(t);
-    setTheme(t);
+    const apply = () => {
+      applyTheme(t);
+      setTheme(t);
+    };
+    // circular reveal from the click point; plain swap where unsupported or
+    // when the reader asked for reduced motion
+    if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      apply();
+      return;
+    }
+    // keyboard activation reports (0,0) — fall back to the toggle's corner
+    const x = e.clientX || innerWidth - 40;
+    const y = e.clientY || 40;
+    const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    document.startViewTransition(apply).ready.then(() => {
+      document.documentElement.animate(
+        { clipPath: [`circle(0 at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
+        {
+          duration: 500,
+          easing: "cubic-bezier(0.23, 1, 0.32, 1)",
+          pseudoElement: "::view-transition-new(root)",
+        }
+      );
+    });
   };
 
   return (
