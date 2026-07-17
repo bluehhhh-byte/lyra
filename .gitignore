@@ -2,3 +2,8 @@ node_modules/
 .next/
 .env*
 .DS_Store
+
+# installed agent skills (local tooling)
+.agents/
+.claude/
+skills-lock.json
