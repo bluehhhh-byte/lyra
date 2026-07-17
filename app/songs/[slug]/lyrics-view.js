@@ -18,7 +18,9 @@ const SIZE_KEYS = ["s", "m", "l"];
 
 const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between songs
 
-export default function LyricsView({ stanzas, lang, song }) {
+// allowNotes=false on the movie page: inline notes write to the songs store, so
+// a movie slug there would create a bogus song file — movies use `comment` only.
+export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
   const [mode, setMode] = useState("both");
   const [size, setSize] = useState("m");
   const [notes, setNotes] = useState({}); // stanza index -> note, overriding the file
@@ -57,8 +59,8 @@ export default function LyricsView({ stanzas, lang, song }) {
   }, [mode, size]);
 
   useEffect(() => {
-    setOwner(document.cookie.split("; ").includes("lyra_admin=1"));
-  }, []);
+    setOwner(allowNotes && document.cookie.split("; ").includes("lyra_admin=1"));
+  }, [allowNotes]);
 
   // note edits go straight to the file (a commit online), so the page shows the
   // saved text right away instead of waiting for the redeploy
