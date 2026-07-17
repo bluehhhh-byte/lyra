@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
+import { genreTagOf } from "../../../lib/genre";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
@@ -161,7 +162,9 @@ export default async function SongPage({ params }) {
           artwork: song.artwork,
           year: song.year || "",
           album: song.album || "",
-          genre: song.genre || "",
+          // the AI-corrected genre lives in tags (J-Rock), not the raw iTunes
+          // store field (J-Pop) — show what the rest of the site shows
+          genre: genreTagOf(song.tags) || song.genre || "",
         }}
       />
 
