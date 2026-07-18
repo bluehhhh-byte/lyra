@@ -105,6 +105,7 @@ export default function MovieForm() {
       country: movie.country,
       genre: movie.genre,
       year: movie.year,
+      rating,
     });
     setPolished(polished || synopsis);
     if (comment) setComment(comment);
@@ -201,6 +202,10 @@ export default function MovieForm() {
             value={synopsis}
             onChange={(e) => setSynopsis(e.target.value)}
           />
+          <div className="mt-3">
+            <p className="mb-1 text-xs text-muted">별점</p>
+            <StarInput value={rating} onChange={setRating} />
+          </div>
           <button className={btn + " mt-2"} disabled={!synopsis.trim() || busy} onClick={genMeta}>
             {busy === "meta" ? "정돈 중…" : "Gemini 줄거리 정돈 + 코멘트 생성"}
           </button>
@@ -210,7 +215,7 @@ export default function MovieForm() {
       {/* 3. review + save */}
       {(polished || (movie && synopsis)) && (
         <section>
-          <Step n="3" label="검수 · 별점 · 저장" />
+          <Step n="3" label="검수 · 저장" />
           <p className="mb-2 text-xs text-muted">줄거리 직접 수정 가능.</p>
           <textarea
             className={input + " h-40 text-sm"}
@@ -218,10 +223,6 @@ export default function MovieForm() {
             onChange={(e) => setPolished(e.target.value)}
           />
           <div className="mt-3 space-y-3">
-            <div>
-              <p className="mb-1 text-xs text-muted">별점</p>
-              <StarInput value={rating} onChange={setRating} />
-            </div>
             <input className={input} placeholder="태그 (국가·장르·연도)" value={tags} onChange={(e) => setTags(e.target.value)} />
             <textarea className={input + " h-20"} placeholder="감상 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />
           </div>

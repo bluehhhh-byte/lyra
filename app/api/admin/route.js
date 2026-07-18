@@ -956,7 +956,14 @@ ${listed}`,
   // personal comment. Country·genre·year tags are deterministic.
   if (action === "movieMeta") {
     const key = process.env.GEMINI_API_KEY;
-    const { title, director, synopsis, country, genre, year } = body;
+    const { title, director, synopsis, country, genre, year, rating } = body;
+    const ratingNum = Number(rating);
+    const ratingGuide =
+      Number.isFinite(ratingNum) && ratingNum >= 3
+        ? `사용자 별점은 ${ratingNum.toFixed(1)}/5다. 작품의 기존 평가와 반응을 참고하되, 코멘트는 좋은 점·강점·인상적인 성취를 중심으로 쓸 것.`
+        : Number.isFinite(ratingNum) && ratingNum > 0 && ratingNum <= 2.5
+          ? `사용자 별점은 ${ratingNum.toFixed(1)}/5다. 작품의 기존 평가와 반응을 참고하되, 코멘트는 아쉬운 점·한계·비판받는 지점을 중심으로 쓸 것.`
+          : "사용자 별점은 아직 없다. 작품의 기존 평가와 반응을 참고하되, 장단점을 과장 없이 균형 있게 쓸 것.";
     let polished = (synopsis || "").trim();
     let comment = "";
     if (key && polished) {
@@ -972,7 +979,7 @@ ${listed}`,
       comment = (
         await geminiText(
           key,
-          `영화 "${title}" (감독 ${director})에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.`
+          `영화 "${title}" (감독 ${director})에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. ${ratingGuide} 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.`
         )
       )
         .replace(/\s*\n+\s*/g, " ")
