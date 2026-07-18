@@ -1,4 +1,4 @@
-import { readSong, writeSong, deleteSong, writeMovie, deleteMovie } from "../../../lib/store";
+import { readSong, writeSong, deleteSong, readMovie, writeMovie, deleteMovie } from "../../../lib/store";
 import { getAllSongs } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
@@ -203,6 +203,12 @@ ${lyrics.slice(0, 2000)}`,
 const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
 const fmValue = (fm, key) => (fm.match(new RegExp(`^${key}:[ \\t]*(.*)$`, "m"))?.[1] || "").trim();
 const isBlank = (v) => !v || v === "[]";
+const parseTags = (value = "") =>
+  value
+    .replace(/^\[|\]$/g, "")
+    .split(",")
+    .map((t) => t.trim())
+    .filter(Boolean);
 
 // Replace `key: …` in place, or insert it right after `after:` when absent.
 function setField(raw, key, value, after) {
@@ -211,6 +217,28 @@ function setField(raw, key, value, after) {
   if (existing.test(raw)) return raw.replace(existing, line);
   const anchor = new RegExp(`^(${after}:[ \\t]*.*)$`, "m");
   return anchor.test(raw) ? raw.replace(anchor, `$1\n${line}`) : raw;
+}
+
+function ratingGuide(rating) {
+  const ratingNum = Number(rating);
+  return Number.isFinite(ratingNum) && ratingNum >= 3
+    ? `사용자 별점은 ${ratingNum.toFixed(1)}/5다. 작품의 기존 평가와 반응을 참고하되, 코멘트는 좋은 점·강점·인상적인 성취를 중심으로 쓸 것.`
+    : Number.isFinite(ratingNum) && ratingNum > 0 && ratingNum <= 2.5
+      ? `사용자 별점은 ${ratingNum.toFixed(1)}/5다. 작품의 기존 평가와 반응을 참고하되, 코멘트는 아쉬운 점·한계·비판받는 지점을 중심으로 쓸 것.`
+      : "사용자 별점은 아직 없다. 작품의 기존 평가와 반응을 참고하되, 장단점을 과장 없이 균형 있게 쓸 것.";
+}
+
+async function movieComment({ key, title, director, mediaType, rating }) {
+  const kind = mediaType === "tv" ? "드라마" : "영화";
+  return (
+    await geminiText(
+      key,
+      `${kind} "${title}"${director ? ` (연출/감독 ${director})` : ""}에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. ${ratingGuide(rating)} 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.`
+    )
+  )
+    .replace(/\s*\n+\s*/g, " ")
+    .replace(/^["']|["']$/g, "")
+    .trim();
 }
 
 // The body interleaves translation (`>`), reading (`+`) and note (`//`) lines —
@@ -949,49 +977,35 @@ ${listed}`,
   }
 
   if (action === "movieDetail") {
-    return Response.json(await movieDetail(body.tmdbId));
+    return Response.json(await movieDetail(body.tmdbId, body.mediaType));
   }
 
   // Polish the auto-loaded TMDB synopsis into clean 줄거리 prose and draft a
   // personal comment. Country·genre·year tags are deterministic.
   if (action === "movieMeta") {
     const key = process.env.GEMINI_API_KEY;
-    const { title, director, synopsis, country, genre, year, rating } = body;
-    const ratingNum = Number(rating);
-    const ratingGuide =
-      Number.isFinite(ratingNum) && ratingNum >= 3
-        ? `사용자 별점은 ${ratingNum.toFixed(1)}/5다. 작품의 기존 평가와 반응을 참고하되, 코멘트는 좋은 점·강점·인상적인 성취를 중심으로 쓸 것.`
-        : Number.isFinite(ratingNum) && ratingNum > 0 && ratingNum <= 2.5
-          ? `사용자 별점은 ${ratingNum.toFixed(1)}/5다. 작품의 기존 평가와 반응을 참고하되, 코멘트는 아쉬운 점·한계·비판받는 지점을 중심으로 쓸 것.`
-          : "사용자 별점은 아직 없다. 작품의 기존 평가와 반응을 참고하되, 장단점을 과장 없이 균형 있게 쓸 것.";
+    const { title, director, mediaType, synopsis, country, genre, year, rating } = body;
+    const kind = mediaType === "tv" ? "드라마" : "영화";
     let polished = (synopsis || "").trim();
     let comment = "";
     if (key && polished) {
       const p = (
         await geminiText(
           key,
-          `영화 "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+          `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
         )
       )
         .replace(/^["']|["']$/g, "")
         .trim();
       if (p) polished = p;
-      comment = (
-        await geminiText(
-          key,
-          `영화 "${title}" (감독 ${director})에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. ${ratingGuide} 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.`
-        )
-      )
-        .replace(/\s*\n+\s*/g, " ")
-        .replace(/^["']|["']$/g, "")
-        .trim();
+      comment = await movieComment({ key, title, director, mediaType, rating });
     }
     const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);
     return Response.json({ polished, comment, tags: tags.join(", ") });
   }
 
   if (action === "movieSave") {
-    const { title, titleKo, director, directorKo, cast, year, runtime, rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis } = body;
+    const { title, titleKo, mediaType, director, directorKo, cast, year, runtime, rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -999,6 +1013,7 @@ ${listed}`,
     const md = `---
 title: ${title}
 title_ko: ${titleKo || title}
+media: ${mediaType === "tv" ? "tv" : "movie"}
 director: ${director || ""}
 director_ko: ${directorKo || ""}
 cast: ${cast || ""}
@@ -1018,6 +1033,65 @@ ${(synopsis || "").trim()}
 `;
     await writeMovie(slug, md, `add(movie): ${slug}`);
     return Response.json({ slug });
+  }
+
+  if (action === "movieRegenMeta" || action === "movieRegenComment") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const movie = await readMovie(body.slug);
+    if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
+    const raw = movie.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+
+    const title = fmValue(fm, "title_ko") || fmValue(fm, "title");
+    const director = fmValue(fm, "director_ko") || fmValue(fm, "director");
+    const mediaType = fmValue(fm, "media") || "movie";
+    const rating = fmValue(fm, "rating");
+    const comment = await movieComment({ key, title, director, mediaType, rating });
+    if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
+
+    let out = setField(raw, "comment", comment, "published");
+    const updated = ["comment"];
+
+    if (action === "movieRegenMeta") {
+      let polished = bodyText.trim();
+      if (polished) {
+        const kind = mediaType === "tv" ? "드라마" : "영화";
+        const p = (
+          await geminiText(
+            key,
+            `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+          )
+        )
+          .replace(/^["']|["']$/g, "")
+          .trim();
+        if (p) {
+          polished = p;
+          updated.push("synopsis");
+        }
+      }
+      const tags = [
+        parseTags(fmValue(fm, "tags"))[0] || "기타",
+        capGenre(fmValue(fm, "genre")),
+        fmValue(fm, "year"),
+      ].filter(Boolean);
+      if (tags.length) {
+        out = setField(out, "tags", `[${tags.join(", ")}]`, "tmdbId");
+        updated.push("tags");
+      }
+      out = out.replace(FM, (_, nextFm) => `---\n${nextFm}\n---\n${polished.replace(/\n*$/, "\n")}`);
+    }
+
+    await writeMovie(
+      body.slug,
+      out,
+      action === "movieRegenMeta"
+        ? `chore(movie): regen metadata — ${body.slug}`
+        : `chore(movie): regen comment — ${body.slug}`
+    );
+    return Response.json({ comment, updated });
   }
 
   if (action === "movieDelete") {

@@ -18,14 +18,16 @@ export default function MovieAdminPage() {
       </div>
       <MovieForm />
 
-      <h2 className="mb-3 mt-16 text-lg font-bold">등록된 영화 ({movies.length})</h2>
+      <h2 className="mb-3 mt-16 text-lg font-bold">등록된 작품 ({movies.length})</h2>
       <MovieTools
         movies={movies.map((m) => ({
           slug: m.slug,
           title: m.title_ko || m.title,
           director: m.director_ko || m.director,
           poster: m.poster,
+          media: m.media || "movie",
           rating: m.rating,
+          comment: m.comment || "",
         }))}
       />
     </>

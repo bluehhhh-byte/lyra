@@ -89,7 +89,7 @@ export default function MovieForm() {
 
   const pick = (r) =>
     run("detail", async () => {
-      const detail = await api("movieDetail", { tmdbId: r.tmdbId });
+      const detail = await api("movieDetail", { tmdbId: r.tmdbId, mediaType: r.mediaType });
       setMovie(detail);
       setSynopsis(detail.overview || ""); // auto-load TMDB synopsis
       setPolished("");
@@ -101,6 +101,7 @@ export default function MovieForm() {
     const { polished, comment, tags: autoTags } = await api("movieMeta", {
       title: movie.title,
       director: movie.director,
+      mediaType: movie.mediaType,
       synopsis,
       country: movie.country,
       genre: movie.genre,
@@ -116,6 +117,7 @@ export default function MovieForm() {
     const { slug } = await api("movieSave", {
       title: movie.title,
       titleKo: movie.title, // TMDB의 title이 이미 한국어
+      mediaType: movie.mediaType,
       director: movie.director,
       directorKo: movie.director, // TMDB 감독명도 한국어로 옴
       cast: movie.cast,
@@ -137,11 +139,11 @@ export default function MovieForm() {
     <div className="max-w-2xl space-y-8">
       {/* 1. search */}
       <section>
-        <Step n="1" label="영화 검색 (TMDB)" />
+        <Step n="1" label="영화/드라마 검색 (TMDB)" />
         <div className="flex flex-wrap gap-2">
           <input
             className={input + " flex-1 basis-48"}
-            placeholder="영화 제목 (예: 이터널 선샤인, parasite)"
+            placeholder="영화·드라마 제목 (예: 이터널 선샤인, 기생충, moving)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && search()}
@@ -169,6 +171,9 @@ export default function MovieForm() {
                   )}
                   <span className="min-w-0">
                     <span className="font-medium">{r.title}</span>
+                    <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 text-[10px] text-muted">
+                      {r.kind}
+                    </span>
                     <span className="text-muted"> · {r.year}</span>
                     {r.originalTitle !== r.title && (
                       <span className="block truncate text-xs text-muted">{r.originalTitle}</span>
@@ -190,7 +195,7 @@ export default function MovieForm() {
             <div className="min-w-0 text-xs text-muted">
               <p className="text-sm font-medium text-ink">{movie.title}</p>
               <p className="truncate">
-                {[movie.director, movie.year, movie.runtime && `${movie.runtime}분`].filter(Boolean).join(" · ")}
+                {[movie.kind, movie.director, movie.year, movie.runtime && `${movie.runtime}분`].filter(Boolean).join(" · ")}
               </p>
               <p className="truncate">{movie.cast}</p>
             </div>
