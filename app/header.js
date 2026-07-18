@@ -16,8 +16,8 @@ export default function Header() {
       </Link>
       <nav className="flex items-baseline gap-4 text-xs text-muted">
         <ThemeToggle />
-        <Link href="/movies" className="hover:text-accent">
-          영화
+        <Link href={inMovies ? "/" : "/movies"} className="hover:text-accent">
+          {inMovies ? "음악" : "영화"}
         </Link>
         <Link href="/stats" className="hover:text-accent">
           통계
