@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllMovies, getMovie } from "../../../lib/movies";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
+import MovieCardButton from "./movie-card";
 
 export function generateStaticParams() {
   return getAllMovies().map((m) => ({ slug: m.slug }));
@@ -103,6 +104,18 @@ export default async function MoviePage({ params }) {
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
               <YouTubeEmbed artist={movie.director || ""} title={`${movie.title} 예고편`} />
+              <MovieCardButton
+                movie={{
+                  slug: movie.slug,
+                  title: movie.title_ko || movie.title,
+                  year: movie.year || "",
+                  director: movie.director_ko || movie.director || "",
+                  genre: movie.genre || "",
+                  poster: movie.poster,
+                  rating: movie.rating,
+                  synopsis: movie.synopsis.join(" "),
+                }}
+              />
               {movie.tmdbId && (
                 <a
                   href={`https://www.themoviedb.org/movie/${movie.tmdbId}`}

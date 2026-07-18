@@ -11,7 +11,7 @@ const W = 1080;
 const H = 1350;
 const MAX_PAIRS = 15;
 
-function loadImage(src) {
+export function loadImage(src) {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.crossOrigin = "anonymous"; // required, or the canvas taints and toBlob throws
@@ -22,7 +22,7 @@ function loadImage(src) {
 }
 
 // word-wrap that falls back to per-character breaks for spaceless CJK runs
-function wrap(ctx, text, maxW) {
+export function wrap(ctx, text, maxW) {
   const out = [];
   let line = "";
   for (const word of text.split(" ")) {
