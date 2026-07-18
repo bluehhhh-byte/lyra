@@ -988,16 +988,18 @@ ${listed}`,
     const kind = mediaType === "tv" ? "드라마" : "영화";
     let polished = (synopsis || "").trim();
     let comment = "";
-    if (key && polished) {
-      const p = (
-        await geminiText(
-          key,
-          `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+    if (key) {
+      if (polished) {
+        const p = (
+          await geminiText(
+            key,
+            `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+          )
         )
-      )
-        .replace(/^["']|["']$/g, "")
-        .trim();
-      if (p) polished = p;
+          .replace(/^["']|["']$/g, "")
+          .trim();
+        if (p) polished = p;
+      }
       comment = await movieComment({ key, title, director, mediaType, rating });
     }
     const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);

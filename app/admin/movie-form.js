@@ -211,14 +211,14 @@ export default function MovieForm() {
             <p className="mb-1 text-xs text-muted">별점</p>
             <StarInput value={rating} onChange={setRating} />
           </div>
-          <button className={btn + " mt-2"} disabled={!synopsis.trim() || busy} onClick={genMeta}>
+          <button className={btn + " mt-2"} disabled={busy} onClick={genMeta}>
             {busy === "meta" ? "정돈 중…" : "Gemini 줄거리 정돈 + 코멘트 생성"}
           </button>
         </section>
       )}
 
       {/* 3. review + save */}
-      {(polished || (movie && synopsis)) && (
+      {movie && (
         <section>
           <Step n="3" label="검수 · 저장" />
           <p className="mb-2 text-xs text-muted">줄거리 직접 수정 가능.</p>
