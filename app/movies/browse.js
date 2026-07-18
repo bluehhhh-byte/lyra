@@ -54,12 +54,12 @@ export default function MovieBrowse({ movies, initialQ = "", initialGroup = "non
           placeholder="영화·감독·배우·줄거리 검색"
           className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex gap-1.5 overflow-x-auto pb-1">
           {GROUPS.map((g) => (
             <button
               key={g.key}
               onClick={() => setGroup(g.key)}
-              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+              className={`shrink-0 rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
                 group === g.key
                   ? "border-accent bg-accent font-semibold text-bg"
                   : "border-line text-muted hover:text-ink"
@@ -68,7 +68,7 @@ export default function MovieBrowse({ movies, initialQ = "", initialGroup = "non
               {g.label}
             </button>
           ))}
-          <span className="rounded-full border border-line px-3 py-1 text-xs text-muted">
+          <span className="shrink-0 rounded-full border border-line px-3 py-1 text-xs text-muted">
             총 {movies.length}편
           </span>
         </div>
