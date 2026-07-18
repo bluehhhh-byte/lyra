@@ -3,7 +3,7 @@ import { getAllMovies } from "../../../lib/movies";
 import MovieForm from "../movie-form";
 import MovieTools from "../movie-tools";
 
-export const metadata = { title: "영화 추가 | Lyra" };
+export const metadata = { title: "Syno. 관리 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
 export default function MovieAdminPage() {
@@ -11,7 +11,7 @@ export default function MovieAdminPage() {
   return (
     <>
       <div className="mb-8 flex items-center gap-4">
-        <h1 className="text-2xl font-bold">영화 추가</h1>
+        <h1 className="text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
         <Link href="/admin" className="text-sm text-muted transition hover:text-accent">
           → 곡 관리로
         </Link>

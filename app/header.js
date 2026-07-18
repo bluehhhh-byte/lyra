@@ -6,7 +6,7 @@ import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   const pathname = usePathname();
-  const inMovies = pathname?.startsWith("/movies");
+  const inMovies = pathname?.startsWith("/movies") || pathname?.startsWith("/admin/movie");
   const brand = inMovies ? "Syno" : "Lyra";
 
   return (
