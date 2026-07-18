@@ -68,6 +68,9 @@ export default function MovieBrowse({ movies, initialQ = "", initialGroup = "non
               {g.label}
             </button>
           ))}
+          <span className="rounded-full border border-line px-3 py-1 text-xs text-muted">
+            총 {movies.length}편
+          </span>
         </div>
       </div>
 

@@ -47,8 +47,7 @@ export default async function MoviesPage({ searchParams }) {
 
   return (
     <>
-      <h1 className="mb-2 text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
-      <p className="mb-6 text-sm text-muted">{movies.length}편 · 영화 줄거리와 감상</p>
+      <h1 className="mb-4 text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
       <MovieBrowse movies={movies} initialQ={q || ""} initialGroup={group || "none"} />
     </>
   );

@@ -93,6 +93,9 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
               {g.label}
             </button>
           ))}
+          <span className="rounded-full border border-line px-3 py-1 text-xs text-muted">
+            총 {songs.length}곡
+          </span>
         </div>
       </div>
 
