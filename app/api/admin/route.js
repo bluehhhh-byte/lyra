@@ -952,16 +952,23 @@ ${listed}`,
     return Response.json(await movieDetail(body.tmdbId));
   }
 
-  // Translate hand-typed quotes (reuses the song translator) and, when Gemini is
-  // available, draft a comment. Country·genre·year tags are deterministic.
+  // Polish the auto-loaded TMDB synopsis into clean 줄거리 prose and draft a
+  // personal comment. Country·genre·year tags are deterministic.
   if (action === "movieMeta") {
     const key = process.env.GEMINI_API_KEY;
-    const { title, director, quotes, country, genre, year } = body;
-    let translated = quotes || "";
+    const { title, director, synopsis, country, genre, year } = body;
+    let polished = (synopsis || "").trim();
     let comment = "";
-    if (key && quotes) {
-      const t = await translateLyrics(key, { title, artist: director, lang: "en", lyrics: quotes });
-      if (t) translated = t;
+    if (key && polished) {
+      const p = (
+        await geminiText(
+          key,
+          `영화 "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+        )
+      )
+        .replace(/^["']|["']$/g, "")
+        .trim();
+      if (p) polished = p;
       comment = (
         await geminiText(
           key,
@@ -973,11 +980,11 @@ ${listed}`,
         .trim();
     }
     const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);
-    return Response.json({ translated, comment, tags: tags.join(", ") });
+    return Response.json({ polished, comment, tags: tags.join(", ") });
   }
 
   if (action === "movieSave") {
-    const { title, titleKo, director, directorKo, cast, year, runtime, rating, genre, poster, backdrop, tmdbId, tags, comment, quotes } = body;
+    const { title, titleKo, director, directorKo, cast, year, runtime, rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -1000,7 +1007,7 @@ date: ${new Date().toISOString().slice(0, 10)}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 ---
-${(quotes || "").trim()}
+${(synopsis || "").trim()}
 `;
     await writeMovie(slug, md, `add(movie): ${slug}`);
     return Response.json({ slug });

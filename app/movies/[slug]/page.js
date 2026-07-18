@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllMovies, getMovie } from "../../../lib/movies";
-import LyricsView from "../../songs/[slug]/lyrics-view";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
 
 export function generateStaticParams() {
@@ -13,7 +12,7 @@ export async function generateMetadata({ params }) {
   const m = getMovie(decodeURIComponent(slug));
   if (!m) return {};
   const title = `${m.title_ko || m.title} (${m.year})`;
-  const description = m.comment || `${m.title} 명대사와 감상`;
+  const description = m.comment || `${m.title} 줄거리와 감상`;
   return {
     title: `${title} | Lyra`,
     description,
@@ -119,28 +118,25 @@ export default async function MoviePage({ params }) {
         </div>
       </div>
 
-      {/* comment */}
+      {/* comment — personal take */}
       {movie.comment && (
         <p className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
           {movie.comment}
         </p>
       )}
 
-      {/* quotes — reuses the lyrics view (identical interleaved format) */}
-      {movie.quotes.length > 0 && (
-        <LyricsView
-          stanzas={movie.quotes}
-          lang="en"
-          allowNotes={false}
-          song={{
-            slug: movie.slug,
-            title: movie.title_ko || movie.title,
-            artist: movie.director_ko || movie.director,
-            artwork: movie.poster,
-            year: movie.year || "",
-            genre: movie.genre || "", // footer meta: 장르 · 연도
-          }}
-        />
+      {/* synopsis — Gemini-polished 줄거리, prose paragraphs */}
+      {movie.synopsis.length > 0 && (
+        <div className="mx-auto max-w-2xl">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent">줄거리</h2>
+          <div className="space-y-4">
+            {movie.synopsis.map((p, i) => (
+              <p key={i} className="font-serif text-lg leading-relaxed">
+                {p}
+              </p>
+            ))}
+          </div>
+        </div>
       )}
 
       {related.length > 0 && (

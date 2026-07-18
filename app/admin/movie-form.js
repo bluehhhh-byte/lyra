@@ -60,8 +60,8 @@ export default function MovieForm() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [movie, setMovie] = useState(null); // picked detail
-  const [quotes, setQuotes] = useState(""); // 명대사 원문 (한 줄에 하나, [화자] 라벨 선택)
-  const [translated, setTranslated] = useState("");
+  const [synopsis, setSynopsis] = useState(""); // TMDB overview, auto-loaded on pick
+  const [polished, setPolished] = useState(""); // Gemini-tidied 줄거리
   const [comment, setComment] = useState("");
   const [tags, setTags] = useState("");
   const [rating, setRating] = useState(0);
@@ -91,22 +91,22 @@ export default function MovieForm() {
     run("detail", async () => {
       const detail = await api("movieDetail", { tmdbId: r.tmdbId });
       setMovie(detail);
-      setQuotes("");
-      setTranslated("");
+      setSynopsis(detail.overview || ""); // auto-load TMDB synopsis
+      setPolished("");
       setComment("");
       setTags([detail.country, detail.genre, detail.year].filter(Boolean).join(", "));
     })();
 
   const genMeta = run("meta", async () => {
-    const { translated, comment, tags: autoTags } = await api("movieMeta", {
+    const { polished, comment, tags: autoTags } = await api("movieMeta", {
       title: movie.title,
       director: movie.director,
-      quotes,
+      synopsis,
       country: movie.country,
       genre: movie.genre,
       year: movie.year,
     });
-    setTranslated(translated || quotes);
+    setPolished(polished || synopsis);
     if (comment) setComment(comment);
     if (autoTags) setTags(autoTags);
   });
@@ -127,7 +127,7 @@ export default function MovieForm() {
       tmdbId: movie.tmdbId,
       tags,
       comment,
-      quotes: translated || quotes,
+      synopsis: polished || synopsis,
     });
     setSavedSlug(slug);
   });
@@ -180,10 +180,10 @@ export default function MovieForm() {
         )}
       </section>
 
-      {/* 2. quotes + meta */}
+      {/* 2. synopsis + meta */}
       {movie && (
         <section>
-          <Step n="2" label="명대사 입력 → Gemini 번역·코멘트" />
+          <Step n="2" label="시놉시스 자동 로딩 → Gemini 정돈" />
           <div className="mb-3 flex items-center gap-3 rounded-lg border border-line bg-surface px-3 py-2">
             <img src={movie.poster} alt="" className="h-16 w-11 shrink-0 rounded object-cover" />
             <div className="min-w-0 text-xs text-muted">
@@ -194,30 +194,28 @@ export default function MovieForm() {
               <p className="truncate">{movie.cast}</p>
             </div>
           </div>
-          <p className="mb-1 text-xs text-muted">
-            명대사 원문을 한 줄에 하나씩. 화자를 넣으려면 <code>[Joel]</code> 처럼 대괄호 줄로.
-          </p>
+          <p className="mb-1 text-xs text-muted">TMDB 시놉시스가 자동 로딩됨. 필요하면 손봐도 됨.</p>
           <textarea
-            className={input + " h-40 font-mono text-xs"}
-            placeholder={"[Clementine]\nMeet me in Montauk.\n\n[Joel]\nConstantly talking isn't necessarily communicating."}
-            value={quotes}
-            onChange={(e) => setQuotes(e.target.value)}
+            className={input + " h-32 text-sm"}
+            placeholder={movie.overview ? "" : "TMDB에 줄거리가 없습니다 — 직접 입력하거나 비워두세요"}
+            value={synopsis}
+            onChange={(e) => setSynopsis(e.target.value)}
           />
-          <button className={btn + " mt-2"} disabled={!quotes.trim() || busy} onClick={genMeta}>
-            {busy === "meta" ? "생성 중…" : "Gemini 번역 + 코멘트 생성"}
+          <button className={btn + " mt-2"} disabled={!synopsis.trim() || busy} onClick={genMeta}>
+            {busy === "meta" ? "정돈 중…" : "Gemini 줄거리 정돈 + 코멘트 생성"}
           </button>
         </section>
       )}
 
       {/* 3. review + save */}
-      {(translated || (movie && quotes)) && (
+      {(polished || (movie && synopsis)) && (
         <section>
           <Step n="3" label="검수 · 별점 · 저장" />
-          <p className="mb-2 text-xs text-muted">번역 직접 수정 가능. 원문/번역 교차 형식.</p>
+          <p className="mb-2 text-xs text-muted">줄거리 직접 수정 가능.</p>
           <textarea
-            className={input + " h-56 font-mono text-xs"}
-            value={translated || quotes}
-            onChange={(e) => setTranslated(e.target.value)}
+            className={input + " h-40 text-sm"}
+            value={polished || synopsis}
+            onChange={(e) => setPolished(e.target.value)}
           />
           <div className="mt-3 space-y-3">
             <div>
