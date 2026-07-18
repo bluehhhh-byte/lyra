@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getAllSongs } from "../../lib/songs";
 import AdminForm from "./form";
 import Backfill from "./backfill";
@@ -12,7 +13,12 @@ export default function AdminPage() {
   const songs = getAllSongs();
   return (
     <>
-      <h1 className="mb-8 text-2xl font-bold">곡 추가</h1>
+      <div className="mb-8 flex items-center gap-4">
+        <h1 className="text-2xl font-bold">곡 추가</h1>
+        <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent">
+          → 영화 관리로
+        </Link>
+      </div>
       <AdminForm />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">누락 항목 보정</h2>

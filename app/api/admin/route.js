@@ -1,6 +1,7 @@
-import { readSong, writeSong, deleteSong } from "../../../lib/store";
+import { readSong, writeSong, deleteSong, writeMovie, deleteMovie } from "../../../lib/store";
 import { getAllSongs } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
+import { searchMovies, movieDetail } from "../../../lib/tmdb";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
@@ -936,6 +937,77 @@ ${listed}`,
 
   if (action === "delete") {
     await deleteSong(body.slug);
+    return Response.json({ ok: true });
+  }
+
+  // ── movies ────────────────────────────────────────────────────────────────
+  // TMDB search/detail mirror the iTunes song flow. Quotes are hand-typed (no
+  // lyric DB for films), so the movie form is search → detail → type quotes →
+  // Gemini translate + comment → save.
+  if (action === "movieSearch") {
+    return Response.json({ results: await searchMovies(body.query) });
+  }
+
+  if (action === "movieDetail") {
+    return Response.json(await movieDetail(body.tmdbId));
+  }
+
+  // Translate hand-typed quotes (reuses the song translator) and, when Gemini is
+  // available, draft a comment. Country·genre·year tags are deterministic.
+  if (action === "movieMeta") {
+    const key = process.env.GEMINI_API_KEY;
+    const { title, director, quotes, country, genre, year } = body;
+    let translated = quotes || "";
+    let comment = "";
+    if (key && quotes) {
+      const t = await translateLyrics(key, { title, artist: director, lang: "en", lyrics: quotes });
+      if (t) translated = t;
+      comment = (
+        await geminiText(
+          key,
+          `영화 "${title}" (감독 ${director})에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.`
+        )
+      )
+        .replace(/\s*\n+\s*/g, " ")
+        .replace(/^["']|["']$/g, "")
+        .trim();
+    }
+    const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);
+    return Response.json({ translated, comment, tags: tags.join(", ") });
+  }
+
+  if (action === "movieSave") {
+    const { title, titleKo, director, directorKo, cast, year, runtime, rating, genre, poster, backdrop, tmdbId, tags, comment, quotes } = body;
+    const slug = `${title} ${year}`
+      .toLowerCase()
+      .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
+      .replace(/^-|-$/g, "");
+    const md = `---
+title: ${title}
+title_ko: ${titleKo || title}
+director: ${director || ""}
+director_ko: ${directorKo || ""}
+cast: ${cast || ""}
+year: ${year || ""}
+runtime: ${runtime || ""}
+rating: ${rating || ""}
+genre: ${genre || ""}
+poster: ${poster || ""}
+backdrop: ${backdrop || ""}
+tmdbId: ${tmdbId || ""}
+tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
+date: ${new Date().toISOString().slice(0, 10)}
+published: ${new Date().toISOString()}
+comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
+---
+${(quotes || "").trim()}
+`;
+    await writeMovie(slug, md, `add(movie): ${slug}`);
+    return Response.json({ slug });
+  }
+
+  if (action === "movieDelete") {
+    await deleteMovie(body.slug);
     return Response.json({ ok: true });
   }
 
