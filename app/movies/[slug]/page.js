@@ -138,6 +138,7 @@ export default async function MoviePage({ params }) {
             artist: movie.director_ko || movie.director,
             artwork: movie.poster,
             year: movie.year || "",
+            genre: movie.genre || "", // footer meta: 장르 · 연도
           }}
         />
       )}

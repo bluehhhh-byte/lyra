@@ -137,7 +137,7 @@ async function drawCard({ song, lines, align = "left" }) {
     ctx.fillText(b.t, xText, y);
   }
 
-  // footer — small artwork, then title / artist / album·year·genre
+  // footer — small artwork, then title / artist / meta
   const fy = H - 170;
   if (art) {
     const size = 96;
@@ -145,7 +145,10 @@ async function drawCard({ song, lines, align = "left" }) {
     ctx.beginPath();
     ctx.roundRect(pad, fy, size, size, 16);
     ctx.clip();
-    ctx.drawImage(art, pad, fy, size, size);
+    // cover-crop: a 2:3 movie poster would squish if drawn into a square, so
+    // take the largest centered square of the source (no-op for square art)
+    const side = Math.min(art.width, art.height);
+    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, pad, fy, size, size);
     ctx.restore();
   }
   const tx = pad + (art ? 120 : 0);

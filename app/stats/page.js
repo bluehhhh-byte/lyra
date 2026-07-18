@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllSongs } from "../../lib/songs";
+import { getAllMovies } from "../../lib/movies";
 import { pct, Bars } from "./charts";
 import DrillSection from "./drilldown";
 
@@ -11,6 +12,9 @@ export const metadata = {
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
 const isDecadeTag = (t) => /^\d{4}s?$/.test(t); // 2010s (legacy) or 2018 (exact year)
 const isCountryTag = (t) => Object.values(COUNTRY).includes(t) || t === "기타";
+// movies use real nationalities (미국·영국·프랑스…), not the song 영미 bucket
+const MOVIE_COUNTRIES = ["한국", "일본", "미국", "영국", "프랑스", "홍콩", "중국", "대만", "기타"];
+const isMovieCountryTag = (t) => MOVIE_COUNTRIES.includes(t);
 
 // Map<key, count>, biggest first
 function tally(values) {
@@ -19,8 +23,36 @@ function tally(values) {
   return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 }
 
+// half-star aware ★ row clipped to the score
+function Stars({ value }) {
+  return (
+    <span className="relative inline-block align-middle text-sm leading-none" aria-label={`별점 ${value}/5`}>
+      <span className="text-muted/30">★★★★★</span>
+      <span className="absolute inset-0 overflow-hidden text-accent" style={{ width: `${(value / 5) * 100}%` }}>
+        ★★★★★
+      </span>
+    </span>
+  );
+}
+
 export default function StatsPage() {
   const songs = getAllSongs();
+  const movies = getAllMovies();
+
+  // movie stats: count, mean rating, rating distribution (5.0 → 0.5), country/genre
+  const rated = movies.filter((m) => m.rating != null);
+  const meanRating = rated.length
+    ? (rated.reduce((n, m) => n + m.rating, 0) / rated.length).toFixed(1)
+    : null;
+  const ratingRows = [];
+  for (let r = 5; r >= 0.5; r -= 0.5) {
+    const n = rated.filter((m) => m.rating === r).length;
+    if (n) ratingRows.push([`${r.toFixed(1)}★`, n]);
+  }
+  const movieCountry = tally(movies.map((m) => m.tags.find((t) => isMovieCountryTag(t)) || "기타"));
+  const movieGenre = tally(
+    movies.flatMap((m) => m.tags).filter((t) => !isDecadeTag(t) && !isMovieCountryTag(t))
+  ).slice(0, 10);
 
   const lines = songs.flatMap((s) => s.stanzas.flatMap((st) => st.lines));
   const translated = lines.filter((l) => l.ko).length;
@@ -134,6 +166,43 @@ export default function StatsPage() {
           {readings > 0 && `한글 독음이 달린 줄 ${readings}개. `}
           {untagged > 0 && `태그가 비어 있는 곡 ${untagged}개.`}
         </p>
+      )}
+
+      {movies.length > 0 && (
+        <div className="mt-20 border-t border-line pt-12">
+          <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
+            영화
+            <Link href="/movies" className="text-xs font-normal text-muted hover:text-accent">
+              보기 →
+            </Link>
+          </h2>
+          <p className="mb-10 text-sm text-muted">
+            {movies.length}편
+            {meanRating && (
+              <>
+                {" · 평균 "}
+                <Stars value={Number(meanRating)} />
+                <span className="ml-1 text-accent">{meanRating}</span>
+              </>
+            )}
+          </p>
+
+          <div className="grid gap-12 sm:grid-cols-2">
+            {ratingRows.length > 0 && (
+              <Section title="별점 분포">
+                <Bars data={ratingRows} total={rated.length} />
+              </Section>
+            )}
+            <Section title="국가별">
+              <Bars data={movieCountry} total={movies.length} />
+            </Section>
+            {movieGenre.length > 0 && (
+              <Section title="장르">
+                <Bars data={movieGenre} total={movies.length} />
+              </Section>
+            )}
+          </div>
+        </div>
       )}
 
       <div className="mt-10 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
