@@ -1,7 +1,6 @@
 import "./globals.css";
-import Link from "next/link";
 import PlayerProvider from "./player";
-import ThemeToggle from "./theme-toggle";
+import Header from "./header";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
 import { getAllSongs } from "../lib/songs";
@@ -46,26 +45,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <PlayerProvider playlist={playlist}>
-        <header className="mx-auto flex max-w-5xl items-baseline justify-between px-5 py-8">
-          <Link href="/" className="text-lg font-bold tracking-tight">
-            Lyra<span className="text-accent">.</span>
-          </Link>
-          <nav className="flex items-baseline gap-4 text-xs text-muted">
-            <ThemeToggle />
-            <Link href="/movies" className="hover:text-accent">
-              영화
-            </Link>
-            <Link href="/stats" className="hover:text-accent">
-              통계
-            </Link>
-            <Link href="/tags" className="hover:text-accent">
-              태그
-            </Link>
-            <Link href="/admin" className="hover:text-accent">
-              관리자
-            </Link>
-          </nav>
-        </header>
+        <Header />
         <main className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
           가사의 저작권은 원저작자에게 있습니다. 번역과 코멘트는 개인 감상입니다.

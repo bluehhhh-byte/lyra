@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllMovies } from "../../lib/movies";
 
 export const metadata = {
-  title: "영화 | Lyra",
+  title: "Syno. | Lyra",
   description: "좋아하는 영화와 줄거리·감상",
 };
 
@@ -31,7 +31,7 @@ export default function MoviesPage() {
 
   return (
     <>
-      <h1 className="mb-2 text-2xl font-bold">영화</h1>
+      <h1 className="mb-2 text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
       <p className="mb-10 text-sm text-muted">{movies.length}편 · 영화 줄거리와 감상</p>
 
       <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
