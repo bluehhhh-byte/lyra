@@ -86,11 +86,13 @@ export default function MovieTools({ movies }) {
                 {m.media === "tv" && <span className="ml-2 text-xs text-muted">드라마</span>}
                 {rating != null && <span className="ml-2 text-xs text-accent">★ {rating.toFixed(1)}</span>}
               </span>
-              <StarInput
-                value={rating || 0}
-                disabled={!!st.busy}
-                onChange={(next) => updateRating(m.slug, next)}
-              />
+              <button
+                onClick={() => set(m.slug, { ratingOpen: !st.ratingOpen, err: "", msg: "" })}
+                disabled={st.busy}
+                className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
+              >
+                별점
+              </button>
               <button
                 onClick={() => regenMeta(m.slug)}
                 disabled={st.busy}
@@ -120,6 +122,23 @@ export default function MovieTools({ movies }) {
                 </button>
               )}
             </div>
+            {st.ratingOpen && (
+              <div className="mt-2 flex items-center gap-2 pl-11 text-xs text-muted">
+                <span>별점 수정</span>
+                <StarInput
+                  value={rating || 0}
+                  disabled={!!st.busy}
+                  onChange={(next) => updateRating(m.slug, next)}
+                />
+                <button
+                  onClick={() => updateRating(m.slug, 0)}
+                  disabled={!!st.busy}
+                  className="text-muted hover:text-accent disabled:opacity-40"
+                >
+                  지우기
+                </button>
+              </div>
+            )}
             <p className="mt-1 pl-11 text-xs text-muted">
               {st.err ? (
                 <span className="text-red-400">{st.err}</span>
