@@ -184,24 +184,6 @@ function StarInput({ value, onChange, disabled }) {
       >
         +
       </button>
-      <div className="ml-1 flex gap-1">
-        {[1, 2, 3, 4, 5].map((n) => (
-          <button
-            key={n}
-            type="button"
-            disabled={disabled}
-            onClick={() => onChange(n)}
-            className={`h-7 w-7 rounded-full border text-xs transition disabled:opacity-40 ${
-              value === n
-                ? "border-accent bg-accent font-semibold text-bg"
-                : "border-line text-muted hover:text-accent"
-            }`}
-            aria-label={`${n}점으로 수정`}
-          >
-            {n}
-          </button>
-        ))}
-      </div>
     </div>
   );
 }
