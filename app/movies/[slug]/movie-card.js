@@ -118,7 +118,7 @@ async function drawCard({ movie }) {
     .split(",")
     .map((name) => name.trim())
     .filter(Boolean)
-    .slice(0, 2)
+    .slice(0, 3)
     .join(", ");
   const meta = [movie.director, cast, movie.country, movie.year, movie.genre].filter(Boolean).join(" · ");
   if (meta) {
