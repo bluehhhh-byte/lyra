@@ -1102,6 +1102,18 @@ ${(synopsis || "").trim()}
     return Response.json({ comment, updated });
   }
 
+  if (action === "movieUpdateRating") {
+    const movie = await readMovie(body.slug);
+    if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
+    const rating = Number(body.rating);
+    if (!Number.isFinite(rating) || rating < 0 || rating > 5)
+      return Response.json({ error: "별점은 0~5 사이여야 합니다" }, { status: 422 });
+    const rounded = Math.round(rating * 2) / 2;
+    const out = setField(movie.raw.replace(/\r\n/g, "\n"), "rating", rounded ? String(rounded) : "", "runtime");
+    await writeMovie(body.slug, out, `edit(movie): update rating — ${body.slug}`);
+    return Response.json({ rating: rounded });
+  }
+
   if (action === "movieDelete") {
     await deleteMovie(body.slug);
     return Response.json({ ok: true });

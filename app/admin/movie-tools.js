@@ -22,6 +22,18 @@ export default function MovieTools({ movies }) {
   const [state, setState] = useState({}); // slug -> { busy, err, msg, comment }
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
 
+  const updateRating = async (slug, rating) => {
+    set(slug, { busy: "rating", err: "", msg: "" });
+    try {
+      const { rating: saved } = await api("movieUpdateRating", { slug, rating });
+      set(slug, { rating: saved, msg: `별점 ${saved ? saved.toFixed(1) : "—"} 저장됨` });
+    } catch (e) {
+      set(slug, { err: e.message });
+    } finally {
+      set(slug, { busy: "" });
+    }
+  };
+
   const regenMeta = async (slug) => {
     set(slug, { busy: "meta", err: "", msg: "" });
     try {
@@ -63,6 +75,7 @@ export default function MovieTools({ movies }) {
     <ul className="max-w-2xl divide-y divide-line rounded-lg border border-line">
       {movies.map((m) => {
         const st = state[m.slug] || {};
+        const rating = st.rating ?? m.rating;
         return (
           <li key={m.slug} className={`px-3 py-2 text-sm ${st.gone ? "opacity-40" : ""}`}>
             <div className="flex items-center gap-3">
@@ -71,8 +84,13 @@ export default function MovieTools({ movies }) {
                 <span className="font-medium">{m.title}</span>
                 <span className="text-muted"> — {m.director}</span>
                 {m.media === "tv" && <span className="ml-2 text-xs text-muted">드라마</span>}
-                {m.rating != null && <span className="ml-2 text-xs text-accent">★ {m.rating.toFixed(1)}</span>}
+                {rating != null && <span className="ml-2 text-xs text-accent">★ {rating.toFixed(1)}</span>}
               </span>
+              <StarInput
+                value={rating || 0}
+                disabled={!!st.busy}
+                onChange={(next) => updateRating(m.slug, next)}
+              />
               <button
                 onClick={() => regenMeta(m.slug)}
                 disabled={st.busy}
@@ -115,5 +133,37 @@ export default function MovieTools({ movies }) {
         );
       })}
     </ul>
+  );
+}
+
+function StarInput({ value, onChange, disabled }) {
+  return (
+    <div className="flex shrink-0 items-center gap-0.5" aria-label="별점 수정">
+      {[1, 2, 3, 4, 5].map((n) => (
+        <span key={n} className="relative inline-block text-base leading-none">
+          <span className="text-muted/30">★</span>
+          <span
+            className="absolute inset-0 overflow-hidden text-accent"
+            style={{ width: value >= n ? "100%" : value >= n - 0.5 ? "50%" : "0%" }}
+          >
+            ★
+          </span>
+          <button
+            type="button"
+            aria-label={`${n - 0.5}점으로 수정`}
+            disabled={disabled}
+            onClick={() => onChange(n - 0.5)}
+            className="absolute inset-y-0 left-0 w-1/2 disabled:cursor-not-allowed"
+          />
+          <button
+            type="button"
+            aria-label={`${n}점으로 수정`}
+            disabled={disabled}
+            onClick={() => onChange(n)}
+            className="absolute inset-y-0 right-0 w-1/2 disabled:cursor-not-allowed"
+          />
+        </span>
+      ))}
+    </div>
   );
 }

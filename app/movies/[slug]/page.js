@@ -33,6 +33,20 @@ function Stars({ value }) {
   );
 }
 
+// "2026년 7월 14일 22:03" in KST; drops the time for a date-only value
+function formatPublished(v) {
+  const d = new Date(v.length <= 10 ? `${v}T00:00:00+09:00` : v);
+  if (isNaN(d)) return v;
+  const withTime = v.length > 10;
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    ...(withTime ? { hour: "2-digit", minute: "2-digit", hour12: false } : {}),
+  }).format(d);
+}
+
 function relatedMovies(movie, all) {
   const tags = new Set(movie.tags);
   return all
@@ -152,6 +166,13 @@ export default async function MoviePage({ params }) {
             ))}
           </div>
         </div>
+      )}
+
+      {/* when this entry went up — full datetime if recorded, else the date */}
+      {(movie.published || movie.date) && (
+        <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
+          기록 {formatPublished(movie.published || movie.date)}
+        </p>
       )}
 
       {related.length > 0 && (
