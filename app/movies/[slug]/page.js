@@ -110,6 +110,8 @@ export default async function MoviePage({ params }) {
                   title: movie.title_ko || movie.title,
                   year: movie.year || "",
                   director: movie.director_ko || movie.director || "",
+                  cast: movie.cast || "",
+                  country: movie.tags?.[0] || "",
                   genre: movie.genre || "",
                   poster: movie.poster,
                   rating: movie.rating,

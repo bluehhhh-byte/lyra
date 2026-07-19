@@ -44,7 +44,7 @@ async function drawCard({ movie }) {
   ctx.fillStyle = ink;
   ctx.textAlign = "right";
   ctx.font = "600 34px Georgia, serif";
-  ctx.fillText("Lyra.", W - pad, 100);
+  ctx.fillText("Syno.", W - pad, 100);
 
   // poster — centered near the top, 2:3
   const pw = 320;
@@ -113,12 +113,19 @@ async function drawCard({ movie }) {
     ctx.fillText(t, W / 2, y);
   }
 
-  // footer — director · year · genre
-  const meta = [movie.director, movie.year, movie.genre].filter(Boolean).join(" · ");
+  // footer — director · cast · country · year · genre
+  const cast = (movie.cast || "")
+    .split(",")
+    .map((name) => name.trim())
+    .filter(Boolean)
+    .slice(0, 2)
+    .join(", ");
+  const meta = [movie.director, cast, movie.country, movie.year, movie.genre].filter(Boolean).join(" · ");
   if (meta) {
     ctx.fillStyle = inkFaint;
     ctx.font = "24px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    ctx.fillText(meta, W / 2, footerY);
+    const footerLines = wrap(ctx, meta, W - pad * 2).slice(0, 2);
+    footerLines.forEach((line, i) => ctx.fillText(line, W / 2, footerY + i * 32));
   }
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
