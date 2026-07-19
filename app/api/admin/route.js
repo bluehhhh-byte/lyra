@@ -228,12 +228,17 @@ function ratingGuide(rating) {
       : "사용자 별점은 아직 없다. 작품의 기존 평가와 반응을 참고하되, 장단점을 과장 없이 균형 있게 쓸 것.";
 }
 
-async function movieComment({ key, title, director, mediaType, rating }) {
+async function movieComment({ key, title, director, mediaType, rating, synopsis = "", tmdbRating = "", tmdbVotes = "" }) {
   const kind = mediaType === "tv" ? "드라마" : "영화";
+  const publicRating =
+    tmdbRating && Number(tmdbVotes) > 0
+      ? `TMDB 공개 평점은 ${Number(tmdbRating).toFixed(1)}/10 (${tmdbVotes}표)다.`
+      : "";
+  const synopsisHint = synopsis ? `\n줄거리 참고:\n${synopsis.slice(0, 800)}` : "";
   return (
     await geminiText(
       key,
-      `${kind} "${title}"${director ? ` (연출/감독 ${director})` : ""}에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. ${ratingGuide(rating)} 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.`
+      `${kind} "${title}"${director ? ` (연출/감독 ${director})` : ""}에 대한 개인 감상 코멘트를 한국어 1~2문장으로 써줘. ${publicRating} ${ratingGuide(rating)} 작품의 주제·연출·인상을 담아서. 반드시 평서문 '~다'체로 끝맺을 것. "~습니다/~해요" 금지. 담백한 톤. 코멘트 문장만 출력.${synopsisHint}`
     )
   )
     .replace(/\s*\n+\s*/g, " ")
@@ -984,7 +989,7 @@ ${listed}`,
   // personal comment. Country·genre·year tags are deterministic.
   if (action === "movieMeta") {
     const key = process.env.GEMINI_API_KEY;
-    const { title, director, mediaType, synopsis, country, genre, year, rating } = body;
+    const { title, director, mediaType, synopsis, country, genre, year, rating, tmdbRating, tmdbVotes } = body;
     const kind = mediaType === "tv" ? "드라마" : "영화";
     let polished = (synopsis || "").trim();
     let comment = "";
@@ -1000,7 +1005,8 @@ ${listed}`,
           .trim();
         if (p) polished = p;
       }
-      comment = await movieComment({ key, title, director, mediaType, rating });
+      comment = await movieComment({ key, title, director, mediaType, rating, synopsis: polished, tmdbRating, tmdbVotes });
+      if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
     }
     const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);
     return Response.json({ polished, comment, tags: tags.join(", ") });
@@ -1051,7 +1057,7 @@ ${(synopsis || "").trim()}
     const director = fmValue(fm, "director_ko") || fmValue(fm, "director");
     const mediaType = fmValue(fm, "media") || "movie";
     const rating = fmValue(fm, "rating");
-    const comment = await movieComment({ key, title, director, mediaType, rating });
+    const comment = await movieComment({ key, title, director, mediaType, rating, synopsis: bodyText });
     if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
 
     let out = setField(raw, "comment", comment, "published");

@@ -107,6 +107,8 @@ export default function MovieForm() {
       genre: movie.genre,
       year: movie.year,
       rating,
+      tmdbRating: movie.tmdbRating,
+      tmdbVotes: movie.tmdbVotes,
     });
     setPolished(polished || synopsis);
     if (comment) setComment(comment);
