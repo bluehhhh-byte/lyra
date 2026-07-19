@@ -156,33 +156,52 @@ export default function MovieTools({ movies }) {
 }
 
 function StarInput({ value, onChange, disabled }) {
+  const step = (delta) => {
+    const next = Math.min(5, Math.max(0.5, Math.round((value + delta) * 2) / 2));
+    onChange(next);
+  };
+
   return (
-    <div className="flex shrink-0 items-center gap-0.5" aria-label="별점 수정">
-      {[1, 2, 3, 4, 5].map((n) => (
-        <span key={n} className="relative inline-block text-base leading-none">
-          <span className="text-muted/30">★</span>
-          <span
-            className="absolute inset-0 overflow-hidden text-accent"
-            style={{ width: value >= n ? "100%" : value >= n - 0.5 ? "50%" : "0%" }}
-          >
-            ★
-          </span>
+    <div className="flex shrink-0 items-center gap-1" aria-label="별점 수정">
+      <button
+        type="button"
+        disabled={disabled || value <= 0.5}
+        onClick={() => step(-0.5)}
+        className="h-7 w-7 rounded-full border border-line text-sm text-muted hover:text-accent disabled:opacity-30"
+        aria-label="별점 0.5점 낮추기"
+      >
+        -
+      </button>
+      <span className="min-w-12 rounded-full border border-line px-2 py-1 text-center text-xs font-semibold text-accent">
+        ★ {value ? value.toFixed(1) : "—"}
+      </span>
+      <button
+        type="button"
+        disabled={disabled || value >= 5}
+        onClick={() => step(0.5)}
+        className="h-7 w-7 rounded-full border border-line text-sm text-muted hover:text-accent disabled:opacity-30"
+        aria-label="별점 0.5점 높이기"
+      >
+        +
+      </button>
+      <div className="ml-1 flex gap-1">
+        {[1, 2, 3, 4, 5].map((n) => (
           <button
+            key={n}
             type="button"
-            aria-label={`${n - 0.5}점으로 수정`}
-            disabled={disabled}
-            onClick={() => onChange(n - 0.5)}
-            className="absolute inset-y-0 left-0 w-1/2 disabled:cursor-not-allowed"
-          />
-          <button
-            type="button"
-            aria-label={`${n}점으로 수정`}
             disabled={disabled}
             onClick={() => onChange(n)}
-            className="absolute inset-y-0 right-0 w-1/2 disabled:cursor-not-allowed"
-          />
-        </span>
-      ))}
+            className={`h-7 w-7 rounded-full border text-xs transition disabled:opacity-40 ${
+              value === n
+                ? "border-accent bg-accent font-semibold text-bg"
+                : "border-line text-muted hover:text-accent"
+            }`}
+            aria-label={`${n}점으로 수정`}
+          >
+            {n}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
