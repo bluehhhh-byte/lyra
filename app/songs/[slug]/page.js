@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
+import { parseMoodLevel, moodName, moodColor } from "../../../lib/mood";
 import { genreTagOf } from "../../../lib/genre";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
@@ -104,7 +105,31 @@ export default async function SongPage({ params }) {
                 .filter(Boolean)
                 .join(" · ")}
             </p>
-            <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-1.5 sm:justify-start">
+              {/* mood sits with the tags but reads differently — the dot carries
+                  the 1–5 scale, which a flat tag pill can't show */}
+              {parseMoodLevel(song.mood) && (
+                <Link
+                  href={`/?mood=${parseMoodLevel(song.mood)}`}
+                  className="flex items-center gap-1.5 rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
+                  title={`감정 세기 ${parseMoodLevel(song.mood)}/5`}
+                >
+                  <span
+                    className="h-2 w-2 rounded-full"
+                    style={{ background: moodColor(song.mood) }}
+                    aria-hidden
+                  />
+                  {moodName(song.mood)}
+                </Link>
+              )}
+              {song.mood_label && (
+                <Link
+                  href={`/?mood_label=${encodeURIComponent(song.mood_label)}`}
+                  className="rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
+                >
+                  {song.mood_label}
+                </Link>
+              )}
               {song.tags.map((t) => (
                 <Link
                   key={t}
