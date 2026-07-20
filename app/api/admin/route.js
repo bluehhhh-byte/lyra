@@ -1,5 +1,5 @@
 import { readSong, writeSong, deleteSong, readMovie, writeMovie, deleteMovie } from "../../../lib/store";
-import { getAllSongs } from "../../../lib/songs";
+import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 
@@ -69,7 +69,9 @@ Rules:
 
 Lyrics:
 ${lyrics}`;
-  return normalizeInterleaved(await geminiText(key, prompt));
+  // capitalize here too, not just on save, so the reviewer sees the final text
+  // in the edit box instead of a surprise change after publishing
+  return capitalizeLyricLines(normalizeInterleaved(await geminiText(key, prompt)));
 }
 
 // Safety net: Gemini occasionally appends the annotation to the original line
@@ -1125,9 +1127,11 @@ ${(synopsis || "").trim()}
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
       .replace(/^-|-$/g, "");
+    // catches the paths that skip translation: a hand-typed body, and the
+    // "이대로 사용" bypass that copies Korean lyrics over verbatim
+    let lyricBody = capitalizeLyricLines(lyrics.trim());
     // auto-restanza on publish — reorganize the lyrics by musical structure.
     // Best-effort: if Gemini is down or the body is too short, keep it as typed.
-    let lyricBody = lyrics.trim();
     try {
       const restanza = await restanzaBody({
         title,
