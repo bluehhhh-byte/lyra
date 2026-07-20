@@ -1,6 +1,6 @@
 ---
 title: Akane Sasu Kiro Terasaredo... - When It Begins To Get Dark...
-title_ko: Akane Sasu Kiro Terasaredo... - When It Begins To Get Dark...
+title_ko: 노을 지는 귀갓길 비추어도... - 어둠이 드리울 때...
 artist: Sheena Ringo
 artist_ko: 
 album: Muzai Moratorium - Innocence Moratorium
@@ -12,11 +12,11 @@ trackId: 1384341694
 duration: 247
 lang: en
 tags: [일본, J-Rock, 1999]
-keywords: []
-emotion: 
+keywords: [약속, 황혼, 눈물, 불안, 내일]
+emotion: 슬픔
 date: 2026-07-20
 published: 2026-07-20T13:14:13.528Z
-comment: 이 곡은 노을 지는 풍경 속에서 사랑하는 이와의 불확실한 관계가 주는 아련한 슬픔을 담아낸다. 불안한 마음을 음악으로 달래려 하지만, 오히려 더욱 깊어지는 감정을 섬세하게 그려내는 것이 인상적이다.
+comment: 곡은 확신 없는 관계에서 오는 고독과 불안감을 노을 지는 풍경과 헤드폰 속 음악에 빗대어 담담하게 표현한다. 가사 속 화자는 눈물을 억누르며 내일에 대한 두려움을 마주하고 있다.
 ---
 何時もの交差点で 彼は頬にキスする
 + 이츠모노 코사텐데 카레와 호호니 키스스루
