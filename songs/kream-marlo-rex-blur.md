@@ -11,6 +11,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d9/
 trackId: 1708367239
 lang: en
 tags: [한국, Dance, 2023]
+emotion: 몽환
+keywords: [너, 나, 몸, 흐릿, 빠짐]
 date: 2026-07-08
 published: 2026-07-08T12:30:46.000Z
 comment: 이 곡은 사랑하는 사람과 경계가 모호해지는 감정을 섬세하게 그린다. 관계 속에서 자신을 잃을까 두려워하면서도 결국 상대에게 이끌리는 복합적인 심리가 담겨 있다.
