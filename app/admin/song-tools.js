@@ -102,9 +102,12 @@ export default function SongTools({ songs }) {
         <button
           onClick={regenAll}
           disabled={!!bulk}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+          className="min-w-32 rounded-lg bg-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-bg disabled:opacity-40"
         >
-          {bulk ? `전체 메타 재생성 중… ${bulk.done}/${bulk.total}` : "전체 메타 AI 재생성"}
+          {/* two lines in both states so the button keeps its size while running */}
+          전체 메타
+          <br />
+          {bulk ? `재생성 중… ${bulk.done}/${bulk.total}` : "AI 재생성"}
         </button>
         <span className="text-xs text-muted">
           태그·코멘트·한글제목·독음을 곡마다 새로 생성(덮어씀)
@@ -115,17 +118,21 @@ export default function SongTools({ songs }) {
         const st = state[s.slug] || {};
         return (
           <li key={s.slug} className="px-3 py-2 text-sm">
-            <div className="flex items-center gap-3">
+            {/* title on its own line, actions underneath — the row ran out of
+                width once there were five of them */}
+            <div className="flex items-start gap-3">
               <img
                 src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
                 alt=""
                 loading="lazy"
                 className="h-9 w-9 shrink-0 rounded"
               />
-              <span className="min-w-0 flex-1">
+              <div className="min-w-0 flex-1">
+              <p className="truncate">
                 <span className="font-medium">{s.title}</span>
                 <span className="text-muted"> — {s.artist}</span>
-              </span>
+              </p>
+              <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
               <button
                 onClick={() => regenMeta(s.slug)}
                 disabled={!!st.busy}
@@ -166,6 +173,8 @@ export default function SongTools({ songs }) {
               <a href={`/admin/edit/${s.slug}`} className="shrink-0 text-xs text-muted hover:text-accent">
                 수정
               </a>
+              </div>
+              </div>
             </div>
             <p className="mt-1 pl-12 text-xs text-muted">
               {st.err ? (

@@ -83,15 +83,20 @@ export default function Requality() {
 
   return (
     <div className="max-w-2xl">
+      {/* min-w + tabular-nums: the progress counter is wider than the idle
+          label and would otherwise shove the hint text sideways mid-scan */}
       <div className="mb-3 flex items-center gap-3">
         <button
           onClick={scan}
           disabled={busy}
-          className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+          className="min-w-32 rounded-lg border border-line px-4 py-2 text-center text-sm leading-tight tabular-nums text-muted hover:text-accent disabled:opacity-40"
         >
+          {/* two lines in both states so the button keeps its size while scanning */}
+          가사 품질
+          <br />
           {busy
             ? `검사 중… ${progress ? `${progress.done}/${progress.total}` : ""}`
-            : "가사 품질 재검사"}
+            : "재검사"}
         </button>
         <span className="text-xs text-muted">
           더 온전한 전사가 있는 곡을 찾습니다 (부분 가사 탐지)
