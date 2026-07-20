@@ -1,7 +1,6 @@
 import { readSong, writeSong, deleteSong, readMovie, writeMovie, deleteMovie } from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
-import { MOOD_LEVELS, MOOD_LABELS, parseMoodLevel, parseMoodLabel } from "../../../lib/mood";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
@@ -207,8 +206,6 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
   let titleKo = lang === "ko" ? title : "";
   let artistKo = "";
   let comment = "";
-  let mood = 0; // 1–5 감정 세기, 0 = 판정 없음
-  let moodLabel = "";
   let aiOk = false; // did the Gemini call actually return usable fields?
 
   // one combined Gemini call (avoids free-tier rate limits from many calls)
@@ -223,8 +220,6 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
 - titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
 - artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
 - comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤
-- mood: 곡의 감정 세기를 1~5 정수로. ${MOOD_LEVELS.map((m) => `${m.level}=${m.name}(${m.hint})`).join(", ")}. 편곡의 시끄러움이 아니라 곡이 남기는 감정의 세기 기준
-- moodLabel: 이 곡이 다루는 감정을 아래에서 정확히 하나만. 목록: ${MOOD_LABELS.join(", ")}
 가사:
 ${lyrics.slice(0, 2000)}`,
         true
@@ -237,9 +232,6 @@ ${lyrics.slice(0, 2000)}`,
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
-      // both optional — a song with no usable mood just renders without one
-      mood = parseMoodLevel(json.mood) || 0;
-      moodLabel = parseMoodLabel(json.moodLabel);
     } catch {} // Gemini 실패해도 국가·장르·연도 태그는 유지
   }
 
@@ -250,7 +242,7 @@ ${lyrics.slice(0, 2000)}`,
   if (country === "일본" && genreTag === "K-Pop") genreTag = "J-Pop";
   if (genreTag) tags.push(genreTag);
   if (year) tags.push(String(year)); // exact release year, not the decade
-  return { tags, titleKo, artistKo, comment, mood, moodLabel, aiOk };
+  return { tags, titleKo, artistKo, comment, aiOk };
 }
 
 const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -910,16 +902,6 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
       out = setField(out, "artist_ko", auto.artistKo, "artist");
       updated.push("artist_ko");
     }
-    // mood arrived after the first 29 songs were filed, so this is also the
-    // backfill path — anchor after tags, which every song already has
-    if (auto.mood) {
-      out = setField(out, "mood", String(auto.mood), "tags");
-      updated.push("mood");
-    }
-    if (auto.moodLabel) {
-      out = setField(out, "mood_label", auto.moodLabel, "mood");
-      updated.push("mood_label");
-    }
     if (!updated.length) return Response.json({ updated: [] });
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
     return Response.json({ updated });
@@ -1259,7 +1241,7 @@ ${(synopsis || "").trim()}
   }
 
   if (action === "save") {
-    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, mood, moodLabel } = body;
+    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre } = body;
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -1292,8 +1274,6 @@ trackId: ${trackId || ""}
 duration: ${duration || ""}
 lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
-mood: ${parseMoodLevel(mood) || ""}
-mood_label: ${parseMoodLabel(moodLabel)}
 date: ${new Date().toISOString().slice(0, 10)}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}

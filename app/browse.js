@@ -1,31 +1,20 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { MOOD_LEVELS, MOOD_COLORS, moodName } from "../lib/mood";
 
 const GROUPS = [
   { key: "none", label: "전체" },
   { key: "country", label: "국가별" },
   { key: "decade", label: "연대별" },
   { key: "artist", label: "가수별" },
-  { key: "moodLabel", label: "감정별" },
   { key: "random", label: "랜덤" },
 ];
 
 const RANDOM_PICKS = 6;
 
-export default function Browse({
-  songs,
-  initialTag = "",
-  initialQ = "",
-  initialGroup = "none",
-  initialMood = 0,
-  initialMoodLabel = "",
-}) {
+export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none" }) {
   const [q, setQ] = useState(initialQ);
   const [tag, setTag] = useState(initialTag);
-  const [mood, setMood] = useState(initialMood);
-  const [moodLabel, setMoodLabel] = useState(initialMoodLabel);
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
 
@@ -39,24 +28,20 @@ export default function Browse({
     if (q) p.set("q", q);
     if (tag) p.set("tag", tag);
     if (group !== "none") p.set("group", group);
-    if (mood) p.set("mood", String(mood));
-    if (moodLabel) p.set("mood_label", moodLabel);
     const qs = p.toString();
     history.replaceState(null, "", qs ? `/?${qs}` : "/");
-  }, [q, tag, group, mood, moodLabel]);
+  }, [q, tag, group]);
 
   const needle = q.trim().toLowerCase();
   const filtered = useMemo(() => {
     return songs.filter(
       (s) =>
         (!tag || s.tags.includes(tag)) &&
-        (!mood || s.mood === mood) &&
-        (!moodLabel || s.moodLabel === moodLabel) &&
         (!needle ||
           s.metaSearch.includes(needle) ||
           s.lines.some((l) => l.toLowerCase().includes(needle)))
     );
-  }, [needle, tag, mood, moodLabel, songs]);
+  }, [needle, tag, songs]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -112,33 +97,6 @@ export default function Browse({
             총 {songs.length}곡
           </span>
         </div>
-      </div>
-
-      {/* 감정 세기 — 색만으로 1~5를 읽을 수 있게 점을 함께 둔다 */}
-      <div className="mb-6 flex flex-wrap items-center gap-1.5">
-        <span className="mr-1 text-xs text-muted">감정</span>
-        {MOOD_LEVELS.map((m) => (
-          <button
-            key={m.level}
-            onClick={() => setMood(mood === m.level ? 0 : m.level)}
-            aria-pressed={mood === m.level}
-            title={m.hint}
-            className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs transition active:scale-[0.97] ${
-              mood === m.level ? "border-accent text-ink" : "border-line text-muted hover:text-ink"
-            }`}
-          >
-            <span className="h-2 w-2 rounded-full" style={{ background: MOOD_COLORS[m.level - 1] }} aria-hidden />
-            {m.name}
-          </button>
-        ))}
-        {moodLabel && (
-          <button
-            onClick={() => setMoodLabel("")}
-            className="ml-1 rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
-          >
-            {moodLabel} ✕
-          </button>
-        )}
       </div>
 
       {tag && (

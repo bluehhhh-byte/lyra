@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getAllSongs } from "../../lib/songs";
 import { getAllMovies } from "../../lib/movies";
 import { pct, Bars } from "./charts";
-import { MOOD_LEVELS, MOOD_COLORS, parseMoodLevel } from "../../lib/mood";
 import DrillSection from "./drilldown";
 
 export const metadata = {
@@ -73,15 +72,6 @@ export default function StatsPage() {
     a[0].localeCompare(b[0])
   );
   const byArtist = tally(songs.map((s) => s.artist)).slice(0, 8);
-
-  // mood is optional per song — everything here counts only the songs that have it
-  const moodLevels = songs.map((s) => parseMoodLevel(s.mood)).filter(Boolean);
-  const byMood = new Map();
-  for (const lv of moodLevels) byMood.set(lv, (byMood.get(lv) || 0) + 1);
-  const moodTotal = moodLevels.length;
-  const moodMax = Math.max(...byMood.values(), 1);
-  const byMoodLabel = tally(songs.map((s) => s.mood_label).filter(Boolean));
-  const moodLabelTotal = byMoodLabel.reduce((n, [, c]) => n + c, 0);
   // country/decade already have their own sections — what's left is genre + mood
   const byTagAll = tally(
     songs.flatMap((s) => s.tags).filter((t) => !isDecadeTag(t) && !isCountryTag(t))
@@ -131,50 +121,6 @@ export default function StatsPage() {
         <Stat label="번역된 줄" value={translated} sub={pct(translated, lines.length)} />
         <Stat label="연" value={stanzas} />
       </div>
-
-      {moodTotal > 0 && (
-        <div className="mb-12">
-          <h2 className="mb-4 text-sm font-semibold text-muted">감정</h2>
-          {/* the 1–5 scale is ordered, so it reads as a ridge across the levels
-              rather than a ranked bar list — that ordering is the whole point */}
-          <div className="flex items-end gap-1.5">
-            {MOOD_LEVELS.map((m) => {
-              const n = byMood.get(m.level) || 0;
-              return (
-                <a
-                  key={m.level}
-                  href={`/?mood=${m.level}`}
-                  className="group flex flex-1 flex-col items-center gap-1.5"
-                  title={`${m.name} — ${n}곡`}
-                >
-                  <span className="text-xs tabular-nums text-muted">{n || ""}</span>
-                  <span
-                    className="w-full rounded-t transition-opacity group-hover:opacity-80"
-                    style={{
-                      background: MOOD_COLORS[m.level - 1],
-                      // floor of 3px so an empty level still shows its place on the scale
-                      height: `${Math.max(3, Math.round((n / moodMax) * 96))}px`,
-                    }}
-                  />
-                  <span className="text-xs text-muted group-hover:text-accent">{m.name}</span>
-                </a>
-              );
-            })}
-          </div>
-          {byMoodLabel.length > 0 && (
-            <div className="mt-8">
-              <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
-                무엇에 대한 감정인가
-              </h3>
-              <Bars
-                data={byMoodLabel}
-                total={moodLabelTotal}
-                link={(l) => `/?mood_label=${encodeURIComponent(l)}`}
-              />
-            </div>
-          )}
-        </div>
-      )}
 
       <div className="grid gap-12 sm:grid-cols-2">
         <Section title="국가별" href="/?group=country">
