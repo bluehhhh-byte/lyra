@@ -866,6 +866,54 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
   // Regenerate ALL AI metadata (tags·comment·title_ko·artist_ko) for one song,
   // OVERWRITING existing values. Lyrics and non-AI fields (album/year/artwork…)
   // are untouched. Driven one song per request from the client (timeout-safe).
+  // Targeted backfill: fill keywords + emotion WITHOUT touching anything else —
+  // regenMeta would also regenerate the comment/tags, clobbering hand-edited
+  // ones. This reads only the Korean text of the body (originals of ko songs,
+  // `>` translations of en/ja songs; `+` readings and `//` notes excluded).
+  if (action === "regenKeywords") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+
+    const koText = bodyText
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => l && !/^\[/.test(l) && !/^\+/.test(l) && !/^\/\//.test(l))
+      .map((l) => l.replace(/^>\s?/, ""))
+      .filter((l) => /[가-힣]/.test(l))
+      .join("\n");
+    if (!koText) return Response.json({ error: "한국어 가사 텍스트가 없습니다" }, { status: 422 });
+
+    const rawJson = await geminiText(
+      key,
+      `노래 "${fmValue(fm, "title")}" (${fmValue(fm, "artist")})의 한국어 가사에 대해 JSON으로만 답해줘.
+- keywords: 자주 등장하거나 주제를 관통하는 핵심 단어 3~5개의 배열. 반드시 아래 텍스트에 실제로 나오는 단어(명사 위주, 1~6자)만. 문장·구절 금지
+- emotion: 이 곡의 감정을 아래 목록에서 정확히 하나만. 목록: ${EMOTIONS.join(", ")}
+가사:
+${koText.slice(0, 2000)}`,
+      true
+    );
+    let kw = [], emotion = "";
+    try {
+      const json = JSON.parse(rawJson.replace(/^```json\s*|\s*```$/g, "").trim());
+      kw = parseKeywords(json.keywords);
+      emotion = parseEmotion(json.emotion);
+    } catch {}
+    if (!kw.length && !emotion)
+      return Response.json({ error: "AI 호출 실패 (쿼터·과부하)" }, { status: 502 });
+
+    let out = raw;
+    if (kw.length) out = setField(out, "keywords", `[${kw.join(", ")}]`, "tags");
+    if (emotion) out = setField(out, "emotion", emotion, "tags");
+    await writeSong(body.slug, out, `chore(song): keywords — ${body.slug}`);
+    return Response.json({ keywords: kw, emotion });
+  }
+
   if (action === "regenMeta") {
     const song = await readSong(body.slug);
     if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });

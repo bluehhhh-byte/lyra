@@ -48,6 +48,26 @@ export default function SongTools({ songs }) {
     setTimeout(() => setBulk(null), 4000);
   };
 
+  // keywords+emotion only — regenAll would also clobber comments/tags.
+  // Sequential: parallel calls trip the Gemini free-tier rate limit.
+  const keywordsAll = async () => {
+    for (let i = 0; i < songs.length; i++) {
+      setBulk({ done: i, total: songs.length });
+      const slug = songs[i].slug;
+      set(slug, { busy: "keywords", err: "", msg: "" });
+      try {
+        const { keywords, emotion } = await api("regenKeywords", { slug });
+        set(slug, { msg: `#${keywords.join(" #")}${emotion ? ` · ${emotion}` : ""}` });
+      } catch (e) {
+        set(slug, { err: e.message });
+      } finally {
+        set(slug, { busy: "" });
+      }
+    }
+    setBulk({ done: songs.length, total: songs.length });
+    setTimeout(() => setBulk(null), 4000);
+  };
+
   const regen = async (slug) => {
     set(slug, { busy: "comment", err: "", msg: "" });
     try {
@@ -109,8 +129,17 @@ export default function SongTools({ songs }) {
           <br />
           {bulk ? `재생성 중… ${bulk.done}/${bulk.total}` : "AI 재생성"}
         </button>
+        <button
+          onClick={keywordsAll}
+          disabled={!!bulk}
+          className="min-w-32 rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+        >
+          키워드·감정
+          <br />
+          {bulk ? `추출 중… ${bulk.done}/${bulk.total}` : "일괄 추출"}
+        </button>
         <span className="text-xs text-muted">
-          태그·코멘트·한글제목·독음을 곡마다 새로 생성(덮어씀)
+          메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움
         </span>
       </div>
       <ul className="divide-y divide-line rounded-lg border border-line">
