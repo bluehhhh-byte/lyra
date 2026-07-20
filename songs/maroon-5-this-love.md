@@ -4,12 +4,12 @@ title_ko: 이 사랑
 artist: Maroon 5
 album: Songs About Jane
 year: 2002
-genre: Pop
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/3e/25/d03e255d-e205-0e66-20f6-01e251896c25/14UMGIM27076.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/0b/8d/790b8d2f-dae6-9380-87ec-6acd52806e49/mzaf_4263648516794463383.plus.aac.p.m4a
 trackId: 1428782513
 lang: en
-tags: [영미, Pop, 2002]
+tags: [영미, Alternative Rock, 2002]
 date: 2026-07-07
 published: 2026-07-07T19:56:45.000Z
 comment: 이 곡은 애덤 리바인과 당시 여자친구와의 관계가 파탄 난 경험을 바탕으로 쓰였다고 한다. 끊임없이 상처 주고받는 위태로운 사랑의 역설적인 감정을 솔직하게 담아내고 있다.
