@@ -51,12 +51,12 @@ What should I do baby What do I do Now
 [Chorus]
 이렇게 끝난 것만 같아, 이대론 미칠 것만 같아
 > It feels like it's just ended like this, I feel like I'm going crazy like this.
-The way we are the where we are the time is over~
+The way we are the where we are the time is over
 > 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어~
 내 모든 게 멈춘 것 같아, 이 세상이 끝난 것 같아
 > Everything about me seems to have stopped, it feels like the world has ended.
-The way we are the where we are the time is over~ (time is over)
-> 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어~ (시간은 끝났어)
+The way we are the where we are the time is over (time is over)
+> 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어 (시간은 끝났어)
 
 [Verse 3]
 이제 집 앞 벤치에도 가로등 아래에서도
@@ -89,8 +89,8 @@ The way we are the where we are the time is over~
 > 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어~
 내 모든 게 멈춘 것 같아, 이 세상이 끝난 것 같아
 > Everything about me seems to have stopped, it feels like the world has ended.
-The way we are the where we are the time is over~ (time is ove)
-> 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어~ (시간은 끝났어)
+The way we are the where we are the time is over (time is ove)
+> 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어 (시간은 끝났어)
 
 [Outro]
 Girl 시간이 됐나봐 더 이상 곁에 둘 수가 없나봐
