@@ -300,6 +300,18 @@ const originalLyrics = (body) =>
     .join("\n")
     .trim();
 
+// How many lines of actual lyric a body holds — annotations, blank lines and
+// section headers excluded. This must match what parseLyrics counts as a line
+// (headers become stanza.section, never stanza.lines), because the rescan
+// measures a stored song that way. Counting headers here instead would make the
+// replace guard stricter than the scan by one per header and reject a swap the
+// scan had just offered. Shared by both so the two can't drift apart.
+export const lyricLineCount = (text) =>
+  (text || "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => l && !/^(>|\+|\/\/)/.test(l) && !/^\[.*\]$/.test(l)).length;
+
 // ── lyrics lookup (lrclib) ────────────────────────────────────────────────
 // iTunes' US store hands back romanized/translated titles ("Through the Night"
 // for 밤편지, "Akuro No Oka" for アクロの丘) while lrclib is indexed under the
@@ -559,13 +571,16 @@ async function handle(req) {
       { title: s.title, artist: s.artist, album: s.album, duration: s.duration, trackId: s.trackId },
       15000 // budget per song so a rescan stays snappy
     );
+    // measure the candidate the same way `have` was measured — lrclib bodies
+    // sometimes carry [Verse 1] headers, which would otherwise pad the count
+    const foundLines = found ? lyricLineCount(found.lyrics) : 0;
     // only surface a meaningfully fuller version (guards transcription noise)
-    const fuller = found && found.lines >= have + 5;
+    const fuller = found && foundLines >= have + 5;
     // hand the text back with the count so "교체" doesn't have to hit lrclib
     // again — the refetch plus two Gemini calls would overrun maxDuration.
     return Response.json({
       have,
-      found: fuller ? found.lines : null,
+      found: fuller ? foundLines : null,
       lyrics: fuller ? found.lyrics : undefined,
     });
   }
@@ -588,9 +603,12 @@ async function handle(req) {
     if (!fresh) return Response.json({ error: "교체할 가사가 비었습니다" }, { status: 400 });
     // Re-check the client's claim. A stale or buggy caller must never be able to
     // trade a full transcription for a shorter one.
-    const count = (t) => t.split("\n").filter((l) => l.trim()).length;
-    if (count(fresh) <= count(originalLyrics(oldBody)))
-      return Response.json({ error: "새 가사가 더 온전하지 않습니다" }, { status: 409 });
+    const had = lyricLineCount(oldBody);
+    if (lyricLineCount(fresh) <= had)
+      return Response.json(
+        { error: `새 가사가 더 온전하지 않습니다 (현재 ${had}줄 → 새 가사 ${lyricLineCount(fresh)}줄)` },
+        { status: 409 }
+      );
 
     const translated = await translateLyrics(key, {
       title: fmValue(fm, "title"),
@@ -617,7 +635,7 @@ async function handle(req) {
       `---\n${fm}\n---\n${withNotes.trim()}\n`,
       `chore(song): fuller transcription — ${body.slug}`
     );
-    return Response.json({ lines: count(originalLyrics(withNotes)), notesKept: kept, notesLost: lost });
+    return Response.json({ lines: lyricLineCount(withNotes), notesKept: kept, notesLost: lost });
   }
 
   if (action === "translate") {
