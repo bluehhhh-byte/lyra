@@ -1,11 +1,11 @@
 ---
-title: Akane Sasu Kiro Terasaredo... - When It Begins To Get Dark...
-title_ko: 노을 지는 귀갓길 비추어도... - 어둠이 드리울 때...
+title: 茜さす 帰路照らされど
+title_ko: 노을 빛이 집으로 가는 길에 비치더라도
 artist: Sheena Ringo
-artist_ko: 
+artist_ko: 시이나 링고
 album: Muzai Moratorium - Innocence Moratorium
 year: 1999
-genre: J-Pop
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/bd/da/b4/bddab4d2-176e-6438-76dc-54bd4eac3914/18UMGIM22257.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2c/80/74/2c807464-f850-c3fa-1df3-dbfda9506199/mzaf_4198788688570674332.plus.aac.p.m4a
 trackId: 1384341694
