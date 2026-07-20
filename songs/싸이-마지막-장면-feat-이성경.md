@@ -11,6 +11,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/
 trackId: 1234834112
 lang: ko
 tags: [한국, K-Pop, 2017]
+emotion: 이별
+keywords: [마지막, 장면, 이별, 추억, 기억]
 date: 2026-07-08
 published: 2026-07-08T09:26:34.000Z
 comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온 사랑의 순간들을 아름다운 영화처럼 회고한다. 고통 속에서도 과거를 낭만적으로 받아들이고 담담하게 이별을 준비하는 모습이 인상적이다.
