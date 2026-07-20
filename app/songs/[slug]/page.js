@@ -169,6 +169,7 @@ export default async function SongPage({ params }) {
         song={{
           slug: song.slug,
           title: song.title,
+          title_ko: song.title_ko && song.title_ko !== song.title ? song.title_ko : "",
           artist: song.artist,
           artwork: song.artwork,
           year: song.year || "",

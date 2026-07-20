@@ -156,6 +156,18 @@ async function drawCard({ song, lines, align = "left" }) {
   ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.title, tx, fy + 34);
+  // translated title in dimmer, smaller type right after — only when it differs
+  // and it still fits before the right margin
+  if (song.title_ko) {
+    const after = tx + ctx.measureText(song.title).width + 12;
+    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    const label = `(${song.title_ko})`;
+    if (after + ctx.measureText(label).width <= W - pad) {
+      ctx.fillStyle = inkDim;
+      ctx.fillText(label, after, fy + 33);
+      ctx.fillStyle = ink;
+    }
+  }
   ctx.fillStyle = inkDim;
   ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, tx, fy + 70);
