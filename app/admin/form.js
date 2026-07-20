@@ -50,6 +50,8 @@ export default function AdminForm() {
   const [translated, setTranslated] = useState("");
   const [tags, setTags] = useState("");
   const [comment, setComment] = useState("");
+  const [keywords, setKeywords] = useState([]); // 번역 가사 핵심 단어 — autotag가 채움
+  const [emotion, setEmotion] = useState(""); // 감정 한 단어 — autotag가 채움
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [savedSlug, setSavedSlug] = useState("");
@@ -113,15 +115,16 @@ export default function AdminForm() {
   const autotag = async (c, lyricsText, lg = lang) => {
     setTags(baseTags(c, lg).join(", ")); // guaranteed baseline
     try {
-      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm } = await api("autotag", {
-        ...c,
-        lang: lg,
-        lyrics: lyricsText,
-      });
+      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em } =
+        await api("autotag", { ...c, lang: lg, lyrics: lyricsText });
       if (auto?.length) setTags(auto.join(", ")); // server merges base + genre + moods
       if (tko) setTitleKo(tko);
       if (ako) setArtistKo(ako);
       if (cm) setComment(cm);
+      // ride along invisibly — the save posts them; no review UI, the regen
+      // tool can always redo them later
+      if (kw?.length) setKeywords(kw);
+      if (em) setEmotion(em);
     } catch {} // Gemini 실패해도 국가·연도 태그는 이미 세팅됨
   };
 
@@ -163,6 +166,8 @@ export default function AdminForm() {
       lang,
       tags,
       comment,
+      keywords,
+      emotion,
       lyrics: translated,
     });
     setSavedSlug(slug);

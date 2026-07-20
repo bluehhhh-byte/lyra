@@ -7,11 +7,11 @@ cast: Jim Carrey, Kate Winslet, Kirsten Dunst
 year: 2004
 runtime: 108
 rating: 5
-genre: SF
+genre: Sci-Fi
 poster: https://image.tmdb.org/t/p/w500/jULvvUymAqM18gIDHbMRfKHbCSB.jpg
 backdrop: https://image.tmdb.org/t/p/w1280/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg
 tmdbId: 38
-tags: [미국, SF, 2004]
+tags: [미국, Sci-Fi, 2004]
 date: 2026-07-17
 published: 2026-07-17T12:00:00.000Z
 comment: 기억을 지워도 마음은 다시 같은 사람에게로 향한다는 이야기다. 미셸 공드리 특유의 아날로그 특수효과가 무너지는 기억을 형상화한다.

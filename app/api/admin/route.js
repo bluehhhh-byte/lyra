@@ -1,6 +1,7 @@
 import { readSong, writeSong, deleteSong, readMovie, writeMovie, deleteMovie } from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
+import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
@@ -206,6 +207,8 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
   let titleKo = lang === "ko" ? title : "";
   let artistKo = "";
   let comment = "";
+  let keywords = []; // 번역 가사의 핵심 단어 3~5개
+  let emotion = ""; // 닫힌 목록의 감정 한 단어 — 통계 일기가 날짜별로 집계
   let aiOk = false; // did the Gemini call actually return usable fields?
 
   // one combined Gemini call (avoids free-tier rate limits from many calls)
@@ -220,6 +223,8 @@ async function computeAuto({ title, artist, lyrics, lang, year, genre }) {
 - titleKo: 곡 제목의 한국어 표기(영어·고유명사는 한글 음역, 뜻있는 제목은 번역)
 - artistKo: 아티스트명이 일본어/한자면 한글 독음, 그 외에는 빈 문자열
 - comment: 가사의 의미와 이 곡에 얽힌 실제 배경·일화를 녹인 개인 감상 1~2문장. 반드시 평서문 '~다'체(예: ~한다, ~이다, ~같다, ~된다)로 끝맺을 것. "~습니다/~합니다/~해요/~함/~음" 금지. 담백한 톤
+- keywords: 한국어 번역 가사에서 자주 등장하거나 주제를 관통하는 핵심 단어 3~5개의 배열. 반드시 번역문에 실제로 나오는 단어(명사 위주, 1~6자)만. 문장·구절 금지
+- emotion: 이 곡의 감정을 아래 목록에서 정확히 하나만. 목록: ${EMOTIONS.join(", ")}
 가사:
 ${lyrics.slice(0, 2000)}`,
         true
@@ -232,6 +237,9 @@ ${lyrics.slice(0, 2000)}`,
       if (!titleKo && json.titleKo) titleKo = String(json.titleKo).trim();
       if (json.artistKo) artistKo = String(json.artistKo).trim();
       if (json.comment) comment = String(json.comment).replace(/\s*\n+\s*/g, " ").trim();
+      // both optional — a song without them just renders without them
+      keywords = parseKeywords(json.keywords);
+      emotion = parseEmotion(json.emotion);
     } catch {} // Gemini 실패해도 국가·장르·연도 태그는 유지
   }
 
@@ -242,7 +250,7 @@ ${lyrics.slice(0, 2000)}`,
   if (country === "일본" && genreTag === "K-Pop") genreTag = "J-Pop";
   if (genreTag) tags.push(genreTag);
   if (year) tags.push(String(year)); // exact release year, not the decade
-  return { tags, titleKo, artistKo, comment, aiOk };
+  return { tags, titleKo, artistKo, comment, keywords, emotion, aiOk };
 }
 
 const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -902,6 +910,18 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
       out = setField(out, "artist_ko", auto.artistKo, "artist");
       updated.push("artist_ko");
     }
+    // keywords/emotion arrived after the first songs were filed, so this is
+    // also their backfill path — anchor after tags, which every song has
+    if (auto.keywords.length) {
+      out = setField(out, "keywords", `[${auto.keywords.join(", ")}]`, "tags");
+      updated.push("keywords");
+    }
+    if (auto.emotion) {
+      // anchored on tags, not keywords — keywords may be absent and setField
+      // silently drops the insert when its anchor is missing
+      out = setField(out, "emotion", auto.emotion, "tags");
+      updated.push("emotion");
+    }
     if (!updated.length) return Response.json({ updated: [] });
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
     return Response.json({ updated });
@@ -1241,7 +1261,7 @@ ${(synopsis || "").trim()}
   }
 
   if (action === "save") {
-    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre } = body;
+    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, keywords, emotion } = body;
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -1274,6 +1294,8 @@ trackId: ${trackId || ""}
 duration: ${duration || ""}
 lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
+keywords: [${parseKeywords(keywords).join(", ")}]
+emotion: ${parseEmotion(emotion)}
 date: ${new Date().toISOString().slice(0, 10)}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}

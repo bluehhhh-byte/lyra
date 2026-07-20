@@ -107,13 +107,16 @@ export default async function MoviePage({ params }) {
               </div>
             )}
             <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
+              {/* dead <span>s until the combined tag pages existed — now a year
+                  tag walks to that year's songs AND films */}
               {movie.tags.map((t) => (
-                <span
+                <Link
                   key={t}
-                  className="rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted"
+                  href={`/tags/${encodeURIComponent(t)}`}
+                  className="rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
                 >
                   {t}
-                </span>
+                </Link>
               ))}
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start">

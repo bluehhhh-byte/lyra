@@ -104,6 +104,27 @@ export default function StatsPage() {
     withTime.filter((d) => d.getUTCHours() >= from && d.getUTCHours() < from + 6).length,
   ]);
 
+  // ── 키워드 일기: 기록한 날짜별로 그날의 키워드와 지배 감정을 묶는다.
+  // 같은 날 여러 곡을 기록하면 그날의 감정은 최빈값 — 7/20이 슬픔이었고
+  // 7/21이 분노였는지를 나중에 되짚을 수 있게.
+  const diaryDays = (() => {
+    const byDay = new Map();
+    for (const s of songs) {
+      const day = (s.published || s.date || "").slice(0, 10);
+      if (!day) continue;
+      if (!byDay.has(day)) byDay.set(day, []);
+      byDay.get(day).push(s);
+    }
+    return [...byDay.entries()]
+      .sort((a, b) => b[0].localeCompare(a[0])) // newest day first
+      .map(([day, list]) => {
+        const kw = tally(list.flatMap((s) => s.keywords || []));
+        const emotions = tally(list.map((s) => s.emotion).filter(Boolean));
+        return { day, count: list.length, keywords: kw, emotion: emotions[0]?.[0] || "" };
+      })
+      .filter((d) => d.keywords.length || d.emotion); // 소급 전의 빈 날은 표시하지 않는다
+  })();
+
   if (songs.length === 0) {
     return <p className="py-20 text-center text-sm text-muted">아직 곡이 없습니다.</p>;
   }
@@ -121,6 +142,47 @@ export default function StatsPage() {
         <Stat label="번역된 줄" value={translated} sub={pct(translated, lines.length)} />
         <Stat label="연" value={stanzas} />
       </div>
+
+      {diaryDays.length > 0 && (
+        <section className="mb-12">
+          <h2 className="mb-1 text-sm font-semibold text-muted">키워드 일기</h2>
+          <p className="mb-4 text-xs text-muted/70">
+            그날 기록한 곡들의 가사 키워드와 감정 — 날짜별 마음의 기록
+          </p>
+          <ol className="space-y-4 border-l border-line pl-4">
+            {diaryDays.map((d) => (
+              <li key={d.day} className="relative">
+                <span className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-bg bg-accent" />
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span className="text-sm font-semibold tabular-nums">
+                    {d.day.slice(5).replace("-", "/")}
+                  </span>
+                  {d.emotion && (
+                    <span className="rounded-full bg-accent px-2.5 py-0.5 text-xs font-semibold text-bg">
+                      {d.emotion}
+                    </span>
+                  )}
+                  <span className="text-xs text-muted">{d.count}곡</span>
+                </div>
+                {d.keywords.length > 0 && (
+                  <div className="mt-1.5 flex flex-wrap gap-1.5">
+                    {d.keywords.map(([w, n]) => (
+                      <Link
+                        key={w}
+                        href={`/?q=${encodeURIComponent(w)}`}
+                        className="rounded-full border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
+                      >
+                        #{w}
+                        {n > 1 && <span className="ml-1 opacity-60">{n}</span>}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       <div className="grid gap-12 sm:grid-cols-2">
         <Section title="국가별" href="/?group=country">
@@ -145,7 +207,7 @@ export default function StatsPage() {
           fine={byTagAll}
           fineLabel="전체 보기"
           total={songs.length}
-          linkPrefix="/?tag="
+          linkPrefix="/tags/"
         />
 
         <Section title="월별 기록">

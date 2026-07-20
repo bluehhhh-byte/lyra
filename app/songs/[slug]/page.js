@@ -108,10 +108,21 @@ export default async function SongPage({ params }) {
               {song.tags.map((t) => (
                 <Link
                   key={t}
-                  href={`/?tag=${encodeURIComponent(t)}`}
+                  href={`/tags/${encodeURIComponent(t)}`}
                   className="rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
                 >
                   {t}
+                </Link>
+              ))}
+              {/* 가사 키워드 — 태그와 달리 #표기, 누르면 이 단어가 나오는
+                  다른 곡을 기존 가사 검색으로 찾는다 */}
+              {(song.keywords || []).map((w) => (
+                <Link
+                  key={w}
+                  href={`/?q=${encodeURIComponent(w)}`}
+                  className="rounded-full border border-dashed border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
+                >
+                  #{w}
                 </Link>
               ))}
             </div>
