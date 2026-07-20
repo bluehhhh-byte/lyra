@@ -171,7 +171,12 @@ export function carryNotes(oldBody, newBody) {
     // still beats deleting it
     const at = out.findIndex((l) => l.trim() === anchorText);
     if (at < 0) continue;
-    out.splice(at + 1, 0, note);
+    // slide past the anchor's own `>`/`+` companions — a note wedged between a
+    // lyric line and its translation still parses, but reads as a mistake when
+    // the markdown is edited by hand
+    let to = at + 1;
+    while (to < out.length && /^\s*[>+]/.test(out[to])) to++;
+    out.splice(to, 0, note);
     kept++;
   }
   return { body: out.join("\n"), kept, lost: notes.length - kept };
