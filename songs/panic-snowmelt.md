@@ -11,6 +11,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8c/
 trackId: 985060472
 lang: ko
 tags: [한국, Alternative Rock, 2005]
+emotion: 체념
+keywords: [눈, 흔적, 맘, 밤, 사람들]
 date: 2026-07-08
 published: 2026-07-08T04:20:14.000Z
 comment: 눈 위에 적은 사랑 고백이 녹아 사라지듯, 덧없이 사라져버린 관계와 흔적에 대한 상실감을 노래한다. 패닉의 데뷔 앨범에 실린 이 곡은 겨울의 쓸쓸한 정취를 절절하게 담고 있다.
