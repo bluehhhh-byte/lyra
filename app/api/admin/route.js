@@ -652,7 +652,9 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
           addedReading++;
         }
         if (n.wantKo && r.ko?.trim()) {
-          ins.push(`> ${String(r.ko).trim()}`);
+          // 한국어 곡이면 이 ko는 영어 번역이다 — 추가 흐름과 같은 대문자 규칙을
+          // 적용한다. 새로 넣는 줄에만 닿으므로 기존 본문은 그대로다.
+          ins.push(`> ${capitalizeLyricLines(String(r.ko).trim())}`);
           addedKo++;
         }
         if (!ins.length) continue;
