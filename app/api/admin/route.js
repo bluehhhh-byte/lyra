@@ -139,6 +139,44 @@ ${numbered}`,
   return out.join("\n\n");
 }
 
+// Stanza notes (`//`) are hand-written analysis — the one part of a song body
+// that can't be regenerated. Replacing the body would delete them silently, so
+// re-anchor each note to the original lyric line that opened its stanza. A
+// replacement transcription is a superset of the old one, so that line almost
+// always survives; parseLyrics folds every `//` in a stanza into one note, so
+// dropping it right under the anchor puts it in the right stanza no matter
+// where the new stanza breaks fall. Returns { body, kept, lost }.
+export function carryNotes(oldBody, newBody) {
+  const notes = [];
+  let anchor = null;
+  for (const line of oldBody.split("\n")) {
+    const t = line.trim();
+    if (!t || /^\[.*\]$/.test(t)) {
+      anchor = null; // stanza break or header — next original line is the anchor
+      continue;
+    }
+    if (/^\/\//.test(t)) {
+      if (anchor) notes.push([anchor, t]);
+      continue;
+    }
+    if (/^[>+]/.test(t)) continue; // annotation, never an anchor
+    anchor ??= t;
+  }
+  if (!notes.length) return { body: newBody, kept: 0, lost: 0 };
+
+  const out = newBody.split("\n");
+  let kept = 0;
+  for (const [anchorText, note] of notes) {
+    // a repeated chorus line can anchor to the wrong stanza; misplacing a note
+    // still beats deleting it
+    const at = out.findIndex((l) => l.trim() === anchorText);
+    if (at < 0) continue;
+    out.splice(at + 1, 0, note);
+    kept++;
+  }
+  return { body: out.join("\n"), kept, lost: notes.length - kept };
+}
+
 // Genre vocabulary, capGenre, KO_GENRE, COUNTRY_TAGS, genreTagOf, genreIssue all
 // live in lib/genre.js (shared with the lint tool + unit-tested there).
 
@@ -518,7 +556,63 @@ async function handle(req) {
     );
     // only surface a meaningfully fuller version (guards transcription noise)
     const fuller = found && found.lines >= have + 5;
-    return Response.json({ have, found: fuller ? found.lines : null });
+    // hand the text back with the count so "교체" doesn't have to hit lrclib
+    // again — the refetch plus two Gemini calls would overrun maxDuration.
+    return Response.json({
+      have,
+      found: fuller ? found.lines : null,
+      lyrics: fuller ? found.lyrics : undefined,
+    });
+  }
+
+  // Replace a partial transcription with the fuller one found by the rescan, and
+  // regenerate the translation for it. The old body is discarded, so the write
+  // is deliberately the LAST thing here: if Gemini stalls and the request times
+  // out, the song is left untouched rather than half-rewritten.
+  if (action === "requalityApply") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, oldBody] = m;
+
+    const fresh = (body.lyrics || "").trim();
+    if (!fresh) return Response.json({ error: "교체할 가사가 비었습니다" }, { status: 400 });
+    // Re-check the client's claim. A stale or buggy caller must never be able to
+    // trade a full transcription for a shorter one.
+    const count = (t) => t.split("\n").filter((l) => l.trim()).length;
+    if (count(fresh) <= count(originalLyrics(oldBody)))
+      return Response.json({ error: "새 가사가 더 온전하지 않습니다" }, { status: 409 });
+
+    const translated = await translateLyrics(key, {
+      title: fmValue(fm, "title"),
+      artist: fmValue(fm, "artist"),
+      lang: fmValue(fm, "lang") || "",
+      lyrics: fresh,
+    });
+    if (!translated) return Response.json({ error: "번역 생성 실패" }, { status: 502 });
+
+    let newBody = translated.trim();
+    try {
+      const restanza = await restanzaBody({
+        title: fmValue(fm, "title"),
+        artist: fmValue(fm, "artist"),
+        bodyText: newBody,
+        key,
+      });
+      if (restanza) newBody = restanza;
+    } catch {} // layout is cosmetic — never lose the new lyrics over it
+    const { body: withNotes, kept, lost } = carryNotes(oldBody, newBody);
+
+    await writeSong(
+      body.slug,
+      `---\n${fm}\n---\n${withNotes.trim()}\n`,
+      `chore(song): fuller transcription — ${body.slug}`
+    );
+    return Response.json({ lines: count(originalLyrics(withNotes)), notesKept: kept, notesLost: lost });
   }
 
   if (action === "translate") {

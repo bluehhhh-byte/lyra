@@ -18,14 +18,42 @@ async function api(action, body) {
   return data;
 }
 
-// Report-only: a fuller transcription might exist (romanized iTunes names yield
-// partial lyrics). We don't auto-replace — that would clobber the translation.
-// Checked one song per request so no single call hits the serverless timeout.
+// Finds songs holding a partial transcription (romanized iTunes names yield
+// short lyrics) and offers to swap in the fuller one, regenerating the
+// translation with it. Checked — and replaced — one song per request so no
+// single call hits the serverless timeout.
 export default function Requality() {
   const [progress, setProgress] = useState(null); // {done, total}
   const [list, setList] = useState(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [state, setState] = useState({}); // slug -> "working" | {lines, notesLost} | {err}
+
+  // Replacing discards the current translation and rebuilds it from the fuller
+  // lyrics, so it stays an explicit choice rather than something the scan does.
+  const replaceOne = async (s) => {
+    setState((v) => ({ ...v, [s.slug]: "working" }));
+    try {
+      const r = await api("requalityApply", { slug: s.slug, lyrics: s.lyrics });
+      setState((v) => ({ ...v, [s.slug]: r }));
+      return true;
+    } catch (e) {
+      setState((v) => ({ ...v, [s.slug]: { err: e.message } }));
+      return false;
+    }
+  };
+
+  // sequential — two Gemini calls per song would trip the free-tier rate limit
+  // if fired in parallel
+  const replaceAll = async () => {
+    if (!confirm(`${list.length}곡의 가사를 더 온전한 전사로 교체하고 번역을 다시 생성합니다.\n현재 번역은 사라집니다. 진행할까요?`)) return;
+    setBusy(true);
+    for (const s of list) {
+      if (state[s.slug]?.lines) continue; // already done
+      await replaceOne(s);
+    }
+    setBusy(false);
+  };
 
   const scan = async () => {
     setBusy(true);
@@ -38,8 +66,8 @@ export default function Requality() {
         setProgress({ done: i, total: songs.length });
         const s = songs[i];
         try {
-          const { have, found } = await api("requalityOne", { slug: s.slug });
-          if (found) fuller.push({ ...s, have, found });
+          const { have, found, lyrics } = await api("requalityOne", { slug: s.slug });
+          if (found) fuller.push({ ...s, have, found, lyrics });
         } catch {
           // skip a song that errors (rate limit / network) — re-scan catches it
         }
@@ -76,27 +104,61 @@ export default function Requality() {
 
       {list && list.length > 0 && (
         <>
+          <div className="mb-2 flex items-center gap-3">
+            <button
+              onClick={replaceAll}
+              disabled={busy}
+              className="rounded-lg border border-accent px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+            >
+              전체 교체 ({list.length}곡)
+            </button>
+            <span className="text-xs text-muted">번역을 다시 생성합니다</span>
+          </div>
           <ul className="divide-y divide-line rounded-lg border border-line">
-            {list.map((s) => (
-              <li key={s.slug} className="flex items-center gap-3 px-3 py-2 text-sm">
-                <span className="flex-1">
-                  <span className="font-medium">{s.title}</span>
-                  <span className="text-muted"> — {s.artist}</span>
-                </span>
-                <span className="shrink-0 text-xs text-muted tabular-nums">
-                  현재 {s.have}줄 → <span className="text-accent">{s.found}줄</span>
-                </span>
-                <a
-                  href={`/admin/edit/${s.slug}`}
-                  className="shrink-0 text-xs text-accent hover:underline"
-                >
-                  수정
-                </a>
-              </li>
-            ))}
+            {list.map((s) => {
+              const st = state[s.slug];
+              return (
+                <li key={s.slug} className="flex items-center gap-3 px-3 py-2 text-sm">
+                  <span className="min-w-0 flex-1 truncate">
+                    <span className="font-medium">{s.title}</span>
+                    <span className="text-muted"> — {s.artist}</span>
+                  </span>
+                  {st?.lines ? (
+                    <span className="shrink-0 text-xs text-green-400 tabular-nums">
+                      ✓ {st.lines}줄로 교체
+                      {st.notesKept ? ` · 노트 ${st.notesKept}개 이관` : ""}
+                      {st.notesLost ? ` · 노트 ${st.notesLost}개 이관 실패` : ""}
+                    </span>
+                  ) : (
+                    <>
+                      <span className="shrink-0 text-xs text-muted tabular-nums">
+                        현재 {s.have}줄 → <span className="text-accent">{s.found}줄</span>
+                      </span>
+                      <button
+                        onClick={() => replaceOne(s)}
+                        disabled={busy || st === "working"}
+                        className="shrink-0 rounded border border-line px-2 py-0.5 text-xs text-muted hover:border-accent hover:text-accent disabled:opacity-40"
+                      >
+                        {st === "working" ? "교체 중…" : "교체"}
+                      </button>
+                      <a
+                        href={`/admin/edit/${s.slug}`}
+                        className="shrink-0 text-xs text-accent hover:underline"
+                      >
+                        수정
+                      </a>
+                    </>
+                  )}
+                  {st?.err && (
+                    <span className="shrink-0 text-xs text-red-400 dark:text-red-400">{st.err}</span>
+                  )}
+                </li>
+              );
+            })}
           </ul>
           <p className="mt-2 text-xs text-muted">
-            자동 교체하지 않습니다 — 번역이 지워지기 때문. 곡을 다시 추가하거나 수정에서 직접 교체하세요.
+            교체하면 더 온전한 전사로 바꾸고 번역을 다시 생성합니다 — 현재 번역은 사라지고,
+            손으로 쓴 연 해설은 원문 줄을 따라 옮겨집니다. 되돌리려면 git 커밋 기록을 사용하세요.
           </p>
         </>
       )}
