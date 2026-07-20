@@ -12,6 +12,8 @@ trackId: 1097863247
 duration: 356
 lang: en
 tags: [영미, Alternative Rock, 2000]
+emotion: 몽환
+keywords: [나, 여기, 현실, 순간]
 date: 2026-07-13
 published: 2026-07-13T23:33:19.555Z
 comment: 톰 요크가 투어 중 겪은 극한 해리감에서 영감을 받아 '나는 여기 없다'고 되뇌며 현실에서 완전히 사라지고 싶은 무력감을 마이클 스타이프의 조언처럼 담담하게 노래한다.
