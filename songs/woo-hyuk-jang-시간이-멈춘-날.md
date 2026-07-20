@@ -39,7 +39,7 @@ Wanna tell u but , 아무런 말도 못하고
 > The time I longed for endlessly will also come to an end, right?
 
 [Pre-Chorus]
-What should I do baby What do I do Now Ah Ah Ah Ah
+What should I do baby What do I do Now
 > 어떡해야 해 baby, 지금 나 어떻게 해 Ah Ah Ah Ah
 온종일 너의 집 앞에서 기다리는 시간도,
 > Even the hours I waited all day in front of your house,
@@ -93,7 +93,7 @@ The way we are the where we are the time is over~ (time is ove)
 > 우리의 모습이, 우리가 있던 곳이, 시간은 끝났어~ (시간은 끝났어)
 
 [Outro]
-GIRL 시간이 됐나봐 더 이상 곁에 둘 수가 없나봐
+Girl 시간이 됐나봐 더 이상 곁에 둘 수가 없나봐
 > Girl, it seems time is up, I can't keep you by my side anymore.
 Girl I’m so sorry 넌 아름답기에
 > Girl, 정말 미안해, 네가 아름답기 때문에
