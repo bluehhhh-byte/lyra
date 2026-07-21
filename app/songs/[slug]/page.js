@@ -138,7 +138,7 @@ export default async function SongPage({ params }) {
                   }}
                 />
               )}
-              <YouTubeEmbed artist={song.artist} title={song.title} />
+              <YouTubeEmbed artist={song.artist} title={song.title} query={song.youtube} />
               {song.trackId && (
                 <a
                   href={`https://music.apple.com/kr/song/${song.trackId}`}
