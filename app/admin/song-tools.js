@@ -18,6 +18,13 @@ async function api(action, body) {
   return data;
 }
 
+// Space bulk Gemini calls out — the free tier's per-minute limit (RPM) is the
+// usual cause of empty responses: back-to-back calls burst past it. A gap
+// between songs keeps a whole-collection run under the limit. regenMeta fires
+// ~2 Gemini calls per song, so ~4s/song stays comfortably below ~10 RPM.
+const BULK_GAP_MS = 4000;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 // Per-song maintenance: regenerate the comment (음슴체), or add a translation to a
 // song that has none (used to give Korean songs the bilingual two-line layout).
 export default function SongTools({ songs }) {
@@ -43,6 +50,7 @@ export default function SongTools({ songs }) {
     for (let i = 0; i < songs.length; i++) {
       setBulk({ done: i, total: songs.length });
       await regenMeta(songs[i].slug);
+      if (i < songs.length - 1) await sleep(BULK_GAP_MS); // stay under the RPM limit
     }
     setBulk({ done: songs.length, total: songs.length });
     setTimeout(() => setBulk(null), 4000);
@@ -63,6 +71,7 @@ export default function SongTools({ songs }) {
       } finally {
         set(slug, { busy: "" });
       }
+      if (i < songs.length - 1) await sleep(BULK_GAP_MS); // stay under the RPM limit
     }
     setBulk({ done: songs.length, total: songs.length });
     setTimeout(() => setBulk(null), 4000);
