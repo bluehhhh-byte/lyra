@@ -16,7 +16,7 @@ keywords: []
 emotion: 
 date: 2026-07-21
 published: 2026-07-21T09:43:13.697Z
-comment: 
+comment: 이 곡은 세상에 대한 지루함과 분노를 표출하며, 함께 자유를 찾아 떠나자는 강렬한 외침이 담겨 있다. 불안과 고독 속에서도 벗어나고자 하는 갈망을 표현한다.
 ---
 That's the start the middle and the end
 > 그게 시작이자 중간이자 끝이야
