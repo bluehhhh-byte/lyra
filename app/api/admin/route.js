@@ -432,6 +432,23 @@ async function findLyrics({ title, artist, album, duration, trackId }, deadlineM
   return null;
 }
 
+// Shape an iTunes track (from /search or /lookup) into the picker's result form.
+function itunesToResult(r) {
+  const art = r.artworkUrl100 || ""; // some tracks/regions omit artwork
+  return {
+    trackId: r.trackId, // lets the lyrics step re-query the JP/KR store for native names
+    title: r.trackName,
+    artist: r.artistName,
+    album: r.collectionName,
+    artwork: art.replace("100x100", "600x600"),
+    thumb: art,
+    duration: Math.round((r.trackTimeMillis || 0) / 1000),
+    year: (r.releaseDate || "").slice(0, 4),
+    genre: r.primaryGenreName || "",
+    preview: r.previewUrl || "",
+  };
+}
+
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, GitHub commits on Vercel.
 export async function POST(req) {
@@ -516,25 +533,53 @@ async function handle(req) {
       const key = `${r.trackName}|${r.artistName}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
-      const art = r.artworkUrl100 || ""; // some tracks/regions omit artwork
-      results.push({
-        trackId: r.trackId, // lets the lyrics step re-query the JP/KR store for native names
-        title: r.trackName,
-        artist: r.artistName,
-        album: r.collectionName,
-        artwork: art.replace("100x100", "600x600"),
-        thumb: art,
-        duration: Math.round((r.trackTimeMillis || 0) / 1000),
-        year: (r.releaseDate || "").slice(0, 4),
-        genre: r.primaryGenreName || "",
-        preview: r.previewUrl || "",
-      });
+      results.push(itunesToResult(r));
     }
     return Response.json({
       results,
       hasMore: stores.some((s) => s.length === PAGE),
       nextOffset: offset + PAGE,
     });
+  }
+
+  // Fallback for tracks hidden from search — Korea's 19금 (청소년유해매체물) and
+  // some explicit tracks are dropped from iTunes' public /search but still exist
+  // in the catalog, reachable by artist lookup. Resolve the artist name to id(s),
+  // then pull each artist's full song list (KR store is widest for Korean 19금).
+  if (action === "artistCatalog") {
+    // musicArtist search breaks when the query carries a title word ("Master
+    // Muzik 도련님" resolves to nothing), so drop trailing words until an artist
+    // resolves — the leading tokens are the artist name.
+    const words = (body.query || "").trim().split(/\s+/).filter(Boolean);
+    const ids = new Set();
+    for (let n = words.length; n >= 1 && !ids.size; n--) {
+      const term = words.slice(0, n).join(" ");
+      await Promise.all(
+        ["KR", "US", "JP"].map((c) =>
+          fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=musicArtist&limit=5&country=${c}`)
+            .then((r) => r.json())
+            .then((r) => (r.results || []).forEach((a) => a.artistId && ids.add(a.artistId)))
+            .catch(() => {})
+        )
+      );
+    }
+    if (!ids.size) return Response.json({ results: [] });
+    const seen = new Set();
+    const results = [];
+    for (const id of [...ids].slice(0, 6)) {
+      const j = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song&limit=200&country=KR`)
+        .then((r) => r.json())
+        .catch(() => ({}));
+      for (const r of j.results || []) {
+        if (r.wrapperType !== "track") continue;
+        const key = `${r.trackName}|${r.artistName}`.toLowerCase();
+        if (seen.has(key)) continue;
+        seen.add(key);
+        results.push(itunesToResult(r));
+      }
+    }
+    results.sort((a, b) => (b.year || "").localeCompare(a.year || "")); // newest first — hidden tracks tend to be recent
+    return Response.json({ results });
   }
 
   if (action === "lyrics") {
