@@ -436,26 +436,42 @@ async function findLyrics({ title, artist, album, duration, trackId }, deadlineM
 // Apple drops from /search but keeps in the catalog. Resolve the artist id(s)
 // (dropping trailing title words until one resolves), then look them up. Bounded
 // (≤3 artists) and parallel so it can run inline on every search cheaply.
+// Shared text normalizer (decoration-insensitive) for matching names/titles.
+const normText = (s) =>
+  (s || "")
+    .toLowerCase()
+    .normalize("NFKC")
+    .replace(/[’'ʻ´`"]/g, "")
+    .replace(/[()\[\]\-_.,!?~×&/]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
 async function fetchArtistCatalog(query) {
   const words = (query || "").trim().split(/\s+/).filter(Boolean);
   // the artist is the leading OR trailing tokens (users type both "가수 곡" and
   // "곡 가수") — try the full query, the first two, and the last two words. All
   // resolutions run in parallel (one round trip), not a sequential trim loop.
   const terms = [...new Set([words.join(" "), words.slice(0, 2).join(" "), words.slice(-2).join(" ")])].filter(Boolean);
-  const ids = new Set();
+  const artists = new Map(); // id -> name
   await Promise.all(
     terms.flatMap((term) =>
       ["KR", "US"].map((c) =>
-        fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=musicArtist&limit=2&country=${c}`)
+        fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=musicArtist&limit=3&country=${c}`)
           .then((r) => r.json())
-          .then((r) => (r.results || []).forEach((a) => a.artistId && ids.add(a.artistId)))
+          .then((r) => (r.results || []).forEach((a) => a.artistId && artists.set(a.artistId, a.artistName || "")))
           .catch(() => {})
       )
     )
   );
-  if (!ids.size) return [];
+  if (!artists.size) return [];
+  // iTunes' musicArtist search is loose ("master muzik" also returns i-dle,
+  // NewJeans) — keep only artists whose name actually appears in the query, so
+  // an artist-only search doesn't drag in unrelated discographies.
+  const nq = normText(query);
+  let ids = [...artists.entries()].filter(([, name]) => name && nq.includes(normText(name))).map(([id]) => id);
+  if (!ids.length) ids = [...artists.keys()].slice(0, 1); // no clean match → best single guess
   const lists = await Promise.all(
-    [...ids].slice(0, 4).map((id) =>
+    ids.slice(0, 3).map((id) =>
       fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song&limit=200&country=KR`)
         .then((r) => r.json())
         .then((j) => (j.results || []).filter((r) => r.wrapperType === "track"))
@@ -565,14 +581,22 @@ async function handle(req) {
         )
       )
         s -= 60;
+      // gentle recency tiebreaker (≤3 pts) — never overrides a relevance tier,
+      // but among equally-matched tracks (e.g. an artist-only search's whole
+      // catalog) the newest float up, so a recent hidden release isn't buried.
+      const yr = +(r.releaseDate || "").slice(0, 4) || 0;
+      if (yr) s += Math.min(3, Math.max(0, (yr - 2000) / 9));
       return s;
     };
     // One scoring pool: store tracks + catalog tracks the /search dropped
-    // (19금/explicit). Catalog tracks only join when their title carries a query
-    // word, so an artist's whole discography doesn't flood in. Scoring both
-    // together is what makes "master muzik 도련님" rank Master Muzik's 도련님
-    // (matches artist AND title → all-words bonus) above other artists' 도련님.
-    const titleWords = words.filter((w) => w.length > 1);
+    // (19금/explicit). Query words already covered by the catalog's artist names
+    // are the "artist" part; whatever's left is the "title" part. Artist-only
+    // search ("Master Muzik") has no leftover title words → include the whole
+    // catalog (its hidden tracks too). "Master Muzik 도련님" leaves 도련님 → keep
+    // only catalog tracks whose title matches, so the discography doesn't flood.
+    // Scoring both pools together ranks the all-words match (artist AND title) top.
+    const catalogArtists = normText([...new Set(catalog.map((r) => r.artistName))].join(" "));
+    const titleWords = words.filter((w) => w.length > 1 && !catalogArtists.includes(normText(w)));
     const seen = new Set();
     const pool = [];
     const add = (r) => {
@@ -582,7 +606,8 @@ async function handle(req) {
       pool.push(r);
     };
     for (let i = 0; i < PAGE; i++) for (const s of stores) if (s[i]) add(s[i]);
-    for (const r of catalog) if (titleWords.some((w) => norm(r.trackName).includes(w))) add(r);
+    for (const r of catalog)
+      if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
     const results = pool.sort((x, y) => score(y) - score(x)).map(itunesToResult);
     return Response.json({
       results,
