@@ -81,20 +81,6 @@ export default function AdminForm() {
       if (offset === 0) setSong(null);
     })();
 
-  // Fallback for 19금/explicit tracks hidden from search — pull the artist's
-  // full catalog via lookup. Query = "가수 [곡명]"; when a title word is present,
-  // filter the catalog by it so the hidden track floats up out of hundreds.
-  const searchArtist = run("artist", async () => {
-    const { results } = await api("artistCatalog", { query });
-    const words = query.toLowerCase().split(/\s+/).filter((w) => w.length > 1);
-    const matched = results.filter((c) =>
-      words.some((w) => `${c.title} ${c.artist}`.toLowerCase().includes(w))
-    );
-    setCandidates(matched.length ? matched : results); // no title word → show all
-    setMore(null);
-    setSong(null);
-  });
-
   const [titleKo, setTitleKo] = useState("");
   const [artistKo, setArtistKo] = useState("");
 
@@ -204,15 +190,8 @@ export default function AdminForm() {
             {busy === "search" ? "…" : "검색"}
           </button>
         </div>
-        <p className="mt-1.5 text-xs text-muted">
-          검색에 안 잡히면(19금·일부 explicit 곡){" "}
-          <button
-            onClick={searchArtist}
-            disabled={!query || busy}
-            className="text-accent hover:underline disabled:opacity-40"
-          >
-            {busy === "artist" ? "가수 곡 불러오는 중…" : "가수 이름으로 전체 곡 찾기 →"}
-          </button>
+        <p className="mt-1.5 text-xs text-muted/70">
+          19금·일부 explicit 곡도 가수+곡명으로 검색하면 함께 찾습니다.
         </p>
         {/* skeleton rows while the first page of a search is in flight */}
         {busy === "search" && candidates.length === 0 && (

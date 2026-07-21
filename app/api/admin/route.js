@@ -432,6 +432,44 @@ async function findLyrics({ title, artist, album, duration, trackId }, deadlineM
   return null;
 }
 
+// Pull an artist's full catalog by lookup — reaches 19금/explicit tracks that
+// Apple drops from /search but keeps in the catalog. Resolve the artist id(s)
+// (dropping trailing title words until one resolves), then look them up. Bounded
+// (≤3 artists) and parallel so it can run inline on every search cheaply.
+async function fetchArtistCatalog(query) {
+  const words = (query || "").trim().split(/\s+/).filter(Boolean);
+  // the artist is the leading OR trailing tokens (users type both "가수 곡" and
+  // "곡 가수") — try the full query, the first two, and the last two words. All
+  // resolutions run in parallel (one round trip), not a sequential trim loop.
+  const terms = [...new Set([words.join(" "), words.slice(0, 2).join(" "), words.slice(-2).join(" ")])].filter(Boolean);
+  const ids = new Set();
+  await Promise.all(
+    terms.flatMap((term) =>
+      ["KR", "US"].map((c) =>
+        fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=musicArtist&limit=2&country=${c}`)
+          .then((r) => r.json())
+          .then((r) => (r.results || []).forEach((a) => a.artistId && ids.add(a.artistId)))
+          .catch(() => {})
+      )
+    )
+  );
+  if (!ids.size) return [];
+  const lists = await Promise.all(
+    [...ids].slice(0, 4).map((id) =>
+      fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song&limit=200&country=KR`)
+        .then((r) => r.json())
+        .then((j) => (j.results || []).filter((r) => r.wrapperType === "track"))
+        .catch(() => [])
+    )
+  );
+  return lists.flat();
+}
+
+// resolve to [] if a best-effort task overruns — used so the artist-catalog
+// augmentation can never stall the main search
+const withTimeout = (p, ms) =>
+  Promise.race([p, new Promise((r) => setTimeout(() => r([]), ms))]);
+
 // Shape an iTunes track (from /search or /lookup) into the picker's result form.
 function itunesToResult(r) {
   const art = r.artworkUrl100 || ""; // some tracks/regions omit artwork
@@ -468,16 +506,22 @@ async function handle(req) {
     const offset = body.offset || 0;
     // free-text search across title and artist — iTunes matches both by default
     // search US/KR/JP stores together — each store has a different catalog
-    const stores = await Promise.all(
-      ["US", "KR", "JP"].map((c) =>
-        fetch(
-          `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}`
+    // Normal /search across stores + the artist catalog (for hidden 19금 tracks),
+    // in parallel. Catalog runs only on the first page — its tracks are folded in
+    // once, filtered to title matches below, so paging stays search-only.
+    const [stores, catalog] = await Promise.all([
+      Promise.all(
+        ["US", "KR", "JP"].map((c) =>
+          fetch(
+            `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}`
+          )
+            .then((r) => r.json())
+            .then((r) => r.results || [])
+            .catch(() => [])
         )
-          .then((r) => r.json())
-          .then((r) => r.results || [])
-          .catch(() => [])
-      )
-    );
+      ),
+      offset === 0 ? withTimeout(fetchArtistCatalog(body.query), 3500) : Promise.resolve([]),
+    ]);
     // Normalize before matching — iTunes decorates names with (feat. …), curly
     // quotes, brackets and hyphens that make honest matches miss.
     const norm = (s) =>
@@ -535,51 +579,23 @@ async function handle(req) {
       seen.add(key);
       results.push(itunesToResult(r));
     }
+    // fold in catalog tracks the /search dropped (19금/explicit) — only those
+    // whose title carries a query word, so an artist's whole discography doesn't
+    // flood in. Newest first (hidden tracks tend to be recent releases).
+    const titleWords = words.filter((w) => w.length > 1);
+    for (const r of catalog.sort((x, y) => (y.releaseDate || "").localeCompare(x.releaseDate || ""))) {
+      const key = `${r.trackName}|${r.artistName}`.toLowerCase();
+      if (seen.has(key)) continue;
+      const t = norm(r.trackName);
+      if (!titleWords.some((w) => t.includes(w))) continue; // title must match a query word
+      seen.add(key);
+      results.push(itunesToResult(r));
+    }
     return Response.json({
       results,
       hasMore: stores.some((s) => s.length === PAGE),
       nextOffset: offset + PAGE,
     });
-  }
-
-  // Fallback for tracks hidden from search — Korea's 19금 (청소년유해매체물) and
-  // some explicit tracks are dropped from iTunes' public /search but still exist
-  // in the catalog, reachable by artist lookup. Resolve the artist name to id(s),
-  // then pull each artist's full song list (KR store is widest for Korean 19금).
-  if (action === "artistCatalog") {
-    // musicArtist search breaks when the query carries a title word ("Master
-    // Muzik 도련님" resolves to nothing), so drop trailing words until an artist
-    // resolves — the leading tokens are the artist name.
-    const words = (body.query || "").trim().split(/\s+/).filter(Boolean);
-    const ids = new Set();
-    for (let n = words.length; n >= 1 && !ids.size; n--) {
-      const term = words.slice(0, n).join(" ");
-      await Promise.all(
-        ["KR", "US", "JP"].map((c) =>
-          fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=musicArtist&limit=5&country=${c}`)
-            .then((r) => r.json())
-            .then((r) => (r.results || []).forEach((a) => a.artistId && ids.add(a.artistId)))
-            .catch(() => {})
-        )
-      );
-    }
-    if (!ids.size) return Response.json({ results: [] });
-    const seen = new Set();
-    const results = [];
-    for (const id of [...ids].slice(0, 6)) {
-      const j = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song&limit=200&country=KR`)
-        .then((r) => r.json())
-        .catch(() => ({}));
-      for (const r of j.results || []) {
-        if (r.wrapperType !== "track") continue;
-        const key = `${r.trackName}|${r.artistName}`.toLowerCase();
-        if (seen.has(key)) continue;
-        seen.add(key);
-        results.push(itunesToResult(r));
-      }
-    }
-    results.sort((a, b) => (b.year || "").localeCompare(a.year || "")); // newest first — hidden tracks tend to be recent
-    return Response.json({ results });
   }
 
   if (action === "lyrics") {
