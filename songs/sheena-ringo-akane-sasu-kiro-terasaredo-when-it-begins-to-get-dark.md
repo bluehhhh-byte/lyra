@@ -12,7 +12,7 @@ trackId: 1384341694
 duration: 247
 lang: en
 tags: [일본, J-Rock, 1999]
-keywords: [약속, 황혼, 눈물, 불안, 내일]
+keywords: [약속, 헤드폰, 눈물, 노래, 두 사람]
 emotion: 슬픔
 date: 2026-07-20
 published: 2026-07-20T13:14:13.528Z
