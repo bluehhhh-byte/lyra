@@ -5,13 +5,13 @@ artist: The Vines
 artist_ko: 
 album: Winning Days
 year: 2004
-genre: Pop
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/07/c8/53/07c853dd-4afb-6d41-8364-dcb571d209dd/00724359805757.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4d/68/a6/4d68a69e-888f-ea65-f744-9f844babcfd1/mzaf_9189670198321703097.plus.aac.p.m4a
 trackId: 716154413
 duration: 156
 lang: en
-tags: [영미, Pop, 2004]
+tags: [영미, Alternative Rock, 2004]
 keywords: []
 emotion: 
 date: 2026-07-21
