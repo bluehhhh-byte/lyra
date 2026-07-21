@@ -567,30 +567,23 @@ async function handle(req) {
         s -= 60;
       return s;
     };
-    // interleave stores so same-score results from KR/JP aren't buried under US
-    const interleaved = [];
-    for (let i = 0; i < PAGE; i++)
-      for (const s of stores) if (s[i]) interleaved.push(s[i]);
-    const seen = new Set();
-    const results = [];
-    for (const r of interleaved.sort((x, y) => score(y) - score(x))) {
-      const key = `${r.trackName}|${r.artistName}`.toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      results.push(itunesToResult(r));
-    }
-    // fold in catalog tracks the /search dropped (19금/explicit) — only those
-    // whose title carries a query word, so an artist's whole discography doesn't
-    // flood in. Newest first (hidden tracks tend to be recent releases).
+    // One scoring pool: store tracks + catalog tracks the /search dropped
+    // (19금/explicit). Catalog tracks only join when their title carries a query
+    // word, so an artist's whole discography doesn't flood in. Scoring both
+    // together is what makes "master muzik 도련님" rank Master Muzik's 도련님
+    // (matches artist AND title → all-words bonus) above other artists' 도련님.
     const titleWords = words.filter((w) => w.length > 1);
-    for (const r of catalog.sort((x, y) => (y.releaseDate || "").localeCompare(x.releaseDate || ""))) {
+    const seen = new Set();
+    const pool = [];
+    const add = (r) => {
       const key = `${r.trackName}|${r.artistName}`.toLowerCase();
-      if (seen.has(key)) continue;
-      const t = norm(r.trackName);
-      if (!titleWords.some((w) => t.includes(w))) continue; // title must match a query word
+      if (seen.has(key)) return;
       seen.add(key);
-      results.push(itunesToResult(r));
-    }
+      pool.push(r);
+    };
+    for (let i = 0; i < PAGE; i++) for (const s of stores) if (s[i]) add(s[i]);
+    for (const r of catalog) if (titleWords.some((w) => norm(r.trackName).includes(w))) add(r);
+    const results = pool.sort((x, y) => score(y) - score(x)).map(itunesToResult);
     return Response.json({
       results,
       hasMore: stores.some((s) => s.length === PAGE),
