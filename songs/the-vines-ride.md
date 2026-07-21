@@ -5,15 +5,15 @@ artist: The Vines
 artist_ko: 
 album: Winning Days
 year: 2004
-genre: Alternative Rock
+genre: Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/07/c8/53/07c853dd-4afb-6d41-8364-dcb571d209dd/00724359805757.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4d/68/a6/4d68a69e-888f-ea65-f744-9f844babcfd1/mzaf_9189670198321703097.plus.aac.p.m4a
 trackId: 716154413
 duration: 156
 lang: en
-tags: [영미, Alternative Rock, 2004]
-keywords: []
-emotion: 
+tags: [영미, Pop, 2004]
+keywords: [혼자, 세상, 시간, 마음]
+emotion: 저항
 date: 2026-07-21
 published: 2026-07-21T09:43:13.697Z
 comment: 이 곡은 세상에 대한 지루함과 분노를 표출하며, 함께 자유를 찾아 떠나자는 강렬한 외침이 담겨 있다. 불안과 고독 속에서도 벗어나고자 하는 갈망을 표현한다.
