@@ -22,6 +22,9 @@ export default function Header() {
         <Link href="/stats" className="hover:text-accent">
           통계
         </Link>
+        <Link href="/diary" className="hover:text-accent">
+          일기
+        </Link>
         <Link href="/tags" className="hover:text-accent">
           태그
         </Link>
