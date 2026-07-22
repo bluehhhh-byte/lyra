@@ -10,6 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/
 trackId: 989835113
 lang: ja
 tags: [일본, J-Rock, 1999]
+emotion: 희망
+keywords: [소원, 세상, 항해, 영혼]
 date: 2026-07-07
 published: 2026-07-07T19:56:45.000Z
 comment: 이 곡은 순수했던 시절을 뒤로하고 미지의 어딘가로 나아가는 청춘의 고뇌와 희망을 담고 있다. 슬픔 가득한 세상에서 흔들림 없는 영혼으로 새로운 항해를 떠나는 다짐이 느껴지는 곡이다.

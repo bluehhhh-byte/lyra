@@ -10,6 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/
 trackId: 1483713068
 lang: ja
 tags: [일본, J-Rock, 2018]
+emotion: 그리움
+keywords: [언덕, 하늘, 꽃, 꿈]
 date: 2026-07-07
 published: 2026-07-07T21:57:22.000Z
 comment: 아크로의 언덕은 한신·아와지 대지진의 비극에서 영감을 받아 만들어졌다고 알려진 곡이다. 가사는 잃어버린 사랑에 대한 깊은 그리움과 함께 그 사람과 다시 만나고 싶어 하는 간절한 염원을 담고 있다.

@@ -11,6 +11,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/
 trackId: 1539118282
 lang: ja
 tags: [일본, Visual Kei, 2013]
+emotion: 슬픔
+keywords: [사랑, 상처, 눈물, 만남]
 date: 2026-07-08
 published: 2026-07-08T03:17:32.000Z
 comment: 이 곡은 사랑하는 사람에게 끊임없이 상처를 주면서도 자신의 꿈에만 몰두했던 화자의 내면을 깊이 파고든다. 헌신적인 사랑으로 상처받은 상대와 뒤늦게 그 사랑의 무게를 깨닫고 후회하는 화자의 비극적인 관계가 인상적이다.

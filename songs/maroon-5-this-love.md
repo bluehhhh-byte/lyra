@@ -10,6 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/
 trackId: 1428782513
 lang: en
 tags: [영미, Alternative Rock, 2002]
+emotion: 이별
+keywords: [사랑, 마음, 작별, 불꽃]
 date: 2026-07-07
 published: 2026-07-07T19:56:45.000Z
 comment: 이 곡은 애덤 리바인과 당시 여자친구와의 관계가 파탄 난 경험을 바탕으로 쓰였다고 한다. 끊임없이 상처 주고받는 위태로운 사랑의 역설적인 감정을 솔직하게 담아내고 있다.

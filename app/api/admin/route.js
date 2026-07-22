@@ -8,6 +8,11 @@ import { searchMovies, movieDetail } from "../../../lib/tmdb";
 // a few times); 30s is ample and stays within hobby-plan limits.
 export const maxDuration = 30;
 
+// "-latest" alias, not a pinned version — a hardcoded gemini-2.5-flash died the
+// day the API key was reissued ("no longer available to new users"). The alias
+// tracks whatever flash is current; env override for the day the alias misbehaves.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
+
 async function geminiText(key, prompt, json = false) {
   const body = JSON.stringify({
     contents: [{ parts: [{ text: prompt }] }],
@@ -22,7 +27,7 @@ async function geminiText(key, prompt, json = false) {
     let rateLimited = false;
     try {
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${key}`,
         { method: "POST", headers: { "Content-Type": "application/json" }, body }
       );
       if (res.ok) {

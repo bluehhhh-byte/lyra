@@ -9,6 +9,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/
 trackId: 1551376803
 lang: en
 tags: [영미, Indie Rock, 2010]
+emotion: 몽환
+keywords: [모래, 끔찍함, 격노, 유령]
 date: 2026-07-07
 published: 2026-07-07T19:56:45.000Z
 comment: 스패니시 사하라가 과거의 공포를 묻어두고 싶어 하는 간절한 열망을 상징하는 듯하다. 이 곡은 잊으려 해도 끊임없이 밀려오는 내면의 번뇌와 마주하는 쓸쓸한 심정을 담고 있다.
