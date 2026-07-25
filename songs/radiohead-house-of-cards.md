@@ -43,6 +43,7 @@ And get swept under
 > 구석으로 쓸려 들어가듯이
 Denial, denial
 > 부정하고, 또 부정해보지만
+// 위태롭게 쌓아 올린 삶의 기반을 비유하며, 다가올 파국을 인지하면서도 현실을 눈감아버리는 강박적인 회피와 부정을 보여준다.
 
 [Verse 2]
 The infrastructure will collapse
@@ -53,6 +54,7 @@ Throw your keys in the bowl
 > 그릇 속에 당신의 열쇠를 던져두고
 Kiss your husband goodnight
 > 남편에게 잘 자라는 키스를 건네세요
+// 기계적 과전압으로 인한 시스템 마비에 비유하여 도덕적 질서와 위선적인 일상이 순식간에 해체되는 일탈의 순간을 서늘하게 포착한다.
 
 [Chorus]
 Forget about your house of cards
@@ -79,3 +81,4 @@ Denial, denial
 > 부정하고, 또 부정해도
 (Your ears should be burning)
 > (귀가 간지럽지도 않나요)
+// 붕괴가 본격화되었음에도 거듭 현실을 부인하는 태도와 구설수에 대한 죄책감을 대비시키며 관계가 종말로 치닫는 과정을 극대화한다.
