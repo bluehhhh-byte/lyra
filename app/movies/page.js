@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function MoviesPage({ searchParams }) {
-  const { q, group, media, country, genre, rating, sort } = (await searchParams) || {};
+  const { q, group, media, country, genre, rating, sort, status } = (await searchParams) || {};
   const movies = getAllMovies().map((m) => {
     const title = m.title_ko || m.title;
     const director = m.director_ko || m.director || "";
@@ -38,6 +38,9 @@ export default async function MoviesPage({ searchParams }) {
       media: m.media === "tv" ? "tv" : "movie",
       poster: m.poster,
       rating: m.rating,
+      watchStatus: m.watchStatus,
+      platform: m.platform || "",
+      episode: m.episode,
       recorded: m.published || m.date || "",
       synopsis,
       metaSearch,
@@ -65,6 +68,7 @@ export default async function MoviesPage({ searchParams }) {
           genre: genre || "all",
           rating: rating || "0",
           sort: sort || "recorded",
+          status: status || "all",
         }}
       />
     </>

@@ -1302,7 +1302,11 @@ ${listed}`,
   }
 
   if (action === "movieSave") {
-    const { title, titleKo, mediaType, director, directorKo, cast, year, runtime, rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis } = body;
+    const {
+      title, titleKo, mediaType, director, directorKo, cast, year, runtime,
+      rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis,
+      status, platform, episode, started, watched,
+    } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -1311,6 +1315,11 @@ ${listed}`,
 title: ${title}
 title_ko: ${titleKo || title}
 media: ${mediaType === "tv" ? "tv" : "movie"}
+status: ${["wishlist", "watching", "watched", "dropped"].includes(status) ? status : "watched"}
+platform: ${platform || ""}
+episode: ${Number(episode) || ""}
+started: ${started || ""}
+watched: ${watched || ""}
 director: ${director || ""}
 director_ko: ${directorKo || ""}
 cast: ${cast || ""}
@@ -1401,6 +1410,30 @@ ${(synopsis || "").trim()}
     const out = setField(movie.raw.replace(/\r\n/g, "\n"), "rating", rounded ? String(rounded) : "", "runtime");
     await writeMovie(body.slug, out, `edit(movie): update rating — ${body.slug}`);
     return Response.json({ rating: rounded });
+  }
+
+  if (action === "movieUpdateWatch") {
+    const movie = await readMovie(body.slug);
+    if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
+    const status = ["wishlist", "watching", "watched", "dropped"].includes(body.status)
+      ? body.status
+      : "watched";
+    const clean = (value) => String(value || "").replace(/\r?\n/g, " ").trim();
+    const episode = Math.max(0, Math.floor(Number(body.episode) || 0));
+    let out = movie.raw.replace(/\r\n/g, "\n");
+    out = setField(out, "status", status, "media");
+    out = setField(out, "platform", clean(body.platform), "status");
+    out = setField(out, "episode", episode ? String(episode) : "", "platform");
+    out = setField(out, "started", clean(body.started), "episode");
+    out = setField(out, "watched", clean(body.watched), "started");
+    await writeMovie(body.slug, out, `edit(movie): update watch status — ${body.slug}`);
+    return Response.json({
+      status,
+      platform: clean(body.platform),
+      episode,
+      started: clean(body.started),
+      watched: clean(body.watched),
+    });
   }
 
   if (action === "movieDelete") {

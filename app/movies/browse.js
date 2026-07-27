@@ -29,6 +29,11 @@ export default function MovieBrowse({ movies, initial = {} }) {
   const [genre, setGenre] = useState(initial.genre || "all");
   const [rating, setRating] = useState(Number(initial.rating) || 0);
   const [sort, setSort] = useState(valid(SORTS, initial.sort, "recorded"));
+  const [status, setStatus] = useState(
+    ["all", "wishlist", "watching", "watched", "dropped"].includes(initial.status)
+      ? initial.status
+      : "all"
+  );
   const [seed, setSeed] = useState(0);
 
   const countries = useMemo(
@@ -49,9 +54,10 @@ export default function MovieBrowse({ movies, initial = {} }) {
     if (genre !== "all") params.set("genre", genre);
     if (rating) params.set("rating", String(rating));
     if (sort !== "recorded") params.set("sort", sort);
+    if (status !== "all") params.set("status", status);
     const query = params.toString();
     history.replaceState(null, "", query ? `/movies?${query}` : "/movies");
-  }, [q, group, media, country, genre, rating, sort]);
+  }, [q, group, media, country, genre, rating, sort, status]);
 
   const needle = q.trim().toLowerCase();
   const filtered = useMemo(
@@ -63,8 +69,9 @@ export default function MovieBrowse({ movies, initial = {} }) {
           (country === "all" || movie.country === country) &&
           (genre === "all" || movie.genre === genre) &&
           (!rating || (movie.rating || 0) >= rating)
+          && (status === "all" || movie.watchStatus === status)
       ),
-    [needle, movies, media, country, genre, rating]
+    [needle, movies, media, country, genre, rating, status]
   );
 
   const sorted = useMemo(() => {
@@ -111,9 +118,10 @@ export default function MovieBrowse({ movies, initial = {} }) {
     setGenre("all");
     setRating(0);
     setSort("recorded");
+    setStatus("all");
   };
   const hasFilters = q || group !== "none" || media !== "all" || country !== "all" ||
-    genre !== "all" || rating || sort !== "recorded";
+    genre !== "all" || rating || sort !== "recorded" || status !== "all";
 
   return (
     <>
@@ -155,6 +163,18 @@ export default function MovieBrowse({ movies, initial = {} }) {
             {[4.5, 4, 3.5, 3, 2.5].map((value) => (
               <option key={value} value={value}>★ {value} 이상</option>
             ))}
+          </select>
+          <select
+            value={status}
+            onChange={(event) => setStatus(event.target.value)}
+            aria-label="감상 상태"
+            className="rounded-lg border border-line bg-surface px-3 py-2 text-xs outline-none focus:border-accent"
+          >
+            <option value="all">상태 전체</option>
+            <option value="wishlist">보고 싶음</option>
+            <option value="watching">보는 중</option>
+            <option value="watched">감상 완료</option>
+            <option value="dropped">중단</option>
           </select>
         </div>
 
@@ -285,6 +305,14 @@ function Grid({ list, needle }) {
             </h3>
             {movie.media === "tv" && <span className="shrink-0 text-[10px] text-muted">DRAMA</span>}
           </div>
+          {movie.watchStatus !== "watched" && (
+            <p className="mt-1 text-[10px] text-accent">
+              {movie.watchStatus === "wishlist" && "보고 싶음"}
+              {movie.watchStatus === "watching" && `보는 중${movie.episode ? ` · ${movie.episode}화` : ""}`}
+              {movie.watchStatus === "dropped" && "중단"}
+              {movie.platform ? ` · ${movie.platform}` : ""}
+            </p>
+          )}
           <p className="mt-0.5 truncate text-xs text-muted">
             {movie.director}
             {movie.year ? ` · ${movie.year}` : ""}

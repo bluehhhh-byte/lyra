@@ -39,6 +39,11 @@ export default function MovieAdminPage() {
           poster: m.poster,
           media: m.media || "movie",
           rating: m.rating,
+          watchStatus: m.watchStatus,
+          platform: m.platform || "",
+          episode: m.episode,
+          started: m.started || "",
+          watched: m.watched || "",
           comment: m.comment || "",
         }))}
       />

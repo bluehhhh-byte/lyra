@@ -59,6 +59,13 @@ export default function StatsPage() {
     ["영화", movies.filter((m) => m.media !== "tv").length],
     ["드라마", movies.filter((m) => m.media === "tv").length],
   ].filter(([, count]) => count);
+  const WATCH_LABEL = {
+    wishlist: "보고 싶음",
+    watching: "보는 중",
+    watched: "감상 완료",
+    dropped: "중단",
+  };
+  const movieStatus = tally(movies.map((movie) => WATCH_LABEL[movie.watchStatus] || "감상 완료"));
   const movieDirectors = tally(
     movies.map((m) => m.director_ko || m.director || "미상")
   ).slice(0, 10);
@@ -254,6 +261,9 @@ export default function StatsPage() {
                 total={movies.length}
                 link={(label) => `/movies?media=${label === "드라마" ? "tv" : "movie"}`}
               />
+            </Section>
+            <Section title="감상 상태">
+              <Bars data={movieStatus} total={movies.length} />
             </Section>
             <Section title="월별 감상 기록">
               <Bars data={movieByMonth} total={movieStamps.length} />

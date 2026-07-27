@@ -65,6 +65,11 @@ export default function MovieForm() {
   const [comment, setComment] = useState("");
   const [tags, setTags] = useState("");
   const [rating, setRating] = useState(0);
+  const [watchStatus, setWatchStatus] = useState("watched");
+  const [platform, setPlatform] = useState("");
+  const [episode, setEpisode] = useState("");
+  const [started, setStarted] = useState("");
+  const [watched, setWatched] = useState("");
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [savedSlug, setSavedSlug] = useState("");
@@ -126,6 +131,11 @@ export default function MovieForm() {
       year: movie.year,
       runtime: movie.runtime,
       rating,
+      status: watchStatus,
+      platform,
+      episode,
+      started,
+      watched,
       genre: movie.genre,
       poster: movie.poster,
       backdrop: movie.backdrop,
@@ -230,6 +240,26 @@ export default function MovieForm() {
             onChange={(e) => setPolished(e.target.value)}
           />
           <div className="mt-3 space-y-3">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <select className={input} value={watchStatus} onChange={(e) => setWatchStatus(e.target.value)}>
+                <option value="wishlist">보고 싶음</option>
+                <option value="watching">보는 중</option>
+                <option value="watched">감상 완료</option>
+                <option value="dropped">중단</option>
+              </select>
+              <input className={input} placeholder="OTT·플랫폼" value={platform} onChange={(e) => setPlatform(e.target.value)} />
+              {movie.mediaType === "tv" && (
+                <input className={input} type="number" min="0" placeholder="현재 회차" value={episode} onChange={(e) => setEpisode(e.target.value)} />
+              )}
+              <label className="text-xs text-muted">
+                감상 시작일
+                <input className={input + " mt-1"} type="date" value={started} onChange={(e) => setStarted(e.target.value)} />
+              </label>
+              <label className="text-xs text-muted">
+                감상 완료일
+                <input className={input + " mt-1"} type="date" value={watched} onChange={(e) => setWatched(e.target.value)} />
+              </label>
+            </div>
             <input className={input} placeholder="태그 (국가·장르·연도)" value={tags} onChange={(e) => setTags(e.target.value)} />
             <textarea className={input + " h-20"} placeholder="감상 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />
           </div>
