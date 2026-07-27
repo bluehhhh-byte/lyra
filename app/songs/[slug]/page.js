@@ -183,7 +183,12 @@ export default async function SongPage({ params }) {
       {/* when this entry went up — full datetime if recorded, else the date */}
       {(song.published || song.date) && (
         <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
-          기록 {formatPublished(song.published || song.date)}
+          <Link
+            href={`/archive/${(song.published || song.date).slice(0, 10)}`}
+            className="hover:text-accent"
+          >
+            기록 {formatPublished(song.published || song.date)}
+          </Link>
         </p>
       )}
 
