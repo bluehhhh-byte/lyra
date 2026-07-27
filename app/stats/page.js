@@ -117,6 +117,9 @@ export default function StatsPage() {
     label,
     withTime.filter((d) => d.getUTCHours() >= from && d.getUTCHours() < from + 6).length,
   ]);
+  const byExactHour = tally(
+    withTime.map((date) => `${String(date.getUTCHours()).padStart(2, "0")}시`)
+  ).sort((a, b) => a[0].localeCompare(b[0]));
   const movieStamps = movies.map(kst).filter(Boolean);
   const movieByMonth = tally(
     movieStamps.map((date) => `${date.getUTCFullYear()}.${date.getUTCMonth() + 1}`)
@@ -187,13 +190,19 @@ export default function StatsPage() {
           <Bars data={byMonth} total={stamps.length} />
         </Section>
 
-        <Section title="기록 시간대">
-          {withTime.length ? (
-            <Bars data={byHour} total={withTime.length} />
-          ) : (
+        {withTime.length ? (
+          <DrillSection
+            title="기록 시간대"
+            coarse={byHour}
+            fine={byExactHour}
+            fineLabel="시간별 보기"
+            total={withTime.length}
+          />
+        ) : (
+          <Section title="기록 시간대">
             <p className="text-sm text-muted">시각이 기록된 곡이 아직 없습니다.</p>
-          )}
-        </Section>
+          </Section>
+        )}
       </div>
 
       {(readings > 0 || untagged > 0) && (

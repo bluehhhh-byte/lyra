@@ -9,8 +9,9 @@ import { Bars } from "./charts";
 export default function DrillSection({ title, coarse, fine, fineLabel = "자세히", total, linkPrefix }) {
   const [open, setOpen] = useState(false);
   const data = open ? fine : coarse;
-  // nothing more to show if the fine view isn't actually longer
-  const canDrill = fine.length > coarse.length;
+  // A detail view can have fewer rows than its summary (for example only
+  // three exact hours may contain records), so compare content, not length.
+  const canDrill = fine.length > 0 && JSON.stringify(fine) !== JSON.stringify(coarse);
   const link = linkPrefix ? (label) => `${linkPrefix}${encodeURIComponent(label)}` : undefined;
 
   return (
