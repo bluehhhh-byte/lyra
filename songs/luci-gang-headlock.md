@@ -61,7 +61,7 @@ Vintage store에서 산 청바지
 > Rather than buying worries, I'm poppin' the tags
 
 [Pre-Chorus]
-느껴봐 인생은 4k
+느껴봐 인생은 4K
 > Feel it, life is in 4K
 폰은 손이 안 닿을 만큼 멀리에
 > Keep the phone far out of reach
@@ -127,7 +127,7 @@ Spot in the sun, I'm eating sundae
 > Feels like it won't melt anymore for the rest of my life
 
 [Pre-Chorus]
-느껴봐 인생은 4k
+느껴봐 인생은 4K
 > Feel it, life is in 4K
 폰은 손이 안 닿을 만큼 멀리에
 > Keep the phone far out of reach
