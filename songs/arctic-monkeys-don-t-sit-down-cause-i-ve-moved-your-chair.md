@@ -1,6 +1,6 @@
 ---
 title: Don't Sit Down 'Cause I've Moved Your Chair
-title_ko: 앉지 마, 내가 네 의자를 옮겼으니까
+title_ko: 앉지 마, 내가 네 의자를 치웠거든
 artist: Arctic Monkeys
 artist_ko: 
 album: Suck It and See
@@ -11,12 +11,12 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/64/
 trackId: 429803453
 duration: 184
 lang: en
-tags: [영미, Hard Rock, 2011]
-keywords: [거울, 주사위, 싸움, 의자, 번개]
+tags: [영미, Alternative Rock, 2011]
+keywords: [거울, 주사위, 가위, 의자, 악마]
 emotion: 저항
 date: 2026-07-27
-published: 2026-07-27T23:24:46.893Z
-comment: 곰과 싸우거나 번개를 씹어 먹는 무모하고 위험한 행동들보다 의자를 치워버린 자리에 앉지 말라는 사소한 장난을 더 경계하라는 위트 있는 가사의 곡이다. 묵직하고 강렬한 기타 리프를 바탕으로 특유의 유머와 반항적인 사운드가 돋보인다.
+published: 2026-07-27T23:27:53.245Z
+comment: 온갖 위험하고 황당한 행동들을 나열하면서도 의자를 치웠으니 앉지 말라는 재치 있는 경고를 던지는 곡이다. 묵직하고 육중한 기타 리프가 어우러져 악티몽키스 특유의 냉소적이고 특이한 위트를 연출한다.
 ---
 [Verse 1]
 Break a mirror, roll the dice
@@ -44,7 +44,7 @@ Ooh, yeah yeah yeah
 Ooh, yeah yeah yeah
 > 우, 예 예 예
 
-[Bridge]
+[Verse 3]
 Bite the lightening and tell me how it tastes
 > 번개를 깨물어보고 무슨 맛인지 말해봐
 Kung fu fighting on your roller skates
