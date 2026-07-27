@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllMovies, getMovie } from "../../../lib/movies";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
 import MovieCardButton from "./movie-card";
+import { splitCast } from "../../../lib/people";
 
 export function generateStaticParams() {
   return getAllMovies().map((m) => ({ slug: m.slug }));
@@ -63,6 +64,13 @@ function relatedMovies(movie, all) {
     .map((x) => x.m);
 }
 
+const WATCH_STATUS = {
+  wishlist: "보고 싶음",
+  watching: "보는 중",
+  watched: "감상 완료",
+  dropped: "중단",
+};
+
 export default async function MoviePage({ params }) {
   const { slug } = await params;
   const all = getAllMovies();
@@ -71,10 +79,8 @@ export default async function MoviePage({ params }) {
   const related = relatedMovies(movie, all);
 
   const meta = [
-    movie.director_ko || movie.director,
     movie.year,
     movie.runtime ? `${movie.runtime}분` : "",
-    movie.cast,
   ]
     .filter(Boolean)
     .join(" · ");
@@ -101,11 +107,29 @@ export default async function MoviePage({ params }) {
               <p className="mt-1 text-lg text-muted">{movie.title}</p>
             )}
             <p className="mt-2 text-sm text-muted">{meta}</p>
+            <div className="mt-2 flex flex-wrap justify-center gap-x-2 gap-y-1 text-xs text-muted sm:justify-start">
+              {(movie.director_ko || movie.director) && (
+                <Link href={`/people/${encodeURIComponent(movie.director_ko || movie.director)}`} className="hover:text-accent">
+                  감독 {movie.director_ko || movie.director}
+                </Link>
+              )}
+              {splitCast(movie.cast).map((actor) => (
+                <Link key={actor} href={`/people/${encodeURIComponent(actor)}`} className="hover:text-accent">
+                  {actor}
+                </Link>
+              ))}
+            </div>
             {movie.rating != null && (
               <div className="mt-3">
                 <Stars value={movie.rating} />
               </div>
             )}
+            <p className="mt-2 text-xs text-muted">
+              {WATCH_STATUS[movie.watchStatus]}
+              {movie.platform ? ` · ${movie.platform}` : ""}
+              {movie.watchStatus === "watching" && movie.episode ? ` · ${movie.episode}화` : ""}
+              {movie.watched ? ` · ${movie.watched}` : movie.started ? ` · ${movie.started} 시작` : ""}
+            </p>
             <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
               {/* dead <span>s until the combined tag pages existed — now a year
                   tag walks to that year's songs AND films */}
@@ -174,7 +198,12 @@ export default async function MoviePage({ params }) {
       {/* when this entry went up — full datetime if recorded, else the date */}
       {(movie.published || movie.date) && (
         <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
-          기록 {formatPublished(movie.published || movie.date)}
+          <Link
+            href={`/archive/${(movie.published || movie.date).slice(0, 10)}`}
+            className="hover:text-accent"
+          >
+            기록 {formatPublished(movie.published || movie.date)}
+          </Link>
         </p>
       )}
 
