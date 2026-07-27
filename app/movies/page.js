@@ -1,5 +1,6 @@
 import { getAllMovies } from "../../lib/movies";
 import MovieBrowse from "./browse";
+import Link from "next/link";
 
 export const metadata = {
   title: "Syno. | Lyra",
@@ -7,7 +8,7 @@ export const metadata = {
 };
 
 export default async function MoviesPage({ searchParams }) {
-  const { q, group } = (await searchParams) || {};
+  const { q, group, media, country, genre, rating, sort } = (await searchParams) || {};
   const movies = getAllMovies().map((m) => {
     const title = m.title_ko || m.title;
     const director = m.director_ko || m.director || "";
@@ -33,8 +34,11 @@ export default async function MoviesPage({ searchParams }) {
       director,
       year: m.year || "",
       genre: m.genre || "",
+      country: m.tags.find((tag) => tag !== m.genre && !/^\d{4}s?$/.test(tag)) || "기타",
+      media: m.media === "tv" ? "tv" : "movie",
       poster: m.poster,
       rating: m.rating,
+      recorded: m.published || m.date || "",
       synopsis,
       metaSearch,
       search: [metaSearch, synopsis.join(" ").toLowerCase()].join(" "),
@@ -47,8 +51,22 @@ export default async function MoviesPage({ searchParams }) {
 
   return (
     <>
-      <h1 className="mb-4 text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
-      <MovieBrowse movies={movies} initialQ={q || ""} initialGroup={group || "none"} />
+      <div className="mb-4 flex items-baseline justify-between">
+        <h1 className="text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
+        <Link href="/collections" className="text-sm text-muted hover:text-accent">컬렉션 →</Link>
+      </div>
+      <MovieBrowse
+        movies={movies}
+        initial={{
+          q: q || "",
+          group: group || "none",
+          media: media || "all",
+          country: country || "all",
+          genre: genre || "all",
+          rating: rating || "0",
+          sort: sort || "recorded",
+        }}
+      />
     </>
   );
 }

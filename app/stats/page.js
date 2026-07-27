@@ -55,6 +55,18 @@ export default function StatsPage() {
   const movieGenre = tally(
     movies.flatMap((m) => m.tags).filter((t) => !isDecadeTag(t) && !isMovieCountryTag(t))
   ).slice(0, 10);
+  const movieMedia = [
+    ["영화", movies.filter((m) => m.media !== "tv").length],
+    ["드라마", movies.filter((m) => m.media === "tv").length],
+  ].filter(([, count]) => count);
+  const movieDirectors = tally(
+    movies.map((m) => m.director_ko || m.director || "미상")
+  ).slice(0, 10);
+  const movieDecades = tally(
+    movies.filter((m) => m.year).map((m) => `${Math.floor(Number(m.year) / 10) * 10}s`)
+  ).sort((a, b) => b[0].localeCompare(a[0]));
+  const knownRuntime = movies.map((m) => Number(m.runtime)).filter((value) => value > 0);
+  const totalRuntime = knownRuntime.reduce((sum, value) => sum + value, 0);
 
   const lines = songs.flatMap((s) => s.stanzas.flatMap((st) => st.lines));
   const translated = lines.filter((l) => l.ko).length;
@@ -105,6 +117,10 @@ export default function StatsPage() {
     label,
     withTime.filter((d) => d.getUTCHours() >= from && d.getUTCHours() < from + 6).length,
   ]);
+  const movieStamps = movies.map(kst).filter(Boolean);
+  const movieByMonth = tally(
+    movieStamps.map((date) => `${date.getUTCFullYear()}.${date.getUTCMonth() + 1}`)
+  ).sort((a, b) => a[0].localeCompare(b[0], undefined, { numeric: true }));
 
   // 일자별 감정 변화 — 상세(키워드·곡 목록)는 /diary로 옮기고, 통계에는
   // 시계열 곡선만 둔다
@@ -206,20 +222,55 @@ export default function StatsPage() {
             )}
           </p>
 
+          <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <Stat label="작품" value={movies.length} />
+            <Stat label="영화" value={movieMedia.find(([label]) => label === "영화")?.[1] || 0} />
+            <Stat label="드라마" value={movieMedia.find(([label]) => label === "드라마")?.[1] || 0} />
+            <Stat
+              label="러닝타임 합"
+              value={totalRuntime ? `${Math.floor(totalRuntime / 60)}시간 ${totalRuntime % 60}분` : "—"}
+              sub={knownRuntime.length < movies.length ? `${knownRuntime.length}편 기준` : ""}
+            />
+          </div>
+
           <div className="grid gap-12 sm:grid-cols-2">
             {ratingRows.length > 0 && (
               <Section title="별점 분포">
                 <Bars data={ratingRows} total={rated.length} />
               </Section>
             )}
+            <Section title="영화·드라마">
+              <Bars
+                data={movieMedia}
+                total={movies.length}
+                link={(label) => `/movies?media=${label === "드라마" ? "tv" : "movie"}`}
+              />
+            </Section>
+            <Section title="월별 감상 기록">
+              <Bars data={movieByMonth} total={movieStamps.length} />
+            </Section>
+            <Section title="개봉 연대">
+              <Bars data={movieDecades} total={movies.length} />
+            </Section>
             <Section title="국가별">
-              <Bars data={movieCountry} total={movies.length} />
+              <Bars
+                data={movieCountry}
+                total={movies.length}
+                link={(label) => `/movies?country=${encodeURIComponent(label)}`}
+              />
             </Section>
             {movieGenre.length > 0 && (
               <Section title="장르">
-                <Bars data={movieGenre} total={movies.length} />
+                <Bars
+                  data={movieGenre}
+                  total={movies.length}
+                  link={(label) => `/movies?genre=${encodeURIComponent(label)}`}
+                />
               </Section>
             )}
+            <Section title="감독별">
+              <Bars data={movieDirectors} total={movies.length} />
+            </Section>
           </div>
         </div>
       )}
@@ -244,7 +295,9 @@ export default function StatsPage() {
 function Stat({ label, value, sub }) {
   return (
     <div className="rounded-xl border border-line bg-surface px-4 py-3">
-      <p className="text-2xl font-bold tabular-nums">{value.toLocaleString()}</p>
+      <p className="text-2xl font-bold tabular-nums">
+        {typeof value === "number" ? value.toLocaleString() : value}
+      </p>
       <p className="mt-0.5 text-xs text-muted">
         {label}
         {sub && <span className="ml-1 text-accent">{sub}</span>}
@@ -268,4 +321,3 @@ function Section({ title, href, children }) {
     </section>
   );
 }
-

@@ -2,12 +2,21 @@ import Link from "next/link";
 import { getAllMovies } from "../../../lib/movies";
 import MovieForm from "../movie-form";
 import MovieTools from "../movie-tools";
+import CollectionManager from "../collection-manager";
+import { getAllCollections } from "../../../lib/collections";
 
 export const metadata = { title: "Syno. 관리 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
 export default function MovieAdminPage() {
   const movies = getAllMovies();
+  const collectionMovies = movies.map((movie) => ({
+    slug: movie.slug,
+    title: movie.title_ko || movie.title,
+    director: movie.director_ko || movie.director || "",
+    year: movie.year || "",
+    poster: movie.poster,
+  }));
   return (
     <>
       <div className="mb-8 flex items-center gap-4">
@@ -17,6 +26,9 @@ export default function MovieAdminPage() {
         </Link>
       </div>
       <MovieForm />
+
+      <h2 className="mb-3 mt-16 text-lg font-bold">큐레이션 컬렉션</h2>
+      <CollectionManager movies={collectionMovies} collections={getAllCollections({ includePrivate: true })} />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">등록된 작품 ({movies.length})</h2>
       <MovieTools

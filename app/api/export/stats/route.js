@@ -1,4 +1,5 @@
 import { getAllSongs } from "../../../../lib/songs";
+import { getAllMovies } from "../../../../lib/movies";
 
 // The collection stats as one Markdown file — mirrors the /stats page's
 // categories. Prerendered at build time (songs are only guaranteed on disk
@@ -17,10 +18,10 @@ function tally(values) {
 }
 
 // a tally → a Markdown table
-function table(rows, total, head = "항목") {
+function table(rows, total, head = "항목", unit = "곡") {
   if (!rows.length) return "_데이터 없음_\n";
   return (
-    `| ${head} | 곡 | 비율 |\n| --- | ---: | ---: |\n` +
+    `| ${head} | ${unit} | 비율 |\n| --- | ---: | ---: |\n` +
     rows.map(([label, n]) => `| ${label} | ${n} | ${pct(n, total)} |`).join("\n") +
     "\n"
   );
@@ -28,6 +29,7 @@ function table(rows, total, head = "항목") {
 
 export async function GET() {
   const songs = getAllSongs();
+  const movies = getAllMovies();
   const lines = songs.flatMap((s) => s.stanzas.flatMap((st) => st.lines));
   const translated = lines.filter((l) => l.ko).length;
   const readings = lines.filter((l) => l.reading).length;
@@ -47,6 +49,17 @@ export async function GET() {
     songs.flatMap((s) => s.tags).filter((t) => !isDecadeTag(t) && !isCountryTag(t))
   );
   const byArtist = tally(songs.map((s) => s.artist));
+  const ratedMovies = movies.filter((movie) => movie.rating != null);
+  const meanRating = ratedMovies.length
+    ? (ratedMovies.reduce((sum, movie) => sum + movie.rating, 0) / ratedMovies.length).toFixed(1)
+    : "—";
+  const byMovieType = [
+    ["영화", movies.filter((movie) => movie.media !== "tv").length],
+    ["드라마", movies.filter((movie) => movie.media === "tv").length],
+  ].filter(([, count]) => count);
+  const byMovieGenre = tally(movies.map((movie) => movie.genre || "기타"));
+  const byDirector = tally(movies.map((movie) => movie.director_ko || movie.director || "미상"));
+  const runtime = movies.reduce((sum, movie) => sum + (Number(movie.runtime) || 0), 0);
 
   const today = new Date().toISOString().slice(0, 10);
   const md = `# Lyra 컬렉션 통계
@@ -77,7 +90,25 @@ ${table(byYear, songs.length, "연도")}
 ${table(byTag, songs.length, "태그")}
 ## 가수별
 
-${table(byArtist, songs.length, "가수")}`;
+${table(byArtist, songs.length, "가수")}
+
+## 영화·드라마
+
+| 지표 | 값 |
+| --- | ---: |
+| 작품 | ${movies.length}편 |
+| 평균 별점 | ${meanRating} |
+| 등록된 러닝타임 합 | ${Math.floor(runtime / 60)}시간 ${runtime % 60}분 |
+
+### 유형
+
+${table(byMovieType, movies.length, "유형", "편")}
+### 장르
+
+${table(byMovieGenre, movies.length, "장르", "편")}
+### 감독
+
+${table(byDirector, movies.length, "감독", "편")}`;
 
   return new Response(md, {
     headers: {

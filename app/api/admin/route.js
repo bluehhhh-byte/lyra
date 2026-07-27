@@ -1,4 +1,14 @@
-import { readSong, writeSong, deleteSong, readMovie, writeMovie, deleteMovie } from "../../../lib/store";
+import {
+  readSong,
+  writeSong,
+  deleteSong,
+  readMovie,
+  writeMovie,
+  deleteMovie,
+  readCollection,
+  writeCollection,
+  deleteCollection,
+} from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
@@ -1395,6 +1405,50 @@ ${(synopsis || "").trim()}
 
   if (action === "movieDelete") {
     await deleteMovie(body.slug);
+    return Response.json({ ok: true });
+  }
+
+  if (action === "collectionSave") {
+    const title = String(body.title || "").trim();
+    if (!title) return Response.json({ error: "컬렉션 제목을 입력하세요" }, { status: 400 });
+    const cleanSlug = (value) =>
+      String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
+        .replace(/^-|-$/g, "");
+    const originalSlug = cleanSlug(body.originalSlug);
+    const slug = originalSlug || cleanSlug(title) || `collection-${Date.now()}`;
+    const movieSlugs = [...new Set(
+      (Array.isArray(body.movieSlugs) ? body.movieSlugs : [])
+        .map((value) => cleanSlug(value))
+        .filter(Boolean)
+    )];
+    if (!movieSlugs.length)
+      return Response.json({ error: "작품을 한 편 이상 선택하세요" }, { status: 400 });
+
+    const existing = originalSlug ? await readCollection(originalSlug) : null;
+    const now = new Date().toISOString();
+    const date = existing?.raw.match(/^date:\s*(.+)$/m)?.[1]?.trim() || now.slice(0, 10);
+    const cleanText = (value) => String(value || "").replace(/\r?\n/g, " ").trim();
+    const raw = [
+      "---",
+      `title: ${cleanText(title)}`,
+      `description: ${cleanText(body.description)}`,
+      `visibility: ${body.visibility === "private" ? "private" : "public"}`,
+      `date: ${date}`,
+      `updated: ${now}`,
+      "---",
+      ...movieSlugs.map((movieSlug) => `- ${movieSlug}`),
+      "",
+    ].join("\n");
+    await writeCollection(slug, raw, `${originalSlug ? "edit" : "add"}(collection): ${slug}`);
+    return Response.json({ ok: true, slug });
+  }
+
+  if (action === "collectionDelete") {
+    const slug = String(body.slug || "").replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯-]/gi, "");
+    if (!slug) return Response.json({ error: "컬렉션을 찾을 수 없음" }, { status: 400 });
+    await deleteCollection(slug, `delete(collection): ${slug}`);
     return Response.json({ ok: true });
   }
 

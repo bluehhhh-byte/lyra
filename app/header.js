@@ -6,7 +6,10 @@ import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   const pathname = usePathname();
-  const inMovies = pathname?.startsWith("/movies") || pathname?.startsWith("/admin/movie");
+  const inMovies =
+    pathname?.startsWith("/movies") ||
+    pathname?.startsWith("/collections") ||
+    pathname?.startsWith("/admin/movie");
   const brand = inMovies ? "Syno" : "Lyra";
 
   return (
@@ -19,6 +22,11 @@ export default function Header() {
         <Link href={inMovies ? "/" : "/movies"} className="hover:text-accent">
           {inMovies ? "음악" : "영화"}
         </Link>
+        {inMovies && (
+          <Link href="/collections" className="hover:text-accent">
+            컬렉션
+          </Link>
+        )}
         <Link href="/stats" className="hover:text-accent">
           통계
         </Link>
