@@ -36,6 +36,19 @@ export default function WatchaImport() {
     }
   };
 
+  const genRecs = async () => {
+    setError("");
+    setReportBusy(true);
+    try {
+      const r = await api("tasteRecs", {});
+      setReport({ text: `추천 ${r.count}편 생성됨 (${r.basedOn}편 기준). 취향 분석 페이지에서 확인.` });
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setReportBusy(false);
+    }
+  };
+
   const run = async () => {
     setError("");
     setResult(null);
@@ -92,7 +105,14 @@ export default function WatchaImport() {
         >
           {reportBusy ? "분석 중…" : "취향 리포트 생성"}
         </button>
-        <span className="text-xs text-muted">Gemini가 별점을 분석해 취향 분석 페이지 상단에 리포트를 답니다</span>
+        <button
+          onClick={genRecs}
+          disabled={reportBusy}
+          className="rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+        >
+          {reportBusy ? "…" : "추천 20편 생성"}
+        </button>
+        <span className="text-xs text-muted">Gemini가 별점을 분석해 리포트·추천을 답니다</span>
       </div>
       {report?.text && (
         <div className="mt-3 rounded-lg border border-line bg-surface/40 px-4 py-3 text-sm leading-relaxed">

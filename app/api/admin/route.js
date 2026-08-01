@@ -1442,6 +1442,85 @@ ${s.lines}`
     return Response.json(report);
   }
 
+  // 추천 20편 — 취향 요약을 Gemini에 주고 '안 본' 영화를 추천받은 뒤,
+  // 각 제목을 TMDB로 찾아 포스터·연도를 붙이고 이미 평가한 것은 걸러낸다.
+  if (action === "tasteRecs") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const dataset = readData("watcha-movies.json", []);
+    const rated = dataset.filter((m) => m.rating != null);
+    if (rated.length < 20)
+      return Response.json({ error: `평가된 영화가 ${rated.length}편뿐입니다 (20편 이상 필요)` }, { status: 422 });
+
+    const s = summarizeTaste(rated);
+    const norm = (t) => (t || "").toLowerCase().replace(/[\s:·・!?,.'"()\[\]/-]/g, "");
+    const seenTitles = new Set(rated.map((m) => norm(m.title_ko || m.title)).concat(rated.map((m) => norm(m.title))));
+    const seenTmdb = new Set(rated.map((m) => String(m.tmdbId)).filter(Boolean));
+    // 회피 목록은 전체 관람작(제목만). 상위 몇 편만 주면 나머지 수백 편과 겹쳐
+    // 추천이 대량 탈락한다. flash 컨텍스트가 넉넉하니 다 넣는다.
+    const seenList = rated.map((m) => m.title_ko || m.title).join(", ");
+
+    const raw = await geminiText(
+      key,
+      `아래는 한 사람의 영화 취향 집계다.
+${s.lines}
+이 취향에 맞으면서 '아직 안 본' 영화 28편을 추천하라. JSON 배열로만:
+[{"title":"영화 제목","year":"2019","why":"한 문장 추천 이유"}]
+규칙:
+- 취향의 편애 지점(높은 평균 별점을 준 국가·장르·감독)을 파고들되, 뻔한 대흥행작·프랜차이즈는 피하고 발견의 재미가 있는 작품으로
+- 아래는 이 사람이 이미 본 ${rated.length}편이다. 이 중 어느 것도 넣지 마라:
+${seenList}
+- title은 한국 개봉명(없으면 원제). why는 취향과 연결한 한국어 한 문장
+- 28편(TMDB 매칭 실패분 여유분). 순수 JSON만 출력`,
+      true
+    );
+    let recs;
+    try {
+      recs = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "추천 생성 실패 (응답 파싱)" }, { status: 502 });
+    }
+    if (!Array.isArray(recs) || !recs.length)
+      return Response.json({ error: "추천이 비었습니다 (쿼터·과부하)" }, { status: 502 });
+
+    // 제목→TMDB. 28건을 순차로 치면 maxDuration을 넘기니 병렬 검색 후 순서대로 채택.
+    // TMDB는 검색 rate limit이 넉넉하다(Gemini와 달리).
+    const searched = await Promise.all(
+      recs.filter((r) => r?.title).map(async (r) => {
+        try {
+          return { r, results: await searchMovies(r.title) };
+        } catch {
+          return { r, results: [] };
+        }
+      })
+    );
+    const out = [];
+    const usedTmdb = new Set();
+    for (const { r, results } of searched) {
+      if (out.length >= 20) break;
+      const hit = results.find((c) => {
+        if (c.mediaType !== "movie") return false;
+        if (seenTmdb.has(String(c.tmdbId)) || usedTmdb.has(String(c.tmdbId))) return false;
+        if (seenTitles.has(norm(c.title)) || seenTitles.has(norm(c.originalTitle))) return false;
+        return !r.year || !c.year || Math.abs(+c.year - +r.year) <= 1;
+      });
+      if (!hit) continue;
+      usedTmdb.add(String(hit.tmdbId));
+      out.push({
+        tmdbId: hit.tmdbId,
+        title: hit.title,
+        year: hit.year,
+        poster: hit.thumb,
+        why: String(r.why || "").trim(),
+      });
+    }
+    if (!out.length) return Response.json({ error: "TMDB 매칭 실패 — 모두 이미 본 작품이거나 검색 실패" }, { status: 502 });
+
+    const payload = { items: out, basedOn: s.count, at: new Date().toISOString() };
+    await writeData("taste-recs.json", JSON.stringify(payload, null, 1), `data: 추천 ${out.length}편`);
+    return Response.json({ count: out.length, basedOn: s.count });
+  }
+
   if (action === "watchaRatings") {
     const items = Array.isArray(body.items) ? body.items : [];
     const byCode = new Map();

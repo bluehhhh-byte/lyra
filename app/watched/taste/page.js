@@ -84,6 +84,7 @@ function PrefSection({ title, high, low, mean }) {
 export default function TastePage() {
   const rated = getWatched().filter((m) => m.rating != null);
   const report = readData("taste-report.json", null);
+  const recs = readData("taste-recs.json", null);
 
   if (rated.length === 0) {
     return (
@@ -140,6 +141,45 @@ export default function TastePage() {
             ))}
           </div>
         </div>
+      )}
+
+      {/* 추천 — 안 본 영화. 리포트 바로 아래, 취향 막대들 위에 둔다 */}
+      {recs?.items?.length > 0 && (
+        <section className="mb-12">
+          <h2 className="mb-1 text-sm font-semibold text-muted">이런 영화는 어떨까</h2>
+          <p className="mb-4 text-xs text-muted/60">평가하지 않은 작품 중 취향에 맞춰 고른 {recs.items.length}편</p>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-4">
+            {recs.items.map((m) => (
+              <a
+                key={m.tmdbId}
+                href={`https://www.themoviedb.org/movie/${m.tmdbId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                  {m.poster ? (
+                    <img
+                      src={m.poster}
+                      alt={m.title}
+                      loading="lazy"
+                      className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
+                    />
+                  ) : (
+                    <div className="flex aspect-[2/3] items-center justify-center p-2 text-center text-xs text-muted">
+                      {m.title}
+                    </div>
+                  )}
+                </div>
+                <p className="mt-1.5 truncate text-xs font-medium group-hover:text-accent">
+                  {m.title}
+                  {m.year ? <span className="text-muted"> · {m.year}</span> : null}
+                </p>
+                {m.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{m.why}</p>}
+              </a>
+            ))}
+          </div>
+        </section>
       )}
 
       <p className="mb-10 max-w-2xl text-xs leading-relaxed text-muted/70">
