@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import { getAllPeople, getPerson } from "../../../lib/people";
 
 export function generateStaticParams() {
-  return getAllPeople().map((person) => ({ name: person.name }));
+  // 정적 내보내기는 경로마다 파일을 만든다 — 이름에 " : * ? < > | 가 있으면
+  // Windows에서 파일 생성이 실패해 빌드가 통째로 멈춘다(예: Francisco "Viruta" Durán).
+  // 그런 이름은 미리 굽지 않고 요청 시 렌더한다.
+  return getAllPeople()
+    .filter((person) => !/["*:<>?|\\]/.test(person.name))
+    .map((person) => ({ name: person.name }));
 }
 
 export async function generateMetadata({ params }) {
