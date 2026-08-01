@@ -171,6 +171,8 @@ comment: 곡에 대한 한 줄 감상 (자동 생성, 수정 가능)
 | `app/api/admin/route.js` | 모든 admin 액션(검색·번역·저장·재검사·소급)의 서버 로직 |
 | `app/diary/` `app/emotion-timeline.js` | 키워드 일기 페이지 / 감정 시계열 SVG |
 | `app/tags/[tag]/` | 곡+영화 통합 태그 페이지 |
+| `app/admin/watcha-import.js` | 왓챠 JSON 붙여넣기 → 별점·코멘트 반영 UI |
+| [`scripts/watcha-bookmarklet.md`](scripts/watcha-bookmarklet.md) | **왓챠 내보내기 북마클릿 + 사용법** (코드 수정 시 `node scripts/watcha-bookmarklet.mjs`로 재생성) |
 | `lib/*.test.mjs` | 프레임워크 없는 assert 테스트 (`node lib/xxx.test.mjs`) |
 
 ## 로컬 실행
