@@ -175,7 +175,9 @@ export default async function MoviePage({ params }) {
       </div>
 
       {/* comment — personal take */}
-      {movie.comment && (
+      {/* 감상문이 본문에 통째로 있으면 comment는 그 앞부분을 자른 요약일 뿐이라
+          같은 문장이 두 번 보인다. 그때는 본문만 보여준다 (comment는 카드·OG용으로 유지). */}
+      {movie.comment && !(movie.body_kind === "review" && movie.synopsis.length > 0) && (
         <p className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
           {movie.comment}
         </p>
@@ -184,7 +186,10 @@ export default async function MoviePage({ params }) {
       {/* synopsis — Gemini-polished 줄거리, prose paragraphs */}
       {movie.synopsis.length > 0 && (
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent">줄거리</h2>
+          {/* body_kind=review → 왓챠에서 옮겨온 내 감상문. 없으면 기존처럼 줄거리 */}
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent">
+            {movie.body_kind === "review" ? "감상" : "줄거리"}
+          </h2>
           <div className="space-y-4">
             {movie.synopsis.map((p, i) => (
               <p key={i} className="font-serif text-lg leading-relaxed">

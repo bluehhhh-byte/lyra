@@ -1305,7 +1305,7 @@ ${listed}`,
     const {
       title, titleKo, mediaType, director, directorKo, cast, year, runtime,
       rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis,
-      status, platform, episode, started, watched,
+      status, platform, episode, started, watched, bodyKind,
     } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
@@ -1331,6 +1331,7 @@ poster: ${poster || ""}
 backdrop: ${backdrop || ""}
 tmdbId: ${tmdbId || ""}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
+body_kind: ${bodyKind === "review" ? "review" : ""}
 date: ${new Date().toISOString().slice(0, 10)}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
