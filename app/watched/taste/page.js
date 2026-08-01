@@ -1,31 +1,12 @@
 import Link from "next/link";
 import { getWatched } from "../../../lib/watched";
+import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
+import { readData } from "../../../lib/store";
 
 export const metadata = {
   title: "취향 분석 | Syno.",
   description: "별점 매긴 영화들의 국가·장르·감독·배우·연대 취향",
 };
-
-// 관람 편수와 선호(평균 별점)를 나눠 본다 — 많이 본 것 ≠ 좋아하는 것.
-// 각 그룹의 평균 별점을 전체 평균과 비교해 "편애/기피"를 드러낸다.
-// 표본이 적으면 평균이 요동치므로 min표본 이상만 순위에 올린다.
-function aggregate(rated, keyFn, { min = 3, top = 8 } = {}) {
-  const g = new Map();
-  for (const m of rated) {
-    for (const k of [].concat(keyFn(m)).filter(Boolean)) {
-      if (!g.has(k)) g.set(k, { n: 0, sum: 0 });
-      const e = g.get(k);
-      e.n += 1;
-      e.sum += m.rating;
-    }
-  }
-  const rows = [...g.entries()].map(([k, e]) => ({ k, n: e.n, avg: e.sum / e.n }));
-  return {
-    byCount: [...rows].sort((a, b) => b.n - a.n).slice(0, top),
-    byAvg: rows.filter((r) => r.n >= min).sort((a, b) => b.avg - a.avg).slice(0, top),
-    byLow: rows.filter((r) => r.n >= min).sort((a, b) => a.avg - b.avg).slice(0, top),
-  };
-}
 
 function Bar({ label, n, avg, max, mean }) {
   const delta = avg - mean;
@@ -100,19 +81,9 @@ function PrefSection({ title, high, low, mean }) {
   );
 }
 
-const decadeOf = (y) => (y ? `${Math.floor(Number(y) / 10) * 10}s` : "미상");
-const runtimeBucket = (r) => {
-  const n = Number(r);
-  if (!n) return null;
-  if (n < 90) return "~90분";
-  if (n < 110) return "90–110분";
-  if (n < 130) return "110–130분";
-  if (n < 150) return "130–150분";
-  return "150분+";
-};
-
 export default function TastePage() {
   const rated = getWatched().filter((m) => m.rating != null);
+  const report = readData("taste-report.json", null);
 
   if (rated.length === 0) {
     return (
@@ -148,6 +119,28 @@ export default function TastePage() {
           ← 목록으로
         </Link>
       </div>
+
+      {/* Gemini 리포트 — 관리자에서 생성해 data/taste-report.json에 저장한 것.
+          별점이 바뀌면 다시 생성해야 최신이 된다(count로 신선도 힌트만 준다). */}
+      {report?.text && (
+        <div className="mb-10 rounded-2xl border border-line bg-surface/40 p-6">
+          <div className="mb-3 flex items-center gap-2">
+            <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">
+              AI 리포트
+            </span>
+            {report.count && report.count !== rated.length && (
+              <span className="text-xs text-muted/60">
+                {report.count}편 기준 · 지금 {rated.length}편 (재생성 권장)
+              </span>
+            )}
+          </div>
+          <div className="space-y-3 text-sm leading-relaxed text-ink/90">
+            {report.text.split(/\n\n+/).map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </div>
+      )}
 
       <p className="mb-10 max-w-2xl text-xs leading-relaxed text-muted/70">
         막대는 <b className="text-muted">관람 편수</b>, 오른쪽 별점은 그 그룹의 <b className="text-muted">평균 평점</b>.

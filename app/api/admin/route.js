@@ -16,6 +16,7 @@ import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../..
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 import { getAllMovies } from "../../../lib/movies";
+import { summarizeTaste } from "../../../lib/taste-core";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
@@ -1411,6 +1412,36 @@ ${(synopsis || "").trim()}
   // 작품만 갱신하고 나머지는 skip한다. 코멘트처럼 새로 만들어야 할 때만 true.
   // 왓챠 별점을 데이터셋(data/watcha-movies.json)에 code로 병합.
   // ~1,000편은 개별 .md가 없으므로 한 파일을 통째로 다시 쓴다(요청 1회).
+  // 취향 리포트 생성 — 집계 요약을 Gemini에 넘겨 한국어 리포트를 받아 저장.
+  // 원본 1000편이 아니라 요약 숫자만 넘기므로 토큰·rate limit 부담이 작다.
+  if (action === "tasteReport") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const dataset = readData("watcha-movies.json", []);
+    const rated = dataset.filter((m) => m.rating != null);
+    if (rated.length < 20)
+      return Response.json({ error: `평가된 영화가 ${rated.length}편뿐입니다 (20편 이상 필요)` }, { status: 422 });
+
+    const s = summarizeTaste(rated);
+    const text = await geminiText(
+      key,
+      `아래는 한 사람이 영화 ${s.count}편에 매긴 별점을 국가·장르·감독·연대·상영시간별로 집계한 것이다.
+이 사람의 영화 취향을 분석하는 리포트를 한국어로 써라.
+- 3~4개 문단, 각 문단 2~3문장. 소제목 없이 이어지는 산문
+- '많이 본 것'과 '높게 평가한 것'의 차이에 주목하라(관람 편수 ≠ 선호)
+- 구체적 근거(국가/장르/감독/연대와 그 평균 별점)를 문장에 녹여라
+- 단정적 분석 톤, 평서문 '~다'체. "~습니다/~해요" 금지. 과장·아부 금지
+- 마지막 문단은 이 사람이 좋아할 만한 방향을 한 문장으로 제안
+집계:
+${s.lines}`
+    );
+    if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
+
+    const report = { text: text.trim(), count: s.count, mean: s.mean, at: new Date().toISOString() };
+    await writeData("taste-report.json", JSON.stringify(report, null, 1), `data: 취향 리포트 (${s.count}편)`);
+    return Response.json(report);
+  }
+
   if (action === "watchaRatings") {
     const items = Array.isArray(body.items) ? body.items : [];
     const byCode = new Map();

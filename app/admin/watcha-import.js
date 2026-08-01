@@ -21,6 +21,20 @@ export default function WatchaImport() {
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
+  const [report, setReport] = useState(null);
+  const [reportBusy, setReportBusy] = useState(false);
+
+  const genReport = async () => {
+    setError("");
+    setReportBusy(true);
+    try {
+      setReport(await api("tasteReport", {}));
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setReportBusy(false);
+    }
+  };
 
   const run = async () => {
     setError("");
@@ -69,6 +83,23 @@ export default function WatchaImport() {
           code로 데이터셋에 별점을 채웁니다 — 영화 페이지를 새로 만들지 않습니다
         </span>
       </div>
+
+      <div className="mt-4 flex items-center gap-3 border-t border-line pt-4">
+        <button
+          onClick={genReport}
+          disabled={reportBusy}
+          className="rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+        >
+          {reportBusy ? "분석 중…" : "취향 리포트 생성"}
+        </button>
+        <span className="text-xs text-muted">Gemini가 별점을 분석해 취향 분석 페이지 상단에 리포트를 답니다</span>
+      </div>
+      {report?.text && (
+        <div className="mt-3 rounded-lg border border-line bg-surface/40 px-4 py-3 text-sm leading-relaxed">
+          <p className="mb-2 text-xs text-green-400">✓ {report.count}편 기준 리포트 생성됨</p>
+          <p className="whitespace-pre-wrap text-muted">{report.text.slice(0, 200)}…</p>
+        </div>
+      )}
 
       {error && <p className="mt-3 text-sm text-red-400 dark:text-red-400">{error}</p>}
 
