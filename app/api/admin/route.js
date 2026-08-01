@@ -13,6 +13,7 @@ import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
+import { getAllMovies } from "../../../lib/movies";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
@@ -1399,6 +1400,102 @@ ${(synopsis || "").trim()}
         : `chore(movie): regen comment — ${body.slug}`
     );
     return Response.json({ comment, updated });
+  }
+
+  // 왓챠피디아 임포트 — 항목 하나 처리. 42편을 한 요청에 넣으면 TMDB 호출이
+  // maxDuration을 넘기므로 클라이언트가 한 건씩 돌린다(재검사 도구와 같은 방식).
+  //
+  // create=false(기본)가 안전장치다: 별점 1,300개를 통째로 넣어도 이미 등록된
+  // 작품만 갱신하고 나머지는 skip한다. 코멘트처럼 새로 만들어야 할 때만 true.
+  if (action === "watchaImport") {
+    const { item, apply = false, create = false } = body;
+    if (!item?.title) return Response.json({ error: "title이 없습니다" }, { status: 400 });
+
+    const norm = (s) => (s || "").toLowerCase().replace(/[\s:·・!?,.'"()\[\]/-]/g, "");
+    const movies = getAllMovies();
+    // watcha_code가 박혀 있으면 그게 가장 정확. 없으면 제목+연도로 찾는다.
+    const found =
+      (item.code && movies.find((m) => m.watcha_code === item.code)) ||
+      movies.find(
+        (m) =>
+          (norm(m.title) === norm(item.title) || norm(m.title_ko) === norm(item.title)) &&
+          (!item.year || !m.year || String(m.year) === String(item.year))
+      );
+
+    const rating = Number(item.rating);
+    const hasRating = Number.isFinite(rating) && rating > 0 && rating <= 5;
+
+    if (found) {
+      if (!apply) return Response.json({ action: "update", slug: found.slug, title: found.title });
+      // getAllMovies()는 파싱된 필드만 준다 — 파일 원문은 store에서 다시 읽는다
+      const file = await readMovie(found.slug);
+      if (!file) return Response.json({ action: "error", title: item.title, error: "파일을 못 읽음" });
+      let out = file.raw.replace(/\r\n/g, "\n");
+      const changed = [];
+      if (hasRating && Number(found.rating) !== rating) {
+        out = setField(out, "rating", String(Math.round(rating * 2) / 2), "runtime");
+        changed.push("rating");
+      }
+      if (item.comment && !found.comment) {
+        out = setField(out, "comment", item.comment.replace(/\s*\n+\s*/g, " "), "published");
+        changed.push("comment");
+      }
+      // 다음 임포트가 제목 대조 없이 바로 찾도록 왓챠 코드를 남긴다
+      if (item.code && found.watcha_code !== item.code) {
+        out = setField(out, "watcha_code", item.code, "tmdbId");
+        changed.push("watcha_code");
+      }
+      if (!changed.length) return Response.json({ action: "nochange", slug: found.slug, title: found.title });
+      await writeMovie(found.slug, out, `edit(movie): watcha import — ${found.slug}`);
+      return Response.json({ action: "updated", slug: found.slug, title: found.title, changed });
+    }
+
+    if (!create) return Response.json({ action: "skip", title: item.title });
+
+    // 신규 등록 — TMDB에서 찾아 붙인다
+    const results = await searchMovies(item.title);
+    const scored = (results || []).map((c, i) => {
+      let s = -i * 0.1;
+      const cy = String(c.year || "");
+      if (item.year && cy === String(item.year)) s += 10;
+      else if (item.year && cy && Math.abs(+cy - +item.year) === 1) s += 4;
+      else if (item.year && cy) s -= 3;
+      if (norm(c.title) === norm(item.title) || norm(c.originalTitle) === norm(item.title)) s += 6;
+      return { c, s };
+    }).sort((a, b) => b.s - a.s);
+    const hit = scored[0]?.s > 0 ? scored[0].c : null;
+    if (!hit) return Response.json({ action: "nomatch", title: item.title });
+    if (!apply) return Response.json({ action: "create", title: item.title, matched: `${hit.title} (${hit.year})` });
+
+    const d = await movieDetail(hit.tmdbId, hit.mediaType);
+    const flat = (item.comment || "").replace(/\s*\n+\s*/g, " ");
+    const slug = `${d.title} ${d.year}`.toLowerCase()
+      .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-").replace(/^-|-$/g, "");
+    const md = `---
+title: ${d.title}
+title_ko: ${d.title}
+media: ${d.mediaType === "tv" ? "tv" : "movie"}
+director: ${d.director || ""}
+director_ko:
+cast: ${d.cast || ""}
+year: ${d.year || ""}
+runtime: ${d.runtime || ""}
+rating: ${hasRating ? Math.round(rating * 2) / 2 : ""}
+genre: ${d.genre || ""}
+poster: ${d.poster || ""}
+backdrop: ${d.backdrop || ""}
+tmdbId: ${d.tmdbId || ""}
+watcha_code: ${item.code || ""}
+tags: [${[d.country, d.genre, d.year].filter(Boolean).join(", ")}]
+body_kind: ${item.comment ? "review" : ""}
+date: ${new Date().toISOString().slice(0, 10)}
+published: ${new Date().toISOString()}
+comment: ${flat.length > 120 ? flat.slice(0, 117) + "…" : flat}
+---
+${(item.comment || "").trim()}
+`;
+    await writeMovie(slug, md, `add(movie): ${slug}`);
+    return Response.json({ action: "created", slug, title: d.title });
   }
 
   if (action === "movieUpdateRating") {

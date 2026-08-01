@@ -3,6 +3,7 @@ import { getAllMovies } from "../../../lib/movies";
 import MovieForm from "../movie-form";
 import MovieTools from "../movie-tools";
 import CollectionManager from "../collection-manager";
+import WatchaImport from "../watcha-import";
 import { getAllCollections } from "../../../lib/collections";
 
 export const metadata = { title: "Syno. 관리 | Lyra" };
@@ -26,6 +27,12 @@ export default function MovieAdminPage() {
         </Link>
       </div>
       <MovieForm />
+
+      <h2 className="mb-1 mt-16 text-lg font-bold">왓챠피디아 가져오기</h2>
+      <p className="mb-3 text-xs text-muted">
+        왓챠 평가·코멘트 페이지에서 뽑은 JSON을 붙여넣으면 별점·코멘트를 채웁니다
+      </p>
+      <WatchaImport />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">큐레이션 컬렉션</h2>
       <CollectionManager movies={collectionMovies} collections={getAllCollections({ includePrivate: true })} />
