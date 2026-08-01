@@ -14,6 +14,8 @@ const PRIMARY = [
 ];
 
 const MORE = [
+  ["/watched", "평가한 영화"],
+  ["/watched/taste", "취향 분석"],
   ["/collections", "컬렉션"],
   ["/watchlist", "워치리스트"],
   ["/people", "인물"],

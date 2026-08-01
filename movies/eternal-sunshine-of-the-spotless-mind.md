@@ -6,12 +6,11 @@ director_ko: 미셸 공드리
 cast: Jim Carrey, Kate Winslet, Kirsten Dunst
 year: 2004
 runtime: 108
-rating:
+rating: 5
 genre: Sci-Fi
 poster: https://image.tmdb.org/t/p/w500/jULvvUymAqM18gIDHbMRfKHbCSB.jpg
 backdrop: https://image.tmdb.org/t/p/w1280/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg
 tmdbId: 38
-watcha_code: m85X9LW
 tags: [미국, Sci-Fi, 2004]
 date: 2026-07-17
 published: 2026-07-17T12:00:00.000Z

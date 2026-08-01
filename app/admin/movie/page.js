@@ -28,9 +28,9 @@ export default function MovieAdminPage() {
       </div>
       <MovieForm />
 
-      <h2 className="mb-1 mt-16 text-lg font-bold">왓챠피디아 가져오기</h2>
+      <h2 className="mb-1 mt-16 text-lg font-bold">왓챠 별점 병합</h2>
       <p className="mb-3 text-xs text-muted">
-        왓챠 평가·코멘트 페이지에서 뽑은 JSON을 붙여넣으면 별점·코멘트를 채웁니다
+        별점 목록 페이지에서 뽑은 JSON을 붙여넣으면 취향 분석·목록의 별점이 채워집니다
       </p>
       <WatchaImport />
 

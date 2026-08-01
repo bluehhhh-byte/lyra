@@ -8,6 +8,8 @@ import {
   readCollection,
   writeCollection,
   deleteCollection,
+  writeData,
+  readData,
 } from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
@@ -1407,6 +1409,31 @@ ${(synopsis || "").trim()}
   //
   // create=false(기본)가 안전장치다: 별점 1,300개를 통째로 넣어도 이미 등록된
   // 작품만 갱신하고 나머지는 skip한다. 코멘트처럼 새로 만들어야 할 때만 true.
+  // 왓챠 별점을 데이터셋(data/watcha-movies.json)에 code로 병합.
+  // ~1,000편은 개별 .md가 없으므로 한 파일을 통째로 다시 쓴다(요청 1회).
+  if (action === "watchaRatings") {
+    const items = Array.isArray(body.items) ? body.items : [];
+    const byCode = new Map();
+    for (const it of items) {
+      const r = Number(it?.rating);
+      if (it?.code && Number.isFinite(r) && r > 0 && r <= 5) byCode.set(it.code, r);
+    }
+    if (!byCode.size) return Response.json({ error: "별점이 있는 항목이 없습니다" }, { status: 400 });
+
+    const dataset = readData("watcha-movies.json", []);
+    let matched = 0, changed = 0, unknown = 0;
+    for (const m of dataset) {
+      if (!byCode.has(m.code)) continue;
+      matched++;
+      const r = byCode.get(m.code);
+      if (m.rating !== r) { m.rating = r; changed++; }
+    }
+    for (const code of byCode.keys()) if (!dataset.some((m) => m.code === code)) unknown++;
+
+    if (changed) await writeData("watcha-movies.json", JSON.stringify(dataset, null, 1), `data: 왓챠 별점 ${changed}편 병합`);
+    return Response.json({ total: byCode.size, matched, changed, unknown });
+  }
+
   if (action === "watchaImport") {
     const { item, apply = false, create = false } = body;
     if (!item?.title) return Response.json({ error: "title이 없습니다" }, { status: 400 });
