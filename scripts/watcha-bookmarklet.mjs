@@ -1,6 +1,6 @@
 import fs from "node:fs";
 
-// 왓챠피디아 목록 페이지에서 별점·코멘트를 긁어 화면에 띄우는 북마클릿.
+// 왓챠피디아 별점 목록에서 {code, rating}을 긁어 화면에 띄우는 북마클릿.
 // 다운로드는 스크롤 대기(await) 뒤라 크롬이 user-gesture 만료로 막는 일이 있어
 // textarea에 담아 자동 선택한다.
 //
@@ -27,7 +27,6 @@ for(let i=0;i<900&&st<5;i++){
  st=n===prev?st+1:0;prev=n;
  tip.textContent='왓챠 내보내기: 스크롤 중… '+n+'개';}
 scrollTo(0,0);await S(300);
-const META=/^(영화|시리즈|책|웹툰|드라마)\s*[・·]|^평균\s|에\s봄$|^평가$|^코멘트$|^\d+개|^더보기|^좋아요|콘텐츠, 인물/;
 const rows=new Map();
 for(const a of document.querySelectorAll('a[href*="/contents/"]')){
  const href=a.getAttribute('href')||'';
@@ -35,27 +34,29 @@ for(const a of document.querySelectorAll('a[href*="/contents/"]')){
  if(!code)continue;
  let root=a;for(let i=0;i<6&&root.parentElement;i++)root=root.parentElement;
  const T=root.innerText||'';
- const L=T.split('\n').map(s=>s.trim()).filter(Boolean);
- const star=T.match(/★\s*([\d.]+)/);
  const yr=T.match(/[・·]\s*(\d{4})/);
- // 평가 목록은 제목/별점이 각자 제 요소에 있다 — 클래스로 집는 게 가장 정확하고,
- // 코멘트 페이지처럼 구조가 다른 곳에서는 아래 휴리스틱으로 떨어진다.
+ // 제목: 전용 클래스가 가장 정확. 왓챠가 제목 칸에 줄거리를 넣어둔 항목은
+ // 40자 넘고 콜론이 있으면 콜론 앞만 쓴다('조커: 폴리 아 되'는 40자 이하라 안전).
  const tEl=a.querySelector('[class*=contentTitle]');
- let title=((tEl?tEl.innerText:a.innerText)||'').trim().split('\n')[0]||L[0]||'';
- // 왓챠 쪽 데이터가 제목 칸에 줄거리까지 넣어둔 항목이 있다. 콜론 앞을 제목으로
- // 본다 — 40자 이하 제목은 건드리지 않으므로 '조커: 폴리 아 되' 같은 건 안전하다.
+ let title=((tEl?tEl.innerText:a.innerText)||'').trim().split('\n')[0]||'';
  if(title.length>40&&title.includes(':'))title=title.split(':')[0].trim();
- const body=L.filter(s=>s!==title&&!META.test(s)&&/[가-힣]/.test(s)&&s.length>5).sort((x,y)=>y.length-x.length)[0]||'';
+ // 별점: contentRating 요소('평가함 ★ 4.5')를 먼저, 없으면 카드 텍스트의 ★,
+ // 그래도 없으면(byStar는 별점이 섹션 헤더에 있다) 위로 올라가며 헤더 별점을 찾는다.
+ const rEl=root.querySelector('[class*=contentRating],[class*=Rating]');
+ let star=(rEl?rEl.innerText:T).match(/★\s*([\d.]+)/)||T.match(/★\s*([\d.]+)/);
+ if(!star){let s=root;for(let i=0;i<8&&s;i++){s=s.previousElementSibling||s.parentElement;
+  const h=s&&(s.querySelector?s.querySelector('h1,h2,h3,[class*=title],[class*=Title]'):null);
+  const m=(h?h.innerText:'').match(/([0-5](?:\.5)?)\s*점|★\s*([\d.]+)|^([0-5]\.[05])$/);
+  if(m){star=[null,m[1]||m[2]||m[3]];break;}}}
  const kind=code[0]==='m'?'movies':code[0]==='t'?'tv_seasons':code[0]==='b'?'books':code[0]==='w'?'webtoons':'';
- const p=rows.get(code)||{code:code,type:kind,title:'',year:'',rating:null,comment:''};
+ const p=rows.get(code)||{code:code,type:kind,title:'',year:'',rating:null};
  if(title&&!p.title)p.title=title;
  if(yr&&!p.year)p.year=yr[1];
- if(star&&p.rating==null)p.rating=+star[1];
- if(body.length>p.comment.length)p.comment=body;
+ if(star&&p.rating==null){const v=+star[1];if(v>0&&v<=5)p.rating=v;}
  rows.set(code,p);}
 tip.remove();
-const items=[...rows.values()].filter(x=>x.title&&(x.rating!=null||x.comment));
-if(!items.length){alert('항목을 못 찾았습니다. 로그인 상태이고 목록이 보이는지 확인해 주세요.');return;}
+const items=[...rows.values()].filter(x=>x.rating!=null);
+if(!items.length){alert('별점을 못 찾았습니다.\n\n① 로그인 상태인지\n② "별점" 목록 페이지인지 확인하세요.\n주소: /contents/movies/ratings (뒤에 ?type=byStar 는 빼세요)');return;}
 const json=JSON.stringify(items,null,2);
 const box=document.createElement('div');box.id='wxbox';
 box.style.cssText='position:fixed;z-index:2147483647;inset:5% 10%;background:#16161a;color:#ededf0;border:1px solid #333;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;font:14px system-ui;box-shadow:0 10px 50px rgba(0,0,0,.6)';
@@ -102,20 +103,19 @@ const doc = `# 왓챠피디아 → Lyra 가져오기 (북마클릿)
 
 이미 등록했는데 코드를 갱신하려면 그 북마크를 **우클릭 → 수정**해서 URL만 교체한다.
 
-## 2. 반드시 "목록" 페이지에서 누른다
+## 2. 반드시 "영화 별점 목록" 페이지에서 누른다
 
 | | 주소 | |
 |---|---|---|
-| ✗ | \`/ratings\` | 영화 1106 · 시리즈 196 처럼 **개수만** 나오는 목차 페이지 |
-| ✓ | \`/contents/movies/ratings\` | 실제 목록 |
-
-목차 페이지에서 누르면 안내창이 뜬다. 주소에 \`/contents/\` 가 들어가야 한다.
+| ✗ | \`/ratings\` | 영화 1106 · 시리즈 196 처럼 **개수만** 나오는 목차 |
+| ✗ | \`/contents/movies/ratings?type=byStar\` | 별점이 카드에 없고 그룹 헤더에만 있어 잘 안 잡힌다 |
+| ✓ | \`/contents/movies/ratings\` | 카드마다 \`평가함 ★ 4.5\` 가 있는 기본 목록 |
 
 - 영화 별점: \`pedia.watcha.com/ko/users/<내코드>/contents/movies/ratings\`
-- 시리즈 별점: \`.../contents/tv_seasons/ratings\`
-- 코멘트: \`pedia.watcha.com/ko/users/<내코드>/comments\`
+  (뒤에 \`?type=byStar\` 가 붙어 있으면 지운다)
 
-\`<내코드>\` 는 왓챠 프로필 주소에 있다.
+\`<내코드>\` 는 왓챠 프로필 주소에 있다. 뽑히는 건 \`{code, title, year, rating}\` —
+별점 병합에 필요한 code·rating만 확실히 담는다(코멘트는 담지 않는다).
 
 ## 3. 실행
 
