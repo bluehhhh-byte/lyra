@@ -192,7 +192,16 @@ export default async function MoviePage({ params }) {
           </h2>
           <div className="space-y-4">
             {movie.synopsis.map((p, i) => (
-              <p key={i} className="font-serif text-lg leading-relaxed">
+              // 감상은 짧든 길든 같은 크기로 — 짧은 감상은 comment 인용구(text-sm)로
+              // 렌더되므로, 본문도 거기 맞춘다. 줄거리는 기존 세리프 본문 그대로.
+              <p
+                key={i}
+                className={
+                  movie.body_kind === "review"
+                    ? "text-sm leading-relaxed text-muted"
+                    : "font-serif text-lg leading-relaxed"
+                }
+              >
                 {p}
               </p>
             ))}
