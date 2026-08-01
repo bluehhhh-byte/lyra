@@ -32,22 +32,18 @@ for(const a of document.querySelectorAll('a[href*="/contents/"]')){
  const href=a.getAttribute('href')||'';
  const code=(href.split('/contents/')[1]||'').split(/[/?#]/)[0]||'';
  if(!code)continue;
- let root=a;for(let i=0;i<6&&root.parentElement;i++)root=root.parentElement;
- const T=root.innerText||'';
- const yr=T.match(/[・·]\s*(\d{4})/);
+ // 별점·제목은 반드시 이 카드(a 또는 그 li) 안에서만 읽는다. 섹션 위로 올라가면
+ // 카드가 전부 든 컨테이너라 첫 카드의 별점이 모두에게 복사된다(그 버그였다).
+ const card=a.closest('li')||a;
+ const T=card.innerText||'';
  // 제목: 전용 클래스가 가장 정확. 왓챠가 제목 칸에 줄거리를 넣어둔 항목은
- // 40자 넘고 콜론이 있으면 콜론 앞만 쓴다('조커: 폴리 아 되'는 40자 이하라 안전).
- const tEl=a.querySelector('[class*=contentTitle]');
- let title=((tEl?tEl.innerText:a.innerText)||'').trim().split('\n')[0]||'';
+ // 40자 넘고 콜론이 있으면 콜론 앞만('조커: 폴리 아 되'는 40자 이하라 안전).
+ const tEl=card.querySelector('[class*=contentTitle]');
+ let title=((tEl?tEl.innerText:T)||'').trim().split('\n')[0]||'';
  if(title.length>40&&title.includes(':'))title=title.split(':')[0].trim();
- // 별점: contentRating 요소('평가함 ★ 4.5')를 먼저, 없으면 카드 텍스트의 ★,
- // 그래도 없으면(byStar는 별점이 섹션 헤더에 있다) 위로 올라가며 헤더 별점을 찾는다.
- const rEl=root.querySelector('[class*=contentRating],[class*=Rating]');
- let star=(rEl?rEl.innerText:T).match(/★\s*([\d.]+)/)||T.match(/★\s*([\d.]+)/);
- if(!star){let s=root;for(let i=0;i<8&&s;i++){s=s.previousElementSibling||s.parentElement;
-  const h=s&&(s.querySelector?s.querySelector('h1,h2,h3,[class*=title],[class*=Title]'):null);
-  const m=(h?h.innerText:'').match(/([0-5](?:\.5)?)\s*점|★\s*([\d.]+)|^([0-5]\.[05])$/);
-  if(m){star=[null,m[1]||m[2]||m[3]];break;}}}
+ // '평가함 ★ 4.5' — 이 카드 안의 별점
+ const star=T.match(/★\s*([\d.]+)/);
+ const yr=T.match(/[・·]\s*(\d{4})/);
  const kind=code[0]==='m'?'movies':code[0]==='t'?'tv_seasons':code[0]==='b'?'books':code[0]==='w'?'webtoons':'';
  const p=rows.get(code)||{code:code,type:kind,title:'',year:'',rating:null};
  if(title&&!p.title)p.title=title;
