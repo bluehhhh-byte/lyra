@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getWatched } from "../../lib/watched";
+import WatchedGrid from "./grid";
 
 export const metadata = {
   title: "평가한 영화 | Syno.",
@@ -17,8 +18,6 @@ export default function WatchedPage() {
     (a, b) => b.rating - a.rating || String(b.year).localeCompare(String(a.year))
   );
 
-  const dist = new Map();
-  for (const m of rated) dist.set(m.rating, (dist.get(m.rating) || 0) + 1);
   const mean = rated.length
     ? (rated.reduce((n, m) => n + m.rating, 0) / rated.length).toFixed(2)
     : null;
@@ -46,53 +45,7 @@ export default function WatchedPage() {
           {noRating > 0 && <p className="mt-2 text-xs text-muted/60">메타데이터는 {all.length}편 준비됨</p>}
         </div>
       ) : (
-        <>
-          {/* 별점 분포 — 5.0에서 0.5까지 */}
-          <div className="mb-10 flex items-end gap-1.5">
-            {Array.from({ length: 10 }, (_, i) => (5 - i * 0.5).toFixed(1)).map((s) => {
-              const n = dist.get(Number(s)) || 0;
-              const max = Math.max(...dist.values(), 1);
-              return (
-                <div key={s} className="flex flex-1 flex-col items-center gap-1">
-                  <span className="text-[10px] tabular-nums text-muted">{n || ""}</span>
-                  <div
-                    className="w-full rounded-t bg-accent/80"
-                    style={{ height: `${Math.max(2, (n / max) * 80)}px` }}
-                  />
-                  <span className="text-[10px] tabular-nums text-muted">{s}</span>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
-            {rated.map((m) => (
-              <div key={m.code} className="group">
-                <div className="relative overflow-hidden rounded-lg border border-line bg-surface">
-                  {m.poster ? (
-                    <img
-                      src={m.poster}
-                      alt={m.title_ko || m.title}
-                      loading="lazy"
-                      className="aspect-[2/3] w-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex aspect-[2/3] items-center justify-center text-xs text-muted">
-                      {m.title_ko || m.title}
-                    </div>
-                  )}
-                  <span className="absolute right-1 top-1 rounded bg-black/70 px-1.5 py-0.5 text-xs font-semibold text-white tabular-nums">
-                    ★{m.rating}
-                  </span>
-                </div>
-                <p className="mt-1.5 truncate text-xs font-medium">{m.title_ko || m.title}</p>
-                <p className="truncate text-[11px] text-muted">
-                  {[m.country, m.year].filter(Boolean).join(" · ")}
-                </p>
-              </div>
-            ))}
-          </div>
-        </>
+        <WatchedGrid rated={rated} />
       )}
     </>
   );

@@ -21,7 +21,7 @@ export default function MovieAdminPage() {
   return (
     <>
       <div className="mb-8 flex items-center gap-4">
-        <h1 className="text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
+        <h1 className="text-2xl font-bold">영화 관리</h1>
         <Link href="/admin" className="text-sm text-muted transition hover:text-accent">
           → 곡 관리로
         </Link>
