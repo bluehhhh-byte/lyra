@@ -146,10 +146,19 @@ export default function TastePage() {
       {/* 추천 — 안 본 영화. 리포트 바로 아래, 취향 막대들 위에 둔다 */}
       {recs?.items?.length > 0 && (
         <section className="mb-12">
-          <h2 className="mb-1 text-sm font-semibold text-muted">이런 영화는 어떨까</h2>
-          <p className="mb-4 text-xs text-muted/60">평가하지 않은 작품 중 취향에 맞춰 고른 {recs.items.length}편</p>
+          <div className="mb-4 flex items-baseline justify-between gap-3">
+            <div>
+              <h2 className="text-sm font-semibold text-muted">이런 영화는 어떨까</h2>
+              <p className="mt-0.5 text-xs text-muted/60">평가하지 않은 작품 중 취향에 맞춰 고른 {recs.items.length}편</p>
+            </div>
+            {recs.items.length > 8 && (
+              <Link href="/recommendations" className="shrink-0 text-xs text-accent hover:underline">
+                전체 보기 →
+              </Link>
+            )}
+          </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-4">
-            {recs.items.map((m) => (
+            {recs.items.slice(0, 8).map((m) => (
               <a
                 key={m.tmdbId}
                 href={`https://www.themoviedb.org/movie/${m.tmdbId}`}

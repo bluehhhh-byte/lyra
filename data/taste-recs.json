@@ -1,6 +1,150 @@
 {
  "items": [
   {
+   "tmdbId": 36095,
+   "title": "큐어",
+   "year": "1997",
+   "poster": "https://image.tmdb.org/t/p/w154/7vOxMTYZwdNgPRPk0wBgGvitHvw.jpg",
+   "why": "일본 미스터리 스릴러의 음울하고 정교한 걸작",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 1807,
+   "title": "엘리펀트",
+   "year": "2003",
+   "poster": "https://image.tmdb.org/t/p/w154/tJnpBuMmlYdZtywqHJCrBvhLZ1J.jpg",
+   "why": "편애 감독 구스 반 산트의 집요하고 날카로운 연출",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 15371,
+   "title": "루팡 3세: 칼리오스트로의 성",
+   "year": "1979",
+   "poster": "https://image.tmdb.org/t/p/w154/67ptFf2Dhrk0CskAYgMggHcG868.jpg",
+   "why": "미야자키 하야오 감독의 활력 넘치는 초기 애니메이션",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 3782,
+   "title": "이키루",
+   "year": "1952",
+   "poster": "https://image.tmdb.org/t/p/w154/8aja0bziXOA0ZgspOLyt4PVZ9kF.jpg",
+   "why": "일본 1950년대 휴머니즘 드라마의 깊은 여운",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 14696,
+   "title": "우게츠 이야기",
+   "year": "1953",
+   "poster": "https://image.tmdb.org/t/p/w154/q4Itzqzl0bZcBdPJK0PnDCQVIaA.jpg",
+   "why": "1950년대 일본 판타지·드라마의 환상적인 걸작",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 15916,
+   "title": "천사의 알",
+   "year": "1985",
+   "poster": "https://image.tmdb.org/t/p/w154/2aWYTSugPZlaZFR2mEMj6NdZOmX.jpg",
+   "why": "80년대 일본 애니메이션 특유의 몽환적 판타지",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 37585,
+   "title": "은하철도의 밤",
+   "year": "1985",
+   "poster": "https://image.tmdb.org/t/p/w154/h1ZdBg35hA6PC1K9KwY2HB0OE0J.jpg",
+   "why": "1980년대 일본 판타지 애니메이션의 환상적인 작화",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 41158,
+   "title": "암화",
+   "year": "1998",
+   "poster": "https://image.tmdb.org/t/p/w154/fGceZ7I1IibzaWHngbrsuOf75g5.jpg",
+   "why": "90년대 홍콩 범죄·미스터리의 서늘하고 날카로운 매력",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 1470861,
+   "title": "천장지구",
+   "year": "",
+   "poster": "https://image.tmdb.org/t/p/w154/tdpUz3dIYRNIaYlXFHRUuFlMKfR.jpg",
+   "why": "선호도 높은 90년대 홍콩 드라마 감성을 담은 작품",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 108,
+   "title": "세 가지 색: 블루",
+   "year": "1993",
+   "poster": "https://image.tmdb.org/t/p/w154/iQHTErDlaS8iM5QUrhgcsTSPRwq.jpg",
+   "why": "프랑스 드라마의 미학적 정점과 깊은 심리 묘사",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 690,
+   "title": "소매치기",
+   "year": "1959",
+   "poster": "https://image.tmdb.org/t/p/w154/6LOGubEfLLikSQPqoXpYkhBLpGI.jpg",
+   "why": "1950년대 프랑스 범죄 드라마의 정제된 연출",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 18872,
+   "title": "환상의 빛",
+   "year": "1995",
+   "poster": "https://image.tmdb.org/t/p/w154/1UOp39IusdtQa1jVlJ6Ne7CqrpU.jpg",
+   "why": "90년대 일본 드라마 특유의 묵직하고 정적인 감성",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 514062,
+   "title": "걸어도 걸어도 메이킹필름",
+   "year": "2009",
+   "poster": "https://image.tmdb.org/t/p/w154/2X9qeJzdiGeBzAk7s7sFRMDIvbp.jpg",
+   "why": "일본 드라마 장르 특유의 섬세한 가족 서사",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 655,
+   "title": "파리, 텍사스",
+   "year": "1984",
+   "poster": "https://image.tmdb.org/t/p/w154/3urLYGDMKAve5Yu3slhhtcBwuMU.jpg",
+   "why": "선호 연대인 80년대 대표 명작 드라마",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 16307,
+   "title": "위커 맨: 파이널 컷",
+   "year": "1973",
+   "poster": "https://image.tmdb.org/t/p/w154/oglvMOKY0ne2Sl3rPC6bHp07EpY.jpg",
+   "why": "영국 특유의 기말하고 독창적인 미스터리 판타지",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 11120,
+   "title": "모스키토 코스트",
+   "year": "1986",
+   "poster": "https://image.tmdb.org/t/p/w154/pUMbuKBH5jIuwS36yd32hOpDaJI.jpg",
+   "why": "피터 위어 감독과 80년대 연대의 매력적 조합",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 1665,
+   "title": "라스트 데이즈",
+   "year": "2005",
+   "poster": "https://image.tmdb.org/t/p/w154/btbp47CHXgLhw30kyDoVfNFLB3g.jpg",
+   "why": "선호 감독 구스 반 산트 특유의 고요한 관조적 연출",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
+   "tmdbId": 797,
+   "title": "페르소나",
+   "year": "1966",
+   "poster": "https://image.tmdb.org/t/p/w154/g9StSKVA2XGlUaceyVuE3mfyguH.jpg",
+   "why": "미스터리·드라마 장르의 강렬하고 미학적인 체험",
+   "at": "2026-08-02T15:18:30.084Z"
+  },
+  {
    "tmdbId": 843,
    "title": "화양연화",
    "year": "2000",
@@ -113,6 +257,5 @@
    "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "basedOn": 1045,
- "at": "2026-08-02T08:07:38.190Z"
+ "at": "2026-08-02T15:18:30.084Z"
 }

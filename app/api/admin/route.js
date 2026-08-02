@@ -1501,31 +1501,41 @@ ${seenList}
         }
       })
     );
-    const out = [];
+    // 누적: 기존 추천을 두고 새 것만 얹는다. 이미 추천한 것(prevTmdb)과
+    // 그새 평가한 것(seenTmdb)은 제외한다 — 본 영화는 추천에서 빠진다.
+    const prev = readData("taste-recs.json", { items: [] });
+    const prevItems = (prev.items || []).filter((m) => !seenTmdb.has(String(m.tmdbId)));
+    const prevTmdb = new Set(prevItems.map((m) => String(m.tmdbId)));
+    const now = new Date().toISOString();
+
+    const added = [];
     const usedTmdb = new Set();
     for (const { r, results } of searched) {
-      if (out.length >= 20) break;
+      if (added.length >= 20) break;
       const hit = results.find((c) => {
         if (c.mediaType !== "movie") return false;
-        if (seenTmdb.has(String(c.tmdbId)) || usedTmdb.has(String(c.tmdbId))) return false;
+        const id = String(c.tmdbId);
+        if (seenTmdb.has(id) || prevTmdb.has(id) || usedTmdb.has(id)) return false;
         if (seenTitles.has(norm(c.title)) || seenTitles.has(norm(c.originalTitle))) return false;
         return !r.year || !c.year || Math.abs(+c.year - +r.year) <= 1;
       });
       if (!hit) continue;
       usedTmdb.add(String(hit.tmdbId));
-      out.push({
+      added.push({
         tmdbId: hit.tmdbId,
         title: hit.title,
         year: hit.year,
         poster: hit.thumb,
         why: String(r.why || "").trim(),
+        at: now,
       });
     }
-    if (!out.length) return Response.json({ error: "TMDB 매칭 실패 — 모두 이미 본 작품이거나 검색 실패" }, { status: 502 });
+    if (!added.length && prevItems.length === prev.items?.length)
+      return Response.json({ error: "새 추천을 찾지 못했습니다 (이미 추천했거나 본 작품)" }, { status: 502 });
 
-    const payload = { items: out, basedOn: s.count, at: new Date().toISOString() };
-    await writeData("taste-recs.json", JSON.stringify(payload, null, 1), `data: 추천 ${out.length}편`);
-    return Response.json({ count: out.length, basedOn: s.count });
+    const items = [...added, ...prevItems]; // 최신 추천이 위로
+    await writeData("taste-recs.json", JSON.stringify({ items, at: now }, null, 1), `data: 추천 +${added.length} (누적 ${items.length})`);
+    return Response.json({ added: added.length, total: items.length });
   }
 
   if (action === "watchaRatings") {

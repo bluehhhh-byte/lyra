@@ -41,7 +41,7 @@ export default function WatchaImport() {
     setReportBusy(true);
     try {
       const r = await api("tasteRecs", {});
-      setReport({ text: `추천 ${r.count}편 생성됨 (${r.basedOn}편 기준). 취향 분석 페이지에서 확인.` });
+      setReport({ text: `새 추천 ${r.added}편 추가 (누적 ${r.total}편). 추천 영화 메뉴에서 확인.` });
     } catch (e) {
       setError(e.message);
     } finally {
