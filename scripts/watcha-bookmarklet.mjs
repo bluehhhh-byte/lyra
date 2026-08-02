@@ -57,14 +57,19 @@ const json=JSON.stringify(items,null,2);
 const box=document.createElement('div');box.id='wxbox';
 box.style.cssText='position:fixed;z-index:2147483647;inset:5% 10%;background:#16161a;color:#ededf0;border:1px solid #333;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;font:14px system-ui;box-shadow:0 10px 50px rgba(0,0,0,.6)';
 const head=document.createElement('div');
-head.innerHTML='<b>'+items.length+'개 추출 완료</b> &nbsp;<span style="opacity:.7">Ctrl+C 로 복사 후 관리자 &gt; 영화 관리 &gt; 왓챠피디아 가져오기에 붙여넣기</span>';
+head.innerHTML='<b>'+items.length+'개 추출 완료</b> &nbsp;<span style="opacity:.7">복사 후 관리자 &gt; 영화 관리 &gt; 왓챠피디아 가져오기에 붙여넣기</span>';
 const ta=document.createElement('textarea');ta.value=json;
 ta.style.cssText='flex:1;width:100%;background:#0d0d0f;color:#ededf0;border:1px solid #333;border-radius:8px;padding:10px;font:12px ui-monospace,monospace;resize:none';
 const bar=document.createElement('div');bar.style.cssText='display:flex;gap:8px';
 const mk=(t,f)=>{const b=document.createElement('button');b.textContent=t;
- b.style.cssText='padding:8px 14px;border-radius:8px;border:1px solid #444;background:#222;color:#ededf0;cursor:pointer;font:14px system-ui';
+ b.style.cssText='flex:1;padding:14px;border-radius:8px;border:1px solid #444;background:#222;color:#ededf0;cursor:pointer;font:15px system-ui';
  b.onclick=f;return b;};
-bar.appendChild(mk('복사',()=>{ta.select();document.execCommand('copy');head.querySelector('b').textContent='복사됨!';}));
+// 모바일은 execCommand가 불안정 — clipboard API 우선, 실패 시 execCommand.
+const done=()=>{head.querySelector('b').textContent='복사됨! 관리자에 붙여넣으세요';};
+bar.appendChild(mk('복사',async()=>{
+ try{await navigator.clipboard.writeText(json);done();}
+ catch{ta.focus();ta.select();ta.setSelectionRange(0,json.length);
+  try{document.execCommand('copy');done();}catch{head.querySelector('b').textContent='길게 눌러 전체 선택 후 복사하세요';}}}));
 bar.appendChild(mk('파일로 저장',()=>{const el=document.createElement('a');
  el.href=URL.createObjectURL(new Blob([json],{type:'application/json'}));
  el.download='watcha-'+items.length+'.json';document.body.appendChild(el);el.click();
@@ -93,11 +98,31 @@ const doc = `# 왓챠피디아 → Lyra 가져오기 (북마클릿)
 
 ## 1. 북마크 등록 (최초 1회)
 
-크롬 \`Ctrl+Shift+O\` → 우측 상단 ⋮ → **새 북마크 추가**
+### PC (크롬/엣지)
+\`Ctrl+Shift+O\` → 우측 상단 ⋮ → **새 북마크 추가**
 - 이름: 아무거나 (예: 왓챠 내보내기)
 - URL: 맨 아래 \`javascript:\` 로 시작하는 한 줄 전체
 
-이미 등록했는데 코드를 갱신하려면 그 북마크를 **우클릭 → 수정**해서 URL만 교체한다.
+이미 등록했으면 그 북마크를 **우클릭 → 수정**해서 URL만 교체한다.
+
+### 모바일 (엣지/크롬 앱) — 콘솔이 없어 북마클릿이 유일한 방법
+모바일은 주소창에 \`javascript:\` 를 붙여넣으면 접두어가 잘리므로, **북마크로
+저장해 이름으로 실행**한다.
+
+1. 이 문서의 맨 아래 한 줄(\`javascript:…\`)을 **복사**한다.
+   - 깃허브 앱/브라우저에서 코드블록 우측의 복사 아이콘을 누르면 편하다.
+2. 아무 페이지나 **북마크에 추가**(⭐)한 뒤, 북마크 목록에서 그 항목을 **편집**:
+   - 이름: \`왓챠\` (짧게 — 곧 주소창에 이 이름을 친다)
+   - URL: 방금 복사한 \`javascript:…\` 를 **붙여넣기**
+   - 엣지: 하단 \`⋯\` → 즐겨찾기 → 항목 옆 \`⋯\` → 편집
+   - 크롬: \`⋮\` → 북마크(★) → 항목 → 편집(연필)
+3. 왓챠 별점 목록 페이지를 연다(아래 2번 주소).
+4. **주소창에 \`왓챠\` 를 치면** 저장한 북마크가 후보로 뜬다 → **탭**하면 실행된다.
+   (주소창에서 실행해야 현재 페이지에서 돈다. 북마크 목록에서 열면 안 된다.)
+5. 스크롤이 끝나면 뜨는 창의 **[복사]** 버튼 → 관리자에 붙여넣기.
+
+> 안 되면: 크롬 모바일은 북마크-이름 실행이 막힌 버전이 있다. 그럴 땐 **엣지**를
+> 쓰거나, PC에서 한 번 뽑아 두는 걸 권한다.
 
 ## 2. 반드시 "영화 별점 목록" 페이지에서 누른다
 
