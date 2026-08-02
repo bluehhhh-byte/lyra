@@ -54,8 +54,8 @@ export default async function MoviesPage({ searchParams }) {
 
   return (
     <>
-      <div className="mb-4 flex items-baseline justify-between">
-        <h1 className="text-2xl font-bold">Syno<span className="text-accent">.</span></h1>
+      {/* 헤더 로고가 이미 Syno. 라 여기 제목은 중복 — 링크만 남긴다 */}
+      <div className="mb-4 flex items-baseline justify-end">
         <Link href="/collections" className="text-sm text-muted hover:text-accent">컬렉션 →</Link>
       </div>
       <MovieBrowse
