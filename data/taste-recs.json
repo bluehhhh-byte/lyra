@@ -1,6 +1,134 @@
 {
  "items": [
   {
+   "tmdbId": 14016,
+   "title": "매드 디텍티브",
+   "year": "2007",
+   "poster": "https://image.tmdb.org/t/p/w154/gj21Ib4baLVwGG89rcMH55u8vcd.jpg",
+   "why": "미스터리와 판타지가 결합된 홍콩 범죄 걸작",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 2463,
+   "title": "암전",
+   "year": "1999",
+   "poster": "https://image.tmdb.org/t/p/w154/5F5NSKdZCwXvB8V5s9juSOI02uL.jpg",
+   "why": "운명론적 정서가 돋보이는 홍콩 범죄 스릴러",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 11020,
+   "title": "행잉록에서의 소풍",
+   "year": "1975",
+   "poster": "https://image.tmdb.org/t/p/w154/7BAXwmFN4pZDNb9N6kzmAAwdssi.jpg",
+   "why": "피터 위어 특유의 기묘하고 아름다운 미스터리",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 476,
+   "title": "드럭스토어 카우보이",
+   "year": "1989",
+   "poster": "https://image.tmdb.org/t/p/w154/nxITSEh80jvMEGGsU8RgCzLL340.jpg",
+   "why": "구스 반 산트 특유의 방황하는 아웃사이더",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 468,
+   "title": "아이다호",
+   "year": "1991",
+   "poster": "https://image.tmdb.org/t/p/w154/gyPnSltBXEoXl1Luic6QiEZdmMG.jpg",
+   "why": "구스 반 산트의 서정적이고 몽환적인 청춘극",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 577,
+   "title": "투 다이 포",
+   "year": "1995",
+   "poster": "https://image.tmdb.org/t/p/w154/kjoFlJQbUqoP68HUlj88PhUDshe.jpg",
+   "why": "구스 반 산트가 그리는 서늘한 블랙 유머 범죄",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 8937,
+   "title": "도쿄 소나타",
+   "year": "2008",
+   "poster": "https://image.tmdb.org/t/p/w154/7QxxH5jEhwiPTc3RZcdtYXQ9gXK.jpg",
+   "why": "가족의 해체를 다룬 깊은 울림의 일본 드라마",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 15080,
+   "title": "추억은 방울방울",
+   "year": "1991",
+   "poster": "https://image.tmdb.org/t/p/w154/v4bzHTNiujvi2gDLI7oCBfXUVsE.jpg",
+   "why": "90년대 지브리의 섬세한 감성과 일상 드라마",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 64131,
+   "title": "나쁜 피",
+   "year": "1986",
+   "poster": "https://image.tmdb.org/t/p/w154/yL6l1ETOvMO3X3RTFVBZbuTHENy.jpg",
+   "why": "80년대 프랑스 영화 특유의 감각적인 범죄극",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 41804,
+   "title": "세상의 모든 아침",
+   "year": "1991",
+   "poster": "https://image.tmdb.org/t/p/w154/4HD0mpf8cHP22vG37umvUshfmV9.jpg",
+   "why": "90년대 프랑스 클래식 음악과 깊은 인생 드라마",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 11159,
+   "title": "비밀과 거짓말",
+   "year": "1996",
+   "poster": "https://image.tmdb.org/t/p/w154/zQBuRQ3hrLhkEsXcxteUxuxLrvs.jpg",
+   "why": "90년대 영국 영화 특유의 깊은 인물 묘사",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 1277488,
+   "title": "배낭을 멘 소년",
+   "year": "2006",
+   "poster": "https://image.tmdb.org/t/p/w154/4fSrqQJAG0HCMHw4DZpmBKwIFdU.jpg",
+   "why": "영국 인디 영화의 묵직한 몰입감과 인물 드라마",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 10697,
+   "title": "타인의 취향",
+   "year": "2000",
+   "poster": "https://image.tmdb.org/t/p/w154/3KOOveu4illXEN8T1Fw2RtMljQO.jpg",
+   "why": "프랑스 특유의 위트와 인간관계에 대한 드라마",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 20532,
+   "title": "산쇼다유",
+   "year": "1954",
+   "poster": "https://image.tmdb.org/t/p/w154/hoOyEvuGKw8CVXTCX6PPYlwrAaZ.jpg",
+   "why": "50년대 일본 거장의 비극적이면서도 숭고한 드라마",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 3112,
+   "title": "사냥꾼의 밤",
+   "year": "1955",
+   "poster": "https://image.tmdb.org/t/p/w154/shhtqMs6BEABnvPIRnEx30zKydM.jpg",
+   "why": "50년대 판타지적 연출이 빛나는 서스펜스 미스터리",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
+   "tmdbId": 40886,
+   "title": "피크닉",
+   "year": "1996",
+   "poster": "https://image.tmdb.org/t/p/w154/ir10NT0QBycWfUeepGXp7Hn4zCO.jpg",
+   "why": "90년대 일본 특유의 몽환적이고 위태로운 청춘극",
+   "at": "2026-08-02T23:52:31.445Z"
+  },
+  {
    "tmdbId": 36095,
    "title": "큐어",
    "year": "1997",
@@ -257,5 +385,5 @@
    "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "at": "2026-08-02T15:18:30.084Z"
+ "at": "2026-08-02T23:52:31.445Z"
 }
