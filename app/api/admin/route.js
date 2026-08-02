@@ -20,7 +20,9 @@ import { summarizeTaste } from "../../../lib/taste-core";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
-export const maxDuration = 30;
+// Vercel hobby 상한. Gemini(대형 프롬프트 + 재시도 백오프) + TMDB 검색이
+// 30초를 넘겨 FUNCTION_INVOCATION_TIMEOUT이 났다 — 60으로 올린다.
+export const maxDuration = 60;
 
 // "-latest" alias, not a pinned version — a hardcoded gemini-2.5-flash died the
 // day the API key was reissued ("no longer available to new users"). The alias
@@ -1456,22 +1458,27 @@ ${s.lines}`
     const norm = (t) => (t || "").toLowerCase().replace(/[\s:·・!?,.'"()\[\]/-]/g, "");
     const seenTitles = new Set(rated.map((m) => norm(m.title_ko || m.title)).concat(rated.map((m) => norm(m.title))));
     const seenTmdb = new Set(rated.map((m) => String(m.tmdbId)).filter(Boolean));
-    // 회피 목록은 전체 관람작(제목만). 상위 몇 편만 주면 나머지 수백 편과 겹쳐
-    // 추천이 대량 탈락한다. flash 컨텍스트가 넉넉하니 다 넣는다.
-    const seenList = rated.map((m) => m.title_ko || m.title).join(", ");
+    // 회피 목록: 전체 1045편을 넣으면 프롬프트가 커져 Gemini가 느려지고
+    // 타임아웃 위험이 커진다. 별점 높은 순 상위 300편만 준다 — 취향에 맞는
+    // 추천일수록 이 상위권과 겹치고, 나머지 중복은 TMDB tmdbId·제목 필터가 잡는다.
+    const seenList = [...rated]
+      .sort((a, b) => b.rating - a.rating)
+      .slice(0, 300)
+      .map((m) => m.title_ko || m.title)
+      .join(", ");
 
     const raw = await geminiText(
       key,
       `아래는 한 사람의 영화 취향 집계다.
 ${s.lines}
-이 취향에 맞으면서 '아직 안 본' 영화 28편을 추천하라. JSON 배열로만:
-[{"title":"영화 제목","year":"2019","why":"한 문장 추천 이유"}]
+이 취향에 맞으면서 '아직 안 본' 영화 32편을 추천하라. JSON 배열로만:
+[{"title":"영화 제목","year":"2019","why":"추천 이유"}]
 규칙:
 - 취향의 편애 지점(높은 평균 별점을 준 국가·장르·감독)을 파고들되, 뻔한 대흥행작·프랜차이즈는 피하고 발견의 재미가 있는 작품으로
-- 아래는 이 사람이 이미 본 ${rated.length}편이다. 이 중 어느 것도 넣지 마라:
+- 이 사람은 영화를 많이 본다. 아래는 그중 높게 평가한 것들이니 이것도, 이와 비슷하게 유명한 것도 피하고 덜 알려진 발견작을 골라라:
 ${seenList}
-- title은 한국 개봉명(없으면 원제). why는 취향과 연결한 한국어 한 문장
-- 28편(TMDB 매칭 실패분 여유분). 순수 JSON만 출력`,
+- title은 한국 개봉명(없으면 원제). why는 취향과 연결한 한국어 40자 이내 한 구절
+- 32편(TMDB 매칭·중복 탈락분 여유분). 순수 JSON만 출력`,
       true
     );
     let recs;
