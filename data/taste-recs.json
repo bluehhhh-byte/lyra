@@ -1,6 +1,118 @@
 {
  "items": [
   {
+   "tmdbId": 95482,
+   "title": "초록물고기",
+   "year": "1997",
+   "poster": "https://image.tmdb.org/t/p/w154/zM4l4k6rTrMjuRfg43qd8lKg4mG.jpg",
+   "why": "선호 감독 이창동의 데뷔작이자 깊은 울림의 한국 범죄 드라마",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 10835,
+   "title": "첩혈쌍웅",
+   "year": "1989",
+   "poster": "https://image.tmdb.org/t/p/w154/nmg1Dzipm1FrkkHT9VP6UkvwUu3.jpg",
+   "why": "선호하는 80년대 홍콩 영화 특유의 진한 비장미와 정서",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 827,
+   "title": "디아볼릭",
+   "year": "1955",
+   "poster": "https://image.tmdb.org/t/p/w154/6wmNcHjXnBEhlAvsUUR6ytdLKHO.jpg",
+   "why": "선호 연대인 1950년대 프랑스의 정통 미스터리 명작",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 635,
+   "title": "엔젤 하트",
+   "year": "1987",
+   "poster": "https://image.tmdb.org/t/p/w154/6qlfnohud4p1MjupJ20fotk3tgG.jpg",
+   "why": "선호하는 80년대 연대와 미스터리·판타지 결합",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 2666,
+   "title": "다크 시티",
+   "year": "1998",
+   "poster": "https://image.tmdb.org/t/p/w154/b4c1hDBjfpVsjDFOszCiJQtibYw.jpg",
+   "why": "90년대 제작된 판타지 미스터리 장르의 숨은 수작",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 1662520,
+   "title": "화이트 엘리펀트",
+   "year": "",
+   "poster": "https://image.tmdb.org/t/p/w154/4j34llIeBATgGo2FB67slzz3L5I.jpg",
+   "why": "선호 감독 구스 반 산트의 차갑고 정교한 연출력",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 27585,
+   "title": "래빗 홀",
+   "year": "2010",
+   "poster": "https://image.tmdb.org/t/p/w154/ml4BIt8VeYg8DSD96hL75ZPm9ln.jpg",
+   "why": "선호 감독 존 카메론 미첼의 섬세한 드라마 연출",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 11832,
+   "title": "바베트의 만찬",
+   "year": "1987",
+   "poster": "https://image.tmdb.org/t/p/w154/lHYu6Rxc0zAU3FiKsqCy5SZPRAj.jpg",
+   "why": "선호하는 80년대 연대의 따뜻하고 깊은 드라마",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 36266,
+   "title": "씨클로",
+   "year": "1995",
+   "poster": "https://image.tmdb.org/t/p/w154/mdOsnSVTLwHMEH1juOLMiwXcO5o.jpg",
+   "why": "90년대에 제작된 깊은 정서의 범죄 드라마 수작",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 11010,
+   "title": "일 포스티노",
+   "year": "1994",
+   "poster": "https://image.tmdb.org/t/p/w154/ac9e8SgwxVRNEStAhytaeaR5URT.jpg",
+   "why": "90년대 고전으로 선호 장르 드라마의 매력이 가득한 작품",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 38047,
+   "title": "유레카",
+   "year": "2001",
+   "poster": "https://image.tmdb.org/t/p/w154/vEjpjEHJtoTvJukTUbCTU0RSZh9.jpg",
+   "why": "선호 국가 일본 특유의 미스터리와 상처의 치유 드라마",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 3933,
+   "title": "유령 신부",
+   "year": "2005",
+   "poster": "https://image.tmdb.org/t/p/w154/dNFskiyB2AGpKJCsh6qviPN03NQ.jpg",
+   "why": "선호 장르인 판타지 애니메이션의 기괴하고 매력적인 세계",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 13384,
+   "title": "케스",
+   "year": "1970",
+   "poster": "https://image.tmdb.org/t/p/w154/r1FMq75irhsQBVGjXhPU4xA9SDo.jpg",
+   "why": "선호 국가 영국의 깊은 울림을 주는 현실적인 드라마",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
+   "tmdbId": 11075,
+   "title": "오디션",
+   "year": "2000",
+   "poster": "https://image.tmdb.org/t/p/w154/zbeBfv9NW3XOzwZ4rFobXH6jqWC.jpg",
+   "why": "선호 국가 일본의 90년대 미스터리 스릴러",
+   "at": "2026-08-03T09:46:48.660Z"
+  },
+  {
    "tmdbId": 14016,
    "title": "매드 디텍티브",
    "year": "2007",
@@ -385,5 +497,5 @@
    "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "at": "2026-08-02T23:52:31.445Z"
+ "at": "2026-08-03T09:46:48.660Z"
 }
