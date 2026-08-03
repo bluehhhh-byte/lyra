@@ -4,7 +4,7 @@ title_ko: 언젠가 어딘가
 artist: Jungle
 artist_ko: 
 album: Sunshine
-year: 
+year: 2026
 genre: Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0e/79/88/0e79883e-29d9-71f5-4ddd-b183ea133123/820200658401.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/50/09/8c/50098ca6-eed0-29f4-d67a-167acb9b9244/mzaf_17408153944004513049.plus.aac.p.m4a
