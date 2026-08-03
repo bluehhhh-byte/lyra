@@ -1,6 +1,94 @@
 {
  "items": [
   {
+   "tmdbId": 43636,
+   "title": "동방삼협",
+   "year": "1993",
+   "poster": "https://image.tmdb.org/t/p/w154/tEzuv5dMY7FfOUICcue4GfqlF2k.jpg",
+   "why": "90년대 홍콩 판타지 누아르 액션의 색다른 매력을 한껏 살린 수작",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 4485,
+   "title": "디바",
+   "year": "1981",
+   "poster": "https://image.tmdb.org/t/p/w154/toprlge6vv88sueBUm9m6TnccBD.jpg",
+   "why": "80년대 프랑스 누벨이마주 스타일의 탐미적인 범죄 스릴러",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 9905,
+   "title": "쉘로우 그레이브",
+   "year": "1994",
+   "poster": "https://image.tmdb.org/t/p/w154/mQRIdnJwLyzRJMve7IjRA6lEmuI.jpg",
+   "why": "90년대 영국 특유의 블랙유머가 돋보이는 팽팽한 범죄물",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 823,
+   "title": "인랑",
+   "year": "1999",
+   "poster": "https://image.tmdb.org/t/p/w154/vJmDFZnB4NxOjVJiJhBS2hPs1cl.jpg",
+   "why": "90년대 일본 애니메이션의 묵직한 서사와 미스터리한 분위기",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 39693,
+   "title": "세월신투",
+   "year": "2010",
+   "poster": "https://image.tmdb.org/t/p/w154/wEAfMDLSOHISjlWD9CNZPzx5iH9.jpg",
+   "why": "홍콩 영화 특유의 진한 향수와 잔잔한 감동을 주는 가족 드라마",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 1455375,
+   "title": "엘리펀트걸",
+   "year": "",
+   "poster": "",
+   "why": "구스 반 산트 감독 특유의 건조하면서도 강렬한 연출력",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 406,
+   "title": "증오",
+   "year": "1995",
+   "poster": "https://image.tmdb.org/t/p/w154/gfdhSzPyAWtAizqs4ytc0MwOlQg.jpg",
+   "why": "90년대 프랑스 범죄 드라마가 선사하는 폭발적인 에너지",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 993,
+   "title": "발자국",
+   "year": "1972",
+   "poster": "https://image.tmdb.org/t/p/w154/jAREYLUnYGwPjbQr0vs1s38QLkH.jpg",
+   "why": "영국식 지적 유희와 두 인물의 숨막히는 미스터리 게임",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 31417,
+   "title": "얼굴 없는 눈",
+   "year": "1960",
+   "poster": "https://image.tmdb.org/t/p/w154/wDXPNt695ZvQ8GA9pOCL3W9Ss51.jpg",
+   "why": "프랑스 잔혹 미스터리 판타지 고전의 아름답고 기괴한 분위기",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 20043,
+   "title": "왕립우주군: 오네아미스의 날개",
+   "year": "1987",
+   "poster": "https://image.tmdb.org/t/p/w154/wcFILjM0fLKCLFTFc4n1siGZk2d.jpg",
+   "why": "80년대 일본 애니메이션 작화와 장인 정신의 집대성",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
+   "tmdbId": 45507,
+   "title": "지존무상",
+   "year": "1989",
+   "poster": "https://image.tmdb.org/t/p/w154/8EtZzVsQlBXslSKpkpXJtwPjVkt.jpg",
+   "why": "80년대 홍콩 범죄 드라마 특유의 비장미와 강렬한 서사",
+   "at": "2026-08-03T23:37:58.083Z"
+  },
+  {
    "tmdbId": 95482,
    "title": "초록물고기",
    "year": "1997",
@@ -497,5 +585,5 @@
    "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "at": "2026-08-03T09:46:48.660Z"
+ "at": "2026-08-03T23:37:58.083Z"
 }
