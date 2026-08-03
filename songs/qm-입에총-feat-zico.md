@@ -45,7 +45,7 @@ comment: 자신을 비하하고 한계를 정하려는 타인들의 지적에 �
 > Speaking with selfish authority, "I only said that for your sake."
 장난이었다, 말하길래 끊어버린 폰
 > He claimed it was just a joke, so I hung up on him.
-7년째 살아남은 뒤에 다시 만나 면
+7년째 살아남은 뒤에 다시 만나면
 > After surviving for seven years, when I meet you face to face again,
 당신에게 할말이 아주 많이 남아있어
 > I still have so much left to say to you.
