@@ -1,6 +1,6 @@
 ---
 title: Someday, Somewhere
-title_ko: 언젠가, 어딘가에서
+title_ko: 언젠가 어딘가
 artist: Jungle
 artist_ko: 
 album: Sunshine
@@ -12,11 +12,11 @@ trackId: 1886730726
 duration: 152
 lang: en
 tags: [영미, Funk]
-keywords: [조화, 기억, 길, 언젠가]
-emotion: 그리움
+keywords: [언젠가, 어딘가, 조화, 길]
+emotion: 희망
 date: 2026-08-03
 published: 2026-08-03T09:45:22.301Z
-comment: 헤어진 연인과 언젠가 다시 만나 완벽한 조화를 이루길 바라는 아련한 기대감을 담은 곡이다. 정글 특유의 감각적인 그루브 위로 재회에 대한 희망과 아련함이 은은하게 번진다.
+comment: 멀어진 관계 속에서도 언젠가 다시 완벽한 조화를 이룰 것이라는 기대를 세련된 펑크 리듬에 실어 담담하게 노래한다. 이별의 아쉬움과 미래에 대한 은은한 희망이 공존하며 특유의 몽환적인 분위기를 자아낸다.
 ---
 [Verse 1]
 Didn't really know what to say
