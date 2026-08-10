@@ -16,8 +16,7 @@ const PRIMARY = [
 const MORE = [
   ["/watched", "평가한 영화"],
   ["/watched/taste", "취향 분석"],
-  ["/collections", "컬렉션"],
-  ["/watchlist", "워치리스트"],
+  ["/recommendations", "추천 영화"],
   ["/people", "인물"],
   ["/recap", "결산"],
   ["/stats", "통계"],
@@ -31,8 +30,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const inMovies =
     pathname?.startsWith("/movies") ||
-    pathname?.startsWith("/collections") ||
-    pathname?.startsWith("/watchlist") ||
+    pathname?.startsWith("/recommendations") ||
+    pathname?.startsWith("/watched") ||
     pathname?.startsWith("/people") ||
     pathname?.startsWith("/admin/movie");
 

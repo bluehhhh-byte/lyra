@@ -64,12 +64,6 @@ function relatedMovies(movie, all) {
     .map((x) => x.m);
 }
 
-const WATCH_STATUS = {
-  wishlist: "보고 싶음",
-  watching: "보는 중",
-  watched: "감상 완료",
-  dropped: "중단",
-};
 
 export default async function MoviePage({ params }) {
   const { slug } = await params;
@@ -124,12 +118,6 @@ export default async function MoviePage({ params }) {
                 <Stars value={movie.rating} />
               </div>
             )}
-            <p className="mt-2 text-xs text-muted">
-              {WATCH_STATUS[movie.watchStatus]}
-              {movie.platform ? ` · ${movie.platform}` : ""}
-              {movie.watchStatus === "watching" && movie.episode ? ` · ${movie.episode}화` : ""}
-              {movie.watched ? ` · ${movie.watched}` : movie.started ? ` · ${movie.started} 시작` : ""}
-            </p>
             <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
               {/* dead <span>s until the combined tag pages existed — now a year
                   tag walks to that year's songs AND films */}

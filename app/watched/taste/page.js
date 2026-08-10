@@ -8,11 +8,18 @@ export const metadata = {
   description: "별점 매긴 영화들의 국가·장르·감독·배우·연대 취향",
 };
 
-function Bar({ label, n, avg, max, mean }) {
+const personLink = (name) => `/people/${encodeURIComponent(name)}`;
+
+function Bar({ label, n, avg, max, mean, link }) {
   const delta = avg - mean;
+  const labelEl = link ? (
+    <Link href={link} className="w-28 shrink-0 truncate hover:text-accent sm:w-36">{label}</Link>
+  ) : (
+    <span className="w-28 shrink-0 truncate sm:w-36">{label}</span>
+  );
   return (
     <div className="flex items-center gap-3 py-1 text-sm">
-      <span className="w-28 shrink-0 truncate sm:w-36">{label}</span>
+      {labelEl}
       <div className="relative h-4 flex-1 overflow-hidden rounded bg-surface">
         <div className="h-full rounded bg-accent/70" style={{ width: `${(n / max) * 100}%` }} />
       </div>
@@ -28,7 +35,7 @@ function Bar({ label, n, avg, max, mean }) {
   );
 }
 
-function CountSection({ title, rows, mean }) {
+function CountSection({ title, rows, mean, link }) {
   if (!rows.length) return null;
   const max = Math.max(...rows.map((r) => r.n), 1);
   return (
@@ -36,7 +43,7 @@ function CountSection({ title, rows, mean }) {
       <h2 className="mb-3 text-sm font-semibold text-muted">{title}</h2>
       <div className="divide-y divide-line/50">
         {rows.map((r) => (
-          <Bar key={r.k} label={r.k} n={r.n} avg={r.avg} max={max} mean={mean} />
+          <Bar key={r.k} label={r.k} n={r.n} avg={r.avg} max={max} mean={mean} link={link?.(r.k)} />
         ))}
       </div>
     </section>
@@ -44,23 +51,26 @@ function CountSection({ title, rows, mean }) {
 }
 
 // 편애/기피 — 평균 별점이 전체 평균에서 얼마나 벗어났나
-function PrefSection({ title, high, low, mean }) {
+function PrefSection({ title, high, low, mean, link }) {
   if (!high.length && !low.length) return null;
-  const chip = (r, tone) => (
-    <span
-      key={r.k}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${
-        tone === "up"
-          ? "border-green-500/40 text-green-400"
-          : "border-red-500/40 text-red-400 dark:text-red-400"
-      }`}
-    >
-      {r.k}
-      <span className="tabular-nums opacity-70">
-        ★{r.avg.toFixed(2)} · {r.n}
-      </span>
-    </span>
-  );
+  const chip = (r, tone) => {
+    const cls = `inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${
+      tone === "up"
+        ? "border-green-500/40 text-green-400"
+        : "border-red-500/40 text-red-400 dark:text-red-400"
+    }`;
+    const inner = (
+      <>
+        {r.k}
+        <span className="tabular-nums opacity-70">★{r.avg.toFixed(2)} · {r.n}</span>
+      </>
+    );
+    return link ? (
+      <Link key={r.k} href={link(r.k)} className={`${cls} hover:brightness-125`}>{inner}</Link>
+    ) : (
+      <span key={r.k} className={cls}>{inner}</span>
+    );
+  };
   return (
     <section className="mb-10">
       <h2 className="mb-1 text-sm font-semibold text-muted">{title}</h2>
@@ -201,14 +211,14 @@ export default function TastePage() {
       <CountSection title="장르별" rows={genre.byCount} mean={mean} />
       <CountSection title="연대별" rows={decade.byCount} mean={mean} />
       <CountSection title="상영시간" rows={runtime.byCount} mean={mean} />
-      <CountSection title="많이 본 감독" rows={director.byCount} mean={mean} />
-      <CountSection title="많이 본 배우" rows={actor.byCount} mean={mean} />
+      <CountSection title="많이 본 감독" rows={director.byCount} mean={mean} link={personLink} />
+      <CountSection title="많이 본 배우" rows={actor.byCount} mean={mean} link={personLink} />
 
       <hr className="my-12 border-line" />
       <h2 className="mb-6 text-lg font-bold">편애와 기피</h2>
       <PrefSection title="장르" high={genre.byAvg} low={genre.byLow} mean={mean} />
       <PrefSection title="국가" high={country.byAvg} low={country.byLow} mean={mean} />
-      <PrefSection title="감독" high={director.byAvg} low={director.byLow} mean={mean} />
+      <PrefSection title="감독" high={director.byAvg} low={director.byLow} mean={mean} link={personLink} />
       <PrefSection title="연대" high={decade.byAvg} low={decade.byLow} mean={mean} />
     </>
   );

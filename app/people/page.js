@@ -8,17 +8,19 @@ export const metadata = {
 
 export default function PeoplePage() {
   const people = getAllPeople();
-  const directors = people.filter((person) => person.directed.length);
-  const actors = people.filter((person) => person.acted.length);
+  // 데이터셋까지 합치면 인물이 수천 명 — 여러 편 겹치는 사람만 인덱스에 낸다.
+  // (개별 인물 페이지는 검색·작품 링크로 여전히 닿는다)
+  const directors = people.filter((person) => person.directed.length >= 2);
+  const actors = people.filter((person) => person.acted.length >= 3);
 
   return (
     <>
       <header className="mb-10">
         <h1 className="text-2xl font-bold">인물</h1>
-        <p className="mt-1 text-sm text-muted">{people.length}명의 감독과 배우</p>
+        <p className="mt-1 text-sm text-muted">여러 작품에서 만난 감독과 배우</p>
       </header>
-      <PeopleSection title="감독" people={directors} />
-      <PeopleSection title="배우" people={actors} />
+      <PeopleSection title={`감독 (${directors.length})`} people={directors} />
+      <PeopleSection title={`배우 (${actors.length})`} people={actors} />
     </>
   );
 }

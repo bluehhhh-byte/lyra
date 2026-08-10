@@ -1,6 +1,5 @@
 import { getAllSongs } from "../../../lib/songs";
 import { getAllMovies } from "../../../lib/movies";
-import { getAllCollections } from "../../../lib/collections";
 import { getAllPeople } from "../../../lib/people";
 
 export const dynamic = "force-dynamic";
@@ -45,14 +44,6 @@ export async function GET(request) {
       image: movie.poster,
     }));
 
-  const collections = getAllCollections()
-    .filter((collection) => includes(collection.title, query) || includes(collection.description, query))
-    .slice(0, 4)
-    .map((collection) => ({
-      href: `/collections/${collection.slug}`,
-      title: collection.title,
-      subtitle: `${collection.movieSlugs.length}편의 컬렉션`,
-    }));
 
   const people = getAllPeople()
     .filter((person) => includes(person.name, query))
@@ -67,7 +58,6 @@ export async function GET(request) {
     groups: [
       ["음악", songs],
       ["영화·드라마", movies],
-      ["컬렉션", collections],
       ["인물", people],
     ].filter(([, items]) => items.length),
   });

@@ -5,9 +5,6 @@ import {
   readMovie,
   writeMovie,
   deleteMovie,
-  readCollection,
-  writeCollection,
-  deleteCollection,
   writeData,
   readData,
 } from "../../../lib/store";
@@ -1310,8 +1307,7 @@ ${listed}`,
   if (action === "movieSave") {
     const {
       title, titleKo, mediaType, director, directorKo, cast, year, runtime,
-      rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis,
-      status, platform, episode, started, watched, bodyKind,
+      rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis, bodyKind,
     } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
@@ -1321,11 +1317,6 @@ ${listed}`,
 title: ${title}
 title_ko: ${titleKo || title}
 media: ${mediaType === "tv" ? "tv" : "movie"}
-status: ${["wishlist", "watching", "watched", "dropped"].includes(status) ? status : "watched"}
-platform: ${platform || ""}
-episode: ${Number(episode) || ""}
-started: ${started || ""}
-watched: ${watched || ""}
 director: ${director || ""}
 director_ko: ${directorKo || ""}
 cast: ${cast || ""}
@@ -1664,76 +1655,8 @@ ${(item.comment || "").trim()}
     return Response.json({ rating: rounded });
   }
 
-  if (action === "movieUpdateWatch") {
-    const movie = await readMovie(body.slug);
-    if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
-    const status = ["wishlist", "watching", "watched", "dropped"].includes(body.status)
-      ? body.status
-      : "watched";
-    const clean = (value) => String(value || "").replace(/\r?\n/g, " ").trim();
-    const episode = Math.max(0, Math.floor(Number(body.episode) || 0));
-    let out = movie.raw.replace(/\r\n/g, "\n");
-    out = setField(out, "status", status, "media");
-    out = setField(out, "platform", clean(body.platform), "status");
-    out = setField(out, "episode", episode ? String(episode) : "", "platform");
-    out = setField(out, "started", clean(body.started), "episode");
-    out = setField(out, "watched", clean(body.watched), "started");
-    await writeMovie(body.slug, out, `edit(movie): update watch status — ${body.slug}`);
-    return Response.json({
-      status,
-      platform: clean(body.platform),
-      episode,
-      started: clean(body.started),
-      watched: clean(body.watched),
-    });
-  }
-
   if (action === "movieDelete") {
     await deleteMovie(body.slug);
-    return Response.json({ ok: true });
-  }
-
-  if (action === "collectionSave") {
-    const title = String(body.title || "").trim();
-    if (!title) return Response.json({ error: "컬렉션 제목을 입력하세요" }, { status: 400 });
-    const cleanSlug = (value) =>
-      String(value || "")
-        .toLowerCase()
-        .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
-        .replace(/^-|-$/g, "");
-    const originalSlug = cleanSlug(body.originalSlug);
-    const slug = originalSlug || cleanSlug(title) || `collection-${Date.now()}`;
-    const movieSlugs = [...new Set(
-      (Array.isArray(body.movieSlugs) ? body.movieSlugs : [])
-        .map((value) => cleanSlug(value))
-        .filter(Boolean)
-    )];
-    if (!movieSlugs.length)
-      return Response.json({ error: "작품을 한 편 이상 선택하세요" }, { status: 400 });
-
-    const existing = originalSlug ? await readCollection(originalSlug) : null;
-    const now = new Date().toISOString();
-    const date = existing?.raw.match(/^date:\s*(.+)$/m)?.[1]?.trim() || now.slice(0, 10);
-    const cleanText = (value) => String(value || "").replace(/\r?\n/g, " ").trim();
-    const raw = [
-      "---",
-      `title: ${cleanText(title)}`,
-      `description: ${cleanText(body.description)}`,
-      `visibility: ${body.visibility === "private" ? "private" : "public"}`,
-      `date: ${date}`,
-      `updated: ${now}`,
-      "---",
-      ...movieSlugs.map((movieSlug) => `- ${movieSlug}`),
-      "",
-    ].join("\n");
-    await writeCollection(slug, raw, `${originalSlug ? "edit" : "add"}(collection): ${slug}`);
-    return Response.json({ ok: true, slug });
-  }
-
-  if (action === "collectionDelete") {
-    const slug = String(body.slug || "").replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯-]/gi, "");
-    if (!slug) return Response.json({ error: "컬렉션을 찾을 수 없음" }, { status: 400 });
-    await deleteCollection(slug, `delete(collection): ${slug}`);
     return Response.json({ ok: true });
   }
 
