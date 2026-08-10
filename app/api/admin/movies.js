@@ -2,8 +2,7 @@
 import { readMovie, writeMovie, deleteMovie } from "../../../lib/store";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 import { capGenre } from "../../../lib/genre";
-import { geminiText } from "../../../lib/admin/gemini";
-import { movieComment } from "../../../lib/admin/movie-meta";
+import { movieMetaGen } from "../../../lib/admin/movie-meta";
 import { FM, fmValue, setField, parseTags } from "../../../lib/admin/frontmatter";
 import { kstToday } from "../../../lib/kst";
 
@@ -17,26 +16,17 @@ export async function handleMovies(action, body) {
   }
 
   // Polish the auto-loaded TMDB synopsis into clean 줄거리 prose and draft a
-  // personal comment. Country·genre·year tags are deterministic.
+  // personal comment — one JSON Gemini call for both (free-tier RPM is the
+  // bottleneck). Country·genre·year tags are deterministic.
   if (action === "movieMeta") {
     const key = process.env.GEMINI_API_KEY;
     const { title, director, mediaType, synopsis, country, genre, year, rating, tmdbRating, tmdbVotes } = body;
-    const kind = mediaType === "tv" ? "드라마" : "영화";
     let polished = (synopsis || "").trim();
     let comment = "";
     if (key) {
-      if (polished) {
-        const p = (
-          await geminiText(
-            key,
-            `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
-          )
-        )
-          .replace(/^["']|["']$/g, "")
-          .trim();
-        if (p) polished = p;
-      }
-      comment = await movieComment({ key, title, director, mediaType, rating, synopsis: polished, tmdbRating, tmdbVotes });
+      const g = await movieMetaGen({ key, title, director, mediaType, rating, synopsis: polished, tmdbRating, tmdbVotes });
+      if (g.synopsis) polished = g.synopsis;
+      comment = g.comment;
       if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
     }
     const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);
@@ -92,7 +82,9 @@ ${(synopsis || "").trim()}
     const director = fmValue(fm, "director_ko") || fmValue(fm, "director");
     const mediaType = fmValue(fm, "media") || "movie";
     const rating = fmValue(fm, "rating");
-    const comment = await movieComment({ key, title, director, mediaType, rating, synopsis: bodyText });
+    // 줄거리 정돈 + 코멘트를 한 번에 — regenComment는 synopsis 결과만 버린다
+    const g = await movieMetaGen({ key, title, director, mediaType, rating, synopsis: bodyText });
+    const comment = g.comment;
     if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
 
     let out = setField(raw, "comment", comment, "published");
@@ -100,20 +92,9 @@ ${(synopsis || "").trim()}
 
     if (action === "movieRegenMeta") {
       let polished = bodyText.trim();
-      if (polished) {
-        const kind = mediaType === "tv" ? "드라마" : "영화";
-        const p = (
-          await geminiText(
-            key,
-            `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
-          )
-        )
-          .replace(/^["']|["']$/g, "")
-          .trim();
-        if (p) {
-          polished = p;
-          updated.push("synopsis");
-        }
+      if (g.synopsis) {
+        polished = g.synopsis;
+        updated.push("synopsis");
       }
       const tags = [
         parseTags(fmValue(fm, "tags"))[0] || "기타",

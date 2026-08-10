@@ -103,8 +103,10 @@ youtube_id: dQw4w9WgXcQ         # (선택) 영상 ID 직접 지정 — 검색 �
 - **쓰기 백엔드** (`lib/store.js`): Vercel 서버리스는 파일시스템이 읽기 전용이므로,
   온라인에서 곡 저장/수정/삭제는 **GitHub Contents API 커밋**으로 처리 → 커밋이 재배포를 트리거.
   로컬 dev는 `fs`로 직접 쓰기(즉시 반영). `GITHUB_TOKEN`·`GITHUB_REPO`로 분기.
-- **Gemini 호출 통합**: 태그·제목·독음·코멘트·키워드·감정을 1회 JSON 호출로 묶어 무료 티어 rate limit 회피.
-  일괄 작업은 곡당 ~4s 간격(순차)으로 분당 한도(RPM) 회피, 일일 한도 소진 시엔 다음날.
+- **Gemini 호출 통합**: 곡은 태그·제목·독음·코멘트·키워드·감정을 1회 JSON 호출로, 영화도
+  줄거리 정돈+코멘트를 1회 JSON 호출로 묶어 무료 티어 rate limit 회피.
+  일괄 작업은 곡당 ~7s 간격(순차)으로 분당 한도(~10 RPM) 아래 유지, 일일 한도 소진 시엔 다음날.
+  한도가 계속 모자라면 `GEMINI_MODEL=gemini-flash-lite-latest`(무료 한도가 더 큼)로 전환.
 - **Gemini 모델**: `GEMINI_MODEL` 환경변수, 기본 `gemini-flash-latest` **별칭**. 버전을 하드코딩하면
   API 키 재발급 시 죽는다("no longer available to new users") — 별칭이 현재 flash를 따라간다.
 - **키워드·감정 신뢰 경계** (`lib/keywords.js`): Gemini가 값을 정하므로 파서가 방어선. `emotion`은

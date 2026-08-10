@@ -18,11 +18,11 @@ async function api(action, body) {
   return data;
 }
 
-// Space bulk Gemini calls out — the free tier's per-minute limit (RPM) is the
-// usual cause of empty responses: back-to-back calls burst past it. A gap
-// between songs keeps a whole-collection run under the limit. regenMeta fires
-// ~2 Gemini calls per song, so ~4s/song stays comfortably below ~10 RPM.
-const BULK_GAP_MS = 4000;
+// Space bulk Gemini calls out — the free tier's per-minute limit (~10 RPM) is
+// the usual cause of empty responses: back-to-back calls burst past it.
+// 4s/song proved too tight in practice (15/min → 429 storms mid-run); 7s keeps
+// a whole-collection run at ~8.5/min, under the limit with headroom.
+const BULK_GAP_MS = 7000;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // Per-song maintenance: regenerate the comment (음슴체), or add a translation to a
