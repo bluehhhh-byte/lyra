@@ -4,6 +4,7 @@
 import fs from "fs";
 import path from "path";
 import { kstToday } from "../lib/kst.js";
+import { GEMINI_MODEL } from "../lib/admin/gemini.js";
 
 const query = process.argv.slice(2).join(" ").trim();
 const API_KEY = process.env.GEMINI_API_KEY;
@@ -49,7 +50,9 @@ Lyrics:
 ${lyrics}`;
 
 const res = await fetch(
-  `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
+  // 모델 별칭은 앱 본체와 같은 정책(lib/admin/gemini.js) — 버전 하드코딩은
+  // 키 재발급 때 "no longer available"로 죽는다
+  `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${API_KEY}`,
   {
     method: "POST",
     headers: { "Content-Type": "application/json" },

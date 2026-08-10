@@ -70,6 +70,24 @@ for (const { url, expect } of CHECKS) {
   }
 }
 
+// 인증 경계 — next start는 production이라 middleware가 살아 있다.
+// admin이 잠겨 있지 않으면 그게 최악의 회귀라 smoke에서 같이 잡는다.
+const AUTH_CHECKS = [
+  { url: "/admin", ok: (r) => r.status >= 300 && r.status < 400 && r.headers.get("location")?.includes("/admin/login"), desc: "비로그인 /admin → 로그인으로 redirect" },
+  { url: "/api/admin", ok: (r) => r.status === 401, desc: "비로그인 /api/admin → 401" },
+  { url: "/admin/login", ok: (r) => r.status === 200, desc: "/admin/login 열림" },
+];
+for (const { url, ok, desc } of AUTH_CHECKS) {
+  try {
+    const res = await fetch(BASE + url, { redirect: "manual", signal: AbortSignal.timeout(10000) });
+    if (!ok(res)) throw new Error(`HTTP ${res.status}`);
+    console.log(`  ✓ ${url} (${desc})`);
+  } catch (e) {
+    failed++;
+    console.log(`  ✗ ${url} — ${desc}: ${e.message}`);
+  }
+}
+
 kill();
-console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length}개 통과`);
+console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length}개 통과`);
 process.exit(failed ? 1 : 0);
