@@ -74,7 +74,7 @@ export default function SearchDialog({ open, onClose }) {
             ref={inputRef}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="음악·가사·영화·컬렉션·인물 검색"
+            placeholder="음악·가사·영화·인물 검색"
             className="min-w-0 flex-1 bg-transparent py-4 text-base outline-none"
           />
           <button onClick={onClose} className="text-xs text-muted hover:text-accent">닫기</button>

@@ -31,6 +31,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
+import { kstDay } from "../../../lib/kst";
+
 // "2026년 7월 14일 22:03" in KST; drops the time for a date-only value
 function formatPublished(v) {
   const d = new Date(v.length <= 10 ? `${v}T00:00:00+09:00` : v);
@@ -184,7 +186,7 @@ export default async function SongPage({ params }) {
       {(song.published || song.date) && (
         <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
           <Link
-            href={`/archive/${(song.published || song.date).slice(0, 10)}`}
+            href={`/archive/${kstDay(song.published || song.date)}`}
             className="hover:text-accent"
           >
             기록 {formatPublished(song.published || song.date)}

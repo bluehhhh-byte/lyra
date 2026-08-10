@@ -5,6 +5,7 @@ import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
 import MovieCardButton from "./movie-card";
 import { splitCast } from "../../../lib/people";
 import { tmdbUrl } from "../../../lib/tmdb-link";
+import { kstDay } from "../../../lib/kst";
 
 export function generateStaticParams() {
   return getAllMovies().map((m) => ({ slug: m.slug }));
@@ -202,7 +203,7 @@ export default async function MoviePage({ params }) {
       {(movie.published || movie.date) && (
         <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
           <Link
-            href={`/archive/${(movie.published || movie.date).slice(0, 10)}`}
+            href={`/archive/${kstDay(movie.published || movie.date)}`}
             className="hover:text-accent"
           >
             기록 {formatPublished(movie.published || movie.date)}

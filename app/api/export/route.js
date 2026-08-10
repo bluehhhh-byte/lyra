@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { kstToday } from "../../../lib/kst";
 
 // One .md with every song's raw file (frontmatter + interleaved lyrics),
 // for offline data analysis. Prerendered at build time — the songs dir is
@@ -17,7 +18,7 @@ export async function GET() {
       return `<!-- ===== ${f.replace(/\.md$/, "")} ===== -->\n${raw}`;
     })
     .join("\n\n");
-  const head = `<!-- Lyra 가사 아카이브 · ${files.length}곡 · ${new Date().toISOString().slice(0, 10)} 빌드 -->\n\n`;
+  const head = `<!-- Lyra 가사 아카이브 · ${files.length}곡 · ${kstToday()} 빌드 -->\n\n`;
   return new Response(head + body, {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",

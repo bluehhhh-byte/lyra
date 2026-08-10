@@ -5,6 +5,7 @@ import { capGenre } from "../../../lib/genre";
 import { geminiText } from "../../../lib/admin/gemini";
 import { movieComment } from "../../../lib/admin/movie-meta";
 import { FM, fmValue, setField, parseTags } from "../../../lib/admin/frontmatter";
+import { kstToday } from "../../../lib/kst";
 
 export async function handleMovies(action, body) {
   if (action === "movieSearch") {
@@ -67,7 +68,7 @@ backdrop: ${backdrop || ""}
 tmdbId: ${tmdbId || ""}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
 body_kind: ${bodyKind === "review" ? "review" : ""}
-date: ${new Date().toISOString().slice(0, 10)}
+date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 ---

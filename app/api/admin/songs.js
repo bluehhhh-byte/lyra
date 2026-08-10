@@ -11,6 +11,7 @@ import {
   needsReading, commentPrompt, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
 } from "../../../lib/admin/song-meta";
+import { kstToday } from "../../../lib/kst";
 
 export async function handleSongs(action, body) {  if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
@@ -766,7 +767,7 @@ lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
 keywords: [${parseKeywords(keywords).join(", ")}]
 emotion: ${parseEmotion(emotion)}
-date: ${new Date().toISOString().slice(0, 10)}
+date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 ---

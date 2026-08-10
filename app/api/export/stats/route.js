@@ -1,5 +1,6 @@
 import { getAllSongs } from "../../../../lib/songs";
 import { getAllMovies } from "../../../../lib/movies";
+import { kstToday } from "../../../../lib/kst";
 
 // The collection stats as one Markdown file — mirrors the /stats page's
 // categories. Prerendered at build time (songs are only guaranteed on disk
@@ -61,7 +62,7 @@ export async function GET() {
   const byDirector = tally(movies.map((movie) => movie.director_ko || movie.director || "미상"));
   const runtime = movies.reduce((sum, movie) => sum + (Number(movie.runtime) || 0), 0);
 
-  const today = new Date().toISOString().slice(0, 10);
+  const today = kstToday();
   const md = `# Lyra 컬렉션 통계
 
 _${songs.length}곡 · ${artists}명의 가수 · ${today} 기준_

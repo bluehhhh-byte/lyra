@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getWatched } from "../../../lib/watched";
 import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
 import { readData } from "../../../lib/store";
+import { tmdbUrl } from "../../../lib/tmdb-link";
 
 export const metadata = {
   title: "취향 분석 | Syno.",
@@ -171,7 +172,7 @@ export default function TastePage() {
             {recs.items.slice(0, 8).map((m) => (
               <a
                 key={m.tmdbId}
-                href={`https://www.themoviedb.org/movie/${m.tmdbId}`}
+                href={tmdbUrl(m.tmdbId, m.media)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"

@@ -3,6 +3,7 @@
 // Paste English lyrics, then Ctrl-D. Writes songs/<slug>.md with Gemini translations.
 import fs from "fs";
 import path from "path";
+import { kstToday } from "../lib/kst.js";
 
 const query = process.argv.slice(2).join(" ").trim();
 const API_KEY = process.env.GEMINI_API_KEY;
@@ -72,7 +73,7 @@ artist: ${meta.artist}
 album: ${meta.album}
 artwork: ${meta.artwork}
 tags: []
-date: ${new Date().toISOString().slice(0, 10)}
+date: ${kstToday()}
 comment:
 ---
 ${translated}

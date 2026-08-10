@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { readData } from "../../lib/store";
+import { tmdbUrl } from "../../lib/tmdb-link";
 
 export const metadata = {
   title: "추천 영화 | Syno.",
@@ -37,7 +38,7 @@ export default function RecommendationsPage() {
           {items.map((m) => (
             <a
               key={m.tmdbId}
-              href={`https://www.themoviedb.org/movie/${m.tmdbId}`}
+              href={tmdbUrl(m.tmdbId, m.media)}
               target="_blank"
               rel="noopener noreferrer"
               className="group"

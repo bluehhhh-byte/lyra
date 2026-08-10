@@ -15,6 +15,7 @@ import { getAllMovies } from "../../../lib/movies";
 import { summarizeTaste } from "../../../lib/taste-core";
 import { geminiText } from "../../../lib/admin/gemini";
 import { setField } from "../../../lib/admin/frontmatter";
+import { kstToday } from "../../../lib/kst";
 
 export async function handleWatcha(action, body) {
   if (action === "tasteReport") {
@@ -124,6 +125,9 @@ ${seenList}
       usedTmdb.add(String(hit.tmdbId));
       added.push({
         tmdbId: hit.tmdbId,
+        // 지금은 movie만 채택하지만, 드라마 추천을 허용하게 되면 /tv/ 링크
+        // 분기가 이 필드를 쓴다 — 기존 항목엔 없고 tmdbUrl이 movie로 간주.
+        media: hit.mediaType,
         title: hit.title,
         year: hit.year,
         poster: hit.thumb,
@@ -243,7 +247,7 @@ tmdbId: ${d.tmdbId || ""}
 watcha_code: ${item.code || ""}
 tags: [${[d.country, d.genre, d.year].filter(Boolean).join(", ")}]
 body_kind: ${item.comment ? "review" : ""}
-date: ${new Date().toISOString().slice(0, 10)}
+date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${flat.length > 120 ? flat.slice(0, 117) + "…" : flat}
 ---
