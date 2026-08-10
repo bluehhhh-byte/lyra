@@ -3,6 +3,7 @@ import { getWatched } from "../../../lib/watched";
 import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
 import { readData } from "../../../lib/store";
 import { tmdbUrl } from "../../../lib/tmdb-link";
+import CoverImage from "../../cover-image";
 
 export const metadata = {
   title: "취향 분석 | Syno.",
@@ -178,18 +179,13 @@ export default function TastePage() {
                 className="group"
               >
                 <div className="overflow-hidden rounded-lg border border-line bg-surface">
-                  {m.poster ? (
-                    <img
-                      src={m.poster}
-                      alt={m.title}
-                      loading="lazy"
-                      className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
-                    />
-                  ) : (
-                    <div className="flex aspect-[2/3] items-center justify-center p-2 text-center text-xs text-muted">
-                      {m.title}
-                    </div>
-                  )}
+                  <CoverImage
+                    src={m.poster}
+                    alt={m.title}
+                    label={m.title}
+                    loading="lazy"
+                    className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
+                  />
                 </div>
                 <p className="mt-1.5 truncate text-xs font-medium group-hover:text-accent">
                   {m.title}

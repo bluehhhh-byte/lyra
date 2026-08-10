@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import CoverImage from "./cover-image";
 
 const RECENT_KEY = "lyra_recent_searches";
 
@@ -105,7 +106,7 @@ export default function SearchDialog({ open, onClose }) {
                   const inner = (
                     <>
                       {item.image ? (
-                        <img src={item.image} alt="" className="h-11 w-11 shrink-0 rounded object-cover" />
+                        <CoverImage src={item.image} alt="" label={label.slice(0, 1)} className="h-11 w-11 shrink-0 rounded object-cover" />
                       ) : (
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-surface text-xs text-muted">
                           {label.slice(0, 1)}

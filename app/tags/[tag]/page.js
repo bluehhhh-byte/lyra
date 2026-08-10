@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs } from "../../../lib/songs";
 import { getAllMovies } from "../../../lib/movies";
+import CoverImage from "../../cover-image";
 
 // One tag, both collections — clicking 2004 shows that year's songs AND films
 // side by side. Static: every tag in use gets a page at build time.
@@ -47,10 +48,11 @@ export default async function TagPage({ params }) {
             {songs.map((s) => (
               <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
                 <div className="overflow-hidden rounded-xl border border-line bg-surface">
-                  <img
+                  <CoverImage
                     src={s.artwork.replace("600x600bb", "300x300bb")}
                     srcSet={`${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x`}
                     alt={`${s.title} album art`}
+                    label={s.title}
                     loading="lazy"
                     decoding="async"
                     className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
@@ -77,9 +79,10 @@ export default async function TagPage({ params }) {
               <Link key={m.slug} href={`/movies/${m.slug}`} className="group">
                 <div className="overflow-hidden rounded-xl border border-line bg-surface">
                   {/* poster is 2:3, not square — don't force the album ratio */}
-                  <img
+                  <CoverImage
                     src={m.poster}
                     alt={`${m.title} poster`}
+                    label={m.title_ko || m.title}
                     loading="lazy"
                     decoding="async"
                     className="aspect-[2/3] w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"

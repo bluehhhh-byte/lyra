@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
+import { verifyToken } from "./lib/auth-token";
 
 // Password-gate the admin UI and its API online. Local dev is always open.
-export function middleware(req) {
+// 쿠키는 HMAC 서명 토큰(lib/auth-token.js) — 비밀번호 원문을 담지 않는다.
+export async function middleware(req) {
   if (process.env.NODE_ENV !== "production") return NextResponse.next();
 
   const { pathname } = req.nextUrl;
   if (pathname === "/admin/login") return NextResponse.next();
 
   const pass = process.env.ADMIN_PASSWORD;
-  const authed = pass && req.cookies.get("lyra_auth")?.value === pass;
+  const authed = pass && (await verifyToken(pass, req.cookies.get("lyra_auth")?.value));
   if (authed) return NextResponse.next();
 
   if (pathname.startsWith("/api/")) {

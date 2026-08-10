@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPeople, getPerson } from "../../../lib/people";
+import CoverImage from "../../cover-image";
 
 export function generateStaticParams() {
   // 데이터셋까지 합치면 인물이 수천 명이라 전부 미리 구우면 빌드가 폭발한다.
@@ -41,7 +42,7 @@ export default async function PersonPage({ params }) {
           const inner = movie.href?.startsWith("/");
           const Card = (
             <>
-              <img src={movie.poster} alt="" className="aspect-[2/3] w-full rounded border border-line object-cover" />
+              <CoverImage src={movie.poster} alt="" label={movie.title_ko || movie.title} className="aspect-[2/3] w-full rounded border border-line object-cover" />
               <h2 className="mt-2 truncate text-sm font-semibold group-hover:text-accent">{movie.title_ko || movie.title}</h2>
               <p className="mt-0.5 truncate text-xs text-muted">
                 {movie.year}{movie.rating != null ? ` · ★ ${movie.rating}` : ""}

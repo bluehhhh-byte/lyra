@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { makeToken } from "../../../lib/auth-token";
 
 export async function POST(req) {
   const { password } = await req.json();
@@ -6,10 +7,9 @@ export async function POST(req) {
   if (!pass || password !== pass) {
     return Response.json({ error: "비밀번호가 틀렸습니다" }, { status: 401 });
   }
-  // ponytail: cookie holds the shared secret directly — fine for a single-owner
-  // blog. Swap for a signed token if this ever grows past one user.
+  // 쿠키에는 비밀번호 대신 서명된 만료 토큰 — 쿠키가 새어도 비밀번호는 안 샌다
   const jar = await cookies();
-  jar.set("lyra_auth", pass, {
+  jar.set("lyra_auth", await makeToken(pass), {
     httpOnly: true,
     sameSite: "lax",
     path: "/",

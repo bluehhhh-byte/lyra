@@ -34,6 +34,8 @@ emotion: 그리움                 # 감정 1개 (닫힌 목록 15종, 통계 �
 date: 2026-07-07
 published: 2026-07-07T22:03:11.000Z  # 기록 시각 (통계·일기의 날짜 기준)
 comment: 곡에 대한 한 줄 감상 (자동 생성, 수정 가능)
+youtube: 검색어 override        # (선택) 유튜브 자동 검색이 엉뚱한 영상을 잡을 때
+youtube_id: dQw4w9WgXcQ         # (선택) 영상 ID 직접 지정 — 검색 자체를 건너뜀
 ---
 [Verse 1]
 夢ならばどれほどよかったでしょう
@@ -94,7 +96,9 @@ comment: 곡에 대한 한 줄 감상 (자동 생성, 수정 가능)
 
 ## 아키텍처 노트
 
-- **인증** (`middleware.js`): 프로덕션에서 `/admin`·`/api/admin`을 `ADMIN_PASSWORD` 쿠키로 보호.
+- **인증** (`middleware.js` + `lib/auth-token.js`): 프로덕션에서 `/admin`·`/api/admin` 보호.
+  쿠키에는 비밀번호 원문이 아니라 HMAC 서명된 30일 만료 토큰이 담긴다(Web Crypto —
+  Edge middleware·Node 라우트 양쪽 동작). 비밀번호를 바꾸면 기존 토큰 전부 무효.
   로컬 dev는 인증 없이 열림.
 - **쓰기 백엔드** (`lib/store.js`): Vercel 서버리스는 파일시스템이 읽기 전용이므로,
   온라인에서 곡 저장/수정/삭제는 **GitHub Contents API 커밋**으로 처리 → 커밋이 재배포를 트리거.
@@ -194,5 +198,6 @@ GEMINI_API_KEY=xxx pnpm dev   # http://localhost:3000, admin 인증 없이 열�
 pnpm test                     # lib/*.test.mjs 전체 (프레임워크 없는 assert 러너)
 pnpm lint:data                # 콘텐츠 파일 검사 — 필수 필드·rating·emotion·중복 (오류만 exit 1)
 pnpm build                    # 배포 포장 — 정적 페이지 생성까지 검증
-pnpm check                    # test + lint:data + build 한 번에 (push 전 게이트)
+pnpm smoke                    # 빌드 산출물을 next start로 띄워 주요 페이지 12곳 실접속 확인
+pnpm check                    # test + lint:data + build + smoke 한 번에 (push 전 게이트)
 ```

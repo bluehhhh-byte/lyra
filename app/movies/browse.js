@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import CoverImage from "../cover-image";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -271,9 +272,10 @@ function Grid({ list, needle }) {
       {list.map((movie) => (
         <Link key={movie.slug} href={`/movies/${movie.slug}`} className="group block transition active:scale-[0.98]">
           <div className="overflow-hidden rounded-xl border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
-            <img
+            <CoverImage
               src={movie.poster}
               alt={`${movie.title} 포스터`}
+              label={movie.title}
               loading="lazy"
               decoding="async"
               className="aspect-[2/3] w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"

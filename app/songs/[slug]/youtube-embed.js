@@ -2,14 +2,15 @@
 import { useState } from "react";
 import { usePlayer } from "../../player";
 
-// No video id is stored, so /api/youtube resolves a search term to the first
-// result's id on demand (listType=search embeds no longer work). Defaults to
-// "artist title"; a `query` override (the song's `youtube` frontmatter) fixes
-// the cases where that search lands on the wrong video.
+// /api/youtube resolves a search term to the first result's id on demand
+// (listType=search embeds no longer work). Defaults to "artist title"; the
+// song's `youtube` frontmatter overrides the search term, and `youtube_id`
+// (an 11-char video id) skips the scrape entirely — the stable escape hatch
+// when the search lands on the wrong video or YouTube blocks the lookup.
 // Opening the video stops the 30s preview so the two never talk over each other.
-export default function YouTubeEmbed({ artist, title, query }) {
+export default function YouTubeEmbed({ artist, title, query, id }) {
   const [open, setOpen] = useState(false);
-  const [videoId, setVideoId] = useState(undefined); // undefined=loading, null=not found
+  const [videoId, setVideoId] = useState(id || undefined); // undefined=loading, null=not found
   const { setTrack } = usePlayer();
   const q = query || `${artist} ${title}`;
 

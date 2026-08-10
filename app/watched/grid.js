@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import { tmdbUrl } from "../../lib/tmdb-link";
+import CoverImage from "../cover-image";
 
 // 별점 분포 막대 + 포스터 그리드. 막대를 누르면 그 별점만 필터, 다시 누르면 해제.
 // 서버 페이지에서 정렬된 rated 배열을 받는다.
@@ -61,18 +62,13 @@ export default function WatchedGrid({ rated }) {
           const inner = (
             <>
               <div className="relative overflow-hidden rounded-lg border border-line bg-surface">
-                {m.poster ? (
-                  <img
-                    src={m.poster}
-                    alt={m.title_ko || m.title}
-                    loading="lazy"
-                    className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
-                  />
-                ) : (
-                  <div className="flex aspect-[2/3] items-center justify-center p-2 text-center text-xs text-muted">
-                    {m.title_ko || m.title}
-                  </div>
-                )}
+                <CoverImage
+                  src={m.poster}
+                  alt={m.title_ko || m.title}
+                  label={m.title_ko || m.title}
+                  loading="lazy"
+                  className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
+                />
                 <span className="absolute right-1 top-1 rounded bg-black/70 px-1.5 py-0.5 text-xs font-semibold text-white tabular-nums">
                   ★{m.rating}
                 </span>

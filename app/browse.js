@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import CoverImage from "./cover-image";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -209,11 +210,12 @@ function Grid({ list, needle, lyrics }) {
           className="group card-in transition-transform duration-300 ease-out hover:-translate-y-1"
         >
           <div className="spot overflow-hidden rounded-xl border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
-            <img
+            <CoverImage
               // grid cells render ≤ ~300px — 300px for 1x, the 600px original for retina
               src={s.artwork.replace("600x600bb", "300x300bb")}
               srcSet={`${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x`}
               alt={`${s.title} album art`}
+              label={s.title}
               loading="lazy"
               decoding="async"
               className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"

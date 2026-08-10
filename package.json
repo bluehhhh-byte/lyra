@@ -1,6 +1,7 @@
 {
   "name": "lyra",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@11.10.0",
   "scripts": {
     "dev": "next dev",
@@ -10,7 +11,8 @@
     "add": "node scripts/add-song.mjs",
     "test": "node scripts/run-tests.mjs",
     "lint:data": "node scripts/lint-data.mjs",
-    "check": "node scripts/run-tests.mjs && node scripts/lint-data.mjs && next build"
+    "smoke": "node scripts/smoke.mjs",
+    "check": "node scripts/run-tests.mjs && node scripts/lint-data.mjs && next build && node scripts/smoke.mjs"
   },
   "dependencies": {
     "next": "^15.3.0",
