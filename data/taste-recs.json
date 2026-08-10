@@ -1,6 +1,110 @@
 {
  "items": [
   {
+   "tmdbId": 1990,
+   "title": "파라노이드 파크",
+   "year": "2007",
+   "poster": "https://image.tmdb.org/t/p/w154/x72V7Rfp7YWNxbjsCAFAk6xx7LS.jpg",
+   "why": "구스 반 산트 특유의 서늘하고 섬세한 범죄·드라마 탐구",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 1600,
+   "title": "베로니카의 이중 생활",
+   "year": "1991",
+   "poster": "https://image.tmdb.org/t/p/w154/piePHly4hjk1OiyUTMTJrBQzQxR.jpg",
+   "why": "프랑스 신비주의 판타지와 환상적인 영상미의 조화",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 17962,
+   "title": "원더풀 라이프",
+   "year": "1999",
+   "poster": "https://image.tmdb.org/t/p/w154/tVzjKNysBJHfwI19HsrOk4wHDvY.jpg",
+   "why": "1990년대 일본 드라마·판타지가 주는 감동과 여운",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 902,
+   "title": "잃어버린 아이들의 도시",
+   "year": "1995",
+   "poster": "https://image.tmdb.org/t/p/w154/9hXbsM3Of273RwXkQp74mVD0Gcm.jpg",
+   "why": "프랑스 거장들의 기발하고 독창적인 다크 판타지",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 10831,
+   "title": "영국식 정원 살인 사건",
+   "year": "1982",
+   "poster": "https://image.tmdb.org/t/p/w154/ljeTWR2kowGXijMc8LMuy72ULM3.jpg",
+   "why": "영국 미스터리 범죄 장르가 가진 지적인 서스펜스",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 25536,
+   "title": "PTU",
+   "year": "2003",
+   "poster": "https://image.tmdb.org/t/p/w154/xXPhKavQB3KkJhQ9Kbos2uvwgfO.jpg",
+   "why": "홍콩 범죄·드라마 장르의 절제된 연출과 미학",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 37946,
+   "title": "게리 올드만의 씬",
+   "year": "2003",
+   "poster": "https://image.tmdb.org/t/p/w154/juNwK0xRUZlQxCU9f5KDgBfFclF.jpg",
+   "why": "구스 반 산트의 미니멀리즘과 독보적인 미장센",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 445,
+   "title": "히든",
+   "year": "2005",
+   "poster": "https://image.tmdb.org/t/p/w154/7aomyqMWVZ5sbCSzy1Q5VDUhbH9.jpg",
+   "why": "프랑스 미스터리 드라마가 선사하는 정교한 긴장감",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 204,
+   "title": "공포의 보수",
+   "year": "1953",
+   "poster": "https://image.tmdb.org/t/p/w154/3cPnJ2yNdE2eD5IyeaUJUswugxP.jpg",
+   "why": "1950년대 프랑스 서스펜스 범죄 극의 고전적 긴장감",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 21712,
+   "title": "마인드 게임",
+   "year": "2004",
+   "poster": "https://image.tmdb.org/t/p/w154/f8CbqeFILuSOFC6KgtufdJZTw4j.jpg",
+   "why": "일본 판타지 애니메이션의 역대급 상상력과 에너지",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 10754,
+   "title": "살인에 관한 짧은 필름",
+   "year": "1988",
+   "poster": "https://image.tmdb.org/t/p/w154/2J9rVIsNrLZc9mQqACUr0oWowm.jpg",
+   "why": "1980년대 묵직한 윤리적 질문을 던지는 범죄 드라마",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 13807,
+   "title": "익사일",
+   "year": "2006",
+   "poster": "https://image.tmdb.org/t/p/w154/e8ToXMfYG49AvYxt5RQ4NetGUXE.jpg",
+   "why": "홍콩 범죄 영화 특유의 스타일리시한 총격 미학",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
+   "tmdbId": 12706,
+   "title": "크루피어",
+   "year": "1998",
+   "poster": "https://image.tmdb.org/t/p/w154/bLLa74hdq9qsJpcVqLSwm3fKzJn.jpg",
+   "why": "1990년대 영국 범죄 미스터리의 차분한 카리스마",
+   "at": "2026-08-10T13:21:54.813Z"
+  },
+  {
    "tmdbId": 43636,
    "title": "동방삼협",
    "year": "1993",
@@ -585,5 +689,5 @@
    "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "at": "2026-08-03T23:37:58.083Z"
+ "at": "2026-08-10T13:21:54.813Z"
 }
