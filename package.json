@@ -8,7 +8,8 @@
     "start": "next start",
     "setup": "pnpm install",
     "add": "node scripts/add-song.mjs",
-    "test": "node scripts/run-tests.mjs"
+    "test": "node scripts/run-tests.mjs",
+    "check": "node scripts/run-tests.mjs && next build"
   },
   "dependencies": {
     "next": "^15.3.0",

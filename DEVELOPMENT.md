@@ -12,7 +12,8 @@
 - **외부 API**
   - iTunes Search API — 곡 메타데이터·앨범아트·미리듣기·발매연도 (키 불필요)
   - lrclib.net — 가사 자동 로드 (키 불필요)
-  - Google Gemini (`gemini-2.5-flash`) — 번역·자동 태그·코멘트·독음 생성
+  - Google Gemini (`gemini-flash-latest` 별칭, `GEMINI_MODEL`로 변경) — 번역·자동 태그·코멘트·독음·취향 리포트·추천 생성
+  - TMDB — 영화·드라마 검색·상세·장르 영문화 (`TMDB_API_KEY`)
 
 ## 데이터 모델 (`songs/*.md`)
 
@@ -174,7 +175,11 @@ comment: 곡에 대한 한 줄 감상 (자동 생성, 수정 가능)
 | `lib/genre.js` / `lib/keywords.js` | 장르 / 키워드·감정 어휘·검증·감정 valence |
 | `lib/diary.js` | 날짜별 감정·키워드 집계 (통계·일기 공용) |
 | `lib/store.js` / `lib/tmdb.js` | GitHub·fs 쓰기 백엔드 / TMDB 래퍼(장르 영문화) |
-| `app/api/admin/route.js` | 모든 admin 액션(검색·번역·저장·재검사·소급)의 서버 로직 |
+| `lib/people.js` / `lib/taste-core.js` | 감독·배우 역색인 (.md+왓챠) / 취향 집계 요약 |
+| `app/api/admin/route.js` | admin API 디스패처(32줄): action 파싱 → 도메인 핸들러 순차 시도 |
+| `app/api/admin/{songs,movies,watcha}.js` | 도메인별 액션 로직 (곡 검색·번역·재검사 / 영화 / 왓챠·취향·추천) |
+| `lib/admin/*.js` | admin 순수 헬퍼 (gemini·frontmatter·lrclib·itunes·song-meta·movie-meta) |
+| `app/api/lyrics-index/route.js` | 가사 검색 인덱스(static) — 홈이 첫 검색 시 lazy fetch |
 | `app/diary/` `app/emotion-timeline.js` | 키워드 일기 페이지 / 감정 시계열 SVG |
 | `app/tags/[tag]/` | 곡+영화 통합 태그 페이지 |
 | `app/admin/watcha-import.js` | 왓챠 JSON 붙여넣기 → 별점·코멘트 반영 UI |
@@ -188,4 +193,5 @@ pnpm install
 GEMINI_API_KEY=xxx pnpm dev   # http://localhost:3000, admin 인증 없이 열림
 pnpm test                     # lib/*.test.mjs 전체 (프레임워크 없는 assert 러너)
 pnpm build                    # 배포 포장 — 정적 페이지 생성까지 검증
+pnpm check                    # test + build 한 번에 (push 전 배포 전 검증)
 ```

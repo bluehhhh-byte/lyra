@@ -17,6 +17,9 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
   const [tag, setTag] = useState(initialTag);
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
+  // slug → lyric lines, fetched once from /api/lyrics-index the first time the
+  // user searches. null until then; meta search works without it.
+  const [lyrics, setLyrics] = useState(null);
 
   // Mirror the filters into the URL so a refresh or a shared link lands on the
   // same view. replaceState, not pushState — one history entry per keystroke
@@ -33,15 +36,30 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
   }, [q, tag, group]);
 
   const needle = q.trim().toLowerCase();
+
+  // load the lyric index once, on the first search — lands a lyric match a beat
+  // after typing (or on mount when arriving via a shared ?q= link)
+  useEffect(() => {
+    if (!needle || lyrics) return;
+    let alive = true;
+    fetch("/api/lyrics-index")
+      .then((r) => r.json())
+      .then((arr) => alive && setLyrics(Object.fromEntries(arr.map((x) => [x.slug, x.lines]))))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [needle, lyrics]);
+
   const filtered = useMemo(() => {
     return songs.filter(
       (s) =>
         (!tag || s.tags.includes(tag)) &&
         (!needle ||
           s.metaSearch.includes(needle) ||
-          s.lines.some((l) => l.toLowerCase().includes(needle)))
+          (lyrics?.[s.slug] || []).some((l) => l.toLowerCase().includes(needle)))
     );
-  }, [needle, tag, songs]);
+  }, [needle, tag, songs, lyrics]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -132,7 +150,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
               다시 섞기 ↻
             </button>
           </div>
-          <Grid list={randomList} needle={needle} />
+          <Grid list={randomList} needle={needle} lyrics={lyrics} />
         </section>
       ) : (
         groups.map(([name, list]) => (
@@ -142,7 +160,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
                 {name} <span className="text-xs">({list.length})</span>
               </h2>
             )}
-            <Grid list={list} needle={needle} />
+            <Grid list={list} needle={needle} lyrics={lyrics} />
           </section>
         ))
       )}
@@ -152,9 +170,9 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
 
 // why did this card match? — when the hit is in the lyrics (not title/artist),
 // show the matching line with the query highlighted
-function Snippet({ song, needle }) {
+function Snippet({ song, needle, lyrics }) {
   if (!needle || song.metaSearch.includes(needle)) return null;
-  const line = song.lines.find((l) => l.toLowerCase().includes(needle));
+  const line = (lyrics?.[song.slug] || []).find((l) => l.toLowerCase().includes(needle));
   if (!line) return null;
   const i = line.toLowerCase().indexOf(needle);
   return (
@@ -177,7 +195,7 @@ function trackSpot(e) {
   card.style.setProperty("--my", `${e.clientY - r.top}px`);
 }
 
-function Grid({ list, needle }) {
+function Grid({ list, needle, lyrics }) {
   return (
     <div
       onPointerMove={trackSpot}
@@ -208,7 +226,7 @@ function Grid({ list, needle }) {
             {s.artist}
             {s.year ? ` · ${s.year}` : ""}
           </p>
-          <Snippet song={s} needle={needle} />
+          <Snippet song={s} needle={needle} lyrics={lyrics} />
         </Link>
       ))}
     </div>

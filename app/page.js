@@ -26,9 +26,8 @@ export default async function Home({ searchParams }) {
       .filter(Boolean)
       .join(" ")
       .toLowerCase(),
-    // ponytail: ships every song's full lyrics to the client. ~20 songs = a few KB.
-    // Move search to a route handler (or a prebuilt index) past ~100 songs.
-    lines: s.stanzas.flatMap((st) => st.lines.flatMap((l) => [l.en, l.ko])).filter(Boolean),
+    // lyrics live in /api/lyrics-index and load lazily on first search — keeps
+    // the initial payload to meta only (see browse.js).
   }));
 
   return <Browse songs={songs} initialTag={tag || ""} initialQ={q || ""} initialGroup={group || "none"} />;
