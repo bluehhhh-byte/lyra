@@ -1,0 +1,157 @@
+// 영화 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
+import { readMovie, writeMovie, deleteMovie } from "../../../lib/store";
+import { searchMovies, movieDetail } from "../../../lib/tmdb";
+import { capGenre } from "../../../lib/genre";
+import { geminiText } from "../../../lib/admin/gemini";
+import { movieComment } from "../../../lib/admin/movie-meta";
+import { FM, fmValue, setField, parseTags } from "../../../lib/admin/frontmatter";
+
+export async function handleMovies(action, body) {
+  if (action === "movieSearch") {
+    return Response.json({ results: await searchMovies(body.query) });
+  }
+
+  if (action === "movieDetail") {
+    return Response.json(await movieDetail(body.tmdbId, body.mediaType));
+  }
+
+  // Polish the auto-loaded TMDB synopsis into clean 줄거리 prose and draft a
+  // personal comment. Country·genre·year tags are deterministic.
+  if (action === "movieMeta") {
+    const key = process.env.GEMINI_API_KEY;
+    const { title, director, mediaType, synopsis, country, genre, year, rating, tmdbRating, tmdbVotes } = body;
+    const kind = mediaType === "tv" ? "드라마" : "영화";
+    let polished = (synopsis || "").trim();
+    let comment = "";
+    if (key) {
+      if (polished) {
+        const p = (
+          await geminiText(
+            key,
+            `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+          )
+        )
+          .replace(/^["']|["']$/g, "")
+          .trim();
+        if (p) polished = p;
+      }
+      comment = await movieComment({ key, title, director, mediaType, rating, synopsis: polished, tmdbRating, tmdbVotes });
+      if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
+    }
+    const tags = [country || "기타", capGenre(genre), year && String(year)].filter(Boolean);
+    return Response.json({ polished, comment, tags: tags.join(", ") });
+  }
+
+  if (action === "movieSave") {
+    const {
+      title, titleKo, mediaType, director, directorKo, cast, year, runtime,
+      rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis, bodyKind,
+    } = body;
+    const slug = `${title} ${year}`
+      .toLowerCase()
+      .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
+      .replace(/^-|-$/g, "");
+    const md = `---
+title: ${title}
+title_ko: ${titleKo || title}
+media: ${mediaType === "tv" ? "tv" : "movie"}
+director: ${director || ""}
+director_ko: ${directorKo || ""}
+cast: ${cast || ""}
+year: ${year || ""}
+runtime: ${runtime || ""}
+rating: ${rating || ""}
+genre: ${genre || ""}
+poster: ${poster || ""}
+backdrop: ${backdrop || ""}
+tmdbId: ${tmdbId || ""}
+tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
+body_kind: ${bodyKind === "review" ? "review" : ""}
+date: ${new Date().toISOString().slice(0, 10)}
+published: ${new Date().toISOString()}
+comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
+---
+${(synopsis || "").trim()}
+`;
+    await writeMovie(slug, md, `add(movie): ${slug}`);
+    return Response.json({ slug });
+  }
+
+  if (action === "movieRegenMeta" || action === "movieRegenComment") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const movie = await readMovie(body.slug);
+    if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
+    const raw = movie.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = m;
+
+    const title = fmValue(fm, "title_ko") || fmValue(fm, "title");
+    const director = fmValue(fm, "director_ko") || fmValue(fm, "director");
+    const mediaType = fmValue(fm, "media") || "movie";
+    const rating = fmValue(fm, "rating");
+    const comment = await movieComment({ key, title, director, mediaType, rating, synopsis: bodyText });
+    if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
+
+    let out = setField(raw, "comment", comment, "published");
+    const updated = ["comment"];
+
+    if (action === "movieRegenMeta") {
+      let polished = bodyText.trim();
+      if (polished) {
+        const kind = mediaType === "tv" ? "드라마" : "영화";
+        const p = (
+          await geminiText(
+            key,
+            `${kind} "${title}"의 줄거리를 아래 원문을 바탕으로 정돈해줘. 맞춤법·어색한 번역투를 다듬고 핵심 줄거리만 2~4문장의 깔끔한 한국어 평서문으로. 과한 스포일러 금지. 줄거리 문장만 출력(제목·머리말 없이).\n원문:\n${polished.slice(0, 1500)}`
+          )
+        )
+          .replace(/^["']|["']$/g, "")
+          .trim();
+        if (p) {
+          polished = p;
+          updated.push("synopsis");
+        }
+      }
+      const tags = [
+        parseTags(fmValue(fm, "tags"))[0] || "기타",
+        capGenre(fmValue(fm, "genre")),
+        fmValue(fm, "year"),
+      ].filter(Boolean);
+      if (tags.length) {
+        out = setField(out, "tags", `[${tags.join(", ")}]`, "tmdbId");
+        updated.push("tags");
+      }
+      out = out.replace(FM, (_, nextFm) => `---\n${nextFm}\n---\n${polished.replace(/\n*$/, "\n")}`);
+    }
+
+    await writeMovie(
+      body.slug,
+      out,
+      action === "movieRegenMeta"
+        ? `chore(movie): regen metadata — ${body.slug}`
+        : `chore(movie): regen comment — ${body.slug}`
+    );
+    return Response.json({ comment, updated });
+  }
+
+  if (action === "movieUpdateRating") {
+    const movie = await readMovie(body.slug);
+    if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
+    const rating = Number(body.rating);
+    if (!Number.isFinite(rating) || rating < 0 || rating > 5)
+      return Response.json({ error: "별점은 0~5 사이여야 합니다" }, { status: 422 });
+    const rounded = Math.round(rating * 2) / 2;
+    const out = setField(movie.raw.replace(/\r\n/g, "\n"), "rating", rounded ? String(rounded) : "", "runtime");
+    await writeMovie(body.slug, out, `edit(movie): update rating — ${body.slug}`);
+    return Response.json({ rating: rounded });
+  }
+
+  if (action === "movieDelete") {
+    await deleteMovie(body.slug);
+    return Response.json({ ok: true });
+  }
+
+  return null;
+}
