@@ -14,49 +14,16 @@ import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 import { getAllMovies } from "../../../lib/movies";
 import { summarizeTaste } from "../../../lib/taste-core";
+import { geminiText } from "../../../lib/admin/gemini";
+import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
+import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
+import { normText, fetchArtistCatalog, withTimeout, itunesToResult } from "../../../lib/admin/itunes";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
 // Vercel hobby 상한. Gemini(대형 프롬프트 + 재시도 백오프) + TMDB 검색이
 // 30초를 넘겨 FUNCTION_INVOCATION_TIMEOUT이 났다 — 60으로 올린다.
 export const maxDuration = 60;
-
-// "-latest" alias, not a pinned version — a hardcoded gemini-2.5-flash died the
-// day the API key was reissued ("no longer available to new users"). The alias
-// tracks whatever flash is current; env override for the day the alias misbehaves.
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
-
-async function geminiText(key, prompt, json = false) {
-  const body = JSON.stringify({
-    contents: [{ parts: [{ text: prompt }] }],
-    ...(json ? { generationConfig: { responseMimeType: "application/json" } } : {}),
-  });
-  // Gemini free tier throws intermittent 503 "high demand" and 429 rate-limit
-  // (RPM/RPD) spikes — retry with backoff so a single blip doesn't fail a
-  // comment/translation. 429 gets a longer wait (rate windows are seconds, not
-  // ms) but stays well under maxDuration; a persistent 429 still gives up so a
-  // bulk run doesn't stall on an exhausted daily quota.
-  for (let attempt = 0; attempt < 3; attempt++) {
-    let rateLimited = false;
-    try {
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${key}`,
-        { method: "POST", headers: { "Content-Type": "application/json" }, body }
-      );
-      if (res.ok) {
-        const data = await res.json();
-        const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
-        if (text) return text;
-      } else if (res.status === 429) {
-        rateLimited = true;
-      } else if (res.status < 500) {
-        return ""; // 400/401 etc. — a retry won't help
-      }
-    } catch {}
-    if (attempt < 2) await new Promise((r) => setTimeout(r, (rateLimited ? 5000 : 800) * (attempt + 1)));
-  }
-  return "";
-}
 
 // Kanji-or-kana artist names get a Korean reading; latin ones legitimately don't.
 export const needsReading = (artist) => /[぀-ヿ㐀-鿿]/.test(artist || "");
@@ -277,25 +244,6 @@ ${lyrics.slice(0, 2000)}`,
   return { tags, titleKo, artistKo, comment, keywords, emotion, aiOk };
 }
 
-const FM = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
-const fmValue = (fm, key) => (fm.match(new RegExp(`^${key}:[ \\t]*(.*)$`, "m"))?.[1] || "").trim();
-const isBlank = (v) => !v || v === "[]";
-const parseTags = (value = "") =>
-  value
-    .replace(/^\[|\]$/g, "")
-    .split(",")
-    .map((t) => t.trim())
-    .filter(Boolean);
-
-// Replace `key: …` in place, or insert it right after `after:` when absent.
-function setField(raw, key, value, after) {
-  const line = `${key}: ${value}`;
-  const existing = new RegExp(`^${key}:[ \\t]*.*$`, "m");
-  if (existing.test(raw)) return raw.replace(existing, line);
-  const anchor = new RegExp(`^(${after}:[ \\t]*.*)$`, "m");
-  return anchor.test(raw) ? raw.replace(anchor, `$1\n${line}`) : raw;
-}
-
 function ratingGuide(rating) {
   const ratingNum = Number(rating);
   return Number.isFinite(ratingNum) && ratingNum >= 3
@@ -345,188 +293,6 @@ export const lyricLineCount = (text) =>
     .filter((l) => l && !/^(>|\+|\/\/)/.test(l) && !/^\[.*\]$/.test(l)).length;
 
 // ── lyrics lookup (lrclib) ────────────────────────────────────────────────
-// iTunes' US store hands back romanized/translated titles ("Through the Night"
-// for 밤편지, "Akuro No Oka" for アクロの丘) while lrclib is indexed under the
-// native title. Measured hit rate jumped 12/16 → 15/16 by trying the native
-// name too. A ±15s duration bound keeps a wrong-length track's lyrics out.
-const LRC = "https://lrclib.net/api";
-const DUR_BOUND = 15; // seconds
-const hasCJK = (s) => /[぀-ヿ㐀-鿿가-힣]/.test(s || "");
-// Per-fetch timeout so one slow/hung lrclib response can't stall the whole
-// request (this is what pushed a single song past the serverless limit).
-// One retry on a network error or 5xx — a transient blip must not read as "no
-// lyrics". A 429 is NOT retried: hammering a rate limit just burns the budget.
-async function getJson(url, timeoutMs = 4000) {
-  for (let attempt = 0; attempt < 2; attempt++) {
-    try {
-      const r = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
-      if (r.ok) return await r.json();
-      if (r.status < 500) return null; // 404/429 etc. — not worth a retry
-    } catch {
-      // network error / timeout → retry once
-    }
-    if (attempt === 0) await new Promise((res) => setTimeout(res, 300));
-  }
-  return null;
-}
-
-const lrcCleanTitle = (t) =>
-  (t || "")
-    .replace(
-      /\s*[\(\[][^)\]]*(remaster|live|acoustic|version|edit|mix|instrumental|deluxe|mono|stereo|feat|with|explicit|bonus)[^)\]]*[\)\]]/gi,
-      ""
-    )
-    .replace(/\s*-\s*(single|ep|remaster(ed)?( \d{4})?|live|radio edit|.*version).*$/i, "")
-    .replace(/\s*(feat\.?|ft\.?)\s+.*$/i, "")
-    .trim();
-const lrcCleanArtist = (a) => (a || "").split(/\s*[,&×]\s*|\s+(?:feat\.?|with|and the)\s+/i)[0].trim();
-
-// Same track id in the JP/KR store often carries the native title/artist.
-async function nativeMeta(trackId, left = () => 8000) {
-  if (!trackId) return null;
-  for (const country of ["JP", "KR"]) {
-    if (left() <= 0) break;
-    const j = await getJson(
-      `https://itunes.apple.com/lookup?${new URLSearchParams({ id: trackId, country })}`,
-      Math.min(4000, left())
-    );
-    const r = j?.results?.[0];
-    if (r && hasCJK(`${r.trackName}${r.artistName}`))
-      return { title: r.trackName, artist: r.artistName };
-  }
-  return null;
-}
-
-function nameCandidates(picked, native) {
-  const out = [];
-  const push = (t, a) => t && a && out.push({ t, a });
-  push(picked.title, picked.artist);
-  push(lrcCleanTitle(picked.title), lrcCleanArtist(picked.artist));
-  if (native) {
-    push(native.title, native.artist);
-    push(lrcCleanTitle(native.title), lrcCleanArtist(native.artist));
-  }
-  const seen = new Set();
-  return out.filter(({ t, a }) => {
-    const k = `${t}|${a}`.toLowerCase();
-    return seen.has(k) ? false : seen.add(k);
-  });
-}
-
-const withinBound = (rowDur, want) => !want || !rowDur || Math.abs(rowDur - want) <= DUR_BOUND;
-
-const asLyric = (text, native) => ({
-  lyrics: text,
-  lines: text.split("\n").filter((l) => l.trim()).length,
-  native,
-});
-
-// Returns { lyrics, lines, native } or null. Stops at the first bounded hit, and
-// abandons remaining candidates once the time budget is spent — so a slow lrclib
-// can't push the request past the serverless timeout. deadlineMs bounds the whole
-// lookup (default generous for the add flow; requality passes a tighter one).
-async function findLyrics({ title, artist, album, duration, trackId }, deadlineMs = 20000) {
-  const until = Date.now() + deadlineMs;
-  const left = () => until - Date.now();
-  const native =
-    hasCJK(`${title}${artist}`) || left() <= 0 ? null : await nativeMeta(trackId, left);
-  // omit falsy fields — URLSearchParams stringifies undefined to the literal
-  // "undefined", which corrupts lrclib's exact /get match for pre-change songs.
-  const qs = (o) =>
-    new URLSearchParams(Object.entries(o).filter(([, v]) => v != null && v !== "")).toString();
-  for (const { t, a } of nameCandidates({ title, artist }, native)) {
-    if (left() <= 0) break; // budget spent — stop rather than risk a timeout
-    const g = await getJson(
-      `${LRC}/get?${qs({ artist_name: a, track_name: t, album_name: album, duration })}`,
-      Math.min(4000, left())
-    );
-    if (g?.plainLyrics?.trim() && withinBound(g.duration, duration))
-      return asLyric(g.plainLyrics.trim(), native);
-    if (left() <= 0) break;
-    const list =
-      (await getJson(`${LRC}/search?${qs({ track_name: t, artist_name: a })}`, Math.min(4000, left()))) ||
-      [];
-    const best = list
-      .filter((r) => r.plainLyrics?.trim())
-      .map((r) => ({ r, d: Math.abs((r.duration || 0) - (duration || 0)) }))
-      .sort((x, y) => x.d - y.d)
-      .find((x) => withinBound(x.r.duration, duration));
-    if (best) return asLyric(best.r.plainLyrics.trim(), native);
-  }
-  return null;
-}
-
-// Pull an artist's full catalog by lookup — reaches 19금/explicit tracks that
-// Apple drops from /search but keeps in the catalog. Resolve the artist id(s)
-// (dropping trailing title words until one resolves), then look them up. Bounded
-// (≤3 artists) and parallel so it can run inline on every search cheaply.
-// Shared text normalizer (decoration-insensitive) for matching names/titles.
-const normText = (s) =>
-  (s || "")
-    .toLowerCase()
-    .normalize("NFKC")
-    .replace(/[’'ʻ´`"]/g, "")
-    .replace(/[()\[\]\-_.,!?~×&/]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-async function fetchArtistCatalog(query) {
-  const words = (query || "").trim().split(/\s+/).filter(Boolean);
-  // the artist is the leading OR trailing tokens (users type both "가수 곡" and
-  // "곡 가수") — try the full query, the first two, and the last two words. All
-  // resolutions run in parallel (one round trip), not a sequential trim loop.
-  const terms = [...new Set([words.join(" "), words.slice(0, 2).join(" "), words.slice(-2).join(" ")])].filter(Boolean);
-  const artists = new Map(); // id -> name
-  await Promise.all(
-    terms.flatMap((term) =>
-      ["KR", "US"].map((c) =>
-        fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=musicArtist&limit=3&country=${c}`)
-          .then((r) => r.json())
-          .then((r) => (r.results || []).forEach((a) => a.artistId && artists.set(a.artistId, a.artistName || "")))
-          .catch(() => {})
-      )
-    )
-  );
-  if (!artists.size) return [];
-  // iTunes' musicArtist search is loose ("master muzik" also returns i-dle,
-  // NewJeans) — keep only artists whose name actually appears in the query, so
-  // an artist-only search doesn't drag in unrelated discographies.
-  const nq = normText(query);
-  let ids = [...artists.entries()].filter(([, name]) => name && nq.includes(normText(name))).map(([id]) => id);
-  if (!ids.length) ids = [...artists.keys()].slice(0, 1); // no clean match → best single guess
-  const lists = await Promise.all(
-    ids.slice(0, 3).map((id) =>
-      fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song&limit=200&country=KR`)
-        .then((r) => r.json())
-        .then((j) => (j.results || []).filter((r) => r.wrapperType === "track"))
-        .catch(() => [])
-    )
-  );
-  return lists.flat();
-}
-
-// resolve to [] if a best-effort task overruns — used so the artist-catalog
-// augmentation can never stall the main search
-const withTimeout = (p, ms) =>
-  Promise.race([p, new Promise((r) => setTimeout(() => r([]), ms))]);
-
-// Shape an iTunes track (from /search or /lookup) into the picker's result form.
-function itunesToResult(r) {
-  const art = r.artworkUrl100 || ""; // some tracks/regions omit artwork
-  return {
-    trackId: r.trackId, // lets the lyrics step re-query the JP/KR store for native names
-    title: r.trackName,
-    artist: r.artistName,
-    album: r.collectionName,
-    artwork: art.replace("100x100", "600x600"),
-    thumb: art,
-    duration: Math.round((r.trackTimeMillis || 0) / 1000),
-    year: (r.releaseDate || "").slice(0, 4),
-    genre: r.primaryGenreName || "",
-    preview: r.previewUrl || "",
-  };
-}
-
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, GitHub commits on Vercel.
 export async function POST(req) {
