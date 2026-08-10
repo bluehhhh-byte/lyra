@@ -54,31 +54,42 @@ export default function WatchedGrid({ rated }) {
       </div>
 
       <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
-        {shown.map((m) => (
-          <div key={m.code} className="group">
-            <div className="relative overflow-hidden rounded-lg border border-line bg-surface">
-              {m.poster ? (
-                <img
-                  src={m.poster}
-                  alt={m.title_ko || m.title}
-                  loading="lazy"
-                  className="aspect-[2/3] w-full object-cover"
-                />
-              ) : (
-                <div className="flex aspect-[2/3] items-center justify-center text-xs text-muted">
-                  {m.title_ko || m.title}
-                </div>
-              )}
-              <span className="absolute right-1 top-1 rounded bg-black/70 px-1.5 py-0.5 text-xs font-semibold text-white tabular-nums">
-                ★{m.rating}
-              </span>
-            </div>
-            <p className="mt-1.5 truncate text-xs font-medium">{m.title_ko || m.title}</p>
-            <p className="truncate text-[11px] text-muted">
-              {[m.country, m.year].filter(Boolean).join(" · ")}
-            </p>
-          </div>
-        ))}
+        {shown.map((m) => {
+          // 데이터셋 영화는 개별 페이지가 없어 TMDB로 보낸다. tmdbId 없으면 링크 없이.
+          const href = m.tmdbId ? `https://www.themoviedb.org/movie/${m.tmdbId}` : null;
+          const inner = (
+            <>
+              <div className="relative overflow-hidden rounded-lg border border-line bg-surface">
+                {m.poster ? (
+                  <img
+                    src={m.poster}
+                    alt={m.title_ko || m.title}
+                    loading="lazy"
+                    className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
+                  />
+                ) : (
+                  <div className="flex aspect-[2/3] items-center justify-center p-2 text-center text-xs text-muted">
+                    {m.title_ko || m.title}
+                  </div>
+                )}
+                <span className="absolute right-1 top-1 rounded bg-black/70 px-1.5 py-0.5 text-xs font-semibold text-white tabular-nums">
+                  ★{m.rating}
+                </span>
+              </div>
+              <p className="mt-1.5 truncate text-xs font-medium group-hover:text-accent">{m.title_ko || m.title}</p>
+              <p className="truncate text-[11px] text-muted">
+                {[m.country, m.year].filter(Boolean).join(" · ")}
+              </p>
+            </>
+          );
+          return href ? (
+            <a key={m.code} href={href} target="_blank" rel="noopener noreferrer" className="group">
+              {inner}
+            </a>
+          ) : (
+            <div key={m.code} className="group">{inner}</div>
+          );
+        })}
       </div>
     </>
   );

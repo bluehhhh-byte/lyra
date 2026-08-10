@@ -100,13 +100,10 @@ export default function SearchDialog({ open, onClose }) {
             <section key={label} className="mb-3">
               <h2 className="px-2 py-2 text-[10px] font-semibold uppercase text-muted">{label}</h2>
               <ul>
-                {items.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={remember}
-                      className="flex items-center gap-3 rounded px-2 py-2 hover:bg-surface"
-                    >
+                {items.map((item) => {
+                  const external = item.href?.startsWith("http");
+                  const inner = (
+                    <>
                       {item.image ? (
                         <img src={item.image} alt="" className="h-11 w-11 shrink-0 rounded object-cover" />
                       ) : (
@@ -119,9 +116,21 @@ export default function SearchDialog({ open, onClose }) {
                         <span className="block truncate text-xs text-muted">{item.subtitle}</span>
                         {item.snippet && <span className="mt-0.5 block truncate text-xs text-muted/70">{item.snippet}</span>}
                       </span>
-                    </Link>
-                  </li>
-                ))}
+                    </>
+                  );
+                  const cls = "flex items-center gap-3 rounded px-2 py-2 hover:bg-surface";
+                  return (
+                    <li key={item.href}>
+                      {external ? (
+                        <a href={item.href} target="_blank" rel="noopener noreferrer" onClick={remember} className={cls}>
+                          {inner}
+                        </a>
+                      ) : (
+                        <Link href={item.href} onClick={remember} className={cls}>{inner}</Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </section>
           ))}

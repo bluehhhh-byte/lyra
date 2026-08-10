@@ -1,6 +1,7 @@
 import { getAllSongs } from "../../../lib/songs";
 import { getAllMovies } from "../../../lib/movies";
 import { getAllPeople } from "../../../lib/people";
+import { getWatched } from "../../../lib/watched";
 
 export const dynamic = "force-dynamic";
 
@@ -45,6 +46,23 @@ export async function GET(request) {
     }));
 
 
+  // 평가한 왓챠 영화 1045편 — 개별 페이지가 없어 TMDB로 링크. 위 .md 영화와
+  // tmdbId가 겹치면(같은 작품) 뺀다.
+  const mdTmdb = new Set(getAllMovies().map((m) => String(m.tmdbId)).filter(Boolean));
+  const watched = getWatched()
+    .filter((m) => m.rating != null && !mdTmdb.has(String(m.tmdbId)))
+    .filter((m) =>
+      [m.title, m.title_ko, m.director, m.director_ko, ...(Array.isArray(m.cast) ? m.cast : [m.cast])]
+        .some((value) => includes(value, query))
+    )
+    .slice(0, 6)
+    .map((m) => ({
+      href: m.tmdbId ? `https://www.themoviedb.org/movie/${m.tmdbId}` : null,
+      title: m.title_ko || m.title,
+      subtitle: [m.director_ko || m.director, m.year, m.rating != null ? `★${m.rating}` : ""].filter(Boolean).join(" · "),
+      image: m.poster,
+    }));
+
   const people = getAllPeople()
     .filter((person) => includes(person.name, query))
     .slice(0, 6)
@@ -58,6 +76,7 @@ export async function GET(request) {
     groups: [
       ["음악", songs],
       ["영화·드라마", movies],
+      ["평가한 영화", watched],
       ["인물", people],
     ].filter(([, items]) => items.length),
   });
