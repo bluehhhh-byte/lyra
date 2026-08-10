@@ -2,6 +2,7 @@ import { getAllSongs } from "../../../lib/songs";
 import { getAllMovies } from "../../../lib/movies";
 import { getAllPeople } from "../../../lib/people";
 import { getWatched } from "../../../lib/watched";
+import { tmdbUrl } from "../../../lib/tmdb-link";
 
 export const dynamic = "force-dynamic";
 
@@ -57,7 +58,7 @@ export async function GET(request) {
     )
     .slice(0, 6)
     .map((m) => ({
-      href: m.tmdbId ? `https://www.themoviedb.org/movie/${m.tmdbId}` : null,
+      href: tmdbUrl(m.tmdbId, m.media),
       title: m.title_ko || m.title,
       subtitle: [m.director_ko || m.director, m.year, m.rating != null ? `★${m.rating}` : ""].filter(Boolean).join(" · "),
       image: m.poster,

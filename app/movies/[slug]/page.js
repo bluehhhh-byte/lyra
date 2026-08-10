@@ -4,6 +4,7 @@ import { getAllMovies, getMovie } from "../../../lib/movies";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
 import MovieCardButton from "./movie-card";
 import { splitCast } from "../../../lib/people";
+import { tmdbUrl } from "../../../lib/tmdb-link";
 
 export function generateStaticParams() {
   return getAllMovies().map((m) => ({ slug: m.slug }));
@@ -149,7 +150,7 @@ export default async function MoviePage({ params }) {
               />
               {movie.tmdbId && (
                 <a
-                  href={`https://www.themoviedb.org/movie/${movie.tmdbId}`}
+                  href={tmdbUrl(movie.tmdbId, movie.media)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted transition active:scale-[0.97] hover:text-accent"

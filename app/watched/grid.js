@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import { tmdbUrl } from "../../lib/tmdb-link";
 
 // 별점 분포 막대 + 포스터 그리드. 막대를 누르면 그 별점만 필터, 다시 누르면 해제.
 // 서버 페이지에서 정렬된 rated 배열을 받는다.
@@ -56,7 +57,7 @@ export default function WatchedGrid({ rated }) {
       <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
         {shown.map((m) => {
           // 데이터셋 영화는 개별 페이지가 없어 TMDB로 보낸다. tmdbId 없으면 링크 없이.
-          const href = m.tmdbId ? `https://www.themoviedb.org/movie/${m.tmdbId}` : null;
+          const href = tmdbUrl(m.tmdbId, m.media);
           const inner = (
             <>
               <div className="relative overflow-hidden rounded-lg border border-line bg-surface">
