@@ -3,7 +3,7 @@ import { readSong, writeSong, deleteSong } from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
-import { geminiText } from "../../../lib/admin/gemini";
+import { geminiText, GEMINI_LITE_MODEL } from "../../../lib/admin/gemini";
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
 import { normText, fetchArtistCatalog, withTimeout, itunesToResult } from "../../../lib/admin/itunes";
@@ -465,7 +465,8 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
 - emotion: 이 곡의 감정을 아래 목록에서 정확히 하나만. 목록: ${EMOTIONS.join(", ")}
 가사:
 ${koText.slice(0, 2000)}`,
-      true
+      true,
+      GEMINI_LITE_MODEL // 키워드·감정 추출은 분류 작업 — 일괄 소급의 쿼터 주범이라 lite로
     );
     let kw = [], emotion = "";
     try {

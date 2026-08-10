@@ -47,6 +47,8 @@ export default function SongTools({ songs }) {
 
   // one song per request (timeout-safe), sequential to respect the Gemini rate limit
   const regenAll = async () => {
+    // 곡당 1회 호출 × 전곡 — 무료 일일 한도를 크게 먹는다. 실수 클릭 방지.
+    if (!confirm(`전체 ${songs.length}곡 = Gemini ${songs.length}회 호출 (약 ${Math.ceil((songs.length * 7) / 60)}분).\n태그·코멘트·독음을 전부 덮어씁니다. 계속할까요?`)) return;
     for (let i = 0; i < songs.length; i++) {
       setBulk({ done: i, total: songs.length });
       await regenMeta(songs[i].slug);
@@ -59,6 +61,7 @@ export default function SongTools({ songs }) {
   // keywords+emotion only — regenAll would also clobber comments/tags.
   // Sequential: parallel calls trip the Gemini free-tier rate limit.
   const keywordsAll = async () => {
+    if (!confirm(`전체 ${songs.length}곡 = Gemini ${songs.length}회 호출 (약 ${Math.ceil((songs.length * 7) / 60)}분).\nkeywords·emotion만 채웁니다(코멘트·태그 보존). 계속할까요?`)) return;
     for (let i = 0; i < songs.length; i++) {
       setBulk({ done: i, total: songs.length });
       const slug = songs[i].slug;

@@ -106,7 +106,11 @@ youtube_id: dQw4w9WgXcQ         # (선택) 영상 ID 직접 지정 — 검색 �
 - **Gemini 호출 통합**: 곡은 태그·제목·독음·코멘트·키워드·감정을 1회 JSON 호출로, 영화도
   줄거리 정돈+코멘트를 1회 JSON 호출로 묶어 무료 티어 rate limit 회피.
   일괄 작업은 곡당 ~7s 간격(순차)으로 분당 한도(~10 RPM) 아래 유지, 일일 한도 소진 시엔 다음날.
-  한도가 계속 모자라면 `GEMINI_MODEL=gemini-flash-lite-latest`(무료 한도가 더 큼)로 전환.
+- **Gemini 2단 모델** (`lib/admin/gemini.js`): 품질 민감한 번역·해설·감상은 flash
+  (`GEMINI_MODEL`), 기계적 분류(자동태그·키워드·감정·연 구분)는 flash-lite
+  (`GEMINI_MODEL_LITE`, 기본 `gemini-flash-lite-latest`). 모델별 무료 쿼터 버킷이 분리돼
+  있어 58곡 일괄 재생성이 번역용 flash 한도를 안 갉아먹는다. 429 응답의 RetryInfo
+  retryDelay를 존중해 재시도(12초 캡).
 - **Gemini 모델**: `GEMINI_MODEL` 환경변수, 기본 `gemini-flash-latest` **별칭**. 버전을 하드코딩하면
   API 키 재발급 시 죽는다("no longer available to new users") — 별칭이 현재 flash를 따라간다.
 - **키워드·감정 신뢰 경계** (`lib/keywords.js`): Gemini가 값을 정하므로 파서가 방어선. `emotion`은
@@ -136,7 +140,8 @@ youtube_id: dQw4w9WgXcQ         # (선택) 영상 ID 직접 지정 — 검색 �
 | `GITHUB_TOKEN` | 곡 저장용 PAT (lyra 저장소 Contents 읽기·쓰기) | ✅ |
 | `GITHUB_REPO` | `owner/repo` (예: `bluehhhh-byte/lyra`) | ✅ |
 | `GEMINI_API_KEY` | 번역·태그·코멘트·독음·취향 리포트·추천 생성 | 선택 |
-| `GEMINI_MODEL` | Gemini 모델 (미설정 시 `gemini-flash-latest`) | 선택 |
+| `GEMINI_MODEL` | 품질용 Gemini 모델 (미설정 시 `gemini-flash-latest`) | 선택 |
+| `GEMINI_MODEL_LITE` | 분류·일괄용 모델 (미설정 시 `gemini-flash-lite-latest`) | 선택 |
 | `TMDB_API_KEY` | 영화 검색·상세·왓챠 임포트·추천 매칭 | 영화 기능에 필수 |
 | `NEXT_PUBLIC_SITE_URL` | sitemap·OG 절대 URL (미설정 시 Vercel 도메인 자동 사용) | 선택 |
 
