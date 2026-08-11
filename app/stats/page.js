@@ -5,6 +5,7 @@ import { pct, Bars } from "./charts";
 import DrillSection from "./drilldown";
 import EmotionTimeline from "../emotion-timeline";
 import { getDiary } from "../../lib/diary";
+import { COUNTRY_TAGS } from "../../lib/genre";
 
 export const metadata = {
   title: "컬렉션 통계 | Lyra",
@@ -13,10 +14,9 @@ export const metadata = {
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
 const isDecadeTag = (t) => /^\d{4}s?$/.test(t); // 2010s (legacy) or 2018 (exact year)
-const isCountryTag = (t) => Object.values(COUNTRY).includes(t) || t === "기타";
-// movies use real nationalities (미국·영국·프랑스…), not the song 영미 bucket
-const MOVIE_COUNTRIES = ["한국", "일본", "미국", "영국", "프랑스", "홍콩", "중국", "대만", "기타"];
-const isMovieCountryTag = (t) => MOVIE_COUNTRIES.includes(t);
+// 곡·영화 모두 같은 권역 어휘(한국·일본·영미·유럽·기타)를 쓴다
+const isCountryTag = (t) => COUNTRY_TAGS.includes(t);
+const isMovieCountryTag = isCountryTag;
 
 // Map<key, count>, biggest first
 function tally(values) {

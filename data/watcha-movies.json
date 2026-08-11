@@ -14,7 +14,7 @@
    "이약동"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/eVCmYS7MymJig8RR7NhMGS3rzEC.jpg",
   "tmdbId": "37702",
   "rating": 4,
@@ -35,7 +35,7 @@
    "매즈 미켈슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2e9maVDTkHXjEB3Bk1oBvZ5Xs0M.jpg",
   "tmdbId": "36557",
   "rating": 3,
@@ -56,7 +56,7 @@
    "마티유 아말릭"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/q1s0OFBJPQXNJ0FKeDCCOoKR70D.jpg",
   "tmdbId": "10764",
   "rating": 2.5,
@@ -98,7 +98,7 @@
    "리 J. 콥"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yg2XzSxH10DVGNY73e7yZgLnDF5.jpg",
   "tmdbId": "389",
   "rating": 3.5,
@@ -119,7 +119,7 @@
    "조지 C. 스콧"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/whDdYx3lh1LHTN0VlPFt51fX29g.jpg",
   "tmdbId": "12219",
   "rating": 3.5,
@@ -140,7 +140,7 @@
    "마크 스트롱"
   ],
   "genre": "War",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/u2oRQqUashBBIj5UNeOd5TN0bmB.jpg",
   "tmdbId": "530915",
   "rating": 3.5,
@@ -308,7 +308,7 @@
    "Albert Rémy"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/dhr6UkJugFMTvr1p51l0iHlo9lf.jpg",
   "tmdbId": "147",
   "rating": 4,
@@ -371,7 +371,7 @@
    "안나 켄드릭"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hDI7t1XMYTibPq1VLDOc6tQR8PH.jpg",
   "tmdbId": "40807",
   "rating": 3,
@@ -392,7 +392,7 @@
    "Geoffrey Arend"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oQdXN6HQGba1Y2h7DEMJT45xxfn.jpg",
   "tmdbId": "19913",
   "rating": 4.5,
@@ -476,7 +476,7 @@
    "파니 아르당"
   ],
   "genre": "Comedy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/jdl6uWgXPrrzfQ9jBHW0NtFqumg.jpg",
   "tmdbId": "1958",
   "rating": 4,
@@ -518,7 +518,7 @@
    "张雨绮"
   ],
   "genre": "Comedy",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/zFdJnP7hRUgZJpl6f2tBK2qNTvu.jpg",
   "tmdbId": "13688",
   "rating": 3.5,
@@ -539,7 +539,7 @@
    "Kirsten Dunst"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jULvvUymAqM18gIDHbMRfKHbCSB.jpg",
   "tmdbId": "38",
   "rating": 5,
@@ -560,7 +560,7 @@
    "게리 올드만"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jJb27pHZeQgQoxso3QVIFsMZn5c.jpg",
   "tmdbId": "820",
   "rating": 3,
@@ -581,7 +581,7 @@
    "가이 피어스"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dfDvzEtWncNcYgDaRK2s3nPjpsy.jpg",
   "tmdbId": "2118",
   "rating": 2.5,
@@ -621,7 +621,7 @@
    "노에미 메를랑"
   ],
   "genre": "Music",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/aiI46rgja9RNkGIcTfLu5HoF5DF.jpg",
   "tmdbId": "817758",
   "rating": 3.5,
@@ -663,7 +663,7 @@
    "Vanessa Marshall"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oXwe3wVhdvvxiixL9UJf6PgBybZ.jpg",
   "tmdbId": "63181",
   "rating": 3,
@@ -705,7 +705,7 @@
    "다이앤 위스트"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ePuSSqXxLuOR7cQz70QsGlx3wsy.jpg",
   "tmdbId": "162",
   "rating": 3.5,
@@ -768,7 +768,7 @@
    "주드 로"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/myBHEGtYbrDpzjIgLotXbEV2wQE.jpg",
   "tmdbId": "782",
   "rating": 3,
@@ -915,7 +915,7 @@
    "카메론 디아즈"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uJcb65imfLqUf6kLghSdsmD8TEW.jpg",
   "tmdbId": "3131",
   "rating": 4,
@@ -978,7 +978,7 @@
    "루이 C.K."
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/clP8tDZeM9jgnqmu4VBClBDpLtS.jpg",
   "tmdbId": "23082",
   "rating": 4,
@@ -1062,7 +1062,7 @@
    "아론 폴"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zlkeH0s7dDxcnuPcHBqAyXFUxqN.jpg",
   "tmdbId": "1279493",
   "rating": 3.5,
@@ -1083,7 +1083,7 @@
    "조나단 그로프"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/lYceQKe3EsYn7VdDXGTy7dSwBLp.jpg",
   "tmdbId": "109445",
   "rating": 3,
@@ -1251,7 +1251,7 @@
    "케이트 맥키넌"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/gjKUhygLXLFBpakpeMTH4IWqj50.jpg",
   "tmdbId": "43074",
   "rating": 3,
@@ -1293,7 +1293,7 @@
    "쥘리에트 비노쉬"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/kPacHbCRcH5QYTqMq87Q7Gvkvwn.jpg",
   "tmdbId": "124905",
   "rating": 4,
@@ -1545,7 +1545,7 @@
    "Jeff Cohen"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/w4AKh5YDOwUKqrnuyDZkY83Urjn.jpg",
   "tmdbId": "9340",
   "rating": 3.5,
@@ -1629,7 +1629,7 @@
    "벤 애플렉"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/67dZYyIKnwjCe2C22mn8jreObah.jpg",
   "tmdbId": "489",
   "rating": 5,
@@ -1650,7 +1650,7 @@
    "애너벨라 쇼라"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7mvNFPjLIeSooiYX3dlJRWL8hY5.jpg",
   "tmdbId": "6715",
   "rating": 4,
@@ -1755,7 +1755,7 @@
    "브래드 개릿"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/d9C2H1qoFt9AL4DwRlqEEZK4hVa.jpg",
   "tmdbId": "11172",
   "rating": 3,
@@ -1776,7 +1776,7 @@
    "소피아 릴리스"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nlZKIOeoSWwrRcrppoIbkfOGZ6J.jpg",
   "tmdbId": "346364",
   "rating": 1.5,
@@ -1881,7 +1881,7 @@
    "林耀聲"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/oPdlUcOgJjnXpEQBKbnnlNpV8w0.jpg",
   "tmdbId": "367196",
   "rating": 3.5,
@@ -1902,7 +1902,7 @@
    "마티유 아말릭"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vsibrPwiJlZHhlrX5f4xFptX3q4.jpg",
   "tmdbId": "120467",
   "rating": 4,
@@ -1944,7 +1944,7 @@
    "Sabrina Ferilli"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/oRqNjXpbaQz3O2cDUfRE2W7wnqt.jpg",
   "tmdbId": "179144",
   "rating": 4,
@@ -2154,7 +2154,7 @@
    "유가령"
   ],
   "genre": "Comedy",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/yjiN7DKAwlwtxSGNJTrnVcdiaGI.jpg",
   "tmdbId": "115156",
   "rating": 3.5,
@@ -2259,7 +2259,7 @@
    "줄리엣 루이스"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iKyOkIMkgcBFdPas2ArQJHiTW1n.jpg",
   "tmdbId": "1587",
   "rating": 3.5,
@@ -2364,7 +2364,7 @@
    "Briana Shann"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bC0CmUZ9s5zdvW2CEWK6sPXXp8V.jpg",
   "tmdbId": "374473",
   "rating": 4,
@@ -2385,7 +2385,7 @@
    "다니엘 스턴"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vqe3WPiHAgCiAHXGVHSJPDG9OgO.jpg",
   "tmdbId": "771",
   "rating": 3,
@@ -2406,7 +2406,7 @@
    "다니엘 스턴"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eUYFbtuSBuvihNmFgLJtl1Y54fE.jpg",
   "tmdbId": "772",
   "rating": 3.5,
@@ -2448,7 +2448,7 @@
    "사라 피전"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/V3w8ol6OT1vrQwc2OHiS2YBa6Z.jpg",
   "tmdbId": "1083433",
   "rating": 3,
@@ -2469,7 +2469,7 @@
    "스캔더 케인스"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/o89tirJIiukLxHH20jxZ2ycSneH.jpg",
   "tmdbId": "2454",
   "rating": 3,
@@ -2532,7 +2532,7 @@
    "닐 패트릭 해리스"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/m2Lw04GIjiTjylqPiccoo3WFMVb.jpg",
   "tmdbId": "210577",
   "rating": 4,
@@ -2700,7 +2700,7 @@
    "Margaret Whitton"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xtkH9Z95vqUO7UsGcr5Yu8jhQdz.jpg",
   "tmdbId": "10068",
   "rating": 3,
@@ -2721,7 +2721,7 @@
    "타하르 라힘"
   ],
   "genre": "History",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cFOpMbj28ZKhXDy50mrIcLhLb8g.jpg",
   "tmdbId": "753342",
   "rating": 3,
@@ -2931,7 +2931,7 @@
    "Arjan Aujla"
   ],
   "genre": "Drama",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/4ZI5xSdyDfuBSY4GeEJJLYfGDpQ.jpg",
   "tmdbId": "26022",
   "rating": 4,
@@ -2973,7 +2973,7 @@
    "제이슨 알렉산더"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qTIATozylvJWXSkU1FJyQeufyHY.jpg",
   "tmdbId": "9889",
   "rating": 4,
@@ -3036,7 +3036,7 @@
    "미우라 마사키"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/dLa0pm3EJL0iK4cMVRoUmZzMUpt.jpg",
   "tmdbId": "928730",
   "rating": 4,
@@ -3162,7 +3162,7 @@
    "Linda May"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yddNUBf1TfGhc3XayD4AOUYiMCk.jpg",
   "tmdbId": "581734",
   "rating": 3,
@@ -3204,7 +3204,7 @@
    "조쉬 브롤린"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2SU078qZf8ZTNfl6XlqgYiQohhG.jpg",
   "tmdbId": "6977",
   "rating": 4.5,
@@ -3246,7 +3246,7 @@
    "지나 롤랜즈"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ntdgcdsmMuHd9s4oEKTvWDiUyU7.jpg",
   "tmdbId": "11036",
   "rating": 3,
@@ -3267,7 +3267,7 @@
    "지나 맥키"
   ],
   "genre": "Romance",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/1AbAtQSgN4KKVODiiX2452dlDJD.jpg",
   "tmdbId": "509",
   "rating": 4,
@@ -3288,7 +3288,7 @@
    "마이클 섀넌"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/38ne9m6KHJLFAOyq8SHxmKP0aiz.jpg",
   "tmdbId": "340666",
   "rating": 3,
@@ -3309,7 +3309,7 @@
    "브랜든 페레아"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6N5pRG81j6EBHhjIMkvwKnOj7u6.jpg",
   "tmdbId": "762504",
   "rating": 3.5,
@@ -3372,7 +3372,7 @@
    "그레이엄 그린"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rdyl5TlXpjMy8EqOcGQRo7r2UAg.jpg",
   "tmdbId": "581",
   "rating": 3.5,
@@ -3414,7 +3414,7 @@
    "Alexander Gould"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9ViCYfZ0whpwtKbM2WJP5PfsG2x.jpg",
   "tmdbId": "12",
   "rating": 3,
@@ -3518,7 +3518,7 @@
    "이안 맥켈런"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/52cjQg88xZNx8JKU7GpbIf19mL1.jpg",
   "tmdbId": "591",
   "rating": 3,
@@ -3539,7 +3539,7 @@
    "홍 차우"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iC5XHOOcFIFuOSJ5DnZFmaxUeGd.jpg",
   "tmdbId": "301337",
   "rating": 3,
@@ -3560,7 +3560,7 @@
    "Александр Годунов"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9MPaeRkwS12glOQ818SEtnMd3XA.jpg",
   "tmdbId": "562",
   "rating": 4,
@@ -3581,7 +3581,7 @@
    "윌리엄 새들러"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eaTk9kzl8cWPlsyexhnMF06U78W.jpg",
   "tmdbId": "1573",
   "rating": 3,
@@ -3602,7 +3602,7 @@
    "사무엘 L. 잭슨"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cOyw8hiCzpEaL8hsYAH7TPE6QF2.jpg",
   "tmdbId": "1572",
   "rating": 3,
@@ -3665,7 +3665,7 @@
    "에런 엑하트"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9ICUbdveP56jRoMMVkXSOr3ceyV.jpg",
   "tmdbId": "155",
   "rating": 5,
@@ -3686,7 +3686,7 @@
    "톰 하디"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eq5P71YHwwaacEYKaQ72Wxy6BlT.jpg",
   "tmdbId": "49026",
   "rating": 4,
@@ -3707,7 +3707,7 @@
    "레이첼 맥아담스"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xA7ic72L0mejJX1SYMU38F7wwiF.jpg",
   "tmdbId": "284052",
   "rating": 4,
@@ -3728,7 +3728,7 @@
    "엘리자베스 올슨"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
   "tmdbId": "453395",
   "rating": 3,
@@ -3875,7 +3875,7 @@
    "제임스 칸"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/1yvBkSv4ZLS1GohlmMDmdpSgfYo.jpg",
   "tmdbId": "238",
   "rating": 4,
@@ -3896,7 +3896,7 @@
    "다이앤 키튼"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/35RGDgySfINL9V2e6lkDECQ0hRa.jpg",
   "tmdbId": "240",
   "rating": 4,
@@ -3938,7 +3938,7 @@
    "올리비아 콜먼"
   ],
   "genre": "Comedy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/p1MnfOS5FUOwlY0FJjle6i2fq32.jpg",
   "tmdbId": "254320",
   "rating": 4,
@@ -3959,7 +3959,7 @@
    "에반 레이첼 우드"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oVogm7Mu1DA8Hc3REBFYu1WlncE.jpg",
   "tmdbId": "12163",
   "rating": 4,
@@ -3980,7 +3980,7 @@
    "에드 해리스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/o9dnRLsS0EHqnTjGtndWfrQzeMh.jpg",
   "tmdbId": "9802",
   "rating": 2.5,
@@ -4043,7 +4043,7 @@
    "마고 로비"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rdBYtoxLvd8J9PsVYVGd7FGzQux.jpg",
   "tmdbId": "106646",
   "rating": 3,
@@ -4064,7 +4064,7 @@
    "타이 심킨스"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/q0xV5Lnq30JiegbVGBOvVwrgUDT.jpg",
   "tmdbId": "785084",
   "rating": 3.5,
@@ -4169,7 +4169,7 @@
    "다니엘 칼타기론"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/i4fdAyiapSg2RCoQ1O081drER9D.jpg",
   "tmdbId": "14784",
   "rating": 4.5,
@@ -4211,7 +4211,7 @@
    "Jerry Orbach"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nTMryOvShRaB2bu9VifCZ73Jmzs.jpg",
   "tmdbId": "88",
   "rating": 3,
@@ -4253,7 +4253,7 @@
    "로렌 홀리"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6EdWcqH6dNJzGO3IAadV4t704ix.jpg",
   "tmdbId": "8467",
   "rating": 3.5,
@@ -4274,7 +4274,7 @@
    "마크 라이런스"
   ],
   "genre": "War",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nLQpUxLulXpIvN7FwREWjRNRBRI.jpg",
   "tmdbId": "374720",
   "rating": 3.5,
@@ -4337,7 +4337,7 @@
    "Kerr Smith"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/kPqTDpKN3lkteEV1OegqpZ6GHL6.jpg",
   "tmdbId": "9532",
   "rating": 3.5,
@@ -4358,7 +4358,7 @@
    "DJ Dallenbach"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qsPkigHg0kntzupMXjlyOpV6pH7.jpg",
   "tmdbId": "489929",
   "rating": 3.5,
@@ -4379,7 +4379,7 @@
    "조아킹 드 알메이다"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nQvW5CpZzDhzY4WgWOWUuMVt3Yt.jpg",
   "tmdbId": "8068",
   "rating": 3,
@@ -4400,7 +4400,7 @@
    "케빈 J. 오코너"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yOW9Q1rZ6EJHGc0ZzyUurxacKsE.jpg",
   "tmdbId": "7345",
   "rating": 4,
@@ -4442,7 +4442,7 @@
    "하비 카이텔"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cG33m3donf0PrPSN5zUeqydlQat.jpg",
   "tmdbId": "1541",
   "rating": 4,
@@ -4463,7 +4463,7 @@
    "제임스 듀발"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uREa7oOO1gxuCUiUOFzHOVv7h5d.jpg",
   "tmdbId": "141",
   "rating": 3.5,
@@ -4484,7 +4484,7 @@
    "이정재"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/ujIHEzt2EEboVzjQoWZBMYdAt1v.jpg",
   "tmdbId": "124157",
   "rating": 4,
@@ -4505,7 +4505,7 @@
    "조 판톨리아노"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hTe0eJaiUjBDNYZim3OZUkSvCXe.jpg",
   "tmdbId": "5503",
   "rating": 4,
@@ -4589,7 +4589,7 @@
    "장민"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/skqHurgkv0WHZlQmamSiuLQXX3P.jpg",
   "tmdbId": "47647",
   "rating": 3.5,
@@ -4610,7 +4610,7 @@
    "향화강"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/An08m2sqHtV9tKEV7ePxUTqQDMN.jpg",
   "tmdbId": "57663",
   "rating": 3.5,
@@ -4652,7 +4652,7 @@
    "알버트 듀퐁텔"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/AdrItykbv1evqcbIPrItVWnkaKj.jpg",
   "tmdbId": "979",
   "rating": 3,
@@ -4694,7 +4694,7 @@
    "관지림"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/7iOHUeZ5FyghoFQAguvPDZv9gHC.jpg",
   "tmdbId": "18672",
   "rating": 4,
@@ -4757,7 +4757,7 @@
    "Анатолий Белый"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/wau82xY0mui2JXLCZK9sti3TioS.jpg",
   "tmdbId": "1257406",
   "rating": 3.5,
@@ -4841,7 +4841,7 @@
    "댄 애크로이드"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qN6mjegSBIAAPukTIcAe12Yfpip.jpg",
   "tmdbId": "403",
   "rating": 4,
@@ -4883,7 +4883,7 @@
    "메릴 스트립"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fmgbVZQnTxc0wuHQVaIYoBy8Fdx.jpg",
   "tmdbId": "590",
   "rating": 3.5,
@@ -4925,7 +4925,7 @@
    "제임스 칸"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/645wJqf2IdIEQIm4RMaVM99rQoE.jpg",
   "tmdbId": "74308",
   "rating": 3,
@@ -4967,7 +4967,7 @@
    "잭 니콜슨"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/j7REKrvSiC2GSsvXfxyAvXQVj7q.jpg",
   "tmdbId": "1422",
   "rating": 4,
@@ -5051,7 +5051,7 @@
    "Lou Romano"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zFah4LNeWw68y7RRGi20CQlGByY.jpg",
   "tmdbId": "2062",
   "rating": 4,
@@ -5072,7 +5072,7 @@
    "존 레전드"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ad9ndytwOckyShSc0A6tx1rZRkW.jpg",
   "tmdbId": "313369",
   "rating": 4.5,
@@ -5093,7 +5093,7 @@
    "모니카 벨루치"
   ],
   "genre": "Mystery",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/3MlRyb7mVc4ffnEVvbdJL2nUJM8.jpg",
   "tmdbId": "12531",
   "rating": 3.5,
@@ -5135,7 +5135,7 @@
    "줄리언 샌즈"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/sAABkeuRhhhgGJ5lLMNTgLIMM9m.jpg",
   "tmdbId": "451",
   "rating": 4,
@@ -5177,7 +5177,7 @@
    "조디 메이"
   ],
   "genre": "History",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qiMfscCYkeNUfgyDgtwFBmwhMpE.jpg",
   "tmdbId": "9361",
   "rating": 2.5,
@@ -5215,7 +5215,7 @@
    "Justin Cooper"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qgcVuVoSEcekcusDlaNpkfsgvaL.jpg",
   "tmdbId": "1624",
   "rating": 4.5,
@@ -5236,7 +5236,7 @@
    "에드워드 번즈"
   ],
   "genre": "War",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9W0XUvNtoJMG6kI4F4Y2mbsS2kt.jpg",
   "tmdbId": "857",
   "rating": 3.5,
@@ -5257,7 +5257,7 @@
    "제레미 아이언스"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9Y048zYw66TWvpUtsiNK0uReiVX.jpg",
   "tmdbId": "8587",
   "rating": 4,
@@ -5278,7 +5278,7 @@
    "Ayush Tandon"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mexaTje46m4uJ9YToFUydtZuqaL.jpg",
   "tmdbId": "87827",
   "rating": 4,
@@ -5299,7 +5299,7 @@
    "도나 머피"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/sT1vLH38iaezVgoFqmaiihbnTUy.jpg",
   "tmdbId": "38757",
   "rating": 3,
@@ -5383,7 +5383,7 @@
    "엠마 톰슨"
   ],
   "genre": "Comedy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/tvaPe5kPoJCLn0xycctkHUaph7w.jpg",
   "tmdbId": "508",
   "rating": 3,
@@ -5446,7 +5446,7 @@
    "웬디 말릭"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7vDMkZnP3pHruaqwiVfGi29lJOe.jpg",
   "tmdbId": "65367",
   "rating": 3,
@@ -5467,7 +5467,7 @@
    "존 론"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/szpcEjLUh65pkPaDagMfTRs3u5N.jpg",
   "tmdbId": "5175",
   "rating": 2,
@@ -5488,7 +5488,7 @@
    "사나다 히로유키"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8TDfMdByPMfhfTeKZJqLy3jcou3.jpg",
   "tmdbId": "5174",
   "rating": 3,
@@ -5530,7 +5530,7 @@
    "벤 멘델슨"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/j4TIfwFrm8WnckByTnMFEAuIVju.jpg",
   "tmdbId": "333339",
   "rating": 3.5,
@@ -5551,7 +5551,7 @@
    "아딜 아크타르"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vD5gUfFYEuYXwfOVJQjLIQTGs0s.jpg",
   "tmdbId": "81224",
   "rating": 4,
@@ -5572,7 +5572,7 @@
    "캐시 베이츠"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eD3KCNkA2WM4zkGnjMK74eW7B9D.jpg",
   "tmdbId": "4148",
   "rating": 4,
@@ -5593,7 +5593,7 @@
    "게리 올드만"
   ],
   "genre": "Crime",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/cVNasmF1Egd3v3mpq747Hizxx4x.jpg",
   "tmdbId": "101",
   "rating": 4,
@@ -5677,7 +5677,7 @@
    "제니퍼 코넬리"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/tAsJepa9y5CAESzF8c2ff31Qkyi.jpg",
   "tmdbId": "641",
   "rating": 4,
@@ -5719,7 +5719,7 @@
    "멜라니 그리피스"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/9INcC14WZjCMKGE360VXmklCLdZ.jpg",
   "tmdbId": "9769",
   "rating": 3,
@@ -5803,7 +5803,7 @@
    "마이클 키튼"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jdS3PmDAD6qW14l6gM4nk2jbngq.jpg",
   "tmdbId": "97020",
   "rating": 2.5,
@@ -5845,7 +5845,7 @@
    "벤 스틸러"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fTw4rK5lqB16DYjyhx9TyP0hQOw.jpg",
   "tmdbId": "9428",
   "rating": 4,
@@ -5908,7 +5908,7 @@
    "덱스터 플레처"
   ],
   "genre": "Comedy",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pmnmU1BVt58y2HLyvWFYnC3F6ma.jpg",
   "tmdbId": "100",
   "rating": 3,
@@ -5950,7 +5950,7 @@
    "최민식"
   ],
   "genre": "Action",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/dHPhwkoDDslf2SFzccRG17Y9f2K.jpg",
   "tmdbId": "240832",
   "rating": 3,
@@ -6034,7 +6034,7 @@
    "주드 로"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6ojHgqtIR41O2qLKa7LFUVj0cZa.jpg",
   "tmdbId": "1213",
   "rating": 3,
@@ -6118,7 +6118,7 @@
    "오노 마치코"
   ],
   "genre": "Fantasy",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/iJpC9FlSSKmOuf82GituSxBB9T1.jpg",
   "tmdbId": "252391",
   "rating": 4,
@@ -6202,7 +6202,7 @@
    "크리스틴 위그"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uH8q40cjMAjrRHyPJMbQwAIJATb.jpg",
   "tmdbId": "286217",
   "rating": 3,
@@ -6223,7 +6223,7 @@
    "피터 그린"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jPC2eYub74zwf2tPGVtzSlBW6Oy.jpg",
   "tmdbId": "854",
   "rating": 4,
@@ -6244,7 +6244,7 @@
    "캐서린 제타존스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zLdx9Kqelv0VNDbZ1yFj7gU7h0N.jpg",
   "tmdbId": "9342",
   "rating": 2.5,
@@ -6286,7 +6286,7 @@
    "데이비드 스트러세언"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/s5Zs4NzdLUv7eYIIdyK7Pb4FfbZ.jpg",
   "tmdbId": "1989",
   "rating": 2,
@@ -6328,7 +6328,7 @@
    "케빈 하트"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/sQZUkEZZLRExn75YBvReuo68i9f.jpg",
   "tmdbId": "328111",
   "rating": 4,
@@ -6431,7 +6431,7 @@
    "필립 세이모어 호프만"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/a43wjrvRglabcBvQIdGGFg6Eo9H.jpg",
   "tmdbId": "334",
   "rating": 3.5,
@@ -6473,7 +6473,7 @@
    "Annie Corley"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8dCpmXx5olQSrTfWvtfnS9z7SuO.jpg",
   "tmdbId": "688",
   "rating": 3,
@@ -6494,7 +6494,7 @@
    "캐리 앤 모스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fxBxoXFAYKWde6lKzXxSusn18Av.jpg",
   "tmdbId": "603",
   "rating": 4.5,
@@ -6515,7 +6515,7 @@
    "캐리 앤 모스"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5RsZJfcXUndClV1vaI68V2shJOs.jpg",
   "tmdbId": "604",
   "rating": 3.5,
@@ -6536,7 +6536,7 @@
    "캐리 앤 모스"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wLS7CaUNyz4hVwCxj7mXhX66A7r.jpg",
   "tmdbId": "605",
   "rating": 3.5,
@@ -6557,7 +6557,7 @@
    "딜런 미네트"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rx2OzJMNasBQlqVGwLIJ4tiMvo9.jpg",
   "tmdbId": "300669",
   "rating": 3,
@@ -6578,7 +6578,7 @@
    "Linda Fiorentino"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nWQNnOvrJJVrjLKKmmxieiivAWS.jpg",
   "tmdbId": "607",
   "rating": 2,
@@ -6599,7 +6599,7 @@
    "Rip Torn"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5KNvkuFXB3C6xBBgDWTVDKluh4E.jpg",
   "tmdbId": "608",
   "rating": 2,
@@ -6641,7 +6641,7 @@
    "John Billingsley"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nCjwNsqXmRcUhsN8NdAFB0ybA2U.jpg",
   "tmdbId": "13363",
   "rating": 1,
@@ -6662,7 +6662,7 @@
    "필립 세이모어 호프만"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/tw3HY4u0k2kACQEyHWbFd88gsoY.jpg",
   "tmdbId": "60308",
   "rating": 3,
@@ -6683,7 +6683,7 @@
    "저스틴 서로"
   ],
   "genre": "Thriller",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/e7eIq8wTxGX00cX47cDFwVvhH5M.jpg",
   "tmdbId": "1018",
   "rating": 3.5,
@@ -6767,7 +6767,7 @@
    "조 판톨리아노"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/x5FPVwJHyf1SnDW04fwr9rsyWm4.jpg",
   "tmdbId": "77",
   "rating": 4.5,
@@ -6809,7 +6809,7 @@
    "Corbin Bernsen"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ypUedY9zX4nGGf1lQv1UGc8PhPA.jpg",
   "tmdbId": "9942",
   "rating": 3.5,
@@ -6830,7 +6830,7 @@
    "Corbin Bernsen"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2QAb0gZusyMsZ1W5ce85plVciDp.jpg",
   "tmdbId": "11067",
   "rating": 3.5,
@@ -6851,7 +6851,7 @@
    "토머스 브로디생스터"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bL0bBepUCLFcCj2ATFD40FbyDEl.jpg",
   "tmdbId": "198663",
   "rating": 3,
@@ -6872,7 +6872,7 @@
    "토머스 브로디생스터"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xTOZbj6y3sTa83YH1dx82Ev7VlA.jpg",
   "tmdbId": "336843",
   "rating": 2,
@@ -6893,7 +6893,7 @@
    "토머스 브로디생스터"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/frtwTyCkcRWXMzIry5uLaGG1fvj.jpg",
   "tmdbId": "294254",
   "rating": 2.5,
@@ -7061,7 +7061,7 @@
    "Mary Gibbs"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fnDLrtEoIrxTCWUvuurMzOzQGpQ.jpg",
   "tmdbId": "585",
   "rating": 3,
@@ -7082,7 +7082,7 @@
    "Eric Idle"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7nTkHjETdGMYK1phHwDbPsrzbYl.jpg",
   "tmdbId": "762",
   "rating": 3,
@@ -7103,7 +7103,7 @@
    "루이 가렐"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/gb0vVzJlxumQrsN8Mnud647Zh0V.jpg",
   "tmdbId": "1278",
   "rating": 4,
@@ -7145,7 +7145,7 @@
    "오진우"
   ],
   "genre": "Action",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/rT8PYGL5eDNcRBtz1HQfDb8AEPM.jpg",
   "tmdbId": "11647",
   "rating": 4,
@@ -7166,7 +7166,7 @@
    "황추생"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/fDPJkz3XLfIyXPEuokiUKh3XMEh.jpg",
   "tmdbId": "10775",
   "rating": 4.5,
@@ -7187,7 +7187,7 @@
    "여명"
   ],
   "genre": "Crime",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/89peRWt56CelRZnEf32nhe7ALKx.jpg",
   "tmdbId": "14310",
   "rating": 3.5,
@@ -7208,7 +7208,7 @@
    "가드 엘마레"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/1yjvY7SJzTWawyfF2QGKZlQGqOB.jpg",
   "tmdbId": "157820",
   "rating": 3,
@@ -7271,7 +7271,7 @@
    "안나 페리스"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/znHT8peERZRWG1ME3r0Db0EV8k8.jpg",
   "tmdbId": "1273221",
   "rating": 3,
@@ -7292,7 +7292,7 @@
    "오맹달"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/5XLXUSGS1wxskd8hDEwu4xRcA6R.jpg",
   "tmdbId": "47648",
   "rating": 4.5,
@@ -7313,7 +7313,7 @@
    "Jason Dohring"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3rWk9g0Oup5WHcrpjvw5zW1WhLc.jpg",
   "tmdbId": "5690",
   "rating": 3,
@@ -7334,7 +7334,7 @@
    "Colette Marchand"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iTPcjDqJnimppXYwDcLScKCJTnI.jpg",
   "tmdbId": "10910",
   "rating": 3.5,
@@ -7355,7 +7355,7 @@
    "키어런 하인즈"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jf0ZUu2bZFya0Ysje4AWGyntAq1.jpg",
   "tmdbId": "612",
   "rating": 3,
@@ -7376,7 +7376,7 @@
    "Tanya Roberts"
   ],
   "genre": "Action & Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jxyI5V4LZ5rHDrXv7NpPh4EBCAo.jpg",
   "tmdbId": "3382",
   "rating": 2,
@@ -7418,7 +7418,7 @@
    "캐시 베이츠"
   ],
   "genre": "Fantasy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/hKDpuZIeAjgc26DRIVEcyqyJpmM.jpg",
   "tmdbId": "59436",
   "rating": 4,
@@ -7460,7 +7460,7 @@
    "François Damiens"
   ],
   "genre": "Comedy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/nIXiddzulilQeesBCFzGljz6DXD.jpg",
   "tmdbId": "304410",
   "rating": 3,
@@ -7502,7 +7502,7 @@
    "Lisa Jakub"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mOkdOaLv5ghEFJ1nEdlLS2yPVwf.jpg",
   "tmdbId": "788",
   "rating": 3,
@@ -7544,7 +7544,7 @@
    "엠마누엘 베아르"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6vDaYhZypJzd8r0NnSY2JPIX6Y5.jpg",
   "tmdbId": "954",
   "rating": 4,
@@ -7565,7 +7565,7 @@
    "탠디 뉴턴"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3SupVoV1otmeot8dj4GpdylEMby.jpg",
   "tmdbId": "955",
   "rating": 3.5,
@@ -7586,7 +7586,7 @@
    "빙 레임스"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oFCEne3jjBc3Gx7xhAZic3Vdpn6.jpg",
   "tmdbId": "956",
   "rating": 3,
@@ -7607,7 +7607,7 @@
    "사이먼 페그"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/tGlxfCFBl0dQZW6QPwH1Jq0fsSY.jpg",
   "tmdbId": "56292",
   "rating": 3,
@@ -7628,7 +7628,7 @@
    "빙 레임스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dIcLgXA6R54EZ0XPSMKW4XDNCAA.jpg",
   "tmdbId": "575264",
   "rating": 3.5,
@@ -7649,7 +7649,7 @@
    "사이먼 페그"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wqHiuRRkjJ8vyjKOm0IjHhyzISy.jpg",
   "tmdbId": "177677",
   "rating": 3,
@@ -7691,7 +7691,7 @@
    "스티브 카렐"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fhLgquC3i27p1optlwqMTQSj2C.jpg",
   "tmdbId": "773",
   "rating": 4,
@@ -7733,7 +7733,7 @@
    "빈스 본"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eILgGFATmfuYAagXdW8zPm6WzCe.jpg",
   "tmdbId": "787",
   "rating": 3,
@@ -7775,7 +7775,7 @@
    "소피아 부텔라"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9mXyFgO5D53RsiG605W6deeBheS.jpg",
   "tmdbId": "282035",
   "rating": 2,
@@ -7796,7 +7796,7 @@
    "존 해나"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6ZnbNShjP8Syaq3nZmoSJOOvxZs.jpg",
   "tmdbId": "1735",
   "rating": 2,
@@ -7817,7 +7817,7 @@
    "张雨绮"
   ],
   "genre": "Comedy",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/qE5I3aIGkm8y9uwKiu6QdZ0B0XG.jpg",
   "tmdbId": "381890",
   "rating": 3,
@@ -7859,7 +7859,7 @@
    "스티븐 연"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mH7QnJDxQibVZw0M66IBZbsw2O6.jpg",
   "tmdbId": "696506",
   "rating": 4,
@@ -7880,7 +7880,7 @@
    "모건 프리먼"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/4XeUViufN2DVkVVOYFW1pbxfAAS.jpg",
   "tmdbId": "70",
   "rating": 4,
@@ -7964,7 +7964,7 @@
    "카메론 디아즈"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/A8C62AYprv1sQteQSKu3tNgLMYb.jpg",
   "tmdbId": "1903",
   "rating": 5,
@@ -8174,7 +8174,7 @@
    "브래드 피트"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6JQtIajMe70HWtBf7uZ1ZyWiW1F.jpg",
   "tmdbId": "615777",
   "rating": 4.5,
@@ -8216,7 +8216,7 @@
    "오웬 윌슨"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/Iuf30yobtKBlCZQBseGccZA1oW.jpg",
   "tmdbId": "18360",
   "rating": 3,
@@ -8489,7 +8489,7 @@
    "제시 아이젠버그"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nfdgwCossZkIEEaQ4iR80mX2iR3.jpg",
   "tmdbId": "209112",
   "rating": 2,
@@ -8510,7 +8510,7 @@
    "짐 캐리"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xEiKDfJ8ATft9GnQebel0IcEY2i.jpg",
   "tmdbId": "414",
   "rating": 3,
@@ -8573,7 +8573,7 @@
    "Assad Zaman"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mQ0fbfc5ELwb2zjFZM4uwAnN3ee.jpg",
   "tmdbId": "128098",
   "rating": 4,
@@ -8615,7 +8615,7 @@
    "잭 갤리퍼내키스"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/1gkCuaWZdzUfDazw6A1dvYfD8nz.jpg",
   "tmdbId": "194662",
   "rating": 4,
@@ -8636,7 +8636,7 @@
    "브래드 피트"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/y7cnBrNfOW8aCiuzPDV3sLdmBui.jpg",
   "tmdbId": "4944",
   "rating": 3,
@@ -8783,7 +8783,7 @@
    "Jack Falahee"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vdJ3F8VYcRqeIg19ZKmUada8l0w.jpg",
   "tmdbId": "61056",
   "rating": 3,
@@ -8846,7 +8846,7 @@
    "릴리 제임스"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fUfZ2zECULlN0pGPgXkez5rF7Hj.jpg",
   "tmdbId": "339403",
   "rating": 3.5,
@@ -8909,7 +8909,7 @@
    "타라지 P. 헨슨"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9QxP0nzAyPQfqJIB0xcvglND5UL.jpg",
   "tmdbId": "4922",
   "rating": 4,
@@ -8930,7 +8930,7 @@
    "Hugh Griffith"
   ],
   "genre": "History",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/sIsKjPdbtPouiehJUowKRQ4bzuw.jpg",
   "tmdbId": "665",
   "rating": 3.5,
@@ -8993,7 +8993,7 @@
    "에이미 라이언"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vL3BXlbHmpd5nAWrwOwxCBkd66m.jpg",
   "tmdbId": "798286",
   "rating": 5,
@@ -9035,7 +9035,7 @@
    "제이콥 피츠"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iHVnQhe46JfQE5Kh3psDaYP7Rj2.jpg",
   "tmdbId": "15662",
   "rating": 5,
@@ -9056,7 +9056,7 @@
    "에단 호크"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8sF4DESzpmkS3ed2nrzjBcr3u86.jpg",
   "tmdbId": "85350",
   "rating": 4,
@@ -9077,7 +9077,7 @@
    "벤 하디"
   ],
   "genre": "Music",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ruZrJe35GG90394nbabbk9Ed7sS.jpg",
   "tmdbId": "424694",
   "rating": 2.5,
@@ -9140,7 +9140,7 @@
    "브라이언 콕스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vxXA3yp1AJUxf5JUCmnyn0BmyUI.jpg",
   "tmdbId": "2502",
   "rating": 4,
@@ -9161,7 +9161,7 @@
    "크리스 쿠퍼"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/crj9CUvNqeNHNdUm8bTN9jpEWqI.jpg",
   "tmdbId": "2501",
   "rating": 4,
@@ -9182,7 +9182,7 @@
    "데이비드 스트러세언"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5C3p4UUNxcFRykRBTiQzB5xveeg.jpg",
   "tmdbId": "2503",
   "rating": 3.5,
@@ -9266,7 +9266,7 @@
    "줄리앤 무어"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/shv6dLkoKUr0csdbwvlnlgXv79W.jpg",
   "tmdbId": "4995",
   "rating": 3.5,
@@ -9413,7 +9413,7 @@
    "滕汝骏"
   ],
   "genre": "Drama",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/g5L6b9vHyBN8NL4ofVwhaGNRBLE.jpg",
   "tmdbId": "42006",
   "rating": 4,
@@ -9455,7 +9455,7 @@
    "소피 마르소"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3aEg4uxWUJsd1Mcx6TaQAlxZiyZ.jpg",
   "tmdbId": "197",
   "rating": 3.5,
@@ -9497,7 +9497,7 @@
    "제니퍼 애니스턴"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bIqFRqtvE3pDSgamXGIAbVCxAKG.jpg",
   "tmdbId": "310",
   "rating": 4,
@@ -9539,7 +9539,7 @@
    "뱅상 카셀"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/n7HKY5t09ZBv2KxMAQyEm17yrcv.jpg",
   "tmdbId": "44214",
   "rating": 4,
@@ -9581,7 +9581,7 @@
    "Michael C. Williams"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9050VGrYjYrEjpOvDZVAngLbg1f.jpg",
   "tmdbId": "2667",
   "rating": 3,
@@ -9602,7 +9602,7 @@
    "크리스 크리스토퍼슨"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rD74tCs0fEX618Urk43H1YGinAH.jpg",
   "tmdbId": "36647",
   "rating": 2,
@@ -9686,7 +9686,7 @@
    "애덤 리바인"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xVXC1mDkjJ1pK9tTFgO2DGPavJj.jpg",
   "tmdbId": "198277",
   "rating": 3,
@@ -9812,7 +9812,7 @@
    "Vernon Dobtcheff"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2k4KFbEeknXmHbNP0qt7lp2p3Y3.jpg",
   "tmdbId": "80",
   "rating": 4,
@@ -9850,7 +9850,7 @@
    "Pamela Reed"
   ],
   "genre": "Family",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/IwrDPrB4d2DMcpnGkvan46yINL.jpg",
   "tmdbId": "1281",
   "rating": 3,
@@ -9892,7 +9892,7 @@
    "줄리 월터스"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/n7Eod4lUHrbb1xGugFbKCDOdId.jpg",
   "tmdbId": "71",
   "rating": 5,
@@ -9913,7 +9913,7 @@
    "Liam Mower"
   ],
   "genre": "Music",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jOKtveSlMiJEGZ4cebtw9bVvjXw.jpg",
   "tmdbId": "298931",
   "rating": 3.5,
@@ -9972,7 +9972,7 @@
    "크리스핀 글로버"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zzxvtXJ9pahjWVX3Q2ko29J0Zf6.jpg",
   "tmdbId": "105",
   "rating": 3.5,
@@ -9993,7 +9993,7 @@
    "리 톰슨"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/f6k9Dd6wDG6Ingkfu6TATo9GNqB.jpg",
   "tmdbId": "165",
   "rating": 3.5,
@@ -10035,7 +10035,7 @@
    "우피 골드버그"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rSeZX5l4T9XcIXCG1sq1YglqTjB.jpg",
   "tmdbId": "251",
   "rating": 3,
@@ -10056,7 +10056,7 @@
    "토드 루이소"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hOwMzzGgJopyLzaDK0Hc9KAV5xh.jpg",
   "tmdbId": "243",
   "rating": 4,
@@ -10077,7 +10077,7 @@
    "조반니 리비시"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rGyDyUyepFIdFQLnzBelp3vsSaB.jpg",
   "tmdbId": "153",
   "rating": 3.5,
@@ -10119,7 +10119,7 @@
    "데비 레이놀즈"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xF6VrA1PZHd6IcypGpjmQ3UgLXx.jpg",
   "tmdbId": "872",
   "rating": 4.5,
@@ -10140,7 +10140,7 @@
    "크리스 엘리엇"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/d00qZPqqTMOnRg2m6l6NVbhSbaP.jpg",
   "tmdbId": "137",
   "rating": 3.5,
@@ -10224,7 +10224,7 @@
    "Eleanor Parker"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3l1ATCYNuHep6evzX8GSUigWOLs.jpg",
   "tmdbId": "15121",
   "rating": 3.5,
@@ -10266,7 +10266,7 @@
    "Brad Dourif"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wvpgvcWNkF2HLuTEMIM7K83MvZ.jpg",
   "tmdbId": "10585",
   "rating": 3,
@@ -10308,7 +10308,7 @@
    "Martine Chevallier"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/7sfZ4vvJIYyIjukUpHdyQVENowJ.jpg",
   "tmdbId": "958736",
   "rating": 4,
@@ -10371,7 +10371,7 @@
    "제이크 웨버"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qqTYdTvdhsWr6vZ72WROS7u7V9r.jpg",
   "tmdbId": "924",
   "rating": 3,
@@ -10392,7 +10392,7 @@
    "王力宏"
   ],
   "genre": "Action",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/xd7dT3mh7cUk1rqDs7AaqJ5NZES.jpg",
   "tmdbId": "4588",
   "rating": 4,
@@ -10455,7 +10455,7 @@
    "아콰피나"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/14L4NGrqO4r7gJtVRiSRP5rNsL5.jpg",
   "tmdbId": "566525",
   "rating": 3,
@@ -10518,7 +10518,7 @@
    "막문위"
   ],
   "genre": "Adventure",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/9NZzc3gKEi7VZb7ri0y5G6ve9Cj.jpg",
   "tmdbId": "389201",
   "rating": 0.5,
@@ -10539,7 +10539,7 @@
    "황보"
   ],
   "genre": "Action",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/qB2uSwzgcEzajJVzOJMNcE6Myi7.jpg",
   "tmdbId": "170657",
   "rating": 4,
@@ -10560,7 +10560,7 @@
    "나가영"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/2Jfl1VI3fLr3VmG8bdtsLUH2cAn.jpg",
   "tmdbId": "13345",
   "rating": 5,
@@ -10581,7 +10581,7 @@
    "데브라 메싱"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3BJu5DQzK9w8PIeIXSAOCfcWKMu.jpg",
   "tmdbId": "489999",
   "rating": 3.5,
@@ -10770,7 +10770,7 @@
    "기네스 팰트로"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/izzk8dbmrLowcoGbFaebqJvzyXg.jpg",
   "tmdbId": "807",
   "rating": 4.5,
@@ -10833,7 +10833,7 @@
    "누미 라파스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vD1HZvrPW9FoYQFGr0ADTCsNFau.jpg",
   "tmdbId": "58574",
   "rating": 2,
@@ -10854,7 +10854,7 @@
    "제프리 러쉬"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8P388iyaL97aBtSNutfJFmLVYXF.jpg",
   "tmdbId": "1934",
   "rating": 3,
@@ -10959,7 +10959,7 @@
    "조미"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/86r8Fe9WuleUh5BLn0VIQhbfemB.jpg",
   "tmdbId": "11770",
   "rating": 4.5,
@@ -11001,7 +11001,7 @@
    "아미 해머"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/4WAq2IZuVvWl0Wd1YIgBXdYgXna.jpg",
   "tmdbId": "37799",
   "rating": 3,
@@ -11022,7 +11022,7 @@
    "밥 건턴"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qV9BQZdiM8foEzDz0Ag5hGWE5qM.jpg",
   "tmdbId": "278",
   "rating": 5,
@@ -11043,7 +11043,7 @@
    "PJ DeBoy"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3ZqQyL1BG6QD2TOyvTVPV54Vvvi.jpg",
   "tmdbId": "1378",
   "rating": 4,
@@ -11085,7 +11085,7 @@
    "미우미우"
   ],
   "genre": "Comedy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/A7LXE2Zh3Sd7bAbqXlKKAHxakkO.jpg",
   "tmdbId": "300",
   "rating": 4,
@@ -11190,7 +11190,7 @@
    "수잔 서랜든"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rsA2n4F5MdhzXZVK5Gqg3K9bBgP.jpg",
   "tmdbId": "4380",
   "rating": 5,
@@ -11232,7 +11232,7 @@
    "랄프 파인즈"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oyyUcGwLX7LTFS1pQbLrQpyzIyt.jpg",
   "tmdbId": "424",
   "rating": 4,
@@ -11253,7 +11253,7 @@
    "카메론 디아즈"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg",
   "tmdbId": "809",
   "rating": 3,
@@ -11274,7 +11274,7 @@
    "카메론 디아즈"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hABnmgdAU3u6Nu61b9GUGaOseVl.jpg",
   "tmdbId": "808",
   "rating": 3,
@@ -11295,7 +11295,7 @@
    "카메론 디아즈"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/s8VjSynQ1wGwkALwmn5nsifivyq.jpg",
   "tmdbId": "810",
   "rating": 3.5,
@@ -11316,7 +11316,7 @@
    "카메론 디아즈"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/t3FNCqPBgRK9jYTzLGWptIdpD3O.jpg",
   "tmdbId": "10192",
   "rating": 3,
@@ -11400,7 +11400,7 @@
    "알랭 들롱"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/3GtW52Mc2jIhWeVklgHteyIaM5s.jpg",
   "tmdbId": "119623",
   "rating": 4,
@@ -11442,7 +11442,7 @@
    "앨런 릭먼"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wIhzI6T8aX7K6IqhBIg9cD8mIAw.jpg",
   "tmdbId": "13885",
   "rating": 3,
@@ -11547,7 +11547,7 @@
    "마이크 화이트"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/j9xIQfUKUbXqSD3WwqKzSvRL9Fb.jpg",
   "tmdbId": "1584",
   "rating": 4,
@@ -11568,7 +11568,7 @@
    "샘 엘리엇"
   ],
   "genre": "Music",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/gQJm9QkcEXZBK4Pw3BUmvsDxc3D.jpg",
   "tmdbId": "332562",
   "rating": 4,
@@ -11589,7 +11589,7 @@
    "데니스 리처즈"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9jNl7xp5vQbryeFI9jcfgevnLpG.jpg",
   "tmdbId": "563",
   "rating": 4,
@@ -11610,7 +11610,7 @@
    "나탈리 포트만"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pt7oxFkvQFzXD0ByCe1uJumL6vD.jpg",
   "tmdbId": "1893",
   "rating": 4,
@@ -11631,7 +11631,7 @@
    "더스틴 호프만"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/reX66e3qHvc8lCMtpeWjEBICpJH.jpg",
   "tmdbId": "1262",
   "rating": 4,
@@ -11652,7 +11652,7 @@
    "제임스 프랭코"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/kHY0fWF4fq1zPg7G1Pro8cTqGha.jpg",
   "tmdbId": "558",
   "rating": 3,
@@ -11673,7 +11673,7 @@
    "커스틴 던스트"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/4xOhtzXGt0if74dTmS4qtizFelX.jpg",
   "tmdbId": "557",
   "rating": 3,
@@ -11694,7 +11694,7 @@
    "제임스 프랭코"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9atb6Nn8TRGxfwROJGuzOD24GNl.jpg",
   "tmdbId": "559",
   "rating": 3,
@@ -11715,7 +11715,7 @@
    "베네딕트 컴버배치"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fvqoI9r1GU2EFkc0xjZ6dKCuDVR.jpg",
   "tmdbId": "634649",
   "rating": 3,
@@ -11736,7 +11736,7 @@
    "브라이언 타이리 헨리"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/lMWTlGr9jVUC18T515hPRKym5QQ.jpg",
   "tmdbId": "569094",
   "rating": 3.5,
@@ -11757,7 +11757,7 @@
    "사무엘 L. 잭슨"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3YewJtji80oIroeXUavNRZkeXfQ.jpg",
   "tmdbId": "429617",
   "rating": 3,
@@ -11778,7 +11778,7 @@
    "로버트 다우니 주니어"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hjki9weYYVABvkpZbX5jBOmKXXv.jpg",
   "tmdbId": "315635",
   "rating": 3,
@@ -11820,7 +11820,7 @@
    "레이첼 맥아담스"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/44QA5b4mkjPgk6nqvj3ZNbT6yfK.jpg",
   "tmdbId": "314365",
   "rating": 4,
@@ -11883,7 +11883,7 @@
    "Madhur Mittal"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/q1iXWNplvy5bm61SH6EbpOVU1fU.jpg",
   "tmdbId": "12405",
   "rating": 3.5,
@@ -12030,7 +12030,7 @@
    "캐시 나지미"
   ],
   "genre": "Music",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/sCS2ZeEhJ3X0c8Gi1Na0CDr9yix.jpg",
   "tmdbId": "2005",
   "rating": 4,
@@ -12051,7 +12051,7 @@
    "로린 힐"
   ],
   "genre": "Music",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xy0FPrBLzvjbxNXltQZYiRl9BGf.jpg",
   "tmdbId": "6279",
   "rating": 5,
@@ -12135,7 +12135,7 @@
    "조쉬 브롤린"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oVA4Rx01OUAYdLOiBNBPjaG7I7v.jpg",
   "tmdbId": "273481",
   "rating": 3.5,
@@ -12156,7 +12156,7 @@
    "토니 콜렛"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zmPBZos4lzZi95UayzjATYyLWHT.jpg",
   "tmdbId": "745",
   "rating": 4,
@@ -12345,7 +12345,7 @@
    "낸시 카트라이트"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ibamiFS4ifL7jtMfi5yDoPERC6p.jpg",
   "tmdbId": "35",
   "rating": 4,
@@ -12450,7 +12450,7 @@
    "Shawnee Smith"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cxGoZv6pYcDEN1nMBtOYEhSDdx4.jpg",
   "tmdbId": "215",
   "rating": 4,
@@ -12471,7 +12471,7 @@
    "Leigh Whannell"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vRVtn1HLMGMHbUsAJkFLC6oT6pQ.jpg",
   "tmdbId": "176",
   "rating": 4,
@@ -12492,7 +12492,7 @@
    "Angus Macfadyen"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vnAek5l3lqrCvc0pvxI4IFqKXqL.jpg",
   "tmdbId": "214",
   "rating": 3,
@@ -12513,7 +12513,7 @@
    "Mai Suzuki"
   ],
   "genre": "Horror",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/tgyl92LivTgOqZLfCrYBOJzWIHA.jpg",
   "tmdbId": "33908",
   "rating": 3,
@@ -12555,7 +12555,7 @@
    "클라이브 오웬"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7EUpW9XRy1QlNgiHh9i9IPTG9Iu.jpg",
   "tmdbId": "187",
   "rating": 4,
@@ -12576,7 +12576,7 @@
    "세스 맥팔레인"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/kKDXw5uRCioD522P1skH49YLNAH.jpg",
   "tmdbId": "335797",
   "rating": 3,
@@ -12660,7 +12660,7 @@
    "벤 애플렉"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5VLbsktpdrSw6fhpZE9CdDa39EW.jpg",
   "tmdbId": "95",
   "rating": 2,
@@ -12681,7 +12681,7 @@
    "Elizabeth Berridge"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/r7iKeLpYfQNYpyJhCEZDYfjO69D.jpg",
   "tmdbId": "279",
   "rating": 4,
@@ -12702,7 +12702,7 @@
    "소라 버치"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/osdwif0XkFgalOCPksm4Yvczyzc.jpg",
   "tmdbId": "14",
   "rating": 4,
@@ -12744,7 +12744,7 @@
    "카일 갤너"
   ],
   "genre": "War",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pKbOLUANgHiiSjC7qs6AXfzW9cX.jpg",
   "tmdbId": "190859",
   "rating": 3,
@@ -12765,7 +12765,7 @@
    "Thomas Ian Nicholas"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5P68by2Thn8wHAziyWGEw2O7hco.jpg",
   "tmdbId": "2105",
   "rating": 3,
@@ -12786,7 +12786,7 @@
    "Rufus"
   ],
   "genre": "Comedy",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/EkQ9Lu1NFnxfPSGizktuLJuxdv.jpg",
   "tmdbId": "194",
   "rating": 4,
@@ -12828,7 +12828,7 @@
    "시고니 위버"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/m5lCha2XcbDowDoYHPc0DTNaCPU.jpg",
   "tmdbId": "19995",
   "rating": 3,
@@ -12849,7 +12849,7 @@
    "시고니 위버"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/u2aVXft5GLBQnjzWVNda7sdDpdu.jpg",
   "tmdbId": "76600",
   "rating": 4,
@@ -12870,7 +12870,7 @@
    "유덕화"
   ],
   "genre": "Crime",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/rOuT8ngBskioGEKyWQ22j8tkGdo.jpg",
   "tmdbId": "18311",
   "rating": 5,
@@ -12954,7 +12954,7 @@
    "아만다 피트"
   ],
   "genre": "Mystery",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/91N7EeWISYM4mBsdQnGJtcrywhS.jpg",
   "tmdbId": "2832",
   "rating": 3,
@@ -12975,7 +12975,7 @@
    "데니스 리어리"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zty1hzthRVGgMDFU1B1uo8zfCk7.jpg",
   "tmdbId": "8355",
   "rating": 3,
@@ -12996,7 +12996,7 @@
    "제레미 아이언스"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zHE9yRURvA7DyhYtQxkGTfE1Ywi.jpg",
   "tmdbId": "9313",
   "rating": 2.5,
@@ -13017,7 +13017,7 @@
    "돈 치들"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ebJbC9OYAZJxy7bRUGryR72hfa2.jpg",
   "tmdbId": "10138",
   "rating": 3,
@@ -13038,7 +13038,7 @@
    "제프 브리지스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ziReGUV3xURsWmcmsn2GOunPc0L.jpg",
   "tmdbId": "1726",
   "rating": 3,
@@ -13059,7 +13059,7 @@
    "돈 치들"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5aHoACZhLJR95uQN4Hd2k6swUZq.jpg",
   "tmdbId": "68721",
   "rating": 2,
@@ -13080,7 +13080,7 @@
    "시드니 폴락"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jVytMY7bVeYqFBp0SpKRoIKXa7W.jpg",
   "tmdbId": "345",
   "rating": 4,
@@ -13269,7 +13269,7 @@
    "냇 울프"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5MdllYBVC9qomummBQSCPWrTylZ.jpg",
   "tmdbId": "222935",
   "rating": 4,
@@ -13332,7 +13332,7 @@
    "댄 카스텔라네타"
   ],
   "genre": "Action & Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nlaiczW81kY46GBdfIcTrBIqr8I.jpg",
   "tmdbId": "2745",
   "rating": 2,
@@ -13395,7 +13395,7 @@
    "Brooklyn Toulson"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8xDGgGqpemdgtKlCVM5E1KkLJb3.jpg",
   "tmdbId": "965150",
   "rating": 4.5,
@@ -13416,7 +13416,7 @@
    "에반젤린 릴리"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ewbQqebFMXqs2n1DEOS2CoDtGm.jpg",
   "tmdbId": "102899",
   "rating": 3,
@@ -13437,7 +13437,7 @@
    "마이클 더글라스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3E6b73EeYqY7PGJNJWjR9AANXVw.jpg",
   "tmdbId": "363088",
   "rating": 3.5,
@@ -13458,7 +13458,7 @@
    "마이클 더글라스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/sz6mTIDDQmR3DYgJudiTmoW2gR5.jpg",
   "tmdbId": "640146",
   "rating": 2.5,
@@ -13479,7 +13479,7 @@
    "스콧 글렌"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hOr56UKAsB9waNDHhriOntCjHTJ.jpg",
   "tmdbId": "274",
   "rating": 4,
@@ -13500,7 +13500,7 @@
    "데미 무어"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9aLwIOYLLrtzKqwieTlHrxXFOfk.jpg",
   "tmdbId": "881",
   "rating": 3.5,
@@ -13542,7 +13542,7 @@
    "제이미 폭스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eYaFLrKuEdzrGw6XG5ZTVciH28v.jpg",
   "tmdbId": "102382",
   "rating": 3,
@@ -13563,7 +13563,7 @@
    "리스 이판"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/a1Kup5VnmxjAHnsT3Sz7RtrC9UU.jpg",
   "tmdbId": "1930",
   "rating": 2,
@@ -13584,7 +13584,7 @@
    "Benjamin Stockham"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fTMbfMqUZ1OCqh9CQq5H5Pi13CH.jpg",
   "tmdbId": "51388",
   "rating": 3,
@@ -13605,7 +13605,7 @@
    "빌 나이"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cLfuuK1Y5FjX1xXDrrEa9ppnKuy.jpg",
   "tmdbId": "122906",
   "rating": 3.5,
@@ -13626,7 +13626,7 @@
    "마크 러팔로"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/krgjV3rJtBcEpQehODKXNCt6uFL.jpg",
   "tmdbId": "24428",
   "rating": 2,
@@ -13647,7 +13647,7 @@
    "마크 러팔로"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/y8pY5MIzpPAnF5vYUNm1tw1AzL3.jpg",
   "tmdbId": "99861",
   "rating": 3,
@@ -13668,7 +13668,7 @@
    "마크 러팔로"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/z7ilT5rNN9kDo8JZmgyhM6ej2xv.jpg",
   "tmdbId": "299534",
   "rating": 3.5,
@@ -13689,7 +13689,7 @@
    "크리스 헴스워스"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/kmP6viwzcEkZeoi1LaVcQemcvZh.jpg",
   "tmdbId": "299536",
   "rating": 3.5,
@@ -13710,7 +13710,7 @@
    "엘리자베스 모스"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/f5qTmyW3EE7iFrsWPr12irrQ1Q8.jpg",
   "tmdbId": "458723",
   "rating": 2,
@@ -13752,7 +13752,7 @@
    "Joe Anderson"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/baQa9wXNa808QlrYcTxhqeEE2Jl.jpg",
   "tmdbId": "4688",
   "rating": 3.5,
@@ -13794,7 +13794,7 @@
    "Anne Le Ny"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/4oOf3pmDD5rMNQGgsf7zMbFKtKC.jpg",
   "tmdbId": "77338",
   "rating": 3,
@@ -13815,7 +13815,7 @@
    "Jordan Nagai"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/lL2WzkjLZP0RkPgUhybBjb9x9SL.jpg",
   "tmdbId": "14160",
   "rating": 4,
@@ -13878,7 +13878,7 @@
    "에런 엑하트"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oDR2LT5HTGIafEftj4bjpGcpIa9.jpg",
   "tmdbId": "462",
   "rating": 3,
@@ -13899,7 +13899,7 @@
    "키호이콴"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dd29Kt2p2voyP2sB6p3jC36A7ce.jpg",
   "tmdbId": "545611",
   "rating": 5,
@@ -13920,7 +13920,7 @@
    "글렌 클로즈"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/smN9X22s82aq5tZ0M5NNVTe7pWO.jpg",
   "tmdbId": "9772",
   "rating": 3.5,
@@ -13941,7 +13941,7 @@
    "Veronica Cartwright"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/k3m1RdlYUlCx51PxxNMlmbm7QSk.jpg",
   "tmdbId": "348",
   "rating": 3,
@@ -13962,7 +13962,7 @@
    "Dominique Pinon"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8xv7mKnaks3vk3Y3eIuwMXJU6Og.jpg",
   "tmdbId": "8078",
   "rating": 3,
@@ -13983,7 +13983,7 @@
    "숀 영"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iYgudzfJMSUdhsW994Wju0plCAG.jpg",
   "tmdbId": "3049",
   "rating": 3,
@@ -14004,7 +14004,7 @@
    "제이슨 밀러"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/1Y0h6vedMbWPJNzqBnRkik16MO4.jpg",
   "tmdbId": "9552",
   "rating": 3.5,
@@ -14025,7 +14025,7 @@
    "캠벨 스콧"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qQ7HJINn03KnWZ4xMvBtNWMdrye.jpg",
   "tmdbId": "8643",
   "rating": 2,
@@ -14046,7 +14046,7 @@
    "마이클 패스벤더"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zm5zanw86TX2T7qJNTKilL3x3S8.jpg",
   "tmdbId": "127585",
   "rating": 2,
@@ -14067,7 +14067,7 @@
    "대니 휴스턴"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cbCRcWzu2KGUySi0nJFnfKfEP8p.jpg",
   "tmdbId": "2080",
   "rating": 3,
@@ -14172,7 +14172,7 @@
    "로니 델카르멘"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/w7eApyAshbepBnDyYRjSeGyRHi2.jpg",
   "tmdbId": "976573",
   "rating": 4,
@@ -14193,7 +14193,7 @@
    "브렌던 글리슨"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uZy5RUNb052OSyhZgTBA9ZxFVzc.jpg",
   "tmdbId": "137113",
   "rating": 4,
@@ -14277,7 +14277,7 @@
    "장위그 앙글라드"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/A6NIxzqSqSrSL4Ze8L4E9yeWDBV.jpg",
   "tmdbId": "10452",
   "rating": 4,
@@ -14403,7 +14403,7 @@
    "Frédérique Meininger"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/9YgWVUCb8SEFhFxniBHbJGSx7Gf.jpg",
   "tmdbId": "10995",
   "rating": 4,
@@ -14487,7 +14487,7 @@
    "장만옥"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/ey7vPDysRjfzvNUkbLBHv2UMQYP.jpg",
   "tmdbId": "79",
   "rating": 3.5,
@@ -14508,7 +14508,7 @@
    "석천"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/lbKlrCCqZCvZ8MUBj8z1MmqyyVR.jpg",
   "tmdbId": "18305",
   "rating": 3,
@@ -14588,7 +14588,7 @@
    "브래들리 쿠퍼"
   ],
   "genre": "Comedy",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/p9xAOBSFf8PPiD9qtYDiUATAWmt.jpg",
   "tmdbId": "10201",
   "rating": 4,
@@ -14651,7 +14651,7 @@
    "앤디 가르시아"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hl9dkOnNCR4adxDTVISjkkC0JQj.jpg",
   "tmdbId": "161",
   "rating": 3,
@@ -14693,7 +14693,7 @@
    "Jack Haley"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9FzHxca1OybjwOdTmWLfhdD4u0g.jpg",
   "tmdbId": "630",
   "rating": 4,
@@ -14735,7 +14735,7 @@
    "패트릭 윌슨"
   ],
   "genre": "Thriller",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wxaH0icfmOgk5ziO53dxAoZQtYt.jpg",
   "tmdbId": "9833",
   "rating": 2.5,
@@ -14756,7 +14756,7 @@
    "맷 데이먼"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jpD6z9fgNe7OqsHoDeAWQWoULde.jpg",
   "tmdbId": "872585",
   "rating": 4.5,
@@ -14819,7 +14819,7 @@
    "Chris Owen"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/isUQSJzdx3WXX7PHXauBXuLaiXv.jpg",
   "tmdbId": "13466",
   "rating": 3,
@@ -14903,7 +14903,7 @@
    "루퍼스 스웰"
   ],
   "genre": "Thriller",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/hyy0g2Lt9rHoP7qwdCnJYGksu7h.jpg",
   "tmdbId": "631843",
   "rating": 3,
@@ -15029,7 +15029,7 @@
    "장쯔이"
   ],
   "genre": "Adventure",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/iCgq5JMo9BqqK8rDKOCJxE86ub9.jpg",
   "tmdbId": "146",
   "rating": 4,
@@ -15092,7 +15092,7 @@
    "마리사 토메이"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wamRJHN4OB1zSOAr35cJOnGooYg.jpg",
   "tmdbId": "3981",
   "rating": 3,
@@ -15197,7 +15197,7 @@
    "周嘉玲"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/aBMD9XUaerpZxJDBnHEJ1Qev0tj.jpg",
   "tmdbId": "284552",
   "rating": 2,
@@ -15449,7 +15449,7 @@
    "클라크 그렉"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yvirUYrva23IudARHn3mMGVxWqM.jpg",
   "tmdbId": "755898",
   "rating": 3,
@@ -15531,7 +15531,7 @@
    "체이스 인피니티"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bCg9iDSXPjVTUs1RyYH8AhmJ11d.jpg",
   "tmdbId": "1054867",
   "rating": 4,
@@ -15594,7 +15594,7 @@
    "숀 펜"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/88J7DQ0Yn6MIqXaAiTgjyErzPnh.jpg",
   "tmdbId": "116745",
   "rating": 4,
@@ -15636,7 +15636,7 @@
    "Toshl"
   ],
   "genre": "Music",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bj76Bw5FOPh1Wi8RHIVOsJ5FfSs.jpg",
   "tmdbId": "376391",
   "rating": 3.5,
@@ -15678,7 +15678,7 @@
    "앨런 튜딕"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uT8Rdx6fpUlM2BFOVwe8BRS2x6A.jpg",
   "tmdbId": "1022796",
   "rating": 2,
@@ -15699,7 +15699,7 @@
    "폴 라이저"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oKNkhmyIBiDENivK6ELZxfBWa3q.jpg",
   "tmdbId": "244786",
   "rating": 4,
@@ -15720,7 +15720,7 @@
    "그렉 키니어"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/e2uVtH6TpMfUl7WeOM70ezkcjsU.jpg",
   "tmdbId": "9489",
   "rating": 3,
@@ -15741,7 +15741,7 @@
    "가브리엘 번"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/h2Fw8XXqDSyRA5Dn9ntCRJESYYY.jpg",
   "tmdbId": "493922",
   "rating": 3.5,
@@ -15762,7 +15762,7 @@
    "베니시오 델 토로"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cbgicjq4Q2OVvXlfd3PqRlLvqmf.jpg",
   "tmdbId": "629",
   "rating": 4.5,
@@ -15783,7 +15783,7 @@
    "Anita Laurenzi"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/5Lt5UAmh70TsV6kA7mSakFqRrJO.jpg",
   "tmdbId": "35705",
   "rating": 3,
@@ -15825,7 +15825,7 @@
    "주이 디샤넬"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/e0UnZeRjzOzc3i4XhJ3K2JLWcxJ.jpg",
   "tmdbId": "7453",
   "rating": 3,
@@ -15909,7 +15909,7 @@
    "케리 콘돈"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/oxjM9l5senfyNOeba4wvUCVi8Ge.jpg",
   "tmdbId": "674324",
   "rating": 4,
@@ -15930,7 +15930,7 @@
    "매튜 구드"
   ],
   "genre": "History",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wT4cHJMqWqWxY4GXDXgD10lMQWy.jpg",
   "tmdbId": "205596",
   "rating": 4,
@@ -15951,7 +15951,7 @@
    "그렉 키니어"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/my0o8fsygH1wnzksOcxHwpatJI6.jpg",
   "tmdbId": "2898",
   "rating": 4,
@@ -15972,7 +15972,7 @@
    "매염방"
   ],
   "genre": "Action",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/i1yEdXeDeNa00nPpy3aG53Zjy5Z.jpg",
   "tmdbId": "18725",
   "rating": 3,
@@ -16056,7 +16056,7 @@
    "미셸 파이퍼"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/58T9BmzbqXRKbdn0Fr6FasKxvWy.jpg",
   "tmdbId": "9837",
   "rating": 3.5,
@@ -16119,7 +16119,7 @@
    "타이 디그스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/lz2TJRCCnw6zMoM9hXNw1jFy1Eu.jpg",
   "tmdbId": "7299",
   "rating": 3,
@@ -16140,7 +16140,7 @@
    "안젤리나 졸리"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/aNtAP8ZzUMdnCPoqYgVOcgI0Eh4.jpg",
   "tmdbId": "524434",
   "rating": 2.5,
@@ -16161,7 +16161,7 @@
    "로버트 맥노턴"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9Kl6z0J1Hu3cFOFXNBrqqVWoNmI.jpg",
   "tmdbId": "601",
   "rating": 4,
@@ -16182,7 +16182,7 @@
    "톰 윌킨슨"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mdP2jfx5ai3DoCFWQi5mqBWuxAy.jpg",
   "tmdbId": "15775",
   "rating": 4,
@@ -16203,7 +16203,7 @@
    "키호이콴"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wvPlEMp4sjPSzrK0zuwqfCLv5z2.jpg",
   "tmdbId": "87",
   "rating": 2.5,
@@ -16224,7 +16224,7 @@
    "매즈 미켈슨"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8ifAx8GS5AHL7xOTMJDMaza84RQ.jpg",
   "tmdbId": "335977",
   "rating": 3,
@@ -16245,7 +16245,7 @@
    "Denholm Elliott"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nbNr6vea9nkedkozeR3ZzoQm12A.jpg",
   "tmdbId": "89",
   "rating": 3,
@@ -16266,7 +16266,7 @@
    "제프 골드블룸"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/fy4Y1o2tGip4V1Pl1DYoRBLc1GR.jpg",
   "tmdbId": "602",
   "rating": 3.5,
@@ -16308,7 +16308,7 @@
    "저스틴 팀버레이크"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/1XKbrWUobAyHjET7W2ousaDCOA3.jpg",
   "tmdbId": "86829",
   "rating": 4,
@@ -16329,7 +16329,7 @@
    "켄싱턴 톨먼"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/x2BHx02jMbvpKjMvbf8XxJkYwHJ.jpg",
   "tmdbId": "1022789",
   "rating": 4,
@@ -16350,7 +16350,7 @@
    "리처드 카인드"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rMXHvHzpuYZXrJUhRVJ3TvDSwe5.jpg",
   "tmdbId": "150540",
   "rating": 4,
@@ -16392,7 +16392,7 @@
    "와타나베 켄"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/atSxEGstxXRoSKDQFBgqQ5lpGSt.jpg",
   "tmdbId": "27205",
   "rating": 4.5,
@@ -16413,7 +16413,7 @@
    "Pat Carroll"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dxEZkFIxuLjyS6VEHeirlURHlrt.jpg",
   "tmdbId": "10144",
   "rating": 2.5,
@@ -16455,7 +16455,7 @@
    "Sarah Vowell"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/11Byg6rHkKIvSehlW3R4pcUj8J.jpg",
   "tmdbId": "9806",
   "rating": 3,
@@ -16476,7 +16476,7 @@
    "마이클 케인"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/evoEi8SBSvIIEveM3V6nCJ6vKj8.jpg",
   "tmdbId": "157336",
   "rating": 4.5,
@@ -16538,7 +16538,7 @@
    "윌렘 대포"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/g7etBdqLKgFzcbGla9cxzgLL3zR.jpg",
   "tmdbId": "409",
   "rating": 3,
@@ -16685,7 +16685,7 @@
    "Marie-Josée Croze"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/zt2TvBqL3498AyTOz3pY6bRSfY6.jpg",
   "tmdbId": "2013",
   "rating": 3,
@@ -16706,7 +16706,7 @@
    "레오나르도 디카프리오"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iLKZv6yLIP8oHYxx1jdPyrvjlYS.jpg",
   "tmdbId": "68718",
   "rating": 3,
@@ -16748,7 +16748,7 @@
    "잭 갤리퍼내키스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/GRbeIj59bZgDshwUETHLG6M6T7.jpg",
   "tmdbId": "417859",
   "rating": 3,
@@ -16769,7 +16769,7 @@
    "마이클 매드슨"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/3RmF67rohiTKfNOixinNveLsX2T.jpg",
   "tmdbId": "500",
   "rating": 4,
@@ -16832,7 +16832,7 @@
    "Maria Yi"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/svZnOMnX8yN8OFsqIE4COCsPXp1.jpg",
   "tmdbId": "11713",
   "rating": 3.5,
@@ -16853,7 +16853,7 @@
    "쿠바 구딩 주니어"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cCDyVPcCDChgZHXdRU1Xm8kqkZf.jpg",
   "tmdbId": "9390",
   "rating": 3,
@@ -16874,7 +16874,7 @@
    "안소니 에드워즈"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rREsWQodwtdGFjo9BYAP1smMrIG.jpg",
   "tmdbId": "1949",
   "rating": 4,
@@ -17021,7 +17021,7 @@
    "브렌던 글리슨"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bIwIzpgrPddNk4xrhdd3xyM8C20.jpg",
   "tmdbId": "889737",
   "rating": 4.5,
@@ -17063,7 +17063,7 @@
    "존 말코비치"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6sGEGaTra9pzZVlFVHKFW2EY8Ei.jpg",
   "tmdbId": "492",
   "rating": 5,
@@ -17084,7 +17084,7 @@
    "Johann Karthaus"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qqXQERsbWGrUldJjr0fDHuWjhPG.jpg",
   "tmdbId": "467244",
   "rating": 4.5,
@@ -17105,7 +17105,7 @@
    "알피 앨런"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mjKe6CmoxRcdiwbDeghyQKY09J.jpg",
   "tmdbId": "245891",
   "rating": 3,
@@ -17126,7 +17126,7 @@
    "이언 맥셰인"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8dGCWRwrMjn1jdFCI5xu5VrkGBL.jpg",
   "tmdbId": "458156",
   "rating": 3.5,
@@ -17168,7 +17168,7 @@
    "로렌스 피시번"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7IEjgGVcOT3kTIb42yFLPVjSvot.jpg",
   "tmdbId": "324552",
   "rating": 3.5,
@@ -17248,7 +17248,7 @@
    "리처드 드라이퍼스"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hbTQy1uBV4xzqHDIbWsMnCcR7J0.jpg",
   "tmdbId": "578",
   "rating": 4,
@@ -17269,7 +17269,7 @@
    "제니퍼 가너"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/mwPfMwbwBXhLR3HTnwNDTGRLoXb.jpg",
   "tmdbId": "7326",
   "rating": 3,
@@ -17311,7 +17311,7 @@
    "이드리스 엘바"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uitqZVbhvlQV5iLOdbk3itGoNNd.jpg",
   "tmdbId": "269149",
   "rating": 4,
@@ -17353,7 +17353,7 @@
    "브루스 윌리스"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/kkWxyyyWFK5KNk9WVwQuGEC9H9H.jpg",
   "tmdbId": "9374",
   "rating": 3,
@@ -17395,7 +17395,7 @@
    "에단 호크"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/41AJ4X5TRWpECsiMIKS8so4MSsD.jpg",
   "tmdbId": "207",
   "rating": 4,
@@ -17416,7 +17416,7 @@
    "제프 골드블룸"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/m4T4h20ame5nG7a5iNPCwk0pHEG.jpg",
   "tmdbId": "329",
   "rating": 4.5,
@@ -17437,7 +17437,7 @@
    "피트 포스틀스웨이트"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7l5RrmZu8xSOAVC1o5yhPKveQK0.jpg",
   "tmdbId": "330",
   "rating": 4,
@@ -17458,7 +17458,7 @@
    "테아 레오니"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/c2JnznwLwZYLqUqjouDXqjTrUc1.jpg",
   "tmdbId": "331",
   "rating": 3,
@@ -17479,7 +17479,7 @@
    "Bradley Pierce"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/jjJohGbwz9kRaf490dZ158vbHho.jpg",
   "tmdbId": "8844",
   "rating": 4,
@@ -17521,7 +17521,7 @@
    "모리스 체스트넛"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6AvM1byeBHX3e5qj9G3FyV35KSK.jpg",
   "tmdbId": "4421",
   "rating": 2,
@@ -17626,7 +17626,7 @@
    "Frederic Forrest"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/giP5yeJBrsqglkM05pbiTyRsoBa.jpg",
   "tmdbId": "28",
   "rating": 3.5,
@@ -17689,7 +17689,7 @@
    "우영광"
   ],
   "genre": "Adventure",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/9Alvzyby49MeYzESgKZj1Z099BB.jpg",
   "tmdbId": "96466",
   "rating": 4,
@@ -17710,7 +17710,7 @@
    "케이트 베킨세일"
   ],
   "genre": "War",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/smVaB0pkAywTXQK2wCPsWWt7AgF.jpg",
   "tmdbId": "676",
   "rating": 3,
@@ -17815,7 +17815,7 @@
    "데이비드 켈리"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iKP6wg3c6COUe8gYutoGG7qcPnO.jpg",
   "tmdbId": "118",
   "rating": 4,
@@ -17899,7 +17899,7 @@
    "오마"
   ],
   "genre": "Fantasy",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/ga2stsG8TlhmCHmajo07R3UCnoe.jpg",
   "tmdbId": "30421",
   "rating": 5,
@@ -17958,7 +17958,7 @@
    "증지위"
   ],
   "genre": "Drama",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/rag263yg5dO6f4qxNOUzjrV2Wvw.jpg",
   "tmdbId": "37185",
   "rating": 3,
@@ -18063,7 +18063,7 @@
    "Milo Machado-Graner"
   ],
   "genre": "Thriller",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/zIxTPoS6zd3txeLP5FUdo3CSfbo.jpg",
   "tmdbId": "915935",
   "rating": 3.5,
@@ -18126,7 +18126,7 @@
    "오맹달"
   ],
   "genre": "Action & Adventure",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/8YCE5gkxTlFtT8RQWKVdPCPZPa8.jpg",
   "tmdbId": "115054",
   "rating": 4,
@@ -18336,7 +18336,7 @@
    "제프리 러쉬"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/osJVVjkHmoO5WoJfbBsImYrKWIb.jpg",
   "tmdbId": "1865",
   "rating": 3,
@@ -18357,7 +18357,7 @@
    "키이라 나이틀리"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6tD4oT7C01aZLVfoZDz5VFVbJCi.jpg",
   "tmdbId": "58",
   "rating": 3,
@@ -18378,7 +18378,7 @@
    "올랜도 블룸"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bTotG6tZERQqfKr2TDjwdjW8It4.jpg",
   "tmdbId": "285",
   "rating": 2,
@@ -18399,7 +18399,7 @@
    "크리스 헴스워스"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9FPuOsWCM8EAlS0gZqPbz3wwBuQ.jpg",
   "tmdbId": "22970",
   "rating": 3.5,
@@ -18420,7 +18420,7 @@
    "Nick Searcy"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/cA1fQvEump2xc1fUd9Rl5VyzDB2.jpg",
   "tmdbId": "8358",
   "rating": 2,
@@ -18441,7 +18441,7 @@
    "스칼렛 요한슨"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vaMRzME3Dt73robEjOtDw4SPJGA.jpg",
   "tmdbId": "271110",
   "rating": 3,
@@ -18462,7 +18462,7 @@
    "스칼렛 요한슨"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qBuAglXtjBW9JBpIJ3W40nY58Am.jpg",
   "tmdbId": "100402",
   "rating": 2.5,
@@ -18500,7 +18500,7 @@
    "릴리 테일러"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pWpTToZ32bG09PaZ1rvYG5mpOyV.jpg",
   "tmdbId": "138843",
   "rating": 3,
@@ -18542,7 +18542,7 @@
    "에즈라 밀러"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5T9tGUUu2frmiHLQ7o9BK1r7I55.jpg",
   "tmdbId": "71859",
   "rating": 2.5,
@@ -18584,7 +18584,7 @@
    "Bridget Moynahan"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wWx9kRmqFZfbh1B5YFceIj7WJCL.jpg",
   "tmdbId": "6282",
   "rating": 4,
@@ -18605,7 +18605,7 @@
    "벤저민 브랫"
   ],
   "genre": "Family",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pQu93NuwR90AaCULzglVD5Ge4Ml.jpg",
   "tmdbId": "354912",
   "rating": 4,
@@ -18647,7 +18647,7 @@
    "존 리스고"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/p1ELcxvzCa1uSCpRfDs4KddGn4x.jpg",
   "tmdbId": "974576",
   "rating": 4.5,
@@ -18668,7 +18668,7 @@
    "제임스 우즈"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qrPziDNhXLCrOShs3cPY1Arb71J.jpg",
   "tmdbId": "686",
   "rating": 3,
@@ -18689,7 +18689,7 @@
    "밀리센트 시먼즈"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vdiR7qc7cWxXD0pT8BZJ35DDB0B.jpg",
   "tmdbId": "447332",
   "rating": 3,
@@ -18710,7 +18710,7 @@
    "Rawle D. Lewis"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/tCh79ruXfV1KhOa7OJBgnM4WRqL.jpg",
   "tmdbId": "864",
   "rating": 4,
@@ -18731,7 +18731,7 @@
    "원화"
   ],
   "genre": "Action",
-  "country": "중국",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/rX8XXAMyMGZRDhEgG1cmwXmxjZU.jpg",
   "tmdbId": "9470",
   "rating": 4,
@@ -18752,7 +18752,7 @@
    "더스틴 호프만"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bPocc0TkmgENeBcreGSq3nNiEB7.jpg",
   "tmdbId": "49444",
   "rating": 2.5,
@@ -18773,7 +18773,7 @@
    "안젤리나 졸리"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/c3Dzd3A3QE0LkKb5HMOHTzs2Fyg.jpg",
   "tmdbId": "9502",
   "rating": 4,
@@ -18794,7 +18794,7 @@
    "윌 페럴"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/rFAAWVcg2uGEwE33kI17ORr3pYr.jpg",
   "tmdbId": "787781",
   "rating": 3,
@@ -18899,7 +18899,7 @@
    "T.J. 밀러"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uNgSTnFZ7XQ9Gl4BgO01oOvzC7t.jpg",
   "tmdbId": "7191",
   "rating": 3,
@@ -18920,7 +18920,7 @@
    "Corey Reynolds"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/q6FhABXGf3TaYKoKNwzGAEzW7bt.jpg",
   "tmdbId": "1450",
   "rating": 3,
@@ -18962,7 +18962,7 @@
    "니콜라스 케이지"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dMq6GzXo5MUvow7Y4LbDRqRAYrb.jpg",
   "tmdbId": "23483",
   "rating": 4,
@@ -19004,7 +19004,7 @@
    "배리 키오건"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9FNFqpzu0rKuzW394wVPaeJpFC3.jpg",
   "tmdbId": "399057",
   "rating": 3.5,
@@ -19046,7 +19046,7 @@
    "헬레나 본햄 카터"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pjoGWlSQdojGkUBtCfFTW2a3AKR.jpg",
   "tmdbId": "45269",
   "rating": 4,
@@ -19067,7 +19067,7 @@
    "사무엘 L. 잭슨"
   ],
   "genre": "Crime",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/pVwvZAgnsuMcDGbeWVtXOpks1oQ.jpg",
   "tmdbId": "207703",
   "rating": 4,
@@ -19088,7 +19088,7 @@
    "잭 블랙"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/51YN66JgY2D6eexN3PwWQwZTXTH.jpg",
   "tmdbId": "254",
   "rating": 3,
@@ -19109,7 +19109,7 @@
    "빌리 제인"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/132KjhVrWUqKFVfMAKKNkherytA.jpg",
   "tmdbId": "597",
   "rating": 3.5,
@@ -19235,7 +19235,7 @@
    "마리옹 꼬띠아르"
   ],
   "genre": "Action",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/pzCstxUOwLlgIq4ERFF1y6NBFfO.jpg",
   "tmdbId": "2330",
   "rating": 2.5,
@@ -19277,7 +19277,7 @@
    "스탠리 투치"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/6BGzYTpKGsMiFwJUUJj1sE7JoXj.jpg",
   "tmdbId": "594",
   "rating": 4,
@@ -19298,7 +19298,7 @@
    "린다 해밀턴"
   ],
   "genre": "Action",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/y6FmrimVoBBKsERc08VyVP1NyNs.jpg",
   "tmdbId": "218",
   "rating": 2.5,
@@ -19319,7 +19319,7 @@
    "제이슨 아이작스"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/gHtyq9JWwEL4pfYzfp570S03MUb.jpg",
   "tmdbId": "10771",
   "rating": 3,
@@ -19340,7 +19340,7 @@
    "아담 골드버그"
   ],
   "genre": "Action & Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dQzIsOfgnNi6d3C6Mrly03cIOHC.jpg",
   "tmdbId": "68006",
   "rating": 3,
@@ -19361,7 +19361,7 @@
    "돈 리클리스"
   ],
   "genre": "Family",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/iJbm78MxPjLutWUYixbeege8EVe.jpg",
   "tmdbId": "862",
   "rating": 3,
@@ -19382,7 +19382,7 @@
    "조앤 쿠삭"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/gXUNsdIIn6NiEBvh8Mq6gjgVPm0.jpg",
   "tmdbId": "863",
   "rating": 4,
@@ -19403,7 +19403,7 @@
    "조앤 쿠삭"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hbUWahBLUon8RaIb9Tq7aWCBCtS.jpg",
   "tmdbId": "10193",
   "rating": 4,
@@ -19424,7 +19424,7 @@
    "애니 포츠"
   ],
   "genre": "Family",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/9P8IX4UyH3QFLL4MV6GZyuOB7Ue.jpg",
   "tmdbId": "301528",
   "rating": 4.5,
@@ -19445,7 +19445,7 @@
    "샤론 스톤"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/q7uUVw1ryWoYgEKLo3MDBQbctw6.jpg",
   "tmdbId": "861",
   "rating": 3,
@@ -19466,7 +19466,7 @@
    "Romane Bohringer"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/awAMLM6CvUFtLuAXCjtb1FDTY9V.jpg",
   "tmdbId": "36834",
   "rating": 3.5,
@@ -19592,7 +19592,7 @@
    "Mark Ryan"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xxj02oRohOlb8jhMh7UKR7yCucb.jpg",
   "tmdbId": "1858",
   "rating": 3,
@@ -19613,7 +19613,7 @@
    "스탠리 투치"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/zPbiUwVSToxgQHMAbuzint09fHf.jpg",
   "tmdbId": "91314",
   "rating": 3,
@@ -19634,7 +19634,7 @@
    "Peter Cullen"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8KjAaZk5RFqtThSMqxQPGtwJsH7.jpg",
   "tmdbId": "8373",
   "rating": 3,
@@ -19655,7 +19655,7 @@
    "조니 리 밀러"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/phJA8xmzrlzAElBRm1xQnr0PCWU.jpg",
   "tmdbId": "627",
   "rating": 5,
@@ -19676,7 +19676,7 @@
    "Mike O'Gorman"
   ],
   "genre": "Action & Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/ooSf4RLx00BhiZeBAb8QcIJU2kO.jpg",
   "tmdbId": "202099",
   "rating": 4,
@@ -19697,7 +19697,7 @@
    "Noah Emmerich"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/AsUv4pFf1UQuOLKf7nYUXgmgCNf.jpg",
   "tmdbId": "37165",
   "rating": 5,
@@ -19718,7 +19718,7 @@
    "안소니 라모스"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/w5mXdM9AIf7urUtoUVYjABdp3g8.jpg",
   "tmdbId": "718821",
   "rating": 4,
@@ -19739,7 +19739,7 @@
    "캐서린 오하라"
   ],
   "genre": "Fantasy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hZpeftLIA5XaO8cRmv1QWiCpUHx.jpg",
   "tmdbId": "9479",
   "rating": 4,
@@ -19781,7 +19781,7 @@
    "데이비드 리스달"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/tGId4DT3LHd71zOyC73aR0TVCTe.jpg",
   "tmdbId": "60622",
   "rating": 4,
@@ -19802,7 +19802,7 @@
    "Mark Fredrichs"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uNOEIKO1YW2XP9mjSdZ8oaHaRFm.jpg",
   "tmdbId": "23827",
   "rating": 3.5,
@@ -19928,7 +19928,7 @@
    "F. 머레이 에이브러햄"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5b2hI9S74F6SuPRqXzppV3743Xm.jpg",
   "tmdbId": "711",
   "rating": 4,
@@ -20012,7 +20012,7 @@
    "Christo Jivkov"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/hNnh0cwtv5iQ1ErTSZXMbo1Q2Rl.jpg",
   "tmdbId": "615",
   "rating": 3,
@@ -20033,7 +20033,7 @@
    "존 마가로"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/5igEts2tRTgUd2gz0uuldAx0tcD.jpg",
   "tmdbId": "666277",
   "rating": 4,
@@ -20054,7 +20054,7 @@
    "필립 세이모어 호프만"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xN1aKur5ddWQSXTqvzDPJD2TCxe.jpg",
   "tmdbId": "10312",
   "rating": 3,
@@ -20092,7 +20092,7 @@
    "Libero De Rienzo"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/cYboNQm5MNUL7vy2mxfc4IOQtDp.jpg",
   "tmdbId": "570",
   "rating": 3,
@@ -20134,7 +20134,7 @@
    "제이슨 클라크"
   ],
   "genre": "History",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/4i3I1lJGjK5bw4gmBYinvTAOppI.jpg",
   "tmdbId": "369972",
   "rating": 3.5,
@@ -20197,7 +20197,7 @@
    "필립 세이모어 호프만"
   ],
   "genre": "Romance",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/eVcSKOuPnhGbzOU2B8qliq8XXNZ.jpg",
   "tmdbId": "8051",
   "rating": 4.5,
@@ -20218,7 +20218,7 @@
    "우마 서먼"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/lnRkeQstaCvfMahZq7p9eAWzK1a.jpg",
   "tmdbId": "680",
   "rating": 4,
@@ -20239,7 +20239,7 @@
    "조앤 앨런"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/wUHMETCAsHvDUkrpq0owD4mqQ0p.jpg",
   "tmdbId": "754",
   "rating": 3,
@@ -20260,7 +20260,7 @@
    "Jules Sitruk"
   ],
   "genre": "Documentary",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/cdnzDxJNw95IQxlHNt5GYGkHGR9.jpg",
   "tmdbId": "1667",
   "rating": 4,
@@ -20302,7 +20302,7 @@
    "게리 시나이즈"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/l8wvbQQIBV8LBHmx3Wx9xbE2kzt.jpg",
   "tmdbId": "13",
   "rating": 4,
@@ -20323,7 +20323,7 @@
    "Margit Carstensen"
   ],
   "genre": "Horror",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/gtseOQqh2nPIdTNsZB3iWTfafct.jpg",
   "tmdbId": "21484",
   "rating": 2.5,
@@ -20344,7 +20344,7 @@
    "포레스트 휘태커"
   ],
   "genre": "Thriller",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/t4w6KSB5Zhfo6MFNlYjKT0L2Pno.jpg",
   "tmdbId": "1817",
   "rating": 4,
@@ -20386,7 +20386,7 @@
    "Klaus-Michael Grüber"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/bFEq8d3ySXz3FS4F5FWyCu5GzT7.jpg",
   "tmdbId": "2767",
   "rating": 4.5,
@@ -20407,7 +20407,7 @@
    "빈센트 도노프리오"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/aQJ650CEHmN5B7W1C2r8efCDyiP.jpg",
   "tmdbId": "600",
   "rating": 3.5,
@@ -20428,7 +20428,7 @@
    "로건 러먼"
   ],
   "genre": "War",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/dYwwlFLd8WNrfa3s6HBzAbH3QXG.jpg",
   "tmdbId": "228150",
   "rating": 3,
@@ -20449,7 +20449,7 @@
    "에드워드 노튼"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/vLv8a0OpH33EDyU2ZqRb5mfMnKS.jpg",
   "tmdbId": "1592",
   "rating": 3,
@@ -20470,7 +20470,7 @@
    "레나 올린"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/g1kPEwATsCI8DnGx6ViAhUVKQSI.jpg",
   "tmdbId": "10644",
   "rating": 3.5,
@@ -20512,7 +20512,7 @@
    "제임스 오티즈"
   ],
   "genre": "Sci-Fi",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qqGpVVZk2KD1lAvccgTU4Z6nh1H.jpg",
   "tmdbId": "687163",
   "rating": 4,
@@ -20533,7 +20533,7 @@
    "Lori Petty"
   ],
   "genre": "Family",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/182uiANKbu4k4CyEXxMQ2hcY3nX.jpg",
   "tmdbId": "1634",
   "rating": 3,
@@ -20554,7 +20554,7 @@
    "릴리 글래드스톤"
   ],
   "genre": "Crime",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/q2SKY5YiExCbZHErVxdD2rML0Bo.jpg",
   "tmdbId": "466420",
   "rating": 3.5,
@@ -20596,7 +20596,7 @@
    "다니엘 파나베이커"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yZevl2vHQgmosfwUdVNzviIfaWS.jpg",
   "tmdbId": "60735",
   "rating": 3,
@@ -20617,7 +20617,7 @@
    "톰 베렌저"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2yLt2UPs7ivdkbG1bosBuuQYTF1.jpg",
   "tmdbId": "792",
   "rating": 3.5,
@@ -20638,7 +20638,7 @@
    "윌렘 대포"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/nwSrKv3tzo4HqkgMj3ZwfAC4VYT.jpg",
   "tmdbId": "394117",
   "rating": 3.5,
@@ -20679,7 +20679,7 @@
    "Frank Finlay"
   ],
   "genre": "Drama",
-  "country": "프랑스",
+  "country": "유럽",
   "poster": "https://image.tmdb.org/t/p/w500/t7L2YDpu635qKT3ehqZxry4yvTX.jpg",
   "tmdbId": "423",
   "rating": 4,
@@ -20742,7 +20742,7 @@
    "金燕玲"
   ],
   "genre": "Drama",
-  "country": "대만",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/qdx6yQJ8WLLyBnwLcdxMznIg4bB.jpg",
   "tmdbId": "25538",
   "rating": 4.5,
@@ -20805,7 +20805,7 @@
    "제임스 칸"
   ],
   "genre": "Animation",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/2SYoJMDkWihYEgmOmcFPlPoCnhm.jpg",
   "tmdbId": "22794",
   "rating": 3,
@@ -20868,7 +20868,7 @@
    "애슐리 티스데일"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/7QuALq6XizODLfdEDonzuSUGlPD.jpg",
   "tmdbId": "10947",
   "rating": 4,
@@ -20994,7 +20994,7 @@
    "로렌스 피시번"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/AjZsoGrhUYbt5gS8cFLzjBqzMNU.jpg",
   "tmdbId": "40008",
   "rating": 3.5,
@@ -21055,7 +21055,7 @@
    "시드니 스위니"
   ],
   "genre": "Horror",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/l59zpc1DUkzCuBsjKBnEbFLBzRC.jpg",
   "tmdbId": "986373",
   "rating": 1,
@@ -21118,7 +21118,7 @@
    "엠마 왓슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8YaP48tVfngbURGldWk1I5odsBK.jpg",
   "tmdbId": "671",
   "rating": 3,
@@ -21139,7 +21139,7 @@
    "엠마 왓슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/1ItejykqHTbFWbZXdzqlvqriv7K.jpg",
   "tmdbId": "675",
   "rating": 3,
@@ -21160,7 +21160,7 @@
    "엠마 왓슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uWPnKtu1eutmgBQ2hoWm0Xe8nfN.jpg",
   "tmdbId": "674",
   "rating": 3,
@@ -21181,7 +21181,7 @@
    "엠마 왓슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/bo8FuQPWKLqbg3WgAXYISkwrbZ9.jpg",
   "tmdbId": "672",
   "rating": 3.5,
@@ -21202,7 +21202,7 @@
    "엠마 왓슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/anwNl1xbzXoj5Ax1nVw3WoDzHlw.jpg",
   "tmdbId": "673",
   "rating": 3.5,
@@ -21223,7 +21223,7 @@
    "엠마 왓슨"
   ],
   "genre": "Adventure",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yrGlb3HLtjGp39mv4MJ5UuIHcj4.jpg",
   "tmdbId": "767",
   "rating": 3,
@@ -21244,7 +21244,7 @@
    "캐리 피셔"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/m4IfPfmR3LELJgu5aa03CIennTF.jpg",
   "tmdbId": "639",
   "rating": 3,
@@ -21370,7 +21370,7 @@
    "Charles Aitken"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/xXMLZQurZsS5WIhiMDJqA1K38WM.jpg",
   "tmdbId": "440021",
   "rating": 3,
@@ -21433,7 +21433,7 @@
    "에밀리 왓슨"
   ],
   "genre": "Drama",
-  "country": "영국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/96ikpEmn7Uxct77x6kTIUgnldh2.jpg",
   "tmdbId": "858024",
   "rating": 4.5,
@@ -21454,7 +21454,7 @@
    "탠디 뉴턴"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/uRMMtYZkWyqsc4AO4aCoHBbZSwL.jpg",
   "tmdbId": "1402",
   "rating": 4,
@@ -21538,7 +21538,7 @@
    "Ethan Suplee"
   ],
   "genre": "Action",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/8mS3VvzeDfw6VdgQQbXsunNBEit.jpg",
   "tmdbId": "514847",
   "rating": 3.5,
@@ -21559,7 +21559,7 @@
    "스티븐 트래스크"
   ],
   "genre": "Comedy",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/yizLunBTerzxbkiCarzJTrprzt0.jpg",
   "tmdbId": "13403",
   "rating": 5,
@@ -21580,7 +21580,7 @@
    "브라이스 댈러스 하워드"
   ],
   "genre": "Drama",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/qMVZtwZIU9oussRb8al2Gb0YPQL.jpg",
   "tmdbId": "50014",
   "rating": 3,
@@ -21811,7 +21811,7 @@
    "줄리아 로버츠"
   ],
   "genre": "Adventure",
-  "country": "미국",
+  "country": "영미",
   "poster": "https://image.tmdb.org/t/p/w500/aYHVKGzHLY9VsVrwx0iBxowXZId.jpg",
   "tmdbId": "879",
   "rating": 3,
@@ -21874,7 +21874,7 @@
    "막문위"
   ],
   "genre": "Comedy",
-  "country": "홍콩",
+  "country": "기타",
   "poster": "https://image.tmdb.org/t/p/w500/qaNp3iuRcCrpXq8IPWCAWLL11nE.jpg",
   "tmdbId": "53168",
   "rating": 5,

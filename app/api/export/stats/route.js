@@ -1,6 +1,7 @@
 import { getAllSongs } from "../../../../lib/songs";
 import { getAllMovies } from "../../../../lib/movies";
 import { kstToday } from "../../../../lib/kst";
+import { COUNTRY_TAGS } from "../../../../lib/genre";
 
 // The collection stats as one Markdown file — mirrors the /stats page's
 // categories. Prerendered at build time (songs are only guaranteed on disk
@@ -9,7 +10,7 @@ export const dynamic = "force-static";
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
 const isDecadeTag = (t) => /^\d{4}s?$/.test(t);
-const isCountryTag = (t) => Object.values(COUNTRY).includes(t) || t === "기타";
+const isCountryTag = (t) => COUNTRY_TAGS.includes(t);
 const pct = (n, total) => (total ? `${Math.round((n / total) * 100)}%` : "—");
 
 function tally(values) {
