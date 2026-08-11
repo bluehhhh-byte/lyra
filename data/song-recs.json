@@ -1,6 +1,226 @@
 {
  "items": [
   {
+   "trackId": 1097861836,
+   "title": "Karma Police",
+   "artist": "Radiohead",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/95/d7/8b/95d78bf8-aa46-9d40-ce93-0652918bc68f/mzaf_12066288776609103708.plus.aac.p.m4a",
+   "year": "1997",
+   "genre": "Alternative",
+   "why": "날카로운 기타와 불안 속 저항의 메시지",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 616297075,
+   "title": "Reptilia",
+   "artist": "The Strokes",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/5e/da/ad/5edaadb8-97d7-fa6b-eda4-bb1abe3f9b3c/TheStrokes_RoomOnFire_G0100017157309_1400x1407.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e3/38/80/e33880b6-14f6-c4b0-4bfc-af791feb03ae/mzaf_12125877867990412946.plus.aac.p.m4a",
+   "year": "2003",
+   "genre": "Rock",
+   "why": "폭발적인 기타 리프와 강렬한 저항감",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 663098051,
+   "title": "No. 1 Party Anthem",
+   "artist": "Arctic Monkeys",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/9c/b5/699cb5d6-115c-ff73-9d26-e57ea4350d72/887828031795.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/16/84/9c/16849c3d-b999-a93f-bbbf-cf09a4f337ef/mzaf_13091105457122357767.plus.aac.p.m4a",
+   "year": "2013",
+   "genre": "Alternative",
+   "why": "특유의 체념과 쓸쓸함이 느껴지는 록",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1242155576,
+   "title": "EVERYTHING",
+   "artist": "검정치마",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/ce/5c/bece5cff-2caf-6d8a-9c21-3035537d2a4d/Album_cover_1400X1400.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/37/c4/c0/37c4c06e-fc10-80b0-5484-97ddf03be83d/mzaf_16030927561900146145.plus.aac.p.m4a",
+   "year": "2016",
+   "genre": "인디 록",
+   "why": "몽환적인 멜로디와 깊은 이별의 감성",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1450482651,
+   "title": "파도",
+   "artist": "새소년",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/c8/ee/3cc8ee7b-6905-844f-25f4-fcf8b3f06d16/8809380636319.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/9f/31/169f3160-c3dc-8fb7-4374-489bd7efbf9d/mzaf_10101894633308321997.plus.aac.p.m4a",
+   "year": "2017",
+   "genre": "록",
+   "why": "거친 에너지가 돋보이는 얼터너티브 록",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 317961372,
+   "title": "Hysteria",
+   "artist": "Muse",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/92/b9/5f/mzi.cgvtndrj.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/87/1f/08/871f082c-ad36-02cc-84b9-1066c18ee728/mzaf_13069569475764077836.plus.aac.p.m4a",
+   "year": "2003",
+   "genre": "Alternative",
+   "why": "강렬한 베이스라인과 불안을 뚫는 저항",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1865062183,
+   "title": "NO PAIN",
+   "artist": "실리카겔",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/9c/e6/429ce6b1-2702-18bf-de93-7d1b8b5a666d/8809964653299.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/8b/4c/378b4c23-4af3-7223-118d-c84cedf7615c/mzaf_17657027766515802437.plus.aac.p.m4a",
+   "year": "2023",
+   "genre": "록",
+   "why": "2020년대 인디 록의 고독과 청춘의 위로",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1536364102,
+   "title": "Re:Re:",
+   "artist": "Asian Kung-Fu Generation",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9b/90/54/9b90547e-6743-bd7b-4d17-c6a485c0124e/4560427295664.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2e/72/af/2e72afd5-d1e1-45c9-f0b4-2ed31c705f21/mzaf_5369979610377716421.plus.aac.p.m4a",
+   "year": "2004",
+   "genre": "Rock",
+   "why": "질주감 넘치는 J-Rock 특유의 희망과 저항",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1410619822,
+   "title": "아지랑이",
+   "artist": "쏜애플",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/51/0a/5b/510a5b3c-405a-630d-d3ea-ea520bc86fb8/Strange_Weather.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/3f/23/e53f2342-c83c-0468-96d2-5b2692bd2581/mzaf_17350376113719603469.plus.aac.p.m4a",
+   "year": "2014",
+   "genre": "록",
+   "why": "불안과 고독을 파고드는 몽환적 얼터너티브",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1811037800,
+   "title": "TOMBOY",
+   "artist": "혁오 & Sunset Rollercoaster",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/31/4a/24314a7e-010d-d4eb-7b90-1fa8f57c781b/8800312826129_cover.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/79/98/cb799851-f7ae-2a06-272b-84d759a8bd81/mzaf_11064272145316724741.plus.aac.p.m4a",
+   "year": "2025",
+   "genre": "한국 록",
+   "why": "청춘의 방황과 체념을 담은 인디 록",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1478044370,
+   "title": "The Pretender (Live at Studio 606 West, Northridge, CA - September 2007)",
+   "artist": "Foo Fighters",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/c6/96/6a/c6966a33-e798-2a04-aa68-cb4355e447f2/886447906613.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/24/22/53/242253f5-2938-77c9-acef-c814261a3958/mzaf_16921109091361817827.plus.aac.p.m4a",
+   "year": "2019",
+   "genre": "Rock",
+   "why": "폭발하는 사운드로 전하는 강력한 저항",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1441817578,
+   "title": "Stand Out Fit In",
+   "artist": "ONE OK ROCK",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0f/b6/2a/0fb62a0c-d7a1-e376-4616-d8fd9c3656c2/075679858412.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/5f/a3/455fa30f-27dc-d9b2-355c-9b6f2ec1801e/mzaf_3079609111774892187.plus.aac.p.m4a",
+   "year": "2018",
+   "genre": "록",
+   "why": "희망과 의지를 부르짖는 강렬한 J-Rock",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 961067403,
+   "title": "Every You Every Me",
+   "artist": "Placebo",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/39/4e/33/394e3318-f803-51f2-7f28-10e63b45a6d3/5060186926902_1.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/46/1f/62/461f62b2-cb86-57f6-07d3-528b2cc31d88/mzaf_15133714695382008281.plus.aac.p.m4a",
+   "year": "1998",
+   "genre": "Alternative",
+   "why": "90년대 특유의 퇴폐미와 불안의 메시지",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1714248019,
+   "title": "Time Walking on Memories",
+   "artist": "NELL",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0c/4a/57/0c4a575b-f9ca-0f87-5321-6d289c2fd9cc/8804775098062.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/25/64/1d/25641d4e-370e-dde6-997e-d26859371007/mzaf_5950353073185290252.plus.aac.p.m4a",
+   "year": "2018",
+   "genre": "Rock",
+   "why": "서정적인 록 사운드와 그리움의 가사",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 273714713,
+   "title": "Toxicity",
+   "artist": "System Of A Down",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/82/51/52/825152b4-9423-b23b-c036-cc67ead732d4/888888046775.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/81/b2/d8/81b2d89d-2303-585f-e6c0-87edfc525cb0/mzaf_3574703683202422354.plus.aac.p.m4a",
+   "year": "2001",
+   "genre": "Hard Rock",
+   "why": "혼란스러운 사회를 향한 분노와 저항",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1536027148,
+   "title": "Hakujitsu",
+   "artist": "King Gnu",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3e/b8/ef/3eb8ef78-c575-eb81-f982-aaec74b5fe53/jacket_BVXX01177B00Z_550.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a2/91/56/a2915609-6396-cd16-eee0-b9baaf05b24c/mzaf_2060143032655781963.plus.aac.p.m4a",
+   "year": "2019",
+   "genre": "Alternative",
+   "why": "2020년대 J-Rock이 담아낸 슬픔과 위로",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1442647615,
+   "title": "Somebody Else",
+   "artist": "The 1975",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/90/16/e3/9016e318-52d6-046e-e6da-d905efe84f3e/15UMGIM62906.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/d9/27/acd927a7-da54-327e-7da2-b99638d9f139/mzaf_11691359230547115368.plus.aac.p.m4a",
+   "year": "2016",
+   "genre": "얼터너티브",
+   "why": "도시적 세련함 속 이별의 고독과 몽환",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1440783625,
+   "title": "Smells Like Teen Spirit",
+   "artist": "Nirvana",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/fd/b9/95fdb9b2-6d2b-92a6-97f2-51c1a6d77f1a/00602527874609.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a6/53/1e/a6531efa-397c-eb73-ecab-9b2790c1471e/mzaf_16440344883389407474.plus.aac.p.m4a",
+   "year": "1991",
+   "genre": "Rock",
+   "why": "90년대 얼터너티브 록의 상징적 저항",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1099848811,
+   "title": "Change (In the House of Flies)",
+   "artist": "Deftones",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/51/57/96515710-cf91-0663-6f5a-942acf6ea31b/093624919797.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/58/3d/ca/583dcad3-e2ca-e229-f089-637b0ab7d328/mzaf_14300378853874282579.plus.aac.p.m4a",
+   "year": "2000",
+   "genre": "Hard Rock",
+   "why": "어둡고 몽환적인 헤비메탈 사운드",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
+   "trackId": 1058298359,
+   "title": "Missing",
+   "artist": "Ellegarden",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4a/46/90/4a4690e8-0d5a-e619-1013-9c3eea782d5c/mzm.zycxldgg.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/18/0a/d1/180ad155-f9db-8f21-1895-189b29aa50bf/mzaf_16981202380278890903.plus.aac.p.m4a",
+   "year": "2004",
+   "genre": "Rock",
+   "why": "질주하는 멜로딕 펑크 속 고독과 그리움",
+   "at": "2026-08-11T11:48:49.642Z"
+  },
+  {
    "trackId": 1097861770,
    "title": "Paranoid Android",
    "artist": "Radiohead",
@@ -221,5 +441,5 @@
    "at": "2026-08-11T11:37:27.097Z"
   }
  ],
- "at": "2026-08-11T11:37:27.097Z"
+ "at": "2026-08-11T11:48:49.642Z"
 }
