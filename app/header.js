@@ -23,7 +23,6 @@ const MORE = [
   ["/recap", "결산"],
   ["/stats", "통계"],
   ["/tags", "태그"],
-  ["/admin", "관리자"],
 ];
 
 export default function Header() {
@@ -85,6 +84,14 @@ export default function Header() {
             <kbd className="hidden font-sans text-[10px] text-muted/70 md:inline">⌘K</kbd>
           </button>
           <ThemeToggle />
+          <Link
+            href="/admin"
+            aria-label="관리자"
+            title="관리자"
+            className="flex h-8 w-8 items-center justify-center rounded-md hover:bg-surface hover:text-accent"
+          >
+            ⚙
+          </Link>
           <button
             onClick={() => setMenuOpen((value) => !value)}
             aria-expanded={menuOpen}
