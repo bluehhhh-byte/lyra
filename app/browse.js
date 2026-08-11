@@ -13,9 +13,10 @@ const GROUPS = [
 
 const RANDOM_PICKS = 6;
 
-export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none" }) {
+export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none", initialEmotion = "" }) {
   const [q, setQ] = useState(initialQ);
   const [tag, setTag] = useState(initialTag);
+  const [emotion, setEmotion] = useState(initialEmotion); // 취향 페이지 감정 막대에서 온다
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
   // slug → lyric lines, fetched once from /api/lyrics-index the first time the
@@ -31,10 +32,11 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
     const p = new URLSearchParams();
     if (q) p.set("q", q);
     if (tag) p.set("tag", tag);
+    if (emotion) p.set("emotion", emotion);
     if (group !== "none") p.set("group", group);
     const qs = p.toString();
     history.replaceState(null, "", qs ? `/?${qs}` : "/");
-  }, [q, tag, group]);
+  }, [q, tag, group, emotion]);
 
   const needle = q.trim().toLowerCase();
 
@@ -56,11 +58,12 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
     return songs.filter(
       (s) =>
         (!tag || s.tags.includes(tag)) &&
+        (!emotion || s.emotion === emotion) &&
         (!needle ||
           s.metaSearch.includes(needle) ||
           (lyrics?.[s.slug] || []).some((l) => l.toLowerCase().includes(needle)))
     );
-  }, [needle, tag, songs, lyrics]);
+  }, [needle, tag, emotion, songs, lyrics]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -118,15 +121,25 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
         </div>
       </div>
 
-      {tag && (
+      {(tag || emotion) && (
         <div className="mb-6 flex items-center gap-2 text-sm">
-          <span className="text-muted">태그</span>
-          <button
-            onClick={() => setTag("")}
-            className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
-          >
-            {tag} ✕
-          </button>
+          <span className="text-muted">{tag ? "태그" : "감정"}</span>
+          {tag && (
+            <button
+              onClick={() => setTag("")}
+              className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+            >
+              {tag} ✕
+            </button>
+          )}
+          {emotion && (
+            <button
+              onClick={() => setEmotion("")}
+              className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+            >
+              {emotion} ✕
+            </button>
+          )}
         </div>
       )}
 
@@ -136,7 +149,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
             ? "아직 곡이 없습니다."
             : q
               ? `"${q}" 검색 결과 없음`
-              : `'${tag}' 태그 곡 없음`}
+              : `'${tag || emotion}' 곡 없음`}
         </p>
       )}
 

@@ -104,10 +104,18 @@ export default function MusicTastePage() {
 
       <Section
         title="감정 분포"
-        hint={`${t.count}곡 중 ${t.covered.emotion}곡 기준 — 색은 밝음(주황) ↔ 어두움(파랑)`}
+        hint={`${t.count}곡 중 ${t.covered.emotion}곡 기준 — 감정을 누르면 그 감정의 곡만, 색은 밝음(주황) ↔ 어두움(파랑)`}
       >
         {t.emotion.map(([e, n]) => (
-          <Bar key={e} label={e} n={n} max={t.emotion[0]?.[1] || 1} total={t.count} color={valenceColor(emotionValence(e))} />
+          <Bar
+            key={e}
+            label={e}
+            n={n}
+            max={t.emotion[0]?.[1] || 1}
+            total={t.count}
+            color={valenceColor(emotionValence(e))}
+            href={`/?emotion=${encodeURIComponent(e)}`}
+          />
         ))}
         {t.emotion.length > 0 && (
           <div className="pt-4">

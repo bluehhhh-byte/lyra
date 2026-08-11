@@ -8,6 +8,7 @@ import { getAllMovies } from "../lib/movies.js";
 import { getWatched } from "../lib/watched.js";
 import { EMOTIONS } from "../lib/keywords.js";
 import { genreTagOf, genreIssue } from "../lib/genre.js";
+import { readData } from "../lib/store.js";
 
 const errors = [];
 const warns = [];
@@ -26,6 +27,11 @@ for (const s of songs) {
   if (!s.artist) err(f, "artist 없음");
   if (!["en", "ja", "ko"].includes(s.lang)) err(f, `lang이 en/ja/ko가 아님: "${s.lang}"`);
   if (!isHttps(s.artwork)) warn(f, `artwork가 https URL이 아님: "${s.artwork || ""}"`);
+  // year가 깨지면 취향 페이지에 "NaN년대"가 뜬다 — 4자리 숫자만
+  if (s.year && !/^\d{4}$/.test(String(s.year))) err(f, `year가 4자리 연도가 아님: "${s.year}"`);
+  if (!s.year) warn(f, "year 없음 (시대 분석에서 제외됨)");
+  if (s.preview && !isHttps(s.preview)) warn(f, "preview가 https URL이 아님");
+  if (s.trackId && !/^\d+$/.test(String(s.trackId))) warn(f, `trackId가 숫자가 아님: "${s.trackId}"`);
   if (!s.tags?.length) warn(f, "tags 비어 있음");
   // 장르 태그는 닫힌 영문 어휘 — 한글 장르("얼터너티브")나 우산 장르가 새면 태그 인덱스가 갈라진다
   else {
@@ -57,6 +63,7 @@ for (const m of movies) {
   if (!m.title) err(f, "title 없음");
   if (m.media && !["movie", "tv"].includes(m.media)) err(f, `media가 movie/tv가 아님: "${m.media}"`);
   if (m.rating != null && !validRating(m.rating)) err(f, `rating이 0.5~5(0.5 단위)가 아님: ${m.rating}`);
+  if (m.year && !/^\d{4}$/.test(String(m.year))) err(f, `year가 4자리 연도가 아님: "${m.year}"`);
   if (!isHttps(m.poster)) warn(f, "poster가 https URL이 아님");
   if (!m.tmdbId) warn(f, "tmdbId 없음 (TMDB 링크·왓챠 임포트 대조 불가)");
   if (!m.year) warn(f, "year 없음");
@@ -91,6 +98,28 @@ const watched = getWatched();
   }
   if (noPoster) warn(f, `poster 없는 항목 ${noPoster}개`);
   if (noTmdb) warn(f, `tmdbId 없는 항목 ${noTmdb}개 (외부 링크·인물 병합 제외됨)`);
+}
+
+// ── data/song-recs.json · data/taste-recs.json (추천) ───────────────────────
+// 추천 파일이 깨져도 사이트는 안 죽지만(빈 배열 fallback), 중복·필드 누락은
+// 생성 로직의 회귀 신호라 여기서 잡는다.
+{
+  const sr = readData("song-recs.json", { items: [] }).items || [];
+  const ids = new Set();
+  for (const [i, r] of sr.entries()) {
+    const at = `data/song-recs.json[${i}] ${r.title || "?"}`;
+    if (!r.trackId || !r.title || !r.artist) err(at, "trackId/title/artist 누락");
+    else if (ids.has(String(r.trackId))) err(at, "trackId 중복");
+    else ids.add(String(r.trackId));
+  }
+  const mr = readData("taste-recs.json", { items: [] }).items || [];
+  const mids = new Set();
+  for (const [i, r] of mr.entries()) {
+    const at = `data/taste-recs.json[${i}] ${r.title || "?"}`;
+    if (!r.tmdbId || !r.title) err(at, "tmdbId/title 누락");
+    else if (mids.has(String(r.tmdbId))) err(at, "tmdbId 중복");
+    else mids.add(String(r.tmdbId));
+  }
 }
 
 // ── 결과 ────────────────────────────────────────────────────────────────────

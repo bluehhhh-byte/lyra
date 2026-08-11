@@ -888,7 +888,8 @@ ${lyricBody}
     if (!added.length && prevItems.length === prev.items?.length)
       return Response.json({ error: "새 추천을 찾지 못했습니다 (이미 추천했거나 담은 곡)" }, { status: 502 });
 
-    const items = [...added, ...prevItems];
+    // 최신 100곡만 유지 — 오래 쌓이면 파일과 페이지가 무한히 자란다
+    const items = [...added, ...prevItems].slice(0, 100);
     await writeData("song-recs.json", JSON.stringify({ items, at: now }, null, 1), `data: 추천 곡 +${added.length} (누적 ${items.length})`);
     return Response.json({ added: added.length, total: items.length });
   }

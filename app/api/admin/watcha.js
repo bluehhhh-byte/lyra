@@ -138,7 +138,8 @@ ${seenList}
     if (!added.length && prevItems.length === prev.items?.length)
       return Response.json({ error: "새 추천을 찾지 못했습니다 (이미 추천했거나 본 작품)" }, { status: 502 });
 
-    const items = [...added, ...prevItems]; // 최신 추천이 위로
+    // 최신 추천이 위로, 최신 100편만 유지 — 파일이 무한히 자라지 않게
+    const items = [...added, ...prevItems].slice(0, 100);
     await writeData("taste-recs.json", JSON.stringify({ items, at: now }, null, 1), `data: 추천 +${added.length} (누적 ${items.length})`);
     return Response.json({ added: added.length, total: items.length });
   }
