@@ -116,6 +116,18 @@ export default function SongTools({ songs }) {
     }
   };
 
+  // 추천 곡 생성 — Gemini 1회 + iTunes 매칭. /recommendations에 누적된다.
+  const [recsBusy, setRecsBusy] = useState("");
+  const songRecs = async () => {
+    setRecsBusy("생성 중…");
+    try {
+      const { added, total } = await api("songRecs", {});
+      setRecsBusy(`+${added}곡 (누적 ${total}) — 재배포 후 반영`);
+    } catch (e) {
+      setRecsBusy(`실패: ${e.message}`);
+    }
+  };
+
   const addTrans = async (slug) => {
     set(slug, { busy: "trans", err: "", msg: "" });
     try {
@@ -150,8 +162,17 @@ export default function SongTools({ songs }) {
           <br />
           {bulk ? `추출 중… ${bulk.done}/${bulk.total}` : "일괄 추출"}
         </button>
+        <button
+          onClick={songRecs}
+          disabled={recsBusy === "생성 중…"}
+          className="min-w-32 rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+        >
+          추천 곡
+          <br />
+          생성
+        </button>
         <span className="text-xs text-muted">
-          메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움
+          {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움"}
         </span>
       </div>
       <ul className="divide-y divide-line rounded-lg border border-line">

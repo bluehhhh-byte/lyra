@@ -16,7 +16,7 @@ const PRIMARY = [
 const MORE = [
   ["/watched", "평가한 영화"],
   ["/watched/taste", "취향 분석"],
-  ["/recommendations", "추천 영화"],
+  ["/recommendations", "추천"],
   ["/people", "인물"],
   ["/recap", "결산"],
   ["/stats", "통계"],

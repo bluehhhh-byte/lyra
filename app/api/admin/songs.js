@@ -1,5 +1,5 @@
 ﻿// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
-import { readSong, writeSong, deleteSong } from "../../../lib/store";
+import { readSong, writeSong, deleteSong, readData, writeData } from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
@@ -776,6 +776,121 @@ ${lyricBody}
 `;
     await writeSong(slug, md, `add(song): ${slug}`);
     return Response.json({ slug });
+  }
+
+  // 추천 곡 — 영화 tasteRecs와 같은 구조. 컬렉션 취향 집계를 Gemini에 주고
+  // '없는 곡'을 추천받은 뒤, iTunes로 찾아 아트워크·30초 미리듣기를 붙인다.
+  // 이미 있는 곡·이전 추천은 제외하고 data/song-recs.json에 누적한다.
+  if (action === "songRecs") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const songs = getAllSongs();
+    if (songs.length < 10)
+      return Response.json({ error: `곡이 ${songs.length}곡뿐입니다 (10곡 이상 필요)` }, { status: 422 });
+
+    const tally = (vals) => {
+      const m = new Map();
+      for (const v of vals) if (v) m.set(v, (m.get(v) || 0) + 1);
+      return [...m.entries()].sort((a, b) => b[1] - a[1]);
+    };
+    const fmt = (rows) => rows.map(([k, n]) => `${k} ${n}곡`).join(", ");
+    const country = tally(songs.map((s) => s.tags.find((t) => COUNTRY_TAGS.includes(t)) || "기타"));
+    const genre = tally(songs.map((s) => genreTagOf(s.tags)));
+    const decade = tally(songs.filter((s) => s.year).map((s) => `${Math.floor(+s.year / 10) * 10}s`));
+    const artists = tally(songs.map((s) => s.artist)).slice(0, 20);
+    const emotion = tally(songs.map((s) => s.emotion));
+    const keywords = tally(songs.flatMap((s) => s.keywords || [])).slice(0, 15);
+    // 59곡 규모라 회피 목록은 전곡을 그대로 준다 (영화의 상위 300 트림과 달리)
+    const have = songs.map((s) => `${s.title} - ${s.artist}`).join("; ");
+
+    const raw = await geminiText(
+      key,
+      `아래는 한 사람의 음악 컬렉션 취향 집계다 (총 ${songs.length}곡).
+국가: ${fmt(country)}
+장르: ${fmt(genre)}
+연대: ${fmt(decade)}
+아티스트: ${fmt(artists)}
+감정: ${fmt(emotion)}
+가사 키워드: ${keywords.map(([k]) => k).join(", ")}
+이 취향에 맞으면서 컬렉션에 '없는' 곡 28곡을 추천하라. JSON 배열로만:
+[{"title":"곡 제목","artist":"아티스트","why":"추천 이유"}]
+규칙:
+- 편애 지점(자주 담은 장르·아티스트·감정·연대)을 파고들되, 이미 담은 아티스트의 곡은 최대 5곡까지만 — 나머지는 취향이 닿을 새로운 아티스트의 발견작으로
+- 아래 컬렉션에 이미 있는 곡과 그 리메이크·커버는 제외: ${have}
+- title은 원제 그대로(검색 매칭용), why는 취향과 연결한 한국어 40자 이내 한 구절
+- 실제 발매된 곡만. 28곡(매칭 탈락 여유분). 순수 JSON만 출력`,
+      true
+    );
+    let recs;
+    try {
+      recs = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "추천 생성 실패 (응답 파싱)" }, { status: 502 });
+    }
+    if (!Array.isArray(recs) || !recs.length)
+      return Response.json({ error: "추천이 비었습니다 (쿼터·과부하)" }, { status: 502 });
+
+    // 곡명+아티스트 → iTunes (미·한 스토어 병렬). 키 불필요, rate limit 넉넉.
+    const searched = await Promise.all(
+      recs.filter((r) => r?.title && r?.artist).map(async (r) => {
+        try {
+          const term = encodeURIComponent(`${r.title} ${r.artist}`);
+          const lists = await Promise.all(
+            ["US", "KR"].map((c) =>
+              fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=5&country=${c}`)
+                .then((x) => x.json())
+                .then((x) => x.results || [])
+                .catch(() => [])
+            )
+          );
+          return { r, results: lists.flat().map(itunesToResult) };
+        } catch {
+          return { r, results: [] };
+        }
+      })
+    );
+
+    // 컬렉션(트랙ID + 제목|아티스트)과 이전 추천 제외, 새 것만 위에 얹는다
+    const haveTrack = new Set(songs.map((s) => String(s.trackId)).filter(Boolean));
+    const haveKey = new Set(songs.map((s) => `${normText(s.title)}|${normText(s.artist)}`));
+    const prev = readData("song-recs.json", { items: [] });
+    const prevItems = (prev.items || []).filter(
+      (m) => !haveTrack.has(String(m.trackId)) && !haveKey.has(`${normText(m.title)}|${normText(m.artist)}`)
+    );
+    const prevTrack = new Set(prevItems.map((m) => String(m.trackId)));
+    const now = new Date().toISOString();
+
+    const added = [];
+    const used = new Set();
+    for (const { r, results } of searched) {
+      if (added.length >= 20) break;
+      const hit = results.find((c) => {
+        const id = String(c.trackId);
+        if (!c.trackId || haveTrack.has(id) || prevTrack.has(id) || used.has(id)) return false;
+        if (haveKey.has(`${normText(c.title)}|${normText(c.artist)}`)) return false;
+        // 아티스트가 실제로 일치해야 — 동명 커버곡 오매칭 방지
+        return normText(c.artist).includes(normText(r.artist)) || normText(r.artist).includes(normText(c.artist));
+      });
+      if (!hit) continue;
+      used.add(String(hit.trackId));
+      added.push({
+        trackId: hit.trackId,
+        title: hit.title,
+        artist: hit.artist,
+        artwork: hit.artwork,
+        preview: hit.preview,
+        year: hit.year,
+        genre: hit.genre,
+        why: String(r.why || "").trim(),
+        at: now,
+      });
+    }
+    if (!added.length && prevItems.length === prev.items?.length)
+      return Response.json({ error: "새 추천을 찾지 못했습니다 (이미 추천했거나 담은 곡)" }, { status: 502 });
+
+    const items = [...added, ...prevItems];
+    await writeData("song-recs.json", JSON.stringify({ items, at: now }, null, 1), `data: 추천 곡 +${added.length} (누적 ${items.length})`);
+    return Response.json({ added: added.length, total: items.length });
   }
   return null;
 }
