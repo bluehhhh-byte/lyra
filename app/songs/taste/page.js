@@ -42,6 +42,16 @@ export default function MusicTastePage() {
   const t = summarizeMusicTaste(songs);
   const text = interpretMusicTaste(t);
 
+  if (t.count === 0)
+    return (
+      <>
+        <h1 className="mb-8 text-2xl font-bold">음악 취향</h1>
+        <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
+          아직 분석할 곡이 없습니다. 곡을 담으면 취향이 여기에 나타납니다.
+        </div>
+      </>
+    );
+
   const tiles = [
     ["곡", `${t.count}곡`],
     ["아티스트", `${t.artist.length}팀`],
@@ -88,7 +98,7 @@ export default function MusicTastePage() {
 
       <Section title="감정 분포" hint="곡마다 붙은 감정 라벨의 집계 — 색은 밝음(주황) ↔ 어두움(파랑)">
         {t.emotion.map(([e, n]) => (
-          <Bar key={e} label={e} n={n} max={t.emotion[0][1]} total={t.count} color={valenceColor(emotionValence(e))} />
+          <Bar key={e} label={e} n={n} max={t.emotion[0]?.[1] || 1} total={t.count} color={valenceColor(emotionValence(e))} />
         ))}
         {t.emotion.length > 0 && (
           <div className="pt-4">
@@ -108,21 +118,21 @@ export default function MusicTastePage() {
         )}
       </Section>
 
-      <Section title="장르 취향">
+      <Section title="많이 담은 장르">
         {t.genre.slice(0, 12).map(([g, n]) => (
-          <Bar key={g} label={g} n={n} max={t.genre[0][1]} total={t.count} />
+          <Bar key={g} label={g} n={n} max={t.genre[0]?.[1] || 1} total={t.count} />
         ))}
       </Section>
 
-      <Section title="시대 취향">
+      <Section title="많이 담은 시대">
         {[...t.decade].sort((a, b) => a[0].localeCompare(b[0])).map(([d, n]) => (
-          <Bar key={d} label={d} n={n} max={t.decade[0][1]} total={t.count} />
+          <Bar key={d} label={d} n={n} max={t.decade[0]?.[1] || 1} total={t.count} />
         ))}
       </Section>
 
       <Section title="국가·권역">
         {t.region.map(([r, n]) => (
-          <Bar key={r} label={r} n={n} max={t.region[0][1]} total={t.count} />
+          <Bar key={r} label={r} n={n} max={t.region[0]?.[1] || 1} total={t.count} />
         ))}
       </Section>
 

@@ -18,6 +18,8 @@ const CHECKS = [
   { url: `/songs/${firstSong}`, expect: "기록" },
   { url: "/movies", expect: null },
   { url: `/movies/${firstMovie}`, expect: null },
+  { url: "/songs/taste", expect: "음악 취향" },
+  { url: "/recommendations/music", expect: "추천 곡" },
   { url: "/watched", expect: "평가한 영화" },
   { url: "/watched/taste", expect: null },
   { url: "/stats", expect: null },
