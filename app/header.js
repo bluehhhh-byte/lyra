@@ -55,7 +55,13 @@ export default function Header() {
   return (
     <>
       <header className="relative z-30 mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-6">
-        <Link href={inMovies ? "/movies" : "/"} className="shrink-0 text-lg font-bold">
+        {/* 로고는 두 세계의 스위치 — Lyra.를 누르면 Syno.(영화)로, Syno.를
+            누르면 Lyra.(음악)로 넘어간다. 현재 섹션 홈은 내비의 음악/영화가 담당. */}
+        <Link
+          href={inMovies ? "/" : "/movies"}
+          title={inMovies ? "Lyra. — 음악으로" : "Syno. — 영화로"}
+          className="shrink-0 text-lg font-bold"
+        >
           {inMovies ? "Syno" : "Lyra"}<span className="text-accent">.</span>
         </Link>
 
