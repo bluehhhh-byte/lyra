@@ -1,0 +1,21 @@
+# push/PR마다 pnpm check(테스트 + 데이터 lint + 빌드 + smoke) 자동 실행.
+# 배포된 admin이 곡을 저장할 때마다 커밋이 생기므로, 데이터 커밋도 매번 검증된다.
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4 # 버전은 package.json의 packageManager를 따른다
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check

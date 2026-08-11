@@ -31,7 +31,8 @@ export async function GET(request) {
     .filter(Boolean)
     .slice(0, 6);
 
-  const movies = getAllMovies()
+  const allMovies = getAllMovies();
+  const movies = allMovies
     .filter((movie) =>
       [
         movie.title, movie.title_ko, movie.director, movie.director_ko,
@@ -49,7 +50,7 @@ export async function GET(request) {
 
   // 평가한 왓챠 영화 1045편 — 개별 페이지가 없어 TMDB로 링크. 위 .md 영화와
   // tmdbId가 겹치면(같은 작품) 뺀다.
-  const mdTmdb = new Set(getAllMovies().map((m) => String(m.tmdbId)).filter(Boolean));
+  const mdTmdb = new Set(allMovies.map((m) => String(m.tmdbId)).filter(Boolean));
   const watched = getWatched()
     .filter((m) => m.rating != null && !mdTmdb.has(String(m.tmdbId)))
     .filter((m) =>
