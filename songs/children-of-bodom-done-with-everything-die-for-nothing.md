@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/72/
 trackId: 735672386
 duration: 209
 lang: en
-tags: [기타, Heavy Metal, 1997]
+tags: [유럽, Heavy Metal, 1997]
 keywords: [신뢰, 하인, 수치, 죽음]
 emotion: 분노
 date: 2026-08-04

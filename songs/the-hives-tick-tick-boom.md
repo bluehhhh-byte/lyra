@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3a/
 trackId: 1443094618
 duration: 205
 lang: en
-tags: [기타, Indie Rock, 2007]
+tags: [유럽, Indie Rock, 2007]
 keywords: [증거, 점수, 기회, 모래]
 emotion: 저항
 date: 2026-07-22
