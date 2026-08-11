@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { readData } from "../../../lib/store";
+import { getAllSongs } from "../../../lib/songs";
+import { normText } from "../../../lib/admin/itunes";
 import SongRecs from "../song-recs";
 
 export const metadata = {
@@ -11,7 +13,13 @@ export const metadata = {
 // 새 추천이 위에 얹히고, 그새 컬렉션에 담은 곡은 다음 생성 때 빠진다.
 export default function MusicRecommendationsPage() {
   const recs = readData("song-recs.json", { items: [] });
-  const items = recs.items || [];
+  // 추천 후 컬렉션에 담은 곡은 다음 생성을 기다리지 않고 즉시 숨긴다
+  const songs = getAllSongs();
+  const haveTrack = new Set(songs.map((s) => String(s.trackId)).filter(Boolean));
+  const haveKey = new Set(songs.map((s) => `${normText(s.title)}|${normText(s.artist)}`));
+  const items = (recs.items || []).filter(
+    (m) => !haveTrack.has(String(m.trackId)) && !haveKey.has(`${normText(m.title)}|${normText(m.artist)}`)
+  );
 
   return (
     <>

@@ -10,10 +10,16 @@ export const metadata = {
 
 // "내가 어떤 음악을 모으는가"의 해석. 별점·재생 기록이 없으므로 모든 표현은
 // '많이 담은'이다 — '좋아하는'이 아니라. 숫자·기록 나열은 /stats 담당.
-function Bar({ label, n, max, total, color }) {
+function Bar({ label, n, max, total, color, href }) {
   return (
     <div className="flex items-center gap-3 text-sm">
-      <span className="w-32 shrink-0 truncate sm:w-40">{label}</span>
+      {href ? (
+        <Link href={href} className="w-32 shrink-0 truncate hover:text-accent hover:underline sm:w-40">
+          {label}
+        </Link>
+      ) : (
+        <span className="w-32 shrink-0 truncate sm:w-40">{label}</span>
+      )}
       <div className="h-4 flex-1 overflow-hidden rounded bg-line/50">
         <div
           className="h-full rounded"
@@ -96,7 +102,10 @@ export default function MusicTastePage() {
         ))}
       </div>
 
-      <Section title="감정 분포" hint="곡마다 붙은 감정 라벨의 집계 — 색은 밝음(주황) ↔ 어두움(파랑)">
+      <Section
+        title="감정 분포"
+        hint={`${t.count}곡 중 ${t.covered.emotion}곡 기준 — 색은 밝음(주황) ↔ 어두움(파랑)`}
+      >
         {t.emotion.map(([e, n]) => (
           <Bar key={e} label={e} n={n} max={t.emotion[0]?.[1] || 1} total={t.count} color={valenceColor(emotionValence(e))} />
         ))}
@@ -118,30 +127,37 @@ export default function MusicTastePage() {
         )}
       </Section>
 
-      <Section title="많이 담은 장르">
+      <Section title="많이 담은 장르" hint={`${t.count}곡 중 ${t.covered.genre}곡 기준 — 장르를 누르면 그 태그의 곡·영화로`}>
         {t.genre.slice(0, 12).map(([g, n]) => (
-          <Bar key={g} label={g} n={n} max={t.genre[0]?.[1] || 1} total={t.count} />
+          <Bar key={g} label={g} n={n} max={t.genre[0]?.[1] || 1} total={t.count} href={`/tags/${encodeURIComponent(g)}`} />
         ))}
       </Section>
 
-      <Section title="많이 담은 시대">
+      <Section title="많이 담은 시대" hint={`연도 있는 ${t.covered.decade}곡 기준 — 시대를 누르면 홈의 연대별 보기로`}>
         {[...t.decade].sort((a, b) => a[0].localeCompare(b[0])).map(([d, n]) => (
-          <Bar key={d} label={d} n={n} max={t.decade[0]?.[1] || 1} total={t.count} />
+          <Bar key={d} label={d} n={n} max={t.decade[0]?.[1] || 1} total={t.count} href="/?group=decade" />
         ))}
       </Section>
 
-      <Section title="국가·권역">
+      <Section title="국가·권역" hint="권역을 누르면 그 태그의 곡·영화로">
         {t.region.map(([r, n]) => (
-          <Bar key={r} label={r} n={n} max={t.region[0]?.[1] || 1} total={t.count} />
+          <Bar
+            key={r}
+            label={r}
+            n={n}
+            max={t.region[0]?.[1] || 1}
+            total={t.count}
+            href={r === "기타" ? undefined : `/tags/${encodeURIComponent(r)}`}
+          />
         ))}
       </Section>
 
       <Section
         title="많이 담은 아티스트"
-        hint={`전체 ${t.artist.length}팀 중 ${t.once.length}팀은 한 곡씩만 담긴 발견형`}
+        hint={`전체 ${t.artist.length}팀 중 ${t.once.length}팀은 한 곡씩만 담긴 발견형 — 이름을 누르면 그 가수의 곡으로`}
       >
         {t.repeat.slice(0, 10).map(([a, n]) => (
-          <Bar key={a} label={a} n={n} max={t.repeat[0]?.[1] || 1} total={t.count} />
+          <Bar key={a} label={a} n={n} max={t.repeat[0]?.[1] || 1} total={t.count} href={`/?q=${encodeURIComponent(a)}`} />
         ))}
         {t.repeat.length === 0 && <p className="text-sm text-muted">아직 두 곡 이상 담은 아티스트가 없습니다.</p>}
       </Section>

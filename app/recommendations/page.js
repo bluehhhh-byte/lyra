@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { readData } from "../../lib/store";
+import { getAllMovies } from "../../lib/movies";
+import { getRated } from "../../lib/watched";
 import { tmdbUrl } from "../../lib/tmdb-link";
 import CoverImage from "../cover-image";
 
@@ -13,7 +15,12 @@ export const metadata = {
 // 추천 곡은 /recommendations/music — 한 페이지에 합쳤더니 너무 길어 분리.
 export default function RecommendationsPage() {
   const recs = readData("taste-recs.json", { items: [] });
-  const items = recs.items || [];
+  // 추천 후 평가했거나 등록한 작품은 다음 생성을 기다리지 않고 즉시 숨긴다
+  const seen = new Set([
+    ...getRated().map((m) => String(m.tmdbId)),
+    ...getAllMovies().map((m) => String(m.tmdbId)),
+  ]);
+  const items = (recs.items || []).filter((m) => !seen.has(String(m.tmdbId)));
 
   return (
     <>
