@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Usage: GEMINI_API_KEY=xxx npm run add -- "song title artist"
+// Usage: GEMINI_API_KEY=xxx pnpm add -- "song title artist"
 // Paste English lyrics, then Ctrl-D. Writes songs/<slug>.md with Gemini translations.
 import fs from "fs";
 import path from "path";

@@ -69,6 +69,7 @@ push/PR마다 `pnpm check`를 돌린다.
 | `GEMINI_MODEL` | 품질용 모델 (기본 `gemini-flash-latest`) |
 | `GEMINI_MODEL_LITE` | 분류·일괄용 모델 (기본 `gemini-flash-lite-latest`) |
 | `TMDB_API_KEY` | 영화 검색·상세·왓챠 임포트 (영화 기능에 필수) |
+| `NEXT_PUBLIC_SITE_URL` | sitemap·OG 절대 URL (선택, 미설정 시 Vercel 도메인 자동 사용) |
 
 **온라인 admin 동작:**
 - 프로덕션에서 `/admin`·`/api/admin`은 비밀번호 로그인으로 보호된다
