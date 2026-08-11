@@ -2,7 +2,7 @@ import { getAllSongs } from "../lib/songs";
 import Browse from "./browse";
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
-const COUNTRY_TAGS = ["한국", "일본", "영미", "유럽", "아시아", "기타"];
+const COUNTRY_TAGS = ["한국", "일본", "영미", "유럽", "아시아", "중남미", "중동", "기타"];
 // the country tag tracks the artist's nationality; lyric language is only a
 // fallback for songs saved before country tags existed
 const countryOf = (s) => s.tags.find((t) => COUNTRY_TAGS.includes(t)) || COUNTRY[s.lang] || "기타";
