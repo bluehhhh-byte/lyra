@@ -286,7 +286,7 @@ export default function StatsPage() {
 
       <div className="mt-10 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
         <Link href="/" className="text-sm text-muted hover:text-accent">
-          ← 컬렉션으로
+          ← 홈으로
         </Link>
         <div className="flex gap-4">
           <a href="/api/export/stats" download className="text-sm text-muted hover:text-accent">

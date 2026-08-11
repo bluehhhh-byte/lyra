@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { THEME_KEY } from "../lib/theme";
 
 // Dark is the default; the OS preference is deliberately ignored.
-const LABEL = { dark: "☾ 다크", light: "☀ 라이트" };
+const ICON = { dark: "☾", light: "☀" };
+const TEXT = { dark: "다크", light: "라이트" };
 
 export function applyTheme(theme) {
   const el = document.documentElement;
@@ -53,11 +54,13 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={next}
-      aria-label={`테마: ${LABEL[theme]}. 클릭하면 전환`}
+      aria-label={`테마: ${TEXT[theme]}. 클릭하면 전환`}
       title="다크 ↔ 라이트"
-      className="w-[4.5rem] text-left tabular-nums hover:text-accent"
+      className="flex h-8 items-center gap-1 rounded-md px-2 hover:bg-surface hover:text-accent"
     >
-      {mounted ? LABEL[theme] : "☾ 다크"}
+      <span aria-hidden>{mounted ? ICON[theme] : "☾"}</span>
+      {/* 모바일은 아이콘만 — 헤더 오른쪽이 좁다 */}
+      <span className="hidden sm:inline">{mounted ? TEXT[theme] : "다크"}</span>
     </button>
   );
 }

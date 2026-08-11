@@ -224,7 +224,7 @@ export default async function SongPage({ params }) {
 
       <div className="mx-auto mt-16 flex max-w-2xl justify-between">
         <Link href="/" className="text-sm text-muted hover:text-accent">
-          ← 컬렉션으로
+          ← 음악으로
         </Link>
         {process.env.NODE_ENV !== "production" && (
           <Link href={`/admin/edit/${song.slug}`} className="text-sm text-muted hover:text-accent">

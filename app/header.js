@@ -7,9 +7,9 @@ import ThemeToggle from "./theme-toggle";
 import SearchDialog from "./search-dialog";
 
 const PRIMARY = [
-  ["/archive", "아카이브"],
   ["/", "음악"],
   ["/movies", "영화"],
+  ["/archive", "아카이브"],
   ["/diary", "일기"],
 ];
 
@@ -65,16 +65,23 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3 text-xs text-muted">
-          <button onClick={() => setSearchOpen(true)} className="hover:text-accent" aria-label="통합 검색">
-            검색
+        <div className="flex items-center gap-2 text-xs text-muted">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="통합 검색"
+            className="flex h-8 items-center gap-1.5 rounded-full border border-line px-3 hover:border-accent hover:text-accent"
+          >
+            <span aria-hidden>⌕</span>
+            <span className="hidden sm:inline">검색</span>
+            {/* 단축키는 header의 keydown 리스너가 처리한다 — 여긴 힌트만 */}
+            <kbd className="hidden font-sans text-[10px] text-muted/70 md:inline">⌘K</kbd>
           </button>
           <ThemeToggle />
           <button
             onClick={() => setMenuOpen((value) => !value)}
             aria-expanded={menuOpen}
             aria-label="전체 메뉴"
-            className="h-8 w-8 text-lg hover:text-accent"
+            className={`h-8 w-8 rounded-md text-lg hover:bg-surface hover:text-accent ${menuOpen ? "bg-surface text-ink" : ""}`}
           >
             {menuOpen ? "×" : "☰"}
           </button>

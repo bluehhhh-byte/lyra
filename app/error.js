@@ -17,7 +17,7 @@ export default function Error({ error, reset }) {
           href="/"
           className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent"
         >
-          컬렉션으로
+          홈으로
         </a>
       </div>
     </div>
