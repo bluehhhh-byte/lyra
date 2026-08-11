@@ -4,14 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import CoverImage from "../cover-image";
 
-const GROUPS = [
-  { key: "none", label: "전체" },
-  { key: "director", label: "감독별" },
-  { key: "year", label: "연도별" },
-  { key: "genre", label: "장르별" },
-  { key: "rating", label: "별점별" },
-];
-
 const SORTS = [
   { key: "recorded", label: "최근 기록순" },
   { key: "year-desc", label: "개봉연도 최신순" },
@@ -22,37 +14,22 @@ const SORTS = [
 
 const valid = (items, value, fallback) => items.some((item) => item.key === value) ? value : fallback;
 
+// 필터를 검색·매체·정렬 셋으로 줄였다 — 국가·장르·별점·그룹 필터는 49편
+// 규모에 과했고 첫 화면을 어지럽혔다. 국가·장르 탐색은 /tags가 담당.
 export default function MovieBrowse({ movies, initial = {} }) {
   const [q, setQ] = useState(initial.q || "");
-  const [group, setGroup] = useState(valid(GROUPS, initial.group, "none"));
   const [media, setMedia] = useState(["all", "movie", "tv"].includes(initial.media) ? initial.media : "all");
-  const [country, setCountry] = useState(initial.country || "all");
-  const [genre, setGenre] = useState(initial.genre || "all");
-  const [rating, setRating] = useState(Number(initial.rating) || 0);
   const [sort, setSort] = useState(valid(SORTS, initial.sort, "recorded"));
   const [seed, setSeed] = useState(0);
-
-  const countries = useMemo(
-    () => [...new Set(movies.map((movie) => movie.country).filter(Boolean))].sort((a, b) => a.localeCompare(b)),
-    [movies]
-  );
-  const genres = useMemo(
-    () => [...new Set(movies.map((movie) => movie.genre).filter(Boolean))].sort((a, b) => a.localeCompare(b)),
-    [movies]
-  );
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (q) params.set("q", q);
-    if (group !== "none") params.set("group", group);
     if (media !== "all") params.set("media", media);
-    if (country !== "all") params.set("country", country);
-    if (genre !== "all") params.set("genre", genre);
-    if (rating) params.set("rating", String(rating));
     if (sort !== "recorded") params.set("sort", sort);
     const query = params.toString();
     history.replaceState(null, "", query ? `/movies?${query}` : "/movies");
-  }, [q, group, media, country, genre, rating, sort]);
+  }, [q, media, sort]);
 
   const needle = q.trim().toLowerCase();
   const filtered = useMemo(
@@ -60,12 +37,9 @@ export default function MovieBrowse({ movies, initial = {} }) {
       movies.filter(
         (movie) =>
           (!needle || movie.search.includes(needle)) &&
-          (media === "all" || movie.media === media) &&
-          (country === "all" || movie.country === country) &&
-          (genre === "all" || movie.genre === genre) &&
-          (!rating || (movie.rating || 0) >= rating)
+          (media === "all" || movie.media === media)
       ),
-    [needle, movies, media, country, genre, rating]
+    [needle, movies, media]
   );
 
   const sorted = useMemo(() => {
@@ -88,45 +62,24 @@ export default function MovieBrowse({ movies, initial = {} }) {
     });
   }, [filtered, sort, seed]);
 
-  const groups = useMemo(() => {
-    if (group === "none") return [["", sorted]];
-    const map = new Map();
-    for (const movie of sorted) {
-      const key = groupValue(movie, group);
-      if (!map.has(key)) map.set(key, []);
-      map.get(key).push(movie);
-    }
-    const entries = [...map.entries()];
-    entries.sort((a, b) => {
-      if (group === "year" || group === "rating") return b[0].localeCompare(a[0]);
-      return b[1].length - a[1].length || a[0].localeCompare(b[0]);
-    });
-    return entries;
-  }, [sorted, group]);
-
   const reset = () => {
     setQ("");
-    setGroup("none");
     setMedia("all");
-    setCountry("all");
-    setGenre("all");
-    setRating(0);
     setSort("recorded");
   };
-  const hasFilters = q || group !== "none" || media !== "all" || country !== "all" ||
-    genre !== "all" || rating || sort !== "recorded";
+  const hasFilters = q || media !== "all" || sort !== "recorded";
 
   return (
     <>
-      <div className="mb-8 border-y border-line py-4">
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
-          <input
-            value={q}
-            onChange={(event) => setQ(event.target.value)}
-            placeholder="영화·감독·배우·줄거리 검색"
-            aria-label="작품 검색"
-            className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent lg:max-w-xs lg:text-sm"
-          />
+      <div className="mb-8 flex flex-col gap-3 border-y border-line py-4 sm:flex-row sm:items-center">
+        <input
+          value={q}
+          onChange={(event) => setQ(event.target.value)}
+          placeholder="영화·감독·배우·줄거리 검색"
+          aria-label="작품 검색"
+          className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
+        />
+        <div className="flex flex-wrap items-center gap-2">
           <div className="flex gap-1 rounded-lg border border-line p-1">
             {[
               ["all", "전체"],
@@ -144,42 +97,11 @@ export default function MovieBrowse({ movies, initial = {} }) {
               </button>
             ))}
           </div>
-          <FilterSelect label="국가" value={country} onChange={setCountry} options={countries} />
-          <FilterSelect label="장르" value={genre} onChange={setGenre} options={genres} />
-          <select
-            value={rating}
-            onChange={(event) => setRating(Number(event.target.value))}
-            aria-label="최소 별점"
-            className="rounded-lg border border-line bg-surface px-3 py-2 text-xs outline-none focus:border-accent"
-          >
-            <option value="0">별점 전체</option>
-            {[4.5, 4, 3.5, 3, 2.5].map((value) => (
-              <option key={value} value={value}>★ {value} 이상</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          <div className="flex gap-1.5 overflow-x-auto">
-            {GROUPS.map((item) => (
-              <button
-                key={item.key}
-                onClick={() => setGroup(item.key)}
-                className={`shrink-0 rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
-                  group === item.key
-                    ? "border-accent bg-accent font-semibold text-bg"
-                    : "border-line text-muted hover:text-ink"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
           <select
             value={sort}
             onChange={(event) => setSort(event.target.value)}
             aria-label="정렬"
-            className="ml-auto rounded-lg border border-line bg-surface px-3 py-1.5 text-xs outline-none focus:border-accent"
+            className="rounded-lg border border-line bg-surface px-3 py-1.5 text-xs outline-none focus:border-accent"
           >
             {SORTS.map((item) => <option key={item.key} value={item.key}>{item.label}</option>)}
           </select>
@@ -203,41 +125,10 @@ export default function MovieBrowse({ movies, initial = {} }) {
       {filtered.length === 0 ? (
         <p className="py-20 text-center text-sm text-muted">조건에 맞는 작품이 없습니다.</p>
       ) : (
-        groups.map(([name, list]) => (
-          <section key={name || "all"} className="mb-10">
-            {name && (
-              <h2 className="mb-4 text-sm font-semibold text-muted">
-                {name} <span className="text-xs">({list.length})</span>
-              </h2>
-            )}
-            <Grid list={list} needle={needle} />
-          </section>
-        ))
+        <Grid list={sorted} needle={needle} />
       )}
     </>
   );
-}
-
-function FilterSelect({ label, value, onChange, options }) {
-  return (
-    <select
-      value={value}
-      onChange={(event) => onChange(event.target.value)}
-      aria-label={`${label} 필터`}
-      className="rounded-lg border border-line bg-surface px-3 py-2 text-xs outline-none focus:border-accent"
-    >
-      <option value="all">{label} 전체</option>
-      {options.map((option) => <option key={option} value={option}>{option}</option>)}
-    </select>
-  );
-}
-
-function groupValue(movie, group) {
-  if (group === "director") return movie.director || "미상";
-  if (group === "year") return movie.year || "미상";
-  if (group === "genre") return movie.genre || "기타";
-  if (group === "rating") return movie.rating != null ? `★ ${movie.rating}` : "미평가";
-  return "전체";
 }
 
 function Stars({ value }) {
