@@ -7,6 +7,7 @@ import { getAllSongs } from "../lib/songs.js";
 import { getAllMovies } from "../lib/movies.js";
 import { getWatched } from "../lib/watched.js";
 import { EMOTIONS } from "../lib/keywords.js";
+import { genreTagOf, genreIssue } from "../lib/genre.js";
 
 const errors = [];
 const warns = [];
@@ -26,6 +27,11 @@ for (const s of songs) {
   if (!["en", "ja", "ko"].includes(s.lang)) err(f, `lang이 en/ja/ko가 아님: "${s.lang}"`);
   if (!isHttps(s.artwork)) warn(f, `artwork가 https URL이 아님: "${s.artwork || ""}"`);
   if (!s.tags?.length) warn(f, "tags 비어 있음");
+  // 장르 태그는 닫힌 영문 어휘 — 한글 장르("얼터너티브")나 우산 장르가 새면 태그 인덱스가 갈라진다
+  else {
+    const gi = genreIssue(genreTagOf(s.tags));
+    if (gi) warn(f, `장르 태그: ${gi} ("${genreTagOf(s.tags) || "—"}")`);
+  }
   // emotion은 닫힌 목록 — 파서(parseEmotion)가 조용히 버리는 값을 여기서 드러낸다
   if (s.emotion && !EMOTIONS.includes(s.emotion)) err(f, `emotion이 목록 밖: "${s.emotion}"`);
   if (!s.emotion) warn(f, "emotion 없음 (admin 키워드·감정 일괄 추출로 채움)");

@@ -12,6 +12,7 @@
     "test": "node scripts/run-tests.mjs",
     "lint:data": "node scripts/lint-data.mjs",
     "smoke": "node scripts/smoke.mjs",
+    "visual": "python scripts/visual-check.py",
     "check": "node scripts/run-tests.mjs && node scripts/lint-data.mjs && next build && node scripts/smoke.mjs"
   },
   "dependencies": {

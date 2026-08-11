@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/
 trackId: 6789189828
 duration: 108
 lang: en
-tags: [영미, Hip-Hop/Rap, 2026]
+tags: [영미, Hip-Hop, 2026]
 keywords: [점프, 돈, 춤, 기회]
 emotion: 기쁨
 date: 2026-07-25

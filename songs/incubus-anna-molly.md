@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b0/
 trackId: 204285262
 duration: 226
 lang: en
-tags: [영미, Rock, 2006]
+tags: [영미, Alternative Rock, 2006]
 keywords: [외로움, 얼굴, 불, 이름, 운명]
 emotion: 그리움
 date: 2026-08-02

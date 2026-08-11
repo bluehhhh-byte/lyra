@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/
 trackId: 1891161447
 duration: 200
 lang: en
-tags: [영미, 얼터너티브, 2026]
+tags: [영미, Alternative Rock, 2026]
 keywords: [어제, 미래, 고독, 유행, 예술]
 emotion: 고독
 date: 2026-08-05

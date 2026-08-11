@@ -11,14 +11,8 @@ export default function SongRecs({ items }) {
     <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
       {items.map((s) => {
         const playing = track?.preview && track.preview === s.preview;
-        return (
-          <button
-            key={s.trackId}
-            onClick={() => s.preview && setTrack({ title: s.title, artist: s.artist, artwork: s.artwork, preview: s.preview })}
-            disabled={!s.preview}
-            className="group text-left"
-            aria-label={`${s.title} 미리듣기`}
-          >
+        const inner = (
+          <>
             <div className="relative overflow-hidden rounded-xl border border-line bg-surface">
               <CoverImage
                 src={s.artwork}
@@ -27,7 +21,7 @@ export default function SongRecs({ items }) {
                 loading="lazy"
                 className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
               />
-              {s.preview && (
+              {s.preview ? (
                 <span
                   className={`absolute bottom-2 right-2 flex h-9 w-9 items-center justify-center rounded-full text-sm backdrop-blur transition ${
                     playing ? "bg-accent text-bg" : "bg-black/60 text-white opacity-0 group-hover:opacity-100"
@@ -35,6 +29,11 @@ export default function SongRecs({ items }) {
                   aria-hidden
                 >
                   ▶
+                </span>
+              ) : (
+                // iTunes에 미리듣기가 없는 곡 — 이유를 보여주고 카드는 유튜브 검색으로
+                <span className="absolute bottom-2 right-2 rounded bg-black/60 px-1.5 py-0.5 text-[10px] text-white/80 backdrop-blur">
+                  미리듣기 없음 · YouTube ↗
                 </span>
               )}
             </div>
@@ -44,7 +43,28 @@ export default function SongRecs({ items }) {
               {s.year ? ` · ${s.year}` : ""}
             </p>
             {s.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{s.why}</p>}
+          </>
+        );
+        return s.preview ? (
+          <button
+            key={s.trackId}
+            onClick={() => setTrack({ title: s.title, artist: s.artist, artwork: s.artwork, preview: s.preview })}
+            className="group text-left"
+            aria-label={`${s.title} 미리듣기`}
+          >
+            {inner}
           </button>
+        ) : (
+          <a
+            key={s.trackId}
+            href={`https://www.youtube.com/results?search_query=${encodeURIComponent(`${s.artist} ${s.title}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group text-left"
+            aria-label={`${s.title} YouTube에서 찾기`}
+          >
+            {inner}
+          </a>
         );
       })}
     </div>
