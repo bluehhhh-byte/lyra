@@ -71,7 +71,8 @@ export default function MovieBrowse({ movies, initial = {} }) {
 
   return (
     <>
-      <div className="mb-8 flex flex-col gap-3 border-y border-line py-4 sm:flex-row sm:items-center">
+      {/* 홈(Lyra)의 상단과 같은 문법 — 검색 인풋 + 라운드 필 + 카운트 칩 */}
+      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <input
           value={q}
           onChange={(event) => setQ(event.target.value)}
@@ -79,29 +80,29 @@ export default function MovieBrowse({ movies, initial = {} }) {
           aria-label="작품 검색"
           className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
-        <div className="flex flex-wrap items-center gap-2">
-          <div className="flex gap-1 rounded-lg border border-line p-1">
-            {[
-              ["all", "전체"],
-              ["movie", "영화"],
-              ["tv", "드라마"],
-            ].map(([key, label]) => (
-              <button
-                key={key}
-                onClick={() => setMedia(key)}
-                className={`min-w-14 rounded px-2.5 py-1.5 text-xs transition ${
-                  media === key ? "bg-accent font-semibold text-bg" : "text-muted hover:text-ink"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap items-center gap-1.5">
+          {[
+            ["all", "전체"],
+            ["movie", "영화"],
+            ["tv", "드라마"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setMedia(key)}
+              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                media === key
+                  ? "border-accent bg-accent font-semibold text-bg"
+                  : "border-line text-muted hover:text-ink"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
           <select
             value={sort}
             onChange={(event) => setSort(event.target.value)}
             aria-label="정렬"
-            className="rounded-lg border border-line bg-surface px-3 py-1.5 text-xs outline-none focus:border-accent"
+            className="rounded-full border border-line bg-bg px-3 py-1 text-xs text-muted outline-none focus:border-accent"
           >
             {SORTS.map((item) => <option key={item.key} value={item.key}>{item.label}</option>)}
           </select>
@@ -110,7 +111,7 @@ export default function MovieBrowse({ movies, initial = {} }) {
               onClick={() => setSeed((value) => value + 1)}
               title="다시 섞기"
               aria-label="작품 다시 섞기"
-              className="h-8 w-8 rounded-lg border border-line text-sm text-muted hover:text-accent"
+              className="rounded-full border border-line px-2.5 py-1 text-xs text-muted hover:text-accent"
             >
               ↻
             </button>
@@ -118,7 +119,9 @@ export default function MovieBrowse({ movies, initial = {} }) {
           {hasFilters && (
             <button onClick={reset} className="text-xs text-muted hover:text-accent">초기화</button>
           )}
-          <span className="text-xs tabular-nums text-muted">{filtered.length}/{movies.length}편</span>
+          <span className="rounded-full border border-line px-3 py-1 text-xs tabular-nums text-muted">
+            총 {movies.length}편{filtered.length !== movies.length && ` · ${filtered.length}편 표시`}
+          </span>
         </div>
       </div>
 

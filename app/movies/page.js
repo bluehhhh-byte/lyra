@@ -1,6 +1,5 @@
 import { getAllMovies } from "../../lib/movies";
 import MovieBrowse from "./browse";
-import Link from "next/link";
 
 export const metadata = {
   title: "Syno. | Lyra",
@@ -49,24 +48,6 @@ export default async function MoviesPage({ searchParams }) {
     return <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>;
   }
 
-  return (
-    <>
-      {/* 헤더 로고가 이미 Syno. 라 여기 제목은 중복 — 링크만 남긴다 */}
-      <div className="mb-4 flex items-baseline justify-end">
-        <Link href="/recommendations" className="text-sm text-muted hover:text-accent">추천 영화 →</Link>
-      </div>
-      <MovieBrowse
-        movies={movies}
-        initial={{
-          q: q || "",
-          group: group || "none",
-          media: media || "all",
-          country: country || "all",
-          genre: genre || "all",
-          rating: rating || "0",
-          sort: sort || "recorded",
-        }}
-      />
-    </>
-  );
+  // 헤더 로고가 이미 Syno. 라 페이지 제목 없음 — 홈(Lyra)과 같은 시작
+  return <MovieBrowse movies={movies} initial={{ q: q || "", media: media || "all", sort: sort || "recorded" }} />;
 }
