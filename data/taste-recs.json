@@ -1,6 +1,105 @@
 {
  "items": [
   {
+   "tmdbId": 77285,
+   "media": "movie",
+   "title": "부운",
+   "year": "1955",
+   "poster": "https://image.tmdb.org/t/p/w154/kEyUKCY3PrinYVVEZtlto5EHk41.jpg",
+   "why": "1950년대 일본 드라마의 정수를 보여주는 명작",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 68004,
+   "media": "movie",
+   "title": "완령옥",
+   "year": "1991",
+   "poster": "https://image.tmdb.org/t/p/w154/6ptcfT6xUWIyAPBXIXlmgPivKov.jpg",
+   "why": "90년대 홍콩 영화의 고혹적이고 깊은 드라마트루기",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 41201,
+   "media": "movie",
+   "title": "일루셔니스트",
+   "year": "2010",
+   "poster": "https://image.tmdb.org/t/p/w154/z2Qvt9hNPOEkKgtunYh5tnF9bdi.jpg",
+   "why": "프랑스 애니메이션 특유의 아날로그 감성과 여운",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 16306,
+   "media": "movie",
+   "title": "판타스틱 플래닛",
+   "year": "1973",
+   "poster": "https://image.tmdb.org/t/p/w154/jOxKv64pJtybPj5wkhE7wYBImvS.jpg",
+   "why": "프랑스 애니메이션의 독창적인 환상성과 미학",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 144,
+   "media": "movie",
+   "title": "베를린 천사의 시",
+   "year": "1987",
+   "poster": "https://image.tmdb.org/t/p/w154/xgPuxj2BHLQ4tPyLwsBr1Jk3sBr.jpg",
+   "why": "80년대 유럽 영화 특유의 몽환적인 판타지",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 614,
+   "media": "movie",
+   "title": "산딸기",
+   "year": "1957",
+   "poster": "https://image.tmdb.org/t/p/w154/1Sh4fqJXnVVSvZ8XDppkf0sVdHZ.jpg",
+   "why": "1950년대 명작 고전이 주는 깊은 성찰과 수사",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 216,
+   "media": "movie",
+   "title": "불안은 영혼을 잠식한다",
+   "year": "1974",
+   "poster": "https://image.tmdb.org/t/p/w154/vyXRTXtL5nUvrXNIJCWg2zPNhVX.jpg",
+   "why": "유럽 드라마 특유의 날카롭고 고독한 고찰",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 55157,
+   "media": "movie",
+   "title": "동성서취",
+   "year": "1993",
+   "poster": "https://image.tmdb.org/t/p/w154/o50ZRY0HKLzibsmjiqEs5Obrp9q.jpg",
+   "why": "90년대 홍콩 영화 특유의 유쾌한 판타지 무협",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 415401,
+   "media": "movie",
+   "title": "더 파티",
+   "year": "2017",
+   "poster": "https://image.tmdb.org/t/p/w154/73iN3tFUjWmQ7MSfClAScIUhlrG.jpg",
+   "why": "영국 드라마다운 날카로운 위트와 밀실 극의 재미",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 511819,
+   "media": "movie",
+   "title": "메모리아",
+   "year": "2021",
+   "poster": "https://image.tmdb.org/t/p/w154/qScbsj8ng1sHkW050NiPD07vpdH.jpg",
+   "why": "몽환적 판타지와 소리의 미학이 결합된 독특한 체험",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
+   "tmdbId": 553,
+   "media": "movie",
+   "title": "도그빌",
+   "year": "2003",
+   "poster": "https://image.tmdb.org/t/p/w154/gwX5Vm9zGzxcZcr3BbthdsPUVdW.jpg",
+   "why": "실험적 연출 속에 담긴 인간성에 대한 서늘한 미스터리",
+   "at": "2026-08-11T03:57:02.596Z"
+  },
+  {
    "tmdbId": 1990,
    "title": "파라노이드 파크",
    "year": "2007",
@@ -689,5 +788,5 @@
    "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "at": "2026-08-10T13:21:54.813Z"
+ "at": "2026-08-11T03:57:02.596Z"
 }
