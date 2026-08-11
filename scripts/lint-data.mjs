@@ -63,6 +63,10 @@ for (const m of movies) {
 }
 
 // ── data/watcha-movies.json ─────────────────────────────────────────────────
+// TMDB 원본에도 포스터가 없는 작품 — 채울 소스가 없어 의도된 예외 (2026-08 확인).
+// CoverImage가 제목 블록으로 표시한다. 새 무포스터 항목은 여기 없으면 경고된다.
+const NO_POSTER_OK = new Set(["m5rq1jd", "mpWpv4d", "mOVPreR"]);
+
 const watched = getWatched();
 {
   const f = "data/watcha-movies.json";
@@ -76,7 +80,7 @@ const watched = getWatched();
     else codes.set(m.code, m.title);
     if (m.rating != null && !validRating(m.rating)) { badRating++; err(at, `rating 이상: ${m.rating}`); }
     if (m.media && !["movie", "tv"].includes(m.media)) { badMedia++; err(at, `media 이상: "${m.media}"`); }
-    if (!m.poster) noPoster++;
+    if (!m.poster && !NO_POSTER_OK.has(m.code)) noPoster++;
     if (!m.tmdbId) noTmdb++;
   }
   if (noPoster) warn(f, `poster 없는 항목 ${noPoster}개`);
