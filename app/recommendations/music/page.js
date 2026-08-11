@@ -22,9 +22,14 @@ export default function MusicRecommendationsPage() {
             컬렉션 취향으로 고른, 아직 담지 않은 곡{items.length > 0 && ` · ${items.length}곡`} — ▶로 30초 미리듣기
           </p>
         </div>
-        <Link href="/recommendations" className="text-sm text-accent hover:underline">
-          추천 영화 →
-        </Link>
+        <div className="flex gap-4">
+          <Link href="/songs/taste" className="text-sm text-accent hover:underline">
+            음악 취향 →
+          </Link>
+          <Link href="/recommendations" className="text-sm text-accent hover:underline">
+            추천 영화 →
+          </Link>
+        </div>
       </div>
 
       {items.length === 0 ? (

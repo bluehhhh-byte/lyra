@@ -1,0 +1,154 @@
+import Link from "next/link";
+import { getAllSongs } from "../../../lib/songs";
+import { summarizeMusicTaste, interpretMusicTaste } from "../../../lib/music-taste-core";
+import { emotionValence, valenceColor } from "../../../lib/keywords";
+
+export const metadata = {
+  title: "음악 취향 | Lyra",
+  description: "모아온 곡들로 본 음악 취향 — 장르·감정·시대·아티스트·키워드",
+};
+
+// "내가 어떤 음악을 모으는가"의 해석. 별점·재생 기록이 없으므로 모든 표현은
+// '많이 담은'이다 — '좋아하는'이 아니라. 숫자·기록 나열은 /stats 담당.
+function Bar({ label, n, max, total, color }) {
+  return (
+    <div className="flex items-center gap-3 text-sm">
+      <span className="w-32 shrink-0 truncate sm:w-40">{label}</span>
+      <div className="h-4 flex-1 overflow-hidden rounded bg-line/50">
+        <div
+          className="h-full rounded"
+          style={{ width: `${Math.max(2, (n / max) * 100)}%`, background: color || "var(--color-accent)" }}
+        />
+      </div>
+      <span className="w-20 shrink-0 text-right text-xs tabular-nums text-muted">
+        {n}곡 · {Math.round((n / total) * 100)}%
+      </span>
+    </div>
+  );
+}
+
+function Section({ title, hint, children }) {
+  return (
+    <section className="mb-12">
+      <h2 className="text-sm font-semibold text-muted">{title}</h2>
+      {hint && <p className="mt-0.5 text-xs text-muted/60">{hint}</p>}
+      <div className="mt-4 space-y-2">{children}</div>
+    </section>
+  );
+}
+
+export default function MusicTastePage() {
+  const songs = getAllSongs();
+  const t = summarizeMusicTaste(songs);
+  const text = interpretMusicTaste(t);
+
+  const tiles = [
+    ["곡", `${t.count}곡`],
+    ["아티스트", `${t.artist.length}팀`],
+    ["최다 장르", t.genre[0]?.[0] || "—"],
+    ["최다 감정", t.emotion[0]?.[0] || "—"],
+    ["최다 시대", t.decade[0]?.[0] || "—"],
+    ["최다 권역", t.region[0]?.[0] || "—"],
+  ];
+
+  // 감정 기울기 게이지 (-3 어두움 ~ +3 밝음)의 마커 위치
+  const valencePct = ((t.valenceMean + 3) / 6) * 100;
+
+  return (
+    <>
+      <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-bold">음악 취향</h1>
+          <p className="mt-1 text-sm text-muted">지금까지 모아온 {t.count}곡이 말해주는 것</p>
+        </div>
+        <div className="flex gap-4">
+          <Link href="/recommendations/music" className="text-sm text-accent hover:underline">
+            추천 곡 →
+          </Link>
+          <Link href="/stats" className="text-sm text-accent hover:underline">
+            통계 →
+          </Link>
+        </div>
+      </div>
+
+      {text && (
+        <div className="mb-10 rounded-xl border border-accent/30 bg-accent/5 px-5 py-4 text-sm leading-relaxed">
+          {text}
+        </div>
+      )}
+
+      <div className="mb-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {tiles.map(([k, v]) => (
+          <div key={k} className="rounded-xl border border-line bg-surface px-4 py-3">
+            <p className="text-xs text-muted">{k}</p>
+            <p className="mt-1 truncate text-sm font-semibold">{v}</p>
+          </div>
+        ))}
+      </div>
+
+      <Section title="감정 분포" hint="곡마다 붙은 감정 라벨의 집계 — 색은 밝음(주황) ↔ 어두움(파랑)">
+        {t.emotion.map(([e, n]) => (
+          <Bar key={e} label={e} n={n} max={t.emotion[0][1]} total={t.count} color={valenceColor(emotionValence(e))} />
+        ))}
+        {t.emotion.length > 0 && (
+          <div className="pt-4">
+            <div className="relative h-2 rounded-full" style={{ background: "linear-gradient(to right, oklch(0.72 0.13 250), oklch(0.72 0.13 40))" }}>
+              <span
+                className="absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-bg bg-ink"
+                style={{ left: `${valencePct}%` }}
+                title={`기울기 ${t.valenceMean.toFixed(1)}`}
+              />
+            </div>
+            <div className="mt-1.5 flex justify-between text-xs text-muted">
+              <span>어두움</span>
+              <span className="tabular-nums">{t.valenceMean > 0 ? "+" : ""}{t.valenceMean.toFixed(1)}</span>
+              <span>밝음</span>
+            </div>
+          </div>
+        )}
+      </Section>
+
+      <Section title="장르 취향">
+        {t.genre.slice(0, 12).map(([g, n]) => (
+          <Bar key={g} label={g} n={n} max={t.genre[0][1]} total={t.count} />
+        ))}
+      </Section>
+
+      <Section title="시대 취향">
+        {[...t.decade].sort((a, b) => a[0].localeCompare(b[0])).map(([d, n]) => (
+          <Bar key={d} label={d} n={n} max={t.decade[0][1]} total={t.count} />
+        ))}
+      </Section>
+
+      <Section title="국가·권역">
+        {t.region.map(([r, n]) => (
+          <Bar key={r} label={r} n={n} max={t.region[0][1]} total={t.count} />
+        ))}
+      </Section>
+
+      <Section
+        title="많이 담은 아티스트"
+        hint={`전체 ${t.artist.length}팀 중 ${t.once.length}팀은 한 곡씩만 담긴 발견형`}
+      >
+        {t.repeat.slice(0, 10).map(([a, n]) => (
+          <Bar key={a} label={a} n={n} max={t.repeat[0]?.[1] || 1} total={t.count} />
+        ))}
+        {t.repeat.length === 0 && <p className="text-sm text-muted">아직 두 곡 이상 담은 아티스트가 없습니다.</p>}
+      </Section>
+
+      <Section title="가사 키워드" hint="누르면 그 단어가 나오는 곡을 가사에서 찾는다">
+        <div className="flex flex-wrap gap-2 pt-1">
+          {t.keywords.slice(0, 30).map(([w, n]) => (
+            <Link
+              key={w}
+              href={`/?q=${encodeURIComponent(w)}`}
+              className="rounded-full border border-line px-3 py-1 text-xs text-muted transition hover:border-accent hover:text-accent"
+            >
+              #{w} <span className="tabular-nums text-muted/60">{n}</span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+    </>
+  );
+}

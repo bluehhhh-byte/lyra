@@ -14,9 +14,10 @@ const PRIMARY = [
 ];
 
 const MORE = [
-  ["/watched", "평가한 영화"],
-  ["/watched/taste", "취향 분석"],
+  ["/songs/taste", "음악 취향"],
   ["/recommendations/music", "추천 곡"],
+  ["/watched", "평가한 영화"],
+  ["/watched/taste", "영화 취향"],
   ["/recommendations", "추천 영화"],
   ["/people", "인물"],
   ["/recap", "결산"],
