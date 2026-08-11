@@ -4,22 +4,13 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import CoverImage from "../cover-image";
 
-const SORTS = [
-  { key: "recorded", label: "최근 기록순" },
-  { key: "year-desc", label: "개봉연도 최신순" },
-  { key: "rating-desc", label: "별점 높은순" },
-  { key: "title", label: "제목순" },
-  { key: "random", label: "랜덤" },
-];
-
-const valid = (items, value, fallback) => items.some((item) => item.key === value) ? value : fallback;
-
-// 필터를 검색·매체·정렬 셋으로 줄였다 — 국가·장르·별점·그룹 필터는 49편
-// 규모에 과했고 첫 화면을 어지럽혔다. 국가·장르 탐색은 /tags가 담당.
+// 필터를 검색·매체·정렬 필로 줄였다 — 국가·장르·별점·그룹 필터와 정렬
+// 드롭다운은 49편 규모에 과했다. 정렬은 별점순·랜덤 두 필만: 켜면 적용,
+// 다시 누르면 기본(최근 기록순)으로. 국가·장르 탐색은 /tags가 담당.
 export default function MovieBrowse({ movies, initial = {} }) {
   const [q, setQ] = useState(initial.q || "");
   const [media, setMedia] = useState(["all", "movie", "tv"].includes(initial.media) ? initial.media : "all");
-  const [sort, setSort] = useState(valid(SORTS, initial.sort, "recorded"));
+  const [sort, setSort] = useState(["rating-desc", "random"].includes(initial.sort) ? initial.sort : "recorded");
   const [seed, setSeed] = useState(0);
 
   useEffect(() => {
@@ -51,15 +42,11 @@ export default function MovieBrowse({ movies, initial = {} }) {
       }
       return list;
     }
-    return list.sort((a, b) => {
-      if (sort === "year-desc")
-        return String(b.year).localeCompare(String(a.year), undefined, { numeric: true }) ||
-          a.title.localeCompare(b.title);
-      if (sort === "rating-desc")
-        return (b.rating ?? -1) - (a.rating ?? -1) || b.recorded.localeCompare(a.recorded);
-      if (sort === "title") return a.title.localeCompare(b.title);
-      return b.recorded.localeCompare(a.recorded);
-    });
+    return list.sort((a, b) =>
+      sort === "rating-desc"
+        ? (b.rating ?? -1) - (a.rating ?? -1) || b.recorded.localeCompare(a.recorded)
+        : b.recorded.localeCompare(a.recorded)
+    );
   }, [filtered, sort, seed]);
 
   const reset = () => {
@@ -98,14 +85,22 @@ export default function MovieBrowse({ movies, initial = {} }) {
               {label}
             </button>
           ))}
-          <select
-            value={sort}
-            onChange={(event) => setSort(event.target.value)}
-            aria-label="정렬"
-            className="rounded-full border border-line bg-bg px-3 py-1 text-xs text-muted outline-none focus:border-accent"
-          >
-            {SORTS.map((item) => <option key={item.key} value={item.key}>{item.label}</option>)}
-          </select>
+          {[
+            ["rating-desc", "별점순"],
+            ["random", "랜덤"],
+          ].map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setSort(sort === key ? "recorded" : key)}
+              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                sort === key
+                  ? "border-accent bg-accent font-semibold text-bg"
+                  : "border-line text-muted hover:text-ink"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
           {sort === "random" && (
             <button
               onClick={() => setSeed((value) => value + 1)}
