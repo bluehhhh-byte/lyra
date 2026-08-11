@@ -142,11 +142,13 @@ export default function SongTools({ songs }) {
 
   return (
     <div className="max-w-2xl">
-      <div className="mb-3 flex items-center gap-3">
+      {/* 모바일: 2×2 그리드(버튼 3 + 설명), 데스크톱: 한 줄 — 버튼 3개가
+          min-w 고정 flex라 좁은 화면을 뚫고 나가던 것 */}
+      <div className="mb-3 grid grid-cols-2 items-center gap-2 sm:flex sm:gap-3">
         <button
           onClick={regenAll}
           disabled={!!bulk}
-          className="min-w-32 rounded-lg bg-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-bg disabled:opacity-40"
+          className="rounded-lg bg-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-bg disabled:opacity-40 sm:min-w-32"
         >
           {/* two lines in both states so the button keeps its size while running */}
           전체 메타
@@ -156,7 +158,7 @@ export default function SongTools({ songs }) {
         <button
           onClick={keywordsAll}
           disabled={!!bulk}
-          className="min-w-32 rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           키워드·감정
           <br />
@@ -165,7 +167,7 @@ export default function SongTools({ songs }) {
         <button
           onClick={songRecs}
           disabled={recsBusy === "생성 중…"}
-          className="min-w-32 rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           추천 곡
           <br />
