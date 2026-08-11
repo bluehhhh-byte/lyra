@@ -8,8 +8,8 @@
    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/95/d7/8b/95d78bf8-aa46-9d40-ce93-0652918bc68f/mzaf_12066288776609103708.plus.aac.p.m4a",
    "year": "1997",
    "genre": "Alternative",
-   "why": "날카로운 기타와 불안 속 저항의 메시지",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "특유의 불안과 체념을 담은 얼터너티브 사운드",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
    "trackId": 616297075,
@@ -19,8 +19,8 @@
    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e3/38/80/e33880b6-14f6-c4b0-4bfc-af791feb03ae/mzaf_12125877867990412946.plus.aac.p.m4a",
    "year": "2003",
    "genre": "Rock",
-   "why": "폭발적인 기타 리프와 강렬한 저항감",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "날카로운 기타 리프와 강렬한 저항적 에너지",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
    "trackId": 663098051,
@@ -30,8 +30,19 @@
    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/16/84/9c/16849c3d-b999-a93f-bbbf-cf09a4f337ef/mzaf_13091105457122357767.plus.aac.p.m4a",
    "year": "2013",
    "genre": "Alternative",
-   "why": "특유의 체념과 쓸쓸함이 느껴지는 록",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "고독과 질주감이 느껴지는 인디 록의 정수",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1512389795,
+   "title": "난춘",
+   "artist": "새소년",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/9d/83/29/9d832953-ab16-06cc-d0e1-3adf8f5f9e11/SESONEON_NANCHUN_3000.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e1/b6/6b/e1b66b64-a406-4db3-2920-3c78adf65bf2/mzaf_2513733843274993778.plus.aac.p.m4a",
+   "year": "2020",
+   "genre": "얼터너티브",
+   "why": "불안 속에서 찾는 따뜻한 위로와 희망의 메시지",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
    "trackId": 1242155576,
@@ -41,19 +52,19 @@
    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/37/c4/c0/37c4c06e-fc10-80b0-5484-97ddf03be83d/mzaf_16030927561900146145.plus.aac.p.m4a",
    "year": "2016",
    "genre": "인디 록",
-   "why": "몽환적인 멜로디와 깊은 이별의 감성",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "몽환적이면서도 아련한 감성의 인디 발라드",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
-   "trackId": 1450482651,
-   "title": "파도",
-   "artist": "새소년",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/c8/ee/3cc8ee7b-6905-844f-25f4-fcf8b3f06d16/8809380636319.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/9f/31/169f3160-c3dc-8fb7-4374-489bd7efbf9d/mzaf_10101894633308321997.plus.aac.p.m4a",
-   "year": "2017",
-   "genre": "록",
-   "why": "거친 에너지가 돋보이는 얼터너티브 록",
-   "at": "2026-08-11T11:48:49.642Z"
+   "trackId": 1517506707,
+   "title": "Live Forever",
+   "artist": "Oasis",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9f/e7/ea/9fe7eac2-87dc-c1df-3333-dc30b82bdd74/5051961006100.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/16/f1/ac/16f1ac05-b12f-fd37-d862-ae5cd9772187/mzaf_16674267505849232959.plus.aac.p.m4a",
+   "year": "1994",
+   "genre": "Indie Rock",
+   "why": "희망과 저항을 포효하는 90년대 브릿팝 명곡",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
    "trackId": 317961372,
@@ -63,151 +74,19 @@
    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/87/1f/08/871f082c-ad36-02cc-84b9-1066c18ee728/mzaf_13069569475764077836.plus.aac.p.m4a",
    "year": "2003",
    "genre": "Alternative",
-   "why": "강렬한 베이스라인과 불안을 뚫는 저항",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "폭발적인 베이스 리프와 폭주하는 저항의 감정",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
-   "trackId": 1865062183,
-   "title": "NO PAIN",
-   "artist": "실리카겔",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/9c/e6/429ce6b1-2702-18bf-de93-7d1b8b5a666d/8809964653299.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/8b/4c/378b4c23-4af3-7223-118d-c84cedf7615c/mzaf_17657027766515802437.plus.aac.p.m4a",
-   "year": "2023",
-   "genre": "록",
-   "why": "2020년대 인디 록의 고독과 청춘의 위로",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1536364102,
-   "title": "Re:Re:",
+   "trackId": 1536394884,
+   "title": "Haruka Kanata",
    "artist": "Asian Kung-Fu Generation",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9b/90/54/9b90547e-6743-bd7b-4d17-c6a485c0124e/4560427295664.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2e/72/af/2e72afd5-d1e1-45c9-f0b4-2ed31c705f21/mzaf_5369979610377716421.plus.aac.p.m4a",
-   "year": "2004",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/48/96/3e/48963e5a-75d7-7a8b-132c-233f26ebd70d/jacket_KSCL01917B00Z_550.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/8f/09/1b/8f091bbd-6e5d-d925-e3ac-a6d9fd217648/mzaf_4971886346231427027.plus.aac.p.m4a",
+   "year": "2002",
    "genre": "Rock",
-   "why": "질주감 넘치는 J-Rock 특유의 희망과 저항",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1410619822,
-   "title": "아지랑이",
-   "artist": "쏜애플",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/51/0a/5b/510a5b3c-405a-630d-d3ea-ea520bc86fb8/Strange_Weather.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/3f/23/e53f2342-c83c-0468-96d2-5b2692bd2581/mzaf_17350376113719603469.plus.aac.p.m4a",
-   "year": "2014",
-   "genre": "록",
-   "why": "불안과 고독을 파고드는 몽환적 얼터너티브",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1811037800,
-   "title": "TOMBOY",
-   "artist": "혁오 & Sunset Rollercoaster",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/31/4a/24314a7e-010d-d4eb-7b90-1fa8f57c781b/8800312826129_cover.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/79/98/cb799851-f7ae-2a06-272b-84d759a8bd81/mzaf_11064272145316724741.plus.aac.p.m4a",
-   "year": "2025",
-   "genre": "한국 록",
-   "why": "청춘의 방황과 체념을 담은 인디 록",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1478044370,
-   "title": "The Pretender (Live at Studio 606 West, Northridge, CA - September 2007)",
-   "artist": "Foo Fighters",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/c6/96/6a/c6966a33-e798-2a04-aa68-cb4355e447f2/886447906613.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/24/22/53/242253f5-2938-77c9-acef-c814261a3958/mzaf_16921109091361817827.plus.aac.p.m4a",
-   "year": "2019",
-   "genre": "Rock",
-   "why": "폭발하는 사운드로 전하는 강력한 저항",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1441817578,
-   "title": "Stand Out Fit In",
-   "artist": "ONE OK ROCK",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0f/b6/2a/0fb62a0c-d7a1-e376-4616-d8fd9c3656c2/075679858412.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/5f/a3/455fa30f-27dc-d9b2-355c-9b6f2ec1801e/mzaf_3079609111774892187.plus.aac.p.m4a",
-   "year": "2018",
-   "genre": "록",
-   "why": "희망과 의지를 부르짖는 강렬한 J-Rock",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 961067403,
-   "title": "Every You Every Me",
-   "artist": "Placebo",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/39/4e/33/394e3318-f803-51f2-7f28-10e63b45a6d3/5060186926902_1.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/46/1f/62/461f62b2-cb86-57f6-07d3-528b2cc31d88/mzaf_15133714695382008281.plus.aac.p.m4a",
-   "year": "1998",
-   "genre": "Alternative",
-   "why": "90년대 특유의 퇴폐미와 불안의 메시지",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1714248019,
-   "title": "Time Walking on Memories",
-   "artist": "NELL",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0c/4a/57/0c4a575b-f9ca-0f87-5321-6d289c2fd9cc/8804775098062.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/25/64/1d/25641d4e-370e-dde6-997e-d26859371007/mzaf_5950353073185290252.plus.aac.p.m4a",
-   "year": "2018",
-   "genre": "Rock",
-   "why": "서정적인 록 사운드와 그리움의 가사",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 273714713,
-   "title": "Toxicity",
-   "artist": "System Of A Down",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/82/51/52/825152b4-9423-b23b-c036-cc67ead732d4/888888046775.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/81/b2/d8/81b2d89d-2303-585f-e6c0-87edfc525cb0/mzaf_3574703683202422354.plus.aac.p.m4a",
-   "year": "2001",
-   "genre": "Hard Rock",
-   "why": "혼란스러운 사회를 향한 분노와 저항",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1536027148,
-   "title": "Hakujitsu",
-   "artist": "King Gnu",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3e/b8/ef/3eb8ef78-c575-eb81-f982-aaec74b5fe53/jacket_BVXX01177B00Z_550.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a2/91/56/a2915609-6396-cd16-eee0-b9baaf05b24c/mzaf_2060143032655781963.plus.aac.p.m4a",
-   "year": "2019",
-   "genre": "Alternative",
-   "why": "2020년대 J-Rock이 담아낸 슬픔과 위로",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1442647615,
-   "title": "Somebody Else",
-   "artist": "The 1975",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/90/16/e3/9016e318-52d6-046e-e6da-d905efe84f3e/15UMGIM62906.rgb.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/d9/27/acd927a7-da54-327e-7da2-b99638d9f139/mzaf_11691359230547115368.plus.aac.p.m4a",
-   "year": "2016",
-   "genre": "얼터너티브",
-   "why": "도시적 세련함 속 이별의 고독과 몽환",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1440783625,
-   "title": "Smells Like Teen Spirit",
-   "artist": "Nirvana",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/fd/b9/95fdb9b2-6d2b-92a6-97f2-51c1a6d77f1a/00602527874609.rgb.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a6/53/1e/a6531efa-397c-eb73-ecab-9b2790c1471e/mzaf_16440344883389407474.plus.aac.p.m4a",
-   "year": "1991",
-   "genre": "Rock",
-   "why": "90년대 얼터너티브 록의 상징적 저항",
-   "at": "2026-08-11T11:48:49.642Z"
-  },
-  {
-   "trackId": 1099848811,
-   "title": "Change (In the House of Flies)",
-   "artist": "Deftones",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/51/57/96515710-cf91-0663-6f5a-942acf6ea31b/093624919797.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/58/3d/ca/583dcad3-e2ca-e229-f089-637b0ab7d328/mzaf_14300378853874282579.plus.aac.p.m4a",
-   "year": "2000",
-   "genre": "Hard Rock",
-   "why": "어둡고 몽환적인 헤비메탈 사운드",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "청춘의 체념과 아련함을 노래하는 J-Rock",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
    "trackId": 1058298359,
@@ -217,8 +96,129 @@
    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/18/0a/d1/180ad155-f9db-8f21-1895-189b29aa50bf/mzaf_16981202380278890903.plus.aac.p.m4a",
    "year": "2004",
    "genre": "Rock",
-   "why": "질주하는 멜로딕 펑크 속 고독과 그리움",
-   "at": "2026-08-11T11:48:49.642Z"
+   "why": "직관적이고 질주감 넘치는 에너제틱 J-Rock",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1865062183,
+   "title": "NO PAIN",
+   "artist": "실리카겔",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/9c/e6/429ce6b1-2702-18bf-de93-7d1b8b5a666d/8809964653299.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/8b/4c/378b4c23-4af3-7223-118d-c84cedf7615c/mzaf_17657027766515802437.plus.aac.p.m4a",
+   "year": "2023",
+   "genre": "록",
+   "why": "2020년대 한국 인디 록 씬을 대표하는 쾌감",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1811037800,
+   "title": "TOMBOY",
+   "artist": "혁오 & Sunset Rollercoaster",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/31/4a/24314a7e-010d-d4eb-7b90-1fa8f57c781b/8800312826129_cover.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/79/98/cb799851-f7ae-2a06-272b-84d759a8bd81/mzaf_11064272145316724741.plus.aac.p.m4a",
+   "year": "2025",
+   "genre": "한국 록",
+   "why": "청춘의 불안과 방황을 담담하게 담아낸 트랙",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1440783625,
+   "title": "Smells Like Teen Spirit",
+   "artist": "Nirvana",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/fd/b9/95fdb9b2-6d2b-92a6-97f2-51c1a6d77f1a/00602527874609.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a6/53/1e/a6531efa-397c-eb73-ecab-9b2790c1471e/mzaf_16440344883389407474.plus.aac.p.m4a",
+   "year": "1991",
+   "genre": "Rock",
+   "why": "90년대 널바나 특유의 거친 저항의 분출",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1589230439,
+   "title": "Only Shallow",
+   "artist": "my bloody valentine",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/84/6f/6f/846f6fdb-5fd2-3a8d-74c4-1ea2c6e36318/744861009863.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/7d/32/6c7d3231-a35a-a64e-c77e-e5dd24a7ea0f/mzaf_10441325985140857715.plus.aac.p.m4a",
+   "year": "1995",
+   "genre": "Alternative",
+   "why": "노이즈 속 깊은 몽환을 선사하는 슈게이징",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1589221912,
+   "title": "Easy Easy",
+   "artist": "King Krule",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/b8/bc/89b8bc09-769f-7b9f-857b-19feba0c24b1/744861610168.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c8/e8/3f/c8e83f7d-dae7-2851-fbe0-1a47725f87ad/mzaf_3991797013769187283.plus.aac.p.m4a",
+   "year": "2013",
+   "genre": "Alternative",
+   "why": "무겁고 묵직한 포스트 펑크의 우울과 저항",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1440881990,
+   "title": "DNA.",
+   "artist": "Kendrick Lamar",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6a/96/73/6a967366-31ba-a41d-c199-bc41b7492313/mzaf_9393549031103413709.plus.aac.p.m4a",
+   "year": "2017",
+   "genre": "Hip-Hop/Rap",
+   "why": "힙합 특유의 강력한 에너지와 사회적 저항",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1714248019,
+   "title": "Time Walking on Memories",
+   "artist": "NELL",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0c/4a/57/0c4a575b-f9ca-0f87-5321-6d289c2fd9cc/8804775098062.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/25/64/1d/25641d4e-370e-dde6-997e-d26859371007/mzaf_5950353073185290252.plus.aac.p.m4a",
+   "year": "2018",
+   "genre": "Rock",
+   "why": "그리움과 슬픔을 아련한 사운드로 그린 록",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1441817578,
+   "title": "Stand Out Fit In",
+   "artist": "ONE OK ROCK",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0f/b6/2a/0fb62a0c-d7a1-e376-4616-d8fd9c3656c2/075679858412.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/5f/a3/455fa30f-27dc-d9b2-355c-9b6f2ec1801e/mzaf_3079609111774892187.plus.aac.p.m4a",
+   "year": "2018",
+   "genre": "록",
+   "why": "폭발적인 사운드로 강렬한 희망을 전하는 록",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1803605836,
+   "title": "Starburster / In Heaven (Lady in the Radiator Song) [Live]",
+   "artist": "Fontaines D.C.",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/93/d5/3e/93d53e93-6873-58fb-4e86-7d9042a665b2/191404153574.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/a6/3f/33a63ff6-1258-601a-1e88-761c63ad96b5/mzaf_6747171685532604732.plus.aac.p.m4a",
+   "year": "2024",
+   "genre": "Alternative",
+   "why": "2020년대 포스트 펑크의 날카로운 불안감",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1630107248,
+   "title": "Song 2 (2012 Remaster)",
+   "artist": "Blur",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/9c/03/07/9c0307dd-256a-b1c9-6129-d33ada97113d/5059460139558.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/67/3a/be/673abe32-dab8-4c64-bf3a-18cbc99d3b6b/mzaf_7090632394024264631.plus.aac.p.m4a",
+   "year": "2022",
+   "genre": "Rock",
+   "why": "짧고 강렬하게 터지는 90년대 얼터너티브",
+   "at": "2026-08-11T11:49:10.462Z"
+  },
+  {
+   "trackId": 1582207963,
+   "title": "Where Is My Mind? (Mixed)",
+   "artist": "Pixies",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/ef/08/e3ef082c-1be0-183b-9216-c34f6bea40d5/soundtracks.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f6/e9/91/f6e991c7-3678-4cde-f824-081fc5b4911d/mzaf_7028581105898976472.plus.aac.p.m4a",
+   "year": "2021",
+   "genre": "Worldwide",
+   "why": "몽환적이면서도 기이한 불안을 자극하는 명곡",
+   "at": "2026-08-11T11:49:10.462Z"
   },
   {
    "trackId": 1097861770,
@@ -441,5 +441,5 @@
    "at": "2026-08-11T11:37:27.097Z"
   }
  ],
- "at": "2026-08-11T11:48:49.642Z"
+ "at": "2026-08-11T11:49:10.462Z"
 }
