@@ -142,6 +142,105 @@
    "sourceCommit": "99b93d4",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:43:48.720Z"
+  },
+  {
+   "slug": "카디-no-need",
+   "batch": 3,
+   "originalLineCount": 109,
+   "addedTranslationCount": 75,
+   "skippedCount": 34,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.691Z"
+  },
+  {
+   "slug": "테이-바다가-사는-섬",
+   "batch": 3,
+   "originalLineCount": 38,
+   "addedTranslationCount": 38,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.694Z"
+  },
+  {
+   "slug": "머드더스튜던트-이끼",
+   "batch": 3,
+   "originalLineCount": 39,
+   "addedTranslationCount": 37,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.696Z"
+  },
+  {
+   "slug": "잔나비-주저하는-연인들을-위해",
+   "batch": 3,
+   "originalLineCount": 30,
+   "addedTranslationCount": 30,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.697Z"
+  },
+  {
+   "slug": "최엘비-물",
+   "batch": 3,
+   "originalLineCount": 30,
+   "addedTranslationCount": 30,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.698Z"
+  },
+  {
+   "slug": "짱유-오롯이-나에게",
+   "batch": 3,
+   "originalLineCount": 30,
+   "addedTranslationCount": 25,
+   "skippedCount": 5,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.699Z"
+  },
+  {
+   "slug": "단편선-순간들-오늘보다-더-기쁜-날은-남은-생에-많지-않을-것이다",
+   "batch": 3,
+   "originalLineCount": 28,
+   "addedTranslationCount": 24,
+   "skippedCount": 4,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.701Z"
+  },
+  {
+   "slug": "잔나비-그-밤-그-밤",
+   "batch": 3,
+   "originalLineCount": 21,
+   "addedTranslationCount": 21,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.702Z"
+  },
+  {
+   "slug": "최원빈-너랑-노는-게-제일-좋아",
+   "batch": 3,
+   "originalLineCount": 23,
+   "addedTranslationCount": 21,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "bacb93c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:49:10.704Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
