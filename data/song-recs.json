@@ -1,6 +1,226 @@
 {
  "items": [
   {
+   "trackId": 1716102079,
+   "title": "Hysteria (Demo 2002)",
+   "artist": "Muse",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/86/5a/07865ad9-c36e-62fb-2223-7ac5a7bcfed1/5054197904226.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/b2/89/4db28973-28d4-d486-124d-86cb29f6491a/mzaf_14591779431089130910.plus.aac.p.m4a",
+   "year": "2023",
+   "genre": "Rock",
+   "why": "강렬한 얼터너티브 록 사운드와 저항적 에너지가 돋보이는 곡",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1744419693,
+   "title": "Live Forever (Monnow Valley Version)",
+   "artist": "Oasis",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/44/ee/e4/44eee4b6-32b2-2886-771c-707aae428448/5051961125108.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/fa/db/68fadbc3-a1ba-ffbc-5589-1ae5770f476c/mzaf_4052425230434968529.plus.aac.p.m4a",
+   "year": "2024",
+   "genre": "Adult Alternative",
+   "why": "90년대 록의 서정성과 희망적인 가사가 취향에 직격",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1536364102,
+   "title": "Re:Re:",
+   "artist": "Asian Kung-Fu Generation",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9b/90/54/9b90547e-6743-bd7b-4d17-c6a485c0124e/4560427295664.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2e/72/af/2e72afd5-d1e1-45c9-f0b4-2ed31c705f21/mzaf_5369979610377716421.plus.aac.p.m4a",
+   "year": "2004",
+   "genre": "Rock",
+   "why": "청춘의 방황과 체념을 담은 대표적인 J-록 트랙",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1764118201,
+   "title": "NO PAIN",
+   "artist": "Silica Gel",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e3/ad/bd/e3adbde9-d73c-b362-2fb5-0638c2f94aac/8809851799765.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/b0/43/33b04367-9fc2-1a3f-995d-4f5d17811ed0/mzaf_10994045245204010573.plus.aac.p.m4a",
+   "year": "2022",
+   "genre": "Rock",
+   "why": "2020년대 한국 인디 록을 대표하는 폭발적인 저항의 스피릿",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1410619822,
+   "title": "아지랑이",
+   "artist": "쏜애플",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/51/0a/5b/510a5b3c-405a-630d-d3ea-ea520bc86fb8/Strange_Weather.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e5/3f/23/e53f2342-c83c-0468-96d2-5b2692bd2581/mzaf_17350376113719603469.plus.aac.p.m4a",
+   "year": "2014",
+   "genre": "록",
+   "why": "불안과 고독의 감정을 특유의 몽환적인 록으로 풀어낸 명곡",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1536357607,
+   "title": "Driver's High",
+   "artist": "L'Arc-en-Ciel",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/9c/54/809c543e-e8ef-0628-2ea1-643c4ad5bbe6/jacket_KSC200284B00Z_550.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/78/df/0d/78df0d03-4544-1d64-90cc-51357c996368/mzaf_9195116182475628740.plus.aac.p.m4a",
+   "year": "1999",
+   "genre": "Rock",
+   "why": "질주감 넘치는 90년대 비주얼계 J-록의 정수",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1483713073,
+   "title": "Cage",
+   "artist": "DIR EN GREY",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/1d/41/1e1d41cc-e600-8edf-242f-297f6c685d2b/4529123106674.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/27/f1/47/27f147b6-7c08-7cf7-638e-c33d5194e0be/mzaf_9244881721057925638.plus.aac.p.m4a",
+   "year": "2018",
+   "genre": "Metal",
+   "why": "수집 아티스트 특유의 어둡고 몽환적인 감성을 잇는 곡",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1443629401,
+   "title": "Karma Police (Live)",
+   "artist": "Radiohead",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/e9/b8/e7/e9b8e762-95e4-d41f-1b7a-292d0cfee68c/00826663155167.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/43/6b/92/436b9211-47af-7852-2f8f-d07c3d60331a/mzaf_10683009866789168498.plus.aac.p.m4a",
+   "year": "2013",
+   "genre": "Rock",
+   "why": "특유의 불안과 고독, 우울한 멜로디가 매력적인 클래식",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1433795870,
+   "title": "1979 (Acoustic Version)",
+   "artist": "The Smashing Pumpkins",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/30/c4/f3/30c4f335-7991-6940-802b-d15e693fd1d1/00602577016493.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/77/a0/e1/77a0e113-6b1b-ab43-d618-8cb4994674de/mzaf_4140130955803688793.plus.aac.p.m4a",
+   "year": "1996",
+   "genre": "Hard Rock",
+   "why": "90년대 얼터너티브 록의 몽환적이고 아련한 회상의 정서",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1440908096,
+   "title": "DNA.",
+   "artist": "Kendrick Lamar",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/94/28/36/94283609-93bb-db1c-e997-44e82c157e90/00602567261216.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b2/30/3f/b2303ffa-c3a9-ad69-6915-a790242d3f95/mzaf_17067037995555899130.plus.aac.p.m4a",
+   "year": "2017",
+   "genre": "Hip-Hop/Rap",
+   "why": "저항과 분노의 메시지를 담은 강렬한 2010년대 힙합",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1450779937,
+   "title": "공드리",
+   "artist": "혁오",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/25/ae/83/25ae83a9-72a2-ed55-b2ef-9ac0927737cf/Untitled.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0e/b4/98/0eb49856-ed94-ce99-facd-feb2505328a0/mzaf_4299609030534637945.plus.aac.p.m4a",
+   "year": "2015",
+   "genre": "록",
+   "why": "청춘의 불안과 방황을 담은 서정적인 인디 록",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1140706729,
+   "title": "뜨거운 여름밤은 가고 남은 건 볼품없지만",
+   "artist": "잔나비",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/30/d9/0b/30d90b00-84b7-4e9b-1452-823049e36d09/COVER-_JANNABI.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/43/de/c343def8-e0d9-a2db-2bea-7b466de9a89f/mzaf_17903610261490262800.plus.aac.p.m4a",
+   "year": "2016",
+   "genre": "K-Pop",
+   "why": "아련한 그리움과 추억을 노래하는 인디 록 발라드",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1556921231,
+   "title": "only shallow",
+   "artist": "my bloody valentine",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/e1/51/4ce15131-7ac5-daf5-bf62-0202f27d691d/887830015998.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/70/ea/6c/70ea6cbe-1a53-8611-840c-7d0a59e67f99/mzaf_10754500313813200284.plus.aac.p.m4a",
+   "year": "1991",
+   "genre": "얼터너티브",
+   "why": "노이즈 뒤에 숨은 몽환적인 사운드로 취향 완벽 적중",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1498121711,
+   "title": "The Adults Are Talking",
+   "artist": "The Strokes",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/a6/ff/62a6ff2a-95c9-5302-31f4-2dcca9e40323/886448281085.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c6/88/a9/c688a995-5b21-dba9-e6e7-eb5e708b0dda/mzaf_13451222908984221620.plus.aac.p.m4a",
+   "year": "2020",
+   "genre": "Alternative",
+   "why": "차갑고 날카로운 거라지 록 사운드의 거부할 수 없는 매력",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 776001216,
+   "title": "R U Mine?",
+   "artist": "Arctic Monkeys",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/29/f5/6f/29f56fb2-4735-947b-f63a-2801294719cb/am_am_itunes_bonus_v2.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f5/67/30/f56730d2-00e5-a705-9610-47e47e61ae55/mzaf_5041619801237384242.plus.aac.p.m4a",
+   "year": "2012",
+   "genre": "Alternative",
+   "why": "묵직한 리프와 불안한 감정선이 살아있는 인디 록",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1536027148,
+   "title": "Hakujitsu",
+   "artist": "King Gnu",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3e/b8/ef/3eb8ef78-c575-eb81-f982-aaec74b5fe53/jacket_BVXX01177B00Z_550.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a2/91/56/a2915609-6396-cd16-eee0-b9baaf05b24c/mzaf_2060143032655781963.plus.aac.p.m4a",
+   "year": "2019",
+   "genre": "Alternative",
+   "why": "체념과 위로의 서사를 담은 2010년대 J-록 대표곡",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 726416473,
+   "title": "Song 2 (2012 Remaster)",
+   "artist": "Blur",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ed/73/cc/ed73cc61-8244-4f45-90fc-23ad8a3ee7e4/5099997227359.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/ff/11/26/ff1126d1-d793-5107-39a9-5e57383b4e88/mzaf_14192975438031776859.plus.aac.p.m4a",
+   "year": "1997",
+   "genre": "Pop",
+   "why": "짧고 강렬하게 터지는 90년대 펑크 얼터너티브 록",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 273714713,
+   "title": "Toxicity",
+   "artist": "System Of A Down",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/82/51/52/825152b4-9423-b23b-c036-cc67ead732d4/888888046775.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/81/b2/d8/81b2d89d-2303-585f-e6c0-87edfc525cb0/mzaf_3574703683202422354.plus.aac.p.m4a",
+   "year": "2001",
+   "genre": "Hard Rock",
+   "why": "2000년대 헤비메탈의 폭발적인 분노와 저항 의식",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1440838114,
+   "title": "Hurt",
+   "artist": "Nine Inch Nails",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/55/e0/85/55e0851e-11df-3b6a-7c54-4eef0efc2bed/15UMGIM67680.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8a/36/e3/8a36e3f9-0b25-b76f-6f6e-8b46fff06b51/mzaf_6136342401198040180.plus.aac.p.m4a",
+   "year": "1994",
+   "genre": "Alternative",
+   "why": "지독한 고독과 체념의 감정을 그리는 얼터너티브 명곡",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
+   "trackId": 1490544823,
+   "title": "Square (2017)",
+   "artist": "백예린",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ca/58/77/ca5877d9-2e1e-0456-c3b2-7704e423dc70/Every_letter_I_sent_you_3000.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0a/87/17/0a8717cd-def8-a401-dcbe-3217738ad6f9/mzaf_2314626443326572709.plus.aac.p.m4a",
+   "year": "2019",
+   "genre": "싱어송라이터",
+   "why": "청량하면서도 희망찬 에너지를 주는 인디 팝 명곡",
+   "at": "2026-08-12T03:46:09.380Z"
+  },
+  {
    "trackId": 1097861836,
    "title": "Karma Police",
    "artist": "Radiohead",
@@ -441,5 +661,5 @@
    "at": "2026-08-11T11:37:27.097Z"
   }
  ],
- "at": "2026-08-11T11:49:10.462Z"
+ "at": "2026-08-12T03:46:09.380Z"
 }
