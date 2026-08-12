@@ -1,6 +1,6 @@
 ---
 title: Wake Up
-title_ko: 
+title_ko: 웨이크 업
 artist: Mr. Big
 artist_ko:
 album: Actual Size
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-10
 published: 2025-07-09T23:42:01.000Z
-comment:
+comment: 학교 폭력과 방황으로 고통받는 청소년에게 내면의 목소리를 듣고 일어섭시라고 외치는 미스터 빅의 메시지가 돋보인다. 화려한 연주 뒤에 감춰진 따뜻한 위로와 삶에 대한 응원이 진하게 전해진다.
 source: instagram
 source_tag: 250710_0841
 source_note: 
