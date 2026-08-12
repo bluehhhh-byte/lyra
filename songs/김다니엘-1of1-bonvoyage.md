@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-14
 published: 2025-06-14T13:09:41.000Z
-comment:
+comment: 낯선 도시를 방황하며 불안한 미래를 마주하는 이들에게 따뜻한 안녕과 위로를 건네는 곡이다. 은은한 멜로디와 함께 서로의 존재를 기억하며 나아가는 여운을 남긴다.
 source: instagram
 source_tag: 250614_2209
 source_note: Netflix <이 별에 필요한> O.S.T.
