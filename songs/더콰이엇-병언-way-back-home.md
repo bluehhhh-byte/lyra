@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-17
 published: 2025-05-17T02:46:06.000Z
-comment:
+comment: 서울이라는 거친 도시 속에서 겪는 불안과 상처를 빗속을 걷는 여정에 빗대어 담담하게 풀어낸 곡이다. 집으로 향하는 길목에서 느끼는 그리움과 방황의 정서가 깊게 다가온다.
 source: instagram
 source_tag: 250517_1145
 source_note: 
