@@ -1,0 +1,60 @@
+{
+ "items": [
+  {
+   "slug": "루시드폴-그대-손으로",
+   "batch": 1,
+   "originalLineCount": 9,
+   "addedTranslationCount": 9,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "5748963",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T19:47:09.528Z"
+  },
+  {
+   "slug": "검정치마-하와이-검은-모래",
+   "batch": 1,
+   "originalLineCount": 14,
+   "addedTranslationCount": 14,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "5748963",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T19:47:09.535Z"
+  },
+  {
+   "slug": "원슈타인-사랑-새",
+   "batch": 1,
+   "originalLineCount": 14,
+   "addedTranslationCount": 14,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "5748963",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T19:47:09.537Z"
+  },
+  {
+   "slug": "김현식-내-사랑-내-곁에",
+   "batch": 1,
+   "originalLineCount": 14,
+   "addedTranslationCount": 14,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "5748963",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T19:47:09.538Z"
+  },
+  {
+   "slug": "국카스텐-붉은-밭",
+   "batch": 1,
+   "originalLineCount": 19,
+   "addedTranslationCount": 15,
+   "skippedCount": 4,
+   "uncertainCount": 0,
+   "sourceCommit": "5748963",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T19:47:09.539Z"
+  }
+ ],
+ "at": "2026-08-12T19:47:09.539Z"
+}
