@@ -1,6 +1,6 @@
 ---
 title: Look To Windward
-title_ko: 
+title_ko: 룩 투 윈드워드
 artist: Sleep Token
 artist_ko:
 album: Even In Arcadia
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-14
 published: 2025-05-13T23:18:12.000Z
-comment:
+comment: 이 곡은 자아와의 내면적 갈등과 파괴적인 충동을 강렬하고 몽환적인 사운드로 풀어낸다. 절망의 깊은 곳에서도 구원을 갈구하는 복잡한 감정이 짙게 배어난다.
 source: instagram
 source_tag: 250514_0821
 source_note: 
