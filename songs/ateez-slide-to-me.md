@@ -1,6 +1,6 @@
 ---
 title: Slide To Me
-title_ko: 
+title_ko: Slide To Me
 artist: ATEEZ
 artist_ko:
 album: GOLDEN HOUR : Part.3 'In Your Fantasy Edition'
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-18
 published: 2025-07-17T23:10:19.000Z
-comment:
+comment: 말이 필요 없는 순간 서로의 감각에 온전히 집중하며 춤을 추는 매혹적인 밤을 그려낸다. 절제된 리듬 속에서 피어오르는 관능적인 긴장감이 인상적이다.
 source: instagram
 source_tag: 250718_0810
 source_note: 
