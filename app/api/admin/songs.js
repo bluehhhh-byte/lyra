@@ -12,6 +12,7 @@ import {
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
 } from "../../../lib/admin/song-meta";
 import { kstToday } from "../../../lib/kst";
+import { summarizeMusicTaste } from "../../../lib/music-taste-core";
 
 export async function handleSongs(action, body) {  if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
@@ -778,6 +779,49 @@ ${lyricBody}
     return Response.json({ slug });
   }
 
+  // 음악 취향 AI 리포트 — 영화 tasteReport의 음악판. 집계 요약을 Gemini에
+  // 넘겨 3~4문단 해석을 받아 저장한다. /songs/taste 상단에 표시되고,
+  // songRecs가 추천 프롬프트에 이 리포트를 함께 넣는다.
+  if (action === "musicReport") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const songs = getAllSongs();
+    if (songs.length < 10)
+      return Response.json({ error: `곡이 ${songs.length}곡뿐입니다 (10곡 이상 필요)` }, { status: 422 });
+
+    const t = summarizeMusicTaste(songs);
+    const fmt = (rows) => rows.map(([k, n]) => `${k} ${n}곡`).join(", ");
+    const lines = [
+      `총 ${t.count}곡 · 아티스트 ${t.artist.length}팀 (${t.once.length}팀은 한 곡만)`,
+      `국가·권역: ${fmt(t.region)}`,
+      `장르: ${fmt(t.genre)}`,
+      `연대: ${fmt(t.decade)}`,
+      `많이 담은 아티스트: ${fmt(t.artist.slice(0, 15))}`,
+      `감정: ${fmt(t.emotion)} (밝음↔어두움 기울기 ${t.valenceMean.toFixed(1)}, -3~+3)`,
+      `가사 키워드: ${t.keywords.slice(0, 15).map(([k]) => k).join(", ")}`,
+    ].join("\n");
+
+    const text = await geminiText(
+      key,
+      `아래는 한 사람이 가사 번역 블로그에 모아온 곡들의 집계다. 별점·재생 기록은 없고
+'직접 골라 담았다'는 사실 자체가 취향의 기록이다.
+이 사람의 음악 취향을 분석하는 리포트를 한국어로 써라.
+- 3~4개 문단, 각 문단 2~3문장. 소제목 없이 이어지는 산문
+- 장르·연대·감정·키워드가 서로 어떻게 얽히는지 교차 해석하라 (예: 어떤 장르에 어떤 감정이 몰리는지)
+- 구체적 근거(장르/연대/감정과 곡 수)를 문장에 녹여라
+- 반복해 담은 아티스트와 한 곡씩 발견한 아티스트의 비율이 말해주는 수집 성향도 짚어라
+- 단정적 분석 톤, 평서문 '~다'체. "~습니다/~해요" 금지. 과장·아부 금지
+- 마지막 문단은 이 취향이 다음에 파고들 만한 방향을 한 문장으로 제안
+집계:
+${lines}`
+    );
+    if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
+
+    const report = { text: text.trim(), count: t.count, at: new Date().toISOString() };
+    await writeData("music-report.json", JSON.stringify(report, null, 1), `data: 음악 취향 리포트 (${t.count}곡)`);
+    return Response.json(report);
+  }
+
   // 추천 곡 — 영화 tasteRecs와 같은 구조. 컬렉션 취향 집계를 Gemini에 주고
   // '없는 곡'을 추천받은 뒤, iTunes로 찾아 아트워크·30초 미리듣기를 붙인다.
   // 이미 있는 곡·이전 추천은 제외하고 data/song-recs.json에 누적한다.
@@ -802,10 +846,16 @@ ${lyricBody}
     const keywords = tally(songs.flatMap((s) => s.keywords || [])).slice(0, 15);
     // 59곡 규모라 회피 목록은 전곡을 그대로 준다 (영화의 상위 300 트림과 달리)
     const have = songs.map((s) => `${s.title} - ${s.artist}`).join("; ");
+    // 취향 리포트가 있으면 추천 프롬프트에 함께 — 숫자 집계가 못 담는
+    // 교차 해석(장르×감정, 수집 성향)이 추천 방향을 잡아준다
+    const report = readData("music-report.json", null);
+    const reportHint = report?.text
+      ? `\n이 사람의 취향 리포트(참고해 추천 방향을 잡아라):\n${report.text.slice(0, 1500)}\n`
+      : "";
 
     const raw = await geminiText(
       key,
-      `아래는 한 사람의 음악 컬렉션 취향 집계다 (총 ${songs.length}곡).
+      `아래는 한 사람의 음악 컬렉션 취향 집계다 (총 ${songs.length}곡).${reportHint}
 국가: ${fmt(country)}
 장르: ${fmt(genre)}
 연대: ${fmt(decade)}

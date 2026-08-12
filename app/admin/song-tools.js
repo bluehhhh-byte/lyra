@@ -119,10 +119,21 @@ export default function SongTools({ songs }) {
   // 추천 곡 생성 — Gemini 1회 + iTunes 매칭. /recommendations에 누적된다.
   const [recsBusy, setRecsBusy] = useState("");
   const songRecs = async () => {
-    setRecsBusy("생성 중…");
+    setRecsBusy("추천 생성 중…");
     try {
       const { added, total } = await api("songRecs", {});
-      setRecsBusy(`+${added}곡 (누적 ${total}) — 재배포 후 반영`);
+      setRecsBusy(`추천 +${added}곡 (누적 ${total}) — 재배포 후 반영`);
+    } catch (e) {
+      setRecsBusy(`실패: ${e.message}`);
+    }
+  };
+
+  // 취향 리포트 생성 — Gemini 1회. /songs/taste 상단에 표시되고 추천 프롬프트에도 반영.
+  const musicReport = async () => {
+    setRecsBusy("리포트 생성 중…");
+    try {
+      const { count } = await api("musicReport", {});
+      setRecsBusy(`리포트 생성됨 (${count}곡 기준) — 재배포 후 반영`);
     } catch (e) {
       setRecsBusy(`실패: ${e.message}`);
     }
@@ -166,14 +177,23 @@ export default function SongTools({ songs }) {
         </button>
         <button
           onClick={songRecs}
-          disabled={recsBusy === "생성 중…"}
+          disabled={recsBusy.endsWith("중…")}
           className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           추천 곡
           <br />
           생성
         </button>
-        <span className="text-xs text-muted">
+        <button
+          onClick={musicReport}
+          disabled={recsBusy.endsWith("중…")}
+          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+        >
+          취향 리포트
+          <br />
+          생성
+        </button>
+        <span className="col-span-2 text-xs text-muted sm:col-span-1">
           {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움"}
         </span>
       </div>

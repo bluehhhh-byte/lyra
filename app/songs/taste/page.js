@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllSongs } from "../../../lib/songs";
+import { readData } from "../../../lib/store";
 import { summarizeMusicTaste, interpretMusicTaste } from "../../../lib/music-taste-core";
 import { emotionValence, valenceColor } from "../../../lib/keywords";
 
@@ -47,6 +48,7 @@ export default function MusicTastePage() {
   const songs = getAllSongs();
   const t = summarizeMusicTaste(songs);
   const text = interpretMusicTaste(t);
+  const report = readData("music-report.json", null);
 
   if (t.count === 0)
     return (
@@ -88,8 +90,26 @@ export default function MusicTastePage() {
       </div>
 
       {text && (
-        <div className="mb-10 rounded-xl border border-accent/30 bg-accent/5 px-5 py-4 text-sm leading-relaxed">
+        <div className="mb-6 rounded-xl border border-accent/30 bg-accent/5 px-5 py-4 text-sm leading-relaxed">
           {text}
+        </div>
+      )}
+
+      {/* Gemini 리포트 — admin의 '취향 리포트 생성'이 저장한 교차 해석.
+          위 한 줄 요약은 코드 계산(항상 최신), 이건 생성 시점 스냅샷. */}
+      {report?.text && (
+        <div className="mb-10 rounded-xl border border-line bg-surface px-5 py-4">
+          <div className="mb-2 flex items-baseline justify-between gap-3">
+            <h2 className="text-sm font-semibold text-muted">AI 리포트</h2>
+            <span className="text-xs text-muted/60">
+              {report.count}곡 기준 · {new Date(report.at).toLocaleDateString("ko-KR", { timeZone: "Asia/Seoul" })}
+            </span>
+          </div>
+          <div className="space-y-3 text-sm leading-relaxed">
+            {report.text.split(/\n\s*\n/).map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
         </div>
       )}
 
