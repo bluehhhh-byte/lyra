@@ -1,6 +1,6 @@
 ---
 title: Same Mistake
-title_ko: 
+title_ko: 세임 미스테이크
 artist: James Blunt
 artist_ko:
 album: All the Lost Souls (Deluxe)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-02
 published: 2025-07-01T23:41:35.000Z
-comment:
+comment: 자신의 내면을 응시하며 과거의 과오를 반복할지 모른다는 두려움을 덤덤하게 고백하는 곡이다. 제임스 블런트 특유의 서정적이면서도 쓸쓸한 목소리가 깊은 여운을 남긴다.
 source: instagram
 source_tag: 250702_0840
 source_note: 
