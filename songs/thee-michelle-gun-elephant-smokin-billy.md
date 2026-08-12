@@ -1,6 +1,6 @@
 ---
 title: SMOKIN' BILLY
-title_ko: 
+title_ko: 스모킨 빌리
 artist: THEE MICHELLE GUN ELEPHANT
 artist_ko:
 album: SMOKIN' BILLY
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-16
 published: 2025-06-16T10:04:35.000Z
-comment:
+comment: 타르와 담배 연기로 얼룩진 폐쇄적인 감각 속에서 '사랑이라는 증오'라는 모순적인 감정을 거칠고 폭발적인 펑크 록 사운드로 토해낸다. 날것 그대로의 가사와 질주하는 연주가 어우러져 밴드 특유의 짙은 무뢰한 같은 매력을 강렬하게 전달한다.
 source: instagram
 source_tag: 250616_1904
 source_note: 
