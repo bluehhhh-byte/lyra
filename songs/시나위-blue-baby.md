@@ -23,22 +23,38 @@ source_note:
 source_hash: 5696e3316f817a40c6711f1af961933a36ab8a99
 ---
 술에 취한 눈으로
+> With drunken eyes
 날 사랑했지
+> You loved me
 내 몸에 맺힌 멍자욱도
+> Even the bruises blooming on my body
 그런 사랑이야
+> That's what that love is
  
 난 무서워, 이런 하루가
+> I'm scared of a day like this
 시작되는게
+> Ever beginning
  
 끝나질 않아, 푸른 하늘이
+> It never ends — the blue sky
 난 정말 보고 싶었어
+> I truly longed to see it
 영원히 잠든 나의 모습은
+> If I fell asleep forever
 아름다울까
+> Would I look beautiful
 
 벗어나고 싶지만
+> I want to break free
 날 가두고 말았어
+> But I ended up caged
 숨이 막혀와
+> I can't breathe
 쓰러지겠지
+> I'll collapse soon
  
 이제 난 자유로워, 영원히
+> Now I am free, forever
 이제 난 평화로워, 영원히
+> Now I am at peace, forever

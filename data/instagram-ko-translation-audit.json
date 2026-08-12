@@ -54,6 +54,94 @@
    "sourceCommit": "5748963",
    "status": "translated",
    "reviewedAt": "2026-08-12T19:47:09.539Z"
+  },
+  {
+   "slug": "gd-x-taeyang-good-boy",
+   "batch": 2,
+   "originalLineCount": 25,
+   "addedTranslationCount": 13,
+   "skippedCount": 12,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.695Z"
+  },
+  {
+   "slug": "시나위-blue-baby",
+   "batch": 2,
+   "originalLineCount": 16,
+   "addedTranslationCount": 16,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.709Z"
+  },
+  {
+   "slug": "오연준-바람이-불어오는-곳",
+   "batch": 2,
+   "originalLineCount": 16,
+   "addedTranslationCount": 16,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.711Z"
+  },
+  {
+   "slug": "서울전자음악단-서로-다른",
+   "batch": 2,
+   "originalLineCount": 16,
+   "addedTranslationCount": 16,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.713Z"
+  },
+  {
+   "slug": "아침-불꽃축제",
+   "batch": 2,
+   "originalLineCount": 16,
+   "addedTranslationCount": 16,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.715Z"
+  },
+  {
+   "slug": "김사랑-너란-놈",
+   "batch": 2,
+   "originalLineCount": 21,
+   "addedTranslationCount": 19,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.717Z"
+  },
+  {
+   "slug": "나얼-언젠가는",
+   "batch": 2,
+   "originalLineCount": 20,
+   "addedTranslationCount": 20,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.718Z"
+  },
+  {
+   "slug": "유재하-우리들의-사랑",
+   "batch": 2,
+   "originalLineCount": 20,
+   "addedTranslationCount": 20,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "99b93d4",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:43:48.720Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
