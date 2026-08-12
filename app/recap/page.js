@@ -36,7 +36,6 @@ export default async function RecapPage({ searchParams }) {
       .filter((i) => i.type === "song").map((i) => i.subtitle)
   );
   const newArtists = recap.artists.map(([a]) => a).filter((a) => a && !seenArtists.has(a));
-  const latestPath = (readData("paths.json", { items: [] }).items || [])[0] || null;
 
   return (
     <>
@@ -98,7 +97,7 @@ export default async function RecapPage({ searchParams }) {
       </section>
 
       {/* 월간 편집본 — 지난 기간과 무엇이 달라졌는지, 다음엔 어디로 가는지 */}
-      {(prevRecap || newArtists.length > 0 || latestPath) && (
+      {(prevRecap || newArtists.length > 0) && (
         <section className="mb-14 rounded-xl border border-line bg-surface/50 px-5 py-5">
           <h2 className="mb-3 text-sm font-semibold">이번 기간의 변화</h2>
           <div className="space-y-2 text-sm text-muted">
@@ -123,14 +122,11 @@ export default async function RecapPage({ searchParams }) {
                 {newArtists.length > 6 && ` 외 ${newArtists.length - 6}팀`}
               </p>
             )}
-            {latestPath && (
-              <p>
-                다음 발견 경로:{" "}
-                <Link href="/songs/paths" className="text-accent hover:underline">
-                  {latestPath.title} ({latestPath.steps.length}곡) →
-                </Link>
-              </p>
-            )}
+            <p>
+              <Link href="/songs/thread" className="text-accent hover:underline">
+                기록의 흐름 보기 →
+              </Link>
+            </p>
           </div>
         </section>
       )}

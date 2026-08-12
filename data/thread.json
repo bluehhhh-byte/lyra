@@ -1,51 +1,25 @@
 {
- "summary": "불안과 저항으로 시작된 기록은 세상과 주변에 대한 격렬한 분노와 환멸을 거치며 고조된다. 이후 과거의 희망과 미래의 고독을 오가다, 마침내 홀로 남은 서글픔과 차갑게 얼어붙은 관계에 대한 불안으로 귀결된다.",
- "links": [
-  {
-   "from": "the-smile-friend-of-a-friend",
-   "to": "arctic-monkeys-don-t-sit-down-cause-i-ve-moved-your-chair",
-   "connection": "현실을 뒤집으려는 불안이 위험을 무릅쓰는 도발로 이어진다"
-  },
-  {
-   "from": "glen-hansard-say-it-to-me-now",
-   "to": "beck-loser",
-   "connection": "오해를 풀려는 안간힘이 자조적인 체념으로 모아진다"
-  },
-  {
-   "from": "incubus-anna-molly",
-   "to": "jungle-someday-somewhere",
-   "connection": "먹구름 속 그리움이 상대를 향한 미련과 희망으로 이어진다"
-  },
-  {
-   "from": "wasureranneyo-nannmonee",
-   "to": "qm-입에총-feat-zico",
-   "connection": "끝장났다는 절규가 주변의 냉대에 대한 반발로 분출된다"
-  },
-  {
-   "from": "slipknot-opium-of-the-people",
-   "to": "children-of-bodom-done-with-everything-die-for-nothing",
-   "connection": "바보들의 공격에 맞서 상대를 무너뜨리겠다는 분노로 거세진다"
-  },
-  {
-   "from": "children-of-bodom-done-with-everything-die-for-nothing",
-   "to": "xxx-간주곡",
-   "connection": "훈수에 대한 분노가 바보들과 엮이기 싫은 환멸로 이어진다"
-  },
-  {
-   "from": "mac-miller-two-matches-feat-ab-soul",
-   "to": "the-strokes-lonely-in-the-future",
-   "connection": "높았던 과거의 꿈이 미래에 느끼는 씁쓸한 고독과 대비된다"
-  },
-  {
-   "from": "검정치마-99",
-   "to": "jasmin-tabatabai-another-sad-song-live",
-   "connection": "밤의 애틋했던 감정이 홀로 남은 밤의 고독으로 고조된다"
-  },
-  {
-   "from": "jasmin-tabatabai-another-sad-song-live",
-   "to": "dir-en-grey-予感",
-   "connection": "홀로 남은 밤의 쓸쓸함이 차가운 관계에 대한 불안으로 이어진다"
-  }
+ "story": "내면의 불안과 세상과의 마찰 속에서 인물은 거친 저항과 분노를 터뜨리며 스스로를 지키려 애쓴다. 폭발적인 충돌 끝에 도달한 곳은 짧은 희망과 아득한 고독, 그리고 환상적인 도피의 공간이다. 지친 영혼은 헛된 꿈과 단념을 거쳐 다시 차가운 현실의 불안 속으로 돌아오며 순환을 완성한다.",
+ "connections": [
+  "공간을 뒤집던 불안은 위험을 일삼는 과감한 행동과 저항으로 고조된다.",
+  "위험천만한 도발 끝에 꼬여버린 오해와 관계를 어떻게든 풀어나가려 애쓴다.",
+  "긁어내도 풀리지 않는 오해 속에서 기괴한 비하와 자조적 체념에 빠져든다.",
+  "비참한 체념의 바닥에서 짙은 먹구름 너머 그리운 존재를 갈망하기 시작한다.",
+  "그 시절의 그리움은 관계를 되돌려 어디론가 나아가고자 하는 희망으로 변한다.",
+  "제자리걸음인 현실 앞에 희망은 끝장났다는 절망적 저항으로 뒤바뀐다.",
+  "아무것도 없는 절망감은 먼저 상대를 공격해야 한다는 선제타격의 분노로 변한다.",
+  "공격적인 태도는 온갖 바보들이 덤벼드는 기이한 세상에 대한 도발로 이어진다.",
+  "덤벼드는 자들을 향한 도발은 너를 무너뜨리겠다는 무자비한 분노로 폭발한다.",
+  "맹렬한 분노 끝에 저 바보들과 함께 시체 가방에 갇히기 싫다는 거부감이 든다.",
+  "더러운 문제에 얽히지 않으려는 거부는 유쾌함 뒤에 숨은 혼돈의 분노로 표출된다.",
+  "폭발하던 분노가 지나간 자리에 어릴 적 품었던 부유한 희망의 꿈을 되짚는다.",
+  "높게 잡았던 목표의 꿈은 까마득한 과거를 돌아보는 씁쓸한 고독으로 바뀐다.",
+  "고독한 과거의 회상은 옭아매는 유령들과 함께 갇혀버린 불안으로 밀려온다.",
+  "유령 같은 불안 속에서 세상에 마땅히 요구해야 했던 자격을 다시 되묻는다.",
+  "세상에 대한 저항을 뒤로하고 마음을 빼앗긴 환상 속의 도시로 아득히 떠난다.",
+  "몽환적인 도피에서 깨어나 무심한 '그래' 한마디로 모든 것을 단념한다.",
+  "체념한 뒤 찾아온 여운은 홀로 틀어진 기타를 쥔 채 고독한 밤을 맞이하게 한다.",
+  "홀로 남은 고독은 얼어붙은 사랑과 불쾌감이라는 불안으로 차갑게 식어간다."
  ],
  "slugs": [
   "the-smile-friend-of-a-friend",
@@ -69,5 +43,5 @@
   "jasmin-tabatabai-another-sad-song-live",
   "dir-en-grey-予感"
  ],
- "at": "2026-08-12T13:16:14.625Z"
+ "at": "2026-08-12T13:52:31.707Z"
 }

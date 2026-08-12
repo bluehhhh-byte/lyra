@@ -239,6 +239,23 @@ export default function SongTools({ songs }) {
           <br />
           생성
         </button>
+        <button
+          onClick={async () => {
+            setRecsBusy("흐름 분석 중…");
+            try {
+              const { links, songs: n } = await api("songThread", {});
+              setRecsBusy(`흐름 분석됨 — 최근 ${n}곡, 연결 ${links}개 (재배포 후 반영)`);
+            } catch (e) {
+              setRecsBusy(`실패: ${e.message}`);
+            }
+          }}
+          disabled={recsBusy.endsWith("중…")}
+          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+        >
+          흐름
+          <br />
+          분석
+        </button>
         <span className="col-span-2 text-xs text-muted sm:col-span-1">
           {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움"}
         </span>

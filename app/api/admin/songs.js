@@ -833,8 +833,12 @@ ${lines}`
     if (all.length < 6) return Response.json({ error: "곡이 부족합니다 (6곡 이상 필요)" }, { status: 422 });
     const recent = all.slice(0, 20).reverse(); // 기록된 순서(과거→현재)로
 
+    // 한국어 텍스트만: ko 곡은 원문(l.en 자리), 그 외는 한글 번역(l.ko).
+    // 원문에 영어 라인이 섞인 한국어 곡(검정치마 등)도 있어 한글 포함 줄만 남긴다.
     const koOf = (s) =>
-      s.stanzas.flatMap((st) => st.lines.map((l) => l.ko || (s.lang === "ko" ? l.en : ""))).filter(Boolean);
+      s.stanzas
+        .flatMap((st) => st.lines.map((l) => (s.lang === "ko" ? l.en : l.ko)))
+        .filter((t) => t && /[가-힣]/.test(t));
     const corpus = recent
       .map(
         (s, i) =>
@@ -845,13 +849,12 @@ ${lines}`
     const raw = await geminiText(
       key,
       `아래는 한 사람이 최근에 '기록한 순서대로' 나열한 ${recent.length}곡이다 (번호가 시간 순서).
-이 기록의 흐름에서 가사·주제의식이 어떻게 이어지는지 추적하라. JSON으로만:
-{"summary":"전체 흐름을 읽어주는 2~3문장 — 반드시 평서문 '~다'체, ~습니다/~해요 금지","links":[{"from":"slug","to":"slug","connection":"두 곡의 가사를 잇는 상관관계 한 구절 (35자 이내)"}]}
+이 기록 전체를 하나의 끊어지지 않는 이야기로 읽어라. JSON으로만:
+{"story":"기록 전체가 그리는 하나의 이야기 3~4문장 — 반드시 평서문 '~다'체, ~습니다/~해요 금지","connections":["1번 곡에서 2번 곡으로 가사의 맥락이 이어지는 한 구절 (40자 이내)", "... 총 ${recent.length - 1}개, i번째 항목이 i번 곡→i+1번 곡의 연결"]}
 규칙:
-- from/to는 대괄호 안 slug 그대로, 시간상 from이 to보다 앞선 곡
-- 인접하거나 가까운(3칸 이내) 기록끼리만 연결하라
-- connection은 실제 가사의 이미지·주제를 근거로 (예: "밤의 이미지가 도피의 갈망으로 번진다")
-- 연결이 억지스러운 쌍은 만들지 말 것 — 자연스러운 것만 5~12개
+- connections는 반드시 ${recent.length - 1}개 — 모든 인접한 기록 쌍을 빠짐없이 잇는다
+- 각 연결은 두 곡의 실제 가사 이미지·주제를 근거로, 앞 곡의 정서가 어떻게 다음 곡으로 번지고 변하는지
+- 억지로 갖다 붙이지 말고, 정말 접점이 없으면 '분위기의 급전환' 같은 전환 자체를 서술하라
 - 순수 JSON만 출력
 기록:
 ${corpus}`,
@@ -863,132 +866,21 @@ ${corpus}`,
     } catch {
       return Response.json({ error: "흐름 분석 실패 (응답 파싱)" }, { status: 502 });
     }
-    const order = new Map(recent.map((s, i) => [s.slug, i]));
-    const links = (Array.isArray(thread?.links) ? thread.links : [])
-      .filter((l) => order.has(l?.from) && order.has(l?.to) && order.get(l.from) < order.get(l.to))
-      .filter((l) => order.get(l.to) - order.get(l.from) <= 3)
-      .map((l) => ({ from: l.from, to: l.to, connection: String(l.connection || "").trim().slice(0, 70) }))
-      .filter((l) => l.connection)
-      .slice(0, 12);
-    if (!links.length) return Response.json({ error: "연결을 찾지 못했습니다" }, { status: 502 });
+    // 인접 쌍 수에 정확히 맞춘다 — 넘치면 자르고, 모자라면 빈 칸(페이지에서 ···)
+    const connections = (Array.isArray(thread?.connections) ? thread.connections : [])
+      .map((c) => String(c || "").trim().slice(0, 80))
+      .slice(0, recent.length - 1);
+    while (connections.length < recent.length - 1) connections.push("");
+    if (!connections.some(Boolean)) return Response.json({ error: "연결을 찾지 못했습니다" }, { status: 502 });
 
     const data = {
-      summary: String(thread.summary || "").trim().slice(0, 300),
-      links,
+      story: String(thread.story || thread.summary || "").trim().slice(0, 500),
+      connections,
       slugs: recent.map((s) => s.slug),
       at: new Date().toISOString(),
     };
-    await writeData("thread.json", JSON.stringify(data, null, 1), `data: 기록의 흐름 (${recent.length}곡, 연결 ${links.length})`);
-    return Response.json({ links: links.length, songs: recent.length });
-  }
-
-  // 발견 경로 — 시작·전환·도착 구조를 가진 6~10곡 탐색 코스.
-  // bridge(곡 A→B를 잇는 다리)와 theme(주제 코스) 두 형태, 한 파일에 쌓인다.
-  // 컬렉션 곡은 slug로 붙이고 새 곡은 iTunes로 매칭해 미리듣기를 단다.
-  if (action === "songPath") {
-    const key = process.env.GEMINI_API_KEY;
-    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const songs = getAllSongs();
-    const type = body.type === "bridge" ? "bridge" : "theme";
-
-    let ask;
-    if (type === "bridge") {
-      const from = songs.find((s) => s.slug === body.from);
-      const to = songs.find((s) => s.slug === body.to);
-      if (!from || !to) return Response.json({ error: "시작·도착 곡을 찾을 수 없음" }, { status: 422 });
-      const describe = (s) =>
-        `"${s.title}" - ${s.artist} (${genreTagOf(s.tags) || s.genre || "?"}, ${s.year || "?"}, 감정: ${parseEmotion(s.emotion) || "?"})`;
-      // 모티프 데이터가 있으면 두 곡의 가사 모티프를 다리의 재료로 준다 —
-      // Gemini가 맨손으로 추측하는 대신 검증된 공통점 위에서 잇는다
-      const motifData = readData("motifs.json", null);
-      const motifsOf = (slug) =>
-        (motifData?.motifs || []).filter((m) => m.songs.some((x) => x.slug === slug)).map((m) => m.name);
-      const fromM = motifsOf(from.slug);
-      const toM = motifsOf(to.slug);
-      const motifHint =
-        fromM.length || toM.length
-          ? `\n가사 모티프 — 시작 곡: ${fromM.join(", ") || "없음"} / 도착 곡: ${toM.join(", ") || "없음"}. 겹치거나 이어지는 모티프를 다리의 축으로 써라.`
-          : "";
-      ask = `${describe(from)} 에서 ${describe(to)} 까지 자연스럽게 건너가는 다리를 놓아라.${motifHint}
-시작 곡과 도착 곡을 포함해 총 5~7곡. 중간 곡들은 장르·질감·감정이 한 걸음씩 이동해야 한다.
-첫 step은 반드시 시작 곡, 마지막 step은 반드시 도착 곡.`;
-    } else {
-      const theme = String(body.theme || "").trim().slice(0, 100);
-      if (!theme) return Response.json({ error: "주제가 없습니다" }, { status: 422 });
-      ask = `주제: "${theme}"
-이 주제로 시작·전환·도착 구조를 가진 6~10곡 탐색 코스를 짜라.
-가능하면 아래 컬렉션의 곡 1~3개를 정거장으로 포함하고, 나머지는 새 곡으로.`;
-    }
-
-    const have = songs.map((s) => `${s.title} - ${s.artist}`).join("; ");
-    const raw = await geminiText(
-      key,
-      `한 사람의 음악 컬렉션(${songs.length}곡)을 바탕으로 한 발견 경로를 만든다.
-${ask}
-JSON으로만:
-{"title":"경로 이름 (15자 이내)","note":"이 경로가 지나는 여정 한 문장","steps":[{"title":"곡 제목","artist":"아티스트","reason":"이 단계로 넘어오는 이유 한 구절 (30자)"}]}
-참고 — 컬렉션 목록: ${have}
-실제 발매된 곡만. 순수 JSON만 출력.`,
-      true
-    );
-    let path;
-    try {
-      path = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
-    } catch {
-      return Response.json({ error: "경로 생성 실패 (응답 파싱)" }, { status: 502 });
-    }
-    const rawSteps = (Array.isArray(path?.steps) ? path.steps : []).filter((s) => s?.title && s?.artist);
-    if (rawSteps.length < 4) return Response.json({ error: "경로가 너무 짧습니다" }, { status: 502 });
-
-    // 각 정거장: 컬렉션 곡이면 slug로, 아니면 iTunes 매칭 (병렬)
-    const byTitleKey = new Map(songs.map((s) => [normText(`${s.title}|${s.artist}`), s]));
-    const byTitle = new Map(songs.map((s) => [normText(s.title), s]));
-    const steps = (
-      await Promise.all(
-        rawSteps.slice(0, 10).map(async (st) => {
-          const local = byTitleKey.get(normText(`${st.title}|${st.artist}`)) || byTitle.get(normText(st.title));
-          if (local && (normText(local.artist).includes(normText(st.artist)) || normText(st.artist).includes(normText(local.artist)))) {
-            return {
-              slug: local.slug, title: local.title, artist: local.artist,
-              artwork: local.artwork, preview: local.preview || "", reason: String(st.reason || "").trim().slice(0, 60),
-            };
-          }
-          try {
-            const term = encodeURIComponent(`${st.title} ${st.artist}`);
-            const lists = await Promise.all(
-              ["US", "KR"].map((c) =>
-                fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=5&country=${c}`)
-                  .then((x) => x.json()).then((x) => x.results || []).catch(() => [])
-              )
-            );
-            const hit = lists.flat().map(itunesToResult).find(
-              (c) => normText(c.artist).includes(normText(st.artist)) || normText(st.artist).includes(normText(c.artist))
-            );
-            if (!hit) return null;
-            return {
-              trackId: hit.trackId, title: hit.title, artist: hit.artist,
-              artwork: hit.artwork, preview: hit.preview, reason: String(st.reason || "").trim().slice(0, 60),
-            };
-          } catch {
-            return null;
-          }
-        })
-      )
-    ).filter(Boolean);
-    if (steps.length < 4) return Response.json({ error: "정거장 매칭 실패 (4곡 미만)" }, { status: 502 });
-
-    const prev = readData("paths.json", { items: [] });
-    const item = {
-      id: Date.now().toString(36),
-      type,
-      title: String(path.title || "").trim().slice(0, 30) || "발견 경로",
-      note: String(path.note || "").trim().slice(0, 100),
-      steps,
-      at: new Date().toISOString(),
-    };
-    const items = [item, ...(prev.items || [])].slice(0, 30);
-    await writeData("paths.json", JSON.stringify({ items }, null, 1), `data: 발견 경로 "${item.title}" (${steps.length}곡)`);
-    return Response.json({ title: item.title, steps: steps.length, total: items.length });
+    await writeData("thread.json", JSON.stringify(data, null, 1), `data: 기록의 흐름 (${recent.length}곡 연속 서사)`);
+    return Response.json({ links: connections.filter(Boolean).length, songs: recent.length });
   }
 
   // 가사 모티프 지도 — 번역된 전체 가사에서 반복되는 이미지·주제를 묶는다.
@@ -1004,8 +896,12 @@ JSON으로만:
     // 곡별 압축 요약 — 전체 가사 대신 keywords·감정·코멘트·대표 3줄만.
     // 곡이 늘어도 요청 크기가 선형으로 완만하고, 긴 가사 한 곡이 결과를
     // 지배하지 않는다. quote 검증은 전체 가사를 대조한다(아래).
+    // 한국어 텍스트만: ko 곡은 원문(l.en 자리), 그 외는 한글 번역(l.ko).
+    // 원문에 영어 라인이 섞인 한국어 곡(검정치마 등)도 있어 한글 포함 줄만 남긴다.
     const koOf = (s) =>
-      s.stanzas.flatMap((st) => st.lines.map((l) => l.ko || (s.lang === "ko" ? l.en : ""))).filter(Boolean);
+      s.stanzas
+        .flatMap((st) => st.lines.map((l) => (s.lang === "ko" ? l.en : l.ko)))
+        .filter((t) => t && /[가-힣]/.test(t));
     const corpus = songs
       .map((s) => {
         const lines = koOf(s).slice(0, 3).join(" / ");
