@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-18
 published: 2025-07-18T14:02:16.000Z
-comment:
+comment: 폭력적인 관계와 깊은 절망 속에서 죽음과 영원한 평화를 갈구하는 화자의 슬픈 심경을 담은 곡이다. 시나위 특유의 무겁고 음울한 사운드가 곡의 비극적인 정서를 극대화한다.
 source: instagram
 source_tag: 250718_2302
 source_note: 
