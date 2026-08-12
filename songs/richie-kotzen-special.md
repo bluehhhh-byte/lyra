@@ -1,6 +1,6 @@
 ---
 title: special
-title_ko: 
+title_ko: 스페셜
 artist: Richie Kotzen
 artist_ko:
 album: The Essential Richie Kotzen
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-06
 published: 2025-06-05T19:56:51.000Z
-comment:
+comment: 더 큰 부와 화려함을 쫓아 떠났던 상대가 모든 것을 잃은 채 돌아온 상황을 담담하게 일깨우는 곡이다. 진정한 사랑보다 물질적인 욕망을 택했던 선택이 결국 부메랑처럼 돌아온다는 메시지를 전한다.
 source: instagram
 source_tag: 250606_0456
 source_note: 
