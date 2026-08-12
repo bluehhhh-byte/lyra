@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-22
 published: 2025-06-22T08:50:54.000Z
-comment:
+comment: 상대방의 행복을 위해 자신의 모든 것을 내어줄 수 있는 절절한 사랑을 담아낸 곡이다. 화려한 외면 뒤에 숨겨진 희생과 애틋한 감정이 잔잔한 여운을 남긴다.
 source: instagram
 source_tag: 250622_1750
 source_note: 
