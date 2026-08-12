@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-26
 published: 2025-06-26T12:27:38.000Z
-comment:
+comment: 이 곡은 래퍼로서의 삶과 현실적인 고민을 의식의 흐름에 따라 자유롭게 풀어낸 트랙이다. 느린 심장 박동이라는 소재를 통해 복잡한 생각에서 벗어나 자신만의 속도로 나아가고자 하는 태도를 보여준다.
 source: instagram
 source_tag: 250626_2126
 source_note: 
