@@ -23,39 +23,66 @@ source_note:
 source_hash: d95238e645e6dc8f105fba38b64a573898c4fad8
 ---
 태양과 닮은 너의 그라운드
+> Your ground, blazing like the sun
 눈부신 함성 속의 라운드
+> A round inside the dazzling roar
 
 규칙 따윈 없어
+> There are no rules here
 끝을 알 수 없는 Drama
+> A Drama with no end in sight
 멈출 수 없는 Diesel Train
+> A Diesel Train that can't be stopped
 
 이 순간 내 속에
+> This moment, deep inside me
 숨 쉬는 숨겨진
+> Everything hidden and breathing —
 모든 걸 널 위해
+> All of it, for you
 
 누구나 바라는 My Moonage Dream
+> The one everyone longs for, My Moonage Dream
 간절히 원하는 난 너의 Cream
+> Wanting it so desperately, I'm your Cream
 
 미치면 어때
+> So what if I go crazy
 난 그럼 어때
+> So what if that's me
 다시 태어난 널 즐겨 Tonight
+> Revel in the reborn you Tonight
 
 심장이 두근거릴 때
+> When your heart starts pounding
 
 이 순간 완벽해
+> This moment is perfect
 살아서 숨 쉬는 
+> Alive and breathing —
 모든 걸 널 위해
+> All of it, for you
 
 누구나 바라는 My Moonage Dream
+> The one everyone longs for, My Moonage Dream
 간절히 원하는 난 너의 Cream
+> Wanting it so desperately, I'm your Cream
 
 미치면 어때
+> So what if I go crazy
 난 그럼 어때
+> So what if that's me
 바로 지금 Tonight
+> Right here, right now, Tonight
 
 누구나 바라는 My Moonage Dream
+> The one everyone longs for, My Moonage Dream
 간절히 원하는 난 너의 Cream
+> Wanting it so desperately, I'm your Cream
 
 미치면 어때
+> So what if I go crazy
 난 그럼 어때
+> So what if that's me
 다시 태어난 널 즐겨 Tonight
+> Revel in the reborn you Tonight

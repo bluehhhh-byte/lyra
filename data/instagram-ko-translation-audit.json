@@ -527,6 +527,94 @@
    "sourceCommit": "b78ce2c",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:50:17.852Z"
+  },
+  {
+   "slug": "epik-high-colde-비-오는-날-듣기-좋은-노래",
+   "batch": 11,
+   "originalLineCount": 53,
+   "addedTranslationCount": 49,
+   "skippedCount": 4,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.386Z"
+  },
+  {
+   "slug": "sokodomo-kirin-지구멸망",
+   "batch": 11,
+   "originalLineCount": 58,
+   "addedTranslationCount": 47,
+   "skippedCount": 11,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.389Z"
+  },
+  {
+   "slug": "이적-빨래",
+   "batch": 11,
+   "originalLineCount": 34,
+   "addedTranslationCount": 34,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.390Z"
+  },
+  {
+   "slug": "김장훈-혼잣말",
+   "batch": 11,
+   "originalLineCount": 33,
+   "addedTranslationCount": 33,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.391Z"
+  },
+  {
+   "slug": "김바다-moonage-dream",
+   "batch": 11,
+   "originalLineCount": 27,
+   "addedTranslationCount": 27,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.392Z"
+  },
+  {
+   "slug": "이찬혁-파노라마",
+   "batch": 11,
+   "originalLineCount": 27,
+   "addedTranslationCount": 27,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.393Z"
+  },
+  {
+   "slug": "백예린-물고기",
+   "batch": 11,
+   "originalLineCount": 23,
+   "addedTranslationCount": 23,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.394Z"
+  },
+  {
+   "slug": "nell-crash",
+   "batch": 11,
+   "originalLineCount": 28,
+   "addedTranslationCount": 22,
+   "skippedCount": 6,
+   "uncertainCount": 0,
+   "sourceCommit": "93eba43",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:40.396Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
