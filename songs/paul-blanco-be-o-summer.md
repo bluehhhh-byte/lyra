@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-23
 published: 2025-06-22T23:49:04.000Z
-comment:
+comment: 화려한 성공과 부를 거머쥐었음에도 문득 찾아오는 공허함과 떠나간 연인에 대한 미련을 솔직하게 털어놓는 곡이다. 차가운 클럽 분위기와 대조되는 쓸쓸한 감정이 짙게 배어난다.
 source: instagram
 source_tag: 250623_0848
 source_note: 
