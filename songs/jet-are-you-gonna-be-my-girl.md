@@ -1,6 +1,6 @@
 ---
 title: Are You Gonna Be My Girl
-title_ko: 
+title_ko: 아 유 고나 비 마이 걸
 artist: Jet
 artist_ko:
 album: Get Born (Deluxe Edition)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-29
 published: 2025-06-29T13:56:15.000Z
-comment:
+comment: 호주 출신 록 밴드 젯의 대표곡으로, 1960년대 개러지 록과 모던 록의 에너지를 폭발적으로 결합해 청자의 귀를 사로잡는다. 첫눈에 반한 상대에게 거침없이 직진하는 화자의 패기가 경쾌한 리듬과 맞물려 짜릿한 해방감을 선사한다.
 source: instagram
 source_tag: 250629_2255
 source_note: 
