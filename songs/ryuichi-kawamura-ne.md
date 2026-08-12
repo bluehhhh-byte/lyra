@@ -1,6 +1,6 @@
 ---
 title: Ne
-title_ko: 
+title_ko: 네에
 artist: Ryuichi Kawamura
 artist_ko:
 album: Ne
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-23
 published: 2025-05-23T05:34:56.000Z
-comment:
+comment: 사랑을 갈구할수록 깊어지는 아픔과 집착을 애절한 목소리로 그려낸 곡이다.
 source: instagram
 source_tag: 250523_1433
 source_note: 
