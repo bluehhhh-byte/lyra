@@ -1,6 +1,6 @@
 ---
 title: Spider
-title_ko: 
+title_ko: 스파이ダー
 artist: Spitz
 artist_ko:
 album: Cycle Hit 1991-1997 Spitz Complete Single Collection
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-21
 published: 2025-05-20T23:07:33.000Z
-comment:
+comment: 지하실의 거미에 자신을 빗대어 사랑하는 이를 데리고 멀리 도망치고 싶은 강렬한 소망을 담은 곡이다. 밝고 경쾌한 멜로디 이면에 집착과 불안이 묘하게 교차하는 스피츠 특유의 독특한 감성이 돋보인다.
 source: instagram
 source_tag: 250521_0806
 source_note: 
