@@ -1,6 +1,6 @@
 ---
 title: Trainwreck 1979
-title_ko: 
+title_ko: 트레인렉 1979
 artist: Death From Above 1979
 artist_ko:
 album: The Physical World
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-16
 published: 2025-06-15T23:24:41.000Z
-comment:
+comment: 이 곡은 1979년 캐나다 미시사가에서 발생한 염화가스 유출 기차 탈선 사고를 모티브로 삼아, 결핍과 끝없는 갈망을 강렬한 록 사운드로 풀어낸다. 멈추지 않는 욕망과 질주 본능을 거칠면서도 댄서블한 리듬으로 폭발시키는 매력이 있다.
 source: instagram
 source_tag: 250616_0823
 source_note: 
