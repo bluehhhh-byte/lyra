@@ -1,6 +1,6 @@
 ---
 title: Scar Tissue
-title_ko: 
+title_ko: 스카 티슈
 artist: Red Hot Chili Peppers
 artist_ko:
 album: Bled Dry
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-24
 published: 2025-06-23T23:18:23.000Z
-comment:
+comment: 과거의 상처와 고통을 담담하게 어루만지는 가사가 존 프루시안테의 나지막한 기타 리프와 어우러져 깊은 여운을 준다. 방황과 치유의 과정을 새와 고독한 시선에 빗대어 표현한 명곡이다.
 source: instagram
 source_tag: 250624_0818
 source_note: 
