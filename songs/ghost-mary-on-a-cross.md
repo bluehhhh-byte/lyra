@@ -1,6 +1,6 @@
 ---
 title: Mary On A Cross
-title_ko: 
+title_ko: 메리 온 어 크로스
 artist: Ghost
 artist_ko:
 album: Seven Inches of Satanic Panic - Single
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-13
 published: 2025-06-13T14:47:53.000Z
-comment:
+comment: 스웨덴의 록 밴드 고스트의 이 곡은 겉보기의 도발적인 종교적 은유와 달리 몽환적인 멜로디 속에 깊은 애정과 허무를 동시에 담아낸다. 틱톡을 통해 뒤늦게 역주행하며 대중적인 사랑을 받았다.
 source: instagram
 source_tag: 250613_2347
 source_note: 
