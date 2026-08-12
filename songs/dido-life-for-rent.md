@@ -1,6 +1,6 @@
 ---
 title: Life For Rent
-title_ko: 
+title_ko: 라이프 포 렌트
 artist: Dido
 artist_ko:
 album: Life for Rent
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-16
 published: 2025-07-16T01:44:09.000Z
-comment:
+comment: 정착하지 못한 채 삶을 빌려 사는 듯한 방황과 고독을 담담한 목소리로 풀어낸 곡이다. 마음을 닫아둔 채 살아가는 삶에 대한 깊은 성찰을 느끼게 한다.
 source: instagram
 source_tag: 250716_1043
 source_note: 
