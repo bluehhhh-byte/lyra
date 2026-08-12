@@ -878,16 +878,40 @@ ${lines}`
 가사 키워드: ${keywords.map(([k]) => k).join(", ")}
 이 취향에 맞으면서 컬렉션에 '없는' 곡 28곡을 추천하라. 이번 추천의 방향: ${brief}
 JSON 배열로만:
-[{"title":"곡 제목","artist":"아티스트","why":"추천 이유","basedOn":"근거","direction":"extend|discover"}]
+[{"title":"곡 제목","artist":"아티스트","why":"추천 이유","direction":"extend|discover","basedOn":{"songs":["컬렉션의 '제목 - 아티스트' 그대로, 0~2개"],"genres":["연결된 장르 0~2개"],"emotions":["연결된 감정 0~2개"],"reason":"연결 근거 한국어 30자 이내"}}]
 규칙:
 - direction: 기존 취향의 연장이면 "extend", 새로운 발견이면 "discover"
-- basedOn: 이 추천의 근거가 된 기존 곡·아티스트·취향 축을 한국어 30자 이내로 (예: "Radiohead의 불안한 정서 연장", "일본 록 비중을 2010년대로 확장")
+- basedOn.songs: 반드시 아래 컬렉션 목록에 실제로 있는 표기 그대로. 없으면 빈 배열
+- basedOn.reason 예: "서늘한 질감과 내면적 가사의 연장", "일본 록 비중을 2010년대로 확장"
 - 이미 담은 아티스트의 곡은 최대 5곡까지만
 - 아래 컬렉션에 이미 있는 곡과 그 리메이크·커버는 제외: ${have}
 - title은 원제 그대로(검색 매칭용), why는 취향과 연결한 한국어 40자 이내 한 구절
 - 실제 발매된 곡만. 28곡(매칭 탈락 여유분). 순수 JSON만 출력`,
       true
     );
+
+    // basedOn 검증 — Gemini의 근거가 실제 데이터와 어긋나면 버린다.
+    // 곡은 컬렉션에 진짜 있는 것만(slug 매핑), 장르·감정은 닫힌 어휘만.
+    const byFullKey = new Map(songs.map((s) => [normText(`${s.title} - ${s.artist}`), s]));
+    const byTitleKey = new Map(songs.map((s) => [normText(s.title), s]));
+    const cleanBasedOn = (b) => {
+      if (!b) return null;
+      if (typeof b === "string") return { songs: [], genres: [], emotions: [], reason: b.slice(0, 60) };
+      const srcSongs = (Array.isArray(b.songs) ? b.songs : [])
+        .map((x) => {
+          const raw = String(x);
+          const hit = byFullKey.get(normText(raw)) || byTitleKey.get(normText(raw.split(" - ")[0]));
+          return hit ? { slug: hit.slug, title: hit.title } : null;
+        })
+        .filter(Boolean)
+        .slice(0, 2);
+      return {
+        songs: srcSongs,
+        genres: (Array.isArray(b.genres) ? b.genres : []).map(capGenre).filter((g) => GENRES.includes(g)).slice(0, 2),
+        emotions: (Array.isArray(b.emotions) ? b.emotions : []).map(parseEmotion).filter(Boolean).slice(0, 2),
+        reason: String(b.reason || "").trim().slice(0, 60),
+      };
+    };
     let recs;
     try {
       recs = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
@@ -949,7 +973,7 @@ JSON 배열로만:
         year: hit.year,
         genre: hit.genre,
         why: String(r.why || "").trim(),
-        basedOn: String(r.basedOn || "").trim(),
+        basedOn: cleanBasedOn(r.basedOn),
         direction: r.direction === "discover" ? "discover" : "extend",
         at: now,
       });

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
-import { genreTagOf } from "../../../lib/genre";
+import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
+import { parseEmotion } from "../../../lib/keywords";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
@@ -73,6 +74,20 @@ export default async function SongPage({ params }) {
   const pick = (s) => s && { slug: s.slug, title: s.title };
   const prev = pick(all[idx - 1]);
   const next = pick(all[idx + 1]);
+
+  // 컬렉션 안에서 이 곡의 자리 — 같은 장르·감정·시대·권역·아티스트가 몇 곡인지
+  const genre = genreTagOf(song.tags);
+  const emotion = parseEmotion(song.emotion);
+  const decade = song.year ? `${Math.floor(+song.year / 10) * 10}년대` : "";
+  const region = song.tags.find((t) => COUNTRY_TAGS.includes(t)) || "";
+  const countBy = (fn) => all.filter(fn).length;
+  const position = [
+    genre && { key: "genre", label: genre, href: `/tags/${encodeURIComponent(genre)}`, count: countBy((s) => genreTagOf(s.tags) === genre) },
+    emotion && { key: "emotion", label: `${emotion}의 감정`, href: `/?emotion=${encodeURIComponent(emotion)}`, count: countBy((s) => parseEmotion(s.emotion) === emotion) },
+    decade && { key: "decade", label: `${decade} 곡`, href: "/?group=decade", count: countBy((s) => s.year && `${Math.floor(+s.year / 10) * 10}년대` === decade) },
+    region && region !== "기타" && { key: "region", label: region, href: `/tags/${encodeURIComponent(region)}`, count: countBy((s) => s.tags.includes(region)) },
+    countBy((s) => s.artist === song.artist) > 1 && { key: "artist", label: `${song.artist}의 곡`, href: `/?q=${encodeURIComponent(song.artist)}`, count: countBy((s) => s.artist === song.artist) },
+  ].filter(Boolean);
 
   return (
     <article>
@@ -192,6 +207,26 @@ export default async function SongPage({ params }) {
             기록 {formatPublished(song.published || song.date)}
           </Link>
         </p>
+      )}
+
+      {/* 이 컬렉션에서의 위치 — 곡 하나를 전체 아카이브와 잇는다.
+          별점이 없는 아카이브라 '몇 곡 중 하나'라는 자리가 곧 맥락이다. */}
+      {position.length > 0 && (
+        <div className="mx-auto mt-16 max-w-2xl rounded-xl border border-line bg-surface px-5 py-4">
+          <h2 className="mb-2 text-sm font-semibold text-muted">이 컬렉션에서</h2>
+          <ul className="space-y-1 text-sm text-muted">
+            {position.map(({ key, label, href, count }) => (
+              <li key={key}>
+                {href ? (
+                  <Link href={href} className="text-ink hover:text-accent hover:underline">{label}</Link>
+                ) : (
+                  <span className="text-ink">{label}</span>
+                )}
+                {` ${count}곡 중 하나`}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {/* related */}

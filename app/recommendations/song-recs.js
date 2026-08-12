@@ -12,6 +12,15 @@ export default function SongRecs({ items }) {
     <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
       {items.map((s) => {
         const playing = track?.preview && track.preview === s.preview;
+        // basedOn: 옛 회차는 문자열, 새 회차는 검증된 구조체 — 문장은 여기서 조립
+        const basis =
+          typeof s.basedOn === "string"
+            ? s.basedOn
+            : s.basedOn?.reason
+              ? s.basedOn.songs?.[0]
+                ? `${s.basedOn.songs[0].title} — ${s.basedOn.reason}`
+                : s.basedOn.reason
+              : "";
         const inner = (
           <>
             <div
@@ -52,7 +61,7 @@ export default function SongRecs({ items }) {
               {s.year ? ` · ${s.year}` : ""}
             </p>
             {s.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{s.why}</p>}
-            {s.basedOn && <p className="mt-0.5 truncate text-[11px] text-accent/70">↳ {s.basedOn}</p>}
+            {basis && <p className="mt-0.5 truncate text-[11px] text-accent/70">↳ {basis}</p>}
           </>
         );
         return s.preview ? (
