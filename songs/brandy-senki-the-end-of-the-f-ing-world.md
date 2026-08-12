@@ -1,6 +1,6 @@
 ---
 title: The End of the F***ing World
-title_ko: 
+title_ko: 디 엔드 오브 더 퍽킹 월드
 artist: Brandy Senki
 artist_ko:
 album: The End of the F***ing World
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-19
 published: 2025-05-19T14:33:17.000Z
-comment:
+comment: 동명의 영국 드라마에서 영감을 받아 제작된 이 곡은 파멸을 향해 질주하는 청춘들의 위태로운 로맨스를 거칠고 질주감 있는 사운드로 그려낸다. 세상에 대한 불신과 서로를 향한 기묘한 연민이 뒤섞인 가사가 아슬아슬한 여운을 남긴다.
 source: instagram
 source_tag: 250519_2332
 source_note: 
