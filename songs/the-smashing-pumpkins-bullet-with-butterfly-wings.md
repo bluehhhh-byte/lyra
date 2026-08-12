@@ -1,6 +1,6 @@
 ---
 title: Bullet With Butterfly Wings
-title_ko: 
+title_ko: 불렛 위드 버터플라이 윙스
 artist: The Smashing Pumpkins
 artist_ko:
 album: Mellon Collie And The Infinite Sadness (Deluxe Edition)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-16
 published: 2025-05-15T23:35:04.000Z
-comment:
+comment: 이 곡은 억압적인 세상 속에서 분노와 무력감을 느끼는 인간의 본성을 날것 그대로 드러낸다. 빌리 코건의 절규하는 듯한 보컬과 폭발적인 기타 리프가 대비를 이루며 90년대 얼터너티브 록의 정수를 보여준다.
 source: instagram
 source_tag: 250516_0834
 source_note: 
