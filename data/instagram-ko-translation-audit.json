@@ -439,6 +439,94 @@
    "sourceCommit": "f7ca1c6",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:50:01.094Z"
+  },
+  {
+   "slug": "쏜애플-시퍼런-봄",
+   "batch": 8,
+   "originalLineCount": 53,
+   "addedTranslationCount": 53,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.841Z"
+  },
+  {
+   "slug": "아이유-분홍신",
+   "batch": 8,
+   "originalLineCount": 45,
+   "addedTranslationCount": 41,
+   "skippedCount": 4,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.845Z"
+  },
+  {
+   "slug": "김동률-산책",
+   "batch": 8,
+   "originalLineCount": 36,
+   "addedTranslationCount": 36,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.847Z"
+  },
+  {
+   "slug": "hathaw9y-낙서",
+   "batch": 8,
+   "originalLineCount": 32,
+   "addedTranslationCount": 32,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.848Z"
+  },
+  {
+   "slug": "자이언티-이문세-눈",
+   "batch": 8,
+   "originalLineCount": 28,
+   "addedTranslationCount": 28,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.849Z"
+  },
+  {
+   "slug": "김종서-starry-night",
+   "batch": 8,
+   "originalLineCount": 29,
+   "addedTranslationCount": 26,
+   "skippedCount": 3,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.850Z"
+  },
+  {
+   "slug": "자이언티-강승원-무중력",
+   "batch": 8,
+   "originalLineCount": 26,
+   "addedTranslationCount": 24,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.851Z"
+  },
+  {
+   "slug": "넋업샨-나찰-피타입-mc메타-불한당가",
+   "batch": 8,
+   "originalLineCount": 22,
+   "addedTranslationCount": 22,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "b78ce2c",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:17.852Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
