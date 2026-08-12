@@ -1,6 +1,6 @@
 ---
 title: Free
-title_ko: 
+title_ko: 프리
 artist: Rumi, Jinu
 artist_ko:
 album: KPop Demon Hunters (Soundtrack from the Netflix Film / Deluxe Version)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-08-06
 published: 2025-08-05T23:45:45.000Z
-comment:
+comment: 상처와 어두운 내면을 가진 서로가 진솔하게 교감하며 비로소 숨을 쉬고 자유를 갈구하는 모습을 담은 곡이다. 과거의 무게에서 벗어나 함께 맞설 용기를 북돋아 준다.
 source: instagram
 source_tag: 250806_0845
 source_note: NETFLIX, K-POP DEMON HUNTERS O.S.T.
