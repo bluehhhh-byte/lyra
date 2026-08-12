@@ -703,6 +703,94 @@
    "sourceCommit": "e9a3b6f",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:50:56.166Z"
+  },
+  {
+   "slug": "제네-더-질라-life",
+   "batch": 10,
+   "originalLineCount": 64,
+   "addedTranslationCount": 51,
+   "skippedCount": 13,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.582Z"
+  },
+  {
+   "slug": "swervy-justhis-trapped-in-the-drum",
+   "batch": 10,
+   "originalLineCount": 53,
+   "addedTranslationCount": 44,
+   "skippedCount": 9,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.585Z"
+  },
+  {
+   "slug": "솔루션스-들꽃",
+   "batch": 10,
+   "originalLineCount": 34,
+   "addedTranslationCount": 34,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.587Z"
+  },
+  {
+   "slug": "불나방-스타-쏘세지-클럽-불행히도-삶은-계속-되었다",
+   "batch": 10,
+   "originalLineCount": 33,
+   "addedTranslationCount": 33,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.589Z"
+  },
+  {
+   "slug": "김광석-혼자-남은-밤",
+   "batch": 10,
+   "originalLineCount": 27,
+   "addedTranslationCount": 27,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.590Z"
+  },
+  {
+   "slug": "장범준-사랑이란-말이-어울리는-사람",
+   "batch": 10,
+   "originalLineCount": 27,
+   "addedTranslationCount": 27,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.591Z"
+  },
+  {
+   "slug": "검정치마-혜야",
+   "batch": 10,
+   "originalLineCount": 23,
+   "addedTranslationCount": 23,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.593Z"
+  },
+  {
+   "slug": "김동률-여름의-끝자락",
+   "batch": 10,
+   "originalLineCount": 22,
+   "addedTranslationCount": 22,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "dfd1910",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:17.594Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
