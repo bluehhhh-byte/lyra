@@ -122,11 +122,6 @@ export default async function RecapPage({ searchParams }) {
                 {newArtists.length > 6 && ` 외 ${newArtists.length - 6}팀`}
               </p>
             )}
-            <p>
-              <Link href="/songs/thread" className="text-accent hover:underline">
-                기록의 흐름 보기 →
-              </Link>
-            </p>
           </div>
         </section>
       )}
