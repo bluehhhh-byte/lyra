@@ -1,6 +1,6 @@
 ---
 title: Travelin'
-title_ko: 
+title_ko: 트래블링
 artist: Miles Caton
 artist_ko:
 album: Sinners (Original Motion Picture Soundtrack)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-05
 published: 2025-06-04T23:35:12.000Z
-comment:
+comment: 사랑하는 연인의 무관심 속에서 방황하며 느끼는 깊은 허전함과 고독을 날것 그대로의 블루스 선율로 담아낸다.
 source: instagram
 source_tag: 250605_0835
 source_note: 영화 <씨너스: 죄인들> O.S.T.
