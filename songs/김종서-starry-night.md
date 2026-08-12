@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-29
 published: 2025-05-28T18:39:11.000Z
-comment:
+comment: 오랜 이별의 상처를 지나 새로운 사랑을 마주한 벅찬 감정을 호소력 짙은 록 발성으로 담아낸 곡이다.
 source: instagram
 source_tag: 250529_0337
 source_note: 
