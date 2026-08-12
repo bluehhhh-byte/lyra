@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-19
 published: 2025-05-18T23:33:23.000Z
-comment:
+comment: 타협 없이 스스로의 길을 개척하며 주체적인 보스가 되겠다는 강렬한 의지를 록 사운드에 담아냈다.
 source: instagram
 source_tag: 250519_0832
 source_note: 
