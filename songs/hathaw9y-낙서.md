@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-09
 published: 2025-06-09T13:41:28.000Z
-comment:
+comment: 관계의 권태와 이별의 과정을 낙서로 가득한 벽에 빗대어 허무하고 쓸쓸한 감정을 담담하게 그려낸다.
 source: instagram
 source_tag: 250609_2241
 source_note: 
