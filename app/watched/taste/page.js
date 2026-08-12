@@ -2,8 +2,6 @@ import Link from "next/link";
 import { getWatched } from "../../../lib/watched";
 import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
 import { readData } from "../../../lib/store";
-import { tmdbUrl } from "../../../lib/tmdb-link";
-import CoverImage from "../../cover-image";
 
 export const metadata = {
   title: "취향 분석 | Syno.",
@@ -96,7 +94,6 @@ function PrefSection({ title, high, low, mean, link }) {
 export default function TastePage() {
   const rated = getWatched().filter((m) => m.rating != null);
   const report = readData("taste-report.json", null);
-  const recs = readData("taste-recs.json", null);
 
   if (rated.length === 0) {
     return (
@@ -153,49 +150,6 @@ export default function TastePage() {
             ))}
           </div>
         </div>
-      )}
-
-      {/* 추천 — 안 본 영화. 리포트 바로 아래, 취향 막대들 위에 둔다 */}
-      {recs?.items?.length > 0 && (
-        <section className="mb-12">
-          <div className="mb-4 flex items-baseline justify-between gap-3">
-            <div>
-              <h2 className="text-sm font-semibold text-muted">이런 영화는 어떨까</h2>
-              <p className="mt-0.5 text-xs text-muted/60">평가하지 않은 작품 중 취향에 맞춰 고른 {recs.items.length}편</p>
-            </div>
-            {recs.items.length > 8 && (
-              <Link href="/recommendations" className="shrink-0 text-xs text-accent hover:underline">
-                전체 보기 →
-              </Link>
-            )}
-          </div>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-4">
-            {recs.items.slice(0, 8).map((m) => (
-              <a
-                key={m.tmdbId}
-                href={tmdbUrl(m.tmdbId, m.media)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="overflow-hidden rounded-lg border border-line bg-surface">
-                  <CoverImage
-                    src={m.poster}
-                    alt={m.title}
-                    label={m.title}
-                    loading="lazy"
-                    className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90"
-                  />
-                </div>
-                <p className="mt-1.5 truncate text-xs font-medium group-hover:text-accent">
-                  {m.title}
-                  {m.year ? <span className="text-muted"> · {m.year}</span> : null}
-                </p>
-                {m.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{m.why}</p>}
-              </a>
-            ))}
-          </div>
-        </section>
       )}
 
       <p className="mb-10 max-w-2xl text-xs leading-relaxed text-muted/70">

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { readData } from "../../../lib/store";
 import { getAllSongs } from "../../../lib/songs";
-import { parseEmotion } from "../../../lib/keywords";
 import CoverImage from "../../cover-image";
 
 export const metadata = {
@@ -65,10 +64,7 @@ export default function ThreadPage() {
                       <p className="break-words text-sm font-medium leading-snug">
                         {s.title} <span className="font-normal text-muted">· {s.artist}</span>
                       </p>
-                      <p className="text-xs text-muted/60">
-                        {(s.published || s.date || "").slice(0, 10)}
-                        {parseEmotion(s.emotion) ? ` · ${parseEmotion(s.emotion)}` : ""}
-                      </p>
+                      <p className="text-xs text-muted/60">{(s.published || s.date || "").slice(0, 10)}</p>
                     </div>
                   </div>
                   {i < timeline.length - 1 && (
