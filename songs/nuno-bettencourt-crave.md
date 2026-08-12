@@ -1,6 +1,6 @@
 ---
 title: Crave
-title_ko: 
+title_ko: 크레이브
 artist: Nuno Bettencourt
 artist_ko:
 album: Schizophonic
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-03
 published: 2025-07-02T23:23:12.000Z
-comment:
+comment: 누누 베텐베르크의 화려한 기타 연주 위로 상대방을 향한 강렬한 갈증과 집착을 직설적으로 풀어낸 곡이다. 스스로 만들어낸 고통 속에 갇힌 화자의 처절한 심경이 돋보인다.
 source: instagram
 source_tag: 250703_0823
 source_note: 
