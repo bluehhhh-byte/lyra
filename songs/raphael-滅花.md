@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ja
 tags: [일본, Visual Kei, 2001]
-keywords: []
-emotion:
+keywords: [계절, 바람, 꽃]
+emotion: 그리움
 date: 2025-04-29
 published: 2025-04-28T23:40:09.000Z
 comment:

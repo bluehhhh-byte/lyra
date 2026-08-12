@@ -12,8 +12,8 @@ duration: 255
 genre: K-Pop
 lang: ko
 tags: [한국, Indie Pop, 2021]
-keywords: []
-emotion:
+keywords: [미소, 눈빛, 목소리]
+emotion: 불안
 date: 2025-06-09
 published: 2025-06-09T13:41:28.000Z
 comment: 관계의 권태와 이별의 과정을 낙서로 가득한 벽에 빗대어 허무하고 쓸쓸한 감정을 담담하게 그려낸다.

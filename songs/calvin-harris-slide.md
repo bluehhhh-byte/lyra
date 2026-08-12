@@ -12,8 +12,8 @@ duration: 268
 genre: Dance
 lang: en
 tags: [영미, Dance, 2017]
-keywords: []
-emotion:
+keywords: [잔고, 피카소, 사랑]
+emotion: 설렘
 date: 2024-06-09
 published: 2024-06-08T19:00:41.000Z
 comment:

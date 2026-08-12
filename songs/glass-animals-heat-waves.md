@@ -12,8 +12,8 @@ duration: 239
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2020]
-keywords: []
-emotion:
+keywords: [열기, 거울, 도로]
+emotion: 그리움
 date: 2024-06-23
 published: 2024-06-22T23:59:53.000Z
 comment:

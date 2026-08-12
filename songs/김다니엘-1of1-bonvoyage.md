@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, R&B/Soul, 2025]
-keywords: []
-emotion:
+keywords: [도시, 미래, 먼지]
+emotion: 불안
 date: 2025-06-14
 published: 2025-06-14T13:09:41.000Z
 comment: 낯선 도시를 방황하며 불안한 미래를 마주하는 이들에게 따뜻한 안녕과 위로를 건네는 곡이다. 은은한 멜로디와 함께 서로의 존재를 기억하며 나아가는 여운을 남긴다.

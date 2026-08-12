@@ -12,8 +12,8 @@ duration: 239
 genre: Pop
 lang: en
 tags: [영미, Alternative Rock, 2004]
-keywords: []
-emotion:
+keywords: [거리, 강가, 땅]
+emotion: 그리움
 date: 2024-08-25
 published: 2024-08-24T20:13:02.000Z
 comment:

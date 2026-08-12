@@ -12,8 +12,8 @@ duration: 154
 genre: 
 lang: en
 tags: [한국, Hip-Hop, 2020]
-keywords: []
-emotion:
+keywords: [문제, 속옷, 신경]
+emotion: 체념
 date: 2025-06-12
 published: 2025-06-11T23:27:15.000Z
 comment: 삶의 무게와 고민 속에서도 멈추지 않고 앞으로 나아가겠다는 소코도모의 독특한 에너지가 돋보이는 곡이다. 가벼운 웃음소리 뒤에 숨겨진 현실적인 고뇌와 질주 본능이 인상적이다.

@@ -12,8 +12,8 @@ duration: 209
 genre: Alternative
 lang: en
 tags: [영미, Indie Rock, 2006]
-keywords: []
-emotion:
+keywords: [세상, 섬, 치맛자락]
+emotion: 슬픔
 date: 2025-08-20
 published: 2025-08-19T19:37:15.000Z
 comment: 순수했던 한 여성이 냉혹한 세상에 부딪혀 상처 입는 과정을 담담하게 그려낸 곡이다. 화자는 그녀를 진심으로 걱정하며 삶의 무게를 견뎌내라고 다독인다.

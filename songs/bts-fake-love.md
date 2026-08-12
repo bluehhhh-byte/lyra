@@ -12,8 +12,8 @@ duration: 121
 genre: 
 lang: ko
 tags: [한국, K-Pop, 2018]
-keywords: []
-emotion:
+keywords: [사랑, 약점, 척]
+emotion: 슬픔
 date: 2024-07-30
 published: 2024-07-30T14:43:58.000Z
 comment:

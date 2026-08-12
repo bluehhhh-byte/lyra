@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ja
 tags: [일본, J-Rock, 2022]
-keywords: []
-emotion:
+keywords: [바다, 여름, 파도소리]
+emotion: 슬픔
 date: 2024-06-24
 published: 2024-06-23T23:38:51.000Z
 comment:

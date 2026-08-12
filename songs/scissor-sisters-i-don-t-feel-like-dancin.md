@@ -12,8 +12,8 @@ duration: 248
 genre: 
 lang: en
 tags: [영미, Pop, 2009]
-keywords: []
-emotion:
+keywords: [드레스, 노래, 아침]
+emotion: 체념
 date: 2024-10-20
 published: 2024-10-20T12:27:12.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 292
 genre: Alternative
 lang: ja
 tags: [일본, J-Rock, 2019]
-keywords: []
-emotion:
+keywords: [죄, 내일, 예전]
+emotion: 체념
 date: 2024-06-09
 published: 2024-06-09T02:24:37.000Z
 comment:

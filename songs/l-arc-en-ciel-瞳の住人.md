@@ -12,8 +12,8 @@ duration: 426
 genre: Rock
 lang: ja
 tags: [일본, J-Rock, 2004]
-keywords: []
-emotion:
+keywords: [세월, 지도, 손끝]
+emotion: 사랑
 date: 2024-08-14
 published: 2024-08-14T10:53:44.000Z
 comment:

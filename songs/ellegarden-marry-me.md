@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [일본, J-Rock, 2005]
-keywords: []
-emotion:
+keywords: [결혼, 색종이, 소녀]
+emotion: 체념
 date: 2024-10-10
 published: 2024-10-09T19:07:35.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 331
 genre: 
 lang: ko
 tags: [한국, Indie Rock, 2015]
-keywords: []
-emotion:
+keywords: [영화, 조명, 땅]
+emotion: 불안
 date: 2024-08-18
 published: 2024-08-17T18:27:53.000Z
 comment:

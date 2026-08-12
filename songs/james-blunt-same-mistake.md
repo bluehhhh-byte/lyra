@@ -12,8 +12,8 @@ duration: 298
 genre: 팝
 lang: en
 tags: [영미, Pop, 2007]
-keywords: []
-emotion:
+keywords: [침대, 거리, 별]
+emotion: 체념
 date: 2025-07-02
 published: 2025-07-01T23:41:35.000Z
 comment: 자신의 내면을 응시하며 과거의 과오를 반복할지 모른다는 두려움을 덤덤하게 고백하는 곡이다. 제임스 블런트 특유의 서정적이면서도 쓸쓸한 목소리가 깊은 여운을 남긴다.

@@ -12,8 +12,8 @@ duration: 242
 genre: 
 lang: ko
 tags: [영미, Rock, 1997]
-keywords: []
-emotion:
+keywords: [세상, 예수님, 눈]
+emotion: 희망
 date: 2024-11-24
 published: 2024-11-24T06:11:11.000Z
 comment:

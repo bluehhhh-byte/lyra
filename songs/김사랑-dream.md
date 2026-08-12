@@ -12,8 +12,8 @@ duration: 194
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 1999]
-keywords: []
-emotion:
+keywords: [눈물, 사랑, 기관차]
+emotion: 저항
 date: 2025-07-28
 published: 2025-07-28T13:53:20.000Z
 comment: 타인의 그늘에서 벗어나 진정한 자아를 찾고자 하는 결연한 의지를 폭발적인 록 사운드에 담아냈다.

@@ -12,8 +12,8 @@ duration: 208
 genre: 록
 lang: en
 tags: [유럽, Heavy Metal, 1996]
-keywords: []
-emotion:
+keywords: [사람, 기회, 인생]
+emotion: 저항
 date: 2024-10-30
 published: 2024-10-30T13:57:33.000Z
 comment:

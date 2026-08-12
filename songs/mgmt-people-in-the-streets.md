@@ -12,8 +12,8 @@ duration: 337
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [삶, 태양, 빛]
+emotion: 불안
 date: 2024-07-12
 published: 2024-07-11T23:08:26.000Z
 comment:

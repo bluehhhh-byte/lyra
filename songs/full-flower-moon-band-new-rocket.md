@@ -12,8 +12,8 @@ duration: 184
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2020]
-keywords: []
-emotion:
+keywords: [로켓, 도시, 콘센트]
+emotion: 고독
 date: 2024-08-12
 published: 2024-08-12T14:32:39.000Z
 comment:

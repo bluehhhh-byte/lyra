@@ -4,6 +4,7 @@ import { getAllSongs, getSong } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
 import { getAllMovies } from "../../../lib/movies";
+import CoverImage from "../../cover-image";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
@@ -26,10 +27,10 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      images: [{ url: song.artwork, width: 600, height: 600 }],
+      images: song.artwork ? [{ url: song.artwork, width: 600, height: 600 }] : [],
       type: "article",
     },
-    twitter: { card: "summary", title, description, images: [song.artwork] },
+    twitter: { card: "summary", title, description, images: song.artwork ? [song.artwork] : [] },
   };
 }
 
@@ -101,20 +102,28 @@ export default async function SongPage({ params }) {
 
   return (
     <article>
-      {/* hero */}
+      {/* hero — 커버 없는 곡(artwork_none 등)은 배경 없이 텍스트 히어로 */}
       <div className="relative mb-12 overflow-hidden rounded-2xl border border-line">
-        <img
-          src={song.artwork}
-          alt=""
-          aria-hidden
-          className="hero-ambient absolute inset-0 h-full w-full object-cover opacity-40 blur-3xl"
-        />
-        <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
+        {song.artwork && (
           <img
             src={song.artwork}
-            alt={`${song.title} album art`}
-            className="w-40 rounded-xl shadow-2xl sm:w-48"
+            alt=""
+            aria-hidden
+            className="hero-ambient absolute inset-0 h-full w-full object-cover opacity-40 blur-3xl"
           />
+        )}
+        <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
+          {song.artwork ? (
+            <img
+              src={song.artwork}
+              alt={`${song.title} album art`}
+              className="w-40 rounded-xl shadow-2xl sm:w-48"
+            />
+          ) : (
+            <div className="flex aspect-square w-40 items-center justify-center rounded-xl border border-line bg-surface p-4 text-center text-sm text-muted sm:w-48">
+              {song.title}
+            </div>
+          )}
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{song.title}</h1>
             {song.title_ko && song.title_ko !== song.title && (
@@ -247,9 +256,10 @@ export default async function SongPage({ params }) {
             {related.map((s) => (
               <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
                 <div className="overflow-hidden rounded-lg border border-line bg-surface">
-                  <img
+                  <CoverImage
                     src={s.artwork}
                     alt=""
+                    label={s.title}
                     loading="lazy"
                     decoding="async"
                     className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"

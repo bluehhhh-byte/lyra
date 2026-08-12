@@ -12,8 +12,8 @@ duration: 213
 genre: 
 lang: en
 tags: [유럽, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [실수, 마음, 처음]
+emotion: 이별
 date: 2024-08-21
 published: 2024-08-20T23:57:45.000Z
 comment:

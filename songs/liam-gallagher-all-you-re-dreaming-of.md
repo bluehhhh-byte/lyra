@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2020]
-keywords: []
-emotion:
+keywords: [밤하늘, 별, 달빛]
+emotion: 위로
 date: 2024-09-28
 published: 2024-09-27T22:38:34.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hard Rock, 2001]
-keywords: []
-emotion:
+keywords: [외로움, 미소, 두려움]
+emotion: 설렘
 date: 2025-05-29
 published: 2025-05-28T18:39:11.000Z
 comment: 오랜 이별의 상처를 지나 새로운 사랑을 마주한 벅찬 감정을 호소력 짙은 록 발성으로 담아낸 곡이다.

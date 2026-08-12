@@ -12,8 +12,8 @@ duration: 245
 genre: 
 lang: ko
 tags: [한국, K-Pop, 2018]
-keywords: []
-emotion:
+keywords: [옷, 눈웃음, 게임]
+emotion: 설렘
 date: 2025-05-03
 published: 2025-05-03T13:27:44.000Z
 comment:

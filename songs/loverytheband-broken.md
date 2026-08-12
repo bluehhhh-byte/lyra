@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2018]
-keywords: []
-emotion:
+keywords: [바보, 외로움]
+emotion: 위로
 date: 2024-06-11
 published: 2024-06-11T14:31:38.000Z
 comment:

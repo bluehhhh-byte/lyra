@@ -12,8 +12,8 @@ duration: 232
 genre: 
 lang: en
 tags: [영미, Pop, 2006]
-keywords: []
-emotion:
+keywords: [뉴욕, 타임스퀘어, 거리]
+emotion: 그리움
 date: 2024-11-09
 published: 2024-11-09T02:14:13.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 208
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2024]
-keywords: []
-emotion:
+keywords: [꽃, 관, 그대]
+emotion: 불안
 date: 2024-10-22
 published: 2024-10-21T23:22:13.000Z
 comment:

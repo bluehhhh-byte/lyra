@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, R&B/Soul, 2024]
-keywords: []
-emotion:
+keywords: [속마음, 손, 세상]
+emotion: 슬픔
 date: 2024-07-13
 published: 2024-07-13T14:05:16.000Z
 comment:

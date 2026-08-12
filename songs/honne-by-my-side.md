@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Electronic, 2020]
-keywords: []
-emotion:
+keywords: [어깨, 세상, 힘]
+emotion: 위로
 date: 2024-07-16
 published: 2024-07-15T23:41:26.000Z
 comment:

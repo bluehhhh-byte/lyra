@@ -12,8 +12,8 @@ duration: 195
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [피부, 말, 요즘]
+emotion: 설렘
 date: 2024-09-05
 published: 2024-09-04T23:43:45.000Z
 comment:

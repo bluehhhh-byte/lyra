@@ -12,8 +12,8 @@ duration: 256
 genre: 
 lang: en
 tags: [영미, Punk Rock, 2009]
-keywords: []
-emotion:
+keywords: [엽서, 달빛, 심장]
+emotion: 사랑
 date: 2024-07-19
 published: 2024-07-18T23:01:49.000Z
 comment:

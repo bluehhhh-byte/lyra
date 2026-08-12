@@ -12,8 +12,8 @@ duration: 205
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2004]
-keywords: []
-emotion:
+keywords: [국기, 동상, 미소]
+emotion: 저항
 date: 2024-11-01
 published: 2024-11-01T14:39:06.000Z
 comment:

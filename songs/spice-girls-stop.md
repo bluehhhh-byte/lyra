@@ -12,8 +12,8 @@ duration: 205
 genre: Britpop
 lang: en
 tags: [영미, Pop, 1997]
-keywords: []
-emotion:
+keywords: [한걸음, 선택지]
+emotion: 설렘
 date: 2024-08-23
 published: 2024-08-22T23:43:33.000Z
 comment:

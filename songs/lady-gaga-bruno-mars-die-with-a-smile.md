@@ -12,8 +12,8 @@ duration: 252
 genre: 팝
 lang: en
 tags: [영미, Pop, 2024]
-keywords: []
-emotion:
+keywords: [꿈, 작별인사, 내일]
+emotion: 사랑
 date: 2024-09-11
 published: 2024-09-11T14:48:19.000Z
 comment:

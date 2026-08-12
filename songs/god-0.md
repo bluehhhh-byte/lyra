@@ -12,8 +12,8 @@ duration: 229
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2002]
-keywords: []
-emotion:
+keywords: [사랑, 상처, 눈빛]
+emotion: 사랑
 date: 2024-08-11
 published: 2024-08-10T22:44:25.000Z
 comment:

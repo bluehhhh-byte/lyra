@@ -12,8 +12,8 @@ duration: 309
 genre: 얼터너티브
 lang: en
 tags: [영미, Alternative Rock, 2000]
-keywords: []
-emotion:
+keywords: [기차, 여름, 비]
+emotion: 희망
 date: 2024-06-20
 published: 2024-06-19T23:41:00.000Z
 comment:

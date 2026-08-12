@@ -12,8 +12,8 @@ duration: 196
 genre: Pop
 lang: en
 tags: [아시아, K-Pop, 2025]
-keywords: []
-emotion:
+keywords: [목소리, 빛, 어둠]
+emotion: 사랑
 date: 2025-07-20
 published: 2025-07-20T14:40:30.000Z
 comment: 이 곡은 잭슨 왕이 화려한 스포트라이트 뒤의 공허함과 방황을 딛고 진정한 자아를 찾아가는 과정을 담담하게 풀어낸다. 과거의 가면을 벗어던지고 내면의 성장을 이뤄낸 그의 진솔한 고백이 깊은 여운을 남긴다.

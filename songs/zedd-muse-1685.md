@@ -12,8 +12,8 @@ duration: 371
 genre: 
 lang: en
 tags: [영미, Electronic, 2024]
-keywords: []
-emotion:
+keywords: [마리아, 상처, 황홀경]
+emotion: 위로
 date: 2024-10-17
 published: 2024-10-16T15:36:11.000Z
 comment:

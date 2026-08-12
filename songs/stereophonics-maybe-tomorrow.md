@@ -12,8 +12,8 @@ duration: 272
 genre: 
 lang: ko
 tags: [영미, Alternative Rock, 2003]
-keywords: []
-emotion:
+keywords: [먹구름, 시간]
+emotion: 위로
 date: 2025-01-20
 published: 2025-01-19T21:56:34.000Z
 comment:

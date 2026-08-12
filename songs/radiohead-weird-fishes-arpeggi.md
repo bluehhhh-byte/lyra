@@ -12,8 +12,8 @@ duration: 318
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2006]
-keywords: []
-emotion:
+keywords: [바다, 밑바닥, 눈]
+emotion: 몽환
 date: 2024-06-12
 published: 2024-06-11T23:44:30.000Z
 comment:

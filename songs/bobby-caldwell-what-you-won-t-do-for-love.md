@@ -12,8 +12,8 @@ duration: 286
 genre: 
 lang: en
 tags: [영미, R&B/Soul, 1978]
-keywords: []
-emotion:
+keywords: [사랑, 친구, 마음]
+emotion: 사랑
 date: 2024-10-24
 published: 2024-10-23T23:17:41.000Z
 comment:

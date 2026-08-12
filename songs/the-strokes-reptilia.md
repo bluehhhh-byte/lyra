@@ -12,8 +12,8 @@ duration: 220
 genre: Alternative
 lang: en
 tags: [영미, Indie Rock, 2003]
-keywords: []
-emotion:
+keywords: [이야기, 동네, 구역]
+emotion: 저항
 date: 2024-09-12
 published: 2024-09-11T15:05:19.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [한국, Hip-Hop, 2024]
-keywords: []
-emotion:
+keywords: [봄, 눈]
+emotion: 그리움
 date: 2024-07-13
 published: 2024-07-13T01:06:33.000Z
 comment:

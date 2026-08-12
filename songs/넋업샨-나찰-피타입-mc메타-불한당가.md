@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2013]
-keywords: []
-emotion:
+keywords: [불한당, 서울, 한강]
+emotion: 저항
 date: 2024-12-06
 published: 2024-12-05T23:32:42.000Z
 comment:

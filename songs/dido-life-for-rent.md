@@ -12,8 +12,8 @@ duration: 221
 genre: Pop
 lang: en
 tags: [영미, Pop, 2003]
-keywords: []
-emotion:
+keywords: [집, 인생, 기회]
+emotion: 체념
 date: 2025-07-16
 published: 2025-07-16T01:44:09.000Z
 comment: 정착하지 못한 채 삶을 빌려 사는 듯한 방황과 고독을 담담한 목소리로 풀어낸 곡이다. 마음을 닫아둔 채 살아가는 삶에 대한 깊은 성찰을 느끼게 한다.

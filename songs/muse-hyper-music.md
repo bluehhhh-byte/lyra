@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2001]
-keywords: []
-emotion:
+keywords: [거짓말, 무덤, 세계]
+emotion: 분노
 date: 2024-10-14
 published: 2024-10-13T23:57:00.000Z
 comment:

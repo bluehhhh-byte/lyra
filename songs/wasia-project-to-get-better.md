@@ -12,8 +12,8 @@ duration: 317
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [방, 차, 모래]
+emotion: 위로
 date: 2024-09-04
 published: 2024-09-03T22:23:34.000Z
 comment:

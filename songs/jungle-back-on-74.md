@@ -12,8 +12,8 @@ duration: 209
 genre: Dance
 lang: en
 tags: [영미, Funk, 2023]
-keywords: []
-emotion:
+keywords: [고향, 휴식, 비]
+emotion: 회상
 date: 2024-06-09
 published: 2024-06-09T01:28:45.000Z
 comment:

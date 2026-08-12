@@ -12,8 +12,8 @@ duration: 233
 genre: 
 lang: en
 tags: [영미, Hard Rock, 2004]
-keywords: []
-emotion:
+keywords: [사람, 부, 특별함]
+emotion: 분노
 date: 2025-06-06
 published: 2025-06-05T19:56:51.000Z
 comment: 더 큰 부와 화려함을 쫓아 떠났던 상대가 모든 것을 잃은 채 돌아온 상황을 담담하게 일깨우는 곡이다. 진정한 사랑보다 물질적인 욕망을 택했던 선택이 결국 부메랑처럼 돌아온다는 메시지를 전한다.

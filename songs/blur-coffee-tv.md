@@ -12,8 +12,8 @@ duration: 359
 genre: 얼터너티브
 lang: en
 tags: [영미, Alternative Rock, 1999]
-keywords: []
-emotion:
+keywords: [마트, 사람들, 마음]
+emotion: 고독
 date: 2024-08-27
 published: 2024-08-26T23:39:02.000Z
 comment:

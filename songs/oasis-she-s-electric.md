@@ -12,8 +12,8 @@ duration: 221
 genre: Indie Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
-keywords: []
-emotion:
+keywords: [전기, 가족, 여동생]
+emotion: 기쁨
 date: 2025-07-24
 published: 2025-07-24T12:13:58.000Z
 comment: 괴짜 가족 속 그녀에게 매료된 화자의 마음을 경쾌한 멜로디로 그려낸 명곡이다. 톡톡 튀는 가사와 재치 있는 묘사가 들을수록 흥겨움을 더한다.

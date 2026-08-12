@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ja
 tags: [일본, Soundtrack, 2002]
-keywords: []
-emotion:
+keywords: [가슴, 꿈, 하늘]
+emotion: 희망
 date: 2024-09-18
 published: 2024-09-18T13:32:29.000Z
 comment:

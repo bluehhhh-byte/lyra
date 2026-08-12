@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 1995]
-keywords: []
-emotion:
+keywords: [플라스틱, 고무, 마을]
+emotion: 체념
 date: 2024-06-25
 published: 2024-06-24T23:44:31.000Z
 comment:

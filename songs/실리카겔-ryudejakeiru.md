@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 2023]
-keywords: []
-emotion:
+keywords: [꿈, 재앙, 날씨]
+emotion: 몽환
 date: 2024-10-22
 published: 2024-10-22T14:29:27.000Z
 comment:

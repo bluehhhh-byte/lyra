@@ -12,8 +12,8 @@ duration: 237
 genre: 
 lang: en
 tags: [한국, Synth-Pop, 2021]
-keywords: []
-emotion:
+keywords: [춤, 시선, 곁]
+emotion: 사랑
 date: 2024-07-17
 published: 2024-07-16T21:28:49.000Z
 comment:

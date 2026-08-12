@@ -12,8 +12,8 @@ duration: 186
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2019]
-keywords: []
-emotion:
+keywords: [기억, 균열, 시간]
+emotion: 회상
 date: 2024-06-19
 published: 2024-06-18T23:34:55.000Z
 comment:

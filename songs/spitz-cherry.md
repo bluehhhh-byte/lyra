@@ -12,8 +12,8 @@ duration: 261
 genre: 
 lang: ja
 tags: [일본, J-Rock, 1996]
-keywords: []
-emotion:
+keywords: [태양, 모래, 미래]
+emotion: 희망
 date: 2024-08-15
 published: 2024-08-15T03:39:59.000Z
 comment:

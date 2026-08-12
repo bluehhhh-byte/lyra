@@ -12,8 +12,8 @@ duration: 220
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2023]
-keywords: []
-emotion:
+keywords: [컨트롤러, 부리부리, 정신]
+emotion: 몽환
 date: 2025-03-19
 published: 2025-03-18T23:19:35.000Z
 comment:

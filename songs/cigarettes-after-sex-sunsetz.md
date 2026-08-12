@@ -12,8 +12,8 @@ duration: 214
 genre: 
 lang: en
 tags: [영미, Dream Pop, 2017]
-keywords: []
-emotion:
+keywords: [해, 마을, 그네]
+emotion: 몽환
 date: 2024-09-08
 published: 2024-09-08T14:30:53.000Z
 comment:

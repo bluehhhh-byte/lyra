@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Folk, 2008]
-keywords: []
-emotion:
+keywords: [까마귀, 허수아비, 빈병]
+emotion: 그리움
 date: 2024-06-21
 published: 2024-06-21T09:55:47.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ja
 tags: [일본, J-Pop, 1999]
-keywords: []
-emotion:
+keywords: [아침, 교차로, 우산]
+emotion: 위로
 date: 2025-05-23
 published: 2025-05-22T19:34:27.000Z
 comment: 이별의 슬픔을 안은 채 무심히 흘러가는 일상을 담담하게 그려내며 깊은 여운을 준다. 상실감 속에서도 아침은 어김없이 찾아온다는 사실이 아이러니하게도 큰 위로로 다가온다.

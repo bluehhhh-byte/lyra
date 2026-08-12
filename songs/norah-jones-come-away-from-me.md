@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Jazz, 2002]
-keywords: []
-emotion:
+keywords: [밤, 노래, 버스]
+emotion: 사랑
 date: 2024-06-30
 published: 2024-06-30T09:30:15.000Z
 comment:

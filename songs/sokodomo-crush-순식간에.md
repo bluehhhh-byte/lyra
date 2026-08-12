@@ -12,8 +12,8 @@ duration: 202
 genre: Hip-Hop/Rap
 lang: ko
 tags: [한국, Hip-Hop, 2025]
-keywords: []
-emotion:
+keywords: [미소, 향기, 심장]
+emotion: 설렘
 date: 2025-07-21
 published: 2025-07-20T22:56:00.000Z
 comment: 소코도모와 크러쉬가 참여한 이 곡은 사랑에 빠지는 찰나의 순간을 감각적인 사운드로 풀어낸다. 예측할 수 없는 마음의 동요를 유쾌하면서도 몰입감 있게 그려낸다.

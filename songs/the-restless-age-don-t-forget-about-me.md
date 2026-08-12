@@ -12,8 +12,8 @@ duration: 233
 genre: 
 lang: en
 tags: [영미, Folk, 2024]
-keywords: []
-emotion:
+keywords: [책, 학교, 역사]
+emotion: 위로
 date: 2024-06-30
 published: 2024-06-30T14:30:59.000Z
 comment:

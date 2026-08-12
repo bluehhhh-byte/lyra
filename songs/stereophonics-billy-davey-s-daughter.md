@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [영미, Alternative Rock, 1997]
-keywords: []
-emotion:
+keywords: [이름, 명성, 다리]
+emotion: 슬픔
 date: 2025-01-20
 published: 2025-01-19T22:07:54.000Z
 comment:

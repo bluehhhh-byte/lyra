@@ -12,8 +12,8 @@ duration: 274
 genre: 
 lang: ko
 tags: [영미, R&B/Soul, 1999]
-keywords: []
-emotion:
+keywords: [불빛, 식당, 돈]
+emotion: 슬픔
 date: 2024-12-28
 published: 2024-12-28T05:55:07.000Z
 comment:

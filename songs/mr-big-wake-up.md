@@ -12,8 +12,8 @@ duration: 225
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2001]
-keywords: []
-emotion:
+keywords: [학교, 분노, 사람들]
+emotion: 저항
 date: 2025-07-10
 published: 2025-07-09T23:42:01.000Z
 comment: 학교 폭력과 방황으로 고통받는 청소년에게 내면의 목소리를 듣고 일어섭시라고 외치는 미스터 빅의 메시지가 돋보인다. 화려한 연주 뒤에 감춰진 따뜻한 위로와 삶에 대한 응원이 진하게 전해진다.

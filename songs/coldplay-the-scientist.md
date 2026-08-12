@@ -12,8 +12,8 @@ duration: 237
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2002]
-keywords: []
-emotion:
+keywords: [비밀, 처음, 말]
+emotion: 슬픔
 date: 2024-11-11
 published: 2024-11-11T00:03:01.000Z
 comment:

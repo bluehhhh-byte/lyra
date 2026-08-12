@@ -12,8 +12,8 @@ duration: 338
 genre: 
 lang: en
 tags: [한국, Indie Pop, 2017]
-keywords: []
-emotion:
+keywords: [길, 별, 춤]
+emotion: 불안
 date: 2024-07-05
 published: 2024-07-04T23:18:38.000Z
 comment:

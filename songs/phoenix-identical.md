@@ -12,8 +12,8 @@ duration: 302
 genre: 
 lang: en
 tags: [유럽, Indie Pop, 2020]
-keywords: []
-emotion:
+keywords: [내성적]
+emotion: 고독
 date: 2024-09-24
 published: 2024-09-23T23:12:49.000Z
 comment:

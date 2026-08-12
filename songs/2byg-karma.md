@@ -12,8 +12,8 @@ duration: 161
 genre: R&B/소울
 lang: en
 tags: [한국, R&B/Soul, 2025]
-keywords: []
-emotion:
+keywords: [업보, 세상, 눈물]
+emotion: 체념
 date: 2025-05-21
 published: 2025-05-21T12:00:08.000Z
 comment: 인과응보의 법칙을 주제로 상처 준 상대에게 연연하지 않고 홀로서기를 다짐하는 곡이다. 트렌디한 사운드와 함께 더 이상 눈물 흘리지 않겠다는 당당한 태도가 돋보인다.

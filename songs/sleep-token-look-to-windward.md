@@ -12,8 +12,8 @@ duration: 466
 genre: 
 lang: en
 tags: [영미, Metal, 2025]
-keywords: []
-emotion:
+keywords: [목소리, 어둠, 그림자]
+emotion: 불안
 date: 2025-05-14
 published: 2025-05-13T23:18:12.000Z
 comment: 이 곡은 자아와의 내면적 갈등과 파괴적인 충동을 강렬하고 몽환적인 사운드로 풀어낸다. 절망의 깊은 곳에서도 구원을 갈구하는 복잡한 감정이 짙게 배어난다.

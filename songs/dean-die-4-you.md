@@ -12,8 +12,8 @@ duration: 194
 genre: R&B/소울
 lang: en
 tags: [한국, R&B/Soul, 2024]
-keywords: []
-emotion:
+keywords: [한사람]
+emotion: 사랑
 date: 2024-07-16
 published: 2024-07-16T12:35:07.000Z
 comment:

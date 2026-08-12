@@ -12,8 +12,8 @@ duration: 201
 genre: 팝
 lang: en
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [헤드라이트, 이유, 시작]
+emotion: 불안
 date: 2024-07-04
 published: 2024-07-04T13:38:42.000Z
 comment:

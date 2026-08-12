@@ -12,8 +12,8 @@ duration: 190
 genre: 얼터너티브
 lang: en
 tags: [영미, Alternative Rock, 2024]
-keywords: []
-emotion:
+keywords: [칼날, 관점]
+emotion: 분노
 date: 2024-09-12
 published: 2024-09-11T23:10:58.000Z
 comment:

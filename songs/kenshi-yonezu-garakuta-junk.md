@@ -12,8 +12,8 @@ duration: 238
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2024]
-keywords: []
-emotion:
+keywords: [공허, 밤, 알람]
+emotion: 위로
 date: 2024-09-04
 published: 2024-09-03T23:17:30.000Z
 comment:

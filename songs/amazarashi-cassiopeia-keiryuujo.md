@@ -12,8 +12,8 @@ duration: 375
 genre: 
 lang: ja
 tags: [일본, J-Rock, 2022]
-keywords: []
-emotion:
+keywords: [선착장, 가로등, 우주]
+emotion: 희망
 date: 2024-12-09
 published: 2024-12-09T13:18:15.000Z
 comment:

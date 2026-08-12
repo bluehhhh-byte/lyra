@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [영미, Hard Rock, 1999]
-keywords: []
-emotion:
+keywords: [비눗방울, 흐름, 마음]
+emotion: 저항
 date: 2024-11-23
 published: 2024-11-23T00:55:28.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Indie Rock, 2024]
-keywords: []
-emotion:
+keywords: [불, 바다, 친구]
+emotion: 저항
 date: 2024-11-19
 published: 2024-11-18T23:42:36.000Z
 comment:

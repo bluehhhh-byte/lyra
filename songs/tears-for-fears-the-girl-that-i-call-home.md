@@ -12,8 +12,8 @@ duration: 224
 genre: 
 lang: en
 tags: [영미, Synth-Pop, 2024]
-keywords: []
-emotion:
+keywords: [물, 칼, 십자가]
+emotion: 사랑
 date: 2024-09-23
 published: 2024-09-22T21:12:40.000Z
 comment:

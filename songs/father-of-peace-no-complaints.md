@@ -12,8 +12,8 @@ duration: 152
 genre: Rock
 lang: en
 tags: [영미, 2025]
-keywords: []
-emotion:
+keywords: [삶, 클럽, 재미]
+emotion: 체념
 date: 2025-06-29
 published: 2025-06-29T04:12:39.000Z
 comment: 일상의 답답함과 혼란 속에서도 스스로를 다독이며 평온을 찾아가는 여정을 담은 곡이다. 거친 표현 뒤에 이어지는 진솔한 위로와 바다를 향한 바람이 잔잔한 여운을 남긴다.

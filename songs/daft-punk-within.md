@@ -12,8 +12,8 @@ duration: 229
 genre: 팝
 lang: ko
 tags: [유럽, Electronic, 2013]
-keywords: []
-emotion:
+keywords: [세계, 방, 문]
+emotion: 고독
 date: 2024-12-27
 published: 2024-12-26T16:30:08.000Z
 comment:

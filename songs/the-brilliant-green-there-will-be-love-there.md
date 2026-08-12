@@ -12,8 +12,8 @@ duration: 243
 genre: 
 lang: ja
 tags: [일본, J-Rock, 1999]
-keywords: []
-emotion:
+keywords: [모퉁이, 기다림, 불안함]
+emotion: 희망
 date: 2025-05-28
 published: 2025-05-27T23:05:22.000Z
 comment: 불안과 고민 속에서도 미래를 향해 나아가며 진정한 사랑을 찾겠다는 의지를 담은 곡이다. 맑고 청량한 밴드 사운드와 카와세 토코모의 보컬이 조화를 이룬다.

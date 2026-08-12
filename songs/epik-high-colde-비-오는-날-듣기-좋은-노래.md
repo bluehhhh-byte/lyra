@@ -12,8 +12,8 @@ duration: 244
 genre: Hip-Hop/Rap
 lang: ko
 tags: [한국, Hip-Hop, 2021]
-keywords: []
-emotion:
+keywords: [비, 음악, 노래]
+emotion: 그리움
 date: 2025-07-18
 published: 2025-07-18T13:38:18.000Z
 comment: 비가 내리는 날 우연히 흘러나오는 음악과 술에 기대어 지나간 연인을 솔직하게 그리워하는 곡이다. 덤덤하게 내뱉는 랩과 쓸쓸한 보컬이 어우러져 빗소리처럼 마음을 차분하게 적신다.

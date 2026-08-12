@@ -12,8 +12,8 @@ duration: 251
 genre: 
 lang: en
 tags: [영미, Folk, 2004]
-keywords: []
-emotion:
+keywords: [여왕, 생각, 사랑]
+emotion: 사랑
 date: 2024-07-27
 published: 2024-07-26T23:06:08.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 374
 genre: 
 lang: en
 tags: [영미, R&B/Soul, 2023]
-keywords: []
-emotion:
+keywords: [집, 계절, 기회]
+emotion: 위로
 date: 2024-06-17
 published: 2024-06-16T15:08:37.000Z
 comment:

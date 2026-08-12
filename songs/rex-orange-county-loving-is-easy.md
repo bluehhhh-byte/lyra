@@ -12,8 +12,8 @@ duration: 155
 genre: 
 lang: en
 tags: [영미, Indie Pop]
-keywords: []
-emotion:
+keywords: [사랑, 완벽]
+emotion: 기쁨
 date: 2024-07-15
 published: 2024-07-15T12:56:19.000Z
 comment:

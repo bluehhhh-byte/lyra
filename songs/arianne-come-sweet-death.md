@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Soundtrack, 2020]
-keywords: []
-emotion:
+keywords: [상처, 고통, 존중]
+emotion: 체념
 date: 2024-10-28
 published: 2024-10-27T23:40:29.000Z
 comment:

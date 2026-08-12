@@ -12,8 +12,8 @@ duration: 190
 genre: Rock
 lang: en
 tags: [영미, Rock, 2017]
-keywords: []
-emotion:
+keywords: [우주, 공룡, 운석]
+emotion: 사랑
 date: 2024-07-23
 published: 2024-07-22T23:24:25.000Z
 comment:

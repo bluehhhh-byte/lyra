@@ -12,8 +12,8 @@ duration: 225
 genre: 
 lang: ja
 tags: [일본, J-Rock, 1994]
-keywords: []
-emotion:
+keywords: [거미, 피아노, 블라우스]
+emotion: 몽환
 date: 2025-05-21
 published: 2025-05-20T23:07:33.000Z
 comment: 지하실의 거미에 자신을 빗대어 사랑하는 이를 데리고 멀리 도망치고 싶은 강렬한 소망을 담은 곡이다. 밝고 경쾌한 멜로디 이면에 집착과 불안이 묘하게 교차하는 스피츠 특유의 독특한 감성이 돋보인다.

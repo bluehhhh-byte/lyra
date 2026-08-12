@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2021]
-keywords: []
-emotion:
+keywords: [자몽, 하늘, 조합]
+emotion: 기쁨
 date: 2025-06-30
 published: 2025-06-29T23:46:44.000Z
 comment: 사랑하는 사람과 함께하는 일상을 축제처럼 즐기며 미래에 대한 확신과 기쁨을 가감 없이 드러낸다. 화려한 겉모습보다 서로가 함께하는 순간 그 자체가 가장 큰 축복임을 경쾌하게 노래한다.

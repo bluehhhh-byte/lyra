@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ja
 tags: [일본, J-Rock, 2025]
-keywords: []
-emotion:
+keywords: [괴수, 밤, 비밀]
+emotion: 몽환
 date: 2025-03-18
 published: 2025-03-17T23:49:02.000Z
 comment:

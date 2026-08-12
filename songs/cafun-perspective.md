@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2023]
-keywords: []
-emotion:
+keywords: [대화, 길, 방향]
+emotion: 불안
 date: 2024-06-17
 published: 2024-06-16T15:22:09.000Z
 comment:

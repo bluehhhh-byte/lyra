@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, 2006]
-keywords: []
-emotion:
+keywords: [꿈, 손]
+emotion: 불안
 date: 2024-09-09
 published: 2024-09-08T23:20:24.000Z
 comment:

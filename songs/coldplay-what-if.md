@@ -12,8 +12,8 @@ duration: 297
 genre: Alternative
 lang: en
 tags: [영미, Alternative Rock, 2005]
-keywords: []
-emotion:
+keywords: [거짓말, 시간, 결정]
+emotion: 불안
 date: 2024-12-25
 published: 2024-12-25T00:52:11.000Z
 comment:

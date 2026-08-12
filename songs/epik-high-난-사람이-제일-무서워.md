@@ -12,8 +12,8 @@ duration: 189
 genre: Hip-Hop/Rap
 lang: ko
 tags: [한국, Hip-Hop, 2017]
-keywords: []
-emotion:
+keywords: [사람, 시대, 벼]
+emotion: 불안
 date: 2025-06-20
 published: 2025-06-20T13:38:02.000Z
 comment: 인간의 이중성과 세상의 부조리함에 대한 깊은 회의감을 타블로 특유의 어두운 시선으로 풀어냈다. 상처와 불신으로 가득한 현실 속에서도 결국 음악을 통해 구원을 갈구한다.

@@ -12,8 +12,8 @@ duration: 287
 genre: Rock
 lang: en
 tags: [일본, J-Rock, 2024]
-keywords: []
-emotion:
+keywords: [음식, 부적응자, 무감각]
+emotion: 고독
 date: 2024-10-11
 published: 2024-10-11T14:44:55.000Z
 comment:

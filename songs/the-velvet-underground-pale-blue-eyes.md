@@ -12,8 +12,8 @@ duration: 338
 genre: 
 lang: en
 tags: [영미, Rock, 1969]
-keywords: []
-emotion:
+keywords: [눈동자, 행복]
+emotion: 사랑
 date: 2024-06-27
 published: 2024-06-27T13:26:55.000Z
 comment:

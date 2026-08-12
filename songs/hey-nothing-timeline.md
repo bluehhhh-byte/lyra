@@ -12,8 +12,8 @@ duration: 332
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2024]
-keywords: []
-emotion:
+keywords: [타이밍, 시간선, 불]
+emotion: 그리움
 date: 2024-10-02
 published: 2024-10-02T12:52:23.000Z
 comment:

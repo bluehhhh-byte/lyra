@@ -12,8 +12,8 @@ duration: 188
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2019]
-keywords: []
-emotion:
+keywords: [햇살, 춤, 현실]
+emotion: 위로
 date: 2024-09-18
 published: 2024-09-18T08:20:08.000Z
 comment:

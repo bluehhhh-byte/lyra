@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2014]
-keywords: []
-emotion:
+keywords: [삶, 시간, 연인들]
+emotion: 이별
 date: 2024-07-08
 published: 2024-07-07T23:25:10.000Z
 comment:

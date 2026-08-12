@@ -12,8 +12,8 @@ duration: 293
 genre: Metal
 lang: en
 tags: [영미, Heavy Metal, 1980]
-keywords: []
-emotion:
+keywords: [세상, 적, 증오]
+emotion: 저항
 date: 2025-07-25
 published: 2025-07-25T14:10:50.000Z
 comment: 냉전 시대의 불안과 사회적 혼란 속에서 정신적 상처를 안고 살아가는 현대인의 모습을 광기 어린 열차에 빗대어 표현한 헤비메탈의 명곡이다. 랜디 로즈의 강렬한 기타 리프가 곡의 질주감을 더하며 냉소적이면서도 평화를 갈구하는 메시지를 전달한다.

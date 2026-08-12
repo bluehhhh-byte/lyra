@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, K-Pop, 2024]
-keywords: []
-emotion:
+keywords: [권력, 영향력, 존재감]
+emotion: 저항
 date: 2024-11-01
 published: 2024-10-31T23:21:20.000Z
 comment:

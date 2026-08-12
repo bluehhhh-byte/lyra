@@ -12,8 +12,8 @@ duration: 200
 genre: 
 lang: en
 tags: [영미, R&B/Soul, 2023]
-keywords: []
-emotion:
+keywords: [파도, 서핑, 예술]
+emotion: 설렘
 date: 2024-06-24
 published: 2024-06-24T14:42:58.000Z
 comment:

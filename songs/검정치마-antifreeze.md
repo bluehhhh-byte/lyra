@@ -12,8 +12,8 @@ duration: 243
 genre: 
 lang: ko
 tags: [한국, Indie Rock, 2008]
-keywords: []
-emotion:
+keywords: [우주, 태양, 눈보라]
+emotion: 사랑
 date: 2024-11-20
 published: 2024-11-19T23:07:12.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 196
 genre: 
 lang: en
 tags: [영미, Rock, 1965]
-keywords: []
-emotion:
+keywords: [미셸, 단어]
+emotion: 사랑
 date: 2024-07-08
 published: 2024-07-07T23:48:53.000Z
 comment:

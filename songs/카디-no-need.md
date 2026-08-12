@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, 2024]
-keywords: []
-emotion:
+keywords: [전율, 인내심, 시작]
+emotion: 희망
 date: 2025-05-19
 published: 2025-05-18T23:33:23.000Z
 comment: 타협 없이 스스로의 길을 개척하며 주체적인 보스가 되겠다는 강렬한 의지를 록 사운드에 담아냈다.

@@ -12,8 +12,8 @@ duration: 167
 genre: Alternative
 lang: en
 tags: [영미, R&B/Soul, 2020]
-keywords: []
-emotion:
+keywords: [악마, 연기, 웃음]
+emotion: 불안
 date: 2024-06-21
 published: 2024-06-20T23:45:39.000Z
 comment:

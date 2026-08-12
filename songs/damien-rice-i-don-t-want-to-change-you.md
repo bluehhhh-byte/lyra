@@ -12,8 +12,8 @@ duration: 326
 genre: 팝
 lang: en
 tags: [유럽, Folk, 2014]
-keywords: []
-emotion:
+keywords: [거리, 도움, 사람]
+emotion: 사랑
 date: 2024-07-23
 published: 2024-07-23T11:55:21.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 235
 genre: Pop
 lang: en
 tags: [영미, Dream Pop, 2015]
-keywords: []
-emotion:
+keywords: [손, 시간, 방식]
+emotion: 사랑
 date: 2024-08-22
 published: 2024-08-21T23:10:53.000Z
 comment:

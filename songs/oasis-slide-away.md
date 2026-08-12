@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 1994]
-keywords: []
-emotion:
+keywords: [꿈, 하루, 세상]
+emotion: 그리움
 date: 2024-06-18
 published: 2024-06-18T00:08:05.000Z
 comment:

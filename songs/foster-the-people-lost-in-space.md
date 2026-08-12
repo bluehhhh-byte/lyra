@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [백일몽, 유리, 하늘]
+emotion: 몽환
 date: 2024-09-30
 published: 2024-09-29T23:33:36.000Z
 comment:

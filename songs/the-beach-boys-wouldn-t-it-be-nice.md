@@ -12,8 +12,8 @@ duration: 154
 genre: Rock
 lang: en
 tags: [영미, Rock, 1966]
-keywords: []
-emotion:
+keywords: [나이, 세상]
+emotion: 설렘
 date: 2024-07-22
 published: 2024-07-22T14:30:55.000Z
 comment:

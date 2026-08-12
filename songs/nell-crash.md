@@ -12,8 +12,8 @@ duration: 167
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 2021]
-keywords: []
-emotion:
+keywords: [바보, 말, 머릿속]
+emotion: 설렘
 date: 2025-07-01
 published: 2025-06-30T23:06:23.000Z
 comment: 좋아하는 사람 앞에만 서면 머릿속이 하얗게 변하고 아무 말도 하지 못하는 당황스러운 마음을 록 사운드에 담아냈다. 멈추지 못하고 상대에게 계속 부딪힌다는 직설적인 표현이 풋풋하면서도 강렬한 인상을 남긴다.

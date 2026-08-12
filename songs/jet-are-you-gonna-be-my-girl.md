@@ -12,8 +12,8 @@ duration: 214
 genre: 록
 lang: en
 tags: [영미, Indie Rock, 2003]
-keywords: []
-emotion:
+keywords: [손, 사람]
+emotion: 설렘
 date: 2025-06-29
 published: 2025-06-29T13:56:15.000Z
 comment: 호주 출신 록 밴드 젯의 대표곡으로, 1960년대 개러지 록과 모던 록의 에너지를 폭발적으로 결합해 청자의 귀를 사로잡는다. 첫눈에 반한 상대에게 거침없이 직진하는 화자의 패기가 경쾌한 리듬과 맞물려 짜릿한 해방감을 선사한다.

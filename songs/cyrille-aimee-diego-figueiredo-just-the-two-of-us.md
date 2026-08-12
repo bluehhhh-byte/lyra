@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [유럽, Jazz, 2016]
-keywords: []
-emotion:
+keywords: [빗방울, 태양, 무지개]
+emotion: 사랑
 date: 2024-10-26
 published: 2024-10-25T16:39:37.000Z
 comment:

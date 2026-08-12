@@ -12,8 +12,8 @@ duration: 170
 genre: 재즈
 lang: en
 tags: [유럽, Jazz, 2023]
-keywords: []
-emotion:
+keywords: [침묵, 눈빛, 아픔]
+emotion: 설렘
 date: 2024-10-25
 published: 2024-10-24T23:27:09.000Z
 comment:

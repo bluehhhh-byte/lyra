@@ -12,8 +12,8 @@ duration: 262
 genre: 
 lang: ko
 tags: [한국, Ballad, 2002]
-keywords: []
-emotion:
+keywords: [숨소리, 눈, 후회]
+emotion: 슬픔
 date: 2024-11-10
 published: 2024-11-10T01:45:55.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 227
 genre: Alternative
 lang: en
 tags: [영미, Pop, 2024]
-keywords: []
-emotion:
+keywords: [삶, 직장, 눈빛]
+emotion: 설렘
 date: 2024-07-04
 published: 2024-07-03T23:30:27.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 201
 genre: 얼터너티브
 lang: en
 tags: [한국, Indie Rock, 2024]
-keywords: []
-emotion:
+keywords: [유명인, 보석, 파티]
+emotion: 사랑
 date: 2024-09-07
 published: 2024-09-06T15:22:05.000Z
 comment:

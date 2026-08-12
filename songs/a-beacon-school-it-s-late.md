@@ -12,8 +12,8 @@ duration: 366
 genre: 
 lang: en
 tags: [영미, Dream Pop, 2018]
-keywords: []
-emotion:
+keywords: [빚, 안정감, 곳]
+emotion: 불안
 date: 2024-09-23
 published: 2024-09-23T10:01:46.000Z
 comment:

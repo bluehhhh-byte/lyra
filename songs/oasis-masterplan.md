@@ -12,8 +12,8 @@ duration: 293
 genre: Indie Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
-keywords: []
-emotion:
+keywords: [파도, 희망, 해안가]
+emotion: 위로
 date: 2024-08-29
 published: 2024-08-28T23:23:50.000Z
 comment:

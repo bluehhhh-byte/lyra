@@ -12,8 +12,8 @@ duration: 245
 genre: Metal
 lang: en
 tags: [유럽, Metal, 2019]
-keywords: []
-emotion:
+keywords: [거리, 유명세, 슬픔]
+emotion: 몽환
 date: 2025-06-13
 published: 2025-06-13T14:47:53.000Z
 comment: 스웨덴의 록 밴드 고스트의 이 곡은 겉보기의 도발적인 종교적 은유와 달리 몽환적인 멜로디 속에 깊은 애정과 허무를 동시에 담아낸다. 틱톡을 통해 뒤늦게 역주행하며 대중적인 사랑을 받았다.

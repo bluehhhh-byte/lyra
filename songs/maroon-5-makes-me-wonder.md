@@ -12,8 +12,8 @@ duration: 211
 genre: 
 lang: en
 tags: [영미, Pop, 2007]
-keywords: []
-emotion:
+keywords: [쾌락, 기억, 가치]
+emotion: 체념
 date: 2025-07-09
 published: 2025-07-09T11:16:00.000Z
 comment: 관계의 붕괴 속에서 느끼는 공허함과 회의감을 경쾌한 펑크 팝 사운드에 담아낸 곡이다. 씁쓸한 이별의 감정을 직설적인 가사와 중독적인 멜로디로 풀어낸 점이 인상적이다.

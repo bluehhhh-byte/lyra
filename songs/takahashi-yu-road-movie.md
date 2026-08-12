@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ja
 tags: [일본, J-Pop, 2017]
-keywords: []
-emotion:
+keywords: [길, 날들, 얼굴]
+emotion: 희망
 date: 2025-04-15
 published: 2025-04-14T23:24:35.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 268
 genre: 
 lang: ko
 tags: [영미, Pop, 2007]
-keywords: []
-emotion:
+keywords: [마을, 사람들]
+emotion: 분노
 date: 2024-12-01
 published: 2024-11-30T15:57:11.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2019]
-keywords: []
-emotion:
+keywords: [세상, 재미, 하늘]
+emotion: 체념
 date: 2025-06-25
 published: 2025-06-24T23:51:26.000Z
 comment: 이 곡은 세상이 끝나는 종말의 순간을 오히려 홀가분하게 즐기며 마지막까지 행복을 찾으려는 태도를 담고 있다. 무거울 수 있는 주제를 소코도모 특유의 독특한 플로우와 키린의 그루브로 유쾌하게 풀어낸 점이 인상적이다.

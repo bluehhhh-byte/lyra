@@ -12,8 +12,8 @@ duration: 120
 genre: 팝
 lang: en
 tags: [영미, Pop, 2022]
-keywords: []
-emotion:
+keywords: [햇살, 사랑, 감정]
+emotion: 설렘
 date: 2024-07-28
 published: 2024-07-28T07:12:40.000Z
 comment:

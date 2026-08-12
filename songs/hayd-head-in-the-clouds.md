@@ -12,8 +12,8 @@ duration: 184
 genre: 
 lang: en
 tags: [영미, Pop, 2021]
-keywords: []
-emotion:
+keywords: [시절, 잔, 순간]
+emotion: 그리움
 date: 2024-10-27
 published: 2024-10-27T05:10:05.000Z
 comment:

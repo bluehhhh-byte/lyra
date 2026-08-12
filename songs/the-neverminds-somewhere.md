@@ -12,8 +12,8 @@ duration: 240
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2023]
-keywords: []
-emotion:
+keywords: [7월, 기차, 날짜]
+emotion: 그리움
 date: 2024-06-10
 published: 2024-06-09T23:38:05.000Z
 comment:

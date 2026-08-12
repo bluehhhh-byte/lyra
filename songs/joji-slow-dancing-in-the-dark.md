@@ -12,8 +12,8 @@ duration: 209
 genre: 
 lang: en
 tags: [영미, R&B/Soul, 2018]
-keywords: []
-emotion:
+keywords: [친구, 하룻밤, 곁]
+emotion: 그리움
 date: 2024-07-26
 published: 2024-07-25T15:33:54.000Z
 comment:

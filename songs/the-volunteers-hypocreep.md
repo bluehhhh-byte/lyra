@@ -12,8 +12,8 @@ duration: 221
 genre: 
 lang: en
 tags: [한국, Indie Rock, 2022]
-keywords: []
-emotion:
+keywords: [괴물, 위선자, 광경]
+emotion: 분노
 date: 2024-10-15
 published: 2024-10-14T23:45:29.000Z
 comment:

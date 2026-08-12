@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Grunge, 1993]
-keywords: []
-emotion:
+keywords: [소나무, 태양, 거짓말]
+emotion: 불안
 date: 2024-09-25
 published: 2024-09-24T22:13:52.000Z
 comment:

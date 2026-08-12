@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [영미, Pop, 2024]
-keywords: []
-emotion:
+keywords: [책임, 밤]
+emotion: 사랑
 date: 2024-12-12
 published: 2024-12-11T23:05:04.000Z
 comment:

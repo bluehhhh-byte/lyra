@@ -12,8 +12,8 @@ duration: 211
 genre: ロック
 lang: ja
 tags: [일본, J-Rock, 1997]
-keywords: []
-emotion:
+keywords: [여름, 희망, 바람]
+emotion: 고독
 date: 2025-07-05
 published: 2025-07-04T23:29:22.000Z
 comment: 여름의 뜨거운 공기 속에 방치된 듯한 무기력함과 어린 시절의 기억을 서정적인 멜로디로 그려낸 곡이다. 화자의 불안정한 내면이 묘한 몽환성과 맞물려 깊은 여운을 남긴다.

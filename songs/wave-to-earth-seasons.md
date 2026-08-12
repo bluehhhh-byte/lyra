@@ -12,8 +12,8 @@ duration: 256
 genre: 
 lang: en
 tags: [한국, Indie Rock, 2020]
-keywords: []
-emotion:
+keywords: [사랑, 삶, 기도]
+emotion: 슬픔
 date: 2024-07-24
 published: 2024-07-23T23:35:29.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 209
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2020]
-keywords: []
-emotion:
+keywords: [집, 언덕, 강아지]
+emotion: 희망
 date: 2024-07-21
 published: 2024-07-21T13:16:39.000Z
 comment:

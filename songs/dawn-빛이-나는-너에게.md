@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, K-Pop, 2023]
-keywords: []
-emotion:
+keywords: [빛, 우리]
+emotion: 사랑
 date: 2025-06-22
 published: 2025-06-22T08:50:54.000Z
 comment: 상대방의 행복을 위해 자신의 모든 것을 내어줄 수 있는 절절한 사랑을 담아낸 곡이다. 화려한 외면 뒤에 숨겨진 희생과 애틋한 감정이 잔잔한 여운을 남긴다.

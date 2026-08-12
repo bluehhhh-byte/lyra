@@ -12,8 +12,8 @@ duration: 213
 genre: 
 lang: ko
 tags: [영미, Indie Rock, 2006]
-keywords: []
-emotion:
+keywords: [승리, 황금, 날들]
+emotion: 회상
 date: 2025-01-22
 published: 2025-01-21T16:13:39.000Z
 comment:

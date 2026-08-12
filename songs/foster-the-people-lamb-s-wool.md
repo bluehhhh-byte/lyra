@@ -12,8 +12,8 @@ duration: 276
 genre: Alternative
 lang: en
 tags: [영미, Indie Pop, 2020]
-keywords: []
-emotion:
+keywords: [눈, 숨, 거리]
+emotion: 위로
 date: 2024-06-11
 published: 2024-06-10T17:04:26.000Z
 comment:

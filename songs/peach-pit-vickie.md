@@ -12,8 +12,8 @@ duration: 223
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2022]
-keywords: []
-emotion:
+keywords: [길, 대마초, 근처]
+emotion: 회상
 date: 2024-07-13
 published: 2024-07-13T12:18:34.000Z
 comment:

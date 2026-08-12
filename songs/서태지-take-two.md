@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 1998]
-keywords: []
-emotion:
+keywords: [가슴, 지옥, 힘]
+emotion: 분노
 date: 2024-10-01
 published: 2024-10-01T13:18:41.000Z
 comment:

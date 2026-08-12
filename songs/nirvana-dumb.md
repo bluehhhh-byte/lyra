@@ -12,8 +12,8 @@ duration: 149
 genre: 
 lang: en
 tags: [영미, Grunge, 1993]
-keywords: []
-emotion:
+keywords: [멍청이, 해, 빛]
+emotion: 체념
 date: 2024-08-25
 published: 2024-08-24T20:42:14.000Z
 comment:

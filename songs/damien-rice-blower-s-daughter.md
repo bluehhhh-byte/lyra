@@ -12,8 +12,8 @@ duration: 287
 genre: Singer/Songwriter
 lang: en
 tags: [유럽, Folk, 2002]
-keywords: []
-emotion:
+keywords: [삶, 이야기]
+emotion: 그리움
 date: 2024-08-16
 published: 2024-08-15T19:13:43.000Z
 comment:

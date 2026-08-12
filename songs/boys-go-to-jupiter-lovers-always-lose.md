@@ -12,8 +12,8 @@ duration: 300
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [선물, 나무, 하늘]
+emotion: 설렘
 date: 2024-08-20
 published: 2024-08-19T23:35:08.000Z
 comment:

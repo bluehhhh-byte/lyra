@@ -1,202 +1,237 @@
 {
  "motifs": [
   {
-   "name": "밤과 새벽",
-   "description": "어둠이 짙게 깔린 밤과 새벽 속에서 고독과 솔직한 감정을 마주하는 이야기입니다.",
+   "name": "밤과 어둠",
+   "description": "깊은 밤이나 어둠 속에서 마주하는 고독과 내면의 솔직한 감정을 다룹니다.",
    "keywords": [
     "밤",
-    "새벽",
     "어둠",
-    "가로등"
+    "새벽",
+    "별",
+    "불빛"
    ],
    "songs": [
     {
      "slug": "jasmin-tabatabai-another-sad-song-live",
-     "quote": "다정한 6월의 밤인데 말이죠"
+     "quote": ""
     },
     {
      "slug": "miyavi-holy-nights",
-     "quote": "무정하게 흘러가는 밤"
+     "quote": ""
     },
     {
      "slug": "새소년-긴-꿈",
-     "quote": "수상한 밤들이 계속되던 날"
+     "quote": ""
     },
     {
-     "slug": "뉴진스-supernatural",
-     "quote": "폭풍우 치는 밤, 흐린 하늘"
+     "slug": "잔나비-그-밤-그-밤",
+     "quote": ""
     },
     {
-     "slug": "panic-snowmelt",
-     "quote": "그 밤 눈이 펑펑 왔지 빛의 조각들처럼"
+     "slug": "김광석-혼자-남은-밤",
+     "quote": ""
     },
     {
-     "slug": "arti-noxibalkeepgoing",
-     "quote": "밤새 뒤척이다가"
+     "slug": "수민-슬롬-왜-왜-왜",
+     "quote": ""
     }
    ]
   },
   {
-   "name": "꿈과 희망",
-   "description": "가혹한 현실 속에서도 품고 있는 희망과 아득한 꿈에 대한 열망을 다룹니다.",
+   "name": "세상과의 투쟁",
+   "description": "부조리한 세상과 타인의 시선에 맞서며 자신의 정체성을 지키려는 저항을 노래합니다.",
    "keywords": [
-    "꿈",
-    "희망",
-    "태양",
-    "미래"
-   ],
-   "songs": [
-    {
-     "slug": "mac-miller-two-matches-feat-ab-soul",
-     "quote": "어릴 적엔, 언젠가 우리 모두 부자가 될 거라 꿈꿨었지"
-    },
-    {
-     "slug": "glay-空が青空であるために",
-     "quote": "어둠을 헤치고 다시 태양은 떠올라"
-    },
-    {
-     "slug": "glay-ここではない-どこかへ",
-     "quote": "꿈은 무한했고, 그 모든 것을 의심조차 하지 않고"
-    },
-    {
-     "slug": "시나위-희망가",
-     "quote": "너의 힘든 하루와 고개 숙인 흐느낌"
-    },
-    {
-     "slug": "jungle-someday-somewhere",
-     "quote": "우린 어디로도 가지 못하는 것만 같아"
-    }
-   ]
-  },
-  {
-   "name": "거친 저항",
-   "description": "부조리한 세상과 타인의 시선에 맞서 싸우거나 분노를 분출하는 모습을 담고 있습니다.",
-   "keywords": [
+    "세상",
     "저항",
-    "공격",
-    "싸움",
-    "분노"
+    "규칙",
+    "거짓말",
+    "싸움"
    ],
    "songs": [
     {
-     "slug": "children-of-bodom-done-with-everything-die-for-nothing",
-     "quote": "아주 쉽게 너를 무너뜨려 주지"
+     "slug": "keane-is-it-any-wonder",
+     "quote": ""
     },
     {
-     "slug": "qm-입에총-feat-zico",
-     "quote": "먼저 가서 그들을 공격해야 해"
+     "slug": "ozzy-osbourne-crazy-train",
+     "quote": ""
     },
     {
-     "slug": "slipknot-opium-of-the-people",
-     "quote": "온갖 바보들이 내게 덤벼드는 걸 봐"
+     "slug": "the-smashing-pumpkins-bullet-with-butterfly-wings",
+     "quote": ""
     },
     {
-     "slug": "wasureranneyo-nannmonee",
-     "quote": "아무것도 없어 아무것도 없어"
+     "slug": "삐삐롱스타킹-바보버스",
+     "quote": ""
     },
     {
-     "slug": "megadeth-hangar-18",
-     "quote": "이 벽들은 부술 수 없어"
+     "slug": "mr-big-wake-up",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "name": "바다와 파도",
+   "description": "아득한 바다와 일렁이는 파도를 바라보며 상실감과 아득한 그리움을 표출합니다.",
+   "keywords": [
+    "바다",
+    "파도",
+    "강물",
+    "배",
+    "부둣가"
+   ],
+   "songs": [
+    {
+     "slug": "검정치마-이별노래",
+     "quote": ""
+    },
+    {
+     "slug": "radiohead-weird-fishes-arpeggi",
+     "quote": ""
+    },
+    {
+     "slug": "macaroni-empitsu-星が泳ぐ",
+     "quote": ""
+    },
+    {
+     "slug": "사비나-앤-드론즈-귀머거리-인생",
+     "quote": ""
+    },
+    {
+     "slug": "kt-tunstall-other-side-of-the-world",
+     "quote": ""
     }
    ]
   },
   {
    "name": "시간과 추억",
-   "description": "지나간 시간과 그 속에 남겨진 빛나는 기억 및 추억을 반추하는 이야기입니다.",
+   "description": "지난날의 기억과 흘러가는 시간 속에서 지나간 사랑과 시절을 회상합니다.",
    "keywords": [
     "시간",
     "기억",
     "추억",
-    "마지막"
+    "세월",
+    "그 시절"
    ],
    "songs": [
     {
      "slug": "woo-hyuk-jang-시간이-멈춘-날",
-     "quote": "우리의 모습이, 우리가 있던 곳이, 시간은 끝났어~"
+     "quote": ""
     },
     {
-     "slug": "the-yellow-monkey-so-young",
-     "quote": "네가 웃었던 물거품 같던 오후"
+     "slug": "나얼-언젠가는",
+     "quote": ""
     },
     {
-     "slug": "브라운아이드소울-똑같다면",
-     "quote": "집으로 돌아오는 길 내 생각에"
+     "slug": "hayd-head-in-the-clouds",
+     "quote": ""
     },
     {
-     "slug": "싸이-마지막-장면-feat-이성경",
-     "quote": "추억의 처음과 끝에"
-    },
-    {
-     "slug": "barry-manilow-copacabana-at-the-copa-long-version",
-     "quote": "그녀의 이름은 롤라였죠"
+     "slug": "katie-remember",
+     "quote": ""
     }
    ]
   },
   {
-   "name": "차가운 고독",
-   "description": "홀로 남겨져 느껴지는 외로움과 상처, 유령처럼 배회하는 고독의 감정입니다.",
+   "name": "길과 방황",
+   "description": "낯선 길과 거리를 거닐며 느껴지는 정처 없는 방황과 외로움을 담아냅니다.",
    "keywords": [
-    "고독",
-    "유령",
-    "상처",
-    "눈물"
+    "길",
+    "거리",
+    "골목",
+    "방황",
+    "도시"
    ],
    "songs": [
     {
-     "slug": "suck-suk",
-     "quote": "유령들이 다가오는 게 보이지 않니"
+     "slug": "miles-caton-travelin",
+     "quote": ""
     },
     {
-     "slug": "radiohead-how-to-disappear-completely",
-     "quote": "그건 내가 아니야"
+     "slug": "강산에-거꾸로-강을-거슬러-오르는-저-힘찬-연어들처럼",
+     "quote": ""
     },
     {
-     "slug": "羊文学-dogs",
-     "quote": "불행의 지뢰를 밟고 말았네"
+     "slug": "sun-rai-san-francisco-street",
+     "quote": ""
     },
     {
-     "slug": "the-weeknd-cry-for-me",
-     "quote": "내 영혼이 서서히 떠나가는 걸 느껴"
+     "slug": "keane-somewhere-only-we-know",
+     "quote": ""
     },
     {
-     "slug": "lareine-metamorphose",
-     "quote": "사랑받을 때마다 상처를 주고"
-    },
-    {
-     "slug": "mandi-yuki-kanesaka-an-ending-unknown",
-     "quote": "돌처럼 굳어버릴 거야."
+     "slug": "아이유-분홍신",
+     "quote": ""
     }
    ]
   },
   {
-   "name": "도시와 방황",
-   "description": "거대한 도시 속에서 어디론가 마음을 빼앗긴 채 방황하는 미지의 서사입니다.",
+   "name": "사랑과 서약",
+   "description": "소중한 사람을 향한 순수한 애정과 따뜻한 다짐을 표현합니다.",
    "keywords": [
-    "도시",
-    "길",
-    "건물",
-    "세상"
+    "사랑",
+    "마음",
+    "손",
+    "목소리",
+    "고백"
+   ],
+   "songs": [
+    {
+     "slug": "유재하-우리들의-사랑",
+     "quote": ""
+    },
+    {
+     "slug": "rick-astley-never-gonna-give-you-up",
+     "quote": ""
+    },
+    {
+     "slug": "lady-gaga-close-to-you",
+     "quote": ""
+    },
+    {
+     "slug": "잔나비-주저하는-연인들을-위해",
+     "quote": ""
+    },
+    {
+     "slug": "87dance-iboy",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "name": "환상과 꿈",
+   "description": "현실을 벗어나 몽환적인 꿈과 상상의 세계를 떠돌며 느끼는 감각입니다.",
+   "keywords": [
+    "꿈",
+    "환상",
+    "구름",
+    "백일몽",
+    "거미"
    ],
    "songs": [
     {
      "slug": "mew-the-zookeeper-s-boy",
-     "quote": "내가 도시에 나가 돌아오지 못한다면"
+     "quote": ""
     },
     {
-     "slug": "incubus-anna-molly",
-     "quote": "이 바닷가 도시에"
+     "slug": "foster-the-people-lost-in-space",
+     "quote": ""
     },
     {
-     "slug": "xxx-간주곡",
-     "quote": "결국 저 시체 가방 속에"
+     "slug": "김동률-여름의-끝자락",
+     "quote": ""
     },
     {
-     "slug": "the-hives-won-t-be-long",
-     "quote": "거대한 도시도"
+     "slug": "아침-불꽃축제",
+     "quote": ""
+    },
+    {
+     "slug": "spitz-spider",
+     "quote": ""
     }
    ]
   }
  ],
- "count": 62,
- "at": "2026-08-12T13:52:02.808Z"
+ "count": 336,
+ "at": "2026-08-12T19:29:45.252Z"
 }

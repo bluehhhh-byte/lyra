@@ -12,8 +12,8 @@ duration: 229
 genre: ロック
 lang: ja
 tags: [일본, J-Rock, 2000]
-keywords: []
-emotion:
+keywords: [베란다, 구름, 꽃]
+emotion: 그리움
 date: 2024-08-14
 published: 2024-08-13T23:41:00.000Z
 comment:

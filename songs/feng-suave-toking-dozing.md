@@ -12,8 +12,8 @@ duration: 227
 genre: Alternative
 lang: en
 tags: [유럽, Indie Pop, 2020]
-keywords: []
-emotion:
+keywords: [돌고래, 고래, 담배]
+emotion: 몽환
 date: 2024-09-02
 published: 2024-09-01T23:33:23.000Z
 comment:

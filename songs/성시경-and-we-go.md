@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [한국, Ballad, 2020]
-keywords: []
-emotion:
+keywords: [세상, 리듬, 영혼]
+emotion: 기쁨
 date: 2024-07-14
 published: 2024-07-13T21:02:48.000Z
 comment:

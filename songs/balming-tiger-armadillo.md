@@ -12,8 +12,8 @@ duration: 150
 genre: 
 lang: en
 tags: [한국, Hip-Hop, 2019]
-keywords: []
-emotion:
+keywords: [갑옷, 거울, 돈]
+emotion: 저항
 date: 2025-05-09
 published: 2025-05-09T10:19:25.000Z
 comment:

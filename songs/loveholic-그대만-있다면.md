@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 2006]
-keywords: []
-emotion:
+keywords: [눈물, 기억, 전부]
+emotion: 이별
 date: 2024-07-21
 published: 2024-07-20T23:00:05.000Z
 comment:

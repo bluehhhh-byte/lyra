@@ -12,8 +12,8 @@ duration: 240
 genre: 
 lang: ko
 tags: [영미, Indie Pop, 2024]
-keywords: []
-emotion:
+keywords: [질투, 감정]
+emotion: 불안
 date: 2024-12-17
 published: 2024-12-16T23:44:34.000Z
 comment:

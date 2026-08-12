@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [한국, Hip-Hop, 2020]
-keywords: []
-emotion:
+keywords: [무대, 돈, 우등상]
+emotion: 기쁨
 date: 2025-05-15
 published: 2025-05-14T23:29:56.000Z
 comment: 한국의 전통적인 천자문 구절과 현대적인 트랩 비트를 독창적으로 결합하여 독보적인 개성을 드러내는 곡이다. 릴체리와 골드부다 특유의 장난스러우면서도 엉뚱한 가사가 유쾌한 에너지를 전달한다.

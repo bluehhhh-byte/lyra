@@ -12,8 +12,8 @@ duration: 226
 genre: 
 lang: ko
 tags: [영미, Indie Rock, 2002]
-keywords: []
-emotion:
+keywords: [도피, 눈]
+emotion: 체념
 date: 2025-01-21
 published: 2025-01-21T14:48:51.000Z
 comment:

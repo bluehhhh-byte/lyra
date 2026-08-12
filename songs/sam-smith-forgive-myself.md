@@ -12,8 +12,8 @@ duration: 220
 genre: 
 lang: en
 tags: [영미, Pop, 2020]
-keywords: []
-emotion:
+keywords: [캘리포니아, 거짓말, 하늘]
+emotion: 슬픔
 date: 2024-07-19
 published: 2024-07-19T05:19:33.000Z
 comment:

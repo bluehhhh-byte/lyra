@@ -12,8 +12,8 @@ duration: 194
 genre: 
 lang: en
 tags: [영미, R&B/Soul, 2024]
-keywords: []
-emotion:
+keywords: [사랑, 칼, 태양]
+emotion: 슬픔
 date: 2024-09-24
 published: 2024-09-24T10:09:47.000Z
 comment:

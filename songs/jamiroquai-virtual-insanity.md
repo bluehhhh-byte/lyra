@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Funk, 1996]
-keywords: []
-emotion:
+keywords: [삶, 마법, 세상]
+emotion: 저항
 date: 2024-06-09
 published: 2024-06-09T04:17:26.000Z
 comment:

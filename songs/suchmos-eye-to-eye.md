@@ -12,8 +12,8 @@ duration: 327
 genre: 
 lang: ja
 tags: [일본, J-Rock, 2025]
-keywords: []
-emotion:
+keywords: [마음, 자존심, 스피드웨이]
+emotion: 저항
 date: 2025-07-04
 published: 2025-07-04T14:04:56.000Z
 comment: 냉소적인 사회적 시선과 속도감 있는 현대 도시의 풍경을 그루비한 밴드 사운드로 담아낸 곡이다. 화면 속 가상과 현실의 경계를 넘나들며 자신만의 태도로 질주하는 삶의 방식을 보여준다.

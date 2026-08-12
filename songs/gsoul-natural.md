@@ -12,8 +12,8 @@ duration: 145
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2021]
-keywords: []
-emotion:
+keywords: [강, 중력, 노래]
+emotion: 사랑
 date: 2024-08-02
 published: 2024-08-02T12:40:01.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2006]
-keywords: []
-emotion:
+keywords: [선택지, 학교, 방법]
+emotion: 회상
 date: 2024-08-19
 published: 2024-08-18T15:45:39.000Z
 comment:

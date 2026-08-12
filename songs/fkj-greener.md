@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [유럽, Electronic, 2022]
-keywords: []
-emotion:
+keywords: [선물, 초록색, 마음]
+emotion: 체념
 date: 2024-06-14
 published: 2024-06-14T10:38:36.000Z
 comment:

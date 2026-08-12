@@ -12,8 +12,8 @@ duration: 215
 genre: 록
 lang: en
 tags: [영미, Pop, 2004]
-keywords: []
-emotion:
+keywords: [바다, 빙산, 물]
+emotion: 슬픔
 date: 2025-07-01
 published: 2025-07-01T13:48:56.000Z
 comment: 거리와 마음의 간극 속에서 관계의 지침과 이별의 불안을 담담한 포크 선율로 풀어낸 곡이다. 차가운 얼음과 같은 내면에서 벗어나고자 하는 갈등이 돋보인다.

@@ -12,8 +12,8 @@ duration: 134
 genre: 
 lang: ko
 tags: [한국, K-Pop, 2023]
-keywords: []
-emotion:
+keywords: [비, 숨]
+emotion: 이별
 date: 2025-05-29
 published: 2025-05-28T19:27:41.000Z
 comment: 이별의 고통을 물에 잠기는 순간에 빗대어 가라앉는 감정을 극대화한다. 폭발적인 고음과 웅장한 밴드 사운드가 청자의 마음을 깊게 울린다.

@@ -12,8 +12,8 @@ duration: 94
 genre: 
 lang: en
 tags: [영미, R&B/Soul, 2025]
-keywords: []
-emotion:
+keywords: [길, 황야, 여인]
+emotion: 고독
 date: 2025-06-05
 published: 2025-06-04T23:35:12.000Z
 comment: 사랑하는 연인의 무관심 속에서 방황하며 느끼는 깊은 허전함과 고독을 날것 그대로의 블루스 선율로 담아낸다.

@@ -1,6 +1,522 @@
 {
  "items": [
   {
+   "trackId": 1239489069,
+   "title": "Karma Police (Remastered)",
+   "artist": "Radiohead",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/9c/f5/04/9cf50453-c311-5324-ffe3-805a811efd73/dj.besjjjpd.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/79/c9/65/79c96504-75cf-15ea-7136-c9e6f9449e0f/mzaf_13527040345321440043.plus.aac.p.m4a",
+   "year": "1997",
+   "genre": "Alternative",
+   "why": "체념과 특유의 서늘한 감정선이 돋보이는 얼터너티브 명곡",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "radiohead-fake-plastic-tree",
+      "title": "Fake Plastic Tree"
+     }
+    ],
+    "genres": [
+     "Alternative Rock"
+    ],
+    "emotions": [
+     "체념",
+     "불안"
+    ],
+    "reason": "서늘하고 몽환적인 록 사운드의 연장"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1727654021,
+   "title": "기다린 만큼, 더",
+   "artist": "검정치마",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9e/a6/94/9ea694dd-6a3b-6604-4309-2230faa84ce7/8809484115796_Cover.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/2f/89/f5/2f89f5f3-671d-9943-4ad1-5e60c479f6c0/mzaf_6119188477618011677.plus.aac.p.m4a",
+   "year": "2016",
+   "genre": "OST",
+   "why": "짙은 그리움과 아련한 내면의 고백을 담은 포크 사운드",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "검정치마-antifreeze",
+      "title": "Antifreeze"
+     }
+    ],
+    "genres": [
+     "Indie Rock",
+     "Folk"
+    ],
+    "emotions": [
+     "그리움",
+     "고독"
+    ],
+    "reason": "검정치마 특유의 서정적 멜랑콜리"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1517447869,
+   "title": "Champagne Supernova",
+   "artist": "Oasis",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/04/92/e0/0492e08b-cbcc-9969-9ad6-8f5a0888068c/5051961007107.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/5b/a4/265ba488-b2d6-4167-c7e7-d5e742c127f1/mzaf_3887073145349385194.plus.aac.p.m4a",
+   "year": "1995",
+   "genre": "Indie Rock",
+   "why": "거대한 사이키델릭 울림 속 체념과 회상의 서사",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "oasis-masterplan",
+      "title": "Masterplan"
+     }
+    ],
+    "genres": [
+     "Alternative Rock"
+    ],
+    "emotions": [
+     "체념",
+     "회상"
+    ],
+    "reason": "영미 록의 클래식한 멜랑콜리 확장"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 721224621,
+   "title": "1979 (Remastered 2012)",
+   "artist": "The Smashing Pumpkins",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ca/ce/b2/caceb2ed-50f0-c666-e4d0-165a0a1541fc/13UABIM04008.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/ad/bc/b7adbc0e-dbf7-986d-995d-115d4415000e/mzaf_16037827753062677028.plus.aac.p.m4a",
+   "year": "1995",
+   "genre": "Alternative",
+   "why": "유년기의 불안과 쓸쓸함을 유연한 비트로 담아낸 록 트랙",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "the-smashing-pumpkins-mayonaise",
+      "title": "Mayonaise"
+     }
+    ],
+    "genres": [
+     "Alternative Rock"
+    ],
+    "emotions": [
+     "불안",
+     "회상"
+    ],
+    "reason": "90년대 얼터너티브 감성의 심화"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1410622413,
+   "title": "한낮",
+   "artist": "쏜애플",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/40/62/09/40620991-3a47-b615-472a-18daca79eb57/capital_disease.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d0/5e/79/d05e79ae-d15a-d321-c304-ca726080a493/mzaf_14802460072071206033.plus.aac.p.m4a",
+   "year": "2016",
+   "genre": "록",
+   "why": "날 선 기타 리프와 불안한 내면을 치열하게 포착한 한국 인디",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "쏜애플-시퍼런-봄",
+      "title": "시퍼런 봄"
+     }
+    ],
+    "genres": [
+     "Indie Rock"
+    ],
+    "emotions": [
+     "불안",
+     "저항"
+    ],
+    "reason": "한국 모던록의 날카로운 정서 유지"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 800157892,
+   "title": "There Is a Light That Never Goes Out",
+   "artist": "The Smiths",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1a/e8/70/1ae870c3-b402-096b-c4c4-8022af5a2ed9/745099189662.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/20/11/51/20115114-e6d1-bd5b-e958-9562ab58d19b/mzaf_13954921709237051462.plus.aac.p.m4a",
+   "year": "1986",
+   "genre": "Alternative",
+   "why": "어두운 체념 속에서 낭만을 갈구하는 인디 록의 고전",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Indie Rock"
+    ],
+    "emotions": [
+     "고독",
+     "사랑"
+    ],
+    "reason": "서늘한 인디 록 질감의 연장선"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1501134399,
+   "title": "사랑했지만 (2012 Remastered)",
+   "artist": "김광석",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/03/13/b2/0313b2b9-2d60-a776-9820-c6940ed22714/jacket-334495.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/33/96/69/33966969-22b8-85c6-695e-dd5382b545a6/mzaf_8938876982636483871.plus.aac.p.m4a",
+   "year": "2012",
+   "genre": "K-Pop",
+   "why": "담담한 보컬 뒤에 숨은 서글픈 체념과 위로의 서사",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "김광석-혼자-남은-밤",
+      "title": "혼자 남은 밤"
+     }
+    ],
+    "genres": [
+     "Folk"
+    ],
+    "emotions": [
+     "그리움",
+     "위로"
+    ],
+    "reason": "포크 질감이 주는 심층적 위안"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1459990044,
+   "title": "나무",
+   "artist": "카더가든",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/b8/72/09/b87209dc-363e-ae11-90c2-14199b2e47b5/cover-_Car_the_garden_DS.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ae/49/8d/ae498d0c-7617-f808-6752-5e69049eeaed/mzaf_6825962096271678499.plus.aac.p.m4a",
+   "year": "2019",
+   "genre": "K-Pop",
+   "why": "고요한 멜로디 위로 얹어지는 고독과 서정적인 위로",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "카더가든-아무렇지-않은-사람",
+      "title": "아무렇지 않은 사람"
+     }
+    ],
+    "genres": [
+     "Indie Pop",
+     "Ballad"
+    ],
+    "emotions": [
+     "위로",
+     "고독"
+    ],
+    "reason": "한국 감성 발라드 축의 연장"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 108067623,
+   "title": "When the Sun Goes Down",
+   "artist": "Arctic Monkeys",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Features/8d/0b/6b/dj.ngfmrawi.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/54/b3/8b/54b38bee-b759-3f36-5468-094852d2ba57/mzaf_3104853886613325841.plus.aac.p.m4a",
+   "year": "2006",
+   "genre": "Alternative",
+   "why": "현실에 대한 날카로운 비판과 거친 인디 록 에너지를 전달",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "arctic-monkeys-don-t-sit-down-cause-i-ve-moved-your-chair",
+      "title": "Don't Sit Down 'Cause I've Moved Your Chair"
+     }
+    ],
+    "genres": [
+     "Indie Rock"
+    ],
+    "emotions": [
+     "저항"
+    ],
+    "reason": "현대 영미 인디 록 사운드 계승"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1239489599,
+   "title": "No Surprises (Remastered)",
+   "artist": "Radiohead",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/9c/f5/04/9cf50453-c311-5324-ffe3-805a811efd73/dj.besjjjpd.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c5/9e/9f/c59e9f33-9e11-c05f-719e-c6f70a881ea8/mzaf_11430692047690504782.plus.aac.p.m4a",
+   "year": "1997",
+   "genre": "Alternative",
+   "why": "아름다운 멜로디 속에 감춰진 묵직한 체념과 현실 비판",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "radiohead-how-to-disappear-completely",
+      "title": "How to Disappear Completely"
+     }
+    ],
+    "genres": [
+     "Alternative Rock"
+    ],
+    "emotions": [
+     "체념",
+     "불안"
+    ],
+    "reason": "라디오헤드 특유의 서늘한 서사"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1747659160,
+   "title": "Stalker",
+   "artist": "10CM",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/83/df/34/83df34b0-ab7d-7257-668a-7692f68fdc7a/5055946710525.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/07/67/38/076738ee-711c-4d03-8ffe-e0efb845496b/mzaf_13343611225704392553.plus.aac.p.m4a",
+   "year": "2014",
+   "genre": "Folk",
+   "why": "자조적인 가사와 스파스한 어쿠스틱 사운드가 주는 단절감",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Folk",
+     "Indie Pop"
+    ],
+    "emotions": [
+     "슬픔",
+     "고독"
+    ],
+    "reason": "가사 중심의 한국 인디 질감 탐색"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1780363844,
+   "title": "내 마음에 주단을 깔고",
+   "artist": "산울림",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ba/ea/2b/baea2b34-9544-d2fc-fede-d7bacc4900a1/8809259907649.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/64/e3/e6/64e3e6bf-3f37-4f5a-5154-1e833185156a/mzaf_17256140433964305899.plus.aac.p.m4a",
+   "year": "1978",
+   "genre": "록",
+   "why": "사이키델릭한 록 베이스라인 위에 펼쳐지는 독창적 서정성",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Rock"
+    ],
+    "emotions": [
+     "몽환"
+    ],
+    "reason": "한국 록 음악의 고전적 내면 탐구"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1440891558,
+   "title": "When You Were Young",
+   "artist": "The Killers",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/0d/d8/d7/0dd8d755-2147-9954-8b2e-991b25e49f51/17UM1IM06934.rgb.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/62/45/11/62451138-29b4-464f-4a9f-24e8c6933a40/mzaf_18073769405768626044.plus.aac.p.m4a",
+   "year": "2006",
+   "genre": "Rock",
+   "why": "질주하는 사운드 속 지나간 날들에 대한 아련한 고찰",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Alternative Rock",
+     "Indie Rock"
+    ],
+    "emotions": [
+     "회상",
+     "저항"
+    ],
+    "reason": "2000년대 얼터너티브 록의 강렬함"
+   },
+   "direction": "extend",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 399211798,
+   "title": "When the Sun Hits",
+   "artist": "Slowdive",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c2/a0/a4/c2a0a495-ec33-27f1-c6db-0dff1c3ba15d/dj.pzrqoswp.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/91/5c/31/915c31f1-91f6-3e3f-5fc8-5f9917303564/mzaf_11049004020622210670.plus.aac.p.m4a",
+   "year": "1993",
+   "genre": "얼터너티브",
+   "why": "노이즈 벽 속으로 침잠하는 몽환적인 슈게이징 대표곡",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "cigarettes-after-sex-sunsetz",
+      "title": "Sunsetz"
+     }
+    ],
+    "genres": [
+     "Dream Pop"
+    ],
+    "emotions": [
+     "몽환",
+     "불안"
+    ],
+    "reason": "슈게이징 장르로의 탐색 확장"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 266604999,
+   "title": "Disorder (Live)",
+   "artist": "Joy Division",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/80/14/7f/80147fb9-8c62-8773-60fe-51d9bdcfd415/dj.blmthqrv.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/93/af/75/93af7553-f740-9ec6-9920-93b76e6658a9/mzaf_14782935132641550962.plus.aac.p.m4a",
+   "year": "2007",
+   "genre": "Alternative",
+   "why": "차가운 드럼 비트와 저음 보컬이 만드는 1980년대 포스트 펑크",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Post-Punk"
+    ],
+    "emotions": [
+     "불안",
+     "고독"
+    ],
+    "reason": "포스트 펑크 원류로의 영역 확장"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1247704673,
+   "title": "Space Song",
+   "artist": "Beach House",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/16/78/af/1678affa-4dba-50ab-bb3b-412153c8142f/098787112269_depressioncherrybeachhouse.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/9a/88/63/9a88639a-53c8-bbbc-d631-d2b76159680e/mzaf_5467437240161367279.plus.aac.p.m4a",
+   "year": "2015",
+   "genre": "얼터너티브",
+   "why": "우주를 떠도는 듯 차가우면서도 아늑한 딥 드림 팝",
+   "basedOn": {
+    "songs": [
+     {
+      "slug": "a-beacon-school-it-s-late",
+      "title": "It's Late"
+     }
+    ],
+    "genres": [
+     "Dream Pop"
+    ],
+    "emotions": [
+     "몽환",
+     "슬픔"
+    ],
+    "reason": "차가운 서정성의 드림 팝 확장"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 65619482,
+   "title": "A Forest",
+   "artist": "The Cure",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/83/b4/9a/83b49a32-35ec-16b1-b933-9a895824cad8/s07.uqusdlxc.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/bc/f3/ed/bcf3eda8-4426-1528-f411-5dfe06bfb4d8/mzaf_16155767371106033934.plus.aac.p.m4a",
+   "year": "1980",
+   "genre": "Alternative",
+   "why": "어둡고 습한 레이어 속으로 몰입시키는 고딕 포스트 펑크",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Post-Punk"
+    ],
+    "emotions": [
+     "불안",
+     "고독"
+    ],
+    "reason": "80년대 포스트 펑크 탐색 제안"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1683774322,
+   "title": "Beautiful World (Live)",
+   "artist": "Parannoul",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/52/f1/1052f182-e468-aec1-f532-36f0f51ef65d/8809936060827.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/fb/6a/d5/fb6ad596-3264-915c-5be0-5c885c3dcca6/mzaf_6669549408744821846.plus.aac.p.m4a",
+   "year": "2023",
+   "genre": "Rock",
+   "why": "방구석의 고독과 폭발적인 슈게이징 노이즈가 결합한 한국 신",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Indie Rock"
+    ],
+    "emotions": [
+     "체념",
+     "불안"
+    ],
+    "reason": "한국 로파이 슈게이징의 발견"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 258200075,
+   "title": "Heaven or Las Vegas",
+   "artist": "Cocteau Twins",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/76/cd/61/76cd61e7-0714-dce5-c48e-0f05f8fcb84b/652637001280.png/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f8/31/97/f831977c-6fd2-d40f-c2c9-fba79106fdf7/mzaf_741650827291009071.plus.aac.p.m4a",
+   "year": "1990",
+   "genre": "Rock",
+   "why": "신비로운 보컬 질감과 신스 레이어가 만든 드림 팝의 정수",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Dream Pop"
+    ],
+    "emotions": [
+     "몽환"
+    ],
+    "reason": "80년대 드림 팝 사운드 탐색"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
+   "trackId": 1440532753,
+   "title": "Softcore",
+   "artist": "The Neighbourhood",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fc/d0/89/fcd0899c-2236-a726-9ce2-ebb110e2204d/886447414545.jpg/600x600bb.jpg",
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/08/9e/1b089e17-1084-d825-d576-66d46ae1e243/mzaf_11823295334220528749.plus.aac.p.m4a",
+   "year": "2018",
+   "genre": "Alternative",
+   "why": "어둡고 절제된 신스 비트 위로 흐르는 현대적 고독감",
+   "basedOn": {
+    "songs": [],
+    "genres": [
+     "Indie Pop"
+    ],
+    "emotions": [
+     "불안",
+     "고독"
+    ],
+    "reason": "다크한 인디 팝 사운드의 발견"
+   },
+   "direction": "discover",
+   "at": "2026-08-12T19:30:18.173Z"
+  },
+  {
    "trackId": 1109715165,
    "title": "Nude",
    "artist": "Radiohead",
@@ -875,19 +1391,6 @@
    "at": "2026-08-12T09:06:25.106Z"
   },
   {
-   "trackId": 1663034560,
-   "title": "Reptilia",
-   "artist": "The Strokes",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/3d/2c/f0/3d2cf05b-9015-6dc9-2449-6f592ac6dcc2/196589677389.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/2c/58/cd/2c58cd89-52b8-7624-1670-a906185d2725/mzaf_15762396709760344147.plus.aac.p.m4a",
-   "year": "2003",
-   "genre": "Alternative",
-   "why": "거친 날것의 질감과 질주하는 날카로운 가공되지 않은 록",
-   "basedOn": "The Strokes의 인디 록 에너지",
-   "direction": "extend",
-   "at": "2026-08-12T09:06:25.106Z"
-  },
-  {
    "trackId": 663097966,
    "title": "R U Mine?",
    "artist": "Arctic Monkeys",
@@ -1312,218 +1815,14 @@
    "genre": "Alternative",
    "why": "특유의 불안과 체념을 담은 얼터너티브 사운드",
    "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 616297075,
-   "title": "Reptilia",
-   "artist": "The Strokes",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/5e/da/ad/5edaadb8-97d7-fa6b-eda4-bb1abe3f9b3c/TheStrokes_RoomOnFire_G0100017157309_1400x1407.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e3/38/80/e33880b6-14f6-c4b0-4bfc-af791feb03ae/mzaf_12125877867990412946.plus.aac.p.m4a",
-   "year": "2003",
-   "genre": "Rock",
-   "why": "날카로운 기타 리프와 강렬한 저항적 에너지",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 663098051,
-   "title": "No. 1 Party Anthem",
-   "artist": "Arctic Monkeys",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/9c/b5/699cb5d6-115c-ff73-9d26-e57ea4350d72/887828031795.png/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/16/84/9c/16849c3d-b999-a93f-bbbf-cf09a4f337ef/mzaf_13091105457122357767.plus.aac.p.m4a",
-   "year": "2013",
-   "genre": "Alternative",
-   "why": "고독과 질주감이 느껴지는 인디 록의 정수",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1512389795,
-   "title": "난춘",
-   "artist": "새소년",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/9d/83/29/9d832953-ab16-06cc-d0e1-3adf8f5f9e11/SESONEON_NANCHUN_3000.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e1/b6/6b/e1b66b64-a406-4db3-2920-3c78adf65bf2/mzaf_2513733843274993778.plus.aac.p.m4a",
-   "year": "2020",
-   "genre": "얼터너티브",
-   "why": "불안 속에서 찾는 따뜻한 위로와 희망의 메시지",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1242155576,
-   "title": "EVERYTHING",
-   "artist": "검정치마",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/ce/5c/bece5cff-2caf-6d8a-9c21-3035537d2a4d/Album_cover_1400X1400.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/37/c4/c0/37c4c06e-fc10-80b0-5484-97ddf03be83d/mzaf_16030927561900146145.plus.aac.p.m4a",
-   "year": "2016",
-   "genre": "인디 록",
-   "why": "몽환적이면서도 아련한 감성의 인디 발라드",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1517506707,
-   "title": "Live Forever",
-   "artist": "Oasis",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9f/e7/ea/9fe7eac2-87dc-c1df-3333-dc30b82bdd74/5051961006100.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/16/f1/ac/16f1ac05-b12f-fd37-d862-ae5cd9772187/mzaf_16674267505849232959.plus.aac.p.m4a",
-   "year": "1994",
-   "genre": "Indie Rock",
-   "why": "희망과 저항을 포효하는 90년대 브릿팝 명곡",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 317961372,
-   "title": "Hysteria",
-   "artist": "Muse",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/92/b9/5f/mzi.cgvtndrj.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/87/1f/08/871f082c-ad36-02cc-84b9-1066c18ee728/mzaf_13069569475764077836.plus.aac.p.m4a",
-   "year": "2003",
-   "genre": "Alternative",
-   "why": "폭발적인 베이스 리프와 폭주하는 저항의 감정",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1536394884,
-   "title": "Haruka Kanata",
-   "artist": "Asian Kung-Fu Generation",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/48/96/3e/48963e5a-75d7-7a8b-132c-233f26ebd70d/jacket_KSCL01917B00Z_550.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/8f/09/1b/8f091bbd-6e5d-d925-e3ac-a6d9fd217648/mzaf_4971886346231427027.plus.aac.p.m4a",
-   "year": "2002",
-   "genre": "Rock",
-   "why": "청춘의 체념과 아련함을 노래하는 J-Rock",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1058298359,
-   "title": "Missing",
-   "artist": "Ellegarden",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4a/46/90/4a4690e8-0d5a-e619-1013-9c3eea782d5c/mzm.zycxldgg.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/18/0a/d1/180ad155-f9db-8f21-1895-189b29aa50bf/mzaf_16981202380278890903.plus.aac.p.m4a",
-   "year": "2004",
-   "genre": "Rock",
-   "why": "직관적이고 질주감 넘치는 에너제틱 J-Rock",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1865062183,
-   "title": "NO PAIN",
-   "artist": "실리카겔",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/9c/e6/429ce6b1-2702-18bf-de93-7d1b8b5a666d/8809964653299.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/8b/4c/378b4c23-4af3-7223-118d-c84cedf7615c/mzaf_17657027766515802437.plus.aac.p.m4a",
-   "year": "2023",
-   "genre": "록",
-   "why": "2020년대 한국 인디 록 씬을 대표하는 쾌감",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1811037800,
-   "title": "TOMBOY",
-   "artist": "혁오 & Sunset Rollercoaster",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/24/31/4a/24314a7e-010d-d4eb-7b90-1fa8f57c781b/8800312826129_cover.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/79/98/cb799851-f7ae-2a06-272b-84d759a8bd81/mzaf_11064272145316724741.plus.aac.p.m4a",
-   "year": "2025",
-   "genre": "한국 록",
-   "why": "청춘의 불안과 방황을 담담하게 담아낸 트랙",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1440783625,
-   "title": "Smells Like Teen Spirit",
-   "artist": "Nirvana",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/fd/b9/95fdb9b2-6d2b-92a6-97f2-51c1a6d77f1a/00602527874609.rgb.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a6/53/1e/a6531efa-397c-eb73-ecab-9b2790c1471e/mzaf_16440344883389407474.plus.aac.p.m4a",
-   "year": "1991",
-   "genre": "Rock",
-   "why": "90년대 널바나 특유의 거친 저항의 분출",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1589230439,
-   "title": "Only Shallow",
-   "artist": "my bloody valentine",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/84/6f/6f/846f6fdb-5fd2-3a8d-74c4-1ea2c6e36318/744861009863.png/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/7d/32/6c7d3231-a35a-a64e-c77e-e5dd24a7ea0f/mzaf_10441325985140857715.plus.aac.p.m4a",
-   "year": "1995",
-   "genre": "Alternative",
-   "why": "노이즈 속 깊은 몽환을 선사하는 슈게이징",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1589221912,
-   "title": "Easy Easy",
-   "artist": "King Krule",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/b8/bc/89b8bc09-769f-7b9f-857b-19feba0c24b1/744861610168.png/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c8/e8/3f/c8e83f7d-dae7-2851-fbe0-1a47725f87ad/mzaf_3991797013769187283.plus.aac.p.m4a",
-   "year": "2013",
-   "genre": "Alternative",
-   "why": "무겁고 묵직한 포스트 펑크의 우울과 저항",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1440881990,
-   "title": "DNA.",
-   "artist": "Kendrick Lamar",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6a/96/73/6a967366-31ba-a41d-c199-bc41b7492313/mzaf_9393549031103413709.plus.aac.p.m4a",
-   "year": "2017",
-   "genre": "Hip-Hop/Rap",
-   "why": "힙합 특유의 강력한 에너지와 사회적 저항",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1714248019,
-   "title": "Time Walking on Memories",
-   "artist": "NELL",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0c/4a/57/0c4a575b-f9ca-0f87-5321-6d289c2fd9cc/8804775098062.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/25/64/1d/25641d4e-370e-dde6-997e-d26859371007/mzaf_5950353073185290252.plus.aac.p.m4a",
-   "year": "2018",
-   "genre": "Rock",
-   "why": "그리움과 슬픔을 아련한 사운드로 그린 록",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1441817578,
-   "title": "Stand Out Fit In",
-   "artist": "ONE OK ROCK",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0f/b6/2a/0fb62a0c-d7a1-e376-4616-d8fd9c3656c2/075679858412.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/45/5f/a3/455fa30f-27dc-d9b2-355c-9b6f2ec1801e/mzaf_3079609111774892187.plus.aac.p.m4a",
-   "year": "2018",
-   "genre": "록",
-   "why": "폭발적인 사운드로 강렬한 희망을 전하는 록",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1803605836,
-   "title": "Starburster / In Heaven (Lady in the Radiator Song) [Live]",
-   "artist": "Fontaines D.C.",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/93/d5/3e/93d53e93-6873-58fb-4e86-7d9042a665b2/191404153574.png/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/a6/3f/33a63ff6-1258-601a-1e88-761c63ad96b5/mzaf_6747171685532604732.plus.aac.p.m4a",
-   "year": "2024",
-   "genre": "Alternative",
-   "why": "2020년대 포스트 펑크의 날카로운 불안감",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1630107248,
-   "title": "Song 2 (2012 Remaster)",
-   "artist": "Blur",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/9c/03/07/9c0307dd-256a-b1c9-6129-d33ada97113d/5059460139558.jpg/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/67/3a/be/673abe32-dab8-4c64-bf3a-18cbc99d3b6b/mzaf_7090632394024264631.plus.aac.p.m4a",
-   "year": "2022",
-   "genre": "Rock",
-   "why": "짧고 강렬하게 터지는 90년대 얼터너티브",
-   "at": "2026-08-11T11:49:10.462Z"
-  },
-  {
-   "trackId": 1582207963,
-   "title": "Where Is My Mind? (Mixed)",
-   "artist": "Pixies",
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/ef/08/e3ef082c-1be0-183b-9216-c34f6bea40d5/soundtracks.png/600x600bb.jpg",
-   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f6/e9/91/f6e991c7-3678-4cde-f824-081fc5b4911d/mzaf_7028581105898976472.plus.aac.p.m4a",
-   "year": "2021",
-   "genre": "Worldwide",
-   "why": "몽환적이면서도 기이한 불안을 자극하는 명곡",
-   "at": "2026-08-11T11:49:10.462Z"
   }
  ],
  "runs": [
+  {
+   "at": "2026-08-12T19:30:18.173Z",
+   "mode": "balance",
+   "label": "균형"
+  },
   {
    "at": "2026-08-12T17:07:12.508Z",
    "mode": "mood",
@@ -1541,5 +1840,5 @@
    "label": "균형"
   }
  ],
- "at": "2026-08-12T17:07:12.508Z"
+ "at": "2026-08-12T19:30:18.173Z"
 }

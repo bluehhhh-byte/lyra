@@ -12,8 +12,8 @@ duration: 215
 genre: 
 lang: en
 tags: [영미, 2024]
-keywords: []
-emotion:
+keywords: [감정, 방법, 곁]
+emotion: 사랑
 date: 2024-09-18
 published: 2024-09-17T16:05:15.000Z
 comment:

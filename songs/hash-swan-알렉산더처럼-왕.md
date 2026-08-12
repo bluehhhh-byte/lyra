@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2018]
-keywords: []
-emotion:
+keywords: [주인공, 카펫, 잡지]
+emotion: 저항
 date: 2024-10-17
 published: 2024-10-16T23:43:10.000Z
 comment:

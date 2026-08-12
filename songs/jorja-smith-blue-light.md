@@ -12,8 +12,8 @@ duration: 250
 genre: R&B/소울
 lang: en
 tags: [영미, R&B/Soul, 2018]
-keywords: []
-emotion:
+keywords: [불빛, 사이렌, 경찰차]
+emotion: 불안
 date: 2024-09-29
 published: 2024-09-29T13:03:29.000Z
 comment:

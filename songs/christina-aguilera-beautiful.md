@@ -12,8 +12,8 @@ duration: 239
 genre: Pop
 lang: en
 tags: [영미, Pop, 2002]
-keywords: []
-emotion:
+keywords: [아픔, 숨, 매일]
+emotion: 위로
 date: 2024-09-26
 published: 2024-09-26T12:31:42.000Z
 comment:

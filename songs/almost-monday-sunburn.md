@@ -12,8 +12,8 @@ duration: 176
 genre: Alternative
 lang: en
 tags: [영미, Indie Pop, 2022]
-keywords: []
-emotion:
+keywords: [화상, 캘리포니아, 폭염]
+emotion: 그리움
 date: 2024-06-14
 published: 2024-06-14T09:39:14.000Z
 comment:

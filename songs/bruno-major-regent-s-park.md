@@ -12,8 +12,8 @@ duration: 177
 genre: 
 lang: en
 tags: [영미, Pop, 2020]
-keywords: []
-emotion:
+keywords: [시, 미소, 노래]
+emotion: 슬픔
 date: 2024-09-17
 published: 2024-09-17T06:27:31.000Z
 comment:

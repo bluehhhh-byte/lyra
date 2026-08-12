@@ -12,8 +12,8 @@ duration: 430
 genre: Alternative
 lang: en
 tags: [영미, Alternative Rock, 2004]
-keywords: []
-emotion:
+keywords: [돌멩이, 별, 심장]
+emotion: 몽환
 date: 2025-07-29
 published: 2025-07-28T23:19:10.000Z
 comment: 소닉 유스 특유의 노이즈와 거친 질감이 돋보이는 곡으로, 죽음과 방황 속에서도 타인을 향한 연대와 위로를 전한다. 차가운 돌 이미지와 대비되는 묘한 온기가 인상적이다.

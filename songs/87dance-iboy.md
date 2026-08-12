@@ -12,8 +12,8 @@ duration: 198
 genre: Rock
 lang: en
 tags: [영미, Rock, 2019]
-keywords: []
-emotion:
+keywords: [행복, 미소, 와인]
+emotion: 사랑
 date: 2024-07-02
 published: 2024-07-02T10:15:15.000Z
 comment:

@@ -12,8 +12,8 @@ duration: 267
 genre: 
 lang: en
 tags: [영미, Pop, 2013]
-keywords: []
-emotion:
+keywords: [고속도로, LA, 미래]
+emotion: 고독
 date: 2024-09-11
 published: 2024-09-10T23:19:49.000Z
 comment:

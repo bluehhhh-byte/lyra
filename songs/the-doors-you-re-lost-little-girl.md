@@ -12,8 +12,8 @@ duration: 196
 genre: 
 lang: en
 tags: [영미, Rock, 1967]
-keywords: []
-emotion:
+keywords: [소녀]
+emotion: 몽환
 date: 2024-06-25
 published: 2024-06-25T14:31:22.000Z
 comment:

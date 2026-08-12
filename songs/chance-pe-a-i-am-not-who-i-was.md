@@ -12,8 +12,8 @@ duration: 145
 genre: 
 lang: en
 tags: [영미, Folk, 2023]
-keywords: []
-emotion:
+keywords: [떠돌이, 영혼, 집]
+emotion: 회상
 date: 2024-06-22
 published: 2024-06-22T10:01:17.000Z
 comment:

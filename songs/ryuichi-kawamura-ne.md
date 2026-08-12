@@ -12,8 +12,8 @@ duration: 336
 genre: 
 lang: ja
 tags: [일본, J-Pop, 2001]
-keywords: []
-emotion:
+keywords: [사랑, 아픔, 자유]
+emotion: 슬픔
 date: 2025-05-23
 published: 2025-05-23T05:34:56.000Z
 comment: 사랑을 갈구할수록 깊어지는 아픔과 집착을 애절한 목소리로 그려낸 곡이다.

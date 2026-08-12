@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2020]
-keywords: []
-emotion:
+keywords: [사랑, 색깔, 손목]
+emotion: 불안
 date: 2025-05-04
 published: 2025-05-04T02:39:41.000Z
 comment:

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Electronic, 2020]
-keywords: []
-emotion:
+keywords: [노래, 기분, 빈털털이]
+emotion: 사랑
 date: 2024-07-01
 published: 2024-06-30T23:43:37.000Z
 comment:

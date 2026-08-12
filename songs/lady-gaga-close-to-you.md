@@ -12,8 +12,8 @@ duration: 164
 genre: Jazz
 lang: en
 tags: [영미, Pop, 2024]
-keywords: []
-emotion:
+keywords: [새, 별, 하늘]
+emotion: 사랑
 date: 2024-10-03
 published: 2024-10-03T08:09:27.000Z
 comment:

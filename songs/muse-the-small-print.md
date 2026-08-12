@@ -12,8 +12,8 @@ duration: 209
 genre: Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]
-keywords: []
-emotion:
+keywords: [탐욕, 기억, 마음]
+emotion: 분노
 date: 2025-07-13
 published: 2025-07-13T10:55:30.000Z
 comment: 이 곡은 악마와의 거래를 통해 영혼을 저당 잡힌 인간의 비극을 다루며, 뮤즈 특유의 폭발적인 에너지와 날카로운 비판 의식이 돋보인다. 계약서의 작은 글씨처럼 사소해 보이는 조건이 결국 모든 것을 파멸로 이끈다는 주제가 강렬하게 다가온다.

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 1995]
-keywords: []
-emotion:
+keywords: [흡혈귀, 세상, 고통]
+emotion: 분노
 date: 2025-05-16
 published: 2025-05-15T23:35:04.000Z
 comment: 이 곡은 억압적인 세상 속에서 분노와 무력감을 느끼는 인간의 본성을 날것 그대로 드러낸다. 빌리 코건의 절규하는 듯한 보컬과 폭발적인 기타 리프가 대비를 이루며 90년대 얼터너티브 록의 정수를 보여준다.

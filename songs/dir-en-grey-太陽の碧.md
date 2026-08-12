@@ -12,8 +12,8 @@ duration: 366
 genre: メタル
 lang: ja
 tags: [일본, Visual Kei, 2000]
-keywords: []
-emotion:
+keywords: [한여름, 태양, 전화]
+emotion: 그리움
 date: 2025-05-26
 published: 2025-05-26T12:17:29.000Z
 comment: 지나간 연인과의 추억과 배신감을 한여름의 태양에 빗대어 애절하게 그려낸 곡이다. 묵직한 사운드 속에서도 멜로디컬한 감성이 돋보인다.

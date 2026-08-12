@@ -12,8 +12,8 @@ duration: 219
 genre: 팝
 lang: en
 tags: [영미, Indie Pop]
-keywords: []
-emotion:
+keywords: [1월, 하늘, 공기]
+emotion: 희망
 date: 2024-01-01
 published: 2023-12-31T15:28:26.000Z
 comment:

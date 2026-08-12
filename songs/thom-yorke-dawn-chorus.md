@@ -12,8 +12,8 @@ duration: 323
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2019]
-keywords: []
-emotion:
+keywords: [골목, 생각]
+emotion: 체념
 date: 2024-08-09
 published: 2024-08-08T23:24:39.000Z
 comment:

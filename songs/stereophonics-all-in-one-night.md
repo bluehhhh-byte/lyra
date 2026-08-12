@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2007]
-keywords: []
-emotion:
+keywords: [새벽, 클럽, 파티]
+emotion: 고독
 date: 2025-04-28
 published: 2025-04-28T09:41:57.000Z
 comment:

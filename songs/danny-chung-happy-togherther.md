@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: en
 tags: [영미, Hip-Hop, 1997]
-keywords: []
-emotion:
+keywords: [상상, 전화, 동전]
+emotion: 기쁨
 date: 2024-11-11
 published: 2024-11-11T11:38:01.000Z
 comment:

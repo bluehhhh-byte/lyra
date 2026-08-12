@@ -12,8 +12,8 @@ duration: 228
 genre: Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
-keywords: []
-emotion:
+keywords: [짐, 생각, 마음]
+emotion: 불안
 date: 2025-06-15
 published: 2025-06-15T13:20:46.000Z
 comment: 뜻대로 풀리지 않는 현실과 스스로에 대한 답답함 속에서 도망치고 싶어 하는 마음을 날것 그대로 그려낸다. 끊임없이 뒤쫓아오는 과거의 기억과 발소리는 피할 수 없는 내면의 불안을 고스란히 보여준다.

@@ -12,8 +12,8 @@ duration:
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2024]
-keywords: []
-emotion:
+keywords: [가사, 미련, 10년]
+emotion: 회상
 date: 2024-11-26
 published: 2024-11-25T23:35:55.000Z
 comment:
