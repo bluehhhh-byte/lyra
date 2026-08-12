@@ -1,6 +1,6 @@
 ---
 title: Canned Heat
-title_ko: 
+title_ko: 캔드 히트
 artist: Jamiroquai
 artist_ko:
 album: Center Stage (Music from the Motion Picture)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-10
 published: 2025-06-09T23:30:05.000Z
-comment:
+comment: 일상의 근심과 불운을 잊기 위해 음악에 몸을 맡기고 춤추는 찬란한 해방감을 그린다. 영화 '나폴레옹 다이너마이트'의 엔딩 크레딧 장면에 등장하여 유쾌한 에너지를 전파한다.
 source: instagram
 source_tag: 250610_0830
 source_note: 
