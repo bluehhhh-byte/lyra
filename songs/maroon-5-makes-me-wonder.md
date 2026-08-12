@@ -1,6 +1,6 @@
 ---
 title: Makes Me Wonder
-title_ko: 
+title_ko: 메이크스 미 원더
 artist: Maroon 5
 artist_ko:
 album: Singles
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-09
 published: 2025-07-09T11:16:00.000Z
-comment:
+comment: 관계의 붕괴 속에서 느끼는 공허함과 회의감을 경쾌한 펑크 팝 사운드에 담아낸 곡이다. 씁쓸한 이별의 감정을 직설적인 가사와 중독적인 멜로디로 풀어낸 점이 인상적이다.
 source: instagram
 source_tag: 250709_2015
 source_note: 
