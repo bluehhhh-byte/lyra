@@ -3,12 +3,12 @@ title: by my side
 title_ko: 
 artist: HONNE
 artist_ko:
-album: 
+album: no song without you
 year: 2020
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/a0/44/37/a04437b0-915f-b329-5b24-2dd2b7d0600b/190295195168.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3c/38/55/3c38557f-0159-be5d-9c55-63d5190a071f/mzaf_2481319651183724110.plus.aac.p.m4a
+trackId: 1518053394
+duration: 250
 genre: 
 lang: en
 tags: [영미, Electronic, 2020]

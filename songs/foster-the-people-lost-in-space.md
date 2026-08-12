@@ -3,12 +3,12 @@ title: Lost In Space
 title_ko: 
 artist: Foster The People
 artist_ko:
-album: 
+album: Paradise State of Mind
 year: 2024
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c1/26/ed/c126edcc-de54-93a9-3e76-143de7e09ecc/075679660657.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/30/3d/87303dd5-2503-52e3-738e-a13bdd27fce7/mzaf_16219532538634226139.plus.aac.p.m4a
+trackId: 1747041276
+duration: 259
 genre: 
 lang: en
 tags: [영미, Indie Pop, 2024]

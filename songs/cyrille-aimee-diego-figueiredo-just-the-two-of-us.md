@@ -3,12 +3,12 @@ title: Just The Two Of Us
 title_ko: 
 artist: Cyrille Aimee , Diego Figueiredo
 artist_ko:
-album: 
+album: Jazz Dictionary J
 year: 2016
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/65/18/82/65188276-02e0-a336-8982-32be787203c3/4538182696163_cov.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d6/b2/12/d6b212f1-fcd8-3bb4-8272-c45f8df47a72/mzaf_10555130620931600364.plus.aac.p.m4a
+trackId: 1238079002
+duration: 301
 genre: 
 lang: en
 tags: [유럽, Jazz, 2016]

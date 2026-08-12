@@ -3,12 +3,12 @@ title: Bullet With Butterfly Wings
 title_ko: 불렛 위드 버터플라이 윙스
 artist: The Smashing Pumpkins
 artist_ko:
-album: 
+album: Rotten Apples: Greatest Hits
 year: 1995
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/a3/bb/caa3bba6-05a8-af60-ba2b-7abe85f6cc67/13UABIM56696.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4c/bc/4f/4cbc4fc5-fc8c-b159-9c78-c8c91ecf2c94/mzaf_1762488723687916470.plus.aac.p.m4a
+trackId: 712732631
+duration: 257
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 1995]

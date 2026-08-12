@@ -3,12 +3,12 @@ title: Fake Plastic Tree
 title_ko: 
 artist: Radiohead
 artist_ko:
-album: 
+album: The Bends
 year: 1995
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a9/5c/1ba95cac-b245-d386-63fb-6b857aa9dce8/634904078065.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/88/7c/92/887c92d6-0979-9f01-1e9b-6762fca517bd/mzaf_1998812167371306210.plus.aac.p.m4a
+trackId: 1097862845
+duration: 291
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 1995]

@@ -3,12 +3,12 @@ title: Superfantastic
 title_ko: Superfantastic
 artist: Mr.Big
 artist_ko:
-album: 
+album: Greatest Hits
 year: 1999
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/90/68/b6/9068b687-ddd4-3bda-3aa0-9e40735580e5/4897012132555.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1c/59/77/1c597774-262a-d209-d673-829ee7551d63/mzaf_7600304337519613174.plus.aac.p.m4a
+trackId: 1270576312
+duration: 225
 genre: 
 lang: ko
 tags: [영미, Hard Rock, 1999]

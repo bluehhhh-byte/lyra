@@ -3,12 +3,12 @@ title: Bonvoyage
 title_ko: Bonvoyage
 artist: 김다니엘, 1of1
 artist_ko:
-album: 
+album: 이 별에 필요한 (Soundtrack from the Netflix Film)
 year: 2025
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b1/e2/5e/b1e25eaa-ea7c-d542-156a-6d43dd1d7256/8800320193466_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/6a/a8/a16aa805-77d7-a7a8-9894-c3edb9891f1b/mzaf_11683707583685877869.plus.aac.p.m4a
+trackId: 1816687886
+duration: 295
 genre: 
 lang: ko
 tags: [한국, R&B/Soul, 2025]

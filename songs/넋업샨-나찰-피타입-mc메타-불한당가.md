@@ -3,12 +3,12 @@ title: 불한당가
 title_ko: 불한당가
 artist: 넋업샨, 나찰, 피타입, MC메타
 artist_ko:
-album: 
+album: 절충 3 : 불한당들의 진입과 전투, Pt. 1
 year: 2013
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/8f/d2/26/8fd226d2-0e8b-9c02-0e6f-24cdf36e7f09/8806163311173.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b5/35/04/b5350468-f899-413c-30c5-94419bc4663c/mzaf_14665111085337118558.plus.aac.p.m4a
+trackId: 1514990695
+duration: 263
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2013]

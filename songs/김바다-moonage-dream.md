@@ -3,12 +3,12 @@ title: Moonage Dream
 title_ko: Moonage Dream
 artist: 김바다
 artist_ko:
-album: 
+album: Moonage Dream
 year: 2014
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/8d/0f/6d/8d0f6dea-d67e-4de7-40cd-1518ac08abc6/KM0002579-_1_-0219.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/57/7c/3b/577c3bce-a436-1803-a9b7-11ce7bc66e61/mzaf_8030372266906923238.plus.aac.p.m4a
+trackId: 824516708
+duration: 198
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 2014]

@@ -3,12 +3,12 @@ title: Hyper Music
 title_ko: 
 artist: Muse
 artist_ko:
-album: 
+album: Origin of Symmetry
 year: 2001
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/0c/c8/0b/0cc80b73-aa09-492d-4fcc-984cab29acfa/825646096909.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/16/ff/13/16ff1344-636c-d0da-42bc-4faac8e0f30d/mzaf_3733274986034212503.plus.aac.p.m4a
+trackId: 992088662
+duration: 201
 genre: 
 lang: en
 tags: [영미, Alternative Rock, 2001]

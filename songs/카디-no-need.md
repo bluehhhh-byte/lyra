@@ -3,12 +3,12 @@ title: No Need
 title_ko: No Need
 artist: 카디
 artist_ko:
-album: 
+album: No Doubt - EP
 year: 2024
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c7/16/06/c71606d6-e1df-8752-4a6d-c96d05807e1d/8800287294299_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/09/d6/9b/09d69b6d-0992-4396-d752-11acf4b3cd66/mzaf_12472298081820797788.plus.aac.p.m4a
+trackId: 1778609494
+duration: 215
 genre: 
 lang: ko
 tags: [한국, 2024]

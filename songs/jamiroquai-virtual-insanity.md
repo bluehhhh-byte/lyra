@@ -3,12 +3,12 @@ title: Virtual Insanity
 title_ko: 
 artist: Jamiroquai
 artist_ko:
-album: 
+album: Travelling Without Moving (20th Anniversary Edition) [2016 Remaster]
 year: 1996
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a1/35/fe/a135fe18-654d-9f23-4235-c06614add855/886447942017.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/a8/60/69a860a4-22e0-acf2-ee5e-0ee2adc6911e/mzaf_13346004038842782241.plus.aac.p.m4a
+trackId: 1479062292
+duration: 341
 genre: 
 lang: en
 tags: [영미, Funk, 1996]

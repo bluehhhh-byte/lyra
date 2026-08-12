@@ -3,12 +3,12 @@ title: All You're Dreaming Of
 title_ko: 
 artist: Liam Gallagher
 artist_ko:
-album: 
+album: Kids Christmas
 year: 2020
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/cf/bb/d8cfbb6f-95ca-e7bf-f3c3-f4f1cc613fca/5059460163515.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/bd/42/92/bd429224-3ad6-d313-5fae-50f2dcecfd7c/mzaf_6308344809967579152.plus.aac.p.m4a
+trackId: 1651365933
+duration: 242
 genre: 
 lang: en
 tags: [영미, Indie Rock, 2020]

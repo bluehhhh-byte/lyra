@@ -3,12 +3,12 @@ title: Young Man
 title_ko: Young Man
 artist: 혁오, Sunset Rollercoaster
 artist_ko:
-album: 
+album: Young Man - Single
 year: 2024
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/dd/b8/30ddb8ea-88a5-00fe-6aa5-d481199bd4ef/4711232885179_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/f8/fe/d2f8fefb-691c-92d4-2a34-ad1e7734cc26/mzaf_15677363100465764619.plus.aac.p.m4a
+trackId: 1754100092
+duration: 257
 genre: 
 lang: ko
 tags: [한국, Indie Rock, 2024]

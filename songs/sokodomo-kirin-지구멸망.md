@@ -3,12 +3,12 @@ title: 지구멸망
 title_ko: 지구멸망
 artist: sokodomo, KIRIN
 artist_ko:
-album: 
+album: 고등래퍼 3 Final
 year: 2019
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/25/77/43/25774327-68f3-4e62-5bb7-c4035fa7b5b6/8809658311979_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/57/b5/3e/57b53ebe-9c5b-b77e-79c0-b2af6ab92945/mzaf_3805700750853621936.plus.aac.p.m4a
+trackId: 1621034162
+duration: 221
 genre: 
 lang: ko
 tags: [한국, Hip-Hop, 2019]

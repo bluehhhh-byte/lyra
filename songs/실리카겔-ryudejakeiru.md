@@ -3,12 +3,12 @@ title: Ryudejakeiru
 title_ko: Ryudejakeiru
 artist: 실리카겔
 artist_ko:
-album: 
+album: POWER ANDRE 99
 year: 2023
-artwork: 
-preview: 
-trackId: 
-duration: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/9c/e6/429ce6b1-2702-18bf-de93-7d1b8b5a666d/8809964653299.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/7d/5e/657d5e76-c2ef-a64e-dcbd-89133ef69457/mzaf_9951022493852410481.plus.aac.p.m4a
+trackId: 1865062191
+duration: 249
 genre: 
 lang: ko
 tags: [한국, Alternative Rock, 2023]
