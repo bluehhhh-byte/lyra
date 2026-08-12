@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-26
 published: 2025-06-25T23:43:46.000Z
-comment:
+comment: 사랑이라는 감정에 깊게 매몰되어 상대방에게 완전히 압도당한 상태를 몽환적이고 직설적인 어조로 풀어낸 곡이다. 집착과 헌신 사이의 경계에서 느껴지는 혼란스러운 심리가 강렬한 비트 위로 펼쳐진다.
 source: instagram
 source_tag: 250626_0843
 source_note: 
