@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-23
 published: 2025-05-22T19:34:27.000Z
-comment:
+comment: 이별의 슬픔을 안은 채 무심히 흘러가는 일상을 담담하게 그려내며 깊은 여운을 준다. 상실감 속에서도 아침은 어김없이 찾아온다는 사실이 아이러니하게도 큰 위로로 다가온다.
 source: instagram
 source_tag: 250523_0431
 source_note: 
