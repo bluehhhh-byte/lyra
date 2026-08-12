@@ -1,6 +1,6 @@
 ---
 title: Crazy Train
-title_ko: 
+title_ko: 크레이지 트레인
 artist: Ozzy Osbourne
 artist_ko:
 album: Blizzard of Ozz (40th Anniversary Expanded Edition)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-25
 published: 2025-07-25T14:10:50.000Z
-comment:
+comment: 냉전 시대의 불안과 사회적 혼란 속에서 정신적 상처를 안고 살아가는 현대인의 모습을 광기 어린 열차에 빗대어 표현한 헤비메탈의 명곡이다. 랜디 로즈의 강렬한 기타 리프가 곡의 질주감을 더하며 냉소적이면서도 평화를 갈구하는 메시지를 전달한다.
 source: instagram
 source_tag: 250725_2310
 source_note: Rest In Peace, Ozzy Osbourne (1948~2025)
