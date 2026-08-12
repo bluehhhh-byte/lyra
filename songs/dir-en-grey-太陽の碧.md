@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-26
 published: 2025-05-26T12:17:29.000Z
-comment:
+comment: 지나간 연인과의 추억과 배신감을 한여름의 태양에 빗대어 애절하게 그려낸 곡이다. 묵직한 사운드 속에서도 멜로디컬한 감성이 돋보인다.
 source: instagram
 source_tag: 250526_2116
 source_note: 
