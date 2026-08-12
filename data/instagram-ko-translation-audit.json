@@ -791,6 +791,105 @@
    "sourceCommit": "dfd1910",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:51:17.594Z"
+  },
+  {
+   "slug": "이찬혁-멸종위기사랑",
+   "batch": 7,
+   "originalLineCount": 76,
+   "addedTranslationCount": 33,
+   "skippedCount": 43,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.312Z"
+  },
+  {
+   "slug": "sokodomo-crush-순식간에",
+   "batch": 7,
+   "originalLineCount": 46,
+   "addedTranslationCount": 34,
+   "skippedCount": 12,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.315Z"
+  },
+  {
+   "slug": "김다니엘-1of1-bonvoyage",
+   "batch": 7,
+   "originalLineCount": 40,
+   "addedTranslationCount": 32,
+   "skippedCount": 8,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.316Z"
+  },
+  {
+   "slug": "브로콜리너마저-이웃에-방해가-되지-않는-선에서",
+   "batch": 7,
+   "originalLineCount": 32,
+   "addedTranslationCount": 32,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.318Z"
+  },
+  {
+   "slug": "레이지-본-시작되는-연인들을-위하여",
+   "batch": 7,
+   "originalLineCount": 28,
+   "addedTranslationCount": 28,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.319Z"
+  },
+  {
+   "slug": "삐삐롱스타킹-바보버스",
+   "batch": 7,
+   "originalLineCount": 26,
+   "addedTranslationCount": 26,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.320Z"
+  },
+  {
+   "slug": "이적-고독의-의미",
+   "batch": 7,
+   "originalLineCount": 24,
+   "addedTranslationCount": 24,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.321Z"
+  },
+  {
+   "slug": "검정치마-이별노래",
+   "batch": 7,
+   "originalLineCount": 21,
+   "addedTranslationCount": 21,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.323Z"
+  },
+  {
+   "slug": "이영훈-일종의-고백",
+   "batch": 7,
+   "originalLineCount": 20,
+   "addedTranslationCount": 20,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e478eba",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:51:33.324Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
