@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-28
 published: 2025-07-28T13:53:20.000Z
-comment:
+comment: 타인의 그늘에서 벗어나 진정한 자아를 찾고자 하는 결연한 의지를 폭발적인 록 사운드에 담아냈다.
 source: instagram
 source_tag: 250728_2253
 source_note: 
