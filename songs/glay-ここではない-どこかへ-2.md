@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-28
 published: 2025-05-28T10:47:07.000Z
-comment:
+comment: 순수했던 시절을 지나 현실의 무게를 견디며 방황하는 청춘의 애환을 담담하게 그려낸 명곡이다. 웅장하면서도 쓸쓸한 멜로디가 미지의 세계를 향한 갈증을 더욱 깊이 자극한다.
 source: instagram
 source_tag: 250528_1947
 source_note: 
