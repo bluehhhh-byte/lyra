@@ -340,6 +340,105 @@
    "sourceCommit": "91f0f4e",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:49:42.064Z"
+  },
+  {
+   "slug": "기리보이-2000-90",
+   "batch": 5,
+   "originalLineCount": 71,
+   "addedTranslationCount": 69,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.082Z"
+  },
+  {
+   "slug": "조용필-그래도-돼",
+   "batch": 5,
+   "originalLineCount": 40,
+   "addedTranslationCount": 40,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.085Z"
+  },
+  {
+   "slug": "서태지-take-two",
+   "batch": 5,
+   "originalLineCount": 37,
+   "addedTranslationCount": 35,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.086Z"
+  },
+  {
+   "slug": "김현철-왜-그래",
+   "batch": 5,
+   "originalLineCount": 31,
+   "addedTranslationCount": 31,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.088Z"
+  },
+  {
+   "slug": "브로콜리너마저-너무-애쓰고-싶지-않아요",
+   "batch": 5,
+   "originalLineCount": 29,
+   "addedTranslationCount": 29,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.089Z"
+  },
+  {
+   "slug": "장기하와-얼굴들-내-사람",
+   "batch": 5,
+   "originalLineCount": 26,
+   "addedTranslationCount": 26,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.090Z"
+  },
+  {
+   "slug": "안신애-hold-me-now",
+   "batch": 5,
+   "originalLineCount": 34,
+   "addedTranslationCount": 24,
+   "skippedCount": 10,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.091Z"
+  },
+  {
+   "slug": "성시경-당신은-참",
+   "batch": 5,
+   "originalLineCount": 22,
+   "addedTranslationCount": 21,
+   "skippedCount": 1,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.093Z"
+  },
+  {
+   "slug": "강산에-거꾸로-강을-거슬러-오르는-저-힘찬-연어들처럼",
+   "batch": 5,
+   "originalLineCount": 20,
+   "addedTranslationCount": 20,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "f7ca1c6",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:01.094Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"

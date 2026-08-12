@@ -23,43 +23,67 @@ source_note:
 source_hash: 2a76d83866c770893afb59146a1e03628bd5e255
 ---
 아프고 힘들고 까지고 다치고
+> Hurting, struggling, scraped and wounded
 이게 내 속마음이야
+> That's how I really feel inside
 누구도 아무도 없는 곳 홀로
+> Somewhere with no one, all alone
 울고 싶은 마음이야
+> I just want to cry
 
 이런 내 손 잡아 줄 수 있겠니
+> Could you take this hand of mine
 나는 네가 필요해
+> I need you
 까만 세상 홀로 넘어질 수 없어
+> I can't fall alone in this pitch-black world
 
 Baby won't you hold me now
 Baby won't you hold me now
 무너지는 나를 잡아
+> Catch me as I crumble
 떨어지지 않게
+> So I don't fall
 두 발로 서게
+> So I can stand on my own two feet
 
 Every time I close my eyes
 I feel like I just want to cry
 하늘과 땅 그 어디 중간쯤에 내 자리
+> My place is somewhere between heaven and earth
 나 갈 곳 있게 Please
+> Give me somewhere to go, please
 Hold me now
 
 잘 먹고 잘 자고 잘 입고 잘 쉬고
+> Eating well, sleeping well, dressing well, resting well
 그게 어려운 일이야
+> Turns out that's the hard part
 울고 다시 웃고 숨 쉬고 사랑하고
+> Crying, laughing again, breathing, loving
 그럴 날이 또 올까
+> Will days like that come again
 
 이런 내 마음 알아줄 수 있겠니
+> Could you understand this heart of mine
 나는 네가 필요해
+> I need you
 험한 세상 홀로 떨어질 수 없어
+> I can't fall alone in this cruel world
 
 Baby won't you hold me now
 Baby won't you hold me now
 무너지는 나를 잡아
+> Catch me as I crumble
 떨어지지 않게
+> So I don't fall
 두 발로 서게
+> So I can stand on my own two feet
 
 Every time I close my eyes
 I feel like I just want to cry
 하늘과 땅 그 어디 중간쯤에 내 자리
+> My place is somewhere between heaven and earth
 나 갈 곳 있게 Please
+> Give me somewhere to go, please
 Hold me now
