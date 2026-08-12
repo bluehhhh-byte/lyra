@@ -4,6 +4,7 @@ import { usePlayer } from "../player";
 
 // 추천 곡 그리드 — 카드의 ▶로 전역 플레이어에 30초 미리듣기를 건다.
 // 컬렉션 곡이 아니라 개별 페이지가 없으니 카드의 행동은 '들어보기' 하나다.
+// 모바일(hover 없음)에선 ▶가 항상 보이고, 재생 중인 카드는 테두리로 구분.
 export default function SongRecs({ items }) {
   const { track, setTrack } = usePlayer();
 
@@ -13,7 +14,11 @@ export default function SongRecs({ items }) {
         const playing = track?.preview && track.preview === s.preview;
         const inner = (
           <>
-            <div className="relative overflow-hidden rounded-xl border border-line bg-surface">
+            <div
+              className={`relative overflow-hidden rounded-xl border bg-surface transition ${
+                playing ? "border-accent ring-2 ring-accent/40" : "border-line"
+              }`}
+            >
               <CoverImage
                 src={s.artwork}
                 alt={s.title}
@@ -22,14 +27,18 @@ export default function SongRecs({ items }) {
                 className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
               />
               {s.preview ? (
-                <span
-                  className={`absolute bottom-2 right-2 flex h-9 w-9 items-center justify-center rounded-full text-sm backdrop-blur transition ${
-                    playing ? "bg-accent text-bg" : "bg-black/60 text-white opacity-0 group-hover:opacity-100"
-                  }`}
-                  aria-hidden
-                >
-                  ▶
-                </span>
+                playing ? (
+                  <span className="absolute bottom-2 right-2 rounded-full bg-accent px-2.5 py-1 text-[10px] font-semibold text-bg backdrop-blur">
+                    재생 중
+                  </span>
+                ) : (
+                  <span
+                    className="absolute bottom-2 right-2 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-sm text-white opacity-100 backdrop-blur transition sm:opacity-0 sm:group-hover:opacity-100"
+                    aria-hidden
+                  >
+                    ▶
+                  </span>
+                )
               ) : (
                 // iTunes에 미리듣기가 없는 곡 — 이유를 보여주고 카드는 유튜브 검색으로
                 <span className="absolute bottom-2 right-2 rounded bg-black/60 px-1.5 py-0.5 text-[10px] text-white/80 backdrop-blur">
@@ -43,6 +52,7 @@ export default function SongRecs({ items }) {
               {s.year ? ` · ${s.year}` : ""}
             </p>
             {s.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{s.why}</p>}
+            {s.basedOn && <p className="mt-0.5 truncate text-[11px] text-accent/70">↳ {s.basedOn}</p>}
           </>
         );
         return s.preview ? (

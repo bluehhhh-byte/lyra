@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { EMOTIONS } from "../../lib/keywords";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -116,13 +117,15 @@ export default function SongTools({ songs }) {
     }
   };
 
-  // 추천 곡 생성 — Gemini 1회 + iTunes 매칭. /recommendations에 누적된다.
+  // 추천 곡 생성 — Gemini 1회 + iTunes 매칭. /recommendations/music에 회차로 쌓인다.
   const [recsBusy, setRecsBusy] = useState("");
+  const [recMode, setRecMode] = useState("balance");
+  const [recEmotion, setRecEmotion] = useState("고독");
   const songRecs = async () => {
     setRecsBusy("추천 생성 중…");
     try {
-      const { added, total } = await api("songRecs", {});
-      setRecsBusy(`추천 +${added}곡 (누적 ${total}) — 재배포 후 반영`);
+      const { added, total, mode } = await api("songRecs", { mode: recMode, emotion: recEmotion });
+      setRecsBusy(`추천 +${added}곡 (${mode}, 누적 ${total}) — 재배포 후 반영`);
     } catch (e) {
       setRecsBusy(`실패: ${e.message}`);
     }
@@ -175,15 +178,38 @@ export default function SongTools({ songs }) {
           <br />
           {bulk ? `추출 중… ${bulk.done}/${bulk.total}` : "일괄 추출"}
         </button>
-        <button
-          onClick={songRecs}
-          disabled={recsBusy.endsWith("중…")}
-          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
-        >
-          추천 곡
-          <br />
-          생성
-        </button>
+        <div className="flex flex-col gap-1 sm:min-w-32">
+          <div className="flex gap-1">
+            <select
+              value={recMode}
+              onChange={(e) => setRecMode(e.target.value)}
+              aria-label="추천 방향"
+              className="w-full rounded-lg border border-line bg-surface px-1.5 py-1 text-xs outline-none focus:border-accent"
+            >
+              <option value="balance">균형</option>
+              <option value="deep">깊게</option>
+              <option value="wide">넓게</option>
+              <option value="mood">분위기</option>
+            </select>
+            {recMode === "mood" && (
+              <select
+                value={recEmotion}
+                onChange={(e) => setRecEmotion(e.target.value)}
+                aria-label="감정"
+                className="w-full rounded-lg border border-line bg-surface px-1.5 py-1 text-xs outline-none focus:border-accent"
+              >
+                {EMOTIONS.map((e) => <option key={e} value={e}>{e}</option>)}
+              </select>
+            )}
+          </div>
+          <button
+            onClick={songRecs}
+            disabled={recsBusy.endsWith("중…")}
+            className="rounded-lg border border-accent px-4 py-1.5 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+          >
+            추천 곡 생성
+          </button>
+        </div>
         <button
           onClick={musicReport}
           disabled={recsBusy.endsWith("중…")}

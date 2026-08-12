@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllSongs } from "../../../lib/songs";
 import { readData } from "../../../lib/store";
-import { summarizeMusicTaste, interpretMusicTaste } from "../../../lib/music-taste-core";
+import { summarizeMusicTaste, interpretMusicTaste, recentShift } from "../../../lib/music-taste-core";
 import { emotionValence, valenceColor } from "../../../lib/keywords";
 
 export const metadata = {
@@ -49,6 +49,7 @@ export default function MusicTastePage() {
   const t = summarizeMusicTaste(songs);
   const text = interpretMusicTaste(t);
   const report = readData("music-report.json", null);
+  const shift = recentShift(songs);
 
   if (t.count === 0)
     return (
@@ -154,6 +155,52 @@ export default function MusicTastePage() {
           </div>
         )}
       </Section>
+
+      {shift && (
+        <Section title="최근의 변화" hint={`최근 ${shift.n}곡을 전체와 비교 — 기록이 움직이는 방향`}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              shift.genre && ["요즘 장르", shift.genre],
+              shift.emotion && ["요즘 감정", shift.emotion],
+              shift.region && ["요즘 권역", shift.region],
+            ]
+              .filter(Boolean)
+              .map(([label, d]) => (
+                <div key={label} className="rounded-xl border border-line bg-surface px-4 py-3 text-sm">
+                  <p className="text-xs text-muted">{label}</p>
+                  <p className="mt-1 font-semibold">
+                    {d.name} <span className="text-xs font-normal text-muted">{d.n}/{shift.n}곡</span>
+                    {d.deltaPct !== 0 && (
+                      <span className={`ml-2 text-xs font-normal ${d.deltaPct > 0 ? "text-accent" : "text-muted"}`}>
+                        전체 대비 {d.deltaPct > 0 ? `+${d.deltaPct}` : d.deltaPct}%p
+                      </span>
+                    )}
+                  </p>
+                </div>
+              ))}
+            <div className="rounded-xl border border-line bg-surface px-4 py-3 text-sm">
+              <p className="text-xs text-muted">정서 기울기</p>
+              <p className="mt-1 font-semibold tabular-nums">
+                {shift.valenceRecent > 0 ? "+" : ""}{shift.valenceRecent.toFixed(1)}
+                <span className="ml-2 text-xs font-normal text-muted">
+                  전체 {shift.valenceAll > 0 ? "+" : ""}{shift.valenceAll.toFixed(1)} →{" "}
+                  {shift.valenceRecent > shift.valenceAll + 0.3
+                    ? "밝아지는 중"
+                    : shift.valenceRecent < shift.valenceAll - 0.3
+                      ? "어두워지는 중"
+                      : "비슷함"}
+                </span>
+              </p>
+            </div>
+          </div>
+          {shift.newArtists.length > 0 && (
+            <p className="pt-1 text-xs text-muted">
+              처음 등장한 아티스트: {shift.newArtists.slice(0, 8).join(", ")}
+              {shift.newArtists.length > 8 && ` 외 ${shift.newArtists.length - 8}팀`}
+            </p>
+          )}
+        </Section>
+      )}
 
       <Section title="많이 담은 장르" hint={`${t.count}곡 중 ${t.covered.genre}곡 기준 — 장르를 누르면 그 태그의 곡·영화로`}>
         {t.genre.slice(0, 12).map(([g, n]) => (

@@ -13,16 +13,23 @@ const PRIMARY = [
   ["/diary", "일기"],
 ];
 
+// 전체 메뉴 — 작은 라벨로 세계를 구분한다 (아카이브·일기는 상단 내비 담당)
 const MORE = [
-  ["/songs/taste", "음악 취향"],
-  ["/recommendations/music", "추천 곡"],
-  ["/watched", "평가한 영화"],
-  ["/watched/taste", "영화 취향"],
-  ["/recommendations", "추천 영화"],
-  ["/people", "인물"],
-  ["/recap", "결산"],
-  ["/stats", "통계"],
-  ["/tags", "태그"],
+  ["LYRA", [
+    ["/songs/taste", "음악 취향"],
+    ["/recommendations/music", "추천 곡"],
+  ]],
+  ["SYNO", [
+    ["/watched", "평가한 영화"],
+    ["/watched/taste", "영화 취향"],
+    ["/recommendations", "추천 영화"],
+    ["/people", "인물"],
+  ]],
+  ["기록", [
+    ["/recap", "결산"],
+    ["/stats", "통계"],
+    ["/tags", "태그"],
+  ]],
 ];
 
 export default function Header() {
@@ -112,10 +119,17 @@ export default function Header() {
               ))}
             </div>
             <div className="pt-2">
-              {MORE.map(([href, label]) => (
-                <Link key={href} href={href} className="flex items-center justify-between rounded px-3 py-2 text-sm hover:bg-surface hover:text-accent">
-                  {label}<span className="text-muted">→</span>
-                </Link>
+              {MORE.map(([groupLabel, links]) => (
+                <div key={groupLabel} className="mb-1">
+                  <p className="px-3 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-wider text-muted/60">
+                    {groupLabel}
+                  </p>
+                  {links.map(([href, label]) => (
+                    <Link key={href} href={href} className="flex items-center justify-between rounded px-3 py-2 text-sm hover:bg-surface hover:text-accent">
+                      {label}<span className="text-muted">→</span>
+                    </Link>
+                  ))}
+                </div>
               ))}
             </div>
           </div>

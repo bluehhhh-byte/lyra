@@ -853,6 +853,20 @@ ${lines}`
       ? `\n이 사람의 취향 리포트(참고해 추천 방향을 잡아라):\n${report.text.slice(0, 1500)}\n`
       : "";
 
+    // 생성 모드 — 균형(기본)/깊게/넓게/분위기. 프롬프트의 방향 지시만 다르다.
+    const MODES = {
+      balance: { label: "균형", brief: "절반은 '취향의 연장선'(direction: extend), 절반은 '새로운 방향'(direction: discover)으로 섞어라." },
+      deep: { label: "깊게", brief: "가장 많이 담은 장르·감정·아티스트 계열을 더 깊게 파고들어라. 대부분 direction: extend." },
+      wide: { label: "넓게", brief: "기존 취향과 연결점은 남기되 새로운 국가·시대·아티스트 중심으로 확장하라. 대부분 direction: discover." },
+      mood: { label: "분위기", brief: "" }, // 감정이 붙는다
+    };
+    const mode = MODES[body.mode] ? body.mode : "balance";
+    const moodEmotion = mode === "mood" ? parseEmotion(body.emotion) : "";
+    const brief =
+      mode === "mood"
+        ? `'${moodEmotion || "고독"}'의 감정에 맞는 곡 중심으로 추천하라. 익숙한 축이면 extend, 새로운 축이면 discover.`
+        : MODES[mode].brief;
+
     const raw = await geminiText(
       key,
       `아래는 한 사람의 음악 컬렉션 취향 집계다 (총 ${songs.length}곡).${reportHint}
@@ -862,10 +876,13 @@ ${lines}`
 아티스트: ${fmt(artists)}
 감정: ${fmt(emotion)}
 가사 키워드: ${keywords.map(([k]) => k).join(", ")}
-이 취향에 맞으면서 컬렉션에 '없는' 곡 28곡을 추천하라. JSON 배열로만:
-[{"title":"곡 제목","artist":"아티스트","why":"추천 이유"}]
+이 취향에 맞으면서 컬렉션에 '없는' 곡 28곡을 추천하라. 이번 추천의 방향: ${brief}
+JSON 배열로만:
+[{"title":"곡 제목","artist":"아티스트","why":"추천 이유","basedOn":"근거","direction":"extend|discover"}]
 규칙:
-- 편애 지점(자주 담은 장르·아티스트·감정·연대)을 파고들되, 이미 담은 아티스트의 곡은 최대 5곡까지만 — 나머지는 취향이 닿을 새로운 아티스트의 발견작으로
+- direction: 기존 취향의 연장이면 "extend", 새로운 발견이면 "discover"
+- basedOn: 이 추천의 근거가 된 기존 곡·아티스트·취향 축을 한국어 30자 이내로 (예: "Radiohead의 불안한 정서 연장", "일본 록 비중을 2010년대로 확장")
+- 이미 담은 아티스트의 곡은 최대 5곡까지만
 - 아래 컬렉션에 이미 있는 곡과 그 리메이크·커버는 제외: ${have}
 - title은 원제 그대로(검색 매칭용), why는 취향과 연결한 한국어 40자 이내 한 구절
 - 실제 발매된 곡만. 28곡(매칭 탈락 여유분). 순수 JSON만 출력`,
@@ -932,16 +949,27 @@ ${lines}`
         year: hit.year,
         genre: hit.genre,
         why: String(r.why || "").trim(),
+        basedOn: String(r.basedOn || "").trim(),
+        direction: r.direction === "discover" ? "discover" : "extend",
         at: now,
       });
     }
     if (!added.length && prevItems.length === prev.items?.length)
       return Response.json({ error: "새 추천을 찾지 못했습니다 (이미 추천했거나 담은 곡)" }, { status: 502 });
 
-    // 최신 100곡만 유지 — 오래 쌓이면 파일과 페이지가 무한히 자란다
+    // 최신 100곡만 유지 — 오래 쌓이면 파일과 페이지가 무한히 자란다.
+    // 같은 at을 공유하는 항목이 한 회차 — runs가 회차별 모드를 기억한다.
     const items = [...added, ...prevItems].slice(0, 100);
-    await writeData("song-recs.json", JSON.stringify({ items, at: now }, null, 1), `data: 추천 곡 +${added.length} (누적 ${items.length})`);
-    return Response.json({ added: added.length, total: items.length });
+    const runs = [
+      { at: now, mode, ...(moodEmotion ? { emotion: moodEmotion } : {}), label: mode === "mood" ? `분위기 · ${moodEmotion}` : MODES[mode].label },
+      ...(prev.runs || []),
+    ].slice(0, 20);
+    await writeData(
+      "song-recs.json",
+      JSON.stringify({ items, runs, at: now }, null, 1),
+      `data: 추천 곡 +${added.length} (${runs[0].label}, 누적 ${items.length})`
+    );
+    return Response.json({ added: added.length, total: items.length, mode: runs[0].label });
   }
   return null;
 }
