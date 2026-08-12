@@ -1,6 +1,114 @@
 {
  "items": [
   {
+   "tmdbId": 11541,
+   "media": "movie",
+   "title": "가장 위험한 해",
+   "year": "1982",
+   "poster": "https://image.tmdb.org/t/p/w154/y9GIM95xWWU4urqqu0kziby0Ykg.jpg",
+   "why": "피터 위어 감독의 섬세한 인물 심리 묘사와 연출",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 1455378,
+   "media": "movie",
+   "title": "지상의 밤",
+   "year": "",
+   "poster": "",
+   "why": "90년대 특유의 아날로그 감성이 담긴 옴니버스 드라마",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 11830,
+   "media": "movie",
+   "title": "담뽀뽀",
+   "year": "1985",
+   "poster": "https://image.tmdb.org/t/p/w154/sPhjsmf600VVVWzXwLheghv9pbO.jpg",
+   "why": "80년대 일본 영화 특유의 위트와 기발한 서사",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 691018,
+   "media": "movie",
+   "title": "사냥꾼의 밤",
+   "year": "",
+   "poster": "",
+   "why": "1950년대 미국 미스터리 범죄 연출의 클래식함",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 15804,
+   "media": "movie",
+   "title": "고령가 소년 살인 사건",
+   "year": "1991",
+   "poster": "https://image.tmdb.org/t/p/w154/xdnex58HIT1bwLIjg4ry8OdOZGO.jpg",
+   "why": "90년대 아시아 영화가 선사하는 묵직한 드라마틱 여운",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 695,
+   "media": "movie",
+   "title": "숏 컷",
+   "year": "1993",
+   "poster": "https://image.tmdb.org/t/p/w154/mbNTvbtWfV4soyErimDTdX67OAr.jpg",
+   "why": "90년대 미국 다중 군상극의 정수를 보여주는 명작",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 25376,
+   "media": "movie",
+   "title": "엘 시크레토: 비밀의 눈동자",
+   "year": "2009",
+   "poster": "https://image.tmdb.org/t/p/w154/3YVLQAOhim7W9Zhnz5CrL4a3RBe.jpg",
+   "why": "정교하게 짜인 미스터리와 묵직한 감동의 범죄 드라마",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 28213,
+   "media": "movie",
+   "title": "봄 이야기",
+   "year": "1990",
+   "poster": "https://image.tmdb.org/t/p/w154/xMMMw94PQcBWp6q4UQy24jCp5zR.jpg",
+   "why": "90년대 프랑스 영화 특유의 섬세한 지적 대화극",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 11305,
+   "media": "movie",
+   "title": "미스테리 트레인",
+   "year": "1989",
+   "poster": "https://image.tmdb.org/t/p/w154/f11xq7dBGhz9UDc3dabldAGeXVH.jpg",
+   "why": "80년대 감각적인 연출이 빛나는 옴니버스 드라마",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 7974,
+   "media": "movie",
+   "title": "성냥공장 소녀",
+   "year": "1990",
+   "poster": "https://image.tmdb.org/t/p/w154/gAx3zjkUT1nH4rElucUUs8MSAVK.jpg",
+   "why": "90년대 북유럽 특유의 절제된 드라마와 깊은 페이소스",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 93,
+   "media": "movie",
+   "title": "살인의 해부",
+   "year": "1959",
+   "poster": "https://image.tmdb.org/t/p/w154/b2G1QSAwtBv9luhEwErIgSRaU92.jpg",
+   "why": "1950년대 미국 범죄 미스터리 법정극의 명작",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
+   "tmdbId": 1092,
+   "media": "movie",
+   "title": "제3의 사나이",
+   "year": "1949",
+   "poster": "https://image.tmdb.org/t/p/w154/rO2Fq0AZZx9obs52KJdx4mRE8p5.jpg",
+   "why": "유럽 필름 노아 특유의 음울하고 매혹적인 미스터리",
+   "at": "2026-08-12T09:37:38.513Z"
+  },
+  {
    "tmdbId": 77285,
    "media": "movie",
    "title": "부운",
@@ -709,84 +817,7 @@
    "year": "2002",
    "poster": "https://image.tmdb.org/t/p/w154/oD2DqPTRjNCcfNqCEGNPJf4DGXe.jpg",
    "why": "시공간을 넘나드는 환상적인 연출과 시적 감성의 애니메이션"
-  },
-  {
-   "tmdbId": 4977,
-   "title": "파프리카",
-   "year": "2006",
-   "poster": "https://image.tmdb.org/t/p/w154/apQqEF7xXjPWfjQgRWmxNtyIaMd.jpg",
-   "why": "꿈과 현실의 경계를 허무는 압도적 비주얼의 미스터리 판타지"
-  },
-  {
-   "tmdbId": 42994,
-   "title": "메모리즈",
-   "year": "1995",
-   "poster": "https://image.tmdb.org/t/p/w154/fTEOza0iLwxEj7PFf05MqUovJey.jpg",
-   "why": "90년대 일본 SF 판타지와 미스터리가 결합된 옴니버스 애니"
-  },
-  {
-   "tmdbId": 23606,
-   "title": "그 여름 가장 조용한 바다",
-   "year": "1991",
-   "poster": "https://image.tmdb.org/t/p/w154/v85KKlwHnnVEEHopL3ilAQs12CO.jpg",
-   "why": "90년대 일본 특유의 정적이고 깊은 울림을 주는 Drama"
-  },
-  {
-   "tmdbId": 1093,
-   "title": "사형대의 엘리베이터",
-   "year": "1958",
-   "poster": "https://image.tmdb.org/t/p/w154/zHr0S6HO9mtroduIq2nEFC0fuwj.jpg",
-   "why": "1950년대 프랑스 범죄 미스터리의 클래식한 매력"
-  },
-  {
-   "tmdbId": 68,
-   "title": "브라질",
-   "year": "1985",
-   "poster": "https://image.tmdb.org/t/p/w154/aewan59WcFThBimkTVVoNf2o5Vb.jpg",
-   "why": "80년대 영국 영화의 디스토피아적 판타지와 블랙 유머"
-  },
-  {
-   "tmdbId": 426,
-   "title": "현기증",
-   "year": "1958",
-   "poster": "https://image.tmdb.org/t/p/w154/fqePCJXuCAAmUnG935fLFgk9H6L.jpg",
-   "why": "1950년대 클래식 미스터리 심리극의 위대한 걸작"
-  },
-  {
-   "tmdbId": 567,
-   "title": "이창",
-   "year": "1954",
-   "poster": "https://image.tmdb.org/t/p/w154/jU5Fe7n9rsEBa0uaV5dqGjJGwmX.jpg",
-   "why": "1950년대에 완성된 관음과 추리의 완벽한 미스터리"
-  },
-  {
-   "tmdbId": 379,
-   "title": "밀러스 크로싱",
-   "year": "1990",
-   "poster": "https://image.tmdb.org/t/p/w154/xdeiADkYabCO3YO3llIqvet7XjY.jpg",
-   "why": "우아하고 냉철한 90년대 범죄·드라마 장르의 정수"
-  },
-  {
-   "tmdbId": 1052,
-   "title": "욕망",
-   "year": "1966",
-   "poster": "https://image.tmdb.org/t/p/w154/jVDVpydUw8Z50naUDAG4NbRCrSa.jpg",
-   "why": "영국 배경의 이미지와 진실에 대한 고품격 미스터리"
-  },
-  {
-   "tmdbId": 30020,
-   "title": "체리 향기",
-   "year": "1997",
-   "poster": "https://image.tmdb.org/t/p/w154/9F2hyCkGTzBEvpwYWzG36HlvwdE.jpg",
-   "why": "이창동 감독의 정서와 맞닿은 깊고 담담한 인생 드라마"
-  },
-  {
-   "tmdbId": 20617,
-   "title": "고하토",
-   "year": "1999",
-   "poster": "https://image.tmdb.org/t/p/w154/1txcD9ZBTtM5v4vW08A55vzGNbs.jpg",
-   "why": "90년대 일본의 기묘하고 매혹적인 심리 미스터리 Drama"
   }
  ],
- "at": "2026-08-11T03:57:02.596Z"
+ "at": "2026-08-12T09:37:38.513Z"
 }
