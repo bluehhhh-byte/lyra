@@ -1,6 +1,6 @@
 ---
 title: Tekken ll
-title_ko: 
+title_ko: 텍켄 II
 artist: Sex Machineguns
 artist_ko:
 album: 
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-17
 published: 2025-06-16T23:14:48.000Z
-comment:
+comment: 일상에서 쌓인 불만과 분노를 펀치와 킥이라는 원초적인 폭력성으로 해소하는 코믹하고 유쾌한 헤비메탈 곡이다. 밴드 특유의 거친 사운드와 해학적인 가사가 어우러져 듣는 이에게 통쾌한 대리만족을 선사한다.
 source: instagram
 source_tag: 250617_0814
 source_note: 
