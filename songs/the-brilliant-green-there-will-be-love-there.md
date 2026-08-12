@@ -1,6 +1,6 @@
 ---
 title: There Will Be Love There
-title_ko: 
+title_ko: 데어 윌 비 러브 데어
 artist: the brilliant green
 artist_ko:
 album: SUPER TERRA2000(Live)
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-28
 published: 2025-05-27T23:05:22.000Z
-comment:
+comment: 불안과 고민 속에서도 미래를 향해 나아가며 진정한 사랑을 찾겠다는 의지를 담은 곡이다. 맑고 청량한 밴드 사운드와 카와세 토코모의 보컬이 조화를 이룬다.
 source: instagram
 source_tag: 250528_0804
 source_note: 
