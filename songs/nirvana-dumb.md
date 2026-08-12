@@ -1,0 +1,84 @@
+---
+title: Dumb
+title_ko: 
+artist: Nirvana
+artist_ko:
+album: In Utero (Super Deluxe Edition)
+year: 1993
+artwork: https://cdn-images.dzcdn.net/images/cover/7aa895fc7e3c22d5533817649f54f13f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/f/0/1aff6cdc5665214210619d977eb84d73.mp3?hdnea=exp=1786559401~acl=/api/1/1/1/a/f/0/1aff6cdc5665214210619d977eb84d73.mp3*~data=user_id=0,application_id=42~hmac=8d54be7e3f79f2c410c0f4a6a3ff5dc562b0071a7e529756f15e599c8127186c
+trackId: 
+duration: 149
+genre: 
+lang: en
+tags: [1993]
+keywords: []
+emotion:
+date: 2024-08-25
+published: 2024-08-24T20:42:14.000Z
+comment:
+source: instagram
+source_tag: 240825_0540
+source_note: 
+source_hash: 0f92ba5beefd7c2d8ce3667b0a862707c2960643
+---
+I'm not like them, but I can pretend
+> 난 그 녀석들과는 다르지만, 대충 섞여 지낼 수 있어
+The sun is gone, but I have a light
+> 해는 졌지만, 난 빛을 가지고 있어
+The day is done, but I'm having fun
+> 날은 저물었지만, 난 여전히 즐거워
+I think I'm dumb
+> 난 멍청이야
+
+Or maybe just happy
+> 어쩌면 그저 행복한 걸까
+Think I'm just happy
+> 그냥 행복하다고 생각해야지
+Think I'm just happy
+> 그냥 행복하다고 생각할 거야
+
+My heart is broke, but I have some glue
+> 내 마음은 산산조각 났지만, 내겐 대마초가 있어
+Help me inhale and mend it with you
+> 숨쉬는 걸 도와줘, 너와 함께면 좋아질 거야
+We'll float around and hang out on clouds
+> 우린 구름 위를 떠다닐 거고
+Then we'll come down
+> 그럼 이제 내려오겠습니다
+And have a hangover
+> 그리고 숙취에 시달리겠지
+
+Skin the sun, fall asleep
+> 태양이 껍질을 벗고 잠에 빠지면
+Wish away, the soul is cheap
+> 사라지고 싶어, 영혼은 싸구려인걸
+Lesson learned, wish me luck
+> 교훈을 얻었어, 행운을 빌어줘
+Soothing burn, wake me up
+> 상처가 아물면 날 깨워줘
+
+I'm not like them, but I can pretend
+> 난 그 녀석들과는 다르지만, 대충 섞여 지낼 수 있어
+The sun is gone, but I have a light
+> 해는 졌지만, 난 빛을 가지고 있어
+The day is done, but I'm having fun
+> 날은 저물었지만, 난 여전히 즐거워
+I think I'm dumb
+> 난 멍청이야
+
+Or maybe just happy
+> 어쩌면 그저 행복한 걸까
+Think I'm just happy
+> 그냥 행복하다고 생각해야지
+Think I'm just happy
+> 그냥 행복하다고 생각할 거야
+
+I think I'm dumb
+> 나는 바보인가 봐
+I think I'm dumb
+> 나는 바보인가 봐
+I think I'm dumb
+> 나는 바보인가 봐
+I think I'm dumb
+> 난 멍청이야

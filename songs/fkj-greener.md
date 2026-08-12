@@ -1,0 +1,63 @@
+---
+title: Greener
+title_ko: 
+artist: FKJ
+artist_ko:
+album: 
+year: 2022
+artwork: 
+preview: 
+trackId: 
+duration: 
+genre: 
+lang: en
+tags: [2022]
+keywords: []
+emotion:
+date: 2024-06-14
+published: 2024-06-14T10:38:36.000Z
+comment:
+source: instagram
+source_tag: 240614_1937
+source_note: 
+source_hash: 93ec5b21047bf8d6b1b2107b501a24050cf19897
+---
+You think you'll like it, you say it's your thing
+> 마음에 들 거라 생각해, 네가 원하는 거라며 
+Wait until you open it
+> 네가 마음을 열때까지 기다리고 있어
+The gift that everybody wants
+> 모두가 원하던 선물이지만
+Sorry, I must say you're wrong
+> 미안해, 네가 틀렸다고 말할 수밖에 없어 
+
+Cause it's always greener on the other side
+> 왜냐면 항상 초록색은 다른 면이 존재하거든
+Always greener on the other side
+> 항상 다른 쪽이 더 푸르니까 
+
+Love of the unknown
+> 무지 속의 사랑
+You gonna get it then look somewhere else
+> 너는 사랑을 얻고 나면 또 다른 곳을 바라보네
+And you'll come back alone
+> 그리고 다시 또 혼자가 되겠지
+Yeah, you'll come back, come back
+> 그래, 다시 돌고 돌아, 돌아올거야
+
+Ready to live steady now but no one wanna talk
+> 현재에 만족하는 삶, 하지만 본심은 숨기고 있지
+Depending on us all, 'cause the mission didn't work out
+> 모두 우리에게 달려있어, 사명감 따윈 말 뿐이니까
+You didn't know time would slip this fast
+> 시간이 이렇게 빨리 흘러갈 줄은 몰랐겠지
+
+Now it's too late
+> 이제 너무 늦었어
+Now it's too late
+> 이제 너무 늦었어
+
+Cause it's always greener on the other side
+> 왜냐면 항상 초록색은 다른 면이 존재하거든
+Always greener on the other side
+> 항상 다른 쪽이 더 푸르니까 

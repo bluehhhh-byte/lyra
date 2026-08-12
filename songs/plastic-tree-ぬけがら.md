@@ -1,0 +1,56 @@
+---
+title: ぬけがら
+title_ko: 허물
+artist: Plastic Tree
+artist_ko:
+album: Puppet Show (パペット ショウ)
+year: 1997
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/76/d2/96/mzi.jbibgbul.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a7/5a/39/a75a39d2-26b9-bea7-b9d3-783049cb6884/mzaf_2378556792784439557.plus.aac.p.m4a
+trackId: 386566257
+duration: 211
+genre: ロック
+lang: ja
+tags: [1997]
+keywords: []
+emotion:
+date: 2025-07-05
+published: 2025-07-04T23:29:22.000Z
+comment:
+source: instagram
+source_tag: 250705_0829
+source_note: 
+source_hash: 7702dda487163fa2db6ed63eeb7b70a5f97b90b0
+---
+夏の日の ボクラは
+> 여름날의 우리는
+淡い光の希望の中に
+> 희미한 빛의 희망 속에
+ずっと 置き去りだった
+> 계속 내버려져 있었어
+憂鬱を 溶かして 步いていた
+> 우울함을 녹이며 걸었지
+
+細い 枝が きしんだ
+> 가는 가지가 삐걱거렸어
+今日は ひどく風が强くて
+> 오늘은 유난히 바람이 세서
+何も かわらないのに
+> 아무것도 변하지 않았는데
+怖くなりだして 下を 向いた
+> 두려워져서 고개를 숙였어
+
+高い空は あんまり 好きじゃない
+> 높은 하늘은 별로 좋아하지 않아
+蟬の悲鳴も 自分も好きじゃない
+> 매미의 울음소리도, 나 자신도 좋아하지 않아
+
+ほんとうの きもちじゃないなら どんな事も もう しないで
+> 진짜 마음이 아니라면 어떤 일도 더는 하지 마
+ほんとうの きもちじゃないなら どんな事も もう しないでよ
+> 진짜 마음이 아니라면 어떤 일도 더는 하지 말아줘
+
+なんで泣いてるんだろ?
+> 왜 울고 있는 걸까?
+僕らは もっと，おりこうだったのにね
+> 우리는 더 똑똑했었는데 말이야

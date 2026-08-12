@@ -1,0 +1,44 @@
+---
+title: Blue Baby
+title_ko: Blue Baby
+artist: 시나위
+artist_ko:
+album: 6집
+year: 1997
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6e/14/2b/6e142b7c-ae07-99e9-e9e3-827793c272af/8806384595253.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/a4/35/f2a43529-d717-4243-6790-790f777e9826/mzaf_15031228162887990011.plus.aac.p.m4a
+trackId: 1852827933
+duration: 297
+genre: K-Pop
+lang: ko
+tags: [1997]
+keywords: []
+emotion:
+date: 2025-07-18
+published: 2025-07-18T14:02:16.000Z
+comment:
+source: instagram
+source_tag: 250718_2302
+source_note: 
+source_hash: 5696e3316f817a40c6711f1af961933a36ab8a99
+---
+술에 취한 눈으로
+날 사랑했지
+내 몸에 맺힌 멍자욱도
+그런 사랑이야
+ 
+난 무서워, 이런 하루가
+시작되는게
+ 
+끝나질 않아, 푸른 하늘이
+난 정말 보고 싶었어
+영원히 잠든 나의 모습은
+아름다울까
+
+벗어나고 싶지만
+날 가두고 말았어
+숨이 막혀와
+쓰러지겠지
+ 
+이제 난 자유로워, 영원히
+이제 난 평화로워, 영원히

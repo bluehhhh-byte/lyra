@@ -1,0 +1,79 @@
+---
+title: Inhaler
+title_ko: 
+artist: Foals
+artist_ko:
+album: 
+year: 2012
+artwork: 
+preview: 
+trackId: 
+duration: 
+genre: 
+lang: en
+tags: [2012]
+keywords: []
+emotion:
+date: 2024-11-27
+published: 2024-11-26T23:53:53.000Z
+comment:
+source: instagram
+source_tag: 241127_0853
+source_note: 
+source_hash: 0ee51e4bf00c2fe87cecb1e31de90620376b68e7
+---
+Sticks and stones don’t break my bones,
+> 돌팔매도 몽둥이도 내 뼈를 부러뜨리진 못해,
+They’re make-believe
+> 돌과 막대기가 내 뼈를 부러뜨릴 수는 없어, 그건 그저 환상이야
+It’s lock ‘n’ load, it’s a dead end road for you and me
+> 총알을 장전하는 소리, 너와 나에게는 막다른 길일 뿐이야
+And I’m rusted gold,
+> 나는 녹슬어버린 금,
+I’m stripped and sold, I’m make believe
+> 나는 녹슨 금처럼 벗겨지고 팔려나가는 환상일 뿐이야
+And I’m up for rent, my head is spent, I guarantee
+> 나는 임대 가능하고, 머리는 다 소진됐어, 이건 확실해
+
+So can you not go away? If just for one day?
+> 그러니까 떠나지 않을 수 있겠어? 단 하루만이라도
+Oo-ooh, oo-oo-oo-ooh
+> 오-오, 오-오-오-오
+Impossible, possible, how d’you feel now?
+> 불가능, 가능, 지금 너는 어떤 기분이야?
+How d’you feel now in a war?
+> 전쟁 속에서 너는 지금 어떤 기분이야?
+War sends out for you and throw your fortune away
+> 전쟁은 너를 향해 다가오고, 너의 행운을 내던져버리지
+
+And I can’t get enough space
+> 그리고 나는 충분한 공간을 얻을 수 없어
+Space, space, get enough space
+> 공간, 공간, 충분한 공간이 필요해
+
+I’m pale and coy, a momma’s boy, I’m make believe
+> 나는 창백하고 소심한 엄마의 아들이야, 그저 환상일 뿐이야
+I shimmy-shake, I wake ‘n’ bake, I’m over me
+> 몸을 흔들고, 깨어나서 준비하고, 나는 나를 넘어섰어
+My lungs defeat, I cannot breathe, don’t follow me
+> 내 폐는 무너지고, 숨을 쉴 수 없어, 나를 따라오지 마
+And you push and shove,
+> 너는 밀치고 또 떠밀지,
+I’ve had enough, you best believe
+> 너는 밀치고 떠밀어, 나는 이제 충분히 참았어, 믿어야 할 거야
+
+So can you not go away? If just for one day?
+> 그러니까 떠나지 않을 수 있겠어? 단 하루만이라도
+Oo-ooh, oo-oo-oo-ooh
+> 오-오, 오-오-오-오
+Impossible, possible, how d’you feel now?
+> 불가능, 가능, 지금 너는 어떤 기분이야?
+How d’you feel now in a war?
+> 전쟁 속에서 너는 지금 어떤 기분이야?
+War sends out for you, throw your fortune away
+> 전쟁은 너를 향해 다가오고, 너의 행운을 내던져버리지
+
+And I can’t get enough space
+> 그리고 나는 충분한 공간을 얻을 수 없어
+Space, I can’t get enough space
+> 공간, 나는 충분한 공간을 얻을 수 없어

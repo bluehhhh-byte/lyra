@@ -1,0 +1,57 @@
+---
+title: Good Boy
+title_ko: 
+artist: GD X TAEYANG
+artist_ko:
+album: GOOD BOY
+year: 2018
+artwork: https://cdn-images.dzcdn.net/images/cover/acc7a55e8629c6298ae3cfd8fad2e6ba/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/e/f/0/0efb92d45cd1693c70f63181db91ade3.mp3?hdnea=exp=1786559379~acl=/api/1/1/0/e/f/0/0efb92d45cd1693c70f63181db91ade3.mp3*~data=user_id=0,application_id=42~hmac=5063131550505573b61b5ab84bf37bb8eca8b3a97baee18be6753b77c2cfc750
+trackId: 
+duration: 245
+genre: 
+lang: ko
+tags: [2018]
+keywords: []
+emotion:
+date: 2025-05-03
+published: 2025-05-03T13:27:44.000Z
+comment:
+source: instagram
+source_tag: 250503_2227
+source_note: 
+source_hash: 520b17e00a3467123779a7325b8b489147297238
+---
+Everyday fresh 한 옷 차림에
+반전되는 심한 낯가림
+다만 살짝 짓는 눈웃음에
+주위 사람들 얼어 죽음
+But I don’t really care
+And I don’t need that
+> (난 너만 있으면 돼 내게 기대)
+이게 게임이라면 yes
+I’m a player
+And you could be my coach
+(Love affair)
+
+Eh eh eh 보기와는 다르게
+I don’t play play play
+> 널 갖고 장난 안 해
+사람들은 말해
+나 같은 남자를 조심하라고
+너무 믿지 말아 보나마나 뻔하다고
+What you know about me
+> 네가 날 아냐고
+
+I am a good boy
+I am a good good
+I am a good boy
+
+Hey 나와 같이 춤을 춰
+밤 새워 동화 같은 꿈을 꿔
+Hey 난 백마 탄 왕자
+너는 구두를 잃어버린 어여쁜 낭자
+Baby where u at
+> 내 손을 잡아 위험하니까
+Where u at
+> 널 하늘로 데려가 줄 테니까

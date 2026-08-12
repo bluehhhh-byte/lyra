@@ -13,7 +13,7 @@ import { readData } from "../lib/store.js";
 const errors = [];
 const warns = [];
 const err = (f, msg) => errors.push(`${f}: ${msg}`);
-const warn = (f, msg) => warns.push(`${f}: ${msg}`);
+const warn = (f, msg) => warns.push({ f, msg });
 
 const isHttps = (u) => /^https:\/\/\S+$/.test(u || "");
 const validRating = (r) => Number.isFinite(r) && r >= 0.5 && r <= 5 && r * 2 === Math.round(r * 2);
@@ -123,7 +123,20 @@ const watched = getWatched();
 }
 
 // ── 결과 ────────────────────────────────────────────────────────────────────
-for (const w of warns) console.log(`  ⚠ ${w}`);
+// 경고가 많으면(대량 임포트 직후 등) 파일별 나열 대신 유형별로 묶는다 —
+// 400줄 노이즈는 경고를 안 읽게 만든다.
+if (warns.length > 30) {
+  const groups = new Map();
+  for (const w of warns) {
+    const key = w.msg.replace(/\d+/g, "N").replace(/"[^"]*"/g, '"…"');
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(w.f);
+  }
+  for (const [key, files] of [...groups].sort((a, b) => b[1].length - a[1].length))
+    console.log(`  ⚠ ${key} × ${files.length} (예: ${files[0]})`);
+} else {
+  for (const w of warns) console.log(`  ⚠ ${w.f}: ${w.msg}`);
+}
 for (const e of errors) console.log(`  ✗ ${e}`);
 console.log(
   `\n곡 ${songs.length} · 영화 ${movies.length} · 왓챠 ${watched.length}` +

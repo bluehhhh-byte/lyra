@@ -212,6 +212,7 @@ youtube_id: dQw4w9WgXcQ         # (선택) 영상 ID 직접 지정 — 검색 �
 | `app/tags/[tag]/` | 곡+영화 통합 태그 페이지 |
 | `app/admin/watcha-import.js` | 왓챠 JSON 붙여넣기 → 별점·코멘트 반영 UI |
 | [`scripts/watcha-bookmarklet.md`](scripts/watcha-bookmarklet.md) | **왓챠 내보내기 북마클릿 + 사용법** (코드 수정 시 `node scripts/watcha-bookmarklet.mjs`로 재생성) |
+| `scripts/instagram-import.mjs` | **인스타 내보내기 → 곡 임포트 (원문 보존)** — 캡션 본문이 1차 원본, `> `만 붙이고 무손실 검증. 가사 없는 게시글은 data/instagram-pending.json 대기 |
 | `lib/*.test.mjs` | 프레임워크 없는 assert 테스트 (`node lib/xxx.test.mjs`) |
 
 ## 로컬 실행

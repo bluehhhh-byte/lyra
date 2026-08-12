@@ -1,0 +1,65 @@
+---
+title: Come Away From Me
+title_ko: 
+artist: Norah Jones
+artist_ko:
+album: Come Away With Me (Super Deluxe Edition)
+year: 2002
+artwork: https://cdn-images.dzcdn.net/images/cover/b08b6d2e396905fff79ab088364f19ef/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/9/c/0/89ceae7a6a3a00adae8360583274adab.mp3?hdnea=exp=1786559403~acl=/api/1/1/8/9/c/0/89ceae7a6a3a00adae8360583274adab.mp3*~data=user_id=0,application_id=42~hmac=edc6e985b42e8daa4d8c8b53d09b3015c6aaf7ff708c384cb5d0816ff5dd8ad4
+trackId: 
+duration: 213
+genre: 
+lang: en
+tags: [2002]
+keywords: []
+emotion:
+date: 2024-06-30
+published: 2024-06-30T09:30:15.000Z
+comment:
+source: instagram
+source_tag: 240630_1828
+source_note: 
+source_hash: 01007de59a77eed71ce8eb6ee49f1d97c981569c
+---
+Come away with me in the night
+> 밤이 되면 나와 함께 떠나요
+Come away with me
+> 나와 같이 떠나요
+And I will write you a song
+> 그러면 내가 노래 하나를 만들어 줄게요
+
+Come away with me on a bus
+> 버스를 타고 나와 함께 떠나요
+Come away where they can't tempt us with their lies
+> 그 누구도 거짓말로 우리를 유혹할 수 없는 곳으로
+
+And I want to walk with you on a cloudy day
+> 난 흐린 날에는 당신과 걷고 싶어요
+In fields where the yellow grass grows knee-high
+> 노란 풀이 무릎까지 자란 곳에서
+So won't you try to come
+> 함께 가보지 않을래요
+
+Come away with me
+> 나와 함께 떠나요
+And we'll kiss on a mountaintop
+> 그리고 산 꼭대기에서 우리는 키스할 거에요
+Come away with me
+> 나와 함께 떠나요
+And I'll never stop loving you
+> 그리고 당신을 향한 사랑을 결코 멈추지 않을 거에요
+
+And I want to wake up with the rain
+> 양철 지붕에서 떨어지는 비와 함께
+Falling on a tin roof
+> 잠에서 깨어나고 싶어요
+While I'm safe there in your arms
+> 당신의 팔에 꼭 안긴 동안에
+
+So all I ask is for you
+> 내가 부탁하는 건 모두 당신을 위해서에요
+Come away with me in the night
+> 밤이 되면 나와 같이 떠나요
+Come away with me
+> 나와 함께 떠나요

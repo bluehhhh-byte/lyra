@@ -1,0 +1,96 @@
+---
+title: 난 사람이 제일 무서워
+title_ko: 난 사람이 제일 무서워
+artist: EPIK HIGH
+artist_ko:
+album: WE'VE DONE SOMETHING WONDERFUL
+year: 2017
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/19/00/dd/1900dd2f-2d37-f089-8fc0-bb2c07a81802/COVER_fin_4000X4000.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ca/79/28/ca7928f1-108f-a068-d2a0-70dd1744daf3/mzaf_4714627960461954199.plus.aac.p.m4a
+trackId: 1299101335
+duration: 189
+genre: Hip-Hop/Rap
+lang: ko
+tags: [2017]
+keywords: []
+emotion:
+date: 2025-06-20
+published: 2025-06-20T13:38:02.000Z
+comment:
+source: instagram
+source_tag: 250620_2237
+source_note: 
+source_hash: c5a29d0346738e1e3f48123c6774bbafd1771ef8
+---
+내가 태어난 1980년에 레논이 죽었어
+난 늘 최악만 Imagine 해
+그래서 두려워
+난 사람이 제일 무서워
+
+익은 걸 썩은 취급하는 이 시대에 뭘 바래
+고개 숙인 벼는 베이기만 해
+숨을 쉴 수가 없어
+난 사람이 제일 무서워
+
+듣기 싫어 평온, 평화를 뺏은 놈들의
+Rest in peace
+(편히 쉬어라)
+박수 칠 때 떠나래 떠나야
+박수 치는 세상이 참 우스워
+난 사람이 제일 무서워
+
+편히 잠들 수 없어
+난 이제 알지 사람 일은 모르는 법
+다 판사 노릇 해도
+Sometimes to get to god
+(때로는 신에게 닿으려면)
+First you gotta meet the devil
+(먼저 악마를 만나야 해)
+난 사람이 제일 무서워
+
+넌 세상 돌아가는 법을 모른대
+꾸짖던 어르신들 덕에 잘만 보는데
+세상이 돌고 있는 게
+그래서 난 사람이 제일 무서워
+
+이젠 Strong man의 시댄데
+다 일으키기엔 힘 딸리나봐
+정의가 입이 무거워 쉽게 들리지 않나 봐
+We at war
+(우린 전쟁 중이야)
+난 사람이 제일 무서워
+
+알 권리 세례 속에
+살 권리를 잊게 하는 Media
+기어 다니는 자의 달콤한 혀를 믿지 마
+It’s a lie
+(그건 거짓이야)
+난 사람이 제일 무서워
+
+아빠의 장례식에 와
+죽음이 치유라는 둥 떠들며 웃던 목사
+좆 까, 네 신이 병가 중
+하늘엔 하늘 뿐이었어
+난 사람이 제일 무서워
+
+아무도 믿을 수 없어
+Cuz you are fucked if you think that
+(왜냐하면 네가 괜찮을 거라고 생각한다면, 넌 망한 거야)
+It’s gonna be okay
+(괜찮아질 거라고)
+상상은 자유인데 자유는 상상도 못 해
+이 세상이 무서워
+
+바람 잘 날 없지, 내 일기장은
+해마다 절판 위기에 빠지네
+지금의 난 37쇄 알 수 없어
+
+소리 아닌 상처 내서 만든 노래들
+피투성이지만
+We’ve done something wonderful
+(우린 멋진 일을 해냈어)
+편히 잠들 수 있어
+편히 잠들 수 있어
+
+Be with me god
+(나와 함께해줘, 신이시여)

@@ -1,0 +1,69 @@
+---
+title: Never Gonna Give You Up
+title_ko: 
+artist: Rick Astley
+artist_ko:
+album: Reeling In The Decades
+year: 1987
+artwork: https://cdn-images.dzcdn.net/images/cover/a37761cd98b72998ff1d8cbfedbf0863/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/e/7/7/0/e773d9a1121ced48f2e74bca4271699c.mp3?hdnea=exp=1786559418~acl=/api/1/1/e/7/7/0/e773d9a1121ced48f2e74bca4271699c.mp3*~data=user_id=0,application_id=42~hmac=7dad33c038d625c6e4886f31d4b9e14c00301a1880db298c3c1bac8e6aac71a8
+trackId: 
+duration: 211
+genre: 
+lang: en
+tags: [1987]
+keywords: []
+emotion:
+date: 2025-06-09
+published: 2025-06-08T23:07:31.000Z
+comment:
+source: instagram
+source_tag: 250609_0806
+source_note: 
+source_hash: 7ee0d9dddf0f65191f53fa7e4dbfd8f2e24e9f12
+---
+We’re no strangers to love
+> 우린 사랑에 대해 모르는 사이 아니잖아
+You know the rules and so do I
+> 너도 나도 다 아는 규칙 있잖아
+A full commitment’s what I’m thinkin’ of
+> 난 완전히 너에게 올인하고 싶어
+You wouldn’t get this from any other guy
+> 이 정도로 진심인 남자는 나밖에 없어
+
+I just wanna tell you how I’m feeling
+> 그냥 내 마음을 솔직하게 말하고 싶어
+Gotta make you understand
+> 네가 이해할 수 있게끔 하고 싶어
+
+Never gonna give you up, never gonna let you down
+> 절대 널 포기하지 않을 거야, 실망시키지도 않을 거야
+Never gonna run around and desert you
+> 절대 널 두고 돌아다니지도, 버리지도 않을 거야
+Never gonna make you cry, never gonna say goodbye
+> 절대 널 울게 하지도, 이별하지도 않을 거야
+Never gonna tell a lie and hurt you
+> 거짓말로 널 다치게 하지도 않을 거야
+
+We’ve known each other for so long
+> 우린 서로를 너무 오래 알아왔잖아
+Your heart’s been aching, but you’re too shy to say it
+> 네 마음이 아팠지만, 말하기 부끄러웠지
+Inside, we both know what’s been going on
+> 우리 둘 다 속으론 무슨 일인지 알고 있어
+We know the game and we’re gonna play it
+> 이 게임은 우리 둘 다 아는 거니까 그대로 가보자
+
+And if you ask me how I’m feeling
+> 내 마음이 어떻냐고 네가 묻는다면
+Don’t tell me you’re too blind to see
+> 네가 몰라서 그런 거 아니잖아
+
+Never gonna give you up, never gonna let you down
+> 절대 널 포기하지 않을 거야, 실망시키지도 않을 거야
+Never gonna run around and desert you
+> 절대 널 두고 돌아다니지도, 버리지도 않을 거야
+Never gonna make you cry, never gonna say goodbye
+> 절대 널 울게 하지도, 이별하지도 않을 거야
+Never gonna tell a lie and hurt you
+> 거짓말로 널 다치게 하지도 않을 거야
