@@ -9,7 +9,7 @@ const COUNTRY_TAGS = ["한국", "일본", "영미", "유럽", "아시아", "중�
 const countryOf = (s) => s.tags.find((t) => COUNTRY_TAGS.includes(t)) || COUNTRY[s.lang] || "기타";
 
 export default async function Home({ searchParams }) {
-  const { tag, q, group, emotion } = (await searchParams) || {};
+  const { tag, q, group, emotion, decade } = (await searchParams) || {};
   const songs = getAllSongs().map((s) => ({
     slug: s.slug,
     title: s.title,
@@ -39,6 +39,7 @@ export default async function Home({ searchParams }) {
       initialQ={q || ""}
       initialGroup={group || "none"}
       initialEmotion={parseEmotion(emotion)}
+      initialDecade={/^\d{4}s$/.test(decade || "") ? decade : ""}
     />
   );
 }

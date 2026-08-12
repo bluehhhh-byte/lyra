@@ -13,6 +13,7 @@ import {
 } from "../../../lib/admin/song-meta";
 import { kstToday } from "../../../lib/kst";
 import { summarizeMusicTaste } from "../../../lib/music-taste-core";
+import { makeBasedOnCleaner } from "../../../lib/admin/based-on";
 
 export async function handleSongs(action, body) {  if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
@@ -822,6 +823,191 @@ ${lines}`
     return Response.json(report);
   }
 
+  // 발견 경로 — 시작·전환·도착 구조를 가진 6~10곡 탐색 코스.
+  // bridge(곡 A→B를 잇는 다리)와 theme(주제 코스) 두 형태, 한 파일에 쌓인다.
+  // 컬렉션 곡은 slug로 붙이고 새 곡은 iTunes로 매칭해 미리듣기를 단다.
+  if (action === "songPath") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const songs = getAllSongs();
+    const type = body.type === "bridge" ? "bridge" : "theme";
+
+    let ask;
+    if (type === "bridge") {
+      const from = songs.find((s) => s.slug === body.from);
+      const to = songs.find((s) => s.slug === body.to);
+      if (!from || !to) return Response.json({ error: "시작·도착 곡을 찾을 수 없음" }, { status: 422 });
+      const describe = (s) =>
+        `"${s.title}" - ${s.artist} (${genreTagOf(s.tags) || s.genre || "?"}, ${s.year || "?"}, 감정: ${parseEmotion(s.emotion) || "?"})`;
+      // 모티프 데이터가 있으면 두 곡의 가사 모티프를 다리의 재료로 준다 —
+      // Gemini가 맨손으로 추측하는 대신 검증된 공통점 위에서 잇는다
+      const motifData = readData("motifs.json", null);
+      const motifsOf = (slug) =>
+        (motifData?.motifs || []).filter((m) => m.songs.some((x) => x.slug === slug)).map((m) => m.name);
+      const fromM = motifsOf(from.slug);
+      const toM = motifsOf(to.slug);
+      const motifHint =
+        fromM.length || toM.length
+          ? `\n가사 모티프 — 시작 곡: ${fromM.join(", ") || "없음"} / 도착 곡: ${toM.join(", ") || "없음"}. 겹치거나 이어지는 모티프를 다리의 축으로 써라.`
+          : "";
+      ask = `${describe(from)} 에서 ${describe(to)} 까지 자연스럽게 건너가는 다리를 놓아라.${motifHint}
+시작 곡과 도착 곡을 포함해 총 5~7곡. 중간 곡들은 장르·질감·감정이 한 걸음씩 이동해야 한다.
+첫 step은 반드시 시작 곡, 마지막 step은 반드시 도착 곡.`;
+    } else {
+      const theme = String(body.theme || "").trim().slice(0, 100);
+      if (!theme) return Response.json({ error: "주제가 없습니다" }, { status: 422 });
+      ask = `주제: "${theme}"
+이 주제로 시작·전환·도착 구조를 가진 6~10곡 탐색 코스를 짜라.
+가능하면 아래 컬렉션의 곡 1~3개를 정거장으로 포함하고, 나머지는 새 곡으로.`;
+    }
+
+    const have = songs.map((s) => `${s.title} - ${s.artist}`).join("; ");
+    const raw = await geminiText(
+      key,
+      `한 사람의 음악 컬렉션(${songs.length}곡)을 바탕으로 한 발견 경로를 만든다.
+${ask}
+JSON으로만:
+{"title":"경로 이름 (15자 이내)","note":"이 경로가 지나는 여정 한 문장","steps":[{"title":"곡 제목","artist":"아티스트","reason":"이 단계로 넘어오는 이유 한 구절 (30자)"}]}
+참고 — 컬렉션 목록: ${have}
+실제 발매된 곡만. 순수 JSON만 출력.`,
+      true
+    );
+    let path;
+    try {
+      path = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "경로 생성 실패 (응답 파싱)" }, { status: 502 });
+    }
+    const rawSteps = (Array.isArray(path?.steps) ? path.steps : []).filter((s) => s?.title && s?.artist);
+    if (rawSteps.length < 4) return Response.json({ error: "경로가 너무 짧습니다" }, { status: 502 });
+
+    // 각 정거장: 컬렉션 곡이면 slug로, 아니면 iTunes 매칭 (병렬)
+    const byTitleKey = new Map(songs.map((s) => [normText(`${s.title}|${s.artist}`), s]));
+    const byTitle = new Map(songs.map((s) => [normText(s.title), s]));
+    const steps = (
+      await Promise.all(
+        rawSteps.slice(0, 10).map(async (st) => {
+          const local = byTitleKey.get(normText(`${st.title}|${st.artist}`)) || byTitle.get(normText(st.title));
+          if (local && (normText(local.artist).includes(normText(st.artist)) || normText(st.artist).includes(normText(local.artist)))) {
+            return {
+              slug: local.slug, title: local.title, artist: local.artist,
+              artwork: local.artwork, preview: local.preview || "", reason: String(st.reason || "").trim().slice(0, 60),
+            };
+          }
+          try {
+            const term = encodeURIComponent(`${st.title} ${st.artist}`);
+            const lists = await Promise.all(
+              ["US", "KR"].map((c) =>
+                fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=5&country=${c}`)
+                  .then((x) => x.json()).then((x) => x.results || []).catch(() => [])
+              )
+            );
+            const hit = lists.flat().map(itunesToResult).find(
+              (c) => normText(c.artist).includes(normText(st.artist)) || normText(st.artist).includes(normText(c.artist))
+            );
+            if (!hit) return null;
+            return {
+              trackId: hit.trackId, title: hit.title, artist: hit.artist,
+              artwork: hit.artwork, preview: hit.preview, reason: String(st.reason || "").trim().slice(0, 60),
+            };
+          } catch {
+            return null;
+          }
+        })
+      )
+    ).filter(Boolean);
+    if (steps.length < 4) return Response.json({ error: "정거장 매칭 실패 (4곡 미만)" }, { status: 502 });
+
+    const prev = readData("paths.json", { items: [] });
+    const item = {
+      id: Date.now().toString(36),
+      type,
+      title: String(path.title || "").trim().slice(0, 30) || "발견 경로",
+      note: String(path.note || "").trim().slice(0, 100),
+      steps,
+      at: new Date().toISOString(),
+    };
+    const items = [item, ...(prev.items || [])].slice(0, 30);
+    await writeData("paths.json", JSON.stringify({ items }, null, 1), `data: 발견 경로 "${item.title}" (${steps.length}곡)`);
+    return Response.json({ title: item.title, steps: steps.length, total: items.length });
+  }
+
+  // 가사 모티프 지도 — 번역된 전체 가사에서 반복되는 이미지·주제를 묶는다.
+  // 단어 빈도(keywords)보다 한 층 깊게: '밤·새벽·어둠·불 꺼진 방'이 하나의
+  // 모티프가 된다. 구절은 실제 가사에 있는 것만 통과(환각 차단).
+  if (action === "motifs") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const songs = getAllSongs();
+    if (songs.length < 10)
+      return Response.json({ error: `곡이 ${songs.length}곡뿐입니다 (10곡 이상 필요)` }, { status: 422 });
+
+    // 곡별 압축 요약 — 전체 가사 대신 keywords·감정·코멘트·대표 3줄만.
+    // 곡이 늘어도 요청 크기가 선형으로 완만하고, 긴 가사 한 곡이 결과를
+    // 지배하지 않는다. quote 검증은 전체 가사를 대조한다(아래).
+    const koOf = (s) =>
+      s.stanzas.flatMap((st) => st.lines.map((l) => l.ko || (s.lang === "ko" ? l.en : ""))).filter(Boolean);
+    const corpus = songs
+      .map((s) => {
+        const lines = koOf(s).slice(0, 3).join(" / ");
+        return `[${s.slug}] ${s.title} - ${s.artist} | 감정: ${parseEmotion(s.emotion) || "?"} | 키워드: ${(s.keywords || []).join(",") || "?"}\n대표 구절: ${lines.slice(0, 200)}`;
+      })
+      .join("\n");
+
+    const raw = await geminiText(
+      key,
+      `아래는 한 사람이 모아온 ${songs.length}곡의 요약(감정·키워드·대표 구절)이다.
+컬렉션 전체에서 반복되는 이미지·주제를 모티프 5~8개로 묶어라. JSON 배열로만:
+[{"name":"밤과 어둠","description":"모티프를 한 문장으로","keywords":["밤","새벽","어둠"],"songs":[{"slug":"대괄호 안 slug 그대로","quote":"그 곡의 대표 구절에서 그대로 복사 (한 줄 이내)"}]}]
+규칙:
+- name은 2~8자 짧은 이름. 의미가 비슷한 표현('밤','새벽','불 꺼진 방')은 하나의 모티프로
+- keywords는 이 모티프를 이루는 단어 2~5개
+- 모티프당 곡 2~10개, 한 곡은 최대 3개 모티프까지. quote는 위 요약에 실제로 있는 구절만 — 지어내지 말 것
+- 순수 JSON만 출력
+곡 요약:
+${corpus}`,
+      true
+    );
+    let motifs;
+    try {
+      motifs = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "모티프 생성 실패 (응답 파싱)" }, { status: 502 });
+    }
+
+    // 검증 — slug는 실존 곡만, quote는 그 곡 '전체 가사'에 실제로 있는 것만,
+    // 곡당 최대 3개 모티프(초과분은 뒤 모티프에서 탈락)
+    const bySlug = new Map(songs.map((s) => [s.slug, koOf(s).join("\n")]));
+    const squash = (t) => String(t || "").replace(/\s+/g, "");
+    const perSong = new Map();
+    const cleaned = (Array.isArray(motifs) ? motifs : [])
+      .map((m) => ({
+        name: String(m?.name || "").trim().slice(0, 20),
+        description: String(m?.description || "").trim().slice(0, 100),
+        keywords: (Array.isArray(m?.keywords) ? m.keywords : []).map((k) => String(k).trim()).filter((k) => k && k.length <= 8).slice(0, 5),
+        songs: (Array.isArray(m?.songs) ? m.songs : [])
+          .filter((x) => bySlug.has(x?.slug))
+          .filter((x) => {
+            const n = perSong.get(x.slug) || 0;
+            if (n >= 3) return false;
+            perSong.set(x.slug, n + 1);
+            return true;
+          })
+          .map((x) => {
+            const quote = String(x.quote || "").trim();
+            const ok = quote && squash(bySlug.get(x.slug)).includes(squash(quote));
+            return { slug: x.slug, quote: ok ? quote.slice(0, 80) : "" };
+          }),
+      }))
+      .filter((m) => m.name && m.songs.length >= 2)
+      .slice(0, 8);
+    if (!cleaned.length) return Response.json({ error: "유효한 모티프가 없습니다" }, { status: 502 });
+
+    const data = { motifs: cleaned, count: songs.length, at: new Date().toISOString() };
+    await writeData("motifs.json", JSON.stringify(data, null, 1), `data: 가사 모티프 ${cleaned.length}개 (${songs.length}곡)`);
+    return Response.json({ motifs: cleaned.length, count: songs.length });
+  }
+
   // 추천 곡 — 영화 tasteRecs와 같은 구조. 컬렉션 취향 집계를 Gemini에 주고
   // '없는 곡'을 추천받은 뒤, iTunes로 찾아 아트워크·30초 미리듣기를 붙인다.
   // 이미 있는 곡·이전 추천은 제외하고 data/song-recs.json에 누적한다.
@@ -890,28 +1076,8 @@ JSON 배열로만:
       true
     );
 
-    // basedOn 검증 — Gemini의 근거가 실제 데이터와 어긋나면 버린다.
-    // 곡은 컬렉션에 진짜 있는 것만(slug 매핑), 장르·감정은 닫힌 어휘만.
-    const byFullKey = new Map(songs.map((s) => [normText(`${s.title} - ${s.artist}`), s]));
-    const byTitleKey = new Map(songs.map((s) => [normText(s.title), s]));
-    const cleanBasedOn = (b) => {
-      if (!b) return null;
-      if (typeof b === "string") return { songs: [], genres: [], emotions: [], reason: b.slice(0, 60) };
-      const srcSongs = (Array.isArray(b.songs) ? b.songs : [])
-        .map((x) => {
-          const raw = String(x);
-          const hit = byFullKey.get(normText(raw)) || byTitleKey.get(normText(raw.split(" - ")[0]));
-          return hit ? { slug: hit.slug, title: hit.title } : null;
-        })
-        .filter(Boolean)
-        .slice(0, 2);
-      return {
-        songs: srcSongs,
-        genres: (Array.isArray(b.genres) ? b.genres : []).map(capGenre).filter((g) => GENRES.includes(g)).slice(0, 2),
-        emotions: (Array.isArray(b.emotions) ? b.emotions : []).map(parseEmotion).filter(Boolean).slice(0, 2),
-        reason: String(b.reason || "").trim().slice(0, 60),
-      };
-    };
+    // basedOn 검증 — lib/admin/based-on.js (동명곡 방어 포함, 테스트로 지킴)
+    const cleanBasedOn = makeBasedOnCleaner(songs);
     let recs;
     try {
       recs = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());

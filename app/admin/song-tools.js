@@ -142,6 +142,17 @@ export default function SongTools({ songs }) {
     }
   };
 
+  // 가사 모티프 생성 — 전곡 가사를 Gemini 1회로 클러스터. /songs/motifs 반영.
+  const motifs = async () => {
+    setRecsBusy("모티프 분석 중…");
+    try {
+      const { motifs: n } = await api("motifs", {});
+      setRecsBusy(`모티프 ${n}개 생성됨 — 재배포 후 반영`);
+    } catch (e) {
+      setRecsBusy(`실패: ${e.message}`);
+    }
+  };
+
   const addTrans = async (slug) => {
     set(slug, { busy: "trans", err: "", msg: "" });
     try {
@@ -216,6 +227,15 @@ export default function SongTools({ songs }) {
           className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           취향 리포트
+          <br />
+          생성
+        </button>
+        <button
+          onClick={motifs}
+          disabled={recsBusy.endsWith("중…")}
+          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+        >
+          모티프
           <br />
           생성
         </button>

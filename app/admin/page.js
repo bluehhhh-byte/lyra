@@ -5,6 +5,7 @@ import Backfill from "./backfill";
 import Lint from "./lint";
 import Requality from "./requality";
 import SongTools from "./song-tools";
+import PathTools from "./path-tools";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
@@ -29,6 +30,9 @@ export default function AdminPage() {
 
       <h2 className="mb-3 mt-16 text-lg font-bold">가사 품질 재검사</h2>
       <Requality />
+
+      <h2 className="mb-3 mt-16 text-lg font-bold">발견 경로</h2>
+      <PathTools songs={songs.map((s) => ({ slug: s.slug, title: s.title, artist: s.artist }))} />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({songs.length})</h2>
       <SongTools

@@ -208,9 +208,9 @@ export default function MusicTastePage() {
         ))}
       </Section>
 
-      <Section title="많이 담은 시대" hint={`연도 있는 ${t.covered.decade}곡 기준 — 시대를 누르면 홈의 연대별 보기로`}>
+      <Section title="많이 담은 시대" hint={`연도 있는 ${t.covered.decade}곡 기준 — 시대를 누르면 그 연대의 곡만`}>
         {[...t.decade].sort((a, b) => a[0].localeCompare(b[0])).map(([d, n]) => (
-          <Bar key={d} label={d} n={n} max={t.decade[0]?.[1] || 1} total={t.count} href="/?group=decade" />
+          <Bar key={d} label={d} n={n} max={t.decade[0]?.[1] || 1} total={t.count} href={`/?decade=${parseInt(d)}s`} />
         ))}
       </Section>
 

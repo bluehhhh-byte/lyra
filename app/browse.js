@@ -13,10 +13,11 @@ const GROUPS = [
 
 const RANDOM_PICKS = 6;
 
-export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none", initialEmotion = "" }) {
+export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none", initialEmotion = "", initialDecade = "" }) {
   const [q, setQ] = useState(initialQ);
   const [tag, setTag] = useState(initialTag);
   const [emotion, setEmotion] = useState(initialEmotion); // 취향 페이지 감정 막대에서 온다
+  const [decade, setDecade] = useState(initialDecade); // 취향·곡 페이지 연대 링크에서 온다 (예: 2010s)
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
   // slug → lyric lines, fetched once from /api/lyrics-index the first time the
@@ -33,10 +34,11 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
     if (q) p.set("q", q);
     if (tag) p.set("tag", tag);
     if (emotion) p.set("emotion", emotion);
+    if (decade) p.set("decade", decade);
     if (group !== "none") p.set("group", group);
     const qs = p.toString();
     history.replaceState(null, "", qs ? `/?${qs}` : "/");
-  }, [q, tag, group, emotion]);
+  }, [q, tag, group, emotion, decade]);
 
   const needle = q.trim().toLowerCase();
 
@@ -59,11 +61,12 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
       (s) =>
         (!tag || s.tags.includes(tag)) &&
         (!emotion || s.emotion === emotion) &&
+        (!decade || s.decade === decade) &&
         (!needle ||
           s.metaSearch.includes(needle) ||
           (lyrics?.[s.slug] || []).some((l) => l.toLowerCase().includes(needle)))
     );
-  }, [needle, tag, emotion, songs, lyrics]);
+  }, [needle, tag, emotion, decade, songs, lyrics]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -121,9 +124,9 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
         </div>
       </div>
 
-      {(tag || emotion) && (
+      {(tag || emotion || decade) && (
         <div className="mb-6 flex items-center gap-2 text-sm">
-          <span className="text-muted">{tag ? "태그" : "감정"}</span>
+          <span className="text-muted">{tag ? "태그" : emotion ? "감정" : "연대"}</span>
           {tag && (
             <button
               onClick={() => setTag("")}
@@ -140,6 +143,14 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
               {emotion} ✕
             </button>
           )}
+          {decade && (
+            <button
+              onClick={() => setDecade("")}
+              className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+            >
+              {decade} ✕
+            </button>
+          )}
         </div>
       )}
 
@@ -149,7 +160,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
             ? "아직 곡이 없습니다."
             : q
               ? `"${q}" 검색 결과 없음`
-              : `'${tag || emotion}' 곡 없음`}
+              : `'${tag || emotion || decade}' 곡 없음`}
         </p>
       )}
 

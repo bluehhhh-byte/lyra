@@ -1,0 +1,194 @@
+{
+ "motifs": [
+  {
+   "name": "어둠과 밤",
+   "description": "빛이 사라진 밤과 새벽의 시간 속에 감추어진 고독과 서정의 분위기를 다룹니다.",
+   "keywords": [
+    "밤",
+    "새벽",
+    "어둠",
+    "빛"
+   ],
+   "songs": [
+    {
+     "slug": "jasmin-tabatabai-another-sad-song-live",
+     "quote": "다정한 6월의 밤인데 말이죠"
+    },
+    {
+     "slug": "검정치마-99",
+     "quote": "I loved that I could hold your hand in the pitch-black night"
+    },
+    {
+     "slug": "arti-noxibalkeepgoing",
+     "quote": "밤새 뒤척이다가"
+    },
+    {
+     "slug": "miyavi-holy-nights",
+     "quote": "무정하게 흘러가는 밤"
+    },
+    {
+     "slug": "악뮤-오랜-날-오랜-밤",
+     "quote": "That place was my long night."
+    },
+    {
+     "slug": "새소년-긴-꿈",
+     "quote": "On days when suspicious nights continued"
+    }
+   ]
+  },
+  {
+   "name": "저항과 분노",
+   "description": "부조리한 세상이나 타인의 억압에 맞서 분노를 표출하고 스스로를 지키려는 노래들입니다.",
+   "keywords": [
+    "세상",
+    "저항",
+    "분노",
+    "경계"
+   ],
+   "songs": [
+    {
+     "slug": "keane-is-it-any-wonder",
+     "quote": "선함과 진실함으로 가득한 세상에서 살아갈 자격이"
+    },
+    {
+     "slug": "children-of-bodom-done-with-everything-die-for-nothing",
+     "quote": "이제 더 이상 도망칠 곳도 없어"
+    },
+    {
+     "slug": "qm-입에총-feat-zico",
+     "quote": "\"Change your major even now.\""
+    },
+    {
+     "slug": "arctic-monkeys-don-t-sit-down-cause-i-ve-moved-your-chair",
+     "quote": "거울을 깨트리고, 주사위를 던져봐"
+    },
+    {
+     "slug": "megadeth-hangar-18",
+     "quote": "이 벽들은 부술 수 없어"
+    }
+   ]
+  },
+  {
+   "name": "꿈과 미래",
+   "description": "어두운 현실 속에서도 더 나은 내일과 희망, 어릴 적의 순수한 꿈을 노래합니다.",
+   "keywords": [
+    "꿈",
+    "미래",
+    "희망",
+    "태양"
+   ],
+   "songs": [
+    {
+     "slug": "mac-miller-two-matches-feat-ab-soul",
+     "quote": "어릴 적엔, 언젠가 우리 모두 부자가 될 거라 꿈꿨었지"
+    },
+    {
+     "slug": "glay-空が青空であるために",
+     "quote": "어둠을 헤치고 다시 태양은 떠올라"
+    },
+    {
+     "slug": "glay-ここではない-どこかへ",
+     "quote": "꿈은 무한했고, 그 모든 것을 의심조차 하지 않고"
+    },
+    {
+     "slug": "시나위-희망가",
+     "quote": "You must overcome, no matter how hard it gets"
+    }
+   ]
+  },
+  {
+   "name": "소외와 고독",
+   "description": "어디에도 속하지 못하고 고립된 채 스스로 사라지거나 갇혀버린 감정을 표현합니다.",
+   "keywords": [
+    "고독",
+    "외로움",
+    "유령",
+    "현실"
+   ],
+   "songs": [
+    {
+     "slug": "suck-suk",
+     "quote": "나를 쫓아 여기에 왔어, 난 갇혀버렸지"
+    },
+    {
+     "slug": "beck-loser",
+     "quote": "침팬지의 시대에 나는 원숭이였지"
+    },
+    {
+     "slug": "羊文学-dogs",
+     "quote": "불행의 지뢰를 밟고 말았네"
+    },
+    {
+     "slug": "radiohead-how-to-disappear-completely",
+     "quote": "나는 가"
+    }
+   ]
+  },
+  {
+   "name": "이별의 흔적",
+   "description": "지나간 연인과의 추억과 마지막 순간의 아쉬움, 눈물을 돌아보는 모티프입니다.",
+   "keywords": [
+    "추억",
+    "기억",
+    "눈물",
+    "이별"
+   ],
+   "songs": [
+    {
+     "slug": "woo-hyuk-jang-시간이-멈춘-날",
+     "quote": "The more time passes like this (the more I)"
+    },
+    {
+     "slug": "현재근-전하려던-눈물을-닦고",
+     "quote": "Leaving behind the words that said it was nothing,"
+    },
+    {
+     "slug": "싸이-마지막-장면-feat-이성경",
+     "quote": "At the beginning and end of our memories"
+    },
+    {
+     "slug": "브라운아이드소울-똑같다면",
+     "quote": "If, out of habit, on the path we always walked together,"
+    },
+    {
+     "slug": "panic-snowmelt",
+     "quote": "That night, snow fell heavily, like fragments of light."
+    }
+   ]
+  },
+  {
+   "name": "사랑과 상처",
+   "description": "상대방에게 깊이 몰입하며 끌어안게 되는 열정과 그 뒤에 남는 상처를 이야기합니다.",
+   "keywords": [
+    "사랑",
+    "상처",
+    "마음",
+    "연인"
+   ],
+   "songs": [
+    {
+     "slug": "dir-en-grey-予感",
+     "quote": "너는 아무것도 모른 채 -180℃로 얼어붙는 사랑"
+    },
+    {
+     "slug": "radiohead-house-of-cards",
+     "quote": "그저 당신의 연인이 되고 싶을 뿐"
+    },
+    {
+     "slug": "kream-marlo-rex-blur",
+     "quote": "넌 내 마음속에, 내 피부 깊숙이 박혀 있어"
+    },
+    {
+     "slug": "lareine-metamorphose",
+     "quote": "사랑받을 때마다 상처를 주고"
+    },
+    {
+     "slug": "maroon-5-this-love",
+     "quote": "내 마음을 지배했던 혼돈을"
+    }
+   ]
+  }
+ ],
+ "count": 62,
+ "at": "2026-08-12T12:50:16.233Z"
+}

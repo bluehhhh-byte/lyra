@@ -6,6 +6,8 @@ import MovieCardButton from "./movie-card";
 import { splitCast } from "../../../lib/people";
 import { tmdbUrl } from "../../../lib/tmdb-link";
 import { kstDay } from "../../../lib/kst";
+import { getAllSongs } from "../../../lib/songs";
+import { COUNTRY_TAGS } from "../../../lib/genre";
 
 export function generateStaticParams() {
   return getAllMovies().map((m) => ({ slug: m.slug }));
@@ -73,6 +75,17 @@ export default async function MoviePage({ params }) {
   const movie = all.find((m) => m.slug === decodeURIComponent(slug));
   if (!movie) notFound();
   const related = relatedMovies(movie, all);
+
+  // Lyra×Syno 교차 — 같은 시대(±같은 권역이면 우선)의 컬렉션 곡.
+  // 같은 사이트에 음악·영화가 함께 사는 것의 배당금.
+  const movieDecade = movie.year ? Math.floor(+movie.year / 10) * 10 : null;
+  const movieRegion = movie.tags?.find((t) => COUNTRY_TAGS.includes(t)) || "";
+  const eraSongs = movieDecade
+    ? getAllSongs()
+        .filter((s) => s.year && Math.floor(+s.year / 10) * 10 === movieDecade)
+        .sort((a, b) => (b.tags.includes(movieRegion) ? 1 : 0) - (a.tags.includes(movieRegion) ? 1 : 0))
+        .slice(0, 4)
+    : [];
 
   const meta = [
     movie.year,
@@ -230,6 +243,32 @@ export default async function MoviePage({ params }) {
                   {m.title_ko || m.title}
                 </h3>
                 <p className="truncate text-xs text-muted">{m.director_ko || m.director}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Lyra×Syno — 이 영화의 시대를 함께 듣는 컬렉션 곡 */}
+      {eraSongs.length > 0 && (
+        <div className="mx-auto mt-14 max-w-2xl">
+          <h2 className="mb-4 text-sm font-semibold text-muted">
+            이 시대의 음악 <span className="text-xs font-normal text-muted/60">{movieDecade}년대의 컬렉션 곡</span>
+          </h2>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
+            {eraSongs.map((s) => (
+              <Link key={s.slug} href={`/songs/${s.slug}`} className="group block transition active:scale-[0.98]">
+                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                  <img
+                    src={s.artwork}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
+                  />
+                </div>
+                <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{s.title}</h3>
+                <p className="truncate text-xs text-muted">{s.artist}</p>
               </Link>
             ))}
           </div>

@@ -1,0 +1,61 @@
+{
+ "items": [
+  {
+   "id": "msq2tr1w",
+   "type": "bridge",
+   "title": "몽환에서 체념으로",
+   "note": "몽환적인 록의 잔향 속에서 쌉싸름한 체념의 정서로 이동하는 여정.",
+   "steps": [
+    {
+     "slug": "radiohead-house-of-cards",
+     "title": "House of Cards",
+     "artist": "Radiohead",
+     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/dd/50/c7/dd50c790-99ac-d3d0-5ab8-e3891fb8fd52/634904032463.png/600x600bb.jpg",
+     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/49/c8/67/49c8676d-ee26-77b6-a0e5-1134e91af4a1/mzaf_10511908633822741203.plus.aac.p.m4a",
+     "reason": "몽환적인 기타 톤으로 여정을 시작합니다."
+    },
+    {
+     "slug": "foals-spanish-sahara",
+     "title": "Spanish Sahara",
+     "artist": "Foals",
+     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/38/3d/16/383d16a4-0eae-5084-8b75-e07ea85dc033/190295006372.jpg/600x600bb.jpg",
+     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/3c/98/c73c98f3-65c3-3664-e7bf-af3b67636c13/mzaf_17077244399841202634.plus.aac.p.m4a",
+     "reason": "은은한 울림을 유지하며 서서히 감정을 고조시킵니다."
+    },
+    {
+     "slug": "羊文学-dogs",
+     "title": "Dogs",
+     "artist": "羊文学",
+     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/ef/ba/4befba54-93ec-a986-4937-faeebb89d949/4547366812398.jpg/600x600bb.jpg",
+     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/4d/43/364d43b5-651a-f211-8d9f-0abe8fd90d76/mzaf_1698364775632233773.plus.aac.p.m4a",
+     "reason": "신비로운 슈게이징 질감으로 서정성을 더합니다."
+    },
+    {
+     "slug": "새소년-긴-꿈",
+     "title": "긴 꿈",
+     "artist": "새소년",
+     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f1/a9/41/f1a941bb-130d-9f75-be43-5f73389feb6a/8809380636494.jpg/600x600bb.jpg",
+     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/13/9a/f2/139af251-91f5-b4b5-b8ac-7ea4141f6e46/mzaf_9072693458988472151.plus.aac.p.m4a",
+     "reason": "꿈결 같은 한국 인디 록의 빈티지 톤으로 전환합니다."
+    },
+    {
+     "slug": "전기뱀장어-일렁",
+     "title": "일렁",
+     "artist": "전기뱀장어",
+     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c2/06/af/c206af00-0ab8-1f69-a460-5d53b02dae8a/8800380021174_cover.jpg/600x600bb.jpg",
+     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/e4/d3/6fe4d395-1a7a-3b9f-abc4-264498b9f7d6/mzaf_14040886338453538789.plus.aac.p.m4a",
+     "reason": "쌉싸름한 멜로디와 함께 쓸쓸한 감정을 돋웁니다."
+    },
+    {
+     "slug": "검정치마-99",
+     "title": "99%",
+     "artist": "검정치마",
+     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/33/f1/f3/33f1f3d4-c3b9-6528-cc99-ee7215dc1d12/TEEN_TROUBLES.jpg/600x600bb.jpg",
+     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/2f/2b/8a/2f2b8a5f-f025-fe11-c097-1a4528d89abd/mzaf_13857375099534152632.plus.aac.p.m4a",
+     "reason": "무던하고 담담한 체념의 정서에 도달합니다."
+    }
+   ],
+   "at": "2026-08-12T12:39:43.412Z"
+  }
+ ]
+}

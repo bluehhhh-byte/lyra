@@ -2,6 +2,7 @@ import Link from "next/link";
 import { buildArchive } from "../../lib/archive";
 import { buildRecap } from "../../lib/recap";
 import { valenceColor } from "../../lib/keywords";
+import { readData } from "../../lib/store";
 import RecapShare from "./recap-share";
 
 export const metadata = {
@@ -24,6 +25,18 @@ export default async function RecapPage({ searchParams }) {
   const recap = buildRecap(archive, period);
 
   if (!period) return <p className="py-20 text-center text-sm text-muted">결산할 기록이 없습니다.</p>;
+
+  // 월간 편집본 재료 — 지난 기간과의 변화 + 다음 발견 경로
+  const list = period.includes("-") ? months : years;
+  const prevPeriod = list[list.indexOf(period) - 1] || null;
+  const prevRecap = prevPeriod ? buildRecap(archive, prevPeriod) : null;
+  // '처음 등장'은 직전 기간이 아니라 그 이전 전체 기록 기준 — 진짜 첫 등장만
+  const seenArtists = new Set(
+    archive.filter((e) => e.day.slice(0, period.length) < period).flatMap((e) => e.items)
+      .filter((i) => i.type === "song").map((i) => i.subtitle)
+  );
+  const newArtists = recap.artists.map(([a]) => a).filter((a) => a && !seenArtists.has(a));
+  const latestPath = (readData("paths.json", { items: [] }).items || [])[0] || null;
 
   return (
     <>
@@ -83,6 +96,44 @@ export default async function RecapPage({ searchParams }) {
           )}
         </div>
       </section>
+
+      {/* 월간 편집본 — 지난 기간과 무엇이 달라졌는지, 다음엔 어디로 가는지 */}
+      {(prevRecap || newArtists.length > 0 || latestPath) && (
+        <section className="mb-14 rounded-xl border border-line bg-surface/50 px-5 py-5">
+          <h2 className="mb-3 text-sm font-semibold">이번 기간의 변화</h2>
+          <div className="space-y-2 text-sm text-muted">
+            {prevRecap && prevRecap.emotions[0] && recap.emotions[0] && (
+              <p>
+                대표 감정: <span className="text-ink">{prevRecap.emotions[0][0]}</span> →{" "}
+                <span className="font-semibold text-ink">{recap.emotions[0][0]}</span>
+                {prevRecap.averageValence !== null && recap.averageValence !== null && (
+                  <span className="ml-2 text-xs">
+                    ({recap.averageValence > prevRecap.averageValence + 0.3
+                      ? "밝아짐"
+                      : recap.averageValence < prevRecap.averageValence - 0.3
+                        ? "어두워짐"
+                        : "온도 비슷"})
+                  </span>
+                )}
+              </p>
+            )}
+            {newArtists.length > 0 && (
+              <p>
+                처음 등장한 가수: <span className="text-ink">{newArtists.slice(0, 6).join(", ")}</span>
+                {newArtists.length > 6 && ` 외 ${newArtists.length - 6}팀`}
+              </p>
+            )}
+            {latestPath && (
+              <p>
+                다음 발견 경로:{" "}
+                <Link href="/songs/paths" className="text-accent hover:underline">
+                  {latestPath.title} ({latestPath.steps.length}곡) →
+                </Link>
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       <section>
         <h2 className="mb-4 text-sm font-semibold">기록의 표지</h2>

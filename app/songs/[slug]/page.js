@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllSongs, getSong } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
+import { getAllMovies } from "../../../lib/movies";
 import LyricsView from "./lyrics-view";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
@@ -84,10 +85,19 @@ export default async function SongPage({ params }) {
   const position = [
     genre && { key: "genre", label: genre, href: `/tags/${encodeURIComponent(genre)}`, count: countBy((s) => genreTagOf(s.tags) === genre) },
     emotion && { key: "emotion", label: `${emotion}의 감정`, href: `/?emotion=${encodeURIComponent(emotion)}`, count: countBy((s) => parseEmotion(s.emotion) === emotion) },
-    decade && { key: "decade", label: `${decade} 곡`, href: "/?group=decade", count: countBy((s) => s.year && `${Math.floor(+s.year / 10) * 10}년대` === decade) },
+    decade && { key: "decade", label: `${decade} 곡`, href: `/?decade=${parseInt(decade)}s`, count: countBy((s) => s.year && `${Math.floor(+s.year / 10) * 10}년대` === decade) },
     region && region !== "기타" && { key: "region", label: region, href: `/tags/${encodeURIComponent(region)}`, count: countBy((s) => s.tags.includes(region)) },
     countBy((s) => s.artist === song.artist) > 1 && { key: "artist", label: `${song.artist}의 곡`, href: `/?q=${encodeURIComponent(song.artist)}`, count: countBy((s) => s.artist === song.artist) },
   ].filter(Boolean);
+
+  // Lyra×Syno 교차 — 같은 시대의 큐레이션 영화 (같은 권역 우선)
+  const songDecadeNum = song.year ? Math.floor(+song.year / 10) * 10 : null;
+  const eraMovies = songDecadeNum
+    ? getAllMovies()
+        .filter((m) => m.year && Math.floor(+m.year / 10) * 10 === songDecadeNum)
+        .sort((a, b) => (b.tags.includes(region) ? 1 : 0) - (a.tags.includes(region) ? 1 : 0))
+        .slice(0, 3)
+    : [];
 
   return (
     <article>
@@ -249,6 +259,31 @@ export default async function SongPage({ params }) {
                   {s.title}
                 </h3>
                 <p className="truncate text-xs text-muted">{s.artist}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Lyra×Syno — 이 곡의 시대를 함께 보는 큐레이션 영화 */}
+      {eraMovies.length > 0 && (
+        <div className="mx-auto mt-14 max-w-2xl">
+          <h2 className="mb-4 text-sm font-semibold text-muted">
+            이 시대의 영화 <span className="text-xs font-normal text-muted/60">{songDecadeNum}년대의 기록</span>
+          </h2>
+          <div className="grid grid-cols-3 gap-x-4 gap-y-6">
+            {eraMovies.map((m) => (
+              <Link key={m.slug} href={`/movies/${m.slug}`} className="group">
+                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                  <img
+                    src={m.poster}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[2/3] w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
+                  />
+                </div>
+                <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{m.title_ko || m.title}</h3>
               </Link>
             ))}
           </div>
