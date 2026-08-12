@@ -1,6 +1,6 @@
 ---
 title: Never Gonna Give You Up
-title_ko: 
+title_ko: 네버 고나 기브 유 업
 artist: Rick Astley
 artist_ko:
 album: Reeling In The Decades
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-06-09
 published: 2025-06-08T23:07:31.000Z
-comment:
+comment: 상대를 절대 포기하거나 실망시키지 않겠다는 굳은 다짐을 경쾌한 리듬에 담아낸 곡이다. 인터넷 밈인 릭롤링의 배경 음악으로 유명해지며 시대를 초월한 대중적 사랑을 받고 있다.
 source: instagram
 source_tag: 250609_0806
 source_note: 
