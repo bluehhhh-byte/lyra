@@ -1,6 +1,6 @@
 ---
 title: Eye to Eye
-title_ko: 
+title_ko: 아이 투 아이
 artist: Suchmos
 artist_ko:
 album: Sunburst
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-04
 published: 2025-07-04T14:04:56.000Z
-comment:
+comment: 냉소적인 사회적 시선과 속도감 있는 현대 도시의 풍경을 그루비한 밴드 사운드로 담아낸 곡이다. 화면 속 가상과 현실의 경계를 넘나들며 자신만의 태도로 질주하는 삶의 방식을 보여준다.
 source: instagram
 source_tag: 250704_2304
 source_note: 
