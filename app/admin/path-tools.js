@@ -62,10 +62,25 @@ export default function PathTools({ songs }) {
         )}
         <button
           onClick={go}
-          disabled={msg.includes("생성 중") || (type === "bridge" ? !from || !to || from === to : !theme.trim())}
+          disabled={msg.includes("분석 중") || msg.includes("생성 중") || (type === "bridge" ? !from || !to || from === to : !theme.trim())}
           className="rounded-lg border border-accent px-4 py-1.5 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
         >
           경로 만들기
+        </button>
+        <button
+          onClick={async () => {
+            setMsg("흐름 분석 중… (최근 20곡 가사 연결)");
+            try {
+              const { links, songs: n } = await api("songThread", {});
+              setMsg(`기록의 흐름 분석됨 — ${n}곡에서 연결 ${links}개, 재배포 후 반영`);
+            } catch (e) {
+              setMsg(`실패: ${e.message}`);
+            }
+          }}
+          disabled={msg.includes("분석 중") || msg.includes("생성 중")}
+          className="rounded-lg border border-line px-4 py-1.5 text-sm text-muted hover:border-accent hover:text-accent disabled:opacity-40"
+        >
+          기록의 흐름 분석
         </button>
       </div>
       {msg && <p className="mt-2 text-xs text-muted">{msg}</p>}

@@ -823,6 +823,65 @@ ${lines}`
     return Response.json(report);
   }
 
+  // 기록의 흐름 — 곡을 담아온 '순서'를 하나의 서사로 읽는다. 인접한 기록
+  // 사이 가사·주제의 연결 고리를 추정해 저장하고, /songs/paths 상단에
+  // 타임라인으로 그린다. 연결이 억지스러우면 그 쌍은 생략된다.
+  if (action === "songThread") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const all = getAllSongs(); // 최신순
+    if (all.length < 6) return Response.json({ error: "곡이 부족합니다 (6곡 이상 필요)" }, { status: 422 });
+    const recent = all.slice(0, 20).reverse(); // 기록된 순서(과거→현재)로
+
+    const koOf = (s) =>
+      s.stanzas.flatMap((st) => st.lines.map((l) => l.ko || (s.lang === "ko" ? l.en : ""))).filter(Boolean);
+    const corpus = recent
+      .map(
+        (s, i) =>
+          `${i + 1}. [${s.slug}] ${s.title} - ${s.artist} (${(s.published || s.date || "").slice(0, 10)}, 감정: ${parseEmotion(s.emotion) || "?"})\n${koOf(s).slice(0, 3).join(" / ").slice(0, 180)}`
+      )
+      .join("\n");
+
+    const raw = await geminiText(
+      key,
+      `아래는 한 사람이 최근에 '기록한 순서대로' 나열한 ${recent.length}곡이다 (번호가 시간 순서).
+이 기록의 흐름에서 가사·주제의식이 어떻게 이어지는지 추적하라. JSON으로만:
+{"summary":"전체 흐름을 읽어주는 2~3문장 — 반드시 평서문 '~다'체, ~습니다/~해요 금지","links":[{"from":"slug","to":"slug","connection":"두 곡의 가사를 잇는 상관관계 한 구절 (35자 이내)"}]}
+규칙:
+- from/to는 대괄호 안 slug 그대로, 시간상 from이 to보다 앞선 곡
+- 인접하거나 가까운(3칸 이내) 기록끼리만 연결하라
+- connection은 실제 가사의 이미지·주제를 근거로 (예: "밤의 이미지가 도피의 갈망으로 번진다")
+- 연결이 억지스러운 쌍은 만들지 말 것 — 자연스러운 것만 5~12개
+- 순수 JSON만 출력
+기록:
+${corpus}`,
+      true
+    );
+    let thread;
+    try {
+      thread = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      return Response.json({ error: "흐름 분석 실패 (응답 파싱)" }, { status: 502 });
+    }
+    const order = new Map(recent.map((s, i) => [s.slug, i]));
+    const links = (Array.isArray(thread?.links) ? thread.links : [])
+      .filter((l) => order.has(l?.from) && order.has(l?.to) && order.get(l.from) < order.get(l.to))
+      .filter((l) => order.get(l.to) - order.get(l.from) <= 3)
+      .map((l) => ({ from: l.from, to: l.to, connection: String(l.connection || "").trim().slice(0, 70) }))
+      .filter((l) => l.connection)
+      .slice(0, 12);
+    if (!links.length) return Response.json({ error: "연결을 찾지 못했습니다" }, { status: 502 });
+
+    const data = {
+      summary: String(thread.summary || "").trim().slice(0, 300),
+      links,
+      slugs: recent.map((s) => s.slug),
+      at: new Date().toISOString(),
+    };
+    await writeData("thread.json", JSON.stringify(data, null, 1), `data: 기록의 흐름 (${recent.length}곡, 연결 ${links.length})`);
+    return Response.json({ links: links.length, songs: recent.length });
+  }
+
   // 발견 경로 — 시작·전환·도착 구조를 가진 6~10곡 탐색 코스.
   // bridge(곡 A→B를 잇는 다리)와 theme(주제 코스) 두 형태, 한 파일에 쌓인다.
   // 컬렉션 곡은 slug로 붙이고 새 곡은 iTunes로 매칭해 미리듣기를 단다.

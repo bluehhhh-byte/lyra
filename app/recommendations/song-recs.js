@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import CoverImage from "../cover-image";
 import { usePlayer } from "../player";
 
@@ -15,8 +14,6 @@ export default function SongRecs({ items }) {
     <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
       {items.map((s) => {
         const playing = track?.preview && track.preview === s.preview;
-        const b = typeof s.basedOn === "object" && s.basedOn ? s.basedOn : null;
-        const legacyBasis = typeof s.basedOn === "string" ? s.basedOn : "";
 
         const cover = (
           <div
@@ -79,34 +76,6 @@ export default function SongRecs({ items }) {
               {s.year ? ` · ${s.year}` : ""}
             </p>
             {s.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{s.why}</p>}
-            {(b?.reason || legacyBasis) && (
-              <p className="mt-0.5 text-[11px] leading-snug text-accent/70">
-                ↳{" "}
-                {b?.songs?.[0] && (
-                  <>
-                    <Link href={`/songs/${b.songs[0].slug}`} className="underline decoration-accent/40 hover:text-accent">
-                      {b.songs[0].title}
-                    </Link>
-                    {" — "}
-                  </>
-                )}
-                {b?.reason || legacyBasis}
-              </p>
-            )}
-            {b && (b.genres?.length || b.emotions?.length) > 0 && (
-              <p className="mt-0.5 flex flex-wrap gap-x-2 text-[10px] text-muted/70">
-                {(b.genres || []).map((g) => (
-                  <Link key={g} href={`/tags/${encodeURIComponent(g)}`} className="hover:text-accent">
-                    {g}
-                  </Link>
-                ))}
-                {(b.emotions || []).map((e) => (
-                  <Link key={e} href={`/?emotion=${encodeURIComponent(e)}`} className="hover:text-accent">
-                    #{e}
-                  </Link>
-                ))}
-              </p>
-            )}
           </div>
         );
       })}

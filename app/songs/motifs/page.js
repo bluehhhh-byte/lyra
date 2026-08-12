@@ -62,23 +62,26 @@ export default function MotifsPage() {
                 {m.songs.map(({ slug, quote }) => {
                   const s = songs.get(slug);
                   return (
-                    <Link key={slug} href={`/songs/${slug}`} className="group flex items-start gap-3">
-                      <CoverImage
-                        src={s.artwork}
-                        alt=""
-                        label={s.title}
-                        loading="lazy"
-                        className="h-12 w-12 shrink-0 rounded-lg border border-line object-cover"
-                      />
-                      <span className="min-w-0">
-                        <span className="block truncate text-sm font-medium group-hover:text-accent">
+                    // 링크는 앨범 이미지에만 — 텍스트는 자르지 않고 줄바꿈으로 다 보여준다
+                    <div key={slug} className="flex min-w-0 items-start gap-3">
+                      <Link href={`/songs/${slug}`} aria-label={`${s.title} 보기`} className="group shrink-0">
+                        <CoverImage
+                          src={s.artwork}
+                          alt=""
+                          label={s.title}
+                          loading="lazy"
+                          className="h-12 w-12 rounded-lg border border-line object-cover transition group-hover:opacity-80 group-hover:ring-2 group-hover:ring-accent/40"
+                        />
+                      </Link>
+                      <div className="min-w-0 flex-1">
+                        <p className="break-words text-sm font-medium leading-snug">
                           {s.title} <span className="font-normal text-muted">· {s.artist}</span>
-                        </span>
+                        </p>
                         {quote && (
-                          <span className="mt-0.5 block text-xs italic leading-snug text-muted/80">“{quote}”</span>
+                          <p className="mt-0.5 break-words text-xs italic leading-snug text-muted/80">“{quote}”</p>
                         )}
-                      </span>
-                    </Link>
+                      </div>
+                    </div>
                   );
                 })}
               </div>
