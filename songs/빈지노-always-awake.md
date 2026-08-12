@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-05-13
 published: 2025-05-13T10:45:27.000Z
-comment:
+comment: 이 곡은 잠드는 시간을 아껴가며 치열하게 꿈을 향해 달려가는 청춘의 뜨거운 열정과 각오를 담고 있다. 초췌한 몰골일지라도 살아있음을 느끼며 현재에 집중하겠다는 메시지가 깊은 인상을 준다.
 source: instagram
 source_tag: 250513_1944
 source_note: 
