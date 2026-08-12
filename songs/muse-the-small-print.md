@@ -1,6 +1,6 @@
 ---
 title: The Small Print
-title_ko: 
+title_ko: 더 스몰 프린트
 artist: Muse
 artist_ko:
 album: Absolution
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-13
 published: 2025-07-13T10:55:30.000Z
-comment:
+comment: 이 곡은 악마와의 거래를 통해 영혼을 저당 잡힌 인간의 비극을 다루며, 뮤즈 특유의 폭발적인 에너지와 날카로운 비판 의식이 돋보인다. 계약서의 작은 글씨처럼 사소해 보이는 조건이 결국 모든 것을 파멸로 이끈다는 주제가 강렬하게 다가온다.
 source: instagram
 source_tag: 250713_1955
 source_note: 
