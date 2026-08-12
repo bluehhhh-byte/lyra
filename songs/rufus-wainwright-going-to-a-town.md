@@ -11,7 +11,7 @@ trackId:
 duration: 268
 genre: 
 lang: ko
-tags: [2007]
+tags: [영미, Pop, 2007]
 keywords: []
 emotion:
 date: 2024-12-01

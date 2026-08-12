@@ -823,6 +823,32 @@ ${lines}`
     return Response.json(report);
   }
 
+  // 커버 수동 지정 — /admin의 커버 검토 화면에서 URL을 직접 입력하거나
+  // '커버 없음'을 확정한다. URL은 https + image/* 응답을 서버에서 검증.
+  if (action === "setArtwork") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    let raw = song.raw.replace(/\r\n/g, "\n");
+    if (body.none) {
+      raw = setField(raw, "artwork_none", "true", "artwork");
+      await writeSong(body.slug, raw, `chore(song): 커버 없음 확정 — ${body.slug}`);
+      return Response.json({ ok: true, none: true });
+    }
+    const url = String(body.artwork || "").trim();
+    if (!/^https:\/\/\S+$/.test(url)) return Response.json({ error: "https URL이 아닙니다" }, { status: 422 });
+    try {
+      const res = await fetch(url, { method: "GET", headers: { Range: "bytes=0-2047" } });
+      const type = res.headers.get("content-type") || "";
+      if (!res.ok || !/^image\//.test(type))
+        return Response.json({ error: `이미지가 아닙니다 (${res.status} ${type})` }, { status: 422 });
+    } catch {
+      return Response.json({ error: "이미지 응답 확인 실패" }, { status: 422 });
+    }
+    raw = setField(raw, "artwork", url, "year");
+    await writeSong(body.slug, raw, `chore(song): 커버 수동 지정 — ${body.slug}`);
+    return Response.json({ ok: true });
+  }
+
   // 가사 모티프 지도 — 번역된 전체 가사에서 반복되는 이미지·주제를 묶는다.
   // 단어 빈도(keywords)보다 한 층 깊게: '밤·새벽·어둠·불 꺼진 방'이 하나의
   // 모티프가 된다. 구절은 실제 가사에 있는 것만 통과(환각 차단).

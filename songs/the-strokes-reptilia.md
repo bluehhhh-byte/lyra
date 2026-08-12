@@ -11,7 +11,7 @@ trackId: 302987569
 duration: 220
 genre: Alternative
 lang: en
-tags: [2003]
+tags: [영미, Indie Rock, 2003]
 keywords: []
 emotion:
 date: 2024-09-12

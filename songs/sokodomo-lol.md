@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/7/0/4b727dc09aec849ef30e2ffc
 trackId: 
 duration: 154
 genre: 
-lang: ko
-tags: [2020]
+lang: en
+tags: [한국, Hip-Hop, 2020]
 keywords: []
 emotion:
 date: 2025-06-12
@@ -35,18 +35,18 @@ I don’t give a damn
 > (난 신경 안 써)
 If I say it I mean it
 > (내가 말하면 그건 진짜야)
-기분 나쁜 건 싫지만
-난 살아야 해서 그냥 그런데요
+> 기분 나쁜 건 싫지만
+> 난 살아야 해서 그냥 그런데요
 
 I might be going through
 > (지금 힘든 일을 겪고 있을지도 몰라)
 Something I might not say
 > (말하지 않을 수도 있어)
-왜냐면 말해봤자 도움이 안돼
+> 왜냐면 말해봤자 도움이 안돼
 Nobody’s here when I need them
 > (내가 필요할 때 아무도 곁에 없어)
-기분 나쁜 건 싫지만
-난 살아야 해서 그냥 참는데요
+> 기분 나쁜 건 싫지만
+> 난 살아야 해서 그냥 참는데요
 
 LOL LOL LOL LOL LOL LOL LOL LOL LOL
 
@@ -60,8 +60,8 @@ Stop me if you can
 > (할 수 있으면 날 멈춰봐)
 I bet you nothing
 > (넌 아무것도 못할 걸 내기할래)
-내 모습 봐
-난 멈추지 못해서 전부 돌진
+> 내 모습 봐
+> 난 멈추지 못해서 전부 돌진
 I keep me locked
 > (난 내 자신을 가둬둬)
 To an energy you never noticed
@@ -75,17 +75,17 @@ Go go home home
 > (집으로 가자 집으로)
 Because you know know
 > (왜냐면 넌 알잖아 알잖아)
-나는 또 또 미친 걸로
-돌아오게 될 것 같아
+> 나는 또 또 미친 걸로
+> 돌아오게 될 것 같아
 
 I might be going through
 > (지금 힘든 일을 겪고 있을지도 몰라)
 Something I might not say
 > (말하지 않을 수도 있어)
-왜냐면 말해봤자 도움이 안돼
+> 왜냐면 말해봤자 도움이 안돼
 Nobody’s here when I need them
 > (내가 필요할 때 아무도 곁에 없어)
-기분 나쁜 건 싫지만
-난 살아야 해서 그냥 참는데요
+> 기분 나쁜 건 싫지만
+> 난 살아야 해서 그냥 참는데요
 
 LOL LOL LOL LOL LOL LOL LOL LOL LOL

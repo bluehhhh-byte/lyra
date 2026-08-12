@@ -11,7 +11,7 @@ trackId:
 duration: 184
 genre: 
 lang: en
-tags: [2021]
+tags: [영미, Pop, 2021]
 keywords: []
 emotion:
 date: 2024-10-27

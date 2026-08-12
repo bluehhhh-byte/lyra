@@ -11,7 +11,7 @@ trackId:
 duration: 267
 genre: 
 lang: en
-tags: [2013]
+tags: [영미, Pop, 2013]
 keywords: []
 emotion:
 date: 2024-09-11

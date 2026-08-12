@@ -11,7 +11,7 @@ trackId:
 duration: 227
 genre: 
 lang: en
-tags: [2014]
+tags: [영미, Punk Rock, 2014]
 keywords: []
 emotion:
 date: 2025-06-16

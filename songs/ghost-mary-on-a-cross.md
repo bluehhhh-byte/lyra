@@ -11,7 +11,7 @@ trackId: 1767041431
 duration: 245
 genre: Metal
 lang: en
-tags: [2019]
+tags: [유럽, Metal, 2019]
 keywords: []
 emotion:
 date: 2025-06-13

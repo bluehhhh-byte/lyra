@@ -11,7 +11,7 @@ trackId: 1882351609
 duration: 227
 genre: Alternative
 lang: en
-tags: [2020]
+tags: [유럽, Indie Pop, 2020]
 keywords: []
 emotion:
 date: 2024-09-02
@@ -52,7 +52,7 @@ So if it's any consolation
 > 그래서 이게 위로가 된다면
 This CGI some folks are working on is just unbelievable
 > 몇몇 사람들이 작업 중인 이 컴퓨터 그래픽 이미지는
-정말 믿을 수 없을 정도야
+> 정말 믿을 수 없을 정도야
 So turn your televisions on again
 > 그러니 다시 텔레비전을 켜봐
 'Cause you wouldn't want to miss a thing

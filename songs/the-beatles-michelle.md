@@ -11,7 +11,7 @@ trackId:
 duration: 196
 genre: 
 lang: en
-tags: [1965]
+tags: [영미, Rock, 1965]
 keywords: []
 emotion:
 date: 2024-07-08

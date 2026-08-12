@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/a/9/3/0/a9304328ce9f4a1695380742
 trackId: 
 duration: 205
 genre: 
-lang: ko
-tags: [2004]
+lang: en
+tags: [영미, Alternative Rock, 2004]
 keywords: []
 emotion:
 date: 2024-11-01

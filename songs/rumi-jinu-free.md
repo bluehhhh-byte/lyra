@@ -11,7 +11,7 @@ trackId: 1837843734
 duration: 175
 genre: Soundtrack
 lang: en
-tags: [2025]
+tags: [영미, Soundtrack, 2025]
 keywords: []
 emotion:
 date: 2025-08-06
@@ -19,7 +19,7 @@ published: 2025-08-05T23:45:45.000Z
 comment: 상처와 어두운 내면을 가진 서로가 진솔하게 교감하며 비로소 숨을 쉬고 자유를 갈구하는 모습을 담은 곡이다. 과거의 무게에서 벗어나 함께 맞설 용기를 북돋아 준다.
 source: instagram
 source_tag: 250806_0845
-source_note: NETFLIX, K-POP DEMON HUNTERS O.S.T.
+source_note: NETFLIX, K-POP DEMON HUNTERS O.S.T. · 이어쓴 댓글 병합
 source_hash: 34211c98738b2fb9ba934f20cc8b39052c0f7cd3
 ---
 
@@ -67,3 +67,67 @@ We can’t fix it if we never face it
 > 직면하지 않으면 절대 고쳐지지 않아
 Let the past be the past ‘til it’s weightless
 > 과거는 그냥 과거로 흘려보내, 더는 짐이 되지 않게
+
+[Jinu]
+Ooh, time goes by, and I lose perspective
+> 시간이 흐르며 난 방향을 잃곤 해
+Yeah, hope only hurts, so I just forget it
+> 희망은 상처만 주니까 그냥 잊어버려
+But you’re breaking through all the dark in me
+> 하지만 넌 내 어둠을 뚫고 들어와
+When I thought that nobody could
+> 아무도 그러지 못할 거라고 생각했을 때
+And you’re waking up all these parts of me
+> 그리고 넌 내 안의 잠든 부분들을 깨워줘
+That I thought were buried for good
+> 완전히 묻혔다고 생각했던 부분들을
+Between imposter and this monster
+> 가짜와 괴물 사이에서
+I been lost inside my head
+> 난 내 머릿속에서 길을 잃었어
+Ain’t no choice when all these voices
+> 머릿속 목소리들이
+Keep me pointing towards no end
+> 끝이 없는 곳으로 날 이끌 때는 선택이 없어
+It’s just easy when I’m with you
+> 하지만 너와 있으면 모든 게 쉬워져
+No one sees me the way you do
+> 아무도 너처럼 날 보지 않아
+I don’t trust it, but I want to
+> 믿을 수는 없지만 믿고 싶어
+I keep coming back to
+> 그래서 자꾸 너에게 돌아와
+Why does it feel right every time I let you in?
+> 왜 널 받아들일 때마다 옳다고 느껴질까?
+Why does it feel like I can tell you anything?
+> 왜 너에겐 뭐든 말할 수 있을 것 같을까?
+We can’t fix it if we never face it
+> 직면하지 않으면 절대 고쳐지지 않아
+What if we find a way to escape it?
+> 만약 벗어날 길을 찾는다면 어떨까?
+We could be free
+> 우리는 자유로워질 수 있어
+Free
+> 자유롭게
+We can’t fix it if we never face it
+> 직면하지 않는다면 고칠 수 없어
+Let the past be the past ‘til it’s weightless
+> 과거는 흘려보내, 더는 짐이 되지 않게
+
+[Rumi]
+Oh, so take my hand, it’s open
+> 그러니까 내 손 잡아, 기다리고 있어
+Free, free
+> 자유롭게, 자유롭게
+What if we heal what’s broken?
+> 만약 깨진 걸 치유할 수 있다면?
+Free, free
+> 자유롭게, 자유롭게
+I tried to hide, but something broke
+> 숨으려 했지만 뭔가 부서졌어
+I couldn’t sing, but you give me hope
+> 노래할 수 없었지만 너는 나에게 희망을 줘
+We can’t fix it if we never face it
+> 마주보지 않으면 고칠 수 없어
+Let the past be the past ‘til it’s weightless
+> 과거는 그냥 흘려보내, 무게 없이

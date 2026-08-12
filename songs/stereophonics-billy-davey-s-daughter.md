@@ -3,15 +3,15 @@ title: Billy Davey's Daughter
 title_ko: Billy Davey's Daughter
 artist: Stereophonics
 artist_ko:
-album: Decade In The Sun - Best Of Stereophonics
+album: 
 year: 1997
-artwork: https://cdn-images.dzcdn.net/images/cover/0d210da789d5468aa7f4322e4c4941b8/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/0/6/0/30696540381c470b2d445f67b9cc78c5.mp3?hdnea=exp=1786559431~acl=/api/1/1/3/0/6/0/30696540381c470b2d445f67b9cc78c5.mp3*~data=user_id=0,application_id=42~hmac=517f5397ffbc786ff512ac214ff98de1ae42490747d07221c5c0ceade299c5ea
+artwork: https://dn710808.ca.archive.org/0/items/mbid-ff32390c-9590-44f7-b39d-372f010673a1/mbid-ff32390c-9590-44f7-b39d-372f010673a1-1757783489_thumb500.jpg
+preview: 
 trackId: 
-duration: 221
+duration: 
 genre: 
 lang: ko
-tags: [1997]
+tags: [영미, Alternative Rock, 1997]
 keywords: []
 emotion:
 date: 2025-01-20

@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2024]
+tags: [한국, 2024]
 keywords: []
 emotion:
 date: 2025-05-19

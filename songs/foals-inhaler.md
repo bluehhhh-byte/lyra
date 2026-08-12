@@ -5,13 +5,13 @@ artist: Foals
 artist_ko:
 album: 
 year: 2012
-artwork: 
+artwork: https://dn710909.ca.archive.org/0/items/mbid-e5656e38-a4a8-4ee1-9ea4-4273a2275497/mbid-e5656e38-a4a8-4ee1-9ea4-4273a2275497-25391187859_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2012]
+tags: [영미, Indie Rock, 2012]
 keywords: []
 emotion:
 date: 2024-11-27
@@ -23,13 +23,11 @@ source_note:
 source_hash: 0ee51e4bf00c2fe87cecb1e31de90620376b68e7
 ---
 Sticks and stones don’t break my bones,
-> 돌팔매도 몽둥이도 내 뼈를 부러뜨리진 못해,
 They’re make-believe
 > 돌과 막대기가 내 뼈를 부러뜨릴 수는 없어, 그건 그저 환상이야
 It’s lock ‘n’ load, it’s a dead end road for you and me
 > 총알을 장전하는 소리, 너와 나에게는 막다른 길일 뿐이야
 And I’m rusted gold,
-> 나는 녹슬어버린 금,
 I’m stripped and sold, I’m make believe
 > 나는 녹슨 금처럼 벗겨지고 팔려나가는 환상일 뿐이야
 And I’m up for rent, my head is spent, I guarantee
@@ -58,7 +56,6 @@ I shimmy-shake, I wake ‘n’ bake, I’m over me
 My lungs defeat, I cannot breathe, don’t follow me
 > 내 폐는 무너지고, 숨을 쉴 수 없어, 나를 따라오지 마
 And you push and shove,
-> 너는 밀치고 또 떠밀지,
 I’ve had enough, you best believe
 > 너는 밀치고 떠밀어, 나는 이제 충분히 참았어, 믿어야 할 거야
 

@@ -11,7 +11,7 @@ trackId: 1597724870
 duration: 145
 genre: R&B/Soul
 lang: en
-tags: [2021]
+tags: [한국, R&B/Soul, 2021]
 keywords: []
 emotion:
 date: 2024-08-02
@@ -34,7 +34,6 @@ As long as you’re smiling that is all I care
 Just like the gravity that's pulling me down 
 > 나를 끌어당기는 중력처럼
 I’m always gon’ be right there
-> 언제나 네 곁에 있을게
 To hold you down down down 
 > 너를 붙잡기 위해 늘 그 자리에 있을 거야 
 Just like the song you're my ribbon in the sky 

@@ -11,7 +11,7 @@ trackId:
 duration: 466
 genre: 
 lang: en
-tags: [2025]
+tags: [영미, Metal, 2025]
 keywords: []
 emotion:
 date: 2025-05-14

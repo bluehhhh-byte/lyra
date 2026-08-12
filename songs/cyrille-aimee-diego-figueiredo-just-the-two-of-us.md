@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [2016]
+tags: [유럽, Jazz, 2016]
 keywords: []
 emotion:
 date: 2024-10-26

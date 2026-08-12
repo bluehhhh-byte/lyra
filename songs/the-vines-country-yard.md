@@ -11,7 +11,7 @@ trackId:
 duration: 226
 genre: 
 lang: ko
-tags: [2002]
+tags: [영미, Indie Rock, 2002]
 keywords: []
 emotion:
 date: 2025-01-21

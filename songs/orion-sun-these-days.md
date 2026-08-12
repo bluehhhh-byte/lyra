@@ -11,7 +11,7 @@ trackId:
 duration: 194
 genre: 
 lang: en
-tags: [2024]
+tags: [영미, R&B/Soul, 2024]
 keywords: []
 emotion:
 date: 2024-09-24

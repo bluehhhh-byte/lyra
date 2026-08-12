@@ -11,7 +11,7 @@ trackId:
 duration: 374
 genre: 
 lang: en
-tags: [2023]
+tags: [영미, R&B/Soul, 2023]
 keywords: []
 emotion:
 date: 2024-06-17
@@ -40,9 +40,7 @@ Got nothin' to show for it
 > 하지만 보여줄 수 없는 게 있어
 
 Is it all
-> 이게 전부일까
 Is it all
-> 이게 전부일까
 Is it all
 > 이 모든 게
 Too much
@@ -75,9 +73,7 @@ I breathe 'til my head's numb
 > 머리가 멍해질 때까지 숨을 몰아쉬어
 
 Is it all
-> 이게 전부일까
 Is it all
-> 이게 전부일까
 Is it all
 > 이 모든 게
 Too much

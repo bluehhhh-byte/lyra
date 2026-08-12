@@ -11,7 +11,7 @@ trackId:
 duration: 167
 genre: 
 lang: ko
-tags: [2021]
+tags: [한국, Alternative Rock, 2021]
 keywords: []
 emotion:
 date: 2025-07-01

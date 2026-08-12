@@ -11,7 +11,7 @@ trackId: 1510740254
 duration: 276
 genre: Alternative
 lang: en
-tags: [2020]
+tags: [영미, Indie Pop, 2020]
 keywords: []
 emotion:
 date: 2024-06-11

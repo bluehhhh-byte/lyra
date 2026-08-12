@@ -11,7 +11,7 @@ trackId: 1724881509
 duration: 167
 genre: Alternative
 lang: en
-tags: [2020]
+tags: [영미, R&B/Soul, 2020]
 keywords: []
 emotion:
 date: 2024-06-21

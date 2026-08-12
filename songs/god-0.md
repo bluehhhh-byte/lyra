@@ -11,7 +11,7 @@ trackId: 1669448268
 duration: 229
 genre: K-Pop
 lang: ko
-tags: [2002]
+tags: [한국, K-Pop, 2002]
 keywords: []
 emotion:
 date: 2024-08-11

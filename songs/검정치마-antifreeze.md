@@ -11,7 +11,7 @@ trackId:
 duration: 243
 genre: 
 lang: ko
-tags: [2008]
+tags: [한국, Indie Rock, 2008]
 keywords: []
 emotion:
 date: 2024-11-20

@@ -11,7 +11,7 @@ trackId: 1270568758
 duration: 225
 genre: Hard Rock
 lang: en
-tags: [2001]
+tags: [영미, Hard Rock, 2001]
 keywords: []
 emotion:
 date: 2025-07-10
@@ -62,7 +62,6 @@ You think an attitude can make you cool
 Sick and tired of being everyone’s fool
 > 모두의 바보가 되는 게 지긋지긋해
 You think daddy’s gun is
-> 아빠의 총이면 다 될 거라 생각하지
 gonna erase all the scars and the pain
 > 아빠의 총이 모든 상처와 아픔을 지워줄 거라 생각해
 

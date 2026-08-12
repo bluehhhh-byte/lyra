@@ -11,7 +11,7 @@ trackId: 2249495
 duration: 287
 genre: Singer/Songwriter
 lang: en
-tags: [2002]
+tags: [유럽, Folk, 2002]
 keywords: []
 emotion:
 date: 2024-08-16
@@ -71,7 +71,6 @@ I can't take my eyes off of you
 Did I say that I loathe you
 > 내가 당신이 밉다고 말했었나
 Did I say that I want to
-> 내가 그러고 싶다고 말했던가
 Leave it all behind
 > 모든 걸 뒤로 한 채 떠나고 싶다고 말했던가
 

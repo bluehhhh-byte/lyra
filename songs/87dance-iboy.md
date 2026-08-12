@@ -10,8 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f1/
 trackId: 1470189918
 duration: 198
 genre: Rock
-lang: ko
-tags: [2019]
+lang: en
+tags: [영미, Rock, 2019]
 keywords: []
 emotion:
 date: 2024-07-02
@@ -38,7 +38,7 @@ I'll be on your milk and I'll be on your wine
 I'll be on your dress
 When you at another land
 > 다른 나라에 있을 때
-난 너의 드레스가 되어 있을게
+> 난 너의 드레스가 되어 있을게
 I'll be change up for you
 > 네가 원하는 모든 방식으로
 Every way you want to plan
@@ -55,7 +55,7 @@ Please call ma name
 Dancing on ma table
 After swimming on the lake
 > 호수에서 수영한 후
-내 테이블 위에서 춤을 춰줘
+> 내 테이블 위에서 춤을 춰줘
 I'll be on your playlist
 > 너의 플레이리스트에 있을게
 Today I'm going your favorite

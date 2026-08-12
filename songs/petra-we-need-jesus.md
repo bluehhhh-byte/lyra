@@ -11,7 +11,7 @@ trackId:
 duration: 242
 genre: 
 lang: ko
-tags: [1997]
+tags: [영미, Rock, 1997]
 keywords: []
 emotion:
 date: 2024-11-24

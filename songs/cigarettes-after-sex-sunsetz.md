@@ -11,7 +11,7 @@ trackId:
 duration: 214
 genre: 
 lang: en
-tags: [2017]
+tags: [영미, Dream Pop, 2017]
 keywords: []
 emotion:
 date: 2024-09-08

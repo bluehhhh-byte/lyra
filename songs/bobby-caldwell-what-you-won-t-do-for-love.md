@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e9
 trackId: 
 duration: 286
 genre: 
-lang: ko
-tags: [1978]
+lang: en
+tags: [영미, R&B/Soul, 1978]
 keywords: []
 emotion:
 date: 2024-10-24
@@ -61,7 +61,7 @@ You’ve tried everything but you won’t give up
 In my world, only you make me do for love
 What I would not do
 > 내 세상에서 오직 당신만이 사랑을 위해
-하지 않았을 일도 하게 만들어요
+> 하지 않았을 일도 하게 만들어요
 
 Make me do for love what I would not do
 > 사랑을 위해 하지 않았을 일도 하게 만드네요

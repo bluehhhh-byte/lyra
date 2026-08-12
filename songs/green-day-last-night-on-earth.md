@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee8
 trackId: 
 duration: 256
 genre: 
-lang: ko
-tags: [2009]
+lang: en
+tags: [영미, Punk Rock, 2009]
 keywords: []
 emotion:
 date: 2024-07-19
@@ -49,8 +49,8 @@ With every breath that I am worth
 Here on earth
 I'm sending all my love to you
 > 내가 가진 모든 숨결마다
-내 모든 사랑을 너에게 보내기 위해
-난 이 땅 위에 서 있어
+> 내 모든 사랑을 너에게 보내기 위해
+> 난 이 땅 위에 서 있어
 
 So if you dare to second guess
 > 그러니 의심이 든다고 해도

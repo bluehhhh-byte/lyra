@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/8/1/2/0/812058f492d64dff4da9543a
 trackId: 
 duration: 371
 genre: 
-lang: ko
-tags: [2024]
+lang: en
+tags: [영미, Electronic, 2024]
 keywords: []
 emotion:
 date: 2024-10-17
@@ -59,7 +59,7 @@ This could be our last chance
 > 이것이 우리의 마지막 기회일지도 모릅니다
 Did I stray too far To still deserve your warm embrace?
 > 제가 너무 멀리 벗어나 여전히
-당신의 따뜻한 포옹을 받을 자격이 있겠습니까?
+> 당신의 따뜻한 포옹을 받을 자격이 있겠습니까?
 
 Ave Maria, Ave Maria
 > 성모 마리아여, 성모 마리아여

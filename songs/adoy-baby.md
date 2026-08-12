@@ -11,7 +11,7 @@ trackId:
 duration: 237
 genre: 
 lang: en
-tags: [2021]
+tags: [한국, Synth-Pop, 2021]
 keywords: []
 emotion:
 date: 2024-07-17

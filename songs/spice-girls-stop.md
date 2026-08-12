@@ -11,7 +11,7 @@ trackId: 724614202
 duration: 205
 genre: Britpop
 lang: en
-tags: [1997]
+tags: [영미, Pop, 1997]
 keywords: []
 emotion:
 date: 2024-08-23

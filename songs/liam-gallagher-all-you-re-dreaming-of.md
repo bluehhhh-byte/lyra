@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [2020]
+tags: [영미, Indie Rock, 2020]
 keywords: []
 emotion:
 date: 2024-09-28

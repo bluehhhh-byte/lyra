@@ -11,7 +11,7 @@ trackId:
 duration: 323
 genre: 
 lang: en
-tags: [2019]
+tags: [영미, Alternative Rock, 2019]
 keywords: []
 emotion:
 date: 2024-08-09

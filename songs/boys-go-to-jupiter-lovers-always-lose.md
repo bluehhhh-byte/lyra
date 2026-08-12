@@ -11,7 +11,7 @@ trackId: 1886772803
 duration: 300
 genre: Indie Pop
 lang: en
-tags: [2024]
+tags: [영미, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-08-20

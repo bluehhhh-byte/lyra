@@ -11,7 +11,7 @@ trackId:
 duration: 94
 genre: 
 lang: en
-tags: [2025]
+tags: [영미, R&B/Soul, 2025]
 keywords: []
 emotion:
 date: 2025-06-05

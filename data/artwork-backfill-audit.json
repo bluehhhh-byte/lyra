@@ -1,0 +1,829 @@
+{
+ "total": 111,
+ "filled": 39,
+ "items": [
+  {
+   "slug": "arianne-come-sweet-death",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "bewhy-celebration",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "BewhY",
+   "matchedTitle": "\"Celebration\"",
+   "matchedAlbum": "032 Funk",
+   "releaseGroupMbid": "0c0fccc3-0c4b-4f9f-ba22-7f27f95a4d80",
+   "action": "filled"
+  },
+  {
+   "slug": "brett-dennen-so-far-from-me",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Brett Dennen",
+   "matchedTitle": "So Far From Me",
+   "matchedAlbum": "Hope for the Hopeless",
+   "releaseGroupMbid": "4480cbd3-d6a6-384c-a42e-aed8aac234c5",
+   "action": "filled"
+  },
+  {
+   "slug": "cafun-perspective",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "CAFUNÉ",
+   "matchedTitle": "Perspective",
+   "matchedAlbum": "Love Songs for the End",
+   "releaseGroupMbid": "b54781c6-9ffc-4f07-b405-3b7bd1c88860",
+   "action": "filled"
+  },
+  {
+   "slug": "cyrille-aimee-diego-figueiredo-just-the-two-of-us",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "danny-chung-happy-togherther",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "dawn-빛이-나는-너에게",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "dreams-come-true-朝がまた来る",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "DREAMS COME TRUE",
+   "matchedTitle": "朝がまた来る",
+   "matchedAlbum": "迎接朝陽",
+   "releaseGroupMbid": "b7c24c02-7ec1-3ec0-9b87-e1eede380f13",
+   "action": "filled"
+  },
+  {
+   "slug": "ellegarden-marry-me",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "ELLEGARDEN",
+   "matchedTitle": "Marry Me",
+   "matchedAlbum": "RIOT ON THE GRILL",
+   "releaseGroupMbid": "f918ea7b-fb8e-3480-a144-a43c19e4da86",
+   "action": "filled"
+  },
+  {
+   "slug": "fkj-greener",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "FKJ Carlos Santana",
+   "matchedTitle": "Greener",
+   "matchedAlbum": "V I N C E N T",
+   "releaseGroupMbid": "70216e66-8475-4061-aebc-8e193fd333f0",
+   "action": "filled"
+  },
+  {
+   "slug": "foals-inhaler",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Foals",
+   "matchedTitle": "Inhaler",
+   "matchedAlbum": "Holy Fire",
+   "releaseGroupMbid": "fdcf14da-08bf-407a-a0af-6f9582b82131",
+   "action": "filled"
+  },
+  {
+   "slug": "foster-the-people-lost-in-space",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "no_cover"
+  },
+  {
+   "slug": "hash-swan-알렉산더처럼-왕",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "honne-by-my-side",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "honne-no-song-without-you",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "HONNE",
+   "matchedTitle": "No Song Without You",
+   "matchedAlbum": "no song without you",
+   "releaseGroupMbid": "874c3636-81db-468b-a0cb-a82ace2ab6af",
+   "action": "filled"
+  },
+  {
+   "slug": "jamiroquai-virtual-insanity",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "layone-ja-mezz-느린심장박동",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "liam-gallagher-all-you-re-dreaming-of",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "loveholic-그대만-있다면",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Loveholic",
+   "matchedTitle": "그대만 있다면",
+   "matchedAlbum": "Nice Dream",
+   "releaseGroupMbid": "4fe1828e-4704-3260-a144-27e092fd3bc5",
+   "action": "filled"
+  },
+  {
+   "slug": "loverytheband-broken",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "macaroni-empitsu-星が泳ぐ",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "mr-big-superfantastic",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "muse-hyper-music",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "no_cover"
+  },
+  {
+   "slug": "nirvana-where-did-you-sleep-last-night",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "norah-jones-come-away-from-me",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "oasis-slide-away",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "one-republic-nobody",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "radiohead-fake-plastic-tree",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "raphael-滅花",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Raphael",
+   "matchedTitle": "不滅花",
+   "matchedAlbum": "秋風の狂詩曲",
+   "releaseGroupMbid": "5436f5bd-c4d9-4a04-bc6d-c3c53b30b727",
+   "action": "filled"
+  },
+  {
+   "slug": "rm-come-back-to-me",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "RM",
+   "matchedTitle": "Come back to me",
+   "matchedAlbum": "Right Place, Wrong Person",
+   "releaseGroupMbid": "41ab9590-7399-4397-883d-3f9ed2d8df60",
+   "action": "filled"
+  },
+  {
+   "slug": "sakanaction-怪獣",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "sex-machineguns-tekken-ll",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "sokodomo-kirin-지구멸망",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "starsailor-in-the-crossfire",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Starsailor",
+   "matchedTitle": "In the Crossfire",
+   "matchedAlbum": "On the Outside",
+   "releaseGroupMbid": "679cb698-2476-34cf-90f1-4a02ffe920d4",
+   "action": "filled"
+  },
+  {
+   "slug": "stereophonics-all-in-one-night",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Stereophonics",
+   "matchedTitle": "All in One Night",
+   "matchedAlbum": "Scream Above the Sounds",
+   "releaseGroupMbid": "322105ed-26be-4d6c-a226-cdb37e443fcb",
+   "action": "filled"
+  },
+  {
+   "slug": "stereophonics-billy-davey-s-daughter",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "Stereophonics",
+   "matchedTitle": "Billy Davey’s Daughter",
+   "matchedAlbum": "Word Gets Around",
+   "releaseGroupMbid": "e6025209-d99c-3f6a-a20c-7d07a82cfaca",
+   "action": "filled"
+  },
+  {
+   "slug": "swervy-justhis-trapped-in-the-drum",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "takahashi-yu-road-movie",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "the-cloud-roon-hey-now-now",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "the-smashing-pumpkins-bullet-with-butterfly-wings",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "the-strokes-i-ll-try-anything-once",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "the-walters-i-love-you-so",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "The Walters",
+   "matchedTitle": "I Love You So",
+   "matchedAlbum": "Try Again",
+   "releaseGroupMbid": "828a2c40-1648-4b12-b533-56cfd4ad4342",
+   "action": "filled"
+  },
+  {
+   "slug": "千と千尋の神隱し-센과-치히로의-행방불명-ost-いつも何度でも",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "강산에-거꾸로-강을-거슬러-오르는-저-힘찬-연어들처럼",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "강산에",
+   "matchedTitle": "거꾸로 강을 거슬러 오르는 저 힘찬 연어들처럼",
+   "matchedAlbum": "Vol. 3 - 연어",
+   "releaseGroupMbid": "695c4712-2bad-4cef-a47b-20237ff469ae",
+   "action": "filled"
+  },
+  {
+   "slug": "검정치마-섬",
+   "provider": "coverartarchive",
+   "status": "acceptable_version",
+   "matchedArtist": "검정치마",
+   "matchedTitle": "섬 (Queen of Diamonds)",
+   "matchedAlbum": "Thirsty",
+   "releaseGroupMbid": "449a5d9a-c842-4e43-9dcc-c5d0f35c4f68",
+   "action": "filled"
+  },
+  {
+   "slug": "검정치마-이별노래",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "검정치마",
+   "matchedTitle": "이별노래",
+   "matchedAlbum": "Don't You Worry Baby (I'm Only Swimming)",
+   "releaseGroupMbid": "6346c2bb-bcf8-4b72-a5a2-a1b91f16302d",
+   "action": "filled"
+  },
+  {
+   "slug": "검정치마-혜야",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "검정치마",
+   "matchedTitle": "혜야",
+   "matchedAlbum": "Team Baby",
+   "releaseGroupMbid": "872c10f4-7dd3-4e68-a91f-869836bfc0ad",
+   "action": "filled"
+  },
+  {
+   "slug": "국카스텐-붉은-밭",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "기리보이-2000-90",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "기리보이",
+   "matchedTitle": "2000/90",
+   "matchedAlbum": "기계적인 앨범",
+   "releaseGroupMbid": "34f2969f-9b11-4cfc-9a74-58501f98915d",
+   "action": "filled"
+  },
+  {
+   "slug": "김경호-사랑-그-시린-아픔으로",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "김경호",
+   "matchedTitle": "사랑, 그 시린 아픔으로",
+   "matchedAlbum": "Unlimited",
+   "releaseGroupMbid": "78446a74-b90f-3510-8dca-930e0fc8084b",
+   "action": "filled"
+  },
+  {
+   "slug": "김광석-혼자-남은-밤",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "김다니엘-1of1-bonvoyage",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "김동률-산책",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "김동률",
+   "matchedTitle": "산책",
+   "matchedAlbum": "산책",
+   "releaseGroupMbid": "7a8e4e71-d24d-43f2-9dbf-a0a6ec815eea",
+   "action": "filled"
+  },
+  {
+   "slug": "김동률-여름의-끝자락",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "김동률 김정원",
+   "matchedTitle": "여름의 끝자락",
+   "matchedAlbum": "답장+",
+   "releaseGroupMbid": "191363dc-526b-4336-b50b-4511ad3f7c4e",
+   "action": "filled"
+  },
+  {
+   "slug": "김바다-moonage-dream",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "김사랑-너란-놈",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "김종서-starry-night",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "김종서",
+   "matchedTitle": "Starry Night",
+   "matchedAlbum": "Odyssey",
+   "releaseGroupMbid": "a2a1a647-b8be-4137-bf38-c9c57863161f",
+   "action": "filled"
+  },
+  {
+   "slug": "김현식-내-사랑-내-곁에",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "김현식",
+   "matchedTitle": "내 사랑 내 곁에",
+   "matchedAlbum": "Kim Hyun Sik Vol. 6",
+   "releaseGroupMbid": "22baca36-a4f8-4e3f-8aef-714042a5a2fe",
+   "action": "filled"
+  },
+  {
+   "slug": "김현철-왜-그래",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "나얼-언젠가는",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "나얼",
+   "matchedTitle": "언젠가는",
+   "matchedAlbum": "Back To The Soul Flight",
+   "releaseGroupMbid": "783f6cc7-5b8b-4b48-adb2-cbdc5f42e115",
+   "action": "filled"
+  },
+  {
+   "slug": "넋업샨-나찰-피타입-mc메타-불한당가",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "단편선-순간들-오늘보다-더-기쁜-날은-남은-생에-많지-않을-것이다",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "더콰이엇-병언-way-back-home",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "델리스파이스-고백",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "레이지-본-시작되는-연인들을-위하여",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "롤러코스터-내게로-와",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "루시드폴-그대-손으로",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "루시드폴-오-사랑",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "릴체리-골드부다-하늘천따지-1000-words",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "머드더스튜던트-이끼",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "메카니즘-조혜련-페퍼톤즈-고장난-타임머신",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "백예린-물고기",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "백예린",
+   "matchedTitle": "물고기",
+   "matchedAlbum": "Pisces",
+   "releaseGroupMbid": "860cf331-1455-4efe-8d92-9e4017aead85",
+   "action": "filled"
+  },
+  {
+   "slug": "벤-꿈처럼",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "불나방-스타-쏘세지-클럽-불행히도-삶은-계속-되었다",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "브로콜리너마저-너무-애쓰고-싶지-않아요",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "브로큰-발렌타인-알루미늄",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "브로큰 발렌타인",
+   "matchedTitle": "알루미늄",
+   "matchedAlbum": "Aluminium",
+   "releaseGroupMbid": "79b2982d-d935-4a8b-ac6d-75c0276d22db",
+   "action": "filled"
+  },
+  {
+   "slug": "빈지노-always-awake",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "삐삐롱스타킹-바보버스",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "사비나-앤-드론즈-귀머거리-인생",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "서울전자음악단-서로-다른",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "서울전자음악단",
+   "matchedTitle": "서로 다른",
+   "matchedAlbum": "Life Is Strange",
+   "releaseGroupMbid": "bae51e9d-f94a-48fa-8ed1-8303a830caea",
+   "action": "filled"
+  },
+  {
+   "slug": "서태지-take-two",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "서태지",
+   "matchedTitle": "Take Two",
+   "matchedAlbum": "Seo Tai Ji",
+   "releaseGroupMbid": "e5736cb9-de40-3ebd-ba95-3177be58adb5",
+   "action": "filled"
+  },
+  {
+   "slug": "성시경-and-we-go",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "성시경",
+   "matchedTitle": "And we go",
+   "matchedAlbum": "Siot",
+   "releaseGroupMbid": "9b55f226-711f-472b-a673-06968ebb84f8",
+   "action": "filled"
+  },
+  {
+   "slug": "성시경-당신은-참",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "성시경",
+   "matchedTitle": "당신은 참..",
+   "matchedAlbum": "여기 내 맘속에",
+   "releaseGroupMbid": "9eef4f64-9cd3-4deb-b1ea-09d029f8dfaf",
+   "action": "filled"
+  },
+  {
+   "slug": "솔루션스-들꽃",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "수민-슬롬-왜-왜-왜",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "실리카겔-ryudejakeiru",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "아침-불꽃축제",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "안신애-hold-me-now",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "염따-더콰이엇",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "염따-저드-새벽에-잠깐이라도-좋아",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "오연준-바람이-불어오는-곳",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "유재하-우리들의-사랑",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "유재하",
+   "matchedTitle": "우리들의 사랑",
+   "matchedAlbum": "사랑하기 때문에",
+   "releaseGroupMbid": "aa54dd85-563a-43e4-93c1-27cbd803dba2",
+   "action": "filled"
+  },
+  {
+   "slug": "이승열-비상",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "이승열",
+   "matchedTitle": "비상",
+   "matchedAlbum": "이날, 이때, 이즈음에....",
+   "releaseGroupMbid": "28a5c2de-93a3-4fe3-b069-36d58e287d31",
+   "action": "filled"
+  },
+  {
+   "slug": "이영훈-일종의-고백",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "이적-고독의-의미",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "no_cover"
+  },
+  {
+   "slug": "이적-빨래",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "no_cover"
+  },
+  {
+   "slug": "이찬혁-파노라마",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "이찬혁",
+   "matchedTitle": "파노라마",
+   "matchedAlbum": "ERROR",
+   "releaseGroupMbid": "8fd7e170-e6ac-41ca-bd96-546a62032a4e",
+   "action": "filled"
+  },
+  {
+   "slug": "자이언티-강승원-무중력",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "자이언티-이문세-눈",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "잔나비-그-밤-그-밤",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "잔나비",
+   "matchedTitle": "그 밤 그 밤",
+   "matchedAlbum": "Jannabi small pieces I",
+   "releaseGroupMbid": "3a8da938-8610-436d-9bae-e3735c4a204d",
+   "action": "filled"
+  },
+  {
+   "slug": "잔나비-주저하는-연인들을-위해",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "잔나비",
+   "matchedTitle": "주저하는 연인들을 위해",
+   "matchedAlbum": "LEGEND",
+   "releaseGroupMbid": "1a4f4a63-c1b2-43b7-bb05-a543682ae04e",
+   "action": "filled"
+  },
+  {
+   "slug": "장기하와-얼굴들-내-사람",
+   "provider": "coverartarchive",
+   "status": "exact",
+   "matchedArtist": "장기하와 얼굴들",
+   "matchedTitle": "내 사람",
+   "matchedAlbum": "Human Mind",
+   "releaseGroupMbid": "4c8b7a8f-1a1e-4cbb-b9b8-d55269814f99",
+   "action": "filled"
+  },
+  {
+   "slug": "장범준-사랑이란-말이-어울리는-사람",
+   "provider": "coverartarchive",
+   "status": "acceptable_version",
+   "matchedArtist": "장범준",
+   "matchedTitle": "사랑이란 말이 어울리는 사람(사말어사)",
+   "matchedAlbum": "장범준 1집",
+   "releaseGroupMbid": "172a66a8-6a72-4970-9889-0698da72956d",
+   "action": "filled"
+  },
+  {
+   "slug": "제네-더-질라-life",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "조용필-그래도-돼",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "지드래곤-power",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "짱유-오롯이-나에게",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "최엘비-물",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "카디-no-need",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "크라잉넛-서커스-매직-유랑단",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  },
+  {
+   "slug": "혁오-sunset-rollercoaster-young-man",
+   "provider": "coverartarchive",
+   "status": "unavailable",
+   "action": "none"
+  }
+ ],
+ "checkedAt": "2026-08-12T18:57:12.391Z"
+}

@@ -5,13 +5,13 @@ artist: Brett Dennen
 artist_ko:
 album: 
 year: 2008
-artwork: 
+artwork: https://dn710707.ca.archive.org/0/items/mbid-1c8877a4-9308-499d-92b1-6e3aa9fda5f5/mbid-1c8877a4-9308-499d-92b1-6e3aa9fda5f5-1602419189_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2008]
+tags: [영미, Folk, 2008]
 keywords: []
 emotion:
 date: 2024-06-21

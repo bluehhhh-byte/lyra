@@ -11,7 +11,7 @@ trackId: 1531535287
 duration: 293
 genre: Metal
 lang: en
-tags: [1980]
+tags: [영미, Heavy Metal, 1980]
 keywords: []
 emotion:
 date: 2025-07-25

@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2014]
+tags: [한국, Alternative Rock, 2014]
 keywords: []
 emotion:
 date: 2025-05-11

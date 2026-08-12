@@ -11,7 +11,7 @@ trackId: 1518053392
 duration: 209
 genre: Electronic
 lang: en
-tags: [2020]
+tags: [영미, Electronic, 2020]
 keywords: []
 emotion:
 date: 2024-07-21

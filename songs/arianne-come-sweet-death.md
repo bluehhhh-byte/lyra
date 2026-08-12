@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [2020]
+tags: [영미, Soundtrack, 2020]
 keywords: []
 emotion:
 date: 2024-10-28
@@ -39,7 +39,6 @@ The ones you love mean more than anything
 So, with sadness in my heart
 > 그래서, 가슴 속의 슬픔을 안고
 Feel the best thing
-> 느껴져, 내가 할 수 있는 최선은
 I could do is end it all and leave forever
 > 내가 모든 걸 끝내고 영원히 떠나는 게 최선일 것 같아
 
@@ -69,14 +68,12 @@ Because of that, it’s killing me inside
 It all returns to nothing
 > 모든 것이 무로 돌아가
 It all comes tumbling down,
-> 모든 게 와르르 무너져 내려,
 Tumbling down, tumbling down
 > 모든 것이 무너져 내려, 무너져 내려, 무너져 내려
 
 It all returns to nothing
 > 모든 것이 무로 돌아가
 I just keep letting me down,
-> 나는 자꾸만 나를 실망시켜,
 Letting me down, letting me down
 > 나는 계속해서 나 자신을 실망시켜, 실망시켜, 실망시켜
 In my heart of hearts

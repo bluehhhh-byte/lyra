@@ -11,7 +11,7 @@ trackId:
 duration: 211
 genre: 
 lang: en
-tags: [1987]
+tags: [영미, Pop, 1987]
 keywords: []
 emotion:
 date: 2025-06-09

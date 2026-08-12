@@ -11,7 +11,7 @@ trackId: 1682357121
 duration: 170
 genre: 재즈
 lang: en
-tags: [2023]
+tags: [유럽, Jazz, 2023]
 keywords: []
 emotion:
 date: 2024-10-25

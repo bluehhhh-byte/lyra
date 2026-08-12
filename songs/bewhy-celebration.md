@@ -5,13 +5,13 @@ artist: BewhY
 artist_ko:
 album: 
 year: 2021
-artwork: 
+artwork: https://dn721609.ca.archive.org/0/items/mbid-6a60a969-c0de-401e-81a4-9b1405aeabbf/mbid-6a60a969-c0de-401e-81a4-9b1405aeabbf-33322040473_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: ko
-tags: [2021]
+tags: [한국, Hip-Hop, 2021]
 keywords: []
 emotion:
 date: 2025-06-30

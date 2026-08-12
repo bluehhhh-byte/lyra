@@ -11,7 +11,7 @@ trackId: 1517447778
 duration: 221
 genre: Indie Rock
 lang: en
-tags: [1995]
+tags: [영미, Alternative Rock, 1995]
 keywords: []
 emotion:
 date: 2025-07-24

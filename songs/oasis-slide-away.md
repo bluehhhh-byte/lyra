@@ -3,15 +3,15 @@ title: Slide Away
 title_ko: 
 artist: Oasis
 artist_ko:
-album: Stop the Clocks
+album: 
 year: 1994
-artwork: https://cdn-images.dzcdn.net/images/cover/380c72012072132c1cbbb9d591f9bf55/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/a/1/0/aa13313ef0b8a14d8c8f1fe07dbd6691.mp3?hdnea=exp=1786559404~acl=/api/1/1/a/a/1/0/aa13313ef0b8a14d8c8f1fe07dbd6691.mp3*~data=user_id=0,application_id=42~hmac=85292cf5ed6632cd585ee35fbf3c30a1e42f8c0a63127cb5f2e2d1b8f7e7c245
+artwork: 
+preview: 
 trackId: 
-duration: 374
+duration: 
 genre: 
-lang: ko
-tags: [1994]
+lang: en
+tags: [영미, Alternative Rock, 1994]
 keywords: []
 emotion:
 date: 2024-06-18
@@ -68,11 +68,11 @@ Slide away, slide away, away
 Slide away (And I wanna try now,
 I wanna make you mine now)
 > 슬며시 떠나 (난 지금 해보고 싶어,
-당신을 지금 내 것으로 만들고 싶어)
+> 당신을 지금 내 것으로 만들고 싶어)
 Slide away (And I wanna try now,
 I wanna make you mine now)
 > 슬며시 떠나 (난 지금 해보고 싶어,
-당신을 지금 내 것으로 만들고 싶어)
+> 당신을 지금 내 것으로 만들고 싶어)
 
 Don't know don't care
 > 몰라, 상관없어

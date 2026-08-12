@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ja
-tags: [1999]
+tags: [일본, Heavy Metal, 1999]
 keywords: []
 emotion:
 date: 2025-06-17

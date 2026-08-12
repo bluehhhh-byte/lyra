@@ -11,7 +11,7 @@ trackId:
 duration: 223
 genre: 
 lang: en
-tags: [2022]
+tags: [영미, Indie Rock, 2022]
 keywords: []
 emotion:
 date: 2024-07-13

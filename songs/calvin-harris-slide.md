@@ -11,7 +11,7 @@ trackId: 1843774120
 duration: 268
 genre: Dance
 lang: en
-tags: [2017]
+tags: [영미, Dance, 2017]
 keywords: []
 emotion:
 date: 2024-06-09

@@ -11,7 +11,7 @@ trackId: 1536503917
 duration: 426
 genre: Rock
 lang: ja
-tags: [2004]
+tags: [일본, J-Rock, 2004]
 keywords: []
 emotion:
 date: 2024-08-14

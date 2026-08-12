@@ -10,8 +10,8 @@ preview:
 trackId: 
 duration: 
 genre: 
-lang: ko
-tags: [2024]
+lang: en
+tags: [영미, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-09-30
@@ -56,7 +56,7 @@ I let the darkness in to teach me
 I learned more than I wanted
 When I tried I couldn't look away
 > 내가 시도했을 때 눈을 돌릴 수 없었고,
-원했던 것보다 더 많이 배웠어
+> 원했던 것보다 더 많이 배웠어
 Floating and drifting and flying through the open sky
 > 열린 하늘을 떠다니고 표류하고 날아다니며
 

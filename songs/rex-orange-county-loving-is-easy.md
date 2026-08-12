@@ -11,7 +11,7 @@ trackId:
 duration: 155
 genre: 
 lang: en
-tags: []
+tags: [영미, Indie Pop]
 keywords: []
 emotion:
 date: 2024-07-15

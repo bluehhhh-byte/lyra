@@ -11,7 +11,7 @@ trackId:
 duration: 302
 genre: 
 lang: en
-tags: [2020]
+tags: [유럽, Indie Pop, 2020]
 keywords: []
 emotion:
 date: 2024-09-24

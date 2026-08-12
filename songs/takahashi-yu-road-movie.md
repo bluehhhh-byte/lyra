@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ja
-tags: [2017]
+tags: [일본, J-Pop, 2017]
 keywords: []
 emotion:
 date: 2025-04-15

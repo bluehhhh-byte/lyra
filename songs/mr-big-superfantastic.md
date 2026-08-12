@@ -3,15 +3,15 @@ title: Superfantastic
 title_ko: Superfantastic
 artist: Mr.Big
 artist_ko:
-album: Greatest Hits
+album: 
 year: 1999
-artwork: https://cdn-images.dzcdn.net/images/cover/b6edc013e01a536218ced90ea5968d59/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/e/4/0/ee4e283e43815fd1b3d5f112d68207f6.mp3?hdnea=exp=1786559399~acl=/api/1/1/e/e/4/0/ee4e283e43815fd1b3d5f112d68207f6.mp3*~data=user_id=0,application_id=42~hmac=1f8eb4f7ce546c74469299c1757223604f1befe80b65367eff37c7d24cdfa7fb
+artwork: 
+preview: 
 trackId: 
-duration: 224
+duration: 
 genre: 
 lang: ko
-tags: [1999]
+tags: [영미, Hard Rock, 1999]
 keywords: []
 emotion:
 date: 2024-11-23

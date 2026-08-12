@@ -11,7 +11,7 @@ trackId:
 duration: 338
 genre: 
 lang: en
-tags: [2017]
+tags: [한국, Indie Pop, 2017]
 keywords: []
 emotion:
 date: 2024-07-05

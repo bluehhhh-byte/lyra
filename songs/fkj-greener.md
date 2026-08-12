@@ -5,13 +5,13 @@ artist: FKJ
 artist_ko:
 album: 
 year: 2022
-artwork: 
+artwork: https://dn711508.ca.archive.org/0/items/mbid-b657be8f-8d31-4376-b616-93c9cb1c1a85/mbid-b657be8f-8d31-4376-b616-93c9cb1c1a85-44649058668_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2022]
+tags: [유럽, Electronic, 2022]
 keywords: []
 emotion:
 date: 2024-06-14

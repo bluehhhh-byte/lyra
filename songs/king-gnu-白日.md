@@ -11,7 +11,7 @@ trackId: 1770456862
 duration: 292
 genre: Alternative
 lang: ja
-tags: [2019]
+tags: [일본, J-Rock, 2019]
 keywords: []
 emotion:
 date: 2024-06-09

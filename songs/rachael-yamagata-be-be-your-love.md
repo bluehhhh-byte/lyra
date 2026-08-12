@@ -11,7 +11,7 @@ trackId:
 duration: 251
 genre: 
 lang: en
-tags: [2004]
+tags: [영미, Folk, 2004]
 keywords: []
 emotion:
 date: 2024-07-27

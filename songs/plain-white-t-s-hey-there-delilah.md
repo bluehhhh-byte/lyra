@@ -11,7 +11,7 @@ trackId:
 duration: 232
 genre: 
 lang: en
-tags: [2006]
+tags: [영미, Pop, 2006]
 keywords: []
 emotion:
 date: 2024-11-09
@@ -25,7 +25,6 @@ source_hash: bb71c42eb2367517782f7a51610027e0fde11aac
 Hey there Delilah, what’s it like in New York City?
 > 델라일라, 뉴욕은 어때?
 I’m a thousand miles away
-> 난 천 마일이나 떨어져 있지만
 But girl, tonight you look so pretty
 > 천 마일이나 떨어져 있지만, 오늘 밤 넌 정말 예뻐 보여
 Yes you do
@@ -38,7 +37,6 @@ I swear it’s true
 Hey there Delilah, don’t you worry about the distance
 > 델라일라, 우리 사이의 먼거리는 걱정하지마
 I’m right there if you get lonely
-> 네가 외로워지면 내가 바로 곁에 있을게
 give this song another listen
 > 네가 외로울 때면 이 노래를 다시 한 번 들어줘
 Close your eyes, Listen to my voice
@@ -49,7 +47,6 @@ It’s my disguise, I’m by your side
 Hey there Delilah, I know times are getting hard
 > 델라일라, 힘든 시기인 걸 알아
 But just believe me, girl
-> 그저 날 믿어줘
 Someday I’ll pay the bills with this guitar
 > 하지만 믿어줘, 난 언젠가 이 기타로 돈을 벌거야
 We’ll have it good
@@ -60,7 +57,6 @@ We’ll have the life we knew we would, my word is good
 Hey there Delilah, I’ve got so much left to say
 > 델라일라, 아직도 할 말이 많아
 If every simple song
-> 이 단순한 노래들 하나하나가
 I wrote to you would take your breath away
 > 내가 쓴 단순한 모든 노래가 널 심쿵하게 할 수 있다면
 I’d write it all
@@ -82,11 +78,9 @@ We know that none of them have felt this way
 > 그들은 이런 감정을 느껴보지 못했다는 걸 아니까
 
 Delilah, I can promise you
-> 델라일라, 약속할 수 있어
 that by the time we get through
 > 델라일라, 약속할게, 우리가 이 모든 걸 이겨냈을 때
 The world will never ever be the same
-> 세상은 두 번 다시 예전 같지 않을 거야
 And you’re to blame
 > 세상은 절대 예전 같지 않을 거야, 그건 다 네 덕분이야
 

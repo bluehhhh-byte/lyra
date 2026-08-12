@@ -11,7 +11,7 @@ trackId:
 duration: 318
 genre: 
 lang: en
-tags: [2006]
+tags: [영미, Alternative Rock, 2006]
 keywords: []
 emotion:
 date: 2024-06-12

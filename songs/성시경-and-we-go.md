@@ -5,13 +5,13 @@ artist: 성시경
 artist_ko:
 album: 
 year: 2020
-artwork: 
+artwork: https://dn721604.ca.archive.org/0/items/mbid-95987162-073e-4cdf-97b2-c76cfbd50bb3/mbid-95987162-073e-4cdf-97b2-c76cfbd50bb3-39102594993_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2020]
+tags: [한국, Ballad, 2020]
 keywords: []
 emotion:
 date: 2024-07-14

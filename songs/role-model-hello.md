@@ -11,7 +11,7 @@ trackId:
 duration: 188
 genre: 
 lang: en
-tags: [2019]
+tags: [영미, Indie Pop, 2019]
 keywords: []
 emotion:
 date: 2024-09-18

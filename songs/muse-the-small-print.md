@@ -11,7 +11,7 @@ trackId: 1716097101
 duration: 209
 genre: Rock
 lang: en
-tags: [2003]
+tags: [영미, Alternative Rock, 2003]
 keywords: []
 emotion:
 date: 2025-07-13

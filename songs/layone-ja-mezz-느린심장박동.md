@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2019]
+tags: [한국, Hip-Hop, 2019]
 keywords: []
 emotion:
 date: 2025-06-26

@@ -11,7 +11,7 @@ trackId: 1443147815
 duration: 430
 genre: Alternative
 lang: en
-tags: [2004]
+tags: [영미, Alternative Rock, 2004]
 keywords: []
 emotion:
 date: 2025-07-29

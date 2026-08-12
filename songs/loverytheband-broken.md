@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [2018]
+tags: [영미, Indie Pop, 2018]
 keywords: []
 emotion:
 date: 2024-06-11

@@ -11,7 +11,7 @@ trackId:
 duration: 337
 genre: 
 lang: en
-tags: [2024]
+tags: [영미, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-07-12
@@ -42,11 +42,9 @@ Telling the heart what it wants to hear
 But what if it's only lies, twisted apart by fear?
 > 만약 거짓말이라거나 두려움에 의해 왜곡된 거라면?
 Well, that's when the brain waves goodbye
-> 그때 정신은 작별을 고하지
 From the front of the train where the coal is burned
 > 마치 증기기관차의 연기처럼 나는 이별을 결심했네 
 And you know the refrain without hearing a sound
-> 소리를 듣지 않고도 후렴을 알고 있잖아
 So you sing it again
 > 넌 소리를 듣지 않고도 다시 후렴구를 노래하네
 'Cause you won't learn from the people in the streets

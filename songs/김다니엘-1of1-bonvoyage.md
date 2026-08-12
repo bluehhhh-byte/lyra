@@ -3,15 +3,15 @@ title: Bonvoyage
 title_ko: Bonvoyage
 artist: 김다니엘, 1of1
 artist_ko:
-album: Lost in Starlight (Soundtrack from the Netflix Film)
+album: 
 year: 2025
-artwork: https://cdn-images.dzcdn.net/images/cover/cf54a8dfb8590a34c09eb30903c78f4d/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/b/0/1abcea48f3fb045b91874176f8a6c210.mp3?hdnea=exp=1786559463~acl=/api/1/1/1/a/b/0/1abcea48f3fb045b91874176f8a6c210.mp3*~data=user_id=0,application_id=42~hmac=c415eb32fffde844f1da5bb816c0a56e8754110f56b73cb2e7fd957bd7324f4b
+artwork: 
+preview: 
 trackId: 
-duration: 61
+duration: 
 genre: 
 lang: ko
-tags: [2025]
+tags: [한국, R&B/Soul, 2025]
 keywords: []
 emotion:
 date: 2025-06-14

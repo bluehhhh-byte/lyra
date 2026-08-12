@@ -11,7 +11,7 @@ trackId: 1725517907
 duration: 208
 genre: 록
 lang: en
-tags: [1996]
+tags: [유럽, Heavy Metal, 1996]
 keywords: []
 emotion:
 date: 2024-10-30

@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2023]
+tags: [한국, Alternative Rock, 2023]
 keywords: []
 emotion:
 date: 2024-10-22

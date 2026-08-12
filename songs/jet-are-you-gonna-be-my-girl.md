@@ -11,7 +11,7 @@ trackId: 1778048261
 duration: 214
 genre: 록
 lang: en
-tags: [2003]
+tags: [영미, Indie Rock, 2003]
 keywords: []
 emotion:
 date: 2025-06-29

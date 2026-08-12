@@ -11,7 +11,7 @@ trackId:
 duration: 194
 genre: 
 lang: ko
-tags: [1999]
+tags: [한국, Alternative Rock, 1999]
 keywords: []
 emotion:
 date: 2025-07-28

@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2013]
+tags: [한국, Hip-Hop, 2013]
 keywords: []
 emotion:
 date: 2024-12-06

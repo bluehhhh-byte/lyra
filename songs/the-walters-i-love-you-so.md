@@ -5,13 +5,13 @@ artist: The Walters
 artist_ko:
 album: 
 year: 2014
-artwork: 
+artwork: https://dn721806.ca.archive.org/0/items/mbid-c77cb8fa-f141-4e02-9aa6-bec180e203e0/mbid-c77cb8fa-f141-4e02-9aa6-bec180e203e0-36889126904_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2014]
+tags: [영미, Indie Rock, 2014]
 keywords: []
 emotion:
 date: 2024-07-08

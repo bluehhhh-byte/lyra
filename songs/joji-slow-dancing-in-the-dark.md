@@ -11,7 +11,7 @@ trackId:
 duration: 209
 genre: 
 lang: en
-tags: [2018]
+tags: [영미, R&B/Soul, 2018]
 keywords: []
 emotion:
 date: 2024-07-26

@@ -11,7 +11,7 @@ trackId: 1770129652
 duration: 164
 genre: Jazz
 lang: en
-tags: [2024]
+tags: [영미, Pop, 2024]
 keywords: []
 emotion:
 date: 2024-10-03

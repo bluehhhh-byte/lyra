@@ -11,7 +11,7 @@ trackId:
 duration: 272
 genre: 
 lang: ko
-tags: [2003]
+tags: [영미, Alternative Rock, 2003]
 keywords: []
 emotion:
 date: 2025-01-20

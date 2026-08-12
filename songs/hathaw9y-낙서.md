@@ -11,7 +11,7 @@ trackId: 1848863778
 duration: 255
 genre: K-Pop
 lang: ko
-tags: [2021]
+tags: [한국, Indie Pop, 2021]
 keywords: []
 emotion:
 date: 2025-06-09

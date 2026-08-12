@@ -5,13 +5,13 @@ artist: Stereophonics
 artist_ko:
 album: 
 year: 2007
-artwork: 
+artwork: https://dn710003.ca.archive.org/0/items/mbid-1143dfe4-b656-4cc0-9d46-d9fe44b4a957/mbid-1143dfe4-b656-4cc0-9d46-d9fe44b4a957-33331691812_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2007]
+tags: [영미, Alternative Rock, 2007]
 keywords: []
 emotion:
 date: 2025-04-28

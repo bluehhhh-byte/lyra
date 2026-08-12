@@ -11,7 +11,7 @@ trackId:
 duration: 240
 genre: 
 lang: ko
-tags: [2024]
+tags: [영미, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-12-17
@@ -19,7 +19,7 @@ published: 2024-12-16T23:44:34.000Z
 comment:
 source: instagram
 source_tag: 241217_0844
-source_note: 
+source_note: 이어쓴 댓글 병합
 source_hash: 8a9d59f6bd7b512facaa53e233252702d3154ac0
 ---
 Jealousy is killin’ me, it’s too much to dismiss 질투가 나를 죽이고 있어, 무시하기엔 너무 큰 감정이야
@@ -65,3 +65,14 @@ I start the day by texting you,
 문자를 보내며 하루를 시작해
 I wish that I had woken next to you, but either way 네 옆에서 깨어났으면 좋았을 텐데, 하지만 어쨌든
 I’m happy just to see your name appearing on my phone 내 휴대폰에 네 이름이 뜨는 걸 보는 것만으로도 행복해
+
+I get that feeling once again, and then my smile starts to grow 다시 한 번 그 느낌이 들고, 내 미소가 번지기 시작해
+Now, I’m thinking through what to say 이제, 뭐라고 말할지 고민하고 있어
+Yeah, I get jealous as fuck, no, it doesn’t feel great 그래, 나 엄청 질투나, 아니, 기분 좋지 않아
+But I’m still with you and that’s all I can know right now, hey 하지만 난 여전히 너와 함께 있고, 그게 지금 내가 알 수 있는 전부야, 이봐
+Tomorrow might not be here 내일은 오지 않을 수도 있어
+I swear that I can make a change 난 변할 수 있다고 맹세해
+Whywaste the time I have my dear, I’ll make a change 내가 가진 시간을 낭비할 이유가 뭐야 자기야, 난 변할 거야
+No need for jealousy today 오늘은 질투할 필요 없어
+I hope you sleep well, my baby 잘 자, 내 사랑
+Goodnight 좋은 밤

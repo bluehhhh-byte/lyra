@@ -11,7 +11,7 @@ trackId:
 duration: 224
 genre: 
 lang: en
-tags: [2024]
+tags: [영미, Synth-Pop, 2024]
 keywords: []
 emotion:
 date: 2024-09-23

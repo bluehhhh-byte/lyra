@@ -11,7 +11,7 @@ trackId: 1572947688
 duration: 244
 genre: Hip-Hop/Rap
 lang: ko
-tags: [2021]
+tags: [한국, Hip-Hop, 2021]
 keywords: []
 emotion:
 date: 2025-07-18

@@ -11,7 +11,7 @@ trackId: 1814770852
 duration: 228
 genre: Rock
 lang: ja
-tags: [2025]
+tags: [일본, J-Rock, 2025]
 keywords: []
 emotion:
 date: 2025-06-15

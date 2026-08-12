@@ -11,7 +11,7 @@ trackId:
 duration: 199
 genre: 
 lang: ko
-tags: [2022]
+tags: [한국, Hip-Hop, 2022]
 keywords: []
 emotion:
 date: 2025-06-23

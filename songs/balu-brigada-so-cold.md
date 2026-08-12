@@ -11,7 +11,7 @@ trackId: 1816613280
 duration: 201
 genre: 팝
 lang: en
-tags: [2024]
+tags: [영미, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-07-04

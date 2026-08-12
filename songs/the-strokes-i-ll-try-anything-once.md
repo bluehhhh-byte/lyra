@@ -3,15 +3,15 @@ title: I'll Try Anything Once
 title_ko: 
 artist: The Strokes
 artist_ko:
-album: Heart In A Cage
+album: 
 year: 2006
-artwork: https://cdn-images.dzcdn.net/images/cover/fcd8a52b76815ad0c75fab62a1c155d3/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/1/0/1a15a52e43e42ec96dab4fa66a1d33dc.mp3?hdnea=exp=1786559442~acl=/api/1/1/1/a/1/0/1a15a52e43e42ec96dab4fa66a1d33dc.mp3*~data=user_id=0,application_id=42~hmac=5c205088258a05eae84f5bb39238f5e6ec38babf92be4c8a4b05c9b53f95a8ce
+artwork: 
+preview: 
 trackId: 
-duration: 194
+duration: 
 genre: 
 lang: en
-tags: [2006]
+tags: [영미, Indie Rock, 2006]
 keywords: []
 emotion:
 date: 2024-08-19

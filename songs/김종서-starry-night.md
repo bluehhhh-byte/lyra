@@ -5,13 +5,13 @@ artist: 김종서
 artist_ko:
 album: 
 year: 2001
-artwork: 
+artwork: https://dn721606.ca.archive.org/0/items/mbid-a7eedd06-e934-42e8-8eb3-665d4f141241/mbid-a7eedd06-e934-42e8-8eb3-665d4f141241-33023911692_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: ko
-tags: [2001]
+tags: [한국, Hard Rock, 2001]
 keywords: []
 emotion:
 date: 2025-05-29

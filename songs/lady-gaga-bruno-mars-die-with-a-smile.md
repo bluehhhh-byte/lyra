@@ -11,7 +11,7 @@ trackId: 1762656732
 duration: 252
 genre: 팝
 lang: en
-tags: [2024]
+tags: [영미, Pop, 2024]
 keywords: []
 emotion:
 date: 2024-09-11

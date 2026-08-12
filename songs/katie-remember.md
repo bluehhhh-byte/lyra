@@ -11,7 +11,7 @@ trackId: 1500859379
 duration: 186
 genre: R&B/Soul
 lang: en
-tags: [2019]
+tags: [한국, R&B/Soul, 2019]
 keywords: []
 emotion:
 date: 2024-06-19

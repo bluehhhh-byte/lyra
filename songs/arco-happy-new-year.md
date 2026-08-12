@@ -11,7 +11,7 @@ trackId: 45255474
 duration: 219
 genre: 팝
 lang: en
-tags: []
+tags: [영미, Indie Pop]
 keywords: []
 emotion:
 date: 2024-01-01

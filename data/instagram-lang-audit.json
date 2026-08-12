@@ -1,0 +1,2199 @@
+{
+ "total": 274,
+ "changed": 0,
+ "items": [
+  {
+   "slug": "브로콜리너마저-이웃에-방해가-되지-않는-선에서",
+   "koLines": 32,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김장훈-혼잣말",
+   "koLines": 33,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "the-kooks-ooh-la",
+   "koLines": 0,
+   "enLines": 29,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "rumi-jinu-free",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "쏜애플-시퍼런-봄",
+   "koLines": 53,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sonic-youth-stones",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "김사랑-dream",
+   "koLines": 22,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "ozzy-osbourne-crazy-train",
+   "koLines": 0,
+   "enLines": 31,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "oasis-she-s-electric",
+   "koLines": 0,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "이찬혁-멸종위기사랑",
+   "koLines": 56,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sokodomo-crush-순식간에",
+   "koLines": 40,
+   "enLines": 6,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "jackson-wang-made-me-a-man",
+   "koLines": 0,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "시나위-blue-baby",
+   "koLines": 16,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "epik-high-colde-비-오는-날-듣기-좋은-노래",
+   "koLines": 49,
+   "enLines": 4,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "ateez-slide-to-me",
+   "koLines": 4,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "koLines": 0,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "dido-life-for-rent",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "muse-the-small-print",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "mr-big-wake-up",
+   "koLines": 0,
+   "enLines": 34,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "maroon-5-makes-me-wonder",
+   "koLines": 0,
+   "enLines": 40,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "단편선-순간들-오늘보다-더-기쁜-날은-남은-생에-많지-않을-것이다",
+   "koLines": 24,
+   "enLines": 4,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "plastic-tree-ぬけがら",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 14,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "suchmos-eye-to-eye",
+   "koLines": 0,
+   "enLines": 14,
+   "jaLines": 20,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "nuno-bettencourt-crave",
+   "koLines": 0,
+   "enLines": 31,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "james-blunt-same-mistake",
+   "koLines": 0,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "kt-tunstall-other-side-of-the-world",
+   "koLines": 0,
+   "enLines": 41,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "nell-crash",
+   "koLines": 22,
+   "enLines": 6,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "bewhy-celebration",
+   "koLines": 48,
+   "enLines": 8,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "jet-are-you-gonna-be-my-girl",
+   "koLines": 0,
+   "enLines": 19,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "father-of-peace-no-complaints",
+   "koLines": 0,
+   "enLines": 46,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "염따-더콰이엇",
+   "koLines": 26,
+   "enLines": 7,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "layone-ja-mezz-느린심장박동",
+   "koLines": 70,
+   "enLines": 1,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "c-jamm-어떤",
+   "koLines": 23,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "장기하와-얼굴들-내-사람",
+   "koLines": 26,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sokodomo-kirin-지구멸망",
+   "koLines": 47,
+   "enLines": 11,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "red-hot-chili-peppers-scar-tissue",
+   "koLines": 0,
+   "enLines": 33,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "paul-blanco-be-o-summer",
+   "koLines": 62,
+   "enLines": 16,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "dawn-빛이-나는-너에게",
+   "koLines": 30,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "카더가든-아무렇지-않은-사람",
+   "koLines": 26,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "epik-high-난-사람이-제일-무서워",
+   "koLines": 52,
+   "enLines": 9,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "나얼-언젠가는",
+   "koLines": 20,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sex-machineguns-tekken-ll",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 40,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "thee-michelle-gun-elephant-smokin-billy",
+   "koLines": 0,
+   "enLines": 1,
+   "jaLines": 24,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "death-from-above-1979-trainwreck-1979",
+   "koLines": 0,
+   "enLines": 31,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "171-footsteps",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 35,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "김다니엘-1of1-bonvoyage",
+   "koLines": 36,
+   "enLines": 4,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "ghost-mary-on-a-cross",
+   "koLines": 0,
+   "enLines": 46,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "크라잉넛-서커스-매직-유랑단",
+   "koLines": 34,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sokodomo-lol",
+   "koLines": 2,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "jamiroquai-canned-heat",
+   "koLines": 0,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "잔나비-그-밤-그-밤",
+   "koLines": 21,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "hathaw9y-낙서",
+   "koLines": 32,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "rick-astley-never-gonna-give-you-up",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "richie-kotzen-special",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "miles-caton-travelin",
+   "koLines": 0,
+   "enLines": 8,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "유재하-우리들의-사랑",
+   "koLines": 20,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "롤러코스터-내게로-와",
+   "koLines": 24,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김현철-왜-그래",
+   "koLines": 31,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "델리스파이스-고백",
+   "koLines": 28,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "woodz-drowning",
+   "koLines": 34,
+   "enLines": 14,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김종서-starry-night",
+   "koLines": 26,
+   "enLines": 3,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김경호-사랑-그-시린-아픔으로",
+   "koLines": 20,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "glay-ここではない-どこかへ-2",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 36,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "the-brilliant-green-there-will-be-love-there",
+   "koLines": 0,
+   "enLines": 12,
+   "jaLines": 27,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "dir-en-grey-太陽の碧",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 19,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "메카니즘-조혜련-페퍼톤즈-고장난-타임머신",
+   "koLines": 48,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "강산에-거꾸로-강을-거슬러-오르는-저-힘찬-연어들처럼",
+   "koLines": 20,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김광석-혼자-남은-밤",
+   "koLines": 27,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "ryuichi-kawamura-ne",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 35,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "dreams-come-true-朝がまた来る",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 38,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "기리보이-2000-90",
+   "koLines": 70,
+   "enLines": 1,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "2byg-karma",
+   "koLines": 0,
+   "enLines": 40,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "spitz-spider",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 14,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "불나방-스타-쏘세지-클럽-불행히도-삶은-계속-되었다",
+   "koLines": 33,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "brandy-senki-the-end-of-the-f-ing-world",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 25,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "카디-no-need",
+   "koLines": 75,
+   "enLines": 34,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "삐삐롱스타킹-바보버스",
+   "koLines": 26,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "더콰이엇-병언-way-back-home",
+   "koLines": 27,
+   "enLines": 14,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "the-smashing-pumpkins-bullet-with-butterfly-wings",
+   "koLines": 0,
+   "enLines": 42,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "릴체리-골드부다-하늘천따지-1000-words",
+   "koLines": 4,
+   "enLines": 35,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "sleep-token-look-to-windward",
+   "koLines": 0,
+   "enLines": 45,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "빈지노-always-awake",
+   "koLines": 40,
+   "enLines": 6,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "머드더스튜던트-이끼",
+   "koLines": 37,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "솔루션스-들꽃",
+   "koLines": 34,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김사랑-너란-놈",
+   "koLines": 19,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "브로큰-발렌타인-알루미늄",
+   "koLines": 37,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김바다-moonage-dream",
+   "koLines": 27,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "balming-tiger-armadillo",
+   "koLines": 0,
+   "enLines": 50,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "이적-고독의-의미",
+   "koLines": 24,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "검정치마-혜야",
+   "koLines": 23,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "검정치마-섬",
+   "koLines": 41,
+   "enLines": 9,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "swervy-justhis-trapped-in-the-drum",
+   "koLines": 44,
+   "enLines": 9,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "gd-x-taeyang-good-boy",
+   "koLines": 13,
+   "enLines": 12,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "검정치마-이별노래",
+   "koLines": 21,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "이적-빨래",
+   "koLines": 34,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "raphael-滅花",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 23,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "stereophonics-all-in-one-night",
+   "koLines": 0,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "브로콜리너마저-너무-애쓰고-싶지-않아요",
+   "koLines": 29,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "takahashi-yu-road-movie",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 43,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "balming-tiger-buriburi",
+   "koLines": 33,
+   "enLines": 23,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sakanaction-怪獣",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 46,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "the-vines-winning-days",
+   "koLines": 30,
+   "enLines": 4,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "the-vines-country-yard",
+   "koLines": 16,
+   "enLines": 1,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "stereophonics-billy-davey-s-daughter",
+   "koLines": 24,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "stereophonics-maybe-tomorrow",
+   "koLines": 15,
+   "enLines": 3,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sisqo-incomplete",
+   "koLines": 27,
+   "enLines": 6,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "daft-punk-within",
+   "koLines": 14,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "coldplay-what-if",
+   "koLines": 1,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "염따-저드-새벽에-잠깐이라도-좋아",
+   "koLines": 27,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "rex-orange-county-jealousy",
+   "koLines": 33,
+   "enLines": 5,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "이찬혁-파노라마",
+   "koLines": 27,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "one-republic-nobody",
+   "koLines": 38,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "국카스텐-붉은-밭",
+   "koLines": 15,
+   "enLines": 4,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "amazarashi-cassiopeia-keiryuujo",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 33,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "넋업샨-나찰-피타입-mc메타-불한당가",
+   "koLines": 22,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "rufus-wainwright-going-to-a-town",
+   "koLines": 25,
+   "enLines": 3,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "foals-inhaler",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "제네-더-질라-life",
+   "koLines": 51,
+   "enLines": 13,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "petra-we-need-jesus",
+   "koLines": 17,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "mr-big-superfantastic",
+   "koLines": 36,
+   "enLines": 1,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "자이언티-강승원-무중력",
+   "koLines": 25,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "검정치마-antifreeze",
+   "koLines": 27,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "혁오-sunset-rollercoaster-young-man",
+   "koLines": 33,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "오연준-바람이-불어오는-곳",
+   "koLines": 16,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "자이언티-이문세-눈",
+   "koLines": 29,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "danny-chung-happy-togherther",
+   "koLines": 0,
+   "enLines": 16,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "coldplay-the-scientist",
+   "koLines": 0,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "m-c-the-max-마지막-내-숨소리",
+   "koLines": 31,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "아침-불꽃축제",
+   "koLines": 17,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "koLines": 0,
+   "enLines": 40,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "장범준-사랑이란-말이-어울리는-사람",
+   "koLines": 28,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "루시드폴-오-사랑",
+   "koLines": 21,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "mansun-harris",
+   "koLines": 3,
+   "enLines": 22,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "지드래곤-power",
+   "koLines": 12,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "helloween-power",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "arianne-come-sweet-death",
+   "koLines": 0,
+   "enLines": 29,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "김동률-산책",
+   "koLines": 37,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "hayd-head-in-the-clouds",
+   "koLines": 1,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "cyrille-aimee-diego-figueiredo-just-the-two-of-us",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "laufey-from-the-start",
+   "koLines": 0,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "bobby-caldwell-what-you-won-t-do-for-love",
+   "koLines": 1,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "조용필-그래도-돼",
+   "koLines": 41,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "실리카겔-ryudejakeiru",
+   "koLines": 24,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "jean-dawson-darlin",
+   "koLines": 1,
+   "enLines": 29,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "scissor-sisters-i-don-t-feel-like-dancin",
+   "koLines": 1,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "짱유-오롯이-나에게",
+   "koLines": 26,
+   "enLines": 5,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "최엘비-물",
+   "koLines": 31,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "hash-swan-알렉산더처럼-왕",
+   "koLines": 32,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "zedd-muse-1685",
+   "koLines": 1,
+   "enLines": 22,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-volunteers-hypocreep",
+   "koLines": 1,
+   "enLines": 46,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "muse-hyper-music",
+   "koLines": 1,
+   "enLines": 15,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "hyde-last-song",
+   "koLines": 1,
+   "enLines": 22,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "김현식-내-사랑-내-곁에",
+   "koLines": 15,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "ellegarden-marry-me",
+   "koLines": 1,
+   "enLines": 22,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "lady-gaga-close-to-you",
+   "koLines": 1,
+   "enLines": 18,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "hey-nothing-timeline",
+   "koLines": 1,
+   "enLines": 36,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "서태지-take-two",
+   "koLines": 38,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "foster-the-people-lost-in-space",
+   "koLines": 1,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "jorja-smith-blue-light",
+   "koLines": 1,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "starsailor-in-the-crossfire",
+   "koLines": 1,
+   "enLines": 29,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "liam-gallagher-all-you-re-dreaming-of",
+   "koLines": 1,
+   "enLines": 31,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "christina-aguilera-beautiful",
+   "koLines": 1,
+   "enLines": 35,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "nirvana-where-did-you-sleep-last-night",
+   "koLines": 1,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "orion-sun-these-days",
+   "koLines": 1,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "phoenix-identical",
+   "koLines": 1,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "a-beacon-school-it-s-late",
+   "koLines": 0,
+   "enLines": 5,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "tears-for-fears-the-girl-that-i-call-home",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "千と千尋の神隱し-센과-치히로의-행방불명-ost-いつも何度でも",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 25,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "role-model-hello",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "mhir-someone-i-ll-wait",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "bruno-major-regent-s-park",
+   "koLines": 0,
+   "enLines": 30,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "linkin-park-the-emptiness-machine",
+   "koLines": 0,
+   "enLines": 33,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-strokes-reptilia",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "lady-gaga-bruno-mars-die-with-a-smile",
+   "koLines": 0,
+   "enLines": 39,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "sun-rai-san-francisco-street",
+   "koLines": 0,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-cloud-roon-hey-now-now",
+   "koLines": 0,
+   "enLines": 21,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "cigarettes-after-sex-sunsetz",
+   "koLines": 0,
+   "enLines": 18,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "wave-to-earth-annie",
+   "koLines": 0,
+   "enLines": 32,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "수민-슬롬-왜-왜-왜",
+   "koLines": 21,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "서울전자음악단-서로-다른",
+   "koLines": 16,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "clairo-juna",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "kenshi-yonezu-garakuta-junk",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 43,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "wasia-project-to-get-better",
+   "koLines": 0,
+   "enLines": 36,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "feng-suave-toking-dozing",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "최원빈-너랑-노는-게-제일-좋아",
+   "koLines": 21,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "oasis-masterplan",
+   "koLines": 0,
+   "enLines": 37,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "blur-coffee-tv",
+   "koLines": 0,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "nirvana-dumb",
+   "koLines": 0,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "keane-somewhere-only-we-know",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "spice-girls-stop",
+   "koLines": 0,
+   "enLines": 33,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "dreamgirl-teenage-blue",
+   "koLines": 0,
+   "enLines": 18,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "mina-okabe-maybe-one-day",
+   "koLines": 0,
+   "enLines": 41,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "김바울-기억의-향기",
+   "koLines": 29,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "김동률-여름의-끝자락",
+   "koLines": 22,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "boys-go-to-jupiter-lovers-always-lose",
+   "koLines": 0,
+   "enLines": 41,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-strokes-i-ll-try-anything-once",
+   "koLines": 0,
+   "enLines": 33,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "검정치마-hollywood",
+   "koLines": 39,
+   "enLines": 15,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "검정치마-하와이-검은-모래",
+   "koLines": 14,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "damien-rice-blower-s-daughter",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "spitz-cherry",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 23,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "l-arc-en-ciel-瞳の住人",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 23,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "plastic-tree-veranda",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 14,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "원슈타인-사랑-새",
+   "koLines": 14,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "full-flower-moon-band-new-rocket",
+   "koLines": 0,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "이영훈-일종의-고백",
+   "koLines": 20,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "아이유-분홍신",
+   "koLines": 41,
+   "enLines": 4,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "god-0",
+   "koLines": 36,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "thom-yorke-dawn-chorus",
+   "koLines": 0,
+   "enLines": 40,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "이승열-비상",
+   "koLines": 24,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "gsoul-natural",
+   "koLines": 0,
+   "enLines": 16,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "테이-바다가-사는-섬",
+   "koLines": 38,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "bts-fake-love",
+   "koLines": 20,
+   "enLines": 8,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "루시드폴-그대-손으로",
+   "koLines": 9,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "jvke-this-is-what-falling-in-love-feels-like",
+   "koLines": 0,
+   "enLines": 16,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "rachael-yamagata-be-be-your-love",
+   "koLines": 0,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "벤-꿈처럼",
+   "koLines": 23,
+   "enLines": 2,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "joji-slow-dancing-in-the-dark",
+   "koLines": 0,
+   "enLines": 36,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "잔나비-주저하는-연인들을-위해",
+   "koLines": 30,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "wave-to-earth-seasons",
+   "koLines": 0,
+   "enLines": 19,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "damien-rice-i-don-t-want-to-change-you",
+   "koLines": 0,
+   "enLines": 30,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "john-mayer-you-re-gonna-live-forever-in-me",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-beach-boys-wouldn-t-it-be-nice",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "성시경-당신은-참",
+   "koLines": 21,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "honne-free-love",
+   "koLines": 0,
+   "enLines": 41,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "loveholic-그대만-있다면",
+   "koLines": 27,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "sam-smith-forgive-myself",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "green-day-last-night-on-earth",
+   "koLines": 0,
+   "enLines": 21,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "레이지-본-시작되는-연인들을-위하여",
+   "koLines": 28,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "adoy-baby",
+   "koLines": 0,
+   "enLines": 12,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "dean-die-4-you",
+   "koLines": 12,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "honne-by-my-side",
+   "koLines": 0,
+   "enLines": 34,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "rex-orange-county-loving-is-easy",
+   "koLines": 0,
+   "enLines": 18,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "성시경-and-we-go",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "안신애-hold-me-now",
+   "koLines": 24,
+   "enLines": 10,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "peach-pit-vickie",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "rm-come-back-to-me",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "mgmt-people-in-the-streets",
+   "koLines": 0,
+   "enLines": 38,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "백예린-물고기",
+   "koLines": 23,
+   "enLines": 0,
+   "jaLines": 0,
+   "beforeLang": "ko",
+   "afterLang": "ko"
+  },
+  {
+   "slug": "the-beatles-michelle",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-walters-i-love-you-so",
+   "koLines": 0,
+   "enLines": 21,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "92914-moonlight",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "balu-brigada-so-cold",
+   "koLines": 0,
+   "enLines": 35,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "lola-young-crush",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "87dance-iboy",
+   "koLines": 1,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "honne-no-song-without-you",
+   "koLines": 0,
+   "enLines": 18,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-restless-age-don-t-forget-about-me",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "norah-jones-come-away-from-me",
+   "koLines": 0,
+   "enLines": 18,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-velvet-underground-pale-blue-eyes",
+   "koLines": 0,
+   "enLines": 35,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-doors-you-re-lost-little-girl",
+   "koLines": 0,
+   "enLines": 15,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "radiohead-fake-plastic-tree",
+   "koLines": 0,
+   "enLines": 30,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "olivia-dean-dive",
+   "koLines": 0,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "macaroni-empitsu-星が泳ぐ",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 11,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "glass-animals-heat-waves",
+   "koLines": 0,
+   "enLines": 36,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "chance-pe-a-i-am-not-who-i-was",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "brett-dennen-so-far-from-me",
+   "koLines": 0,
+   "enLines": 28,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "joji-normal-people",
+   "koLines": 1,
+   "enLines": 22,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-smashing-pumpkins-try-try-try",
+   "koLines": 0,
+   "enLines": 37,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "katie-remember",
+   "koLines": 0,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "사비나-앤-드론즈-귀머거리-인생",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "oasis-slide-away",
+   "koLines": 0,
+   "enLines": 26,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "cafun-perspective",
+   "koLines": 0,
+   "enLines": 17,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "mac-ayres-i-ll-be-your-home-now",
+   "koLines": 0,
+   "enLines": 29,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "fkj-greener",
+   "koLines": 0,
+   "enLines": 17,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "almost-monday-sunburn",
+   "koLines": 0,
+   "enLines": 25,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "radiohead-weird-fishes-arpeggi",
+   "koLines": 0,
+   "enLines": 31,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "loverytheband-broken",
+   "koLines": 0,
+   "enLines": 27,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "harry-styles-music-for-a-sushi-restaurant",
+   "koLines": 0,
+   "enLines": 31,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "foster-the-people-lamb-s-wool",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "the-neverminds-somewhere",
+   "koLines": 0,
+   "enLines": 24,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "jamiroquai-virtual-insanity",
+   "koLines": 0,
+   "enLines": 36,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "king-gnu-白日",
+   "koLines": 0,
+   "enLines": 0,
+   "jaLines": 42,
+   "beforeLang": "ja",
+   "afterLang": "ja"
+  },
+  {
+   "slug": "jungle-back-on-74",
+   "koLines": 0,
+   "enLines": 21,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "calvin-harris-slide",
+   "koLines": 0,
+   "enLines": 33,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  },
+  {
+   "slug": "arco-happy-new-year",
+   "koLines": 0,
+   "enLines": 20,
+   "jaLines": 0,
+   "beforeLang": "en",
+   "afterLang": "en"
+  }
+ ],
+ "at": "2026-08-12T18:46:54.875Z"
+}

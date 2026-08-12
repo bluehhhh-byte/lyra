@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [1997]
+tags: [영미, Hip-Hop, 1997]
 keywords: []
 emotion:
 date: 2024-11-11

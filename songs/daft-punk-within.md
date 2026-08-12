@@ -11,7 +11,7 @@ trackId: 617154361
 duration: 229
 genre: 팝
 lang: ko
-tags: [2013]
+tags: [유럽, Electronic, 2013]
 keywords: []
 emotion:
 date: 2024-12-27

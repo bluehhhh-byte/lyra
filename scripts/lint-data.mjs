@@ -26,7 +26,7 @@ for (const s of songs) {
   if (!s.title) err(f, "title 없음");
   if (!s.artist) err(f, "artist 없음");
   if (!["en", "ja", "ko"].includes(s.lang)) err(f, `lang이 en/ja/ko가 아님: "${s.lang}"`);
-  if (!isHttps(s.artwork)) warn(f, `artwork가 https URL이 아님: "${s.artwork || ""}"`);
+  if (!isHttps(s.artwork) && !s.artwork_none) warn(f, `artwork가 https URL이 아님: "${s.artwork || ""}"`);
   // year가 깨지면 취향 페이지에 "NaN년대"가 뜬다 — 4자리 숫자만
   if (s.year && !/^\d{4}$/.test(String(s.year))) err(f, `year가 4자리 연도가 아님: "${s.year}"`);
   if (!s.year) warn(f, "year 없음 (시대 분석에서 제외됨)");

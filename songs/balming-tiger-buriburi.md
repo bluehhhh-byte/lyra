@@ -11,7 +11,7 @@ trackId:
 duration: 220
 genre: 
 lang: ko
-tags: [2023]
+tags: [한국, Hip-Hop, 2023]
 keywords: []
 emotion:
 date: 2025-03-19

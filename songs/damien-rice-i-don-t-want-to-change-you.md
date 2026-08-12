@@ -10,8 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/76/
 trackId: 915106304
 duration: 326
 genre: 팝
-lang: ko
-tags: [2014]
+lang: en
+tags: [유럽, Folk, 2014]
 keywords: []
 emotion:
 date: 2024-07-23
@@ -30,7 +30,7 @@ If ever you need someone, what not that you need help in
 > 네가 누군가를 필요로 한다면, 단지 도움이 필요한 것이 아니라
 But if ever you want someone, you know that I am willing
 > 네가 누군가를 원하는 거라면,
-내가 기꺼이 그 사람이 될거라는 걸 알잖아
+> 내가 기꺼이 그 사람이 될거라는 걸 알잖아
 
 I don't want to change you
 > 난 너를 바꾸고 싶지 않아
@@ -47,13 +47,13 @@ Wherever you go, I can always follow
 > 네가 어디를 가던간에, 난 늘 따라갈 수 있어
 I can feed this real slow, if it's a lot to swallow
 > 삼키기엔 너무 많은 양이라면,
-내가 정말로 천천히 먹여줄 수도 있어
+> 내가 정말로 천천히 먹여줄 수도 있어
 If you just wanna be alone, I can wait without waiting
 > 네가 단지 혼자만의 시간을 갖고 싶은 거라면,
-난 기다림 없이 기다릴 수도 있고
+> 난 기다림 없이 기다릴 수도 있고
 If you want me to let this go, I am more than willing
 > 내가 계속 이러도록 내버려두기 원한다면,
-난 그거보다 더 바라는 게 없어
+> 난 그거보다 더 바라는 게 없어
 'Cause I don't want to change you
 > 왜냐하면 난 너를 바꾸고 싶지 않으니까
 
@@ -72,7 +72,7 @@ I've never been with anyone in the way I've been with you
 > 너를 대했던 방식대로 누군가를 대해본 적이 없어
 But if love is not for fun, then it's doomed
 > 하지만 사랑이 즐거움을 위한 것만이 아니라면,
-그 사랑은 운명인 것이겠지
+> 그 사랑은 운명인 것이겠지
 'Cause water races, water races down
 > 왜냐하면 물은 흐르니까, 물은 아래로 흐르니까
 The waterfalls, water races, water races down

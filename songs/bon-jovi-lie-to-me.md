@@ -11,7 +11,7 @@ trackId: 1440854578
 duration: 334
 genre: Rock
 lang: en
-tags: [1995]
+tags: [영미, Hard Rock, 1995]
 keywords: []
 emotion:
 date: 2025-07-17
@@ -23,32 +23,26 @@ source_note:
 source_hash: 74f4c1f966dce377181084aee2ca3b4b0656264f
 ---
 Rumor has it that your daddy’s coming down
-> 소문엔 네 아버지가 오신다더라
 he’s gonna pay the rent
 > 소문엔 네 아버지가 이번 달 집세 내주신다며
 Tell me baby, is this as good as this life is gonna get
 > 우리가 누릴 수 있는 게 고작 이 정도야
 It feels like there’s a stranger
-> 낯선 사람이 하나 있는 것만 같아
 whose standing in these shoes
 > 요즘 내 모습이 내가 아닌 기분이야
 But I know I can’t lose me, ‘cause then I’d be losing you
 > 근데 나를 잃으면 너도 잃는 거잖아
 
 I know I promised baby, I would be the one
-> 알아, 내가 그 사람이 되겠다고 약속했지
 who would make our dreams come true
 > 우리 꿈 이뤄주겠다고 약속했는데
 I ain’t too proud of all the struggles and
-> 그 모든 발버둥이 자랑스럽지만은 않아
 the hard times we’ve been through
 > 우리가 겪은 고생들, 자랑스럽진 않아
 When this cold world comes between us,
-> 이 차가운 세상이 우리 사이에 끼어들 때,
 please tell me you’ll be brave
 > 세상이 우리 사이를 갈라도, 넌 제발 강해졌으면 해
 ‘Cause I can’t realize the danger
-> 나는 그 위험을 알아차리지 못하니까
 when forgiveness fades away
 > 용서가 사라지면, 무슨 일이 날지도 몰라서
 
@@ -62,19 +56,15 @@ Right now, if you don’t love me baby, lie to me
 > 지금 당장은 날 사랑하지 않아도 괜찮아, 거짓말해줘
 
 Pour another cup of coffee, babe
-> 커피 한 잔 더 따라줘,
 I got something to say to you
 > 커피 한 잔만 더 줘 할 말 있어
 I ain’t got the winning ticket,
-> 나한테 당첨 복권 같은 건 없어,
 not the one that’s gonna pull us through
 > 우릴 살릴 비장의 무기 같은 건 나한텐 없어
 No one said that it’d be easy,
-> 쉬울 거라고 말한 사람은 없었지,
 let your old man take you home
 > 인생이 쉽다 한 사람 없잖아, 네 아버지 데려가셔도 돼
 But know that if you walk out on me,
-> 하지만 알아둬, 네가 날 두고 떠난다면,
 that darling, I’d be gone
 > 근데 네가 떠나면 나도 진짜 무너질 거야
 

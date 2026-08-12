@@ -11,7 +11,7 @@ trackId:
 duration: 149
 genre: 
 lang: en
-tags: [1993]
+tags: [영미, Grunge, 1993]
 keywords: []
 emotion:
 date: 2024-08-25
@@ -75,10 +75,7 @@ Think I'm just happy
 > 그냥 행복하다고 생각할 거야
 
 I think I'm dumb
-> 나는 바보인가 봐
 I think I'm dumb
-> 나는 바보인가 봐
 I think I'm dumb
-> 나는 바보인가 봐
 I think I'm dumb
 > 난 멍청이야

@@ -11,7 +11,7 @@ trackId:
 duration: 243
 genre: 
 lang: ja
-tags: [1999]
+tags: [일본, J-Rock, 1999]
 keywords: []
 emotion:
 date: 2025-05-28

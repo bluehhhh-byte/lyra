@@ -3,15 +3,15 @@ title: Come Away From Me
 title_ko: 
 artist: Norah Jones
 artist_ko:
-album: Come Away With Me (Super Deluxe Edition)
+album: 
 year: 2002
-artwork: https://cdn-images.dzcdn.net/images/cover/b08b6d2e396905fff79ab088364f19ef/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/9/c/0/89ceae7a6a3a00adae8360583274adab.mp3?hdnea=exp=1786559403~acl=/api/1/1/8/9/c/0/89ceae7a6a3a00adae8360583274adab.mp3*~data=user_id=0,application_id=42~hmac=edc6e985b42e8daa4d8c8b53d09b3015c6aaf7ff708c384cb5d0816ff5dd8ad4
+artwork: 
+preview: 
 trackId: 
-duration: 213
+duration: 
 genre: 
 lang: en
-tags: [2002]
+tags: [영미, Jazz, 2002]
 keywords: []
 emotion:
 date: 2024-06-30

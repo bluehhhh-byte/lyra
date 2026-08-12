@@ -11,7 +11,7 @@ trackId:
 duration: 193
 genre: 
 lang: en
-tags: [2022]
+tags: [영미, Pop, 2022]
 keywords: []
 emotion:
 date: 2024-06-11

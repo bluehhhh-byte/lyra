@@ -3,15 +3,15 @@ title: Virtual Insanity
 title_ko: 
 artist: Jamiroquai
 artist_ko:
-album: High Times: Singles 1992-2006
+album: 
 year: 1996
-artwork: https://cdn-images.dzcdn.net/images/cover/9591ccd45408a86dfa6e753733bb55e5/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/7/f/0/17f0fe767a557b5e1a9bfa954e7d40ac.mp3?hdnea=exp=1786559386~acl=/api/1/1/1/7/f/0/17f0fe767a557b5e1a9bfa954e7d40ac.mp3*~data=user_id=0,application_id=42~hmac=64e0873c55541eb2ea4fe3f5cac42463fb436b29e7c0b548258ca2f6bc3fc570
+artwork: 
+preview: 
 trackId: 
-duration: 229
+duration: 
 genre: 
 lang: en
-tags: [1996]
+tags: [영미, Funk, 1996]
 keywords: []
 emotion:
 date: 2024-06-09

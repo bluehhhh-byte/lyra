@@ -11,7 +11,7 @@ trackId: 279647290
 duration: 239
 genre: Pop
 lang: en
-tags: [2002]
+tags: [영미, Pop, 2002]
 keywords: []
 emotion:
 date: 2024-09-26

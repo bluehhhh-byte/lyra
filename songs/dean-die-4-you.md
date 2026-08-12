@@ -10,8 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/
 trackId: 1716886967
 duration: 194
 genre: R&B/소울
-lang: ko
-tags: [2024]
+lang: en
+tags: [한국, R&B/Soul, 2024]
 keywords: []
 emotion:
 date: 2024-07-16
@@ -68,8 +68,8 @@ Baby you know I'd die for you
 모르지만
 Let you know
 > 어떤 멜로디도
-그 어떤 스토리도 내겐
-네 잔상일 뿐인데
+> 그 어떤 스토리도 내겐
+> 네 잔상일 뿐인데
 
 I know it is way too late
 > 너무 늦은 걸 알지만

@@ -5,13 +5,13 @@ artist: HONNE
 artist_ko:
 album: 
 year: 2020
-artwork: 
+artwork: https://ia800509.us.archive.org/35/items/mbid-a60effe3-80d2-48a7-9b2b-27dcc0254a98/mbid-a60effe3-80d2-48a7-9b2b-27dcc0254a98-36627127944_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2020]
+tags: [영미, Electronic, 2020]
 keywords: []
 emotion:
 date: 2024-07-01

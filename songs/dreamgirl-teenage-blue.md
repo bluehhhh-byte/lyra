@@ -11,7 +11,7 @@ trackId: 1644213706
 duration: 235
 genre: Pop
 lang: en
-tags: [2015]
+tags: [영미, Dream Pop, 2015]
 keywords: []
 emotion:
 date: 2024-08-22

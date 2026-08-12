@@ -10,8 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/
 trackId: 1373567936
 duration: 250
 genre: R&B/소울
-lang: ko
-tags: [2018]
+lang: en
+tags: [영미, R&B/Soul, 2018]
 keywords: []
 emotion:
 date: 2024-09-29
@@ -19,7 +19,7 @@ published: 2024-09-29T13:03:29.000Z
 comment:
 source: instagram
 source_tag: 240929_2202
-source_note: 
+source_note: 이어쓴 댓글 병합
 source_hash: 5a7373406eccee1ac8821e16f762d44d4be061d6
 ---
 I wanna turn those blue lights into strobe lights
@@ -77,6 +77,37 @@ Look blud I'm sorry 'cause I know you got my back
 > "봐, 친구야 미안해, 네가 날 도와줄 거란 걸 알아
 He was running, I couldn't think, I had to get out of that"
 > 그가 도망가고 있었어, 난 생각할 수 없었어,
-그 상황에서 빠져나와야 했어"
+> 그 상황에서 빠져나와야 했어"
 
-(댓글에 이어서)
+Not long ago you were miming to the "Shook Ones"
+> 얼마 전까지만 해도 넌 "누군가를 쏘겠다는" 글을 SNS에 남겼지
+Now this really is part two 'cause you're the shook one
+> 이제 이게 정말 파트 2야, 네가 겁에 질린 사람이 됐으니까
+Hands you the tool as you question your friendship
+> 네가 우정을 의심할 때 그가 도구를 건네
+How's man like you gonna make me a convict?
+> 너 같은 사람이 어떻게 날 범죄자로 만들 수 있어?
+Level of a felon when I've done nothing wrong
+> 난 아무것도 잘못하지 않았는데 중범죄자 수준이 됐어
+Blood on my hands but I don't know where it's from, oh
+> 내 손에 피가 묻었지만 어디서 왔는지 모르겠어, 오
+You got blood on your hands
+> 네 손에 피가 묻었어
+but you don't know where it's from
+> 하지만 넌 그게 어디서 왔는지 모르지
+You better run when you hear the sirens coming
+> 사이렌 소리가 들리면 도망가는 게 좋아
+When you hear the sirens coming
+> 사이렌 소리가 들릴 때
+Better run when you hear the sirens coming
+> 사이렌 소리가 들리면 도망가는 게 좋아
+'Cause they will be coming for you
+> 그들이 너를 잡으러 올 테니까
+Run when you hear the sirens coming
+> 사이렌 소리가 들리면 도망가
+Better run when you hear the sirens coming
+> 사이렌 소리가 들리면 도망가는 게 좋아
+When you hear the sirens coming
+> 사이렌 소리가 들릴 때
+The blue lights are coming for you
+> 파란 불빛들이 너를 잡으러 오고 있어

@@ -11,7 +11,7 @@ trackId:
 duration: 134
 genre: 
 lang: ko
-tags: [2023]
+tags: [한국, K-Pop, 2023]
 keywords: []
 emotion:
 date: 2025-05-29

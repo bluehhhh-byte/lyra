@@ -11,7 +11,7 @@ trackId:
 duration: 338
 genre: 
 lang: en
-tags: [1969]
+tags: [영미, Rock, 1969]
 keywords: []
 emotion:
 date: 2024-06-27

@@ -11,7 +11,7 @@ trackId: 1525934928
 duration: 293
 genre: Indie Rock
 lang: en
-tags: [1998]
+tags: [영미, Alternative Rock, 1998]
 keywords: []
 emotion:
 date: 2024-08-29

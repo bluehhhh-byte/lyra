@@ -3,15 +3,15 @@ title: 그대만 있다면
 title_ko: 그대만 있다면
 artist: Loveholic
 artist_ko:
-album: 어느 멋진 날 (Original Television Soundtrack)
+album: 
 year: 2006
-artwork: https://cdn-images.dzcdn.net/images/cover/a7a1577b4313ead3c1c7f63ad7c60211/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/4/8/0/148735da23905d97e02b809a167d613d.mp3?hdnea=exp=1786559390~acl=/api/1/1/1/4/8/0/148735da23905d97e02b809a167d613d.mp3*~data=user_id=0,application_id=42~hmac=55e2313e6bb9f78d989117a70fb83f3c9c41f5bf190eddd12b1be519c0808a39
+artwork: https://dn710603.ca.archive.org/0/items/mbid-e209bc41-5650-41ae-b143-681b57b0ef56/mbid-e209bc41-5650-41ae-b143-681b57b0ef56-18408285793_thumb500.jpg
+preview: 
 trackId: 
-duration: 250
+duration: 
 genre: 
 lang: ko
-tags: [2006]
+tags: [한국, Alternative Rock, 2006]
 keywords: []
 emotion:
 date: 2024-07-21

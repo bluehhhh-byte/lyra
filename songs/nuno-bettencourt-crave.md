@@ -11,7 +11,7 @@ trackId:
 duration: 276
 genre: 
 lang: en
-tags: [1997]
+tags: [영미, Hard Rock, 1997]
 keywords: []
 emotion:
 date: 2025-07-03

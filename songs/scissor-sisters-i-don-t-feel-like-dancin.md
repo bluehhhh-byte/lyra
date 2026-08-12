@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/3/8/e/0/38e2dc8200469addaa388be3
 trackId: 
 duration: 248
 genre: 
-lang: ko
-tags: [2009]
+lang: en
+tags: [영미, Pop, 2009]
 keywords: []
 emotion:
 date: 2024-10-20
@@ -50,7 +50,7 @@ but my two feet can’t find a way
 You’d think that I could muster up
 a little soft shoe, gentle sway
 > 네가 보기엔 내가 살짝 발을 움직이며
-부드럽게 흔들 수 있을 것 같겠지
+> 부드럽게 흔들 수 있을 것 같겠지
 But I don’t feel like dancin’, no sir, no dancin’ today.
 > 하지만 춤추고 싶지 않아, 아니, 오늘은 춤추지 않을 거야
 

@@ -11,7 +11,7 @@ trackId: 1123076821
 duration: 297
 genre: Alternative
 lang: en
-tags: [2005]
+tags: [영미, Alternative Rock, 2005]
 keywords: []
 emotion:
 date: 2024-12-25

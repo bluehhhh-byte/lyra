@@ -11,7 +11,7 @@ trackId: 292025864
 duration: 221
 genre: Pop
 lang: en
-tags: [2003]
+tags: [영미, Pop, 2003]
 keywords: []
 emotion:
 date: 2025-07-16

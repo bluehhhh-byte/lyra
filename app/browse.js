@@ -5,9 +5,9 @@ import CoverImage from "./cover-image";
 
 const GROUPS = [
   { key: "none", label: "전체" },
-  { key: "country", label: "국가별" },
-  { key: "decade", label: "연대별" },
-  { key: "artist", label: "가수별" },
+  { key: "country", label: "국가" },
+  { key: "decade", label: "연대" },
+  { key: "artist", label: "가수" },
   { key: "random", label: "랜덤" },
 ];
 

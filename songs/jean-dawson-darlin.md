@@ -11,7 +11,7 @@ trackId:
 duration: 208
 genre: 
 lang: en
-tags: [2024]
+tags: [영미, Alternative Rock, 2024]
 keywords: []
 emotion:
 date: 2024-10-22

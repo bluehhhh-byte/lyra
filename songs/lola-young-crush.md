@@ -11,7 +11,7 @@ trackId: 1746042592
 duration: 227
 genre: Alternative
 lang: en
-tags: [2024]
+tags: [영미, Pop, 2024]
 keywords: []
 emotion:
 date: 2024-07-04

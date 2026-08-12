@@ -1,0 +1,351 @@
+{
+ "audited": 49,
+ "removed": 48,
+ "kept": 1,
+ "items": [
+  {
+   "slug": "the-kooks-ooh-la",
+   "originalLine": "And ooh la, the world just chewed her up",
+   "insertedTranslation": "울라, 세상은 그녀를 잘근잘근 씹어 놓고선",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "the-kooks-ooh-la",
+   "originalLine": "And ooh la, the world just chewed her up",
+   "insertedTranslation": "울라, 세상은 그녀를 잘근잘근 씹어 놓고선",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "jackson-wang-made-me-a-man",
+   "originalLine": "But you were the light,",
+   "insertedTranslation": "하지만 너는 빛이었어,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "Rumor has it that your daddy’s coming down",
+   "insertedTranslation": "소문엔 네 아버지가 오신다더라",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "It feels like there’s a stranger",
+   "insertedTranslation": "낯선 사람이 하나 있는 것만 같아",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "I know I promised baby, I would be the one",
+   "insertedTranslation": "알아, 내가 그 사람이 되겠다고 약속했지",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "I ain’t too proud of all the struggles and",
+   "insertedTranslation": "그 모든 발버둥이 자랑스럽지만은 않아",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "When this cold world comes between us,",
+   "insertedTranslation": "이 차가운 세상이 우리 사이에 끼어들 때,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "‘Cause I can’t realize the danger",
+   "insertedTranslation": "나는 그 위험을 알아차리지 못하니까",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "Pour another cup of coffee, babe",
+   "insertedTranslation": "커피 한 잔 더 따라줘,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "I ain’t got the winning ticket,",
+   "insertedTranslation": "나한테 당첨 복권 같은 건 없어,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "No one said that it’d be easy,",
+   "insertedTranslation": "쉬울 거라고 말한 사람은 없었지,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "bon-jovi-lie-to-me",
+   "originalLine": "But know that if you walk out on me,",
+   "insertedTranslation": "하지만 알아둬, 네가 날 두고 떠난다면,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "mr-big-wake-up",
+   "originalLine": "You think daddy’s gun is",
+   "insertedTranslation": "아빠의 총이면 다 될 거라 생각하지",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "jamiroquai-canned-heat",
+   "originalLine": "Stuck between hell and high water",
+   "insertedTranslation": "지옥과 성난 물살 사이에 갇힌 채",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "richie-kotzen-special",
+   "originalLine": "Did you wonder in all this time",
+   "insertedTranslation": "그 긴 시간 동안 궁금하긴 했어?",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "richie-kotzen-special",
+   "originalLine": "Did you wanna be cruel",
+   "insertedTranslation": "잔인해지고 싶었던 거야?",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "richie-kotzen-special",
+   "originalLine": "You gave up love for something more",
+   "insertedTranslation": "너는 더 큰 무언가를 위해 사랑을 버렸지",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "2byg-karma",
+   "originalLine": "Now that I got no more tears left to cry",
+   "insertedTranslation": "이제 흘릴 눈물조차 남지 않았으니",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "foals-inhaler",
+   "originalLine": "Sticks and stones don’t break my bones,",
+   "insertedTranslation": "돌팔매도 몽둥이도 내 뼈를 부러뜨리진 못해,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "foals-inhaler",
+   "originalLine": "And I’m rusted gold,",
+   "insertedTranslation": "나는 녹슬어버린 금,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "foals-inhaler",
+   "originalLine": "And you push and shove,",
+   "insertedTranslation": "너는 밀치고 또 떠밀지,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "originalLine": "I’m a thousand miles away",
+   "insertedTranslation": "난 천 마일이나 떨어져 있지만",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "originalLine": "I’m right there if you get lonely",
+   "insertedTranslation": "네가 외로워지면 내가 바로 곁에 있을게",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "originalLine": "But just believe me, girl",
+   "insertedTranslation": "그저 날 믿어줘",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "originalLine": "If every simple song",
+   "insertedTranslation": "이 단순한 노래들 하나하나가",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "originalLine": "Delilah, I can promise you",
+   "insertedTranslation": "델라일라, 약속할 수 있어",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "plain-white-t-s-hey-there-delilah",
+   "originalLine": "The world will never ever be the same",
+   "insertedTranslation": "세상은 두 번 다시 예전 같지 않을 거야",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "arianne-come-sweet-death",
+   "originalLine": "Feel the best thing",
+   "insertedTranslation": "느껴져, 내가 할 수 있는 최선은",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "arianne-come-sweet-death",
+   "originalLine": "It all comes tumbling down,",
+   "insertedTranslation": "모든 게 와르르 무너져 내려,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "arianne-come-sweet-death",
+   "originalLine": "I just keep letting me down,",
+   "insertedTranslation": "나는 자꾸만 나를 실망시켜,",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "blur-coffee-tv",
+   "originalLine": "Oh, we could start over again",
+   "insertedTranslation": "오, 우린 다시 시작할 수 있을 거야",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "blur-coffee-tv",
+   "originalLine": "Oh, we could start over again",
+   "insertedTranslation": "오, 우린 다시 시작할 수 있을 거야",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "blur-coffee-tv",
+   "originalLine": "Oh, we could start over again",
+   "insertedTranslation": "오, 우린 다시 시작할 수 있을 거야",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "nirvana-dumb",
+   "originalLine": "I think I'm dumb",
+   "insertedTranslation": "나는 바보인가 봐",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "nirvana-dumb",
+   "originalLine": "I think I'm dumb",
+   "insertedTranslation": "나는 바보인가 봐",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "nirvana-dumb",
+   "originalLine": "I think I'm dumb",
+   "insertedTranslation": "나는 바보인가 봐",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "damien-rice-blower-s-daughter",
+   "originalLine": "Did I say that I want to",
+   "insertedTranslation": "내가 그러고 싶다고 말했던가",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "gsoul-natural",
+   "originalLine": "I’m always gon’ be right there",
+   "insertedTranslation": "언제나 네 곁에 있을게",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "honne-free-love",
+   "originalLine": "Oh, free love",
+   "insertedTranslation": "오, 자유로운 사랑",
+   "classification": "genuinely_missing",
+   "action": "kept"
+  },
+  {
+   "slug": "mgmt-people-in-the-streets",
+   "originalLine": "Well, that's when the brain waves goodbye",
+   "insertedTranslation": "그때 정신은 작별을 고하지",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "mgmt-people-in-the-streets",
+   "originalLine": "And you know the refrain without hearing a sound",
+   "insertedTranslation": "소리를 듣지 않고도 후렴을 알고 있잖아",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "cafun-perspective",
+   "originalLine": "Tender placement",
+   "insertedTranslation": "조심스레 놓인 마음",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "cafun-perspective",
+   "originalLine": "And I saw your face fall",
+   "insertedTranslation": "네 표정이 무너지는 걸 봤어",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  },
+  {
+   "slug": "mac-ayres-i-ll-be-your-home-now",
+   "originalLine": "Is it all",
+   "insertedTranslation": "이게 전부일까",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "mac-ayres-i-ll-be-your-home-now",
+   "originalLine": "Is it all",
+   "insertedTranslation": "이게 전부일까",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "mac-ayres-i-ll-be-your-home-now",
+   "originalLine": "Is it all",
+   "insertedTranslation": "이게 전부일까",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "mac-ayres-i-ll-be-your-home-now",
+   "originalLine": "Is it all",
+   "insertedTranslation": "이게 전부일까",
+   "classification": "refrain_duplicate",
+   "action": "removed"
+  },
+  {
+   "slug": "jungle-back-on-74",
+   "originalLine": "Then we were talking 'bout the same",
+   "insertedTranslation": "그러다 우린 같은 이야기를 하고 있었지",
+   "classification": "covered_by_adjacent",
+   "action": "removed"
+  }
+ ],
+ "at": "2026-08-12T18:43:44.555Z"
+}

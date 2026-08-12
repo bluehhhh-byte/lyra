@@ -11,7 +11,7 @@ trackId: 1763779227
 duration: 287
 genre: Rock
 lang: en
-tags: [2024]
+tags: [일본, J-Rock, 2024]
 keywords: []
 emotion:
 date: 2024-10-11

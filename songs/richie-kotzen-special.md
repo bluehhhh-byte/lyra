@@ -11,7 +11,7 @@ trackId:
 duration: 233
 genre: 
 lang: en
-tags: [2004]
+tags: [영미, Hard Rock, 2004]
 keywords: []
 emotion:
 date: 2025-06-06
@@ -34,11 +34,9 @@ But here you are and baby I wanna know
 Did you wanna be rich did you wanna feel special
 > 넌 부와 특별함을 원했던 거야?
 Did you wonder in all this time
-> 그 긴 시간 동안 궁금하긴 했어?
 How I was livin’ without you
 > 내가 너 없이 어떻게 지냈는지 궁금했어?
 Did you wanna be cruel
-> 잔인해지고 싶었던 거야?
 Did you think that I never would go on
 > 날 힘들게 하고 싶었니, 내가 널 잊지 못할 거라 생각했어?
 Now all the things you thought you had have gone
@@ -73,7 +71,6 @@ All the things you thought you had have gone
 All things that you wanted now you know were wrong
 > 네가 원했던 게 결국 잘못된 선택이었단 걸 알겠지
 You gave up love for something more
-> 너는 더 큰 무언가를 위해 사랑을 버렸지
 Let that be a lesson to you
 > 넌 사랑을 버리고 더 큰 걸 쫓았지만,
-그게 어떤 의미였는지 이제 알겠지
+> 그게 어떤 의미였는지 이제 알겠지

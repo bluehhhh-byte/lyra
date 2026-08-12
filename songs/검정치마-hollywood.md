@@ -11,7 +11,7 @@ trackId:
 duration: 331
 genre: 
 lang: ko
-tags: [2015]
+tags: [한국, Indie Rock, 2015]
 keywords: []
 emotion:
 date: 2024-08-18

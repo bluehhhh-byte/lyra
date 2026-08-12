@@ -11,7 +11,7 @@ trackId:
 duration: 261
 genre: 
 lang: ja
-tags: [1996]
+tags: [일본, J-Rock, 1996]
 keywords: []
 emotion:
 date: 2024-08-15

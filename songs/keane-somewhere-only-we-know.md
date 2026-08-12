@@ -11,7 +11,7 @@ trackId: 1445287036
 duration: 239
 genre: Pop
 lang: en
-tags: [2004]
+tags: [영미, Alternative Rock, 2004]
 keywords: []
 emotion:
 date: 2024-08-25

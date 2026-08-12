@@ -11,7 +11,7 @@ trackId: 728254776
 duration: 154
 genre: Rock
 lang: en
-tags: [1966]
+tags: [영미, Rock, 1966]
 keywords: []
 emotion:
 date: 2024-07-22

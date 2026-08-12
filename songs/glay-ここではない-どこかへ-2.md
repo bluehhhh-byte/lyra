@@ -11,7 +11,7 @@ trackId: 989835113
 duration: 349
 genre: ロック
 lang: ja
-tags: [1999]
+tags: [일본, J-Rock, 1999]
 keywords: []
 emotion:
 date: 2025-05-28

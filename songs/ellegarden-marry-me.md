@@ -5,13 +5,13 @@ artist: Ellegarden
 artist_ko:
 album: 
 year: 2005
-artwork: 
+artwork: https://dn721903.ca.archive.org/0/items/mbid-3fc54511-fd60-3380-91ec-95ee99ac51e8/mbid-3fc54511-fd60-3380-91ec-95ee99ac51e8-45330395054_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2005]
+tags: [일본, J-Rock, 2005]
 keywords: []
 emotion:
 date: 2024-10-10

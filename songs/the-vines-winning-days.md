@@ -11,7 +11,7 @@ trackId:
 duration: 213
 genre: 
 lang: ko
-tags: [2006]
+tags: [영미, Indie Rock, 2006]
 keywords: []
 emotion:
 date: 2025-01-22

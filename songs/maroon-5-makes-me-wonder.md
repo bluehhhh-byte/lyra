@@ -11,7 +11,7 @@ trackId:
 duration: 211
 genre: 
 lang: en
-tags: [2007]
+tags: [영미, Pop, 2007]
 keywords: []
 emotion:
 date: 2025-07-09

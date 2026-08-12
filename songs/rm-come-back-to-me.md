@@ -5,13 +5,13 @@ artist: RM
 artist_ko:
 album: 
 year: 2024
-artwork: 
+artwork: https://dn721809.ca.archive.org/0/items/mbid-b91e409c-46d4-4828-9176-4ae54a4bf9f4/mbid-b91e409c-46d4-4828-9176-4ae54a4bf9f4-45600783094_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2024]
+tags: [한국, Hip-Hop, 2024]
 keywords: []
 emotion:
 date: 2024-07-13
@@ -46,7 +46,7 @@ I don't wanna know bout the hour
 > 사실 몇시인지 알고 싶지도 않아
 I forgot to shower
 > 씻는 것도 잊었지
-세수할 시간도 아까워
+> 세수할 시간도 아까워
 
 You don't have to be
 > 그러지 않아도 돼

@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ja
-tags: [2002]
+tags: [일본, Soundtrack, 2002]
 keywords: []
 emotion:
 date: 2024-09-18

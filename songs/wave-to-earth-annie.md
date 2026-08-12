@@ -11,7 +11,7 @@ trackId: 1771834504
 duration: 201
 genre: 얼터너티브
 lang: en
-tags: [2024]
+tags: [한국, Indie Rock, 2024]
 keywords: []
 emotion:
 date: 2024-09-07

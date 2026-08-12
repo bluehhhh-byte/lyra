@@ -11,7 +11,7 @@ trackId:
 duration: 221
 genre: 
 lang: en
-tags: [2022]
+tags: [한국, Indie Rock, 2022]
 keywords: []
 emotion:
 date: 2024-10-15

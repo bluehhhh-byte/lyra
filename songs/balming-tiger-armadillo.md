@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/5/5/5/0/555a5d994a03ef5e21debc91
 trackId: 
 duration: 150
 genre: 
-lang: ko
-tags: [2019]
+lang: en
+tags: [한국, Hip-Hop, 2019]
 keywords: []
 emotion:
 date: 2025-05-09
@@ -102,8 +102,8 @@ Flip off your Nike Air Force
 > 네 에어포스 벗기고
 With Fila flip flop Bbbap
 > 휠라 쪼리로 툭! 빡!
-Call me mystery 간지
-난 미스터리한 간지
+> Call me mystery 간지
+> 난 미스터리한 간지
 You can’t read my kanji
 > 내 한자 넌 못 읽지
 You bout to go off

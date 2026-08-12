@@ -11,7 +11,7 @@ trackId: 1612758102
 duration: 153
 genre: K-Pop
 lang: ko
-tags: [2022]
+tags: [한국, Hip-Hop, 2022]
 keywords: []
 emotion:
 date: 2025-06-26

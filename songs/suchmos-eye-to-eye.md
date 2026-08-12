@@ -11,7 +11,7 @@ trackId:
 duration: 327
 genre: 
 lang: ja
-tags: [2025]
+tags: [일본, J-Rock, 2025]
 keywords: []
 emotion:
 date: 2025-07-04

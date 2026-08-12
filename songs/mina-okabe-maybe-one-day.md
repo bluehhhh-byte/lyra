@@ -11,7 +11,7 @@ trackId:
 duration: 213
 genre: 
 lang: en
-tags: [2024]
+tags: [유럽, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-08-21

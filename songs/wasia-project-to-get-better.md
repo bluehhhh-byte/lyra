@@ -11,7 +11,7 @@ trackId:
 duration: 317
 genre: 
 lang: en
-tags: [2024]
+tags: [영미, Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2024-09-04

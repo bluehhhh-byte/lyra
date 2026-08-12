@@ -11,7 +11,7 @@ trackId:
 duration: 208
 genre: 
 lang: ja
-tags: [1998]
+tags: [일본, J-Rock, 1998]
 keywords: []
 emotion:
 date: 2025-06-16

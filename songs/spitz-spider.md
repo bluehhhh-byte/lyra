@@ -11,7 +11,7 @@ trackId:
 duration: 225
 genre: 
 lang: ja
-tags: [1994]
+tags: [일본, J-Rock, 1994]
 keywords: []
 emotion:
 date: 2025-05-21

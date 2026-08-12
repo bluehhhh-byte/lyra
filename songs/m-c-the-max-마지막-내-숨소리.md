@@ -11,7 +11,7 @@ trackId:
 duration: 262
 genre: 
 lang: ko
-tags: [2002]
+tags: [한국, Ballad, 2002]
 keywords: []
 emotion:
 date: 2024-11-10

@@ -5,13 +5,13 @@ artist: Starsailor
 artist_ko:
 album: 
 year: 2005
-artwork: 
+artwork: https://dn710009.ca.archive.org/0/items/mbid-20af560f-45c2-416e-9abb-0f0db24518ca/mbid-20af560f-45c2-416e-9abb-0f0db24518ca-36152974653_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: en
-tags: [2005]
+tags: [영미, Alternative Rock, 2005]
 keywords: []
 emotion:
 date: 2024-09-28

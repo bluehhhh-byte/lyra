@@ -10,8 +10,8 @@ preview:
 trackId: 
 duration: 
 genre: 
-lang: ko
-tags: [2020]
+lang: en
+tags: [한국, Hip-Hop, 2020]
 keywords: []
 emotion:
 date: 2025-05-15

@@ -3,15 +3,15 @@ title: Where Did You Sleep Last Night
 title_ko: 
 artist: Nirvana
 artist_ko:
-album: MTV Unplugged In New York
+album: 
 year: 1993
-artwork: https://cdn-images.dzcdn.net/images/cover/fe1082c5ef54876802146897e76b592e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/5/0/4b53adb817184366ddff1190f7792663.mp3?hdnea=exp=1786559401~acl=/api/1/1/4/b/5/0/4b53adb817184366ddff1190f7792663.mp3*~data=user_id=0,application_id=42~hmac=1061e235c8973ce4924122aab3a39ea97d2b1f45680c921c5574c0375d828299
+artwork: 
+preview: 
 trackId: 
-duration: 307
+duration: 
 genre: 
 lang: en
-tags: [1993]
+tags: [영미, Grunge, 1993]
 keywords: []
 emotion:
 date: 2024-09-25

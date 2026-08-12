@@ -11,7 +11,7 @@ trackId: 1809248585
 duration: 196
 genre: Pop
 lang: en
-tags: [2025]
+tags: [아시아, K-Pop, 2025]
 keywords: []
 emotion:
 date: 2025-07-20
@@ -29,7 +29,6 @@ They silenced my voice before I could talk
 Was chasin’ the highs but I still missed the mark
 > 기쁨을 좇았지만 여전히 목표엔 닿지 못했어
 But you were the light,
-> 하지만 너는 빛이었어,
 you were the light when I was lost in the dark
 > 하지만 어둠 속에 길을 잃었을 때, 너는 내 빛이었어
 

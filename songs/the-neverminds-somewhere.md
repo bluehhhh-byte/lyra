@@ -11,7 +11,7 @@ trackId:
 duration: 240
 genre: 
 lang: en
-tags: [2023]
+tags: [영미, Indie Rock, 2023]
 keywords: []
 emotion:
 date: 2024-06-10

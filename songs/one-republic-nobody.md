@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2024]
+tags: [영미, Pop, 2024]
 keywords: []
 emotion:
 date: 2024-12-12

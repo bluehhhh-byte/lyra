@@ -11,7 +11,7 @@ trackId: 1759899378
 duration: 238
 genre: J-Pop
 lang: ja
-tags: [2024]
+tags: [일본, J-Pop, 2024]
 keywords: []
 emotion:
 date: 2024-09-04

@@ -5,13 +5,13 @@ artist: Raphael
 artist_ko:
 album: 
 year: 2001
-artwork: 
+artwork: https://dn720803.ca.archive.org/0/items/mbid-3d424da4-7c8e-42a1-9e96-7a9aea22a486/mbid-3d424da4-7c8e-42a1-9e96-7a9aea22a486-43862100458_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: ja
-tags: [2001]
+tags: [일본, Visual Kei, 2001]
 keywords: []
 emotion:
 date: 2025-04-29

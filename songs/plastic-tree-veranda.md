@@ -11,7 +11,7 @@ trackId: 386566500
 duration: 229
 genre: ロック
 lang: ja
-tags: [2000]
+tags: [일본, J-Rock, 2000]
 keywords: []
 emotion:
 date: 2024-08-14

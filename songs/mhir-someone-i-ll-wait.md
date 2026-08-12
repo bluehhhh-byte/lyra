@@ -11,7 +11,7 @@ trackId:
 duration: 215
 genre: 
 lang: en
-tags: [2024]
+tags: [영미, 2024]
 keywords: []
 emotion:
 date: 2024-09-18

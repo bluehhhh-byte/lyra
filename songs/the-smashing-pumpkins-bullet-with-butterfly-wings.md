@@ -3,15 +3,15 @@ title: Bullet With Butterfly Wings
 title_ko: 불렛 위드 버터플라이 윙스
 artist: The Smashing Pumpkins
 artist_ko:
-album: Mellon Collie And The Infinite Sadness (Deluxe Edition)
+album: 
 year: 1995
-artwork: https://cdn-images.dzcdn.net/images/cover/604cf65ac87ccca2870943a04b26e95e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/2/b/0/42bd9ec7f7a62ec1fe63b6f650e2c65d.mp3?hdnea=exp=1786559441~acl=/api/1/1/4/2/b/0/42bd9ec7f7a62ec1fe63b6f650e2c65d.mp3*~data=user_id=0,application_id=42~hmac=564fc06a6448d299cf5ab835cffab52918bd387e0321201ee3a01ccaaeb3f67a
+artwork: 
+preview: 
 trackId: 
-duration: 256
+duration: 
 genre: 
 lang: en
-tags: [1995]
+tags: [영미, Alternative Rock, 1995]
 keywords: []
 emotion:
 date: 2025-05-16
@@ -47,7 +47,7 @@ All my cool and cold
 > 차갑고 냉정한 내 본모습을
 Like ol’ Job
 > 욥처럼, 끝까지 버티며
-(욥: 고난 속에서도 신을 향해 절규한 인물)
+> (욥: 고난 속에서도 신을 향해 절규한 인물)
 
 Despite all my rage, I am still just a rat in a cage
 > 분노가 끓어올라도, 결국 나는 우리 안의 쥐일 뿐

@@ -11,7 +11,7 @@ trackId: 1746137278
 duration: 176
 genre: Alternative
 lang: en
-tags: [2022]
+tags: [영미, Indie Pop, 2022]
 keywords: []
 emotion:
 date: 2024-06-14

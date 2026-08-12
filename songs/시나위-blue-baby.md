@@ -11,7 +11,7 @@ trackId: 1852827933
 duration: 297
 genre: K-Pop
 lang: ko
-tags: [1997]
+tags: [한국, Heavy Metal, 1997]
 keywords: []
 emotion:
 date: 2025-07-18

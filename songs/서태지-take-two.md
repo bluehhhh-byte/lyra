@@ -5,13 +5,13 @@ artist: 서태지
 artist_ko:
 album: 
 year: 1998
-artwork: 
+artwork: https://dn710607.ca.archive.org/0/items/mbid-a4de2aa7-0105-4384-8f72-fa952168639a/mbid-a4de2aa7-0105-4384-8f72-fa952168639a-3630138829_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: ko
-tags: [1998]
+tags: [한국, Alternative Rock, 1998]
 keywords: []
 emotion:
 date: 2024-10-01

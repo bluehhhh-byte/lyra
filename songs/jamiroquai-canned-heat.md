@@ -11,7 +11,7 @@ trackId: 190094410
 duration: 331
 genre: Soundtrack
 lang: en
-tags: [2001]
+tags: [영미, Funk, 2001]
 keywords: []
 emotion:
 date: 2025-06-10
@@ -66,7 +66,6 @@ I know I never ever felt like this before
 I don’t know what to do but then that’s nothing new
 > 뭘 해야 할지 모르겠지만, 새삼스러운 일도 아니야
 Stuck between hell and high water
-> 지옥과 성난 물살 사이에 갇힌 채
 I need a cure to make it through
 > 지옥과 파도 사이에 갇혀, 벗어날 묘책이 필요해
 

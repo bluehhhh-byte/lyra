@@ -11,7 +11,7 @@ trackId:
 duration: 336
 genre: 
 lang: ja
-tags: [2001]
+tags: [일본, J-Pop, 2001]
 keywords: []
 emotion:
 date: 2025-05-23

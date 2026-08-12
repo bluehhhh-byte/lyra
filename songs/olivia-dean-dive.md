@@ -10,8 +10,8 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/6/5/1/0/651a9dc58d19e686e4cff33d
 trackId: 
 duration: 200
 genre: 
-lang: ko
-tags: [2023]
+lang: en
+tags: [영미, R&B/Soul, 2023]
 keywords: []
 emotion:
 date: 2024-06-24
@@ -52,7 +52,7 @@ Maybe it's the magic in the wine
 > (제어가 안돼)
 Maybe it's the fact that every time I fall, I lose it all
 > 어쩌면 내가 사랑에 빠질 때마다,
-모든 것을 다 준다는 게 사실인가봐
+> 모든 것을 다 준다는 게 사실인가봐
 But you got me from my head to my feet
 > 하지만 넌 내 온 몸을 사로잡았네
 And I'm ready to dive
@@ -76,7 +76,7 @@ Wanna swim good and I wanna swim deep
 
 Maybe it's the fact that every time I fall, I lose it all
 > 어쩌면 내가 사랑에 빠질 때마다,
-모든 것을 다 준다는 게 사실인가봐
+> 모든 것을 다 준다는 게 사실인가봐
 But you got me from my head to my feet
 > 하지만 넌 내 온 몸을 사로잡았네
 And I'm ready to dive

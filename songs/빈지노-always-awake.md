@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2012]
+tags: [한국, Hip-Hop, 2012]
 keywords: []
 emotion:
 date: 2025-05-13

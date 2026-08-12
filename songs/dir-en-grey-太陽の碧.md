@@ -11,7 +11,7 @@ trackId: 1624685458
 duration: 366
 genre: メタル
 lang: ja
-tags: [2000]
+tags: [일본, Visual Kei, 2000]
 keywords: []
 emotion:
 date: 2025-05-26

@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: ko
-tags: [2018]
+tags: [한국, Hip-Hop, 2018]
 keywords: []
 emotion:
 date: 2025-05-17

@@ -11,7 +11,7 @@ trackId: 386566257
 duration: 211
 genre: ロック
 lang: ja
-tags: [1997]
+tags: [일본, J-Rock, 1997]
 keywords: []
 emotion:
 date: 2025-07-05

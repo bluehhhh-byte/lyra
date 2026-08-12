@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [2006]
+tags: [영미, 2006]
 keywords: []
 emotion:
 date: 2024-09-09

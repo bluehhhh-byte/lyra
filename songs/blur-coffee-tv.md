@@ -11,7 +11,7 @@ trackId: 731972327
 duration: 359
 genre: 얼터너티브
 lang: en
-tags: [1999]
+tags: [영미, Alternative Rock, 1999]
 keywords: []
 emotion:
 date: 2024-08-27
@@ -75,10 +75,7 @@ So we can start over again
 > 우리가 다시 시작할 수 있도록
 
 Oh, we could start over again
-> 오, 우린 다시 시작할 수 있을 거야
 Oh, we could start over again
-> 오, 우린 다시 시작할 수 있을 거야
 Oh, we could start over again
-> 오, 우린 다시 시작할 수 있을 거야
 Oh, we could start over again
 > 그래, 우린 다시 시작할 수 있을 거야

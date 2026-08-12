@@ -11,7 +11,7 @@ trackId: 1869945701
 duration: 152
 genre: Rock
 lang: en
-tags: [2025]
+tags: [영미, 2025]
 keywords: []
 emotion:
 date: 2025-06-29

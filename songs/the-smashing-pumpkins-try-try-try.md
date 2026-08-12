@@ -10,8 +10,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/
 trackId: 712756047
 duration: 309
 genre: 얼터너티브
-lang: ko
-tags: [2000]
+lang: en
+tags: [영미, Alternative Rock, 2000]
 keywords: []
 emotion:
 date: 2024-06-20
@@ -27,11 +27,11 @@ Pop tart
 What's our mission,
 Do we know but never listen
 > 우리는 무엇을 해야 할지 알고 있었지만
-전혀 신경 쓰지 않았어요
+> 전혀 신경 쓰지 않았어요
 For too long they held me under
 But I hear it's almost over
 > 너무 오랫동안 나를 묶어두었던 것들로부터
-이젠 거의 끝나가고 있다고 들었거든요
+> 이젠 거의 끝나가고 있다고 들었거든요
 
 In Detroit on a Memphis train
 > 디트로이트에서 멤피스행 기차를 탔어요
@@ -71,7 +71,7 @@ Can you envision a free world of clear division
 For too long they held us under
 But I know we're getting over
 > 너무 오랫동안 우리를 억눌렀던 것들로부터
-우리는 이겨내고 있다는 걸 난 알아요
+> 우리는 이겨내고 있다는 걸 난 알아요
 
 In Detroit with the Nashville tears
 > 내슈빌의 눈물과 함께 도착한 여기는 디트로이트
@@ -93,7 +93,7 @@ And no one should deny
 We tried to hold on to the pulse of the feedback current
 Into the flow of encrypted movement
 > 암호화된 움직임의 흐름 속에서
-다시 돌아오는 맥박을 붙잡으려 했어요
+> 다시 돌아오는 맥박을 붙잡으려 했어요
 Slapback kills the ancient remnants
 > 아주 오래된 파편들은 지워버려요
 You never listen skinned knees try to hold on

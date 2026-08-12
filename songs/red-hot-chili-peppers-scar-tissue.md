@@ -11,7 +11,7 @@ trackId:
 duration: 234
 genre: 
 lang: en
-tags: [1999]
+tags: [영미, Alternative Rock, 1999]
 keywords: []
 emotion:
 date: 2025-06-24

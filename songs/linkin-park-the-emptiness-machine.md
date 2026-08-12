@@ -11,7 +11,7 @@ trackId: 1796484133
 duration: 190
 genre: 얼터너티브
 lang: en
-tags: [2024]
+tags: [영미, Alternative Rock, 2024]
 keywords: []
 emotion:
 date: 2024-09-12

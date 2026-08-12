@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: 
 lang: en
-tags: [2001]
+tags: [영미, Alternative Rock, 2001]
 keywords: []
 emotion:
 date: 2024-10-14

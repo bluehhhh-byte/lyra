@@ -11,7 +11,7 @@ trackId:
 duration: 274
 genre: 
 lang: ko
-tags: [1999]
+tags: [영미, R&B/Soul, 1999]
 keywords: []
 emotion:
 date: 2024-12-28

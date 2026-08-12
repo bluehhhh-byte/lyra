@@ -11,7 +11,7 @@ trackId:
 duration: 237
 genre: 
 lang: en
-tags: [2002]
+tags: [영미, Alternative Rock, 2002]
 keywords: []
 emotion:
 date: 2024-11-11

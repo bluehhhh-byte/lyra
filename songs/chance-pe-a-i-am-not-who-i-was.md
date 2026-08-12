@@ -11,7 +11,7 @@ trackId:
 duration: 145
 genre: 
 lang: en
-tags: [2023]
+tags: [영미, Folk, 2023]
 keywords: []
 emotion:
 date: 2024-06-22

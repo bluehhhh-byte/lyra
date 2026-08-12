@@ -11,7 +11,7 @@ trackId:
 duration: 256
 genre: 
 lang: en
-tags: [2020]
+tags: [한국, Indie Rock, 2020]
 keywords: []
 emotion:
 date: 2024-07-24

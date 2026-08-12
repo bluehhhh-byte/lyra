@@ -11,7 +11,7 @@ trackId: 724917290
 duration: 215
 genre: 록
 lang: en
-tags: [2004]
+tags: [영미, Pop, 2004]
 keywords: []
 emotion:
 date: 2025-07-01

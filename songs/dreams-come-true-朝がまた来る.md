@@ -5,13 +5,13 @@ artist: DREAMS COME TRUE
 artist_ko:
 album: 
 year: 1999
-artwork: 
+artwork: https://dn710906.ca.archive.org/0/items/mbid-2ff5a9f3-9285-4d9e-9d4c-3384c10b2139/mbid-2ff5a9f3-9285-4d9e-9d4c-3384c10b2139-6131405794_thumb500.jpg
 preview: 
 trackId: 
 duration: 
 genre: 
 lang: ja
-tags: [1999]
+tags: [일본, J-Pop, 1999]
 keywords: []
 emotion:
 date: 2025-05-23

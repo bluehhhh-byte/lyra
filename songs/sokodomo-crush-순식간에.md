@@ -11,7 +11,7 @@ trackId: 1824139960
 duration: 202
 genre: Hip-Hop/Rap
 lang: ko
-tags: [2025]
+tags: [한국, Hip-Hop, 2025]
 keywords: []
 emotion:
 date: 2025-07-21

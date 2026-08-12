@@ -11,7 +11,7 @@ trackId: 1676152328
 duration: 209
 genre: Dance
 lang: en
-tags: [2023]
+tags: [영미, Funk, 2023]
 keywords: []
 emotion:
 date: 2024-06-09
@@ -32,7 +32,6 @@ But that don't change when it breakdown
 > 도망치면 이런 급변에서 벗어날 수 있겠지 싶었어
 
 Then we were talking 'bout the same
-> 그러다 우린 같은 이야기를 하고 있었지
 Were talking 'bout the same crime
 > 그렇게 서로 죄악을 나누었을 적에
 No, it don't hurt when it rains now

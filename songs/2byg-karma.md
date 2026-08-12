@@ -11,7 +11,7 @@ trackId: 1807680604
 duration: 161
 genre: R&B/소울
 lang: en
-tags: [2025]
+tags: [한국, R&B/Soul, 2025]
 keywords: []
 emotion:
 date: 2025-05-21
@@ -80,7 +80,6 @@ Oh, baby, it’s your love
 I don’t need ya, I’ll be just fine
 > 난 네가 필요 없어, 난 괜찮을 거야
 Now that I got no more tears left to cry
-> 이제 흘릴 눈물조차 남지 않았으니
 (Girl, I’m good, good)
 > 이제 더 이상 흘릴 눈물도 없으니까 (나 정말 괜찮아)
 I’m good without ya, take my advice

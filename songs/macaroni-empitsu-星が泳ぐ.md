@@ -3,15 +3,15 @@ title: 星が泳ぐ
 title_ko: 별이 헤엄치다
 artist: Macaroni Empitsu
 artist_ko:
-album: Hoshigaoyogu
+album: 
 year: 2022
-artwork: https://cdn-images.dzcdn.net/images/cover/469885c9b31b358e27917116e1ec4cb0/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/8/b/0/08b4e7775a8dfe3e2eb92e6330bacc4c.mp3?hdnea=exp=1786559393~acl=/api/1/1/0/8/b/0/08b4e7775a8dfe3e2eb92e6330bacc4c.mp3*~data=user_id=0,application_id=42~hmac=2c17b739ce0105b250426fc05de54c97f5514b21b7068d6e188d0c53609e0989
+artwork: 
+preview: 
 trackId: 
-duration: 239
+duration: 
 genre: 
 lang: ja
-tags: [2022]
+tags: [일본, J-Rock, 2022]
 keywords: []
 emotion:
 date: 2024-06-24

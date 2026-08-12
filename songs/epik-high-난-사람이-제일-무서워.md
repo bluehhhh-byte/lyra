@@ -11,7 +11,7 @@ trackId: 1299101335
 duration: 189
 genre: Hip-Hop/Rap
 lang: ko
-tags: [2017]
+tags: [한국, Hip-Hop, 2017]
 keywords: []
 emotion:
 date: 2025-06-20

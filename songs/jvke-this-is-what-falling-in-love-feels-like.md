@@ -11,7 +11,7 @@ trackId: 1582691808
 duration: 120
 genre: 팝
 lang: en
-tags: [2022]
+tags: [영미, Pop, 2022]
 keywords: []
 emotion:
 date: 2024-07-28
