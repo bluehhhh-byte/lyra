@@ -615,6 +615,94 @@
    "sourceCommit": "93eba43",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:50:40.396Z"
+  },
+  {
+   "slug": "bewhy-celebration",
+   "batch": 12,
+   "originalLineCount": 56,
+   "addedTranslationCount": 48,
+   "skippedCount": 8,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.154Z"
+  },
+  {
+   "slug": "메카니즘-조혜련-페퍼톤즈-고장난-타임머신",
+   "batch": 12,
+   "originalLineCount": 48,
+   "addedTranslationCount": 48,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.158Z"
+  },
+  {
+   "slug": "크라잉넛-서커스-매직-유랑단",
+   "batch": 12,
+   "originalLineCount": 34,
+   "addedTranslationCount": 34,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.159Z"
+  },
+  {
+   "slug": "balming-tiger-buriburi",
+   "batch": 12,
+   "originalLineCount": 56,
+   "addedTranslationCount": 26,
+   "skippedCount": 30,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.160Z"
+  },
+  {
+   "slug": "더콰이엇-병언-way-back-home",
+   "batch": 12,
+   "originalLineCount": 41,
+   "addedTranslationCount": 27,
+   "skippedCount": 14,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.162Z"
+  },
+  {
+   "slug": "염따-저드-새벽에-잠깐이라도-좋아",
+   "batch": 12,
+   "originalLineCount": 27,
+   "addedTranslationCount": 27,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.163Z"
+  },
+  {
+   "slug": "벤-꿈처럼",
+   "batch": 12,
+   "originalLineCount": 25,
+   "addedTranslationCount": 23,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.164Z"
+  },
+  {
+   "slug": "실리카겔-ryudejakeiru",
+   "batch": 12,
+   "originalLineCount": 25,
+   "addedTranslationCount": 23,
+   "skippedCount": 2,
+   "uncertainCount": 0,
+   "sourceCommit": "e9a3b6f",
+   "status": "translated",
+   "reviewedAt": "2026-08-12T22:50:56.166Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
