@@ -1,6 +1,6 @@
 ---
 title: Lie To Me
-title_ko: 
+title_ko: 라이 투 미
 artist: Bon Jovi
 artist_ko:
 album: These Days
@@ -16,7 +16,7 @@ keywords: []
 emotion:
 date: 2025-07-17
 published: 2025-07-16T15:28:12.000Z
-comment:
+comment: 삶의 무게와 관계의 위기 속에서도 사랑을 붙잡고 싶은 절박함을 거친 록 사운드에 담아냈다. 진실을 마주하기보다 거짓말로라도 곁에 있어 주길 바라는 애절한 고백이 깊은 여운을 남긴다.
 source: instagram
 source_tag: 250717_0027
 source_note: 
