@@ -7,6 +7,7 @@ import Requality from "./requality";
 import SongTools from "./song-tools";
 import ArtworkReview from "./artwork-review";
 import LyricsAudit from "./lyrics-audit";
+import BulkWork from "./bulk-work";
 import { readData } from "../../lib/store";
 
 export const metadata = { title: "곡 추가 | Lyra" };
@@ -30,7 +31,10 @@ export default function AdminPage() {
       </div>
       <AdminForm />
 
-      <h2 className="mb-3 mt-16 text-lg font-bold">누락 항목 보정</h2>
+      <h2 className="mb-3 mt-16 text-lg font-bold">대량 작업 (Claude·ChatGPT)</h2>
+      <BulkWork />
+
+      <h2 className="mb-3 mt-16 text-lg font-bold">누락 항목 보정 (한 곡씩 · Gemini)</h2>
       <Backfill />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">커버 검토 ({artworkless.length})</h2>

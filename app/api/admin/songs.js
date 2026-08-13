@@ -15,6 +15,7 @@ import { kstToday } from "../../../lib/kst";
 import { summarizeMusicTaste } from "../../../lib/music-taste-core";
 import { makeBasedOnCleaner } from "../../../lib/admin/based-on";
 import { TYPES as CORRECTION_TYPES, lineHash } from "../../../lib/admin/corrections";
+import { songNeeds, summarizeNeeds } from "../../../lib/admin/needs";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 
@@ -239,27 +240,14 @@ export async function handleSongs(action, body) {  if (action === "search") {
   }
 
 
-  // Format lint — catches the failure modes we've actually hit: original lines
-  // whose translation is missing, Japanese lines without a reading, and Gemini's
-  // inline ">"/"+" markers glued onto the lyric line (the supernatural bug).
+  // Format lint — 무엇이 빠졌는지는 lib/admin/needs.js 한 곳에서만 판정한다.
+  // 예전에는 이 화면이 자체 규칙을 갖고 있어, 파서를 고쳐 해결된 것(병합 번역 `>^N`,
+  // 🗨 해설 줄, 외국곡 속 한국어 가사)까지 "번역 없음"으로 세고 있었다.
   if (action === "lint") {
     const report = getAllSongs()
       .map((s) => {
-        const lines = s.stanzas.flatMap((st) => st.lines);
-        const translated = lines.filter((l) => l.ko?.trim()).length;
-        // a Korean song with zero translations is a deliberate choice, not a defect
-        const untranslated =
-          s.lang === "ko" && translated === 0 ? 0 : lines.length - translated;
-        const noReading = lines.filter((l) => isJaLine(l.en) && !l.reading?.trim()).length;
-        const inline = lines.filter((l) => / [>+] /.test(l.en)).length;
-        const issues = [];
-        if (inline) issues.push(`인라인 마커 의심 ${inline}줄`);
-        if (untranslated) issues.push(`번역 없음 ${untranslated}줄`);
-        if (noReading) issues.push(`독음 없음 ${noReading}줄`);
-        // genre sanity — flagged songs get a one-click 장르 재생성 in the UI
-        const gIssue = genreIssue(genreTagOf(s.tags));
-        if (gIssue) issues.push(`장르: ${gIssue}`);
-        return { slug: s.slug, title: s.title, artist: s.artist, issues, genreFix: !!gIssue };
+        const issues = summarizeNeeds(s).filter((t) => !/커버|연도|가사 없음|코멘트|한글 제목/.test(t));
+        return { slug: s.slug, title: s.title, artist: s.artist, issues, genreFix: issues.some((t) => t.startsWith("장르")) };
       })
       .filter((s) => s.issues.length);
     return Response.json({ report, total: getAllSongs().length });
@@ -717,6 +705,108 @@ ${listed}`,
       return Response.json({ error: "연 정리 실패 — 가사가 짧거나 구조가 안 맞음" }, { status: 502 });
     await writeSong(body.slug, `---\n${fm}\n---\n${newBody}\n`, `chore(song): restanza — ${body.slug}`);
     return Response.json({ stanzas: newBody.split("\n\n").length });
+  }
+
+  // ── 대량 작업 (Claude·ChatGPT) ────────────────────────────────────────────
+  // Gemini 무료 티어로는 768곡을 훑을 수 없다. 그래서 역할을 나눈다:
+  //   소량(Gemini): 새 곡 하나를 넣을 때의 번역·독음·코멘트 — 기존 버튼 그대로
+  //   대량(Claude·ChatGPT): 전 곡 대상 작업 — 여기서 '무엇이 부족한지' 목록만 만들고
+  //     실제 문장은 밖에서 채워 온다. 채워 온 결과는 bulkApply가 검증하고 쓴다.
+  // 이 경로는 외부 API를 한 번도 부르지 않는다.
+  if (action === "bulkPlan") {
+    const field = body.field || "";           // keywords|emotion|comment|title_ko|reading|genre|year|artwork
+    const limit = Math.min(Number(body.limit) || 500, 2000);
+    const songs = getAllSongs();
+    const rows = [];
+    for (const s of songs) {
+      const n = songNeeds(s);
+      const want =
+        field === "keywords" ? n.keywords :
+        field === "emotion" ? n.emotion :
+        field === "comment" ? n.comment :
+        field === "title_ko" ? n.titleKo :
+        field === "reading" ? n.reading :
+        field === "genre" ? (n.genre ? 1 : 0) :
+        field === "year" ? n.year :
+        field === "artwork" ? n.artwork :
+        summarizeNeeds(s).length; // field 미지정이면 뭐라도 부족한 곡
+      if (!want) continue;
+      rows.push({
+        slug: s.slug, title: s.title, artist: s.artist, lang: s.lang,
+        year: s.year || "", genre: s.genre || "", album: s.album || "",
+        needs: summarizeNeeds(s),
+      });
+      if (rows.length >= limit) break;
+    }
+    return Response.json({ field: field || "any", count: rows.length, total: songs.length, items: rows });
+  }
+
+  // 밖에서 채워 온 결과를 검증하고 쓴다. 닫힌 어휘(감정·장르·국가)를 벗어난 값,
+  // 4자리가 아닌 연도, https가 아닌 커버는 받지 않는다 — 대량 작업일수록
+  // 잘못된 값 하나가 조용히 768곡에 섞인다.
+  if (action === "bulkApply") {
+    const items = Array.isArray(body.items) ? body.items : [];
+    if (!items.length) return Response.json({ error: "items가 비어 있습니다" }, { status: 422 });
+    const bySlug = new Map(getAllSongs().map((s) => [s.slug, s]));
+    const applied = [], rejected = [];
+    for (const it of items.slice(0, 1000)) {
+      const song = bySlug.get(it.slug);
+      if (!song) { rejected.push({ slug: it.slug, why: "없는 곡" }); continue; }
+      const stored = await readSong(it.slug);
+      if (!stored) { rejected.push({ slug: it.slug, why: "파일 없음" }); continue; }
+      let raw = stored.raw.replace(/\r\n/g, "\n");
+      const fm = raw.match(FM)?.[1];
+      if (!fm) { rejected.push({ slug: it.slug, why: "frontmatter 없음" }); continue; }
+      const changed = [];
+
+      if (it.emotion !== undefined) {
+        const e = parseEmotion(it.emotion);
+        if (!e) rejected.push({ slug: it.slug, why: `감정이 목록 밖: ${it.emotion}` });
+        else if (!fmValue(fm, "emotion") || body.overwrite) { raw = setField(raw, "emotion", e, "keywords"); changed.push("emotion"); }
+      }
+      if (it.keywords !== undefined) {
+        const kw = parseKeywords(Array.isArray(it.keywords) ? it.keywords.join(", ") : it.keywords);
+        if (kw.length && (!fmValue(fm, "keywords") || fmValue(fm, "keywords") === "[]" || body.overwrite)) {
+          raw = setField(raw, "keywords", `[${kw.join(", ")}]`, "tags");
+          changed.push("keywords");
+        }
+      }
+      if (it.comment !== undefined && String(it.comment).trim()) {
+        const c = String(it.comment).trim().replace(/\s+/g, " ");
+        if (/(습니다|합니다|해요)\.?$/.test(c)) rejected.push({ slug: it.slug, why: "코멘트 문체(~다체 아님)" });
+        else if (!fmValue(fm, "comment") || body.overwrite) { raw = setField(raw, "comment", c, "date"); changed.push("comment"); }
+      }
+      if (it.title_ko !== undefined && String(it.title_ko).trim() && (!fmValue(fm, "title_ko") || body.overwrite)) {
+        raw = setField(raw, "title_ko", String(it.title_ko).trim(), "title");
+        changed.push("title_ko");
+      }
+      if (it.genre !== undefined && String(it.genre).trim()) {
+        const g = capGenre(it.genre);
+        if (!GENRES.includes(g)) rejected.push({ slug: it.slug, why: `장르가 목록 밖: ${it.genre}` });
+        else { raw = setField(raw, "genre", g, "duration"); changed.push("genre"); }
+      }
+      if (it.year !== undefined && String(it.year).trim()) {
+        if (!/^\d{4}$/.test(String(it.year))) rejected.push({ slug: it.slug, why: `연도가 4자리가 아님: ${it.year}` });
+        else if (!fmValue(fm, "year") || body.overwrite) { raw = setField(raw, "year", String(it.year), "album"); changed.push("year"); }
+      }
+      if (it.artwork !== undefined && String(it.artwork).trim()) {
+        if (!/^https:\/\//.test(it.artwork)) rejected.push({ slug: it.slug, why: "커버가 https가 아님" });
+        else if (!(fmValue(fm, "artwork") || "").startsWith("https") || body.overwrite) { raw = setField(raw, "artwork", String(it.artwork), "year"); changed.push("artwork"); }
+      }
+      // 태그의 국가·장르·연도 세 자리는 값이 바뀌면 같이 맞춘다
+      if (changed.includes("genre") || changed.includes("year")) {
+        const tags = (fmValue(raw.match(FM)[1], "tags") || "").replace(/^\[|\]$/g, "").split(",").map((x) => x.trim()).filter(Boolean);
+        const country = tags.find((t) => COUNTRY_TAGS.includes(t)) || "";
+        const g2 = fmValue(raw.match(FM)[1], "genre");
+        const y2 = fmValue(raw.match(FM)[1], "year");
+        raw = setField(raw, "tags", `[${[country, g2, y2].filter(Boolean).join(", ")}]`, "lang");
+      }
+
+      if (!changed.length) continue;
+      await writeSong(it.slug, raw, `chore(song): bulk ${changed.join(",")} — ${it.slug}`);
+      applied.push({ slug: it.slug, changed });
+    }
+    return Response.json({ applied: applied.length, rejected, fields: [...new Set(applied.flatMap((a) => a.changed))] });
   }
 
   if (action === "load") {
