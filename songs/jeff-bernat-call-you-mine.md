@@ -18,7 +18,7 @@ keywords: [전화, 밤, 별, 잔디, 식사]
 emotion: 사랑
 date: 2023-02-10
 published: 2023-02-09T15:19:34.000Z
-comment:
+comment: 우울하게 깨어난 날 전화를 걸어 만난 밤을 떠올리며 너를 내 사람이라 불러도 되느냐고 묻는 곡이다. 긴장했지만 꼭 말해야 했다는 고백이 뒤를 잇는다.
 source: instagram
 source_tag: 230210_0018
 source_note: 

@@ -16,7 +16,7 @@ keywords: [뉴욕, 타임스퀘어, 거리]
 emotion: 그리움
 date: 2024-11-09
 published: 2024-11-09T02:14:13.000Z
-comment:
+comment: 천 마일 떨어진 뉴욕의 상대에게 이 노래를 다시 들어달라고 말한다. 톰 히긴슨이 실제 인물 딜라일라에게 반해 만든 곡이라 이루어지지 않은 관계 위에 지어졌다.
 source: instagram
 source_tag: 241109_1233
 source_note: 

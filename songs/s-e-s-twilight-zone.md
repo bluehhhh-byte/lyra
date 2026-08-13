@@ -16,7 +16,7 @@ keywords: [새벽, 꿈, 향기, 눈물, 황혼]
 emotion: 사랑
 date: 2023-01-26
 published: 2023-01-25T23:27:32.000Z
-comment:
+comment: 1999년 3집 수록곡으로, 아침이 오기 전까지만이라도 사랑해달라고 붙잡는 내용이다. 황혼이라는 시간대를 사랑이 허락된 짧은 경계로 쓴다.
 source: instagram
 source_tag: 230126_0827
 source_note: 

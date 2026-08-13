@@ -18,7 +18,7 @@ keywords: [꿈, 밤, 모래, 별, 약속, 짐승]
 emotion: 희망
 date: 2023-01-05
 published: 2023-01-04T23:48:13.000Z
-comment:
+comment: 영화 더 퍼스트 슬램덩크의 주제가로, 무리에서 떨어져 나와 꿈을 문 짐승의 이미지로 시작한다. 후반부에는 패스와 스틸 같은 농구 용어가 그대로 박혀 있다.
 source: instagram
 source_tag: 230105_0847
 source_note: 

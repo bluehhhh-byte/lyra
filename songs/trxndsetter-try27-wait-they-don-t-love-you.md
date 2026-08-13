@@ -18,7 +18,7 @@ keywords: [짐, 거리, 지도, 이메일, 마음]
 emotion: 그리움
 date: 2024-12-29
 published: 2024-12-29T07:10:28.000Z
-comment:
+comment: 그들은 내가 사랑하는 만큼 너를 사랑하지 않는다는 문장 하나를 계속 되풀이한다. Yeah Yeah Yeahs의 Maps를 끌어온 곡이라 떠나면서도 붙잡는 원거리의 마음이 겹친다.
 source: instagram
 source_tag: 241229_1609
 source_note: Maps는 My Angus Please Stay

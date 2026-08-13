@@ -16,7 +16,7 @@ keywords: [계절, 바람, 꽃]
 emotion: 그리움
 date: 2025-04-29
 published: 2025-04-28T23:40:09.000Z
-comment:
+comment: 이룰 수 없던 사랑이 계절과 함께 지나갔다고 말한다. 변해버린 상대를 기억 속에서만 시들지 않는 꽃으로 남기고, 그 선명함을 슬프고 애처롭다고 부른다.
 source: instagram
 source_tag: 250429_0839
 source_note: 

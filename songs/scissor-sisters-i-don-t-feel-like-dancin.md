@@ -16,7 +16,7 @@ keywords: [드레스, 노래, 아침]
 emotion: 체념
 date: 2024-10-20
 published: 2024-10-20T12:27:12.000Z
-comment:
+comment: 춤추고 싶지 않다는 말을 가장 신나는 디스코 위에 얹는 역설로 굴러간다. 남들이 즐길 때 혼자 외로워지는 감각이 밝은 편곡과 계속 어긋난다. 엘튼 존이 함께 썼다.
 source: instagram
 source_tag: 241020_2125
 source_note: 

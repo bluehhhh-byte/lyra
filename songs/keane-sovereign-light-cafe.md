@@ -16,7 +16,7 @@ keywords: [카페, 바다, 여름, 골목, 시절]
 emotion: 회상
 date: 2023-01-17
 published: 2023-01-16T23:14:43.000Z
-comment:
+comment: 영국 남부 해안에 실재하는 카페 이름을 제목으로 삼아 유년의 여름을 되짚는 2012년 곡이다. 그때보다 나은 사람이 되었으니 외면하지 말라고 청한다.
 source: instagram
 source_tag: 230117_0814
 source_note: 

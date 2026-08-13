@@ -16,7 +16,7 @@ keywords: [담배연기, 술, 택시, 주말, 심장, 집]
 emotion: 그리움
 date: 2023-02-04
 published: 2023-02-04T07:50:31.000Z
-comment:
+comment: 담배 연기와 술 냄새가 역해진 파티장을 빠져나와 택시를 잡는 곡이다. 아깐 미안했다는 말을 되새기며 지금 어디냐고 묻는 데서 방향이 바뀐다.
 source: instagram
 source_tag: 230204_1650
 source_note: 

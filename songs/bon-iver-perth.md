@@ -18,7 +18,7 @@ keywords: [눈물, 먼지, 빛, 숲, 나방, 이름]
 emotion: 슬픔
 date: 2023-01-06
 published: 2023-01-06T01:05:48.000Z
-comment:
+comment: 2011년 앨범 Bon Iver, Bon Iver의 첫 곡으로, 제목은 히스 레저의 고향 도시에서 왔다고 알려져 있다. 네가 사랑한 사람들은 여전히 살아 있다는 구절로 상실을 견딘다.
 source: instagram
 source_tag: 230106_1004
 source_note: 

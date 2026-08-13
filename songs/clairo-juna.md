@@ -7,7 +7,9 @@ album: Charm
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/6dfa4ea965a74b93870a85daa74b7ca3/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/d/8/0/2d83d10ddb21a8338f189a62613b72b0.mp3?hdnea=exp=1786559368~acl=/api/1/1/2/d/8/0/2d83d10ddb21a8338f189a62613b72b0.mp3*~data=user_id=0,application_id=42~hmac=77148067df7ae482869167881f02e4ce4a5e700754075e23a6ac2ecae582adbb
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/juna/1742301413?i=1742301428&uo=4
+trackId: 1742301428
 duration: 195
 genre: Indie Pop
 lang: en

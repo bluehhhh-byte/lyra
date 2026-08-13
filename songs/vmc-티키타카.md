@@ -18,7 +18,7 @@ keywords: [손바닥, 무대, 페스티벌, 땀, 마이크, 신발]
 emotion: 저항
 date: 2023-01-11
 published: 2023-01-11T09:57:51.000Z
-comment:
+comment: 크루끼리 주고받는 랩을 축구의 패스에 빗댄 2017년 단체곡이다. 우리끼리 주고받으니 끼어들지 말라는 배타적인 선언이 후렴에서 반복된다.
 source: instagram
 source_tag: 231011_1857
 source_note: 

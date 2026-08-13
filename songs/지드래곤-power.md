@@ -16,7 +16,7 @@ keywords: [권력, 영향력, 존재감]
 emotion: 저항
 date: 2024-11-01
 published: 2024-10-31T23:21:20.000Z
-comment:
+comment: 존재감과 영향력을 선언하는 자전적 트랙으로, 악의적인 조롱에는 시간을 쓰지 않겠다고 잘라 말한다. 7년 만의 복귀곡이라 왕은 여전하다는 문장이 무게를 갖는다.
 source: instagram
 source_tag: 241101_0820
 source_note: 핵심 메시지 · 가사 분석 · 상징적 의미

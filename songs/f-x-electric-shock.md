@@ -3,12 +3,14 @@ title: Electric Shock
 title_ko: Electric Shock
 artist: f(x)
 artist_ko:
-album: Electric Shock - The 2nd Mini Album
+album: Electric Shock - EP
 year: 2012
 artwork: https://cdn-images.dzcdn.net/images/cover/4f04e465a2e190d9ec46ccb6ef29587f/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3?hdnea=exp=1786584296~acl=/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3*~data=user_id=0,application_id=42~hmac=49d2b23ef4c7eebd5e4fed61d50581c875329ddf435f3ad3c93b2367ab240465
-trackId:
-duration: 196
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/electric-shock/854917461?i=854917495&uo=4
+trackId: 854917495
+duration: 195
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2012]
@@ -16,7 +18,7 @@ keywords: [전류, 블랙홀, 눈빛, 심장, 숨]
 emotion: 설렘
 date: 2023-01-24
 published: 2023-01-24T01:50:51.000Z
-comment:
+comment: 2012년 미니 2집 타이틀곡으로, 사랑에 빠진 상태를 감전과 전압 조절의 언어로 옮긴다. 전·기·충·격을 한 글자씩 끊어 부르는 구성이 곡의 골격이다.
 source: instagram
 source_tag: 230124_1048
 source_note: 

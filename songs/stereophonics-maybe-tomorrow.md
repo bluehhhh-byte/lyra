@@ -16,7 +16,7 @@ keywords: [먹구름, 시간]
 emotion: 위로
 date: 2025-01-20
 published: 2025-01-19T21:56:34.000Z
-comment:
+comment: 작은 먹구름이 계속 따라다닌다는 비유로 우울을 그린다. 내일이면 집으로 가는 길을 찾겠지라는 말만 되풀이하는데, 그 반복 자체가 위로의 방식이 된다.
 source: instagram
 source_tag: 250120_0656
 source_note: 

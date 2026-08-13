@@ -3,12 +3,14 @@ title: Greener
 title_ko: 
 artist: FKJ
 artist_ko:
-album: 
+album: V I N C E N T
 year: 2022
 artwork: https://dn711508.ca.archive.org/0/items/mbid-b657be8f-8d31-4376-b616-93c9cb1c1a85/mbid-b657be8f-8d31-4376-b616-93c9cb1c1a85-44649058668_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/24/d9/b624d965-4756-e4b4-bbf5-42a5204ad837/mzaf_5849530520244871585.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/greener/1892105474?i=1892105476&uo=4
+trackId: 1892105476
+duration: 234
 genre: Electronic
 lang: en
 tags: [유럽, Electronic, 2022]

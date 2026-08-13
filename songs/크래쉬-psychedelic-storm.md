@@ -18,7 +18,7 @@ keywords: [티비, 잡지, 광고, 유행, 도구]
 emotion: 저항
 date: 2023-02-11
 published: 2023-02-11T00:53:24.000Z
-comment:
+comment: 유행을 좇느라 언어와 표정까지 잃은 사람을 티비와 잡지 속 작은 지면이라 부르는 곡이다. 한국 스래시 밴드 크래쉬가 앨범 The Massive Crush에 실었다.
 source: instagram
 source_tag: 230211_0951
 source_note: 

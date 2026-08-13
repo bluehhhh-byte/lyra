@@ -16,7 +16,7 @@ keywords: [추억, 겨울, 빈자리, 눈빛, 입맞춤]
 emotion: 이별
 date: 2022-12-18
 published: 2022-12-18T04:45:41.000Z
-comment:
+comment: 아무 말 없이 떠난 사람과 보낸 겨울을 돌아보는 곡이다. 희미해지는 사진 같은 추억을 간직해달라 하고는 더는 찾지 않겠다고 맺는다.
 source: instagram
 source_tag: 221218_1345
 source_note: 

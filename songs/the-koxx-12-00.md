@@ -16,7 +16,7 @@ keywords: [파티, 시계, 문, 어제, 밤]
 emotion: 불안
 date: 2023-01-04
 published: 2023-01-03T23:18:19.000Z
-comment:
+comment: 열두 시가 되면 문이 닫힌다는 시한을 앞두고 아무것도 하지 못한 하루를 되짚는다. 파티에서 말도 붙이지 못한 실패담이 그대로 곡의 경고가 된다.
 source: instagram
 source_tag: 230104_0817
 source_note: 

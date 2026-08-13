@@ -16,7 +16,7 @@ keywords: [도피, 눈]
 emotion: 체념
 date: 2025-01-21
 published: 2025-01-21T14:48:51.000Z
-comment:
+comment: 아프고 쓸모없다는 느낌에 지쳐 눈을 감아버리는 편을 도피로 택한다. 비밀 정원엔 아무것도 없고 변화도 필요 없다는 말로 무기력을 그대로 둔다.
 source: instagram
 source_tag: 250121_2348
 source_note: 

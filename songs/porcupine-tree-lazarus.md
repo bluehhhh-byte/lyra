@@ -16,7 +16,7 @@ keywords: [안개, 달빛, 계곡, 창문, 여름, 도시]
 emotion: 위로
 date: 2023-01-03
 published: 2023-01-03T10:06:02.000Z
-comment:
+comment: 2005년 앨범 Deadwing 수록곡으로, 계곡 아래로 따라오라는 목소리가 화자를 부른다. 성경의 나사로를 불러내며 떠나는 일을 위로처럼 말한다.
 source: instagram
 source_tag: 230103_1905
 source_note: 

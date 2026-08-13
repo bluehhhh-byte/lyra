@@ -16,7 +16,7 @@ keywords: [상상, 전화, 동전]
 emotion: 기쁨
 date: 2024-11-11
 published: 2024-11-11T11:38:01.000Z
-comment:
+comment: 터틀즈의 1967년 곡을 끌어와 전화 한 통과 동전 하나의 상상으로 옮긴다. 주사위를 어떻게 던져도 결국 둘이어야 한다는 확신이 곡 전체를 이룬다.
 source: instagram
 source_tag: 241111_2035
 source_note: 

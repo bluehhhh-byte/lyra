@@ -16,7 +16,7 @@ keywords: [아침, 커피, 버스, 라디오, 햇살]
 emotion: 체념
 date: 2022-12-11
 published: 2022-12-11T05:30:54.000Z
-comment:
+comment: 잊지 못할 사랑이라 여겼는데 어느새 잊고 사는 자신을 발견하는 곡이다. 평범한 하루가 흘러가는 묘사 사이로 미안하다는 말이 끼어든다.
 source: instagram
 source_tag: 221211_1430
 source_note: 

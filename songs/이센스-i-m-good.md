@@ -16,7 +16,7 @@ keywords: [도시, 휴식, 안부, 하루, 오늘]
 emotion: 체념
 date: 2023-02-01
 published: 2023-01-31T23:23:36.000Z
-comment:
+comment: 휴식까지 비싸진 도시에서 잘 지내냐는 물음에 잘 지낸다고만 답하는 곡이다. 달콤하기만을 빌었던 처음과 익숙해진 지금이 나란히 놓인다.
 source: instagram
 source_tag: 230201_0820
 source_note: 

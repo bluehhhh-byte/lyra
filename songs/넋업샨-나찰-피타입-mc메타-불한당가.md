@@ -16,7 +16,7 @@ keywords: [불한당, 서울, 한강]
 emotion: 저항
 date: 2024-12-06
 published: 2024-12-05T23:32:42.000Z
-comment:
+comment: 붉게 물든 한강과 남산을 배경으로 네 명이 차례로 판을 뒤집겠다고 선언한다. 불한당이라는 옛말을 서울 거리로 끌어와 씬을 향한 도발로 쓴다.
 source: instagram
 source_tag: 241206_0831
 source_note: 

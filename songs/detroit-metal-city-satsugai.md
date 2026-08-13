@@ -16,7 +16,7 @@ keywords: [지옥, 피, 부모, 형제, 미래, 추억]
 emotion: 분노
 date: 2023-03-07
 published: 2023-03-07T12:42:56.000Z
-comment:
+comment: 부모와 형제와 친척을 다 죽였다고 외치는, 데스메탈의 과장을 그대로 흉내 낸 곡이다. 만화 디트로이트 메탈 시티에서 순한 청년이 크라우저 2세로 분해 부르는 대표곡이다.
 source: instagram
 source_tag: 230307_2141
 source_note: 

@@ -16,7 +16,7 @@ keywords: [불, 바다, 친구]
 emotion: 저항
 date: 2024-11-19
 published: 2024-11-18T23:42:36.000Z
-comment:
+comment: 죽은 친구들을 뒤에 두고 그저 살아남으려 했을 뿐이라고 말한다. 매일이 어제일 뿐이라며 뒤돌아보지 않고 나아가는 태도가 후렴에서 반복된다.
 source: instagram
 source_tag: 241119_0840
 source_note: 

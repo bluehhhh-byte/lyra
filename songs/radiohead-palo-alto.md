@@ -16,7 +16,7 @@ keywords: [도시, 하늘, 상사, 아내, 직장]
 emotion: 고독
 date: 2023-03-04
 published: 2023-03-04T04:55:06.000Z
-comment:
+comment: 미래도시에서 서로 볼 틈도 없이 바쁜 사람들이 괜찮다는 안부만 주고받는 곡이다. OK Computer 시기에 만들어져 싱글 수록곡으로 나온 실리콘밸리 이야기다.
 source: instagram
 source_tag: 230304_1354
 source_note: 

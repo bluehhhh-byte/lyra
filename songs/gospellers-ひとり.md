@@ -16,7 +16,7 @@ keywords: [약속, 노래, 걸음, 꿈, 곁]
 emotion: 사랑
 date: 2023-02-09
 published: 2023-02-09T14:29:38.000Z
-comment:
+comment: 사랑한다는 말을 덜 하게 된 이유가 정말로 사랑하게 됐기 때문이라고 말하는 곡이다. 조용하고 격렬하게 사랑한다는 구절이 마지막에 놓인다.
 source: instagram
 source_tag: 230209_2329
 source_note: 

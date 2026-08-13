@@ -18,7 +18,7 @@ keywords: [눈물, 고개, 발길, 숨, 기다림]
 emotion: 이별
 date: 2023-02-06
 published: 2023-02-06T14:00:24.000Z
-comment:
+comment: 떠나는 사람 앞에서 고개를 숙이고 눈물만 참으며 기다리겠다고 말하는 곡이다. 우는 모습을 기억하게 하기 싫어 그냥 보낸다는 데서 물러선다.
 source: instagram
 source_tag: 230206_2259
 source_note: 

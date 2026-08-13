@@ -18,7 +18,7 @@ keywords: [토요일, 월요일, 거리, 자동차, 꿈, 이름]
 emotion: 희망
 date: 2022-12-10
 published: 2022-12-09T22:06:23.000Z
-comment:
+comment: 1994년 베스트 앨범에 새로 실린 곡으로, 이름과 사연이 다른 인물들을 차례로 등장시킨다. 월요일 같은 기분이어도 언젠가 토요일 밤이 된다는 문장이 축이다.
 source: instagram
 source_tag: 221219_0707
 source_note: 

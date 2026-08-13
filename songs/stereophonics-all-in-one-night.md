@@ -16,7 +16,7 @@ keywords: [새벽, 클럽, 파티]
 emotion: 고독
 date: 2025-04-28
 published: 2025-04-28T09:41:57.000Z
-comment:
+comment: 새벽 한 시부터 시간을 한 시간씩 세며 클럽에서 빠져나온 밤을 따라간다. 파티 한복판에서 아이가 태어나는 소동까지, 하룻밤에 겹친 일들을 담담하게 나열한다.
 source: instagram
 source_tag: 250428_1841
 source_note: 

@@ -32,7 +32,62 @@
    "reason": "연도 줄을 뺐으므로 그 줄까지 덮던 >^2 표기를 >로 되돌림",
    "sourceUrl": "",
    "reviewedAt": "2026-08-13T05:53:10.839Z"
+  },
+  {
+   "slug": "머드더스튜던트-이끼",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 38,
+   "beforeHash": "c9658c1b2e93",
+   "afterHash": "c7737dfab6e1",
+   "reason": "'서서히'는 속도를 뜻하는데 one by one은 차례를 뜻해 부사 의미가 바뀜",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T10:48:59.749773Z"
+  },
+  {
+   "slug": "layone-ja-mezz-느린심장박동",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 70,
+   "beforeHash": "7ab7c3e0652e",
+   "afterHash": "36fccc580dba",
+   "reason": "'가방끈'은 학력을 뜻하는 관용어 — 직역하면 다음 줄의 투자 비교가 성립하지 않음",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T10:48:59.749773Z"
+  },
+  {
+   "slug": "검정치마-하와이-검은-모래",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 31,
+   "beforeHash": "24f62bd091c6",
+   "afterHash": "868ec40404fe",
+   "reason": "무궁화는 Rose of Sharon — hibiscus로 옮기면 하와이의 꽃이 되어 대비가 뒤집힘",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T10:48:59.749773Z"
+  },
+  {
+   "slug": "검정치마-하와이-검은-모래",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 47,
+   "beforeHash": "8936d20ee080",
+   "afterHash": "c8fccde745d4",
+   "reason": "그늘(shade)과 다음 행의 그림자(shadow)가 같은 단어가 되어 대비가 사라짐",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T10:48:59.749773Z"
+  },
+  {
+   "slug": "브로콜리너마저-너무-애쓰고-싶지-않아요",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 40,
+   "beforeHash": "51bf324b89cb",
+   "afterHash": "94e00204156c",
+   "reason": "목적어가 '이름'이므로 '불러주다'는 이름을 부르는 것 — 앞 연의 '노래'와의 대비가 흐려짐",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T10:48:59.749773Z"
   }
  ],
- "at": "2026-08-13T05:53:10.846Z"
+ "at": "2026-08-13T10:48:59.749773Z"
 }

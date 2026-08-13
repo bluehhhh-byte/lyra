@@ -16,7 +16,7 @@ keywords: [이름, 혈관, 고통, 머리, 마음]
 emotion: 그리움
 date: 2023-02-10
 published: 2023-02-10T10:55:45.000Z
-comment:
+comment: 머릿속과 혈관을 지나가며 계속 떠나가는 그녀를 감당할 수 없다고 말하는 곡이다. 라스가 남긴 유일한 정규 앨범에 실렸다.
 source: instagram
 source_tag: 230210_1955
 source_note: 

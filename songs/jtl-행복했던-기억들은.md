@@ -16,7 +16,7 @@ keywords: [눈, 눈물, 술, 밤, 빈자리]
 emotion: 그리움
 date: 2022-12-18
 published: 2022-12-18T05:11:44.000Z
-comment:
+comment: H.O.T. 해체 뒤 결성된 세 사람의 라이브 앨범에 실린 곡이다. 눈 내리던 첫날을 떠올리며 빈자리가 곧 그리움이라는 것을 확인한다.
 source: instagram
 source_tag: 221218_1411
 source_note: 

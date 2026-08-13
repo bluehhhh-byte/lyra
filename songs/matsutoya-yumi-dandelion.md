@@ -16,7 +16,7 @@ keywords: [민들레, 노을, 씨앗, 바람, 편지, 겨울]
 emotion: 위로
 date: 2023-02-13
 published: 2023-02-12T23:25:34.000Z
-comment:
+comment: 상처받은 날들이 그 사람을 만나기 위한 수업이었다며 민들레에 상대를 겹쳐 놓는 곡이다. 아라이 유미가 결혼 뒤 마츠토야 유미로 이름을 바꾸고 낸 노래다.
 source: instagram
 source_tag: 230213_0826
 source_note: 

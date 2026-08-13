@@ -16,7 +16,7 @@ keywords: [총성, 지평선, 태양, 바람, 함성]
 emotion: 희망
 date: 2023-01-09
 published: 2023-01-09T10:15:09.000Z
-comment:
+comment: 2008년 앨범 Colorful Express 수록곡으로, 출발 총성 직전의 트랙을 무대로 삼는다. 여기서 숨이 멎어도 후회는 없다는 각오가 후렴을 채운다.
 source: instagram
 source_tag: 230109_1914
 source_note: 

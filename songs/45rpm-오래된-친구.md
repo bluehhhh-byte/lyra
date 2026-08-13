@@ -18,7 +18,7 @@ keywords: [친구, 무대, 술, 노을, 빵, 우정]
 emotion: 회상
 date: 2022-12-16
 published: 2022-12-15T15:01:16.000Z
-comment:
+comment: 2015년 앨범 RAPPERTORY 수록곡으로, 각자 바빠져 줄어든 시간을 두고 다시 만나자고 말한다. 인지도가 바닥이라는 자조까지 가사에 그대로 넣는다.
 source: instagram
 source_tag: 221215_2359
 source_note: 

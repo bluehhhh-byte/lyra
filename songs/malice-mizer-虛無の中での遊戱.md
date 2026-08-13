@@ -16,7 +16,7 @@ keywords: [유리조각, 빛, 어둠, 그림자, 파편, 시간]
 emotion: 몽환
 date: 2023-01-10
 published: 2023-01-10T09:51:17.000Z
-comment:
+comment: 망상과 현실의 틈에 사로잡힌 화자가 허무를 조롱하며 홀로 소멸해가는 곡이다. 깨진 유리조각과 그것을 관통하는 빛을 회상의 파편으로 반복해 부른다.
 source: instagram
 source_tag: 230110_1850
 source_note: 

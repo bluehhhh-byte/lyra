@@ -3,12 +3,14 @@ title: Highway Star, Speed Star
 title_ko: 
 artist: Cymbals
 artist_ko:
-album: requests!
-year: 
+album: Highway Star, Speed Star - Single
+year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/bea4f72802442aea03cc02c63187528c/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3?hdnea=exp=1786584277~acl=/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3*~data=user_id=0,application_id=42~hmac=0990e17632302201d26fa84ec6d2a523bb72deed23fb9657de8ef602c6ac0f23
-trackId:
-duration: 254
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/highway-star-speed-star/1720674244?i=1720674245&uo=4
+trackId: 1720674245
+duration: 263
 genre: Indie Pop
 lang: ja
 tags: [일본, Indie Pop]
@@ -16,7 +18,7 @@ keywords: [미등, 담배, 별, 밤, 손목시계, 선글라스]
 emotion: 설렘
 date: 2023-01-09
 published: 2023-01-09T10:03:09.000Z
-comment:
+comment: 밤의 수도를 빠져나가는 두 사람을 밤의 공범자로 그린 곡이다. 영화 흉내에 가까운 도주극을 장난스러운 기분으로 끝까지 밀고 나간다.
 source: instagram
 source_tag: 
 source_note: 

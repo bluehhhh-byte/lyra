@@ -16,7 +16,7 @@ keywords: [문제, 상담, 펜, 바닥, 유리잔]
 emotion: 희망
 date: 2022-12-19
 published: 2022-12-19T14:41:43.000Z
-comment:
+comment: 문제가 있다는 사실을 부정하지 않고 고칠 수 있다고 말하는 곡이다. 상담에서 들은 다시 시작해보자는 말을 그대로 가사에 옮겨 놓는다.
 source: instagram
 source_tag: 221219_2341
 source_note: 

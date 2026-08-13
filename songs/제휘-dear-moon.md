@@ -18,7 +18,7 @@ keywords: [달, 밤, 얼굴, 목소리, 수화, 그늘]
 emotion: 그리움
 date: 2023-01-17
 published: 2023-01-17T09:50:02.000Z
-comment:
+comment: 드라마 나의 아저씨 OST로, 아무리 따라가도 닿지 않는 달에 상대를 비유한다. 가지려는 게 아니라 자신이 짙은 밤이라서 상대가 눈부신 것이라고 말한다.
 source: instagram
 source_tag: 230117_1849
 source_note: 

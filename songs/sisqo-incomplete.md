@@ -16,7 +16,7 @@ keywords: [불빛, 식당, 돈]
 emotion: 슬픔
 date: 2024-12-28
 published: 2024-12-28T05:55:07.000Z
-comment:
+comment: 돈과 명성과 잡지 표지의 얼굴들을 다 가져도 외롭다고 말한다. 떠나보낸 한 사람이 없으면 무엇으로도 채워지지 않는다는 것이 제목 그대로의 결론이다.
 source: instagram
 source_tag: 241228_1453
 source_note: 

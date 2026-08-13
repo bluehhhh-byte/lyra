@@ -16,7 +16,7 @@ keywords: [태양, 함성, 순간]
 emotion: 저항
 date: 2025-05-11
 published: 2025-05-11T11:05:15.000Z
-comment:
+comment: 규칙 없는 경기장과 멈추지 않는 기관차의 이미지로 달아오른 순간을 밀어붙인다. 미쳐도 상관없다는 태도로 다시 태어난 상대를 즐기라고 몰아가는 곡이다.
 source: instagram
 source_tag: 250511_2002
 source_note: 

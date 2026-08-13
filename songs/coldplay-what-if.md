@@ -16,7 +16,7 @@ keywords: [거짓말, 시간, 결정]
 emotion: 불안
 date: 2024-12-25
 published: 2024-12-25T00:52:11.000Z
-comment:
+comment: 거짓도 시간도 없다면 어떨까라는 가정으로 시작해, 상대가 이미 마음을 정했을 가능성을 계속 되짚는다. 확신 없이 결과를 기다리는 상태가 곡 전체를 지배한다.
 source: instagram
 source_tag: 241225_0949
 source_note: 

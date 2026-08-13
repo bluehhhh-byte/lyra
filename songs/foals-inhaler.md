@@ -3,12 +3,14 @@ title: Inhaler
 title_ko: 
 artist: Foals
 artist_ko:
-album: 
+album: Holy Fire
 year: 2012
 artwork: https://dn710909.ca.archive.org/0/items/mbid-e5656e38-a4a8-4ee1-9ea4-4273a2275497/mbid-e5656e38-a4a8-4ee1-9ea4-4273a2275497-25391187859_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ad/a0/a4/ada0a4c7-a42b-d3c2-83dd-5d68ef39bddc/mzaf_3420191840849788412.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/inhaler/1551377311?i=1551377313&uo=4
+trackId: 1551377313
+duration: 293
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2012]
@@ -16,7 +18,7 @@ keywords: [환상, 총알, 길]
 emotion: 저항
 date: 2024-11-27
 published: 2024-11-26T23:53:53.000Z
-comment:
+comment: 돌과 막대기도 다 환상이라며 자신을 녹슨 금이자 임대 가능한 상태로 부른다. 막다른 길과 전쟁의 이미지 위에서 하루만이라도 떠나지 말라는 요구가 터진다.
 source: instagram
 source_tag: 241127_0853
 source_note: 

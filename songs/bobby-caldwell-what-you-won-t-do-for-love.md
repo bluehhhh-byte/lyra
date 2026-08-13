@@ -18,7 +18,7 @@ keywords: [사랑, 친구, 마음]
 emotion: 사랑
 date: 2024-10-24
 published: 2024-10-23T23:17:41.000Z
-comment:
+comment: 사랑을 위해서라면 못 할 게 없다는 말을 부드럽게 반복한다. 알앤비 시장에서 먼저 사랑받은 탓에 얼굴을 감춘 채 알려졌던 1978년 데뷔작의 곡이다.
 source: instagram
 source_tag: 241024_0816
 source_note: 

@@ -16,7 +16,7 @@ keywords: [길, 날들, 얼굴]
 emotion: 희망
 date: 2025-04-15
 published: 2025-04-14T23:24:35.000Z
-comment:
+comment: 만난 적 없는 누군가도 비슷한 날들을 살고 있을 거라는 상상에서 출발한다. 길을 잘못 들어도 거기서만 피는 꽃이 있다며 늦은 걸음을 긍정한다. 짱구 극장판 주제가로 쓰였다.
 source: instagram
 source_tag: 250415_0820
 source_note: 짱구는 못말려 극장판 25기 <습격!! 외계인 덩덩이> 주제가

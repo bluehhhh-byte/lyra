@@ -18,7 +18,7 @@ keywords: [눈, 언덕, 꽃, 창가, 약속, 거리]
 emotion: 그리움
 date: 2023-01-18
 published: 2023-01-18T09:34:33.000Z
-comment:
+comment: 2001년 싱글로, 눈 내리는 풍경 속에서 이미 없는 사람의 방에 꽃 한 송이를 놓는 곡이다. 계절과 함께 그 사람의 색도 녹아 사라지리라는 인식이 깔려 있다.
 source: instagram
 source_tag: 230118_1834
 source_note: 

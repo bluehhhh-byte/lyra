@@ -18,7 +18,7 @@ keywords: [겨울, 눈, 방, 국도, 봄, 꽃]
 emotion: 그리움
 date: 2023-01-31
 published: 2023-01-30T20:39:57.000Z
-comment:
+comment: 겨울이 오기도 전에 그리워하며 국도를 달리는 차 안의 침묵을 그린 곡이다. 정직한 사람이 바보가 된다는 세상 얘기가 이별 사이에 끼어 있다.
 source: instagram
 source_tag: 230131_0523
 source_note: 

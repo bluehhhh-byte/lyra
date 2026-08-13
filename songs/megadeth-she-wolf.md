@@ -18,7 +18,7 @@ keywords: [늑대, 입술, 이빨, 밤, 발톱, 사마귀]
 emotion: 불안
 date: 2023-01-13
 published: 2023-01-12T15:34:49.000Z
-comment:
+comment: 1997년 앨범 Cryptic Writings 수록곡으로, 밤에 사냥하는 암늑대를 치명적인 유혹의 상징으로 그린다. 사마귀와 주술의 이미지를 겹쳐 공포를 쌓는다.
 source: instagram
 source_tag: 230113_0034
 source_note: 

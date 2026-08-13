@@ -3,12 +3,14 @@ title: The Scientist
 title_ko: 
 artist: Coldplay
 artist_ko:
-album: A Metal Tribute To Coldplay
+album: A Rush of Blood to the Head
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/249fc78bd75bb8bfe2ae8c05e06650ee/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/6/0/73695cce07d5e5ef7b0bfc5d5bb01402.mp3?hdnea=exp=1786559368~acl=/api/1/1/7/3/6/0/73695cce07d5e5ef7b0bfc5d5bb01402.mp3*~data=user_id=0,application_id=42~hmac=942c877802cfeacb14abc70ac033e325692b86ea111c3799f94d6ccdc50fcb31
-trackId: 
-duration: 237
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-scientist/1122775993?i=1122776155&uo=4
+trackId: 1122776155
+duration: 309
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2002]
@@ -16,7 +18,7 @@ keywords: [비밀, 처음, 말]
 emotion: 슬픔
 date: 2024-11-11
 published: 2024-11-11T00:03:01.000Z
-comment:
+comment: 미안하다는 말을 하러 찾아와 처음으로 돌아가자고 청한다. 아무도 쉽다고 하지 않았지만 이렇게 힘들 줄도 몰랐다는 문장이 후회의 크기를 대신한다.
 source: instagram
 source_tag: 241111_0848
 source_note: 

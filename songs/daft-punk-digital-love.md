@@ -18,7 +18,7 @@ keywords: [꿈, 밤, 춤, 리듬, 햇살]
 emotion: 설렘
 date: 2023-02-10
 published: 2023-02-09T23:04:50.000Z
-comment:
+comment: 꿈에서 함께 춤추다 햇빛에 깨어버린 밤을 두고 이 꿈이 현실이 되길 바라는 곡이다. 다프트 펑크의 앨범 Discovery에 실렸다.
 source: instagram
 source_tag: 230210_0803
 source_note: 

@@ -16,7 +16,7 @@ keywords: [눈물, 손, 바람, 먼지, 여행, 어둠]
 emotion: 이별
 date: 2023-01-27
 published: 2023-01-26T23:21:02.000Z
-comment:
+comment: 죽음을 앞둔 사람이 남는 사람에게 건네는 마지막 부탁을 담은 노래다. 자신을 바람에 흩어지는 회색 먼지에 빗대며, 슬픈 얼굴 대신 웃으며 보내달라고 말한다.
 source: instagram
 source_tag: 230127_0819
 source_note: 

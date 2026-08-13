@@ -18,7 +18,7 @@ keywords: [별, 달, 언덕, 어둠, 우주]
 emotion: 몽환
 date: 2023-01-06
 published: 2023-01-06T10:19:17.000Z
-comment:
+comment: 2016년 MYST3RY 수록곡으로, 어둠 속에서 빛을 내는 우주로 데려가 달라고 청한다. 사고 이후 세 명으로 돌아온 시점의 노래라 구해달라는 신호가 무겁게 놓인다.
 source: instagram
 source_tag: 230106_1918
 source_note: 

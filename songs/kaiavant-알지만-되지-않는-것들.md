@@ -18,7 +18,7 @@ keywords: [하늘, 밤, 고통, 이유, 불]
 emotion: 그리움
 date: 2023-01-02
 published: 2023-01-01T23:10:15.000Z
-comment:
+comment: 머리로는 다 아는 위로가 정작 몸에서는 작동하지 않는 상태를 말한다. 맑은 하늘이 슬픈 이유가 함께하지 못한다는 것 하나뿐이라고 짚는다.
 source: instagram
 source_tag: 230102_0809
 source_note: 

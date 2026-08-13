@@ -16,7 +16,7 @@ keywords: [갑옷, 거울, 돈]
 emotion: 저항
 date: 2025-05-09
 published: 2025-05-09T10:19:25.000Z
-comment:
+comment: 아르마딜로의 갑옷을 방어이자 과시로 쓰는 자기 선언이다. 거울만 들여다보는 가짜들과 자신을 갈라놓고 돈과 기세를 늘어놓는 허세가 전면에 있다.
 source: instagram
 source_tag: 250509_1919
 source_note: 

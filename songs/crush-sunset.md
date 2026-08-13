@@ -18,7 +18,7 @@ keywords: [노을, 바람, 날개, 우주, 별, 하늘]
 emotion: 몽환
 date: 2023-01-31
 published: 2023-01-31T13:09:01.000Z
-comment:
+comment: 붉은 노을이 번질 때 바람이 날개가 되어 피지 못한 꿈을 다시 살려낸다는 곡이다. 크러쉬의 앨범 From Midnight To Sunrise에 실렸다.
 source: instagram
 source_tag: 230131_2208
 source_note: 

@@ -16,7 +16,7 @@ keywords: [꿈, 재앙, 날씨]
 emotion: 몽환
 date: 2024-10-22
 published: 2024-10-22T14:29:27.000Z
-comment:
+comment: 백만 가지 재앙 속에서 성실하게 지킬 것만 남겼다는 문장이 중심이다. 꿈에서 본 진귀한 물건을 놓지 않겠다는 다짐이 깨어날 곳을 향한 이동으로 이어진다.
 source: instagram
 source_tag: 241022_2328
 source_note: 

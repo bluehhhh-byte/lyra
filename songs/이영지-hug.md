@@ -18,7 +18,7 @@ keywords: [포옹, 팻말, 어깨, 부목, 아이, 목소리]
 emotion: 위로
 date: 2023-01-09
 published: 2023-01-08T23:26:57.000Z
-comment:
+comment: 쇼미더머니 11 파이널 무대에서 부른 곡으로, 자신을 제일 싫어하는 사람이 자기라고 먼저 털어놓는다. 프리허그 팻말을 든 쪽이 실은 안기고 싶었다는 뒤집기가 핵심이다.
 source: instagram
 source_tag: 230109_0826
 source_note: 

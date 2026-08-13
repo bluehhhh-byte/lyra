@@ -16,7 +16,7 @@ keywords: [부엌, 침실, 프라이팬, 손, 등]
 emotion: 사랑
 date: 2023-02-12
 published: 2023-02-12T00:33:08.000Z
-comment:
+comment: 부엌과 침실에서 나를 원해 줄 남자를 노골적으로 나열하는 곡이다. 그런 남자를 원한다는 말과 그런 남자가 되고 싶다는 말이 계속 겹쳐 읽힌다.
 source: instagram
 source_tag: 230212_0933
 source_note: 

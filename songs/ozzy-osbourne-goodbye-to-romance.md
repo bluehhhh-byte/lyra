@@ -16,7 +16,7 @@ keywords: [왕관, 광대, 날개, 태양, 날씨, 과거]
 emotion: 이별
 date: 2023-02-15
 published: 2023-02-15T10:30:23.000Z
-comment:
+comment: 왕이자 광대였던 시절과 과거 전부에 작별을 고하고 다시 자유롭다고 말하는 곡이다. 블랙 사바스를 떠난 오지 오스본이 첫 솔로 앨범에 담은 작별 인사로 읽힌다.
 source: instagram
 source_tag: 230215_1929
 source_note: 

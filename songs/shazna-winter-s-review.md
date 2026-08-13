@@ -16,7 +16,7 @@ keywords: [눈, 겨울, 발자국, 여행, 연인, 봄]
 emotion: 희망
 date: 2023-02-22
 published: 2023-02-21T15:47:24.000Z
-comment:
+comment: 눈이 슬픔도 눈물도 하얗게 덮으면 새로운 미래가 태어난다고 말하는 겨울 노래다. 무기력한 세상에서 반짝일 자리를 찾는다는 구절이 가운데 놓인다.
 source: instagram
 source_tag: 230222_0048
 source_note: 

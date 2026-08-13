@@ -3,11 +3,13 @@ title: Good Boy
 title_ko: 
 artist: GD X TAEYANG
 artist_ko:
-album: GOOD BOY
+album: GOOD BOY - Single
 year: 2018
 artwork: https://cdn-images.dzcdn.net/images/cover/acc7a55e8629c6298ae3cfd8fad2e6ba/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/e/f/0/0efb92d45cd1693c70f63181db91ade3.mp3?hdnea=exp=1786559379~acl=/api/1/1/0/e/f/0/0efb92d45cd1693c70f63181db91ade3.mp3*~data=user_id=0,application_id=42~hmac=5063131550505573b61b5ab84bf37bb8eca8b3a97baee18be6753b77c2cfc750
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/good-boy/1313615274?i=1313615284&uo=4
+trackId: 1313615284
 duration: 245
 genre: K-Pop
 lang: ko
@@ -16,7 +18,7 @@ keywords: [옷, 눈웃음, 게임]
 emotion: 설렘
 date: 2025-05-03
 published: 2025-05-03T13:27:44.000Z
-comment:
+comment: 차림새와 낯가림이 어긋나는 사람이 자신을 나쁜 남자로 보는 시선에 반박한다. 조심하라는 소문에 굳이 해명하지 않고 같이 춤추자고 넘기는 태도가 곡을 끌고 간다.
 source: instagram
 source_tag: 250503_2227
 source_note: 

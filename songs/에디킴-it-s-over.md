@@ -18,7 +18,7 @@ keywords: [아침, 비, 하늘, 거울, 전화, 눈물]
 emotion: 이별
 date: 2023-02-21
 published: 2023-02-21T13:59:57.000Z
-comment:
+comment: 괜찮은 척할수록 더 슬퍼진다는 이별 이후의 일상을 그린 곡이다. 친구에게 괜히 전화를 걸고 거울 앞에서 웃어 보는 장면이 이어진다.
 source: instagram
 source_tag: 230221_1059
 source_note: 

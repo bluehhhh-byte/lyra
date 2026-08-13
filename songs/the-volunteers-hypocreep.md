@@ -16,7 +16,7 @@ keywords: [괴물, 위선자, 광경]
 emotion: 분노
 date: 2024-10-15
 published: 2024-10-14T23:45:29.000Z
-comment:
+comment: 스스로를 괴물이라 부르며 위선자들과 드라마에 목마른 이들에게 욕을 쏟는다. 밴드 안의 갈등이 그대로 비치는 가사라 자기 선언과 자기 폭로가 구분되지 않는다.
 source: instagram
 source_tag: 241015_0844
 source_note: 

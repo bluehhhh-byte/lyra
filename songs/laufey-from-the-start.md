@@ -16,7 +16,7 @@ keywords: [침묵, 눈빛, 아픔]
 emotion: 설렘
 date: 2024-10-25
 published: 2024-10-24T23:27:09.000Z
-comment:
+comment: 새로 만난 사람 이야기를 하는 상대 앞에서 조용해지는 마음을 재즈 어법으로 적는다. 처음부터 좋아했다는 사실을 끝내 말하지 못하는 짝사랑이 곡의 전부다.
 source: instagram
 source_tag: 241025_0826
 source_note: 

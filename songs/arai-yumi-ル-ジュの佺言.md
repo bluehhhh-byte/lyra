@@ -16,7 +16,7 @@ keywords: [열차, 거리, 욕실, 황혼, 전화]
 emotion: 분노
 date: 2023-03-13
 published: 2023-03-12T23:38:47.000Z
-comment:
+comment: 바람난 연인의 욕실에 립스틱으로 전언을 남기고 그 어머니를 만나러 혼자 열차에 오른 여자의 노래다. 아라이 유미가 1975년에 낸 곡이고 훗날 마녀 배달부 키키의 오프닝으로 쓰였다.
 source: instagram
 source_tag: 230313_0838
 source_note: 

@@ -3,12 +3,14 @@ title: 朝がまた来る
 title_ko: 아침이 또 찾아와
 artist: DREAMS COME TRUE
 artist_ko:
-album: 
+album: 朝がまた来る - Single
 year: 1999
 artwork: https://dn710906.ca.archive.org/0/items/mbid-2ff5a9f3-9285-4d9e-9d4c-3384c10b2139/mbid-2ff5a9f3-9285-4d9e-9d4c-3384c10b2139-6131405794_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/98/30/bb/9830bb2c-ecaa-cd7a-6e0b-f4ab99d6648d/mzaf_12518075482837619782.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/%E6%9C%9D%E3%81%8C%E3%81%BE%E3%81%9F%E6%9D%A5%E3%82%8B/1445183153?i=1445183158&uo=4
+trackId: 1445183158
+duration: 243
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1999]

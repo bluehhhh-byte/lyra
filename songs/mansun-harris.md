@@ -16,7 +16,7 @@ keywords: [국기, 동상, 미소]
 emotion: 저항
 date: 2024-11-01
 published: 2024-11-01T14:39:06.000Z
-comment:
+comment: 마당에 국기를 꽂은 남자와 광장의 청동 동상을 겹쳐 놓는다. 녹슬어 가는 폭격기 옆에서 미소 지은 채 굳어버린 얼굴로 맹목적인 애국심을 겨눈다.
 source: instagram
 source_tag: 241101_2339
 source_note: 맹목적 애국심에 대한 비판 · 시간의 흐름과 변화 · 감금된 편견

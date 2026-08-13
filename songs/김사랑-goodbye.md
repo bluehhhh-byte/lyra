@@ -18,7 +18,7 @@ keywords: [한마디, 말, 사랑, 사람, 마음]
 emotion: 이별
 date: 2022-12-30
 published: 2022-12-30T09:40:32.000Z
-comment:
+comment: 차갑게 건네진 이별 앞에서 그 한마디를 끝내 담지 못한 사람의 노래다. 사랑은 뜨겁고 사람은 잔인하다는 대비로 상황을 정리한다.
 source: instagram
 source_tag: 221230_1840
 source_note: 

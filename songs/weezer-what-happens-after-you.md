@@ -18,7 +18,7 @@ keywords: [신호, 메아리, 기억, 바위, 암호]
 emotion: 그리움
 date: 2023-02-21
 published: 2023-02-20T23:48:39.000Z
-comment:
+comment: 답이 오지 않는 신호를 계속 보내며 너 다음에는 무엇이 오느냐고 묻는 곡이다. 위저가 사계절에 맞춰 낸 SZNZ 연작 중 가을 편에 실렸다.
 source: instagram
 source_tag: 230221_0847
 source_note: 

@@ -16,7 +16,7 @@ keywords: [운명, 광기, 심장, 발자국, 꿈]
 emotion: 사랑
 date: 2023-02-19
 published: 2023-02-18T16:09:38.000Z
-comment:
+comment: 운명이자 순수한 광기라 부르는 사랑을 처음으로 털어놓는 곡이다. 스매싱 펌킨스가 해체를 발표한 해에 낸 앨범 Machina에 실렸다.
 source: instagram
 source_tag: 230219_0109
 source_note: 

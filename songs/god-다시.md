@@ -16,7 +16,7 @@ keywords: [꽃, 촛불, 음식, 문, 바다, 고백]
 emotion: 그리움
 date: 2022-12-11
 published: 2022-12-11T05:19:03.000Z
-comment:
+comment: 2001년 Chapter 4 수록곡으로, 고백하려고 꽃을 들고 갔더니 상대는 이미 떠난 뒤였다는 이야기다. 돌아오면 다 말하겠다는 다짐이 후렴을 이룬다.
 source: instagram
 source_tag: 221211_1415
 source_note: 

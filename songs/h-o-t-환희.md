@@ -16,7 +16,7 @@ keywords: [눈물, 눈빛, 거리, 추억, 입맞춤]
 emotion: 그리움
 date: 2023-01-25
 published: 2023-01-25T09:51:36.000Z
-comment:
+comment: 4집 수록곡으로, 떠난 사람이 돌아오기를 기다리는 마음을 길게 늘어놓는다. 함께 걷던 거리와 입맞춤을 되짚으며 아직 하지 못한 말이 남았다고 말한다.
 source: instagram
 source_tag: 230125_1851
 source_note: 

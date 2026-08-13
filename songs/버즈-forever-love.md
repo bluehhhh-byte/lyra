@@ -18,7 +18,7 @@ keywords: [눈물, 삶, 품, 곁, 기다림]
 emotion: 사랑
 date: 2023-02-24
 published: 2023-02-23T23:25:15.000Z
-comment:
+comment: 끝없이 떨어지던 자신을 안아 주던 사람에게 이제는 내가 지키겠다고 답하는 곡이다. 널 위해 살 수 있다면 괜찮다는 말이 후렴 자리를 차지한다.
 source: instagram
 source_tag: 230224_0824
 source_note: 

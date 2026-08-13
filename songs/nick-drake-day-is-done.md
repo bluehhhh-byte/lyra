@@ -16,7 +16,7 @@ keywords: [태양, 밤, 새, 신문, 파티, 경기]
 emotion: 체념
 date: 2023-03-03
 published: 2023-03-03T14:34:17.000Z
-comment:
+comment: 하루가 저물 때마다 이미 늦었고 이미 졌다는 사실만 확인하는 노래다. 닉 드레이크의 첫 앨범 Five Leaves Left에 현악 편곡을 얹어 실렸다.
 source: instagram
 source_tag: 230303_2333
 source_note: 

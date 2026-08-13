@@ -16,7 +16,7 @@ keywords: [숨소리, 눈, 후회]
 emotion: 슬픔
 date: 2024-11-10
 published: 2024-11-10T01:45:55.000Z
-comment:
+comment: 죽어가는 사람이 마지막 숨소리를 들어달라고 부르는 형식이다. 자신은 눈을 감으면 그만이지만 남은 사람은 어떡하냐는 물음이 후회 없다는 말과 부딪힌다.
 source: instagram
 source_tag: 241110_1044
 source_note: 

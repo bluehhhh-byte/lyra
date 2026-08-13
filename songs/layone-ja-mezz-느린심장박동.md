@@ -68,7 +68,7 @@ Very Very Good
 왜 아줌마 아들내미를 감금해
 > Lady, why are you locking up your son
 백화점에서 산 아들 가방 끈
-> That schoolbag strap you bought your son at the department store
+> That extra schooling you bought your son off a department-store shelf
 대신 집을 여러 개 사시는 게 Like 바둑
 > Better off buying a few houses instead, Like baduk
 

@@ -3,12 +3,14 @@ title: Marry Me
 title_ko: 
 artist: Ellegarden
 artist_ko:
-album: 
+album: Figureheads Compilation
 year: 2005
 artwork: https://dn721903.ca.archive.org/0/items/mbid-3fc54511-fd60-3380-91ec-95ee99ac51e8/mbid-3fc54511-fd60-3380-91ec-95ee99ac51e8-45330395054_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/80/04/b4/8004b431-aa35-afd1-3a18-5ad67dd84610/mzaf_2608148749443610331.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/marry-me/258761629?i=258762848&uo=4
+trackId: 258762848
+duration: 170
 genre: J-Rock
 lang: en
 tags: [일본, J-Rock, 2005]

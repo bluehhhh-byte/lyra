@@ -18,7 +18,7 @@ keywords: [별, 마음, 이유, 밤]
 emotion: 이별
 date: 2022-12-19
 published: 2022-12-19T13:17:09.000Z
-comment:
+comment: 속임수를 쓴 쪽은 상대인데도 용서를 구하고 마는 사람의 노래다. 공평하지 않은 게임이라 부르며 결국 다 끝났다고 스스로 정리한다.
 source: instagram
 source_tag: 221219_2215
 source_note: 

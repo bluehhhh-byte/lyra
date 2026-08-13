@@ -16,7 +16,7 @@ keywords: [성탄절, 새해, 인사, 마음]
 emotion: 기쁨
 date: 2022-12-24
 published: 2022-12-23T16:25:43.000Z
-comment:
+comment: 호세 펠리치아노의 캐럴을 밴드가 옮긴 곡이다. 성탄과 새해 인사를 스페인어와 영어로 번갈아 반복하는 것이 가사의 전부다.
 source: instagram
 source_tag: 221224_0124
 source_note: 

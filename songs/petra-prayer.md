@@ -16,7 +16,7 @@ keywords: [그녀, 빈자리, 마음, 밤]
 emotion: 고독
 date: 2023-01-11
 published: 2023-01-10T16:03:24.000Z
-comment:
+comment: 떠나 있는 동안 사랑하는 사람의 공허와 자신의 외로움을 함께 채워달라고 비는, 짧은 기도문 형태의 곡이다.
 source: instagram
 source_tag: 230111_0101
 source_note: 

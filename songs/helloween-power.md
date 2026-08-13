@@ -16,7 +16,7 @@ keywords: [사람, 기회, 인생]
 emotion: 저항
 date: 2024-10-30
 published: 2024-10-30T13:57:33.000Z
-comment:
+comment: 믿을 만한 사람이 앞에 서주는 일을 상상해보라는 말로 시작한다. 평생 기다린 기회를 놓치지 않겠다는 결심이 우리에게 힘이 있다는 후렴으로 이어진다.
 source: instagram
 source_tag: 241030_2252
 source_note: 

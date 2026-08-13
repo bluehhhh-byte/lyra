@@ -16,7 +16,7 @@ keywords: [동굴, 하루, 눈, 스테레오, 집착]
 emotion: 몽환
 date: 2023-02-23
 published: 2023-02-23T13:04:02.000Z
-comment:
+comment: 붙잡는 마음과 놓아주는 마음이 뒤엉킨 채 머물러 달라는 말만 반복되는 곡이다. 문법이 또렷하지 않은 영어 가사가 그대로 몽롱한 질감이 된다.
 source: instagram
 source_tag: 230223_2203
 source_note: 

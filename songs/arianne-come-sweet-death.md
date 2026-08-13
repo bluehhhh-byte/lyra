@@ -16,7 +16,7 @@ keywords: [상처, 고통, 존중]
 emotion: 체념
 date: 2024-10-28
 published: 2024-10-27T23:40:29.000Z
-comment:
+comment: 실망시켰다는 고백에서 시작해 모든 걸 끝내고 떠나는 게 최선 같다는 말로 넘어간다. 신세기 에반게리온 극장판에 쓰인 곡이라 파멸의 장면과 함께 기억된다.
 source: instagram
 source_tag: 241028_0834
 source_note: 

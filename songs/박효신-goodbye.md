@@ -18,7 +18,7 @@ keywords: [오후, 여름, 화면, 눈물, 숨바꼭질, 기억]
 emotion: 이별
 date: 2022-12-30
 published: 2022-12-30T10:08:17.000Z
-comment:
+comment: 2019년 싱글로, 멈춰버린 화면 속에서 웃고 있는 사람에게 늦은 작별을 건넨다. 고맙다는 말이 왜 그렇게 어려웠는지 자문하는 대목이 축이다.
 source: instagram
 source_tag: 221230_1907
 source_note: 

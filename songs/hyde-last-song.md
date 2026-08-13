@@ -16,7 +16,7 @@ keywords: [음식, 부적응자, 무감각]
 emotion: 고독
 date: 2024-10-11
 published: 2024-10-11T14:44:55.000Z
-comment:
+comment: 어디를 가도 어울리지 않는다고 느끼는 부적응자의 목소리로 쓰였다. 사랑받으면 더 높이 오를 수 있다는 말과, 분석하지 말아 달라는 요구가 나란히 놓인다.
 source: instagram
 source_tag: 241011_2343
 source_note: 

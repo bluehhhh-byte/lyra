@@ -18,7 +18,7 @@ keywords: [기억, 미소, 눈물, 시간, 곁]
 emotion: 이별
 date: 2022-12-30
 published: 2022-12-30T09:53:42.000Z
-comment:
+comment: 은퇴를 알린 뒤 나온 베스트 앨범에 실린 작별 노래다. 약속된 헤어짐을 알면서도 사랑해준 상대에게 이제는 잊어달라고 청한다.
 source: instagram
 source_tag: 221230_1853
 source_note: 

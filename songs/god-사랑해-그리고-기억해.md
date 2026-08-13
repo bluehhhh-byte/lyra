@@ -16,7 +16,7 @@ keywords: [눈물, 추억, 가슴, 순간, 품]
 emotion: 이별
 date: 2022-12-11
 published: 2022-12-11T04:53:24.000Z
-comment:
+comment: 사랑하는 사람을 보내야 했던 이들에게 바친다는 문장으로 시작하는 곡이다. 내 몫이 아니라는 인정과 후회되면 돌아와도 된다는 말이 함께 놓인다.
 source: instagram
 source_tag: 221211_1352
 source_note: 

@@ -16,7 +16,7 @@ keywords: [세상, 예수님, 눈]
 emotion: 희망
 date: 2024-11-24
 published: 2024-11-24T06:11:11.000Z
-comment:
+comment: 세상이 언제쯤 알게 될까라는 물음을 반복하는 기독교 록 곡이다. 슬프지도 화내지도 않는 가사라 마음이 힘들 때 꺼내 듣게 된다는 기록이 함께 붙어 있다.
 source: instagram
 source_tag: 241124_1509
 source_note: 

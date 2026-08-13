@@ -18,7 +18,7 @@ keywords: [눈물, 기억, 하늘, 길]
 emotion: 이별
 date: 2023-02-14
 published: 2023-02-13T19:56:05.000Z
-comment:
+comment: 이별을 인정하지 않고 나에게 오는 길이 조금 멀 뿐이라고 믿는 노래다. 영화 엽기적인 그녀에 쓰이며 널리 알려진 곡이다.
 source: instagram
 source_tag: 230214_0455
 source_note: 

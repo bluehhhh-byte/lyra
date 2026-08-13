@@ -16,7 +16,7 @@ keywords: [강, 물살, 부서, 발, 말]
 emotion: 체념
 date: 2025-04-08
 published: 2025-04-08T10:19:27.000Z
-comment:
+comment: 가사 대신 부서를 옮기고 강을 건넌 기록이 적혀 있다. 잘됐다는 말 뒤에 가려진 시기와 견제, 돌아갈 곳이 없다는 자각을 곡의 자리에 대신 놓았다.
 source: instagram
 source_tag: 240408_1906
 source_note: 

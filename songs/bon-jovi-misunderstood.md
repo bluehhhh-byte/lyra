@@ -18,7 +18,7 @@ keywords: [시간, 소파, 밤, 친구, 말]
 emotion: 이별
 date: 2022-12-09
 published: 2022-12-08T23:31:43.000Z
-comment:
+comment: 2002년 앨범 Bounce 수록곡으로, 말을 잘못한 밤들을 되감고 싶어 하는 곡이다. 오해였다고 반복하면서 문 밖에 서 있는 자리를 벗어나지 못한다.
 source: instagram
 source_tag: 221209_0831
 source_note: 

@@ -16,7 +16,7 @@ keywords: [사람, 인생, 도움, 속삭임, 의심]
 emotion: 사랑
 date: 2023-03-07
 published: 2023-03-06T15:16:25.000Z
-comment:
+comment: 스스로가 자신의 최악의 적이던 시절에 자기를 일으켜 세운 사람에게 뒤늦게 고맙다고 말하는 곡이다. 옆에 있는 것을 당연하게 여겼다는 후회가 함께 붙어 있다.
 source: instagram
 source_tag: 230307_0014
 source_note: 

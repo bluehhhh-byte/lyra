@@ -18,7 +18,7 @@ keywords: [일몰, 눈물, 짐, 무덤, 영혼]
 emotion: 고독
 date: 2023-03-09
 published: 2023-03-08T23:29:41.000Z
-comment:
+comment: 우리는 모두 혼자 죽는다는 말을 반복하며 떠날 사람은 얼른 줄을 서라고 말하는 곡이다. 짐을 다시 싸고 양지바른 곳에 묻히겠다는 체념이 그 아래 깔려 있다.
 source: instagram
 source_tag: 230309_0829
 source_note: 

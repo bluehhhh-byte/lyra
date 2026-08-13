@@ -16,7 +16,7 @@ keywords: [세계, 방, 문]
 emotion: 고독
 date: 2024-12-27
 published: 2024-12-26T16:30:08.000Z
-comment:
+comment: 설명할 수 없는 세계가 자기 안에 있고 문들은 전부 똑같아 보인다고 한다. 이름조차 기억나지 않는 화자가 내가 누구인지 말해달라고 청하는 것으로 끝난다.
 source: instagram
 source_tag: 241227_0129
 source_note: 

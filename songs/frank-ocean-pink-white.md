@@ -7,8 +7,10 @@ album: Blonde
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/f798a866107715dd6dc1049e498ce21f/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/3/9/0/539d5ac2b897f16027d0aaf22d844f15.mp3?hdnea=exp=1786584298~acl=/api/1/1/5/3/9/0/539d5ac2b897f16027d0aaf22d844f15.mp3*~data=user_id=0,application_id=42~hmac=3e9c58aebdbddd6b944af0d0f739c0f54ed2b139436e76c37c48018cbd191a5c
-trackId:
-duration: 184
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/pink-white/1146195596?i=1146195714&uo=4
+trackId: 1146195714
+duration: 185
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2016]

@@ -16,7 +16,7 @@ keywords: [아침, 고향, 폭풍, 산, 길, 배]
 emotion: 그리움
 date: 2023-03-03
 published: 2023-03-02T23:03:26.000Z
-comment:
+comment: 먼 타지에서 아침을 맞으며 폭풍과 산을 다 지나 고향으로 돌아가겠다고 말하는 곡이다. 돛 없는 배 같다는 비유로 그리움의 크기를 잰다.
 source: instagram
 source_tag: 230303_0803
 source_note: 

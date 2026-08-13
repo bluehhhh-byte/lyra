@@ -16,7 +16,7 @@ keywords: [이름, 명성, 다리]
 emotion: 슬픔
 date: 2025-01-20
 published: 2025-01-19T22:07:54.000Z
-comment:
+comment: 이름은 몰랐고 소문만 알던 여자가 다리에서 몸을 던진 일을 마을의 시선으로 되짚는다. 소문이 퍼진다는 말이 후렴에서 반복되며 죽음이 이야깃거리로 소비되는 방식을 드러낸다.
 source: instagram
 source_tag: 250120_0707
 source_note: 

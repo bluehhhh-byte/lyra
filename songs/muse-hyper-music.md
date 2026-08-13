@@ -16,7 +16,7 @@ keywords: [거짓말, 무덤, 세계]
 emotion: 분노
 date: 2024-10-14
 published: 2024-10-13T23:57:00.000Z
-comment:
+comment: 황금빛 거짓말에 배신당한 인간이 원한 적도 없다고 잘라내는 곡이다. 누구도 믿지 않겠다는 결심이 분노보다 자유에 가깝게 들린다. 2001년 Origin of Symmetry에 실렸다.
 source: instagram
 source_tag: 241014_0856
 source_note: 

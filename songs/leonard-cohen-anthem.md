@@ -16,7 +16,7 @@ keywords: [새, 종, 비둘기, 틈, 빛, 전쟁]
 emotion: 희망
 date: 2025-01-03
 published: 2025-01-02T23:48:56.000Z
-comment:
+comment: 전쟁은 다시 벌어지고 비둘기는 다시 팔린다는 인식 위에서, 완벽한 헌신은 잊고 아직 울릴 수 있는 종을 울리라고 한다. 모든 것에 난 틈으로 빛이 들어온다는 구절이 축이다.
 source: instagram
 source_tag: 250103_0848
 source_note: 

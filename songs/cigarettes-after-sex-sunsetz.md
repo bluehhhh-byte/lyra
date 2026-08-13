@@ -7,8 +7,10 @@ album: Cigarettes After Sex
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/2db20377876da16feb8ec9652e835a81/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/9/7/0/697b2adc2271af95c13106c0ff0e433e.mp3?hdnea=exp=1786559367~acl=/api/1/1/6/9/7/0/697b2adc2271af95c13106c0ff0e433e.mp3*~data=user_id=0,application_id=42~hmac=39f30a4593c68da7ce583daae77cdd9f6160abca145b00943f823a3e0a83ea57
-trackId: 
-duration: 214
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/sunsetz/1217977525?i=1217977722&uo=4
+trackId: 1217977722
+duration: 215
 genre: Dream Pop
 lang: en
 tags: [영미, Dream Pop, 2017]

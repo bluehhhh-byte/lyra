@@ -18,7 +18,7 @@ keywords: [새벽, 바다, 바람, 별빛, 하늘, 날개]
 emotion: 이별
 date: 2023-02-17
 published: 2023-02-17T10:17:21.000Z
-comment:
+comment: 붉게 타 멍든 하늘과 힘없이 접은 날개를 두고 나를 잊었느냐고 묻는 곡이다. 한국어로 쓴 가사를 헤비메탈 편성 위에 얹었다.
 source: instagram
 source_tag: 230217_1916
 source_note: 

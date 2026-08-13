@@ -16,7 +16,7 @@ keywords: [장미, 가시, 건물, 도시, 바람, 향기]
 emotion: 저항
 date: 2023-03-09
 published: 2023-03-09T10:13:15.000Z
-comment:
+comment: 삭막한 도시의 건물 틈에서 자란 장미에 자신을 겹쳐 꺾이지 않겠다고 말하는 곡이다. 예쁘지 않으면 잘라내고 예쁘면 꺾어버리는 세상에 대한 대답이기도 하다.
 source: instagram
 source_tag: 230309_1910
 source_note: 

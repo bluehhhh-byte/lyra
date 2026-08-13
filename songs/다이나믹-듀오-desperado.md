@@ -16,7 +16,7 @@ keywords: [무법자, 넥타이, 유리천장, 돈, 총]
 emotion: 분노
 date: 2022-12-22
 published: 2022-12-22T14:30:01.000Z
-comment:
+comment: 불평등이 굳어진 사회에서 무법자가 되는 상상을 해보는 곡이다. 다 쏘고 약탈하면 어떻겠냐고 내뱉은 뒤 농담이라고 물러서는 구성이다.
 source: instagram
 source_tag: 221222_2319
 source_note: 

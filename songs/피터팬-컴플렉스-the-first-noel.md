@@ -16,7 +16,7 @@ keywords: [별, 목자, 천사, 아기, 예물, 동방]
 emotion: 기쁨
 date: 2022-12-24
 published: 2022-12-23T16:15:24.000Z
-comment:
+comment: 오래 전부터 전해진 전통 캐럴을 옮긴 곡으로, 목자와 동방 박사가 별을 따라가는 성탄 이야기를 그대로 따라간다.
 source: instagram
 source_tag: 221224_0114
 source_note: 

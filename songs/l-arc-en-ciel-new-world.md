@@ -18,7 +18,7 @@ keywords: [하늘, 빛, 어둠, 날개, 바람]
 emotion: 희망
 date: 2023-01-13
 published: 2023-01-12T23:19:52.000Z
-comment:
+comment: 2005년 앨범 AWAKE 수록곡으로, 어둠을 가르는 빛을 붙잡고 날아오르는 각성을 노래한다. 뒤돌아본 과거는 시시하다고 잘라내는 첫 줄이 방향을 정한다.
 source: instagram
 source_tag: 230113_0819
 source_note: 

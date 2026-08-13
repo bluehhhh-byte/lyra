@@ -18,7 +18,7 @@ keywords: [꿈, 구름, 하늘, 달, 친구, 태양]
 emotion: 기쁨
 date: 2023-02-10
 published: 2023-02-09T23:21:21.000Z
-comment:
+comment: 구름에 닿을 만큼 뛰고 친구들과 달을 보며 소리치던 하루를 인생 최고의 날이라 부르는 곡이다. 이 꿈에서 나를 깨우지 말아 달라는 말이 후렴에 붙어 있다.
 source: instagram
 source_tag: 230210_0820
 source_note: 

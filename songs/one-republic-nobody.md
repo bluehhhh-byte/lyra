@@ -16,7 +16,7 @@ keywords: [책임, 밤]
 emotion: 사랑
 date: 2024-12-12
 published: 2024-12-11T23:05:04.000Z
-comment:
+comment: 상대가 악마와 싸울 때 밤을 새워서라도 곁에 있겠다는 약속을 반복한다. 아무도 자신만큼 그를 알지 못한다는 말이 후렴에서 애정과 자신감을 함께 떠받친다.
 source: instagram
 source_tag: 241212_0804
 source_note: 

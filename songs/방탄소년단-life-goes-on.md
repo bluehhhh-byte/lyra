@@ -18,7 +18,7 @@ keywords: [봄, 비, 먹구름, 거리, 발자국, 감기]
 emotion: 위로
 date: 2023-02-07
 published: 2023-02-07T13:53:41.000Z
-comment:
+comment: 예고 없이 세상이 멈춘 해에 발자국이 지워진 거리와 넘어져 있는 자신을 그린 곡이다. 방탄소년단이 코로나 시기에 낸 앨범 BE의 타이틀곡이다.
 source: instagram
 source_tag: 230207_2252
 source_note: 

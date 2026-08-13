@@ -18,7 +18,7 @@ keywords: [밤, 눈물, 상처, 거짓말, 마음]
 emotion: 이별
 date: 2023-01-02
 published: 2023-01-02T10:30:00.000Z
-comment:
+comment: 2022년 EP YOUNG-LUV.COM 수록곡으로, 상처받기 전에 먼저 식어버린 마음을 말한다. 미안하다고 하면서도 절대 변하지 않겠다는 태도를 끝까지 유지한다.
 source: instagram
 source_tag: 230102_1929
 source_note: 

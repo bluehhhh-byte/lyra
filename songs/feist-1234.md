@@ -3,12 +3,14 @@ title: 1234
 title_ko: 
 artist: Feist
 artist_ko:
-album: The Reminder
+album: The Reminder (Deluxe Version)
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/980fbd5c10ceb29f2fc3ba390a8e8dcb/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/7/e/0/77e722f21c7489b6c12f47e0637a9fce.mp3?hdnea=exp=1786584296~acl=/api/1/1/7/7/e/0/77e722f21c7489b6c12f47e0637a9fce.mp3*~data=user_id=0,application_id=42~hmac=98f4eb264e35b6a8e8919fd0e23aebb36e7db3077ee42b5156d891bcad3a7c39
-trackId:
-duration: 183
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/1234/1440837029?i=1440837804&uo=4
+trackId: 1440837804
+duration: 184
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2007]

@@ -16,7 +16,7 @@ keywords: [립스틱, 눈물, 거짓말, 비밀, 친구]
 emotion: 이별
 date: 2022-12-13
 published: 2022-12-12T23:40:42.000Z
-comment:
+comment: 거짓말이 드러난 뒤에도 그 사람을 머릿속에 두고 사는 상태를 말한다. 괜찮지 않다고 인정하면서 그 고통이 싫지만은 않다고 덧붙인다.
 source: instagram
 source_tag: 221213_0840
 source_note: 

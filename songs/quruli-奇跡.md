@@ -16,7 +16,7 @@ keywords: [하늘, 눈물, 단추, 꽃, 한숨]
 emotion: 희망
 date: 2023-01-08
 published: 2023-01-08T09:31:07.000Z
-comment:
+comment: 말이 어긋나고 단추를 잘못 채우는 일상 속에서 그림 같은 행복을 조금만 나눠달라고 비는 곡이다. 내년에도 만나자는 인사로 끝을 맺는다.
 source: instagram
 source_tag: 230108_1830
 source_note: 

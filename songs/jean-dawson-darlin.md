@@ -16,7 +16,7 @@ keywords: [꽃, 관, 그대]
 emotion: 불안
 date: 2024-10-22
 published: 2024-10-21T23:22:13.000Z
-comment:
+comment: 내가 죽으면 꽃을 자주 가져다 줄 거냐고 묻는 말로 시작한다. 너를 위해 죽을 수 있다는 고백이 관과 총 같은 이미지와 붙어 있어 애정이 유서처럼 읽힌다.
 source: instagram
 source_tag: 241022_0820
 source_note: 

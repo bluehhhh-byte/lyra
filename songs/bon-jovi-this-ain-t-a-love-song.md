@@ -18,7 +18,7 @@ keywords: [장미, 여름, 눈동자, 밤, 무릎, 작별]
 emotion: 이별
 date: 2022-12-09
 published: 2022-12-09T14:11:00.000Z
-comment:
+comment: 1995년 앨범 These Days의 첫 싱글로, 사랑 노래가 아니라고 부정하면서 사랑을 말한다. 장미가 시들 때 알아챘어야 했다는 뒤늦은 자각으로 시작한다.
 source: instagram
 source_tag: 221209_2310
 source_note: 

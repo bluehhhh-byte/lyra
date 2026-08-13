@@ -16,7 +16,7 @@ keywords: [축제, 악마, 손가락, 나무, 무대]
 emotion: 저항
 date: 2023-02-07
 published: 2023-02-06T23:39:56.000Z
-comment:
+comment: 내 걱정은 세상에서 제일 쓸데없는 짓이라며 남의 오지랖을 사절하는 곡이다. 남을 깎아내리는 대신 자기를 깎아 나눴다는 구절이 중심에 있다.
 source: instagram
 source_tag: 230207_0838
 source_note: 해외 유명 록페스티벌 : 썸머소닉(일본), 코첼라(미국), 글라스톤 베리(영국) · Artistree : Artist(예술가)+Tree(나무) 합성어 · I am Groot : 마블 영화 '가디언스 오브 갤럭시' 캐릭터의 대사. 할 얘긴 많지만 말을 아껴야할 때 사용.

@@ -18,7 +18,7 @@ keywords: [바다, 파도, 욕망, 환상, 태양]
 emotion: 체념
 date: 2023-01-19
 published: 2023-01-18T23:11:07.000Z
-comment:
+comment: 1996년 싱글로, 사랑도 욕망도 파도처럼 부서져 환상이 되기를 바라는 짧은 노래다. 지금 다 태워달라는 요청으로 체념을 마무리한다.
 source: instagram
 source_tag: 230119_0810
 source_note: 

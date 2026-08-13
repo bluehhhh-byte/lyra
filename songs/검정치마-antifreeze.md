@@ -16,7 +16,7 @@ keywords: [우주, 태양, 눈보라]
 emotion: 사랑
 date: 2024-11-20
 published: 2024-11-19T23:07:12.000Z
-comment:
+comment: 우주를 홀로 떠돌다 태양과 달이 겹치는 순간에야 모든 걸 이해하게 될 거라고 한다. 눈보라 속에서 처음 본 눈동자를 부르는 대목이 정점이다. 검정치마 1집에 실린 곡이다.
 source: instagram
 source_tag: 241120_0801
 source_note: 

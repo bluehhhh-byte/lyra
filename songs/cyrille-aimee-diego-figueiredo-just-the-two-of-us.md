@@ -16,7 +16,7 @@ keywords: [빗방울, 태양, 무지개]
 emotion: 사랑
 date: 2024-10-26
 published: 2024-10-25T16:39:37.000Z
-comment:
+comment: 빌 위더스와 그로버 워싱턴 주니어의 1980년 곡을 목소리와 기타만으로 옮긴다. 빗방울과 무지개의 이미지 위에 둘이면 해낼 수 있다는 말이 담담하게 놓인다.
 source: instagram
 source_tag: 241026_0138
 source_note: 

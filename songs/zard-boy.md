@@ -18,7 +18,7 @@ keywords: [키스, 밤, 미소, 도시, 친구]
 emotion: 사랑
 date: 2025-08-18
 published: 2025-08-17T22:49:26.000Z
-comment:
+comment: 첫 키스의 밤을 기억하느냐고 묻는 화자가, 도시에서 병사처럼 버티는 상대를 말없이 안아주고 싶다고 말한다. 사랑한다고 입에 담으면 거짓이 될 것 같다는 망설임이 곡의 중심이다.
 source: instagram
 source_tag: 250818_0745
 source_note: 소마이 신지, <여름정원> O.S.T.

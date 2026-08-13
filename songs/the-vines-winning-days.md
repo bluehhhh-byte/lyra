@@ -16,7 +16,7 @@ keywords: [승리, 황금, 날들]
 emotion: 회상
 date: 2025-01-22
 published: 2025-01-21T16:13:39.000Z
-comment:
+comment: 승리의 날들은 지나갔다는 문장으로 시작해, 그 아래에 황금이 있다는 말로 버틴다. 계속 노력해왔다는 말만 반복되는 자리에서 회한과 기대가 뒤섞인다.
 source: instagram
 source_tag: 250122_0113
 source_note: 

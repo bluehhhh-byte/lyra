@@ -16,7 +16,7 @@ keywords: [마리아, 상처, 황홀경]
 emotion: 위로
 date: 2024-10-17
 published: 2024-10-16T15:36:11.000Z
-comment:
+comment: 아베 마리아를 부르며 상처를 치유해 달라고 청하는 구조다. 너무 멀리 벗어난 게 아니냐는 자책이 황홀경을 향한 요청과 겹쳐 놓인다.
 source: instagram
 source_tag: 241017_1234
 source_note: 

@@ -16,7 +16,7 @@ keywords: [자동차, 하늘, 밤, 빛, 전화]
 emotion: 사랑
 date: 2022-12-12
 published: 2022-12-12T10:32:34.000Z
-comment:
+comment: 차 안에서 해 질 무렵의 빛을 함께 보던 짧은 시간을 노래한다. 상대를 빛 그 자체로 두어 따로 조명이 필요 없다고 말한다.
 source: instagram
 source_tag: 221212_1930
 source_note: 

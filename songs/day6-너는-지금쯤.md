@@ -18,7 +18,7 @@ keywords: [편지, 서랍, 약속, 기억, 얘기]
 emotion: 그리움
 date: 2023-02-20
 published: 2023-02-19T23:35:12.000Z
-comment:
+comment: 서랍 속 편지에 남은 옛 약속을 이제는 기억하지 않기로 한다는 노래다. 봄여름가을겨울 헌정 앨범에서 데이식스가 다시 부른 곡이다.
 source: instagram
 source_tag: 230220_0833
 source_note: 

@@ -18,7 +18,7 @@ keywords: [선착장, 가로등, 우주]
 emotion: 희망
 date: 2024-12-09
 published: 2024-12-09T13:18:15.000Z
-comment:
+comment: 교복에 어울리지 않는 말들을 가방에 숨긴 채 선착장 가로등 아래 서 있는 장면에서 시작한다. 호기심이 자신을 태울 걸 알면서도 어차피 재가 될 바에는 적어두라고 말한다.
 source: instagram
 source_tag: 241209_2217
 source_note: 

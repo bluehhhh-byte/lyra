@@ -16,7 +16,7 @@ keywords: [시절, 잔, 순간]
 emotion: 그리움
 date: 2024-10-27
 published: 2024-10-27T05:10:05.000Z
-comment:
+comment: 삶이 단순했고 잔이 반쯤 차 보이던 시절을 그리워한다. 친구 사이에도 유통기한이 있다는 사실을 인정하는 것이 이 곡이 하는 일이다.
 source: instagram
 source_tag: 241027_1408
 source_note: 

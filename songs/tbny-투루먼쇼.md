@@ -18,7 +18,7 @@ keywords: [카메라, 세트장, 파도, 달빛, 감옥, 등대]
 emotion: 불안
 date: 2022-12-15
 published: 2022-12-15T14:19:07.000Z
-comment:
+comment: 2006년 앨범 Masquerade 수록곡으로, 영화 트루먼 쇼처럼 각본에 갇힌 삶을 빌려 온다. 카메라와 세트장 밖으로 노를 저어 나가겠다는 결심으로 끝난다.
 source: instagram
 source_tag: 221215_2316
 source_note: 

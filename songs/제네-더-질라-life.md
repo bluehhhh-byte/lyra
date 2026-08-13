@@ -16,7 +16,7 @@ keywords: [가사, 미련, 10년]
 emotion: 회상
 date: 2024-11-26
 published: 2024-11-25T23:35:55.000Z
-comment:
+comment: 무엇이 여기까지 이끌었는지 묻고 10년 전의 자신에게 답을 구한다. 정답은 없고 목표를 세우면 그다음을 봐야 한다는 말로 미련을 정리한다.
 source: instagram
 source_tag: 241126_0834
 source_note: 

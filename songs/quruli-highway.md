@@ -16,7 +16,7 @@ keywords: [여행, 달, 자동차, 면허, 꽃]
 emotion: 희망
 date: 2023-03-11
 published: 2023-03-11T14:24:44.000Z
-comment:
+comment: 여행을 떠날 이유를 백 가지쯤 늘어놓다가 사실은 이유 따위 하나도 없다고 뒤집는 곡이다. 구루리가 영화 조제, 호랑이 그리고 물고기들에 붙인 노래다.
 source: instagram
 source_tag: 230311_2323
 source_note: 

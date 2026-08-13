@@ -18,7 +18,7 @@ keywords: [아침, 여름, 가을, 심장, 미로, 기억]
 emotion: 설렘
 date: 2023-01-02
 published: 2023-01-02T09:51:44.000Z
-comment:
+comment: 2022년 싱글로, 확실하지 않은 마음을 먼저 말하기는 싫어하는 상태를 그린다. 여름에서 가을로 넘어간 시간과 미로 같은 기다림이 겹쳐 놓인다.
 source: instagram
 source_tag: 230102_1850
 source_note: 

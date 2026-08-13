@@ -18,7 +18,7 @@ keywords: [바위, 안개, 절벽, 집, 주먹, 운명]
 emotion: 저항
 date: 2023-01-03
 published: 2023-01-03T09:45:34.000Z
-comment:
+comment: 바위를 다시 밀어 올리는 대신 굴러 떨어지게 두는 시시포스를 그린다. 이건 운명과 상관없다고 말하며, 중간에 선 자는 역사에서 잊힌다고 덧붙인다.
 source: instagram
 source_tag: 230103_1845
 source_note: 

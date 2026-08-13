@@ -16,7 +16,7 @@ keywords: [후회, 한숨, 약속, 손, 말]
 emotion: 회상
 date: 2022-12-07
 published: 2022-12-06T15:01:46.000Z
-comment:
+comment: 뒤늦게 꺼낸 후회와 속에 담아두기만 한 말들을 정리하는 곡이다. 한숨에게 숨지 말자고 해놓고는 상대를 나의 작은 영웅이라 부른다.
 source: instagram
 source_tag: 221207_0000
 source_note: 

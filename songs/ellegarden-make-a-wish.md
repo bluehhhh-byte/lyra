@@ -18,7 +18,7 @@ keywords: [일요일, 소원, 손, 집, 길]
 emotion: 위로
 date: 2023-02-08
 published: 2023-02-07T23:19:24.000Z
-comment:
+comment: 일요일이 끝났는데도 아무도 일어서지 않는 자리에서 쉬운 소원 하나를 빌자고 말하는 곡이다. 그 소원은 네가 혼자가 아니라는 것 하나다.
 source: instagram
 source_tag: 230208_0818
 source_note: 

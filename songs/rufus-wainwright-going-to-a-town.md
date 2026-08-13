@@ -16,7 +16,7 @@ keywords: [마을, 사람들]
 emotion: 분노
 date: 2024-12-01
 published: 2024-11-30T15:57:11.000Z
-comment:
+comment: 이미 불타버린 마을로 간다는 말로 미국에 지쳤다고 반복한다. 진실을 말할 생각이 없어 보이는 나라를 향한 환멸이 조용한 어조라서 더 분명하게 들린다.
 source: instagram
 source_tag: 241201_0106
 source_note: 

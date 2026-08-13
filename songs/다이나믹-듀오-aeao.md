@@ -18,7 +18,7 @@ keywords: [동전, 이력서, 휘파람, 비바람, 주름]
 emotion: 희망
 date: 2022-12-22
 published: 2022-12-22T14:48:53.000Z
-comment:
+comment: 실패와 회복을 이력서 고쳐 쓰듯 반복해온 시간을 정리하는 곡이다. 성공 뒤에 따라온 비바람과 자기 착취를 인정하면서도 꿈은 놓지 않는다.
 source: instagram
 source_tag: 221222_2348
 source_note: 

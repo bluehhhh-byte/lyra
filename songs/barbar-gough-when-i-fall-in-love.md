@@ -18,7 +18,7 @@ keywords: [달빛, 키스, 햇살, 마음, 세상]
 emotion: 사랑
 date: 2023-02-22
 published: 2023-02-21T23:27:41.000Z
-comment:
+comment: 사랑에 빠진다면 영원할 것이고 아니면 아예 빠지지 않겠다는 조건을 거는 곡이다. 1952년에 만들어져 여러 가수가 불러 온 오래된 스탠더드다.
 source: instagram
 source_tag: 230222_0826
 source_note: 

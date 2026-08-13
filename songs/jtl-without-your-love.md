@@ -16,7 +16,7 @@ keywords: [달, 별빛, 비, 무지개, 구름]
 emotion: 체념
 date: 2022-12-18
 published: 2022-12-18T04:56:22.000Z
-comment:
+comment: 네 사랑 없이 나아가겠다는 선언을 반복하는 곡이다. 달을 내리고 별빛을 끄는 이미지로 감정을 지우고 미래만 남기려 한다.
 source: instagram
 source_tag: 221218_1355
 source_note: 

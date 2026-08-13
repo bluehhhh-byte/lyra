@@ -16,7 +16,7 @@ keywords: [거리, 울타리, 춤, 밤, 광기]
 emotion: 불안
 date: 2023-02-19
 published: 2023-02-19T08:29:08.000Z
-comment:
+comment: 압박에 눌린 사람들과 그 위에서 웃는 광기를 그리다가 사랑에 한 번 더 기회를 주자고 묻는 곡이다. 퀸과 데이비드 보위가 함께 만들고 함께 부른 1981년 싱글이다.
 source: instagram
 source_tag: 230219_1728
 source_note: 

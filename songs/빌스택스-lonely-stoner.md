@@ -18,7 +18,7 @@ keywords: [비, 음악, 핸드폰, 천장, 영화, 밤]
 emotion: 고독
 date: 2023-02-05
 published: 2023-02-04T15:30:26.000Z
-comment:
+comment: 아무 계획 없는 게 오늘의 계획이라며 연락을 끊고 방에 틀어박히는 곡이다. 잃어버린 자신을 찾으면 그때 돌아오겠다는 말로 자리를 비운다.
 source: instagram
 source_tag: 230205_0030
 source_note: 

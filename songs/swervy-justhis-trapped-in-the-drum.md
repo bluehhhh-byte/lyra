@@ -16,7 +16,7 @@ keywords: [사랑, 색깔, 손목]
 emotion: 불안
 date: 2025-05-04
 published: 2025-05-04T02:39:41.000Z
-comment:
+comment: 흑백에 덮여 숨을 못 쉬겠다는 감각을 반복한다. 정신을 잃을 때까지 밀어붙이는 밤과 질식에 익숙해진 상태를 사랑의 결과로 늘어놓는 곡이다.
 source: instagram
 source_tag: 250504_1139
 source_note: 

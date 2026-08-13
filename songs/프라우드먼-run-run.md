@@ -18,7 +18,7 @@ keywords: [엔진, 밤, 추억, 집, 베이스]
 emotion: 그리움
 date: 2023-01-28
 published: 2023-01-27T15:19:41.000Z
-comment:
+comment: 앞으로 가려 해도 자꾸 뒤로 돌아 상대에게 달려가고 있다는 곡이다. 댄스 크루 프라우드먼이 낸 싱글이고 돌아오지 못할 걸 알면서도 멈추지 않는다.
 source: instagram
 source_tag: 230128_0018
 source_note: 

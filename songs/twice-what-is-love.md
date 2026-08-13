@@ -18,7 +18,7 @@ keywords: [영화, 책, 드라마, 사탕, 하늘, 상상]
 emotion: 설렘
 date: 2023-03-10
 published: 2023-03-10T13:20:29.000Z
-comment:
+comment: 영화와 책과 드라마에서만 배운 사랑이 실제로는 어떤 느낌일지 궁금해 견디지 못하는 곡이다. 박진영이 쓴 곡이고 뮤직비디오는 유명 영화 장면들을 그대로 옮겨 놓았다.
 source: instagram
 source_tag: 230310_1020
 source_note: 

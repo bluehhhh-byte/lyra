@@ -18,7 +18,7 @@ keywords: [심장, 별, 집, 잠, 달리기]
 emotion: 몽환
 date: 2023-01-04
 published: 2023-01-03T23:40:45.000Z
-comment:
+comment: 2007년 싱글로, 조용한 심장박동과 잠든 사람을 작은 별에 빗댄 짧은 곡이다. 집에 가기엔 너무 멀리 왔느냐는 물음 하나로 분위기가 뒤집힌다.
 source: instagram
 source_tag: 230104_0840
 source_note: 

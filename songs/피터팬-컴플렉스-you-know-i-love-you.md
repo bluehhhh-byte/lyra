@@ -16,7 +16,7 @@ keywords: [모습, 말, 욕심, 마음]
 emotion: 사랑
 date: 2022-12-24
 published: 2022-12-23T16:45:25.000Z
-comment:
+comment: 세 번이나 상대를 모른 척했다는 고백으로 시작하는 곡이다. 자신의 욕심과 부족함 탓에 얼굴을 볼 수 없다면서도 떠나지 말라고 매달린다.
 source: instagram
 source_tag: 221224_0144
 source_note: 

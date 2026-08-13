@@ -3,12 +3,14 @@ title: Singin' In The Rain
 title_ko: 
 artist: Gene Kelly
 artist_ko:
-album: Singing In The Rain - Original Film Soundtrack
+album: Singin' in the Rain (Original Motion Picture Soundtrack)
 year: 1952
 artwork: https://cdn-images.dzcdn.net/images/cover/b122052f255a1d34a3d0cb76c190085e/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3?hdnea=exp=1786584303~acl=/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3*~data=user_id=0,application_id=42~hmac=4d67a090f5dd59e028bbacccafd35e7dba71738d89496a107bb4a0b9be914952
-trackId:
-duration: 175
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/singin-in-the-rain/1455420325?i=1455420758&uo=4
+trackId: 1455420758
+duration: 294
 genre: Soundtrack
 lang: en
 tags: [영미, Soundtrack, 1952]
@@ -16,7 +18,7 @@ keywords: [비, 구름, 태양, 골목, 춤, 미소]
 emotion: 기쁨
 date: 2023-02-12
 published: 2023-02-11T17:37:46.000Z
-comment:
+comment: 머리 위 먹구름을 보고도 웃으며 빗속에서 노래하고 춤춘다는 곡이다. 1929년에 만들어진 노래를 1952년 영화 사랑은 비를 타고에서 진 켈리가 다시 불렀다.
 source: instagram
 source_tag: 230212_0237
 source_note: 

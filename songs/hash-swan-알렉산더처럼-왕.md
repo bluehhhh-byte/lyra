@@ -16,7 +16,7 @@ keywords: [주인공, 카펫, 잡지]
 emotion: 저항
 date: 2024-10-17
 published: 2024-10-16T23:43:10.000Z
-comment:
+comment: 주인공이 못 될 바에는 자겠다는 말로 시작해 붉은 카펫과 잡지 표지를 목표로 세운다. 벽 뒤가 무서우면 비키라는 말이 편견을 깨겠다는 선언으로 이어진다.
 source: instagram
 source_tag: 241017_0841
 source_note: 

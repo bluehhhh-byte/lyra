@@ -18,7 +18,7 @@ keywords: [컨트롤러, 부리부리, 정신]
 emotion: 몽환
 date: 2025-03-19
 published: 2025-03-18T23:19:35.000Z
-comment:
+comment: 정신이 맑은 게 싫다며 컨트롤러를 놓아버린 상태를 반복구로 붙든다. 아직 잊지 못한 상대를 향한 말이 부리부리라는 무의미한 소리에 실려 흐려진다.
 source: instagram
 source_tag: 250319_0819
 source_note: 

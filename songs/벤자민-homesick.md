@@ -18,7 +18,7 @@ keywords: [신발, 발자국, 초침, 걸음마, 물, 길]
 emotion: 고독
 date: 2022-12-06
 published: 2022-12-06T14:53:18.000Z
-comment:
+comment: 드라마 약한영웅 Class 1 OST로, 돌아갈 집을 모르는 상태를 병처럼 말한다. 맞는 신발이 없다는 이미지로 어디에도 맞지 않는 자신을 그린다.
 source: instagram
 source_tag: 221206_2352
 source_note: 

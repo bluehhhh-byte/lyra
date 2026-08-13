@@ -16,7 +16,7 @@ keywords: [비눗방울, 흐름, 마음]
 emotion: 저항
 date: 2024-11-23
 published: 2024-11-23T00:55:28.000Z
-comment:
+comment: 남들 하는 대로 따라 사는 사람과 물감으로 칠한 듯 완벽해 보이는 세상을 비꼰다. 겉만 좋아 보이는 삶을 거절하는 태도가 곡의 중심에 있다.
 source: instagram
 source_tag: 241123_0951
 source_note: 

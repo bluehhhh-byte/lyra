@@ -16,7 +16,7 @@ keywords: [괴수, 밤, 비밀]
 emotion: 몽환
 date: 2025-03-18
 published: 2025-03-17T23:49:02.000Z
-comment:
+comment: 밤의 괴수가 되어서라도 비밀을 남겨두고 싶다는 말을 반복한다. 별을 씹어 삼키듯 알아가도 아침이면 잊는다는 인식 위에, 세상이 미완성이라 계속 알고 싶다는 태도를 얹는다.
 source: instagram
 source_tag: 250318_0848
 source_note: 

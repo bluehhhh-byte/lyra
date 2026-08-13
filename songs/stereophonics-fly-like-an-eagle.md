@@ -18,7 +18,7 @@ keywords: [독수리, 새벽, 심장, 키스, 마음]
 emotion: 희망
 date: 2023-02-21
 published: 2023-02-20T23:19:27.000Z
-comment:
+comment: 이제 그만둘 때가 됐다는 생각과 독수리처럼 날아 다시 태어나겠다는 마음이 한 곡에 같이 놓인다. 다 잘될 거라는 후렴이 그 위를 계속 덮는다.
 source: instagram
 source_tag: 230221_0818
 source_note: 

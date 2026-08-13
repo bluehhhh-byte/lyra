@@ -16,7 +16,7 @@ keywords: [질투, 감정]
 emotion: 불안
 date: 2024-12-17
 published: 2024-12-16T23:44:34.000Z
-comment:
+comment: 질투 때문에 죽고 싶지도 이렇게 살고 싶지도 않다는 상태를 그대로 적는다. 다른 남자들과 자신을 견주며 밤을 보냈다고 인정하는 대목이 이 곡에서 가장 솔직하다.
 source: instagram
 source_tag: 241217_0844
 source_note: 이어쓴 댓글 병합

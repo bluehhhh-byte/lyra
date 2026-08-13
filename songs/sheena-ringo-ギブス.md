@@ -16,7 +16,7 @@ keywords: [사진, 덫, 사월, 거짓말, 내일]
 emotion: 사랑
 date: 2023-02-26
 published: 2023-02-26T11:49:16.000Z
-comment:
+comment: 사진이 되면 내가 낡는다며 영원 같은 말을 싫어하면서도 꼭 안아 달라고 말하는 곡이다. 커트 코베인과 코트니 러브의 이름을 그대로 불러 두 사람 관계에 겹쳐 놓는다.
 source: instagram
 source_tag: 230226_2048
 source_note: 

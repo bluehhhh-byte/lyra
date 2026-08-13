@@ -16,7 +16,7 @@ keywords: [아침, 타르트, 거리, 반지, 침대]
 emotion: 사랑
 date: 2023-03-08
 published: 2023-03-07T23:17:12.000Z
-comment:
+comment: 아침에 치즈 타르트를 굽는 연인과 커플링을 사러 나가는 하루를 그대로 옮긴 곡이다. 가지 히데키는 시부야케이 계열로 분류되는 뮤지션이다.
 source: instagram
 source_tag: 230308_0818
 source_note: 
