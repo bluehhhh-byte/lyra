@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/7/1/3/0/713e239a8d4089b33fe30064
 trackId: 
 duration: 226
 genre: 
-lang: ko
+lang: en
 tags: [영미, Indie Rock, 2002]
 keywords: [도피, 눈]
 emotion: 체념

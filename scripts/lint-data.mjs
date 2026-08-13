@@ -55,12 +55,16 @@ for (const s of songs) {
     const missing = lines.filter((l) => {
       const t = l.en?.trim();
       if (!t || l.ko?.trim() || l.koMerged) return false;
-      if (/^[🗨✏]/.test(t)) return false;
+      if (/^[🗨✏]/u.test(t)) return false;
       const ko = (t.match(/[가-힣]/g) || []).length;
       return ko < 2 || (t.match(/[a-zA-Z぀-ヿ一-鿿]/g) || []).length >= ko;
     }).length;
     if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
   }
+  // 가사 없이 해설만 있는 곡 — 캡션에 가사를 안 적었거나 연주곡이다.
+  // 화면에는 노트만 뜨므로 어느 쪽인지 사람이 확인해 채우거나 표시해야 한다.
+  if (!lines.some((l) => l.en?.trim() || l.ko?.trim())) warn(f, "가사 줄 없음 (해설만 있음 — 연주곡이거나 가사 미기입)");
+
   // `>^N`이 문단 밖까지 가리키면 어느 줄을 덮는지가 불분명하다 — 조용히 넘기지 않는다
   const overflow = lines.filter((l) => l.koSpanError).length;
   if (overflow) err(f, `>^N 범위가 문단을 넘어감 ${overflow}곳`);

@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/
 trackId: 1754100092
 duration: 257
 genre: 
-lang: ko
+lang: en
 tags: [한국, Indie Rock, 2024]
 keywords: [불, 바다, 친구]
 emotion: 저항

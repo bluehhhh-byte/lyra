@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/56/
 trackId: 617154361
 duration: 229
 genre: 팝
-lang: ko
+lang: en
 tags: [유럽, Electronic, 2013]
 keywords: [세계, 방, 문]
 emotion: 고독

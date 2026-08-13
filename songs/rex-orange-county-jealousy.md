@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/5/c/1/0/5c1fa05d9baaf75e6caa1f0b
 trackId: 
 duration: 240
 genre: 
-lang: ko
+lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [질투, 감정]
 emotion: 불안
@@ -29,10 +29,13 @@ I don’t like how it goes, but I still go there, I’ll admit 이런 상황�
 여전히 그 길을 가고 있다는 걸 인정해
 
 And baby, it’s hard to see a way out
+> 그리고 그거 알아, 빠져나갈 길이 잘 안 보여
 그리고 자기야, 출구를 찾기가 힘들어
 (compare myself to many men)
+> (수많은 남자들과 나를 견주면서)
 (나 자신을 다른 남자들과 비교하면서)
 It’s hard to see a way out
+> 빠져나갈 길이 잘 안 보여
 출구를 찾기가 힘들어 
 (many nights spent hating on them) (그들을 미워하며 보낸 수많은 밤)
 It’s hard for me to see a way out 나로서는 출구를 찾기가 힘들어
@@ -58,9 +61,11 @@ Hope you know just how much I care 내가 얼마나 널 아끼는지 알았으
 
 I really hope you’re sleeping well 정말로 네가 잘 자고 있길 바라
 I’m excited just for waking up
+> 난 그저 눈을 뜨는 것만으로 설레
 and to see how your nice sleep was 네가 얼마나 잘 잤는지 보기 위해 일어나는 것만으로도 설레
 Breakfast dawn, I stretch and yawn 아침 식사 시간, 기지개를 펴고 하품을 해
 I start the day by texting you,
+> 하루를 네게 문자 보내며 시작하고,
 “Good morning, babe, how you feeling?” “좋은 아침, 자기야, 기분이 어때?“라고
 문자를 보내며 하루를 시작해
 I wish that I had woken next to you, but either way 네 옆에서 깨어났으면 좋았을 텐데, 하지만 어쨌든

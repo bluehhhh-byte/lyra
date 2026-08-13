@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/8/5/f/0/85f62ae25ea5d68078ec2132
 trackId: 
 duration: 213
 genre: 
-lang: ko
+lang: en
 tags: [영미, Indie Rock, 2006]
 keywords: [승리, 황금, 날들]
 emotion: 회상
@@ -38,6 +38,7 @@ All my time 내 모든 시간 동안
 I’m just seein’ it rise 난 그저 그것이 올라가는 걸 보고 있어
 ‘Cause it could be the land that’s over me 그것은 나를 덮고 있는 땅일 수도 있으니까
 (land that’s over me)
+> (내 위로 펼쳐진 땅)
 (나를 덮고 있는 땅)
 So, I just wanna let it breathe 그래서, 난 그저 그것이 숨쉬게 하고 싶어
 
@@ -53,12 +54,15 @@ It can help your mind too 그것은 네 마음도 도울 수 있어
 Get up, don’t hide away 일어나, 숨지 마
 ’Cause I know where they go 난 그들이 어디로 가는지 알고 있으니까
 (get up and go outside)
+> (일어나서 밖으로 나가)
 (일어나서 밖으로 나가)
 I’ve seen you down when I was flyin’
+> 내가 날아오를 때 넌 가라앉아 있었지
 내가 날아오를 때 네가 침울해 있는 걸 봤어
 (it can help your mind too) (그것은 네 마음도 도울 수 있어)
 I’m sinkin’ like a stone 난 돌처럼 가라앉고 있어
 (get up, don’t hide away)
+> (일어나, 숨지 마)
 (일어나, 숨지 마)
 
 I can’t breathe 난 숨을 쉴 수 없어

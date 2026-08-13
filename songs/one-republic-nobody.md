@@ -10,7 +10,7 @@ preview:
 trackId: 
 duration: 
 genre: Indie Pop
-lang: ko
+lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [책임, 밤]
 emotion: 사랑
@@ -29,6 +29,7 @@ Yeah I’d take the fall 그래, 내가 책임질게
 I got you covered when there’s no one at all 아무도 없을 때 내가 너를 지켜줄게
 Oh yeah and I’d stay through the night 오, 그래 나는 밤새도록 함께 있을 거야
 When you’ve got demons
+> 네가 악마와 싸울 때
 trying to break through the walls 네가 악마들과 싸울 때 벽을 뚫고 나오려 할 때
 
 There ain’t no no kind of line 어떤 선도 없어
@@ -59,6 +60,7 @@ You’re out here searching for signs 넌 여기서 신호를 찾고 있어
 So I think it’s finally time that you knew 이제는 네가 알아야 할 때인 것 같아
 
 Nobody got you the way I do
+> 아무도 나처럼 너를 이해하지 못해
 아무도 나처럼 너를 이해하지 못해 Whatever demons you’re fighting through 네가 어떤 악마와 싸우고 있든
 When you need somebody to turn to 네가 의지할 누군가가 필요할 때
 Nobody got you the way I do 아무도 나처럼 너를 이해하지 못해

@@ -14,7 +14,7 @@ import fs from "fs";
 import { FM } from "../lib/admin/frontmatter.js";
 
 const WRITE = process.argv.includes("--write");
-const isNote = (s) => /^[🗨✏]/.test(s); // 본인이 쓴 해설 — 가사도 번역도 아니다
+const isNote = (s) => /^[🗨✏]/u.test(s); // 본인이 쓴 해설 — 가사도 번역도 아니다
 const hangul = (s) => (s.match(/[가-힣]/g) || []).length;
 const foreign = (s) => (s.match(/[a-zA-Z぀-ヿ一-鿿]/g) || []).length;
 

@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/b/6/5/0/b6515b6328031bc0c6d189a9
 trackId: 
 duration: 272
 genre: 
-lang: ko
+lang: en
 tags: [영미, Alternative Rock, 2003]
 keywords: [먹구름, 시간]
 emotion: 위로
@@ -24,10 +24,12 @@ source_hash: bd0063189934c4f2c3a200adf47afb8fb5f5dbf4
 ---
 I’ve been down and I’m wondering why 나는 우울했고 그 이유를 궁금해하고 있어
 These little black clouds
+> 이 자그마한 먹구름들
 keep walking around with me, with me 이 작은 먹구름들이 계속해서 나와 함께, 나와 함께 맴돌아
 It wastes time and I’d rather be high 시간만 낭비되고 있고 난 차라리 기분이 좋아지고 싶어
 Think I’ll walk me outside and buy a rainbow smile 밖으로 나가서 무지개 미소를 사볼까 생각해
 But be free, they’re all free
+> 하지만 자유로워, 다들 자유롭잖아
 하지만 자유로워져야지, 그들은 모두 자유로워
 
 So maybe tomorrow, I’ll find my way home 그래서 아마도 내일이면, 집으로 가는 길을 찾을 수 있겠지
@@ -38,6 +40,7 @@ I’ve been the upper side of down, been the inside of out 나는 밑바닥의
 But we breathe, we breathe 하지만 우리는 숨을 쉬어, 우리는 숨을 쉬어
 I wanna breeze and an open mind 난 산들바람과 열린 마음을 원해
 I wanna swim in the ocean,
+> 난 바다에서 헤엄치고 싶어,
 wanna take my time for me, all me 바다에서 수영하고 싶고, 나를 위한,
 온전히 나만을 위한 시간을 갖고 싶어
 

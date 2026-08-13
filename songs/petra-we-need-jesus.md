@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/2/1/b/0/21bf7a1971a06f283af3b196
 trackId: 
 duration: 242
 genre: Hard Rock
-lang: ko
+lang: en
 tags: [영미, Hard Rock, 1997]
 keywords: [세상, 예수님, 눈]
 emotion: 희망
@@ -28,12 +28,14 @@ If we open our eyes we will all realize that He loves us 우리가 눈을 뜨�
 
 When will the world see that we need Jesus 세상은 언제쯤 우리에게 예수님이 필요하다는 것을 알게 될까요
 When our hearts are as one and believe that
+> 우리 마음이 하나가 되어 믿을 때
 He’s the Son of our God 우리의 마음이 하나 되고 그분이 우리 하나님의 아들이심을 믿을 때
 
 The Lord is our God and we shall never want 주님은 우리의 하나님이시니 우리는 결코 부족함이 없으리라
 The Lord is our God and we shall live forever 주님은 우리의 하나님이시니 우리는 영원히 살리라
 
 When we share the love of Jesus
+> 우리가 예수의 사랑을 나눌 때
 see each other as He sees us 우리가 예수님의 사랑을 나누고
 그분이 우리를 보시는 것처럼 서로를 바라볼 때
 Then His love will see us through 그분의 사랑이 우리를 이끌어 주시리라

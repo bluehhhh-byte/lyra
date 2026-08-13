@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd
 trackId: 
 duration: 268
 genre: Folk
-lang: ko
+lang: en
 tags: [영미, Folk, 2007]
 keywords: [마을, 사람들]
 emotion: 분노
@@ -25,6 +25,7 @@ source_hash: ff2845e3c6389942ad1127713f77c1c6014e1dd2
 I’m going to a town that has already been burnt down 난 이미 불타버린 마을로 가고 있어
 I’m going to a place that has already been disgraced 난 이미 불명예스러워진 곳으로 가고 있어
 I’m gonna see some folks
+> 몇몇 사람들을 만나러 갈 거야
 who have already been let down 난 이미 실망하게 된 사람들을 보러 갈 거야
 I’m so tired of America 나는 미국이 너무나도 지쳤어
 
@@ -39,8 +40,10 @@ I’ve got a life to lead, America 내겐 이끌어갈 삶이 있어, 미국�
 I’ve got a life to lead 내겐 이끌어갈 삶이 있어
 
 Tell me, do you really think
+> 말해봐, 정말 그렇게 생각해?
 you go to hell for having loved? 말해줘, 정말 사랑했다고 지옥에 간다고 생각하니?
 Tell me, enough of thinking
+> 말해봐, 생각은 이제 그만
 everything that you’ve done is good 말해줘, 네가 한 모든 일이 옳다고 생각하는 건 이제 충분해
 I really need to know 난 정말 알아야 해
 After soaking the body of Jesus Christ in blood 예수 그리스도의 몸을 피로 적신 후에

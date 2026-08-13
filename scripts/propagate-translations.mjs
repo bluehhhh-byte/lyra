@@ -8,7 +8,7 @@ import fs from "fs";
 import { FM } from "../lib/admin/frontmatter.js";
 
 const WRITE = process.argv.includes("--write");
-const isNote = (t) => /^[🗨✏]/.test(t);
+const isNote = (t) => /^[🗨✏]/u.test(t);
 const skip = (t) => !t || t.startsWith(">") || t.startsWith("+") || t.startsWith("//") || /^\[.*\]$/.test(t) || isNote(t);
 
 let files = 0, added = 0;

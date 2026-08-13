@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1c/
 trackId: 1270576312
 duration: 225
 genre: 
-lang: ko
+lang: en
 tags: [영미, Hard Rock, 1999]
 keywords: [비눗방울, 흐름, 마음]
 emotion: 저항
@@ -39,6 +39,7 @@ Blue skies and the perfect life 파란 하늘과 완벽한 삶이 있대
 For you and me 우리를 위해서래
 
 Look into the eyes of the man
+> 그 사람의 눈을 들여다봐
 and see the main attraction 저 사람 눈을 보면 알 수 있어, 잘난 척하는 모습이
 Living off the fat of the land and standing tall 좋은 것만 누리면서 으쓱대고 있어
 Mr. Feel Good craves satisfaction 기분 좋은 것만 찾는 사람은 말이야
