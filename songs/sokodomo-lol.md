@@ -51,6 +51,7 @@ Nobody’s here when I need them
 > 난 살아야 해서 그냥 참는데요
 
 LOL LOL LOL LOL LOL LOL LOL LOL LOL
+> ㅋㅋㅋㅋㅋㅋㅋ
 
 Yeah I got that fire in my blood
 > (그래, 내 피 속엔 불꽃이 있어)
@@ -70,7 +71,9 @@ To an energy you never noticed
 > (네가 절대 눈치채지 못한 에너지에)
 
 Give me 뽀뽀
+> 뽀뽀해 줘
 (나한테 뽀뽀해줘)
+> (Give me a kiss)
 Fo fo free
 >^3 (무료로 뽀뽀)
 Go go home home
@@ -91,3 +94,4 @@ Nobody’s here when I need them
 > 난 살아야 해서 그냥 참는데요
 
 LOL LOL LOL LOL LOL LOL LOL LOL LOL
+> ㅋㅋㅋㅋㅋㅋㅋ
