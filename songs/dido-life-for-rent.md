@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/0e/e2/97/mzi.ldrppyft.jp
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/68/3e/d5/683ed598-8306-36c1-a7f1-0764f1a834a1/mzaf_8423953338839675345.plus.aac.p.m4a
 trackId: 292025864
 duration: 221
-genre: Pop
+genre: Folk
 lang: en
-tags: [영미, Pop, 2003]
+tags: [영미, Folk, 2003]
 keywords: [집, 인생, 기회]
 emotion: 체념
 date: 2025-07-16

@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a37761cd98b72998ff1d8cbfedbf0
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/7/7/0/e773d9a1121ced48f2e74bca4271699c.mp3?hdnea=exp=1786559418~acl=/api/1/1/e/7/7/0/e773d9a1121ced48f2e74bca4271699c.mp3*~data=user_id=0,application_id=42~hmac=7dad33c038d625c6e4886f31d4b9e14c00301a1880db298c3c1bac8e6aac71a8
 trackId: 
 duration: 211
-genre: 
+genre: Synth-Pop
 lang: en
-tags: [영미, Pop, 1987]
+tags: [영미, Synth-Pop, 1987]
 keywords: [규칙, 마음, 진심]
 emotion: 사랑
 date: 2025-06-09

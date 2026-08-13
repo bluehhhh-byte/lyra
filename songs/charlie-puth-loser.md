@@ -11,9 +11,9 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/loser/1633318292?i=1633318763&uo=4
 trackId: 1633318763
 duration: 204
-genre: Pop
+genre: R&B/Soul
 lang: en
-tags: [영미, Pop, 2022]
+tags: [영미, R&B/Soul, 2022]
 keywords: [술, 밤, 잠, 마음]
 emotion: 이별
 date: 2022-11-12

@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/54/c8/4854c8
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/a2/cf/1fa2cfca-5eb6-c361-02fd-665280d57212/mzaf_14355860194011638271.plus.aac.p.m4a
 trackId: 279647290
 duration: 239
-genre: Pop
+genre: R&B/Soul
 lang: en
-tags: [영미, Pop, 2002]
+tags: [영미, R&B/Soul, 2002]
 keywords: [아픔, 숨, 매일]
 emotion: 위로
 date: 2024-09-26

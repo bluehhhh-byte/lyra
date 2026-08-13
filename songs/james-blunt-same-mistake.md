@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/0e/ed/d10eed7e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e2/08/55/e20855e1-a56d-30ab-4554-3a94e99b530f/mzaf_4632145527291172001.plus.aac.p.m4a
 trackId: 714586435
 duration: 298
-genre: 팝
+genre: Folk
 lang: en
-tags: [영미, Pop, 2007]
+tags: [영미, Folk, 2007]
 keywords: [침대, 거리, 별]
 emotion: 체념
 date: 2025-07-02

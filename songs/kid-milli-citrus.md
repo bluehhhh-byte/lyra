@@ -3,12 +3,14 @@ title: Citrus
 title_ko: Citrus
 artist: Kid Milli
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Cliché
+year: 2021
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/38/74/30/3874305f-3598-ef3a-192f-4ae93a46df84/Cliche_ARTWORK.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/23/5e/54/235e5411-a401-7b6d-c4e7-2fe7c21762aa/mzaf_15040695199246947071.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/citrus/1564913970?i=1564914097&uo=4
+trackId: 1564914097
+duration: 214
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

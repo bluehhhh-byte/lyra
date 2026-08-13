@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b0e936124f59e669ddba02ebe5893
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/2/b/0/e2b065b5086ac8ced8d6c10810dd130d.mp3?hdnea=exp=1786584311~acl=/api/1/1/e/2/b/0/e2b065b5086ac8ced8d6c10810dd130d.mp3*~data=user_id=0,application_id=42~hmac=d789458108e8776d90960e6221ef1ae0079ed11bc23c963cccafd4957df6e301
 trackId:
 duration: 177
-genre: Pop
+genre: Funk
 lang: en
-tags: [영미, Pop, 2022]
+tags: [영미, Funk, 2022]
 keywords: [밤, 대화, 아침, 카메라, 안개]
 emotion: 사랑
 date: 2022-09-17

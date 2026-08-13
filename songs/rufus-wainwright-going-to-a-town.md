@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/055698d1f363d8c88f8b5d7908fda
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd1d67df0a.mp3?hdnea=exp=1786559420~acl=/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd1d67df0a.mp3*~data=user_id=0,application_id=42~hmac=4f7933cfd8e12c042c23532ed5a756b1d1c3c92d3e54d3d60246804e4969b458
 trackId: 
 duration: 268
-genre: 
+genre: Folk
 lang: ko
-tags: [영미, Pop, 2007]
+tags: [영미, Folk, 2007]
 keywords: [마을, 사람들]
 emotion: 분노
 date: 2024-12-01

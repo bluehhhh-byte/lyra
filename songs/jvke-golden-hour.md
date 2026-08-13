@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/845eff477946539849c7291510d61
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/b/7/0/3b72afc4e823cc61cd71bd7c795221b6.mp3?hdnea=exp=1786584328~acl=/api/1/1/3/b/7/0/3b72afc4e823cc61cd71bd7c795221b6.mp3*~data=user_id=0,application_id=42~hmac=641bdc7eaec0a796a17a68de1536c8bb8d7107287a679f75aec48493968fda2d
 trackId:
 duration: 209
-genre: Pop
+genre: Indie Pop
 lang: en
-tags: [영미, Pop, 2022]
+tags: [영미, Indie Pop, 2022]
 keywords: [자동차, 하늘, 밤, 빛, 전화]
 emotion: 사랑
 date: 2022-12-12

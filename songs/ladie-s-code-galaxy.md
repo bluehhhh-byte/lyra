@@ -3,12 +3,14 @@ title: Galaxy
 title_ko: Galaxy
 artist: LADIE'S CODE
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: MYST3RY - Single
+year: 2016
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/59/04/96/590496ef-9608-30b8-5512-d1ab03e179ba/cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/70/e7/8b/70e78bc4-5ff4-2cb2-9232-58c074dfc009/mzaf_15950256429680048596.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/galaxy/1443704627?i=1443704629&uo=4
+trackId: 1443704629
+duration: 212
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop]

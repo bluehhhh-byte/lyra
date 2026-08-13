@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3d/20/34/3d203473-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/39/bd/60/39bd6067-748d-1d27-9f7f-bdf008ff33b7/mzaf_18337422130943024749.plus.aac.p.m4a
 trackId: 724917290
 duration: 215
-genre: 록
+genre: Folk
 lang: en
-tags: [영미, Pop, 2004]
+tags: [영미, Folk, 2004]
 keywords: [바다, 빙산, 물]
 emotion: 슬픔
 date: 2025-07-01

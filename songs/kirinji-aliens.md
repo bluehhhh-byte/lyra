@@ -3,12 +3,14 @@ title: Aliens
 title_ko: 
 artist: Kirinji
 artist_ko:
-album:
+album: 3
 year: 2000
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/66/37/f2/6637f21a-7a52-6072-62af-6009a6f5bd48/dj.nssfghzp.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/f3/46/c0f34688-f5ae-7d61-9b81-89ebb3724f74/mzaf_15300152028185973584.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/aliens/258411790?i=258412002&uo=4
+trackId: 258412002
+duration: 364
 genre: City Pop
 lang: ja
 tags: [일본, City Pop, 2000]

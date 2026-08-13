@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/921e0c5dd0535aba6c8e753d56b1e
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/6/0/0/560745ef5dd496cf90217f224dbfb4e0.mp3?hdnea=exp=1786559396~acl=/api/1/1/5/6/0/0/560745ef5dd496cf90217f224dbfb4e0.mp3*~data=user_id=0,application_id=42~hmac=87f1236419cec6eebed06f51432b2eb0ef56d1784595a19fd8f0cc06939a44be
 trackId: 
 duration: 215
-genre: 
+genre: Indie Pop
 lang: en
-tags: [영미, 2024]
+tags: [영미, Indie Pop, 2024]
 keywords: [감정, 방법, 곁]
 emotion: 사랑
 date: 2024-09-18

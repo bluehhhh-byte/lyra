@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/57/6f/c7/576fc76a-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/8f/ed/2a8fed04-6eda-8418-9b7a-04af50ad2b89/mzaf_10964339388419466551.plus.aac.p.m4a
 trackId: 728254776
 duration: 154
-genre: Rock
+genre: Indie Pop
 lang: en
-tags: [영미, Rock, 1966]
+tags: [영미, Indie Pop, 1966]
 keywords: [나이, 세상]
 emotion: 설렘
 date: 2024-07-22

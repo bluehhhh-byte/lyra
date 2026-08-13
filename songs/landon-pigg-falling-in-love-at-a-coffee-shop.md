@@ -3,12 +3,14 @@ title: Falling In Love At A Coffee Shop
 title_ko: 
 artist: Landon Pigg
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Falling In Love At a Coffee Shop - Single
+year: 2007
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/a6/ed/1a/a6ed1a4f-88d0-32be-6856-cabcb0d8900b/dj.ynctqhby.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/3f/b2/12/3fb21243-3514-d605-765f-668ca6950e4e/mzaf_9689496126599507838.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/falling-in-love-at-a-coffee-shop/268633664?i=268633674&uo=4
+trackId: 268633674
+duration: 270
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop]

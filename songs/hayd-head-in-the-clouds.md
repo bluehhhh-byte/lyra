@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/d6fb1b306580ada577a516b00e4c3
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/0/2/0/f02ccfb871bc0792d43bae472899b41c.mp3?hdnea=exp=1786559382~acl=/api/1/1/f/0/2/0/f02ccfb871bc0792d43bae472899b41c.mp3*~data=user_id=0,application_id=42~hmac=14880a1a3b20f57f8ea8cfec1b003a1a690de2d296e1a5e82f27aac9ebb43a66
 trackId: 
 duration: 184
-genre: 
+genre: Indie Pop
 lang: en
-tags: [영미, Pop, 2021]
+tags: [영미, Indie Pop, 2021]
 keywords: [시절, 잔, 순간]
 emotion: 그리움
 date: 2024-10-27

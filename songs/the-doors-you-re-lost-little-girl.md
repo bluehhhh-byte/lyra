@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/1a8f4f1180a7f3a4bcb115d31f983
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/4/5/0/24576bea1b55583dda77a90108241d1c.mp3?hdnea=exp=1786559439~acl=/api/1/1/2/4/5/0/24576bea1b55583dda77a90108241d1c.mp3*~data=user_id=0,application_id=42~hmac=939a1c0c15e25c032327a73285b6aa5770062a2ef0492ba7ea06653ccac5509b
 trackId: 
 duration: 196
-genre: 
+genre: Alternative Rock
 lang: en
-tags: [영미, Rock, 1967]
+tags: [영미, Alternative Rock, 1967]
 keywords: [소녀]
 emotion: 몽환
 date: 2024-06-25

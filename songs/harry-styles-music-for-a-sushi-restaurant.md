@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b0e936124f59e669ddba02ebe5893
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/2/8/0/62805d25eef0e50839abd65fc4e7b24a.mp3?hdnea=exp=1786559381~acl=/api/1/1/6/2/8/0/62805d25eef0e50839abd65fc4e7b24a.mp3*~data=user_id=0,application_id=42~hmac=7772ae5ba173e31580ab678430a36504a3f117296dbe0b1169840ba841278f72
 trackId: 
 duration: 193
-genre: 
+genre: Funk
 lang: en
-tags: [영미, Pop, 2022]
+tags: [영미, Funk, 2022]
 keywords: [아이스크림, 풍선껌, 볶음밥]
 emotion: 기쁨
 date: 2024-06-11

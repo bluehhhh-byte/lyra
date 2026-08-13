@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/8e/4c/5f8e4c9e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ce/03/b5/ce03b5ca-4f8e-7442-2000-d3bff42cee7e/mzaf_15181883251180884324.plus.aac.p.m4a
 trackId: 1869945701
 duration: 152
-genre: Rock
+genre: R&B/Soul
 lang: en
-tags: [영미, 2025]
+tags: [영미, R&B/Soul, 2025]
 keywords: [삶, 클럽, 재미]
 emotion: 체념
 date: 2025-06-29

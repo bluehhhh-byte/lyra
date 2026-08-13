@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/75/2e/1a752e5c-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b8/16/b4/b816b438-5cf7-c7ae-cccd-b45dff49fb86/mzaf_3575220220233918232.plus.aac.p.m4a
 trackId: 1224353524
 duration: 190
-genre: Rock
+genre: Folk
 lang: en
-tags: [영미, Rock, 2017]
+tags: [영미, Folk, 2017]
 keywords: [우주, 공룡, 운석]
 emotion: 사랑
 date: 2024-07-23

@@ -151,7 +151,13 @@ for (const t of targets.slice(0, LIMIT)) {
     filled++;
     console.log(`  ${WRITE ? "채움" : "(dry)"} ${t.f}: ${hit.artist} - ${hit.title} [${status}]`);
     if (WRITE) {
-      let out = t.raw;
+      // 시작할 때 읽어둔 내용이 아니라 지금 파일을 다시 읽는다. 이 스크립트는 한 곡에
+      // 6.5초씩 쓰므로 전체가 도는 동안 다른 작업(번역·메타 채우기)이 같은 파일을
+      // 고칠 수 있다 — 오래된 스냅샷으로 덮으면 그 변경이 조용히 사라진다.
+      if (!fs.existsSync("songs/" + t.f)) { console.log(`  건너뜀(그새 삭제됨): ${t.f}`); continue; }
+      let out = fs.readFileSync("songs/" + t.f, "utf8").replace(/\r\n/g, "\n");
+      if (!out.match(FM)) { console.log(`  건너뜀(형식 깨짐): ${t.f}`); continue; }
+      if ((fmValue(out.match(FM)[1], "artwork") || "").startsWith("https")) { console.log(`  건너뜀(그새 채워짐): ${t.f}`); continue; }
       out = setField(out, "artwork", hit.artwork, "year");
       if (hit.preview) out = setField(out, "preview", hit.preview, "artwork");
       if (hit.trackId) out = setField(out, "trackId", String(hit.trackId), "preview");
@@ -161,7 +167,7 @@ for (const t of targets.slice(0, LIMIT)) {
       if (hit.provider) out = setField(out, "preview_provider", hit.provider, "preview");
       if (hit.externalUrl) out = setField(out, "external_url", hit.externalUrl, "preview_provider");
       // 보관 게시물에는 발매연도가 없는 캡션이 많다 — 카탈로그에서만 채운다(덮어쓰지 않음)
-      if (hit.year && !fmValue(t.raw.match(FM)[1], "year")) out = setField(out, "year", hit.year, "album");
+      if (hit.year && !fmValue(out.match(FM)[1], "year")) out = setField(out, "year", hit.year, "album");
       fs.writeFileSync("songs/" + t.f, out);
     }
   }

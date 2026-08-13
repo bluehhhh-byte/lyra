@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0f/6b/0d/0f6b0d9e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/28/c7/2328c7a9-24fe-7bab-8024-c8c67828164b/mzaf_7087381778902583194.plus.aac.p.m4a
 trackId: 1582691808
 duration: 120
-genre: 팝
+genre: Indie Pop
 lang: en
-tags: [영미, Pop, 2022]
+tags: [영미, Indie Pop, 2022]
 keywords: [햇살, 사랑, 감정]
 emotion: 설렘
 date: 2024-07-28

@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/c673f9397dd6eca59786537172af7
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/b/9/0/1b9cd371d8e3018dad22f40d1a4fab19.mp3?hdnea=exp=1786559394~acl=/api/1/1/1/b/9/0/1b9cd371d8e3018dad22f40d1a4fab19.mp3*~data=user_id=0,application_id=42~hmac=1aa1906650ee0c76183c891e3dcb4c5ef72774e3c05668464c8fe4de5e2317c7
 trackId: 
 duration: 211
-genre: 
+genre: Funk
 lang: en
-tags: [영미, Pop, 2007]
+tags: [영미, Funk, 2007]
 keywords: [쾌락, 기억, 가치]
 emotion: 체념
 date: 2025-07-09

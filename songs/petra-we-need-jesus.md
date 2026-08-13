@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/1cb3614c33009a0a74adff492161c
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/1/b/0/21bf7a1971a06f283af3b19600344fea.mp3?hdnea=exp=1786559409~acl=/api/1/1/2/1/b/0/21bf7a1971a06f283af3b19600344fea.mp3*~data=user_id=0,application_id=42~hmac=4d34348df2050821db74f78b3c0799b6fc0848eb5cf54d4e3dc42e13bb330531
 trackId: 
 duration: 242
-genre: 
+genre: Hard Rock
 lang: ko
-tags: [영미, Rock, 1997]
+tags: [영미, Hard Rock, 1997]
 keywords: [세상, 예수님, 눈]
 emotion: 희망
 date: 2024-11-24

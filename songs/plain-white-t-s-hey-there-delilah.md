@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/7a83573cb86eb70c8903db13b5fdd
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/1/c/0/f1c0d5f32486c8c534252a1eb34f4ba8.mp3?hdnea=exp=1786559410~acl=/api/1/1/f/1/c/0/f1c0d5f32486c8c534252a1eb34f4ba8.mp3*~data=user_id=0,application_id=42~hmac=2e6adfce9a16dcf4b2f5cfe928314c47cfcd8752dc2d70f527648408d98c7b9e
 trackId: 
 duration: 232
-genre: 
+genre: Folk
 lang: en
-tags: [영미, Pop, 2006]
+tags: [영미, Folk, 2006]
 keywords: [뉴욕, 타임스퀘어, 거리]
 emotion: 그리움
 date: 2024-11-09

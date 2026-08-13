@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration:
-genre: Alternative Rock
+genre: Indie Rock
 lang: ko
-tags: [한국, Alternative Rock, 1995]
+tags: [한국, Indie Rock, 1995]
 keywords: [미소, 입술, 머리, 아침, 눈물, 꿈]
 emotion: 고독
 date: 2023-03-29

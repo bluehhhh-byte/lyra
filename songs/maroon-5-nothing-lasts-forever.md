@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration:
-genre: Pop
+genre: Funk
 lang: en
-tags: [영미, Pop, 2007]
+tags: [영미, Funk, 2007]
 keywords: [침대, 벽, 추억, 영혼, 바닥]
 emotion: 이별
 date: 2023-04-14

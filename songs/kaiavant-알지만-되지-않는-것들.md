@@ -3,12 +3,14 @@ title: 알지만 되지 않는 것들
 title_ko: 알지만 되지 않는 것들
 artist: KAIAVANT
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 알지만 되지 않는 것들
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/7c/2f/ff7c2f6c-b04c-8ded-6ac6-6f730f186434/cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/8c/85/43/8c8543ae-4329-f17c-2a7d-b353f73ad3d7/mzaf_7440296692723128164.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%95%8C%EC%A7%80%EB%A7%8C-%EB%90%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EA%B2%83%EB%93%A4/1729521185?i=1729521186&uo=4
+trackId: 1729521186
+duration: 140
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop]

@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/5952ccc871445c625459eeb11a269
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/9/f/0/59fda950706719cebb909e117425c875.mp3?hdnea=exp=1786559423~acl=/api/1/1/5/9/f/0/59fda950706719cebb909e117425c875.mp3*~data=user_id=0,application_id=42~hmac=cb554cec1b71dbf4e3ec51a70d0d62a79796bbdc151dad51edcf620d2d0a5443
 trackId: 
 duration: 220
-genre: 
+genre: R&B/Soul
 lang: en
-tags: [영미, Pop, 2020]
+tags: [영미, R&B/Soul, 2020]
 keywords: [캘리포니아, 거짓말, 하늘]
 emotion: 슬픔
 date: 2024-07-19

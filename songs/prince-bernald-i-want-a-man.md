@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration:
-genre: Pop
+genre: Indie Pop
 lang: en
-tags: [영미, Pop]
+tags: [영미, Indie Pop]
 keywords: [부엌, 침실, 프라이팬, 손, 등]
 emotion: 사랑
 date: 2023-02-12

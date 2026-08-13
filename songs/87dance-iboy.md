@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/ca/e9/0e/cae90efe-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f1/92/55/f1925591-4290-e99a-0dd6-4067e4d4f44b/mzaf_13988167074836186425.plus.aac.p.m4a
 trackId: 1470189918
 duration: 198
-genre: Rock
+genre: Indie Rock
 lang: en
-tags: [영미, Rock, 2019]
+tags: [영미, Indie Rock, 2019]
 keywords: [행복, 미소, 와인]
 emotion: 사랑
 date: 2024-07-02

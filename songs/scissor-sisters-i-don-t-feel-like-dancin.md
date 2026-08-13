@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/5334799f2cf9fae5cb7ced93cca1c
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/8/e/0/38e2dc8200469addaa388be33098e6c4.mp3?hdnea=exp=1786559423~acl=/api/1/1/3/8/e/0/38e2dc8200469addaa388be33098e6c4.mp3*~data=user_id=0,application_id=42~hmac=4d5e280dfe3b257c9729a85658cc8a6b170acf6cdb067cbb2a07619da31333a2
 trackId: 
 duration: 248
-genre: 
+genre: Disco
 lang: en
-tags: [영미, Pop, 2009]
+tags: [영미, Disco, 2009]
 keywords: [드레스, 노래, 아침]
 emotion: 체념
 date: 2024-10-20

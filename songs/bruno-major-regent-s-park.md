@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/818c716c3a4789da6fd087f378e84
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/0/1/0/601510e5675e0bd5df109630d6288b03.mp3?hdnea=exp=1786559364~acl=/api/1/1/6/0/1/0/601510e5675e0bd5df109630d6288b03.mp3*~data=user_id=0,application_id=42~hmac=aaa6de14adc52ee4cc139365387ee94c80eca2272f6a705d5c041cff4e2aaa95
 trackId: 
 duration: 177
-genre: 
+genre: Jazz
 lang: en
-tags: [영미, Pop, 2020]
+tags: [영미, Jazz, 2020]
 keywords: [시, 미소, 노래]
 emotion: 슬픔
 date: 2024-09-17

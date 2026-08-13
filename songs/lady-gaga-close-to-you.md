@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/97/a6/ab/97a6abc2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/18/49/c9/1849c940-1b1b-b8ce-c6cd-ebb7024c3e5f/mzaf_562008030581793465.plus.aac.p.m4a
 trackId: 1770129652
 duration: 164
-genre: Jazz
+genre: Synth-Pop
 lang: en
-tags: [영미, Pop, 2024]
+tags: [영미, Synth-Pop, 2024]
 keywords: [새, 별, 하늘]
 emotion: 사랑
 date: 2024-10-03

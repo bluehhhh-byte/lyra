@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/d1/46/e9d14699-9505-493e-cd27-a501095c81ff/mzaf_7283388936457278756.plus.aac.p.m4a
 trackId: 1762656732
 duration: 252
-genre: 팝
+genre: R&B/Soul
 lang: en
-tags: [영미, Pop, 2024]
+tags: [영미, R&B/Soul, 2024]
 keywords: [꿈, 작별인사, 내일]
 emotion: 사랑
 date: 2024-09-11

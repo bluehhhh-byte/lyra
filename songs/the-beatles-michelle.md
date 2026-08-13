@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/e6b1f1fe4b354609ba357015a52c9
 preview: https://cdnt-preview.dzcdn.net/api/1/1/b/1/1/0/b1147c38b162821a02b1ec27e43f5f73.mp3?hdnea=exp=1786559437~acl=/api/1/1/b/1/1/0/b1147c38b162821a02b1ec27e43f5f73.mp3*~data=user_id=0,application_id=42~hmac=931219ce8ec1f9ea8d892515e8ed5f4263dcd139738ebdd47ebc23b406a0a2c3
 trackId: 
 duration: 196
-genre: 
+genre: Folk
 lang: en
-tags: [영미, Rock, 1965]
+tags: [영미, Folk, 1965]
 keywords: [미셸, 단어]
 emotion: 사랑
 date: 2024-07-08

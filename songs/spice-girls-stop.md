@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/cb/8a/8f/cb8a8fd9-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/53/78/b75378b8-f097-f04d-e39f-8076ce927527/mzaf_5498240597791343004.plus.aac.p.m4a
 trackId: 724614202
 duration: 205
-genre: Britpop
+genre: Dance
 lang: en
-tags: [영미, Pop, 1997]
+tags: [영미, Dance, 1997]
 keywords: [한걸음, 선택지]
 emotion: 설렘
 date: 2024-08-23

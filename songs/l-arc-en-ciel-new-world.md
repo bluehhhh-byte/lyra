@@ -3,12 +3,14 @@ title: New World
 title_ko: 
 artist: L'Arc~en~Ciel
 artist_ko:
-album:
+album: AWAKE
 year: 2005
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4b/4e/9d/4b4e9d66-a636-f06e-fb42-1606df1e580d/jacket_KSXX00141B00Z_550.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ab/72/5f/ab725ff9-ea7c-1df5-c35a-c1946ebdbcaf/mzaf_12729559614622582929.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/new-world/1536473363?i=1536473364&uo=4
+trackId: 1536473364
+duration: 247
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2005]

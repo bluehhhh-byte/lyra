@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b8438109e927f41cf792f84503f15
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/d/a/0/0da7949b8c05b6dc6584580957b7ec52.mp3?hdnea=exp=1786559442~acl=/api/1/1/0/d/a/0/0da7949b8c05b6dc6584580957b7ec52.mp3*~data=user_id=0,application_id=42~hmac=6269f3fd70fdaf48b44916c357f9e358e0c7b23e42948701cbf0377dc8cf4c05
 trackId: 
 duration: 338
-genre: 
+genre: Indie Rock
 lang: en
-tags: [영미, Rock, 1969]
+tags: [영미, Indie Rock, 1969]
 keywords: [눈동자, 행복]
 emotion: 사랑
 date: 2024-06-27

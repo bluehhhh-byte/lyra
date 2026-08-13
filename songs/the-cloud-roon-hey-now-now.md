@@ -9,9 +9,9 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Indie Pop
 lang: en
-tags: [영미, 2006]
+tags: [영미, Indie Pop, 2006]
 keywords: [꿈, 손]
 emotion: 불안
 date: 2024-09-09

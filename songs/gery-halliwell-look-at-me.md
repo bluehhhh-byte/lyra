@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration:
-genre: Pop
+genre: Dance
 lang: en
-tags: [영미, Pop, 1999]
+tags: [영미, Dance, 1999]
 keywords: [얼굴, 화장, 거짓말, 눈, 가십]
 emotion: 저항
 date: 2023-04-19

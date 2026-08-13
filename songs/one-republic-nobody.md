@@ -9,9 +9,9 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Indie Pop
 lang: ko
-tags: [영미, Pop, 2024]
+tags: [영미, Indie Pop, 2024]
 keywords: [책임, 밤]
 emotion: 사랑
 date: 2024-12-12

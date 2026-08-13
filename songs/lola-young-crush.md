@@ -9,9 +9,9 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5a/c6/b1/5ac6b183-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/14/e8/8714e8b8-84d7-07ad-17f3-cd6c19f073f1/mzaf_2898486241791141488.plus.aac.p.m4a
 trackId: 1746042592
 duration: 227
-genre: Alternative
+genre: R&B/Soul
 lang: en
-tags: [영미, Pop, 2024]
+tags: [영미, R&B/Soul, 2024]
 keywords: [삶, 직장, 눈빛]
 emotion: 설렘
 date: 2024-07-04

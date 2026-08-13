@@ -11,9 +11,9 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/nothing-really-matters/952887?i=952639&uo=4
 trackId: 952639
 duration: 267
-genre:
+genre: Dance
 lang: en
-tags: []
+tags: [Dance, 1998]
 keywords: []
 emotion:
 date: 2023-04-14
