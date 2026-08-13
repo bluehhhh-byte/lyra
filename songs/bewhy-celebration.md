@@ -75,9 +75,13 @@ Cartier 파란 하늘과의 조합
 > With you by my side, the days feel shorter
 
 Celebrate, celebrate, celebration
+> 축하해, 축하해, 축배를 들자
 Celebrate, celebrate, celebration
+> 축하해, 축하해, 축배를 들자
 Celebrate, celebrate, celebration
+> 축하해, 축하해, 축배를 들자
 Celebrate, celebrate, celeb-
+> 축하해, 축하해, 축배를-
 
 사실 Outfit, Ring 빼고 보세와 Zara 풀착장
 > Truth is, besides the Ring, this Outfit's all no-brand and Zara
@@ -134,6 +138,10 @@ Celebrate, celebrate, celeb-
 > With you by my side, the days feel shorter
 
 Celebrate, celebrate, celebration
+> 축하해, 축하해, 축배를 들자
 Celebrate, celebrate, celebration
+> 축하해, 축하해, 축배를 들자
 Celebrate, celebrate, celebration
+> 축하해, 축하해, 축배를 들자
 Celebrate, celebrate, celeb-
+> 축하해, 축하해, 축배를-
