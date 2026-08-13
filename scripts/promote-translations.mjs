@@ -25,12 +25,23 @@ for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
   if (!m) continue;
   if (/^lang:\s*ko\s*$/m.test(m[1])) continue; // 한국어 곡은 한글이 원문이다
   const lines = m[2].split("\n");
+  // 이 곡의 번역이 영어면(두 언어를 섞어 쓰는 K-pop 등) 한글 줄은 원문이다 —
+  // 승격하면 원문이 번역으로 둔갑한다. 곡 통째로 건너뛴다.
+  const enTrans = lines.filter((l) => {
+    const t = l.trim();
+    return t.startsWith(">") && /[a-zA-Z]{6,}/.test(t) && hangul(t) < 2;
+  }).length;
+  if (enTrans >= 2) continue;
   let hit = 0;
   for (let i = 1; i < lines.length; i++) {
     const t = lines[i].trim();
     if (!t || t.startsWith(">") || t.startsWith("+") || t.startsWith("//") || /^\[.*\]$/.test(t)) continue;
     if (!lines[i - 1].trim().startsWith(">")) continue; // 번역 줄 바로 아래만
     if (isNote(t) || hangul(t) < 2 || foreign(t) >= hangul(t)) continue; // 해설·원문 제외
+    // 두 언어를 섞어 쓰는 곡(K-pop)에서는 이 한글 줄이 원문이고 그 아래가 번역이다.
+    // 바로 아래에 영어 `>` 줄이 있으면 승격하지 않는다 — 원문을 번역으로 바꾸는 셈이다.
+    const below = (lines[i + 1] || "").trim();
+    if (below.startsWith(">") && /[a-zA-Z]{6,}/.test(below) && hangul(below) < 2) continue;
     lines[i] = lines[i].replace(/^(\s*)/, "$1> ");
     hit++;
   }

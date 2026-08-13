@@ -31,15 +31,15 @@ In the moment, you and I
 > 이 순간, 너와 나
 One more chance, 너와 나
 > 한 번 더 기회, 너와 나
-> 다시 한번 만나게 서로에게 향하게
+다시 한번 만나게 서로에게 향하게
 > Once again, let us meet, let us turn to each other.
 
 [Pre-Chorus]
 My feeling's getting deeper
 > 내 감정은 점점 더 깊어져
-> 내 심박수를 믿어
+내 심박수를 믿어
 > Trust my heartbeat.
-> 우리 인연은 깊어
+우리 인연은 깊어
 > Our connection is deep.
 I gotta see the meaning of it (come on)
 > 그 의미를 찾아야 해 (어서 와)
@@ -69,7 +69,7 @@ Second chance, しょうがない
 [Pre-Chorus]
 My feeling's getting deeper (deeper)
 > 내 감정은 점점 더 깊어져 (더 깊이)
-> 내 심박수를 믿어 (믿어)
+내 심박수를 믿어 (믿어)
 > Trust my heartbeat (trust).
 우리 인연은 깊어 (you know)
 > Our connection is deep (you know).
@@ -92,7 +92,7 @@ It's supernatural
 > 초자연적인 일이야
 It's supernatural
 > 초자연적인 일이야
-> 거짓말 안 할래, 너도 말해
+거짓말 안 할래, 너도 말해
 > I won't lie, you speak up too.
 Attention we should pay, to what is coming through
 > 우리가 다가오는 것에 주목해야 해

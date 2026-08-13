@@ -21,9 +21,9 @@ comment: 쓸데없는 걱정을 털어내고 현재의 자유를 즐기며 당�
 [Intro]
 Eating good, feeding good all my brothers
 > 잘 먹고 내 형제들도 다 챙겨 먹여
-> 좋은 느낌 망원 스튜디오는 방공호
+좋은 느낌 망원 스튜디오는 방공호
 > Good vibes, the Mangwon studio is a fallout shelter
-> 나쁜 소식 들림 문 닫어
+나쁜 소식 들림 문 닫어
 > If bad news comes around, lock the door
 저기 빵빵 클락션 don't even bother me
 > That honking horn over there doesn't even bother me
@@ -31,31 +31,31 @@ Eating good, feeding good all my brothers
 [Verse 1]
 앞차 빼 (빨리!)
 > Move the car ahead (Hurry!)
-> 시간 없지
+시간 없지
 > Ain't got time
-> 긍정적인 사고의 비법은 무슨
+긍정적인 사고의 비법은 무슨
 > What secret to positive thinking?
-> 걍 밀고 가는 거야 고집
+걍 밀고 가는 거야 고집
 > Just pushing through with pure stubbornness
-> 청기 백기하듯이
+청기 백기하듯이
 > Like playing blue flag, white flag
-> 바지 더 내리고 올려 위치
+바지 더 내리고 올려 위치
 > Sag my pants lower and raise my status
-> 들이켜 맑은 정상 위 공기
+들이켜 맑은 정상 위 공기
 > Breathe in the clear air at the top
-> 식탁 위는 요새 고기뿐이지만
+식탁 위는 요새 고기뿐이지만
 > Though my table's filled with nothing but meat these days
-> 잔고가 10만원일 때와 다름없이
+잔고가 10만원일 때와 다름없이
 > I'm no different from when my balance was just 100k won
 (I wear)
 > (난 입지)
 Vintage store에서 산 청바지
 > Jeans bought from a vintage store
-> 월화수목금토일 입어
+월화수목금토일 입어
 > Wear them Monday through Sunday
-> 선 자리 빠꾸먹을 옷차림
+선 자리 빠꾸먹을 옷차림
 > An outfit that'd get me rejected at a blind date
-> 유일한 걱정은 쓸데없는 걱정 사기
+유일한 걱정은 쓸데없는 걱정 사기
 > My only worry is buying useless worries
 걱정 살 바엔 I poppin' the tags
 > Rather than buying worries, I'm poppin' the tags
@@ -63,11 +63,11 @@ Vintage store에서 산 청바지
 [Pre-Chorus]
 느껴봐 인생은 4K
 > Feel it, life is in 4K
-> 폰은 손이 안 닿을 만큼 멀리에
+폰은 손이 안 닿을 만큼 멀리에
 > Keep the phone far out of reach
-> 다 웃자고 하는 건데
+다 웃자고 하는 건데
 > It's all just meant to make us smile anyway
-> 미리 사서 걱정해서 뭐해
+미리 사서 걱정해서 뭐해
 > Why bother worrying in advance?
 
 [Chorus]
@@ -85,27 +85,27 @@ Headlock, Headlock, Headlock
 > A brunch cafe right in front of my house
 아아에 egg 샌드위치 take-out해
 > Take out an iced Americano and an egg sandwich
-> 한강 공원에서 자외선 좀 쐐줘
+한강 공원에서 자외선 좀 쐐줘
 > Soak up some sunshine at Hangang Park
 Face 위에 freckles
 > Freckles on my face
-> 스케줄러 위엔
+스케줄러 위엔
 > On top of my scheduler
-> 빼곡한 빨간 체크 표시
+빼곡한 빨간 체크 표시
 > Packed with red check marks
 (God damn!)
 > (맙소사!)
-> 해야될게 산더미
+해야될게 산더미
 > Got a mountain of things to do
 (What's next?)
 > (다음은 뭐야?)
 Honestly I need to manage my stress
 > 솔직히 스트레스 관리 좀 해야겠어
-> 아 모르겠다 바보같이 해
+아 모르겠다 바보같이 해
 > Ah, I don't know, just do it like a fool
-> 가격 택 안봐 돈 낭비해
+가격 택 안봐 돈 낭비해
 > Don't look at price tags, wasting money
-> 맵 안키고 미로같은 길을 뺑뺑
+맵 안키고 미로같은 길을 뺑뺑
 > Round and round through maze-like streets without a map
 > 돌아다니는 date 코스
 > A date course wandering around
@@ -119,21 +119,21 @@ Yeah, yeah, yes!
 > 그래, 그래, 좋았어!
 Bel-Air with a chicken taco, yes!
 > 치킨 타코와 함께하는 벨에어, 좋아!
-> 통장의 치즈보다 맛이 좋대
+통장의 치즈보다 맛이 좋대
 > Tastes better than the cheese in my bank account
 Spot in the sun, I'm eating sundae
 > Eating a sundae in a sunny spot
-> 더 녹지 않을 것 같애 평생
+더 녹지 않을 것 같애 평생
 > Feels like it won't melt anymore for the rest of my life
 
 [Pre-Chorus]
 느껴봐 인생은 4K
 > Feel it, life is in 4K
-> 폰은 손이 안 닿을 만큼 멀리에
+폰은 손이 안 닿을 만큼 멀리에
 > Keep the phone far out of reach
-> 다 웃자고 하는 건데
+다 웃자고 하는 건데
 > It's all just meant to make us smile anyway
-> 미리 사서 걱정해서 뭐해
+미리 사서 걱정해서 뭐해
 > Why bother worrying in advance?
 
 [Chorus]

@@ -20,22 +20,22 @@ comment: 90년대 삐삐밴드가 느낀 세상과의 '투명한 문' 같은 단
 ---
 누군가 날 가지고 날 가지지 않고
 > Someone has me, someone doesn't
-> 누군가 날 안고 날 안아주지 않네
+누군가 날 안고 날 안아주지 않네
 > Someone holds me, someone doesn't embrace me
 
 투명한 문을 두고 두드리는 누군가
 > Someone taps on the transparent door
-> 미소는 짓고 웃지는 않네
+미소는 짓고 웃지는 않네
 > They smile, but they don't laugh
 
 쳐다보는 눈빛이 바라보진 않고
 > The eyes that look don't truly see
-> 말하는 입술이 이야기 하진 않네
+말하는 입술이 이야기 하진 않네
 > The lips that speak don't truly converse
 
 매일 똑같은 장면이 진실인지
 > Is the same scene every day true?
-> 또다시 반복된 아침은 거짓인지
+또다시 반복된 아침은 거짓인지
 > Or is this repeated morning a lie?
 
 over and over and over and over
@@ -45,11 +45,11 @@ over and over and over and over
 
 사람들은 모두 웃고 있는데
 > Everyone is laughing
-> 어떻게든 되겠지
+어떻게든 되겠지
 > It'll work out somehow
-> 어디로든 가겠지
+어디로든 가겠지
 > I'll go somewhere, anywhere
-> 아무것도 모른채
+아무것도 모른채
 > Without knowing anything
 
 over and over and over and over
@@ -59,26 +59,26 @@ over and over and over and over
 
 (재밌어 보여 있어 보여
 > (Looks fun, looks like something's there
-> 멀리서 봐도 가까이서 봐도
+멀리서 봐도 가까이서 봐도
 > Whether I look from far or near
-> 그 줄무늬티는 어디서 샀어?
+그 줄무늬티는 어디서 샀어?
 > Where did you buy that striped T-shirt?
-> 나 그런 무늬는 처음봤어
+나 그런 무늬는 처음봤어
 > I've never seen a pattern like that
-> 슬퍼보여 웃고 있어도
+슬퍼보여 웃고 있어도
 > Looks sad even when laughing
-> 멀어보여 가까운데
+멀어보여 가까운데
 > Looks far away, but is close
-> 웃어보여 웃어보여 하하)
+웃어보여 웃어보여 하하)
 > Looks like laughing, looks like laughing haha)
 
 문을 열고 싶은데 열리지가 않고
 > I want to open the door, but it won't open
-> 바라보고 싶은데 볼수가 없어
+바라보고 싶은데 볼수가 없어
 > I want to look, but I can't see
-> 말하는 입술이 이야기 하진않네
+말하는 입술이 이야기 하진않네
 > The lips that speak don't truly converse
-> 쳐다보는 눈빛이 바라보진 않네
+쳐다보는 눈빛이 바라보진 않네
 > The eyes that look don't truly see
 
 over and over and over and over
