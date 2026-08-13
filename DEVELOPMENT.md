@@ -287,6 +287,6 @@ GEMINI_API_KEY=xxx pnpm dev   # http://localhost:3000, admin 인증 없이 열�
 pnpm test                     # lib/*.test.mjs 전체 (프레임워크 없는 assert 러너)
 pnpm lint:data                # 콘텐츠 파일 검사 — 필수 필드·rating·emotion·중복 (오류만 exit 1)
 pnpm build                    # 배포 포장 — 정적 페이지 생성까지 검증
-pnpm smoke                    # 빌드 산출물을 next start로 띄워 15개 확인 (주요 페이지 12 + 인증 경계 3)
+pnpm smoke                    # 빌드 산출물을 next start로 띄워 17개 확인 (주요 페이지·API + 인증 경계)
 pnpm check                    # test + lint:data + build + smoke 한 번에 (push 전 게이트)
 ```
