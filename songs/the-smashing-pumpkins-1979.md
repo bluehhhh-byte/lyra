@@ -43,7 +43,7 @@ We'd never see an end to it all
 
 And I don't even care
 To shake these zipper blues*
-> 어느 한곳에 머물지 못하더라도 상관없어
+>^2 어느 한곳에 머물지 못하더라도 상관없어
 And we don't know
 > 우리는 아직 몰라
 Just where our bones will rest to dust I guess
@@ -86,7 +86,7 @@ I know you better than you fake it to see
 
 And I don't even care
 To shake these zipper blues*
-> 어느 한곳에 머물지 못하더라도 상관없어
+>^2 어느 한곳에 머물지 못하더라도 상관없어
 And we don't know
 > 우리는 아직 몰라
 Just where our bones will rest to dust I guess

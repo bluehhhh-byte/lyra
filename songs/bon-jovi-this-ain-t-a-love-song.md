@@ -36,10 +36,10 @@ Baby, ain't it funny, how you never ever learn to fall?
 > 무너지는지를 알지 못한다는 게 얼마나 우스운 일인지
 You're really on your knees
 when you think you're standing tall
-> 당신이 서 있다고 생각할 때 사실은 무너지고 있었는데도
+>^2 당신이 서 있다고 생각할 때 사실은 무너지고 있었는데도
 But only fools are know-it-alls
 And I've played that fool for you
-> 바보들이나 아는 척을 하는 건데, 내가 당신에게 그랬던 거야
+>^2 바보들이나 아는 척을 하는 건데, 내가 당신에게 그랬던 거야
 
 I cried and cried
 > 나는 울고 또 울었어
@@ -47,7 +47,7 @@ There were nights that I died for you baby
 > 당신을 위해 죽을 수도 있었던 밤들도 있었어
 I tried and I tried to deny,
 your love drove me crazy baby
-> 당신이 나를 미치게 한다는 것을
+>^2 당신이 나를 미치게 한다는 것을
 > 부정하려 무슨 짓이든 해보려 했어
 
 If the love that I've got for you is gone

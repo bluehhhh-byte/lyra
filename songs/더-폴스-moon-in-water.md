@@ -29,9 +29,13 @@ source_body_hash: a7550e8ddeea11b6d346d52845619a5479dc14f1
 너를 한껏 비추어 본다
 
 Moon in water
+> 물 속에 비친 달
 Wave in water
+> 물 속에 이는 물결
 Moon in water
+> 물 속에 비친 달
 Wave in water
+> 물 속에 이는 물결
 
 물 속에 비친 너는
 여전히 빛이 나고

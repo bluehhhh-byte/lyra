@@ -30,7 +30,7 @@ This has hot to stop
 This has got to lie down
 Someone else on top
 
-이제는 사라져야 해요
-이제는 그만해야 해요
-이제는 내려놓아야 해요
-누군가를 통해서라도
+> 이제는 사라져야 해요
+> 이제는 그만해야 해요
+> 이제는 내려놓아야 해요
+> 누군가를 통해서라도

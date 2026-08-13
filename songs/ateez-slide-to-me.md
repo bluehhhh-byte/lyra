@@ -72,6 +72,7 @@ Baby just give me the sign
 Oh girl, I know what you need
 >^3 조금 더 가까이 전율 속 거친 춤을 춰
 Shall we dance
+> (우리 춤출까)
 
 Hey, Slide to me
 > (자, 이리로 다가와)

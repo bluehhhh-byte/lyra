@@ -49,12 +49,14 @@ I am a terrorist straight out of hell
 サツガイ サツガイせよ
 > SALHAE SALHAE하라
 (KILL! KILL! KILL! KILL!)
+> (죽여라! 죽여라! 죽여라! 죽여라!)
 思い出を血に染めてやれ
 > 추억따윈 피로 물들여줘라
 
 サツガイ サツガイせよ
 > SALHAE SALHAE하라
 (KILL! KILL! KILL! KILL!)
+> (죽여라! 죽여라! 죽여라! 죽여라!)
 未来など血に染めてやれ
 > 미래따윈 피로 물들여줘라
 
@@ -84,11 +86,13 @@ I am a terrorist straight out of hell
 サツガイ サツガイせよ
 > SALHAE SALHAE하라
 (KILL! KILL! KILL! KILL!)
+> (죽여라! 죽여라! 죽여라! 죽여라!)
 思い出を血に染めてやれ
 > 추억따윈 피로 물들여줘라
 
 サツガイ サツガイせよ
 > SALHAE SALHAE하라
 (KILL! KILL! KILL! KILL!)
+> (죽여라! 죽여라! 죽여라! 죽여라!)
 未来など血に染めてやれ
 > 미래따윈 피로 물들여줘라

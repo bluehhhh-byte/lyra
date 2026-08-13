@@ -65,7 +65,7 @@ This is gonna be the best day of my life
 > 지금이 내 인생에서 가장 좋은 날이야
 This is gonna be, this is gonna be
 The best day of my life
-> 지금이 지금이, 내 인생에서 가장 좋은 날이야
+>^2 지금이 지금이, 내 인생에서 가장 좋은 날이야
 
 Everything is looking up, everybody up now
 > 모든 것이 좋아질 것 같아, 모두 힘내자

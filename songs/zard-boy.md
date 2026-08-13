@@ -3,12 +3,14 @@ title: Boy
 title_ko: 
 artist: ZARD
 artist_ko:
-album:
+album: この愛に泳ぎ疲れても・Boy - Single
 year: 1994
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e2/cd/5b/e2cd5b75-defd-2d33-7454-200fcc38b880/BGDH-1033.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a6/e3/f5/a6e3f566-75c9-1094-577c-378a9b68859d/mzaf_7454550072652899583.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/boy/1580925018?i=1580925023&uo=4
+trackId: 1580925023
+duration: 333
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1994]

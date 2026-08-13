@@ -3,12 +3,14 @@ title: comedy
 title_ko: 
 artist: Sion
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: love - EP
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f3/c4/a9/f3c4a9e5-a6c5-54d2-4a10-57cf6bb1bd10/cover_KM0019282_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/c8/c6/e2/c8c6e23a-f409-2c7f-1f40-a4f048b9eca1/mzaf_15508659862080591518.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/comedy/1724310430?i=1724310434&uo=4
+trackId: 1724310434
+duration: 213
 genre: Indie Pop
 lang: en
 tags: [한국, Indie Pop]
@@ -48,11 +50,11 @@ To watch it with you
 
 Noway, tell me this is just a part
 Of a comedy TV-show or a prank?
-> 안돼, 이건
+>^2 안돼, 이건
 > 그냥 코미디쇼나 장난의 일부지?
 You told me that
 we'll only have to laugh
-> 우린 웃기만하면 된다고 했잖아
+>^2 우린 웃기만하면 된다고 했잖아
 My eyes are sweating in regret
 > 후회로 눈물이 나 
 So please explain
@@ -64,13 +66,13 @@ Like a hunted deer
 > 사냥당한 사슴처럼
 And maybe one day
 you will sell it away
-> 그리고 언젠가 넌 팔아치우겠지
+>^2 그리고 언젠가 넌 팔아치우겠지
 To a puppeteer
 > 꼭두각시 인형사에게
 
 He'll make me a puppet
 for a comedy show
-> 나를 꼭두각시로 만들겠지
+>^2 나를 꼭두각시로 만들겠지
 > 코미디쇼를 위해
 Kids will love my scent
 > 아이들은 내 향기를 좋아하겠지만
@@ -82,11 +84,11 @@ They smell is a piece of broken love
 
 Noway, tell me this is just a part
 Of a comedy TV-show or a prank?
-> 안돼, 이건
+>^2 안돼, 이건
 > 그냥 코미디쇼나 장난의 일부지?
 You told me that
 we'll only have to laugh
-> 우린 웃기만하면 된다고 했잖아
+>^2 우린 웃기만하면 된다고 했잖아
 My eyes are sweating in regret
 > 후회로 눈물이 나 
 So please explain

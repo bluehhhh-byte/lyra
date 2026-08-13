@@ -3,12 +3,14 @@ title: Fly Like An Eagle
 title_ko: 
 artist: Stereophonics
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Kind (Deluxe)
+year: 2019
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/09/5d/0e/095d0e54-ef9f-37fa-fa87-b4f3150509ca/190295377007.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/55/d8/c0/55d8c052-8837-f817-e36b-732a7be957c7/mzaf_8992531956044425634.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/fly-like-an-eagle/1475933628?i=1475933856&uo=4
+trackId: 1475933856
+duration: 273
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock]

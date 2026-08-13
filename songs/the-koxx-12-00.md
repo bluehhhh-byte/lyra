@@ -29,13 +29,13 @@ Like a past and gone yesterday
 > 마치 과거처럼, 그리고 오늘처럼
 I didn't do anything 
 Which memorable something
-> 난 기억에 남을 어떠한 것도 하지 않았지
+>^2 난 기억에 남을 어떠한 것도 하지 않았지
 
 It's unavoidable, miserable situation
 > 피할 수 없는, 막막한 상황이야
 11 o'clock is last chance
 For the people who fear failure
-> 밤 11시는 실패를 두려워하는 사람들에겐
+>^2 밤 11시는 실패를 두려워하는 사람들에겐
 > 마지막 기회일테니까
 
 열 두시가 되면은 문을 닫는다
@@ -53,7 +53,7 @@ It's unavoidable, miserable situation
 > 피할 수 없는, 비참한 상황이야
 11 o'clock is last chance
 For the people who fear failure
-> 밤 11시는 실패를 두려워하는 사람들에겐
+>^2 밤 11시는 실패를 두려워하는 사람들에겐
 > 마지막 기회일테니까
 
 열 두시가 되면은 문을 닫는다

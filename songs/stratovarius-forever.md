@@ -3,12 +3,14 @@ title: Forever
 title_ko: 
 artist: Stratovarius
 artist_ko:
-album:
+album: Episode
 year: 1996
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/8e/3c/e58e3cbc-404d-b3a5-2224-3ba1405f56ce/4262428352505.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/fc/2b/92fc2b5e-a99f-e455-ca32-9785e9a4ae8f/mzaf_7524278521945231129.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/forever/1872455914?i=1872455927&uo=4
+trackId: 1872455927
+duration: 186
 genre: Heavy Metal
 lang: en
 tags: [유럽, Heavy Metal, 1996]

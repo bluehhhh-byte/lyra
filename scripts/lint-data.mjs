@@ -49,7 +49,10 @@ for (const s of songs) {
   // `>^N`으로 아래 줄 번역이 덮는 줄(koMerged)은 누락이 아니다.
   const lines = s.stanzas.flatMap((st) => st.lines);
   if (s.lang !== "ko") {
-    const missing = lines.filter((l) => l.en?.trim() && !l.ko?.trim() && !l.koMerged).length;
+    // 🗨·✏로 시작하는 줄은 본인이 쓴 해설이다 — 가사가 아니므로 번역 대상도 아니다
+    const missing = lines.filter(
+      (l) => l.en?.trim() && !l.ko?.trim() && !l.koMerged && !/^[🗨✏]/.test(l.en.trim())
+    ).length;
     if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
   }
   // `>^N`이 문단 밖까지 가리키면 어느 줄을 덮는지가 불분명하다 — 조용히 넘기지 않는다

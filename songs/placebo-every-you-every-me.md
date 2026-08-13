@@ -51,7 +51,7 @@ No circumstances could excuse
 > 다른 어떤 것도 변명의 여지가 없어
 In the shape of things to come,
 Too much poison come undone
-> 다가올 것은, 감당 못할 끔찍한 결과들 뿐이겠지
+>^2 다가올 것은, 감당 못할 끔찍한 결과들 뿐이겠지
 'Cause there's nothing else to do
 > 왜냐면, 달리 할 수 있는 게 없으니까
 Every me and every you

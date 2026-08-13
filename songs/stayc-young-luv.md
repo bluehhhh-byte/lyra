@@ -3,12 +3,14 @@ title: YOUNG LUV
 title_ko: YOUNG LUV
 artist: STAYC
 artist_ko:
-album:
+album: YOUNG-LUV.COM - EP
 year: 2022
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e7/37/29/e73729f2-ec82-295d-40d0-3025b9f251d8/cover_KM0014771_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/7f/87/1d7f8778-7622-09e0-257f-d3a4dca0aa9f/mzaf_5191776639629169420.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/young-luv/1609910841?i=1609910845&uo=4
+trackId: 1609910845
+duration: 206
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2022]

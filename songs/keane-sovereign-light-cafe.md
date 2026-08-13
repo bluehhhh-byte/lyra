@@ -28,7 +28,7 @@ but you’ve still got nothing to say
 don’t turn your back on me, don’t walk away
 i’m a better man now than i was that day
 
-네가 어떤 신호라도 주길 바라지만
-넌 여전히 아무런 말이 없지
-날 외면하지마, 떠나지마
-난 그 날보다 더욱 괜찮은 사람이 되었어
+> 네가 어떤 신호라도 주길 바라지만
+> 넌 여전히 아무런 말이 없지
+> 날 외면하지마, 떠나지마
+> 난 그 날보다 더욱 괜찮은 사람이 되었어

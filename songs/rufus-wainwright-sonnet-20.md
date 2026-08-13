@@ -28,7 +28,7 @@ Till Nature, as she wrought thee, fell a-doting,
 And by addition me of thee defeated, 
 By adding one thing to my purpose nothing
 
-그대는 처음에 여자로 태어났으나
-자연이 만드는 도중 사랑을 느껴,
-하나를 첨가하여 나에게서 그대를 앗아가고
-나에게는 쓸모없는 하나를 달게 하였네
+> 그대는 처음에 여자로 태어났으나
+> 자연이 만드는 도중 사랑을 느껴,
+> 하나를 첨가하여 나에게서 그대를 앗아가고
+> 나에게는 쓸모없는 하나를 달게 하였네

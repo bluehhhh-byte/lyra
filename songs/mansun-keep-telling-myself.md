@@ -35,7 +35,7 @@ They look at the moon but I look at the sun
 > 달을 쳐다보지만 난 태양을 보네
 Because I believe in something else
 Helping me through when my soul is spent
-> 내 영혼이 다했을 때 나를 채워주는 존재를 믿기에
+>^2 내 영혼이 다했을 때 나를 채워주는 존재를 믿기에
 
 It's something that's in me
 > 그것은 내 안에 있는 무언가
@@ -78,7 +78,7 @@ They look at the moon but I look at the sun
 > 달을 쳐다보지만 난 태양을 보네
 Because I believe in something else
 Helping me through when my soul is spent
-> 내 영혼이 다했을 때 나를 채워주는 존재를 믿기에
+>^2 내 영혼이 다했을 때 나를 채워주는 존재를 믿기에
 
 My soul is spent
 > 내 영혼이 다했을 때

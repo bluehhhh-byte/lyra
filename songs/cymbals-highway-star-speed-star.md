@@ -74,7 +74,9 @@ source_body_hash: 46570c517e5fed859145212ce701a44d7f43d1d5
 > 웃는 우리 둘의 목소리
 
 Party won't be end on this Highway Star
+> 이 하이웨이 스타 위에서 파티는 끝나지 않아
 Party won't be end on this Highway Star
+> 이 하이웨이 스타 위에서 파티는 끝나지 않아
 
 ほほえむ星たちへと祈るように速度上げ走る二人　
 > 미소짓는 별들에게로 기도하듯이 속도를 올려 달리는 우리 둘

@@ -3,14 +3,16 @@ title: What is Love?
 title_ko: 
 artist: TWICE
 artist_ko:
-album:
+album: What is Love? - EP
 year: 2018
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7e/41/69/7e4169e8-8358-27ff-66b4-1564ec800abd/00602508875137_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c9/67/30/c9673025-135c-e508-571b-122c268d7a28/mzaf_11330238921094968350.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/what-is-love/1555390082?i=1555390083&uo=4
+trackId: 1555390083
+duration: 208
 genre: K-Pop
-lang: en
+lang: ko
 tags: [한국, K-Pop, 2018]
 keywords: [영화, 책, 드라마, 사탕, 하늘, 상상]
 emotion: 설렘
@@ -37,6 +39,7 @@ I wanna know
 I wanna know
 > 하늘을 나는 것 같다는데
 I wanna know know know know
+> 알고 싶어 알고 싶어 알고 싶어
 What is love?
 > 사랑이 어떤 느낌인지
 
@@ -45,6 +48,7 @@ I wanna know
 I wanna know
 > 세상이 다 아름답다는데
 I wanna know know know know
+> 알고 싶어 알고 싶어 알고 싶어
 What is love?
 > 언젠간 나에게도 사랑이 올까
 
@@ -63,6 +67,7 @@ I wanna know
 I wanna know
 > 하늘을 나는 것 같다는데
 I wanna know know know know
+> 알고 싶어 알고 싶어 알고 싶어
 What is love?
 > 사랑이 어떤 느낌인지
 
@@ -71,5 +76,6 @@ I wanna know
 I wanna know
 > 세상이 다 아름답다는데
 I wanna know know know know
+> 알고 싶어 알고 싶어 알고 싶어
 What is love?
 > 언젠간 나에게도 사랑이 올까

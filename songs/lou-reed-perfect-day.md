@@ -35,11 +35,11 @@ Then later a movie, too, and then home
 
 Oh, it's such a perfect day,
 I'm glad I spent it with you
-> 오, 아주 완벽한 날이야, 당신이랑 보내게 돼서 기뻐
+>^2 오, 아주 완벽한 날이야, 당신이랑 보내게 돼서 기뻐
 Oh, such a perfect day,
 you just keep me hanging on,
 you just keep me hanging on
-> 아주 완벽한 날이야, 당신이 나를 목매이게 하지,
+>^3 아주 완벽한 날이야, 당신이 나를 목매이게 하지,
 > 이렇게 들뜨게끔 말야
 
 Just a perfect day, problems all left alone

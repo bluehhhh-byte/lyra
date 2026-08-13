@@ -38,25 +38,42 @@ It's just the radio
 > 그저 라디오만 흘러나올뿐
 
 Don't you remember you told me you loved me, baby
+> 기억나지 않아? 날 사랑한다고 말했잖아
 You said you'd be coming back this way again, baby
+> 이 길로 다시 돌아오겠다고 했잖아
 Baby, baby, baby, baby, oh, baby
 I love you, I really do
+>^2 사랑해, 정말로 사랑해
 
 Loneliness
+> 외로움이란
 Is such a sad affair
+> 참 서글픈 일이야
 And I can hardly wait
+> 도무지 기다릴 수가 없어
 To be with you again
+> 당신과 다시 함께할 그날을
 What to say
+> 무슨 말을 해야
 To make you come again
+> 당신이 다시 와줄까
 Come back to me again
+> 내게로 다시 돌아와서
 And play your sad guitar
+> 그 슬픈 기타를 연주해줘
 
 [Chorus]
 Don't you remember you told me you loved me, baby
+> 기억나지 않아? 날 사랑한다고 말했잖아
 You said you'd be coming back this way again, baby
+> 이 길로 다시 돌아오겠다고 했잖아
 Baby, baby, baby, baby, oh, baby
 I love you, I really do
+>^2 사랑해, 정말로 사랑해
 Don't you remember you told me you loved me, baby
+> 기억나지 않아? 날 사랑한다고 말했잖아
 You said you'd be coming back this way again, baby
+> 이 길로 다시 돌아오겠다고 했잖아
 Baby, baby, baby, baby, oh, baby
 I love you, I really do
+>^2 사랑해, 정말로 사랑해

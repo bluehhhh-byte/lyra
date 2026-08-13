@@ -75,7 +75,10 @@ So we can start over again
 > 우리가 다시 시작할 수 있도록
 
 Oh, we could start over again
+> 그래, 우린 다시 시작할 수 있을 거야
 Oh, we could start over again
+> 그래, 우린 다시 시작할 수 있을 거야
 Oh, we could start over again
+> 그래, 우린 다시 시작할 수 있을 거야
 Oh, we could start over again
 > 그래, 우린 다시 시작할 수 있을 거야

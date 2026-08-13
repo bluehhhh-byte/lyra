@@ -3,12 +3,14 @@ title: JAPAN - Silent Jealousy
 title_ko: 
 artist: X
 artist_ko:
-album:
+album: Jealousy
 year: 1991
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/65/a5/35/65a53502-28a9-d3d4-ec2a-946f2844adb1/dj.qkyhkout.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cb/e0/a8/cbe0a82d-f7b4-01a6-a147-79ca383f508d/mzaf_8984327001252728728.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/silent-jealousy/290880497?i=290880509&uo=4
+trackId: 290880509
+duration: 439
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1991]

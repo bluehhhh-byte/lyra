@@ -32,7 +32,7 @@ I just sealed the deal
 
 You toss all the mornings lost to the clouds
 And you watch it go
-> 넌 아침부터 구름 너머 사라지는 시간을 지켜보고 있었지
+>^2 넌 아침부터 구름 너머 사라지는 시간을 지켜보고 있었지
 Your fair weather friends on a parachute binge get lost when the wind blows
 > 필요할 때만 찾던 친구들은 바람 불듯 떠나버리고
 The handshake's stuck on the tip of my tongue
@@ -68,10 +68,10 @@ White smoke, white light, white marble on the floor
 
 Little girl, you convince yourself that
 You want it, but you don't know
-> 그대 스스로 이런 걸 원했다고 말하지만 사실 아무것도 모르지
+>^2 그대 스스로 이런 걸 원했다고 말하지만 사실 아무것도 모르지
 You keep trying to wash the blood
 From your hands, but it won't go
-> 겨우 손 씻으려 해도 핏자국은 사라지지 않는 거야
+>^2 겨우 손 씻으려 해도 핏자국은 사라지지 않는 거야
 We're gonna keep you on the run
 > 우리가 널 계속해서 도망다니게 만들게
 

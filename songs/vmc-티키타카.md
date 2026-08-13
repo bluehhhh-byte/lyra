@@ -3,12 +3,14 @@ title: 티키타카
 title_ko: 티키타카
 artist: VMC
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: VISTY BOYZ
+year: 2017
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b0/3b/94/b03b945b-c209-4d9c-ca5b-49eda1acc1dc/cover_KM0021627_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/3d/31/e93d3150-595a-3de0-76cd-ae1eabaa65aa/mzaf_737738781764310302.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%ED%8B%B0%ED%82%A4%ED%83%80%EC%B9%B4-feat-%EB%94%A5%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%9A%B0%ED%83%84-%EB%84%89%EC%82%B4-%EC%98%A4%EB%94%94/1811702689?i=1811703024&uo=4
+trackId: 1811703024
+duration: 195
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

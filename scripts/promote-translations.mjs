@@ -33,6 +33,32 @@ for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
     lines[i] = lines[i].replace(/^(\s*)/, "$1> ");
     hit++;
   }
+
+  // 문단 통째로 번역인 경우 — 원문 문단을 쓰고 빈 줄 뒤에 번역 문단을 이어 쓴 형태.
+  // 앞 문단이 전부 원문(번역 표시 없음)이고 이 문단이 전부 한글이면 번역으로 본다.
+  const blocks = [];
+  let cur = [];
+  lines.forEach((l, i) => {
+    if (l.trim()) cur.push(i);
+    else { if (cur.length) blocks.push(cur); cur = []; }
+  });
+  if (cur.length) blocks.push(cur);
+  const kind = (idx) => {
+    const rows = idx.map((i) => lines[i].trim()).filter((t) => !/^\[.*\]$/.test(t) && !t.startsWith("//") && !t.startsWith("+"));
+    if (!rows.length) return "";
+    if (rows.some((t) => t.startsWith(">"))) return "mixed";
+    return rows.every((t) => hangul(t) >= 2 && foreign(t) < hangul(t)) ? "ko" : "src";
+  };
+  for (let b = 1; b < blocks.length; b++) {
+    if (kind(blocks[b]) !== "ko" || kind(blocks[b - 1]) !== "src") continue;
+    if (blocks[b].length > blocks[b - 1].length) continue; // 번역이 원문보다 많으면 판단 보류
+    for (const i of blocks[b]) {
+      const t = lines[i].trim();
+      if (/^\[.*\]$/.test(t) || t.startsWith("//") || t.startsWith("+")) continue;
+      lines[i] = lines[i].replace(/^(\s*)/, "$1> ");
+      hit++;
+    }
+  }
   if (!hit) continue;
   files++;
   promoted += hit;

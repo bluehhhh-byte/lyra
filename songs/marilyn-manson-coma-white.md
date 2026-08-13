@@ -29,7 +29,7 @@ Behind her smile
 > 차갑고 공허한 것이 숨어있어
 She's standing on an overpass
 In her miracle mile
-> 베버리힐즈 미라클마일의 고가도로 위에 서서
+>^2 베버리힐즈 미라클마일의 고가도로 위에 서서
 
 
 'Cause you were from a perfect world

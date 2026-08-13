@@ -29,7 +29,7 @@ I'm a little used to calling outside your name
 > 밖에서 네 이름을 부르는 게 조금은 익숙해졌지만
 I won't see you tonight
 So I can keep from going insane
-> 난 미치고 싶진 않으니까 오늘 밤은 널 보지 않을 거야
+>^2 난 미치고 싶진 않으니까 오늘 밤은 널 보지 않을 거야
 But I don't know enough
 > 하지만 나도 잘 모르겠어
 I get some kinda lazy day
@@ -39,7 +39,7 @@ I've been fabulous through to find my tattered name
 > 내 너덜너덜한 이름을 찾으려고 정말 애썼는데
 I'll be stewed tomorrow
 If I don't leave as them both the same
-> 우리 둘 다 서로를 떠나지 않는다면
+>^2 우리 둘 다 서로를 떠나지 않는다면
 > 내일은 엉망진창이 될테니까
 But I don't know enough
 > 하지만 나도 잘 모르겠어
@@ -50,7 +50,7 @@ I'm a little used to wandering outside the rain
 > 빗 속에서 방황하는 것도 조금은 익숙해졌지만
 You can leave me tomorrow
 If it suits you just the same
-> 예전같이 지내는 게 좋다면 내일은 날 떠나도 돼
+>^2 예전같이 지내는 게 좋다면 내일은 날 떠나도 돼
 But I don't know enough
 > 하지만 나도 잘 모르겠어
 I need sun who leaves the day
@@ -69,7 +69,7 @@ And it's hard for me to lose in my life
 > 살면서 무언가를 잃는 건 너무 힘들거든
 I've found outside your skin 
 Right near the fire that we can baby
-> 뜨겁게 너의 살결 가까이 닿았던 기억으로
+>^2 뜨겁게 너의 살결 가까이 닿았던 기억으로
 We can change and feel alright
 > 우리가 괜찮은 느낌으로 바뀔 수 있을지는
 

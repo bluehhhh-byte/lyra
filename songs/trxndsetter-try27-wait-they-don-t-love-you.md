@@ -3,12 +3,14 @@ title: Wait They Don't Love You
 title_ko: Wait They Don't Love You
 artist: Trxndsetter, Try27
 artist_ko:
-album:
+album: Wait they don't love you - Single
 year: 2024
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0d/93/dc/0d93dc42-42eb-a31a-f7f9-ce4cc967f29d/723277955377.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/17/59/101759f9-ac0f-542a-1690-a6518ec844c8/mzaf_14122007272225329862.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/wait-they-dont-love-you/1781344560?i=1781344561&uo=4
+trackId: 1781344561
+duration: 125
 genre: Electronic
 lang: ko
 tags: [기타, Electronic, 2024]

@@ -10,7 +10,7 @@ preview:
 trackId:
 duration:
 genre: Hip-Hop
-lang: en
+lang: ko
 tags: [한국, Hip-Hop]
 keywords: [부산, 졸업, 앨범, 운동, 혈액형]
 emotion: 회상

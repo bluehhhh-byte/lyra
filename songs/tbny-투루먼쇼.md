@@ -3,12 +3,14 @@ title: 투루먼쇼
 title_ko: 투루먼쇼
 artist: TBNY
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Masquerade
+year: 2006
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/92/0c/8f/920c8f35-0839-6c3e-c86c-02fa17246a1c/cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/aa/03/34/aa033461-480c-d60c-5c7e-4405ea61bfff/mzaf_12353395513583930358.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%ED%88%AC%EB%A3%A8%EB%A8%BC%EC%87%BC-feat-sean2slow-dj-bamboo/1500848110?i=1500848126&uo=4
+trackId: 1500848126
+duration: 224
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

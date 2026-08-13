@@ -29,14 +29,14 @@ I can see a washed out moon through the fog
 > 나는 안개 속의 빛 바랜 달을 볼 수가 있어
 And then a voice inside my head
 breaks the analogue and says
-> 그리고 곧 지나간 것들을 부숴버리는
+>^2 그리고 곧 지나간 것들을 부숴버리는
 > 한 목소리가 내 머리 속에 들리지
 
 Follow me down to the valley below
 > 저 계곡 아래로 나를 따라오렴
 You know Moonlight is bleeding
 From out of your soul
-> 달빛이 네 영혼 밖에서 피흘리는 것을 너도 알잖아
+>^2 달빛이 네 영혼 밖에서 피흘리는 것을 너도 알잖아
 
 I survived against the will of my twisted folk
 > 나는 일그러진 사람들의 의지에 맞서 살아남았어
@@ -48,7 +48,7 @@ Follow me down to the valley below
 > 저 계곡 아래로 나를 따라오렴
 You know Moonlight is bleeding
 From out of your soul
-> 달빛이 네 영혼 밖에서 피흘리는 것을 너도 알잖아
+>^2 달빛이 네 영혼 밖에서 피흘리는 것을 너도 알잖아
 
 My David, don't you worry
 > 나의 다윗이여, 걱정 말아라
@@ -69,9 +69,9 @@ Follow me down to the valley below
 > (나를 따라 아래로 가자)
 You know Moonlight is bleeding
 From out of your soul
-> 달빛이 네 영혼 밖에서 피흘리는 것을 너도 알잖아
+>^2 달빛이 네 영혼 밖에서 피흘리는 것을 너도 알잖아
 
 Come to us, Lazarus
 It's time for you to go
-> 우리에게 오렴, 나사로여
+>^2 우리에게 오렴, 나사로여
 > 이제 너를 위해 떠나야 할 시간이니

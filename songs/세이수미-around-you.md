@@ -49,7 +49,7 @@ I'm just missing what I liked
 > 그냥 내가 좋아했던 게 그리워
 But something that makes me think about
 something else is waiting for me when I go out
-> 하지만 내가 외출할 때 어떤 것에 대해 
+>^2 하지만 내가 외출할 때 어떤 것에 대해 
 > 생각하게 만드는 무언가 기다리고 있어
 
 I haven't seen anyone for a few days
@@ -60,7 +60,7 @@ Just hanging about myself
 > 그냥 내 자신을 어슬렁거릴 뿐
 And it is hard to find some reason
 to get out of here
-> 그리고 여기서 나가야 할 이유를 찾기가 어려워
+>^2 그리고 여기서 나가야 할 이유를 찾기가 어려워
 Nobody seems to care for truth
 > 아무도 진실을 좋아하지 않는 것 같아
 

@@ -40,7 +40,9 @@ Not yet awake, I'm raised of make
 > 아직 깨어나지 않았지만 난 일어섰지
 
 Still alive who you love
+> 여전히 살아있어, 네가 사랑하는 사람들은
 Still alive who you love
+> 여전히 살아있어, 네가 사랑하는 사람들은
 Still alive who you love
 > 여전히 살아있어, 네가 사랑하는 사람들은
 

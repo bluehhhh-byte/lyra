@@ -49,14 +49,14 @@ Caught up in a dream
 > 아직 꿈에 사로잡힌 채
 Somewhere in-between
 Rhyme and reason
-> 운율과 이유 사이 어딘가에서
+>^2 운율과 이유 사이 어딘가에서
 Disbelieving
 > 불신하며
 Banshee screaming
 > 밴시는 울부짖지
 Falling from grace
 I’m finally face to fate
-> 드디어 나는 타락한 운명을 마주하고
+>^2 드디어 나는 타락한 운명을 마주하고
 
 She Banshee
 > 그녀는 밴시
@@ -88,14 +88,14 @@ Caught up in a dream
 > 아직 꿈에 사로잡힌 채
 Somewhere in-between
 Head is spinnin’
-> 머리가 뱅뱅도는 사이 어딘가에서
+>^2 머리가 뱅뱅도는 사이 어딘가에서
 Body’s willin’
 > 육신의 의지
 Cheshire grinnin’
 > 공연한 웃음
 Falling from grace
 She’s calling out from the grave
-> 드디어 그녀는 타락한 무덤에서 절규하네
+>^2 드디어 그녀는 타락한 무덤에서 절규하네
 
 She Banshee
 > 그녀는 밴시

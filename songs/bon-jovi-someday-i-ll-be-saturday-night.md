@@ -29,7 +29,7 @@ I'm taking each day and night at a time
 > 매일 밤낮을 보내는 동안
 I'm feeling like a Monday,
 But someday I'll be Saturday night
-> 월요일 같은 기분이지만
+>^2 월요일 같은 기분이지만
 > 때로는 토요일 밤 같은 기분이기도 해
 
 Hey my name is Jim, where did I go wrong?
@@ -73,7 +73,7 @@ Like I ain't got nothing but this roll of the dice
 > 주사위 굴리는 것 외에 아무것도 하지 않은 것처럼
 I'm feeling like a Monday,
 But someday I'll be Saturday night
-> 월요일 같은 기분이지만
+>^2 월요일 같은 기분이지만
 > 때로는 토요일 밤 같은 기분이기도 해
 
 Now I can't say my name or tell you where I am
@@ -82,11 +82,11 @@ I want to blow myself away, don't know if I can
 > 나 자신을 날려버리고 싶어, 그럴 수 있는진 몰라도
 I wish that I could be in some other time and place
 With someone else's soul, someone else's face
-> 다른 사람의 영혼, 다른 사람의 얼굴을 갖고
+>^2 다른 사람의 영혼, 다른 사람의 얼굴을 갖고
 > 다른 시간과 장소에 살고 싶었지만
 I'm gonna pick up all the pieces
 And what's left of my pride
-> 내 조각들과 남아있는 내 자존심은 챙겨야지
+>^2 내 조각들과 남아있는 내 자존심은 챙겨야지
 
 Someday I'll be Saturday night
 > 때로는 토요일 밤이 될 거야

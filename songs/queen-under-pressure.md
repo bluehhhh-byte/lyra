@@ -28,11 +28,11 @@ Pressure on people - people on streets
 > 그 압박감은 사람들을 거리로 내몰아가네
 Turned away from it all like a blind man
 Sat on a fence but it don't work
-> 눈먼 사람처럼 울타리 위에 앉아서, 
+>^2 눈먼 사람처럼 울타리 위에 앉아서, 
 > 이 모든 것을 외면해 보지만 아무 소용이 없어
 Keep coming up with love
 But it's so slashed and torn
-> 사랑이 오고 있지만,
+>^2 사랑이 오고 있지만,
 > 그 사랑은 갈가리 찢겨져 있네
 
 Why, why, why?
@@ -51,11 +51,11 @@ Why can't we give love that one more chance?
 
 And love dares you to care for
 The people on the edge of the night
-> 하지만 사랑은 우리에게 어둠의 가장자리로
+>^2 하지만 사랑은 우리에게 어둠의 가장자리로
 > 내몰린 사람들을 돌볼 용기를 주네
 And love dares you to change
 Our way of caring about ourselves
-> 그리고 사랑은 우리 스스로를
+>^2 그리고 사랑은 우리 스스로를
 > 사랑하는 방법을 감히 바꿀 수 있도록 하네
 
 This is our last dance

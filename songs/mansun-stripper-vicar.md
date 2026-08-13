@@ -54,7 +54,7 @@ If I dob on him they'll call him plastic scouser
 > 사람들은 그를 슬럼가 출신이라고 할 거야
 But the only thing the Stripper Vicar
 Wears is plastic trousers
-> 하지만 스트리퍼 신부가 입는 유일한 옷은
+>^2 하지만 스트리퍼 신부가 입는 유일한 옷은
 > 플라스틱 바지뿐이거든
 
 Dear Mavis thought I'd follow up my letter

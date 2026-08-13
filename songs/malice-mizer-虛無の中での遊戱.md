@@ -29,7 +29,7 @@ Surge vague twine rip assault mind
 > 격동하는 몽롱한 뒤얽힌 찢어지는 습격당한 마음
 Throught the shattered pieces of glass
 countless rays of light are reflected
-> 흩어진 유리조각을 통해 비춰지는 무수한 빛의 섬광들
+>^2 흩어진 유리조각을 통해 비춰지는 무수한 빛의 섬광들
 In my ruined and dissoluted mind
 > 나의 피폐하고 타락한 마음 속에서
 I ridicule nihility, I dissipate in solitary
@@ -58,7 +58,7 @@ Time passes as your heart mingles with the flowing waters
 > 시간은 그대의 마음이 흐르는 물과 뒤섞이듯 지나간다
 From yonder of darkness,
 the broken pieces of recollection, Reminiscence
-> 어둠의 저편으로부터 깨어진 추억의 파편, 회상
+>^2 어둠의 저편으로부터 깨어진 추억의 파편, 회상
 
 Eternity of the time is ticking away endlessly, Reminiscence
 > 영원의 시간은 끊임없이 흘러간다, 회상

@@ -25,25 +25,25 @@ source_body_hash: 9cceffb2677699a28cf06f8fef80b5312d81ba98
 ---
 You and me 
 Meant to be immutable, impossible
-> 너와 나
+>^2 너와 나
 > 모든 것이 불변이고, 불가능이듯
 
 It’s destiny, pure lunacy 
 Incalculable, insufferable
-> 이것은 운명, 순수한 광기
+>^2 이것은 운명, 순수한 광기
 > 측정할 수 없는, 견딜 수 없는
 
 But for the last time 
 You’re everything that i want and ask for 
 You’re all that i’d dreamed
-> 항상 마지막 순간에
+>^3 항상 마지막 순간에
 > 너는 내가 갈구하고 원하는 모든 것
 > 내가 꿈꿔왔던 모든 것
 
 For the first time 
 I’m telling you how much
 I need and bleed for
-> 얼마나 원하고
+>^3 얼마나 원하고
 > 처절하게 갈망하는지
 > 처음으로 네게 말하고 있어
 
@@ -61,7 +61,7 @@ You’re mine forever now
 
 Who wouldn’t be the one you love and live for 
 Who wouldn’t stand inside your love and die for
-> 누가 너를 사랑하고
+>^2 누가 너를 사랑하고
 > 살아가는 목적이 될 수 있을 것인지
 > 너와의 사랑 안에서 죽음마저
 > 두려워하지 않을 자는 누가 될 것인지

@@ -64,7 +64,7 @@ Though we didn't talk much how'd your evening go
 > 얼마 말하지도 못했지만, 저녁에는 어땠어?
 You barely spoke a word to me
 besides that slurred hello
-> 너 혀 꼬인 인사 빼고는 거의 말도 못했잖아
+>^2 너 혀 꼬인 인사 빼고는 거의 말도 못했잖아
 But I happened to see without even tryin'
 > 일부러 보려고 한 건 정말 아닌데,
 How she laughed with you

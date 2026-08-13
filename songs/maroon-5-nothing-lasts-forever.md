@@ -77,7 +77,7 @@ But you're still too reluctant to accept my help
 > 넌 내 도움을 받기를 주저하고 있네 
 What a shame, I hope you find
 Somewhere to place the blame
-> 부끄럽게도 네게 핑계거리라도 있었으면 좋았을텐데
+>^2 부끄럽게도 네게 핑계거리라도 있었으면 좋았을텐데
 But until then the fact remains
 > 하지만 탓하는 순간에도 진실은 계속 남아 있겠지 
 

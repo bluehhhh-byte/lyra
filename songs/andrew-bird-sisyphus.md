@@ -29,11 +29,11 @@ A stone's throw from the precipice, paused
 > 꼭대기에서 바위를 던지기 전 그 잠깐 사이에
 Did he jump or did he fall as
 he gazed into the maw of the morning mist?
-> 자욱한 새벽안갯속으로
+>^2 자욱한 새벽안갯속으로
 > 그는 뛰어내렸나 아니면 굴러 떨어졌나
 Did he raise both fists and say,
 "To hell with this" and just let the rock roll?
-> 아니면 두 주먹을 치켜들고
+>^2 아니면 두 주먹을 치켜들고
 > "될 대로 되라지"라며 그저 바위가 떨어지게 놔두었던가
 
 Let it roll, let it crash down low
@@ -54,7 +54,7 @@ And everything to do with you
 
 I'd rather fail like a mortal than flail
 like a god on a lightning rod
-> 신처럼 피뢰침 위에서 번개로 위협하느니
+>^2 신처럼 피뢰침 위에서 번개로 위협하느니
 > 인간처럼 죽음을 기다릴게
 History forgets the moderates
 > 어설프게 중간에 낀 자는 역사에서 잊혀지기 마련이지
@@ -62,7 +62,7 @@ For those who sit recalcitrant and taciturn
 > 자리에 앉아 고집부리며 침묵하는 이들에게
 You know I'd rather turn and
 burn than scale this edifice, yeah
-> 이 무거운 전당을 들어 올리느니
+>^2 이 무거운 전당을 들어 올리느니
 > 차라리 괴로움에 몸부림치며 불에 타버리겠어
 Where's my accomplice?
 > 내 편은 도대체 어디 있는거야?

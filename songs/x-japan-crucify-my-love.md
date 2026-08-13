@@ -3,12 +3,14 @@ title: JAPAN - Crucify My Love
 title_ko: 
 artist: X
 artist_ko:
-album:
+album: DAHLIA
 year: 1996
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0b/49/e0/0b49e0c0-e784-05ab-c8f0-b3253de5c15c/4571630207023.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/72/2e/b1722e87-e5d4-cab0-16f2-647f5af450fb/mzaf_1580485740302239288.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/crucify-my-love/1886166310?i=1886166660&uo=4
+trackId: 1886166660
+duration: 276
 genre: Visual Kei
 lang: en
 tags: [일본, Visual Kei, 1996]

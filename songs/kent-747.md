@@ -24,8 +24,11 @@ source_hash: 421715f3c9eb52c5d40b960022ee27357724e26f
 source_body_hash: af43904b5f20b20f79eb9a73b330c6fc99594203
 ---
 Maybe it’s just me 
+> 아마 나만 그런 건지도 몰라
 but sometimes it’s impossible to breathe 
+> 가끔은 도무지 숨을 쉴 수가 없어
 Maybe this time it won’t heal 
+> 아마 이번엔 낫지 않을 거야
 
 아마 나는,
 가끔 숨을 쉴 수 없을거야

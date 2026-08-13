@@ -69,7 +69,7 @@ You're overtaken by visions of being overlooked
 > 간과했던 것들에게 발목을 붙잡혔지
 How disappointed would D. I. D. I. P. P. be
 (Dead Idealistic Desperate Inventor Pioneer Philosophers)
-> 죽은 이상적인 간절한 혁신적인 철학자들이
+>^2 죽은 이상적인 간절한 혁신적인 철학자들이
 To see such power in our hands all wasted on greed
 > 탐욕에 물들어 허비되는 우리를 보며 얼마나 좌절할까
 Am I a prisoner to instincts or do my thoughts just live

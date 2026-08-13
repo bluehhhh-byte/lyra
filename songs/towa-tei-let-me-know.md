@@ -3,12 +3,14 @@ title: Let Me Know
 title_ko: 
 artist: Towa Tei
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: LAST CENTURY MODERN
+year: 1999
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/09/4f/7a/094f7aaa-a58e-3ab8-cfd9-af09b5c4e9aa/825646217885.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/12/5d/f2/125df27d-8391-0705-8b5b-c8ce2f212ce4/mzaf_11753646480373729921.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/let-me-know/910760218?i=910760249&uo=4
+trackId: 910760249
+duration: 250
 genre: Electronic
 lang: ja
 tags: [일본, Electronic]
@@ -53,7 +55,7 @@ Any way you want my heart
 > 두 사람을 이어주는 건
 悲しい？ うれしい？ 
 さみしかったの？
-> 슬펐어? 기뻤어? 외로웠어?
+>^2 슬펐어? 기뻤어? 외로웠어?
 守ってあげて あたしだけ見てれぇ
 > 지켜줘, 나만 바라보고 있어 줘
 

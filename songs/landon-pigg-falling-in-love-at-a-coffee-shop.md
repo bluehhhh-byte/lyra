@@ -29,7 +29,7 @@ I think that possibly, maybe I'm falling for you
 > 어쩌면 나는 아마도, 빠져들고 있어
 Yes, there's a chance
 That I've fallen quite hard over you
-> 그래, 너에게 꽤나 깊게 빠졌을 가능성이 있어
+>^2 그래, 너에게 꽤나 깊게 빠졌을 가능성이 있어
 I've seen the paths that your eyes wander down
 > 떠돌고 있는 시선들, 너의 눈이 향하는 곳을
 I want to come too
@@ -46,7 +46,7 @@ I think that possibly, maybe I'm falling for you
 > 어쩌면 나는 아마도, 빠져들고 있어
 Yes, there's a chance
 That I've fallen quite hard over you
-> 그래, 너에게 꽤나 깊게 빠졌을 가능성이 있어
+>^2 그래, 너에게 꽤나 깊게 빠졌을 가능성이 있어
 I've seen the waters that make your eyes shine
 > 너의 눈을 환하게 해 준 물결들을 보고 나서
 Now I'm shining too

@@ -48,7 +48,9 @@ source_body_hash: 76d4542bcbb459d34384fa6536e20629cff5f0cd
 > 과거를 보지말고 바라봐줘요 나만을
 
 You’re everything
+> 당신은 나의 전부예요
 You’re everything
+> 당신은 나의 전부예요
 
 あなたが想うより强く
 > 당신이 생각하는 것 보다 훨씬 강하게
@@ -70,7 +72,9 @@ You’re everything
 > 이 손을 잡고 바라봐요 지금 이 순간을
 
 You’re everything　
+> 당신은 나의 전부예요
 You’re everything
+> 당신은 나의 전부예요
 
 あなたと離れてる場所でも
 > 당신과 헤어진 경우라도
@@ -82,7 +86,9 @@ You’re everything
 > 강하게 사랑하게 하는 힘을 용기로 지금 바꿔 갈꺼에요
 
 Oh You’re my everything
+> 오, 당신은 나의 전부예요
 You’re everything　
+> 당신은 나의 전부예요
 
 あなたと離れてる場所でも會えばいつも
 > 당신과 헤어진 경우라도 만날 수 있다면
@@ -95,4 +101,6 @@ You’re everything　
 > 우아한 거짓말같은 건 필요없어 내가 원하는 것은 당신
 
 You’re everything
+> 당신은 나의 전부예요
 My everything
+> 나의 전부

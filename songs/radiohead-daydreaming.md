@@ -38,7 +38,7 @@ Of no return
 And it's too late
 The damage is done
 The damage is done
-> 이젠 너무 늦어버렸어
+>^3 이젠 너무 늦어버렸어
 > 이미 너무 망가져버렸지
 > 상처가 생겨버렸어
 

@@ -29,7 +29,7 @@ This will be on my videotape, my videotape
 > 이 영상이 비디오 테이프에 나오게 될 거야
 Mephistopheles is just beneath
 and he′s reaching up to grab me
-> 악마가 내 밑에서 나를 잡으려 점점 손을 뻗고 있어
+>^2 악마가 내 밑에서 나를 잡으려 점점 손을 뻗고 있어
 
 This is one for the good days 
 > 나는 행복했던 날들을 기억하기 위해서
@@ -66,4 +66,4 @@ You shouldn′t be afraid
 > 더 이상 두려워 하지마
 Because I know today has been
 the most perfect day I′ve ever seen
-> 오늘은 내 인생에서 정말이지 가장 완벽한 날이 될 테니까
+>^2 오늘은 내 인생에서 정말이지 가장 완벽한 날이 될 테니까

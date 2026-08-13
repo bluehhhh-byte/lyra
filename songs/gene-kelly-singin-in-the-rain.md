@@ -30,10 +30,10 @@ Just singing in the rain
 
 What a glorious feelin'
 I'm happy again
-> 다시 행복해져서 기분이 너무 좋아요
+>^2 다시 행복해져서 기분이 너무 좋아요
 I'm laughing at clouds
 So dark up above
-> 하늘의 먹구름을 보고도 웃음이 나요
+>^2 하늘의 먹구름을 보고도 웃음이 나요
 
 The sun's in my heart
 > 태양이 내 마음을 비추고
@@ -41,14 +41,14 @@ And I'm ready for love
 > 난 사랑할 준비가 되었죠
 Let the stormy clouds chase
 Everyone from the place
-> 비를 머금은 구름이 가는 곳마다 쫓아와도
+>^2 비를 머금은 구름이 가는 곳마다 쫓아와도
 Come on with the rain
 I've a smile on my face
-> 난 빗속에서도 미소 지을 수 있어요
+>^2 난 빗속에서도 미소 지을 수 있어요
 
 I walk down the lane
 With a happy refrain
-> 행복한 후렴구를 부르며 좁은 길을 내려가
+>^2 행복한 후렴구를 부르며 좁은 길을 내려가
 Just singin',
 > 난 그저 노래를,
 Singin' in the rain

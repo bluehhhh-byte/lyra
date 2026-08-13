@@ -3,12 +3,14 @@ title: What Happens After You?
 title_ko: 
 artist: Weezer
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: SZNZ: Autumn
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a9/aa/27/a9aa27da-e879-f126-6e82-a3ff06452ab7/075679753366.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/28/57/34285728-845a-760f-fc98-093286f771da/mzaf_11872976074782021470.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/what-happens-after-you/1645304165?i=1645304169&uo=4
+trackId: 1645304169
+duration: 200
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock]

@@ -32,29 +32,29 @@ Feelin' kinda nervous, startin' things, not really like me
 > 좀 긴장돼, 나 답지 않게 시작하는 것 같아서
 Got a boyfriend, says he likes me,
 Guess I like him, but it's funny
-> 애인이 생겼어, 내가 좋대, 나도 좋아, 근데 좀 웃기네
+>^2 애인이 생겼어, 내가 좋대, 나도 좋아, 근데 좀 웃기네
 'Cause I'm not big on relationships,
 I'm more down for the flirt
-> 난 연애를 좋아하지 않아, 썸 타는 게 더 재미있잖아
+>^2 난 연애를 좋아하지 않아, 썸 타는 게 더 재미있잖아
 All my friends say it's a problem,
 I'd just rather not get hurt
-> 내 친구들 모두 그게 문제래, 난 다치지 않고 싶을 뿐인데
+>^2 내 친구들 모두 그게 문제래, 난 다치지 않고 싶을 뿐인데
 'Cause I can't take my feelings
 And I can't trust my heart
-> 나도 내 감정을 감당 못해, 내 마음을 모르겠어
+>^2 나도 내 감정을 감당 못해, 내 마음을 모르겠어
 So I never take my chances
 'Cause I know I'll break apart
-> 그래서 기회를 잡지 않아, 상처 입을 게 뻔하니까
+>^2 그래서 기회를 잡지 않아, 상처 입을 게 뻔하니까
 
 Buh-duh-duh-duh, buh-duh-duh
 I hate the mushy shit, and
-> 오글거리는 거 정말 싫어
+>^2 오글거리는 거 정말 싫어
 Buh-duh-duh-duh, duh-duh-duh
 I tell it how it is, and
-> 정말이라고 말하며
+>^2 정말이라고 말하며
 Boom, buh-duh-duh, duh-duh
 I wish that I was kiddin' but I'm not good at listening
-> 농담이었으면 좋았겠지만, 난 다른 사람 말도 듣지 않는 걸
+>^2 농담이었으면 좋았겠지만, 난 다른 사람 말도 듣지 않는 걸
 So I don't want someone missin' me
 > 그래서 누군가가 날 그리워하지 않았으면 좋겠어
 
@@ -64,10 +64,10 @@ The nеxt, I hate myself, never good for someone else
 > 나 자신을 싫어하다가도, 누구에게도 좋은 사람이 될 수 없어
 So I try to stay away,
 Don't want them dealing with my brain
-> 거리를 두고 싶어, 남들이 날 건드리지 않았으면 좋겠어
+>^2 거리를 두고 싶어, 남들이 날 건드리지 않았으면 좋겠어
 But suddenly he's got me folding
 'Cause I only want him to hold me, yuck
-> 그런데 갑자기 사랑에 빠지고 만 거야,
+>^2 그런데 갑자기 사랑에 빠지고 만 거야,
 > 난 그냥 갖고 놀고만 싶었는데
 'Cause I can't take my feelings and I can't trust my heart
 > 나도 내 감정을 감당 못해, 내 마음을 모르겠어

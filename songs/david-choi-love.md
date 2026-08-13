@@ -33,7 +33,7 @@ It's so out of place
 > 너무 어색해 보여요
 All you can remember
 Is how you felt the other day
-> 당신은 전에 느꼈던 감정만 떠올릴 뿐이죠
+>^2 당신은 전에 느꼈던 감정만 떠올릴 뿐이죠
 
 You let the small things in your way
 > 사소한 것들이 당신을 가로막지만

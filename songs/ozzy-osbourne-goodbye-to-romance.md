@@ -56,7 +56,7 @@ And I feel the time is right
 > 바로 이 순간이라고 느껴
 Although I know that you just might
 Say to me what ya gonna do
-> 비록 내게 이제 뭐할 거냐고 너는 묻겠지만
+>^2 비록 내게 이제 뭐할 거냐고 너는 묻겠지만
 'Cause I have to take this chance
 > 난 이 기회를 꼭 잡을 테니까
 Goodbye to friends and true romance and to all of you

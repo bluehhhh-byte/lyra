@@ -56,14 +56,14 @@ Outside on the grass us two (We were)
 > 잔디밭에 우리 둘 뿐이었어 (우리는)
 Gazin’s at stars who smiled as
 My eyes only turned towards you (I knew)
-> 너를 바라보는 내 눈처럼 미소짓는 별들을 보며 (난 알았어)
+>^2 너를 바라보는 내 눈처럼 미소짓는 별들을 보며 (난 알았어)
 There was no one else I needed
 > 다른 아무 것들이 필요하지 않았고
 And my love’s never felt this way (I wasn't)
 > 이런 사랑의 기분을 느껴본 적이 없었거든 (난 없었어)
 Too sure if you would mind
 I was nervous but I had to say
-> 네가 좋아하지 않을까봐 긴장했지만 꼭 말해야 했으니까
+>^2 네가 좋아하지 않을까봐 긴장했지만 꼭 말해야 했으니까
 
 (Can I) Call you my own
 > (해도 될까) 널 내 것이라 부르고
