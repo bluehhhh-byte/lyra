@@ -1,0 +1,60 @@
+---
+title: Sad But True
+title_ko: 
+artist: Metallica
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: en
+tags: []
+keywords: []
+emotion:
+date: 2022-11-21
+published: 2022-11-21T14:53:13.000Z
+comment:
+source: instagram
+source_tag: 221121_2352
+source_note: 
+source_hash: 83ac2c4c8f3bdd90f151e2ef4a4db168dd294925
+source_body_hash: 4f68af6d3366f449a5ecfeb8aa8328d76c67ab42
+---
+I'm your dream, make you real
+> 난 너의 꿈, 널 진짜로 만들어주지
+I'm your eyes when you must steal
+> 네가 무언가 훔쳐야 할 때 너의 눈이 되어줄게
+I'm your pain when you can't feel
+> 난 네가 느낄 수 없을 때 고통이 되어 줄 거야
+
+Sad but true, I'm your dream
+> 슬프지만 사실이야, 난 너의 꿈이야
+Mind astray I'm your eyes
+> 길을 잃어버린 마음, 난 너의 눈이야
+While you're away I'm your pain
+> 네가 어디 가 있든지 난 너의 고통이야
+While you repay, You know it's sad but true
+> 네가 빚을 갚을 때, 슬프지만 사실이라는 걸 알게 될 거야
+
+Hate, I'm your hate
+> 증오, 난 너의 증오야 
+I'm your hate when you want love
+> 네가 사랑을 원할 때 증오가 돼줄게
+Pay, pay the price Pay
+> 대가, 대가를 치뤄야 해
+For nothing's fair
+> 모든 것이 불공평하니까 
+
+I'm your truth, telling lies
+> 난 너의 진실, 거짓말을 하지 
+I'm your reasoned alibis
+> 난 너의 알리바이야
+I'm inside
+> 난 네 안에 있어
+Open your eyes I'm you
+> 눈을 떠, 난 너라고
+Sad but true
+> 슬프지만 사실이야

@@ -1,0 +1,59 @@
+---
+title: Perth
+title_ko: 
+artist: Bon Iver
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: en
+tags: []
+keywords: []
+emotion:
+date: 2023-01-06
+published: 2023-01-06T01:05:48.000Z
+comment:
+source: instagram
+source_tag: 230106_1004
+source_note: 
+source_hash: 21ec3ffa65719969508ad2f625dc79d8f812d653
+source_body_hash: 229724c11c4fb369334b3a629a5239ebf4df0429
+---
+(*Perth는 호주에 있는 히스레저의 고향)
+
+I'm tearing up, acrost your face
+> 너의 얼굴을 마주하면 눈물이 차올라
+move dust through the light
+> 너의 고통을 드러내는 게 좋을거야
+To fide your name
+> 너의 이름을 신뢰하기 위해서
+It's something fane
+> 이건 기쁜 일이야
+This is not a place
+> 장소를 말하는 게 아냐
+(*Bon Iver의 모든 곡명은 도시이름임)
+Not yet awake, I'm raised of make
+> 아직 깨어나지 않았지만 난 일어섰지
+
+Still alive who you love
+Still alive who you love
+Still alive who you love
+> 여전히 살아있어, 네가 사랑하는 사람들은
+
+In a mother, out a moth
+> 어머니의 품에서부터 나방이 되어
+Furling forests for the soft
+> 연약한 이들을 위한 숲으로
+Gotta know been lead aloft
+> 그가 죽어 높은 곳으로 떠났음을 우린 받아들여야 해
+
+So I'm ridding all your stories
+> 이제 너의 이야기들을 지워가고 있어
+What I know, what it is, is pouring? wire it up!
+> 내가 아는 건 눈물이 흐른다는 것 뿐, 힘내야 해
+You're breaking your ground
+> 넌 너를 부수고 있어

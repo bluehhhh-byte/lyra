@@ -1,0 +1,61 @@
+---
+title: Homesick
+title_ko: Homesick
+artist: 벤자민
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: ko
+tags: []
+keywords: []
+emotion:
+date: 2022-12-06
+published: 2022-12-06T14:53:18.000Z
+comment:
+source: instagram
+source_tag: 221206_2352
+source_note: 
+source_hash: c25c331ceea6cd70448bd54275d5613e86c21cc3
+source_body_hash: c4a3918bfeedb4a38f356e3fe00f708b9e28ee82
+---
+No one's beside me
+친해 내가 돌아간 길은
+유치한 말만 입에 남지 
+어제보다는 조용하게 
+내일보다는 좀 더 빠르게 
+불을 찾아 달려간 
+내 발자국은 아직 걸음마 
+너무 걱정 마 
+나는 엉성하지 
+
+Boy I get so wild 
+For my love of probs 
+너무 걱정 마 
+나는 멍청하게 
+가고 있어 익숙한 길 위 
+남을 자국 아래로 
+
+The door shine again 
+맞는 게 없는 신발 
+입이 아프게 말한 이유를 
+찾기까지 오래 걸렸지
+여러 손을 거쳐 온 
+나에게 알려줘 
+나는 메말랐어 
+
+Baby, I don’t know how to go home 
+Now I’m sick 
+내 고인 발이 들어갈 신발을 찾지 
+초침이 늦게 들려 내게 반박 씩 
+소식은 쉽게 들려오네 싸움 같이 
+
+Baby, I don’t know how to go home 
+Now I’m sick 
+내 더러운 몸을 불려 물에 담갔지 
+초침은 늦게 들려 내게 반박 씩 
+소식은 쉽게 들려오네 마음 같이 

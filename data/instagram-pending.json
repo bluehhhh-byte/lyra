@@ -2,11 +2,12 @@
  "items": [
   {
    "artist": "忘れらんねえよ",
-   "title": "なんもねえ (2026) *냥냥팩토리, <담배 고양이> OP",
+   "title": "なんもねえ",
    "title_ko": "",
-   "year": "",
+   "year": "2026",
    "ts": 1785766488,
-   "tag": "260803_2314"
+   "tag": "260803_2314",
+   "sourceHash": "b50ce9577bc88beaffa8e4df2ccaef73205e6495"
   },
   {
    "artist": "The Frames",
@@ -14,7 +15,8 @@
    "title_ko": "",
    "year": "2007",
    "ts": 1785451664,
-   "tag": "260731_0747"
+   "tag": "260731_0747",
+   "sourceHash": "1003a832fcf7ac903b6ab0ce85fdcbdcf74a58ce"
   },
   {
    "artist": "Arctic Monkeys",
@@ -22,15 +24,8 @@
    "title_ko": "",
    "year": "2011",
    "ts": 1785195271,
-   "tag": "260728_0834"
-  },
-  {
-   "artist": "GLAY",
-   "title": "空が青空であるために (2015) *테라지마 유지, <다이아몬드 에이스 2기> OP",
-   "title_ko": "",
-   "year": "",
-   "ts": 1784939342,
-   "tag": "260725_0927"
+   "tag": "260728_0834",
+   "sourceHash": "099c76b89c4711a162120402e6919e111d5db94e"
   },
   {
    "artist": "Yorushika",
@@ -38,15 +33,8 @@
    "title_ko": "",
    "year": "2026",
    "ts": 1784818183,
-   "tag": "260723_2349"
-  },
-  {
-   "artist": "MANDI & Yuki Kanesaka",
-   "title": "An Ending Unknown (2026) *마쓰키 잇카, <일본삼국> ED",
-   "title_ko": "",
-   "year": "",
-   "ts": 1784552767,
-   "tag": "260720_2206"
+   "tag": "260723_2349",
+   "sourceHash": "55e6cc14f1e55d9d0f9fa8d40ef39f860de0c6e4"
   },
   {
    "artist": "장우혁",
@@ -54,7 +42,8 @@
    "title_ko": "",
    "year": "2011",
    "ts": 1784504817,
-   "tag": "260720_0846"
+   "tag": "260720_0846",
+   "sourceHash": "19a66491db7798cf29de5ba845eb71e520acf529"
   },
   {
    "artist": "고레에다 히로카즈",
@@ -62,7 +51,8 @@
    "title_ko": "",
    "year": "2026",
    "ts": 1784503922,
-   "tag": "260720_0831"
+   "tag": "260720_0831",
+   "sourceHash": "4c91240740d60cf11bac1422299a6a88f83be06b"
   },
   {
    "artist": "조쉬 사프디",
@@ -70,7 +60,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1784503756,
-   "tag": "260720_0829"
+   "tag": "260720_0829",
+   "sourceHash": "100be26287c7b299fce25abc6631d1c092c16195"
   },
   {
    "artist": "나홍진",
@@ -78,7 +69,8 @@
    "title_ko": "",
    "year": "2026",
    "ts": 1784451366,
-   "tag": "260719_1755"
+   "tag": "260719_1755",
+   "sourceHash": "4892d9cceec4664a6d8cf33135df0ac13a069ee0"
   },
   {
    "artist": "NewJeans",
@@ -86,7 +78,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1783554714,
-   "tag": "260709_0851"
+   "tag": "260709_0851",
+   "sourceHash": "196e9d7b368d8545959ad579dccb7d7bd50328c6"
   },
   {
    "artist": "MGMT",
@@ -94,7 +87,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1783382033,
-   "tag": "260707_0853"
+   "tag": "260707_0853",
+   "sourceHash": "2165f591cfcb5ae75a761a21db177f2c4dfd230b"
   },
   {
    "artist": "삐삐밴드, Zion.T",
@@ -102,7 +96,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1783035170,
-   "tag": "260703_0832"
+   "tag": "260703_0832",
+   "sourceHash": "42cb2d83f137ab478e4edb98f7ed72a28cb7875c"
   },
   {
    "artist": "Impellitteri",
@@ -110,7 +105,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1782948953,
-   "tag": "260702_0835"
+   "tag": "260702_0835",
+   "sourceHash": "c4936226a14057b76ded41457fff3fafb1a571a9"
   },
   {
    "artist": "태양",
@@ -118,7 +114,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1782877983,
-   "tag": "260701_1252"
+   "tag": "260701_1252",
+   "sourceHash": "71231eb20522aa0f3fd7bfe723989cfc062cb507"
   },
   {
    "artist": "Michael Jackson, Janet Jackson",
@@ -126,7 +123,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1782816522,
-   "tag": "260630_1947"
+   "tag": "260630_1947",
+   "sourceHash": "ed77141d98eabf28f5afc8cd69128107b76a6df3"
   },
   {
    "artist": "Silica Gel",
@@ -134,7 +132,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1782775602,
-   "tag": "260630_0826"
+   "tag": "260630_0826",
+   "sourceHash": "5b50c3ec278c5b400fd032accb9e90cf11aa7ff9"
   },
   {
    "artist": "술탄 오브 더 디스코",
@@ -142,15 +141,17 @@
    "title_ko": "",
    "year": "",
    "ts": 1782561037,
-   "tag": "260627_2050"
+   "tag": "260627_2050",
+   "sourceHash": "d959a52ebd45d06511b198aa01309adac5495f53"
   },
   {
    "artist": "Porno Graffitti",
-   "title": "Melissa (2003) *아라카와 히로무, <강철의 연금술사 1기> OP “너의 손으로 찢어버려, 먼 옛날의 기억을. 슬픔의 숨통을 멎게 해줘. 자, 사랑에 애타는 가슴을 꿰뚫어 버려.”",
+   "title": "Melissa",
    "title_ko": "",
-   "year": "",
+   "year": "2003",
    "ts": 1782296884,
-   "tag": "260624_1927"
+   "tag": "260624_1927",
+   "sourceHash": "e41335e5146769fda51c96111901b573c5454cb4"
   },
   {
    "artist": "엘리스유",
@@ -158,7 +159,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1782172242,
-   "tag": "260623_0850"
+   "tag": "260623_0850",
+   "sourceHash": "6bffe820130560d240ce49fbdcf8db535c42919d"
   },
   {
    "artist": "OK Go",
@@ -166,7 +168,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1781568273,
-   "tag": "260616_0904"
+   "tag": "260616_0904",
+   "sourceHash": "b5cb1a1f72b42f8d27800227285c78d04511bedd"
   },
   {
    "artist": "유다빈 밴드",
@@ -174,7 +177,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1781008375,
-   "tag": "260609_2132"
+   "tag": "260609_2132",
+   "sourceHash": "03b789c095eb1c967f4ed3c22e034a69578d6d45"
   },
   {
    "artist": "최유리",
@@ -182,15 +186,17 @@
    "title_ko": "",
    "year": "",
    "ts": 1780962785,
-   "tag": "260609_0852"
+   "tag": "260609_0852",
+   "sourceHash": "6fcbbcbfad707e1e5f3fd8b929dca0aa655c9ba8"
   },
   {
    "artist": "TOMOO",
-   "title": "Endless (2025) *후지TV, <전영역이상해결실> ED “억지로 묶이거나 완성되지 않아도, 서로의 아픔까지 품어내며 각자의 궤적대로 나란히 걸어가는 두 사람의 가장 순수하고 영원한 사랑 이야기.”",
+   "title": "Endless",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1779709863,
-   "tag": "260525_2050"
+   "tag": "260525_2050",
+   "sourceHash": "516bd893909baf1ef284d3d1d3de242f041bc8f6"
   },
   {
    "artist": "12BH",
@@ -198,7 +204,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1779377199,
-   "tag": "260522_0026"
+   "tag": "260522_0026",
+   "sourceHash": "0b8db092daf41db79c7e14a387625a35347af4e7"
   },
   {
    "artist": "AnoyingBox",
@@ -206,7 +213,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1779233974,
-   "tag": "260520_0839"
+   "tag": "260520_0839",
+   "sourceHash": "7ad98f39116488a6695ddd71588bae46cd53f8f6"
   },
   {
    "artist": "한로로",
@@ -214,7 +222,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1779149519,
-   "tag": "260519_0911"
+   "tag": "260519_0911",
+   "sourceHash": "6152e3058ed0179f6fea509a4cdd6d3874ad6272"
   },
   {
    "artist": "장기하와 얼굴들",
@@ -222,7 +231,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1778972952,
-   "tag": "260517_0809"
+   "tag": "260517_0809",
+   "sourceHash": "131bf785c7da1d29d885e50dd40c3ae0aae7c180"
   },
   {
    "artist": "EPIKHIGH",
@@ -230,7 +240,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1778801481,
-   "tag": "260515_0831"
+   "tag": "260515_0831",
+   "sourceHash": "d6fb6431270ce4b6c35ea0de2f62c33f9acb0cbb"
   },
   {
    "artist": "Temples",
@@ -238,15 +249,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1778731590,
-   "tag": "260514_1306"
-  },
-  {
-   "artist": "브로콜리너마저",
-   "title": "너무 애쓰고 싶지 않아요 (2024) *김민정, <아름답고 쓸모없기를> “나의 모든 게 닳아요. 몸도 마음도, 꿈과 사랑도. 내가 갖고 싶던 것도 가졌다고 생각한 것도 모두, 아름답고 쓸모없는 작은 돌 하나.”",
-   "title_ko": "",
-   "year": "",
-   "ts": 1778626659,
-   "tag": "260513_0757"
+   "tag": "260514_1306",
+   "sourceHash": "9c91ffc4b71f6d6a5b84d56c28fae0891ee0e7e2"
   },
   {
    "artist": "Cheryl Lynn",
@@ -254,7 +258,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1778329318,
-   "tag": "260509_2121"
+   "tag": "260509_2121",
+   "sourceHash": "d1304c1c22b51589b06b2e08842f6f9cffbf64fa"
   },
   {
    "artist": "해파",
@@ -262,7 +267,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1778159125,
-   "tag": "260507_1005"
+   "tag": "260507_1005",
+   "sourceHash": "a061ac1e7df90b6dbb0ad82e56e29437fc3b4f64"
   },
   {
    "artist": "PIERROT",
@@ -270,15 +276,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1778013254,
-   "tag": "260506_0534"
-  },
-  {
-   "artist": "羊文学",
-   "title": "Dogs (2026) *마나베 쇼헤이, <쿠조의 대죄> OP “어차피 개라면 그 송곳니로 목숨을 씹어 삼켜버려. 미지근한 각오로는 앞날은 없으니까. 들이받을지, 도망칠지, 네가 직접 정해.”",
-   "title_ko": "",
-   "year": "",
-   "ts": 1777595250,
-   "tag": "260501_0927"
+   "tag": "260506_0534",
+   "sourceHash": "560af0fe12164580aa1f962a2f22e03d0e9e6e77"
   },
   {
    "artist": "GENER8ION, Yung Lean",
@@ -286,7 +285,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1777545272,
-   "tag": "260430_1934"
+   "tag": "260430_1934",
+   "sourceHash": "8ae021ad909ba33b96cb1853d963f751bf6c5a3f"
   },
   {
    "artist": "M.C The Max",
@@ -294,7 +294,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1777348415,
-   "tag": "260428_1253"
+   "tag": "260428_1253",
+   "sourceHash": "ace97a105e71c1eeb6079788e9f26590d766fcaa"
   },
   {
    "artist": "김동률,이소라",
@@ -302,7 +303,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1777284940,
-   "tag": "260427_1915"
+   "tag": "260427_1915",
+   "sourceHash": "799e98eb83b371c57bb52fc0ec11f7dcbda9bc38"
   },
   {
    "artist": "Stryper",
@@ -310,7 +312,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1777134272,
-   "tag": "260426_0124"
+   "tag": "260426_0124",
+   "sourceHash": "f1cf21f8e66c98d453c7265f258e5ff623a65985"
   },
   {
    "artist": "Phoenix",
@@ -318,7 +321,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1776857565,
-   "tag": "260422_2032"
+   "tag": "260422_2032",
+   "sourceHash": "ad5af94a0015a0454d329f1cbe84ed6d70395207"
   },
   {
    "artist": "The Dead Weather",
@@ -326,23 +330,26 @@
    "title_ko": "",
    "year": "",
    "ts": 1776830242,
-   "tag": "260420_1257"
+   "tag": "260420_1257",
+   "sourceHash": "36483949f5aa0538bf9d3213f44109512525a035"
   },
   {
    "artist": "Official髭男dism",
-   "title": "らしさ (2025) *우오토 <100미터.> 애니메이션 주제가 “서로 경쟁하면서도 정말 좋아하는 것에 모든 걸 바치고는 아직도 울고 웃는 거야. 제자리에 섰다면 자, 진심으로 승부다. 기쁨 슬픔 불안 기대 절망 절정. 너와 나의 것이야, 전부.”",
+   "title": "らしさ",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1776680614,
-   "tag": "260420_1923"
+   "tag": "260420_1923",
+   "sourceHash": "157e9ccc95d71051596b273b5e92b1d13b500498"
   },
   {
    "artist": "Kenshi Yonezu",
-   "title": "地球儀 (2023) *미야자키 하야오, <그대들은 어떻게 살 것인가> 주제가 “태어난 날의 맑은 축복부터 사랑하는 이와의 아득한 이별까지, 손이 맞닿는 기쁨과 놓아주어야 하는 슬픔을 모두 끌어안은 채 지구본을 돌리듯 끝없이 삶을 탐구하며 앞으로 나아가는 쓸쓸하고도 찬란한 찬가.”",
+   "title": "地球儀",
    "title_ko": "",
-   "year": "",
+   "year": "2023",
    "ts": 1776564878,
-   "tag": "260419_1114"
+   "tag": "260419_1114",
+   "sourceHash": "9f7f30da4c18ed731b6639eeecbc360d45da357a"
   },
   {
    "artist": "The Last Shadow Puppet",
@@ -350,7 +357,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1776315502,
-   "tag": "260416_1358"
+   "tag": "260416_1358",
+   "sourceHash": "d12c8375a2adedcf6cae220ada0b72f9802d3b53"
   },
   {
    "artist": "KIYOHARU",
@@ -358,7 +366,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1776210674,
-   "tag": "260415_0850"
+   "tag": "260415_0850",
+   "sourceHash": "8973bd8d0d2d6ef70aa8bf88a39b3340f42b77dc"
   },
   {
    "artist": "Radiohead",
@@ -366,7 +375,8 @@
    "title_ko": "1984, 조지 오웰",
    "year": "",
    "ts": 1776140065,
-   "tag": "260414_1314"
+   "tag": "260414_1314",
+   "sourceHash": "00ca65c5435a586a6c1d10f00f31ad608ee82637"
   },
   {
    "artist": "AKMU",
@@ -374,7 +384,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1776037069,
-   "tag": "260413_0837"
+   "tag": "260413_0837",
+   "sourceHash": "54219125181aee712211d7511e802f0934569f98"
   },
   {
    "artist": "Chun Chun",
@@ -382,7 +393,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775843167,
-   "tag": "260411_0245"
+   "tag": "260411_0245",
+   "sourceHash": "05480e78426faf169aaf1b0d1bf24122a819cbe6"
   },
   {
    "artist": "T.O.P",
@@ -390,7 +402,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775706009,
-   "tag": "260409_1239"
+   "tag": "260409_1239",
+   "sourceHash": "cbf72963ce7691b09afb85652b56858f1b09338d"
   },
   {
    "artist": "Redoor",
@@ -398,7 +411,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775684658,
-   "tag": "260409_0643"
+   "tag": "260409_0643",
+   "sourceHash": "e2ebd93f2a59046627429be8866586ee5f341a87"
   },
   {
    "artist": "NELL",
@@ -406,7 +420,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775606014,
-   "tag": "260408_0853"
+   "tag": "260408_0853",
+   "sourceHash": "c704b8adbe590cea22e11526e86581e3db0614e1"
   },
   {
    "artist": "BIGBANG",
@@ -414,7 +429,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775557658,
-   "tag": "260407_1927"
+   "tag": "260407_1927",
+   "sourceHash": "2b1adf80d196dd2ff098226abdc9e8c1fb0ecea1"
   },
   {
    "artist": "THE KOXX",
@@ -422,15 +438,17 @@
    "title_ko": "",
    "year": "",
    "ts": 1775433166,
-   "tag": "260406_0852"
+   "tag": "260406_0852",
+   "sourceHash": "8d8a5704d68e7956083d645a0cf5e658a4367a89"
   },
   {
    "artist": "陰陽座",
-   "title": "甲賀忍法帖 (2005) *애니메이션 <바질리스크 ~코우가인법첩~> O.P. ”수백 년을 이어온 가문의 원한. 피로 물든 숙명 앞에 선 두 연인은, 서로를 향해 칼을 겨누면서도 마지막 순간까지 서로의 눈꺼풀 속에 남길 유일한 기억을 쫓는다. 비극적인 사랑의 종막을 향한 피의 진혼곡.“",
+   "title": "甲賀忍法帖",
    "title_ko": "",
-   "year": "",
+   "year": "2005",
    "ts": 1775375707,
-   "tag": "260405_1654"
+   "tag": "260405_1654",
+   "sourceHash": "d013ba254b0ef0d92e933258a9c0142ae9ff0723"
   },
   {
    "artist": "BTS",
@@ -438,7 +456,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775319522,
-   "tag": "260405_0118"
+   "tag": "260405_0118",
+   "sourceHash": "45b2e51e4fb7602c5b8d3c544938a57406de2b67"
   },
   {
    "artist": "김하온, 창모",
@@ -446,7 +465,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775315880,
-   "tag": "260405_0017"
+   "tag": "260405_0017",
+   "sourceHash": "d40152d17ae23b075dc6d70ea27970e2f1adc53f"
   },
   {
    "artist": "Flea",
@@ -454,7 +474,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1775150114,
-   "tag": "260403_0214"
+   "tag": "260403_0214",
+   "sourceHash": "a8e2f1c8ad9fd26d932e23388588715a164fbc3a"
   },
   {
    "artist": "Raf Sandou, WOODZ",
@@ -462,7 +483,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774999624,
-   "tag": "260401_0826"
+   "tag": "260401_0826",
+   "sourceHash": "92cb14cfdcdea8da10b246d179ebe1d5a761badd"
   },
   {
    "artist": "B",
@@ -470,7 +492,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774950959,
-   "tag": "260331_1855"
+   "tag": "260331_1855",
+   "sourceHash": "1dead77ee34521f46ee8893ba3db2cb0c1b160e8"
   },
   {
    "artist": "hu57la",
@@ -478,7 +501,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774828013,
-   "tag": "260330_0846"
+   "tag": "260330_0846",
+   "sourceHash": "a8f146372d2906783b33afacb1cc809b0640fa20"
   },
   {
    "artist": "god",
@@ -486,7 +510,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774568754,
-   "tag": "260327_0845"
+   "tag": "260327_0845",
+   "sourceHash": "081ce17971f99ba9820ce02a8b8ee454dc435cbf"
   },
   {
    "artist": "Lithe, Don Toliver",
@@ -494,7 +519,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774482760,
-   "tag": "260326_0852"
+   "tag": "260326_0852",
+   "sourceHash": "7a537d3065385c5bc126aac1664318d46212daea"
   },
   {
    "artist": "L’Arc~en~Ciel",
@@ -502,7 +528,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774396152,
-   "tag": "260325_0848"
+   "tag": "260325_0848",
+   "sourceHash": "2642a4015d12fbdff23afefd2f8ae88887452fd8"
   },
   {
    "artist": "필 로드, 크리스 밀러",
@@ -510,7 +537,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774288314,
-   "tag": "260324_0251"
+   "tag": "260324_0251",
+   "sourceHash": "c4b8868f0e81c01e833b5d5a5e6350d0643bef58"
   },
   {
    "artist": "Lionclad",
@@ -518,7 +546,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774223676,
-   "tag": "260323_0854"
+   "tag": "260323_0854",
+   "sourceHash": "441b3e2c4b3b268a576088a519a9a55a49ca727d"
   },
   {
    "artist": "원슈타인",
@@ -526,7 +555,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774094536,
-   "tag": "260321_2102"
+   "tag": "260321_2102",
+   "sourceHash": "d69e4ad301521266d14d6f35eed6a67aefbd7ad5"
   },
   {
    "artist": "Pierce The Veil",
@@ -534,7 +564,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1774065463,
-   "tag": "260321_1257"
+   "tag": "260321_1257",
+   "sourceHash": "f00541d15d4bcac90cb3cd6960cd55eebae7b687"
   },
   {
    "artist": "BOBBY, CHANMINA",
@@ -542,7 +573,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1773100490,
-   "tag": "260310_0854"
+   "tag": "260310_0854",
+   "sourceHash": "20b1843e827434237ddb2328fb9d370150c0a66e"
   },
   {
    "artist": "ROSALÍA, Björk, Yves Tumor",
@@ -550,7 +582,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772862088,
-   "tag": "260307_1440"
+   "tag": "260307_1440",
+   "sourceHash": "a82e6362f19b8a3413b00dc01ce44181f340e491"
   },
   {
    "artist": "viceversa",
@@ -558,7 +591,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772860239,
-   "tag": "260307_1410"
+   "tag": "260307_1410",
+   "sourceHash": "df163fa16bda33a250b5cf4aa6b475787f7b8a58"
   },
   {
    "artist": "KIRARA",
@@ -566,7 +600,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772668034,
-   "tag": "260305_0846"
+   "tag": "260305_0846",
+   "sourceHash": "e4cc51436e3900779287a472e77a21d06d169bcc"
   },
   {
    "artist": "요아킴 트리에",
@@ -574,7 +609,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772581677,
-   "tag": "260304_0847"
+   "tag": "260304_0847",
+   "sourceHash": "7f75007873813d23257f13f4648c656d916fff3e"
   },
   {
    "artist": "클로이 자오",
@@ -582,7 +618,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772498275,
-   "tag": "260303_0937"
+   "tag": "260303_0937",
+   "sourceHash": "1eaf2b59011996a1f09c8d1daddd1db89e30b2d2"
   },
   {
    "artist": "레오스 카락스",
@@ -590,7 +627,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772494497,
-   "tag": "260303_0834"
+   "tag": "260303_0834",
+   "sourceHash": "3745ec87b4455af894e344405478af1c5aafac71"
   },
   {
    "artist": "DIR EN GREY",
@@ -598,7 +636,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772275980,
-   "tag": "260228_1952"
+   "tag": "260228_1952",
+   "sourceHash": "831e8e58770a6b18098126dde37640f84add3f9b"
   },
   {
    "artist": "SIENNA SPIRO",
@@ -606,7 +645,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772274912,
-   "tag": "260228_1935"
+   "tag": "260228_1935",
+   "sourceHash": "d69154cb690415c511d8973d1a8650e8c87ece80"
   },
   {
    "artist": "ELLEGARDEN",
@@ -614,7 +654,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1772151083,
-   "tag": "260227_0911"
+   "tag": "260227_0911",
+   "sourceHash": "6b4532d9a55e4243c49fa9a35f936e6ec933ea79"
   },
   {
    "artist": "이찬혁",
@@ -622,7 +663,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771976523,
-   "tag": "260225_0841"
+   "tag": "260225_0841",
+   "sourceHash": "ea0d03b7dbf21ac079c95c893e32655fd317ef4e"
   },
   {
    "artist": "The Rare Occasions",
@@ -630,7 +672,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771802577,
-   "tag": "260223_0822"
+   "tag": "260223_0822",
+   "sourceHash": "34bf8f9cd08b06956b0e896aa08d5571d3aa80c6"
   },
   {
    "artist": "Caitlin Byk",
@@ -638,7 +681,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771784813,
-   "tag": "260223_0326"
+   "tag": "260223_0326",
+   "sourceHash": "86cab37a99d2074ec4c20400aea96b38be5e4c01"
   },
   {
    "artist": "Kehlani",
@@ -646,7 +690,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771783501,
-   "tag": "260223_0304"
+   "tag": "260223_0304",
+   "sourceHash": "0aabcf3c9fddc89ce5adadc5fb3cbb019aa1a1d4"
   },
   {
    "artist": "치사토 모리타카",
@@ -654,7 +699,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771755116,
-   "tag": "260222_1911"
+   "tag": "260222_1911",
+   "sourceHash": "dadc3100f215873877f8e78dc97f5b1f38e18234"
   },
   {
    "artist": "Red Hot Chili Peppers",
@@ -662,7 +708,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771696496,
-   "tag": "260222_0254"
+   "tag": "260222_0254",
+   "sourceHash": "9897ac3f5c5770c57e20dcd8d15911d5d72e9728"
   },
   {
    "artist": "Damien Rice",
@@ -670,7 +717,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771520405,
-   "tag": "260220_0200"
+   "tag": "260220_0200",
+   "sourceHash": "10023ef5114e8dbbd1965e5268f326c8f79b5460"
   },
   {
    "artist": "IVE",
@@ -678,7 +726,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1771502567,
-   "tag": "260219_2102"
+   "tag": "260219_2102",
+   "sourceHash": "12b2cb178f383230b2e3118e1d44d2fd22353181"
   },
   {
    "artist": "Bill Stax, Dok2, The Quiett, 천재노창",
@@ -686,7 +735,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770939196,
-   "tag": "260213_0833"
+   "tag": "260213_0833",
+   "sourceHash": "58a63bca2b1c5a8a58c136eb5ff2030dbfbf22ea"
   },
   {
    "artist": "Zhuli",
@@ -694,7 +744,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770853781,
-   "tag": "260212_0849"
+   "tag": "260212_0849",
+   "sourceHash": "911d838bad774d0053537cc83f1ee1e8b989ff4e"
   },
   {
    "artist": "Henry Young, Ashley Alisha",
@@ -702,7 +753,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770852203,
-   "tag": "260212_0823"
+   "tag": "260212_0823",
+   "sourceHash": "8c08a2ede710032f7cd8199fbf6bb9e90d075dce"
   },
   {
    "artist": "구로사와 아키라",
@@ -710,7 +762,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770767147,
-   "tag": "260211_0845"
+   "tag": "260211_0845",
+   "sourceHash": "b89e3fdffeccd7a7987593c6b3fb4942d2c93fa8"
   },
   {
    "artist": "Extreme",
@@ -718,7 +771,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770545470,
-   "tag": "260208_1910"
+   "tag": "260208_1910",
+   "sourceHash": "128626a8b3a1af753fd3f048b1e0f3f4b1bae0f2"
   },
   {
    "artist": "Magi Merlin",
@@ -726,7 +780,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770481549,
-   "tag": "260208_0125"
+   "tag": "260208_0125",
+   "sourceHash": "1eca041aa3a0166367006984a1384e8daf1aaba8"
   },
   {
    "artist": "Dumbfoundead, Loppy, Nafla",
@@ -734,7 +789,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1770336460,
-   "tag": "260206_0907"
+   "tag": "260206_0907",
+   "sourceHash": "b291b1a822eba0ed4f6540ca52008ba7e4c8b370"
   },
   {
    "artist": "Limp Bizkit",
@@ -742,15 +798,17 @@
    "title_ko": "",
    "year": "",
    "ts": 1770292900,
-   "tag": "260205_2101"
+   "tag": "260205_2101",
+   "sourceHash": "54e8e47a83443d0f34c0750b225ede7dbc55b772"
   },
   {
    "artist": "Hiromi, Tomoaki Bada, Shun Ishiwaka",
-   "title": "N.E.W. (2023) * Blue Giant O.S.T. “답습하지 않는다, 우리는 개척한다.”",
+   "title": "N.E.W.",
    "title_ko": "",
-   "year": "",
+   "year": "2023",
    "ts": 1769761346,
-   "tag": "260130_1722"
+   "tag": "260130_1722",
+   "sourceHash": "c34cf8f61c0766ce6cfcaa35d155e92f1d1bead8"
   },
   {
    "artist": "Steve Vai",
@@ -758,7 +816,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1769644378,
-   "tag": "260129_0852"
+   "tag": "260129_0852",
+   "sourceHash": "191761e75e6e70e7db0dd783a759e9c89e8d09ec"
   },
   {
    "artist": "KIRARA",
@@ -766,7 +825,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1768865957,
-   "tag": "260120_0839"
+   "tag": "260120_0839",
+   "sourceHash": "da47905011f8ec5609f8cb18627f7f3de80ab33c"
   },
   {
    "artist": "자우림",
@@ -774,7 +834,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1768778273,
-   "tag": "260119_0817"
+   "tag": "260119_0817",
+   "sourceHash": "ab4d9b94f7fd1e08ba56f765b7dc66d8132cbf39"
   },
   {
    "artist": "Bon Jovi",
@@ -782,7 +843,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1768574854,
-   "tag": "260116_2347"
+   "tag": "260116_2347",
+   "sourceHash": "42f708aa0f5ad1a6a7168223f3f60ca037900564"
   },
   {
    "artist": "스윙스, 그냥노창, 블랙넛, 다민이",
@@ -790,15 +852,17 @@
    "title_ko": "",
    "year": "",
    "ts": 1768430836,
-   "tag": "260115_0747"
+   "tag": "260115_0747",
+   "sourceHash": "285f846d61671aab7ab34ff1748f80a97188ff55"
   },
   {
    "artist": "YUNGBLUD",
-   "title": "Changes (2025) *Black Sabath Tribute. “소중했던 연인을 떠나보낸 후, 뒤늦은 후회와 상실감 속에서 피할 수 없는 삶의 변화를 마주하며 고군분투하는 한 남자의 애절한 고백.”",
+   "title": "Changes",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1768231358,
-   "tag": "260113_0022"
+   "tag": "260113_0022",
+   "sourceHash": "f426997cea1c4273bb8492756f12def78e2ed9e7"
   },
   {
    "artist": "짱유, Hukky Shibaseki",
@@ -806,7 +870,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1768175598,
-   "tag": "260112_0853"
+   "tag": "260112_0853",
+   "sourceHash": "746fe050382e3cc8862db84750eac7e05cd560d7"
   },
   {
    "artist": "소라네오",
@@ -814,7 +879,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1768053344,
-   "tag": "260110_2255"
+   "tag": "260110_2255",
+   "sourceHash": "d961970ba8f13cd592c7c1587c6a3c931aa00c0d"
   },
   {
    "artist": "서지원",
@@ -822,7 +888,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1768050574,
-   "tag": "260110_2209"
+   "tag": "260110_2209",
+   "sourceHash": "af1b12f92625acbcd1d03441c808e5b0317e7bce"
   },
   {
    "artist": "San E",
@@ -830,7 +897,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767713566,
-   "tag": "260107_0032"
+   "tag": "260107_0032",
+   "sourceHash": "5fbbe5718929c2710b03f08bbf219c11c8abf88c"
   },
   {
    "artist": "Jamiroquai",
@@ -838,7 +906,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767655895,
-   "tag": "260106_0831"
+   "tag": "260106_0831",
+   "sourceHash": "d7b0ff4251bf7a1e57843d6877c1572340eb7f93"
   },
   {
    "artist": "Zior Park",
@@ -846,7 +915,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767573138,
-   "tag": "260105_0932"
+   "tag": "260105_0932",
+   "sourceHash": "05bd356ae80a9c7fd3cd2c1765cd5af32a359170"
   },
   {
    "artist": "에드워드 양",
@@ -854,7 +924,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767537136,
-   "tag": "260104_2332"
+   "tag": "260104_2332",
+   "sourceHash": "b866e2a69851dc67abd9f8ff295575281af0f379"
   },
   {
    "artist": "타케우치 히데키",
@@ -862,7 +933,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767478703,
-   "tag": "260104_0718"
+   "tag": "260104_0718",
+   "sourceHash": "080a73ff3b0d2ef2d2221c8557d04a628f45be9e"
   },
   {
    "artist": "백예린",
@@ -870,7 +942,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767415022,
-   "tag": "260103_1336"
+   "tag": "260103_1336",
+   "sourceHash": "9eb082e3ab898ace606fe966182fe75a4be7cebf"
   },
   {
    "artist": "Robbie Williams",
@@ -878,7 +951,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767311486,
-   "tag": "260102_0851"
+   "tag": "260102_0851",
+   "sourceHash": "f740cca27ddf90b50df113f77f720ef8e7594a3a"
   },
   {
    "artist": "서태지",
@@ -886,7 +960,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767301073,
-   "tag": "260102_0557"
+   "tag": "260102_0557",
+   "sourceHash": "1bf98a6fbec8e5ee42231e4afb4441fa72cf9a6a"
   },
   {
    "artist": "Arco",
@@ -894,7 +969,8 @@
    "title_ko": "",
    "year": "",
    "ts": 1767225231,
-   "tag": "260101_0853"
+   "tag": "260101_0853",
+   "sourceHash": "000fb21470ddc2d020f1667cb6b8269ddcb09483"
   },
   {
    "artist": "Siam Shade",
@@ -902,7 +978,8 @@
    "title_ko": "",
    "year": "2000",
    "ts": 1767192714,
-   "tag": "251231_2350"
+   "tag": "251231_2350",
+   "sourceHash": "3a50c8f185a8c8f072b8b01940f5d3678534ba7b"
   },
   {
    "artist": "Maytree",
@@ -910,7 +987,8 @@
    "title_ko": "",
    "year": "2021",
    "ts": 1766921177,
-   "tag": "251228_2026"
+   "tag": "251228_2026",
+   "sourceHash": "3b3dc19b9f0cef3aad67a190d940624ce01db73c"
   },
   {
    "artist": "5 Seconds of Summer",
@@ -918,23 +996,26 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1766676626,
-   "tag": "251226_0030"
+   "tag": "251226_0030",
+   "sourceHash": "d5d38f4021115a8a1c5816778bc5a26bac62bad8"
   },
   {
    "artist": "Sam Fender",
-   "title": "People Watching (2025) *Merry Christmas",
+   "title": "People Watching",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1766592976,
-   "tag": "251225_0116"
+   "tag": "251225_0116",
+   "sourceHash": "7087174948f5ec58f15e73904fb8af6b96b7753b"
   },
   {
    "artist": "SIENNA SPIRO",
-   "title": "Ain’t No Way (2025) *Aretha Franklin Cover.",
+   "title": "Ain’t No Way",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1766529488,
-   "tag": "251224_0738"
+   "tag": "251224_0738",
+   "sourceHash": "2328686318e37d2de63e3d19c6cf46614fe221ba"
   },
   {
    "artist": "로이킴",
@@ -942,7 +1023,8 @@
    "title_ko": "",
    "year": "2018",
    "ts": 1765928402,
-   "tag": "251217_0839"
+   "tag": "251217_0839",
+   "sourceHash": "a432fe41b19b7843416d45c6fe3dbc1a3dd3fe39"
   },
   {
    "artist": "듀스",
@@ -950,7 +1032,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1765656548,
-   "tag": "251214_0509"
+   "tag": "251214_0509",
+   "sourceHash": "c6dec7b1245b57a0bfaac12683bfa47e3bf0170f"
   },
   {
    "artist": "카더가든",
@@ -958,7 +1041,8 @@
    "title_ko": "",
    "year": "2020",
    "ts": 1765376304,
-   "tag": "251210_2318"
+   "tag": "251210_2318",
+   "sourceHash": "1e4ecf6ab9d9ed2a57c1a613293d51644f5afe29"
   },
   {
    "artist": "장석훈",
@@ -966,7 +1050,8 @@
    "title_ko": "",
    "year": "2019",
    "ts": 1765322021,
-   "tag": "251210_0813"
+   "tag": "251210_0813",
+   "sourceHash": "acf0a0ad5ca1d954376424c555aaaa23a53100b2"
   },
   {
    "artist": "Stereophonics",
@@ -974,7 +1059,8 @@
    "title_ko": "",
    "year": "2003",
    "ts": 1765288534,
-   "tag": "251209_2255"
+   "tag": "251209_2255",
+   "sourceHash": "a049d3b2bf8ad2f24c146f07e01b28a5868d0a7a"
   },
   {
    "artist": "신화",
@@ -982,7 +1068,8 @@
    "title_ko": "",
    "year": "1999",
    "ts": 1764932149,
-   "tag": "251205_1955"
+   "tag": "251205_1955",
+   "sourceHash": "09e3464c98a2f19488b8000322240e405c8b60e8"
   },
   {
    "artist": "젝스키스",
@@ -990,7 +1077,8 @@
    "title_ko": "",
    "year": "1997",
    "ts": 1764621646,
-   "tag": "251202_0540"
+   "tag": "251202_0540",
+   "sourceHash": "9d179312e7a498419002b17bd9e9740197d6ff92"
   },
   {
    "artist": "BoA",
@@ -998,15 +1086,17 @@
    "title_ko": "",
    "year": "2020",
    "ts": 1764286673,
-   "tag": "251128_0837"
+   "tag": "251128_0837",
+   "sourceHash": "5335e6cbe3be7756f51de74d94c5b3e5bb40f805"
   },
   {
    "artist": "Kenshi Yonezu",
-   "title": "Kick Back (2024) *후지모토 타츠키, 체인소맨 1기 오프닝",
+   "title": "Kick Back",
    "title_ko": "",
-   "year": "",
+   "year": "2024",
    "ts": 1764195632,
-   "tag": "251127_0720"
+   "tag": "251127_0720",
+   "sourceHash": "9e7e148bd7759b2b40a8b9b1843e073604557d8d"
   },
   {
    "artist": "RIIZE",
@@ -1014,7 +1104,8 @@
    "title_ko": "",
    "year": "2024",
    "ts": 1764114265,
-   "tag": "251126_0843"
+   "tag": "251126_0843",
+   "sourceHash": "160bd0bc7ffe5fcf828b62e690e96635d5828c61"
   },
   {
    "artist": "스카이민혁, 알트",
@@ -1022,7 +1113,8 @@
    "title_ko": "",
    "year": "2022",
    "ts": 1764081780,
-   "tag": "251125_2342"
+   "tag": "251125_2342",
+   "sourceHash": "2bb383fcbe30f1689be1396577fae0903f86abfd"
   },
   {
    "artist": "XXX",
@@ -1030,7 +1122,8 @@
    "title_ko": "",
    "year": "2016",
    "ts": 1763941235,
-   "tag": "251124_0840"
+   "tag": "251124_0840",
+   "sourceHash": "d0e42c61c553fc9d6e0e0902a64d73eb411e72e0"
   },
   {
    "artist": "HYBS",
@@ -1038,7 +1131,8 @@
    "title_ko": "",
    "year": "2022",
    "ts": 1763678488,
-   "tag": "251121_0741"
+   "tag": "251121_0741",
+   "sourceHash": "7bf1729087784bb3950bccba133470f83a999f7c"
   },
   {
    "artist": "OneRepublic",
@@ -1046,7 +1140,8 @@
    "title_ko": "",
    "year": "2022",
    "ts": 1763593715,
-   "tag": "251120_0808"
+   "tag": "251120_0808",
+   "sourceHash": "5b28de2550c3c1b963aa9bffe948be1e1d9e264f"
   },
   {
    "artist": "Kanye West",
@@ -1054,7 +1149,8 @@
    "title_ko": "",
    "year": "2007",
    "ts": 1763422823,
-   "tag": "251118_0840"
+   "tag": "251118_0840",
+   "sourceHash": "f6807267cb4c3df97bc38fcce59db027bb241fc9"
   },
   {
    "artist": "검정치마",
@@ -1062,7 +1158,8 @@
    "title_ko": "",
    "year": "2017",
    "ts": 1763226925,
-   "tag": "251116_0215"
+   "tag": "251116_0215",
+   "sourceHash": "37b7fbc6e9777041b51736f69b223eae1c7fbe31"
   },
   {
    "artist": "Sigur Ros",
@@ -1070,7 +1167,8 @@
    "title_ko": "",
    "year": "2005",
    "ts": 1763136108,
-   "tag": "251115_0101"
+   "tag": "251115_0101",
+   "sourceHash": "3e20c11964be9103a4c43da52bd7aca2d3ddfd05"
   },
   {
    "artist": "오존",
@@ -1078,7 +1176,8 @@
    "title_ko": "",
    "year": "2020",
    "ts": 1762817877,
-   "tag": "251111_0837"
+   "tag": "251111_0837",
+   "sourceHash": "6298657777c347625f9664e2894dd553189bc095"
   },
   {
    "artist": "자우림",
@@ -1086,7 +1185,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1762817253,
-   "tag": "251111_0827"
+   "tag": "251111_0827",
+   "sourceHash": "b9b767a62e1fcef819ba3d88b960ec347693dc15"
   },
   {
    "artist": "MEW",
@@ -1094,7 +1194,8 @@
    "title_ko": "",
    "year": "2015",
    "ts": 1761780531,
-   "tag": "251040_0828"
+   "tag": "251040_0828",
+   "sourceHash": "6adda2159b693d6aeedd2faee5cd9bfa8c9fa360"
   },
   {
    "artist": "BTS",
@@ -1102,7 +1203,8 @@
    "title_ko": "",
    "year": "2020",
    "ts": 1761711149,
-   "tag": "251029_1312"
+   "tag": "251029_1312",
+   "sourceHash": "a43cf15a4a15622a5926f0d3138daa670d991f6e"
   },
   {
    "artist": "THE KOXX",
@@ -1110,7 +1212,8 @@
    "title_ko": "",
    "year": "2017",
    "ts": 1761574258,
-   "tag": "251027_2310"
+   "tag": "251027_2310",
+   "sourceHash": "425c40723148aa73cdf903a5ac60b21b0c1893e2"
   },
   {
    "artist": "Derik Fein",
@@ -1118,7 +1221,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1761434423,
-   "tag": "251026_0820"
+   "tag": "251026_0820",
+   "sourceHash": "83c1dc422ef7dda9096c04c4717784e43304f321"
   },
   {
    "artist": "Megadeth",
@@ -1126,7 +1230,8 @@
    "title_ko": "",
    "year": "1997",
    "ts": 1761316103,
-   "tag": "251024_2328"
+   "tag": "251024_2328",
+   "sourceHash": "d4ff3ac54938b51d240bbfe6a41485add1d954c3"
   },
   {
    "artist": "Rude John",
@@ -1134,7 +1239,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1761214195,
-   "tag": "251023_1909"
+   "tag": "251023_1909",
+   "sourceHash": "6a601bb89dc36cadfc3d8e90c5c465c92b9887b9"
   },
   {
    "artist": "ALLDAY PROJECT",
@@ -1142,7 +1248,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1761176811,
-   "tag": "251023_0846"
+   "tag": "251023_0846",
+   "sourceHash": "b725a7021ac99c49125c08fee1fe38de0c822913"
   },
   {
    "artist": "EVE",
@@ -1150,7 +1257,8 @@
    "title_ko": "",
    "year": "2006",
    "ts": 1760827515,
-   "tag": "251019_0745"
+   "tag": "251019_0745",
+   "sourceHash": "87aff40abaef779afc57530b63242406d7ece48f"
   },
   {
    "artist": "Nemesis",
@@ -1158,7 +1266,8 @@
    "title_ko": "",
    "year": "2005",
    "ts": 1760804150,
-   "tag": "251019_0115"
+   "tag": "251019_0115",
+   "sourceHash": "f1be926792a41ec052b2aeb36fa25c7720a7d21a"
   },
   {
    "artist": "새소년",
@@ -1166,7 +1275,8 @@
    "title_ko": "",
    "year": "2021",
    "ts": 1760654071,
-   "tag": "251017_0734"
+   "tag": "251017_0734",
+   "sourceHash": "418ab4089790ee0bd24d2460860554a505c55651"
   },
   {
    "artist": "카더가든",
@@ -1174,7 +1284,8 @@
    "title_ko": "",
    "year": "2021",
    "ts": 1760653411,
-   "tag": "251017_0723"
+   "tag": "251017_0723",
+   "sourceHash": "1572ac3fe5a9b563e80dcf8ae12056fa24fc1622"
   },
   {
    "artist": "장범준",
@@ -1182,7 +1293,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1760538831,
-   "tag": "251015_2333"
+   "tag": "251015_2333",
+   "sourceHash": "4af6910d4f7397c05cf69ac90339421e56d818cb"
   },
   {
    "artist": "can’t be blue",
@@ -1190,7 +1302,8 @@
    "title_ko": "",
    "year": "2024",
    "ts": 1760482890,
-   "tag": "251015_0801"
+   "tag": "251015_0801",
+   "sourceHash": "10d888c86586eaaae1ea2b82f4ca18c6d16f99ad"
   },
   {
    "artist": "Troye Sivan",
@@ -1198,7 +1311,8 @@
    "title_ko": "",
    "year": "2021",
    "ts": 1760450081,
-   "tag": "251014_2254"
+   "tag": "251014_2254",
+   "sourceHash": "4b028d115ef8b9f1a6b57776091dcb4f03fcf661"
   },
   {
    "artist": "Suede",
@@ -1206,7 +1320,8 @@
    "title_ko": "",
    "year": "2016",
    "ts": 1758895347,
-   "tag": "250926_2302"
+   "tag": "250926_2302",
+   "sourceHash": "8df71444bd198443cd5bcb6342a67683aacf4d86"
   },
   {
    "artist": "봄여름가을겨울",
@@ -1214,7 +1329,8 @@
    "title_ko": "",
    "year": "1989",
    "ts": 1758870900,
-   "tag": "250926_1614"
+   "tag": "250926_1614",
+   "sourceHash": "89fd0bc4198042caaf71ba1cc38c8423238bc1f0"
   },
   {
    "artist": "제이통",
@@ -1222,7 +1338,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1758638969,
-   "tag": "250923_2349"
+   "tag": "250923_2349",
+   "sourceHash": "1be37494514a67076edcd55c076161df5298ad4f"
   },
   {
    "artist": "디오",
@@ -1230,7 +1347,8 @@
    "title_ko": "",
    "year": "2024",
    "ts": 1757861317,
-   "tag": "250914_2348"
+   "tag": "250914_2348",
+   "sourceHash": "8380f031bc647aec5cda63405bd2d2b9e363c42e"
   },
   {
    "artist": "시나위",
@@ -1238,7 +1356,8 @@
    "title_ko": "",
    "year": "2014",
    "ts": 1757428674,
-   "tag": "250909_2337"
+   "tag": "250909_2337",
+   "sourceHash": "59e845c383946327a91e619388c4b9bda2cbc960"
   },
   {
    "artist": "Dream Theater",
@@ -1246,7 +1365,8 @@
    "title_ko": "",
    "year": "2005",
    "ts": 1757375808,
-   "tag": "250909_0856"
+   "tag": "250909_0856",
+   "sourceHash": "a333e36a8b7cb9c30bf7a5743063dd03082b0bd6"
   },
   {
    "artist": "Tyler, The Creater",
@@ -1254,15 +1374,17 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1757341889,
-   "tag": "250908_2331"
+   "tag": "250908_2331",
+   "sourceHash": "a52fdcc784fb86f5a79863036d836a8c0645d21c"
   },
   {
    "artist": "아일릿",
-   "title": "빌려온 고양이 (2025) *The Five Star Stories, 優雅なる脱走(우아한 탈주) 샘플링",
+   "title": "빌려온 고양이",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1757286823,
-   "tag": "250908_0813"
+   "tag": "250908_0813",
+   "sourceHash": "1e06f53e1f27d7e952a4b9223940ef1d4ada7831"
   },
   {
    "artist": "Lizzo",
@@ -1270,7 +1392,8 @@
    "title_ko": "",
    "year": "2022",
    "ts": 1757211534,
-   "tag": "250907_1117"
+   "tag": "250907_1117",
+   "sourceHash": "f2d6ed552e71f9a45e43a198cbd3c970fd8c61e2"
   },
   {
    "artist": "GACKT",
@@ -1278,15 +1401,17 @@
    "title_ko": "재회",
    "year": "2000",
    "ts": 1756942471,
-   "tag": "250904_0834"
+   "tag": "250904_0834",
+   "sourceHash": "18bb67a5bdf30eb00933138a9659952de99642b0"
   },
   {
    "artist": "Perfume",
-   "title": "Human Factory (전조인간, 2025) *와타나베 키즈타카, 더 테러 라이브 : 라스트쇼 O.S.T.",
-   "title_ko": "",
-   "year": "",
+   "title": "Human Factory",
+   "title_ko": "전조인간",
+   "year": "2025",
    "ts": 1756855428,
-   "tag": "250903_0823"
+   "tag": "250903_0823",
+   "sourceHash": "8c71fd4f14e3aab5079aba513406c16957199f9b"
   },
   {
    "artist": "Royel Otis",
@@ -1294,7 +1419,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1756769046,
-   "tag": "250902_0823"
+   "tag": "250902_0823",
+   "sourceHash": "6e5b9d21018ab7ecbd199474015899c8b3b5d2bb"
   },
   {
    "artist": "선미",
@@ -1302,7 +1428,8 @@
    "title_ko": "",
    "year": "2022",
    "ts": 1756733257,
-   "tag": "250901_2226"
+   "tag": "250901_2226",
+   "sourceHash": "8a6f83a5be8641a95b06cce18d6318d03f37e5db"
   },
   {
    "artist": "Fly to the Sky",
@@ -1310,15 +1437,17 @@
    "title_ko": "",
    "year": "2002",
    "ts": 1756613174,
-   "tag": "250831_1305"
+   "tag": "250831_1305",
+   "sourceHash": "dcfb4f39920bb21b42c91ab2a483f7bcaaabbc7a"
   },
   {
    "artist": "TENBLANK",
-   "title": "Glass Heart (2025) *NETFLIX, Glass Heart O.S.T.",
+   "title": "Glass Heart",
    "title_ko": "",
-   "year": "",
+   "year": "2025",
    "ts": 1756562085,
-   "tag": "250830_2253"
+   "tag": "250830_2253",
+   "sourceHash": "e8da208d38bc94878835bd674f1d048a8841930d"
   },
   {
    "artist": "머쉬베놈, 신빠람 이박사",
@@ -1326,15 +1455,17 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1756552664,
-   "tag": "250830_2016"
+   "tag": "250830_2016",
+   "sourceHash": "21f54839ca4ac3e90e5ad973006762385504f409"
   },
   {
    "artist": "LiSA",
-   "title": "紅蓮華 (홍련화, 2020) *코토게 코요하루, 귀멸의 칼날 1기 OP",
-   "title_ko": "",
-   "year": "",
+   "title": "紅蓮華",
+   "title_ko": "홍련화",
+   "year": "2020",
    "ts": 1756336918,
-   "tag": "250828_0820"
+   "tag": "250828_0820",
+   "sourceHash": "493b94766e338baae5aba03e03ad87ad0299a3c9"
   },
   {
    "artist": "Bakar",
@@ -1342,7 +1473,8 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1756218025,
-   "tag": "250826_2319"
+   "tag": "250826_2319",
+   "sourceHash": "dfade50ca06cf61465b2692148fab6da2e4afefa"
   },
   {
    "artist": "Pearl Jam",
@@ -1350,7 +1482,8 @@
    "title_ko": "",
    "year": "1991",
    "ts": 1756163530,
-   "tag": "250826_0812"
+   "tag": "250826_0812",
+   "sourceHash": "f96d1aad2fd24b26a56594bd91a6f411ba8e88fa"
   },
   {
    "artist": "d4vd",
@@ -1358,8 +1491,270 @@
    "title_ko": "",
    "year": "2025",
    "ts": 1756078327,
-   "tag": "250825_0825"
+   "tag": "250825_0825",
+   "sourceHash": "0d8d02586c9781c419a7ec6b2edf8e44422fad72"
+  },
+  {
+   "artist": "MGMT",
+   "title": "Piece of What (2006) “사랑의 한계를 지나 산산조각 나고 풀어져. 모든 걸 다시 괜찮게 만들 조각들을 줍기 위해 기다리네. 하지만 무엇의 조각인가. 우리가 집이라 부르던 것의 무엇의 조각인가.”",
+   "title_ko": "",
+   "year": "",
+   "ts": 1783381893,
+   "tag": "260707_0851",
+   "sourceHash": "b8b93bb596e2d4dceb16cd57949d6cb7b09b8c2b"
+  },
+  {
+   "artist": "서태지",
+   "title": "Live Wire (2024) “세상의 편견과 억압이라는 경계선을 넘어, 음악이라는 유일한 무기로 내 삶의 주권을 되찾는 ‘나만의 독립기념일’을 선포하다.”",
+   "title_ko": "",
+   "year": "",
+   "ts": 1767281957,
+   "tag": "260102_0039",
+   "sourceHash": "3a0c99c128ea9d47cefc8e1e03c105d86e607cba"
+  },
+  {
+   "artist": "서태지",
+   "title": "Live Wire (2024) \"세상의 편견과 억압이라는 경계선을 넘어, 음악이라는 유일한 무기로 내 삶의 주권을 되찾는 '나만의 독립기념일'을 선포하다.\"",
+   "title_ko": "",
+   "year": "",
+   "ts": 1767281238,
+   "tag": "250102_0027",
+   "sourceHash": "840760f7d414585ea5d9617af6dacfc0c4fd7952"
+  },
+  {
+   "artist": "듀스",
+   "title": "Rise",
+   "title_ko": "",
+   "year": "2025",
+   "ts": 1765656458,
+   "tag": "251214_0507",
+   "sourceHash": "a29d7f2ce6c24b161a0bb3c064c8b1fed92f1230"
+  },
+  {
+   "artist": "Kanye West",
+   "title": "Good Morning",
+   "title_ko": "",
+   "year": "2007",
+   "ts": 1763422458,
+   "tag": "251118_0834",
+   "sourceHash": "f7af96a26d64af8468e64d52728613f5d36c645f"
+  },
+  {
+   "artist": "The KOXX",
+   "title": "echo",
+   "title_ko": "",
+   "year": "2017",
+   "ts": 1761574136,
+   "tag": "251027_2308",
+   "sourceHash": "d521c53edad5554aaf9fb4344440171b88ab3297"
+  },
+  {
+   "artist": "네미시스",
+   "title": "베르사유의 장미",
+   "title_ko": "",
+   "year": "2005",
+   "ts": 1760804008,
+   "tag": "251019_0112",
+   "sourceHash": "e121febf75eb40af4742477691f28d15d5d6f781"
+  },
+  {
+   "artist": "네미시스",
+   "title": "베르사유의 장미",
+   "title_ko": "",
+   "year": "2005",
+   "ts": 1760803773,
+   "tag": "251019_0109",
+   "sourceHash": "c8ea045e7e88729c3dbd8b076be814e83ffaea1e"
+  },
+  {
+   "artist": "새소년",
+   "title": "파도",
+   "title_ko": "",
+   "year": "2021",
+   "ts": 1760653929,
+   "tag": "251017_0732",
+   "sourceHash": "4f0bafbfb586e58d2d43ac15d76740dc69eae503"
+  },
+  {
+   "artist": "제이통",
+   "title": "Woof",
+   "title_ko": "",
+   "year": "2025",
+   "ts": 1758638475,
+   "tag": "250923_2341",
+   "sourceHash": "5050fb9830aee0e01e7bc274cdc0c18991e1260a"
+  },
+  {
+   "artist": "선미",
+   "title": "열이 올라요",
+   "title_ko": "",
+   "year": "2022",
+   "ts": 1756684176,
+   "tag": "250901_0849",
+   "sourceHash": "b6d72d825d6a9eed3bc36bfcd36991f29b5479f1"
+  },
+  {
+   "artist": "d4vd",
+   "title": "Is This Really Love?",
+   "title_ko": "",
+   "year": "2025",
+   "ts": 1756077973,
+   "tag": "250825_0825",
+   "sourceHash": "3218697007d22351badfc5feee098d3b918ebfa8"
+  },
+  {
+   "artist": "Kim Gordon",
+   "title": "Bye Bye",
+   "title_ko": "",
+   "year": "2024",
+   "ts": 1715954713,
+   "tag": "240517_2258",
+   "sourceHash": "1e6660f9925c88579ead19fb560e21397234847b"
+  },
+  {
+   "artist": "YOUNG POSSE",
+   "title": "XXL",
+   "title_ko": "",
+   "year": "2024",
+   "ts": 1715867321,
+   "tag": "240516_1923",
+   "sourceHash": "b865844e5e213789ec16f4b32d73ecbef9e8272c"
+  },
+  {
+   "artist": "YOUNG POSSE",
+   "title": "XXL",
+   "title_ko": "",
+   "year": "",
+   "ts": 1715855398,
+   "tag": "240516_1923",
+   "sourceHash": "63113f3a73faabe6fa091f74e00fa94a26ca8055"
+  },
+  {
+   "artist": "\"독수리를 공격할 수 있는 유일한 새인 까마귀는 독수리의 등에 올라타 목을 쪼아대며 공격한다. 하지만, 독수리는 반응하지 않는다. 대신, 독수리는 더 높이 날아오른다. 더 높게 날면 날수록, 까마귀가 숨쉬기 어려워지니까. 결국, 까마귀는 산소가 부족해서 떨어져 나가게 된다. 여기서 까마귀는 당신에게 사람이 될 수도, 어떤 문제일 수도 있다. 보잘것없는 까마귀 때문에 내 삶과 꿈과 미래가 흐려지게 하지 마라. 당신의 꾸준하고 멋진 행동으로 까마귀를 내쫓아라.\"",
+   "title": "<쇼펜하우어 인생 수업 : 한 번뿐인 삶 이렇게 살아라>, 2024",
+   "title_ko": "",
+   "year": "",
+   "ts": 1711269302,
+   "tag": "240324_1723",
+   "sourceHash": "5441463cc0eeea2d12e833273113b389c98b0da3"
+  },
+  {
+   "artist": "Astor Piazzolla",
+   "title": "Oblivion",
+   "title_ko": "perf. HAUSER",
+   "year": "",
+   "ts": 1710862169,
+   "tag": "240320_0024",
+   "sourceHash": "33b3c31c64c899732c3523a425697ac0fecca870"
+  },
+  {
+   "artist": "터보",
+   "title": "Tonight",
+   "title_ko": "",
+   "year": "2000",
+   "ts": 1706483959,
+   "tag": "240128_0430",
+   "sourceHash": "e4e9865fc7c937fb4c6d2b5e5f9c5075aedadf87"
+  },
+  {
+   "artist": "Celeste",
+   "title": "Both Sides Of The Moon",
+   "title_ko": "",
+   "year": "",
+   "ts": 1685179769,
+   "tag": "230527_1827",
+   "sourceHash": "96c931dc096b57df88144268bb98c3289e5eb3f8"
+  },
+  {
+   "artist": "Valentine",
+   "title": "Say That You're Mine",
+   "title_ko": "",
+   "year": "",
+   "ts": 1685115276,
+   "tag": "230527_0034",
+   "sourceHash": "6f7392a4f1518a10428fcd6f4ec2757ab078040e"
+  },
+  {
+   "artist": "김민성",
+   "title": "접점",
+   "title_ko": "",
+   "year": "",
+   "ts": 1685096878,
+   "tag": "230526_1926",
+   "sourceHash": "7155d18e2e21da05b13d1d1935757488c9eb2a28"
+  },
+  {
+   "artist": "Apollo Sunshine",
+   "title": "Flip!",
+   "title_ko": "",
+   "year": "",
+   "ts": 1685021236,
+   "tag": "230525_2225",
+   "sourceHash": "840c2c77934188ee83bce767f6dec38a9e8ad967"
+  },
+  {
+   "artist": "Blood Cultures",
+   "title": "Set It On Fire",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684971051,
+   "tag": "230525_0830",
+   "sourceHash": "a04d0fb2c68e9f65f436fb12c05851e58aa03270"
+  },
+  {
+   "artist": "The Beatles",
+   "title": "A Day In The Life",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684923403,
+   "tag": "230524_1916",
+   "sourceHash": "11580ff5e53ab43a18ea186042b64dbf8df3d60e"
+  },
+  {
+   "artist": "BIMINI",
+   "title": "Can't Hold Me Back",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684885851,
+   "tag": "230524_0850",
+   "sourceHash": "3d6f6de00f6b2b9bc8650c92aa0c435b84e51d4a"
+  },
+  {
+   "artist": "Mina Okabe",
+   "title": "Talk To Me",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684836517,
+   "tag": "230523_1908",
+   "sourceHash": "a983bd24bc25e602181f9385a3ee02d9cc2781ca"
+  },
+  {
+   "artist": "Oasis",
+   "title": "Let There Be Love",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684772583,
+   "tag": "230523_0123",
+   "sourceHash": "5632f2ebff7a688c1c8d43eafe0fa290d20d004a"
+  },
+  {
+   "artist": "KAYTRAMINÉ",
+   "title": "4EVA",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684749640,
+   "tag": "230522_1900",
+   "sourceHash": "200e270686a48265705b9574cc8ceb2ebc08fa1d"
+  },
+  {
+   "artist": "Blur",
+   "title": "The Narcissist",
+   "title_ko": "",
+   "year": "",
+   "ts": 1684684902,
+   "tag": "230522_0100",
+   "sourceHash": "8ec30dc0799c09c247d2b70944c175fee5419ff9"
   }
  ],
- "at": "2026-08-12T17:49:53.749Z"
+ "at": "2026-08-13T00:59:26.561Z"
 }

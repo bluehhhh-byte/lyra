@@ -1,0 +1,44 @@
+---
+title: Goodbye
+title_ko: Goodbye
+artist: 김사랑
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: ko
+tags: []
+keywords: []
+emotion:
+date: 2022-12-30
+published: 2022-12-30T09:40:32.000Z
+comment:
+source: instagram
+source_tag: 221230_1840
+source_note: 
+source_hash: bf40739a82d8bbe080c60afb9ae94ceeb4da1054
+source_body_hash: 6ed654412584cddab203d05271c64cd9361fea20
+---
+그대는 차갑게 이별은 편하게
+그래 그렇게 내게 오네
+사랑은 너무 뜨거워
+사랑은 너무 깊어
+그래 그땐 그랬는데
+
+Goodbye
+그 한마디면 됐지만
+담을 수 없었던 그 말
+Goodbye
+
+사랑은 네가 필요해
+사람은 너무 잔인해
+끝나지 않는 되뇌임
+이젠 Goodbye
+
+끝내 그대는 차갑게
+한마디 말도 없이 이렇게
+돌아서게 하네

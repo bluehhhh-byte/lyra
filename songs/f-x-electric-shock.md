@@ -1,0 +1,58 @@
+---
+title: Electric Shock
+title_ko: Electric Shock
+artist: f(x)
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: ko
+tags: []
+keywords: []
+emotion:
+date: 2023-01-24
+published: 2023-01-24T01:50:51.000Z
+comment:
+source: instagram
+source_tag: 230124_1048
+source_note: 
+source_hash: 59a0d2548b9d0658a9af1731f334b8e7fe1e61a6
+source_body_hash: bbdc1177a268efedac6ae8d3b75581050b11a10f
+---
+전 전 전류들이 몸을 타고 흘러 다녀
+기 기 기절할 듯 아슬아슬 찌릿찌릿
+충 충 충분해 네 사랑이 과분해
+격 격 격하게 날 아끼는 거 다 알아
+
+블랙홀처럼 빨려 들어가
+끝이 안 보여 떨어져 쿵
+여기는 어디? 열심히 딩동딩동
+도대체 난 누구? 머릿속이 빙그르르르르
+
+전 전 전압을 좀 맞춰서 날 사랑해줘
+기 기척 없이 나를 놀래키진 말아줘
+충 충돌 하진 말고 살짝 나를 피해줘
+격 격변하는 세계 그 속에 날 지켜줘
+
+의사 선생님 이건 뭔가요?
+숨이 가쁘고 열이 나요
+말문이 막혀 귓가는 딩동딩동
+눈이 막 부셔 머릿속은 빙그르르르르
+
+나의 모든 걸 사로잡은 Energy
+그 눈빛 속에 강렬한 Laser Laser
+내 맘 깊은 곳 증폭되는 Synergy
+대체 끝이 없는 너의 Gauge Gauge
+
+점점 빨라지는 Beat 점점 더 크게 뛰는데
+이미 한계를 넘어선 I'm In Shock
+E-Electric Shock
+
+Nanananananana (Electric) Nanananananana (Electric)
+Nanananananana E-E-E-Electric Shock
+Nanananananana (Electric) Nanananananana (Electric)
+Nanananananana E-E-E-Electric Shock

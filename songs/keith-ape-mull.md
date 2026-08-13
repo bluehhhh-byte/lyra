@@ -1,0 +1,53 @@
+---
+title: Mull
+title_ko: Mull
+artist: Keith Ape
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: ko
+tags: []
+keywords: []
+emotion:
+date: 2022-11-19
+published: 2022-11-19T10:25:06.000Z
+comment:
+source: instagram
+source_tag: 221119_1924
+source_note: 
+source_hash: c2f4f3f8005ab7bd7f578254079d6f8aaf4ba259
+source_body_hash: 74ba852b8db54b128e4792692081359eb5a11173
+---
+손목엔 가득한 금
+목과 주먹엔 얼음
+그래서 무거운 내 발걸음
+난 그냥 원하면 모든 얻음
+난 아마 되겠지 거물 거물
+니꺼는 되버렸지 고물 고물
+난 필요해 필요해 저울 저울
+내 보석은 차가워 너무 겨울
+가끔은 그리운 서울 서울
+내 보석은 차가워 너무 겨울
+미움은 반사해 거울 거울
+꺼져 난 여기까지 왔어 겨우
+뺏기지 않지 그냥 난 얻음
+절대로 잊을 수 없는 나의 처음
+잘 봐 내 손목에 매달린 얼음
+내 목엔 가득한 금
+내 현실이 너에겐 꿈
+나는 안 따르지 rule
+아직 나를 따르는 운
+우리는 필요해 물
+나는 안 필요해 술
+
+얘넨 뺏고 싶어해 나의 기
+내 보석 전부 다 물
+넌 내게 뭘 요구하구
+나는 다 거절하구
+난 "그래 그래서 뭐 어쩌라구?"
+붙여 내 Woods에 불

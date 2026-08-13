@@ -1,0 +1,50 @@
+---
+title: 星が泳ぐ 별이 헤엄치다
+title_ko: 
+artist: Macaroni Empitsu
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: ja
+tags: []
+keywords: []
+emotion:
+date: 2022-10-03
+published: 2022-10-03T14:33:20.000Z
+comment:
+source: instagram
+source_tag: 
+source_note: 
+source_hash: 59b107532c1d0069dfc394ac6a265763288de625
+source_body_hash: 3689ca9d655b2eaaab02b7192084b18aa1b5b864
+---
+海へ行ったまま帰ってこないや
+> 바다에 갔다 돌아오지 않네 
+猫の唄声と潮騒の記憶
+> 고양이의 노랫소리와 파도소리의 기억
+
+意味がないな 君が居ないと
+> 의미가 없구나 네가 없으면
+そんな夏だけが残っていく
+> 그런 여름만이 남겨져 간다
+キリがねぇな
+> 끝이 없구나
+悲しみは叩き割るたび増えていく
+> 슬픔은 깨어질 때마다 늘어만 간다
+
+意味がないか こんな歌には
+> 의미가 없을까 이런 노래에는
+伝えられていない事ばっかだ
+> 전하지 못한 말 뿐이야
+たましいごと愛していたんだ
+> 영혼까지 전부 사랑하고 있었어
+嘘ではないよ そうでもないかな
+> 거짓말이 아니야 그렇지도 않나
+
+もう行かなくちゃ、バイバイ
+> 이제 가 봐야 해, 바이바이

@@ -1,0 +1,42 @@
+---
+title: LOVE
+title_ko: LOVE
+artist: Mac Kidd
+artist_ko:
+album:
+year: 
+artwork:
+preview:
+trackId:
+duration:
+genre:
+lang: ko
+tags: []
+keywords: []
+emotion:
+date: 2022-11-19
+published: 2022-11-19T10:45:29.000Z
+comment:
+source: instagram
+source_tag: 221119_1945
+source_note: 
+source_hash: 3f9f5a84167b69bef4ad2a948ed4c409f8232ce6
+source_body_hash: d54ec4c76c9f6f6cf7e4eeacff394a3feb12ca92
+---
+Bye 인사는 민망
+일단 모름 미뤄
+내일 논단 말은 말어
+의심은 No
+너를 원해 오늘 뿐요
+나름 신사다움
+말만 안해 바로 실천함
+싫어 너와 나의 정적
+
+Oh 넌 많이 바래왔던
+그런 나의 소원
+버겁지만 다른 여자는 모두 싱거워
+너는 맞아 나의 천사
+좀만 기달 천국 선사
+우리 미래 기분 천장
+
+싫어 너와 나의 정적
