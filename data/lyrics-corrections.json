@@ -1,0 +1,38 @@
+{
+ "items": [
+  {
+   "slug": "171-footsteps",
+   "type": "caption_leak",
+   "field": "original",
+   "lineIndex": 0,
+   "beforeHash": "004be89dd9e0",
+   "afterHash": "da39a3ee5e6b",
+   "reason": "캡션 첫 줄의 발매연도가 가사로 들어옴 — 가사가 아님",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T05:50:57.294Z"
+  },
+  {
+   "slug": "joji-normal-people",
+   "type": "caption_leak",
+   "field": "original",
+   "lineIndex": 50,
+   "beforeHash": "15b1da48ab66",
+   "afterHash": "da39a3ee5e6b",
+   "reason": "캡션 끝의 해시태그 줄이 가사로 들어옴 — 가사가 아님",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T05:50:57.307Z"
+  },
+  {
+   "slug": "171-footsteps",
+   "type": "line_split",
+   "field": "translation",
+   "lineIndex": 1,
+   "beforeHash": "d52eaaa9a8b5",
+   "afterHash": "e6b05a349dd0",
+   "reason": "연도 줄을 뺐으므로 그 줄까지 덮던 >^2 표기를 >로 되돌림",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-13T05:53:10.839Z"
+  }
+ ],
+ "at": "2026-08-13T05:53:10.846Z"
+}

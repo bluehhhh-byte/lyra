@@ -69,6 +69,39 @@ for (const s of songs) {
   const overflow = lines.filter((l) => l.koSpanError).length;
   if (overflow) err(f, `>^N 범위가 문단을 넘어감 ${overflow}곳`);
 
+  // ── 가사 정확성 회귀 검사 ────────────────────────────────────────────────
+  // 원문 없이 번역만 떠 있는 줄 — 파서가 붙일 원문을 못 찾았다는 뜻이다.
+  // 화면에는 번역만 나와 어느 구절인지 알 수 없다.
+  const orphan = lines.filter((l) => !l.en?.trim() && l.ko?.trim()).length;
+  if (orphan) err(f, `원문 없이 번역만 있는 줄 ${orphan}개 (붙일 원문을 못 찾음)`);
+
+  // 번역이 원문과 글자까지 같으면 번역이 아니라 복사다
+  const echo = lines.filter((l) => l.en?.trim() && l.ko?.trim() && l.en.trim() === l.ko.trim()).length;
+  if (echo) warn(f, `번역이 원문과 동일한 줄 ${echo}개`);
+
+  // 같은 원문 줄에 서로 다른 번역이 붙어 있으면 후렴 하나가 두 가지로 읽힌다.
+  // (의도한 변주일 수 있어 경고 — 감사 화면에서 확인한다)
+  const byLine = new Map();
+  for (const l of lines) {
+    const k = l.en?.trim();
+    if (!k || !l.ko?.trim()) continue;
+    if (!byLine.has(k)) byLine.set(k, new Set());
+    byLine.get(k).add(l.ko.trim());
+  }
+  const split = [...byLine.values()].filter((v) => v.size > 1).length;
+  if (split) warn(f, `같은 원문에 다른 번역이 붙은 구절 ${split}개`);
+
+  // 캡션 흔적이 가사에 남은 경우 — 해시태그, 날짜 태그, 연도만 있는 줄
+  const leak = lines.filter((l) => {
+    const t = (l.en || "").trim();
+    return /#\S/.test(t) || /^\(?\d{4}\)?$/.test(t) || /^\d{6}_\d{4}$/.test(t);
+  }).length;
+  if (leak) warn(f, `가사에 캡션 흔적(해시태그·연도·날짜 태그) ${leak}줄`);
+
+  // 검증 기록이 있으면 근거가 있어야 한다 — 근거 없는 '확인함'은 확인이 아니다
+  if (s.lyrics_verified_at && !s.lyrics_source) err(f, "lyrics_verified_at이 있는데 lyrics_source(근거 URL) 없음");
+  if (s.lyrics_source && !/^https?:\/\//.test(s.lyrics_source)) err(f, `lyrics_source가 URL이 아님: "${s.lyrics_source}"`);
+
   const key = `${s.title}|${s.artist}`.toLowerCase();
   if (songKey.has(key)) err(f, `중복 곡 (${songKey.get(key)}와 같은 title+artist)`);
   else songKey.set(key, f);

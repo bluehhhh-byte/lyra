@@ -6,6 +6,7 @@ import Lint from "./lint";
 import Requality from "./requality";
 import SongTools from "./song-tools";
 import ArtworkReview from "./artwork-review";
+import LyricsAudit from "./lyrics-audit";
 import { readData } from "../../lib/store";
 
 export const metadata = { title: "곡 추가 | Lyra" };
@@ -37,6 +38,9 @@ export default function AdminPage() {
 
       <h2 className="mb-3 mt-16 text-lg font-bold">번역 형식 검사</h2>
       <Lint />
+
+      <h2 className="mb-3 mt-16 text-lg font-bold">가사 정확성 검토</h2>
+      <LyricsAudit />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">가사 품질 재검사</h2>
       <Requality />

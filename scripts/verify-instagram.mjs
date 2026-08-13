@@ -13,6 +13,7 @@ import path from "path";
 import { getAllSongs } from "../lib/songs.js";
 import { adaptPosts, dedupePosts, extractBody, sourceHash, bodyHash } from "../lib/admin/instagram.js";
 import { parseFrontmatter } from "../lib/songs.js";
+import { load as loadCorrections, lineHash } from "../lib/admin/corrections.js";
 
 const exportDir = process.argv[2];
 if (!exportDir) {
@@ -34,6 +35,17 @@ try {
     JSON.parse(fs.readFileSync("data/instagram-source-manifest.json", "utf8")).items.map((i) => [i.slug, i])
   );
 } catch {} // 대조표가 없어도 원본만으로 검증한다
+
+// 인스타 원본과 달라진 줄은 data/lyrics-corrections.json에 근거가 있어야 한다.
+// (인스타에 처음부터 있던 오타를 고친 경우 — source_hash는 원본을 계속 가리킨다)
+const corrections = loadCorrections((p) => fs.readFileSync(p, "utf8")).items;
+const EMPTY_HASH = lineHash("");
+// 교체된 줄(afterHash)과 지운 줄(beforeHash, after가 빈 문자열)을 따로 본다
+const approvedFor = (slug) => ({
+  replaced: new Set(corrections.filter((c) => c.slug === slug && c.afterHash !== EMPTY_HASH).map((c) => c.afterHash)),
+  deleted: new Set(corrections.filter((c) => c.slug === slug && c.afterHash === EMPTY_HASH).map((c) => c.beforeHash)),
+});
+let approvedUsed = 0;
 
 // 눈에 보이지 않는 문자(제로폭 공백·BOM·NBSP)와 줄 끝 공백은 내용이 아니다.
 // 캡션에는 이런 문자가 흔하고, 파일을 다시 쓰는 과정에서 사라지기도 한다.
@@ -64,12 +76,17 @@ for (const s of songs) {
 
   // 원본 줄을 순서대로 따라간다. 파일 쪽 줄은 원본 줄과 같거나, 임포터가 앞에
   // 붙인 `> `/`>^N `를 벗기면 같아야 한다. 그 외 줄은 나중에 붙인 번역만 허용.
-  let oi = 0, tail = 0;
+  const approved = approvedFor(s.slug);
+  let oi = 0, tail = 0, fixed = 0;
   for (let bi = 0; bi < body.length; bi++) {
     const line = body[bi];
     const derived = /^>/.test(line);
     const bare = norm(line.replace(/^>(\^\d+)?\s?/, ""));
+    // 근거가 기록된 '삭제'는 원본 줄을 건너뛴다 (가사가 아닌 줄을 뺀 경우)
+    while (oi < original.length && approved.deleted.has(lineHash(original[oi].trim()))) { oi++; fixed++; }
     const want = oi < original.length ? norm(original[oi]) : null;
+    // 근거가 기록된 교정이면 원본과 달라도 통과 — 그 줄이 원본 한 줄을 대신한다
+    if (!derived && approved.replaced.has(lineHash(line.trim())) && want !== null) { oi++; fixed++; continue; }
     // 번역이 원문과 같은 문자열일 때(영어 곡의 영어 후렴 등) 파생 줄이 원문 자리를
     // 먼저 차지해 뒤가 어긋난다 — 바로 다음 줄이 원문 그 자체면 그쪽에 양보한다
     const nextIsSame = derived && bi + 1 < body.length && !/^>/.test(body[bi + 1]) && norm(body[bi + 1]) === want;
@@ -78,7 +95,10 @@ for (const s of songs) {
     if (commentMerged) { tail++; continue; } // 댓글에서 이어 붙인 꼬리
     errors.push(`${f}: 원본에 없는 줄 — "${line.slice(0, 40)}"`);
   }
+  // 파일 끝까지 돌고 남은 원본 줄도 '승인된 삭제'면 건너뛴다 (마지막 줄을 지운 경우)
+  while (oi < original.length && approved.deleted.has(lineHash(original[oi].trim()))) { oi++; fixed++; }
   if (tail) warns.push(`${f}: 캡션 뒤 ${tail}줄은 이어쓴 댓글에서 온 것 (source_note에 기록됨)`);
+  if (fixed) { approvedUsed += fixed; warns.push(`${f}: 승인된 교정 ${fixed}줄 (인스타 원본과 다름 — data/lyrics-corrections.json에 근거)`); }
   if (oi < original.length)
     errors.push(`${f}: 원본 ${original.length}줄 중 ${original.length - oi}줄이 사라졌거나 순서가 바뀜 (첫 미일치: "${(original[oi] || "").slice(0, 40)}")`);
 
@@ -96,6 +116,6 @@ for (const w of warns) console.log(`  ⚠ ${w}`);
 for (const e of errors) console.log(`  ✗ ${e}`);
 console.log(
   `\n인스타 출처 곡 ${songs.length} · 원본 대조 ${checked} · source_hash 없음 ${noSource}` +
-  ` — 오류 ${errors.length} · 경고 ${warns.length}`
+  ` · 승인 교정 ${approvedUsed}줄 — 오류 ${errors.length} · 경고 ${warns.length}`
 );
 process.exit(errors.length ? 1 : 0);

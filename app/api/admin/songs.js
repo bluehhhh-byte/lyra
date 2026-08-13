@@ -14,6 +14,9 @@ import {
 import { kstToday } from "../../../lib/kst";
 import { summarizeMusicTaste } from "../../../lib/music-taste-core";
 import { makeBasedOnCleaner } from "../../../lib/admin/based-on";
+import { TYPES as CORRECTION_TYPES, lineHash } from "../../../lib/admin/corrections";
+
+const CORRECTIONS_FILE = "lyrics-corrections.json";
 
 export async function handleSongs(action, body) {  if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
@@ -720,6 +723,89 @@ ${listed}`,
     const song = await readSong(body.slug);
     if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
     return Response.json({ raw: song.raw });
+  }
+
+  // ── 가사 정확성 감사 ──────────────────────────────────────────────────────
+  // 무손실 검증은 "인스타에 적힌 그대로냐"만 본다. 인스타에 처음부터 있던 오타나
+  // 잘못 들은 단어는 잡히지 않는다. 여기서 고치되 근거를 남긴다 —
+  // source_hash는 계속 인스타 원본을 가리키고, 달라진 줄만 교정 이력에 기록한다.
+  if (action === "auditQueue") {
+    const items = readData(CORRECTIONS_FILE, { items: [] }).items || [];
+    const done = new Set(items.map((c) => c.slug));
+    const songs = getAllSongs();
+    const risky = songs.map((s) => {
+      const lines = s.stanzas.flatMap((st) => st.lines);
+      const reasons = [];
+      if (/댓글\s*병합/.test(s.source_note || "")) reasons.push("댓글에서 복원");
+      if (lines.some((l) => l.koSpan > 1)) reasons.push("병합 번역");
+      if (lines.length >= 60) reasons.push("긴 캡션");
+      if (s.lang === "ko" && lines.some((l) => l.ko)) reasons.push("Claude 영어 번역");
+      if (s.lang === "ja") reasons.push("일본어");
+      return {
+        slug: s.slug, title: s.title, artist: s.artist, lang: s.lang,
+        lines: lines.length, reasons,
+        verifiedAt: s.lyrics_verified_at || "",
+        reviewed: done.has(s.slug),
+      };
+    });
+    // 위험도 높은 순 — 사용자가 준 순서를 그대로 점수로 쓴다
+    const rank = (r) => (r.includes("댓글에서 복원") ? 6 : 0) + (r.includes("병합 번역") ? 5 : 0) +
+      (r.includes("긴 캡션") ? 4 : 0) + (r.includes("Claude 영어 번역") ? 3 : 0) + (r.includes("일본어") ? 2 : 0);
+    risky.sort((a, b) => rank(b.reasons) - rank(a.reasons) || b.lines - a.lines);
+    return Response.json({ items: risky.filter((r) => r.reasons.length && !r.verifiedAt).slice(0, 200), total: songs.length });
+  }
+
+  if (action === "auditSong") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const items = (readData(CORRECTIONS_FILE, { items: [] }).items || []).filter((c) => c.slug === body.slug);
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    return Response.json({ raw, corrections: items });
+  }
+
+  // 한 곡의 검토 결과 저장 — 본문을 바꿨으면 바뀐 줄마다 근거가 있어야 한다
+  if (action === "auditSave") {
+    const { slug, raw, corrections = [], verifiedAt, source } = body;
+    const song = await readSong(slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const before = song.raw.replace(/\r\n/g, "\n");
+    const after = (raw || "").replace(/\r\n/g, "\n");
+    const changed = before !== after;
+    if (changed && !corrections.length)
+      return Response.json({ error: "본문을 바꾸려면 교정 사유가 필요합니다" }, { status: 422 });
+    for (const c of corrections) {
+      if (!CORRECTION_TYPES.includes(c.type))
+        return Response.json({ error: `교정 종류가 목록 밖: ${c.type}` }, { status: 422 });
+      if (!String(c.reason || "").trim())
+        return Response.json({ error: "교정 사유(reason)가 비어 있습니다" }, { status: 422 });
+    }
+    let out = after;
+    if (verifiedAt) {
+      if (!/^https?:\/\//.test(source || ""))
+        return Response.json({ error: "확인 근거 URL이 필요합니다" }, { status: 422 });
+      out = setField(out, "lyrics_verified_at", verifiedAt, "published");
+      out = setField(out, "lyrics_source", source, "lyrics_verified_at");
+    }
+    if (out !== before) await writeSong(slug, out, `fix(lyrics): audit — ${slug}`);
+
+    if (corrections.length) {
+      const store = readData(CORRECTIONS_FILE, { items: [] });
+      const list = store.items || [];
+      for (const c of corrections)
+        list.push({
+          slug,
+          type: c.type,
+          field: c.field === "translation" ? "translation" : "original",
+          lineIndex: Number(c.lineIndex ?? -1),
+          beforeHash: lineHash(c.before ?? ""),
+          afterHash: lineHash(c.after ?? ""),
+          reason: String(c.reason).trim(),
+          sourceUrl: String(c.sourceUrl || "").trim(),
+          reviewedAt: new Date().toISOString(),
+        });
+      await writeData(CORRECTIONS_FILE, { items: list, at: new Date().toISOString() }, `chore(audit): corrections — ${slug}`);
+    }
+    return Response.json({ ok: true, changed: out !== before, corrections: corrections.length });
   }
 
   if (action === "update") {

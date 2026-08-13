@@ -72,4 +72,3 @@ But we're safe on the inside
 Yeah, I know we're fine
 > 그래, 우린 괜찮을거야
 
-​#240621_0843 #ep91_난그시절을반복할수있어얼마든지
