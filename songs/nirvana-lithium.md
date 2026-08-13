@@ -93,4 +93,3 @@ I killed you, I'm not gonna crack
 > 널 죽였어, 난 무너지지 않을거야
 
 🗨 적당한 기쁨과 적당한 슬픔과 적당한 분노와 적당한 우울을 가지고, 괜히 긍정적이 되려거나 괜히 신파적이 되려거나 괜히 호기롭게 되려거나 괜히 고립되려거나 그러지 않는다. 아무것도 하지 않는 게 아니라 지나치지 않으려는 거. 그러니 아무리 네가 그리워도 내가 할 수 있는 건 여기까지야.
-> With a balanced measure of joy, sorrow, anger, and gloom, I refrain from forcing optimism, melodrama, bravado, or isolation. It is not apathy, but a refusal to go to extremes. So no matter how intensely I miss you, this is as far as I can go.
