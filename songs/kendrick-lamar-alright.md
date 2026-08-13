@@ -14,7 +14,7 @@ duration: 219
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 2015]
-keywords: [기도, 호텔, 밤, 악마, 거리]
+keywords: [밤, 기도, 호텔, 악마, 정답]
 emotion: 희망
 date: 2022-09-26
 published: 2022-09-25T23:39:06.000Z

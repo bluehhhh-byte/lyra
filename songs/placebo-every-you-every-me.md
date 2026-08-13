@@ -14,7 +14,7 @@ duration: 214
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
-keywords: [팔, 이름, 상자, 독, 접시]
+keywords: [팔, 이름, 열정, 몸, 안식]
 emotion: 체념
 date: 2023-04-12
 published: 2023-04-12T12:06:11.000Z

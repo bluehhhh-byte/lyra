@@ -14,7 +14,7 @@ duration: 236
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 1993]
-keywords: [무대, 박수, 거짓, 웃음, 칭찬]
+keywords: [어제, 마음, 진실함, 생각, 포기]
 emotion: 분노
 date: 2022-11-28
 published: 2022-11-27T18:57:17.000Z

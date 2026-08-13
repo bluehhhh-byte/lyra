@@ -14,7 +14,7 @@ duration: 205
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]
-keywords: [수표, 무대, 자동차, 거리, 돈]
+keywords: [수표, 여자, 삶, 굶주림, 히트곡]
 emotion: 기쁨
 date: 2023-06-06
 published: 2023-06-06T11:43:18.000Z

@@ -14,7 +14,7 @@ duration: 439
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1991]
-keywords: [기억, 침묵, 질투, 밤, 상처]
+keywords: [기억, 진실, 괴로움, 사랑]
 emotion: 슬픔
 date: 2023-05-29
 published: 2023-05-29T14:32:25.000Z

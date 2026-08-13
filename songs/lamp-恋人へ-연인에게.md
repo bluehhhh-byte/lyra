@@ -12,7 +12,7 @@ duration:
 genre: Dream Pop
 lang: ja
 tags: [일본, Dream Pop]
-keywords: [계절, 풍경, 여름, 거리, 밤]
+keywords: [계절, 풍경, 당신, 생각]
 emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:18:22.000Z

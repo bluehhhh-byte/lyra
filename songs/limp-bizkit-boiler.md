@@ -14,7 +14,7 @@ duration: 420
 genre: Metal
 lang: en
 tags: [영미, Metal, 2000]
-keywords: [거짓말, 상처, 잠, 이유]
+keywords: [이유, 착취, 사람, 짓]
 emotion: 분노
 date: 2023-06-05
 published: 2023-06-04T23:29:05.000Z

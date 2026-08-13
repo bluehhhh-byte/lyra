@@ -14,7 +14,7 @@ duration: 229
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]
-keywords: [눈물, 삶, 품, 곁, 기다림]
+keywords: [삶, 말, 기다림, 눈물]
 emotion: 사랑
 date: 2023-02-24
 published: 2023-02-23T23:25:15.000Z

@@ -14,7 +14,7 @@ duration: 185
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2016]
-keywords: [하늘, 땅, 남쪽, 북쪽, 구름]
+keywords: [하늘, 땅, 허리케인, 홍수, 수영장]
 emotion: 회상
 date: 2023-05-12
 published: 2023-05-12T10:02:53.000Z

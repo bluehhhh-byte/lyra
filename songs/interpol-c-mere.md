@@ -14,7 +14,7 @@ duration: 192
 genre: Post-Punk
 lang: en
 tags: [영미, Post-Punk, 2004]
-keywords: [밤, 잠, 저녁, 시간, 마음]
+keywords: [밤, 약속, 사랑, 문제, 누군가]
 emotion: 그리움
 date: 2022-11-12
 published: 2022-11-12T09:38:24.000Z

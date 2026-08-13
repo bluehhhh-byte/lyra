@@ -1,17 +1,17 @@
 {
- "at": "2026-08-13T15:46:54.737Z",
+ "at": "2026-08-13T15:51:05.290Z",
  "total": {
   "songs": 768,
-  "songsNeedingWork": 50,
+  "songsNeedingWork": 30,
   "moviesNeedingWork": 16
  },
  "byNeed": {
   "번역 없음 2줄": 1,
   "번역 없음 1줄": 3,
-  "키워드 근거 약함": 30,
   "연도 없음": 11,
   "가사 없음": 3,
   "번역 없음 8줄": 1,
+  "키워드 근거 약함": 10,
   "독음 없음 2줄": 1
  },
  "songBatches": [
@@ -52,30 +52,6 @@
     ],
     "counts": {
      "translation": 1,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "muse-hate-this-and-i-ll-love-you",
-    "kind": "song",
-    "title": "Hate This And I'll Love You",
-    "artist": "Muse",
-    "lang": "en",
-    "year": "1999",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
      "reading": 0,
      "inline": 0,
      "genre": "",
@@ -133,102 +109,6 @@
      "titleKo": 0,
      "artwork": 0,
      "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "mase-feel-so-good",
-    "kind": "song",
-    "title": "Feel So Good",
-    "artist": "Mase",
-    "lang": "en",
-    "year": "1997",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "puff-daddy-been-around-the-world",
-    "kind": "song",
-    "title": "Been Around The World",
-    "artist": "Puff Daddy",
-    "lang": "en",
-    "year": "1997",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "limp-bizkit-boiler",
-    "kind": "song",
-    "title": "Boiler",
-    "artist": "Limp Bizkit",
-    "lang": "en",
-    "year": "2000",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "x-japan-silent-jealousy",
-    "kind": "song",
-    "title": "JAPAN - Silent Jealousy",
-    "artist": "X",
-    "lang": "ja",
-    "year": "1991",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
      "lyrics": 0
     }
    },
@@ -329,78 +209,6 @@
     }
    },
    {
-    "id": "frank-ocean-pink-white",
-    "kind": "song",
-    "title": "Pink + White",
-    "artist": "Frank Ocean",
-    "lang": "en",
-    "year": "2016",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "madonna-nothing-really-matters",
-    "kind": "song",
-    "title": "Nothing Really Matters",
-    "artist": "Madonna",
-    "lang": "en",
-    "year": "1998",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "placebo-every-you-every-me",
-    "kind": "song",
-    "title": "Every You Every Me",
-    "artist": "Placebo",
-    "lang": "en",
-    "year": "1998",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "hoobastank-the-reason",
     "kind": "song",
     "title": "The Reason",
@@ -412,102 +220,6 @@
     ],
     "counts": {
      "translation": 1,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "ap-alchemy-no-one-likes-us",
-    "kind": "song",
-    "title": "No One Likes US",
-    "artist": "AP Alchemy",
-    "lang": "en",
-    "year": "2023",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "장국영-to-you",
-    "kind": "song",
-    "title": "To You",
-    "artist": "장국영",
-    "lang": "en",
-    "year": "1990",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "시나위-꽃잎",
-    "kind": "song",
-    "title": "꽃잎",
-    "artist": "시나위",
-    "lang": "ko",
-    "year": "1997",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "버즈-forever-love",
-    "kind": "song",
-    "title": "Forever Love",
-    "artist": "버즈",
-    "lang": "ko",
-    "year": "2015",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
      "reading": 0,
      "inline": 0,
      "genre": "",
@@ -593,30 +305,6 @@
     }
    },
    {
-    "id": "keane-sovereign-light-cafe",
-    "kind": "song",
-    "title": "Sovereign Light Cafe",
-    "artist": "Keane",
-    "lang": "en",
-    "year": "2012",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "공공구-산책",
     "kind": "song",
     "title": "산책",
@@ -637,54 +325,6 @@
      "titleKo": 0,
      "artwork": 0,
      "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "petra-prayer",
-    "kind": "song",
-    "title": "Prayer",
-    "artist": "Petra",
-    "lang": "en",
-    "year": "1990",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "the-koxx-12-00",
-    "kind": "song",
-    "title": "12:00",
-    "artist": "THE KOXX",
-    "lang": "en",
-    "year": "2011",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
      "lyrics": 0
     }
    },
@@ -735,9 +375,7 @@
      "year": 1,
      "lyrics": 0
     }
-   }
-  ],
-  [
+   },
    {
     "id": "블랙넛-가가라이브",
     "kind": "song",
@@ -763,30 +401,6 @@
     }
    },
    {
-    "id": "pet-shop-boys-yesterday-when-i-was-mad",
-    "kind": "song",
-    "title": "Yesterday When I Was Mad",
-    "artist": "Pet Shop Boys",
-    "lang": "en",
-    "year": "1993",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "mac-kidd-love",
     "kind": "song",
     "title": "LOVE",
@@ -807,30 +421,6 @@
      "titleKo": 0,
      "artwork": 0,
      "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "interpol-c-mere",
-    "kind": "song",
-    "title": "C'mere",
-    "artist": "Interpol",
-    "lang": "en",
-    "year": "2004",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
      "lyrics": 0
     }
    },
@@ -979,30 +569,6 @@
     }
    },
    {
-    "id": "그림자-궁전-중화반응",
-    "kind": "song",
-    "title": "중화반응",
-    "artist": "그림자 궁전",
-    "lang": "ko",
-    "year": "2007",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "damien-rice-elephant",
     "kind": "song",
     "title": "Elephant",
@@ -1129,54 +695,6 @@
     "artist": "Jeff Buckley",
     "lang": "en",
     "year": "1998",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "harry-styles-late-night-talking",
-    "kind": "song",
-    "title": "Late Night Talking",
-    "artist": "Harry Styles",
-    "lang": "en",
-    "year": "2022",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "lamp-恋人へ-연인에게",
-    "kind": "song",
-    "title": "恋人へ 연인에게",
-    "artist": "Lamp",
-    "lang": "ja",
-    "year": "2004",
     "needs": [
      "키워드 근거 약함"
     ],

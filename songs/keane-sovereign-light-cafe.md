@@ -12,7 +12,7 @@ duration:
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2012]
-keywords: [카페, 바다, 여름, 골목, 시절]
+keywords: [신호, 말, 사람, 그날]
 emotion: 회상
 date: 2023-01-17
 published: 2023-01-16T23:14:43.000Z

@@ -12,7 +12,7 @@ duration:
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop]
-keywords: [친구, 부모, 축구, 응원가, 패거리]
+keywords: [친구, 패거리, 팬, 엄마, 아빠]
 emotion: 저항
 date: 2023-04-04
 published: 2023-04-03T23:19:07.000Z

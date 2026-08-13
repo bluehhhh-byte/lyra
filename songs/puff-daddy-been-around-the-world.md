@@ -14,7 +14,7 @@ duration: 315
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]
-keywords: [춤, 돈, 여자, 소문, 거리]
+keywords: [춤, 여자, 부자, 안티팬, 히트]
 emotion: 기쁨
 date: 2023-06-06
 published: 2023-06-06T10:44:26.000Z

@@ -14,7 +14,7 @@ duration: 258
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2011]
-keywords: [파티, 시계, 문, 어제, 밤]
+keywords: [파티, 문, 밤, 용기, 실패]
 emotion: 불안
 date: 2023-01-04
 published: 2023-01-03T23:18:19.000Z

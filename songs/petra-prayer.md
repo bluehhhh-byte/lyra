@@ -14,7 +14,7 @@ duration: 256
 genre: Electronic
 lang: en
 tags: [영미, Electronic]
-keywords: [그녀, 빈자리, 마음, 밤]
+keywords: [그녀, 공허함, 외로움, 사랑]
 emotion: 고독
 date: 2023-01-11
 published: 2023-01-10T16:03:24.000Z

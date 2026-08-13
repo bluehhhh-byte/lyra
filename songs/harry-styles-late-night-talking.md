@@ -14,7 +14,7 @@ duration: 178
 genre: Funk
 lang: en
 tags: [영미, Funk, 2022]
-keywords: [밤, 대화, 아침, 카메라, 안개]
+keywords: [밤, 아침, 카메라, 이야기, 생각]
 emotion: 사랑
 date: 2022-09-17
 published: 2022-09-17T01:53:24.000Z
