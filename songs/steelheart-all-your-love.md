@@ -94,4 +94,5 @@ And girl I can't thank you enough
 For all your love
 > 그대의 사랑 덕분에 난 꿈꾸며 살아가요
 > 그대여, 난 아직 보답하지 못했어요
+> 그대의 그 모든 사랑에
 > 그대의 사랑에 말이죠

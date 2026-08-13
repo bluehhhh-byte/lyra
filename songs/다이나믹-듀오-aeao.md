@@ -3,12 +3,14 @@ title: AEAO
 title_ko: AEAO
 artist: 다이나믹 듀오
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: A Giant Step - Single
+year: 2014
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/eb/19/90/eb199068-bebf-179c-4b3b-4099619e4726/8809603542342_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/64/da/16/64da16fe-a645-a137-56ff-96e67da86f0c/mzaf_6847606205009456561.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/aeao/1615714661?i=1615714663&uo=4
+trackId: 1615714663
+duration: 317
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

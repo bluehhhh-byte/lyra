@@ -3,12 +3,14 @@ title: Busan
 title_ko: Busan
 artist: 데이먼스 이어
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Busan - Single
+year: 2017
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/54/51/ad/5451ad6f-e382-0884-4881-9baedecb29c3/5021732546487.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/03/7c/e9/037ce9f4-4d77-d354-17bd-3884af54e349/mzaf_4393120645145680143.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/busan/1778635794?i=1778635803&uo=4
+trackId: 1778635803
+duration: 178
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock]

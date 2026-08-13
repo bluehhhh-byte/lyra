@@ -3,12 +3,14 @@ title: Goodbye
 title_ko: Goodbye
 artist: 박효신
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Goodbye - Single
+year: 2019
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/77/59/ac/7759ac77-3fba-6a00-f768-855315314eab/8809829710013.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/65/50/5d/65505df6-dcd2-1494-1850-bf7812d7fd85/mzaf_9124995697285345723.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/goodbye/1698506936?i=1698506946&uo=4
+trackId: 1698506946
+duration: 288
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

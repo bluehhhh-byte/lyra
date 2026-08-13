@@ -85,6 +85,6 @@ You look so cool
 You look so cool, cool, cool, cool
 You look so cool, you look so cool
 You look so cool, cool, cool, cool, cool
-> "너 정말 멋있다, 너 오늘 진짜 멋있다."
+>^4 "너 정말 멋있다, 너 오늘 진짜 멋있다."
 Cause I know you
 > 난 널 잘 아니까

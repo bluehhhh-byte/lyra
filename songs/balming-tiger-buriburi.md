@@ -58,6 +58,7 @@ You know my style 좀 다른 게임이
 흔들어봐, 네 마지막까지
 > Shake it, down to your very last
 (Buriburi, shake, shake your buri right)
+> You know my style 이건 네 장치
 You know my style, you could never date me
 > (넌 내 스타일을 알잖아, 넌 절대 나와 만날 수 없어)
 I’m with the vibe, where can you find me

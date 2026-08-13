@@ -14,6 +14,7 @@ import fs from "fs";
 import { FM } from "../lib/admin/frontmatter.js";
 
 const WRITE = process.argv.includes("--write");
+const isNote = (s) => /^[🗨✏]/.test(s); // 본인이 쓴 해설 — 가사도 번역도 아니다
 const hangul = (s) => (s.match(/[가-힣]/g) || []).length;
 const foreign = (s) => (s.match(/[a-zA-Z぀-ヿ一-鿿]/g) || []).length;
 
@@ -29,7 +30,7 @@ for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
     const t = lines[i].trim();
     if (!t || t.startsWith(">") || t.startsWith("+") || t.startsWith("//") || /^\[.*\]$/.test(t)) continue;
     if (!lines[i - 1].trim().startsWith(">")) continue; // 번역 줄 바로 아래만
-    if (hangul(t) < 2 || foreign(t) >= hangul(t)) continue; // 한글이 주가 아니면 원문
+    if (isNote(t) || hangul(t) < 2 || foreign(t) >= hangul(t)) continue; // 해설·원문 제외
     lines[i] = lines[i].replace(/^(\s*)/, "$1> ");
     hit++;
   }
@@ -44,7 +45,7 @@ for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
   });
   if (cur.length) blocks.push(cur);
   const kind = (idx) => {
-    const rows = idx.map((i) => lines[i].trim()).filter((t) => !/^\[.*\]$/.test(t) && !t.startsWith("//") && !t.startsWith("+"));
+    const rows = idx.map((i) => lines[i].trim()).filter((t) => !/^\[.*\]$/.test(t) && !t.startsWith("//") && !t.startsWith("+") && !isNote(t));
     if (!rows.length) return "";
     if (rows.some((t) => t.startsWith(">"))) return "mixed";
     return rows.every((t) => hangul(t) >= 2 && foreign(t) < hangul(t)) ? "ko" : "src";
@@ -54,7 +55,7 @@ for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
     if (blocks[b].length > blocks[b - 1].length) continue; // 번역이 원문보다 많으면 판단 보류
     for (const i of blocks[b]) {
       const t = lines[i].trim();
-      if (/^\[.*\]$/.test(t) || t.startsWith("//") || t.startsWith("+")) continue;
+      if (/^\[.*\]$/.test(t) || t.startsWith("//") || t.startsWith("+") || isNote(t)) continue;
       lines[i] = lines[i].replace(/^(\s*)/, "$1> ");
       hit++;
     }

@@ -39,6 +39,7 @@ source_body_hash: ddffe25b8eef0ef1959496cc7241317a67450e20
 闇を裂いて溢れ出した光りつかみ揭げろ
 > 어둠을 가르며 흘러 넘치기 시작한 빛을 잡아 올려
 I'm awakening in the new world
+> (난 새로운 세상에서 깨어나고 있어)
 
 その手を伸ばしてくれたら
 > 그 손을 내밀어준다면
@@ -56,6 +57,7 @@ I'm awakening in the new world
 暴れる鼓動時を超えて響け
 > 날뛰는 고동 시간을 넘어 울려
 I'm awakening in the new world
+> (난 새로운 세상에서 깨어나고 있어)
 
 歪む殘像溶けて流れていく
 > 일그러진 잔상이 녹아서 흘러가며

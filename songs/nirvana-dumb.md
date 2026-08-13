@@ -75,7 +75,10 @@ Think I'm just happy
 > 그냥 행복하다고 생각할 거야
 
 I think I'm dumb
+> 난 멍청이야
 I think I'm dumb
+> 난 멍청이야
 I think I'm dumb
+> 난 멍청이야
 I think I'm dumb
 > 난 멍청이야

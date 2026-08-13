@@ -3,12 +3,14 @@ title: Rainbow
 title_ko: Rainbow
 artist: 데이먼스 이어
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: HEADACHE.
+year: 2021
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fa/94/8b/fa948be2-bf17-563e-29cb-ab92b2edfaf8/5021732616081.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/b8/35/fab8350a-8821-f13a-7ebd-0a07bb902bee/mzaf_5330251766459044549.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/rainbow/1790597684?i=1790598195&uo=4
+trackId: 1790598195
+duration: 246
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock]

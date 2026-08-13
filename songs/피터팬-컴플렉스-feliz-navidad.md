@@ -27,12 +27,12 @@ Feliz Navidad
 Feliz Navidad
 Feliz Navidad
 Prospero Ano y Felicidad
-> 메리 크리스마스
+>^3 메리 크리스마스
 > 새해 복 많이 받기를
 
 I wanna wish you a Merry Christmas
 I wanna wish you a Merry Christmas
 I wanna wish you a Merry Christmas
 From the bottom of my heart
-> 너에게 메리 크리스마스가 되길 바라며
+>^3 너에게 메리 크리스마스가 되길 바라며
 > 나의 가장 깊은 마음으로부터

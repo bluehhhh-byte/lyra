@@ -52,9 +52,9 @@ And waking sound
 In my time
 I’ll wrap my wire around
 your heart and your mind
-> 너의 모든 행동과 발자국 소리
+>^2 너의 모든 행동과 발자국 소리
 > 나의 시간 속에서
-> 너의 심장과 너의 마음에 나의 끈을 묶은 채
+>^2 너의 심장과 너의 마음에 나의 끈을 묶은 채
 
 You’re mine forever now
 > 너는 지금 이 순간부터 영원히 나만의 것

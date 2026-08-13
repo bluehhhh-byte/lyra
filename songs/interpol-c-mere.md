@@ -29,8 +29,8 @@ The trouble is that you're in love
 With someone else
 It should be me
 Oh, it should be me
-> 우리가 함께하기에는 너무 늦어버렸어
-> 문제는 네가 다른 누군가와 사랑에 빠졌다는 거야
+>^2 우리가 함께하기에는 너무 늦어버렸어
+>^2 문제는 네가 다른 누군가와 사랑에 빠졌다는 거야
 > 그건 나여야 해
 > 오, 그건 나여야 해
 

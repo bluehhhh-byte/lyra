@@ -3,12 +3,14 @@ title: Life Goes On
 title_ko: Life Goes On
 artist: 방탄소년단
 artist_ko:
-album:
+album: BE
 year: 2020
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/22/f3/8f/22f38fb9-1690-326a-d891-7aa946c2b06f/195497623273_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/63/1c/7f631c84-92f2-0805-22cf-8b15ddae12ce/mzaf_7122502015402982287.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/life-goes-on/1596532185?i=1596532189&uo=4
+trackId: 1596532189
+duration: 207
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2020]

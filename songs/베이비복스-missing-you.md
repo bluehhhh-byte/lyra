@@ -3,12 +3,14 @@ title: Missing You
 title_ko: Missing You
 artist: 베이비복스
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Baby V.O.X Special Album
+year: 1997
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e8/19/0d/e8190d98-5c9a-f149-8b82-19adf68b9b07/cover_KM0020977_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dd/1f/ad/dd1fad01-4d24-0304-8dd1-86925c353eec/mzaf_3586576619684163494.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/missing-you/1804756101?i=1804756131&uo=4
+trackId: 1804756131
+duration: 236
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

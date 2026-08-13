@@ -3,12 +3,14 @@ title: Moon In Water
 title_ko: 
 artist: 더 폴스
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Moon In Water - Single
+year: 2018
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/f8/97/0bf89785-78ca-3666-3926-d4e7c648928b/191953012162.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/84/f4/2784f41f-441f-8f99-79c9-3c330a1011e1/mzaf_3138472326983813732.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/moon-in-water/1406659647?i=1406659659&uo=4
+trackId: 1406659659
+duration: 260
 genre: Dream Pop
 lang: en
 tags: [한국, Dream Pop]

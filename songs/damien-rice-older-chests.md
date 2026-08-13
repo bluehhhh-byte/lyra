@@ -50,6 +50,7 @@ And some things
 They stay the same
 > 있지, 삶에서 어떤 것들은 변하곤 해
 > 그리고 어떤 것들
+> 그대로 남아 있기도 하지
 > 그것들은 똑같이 남아있지
 
 Like time, there's always time

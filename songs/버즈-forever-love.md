@@ -3,12 +3,14 @@ title: Forever Love
 title_ko: Forever Love
 artist: 버즈
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Forever Love - Single
+year: 2015
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ed/3d/af/ed3daf50-8300-fae2-59fb-9e3118a9aa27/191953415949.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/3b/4a/de3b4a18-2d82-1396-38b5-f178cc2f2cc9/mzaf_5996806357273242479.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/forever-love/1792413403?i=1792413404&uo=4
+trackId: 1792413404
+duration: 229
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

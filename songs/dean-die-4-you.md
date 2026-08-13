@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/
 trackId: 1716886967
 duration: 194
 genre: R&B/소울
-lang: en
+lang: ko
 tags: [한국, R&B/Soul, 2024]
 keywords: [한사람]
 emotion: 사랑

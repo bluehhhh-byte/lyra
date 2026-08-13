@@ -3,12 +3,14 @@ title: Goodbye
 title_ko: Goodbye
 artist: 김사랑
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: [Human Complex] Integrated
+year: 2010
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/0c/da/68/0cda687a-75ea-d611-4aff-b404807bcab7/825646042197.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/86/83/72/86837261-00aa-39ce-8430-d2103b0c750b/mzaf_17586332618603370235.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/goodbye/1642913037?i=1642913047&uo=4
+trackId: 1642913047
+duration: 222
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

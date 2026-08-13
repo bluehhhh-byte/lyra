@@ -59,7 +59,7 @@ and ever fill we die together
 내 어둠 안에 밝은 빛이 올 때까지
 Baby you can touch my lonely heart
 baby I`m yours come into my bed
-> (내 외로운 마음을 만져줘, 내 침대로 와)
+>^2 (내 외로운 마음을 만져줘, 내 침대로 와)
 > 아무런 말도 필요 없는 걸 
 > 난 떠올라 너의 나를 본 거야 Alight
 

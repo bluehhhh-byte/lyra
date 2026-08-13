@@ -41,8 +41,8 @@ If you're feeling down,
 I just wanna make you happier, baby
 Wish I was around, 
 I just wanna make you happier, baby
-> 네가 우울하다면 그저 널 행복하게 해주고 싶어
-> 네 곁에 있고 싶어, 널 행복하게 해주고 싶어
+>^2 네가 우울하다면 그저 널 행복하게 해주고 싶어
+>^2 네 곁에 있고 싶어, 널 행복하게 해주고 싶어
 
 We've been doin' all this late-night talkin'
 'Bout anything you want until the morning

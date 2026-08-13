@@ -3,12 +3,14 @@ title: Homesick
 title_ko: Homesick
 artist: 벤자민
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 약한영웅 Class 1 (Original Soundtrack)
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/35/df/c3/35dfc36e-7a79-6c02-b660-a29c78a35cd4/888272109337_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/f0/a2/1c/f0a21cfd-4f5f-c958-2e42-51c26ebed415/mzaf_5710854283217138290.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/homesick/1656198253?i=1656198557&uo=4
+trackId: 1656198557
+duration: 278
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

@@ -24,26 +24,42 @@ source_hash: 9025a5d7e9d1b142ca6a991542653b0631688321
 source_body_hash: 756a7e077f14cf0267ad596afca143cd5f114687
 ---
 Fuck your friends
+> 네 친구들 좆까
 Fuck your crew
+> 네 패거리 좆까
 Fuck your fans
+> 네 팬들 좆까
 Fuck you too
+> 너도 좆까
 
 Fuck your ma
+> 네 엄마 좆까
 Fuck your pa
+> 네 아빠 좆까
 We don't care
+> 우린 신경 안 써
 We don't care
+> 우린 신경 안 써
 
 Fuck your friends
+> 네 친구들 좆까
 Fuck your crew
+> 네 패거리 좆까
 Fuck your fans
+> 네 팬들 좆까
 Fuck you too
+> 너도 좆까
 
 Fuck your ma
+> 네 엄마 좆까
 Fuck your pa
+> 네 아빠 좆까
 No one likes us
+> 아무도 우리를 안 좋아해
 Nobody likes us
+> 아무도 우릴 좋아하지 않아
 
-> 🗨 이 곡의 샘플링으로 영국챔피언십리그(EFL)에서 폭력적인 훌리건으로 유명한 런던 밀월 FC의 응원가가 차용되었다. 
+🗨 이 곡의 샘플링으로 영국챔피언십리그(EFL)에서 폭력적인 훌리건으로 유명한 런던 밀월 FC의 응원가가 차용되었다. 
 
 "아무도 우리를 좋아하지 않지만, 우리는 그 딴 거 신경 안 써(No one likes us, we don't care)" 
 
