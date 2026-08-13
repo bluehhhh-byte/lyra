@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Pop]
+keywords: [하늘, 밤, 고통, 이유, 불]
+emotion: 그리움
 date: 2023-01-02
 published: 2023-01-01T23:10:15.000Z
 comment:

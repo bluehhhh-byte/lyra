@@ -4,16 +4,16 @@ title_ko: KEY - 건물 사이에 피어난 장미
 artist: H1
 artist_ko:
 album:
-year: 
+year: 2023
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2023]
+keywords: [장미, 가시, 건물, 도시, 바람, 향기]
+emotion: 저항
 date: 2023-03-09
 published: 2023-03-09T10:13:15.000Z
 comment:

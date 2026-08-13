@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: ko
-tags: [2006]
-keywords: []
-emotion:
+tags: [한국, Alternative Rock, 2006]
+keywords: [거짓말, 습관, 타인, 상처, 미움]
+emotion: 이별
 date: 2024-04-27
 published: 2024-04-27T12:29:01.000Z
 comment:

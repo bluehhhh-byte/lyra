@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [하늘, 구름, 상처, 지면, 눈물]
+emotion: 슬픔
 date: 2022-11-16
 published: 2022-11-15T15:56:47.000Z
 comment:

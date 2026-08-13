@@ -4,16 +4,16 @@ title_ko:
 artist: Marilyn Manson
 artist_ko:
 album: Mechanical Animals
-year: 
+year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/6ccbcde98df5080d38f41e895910fb12/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/8/b/0/98bc91f0638bf88b300fa656ea54dbd8.mp3?hdnea=exp=1786584352~acl=/api/1/1/9/8/b/0/98bc91f0638bf88b300fa656ea54dbd8.mp3*~data=user_id=0,application_id=42~hmac=75f88dafe487417dd43f406c95e0aa1fece234b591a8fa936f551c074838643e
 trackId:
 duration: 340
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1998]
+keywords: [미소, 고가도로, 약, 사진, 세상]
+emotion: 체념
 date: 2023-03-22
 published: 2023-03-21T23:08:58.000Z
 comment:

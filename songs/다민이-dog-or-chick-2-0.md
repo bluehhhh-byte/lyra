@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/99f058375e3464eea2bd63127de09
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/9/e/0/d9e0cd9fe4b0da9e982fc035760573dd.mp3?hdnea=exp=1786584463~acl=/api/1/1/d/9/e/0/d9e0cd9fe4b0da9e982fc035760573dd.mp3*~data=user_id=0,application_id=42~hmac=f8e1901e79679eacd9c8740110fd2431fe05a2e0a1ef9a2d02c70d0cced73954
 trackId:
 duration: 136
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [계층, 바닥, 도시, 음악, 현실]
+emotion: 분노
 date: 2022-09-25
 published: 2022-09-25T13:22:44.000Z
 comment:

@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/4b4a1145cc777f1bf8fdb24d9fd51
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/4/c/0/44c06c31d28c6918717d331881c6e634.mp3?hdnea=exp=1786584276~acl=/api/1/1/4/4/c/0/44c06c31d28c6918717d331881c6e634.mp3*~data=user_id=0,application_id=42~hmac=c841acb9098debe8e62ef99a08b5b514720468ec1ae41071ae843cee7ea03484
 trackId:
 duration: 126
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop]
+keywords: [마이크, 애인, 친구, 마음, 연애]
+emotion: 불안
 date: 2022-12-20
 published: 2022-12-19T15:27:41.000Z
 comment:

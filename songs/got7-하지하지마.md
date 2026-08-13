@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/%ED%95%98%EC%A7%80%ED%95%98%EC%A7%80%EB%A7%88/1695485415?i=1695485536&uo=4
 trackId: 1695485536
 duration: 197
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2014]
+keywords: [손길, 어깨, 미소, 심장, 팔짱]
+emotion: 설렘
 date: 2023-03-16
 published: 2023-03-15T23:49:37.000Z
 comment:

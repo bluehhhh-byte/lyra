@@ -4,16 +4,16 @@ title_ko:
 artist: Stratovarius
 artist_ko:
 album:
-year: 
+year: 1996
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, Heavy Metal, 1996]
+keywords: [어둠, 겨울, 들판, 햇빛, 먼지, 별]
+emotion: 회상
 date: 2023-05-05
 published: 2023-05-04T22:15:37.000Z
 comment:

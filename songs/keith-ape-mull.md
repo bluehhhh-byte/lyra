@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/f2230b73c501ad3952c4cf36cf66b
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/0/5/0/5055948bb186e9d4a74ca670b6246f0f.mp3?hdnea=exp=1786584331~acl=/api/1/1/5/0/5/0/5055948bb186e9d4a74ca670b6246f0f.mp3*~data=user_id=0,application_id=42~hmac=c9a3c4c3fe06b6a69961de28b21733e15968c00acb4ab57b41af76c58a1e3754
 trackId:
 duration: 178
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [손목, 금, 얼음, 보석, 서울]
+emotion: 저항
 date: 2022-11-19
 published: 2022-11-19T10:25:06.000Z
 comment:

@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/the-view-from-the-afternoon/111153953?i=111153346&uo=4
 trackId: 111153346
 duration: 218
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 2006]
+keywords: [밤, 술, 문자, 휴대폰, 저녁]
+emotion: 불안
 date: 2023-06-02
 published: 2023-06-02T11:31:02.000Z
 comment:

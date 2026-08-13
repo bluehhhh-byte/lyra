@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/kr/album/%EC%98%A4%EB%9E%98%EB%90%9C-%EC%B9%9C%EA%B5%AC-feat-%EB%A1%9C%EA%BC%AC/1655801741?i=1655802101&uo=4
 trackId: 1655802101
 duration: 213
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop, 2015]
+keywords: [친구, 무대, 술, 노을, 빵, 우정]
+emotion: 회상
 date: 2022-12-16
 published: 2022-12-15T15:01:16.000Z
 comment:

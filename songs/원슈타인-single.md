@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [우산, 비, 노래, 차, 아침]
+emotion: 고독
 date: 2023-05-28
 published: 2023-05-27T23:05:38.000Z
 comment:

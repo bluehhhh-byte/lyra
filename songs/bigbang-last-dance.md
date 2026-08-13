@@ -4,16 +4,16 @@ title_ko: Last Dance
 artist: BIGBANG
 artist_ko:
 album: MADE
-year: 
+year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/73f9614becfcecc25782335cacc49cd2/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3?hdnea=exp=1786584267~acl=/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3*~data=user_id=0,application_id=42~hmac=83b369eca3ad8d781484049b6a38c26bdefc9c77495c909a1977b8299556b54c
 trackId:
 duration: 279
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2016]
+keywords: [별, 불빛, 눈물, 어른, 친구]
+emotion: 그리움
 date: 2022-12-01
 published: 2022-11-30T18:05:19.000Z
 comment:

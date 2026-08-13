@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Pop
 lang: ja
-tags: [1994]
-keywords: []
-emotion:
+tags: [일본, J-Pop, 1994]
+keywords: [키스, 밤, 미소, 도시, 친구]
+emotion: 사랑
 date: 2025-08-18
 published: 2025-08-17T22:49:26.000Z
 comment:

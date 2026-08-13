@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [침대, 방, 아침, 젊음, 소식]
+emotion: 고독
 date: 2022-09-20
 published: 2022-09-20T03:39:08.000Z
 comment:

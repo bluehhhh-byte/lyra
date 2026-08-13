@@ -4,16 +4,16 @@ title_ko: Ditto
 artist: NewJeans
 artist_ko:
 album:
-year: 
+year: 2022
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2022]
+keywords: [아침, 여름, 가을, 심장, 미로, 기억]
+emotion: 설렘
 date: 2023-01-02
 published: 2023-01-02T09:51:44.000Z
 comment:

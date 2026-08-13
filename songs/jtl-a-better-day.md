@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/4/0/2e491a27756b8be569ec128ebbd542ab.mp3?hdnea=exp=1786584324~acl=/api/1/1/2/e/4/0/2e491a27756b8be569ec128ebbd542ab.mp3*~data=user_id=0,application_id=42~hmac=6791941894b6c4621e40ce991f5aff64107a5f81fe0065e99655b13d021ded03
 trackId:
 duration: 265
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [추억, 겨울, 빈자리, 눈빛, 입맞춤]
+emotion: 이별
 date: 2022-12-18
 published: 2022-12-18T04:45:41.000Z
 comment:

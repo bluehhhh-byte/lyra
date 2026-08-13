@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: [2024]
-keywords: []
-emotion:
+tags: [일본, J-Rock, 2024]
+keywords: [정의, 우주, 불꽃, 얼굴, 손, 자연]
+emotion: 저항
 date: 2024-04-21
 published: 2024-04-21T03:45:41.000Z
 comment:

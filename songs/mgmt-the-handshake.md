@@ -4,16 +4,16 @@ title_ko:
 artist: MGMT
 artist_ko:
 album:
-year: 
+year: 2007
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop, 2007]
+keywords: [악수, 구름, 눈물, 신용카드, 대리석, 담배]
+emotion: 불안
 date: 2022-11-12
 published: 2022-11-12T11:20:00.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [축제, 악마, 손가락, 나무, 무대]
+emotion: 저항
 date: 2023-02-07
 published: 2023-02-06T23:39:56.000Z
 comment:

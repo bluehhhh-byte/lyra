@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [세상, 꿈, 야망, 시련, 싸움]
+emotion: 저항
 date: 2022-11-25
 published: 2022-11-24T23:24:09.000Z
 comment:

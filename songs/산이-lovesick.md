@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [병, 의사, 심장, 미소, 꿈, 눈물]
+emotion: 사랑
 date: 2022-10-01
 published: 2022-10-01T11:58:25.000Z
 comment:

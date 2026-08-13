@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [밤하늘, 꿈, 천사, 소원, 얼굴]
+emotion: 그리움
 date: 2023-05-14
 published: 2023-05-14T14:34:28.000Z
 comment:

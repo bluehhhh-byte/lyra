@@ -4,16 +4,16 @@ title_ko:
 artist: Radiohead
 artist_ko:
 album: No Surprises
-year: 
+year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/7a378976d3ff1b1fd7b21ee0c7f95fa5/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/2/0/cf2203c4542f336a75ab187d31116549.mp3?hdnea=exp=1786584393~acl=/api/1/1/c/f/2/0/cf2203c4542f336a75ab187d31116549.mp3*~data=user_id=0,application_id=42~hmac=20680e3abd89da4be88c15fca7c8c12e0cf3efc838c74784d33289f9c33b4302
 trackId:
 duration: 223
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1998]
+keywords: [도시, 하늘, 상사, 아내, 직장]
+emotion: 고독
 date: 2023-03-04
 published: 2023-03-04T04:55:06.000Z
 comment:

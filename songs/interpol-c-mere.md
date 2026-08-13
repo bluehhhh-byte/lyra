@@ -4,16 +4,16 @@ title_ko:
 artist: Interpol
 artist_ko:
 album: Antics
-year: 
+year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/ce1164995e91a8a61d2b796938d47065/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/d/1/0/0d1bd3b381ce1bb10afefbfdb7dde6fb.mp3?hdnea=exp=1786584320~acl=/api/1/1/0/d/1/0/0d1bd3b381ce1bb10afefbfdb7dde6fb.mp3*~data=user_id=0,application_id=42~hmac=a5772cb11a2ea2ed78a0631f78a24e66c7b6491d659fe488bee4388552e68d9c
 trackId:
 duration: 192
-genre:
+genre: Post-Punk
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Post-Punk, 2004]
+keywords: [밤, 잠, 저녁, 시간, 마음]
+emotion: 그리움
 date: 2022-11-12
 published: 2022-11-12T09:38:24.000Z
 comment:

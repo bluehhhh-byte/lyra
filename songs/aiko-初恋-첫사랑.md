@@ -4,16 +4,16 @@ title_ko:
 artist: Aiko
 artist_ko:
 album:
-year: 
+year: 2001
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 2001]
+keywords: [손가락, 눈물, 망상, 몸짓, 내일, 입술]
+emotion: 설렘
 date: 2022-11-14
 published: 2022-11-13T19:45:02.000Z
 comment:

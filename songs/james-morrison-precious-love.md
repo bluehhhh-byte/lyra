@@ -4,16 +4,16 @@ title_ko:
 artist: James Morrison
 artist_ko:
 album: Greatest Hits
-year: 
+year: 2011
 artwork: https://cdn-images.dzcdn.net/images/cover/d87ce114c26e3f6297290bed8936a379/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/6/5/0/96556d626fd0b835d86dcf98f7034f91.mp3?hdnea=exp=1786584321~acl=/api/1/1/9/6/5/0/96556d626fd0b835d86dcf98f7034f91.mp3*~data=user_id=0,application_id=42~hmac=e967727f82cd23e51bc2e9291a0efd2626dd9c81a63b8cdeee18ac600626ef80
 trackId:
 duration: 240
-genre:
+genre: R&B/Soul
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, R&B/Soul, 2011]
+keywords: [사람, 인생, 도움, 속삭임, 의심]
+emotion: 사랑
 date: 2023-03-07
 published: 2023-03-06T15:16:25.000Z
 comment:

@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/kr/album/%EC%84%AC-rough-feat-colde/1406820407?i=1406822544&uo=4
 trackId: 1406822544
 duration: 97
-genre:
+genre: R&B/Soul
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul, 2017]
+keywords: [눈빛, 푸른빛, 마음, 사랑, 아픔]
+emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:14:38.000Z
 comment:

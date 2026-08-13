@@ -4,16 +4,16 @@ title_ko: 어른의 우울
 artist: ATARASHII GAKKO!
 artist_ko:
 album: OTONABLUE
-year: 
+year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/011ea7436c1b1ff2e01abde85a3aa598/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/0/0/ec0a8c673d95d439562bc7b46701336c.mp3?hdnea=exp=1786584263~acl=/api/1/1/e/c/0/0/ec0a8c673d95d439562bc7b46701336c.mp3*~data=user_id=0,application_id=42~hmac=6a17aa30aaf827b1be297474f31b9408d84ff6ad18912134e1b299d37fe233b9
 trackId:
 duration: 185
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 2020]
+keywords: [입술, 거리, 시선, 꽃봉오리, 땀, 몸]
+emotion: 설렘
 date: 2023-03-14
 published: 2023-03-14T14:25:41.000Z
 comment:

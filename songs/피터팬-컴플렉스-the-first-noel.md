@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [별, 목자, 천사, 아기, 예물, 동방]
+emotion: 기쁨
 date: 2022-12-24
 published: 2022-12-23T16:15:24.000Z
 comment:

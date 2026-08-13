@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [당근, 토마토, 마늘, 솔방울, 햇빛, 나무]
+emotion: 기쁨
 date: 2022-10-07
 published: 2022-10-07T12:25:19.000Z
 comment:

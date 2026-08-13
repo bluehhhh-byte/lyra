@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/2c0c1a47ba3c73fc1a36d12df896e
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/e/9/0/6e966d2a5cc35e07a4675b8eba9c08e4.mp3?hdnea=exp=1786584373~acl=/api/1/1/6/e/9/0/6e966d2a5cc35e07a4675b8eba9c08e4.mp3*~data=user_id=0,application_id=42~hmac=b5e34cb2f25c149aea0430e47dcf5992d0b502f676ec4b3951e3f28b5b61e513
 trackId:
 duration: 286
-genre:
+genre: Trot
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [일본, Trot]
+keywords: [기적, 기차, 소리, 님]
+emotion: 이별
 date: 2022-09-20
 published: 2022-09-20T13:50:15.000Z
 comment:

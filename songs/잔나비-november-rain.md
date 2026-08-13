@@ -4,16 +4,16 @@ title_ko: November Rain
 artist: 잔나비
 artist_ko:
 album:
-year: 
+year: 2016
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock, 2016]
+keywords: [비, 눈, 빗소리, 낙엽, 겨울, 커튼]
+emotion: 그리움
 date: 2022-10-30
 published: 2022-10-30T05:40:36.000Z
 comment:

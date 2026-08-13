@@ -4,16 +4,16 @@ title_ko:
 artist: EELS
 artist_ko:
 album:
-year: 
+year: 1996
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1996]
+keywords: [마취제, 구멍, 영혼, 예수, 엄마]
+emotion: 체념
 date: 2022-10-06
 published: 2022-10-06T13:02:02.000Z
 comment:

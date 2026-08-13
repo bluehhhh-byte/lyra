@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/older-chests/2249511?i=2249499&uo=4
 trackId: 2249499
 duration: 286
-genre:
+genre: Folk
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, Folk, 2002]
+keywords: [수납장, 벽, 선반, 책, 시간]
+emotion: 위로
 date: 2022-09-17
 published: 2022-09-17T01:05:25.000Z
 comment:

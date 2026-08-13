@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [서울, 강남, 샴페인, 지폐, 집세]
+emotion: 저항
 date: 2022-11-19
 published: 2022-11-19T10:41:17.000Z
 comment:

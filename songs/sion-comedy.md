@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Pop]
+keywords: [코미디쇼, 사슴, 벽, 인형, 눈물]
+emotion: 이별
 date: 2022-09-17
 published: 2022-09-17T09:10:45.000Z
 comment:

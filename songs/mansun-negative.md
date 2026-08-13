@@ -4,16 +4,16 @@ title_ko:
 artist: Mansun
 artist_ko:
 album: Six
-year: 
+year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/ffe1e2af8d722bbb7d738426f6c60599/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/4/f/0/a4f856b55b5ba24577ebcf86322906c0.mp3?hdnea=exp=1786584350~acl=/api/1/1/a/4/f/0/a4f856b55b5ba24577ebcf86322906c0.mp3*~data=user_id=0,application_id=42~hmac=9d7e593b9eed9b7ccf969ff6b05c08b717add186d4e63b4db647e034bc1f05b8
 trackId:
 duration: 261
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1998]
+keywords: [거짓말, 거리, 침대, 눈, 세상]
+emotion: 불안
 date: 2023-03-30
 published: 2023-03-29T23:30:28.000Z
 comment:

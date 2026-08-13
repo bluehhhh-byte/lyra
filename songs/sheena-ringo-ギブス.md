@@ -4,16 +4,16 @@ title_ko: 깁스
 artist: Sheena Ringo
 artist_ko:
 album:
-year: 
+year: 2000
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock, 2000]
+keywords: [사진, 덫, 사월, 거짓말, 내일]
+emotion: 사랑
 date: 2023-02-26
 published: 2023-02-26T11:49:16.000Z
 comment:

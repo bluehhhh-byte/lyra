@@ -4,16 +4,16 @@ title_ko: 꿈속으로
 artist: Inoue Yosui
 artist_ko:
 album:
-year: 
+year: 1973
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Folk
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Folk, 1973]
+keywords: [가방, 책상, 춤, 꿈, 물건]
+emotion: 몽환
 date: 2023-03-14
 published: 2023-03-13T23:53:26.000Z
 comment:

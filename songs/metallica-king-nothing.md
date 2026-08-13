@@ -4,16 +4,16 @@ title_ko:
 artist: Metallica
 artist_ko:
 album:
-year: 
+year: 1996
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Heavy Metal, 1996]
+keywords: [왕관, 성, 손가락, 이름, 왕]
+emotion: 체념
 date: 2022-11-22
 published: 2022-11-21T15:33:41.000Z
 comment:

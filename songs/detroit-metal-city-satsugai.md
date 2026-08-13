@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Heavy Metal]
+keywords: [지옥, 피, 부모, 형제, 미래, 추억]
+emotion: 분노
 date: 2023-03-07
 published: 2023-03-07T12:42:56.000Z
 comment:

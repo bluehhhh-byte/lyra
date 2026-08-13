@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [도시, 휴식, 안부, 하루, 오늘]
+emotion: 체념
 date: 2023-02-01
 published: 2023-01-31T23:23:36.000Z
 comment:

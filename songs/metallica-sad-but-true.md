@@ -4,16 +4,16 @@ title_ko:
 artist: Metallica
 artist_ko:
 album:
-year: 
+year: 1991
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Heavy Metal, 1991]
+keywords: [꿈, 눈, 고통, 거짓말, 대가]
+emotion: 분노
 date: 2022-11-21
 published: 2022-11-21T14:53:13.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [라디오, 주파수, 신청곡, 빗물, 전광판, 교통사고]
+emotion: 고독
 date: 2022-09-28
 published: 2022-09-28T06:39:37.000Z
 comment:

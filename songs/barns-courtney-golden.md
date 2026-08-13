@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/9081ba7e5916d6beb00145c1f5060
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3?hdnea=exp=1786584265~acl=/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3*~data=user_id=0,application_id=42~hmac=b028038bdca5d6287eb691dc4a15185eae1d3c8c6b6699479d3923e125b0f4a7
 trackId:
 duration: 203
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock]
+keywords: [입술, 피, 황금, 기도, 하늘]
+emotion: 사랑
 date: 2023-06-01
 published: 2023-06-01T01:01:55.000Z
 comment:

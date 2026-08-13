@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Punk Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Punk Rock]
+keywords: [하늘, 별빛, 눈물, 밤, 세상]
+emotion: 사랑
 date: 2022-10-02
 published: 2022-10-02T08:03:54.000Z
 comment:

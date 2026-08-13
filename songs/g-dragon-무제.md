@@ -4,16 +4,16 @@ title_ko: DRAGON - 무제
 artist: G
 artist_ko:
 album:
-year: 
+year: 2017
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad, 2017]
+keywords: [꿈, 노래, 기억, 추억, 거짓말]
+emotion: 이별
 date: 2022-12-01
 published: 2022-11-30T18:15:58.000Z
 comment:

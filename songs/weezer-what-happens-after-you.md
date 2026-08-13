@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock]
+keywords: [신호, 메아리, 기억, 바위, 암호]
+emotion: 그리움
 date: 2023-02-21
 published: 2023-02-20T23:48:39.000Z
 comment:

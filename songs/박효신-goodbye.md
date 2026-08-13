@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [오후, 여름, 화면, 눈물, 숨바꼭질, 기억]
+emotion: 이별
 date: 2022-12-30
 published: 2022-12-30T10:08:17.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko: Ready, Get Set, Go!
 artist: Peppertones
 artist_ko:
 album: Colorful Express
-year: 
+year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/85f7ac5672ba1d2c15ce0005f7a55d0e/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/9/3/0/193ea2d40ff4b38698ce72bb677d84ca.mp3?hdnea=exp=1786584377~acl=/api/1/1/1/9/3/0/193ea2d40ff4b38698ce72bb677d84ca.mp3*~data=user_id=0,application_id=42~hmac=feba049ef1ba344730f16c20aab312468ef674a2a5c179f280f54e43fa550d70
 trackId:
 duration: 305
-genre:
+genre: Indie Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Pop, 2008]
+keywords: [총성, 지평선, 태양, 바람, 함성]
+emotion: 희망
 date: 2023-01-09
 published: 2023-01-09T10:15:09.000Z
 comment:

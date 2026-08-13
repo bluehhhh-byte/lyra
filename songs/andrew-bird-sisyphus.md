@@ -4,16 +4,16 @@ title_ko:
 artist: Andrew Bird
 artist_ko:
 album: Indie Pa' Curar La Cruda
-year: 
+year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/a0c5b52c7d3a6dd34dcde771669c5ff3/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/0/b/0/40b8ea55184d12667566658cebaedb88.mp3?hdnea=exp=1786584258~acl=/api/1/1/4/0/b/0/40b8ea55184d12667566658cebaedb88.mp3*~data=user_id=0,application_id=42~hmac=1107843c5fc2b914187e674c5a7dfe873ac517426063fea41038b664968d7aba
 trackId:
 duration: 247
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 2019]
+keywords: [바위, 안개, 절벽, 집, 주먹, 운명]
+emotion: 저항
 date: 2023-01-03
 published: 2023-01-03T09:45:34.000Z
 comment:

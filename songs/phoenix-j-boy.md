@@ -4,16 +4,16 @@ title_ko:
 artist: Phoenix
 artist_ko:
 album: Ti Amo
-year: 
+year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/dc62909cbb88b0d012ccbbc16de015e6/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/e/7/0/ce7c05a997b59e48e7c04af2856df5b9.mp3?hdnea=exp=1786584380~acl=/api/1/1/c/e/7/0/ce7c05a997b59e48e7c04af2856df5b9.mp3*~data=user_id=0,application_id=42~hmac=3879159d1fa87082c926066d9f5c6db8ae95f08be522983779ddd16291fa2a33
 trackId:
 duration: 247
-genre:
+genre: Synth-Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, Synth-Pop, 2017]
+keywords: [보석, 팔찌, 무도회, 수족관, 골목, 숲]
+emotion: 몽환
 date: 2023-04-06
 published: 2023-04-06T10:57:04.000Z
 comment:

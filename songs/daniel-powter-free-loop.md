@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/free-loop/63816246?i=63816163&uo=4
 trackId: 63816163
 duration: 233
-genre:
+genre: Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Pop, 2005]
+keywords: [밤, 비, 이름, 태양, 살결, 하룻밤]
+emotion: 체념
 date: 2023-05-09
 published: 2023-05-09T11:08:40.000Z
 comment:

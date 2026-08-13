@@ -4,16 +4,16 @@ title_ko:
 artist: Limp Bizkit
 artist_ko:
 album: Chocolate Starfish And The Hot Dog Flavored Water
-year: 
+year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/070e00c8dbd21dc735bc27eb6fef9ae1/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/8/5/0/0859c3302fcd103e4cd8afc56471aab1.mp3?hdnea=exp=1786584341~acl=/api/1/1/0/8/5/0/0859c3302fcd103e4cd8afc56471aab1.mp3*~data=user_id=0,application_id=42~hmac=d5289a6eeb45daa05f322898418a0d1bba27c34328a2d2872c359bf1aaf0b7e8
 trackId:
 duration: 420
-genre:
+genre: Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Metal, 2000]
+keywords: [거짓말, 상처, 잠, 이유]
+emotion: 분노
 date: 2023-06-05
 published: 2023-06-04T23:29:05.000Z
 comment:

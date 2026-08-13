@@ -4,16 +4,16 @@ title_ko: 성스러운 바다와 선샤인
 artist: THE YELLOW MONKEY
 artist_ko:
 album:
-year: 
+year: 1996
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock, 1996]
+keywords: [바다, 파도, 욕망, 환상, 태양]
+emotion: 체념
 date: 2023-01-19
 published: 2023-01-18T23:11:07.000Z
 comment:

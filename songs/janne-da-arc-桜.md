@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/jp/album/%E6%A1%9C/730850899?i=730850924&uo=4
 trackId: 730850924
 duration: 348
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei, 2000]
+keywords: [벚꽃, 눈, 바람, 약속, 꽃잎]
+emotion: 그리움
 date: 2023-04-05
 published: 2023-04-04T23:41:07.000Z
 comment:

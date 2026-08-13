@@ -4,16 +4,16 @@ title_ko:
 artist: Slipknot
 artist_ko:
 album: Nu Metal Greats
-year: 
+year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/abde61289af0a36e980d1a3d715b8dad/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/5/0/4b569c4755f2e8e0e6e55878a426e32a.mp3?hdnea=exp=1786584407~acl=/api/1/1/4/b/5/0/4b569c4755f2e8e0e6e55878a426e32a.mp3*~data=user_id=0,application_id=42~hmac=65cbe330b6bdd31a1c119b5139185f8950457d8cd922aa850317a248fb755936
 trackId:
 duration: 264
-genre:
+genre: Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Metal, 2004]
+keywords: [세상, 휘발유, 얼룩, 반란, 호흡]
+emotion: 분노
 date: 2023-04-20
 published: 2023-04-20T00:01:20.000Z
 comment:

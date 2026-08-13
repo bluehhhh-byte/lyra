@@ -4,16 +4,16 @@ title_ko:
 artist: Björk
 artist_ko:
 album: Screaming Masterpiece (Original Motion Picture Soundtrack)
-year: 
+year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/9ed6c568004b157f2eb9d049e4910f67/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/5/0/f65e901c98d0559dc13316f9e56135b1.mp3?hdnea=exp=1786584268~acl=/api/1/1/f/6/5/0/f65e901c98d0559dc13316f9e56135b1.mp3*~data=user_id=0,application_id=42~hmac=25be91a2c2c4b793688f68dc16fc7a7058c62a8f171a1fbbc1e35efdac6c68ae
 trackId:
 duration: 223
-genre:
+genre: Electronic
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, Electronic, 1997]
+keywords: [사랑, 마음, 주위, 믿음]
+emotion: 위로
 date: 2022-11-29
 published: 2022-11-28T23:43:31.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko: Electric Shock
 artist: f(x)
 artist_ko:
 album: Electric Shock - The 2nd Mini Album
-year: 
+year: 2012
 artwork: https://cdn-images.dzcdn.net/images/cover/4f04e465a2e190d9ec46ccb6ef29587f/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3?hdnea=exp=1786584296~acl=/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3*~data=user_id=0,application_id=42~hmac=49d2b23ef4c7eebd5e4fed61d50581c875329ddf435f3ad3c93b2367ab240465
 trackId:
 duration: 196
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2012]
+keywords: [전류, 블랙홀, 눈빛, 심장, 숨]
+emotion: 설렘
 date: 2023-01-24
 published: 2023-01-24T01:50:51.000Z
 comment:

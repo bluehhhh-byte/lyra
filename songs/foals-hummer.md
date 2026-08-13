@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/hummer/217602349?i=217602354&uo=4
 trackId: 217602354
 duration: 178
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 2007]
+keywords: [심장, 별, 집, 잠, 달리기]
+emotion: 몽환
 date: 2023-01-04
 published: 2023-01-03T23:40:45.000Z
 comment:

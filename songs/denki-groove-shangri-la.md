@@ -4,16 +4,16 @@ title_ko:
 artist: Denki Groove
 artist_ko:
 album: Shangri-La
-year: 
+year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/c02e93814b4a9ce7de572dd5563d601a/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/f/c/0/1fc772ec71f59342ee897728a5b9a4e4.mp3?hdnea=exp=1786584284~acl=/api/1/1/1/f/c/0/1fc772ec71f59342ee897728a5b9a4e4.mp3*~data=user_id=0,application_id=42~hmac=88811c8509429b6beaa4fc9da3af10ae3f22c9436fe74cbdab3e709f3e0021f1
 trackId:
 duration: 240
-genre:
+genre: Electronic
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Electronic, 1997]
+keywords: [꿈, 키스, 유토피아, 세상, 기억]
+emotion: 몽환
 date: 2023-04-02
 published: 2023-04-02T11:09:08.000Z
 comment:

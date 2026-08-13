@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/34b5da2d35c25244081c47a1a9ba4
 preview: https://cdnt-preview.dzcdn.net/api/1/1/b/8/b/0/b8bc06df29b6bdb10c51c6e417be3d83.mp3?hdnea=exp=1786584382~acl=/api/1/1/b/8/b/0/b8bc06df29b6bdb10c51c6e417be3d83.mp3*~data=user_id=0,application_id=42~hmac=5def7221fce1144bcb88bfaa6bc4a6a63c5ca1ab5e2a04f6b7169b6b9ddd0160
 trackId:
 duration: 296
-genre:
+genre: Metal
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Metal]
+keywords: [불꽃, 물결, 어둠, 빛, 숯]
+emotion: 체념
 date: 2022-11-20
 published: 2022-11-20T07:37:41.000Z
 comment:

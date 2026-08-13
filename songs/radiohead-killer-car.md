@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock]
+keywords: [브레이크, 트렁크, 도로, 달, 식물]
+emotion: 불안
 date: 2022-11-02
 published: 2022-11-02T12:14:18.000Z
 comment:

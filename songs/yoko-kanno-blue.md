@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/d6a1b914d623c7b3df0bf153ce632
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/0/d/0/a0d90c60c7a53d232f4b071932e9a4fb.mp3?hdnea=exp=1786584433~acl=/api/1/1/a/0/d/0/a0d90c60c7a53d232f4b071932e9a4fb.mp3*~data=user_id=0,application_id=42~hmac=649cdfc7de69c5eef5f9300c1265cde3fd0fd26fe0b38f1f432decf4f6825bee
 trackId:
 duration: 294
-genre:
+genre: Soundtrack
 lang: en
-tags: [2001]
-keywords: []
-emotion:
+tags: [일본, Soundtrack, 2001]
+keywords: [하늘, 별, 꿈, 자유, 빛]
+emotion: 몽환
 date: 2024-05-11
 published: 2024-05-11T02:50:18.000Z
 comment:

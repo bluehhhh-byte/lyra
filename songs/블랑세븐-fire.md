@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop]
+keywords: [밤하늘, 별, 손, 순간, 가슴, 곁]
+emotion: 사랑
 date: 2022-10-08
 published: 2022-10-08T11:48:01.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: S.E.S.
 artist_ko:
 album: LOVE - The 3rd Album
-year: 
+year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/d993241d18248982a0a355e1b9001e9b/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/d/0/ecd394fc8483807107c5bbe00a49ffc5.mp3?hdnea=exp=1786584399~acl=/api/1/1/e/c/d/0/ecd394fc8483807107c5bbe00a49ffc5.mp3*~data=user_id=0,application_id=42~hmac=52c5a73fe7a68f5b9723bd876206717f2f29b720fbbc3a24c481053c72dc8d1f
 trackId:
 duration: 226
-genre:
+genre: K-Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 1999]
+keywords: [새벽, 꿈, 향기, 눈물, 황혼]
+emotion: 사랑
 date: 2023-01-26
 published: 2023-01-25T23:27:32.000Z
 comment:

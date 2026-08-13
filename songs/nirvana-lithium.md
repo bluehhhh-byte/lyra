@@ -4,16 +4,16 @@ title_ko:
 artist: Nirvana
 artist_ko:
 album: Nevermind (Remastered)
-year: 
+year: 1991
 artwork: https://cdn-images.dzcdn.net/images/cover/f0282817b697279e56df13909962a54a/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/7/0/1174a6c09fbc3fe39c1d01e49de8c85b.mp3?hdnea=exp=1786584368~acl=/api/1/1/1/1/7/0/1174a6c09fbc3fe39c1d01e49de8c85b.mp3*~data=user_id=0,application_id=42~hmac=042202c604c2193c8e2ce97e1430544f8d38dfed940e0be7e8635a874bc5fa60
 trackId:
 duration: 255
-genre:
+genre: Grunge
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Grunge, 1991]
+keywords: [거울, 촛불, 신, 친구, 머리, 일요일]
+emotion: 고독
 date: 2023-05-21
 published: 2023-05-20T22:32:11.000Z
 comment:

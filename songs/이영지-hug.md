@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [포옹, 팻말, 어깨, 부목, 아이, 목소리]
+emotion: 위로
 date: 2023-01-09
 published: 2023-01-08T23:26:57.000Z
 comment:

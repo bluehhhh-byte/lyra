@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [눈물, 손, 바람, 먼지, 여행, 어둠]
+emotion: 이별
 date: 2023-01-27
 published: 2023-01-26T23:21:02.000Z
 comment:

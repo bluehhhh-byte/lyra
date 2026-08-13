@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/dddf41b7da9603b499a175e951218
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/2/0/cf211d5b963a88f6443499bb285e48e7.mp3?hdnea=exp=1786584414~acl=/api/1/1/c/f/2/0/cf211d5b963a88f6443499bb285e48e7.mp3*~data=user_id=0,application_id=42~hmac=a54061a3943189eae36d99f0510199c66c1d7f04dff6c267fe32f09334e36041
 trackId:
 duration: 154
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop]
+keywords: [열쇠, 와인, 하루, 일주일, 집]
+emotion: 설렘
 date: 2023-04-11
 published: 2023-04-11T10:09:41.000Z
 comment:

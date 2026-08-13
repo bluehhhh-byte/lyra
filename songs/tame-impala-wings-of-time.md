@@ -4,16 +4,16 @@ title_ko:
 artist: Tame Impala
 artist_ko:
 album: Wings Of Time (From the Motion Picture Dungeons & Dragons: Honor Among Thieves)
-year: 
+year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/eebc5acaf3db742a016cb021745d920a/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/4/5/0/445cbee73bfe7753cf89a6bfd520d019.mp3?hdnea=exp=1786584415~acl=/api/1/1/4/4/5/0/445cbee73bfe7753cf89a6bfd520d019.mp3*~data=user_id=0,application_id=42~hmac=e9f0574feb88cd09d7fc8b051251e716772d9f4a2110434efdc8f73b2ae8ec46
 trackId:
 duration: 168
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2023]
+keywords: [날개, 시간, 세상, 지평선, 하늘]
+emotion: 기쁨
 date: 2023-04-10
 published: 2023-04-09T23:45:31.000Z
 comment:

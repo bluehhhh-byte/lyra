@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/make-a-wish/1058302637?i=1058302641&uo=4
 trackId: 1058302641
 duration: 138
-genre:
+genre: Punk Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [일본, Punk Rock, 2004]
+keywords: [일요일, 소원, 손, 집, 길]
+emotion: 위로
 date: 2023-02-08
 published: 2023-02-07T23:19:24.000Z
 comment:

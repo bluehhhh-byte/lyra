@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/ba9b6789fc43c332eebfcfaa8bdff
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7ae3aa7791.mp3?hdnea=exp=1786584287~acl=/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7ae3aa7791.mp3*~data=user_id=0,application_id=42~hmac=8e85606a398cce174bd5e5172bfefebe36da1631bac662a5b6a902428739fd55
 trackId:
 duration: 272
-genre:
+genre: Metal
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Metal]
+keywords: [죽음, 공포, 함정, 자유, 한숨, 왜곡]
+emotion: 저항
 date: 2023-03-08
 published: 2023-03-08T10:20:19.000Z
 comment:

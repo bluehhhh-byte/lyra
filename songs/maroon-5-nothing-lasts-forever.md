@@ -4,16 +4,16 @@ title_ko:
 artist: Maroon 5
 artist_ko:
 album:
-year: 
+year: 2007
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Pop, 2007]
+keywords: [침대, 벽, 추억, 영혼, 바닥]
+emotion: 이별
 date: 2023-04-14
 published: 2023-04-13T23:45:17.000Z
 comment:

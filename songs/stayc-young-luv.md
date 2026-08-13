@@ -4,16 +4,16 @@ title_ko: YOUNG LUV
 artist: STAYC
 artist_ko:
 album:
-year: 
+year: 2022
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2022]
+keywords: [밤, 눈물, 상처, 거짓말, 마음]
+emotion: 이별
 date: 2023-01-02
 published: 2023-01-02T10:30:00.000Z
 comment:

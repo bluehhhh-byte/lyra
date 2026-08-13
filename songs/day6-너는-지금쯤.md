@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/%EB%84%88%EB%8A%94-%EC%A7%80%EA%B8%88%EC%AF%A4/1787112766?i=1787113050&uo=4
 trackId: 1787113050
 duration: 235
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad, 2024]
+keywords: [편지, 서랍, 약속, 기억, 얘기]
+emotion: 그리움
 date: 2023-02-20
 published: 2023-02-19T23:35:12.000Z
 comment:

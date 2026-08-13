@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/jp/album/missing-you/991565109?i=991565115&uo=4
 trackId: 991565115
 duration: 350
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock, 2000]
+keywords: [겨울, 눈, 방, 국도, 봄, 꽃]
+emotion: 그리움
 date: 2023-01-31
 published: 2023-01-30T20:39:57.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: Muse
 artist_ko:
 album:
-year: 
+year: 2015
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2015]
+keywords: [드론, 가족, 손가락, 목숨, 기도]
+emotion: 저항
 date: 2023-06-03
 published: 2023-06-03T12:10:27.000Z
 comment:

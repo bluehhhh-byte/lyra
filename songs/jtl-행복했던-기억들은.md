@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/f/2/0/0f2e9518f981480db4e43e55120ac80d.mp3?hdnea=exp=1786584326~acl=/api/1/1/0/f/2/0/0f2e9518f981480db4e43e55120ac80d.mp3*~data=user_id=0,application_id=42~hmac=c7a138b40da04a2f67231bdaf0a3f933ab8b4d6b688e76cd09c0ccf65afd5503
 trackId:
 duration: 353
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [눈, 눈물, 술, 밤, 빈자리]
+emotion: 그리움
 date: 2022-12-18
 published: 2022-12-18T05:11:44.000Z
 comment:

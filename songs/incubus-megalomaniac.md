@@ -4,16 +4,16 @@ title_ko:
 artist: Incubus
 artist_ko:
 album:
-year: 
+year: 2004
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2004]
+keywords: [라디오, 화면, 날개, 가위, 원칙]
+emotion: 저항
 date: 2023-03-21
 published: 2023-03-21T13:12:53.000Z
 comment:

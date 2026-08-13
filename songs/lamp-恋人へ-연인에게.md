@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Dream Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Dream Pop]
+keywords: [계절, 풍경, 여름, 거리, 밤]
+emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:18:22.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko: 루즈의 전언
 artist: Arai Yumi
 artist_ko:
 album:
-year: 
+year: 1975
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: City Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, City Pop, 1975]
+keywords: [열차, 거리, 욕실, 황혼, 전화]
+emotion: 분노
 date: 2023-03-13
 published: 2023-03-12T23:38:47.000Z
 comment:

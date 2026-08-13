@@ -4,16 +4,16 @@ title_ko:
 artist: Valley
 artist_ko:
 album: The Problem Song
-year: 
+year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/a7da5743ed1cc890ef8139ac6d7bb3bd/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/0/2/0/90203ce958f41c2b5f43fe19a29d61ce.mp3?hdnea=exp=1786584427~acl=/api/1/1/9/0/2/0/90203ce958f41c2b5f43fe19a29d61ce.mp3*~data=user_id=0,application_id=42~hmac=31bd53b0cd2b65e91755e041418dc254d7e114be8149487987287387ff0b92f3
 trackId:
 duration: 157
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop, 2022]
+keywords: [문제, 상담, 펜, 바닥, 유리잔]
+emotion: 희망
 date: 2022-12-19
 published: 2022-12-19T14:41:43.000Z
 comment:

@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/digital-love/697194953?i=697195633&uo=4
 trackId: 697195633
 duration: 301
-genre:
+genre: House
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, House, 2001]
+keywords: [꿈, 밤, 춤, 리듬, 햇살]
+emotion: 설렘
 date: 2023-02-10
 published: 2023-02-09T23:04:50.000Z
 comment:

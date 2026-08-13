@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/elephant/203880553?i=203880800&uo=4
 trackId: 203880800
 duration: 357
-genre:
+genre: Folk
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, Folk, 2006]
+keywords: [코끼리, 방, 침묵, 무게, 거짓말]
+emotion: 체념
 date: 2022-09-22
 published: 2022-09-22T14:33:07.000Z
 comment:

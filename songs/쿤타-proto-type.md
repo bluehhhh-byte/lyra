@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [계약서, 담배, 무덤, 그림, 목줄]
+emotion: 체념
 date: 2022-10-01
 published: 2022-10-01T11:41:13.000Z
 comment:

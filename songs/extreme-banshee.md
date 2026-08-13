@@ -4,16 +4,16 @@ title_ko:
 artist: Extreme
 artist_ko:
 album: SIX
-year: 
+year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/63fe9760a4e79ac7b7bcf8e162631452/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/e/2/0/0e21c59c043c7ec4e6be3e63bb42793f.mp3?hdnea=exp=1786584295~acl=/api/1/1/0/e/2/0/0e21c59c043c7ec4e6be3e63bb42793f.mp3*~data=user_id=0,application_id=42~hmac=1046b0958f7d712001af5b8d111bb8e631080f890255f04a8fae140391e31d46
 trackId:
 duration: 214
-genre:
+genre: Hard Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Hard Rock, 2023]
+keywords: [달빛, 강풍, 날개, 천사, 지옥, 키스]
+emotion: 불안
 date: 2023-04-28
 published: 2023-04-28T01:39:47.000Z
 comment:

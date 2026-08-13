@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/tango/1438896266?i=1438896267&uo=4
 trackId: 1438896267
 duration: 186
-genre:
+genre: R&B/Soul
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, R&B/Soul, 2018]
+keywords: [탱고, 춤, 열쇠, 침대, 기도]
+emotion: 이별
 date: 2023-03-29
 published: 2023-03-28T23:41:18.000Z
 comment:

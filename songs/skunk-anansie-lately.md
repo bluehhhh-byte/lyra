@@ -4,16 +4,16 @@ title_ko:
 artist: Skunk Anansie
 artist_ko:
 album: Post Orgasmic Chill
-year: 
+year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/91eaa68573b3df97060bbd0864cc0f64/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3?hdnea=exp=1786584406~acl=/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3*~data=user_id=0,application_id=42~hmac=d58cbac60a75af5c5f719b3f81c62c135fb2d4b1e572b55c5fba2eeef6cf2f51
 trackId:
 duration: 233
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1999]
+keywords: [연인, 술, 담배, 지옥, 순간]
+emotion: 체념
 date: 2023-03-30
 published: 2023-03-30T11:11:59.000Z
 comment:

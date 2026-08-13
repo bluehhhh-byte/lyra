@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/21d10745cd13a4fc871467a579715
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/c/4/0/8c4170a3ff43d7f6624cf135408a4ea7.mp3?hdnea=exp=1786584402~acl=/api/1/1/8/c/4/0/8c4170a3ff43d7f6624cf135408a4ea7.mp3*~data=user_id=0,application_id=42~hmac=33de8bdf18dcef79372017081da82cd2a15b6f20aafa4b4550fdd7c8c6601202
 trackId:
 duration: 327
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [눈, 겨울, 발자국, 여행, 연인, 봄]
+emotion: 희망
 date: 2023-02-22
 published: 2023-02-21T15:47:24.000Z
 comment:

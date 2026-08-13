@@ -4,16 +4,16 @@ title_ko:
 artist: Queen
 artist_ko:
 album: Queen at the Opera - Original Cast Recording
-year: 
+year: 1981
 artwork: https://cdn-images.dzcdn.net/images/cover/f6ab025bc6edfd74c683705fc62d493a/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/c/5/0/fc5c4885dbe7ed942b7929ff0d8844b1.mp3?hdnea=exp=1786584386~acl=/api/1/1/f/c/5/0/fc5c4885dbe7ed942b7929ff0d8844b1.mp3*~data=user_id=0,application_id=42~hmac=3833328647a2669ded5133eff6ee51dc0bc9d717248fb489924ca1efe38bf3e8
 trackId:
 duration: 225
-genre:
+genre: Hard Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Hard Rock, 1981]
+keywords: [거리, 울타리, 춤, 밤, 광기]
+emotion: 불안
 date: 2023-02-19
 published: 2023-02-19T08:29:08.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [담배연기, 술, 택시, 주말, 심장, 집]
+emotion: 그리움
 date: 2023-02-04
 published: 2023-02-04T07:50:31.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [줄자, 기계, 화약, 미꾸라지, 꿈, 일]
+emotion: 저항
 date: 2022-09-27
 published: 2022-09-26T23:15:43.000Z
 comment:

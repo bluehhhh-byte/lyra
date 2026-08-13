@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Metal
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Metal]
+keywords: [티비, 잡지, 광고, 유행, 도구]
+emotion: 저항
 date: 2023-02-11
 published: 2023-02-11T00:53:24.000Z
 comment:

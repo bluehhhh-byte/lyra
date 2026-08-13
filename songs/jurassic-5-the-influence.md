@@ -4,16 +4,16 @@ title_ko:
 artist: Jurassic 5
 artist_ko:
 album: Quality Control
-year: 
+year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/b3b4d7abba4165884e983c6e9601c09b/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/7/c/0/27c0922524153d52769593ca30a0b168.mp3?hdnea=exp=1786584327~acl=/api/1/1/2/7/c/0/27c0922524153d52769593ca30a0b168.mp3*~data=user_id=0,application_id=42~hmac=536a45aa6d0060b13438f5d8850dc9086e08d94f9253882b8fc46e4cd5180132
 trackId:
 duration: 236
-genre:
+genre: Hip-Hop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Hip-Hop, 2000]
+keywords: [재산, 비평가, 이력서, 목소리, 지붕]
+emotion: 기쁨
 date: 2023-06-07
 published: 2023-06-07T10:25:29.000Z
 comment:

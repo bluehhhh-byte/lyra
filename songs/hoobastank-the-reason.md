@@ -4,16 +4,16 @@ title_ko:
 artist: Hoobastank
 artist_ko:
 album: The Reason
-year: 
+year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/95919aacfffbd4727a2d468f46cff72d/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/3/5/0/635769c3bc4723a0e40cf04388f86e9b.mp3?hdnea=exp=1786584315~acl=/api/1/1/6/3/5/0/635769c3bc4723a0e40cf04388f86e9b.mp3*~data=user_id=0,application_id=42~hmac=dcb6d8b4fbc219dbe92efc6a2b74ecfaa9bac2c3d53209ab796a6b97a2b3d4a3
 trackId:
 duration: 232
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2003]
+keywords: [눈물, 상처, 이유, 하루, 사람]
+emotion: 사랑
 date: 2023-04-08
 published: 2023-04-08T09:33:14.000Z
 comment:

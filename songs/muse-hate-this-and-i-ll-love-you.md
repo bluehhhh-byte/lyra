@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: [1999]
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1999]
+keywords: [영혼, 하늘, 불길, 죽음, 시간]
+emotion: 분노
 date: 2024-06-09
 published: 2024-06-08T19:46:25.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: Radiohead
 artist_ko:
 album: In Rainbows
-year: 
+year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/9/5/0/5959cc901e473e3ce7592d4a13ce429e.mp3?hdnea=exp=1786584388~acl=/api/1/1/5/9/5/0/5959cc901e473e3ce7592d4a13ce429e.mp3*~data=user_id=0,application_id=42~hmac=59f34c0605048c91b5889efe0b61de211bf415c53de65d1cf34e254ae7a6abfb
 trackId:
 duration: 228
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2007]
+keywords: [나방, 곤충, 동물, 자동차, 갈대, 빛]
+emotion: 사랑
 date: 2022-12-04
 published: 2022-12-04T12:27:41.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop]
+keywords: [커피숍, 눈동자, 그림자, 물결, 빛]
+emotion: 설렘
 date: 2023-05-10
 published: 2023-05-10T01:41:42.000Z
 comment:

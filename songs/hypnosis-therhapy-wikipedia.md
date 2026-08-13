@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [부산, 졸업, 앨범, 운동, 혈액형]
+emotion: 회상
 date: 2022-11-25
 published: 2022-11-24T23:26:57.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [카메라, 세트장, 파도, 달빛, 감옥, 등대]
+emotion: 불안
 date: 2022-12-15
 published: 2022-12-15T14:19:07.000Z
 comment:

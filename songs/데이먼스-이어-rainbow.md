@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [어둠, 비, 밤, 노을, 품]
+emotion: 체념
 date: 2022-10-04
 published: 2022-10-04T09:41:27.000Z
 comment:

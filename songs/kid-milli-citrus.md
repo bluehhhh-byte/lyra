@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [향기, 불빛, 꽃, 해변, 겨울]
+emotion: 사랑
 date: 2022-11-19
 published: 2022-11-19T10:58:21.000Z
 comment:

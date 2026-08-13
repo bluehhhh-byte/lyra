@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, R&B/Soul]
+keywords: [약속, 노래, 걸음, 꿈, 곁]
+emotion: 사랑
 date: 2023-02-09
 published: 2023-02-09T14:29:38.000Z
 comment:

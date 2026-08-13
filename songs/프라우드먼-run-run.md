@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Dance
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Dance]
+keywords: [엔진, 밤, 추억, 집, 베이스]
+emotion: 그리움
 date: 2023-01-28
 published: 2023-01-27T15:19:41.000Z
 comment:

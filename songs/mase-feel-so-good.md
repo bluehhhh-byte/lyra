@@ -4,16 +4,16 @@ title_ko:
 artist: Mase
 artist_ko:
 album:
-year: 
+year: 1997
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Hip-Hop, 1997]
+keywords: [수표, 무대, 자동차, 거리, 돈]
+emotion: 기쁨
 date: 2023-06-06
 published: 2023-06-06T11:43:18.000Z
 comment:

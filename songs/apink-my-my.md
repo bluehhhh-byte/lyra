@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/my-my/1004834141?i=1004834147&uo=4
 trackId: 1004834147
 duration: 235
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2011]
+keywords: [눈, 마음, 자리, 첫날]
+emotion: 사랑
 date: 2023-04-29
 published: 2023-04-28T22:00:06.000Z
 comment:

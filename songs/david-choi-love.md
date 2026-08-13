@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/love/292190946?i=292190962&uo=4
 trackId: 292190962
 duration: 226
-genre:
+genre: Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Pop, 2008]
+keywords: [얼굴, 보물, 마음, 세상, 방향]
+emotion: 위로
 date: 2023-05-20
 published: 2023-05-19T21:45:43.000Z
 comment:

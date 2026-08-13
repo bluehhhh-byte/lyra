@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Heavy Metal]
+keywords: [아이, 젊음, 영혼, 구원]
+emotion: 희망
 date: 2022-11-20
 published: 2022-11-20T14:47:15.000Z
 comment:

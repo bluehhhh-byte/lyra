@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [일몰, 눈물, 짐, 무덤, 영혼]
+emotion: 고독
 date: 2023-03-09
 published: 2023-03-08T23:29:41.000Z
 comment:

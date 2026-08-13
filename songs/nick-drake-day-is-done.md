@@ -4,16 +4,16 @@ title_ko:
 artist: Nick Drake
 artist_ko:
 album: Five Leaves Left
-year: 
+year: 1969
 artwork: https://cdn-images.dzcdn.net/images/cover/8e1330155275bbb3df49a7a623d2ed54/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/8/3/0/783383b71b4586e75ed7313e0662ca06.mp3?hdnea=exp=1786584367~acl=/api/1/1/7/8/3/0/783383b71b4586e75ed7313e0662ca06.mp3*~data=user_id=0,application_id=42~hmac=14b1261b34b94cfa5928c1a155dcd250e7887290179d4400f25763a54acd3b0d
 trackId:
 duration: 142
-genre:
+genre: Folk
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Folk, 1969]
+keywords: [태양, 밤, 새, 신문, 파티, 경기]
+emotion: 체념
 date: 2023-03-03
 published: 2023-03-03T14:34:17.000Z
 comment:

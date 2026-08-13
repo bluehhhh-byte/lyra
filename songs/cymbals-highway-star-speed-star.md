@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/bea4f72802442aea03cc02c631875
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3?hdnea=exp=1786584277~acl=/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3*~data=user_id=0,application_id=42~hmac=0990e17632302201d26fa84ec6d2a523bb72deed23fb9657de8ef602c6ac0f23
 trackId:
 duration: 254
-genre:
+genre: Indie Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Indie Pop]
+keywords: [미등, 담배, 별, 밤, 손목시계, 선글라스]
+emotion: 설렘
 date: 2023-01-09
 published: 2023-01-09T10:03:09.000Z
 comment:

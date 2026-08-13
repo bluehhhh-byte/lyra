@@ -4,16 +4,16 @@ title_ko: 카마도 탄지로의 노래
 artist: Go Shiina
 artist_ko:
 album:
-year: 
+year: 2019
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Soundtrack
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Soundtrack, 2019]
+keywords: [어둠, 진흙, 실, 운명, 상처, 소리]
+emotion: 희망
 date: 2023-05-31
 published: 2023-05-30T23:37:28.000Z
 comment:

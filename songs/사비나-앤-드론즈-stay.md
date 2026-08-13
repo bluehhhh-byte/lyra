@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Dream Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Dream Pop]
+keywords: [동굴, 하루, 눈, 스테레오, 집착]
+emotion: 몽환
 date: 2023-02-23
 published: 2023-02-23T13:04:02.000Z
 comment:

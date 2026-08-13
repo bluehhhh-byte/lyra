@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [아침, 비, 하늘, 거울, 전화, 눈물]
+emotion: 이별
 date: 2023-02-21
 published: 2023-02-21T13:59:57.000Z
 comment:

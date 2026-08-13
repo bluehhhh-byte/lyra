@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Dream Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Dream Pop]
+keywords: [물, 손, 하늘, 파도, 빛]
+emotion: 몽환
 date: 2022-09-22
 published: 2022-09-22T10:33:14.000Z
 comment:

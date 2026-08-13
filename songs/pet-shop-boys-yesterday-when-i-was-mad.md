@@ -4,16 +4,16 @@ title_ko:
 artist: Pet Shop Boys
 artist_ko:
 album:
-year: 
+year: 1993
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Synth-Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Synth-Pop, 1993]
+keywords: [무대, 박수, 거짓, 웃음, 칭찬]
+emotion: 분노
 date: 2022-11-28
 published: 2022-11-27T18:57:17.000Z
 comment:

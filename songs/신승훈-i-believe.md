@@ -4,16 +4,16 @@ title_ko: I Believe
 artist: 신승훈
 artist_ko:
 album:
-year: 
+year: 2001
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad, 2001]
+keywords: [눈물, 기억, 하늘, 길]
+emotion: 이별
 date: 2023-02-14
 published: 2023-02-13T19:56:05.000Z
 comment:

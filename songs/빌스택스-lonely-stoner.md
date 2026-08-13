@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [비, 음악, 핸드폰, 천장, 영화, 밤]
+emotion: 고독
 date: 2023-02-05
 published: 2023-02-04T15:30:26.000Z
 comment:

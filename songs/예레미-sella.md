@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Heavy Metal]
+keywords: [새벽, 바다, 바람, 별빛, 하늘, 날개]
+emotion: 이별
 date: 2023-02-17
 published: 2023-02-17T10:17:21.000Z
 comment:

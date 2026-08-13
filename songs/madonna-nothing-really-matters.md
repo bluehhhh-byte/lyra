@@ -3,12 +3,14 @@ title: Nothing Really Matters
 title_ko: 
 artist: Madonna
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Ray of Light
+year: 1998
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/2b/8d/dd2b8d84-e032-94d2-473a-3f8efd18fe36/dj.rwfgroxa.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/fa/e2/02/fae20208-b3de-08bc-5c9b-b9350af63989/mzaf_12110532664451627984.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/nothing-really-matters/952887?i=952639&uo=4
+trackId: 952639
+duration: 267
 genre:
 lang: en
 tags: []

@@ -4,16 +4,16 @@ title_ko: Flying Bobs
 artist: 검정치마
 artist_ko:
 album: TEEN TROUBLES
-year: 
+year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/1f57b42c78f64db752978fded1d5c123/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/3/6/0/0364baa36e3d3bdf17619368ce9586c5.mp3?hdnea=exp=1786584438~acl=/api/1/1/0/3/6/0/0364baa36e3d3bdf17619368ce9586c5.mp3*~data=user_id=0,application_id=42~hmac=59e48b94b914da9a4668bbe4c20434bc76e4d30dd1c8a245036d824ad084d7a8
 trackId:
 duration: 243
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock, 2022]
+keywords: [매미, 여름밤, 계절, 저주, 열일곱]
+emotion: 회상
 date: 2023-04-30
 published: 2023-04-30T11:32:21.000Z
 comment:

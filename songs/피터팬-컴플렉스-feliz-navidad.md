@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [성탄절, 새해, 인사, 마음]
+emotion: 기쁨
 date: 2022-12-24
 published: 2022-12-23T16:25:43.000Z
 comment:

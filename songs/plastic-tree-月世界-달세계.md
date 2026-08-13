@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [밤하늘, 별빛, 에스컬레이터, 개, 소원]
+emotion: 몽환
 date: 2022-09-18
 published: 2022-09-17T17:35:51.000Z
 comment:

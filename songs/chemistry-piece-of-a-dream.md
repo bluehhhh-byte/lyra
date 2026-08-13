@@ -4,16 +4,16 @@ title_ko:
 artist: CHEMISTRY
 artist_ko:
 album:
-year: 
+year: 2001
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, R&B/Soul, 2001]
+keywords: [꿈, 장난감, 주머니, 손끝, 내일, 상처]
+emotion: 그리움
 date: 2022-11-14
 published: 2022-11-13T19:17:13.000Z
 comment:

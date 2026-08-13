@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [전화, 카톡, 곁, 다짐]
+emotion: 사랑
 date: 2022-09-27
 published: 2022-09-26T21:24:07.000Z
 comment:

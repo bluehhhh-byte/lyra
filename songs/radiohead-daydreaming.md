@@ -4,16 +4,16 @@ title_ko:
 artist: Radiohead
 artist_ko:
 album: A Moon Shaped Pool
-year: 
+year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/e9232e4391ed1206cc0bd6ab17822177/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/5/d/0/75d41035ef25f59e5c7bedd19eae5050.mp3?hdnea=exp=1786584390~acl=/api/1/1/7/5/d/0/75d41035ef25f59e5c7bedd19eae5050.mp3*~data=user_id=0,application_id=42~hmac=a6dca408c68be102018e86294e573453095ee48d004137b57dc575d023a44735
 trackId:
 duration: 384
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2016]
+keywords: [방, 창문, 햇살, 문, 상처]
+emotion: 몽환
 date: 2022-12-02
 published: 2022-12-02T05:58:53.000Z
 comment:

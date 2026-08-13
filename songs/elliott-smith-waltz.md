@@ -4,16 +4,16 @@ title_ko: XO
 artist: Elliott Smith
 artist_ko:
 album:
-year: 
+year: 1998
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 1998]
+keywords: [마이크, 담배, 노래, 인형, 기억]
+emotion: 슬픔
 date: 2023-04-22
 published: 2023-04-22T02:33:03.000Z
 comment:

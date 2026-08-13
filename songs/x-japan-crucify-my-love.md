@@ -4,16 +4,16 @@ title_ko:
 artist: X
 artist_ko:
 album:
-year: 
+year: 1996
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei, 1996]
+keywords: [십자가, 바람, 강, 바다, 그림자]
+emotion: 이별
 date: 2023-05-06
 published: 2023-05-06T10:57:41.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [물, 사진, 세상, 시간, 후회]
+emotion: 고독
 date: 2022-09-26
 published: 2022-09-25T23:16:45.000Z
 comment:

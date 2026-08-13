@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [바다, 향기, 기억, 시간, 손]
+emotion: 그리움
 date: 2022-09-20
 published: 2022-09-19T15:13:43.000Z
 comment:

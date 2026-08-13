@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/jp/album/%E7%AC%AC%E3%82%BC%E3%83%AD%E6%84%9F/1652587487?i=1652587504&uo=4
 trackId: 1652587504
 duration: 288
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock, 2022]
+keywords: [꿈, 밤, 모래, 별, 약속, 짐승]
+emotion: 희망
 date: 2023-01-05
 published: 2023-01-04T23:48:13.000Z
 comment:

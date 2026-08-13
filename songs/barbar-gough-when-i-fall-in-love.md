@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/when-i-fall-in-love/1440861012?i=1440861659&uo=4
 trackId: 1440861659
 duration: 183
-genre:
+genre: Jazz
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Jazz, 2013]
+keywords: [달빛, 키스, 햇살, 마음, 세상]
+emotion: 사랑
 date: 2023-02-22
 published: 2023-02-21T23:27:41.000Z
 comment:

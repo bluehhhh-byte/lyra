@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [장미, 풀숲, 바람, 별, 꽃잎]
+emotion: 체념
 date: 2022-11-17
 published: 2022-11-17T14:40:56.000Z
 comment:

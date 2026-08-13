@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, R&B/Soul]
+keywords: [손, 눈물, 구름, 연인, 친구, 꿈]
+emotion: 이별
 date: 2022-11-15
 published: 2022-11-14T23:34:15.000Z
 comment:

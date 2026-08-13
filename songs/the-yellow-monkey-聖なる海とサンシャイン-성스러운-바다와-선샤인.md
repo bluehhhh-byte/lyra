@@ -4,16 +4,16 @@ title_ko:
 artist: THE YELLOW MONKEY
 artist_ko:
 album:
-year: 
+year: 1996
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock, 1996]
+keywords: [바다, 파도, 욕망, 환상, 태양]
+emotion: 체념
 date: 2022-09-17
 published: 2022-09-17T04:26:16.000Z
 comment:

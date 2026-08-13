@@ -4,16 +4,16 @@ title_ko:
 artist: Feist
 artist_ko:
 album: The Reminder
-year: 
+year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/980fbd5c10ceb29f2fc3ba390a8e8dcb/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/7/e/0/77e722f21c7489b6c12f47e0637a9fce.mp3?hdnea=exp=1786584296~acl=/api/1/1/7/7/e/0/77e722f21c7489b6c12f47e0637a9fce.mp3*~data=user_id=0,application_id=42~hmac=98f4eb264e35b6a8e8919fd0e23aebb36e7db3077ee42b5156d891bcad3a7c39
 trackId:
 duration: 183
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop, 2007]
+keywords: [숫자, 밤, 눈물, 문, 돈]
+emotion: 회상
 date: 2023-04-12
 published: 2023-04-12T00:54:31.000Z
 comment:

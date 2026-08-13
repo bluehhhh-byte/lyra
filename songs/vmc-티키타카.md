@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [손바닥, 무대, 페스티벌, 땀, 마이크, 신발]
+emotion: 저항
 date: 2023-01-11
 published: 2023-01-11T09:57:51.000Z
 comment:

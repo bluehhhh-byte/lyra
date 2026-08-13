@@ -4,16 +4,16 @@ title_ko:
 artist: Gene Kelly
 artist_ko:
 album: Singing In The Rain - Original Film Soundtrack
-year: 
+year: 1952
 artwork: https://cdn-images.dzcdn.net/images/cover/b122052f255a1d34a3d0cb76c190085e/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3?hdnea=exp=1786584303~acl=/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3*~data=user_id=0,application_id=42~hmac=4d67a090f5dd59e028bbacccafd35e7dba71738d89496a107bb4a0b9be914952
 trackId:
 duration: 175
-genre:
+genre: Soundtrack
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Soundtrack, 1952]
+keywords: [비, 구름, 태양, 골목, 춤, 미소]
+emotion: 기쁨
 date: 2023-02-12
 published: 2023-02-11T17:37:46.000Z
 comment:

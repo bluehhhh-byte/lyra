@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [파도, 바다, 과거, 빛, 숨결]
+emotion: 회상
 date: 2022-09-30
 published: 2022-09-29T21:35:26.000Z
 comment:

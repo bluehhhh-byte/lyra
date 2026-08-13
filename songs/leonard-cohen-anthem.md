@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b62532055cff127e398cecbd1c989
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/1/c/0/51cd3dec75bb5fbfdbf54e983d5e2393.mp3?hdnea=exp=1786584340~acl=/api/1/1/5/1/c/0/51cd3dec75bb5fbfdbf54e983d5e2393.mp3*~data=user_id=0,application_id=42~hmac=b9e7daee22026477d893f40620072da10639ee2d08b0b06487ff92f2df110366
 trackId:
 duration: 366
-genre:
+genre: Folk
 lang: en
-tags: [1992]
-keywords: []
-emotion:
+tags: [영미, Folk, 1992]
+keywords: [새, 종, 비둘기, 틈, 빛, 전쟁]
+emotion: 희망
 date: 2025-01-03
 published: 2025-01-02T23:48:56.000Z
 comment:

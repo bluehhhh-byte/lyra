@@ -4,16 +4,16 @@ title_ko: Moai
 artist: 서태지
 artist_ko:
 album:
-year: 
+year: 2008
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Alternative Rock, 2008]
+keywords: [바다, 별빛, 파도, 어둠, 바람, 물결]
+emotion: 고독
 date: 2022-09-30
 published: 2022-09-30T09:58:11.000Z
 comment:

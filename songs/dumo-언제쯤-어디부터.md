@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/kr/album/%EC%96%B8%EC%A0%9C%EC%AF%A4-%EC%96%B4%EB%94%94%EB%B6%80%ED%84%B0-feat-%ED%94%84%EB%A6%AC%EB%93%A0/1680521395?i=1680521397&uo=4
 trackId: 1680521397
 duration: 208
-genre:
+genre: R&B/Soul
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul, 2023]
+keywords: [아침, 시계, 밤, 거리, 잠, 꿈]
+emotion: 그리움
 date: 2023-05-10
 published: 2023-05-10T14:23:50.000Z
 comment:

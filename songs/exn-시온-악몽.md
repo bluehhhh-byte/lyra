@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/kr/album/%EC%95%85%EB%AA%BD-with-%ED%94%84%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%A8%BC/1828890973?i=1828890975&uo=4
 trackId: 1828890975
 duration: 186
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop, 2022]
+keywords: [악몽, 밤, 바늘, 실, 꼭두각시, 인형]
+emotion: 불안
 date: 2022-09-25
 published: 2022-09-24T18:00:29.000Z
 comment:

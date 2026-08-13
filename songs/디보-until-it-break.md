@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Rock]
+keywords: [꽃, 달빛, 혼란, 거짓말, 삶]
+emotion: 사랑
 date: 2022-09-27
 published: 2022-09-26T21:38:22.000Z
 comment:

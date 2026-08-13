@@ -4,16 +4,16 @@ title_ko:
 artist: The Smashing Pumpkins
 artist_ko:
 album: ¡90's Rockstars Hits!
-year: 
+year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/4b20b26269ab740644f405dcbf763c6c/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/3/b/0/43b091be7e5a8a23d7a676d9ece2ab2c.mp3?hdnea=exp=1786584421~acl=/api/1/1/4/3/b/0/43b091be7e5a8a23d7a676d9ece2ab2c.mp3*~data=user_id=0,application_id=42~hmac=ec67e056a32dfdaeb33973443adcc455971bc6b0468dda7dfba3f2bc26ca45e6
 trackId:
 duration: 266
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1995]
+keywords: [거리, 전선, 헤드라이트, 새벽, 풍뎅이]
+emotion: 회상
 date: 2023-05-11
 published: 2023-05-11T13:40:12.000Z
 comment:

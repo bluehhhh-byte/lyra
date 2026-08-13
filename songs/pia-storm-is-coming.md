@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/f55378f3941cc32a3adcbfa26ba24
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/c/f/0/4cf98adf0e7a53ac0c3cfde932badc61.mp3?hdnea=exp=1786584381~acl=/api/1/1/4/c/f/0/4cf98adf0e7a53ac0c3cfde932badc61.mp3*~data=user_id=0,application_id=42~hmac=c5f03a1d6d2f82c3e5a679541641096a3e96cf4fb3e6137246da6179ad947f38
 trackId:
 duration: 237
-genre:
+genre: Metal
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Metal]
+keywords: [도시, 불빛, 꿈, 파도, 혼돈]
+emotion: 불안
 date: 2022-11-20
 published: 2022-11-20T07:05:02.000Z
 comment:

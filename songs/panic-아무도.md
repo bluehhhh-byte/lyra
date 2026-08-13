@@ -4,16 +4,16 @@ title_ko: 아무도
 artist: PANIC
 artist_ko:
 album:
-year: 
+year: 1995
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Alternative Rock, 1995]
+keywords: [미소, 입술, 머리, 아침, 눈물, 꿈]
+emotion: 고독
 date: 2023-03-29
 published: 2023-03-29T10:23:54.000Z
 comment:

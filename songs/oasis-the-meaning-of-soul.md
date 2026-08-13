@@ -4,16 +4,16 @@ title_ko:
 artist: Oasis
 artist_ko:
 album: Don't Believe The Truth
-year: 
+year: 2005
 artwork: https://cdn-images.dzcdn.net/images/cover/753f13d4110242ad020ee5ed76053d0a/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/c/8/0/dc8b7aee465da6abbeaaeb0dd6d3b9e3.mp3?hdnea=exp=1786584371~acl=/api/1/1/d/c/8/0/dc8b7aee465da6abbeaaeb0dd6d3b9e3.mp3*~data=user_id=0,application_id=42~hmac=d9b22ff5e2432aaf90a9a4aee588007a32ba4102b6b2a8dc48feec36647ee135
 trackId:
 duration: 103
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2005]
+keywords: [밤, 눈, 빛, 길]
+emotion: 기쁨
 date: 2023-05-30
 published: 2023-05-30T11:11:36.000Z
 comment:

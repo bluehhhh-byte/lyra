@@ -4,16 +4,16 @@ title_ko:
 artist: Matsutoya Yumi
 artist_ko:
 album:
-year: 
+year: 1979
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 1979]
+keywords: [민들레, 노을, 씨앗, 바람, 편지, 겨울]
+emotion: 위로
 date: 2022-09-19
 published: 2022-09-18T16:15:52.000Z
 comment:

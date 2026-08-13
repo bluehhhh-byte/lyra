@@ -4,16 +4,16 @@ title_ko:
 artist: Kirinji
 artist_ko:
 album:
-year: 
+year: 2000
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: City Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, City Pop, 2000]
+keywords: [하늘, 달빛, 밤, 도시, 스포츠카]
+emotion: 몽환
 date: 2022-09-17
 published: 2022-09-17T01:57:49.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: Peach Pit
 artist_ko:
 album:
-year: 
+year: 2020
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 2020]
+keywords: [신발, 맥주, 밤, 담배, 웃음]
+emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:20:40.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Pop]
+keywords: [후회, 한숨, 약속, 손, 말]
+emotion: 회상
 date: 2022-12-07
 published: 2022-12-06T15:01:46.000Z
 comment:

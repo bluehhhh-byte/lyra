@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Alternative Rock]
+keywords: [벌레, 피, 기도, 눈물, 거짓말]
+emotion: 불안
 date: 2023-05-08
 published: 2023-05-07T17:58:49.000Z
 comment:

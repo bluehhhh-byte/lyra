@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/52921f5ca0beeb02f925ba9ed570a
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/8/a/0/68a3600f14127c5596e3c78a94301a08.mp3?hdnea=exp=1786584255~acl=/api/1/1/6/8/a/0/68a3600f14127c5596e3c78a94301a08.mp3*~data=user_id=0,application_id=42~hmac=48c96f232ee8dfcfcbd56e18bb4a4260ca3ce4411650cf6899b10552a2846386
 trackId:
 duration: 253
-genre:
+genre: Hard Rock
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hard Rock]
+keywords: [창문, 꽃, 눈, 웃음, 모습]
+emotion: 그리움
 date: 2022-11-07
 published: 2022-11-07T09:29:28.000Z
 comment:

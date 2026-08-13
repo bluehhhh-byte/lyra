@@ -4,16 +4,16 @@ title_ko:
 artist: Steelheart
 artist_ko:
 album: WAIT
-year: 
+year: 1996
 artwork: https://cdn-images.dzcdn.net/images/cover/52479f8a11c8277b75c8a93bc57679a6/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/7/c/0/07cbd62e3083b19647274155ed44ca6e.mp3?hdnea=exp=1786584410~acl=/api/1/1/0/7/c/0/07cbd62e3083b19647274155ed44ca6e.mp3*~data=user_id=0,application_id=42~hmac=694d81f90dc870922a8f3e1debd9cbf508a15184a402fa6b77193517283396b2
 trackId:
 duration: 269
-genre:
+genre: Hard Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Hard Rock, 1996]
+keywords: [세상, 빛, 햇빛, 비, 심장]
+emotion: 고독
 date: 2023-03-20
 published: 2023-03-20T10:56:51.000Z
 comment:

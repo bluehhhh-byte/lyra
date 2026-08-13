@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [동전, 이력서, 휘파람, 비바람, 주름]
+emotion: 희망
 date: 2022-12-22
 published: 2022-12-22T14:48:53.000Z
 comment:

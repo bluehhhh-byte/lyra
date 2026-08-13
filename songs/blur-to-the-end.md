@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/to-the-end/699606030?i=699606144&uo=4
 trackId: 699606144
 duration: 245
-genre:
+genre: Alternative Rock
 lang: en
-tags: [1994]
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1994]
+keywords: [술, 말, 햇살, 사랑, 끝]
+emotion: 이별
 date: 2024-06-09
 published: 2024-06-08T17:47:50.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Pop]
+keywords: [달, 밤, 얼굴, 목소리, 수화, 그늘]
+emotion: 그리움
 date: 2023-01-17
 published: 2023-01-17T09:50:02.000Z
 comment:

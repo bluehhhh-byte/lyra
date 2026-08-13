@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [편지, 꿈, 반지, 베개, 눈물, 밤]
+emotion: 슬픔
 date: 2022-11-16
 published: 2022-11-16T14:06:00.000Z
 comment:

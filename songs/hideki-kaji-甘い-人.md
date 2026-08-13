@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Indie Pop]
+keywords: [아침, 타르트, 거리, 반지, 침대]
+emotion: 사랑
 date: 2023-03-08
 published: 2023-03-07T23:17:12.000Z
 comment:

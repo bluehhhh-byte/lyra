@@ -4,16 +4,16 @@ title_ko:
 artist: Phoenix
 artist_ko:
 album:
-year: 
+year: 2013
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [유럽, Indie Pop, 2013]
+keywords: [편지, 밤, 시간, 거짓말, 비밀, 선]
+emotion: 이별
 date: 2022-09-17
 published: 2022-09-17T01:55:48.000Z
 comment:

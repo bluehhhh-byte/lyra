@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [조각가, 거울, 작품, 인생, 축복, 몸]
+emotion: 위로
 date: 2022-09-24
 published: 2022-09-24T10:57:18.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock]
+keywords: [하늘, 눈물, 단추, 꽃, 한숨]
+emotion: 희망
 date: 2023-01-08
 published: 2023-01-08T09:31:07.000Z
 comment:

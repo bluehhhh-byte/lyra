@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock]
+keywords: [바다, 고양이, 파도, 여름, 노래, 별]
+emotion: 그리움
 date: 2022-10-03
 published: 2022-10-03T14:33:20.000Z
 comment:

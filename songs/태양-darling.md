@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul]
+keywords: [술, 벽, 미로, 여정, 세상]
+emotion: 사랑
 date: 2022-12-01
 published: 2022-11-30T18:34:29.000Z
 comment:

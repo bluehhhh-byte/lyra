@@ -4,16 +4,16 @@ title_ko:
 artist: Oku Hanako
 artist_ko:
 album:
-year: 
+year: 2006
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 2006]
+keywords: [가로등, 눈동자, 목소리, 길, 밤, 추억]
+emotion: 그리움
 date: 2022-10-03
 published: 2022-10-03T14:30:17.000Z
 comment:

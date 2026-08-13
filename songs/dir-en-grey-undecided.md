@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/72236b98980e113c11f8ecfd0fe75
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/8/2/0/08230837e6684a6aa4b3d0f0b88cc5f3.mp3?hdnea=exp=1786584287~acl=/api/1/1/0/8/2/0/08230837e6684a6aa4b3d0f0b88cc5f3.mp3*~data=user_id=0,application_id=42~hmac=b7057ca5658376ff000e833b2e39c4d6c01927f8f864fcfddf91bf8baa7731fd
 trackId:
 duration: 297
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [비, 발자국, 파도, 바다, 계절, 눈물]
+emotion: 이별
 date: 2023-04-26
 published: 2023-04-25T16:08:56.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: Megadeth
 artist_ko:
 album:
-year: 
+year: 1997
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Heavy Metal
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Heavy Metal, 1997]
+keywords: [늑대, 입술, 이빨, 밤, 발톱, 사마귀]
+emotion: 불안
 date: 2023-01-13
 published: 2023-01-12T15:34:49.000Z
 comment:

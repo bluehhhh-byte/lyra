@@ -4,16 +4,16 @@ title_ko:
 artist: L'Arc~en~Ciel
 artist_ko:
 album:
-year: 
+year: 2005
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Rock
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Rock, 2005]
+keywords: [하늘, 빛, 어둠, 날개, 바람]
+emotion: 희망
 date: 2023-01-13
 published: 2023-01-12T23:19:52.000Z
 comment:

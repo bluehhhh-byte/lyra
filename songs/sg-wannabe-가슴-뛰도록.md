@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [아침, 심장, 하루, 미소, 눈물, 어깨]
+emotion: 사랑
 date: 2023-03-17
 published: 2023-03-16T23:21:30.000Z
 comment:

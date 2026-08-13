@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/3782d23828ec1ee084529a1cec2db
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/8/5/0/485369bafefd47f7771cdc43c16b5edf.mp3?hdnea=exp=1786584379~acl=/api/1/1/4/8/5/0/485369bafefd47f7771cdc43c16b5edf.mp3*~data=user_id=0,application_id=42~hmac=fb0fb5580c669ad95b785374b63e7d31d138463259a4c592a3b59cc62831ead6
 trackId:
 duration: 679
-genre:
+genre: Electronic
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Electronic]
+keywords: [그녀, 빈자리, 마음, 밤]
+emotion: 고독
 date: 2023-01-11
 published: 2023-01-10T16:03:24.000Z
 comment:

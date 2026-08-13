@@ -4,16 +4,16 @@ title_ko: Time Machine
 artist: Chara
 artist_ko:
 album: Hikari To Watashi
-year: 
+year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/782ef82ad66f2bcf319c124748d1e653/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/8/f/0/d8f1e31ccc79d6bad66776bbe64f4d9e.mp3?hdnea=exp=1786584273~acl=/api/1/1/d/8/f/0/d8f1e31ccc79d6bad66776bbe64f4d9e.mp3*~data=user_id=0,application_id=42~hmac=2ca160f458be5269f2da5b93382e2c39fdf862cac6a92dce68106eb1a3367f63
 trackId:
 duration: 398
-genre:
+genre: J-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 1997]
+keywords: [벽, 눈물, 바늘, 실, 파랑, 마음]
+emotion: 그리움
 date: 2022-09-21
 published: 2022-09-21T14:29:15.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul]
+keywords: [강, 물, 중력, 리본, 하늘, 바다]
+emotion: 사랑
 date: 2022-09-17
 published: 2022-09-17T05:29:02.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: Radiohead
 artist_ko:
 album:
-year: 
+year: 2007
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2007]
+keywords: [가전제품, 집, 저녁, 발, 빛]
+emotion: 불안
 date: 2022-10-31
 published: 2022-10-31T13:17:45.000Z
 comment:

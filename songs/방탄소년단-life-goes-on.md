@@ -4,16 +4,16 @@ title_ko: Life Goes On
 artist: 방탄소년단
 artist_ko:
 album:
-year: 
+year: 2020
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2020]
+keywords: [봄, 비, 먹구름, 거리, 발자국, 감기]
+emotion: 위로
 date: 2023-02-07
 published: 2023-02-07T13:53:41.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [색깔, 흑백, 산소, 카메라, 관, 비석]
+emotion: 불안
 date: 2022-09-25
 published: 2022-09-25T01:44:28.000Z
 comment:

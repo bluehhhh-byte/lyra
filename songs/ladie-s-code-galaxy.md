@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop]
+keywords: [별, 달, 언덕, 어둠, 우주]
+emotion: 몽환
 date: 2023-01-06
 published: 2023-01-06T10:19:17.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: Keane
 artist_ko:
 album:
-year: 
+year: 2012
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2012]
+keywords: [카페, 바다, 여름, 골목, 시절]
+emotion: 회상
 date: 2023-01-17
 published: 2023-01-16T23:14:43.000Z
 comment:

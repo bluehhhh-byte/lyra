@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Electronic
 lang: ko
-tags: [2024]
-keywords: []
-emotion:
+tags: [기타, Electronic, 2024]
+keywords: [짐, 거리, 지도, 이메일, 마음]
+emotion: 그리움
 date: 2024-12-29
 published: 2024-12-29T07:10:28.000Z
 comment:

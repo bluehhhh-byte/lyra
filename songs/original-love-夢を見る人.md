@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/9469e8766abdd194eacc97a996ff3
 preview: https://cdnt-preview.dzcdn.net/api/1/1/b/9/6/0/b96809403942353f628de30bd3037776.mp3?hdnea=exp=1786584373~acl=/api/1/1/b/9/6/0/b96809403942353f628de30bd3037776.mp3*~data=user_id=0,application_id=42~hmac=ebe4394b40c0b7e356208da0bba233c74f3fc5f6beb535aadd3644068c5770cb
 trackId:
 duration: 320
-genre:
+genre: City Pop
 lang: ja
-tags: [1996]
-keywords: []
-emotion:
+tags: [일본, City Pop, 1996]
+keywords: [열차, 아침, 이슬, 지붕, 풀밭, 무지개]
+emotion: 희망
 date: 2024-08-26
 published: 2024-08-25T23:23:42.000Z
 comment:

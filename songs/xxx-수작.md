@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [빈곤, 취업난, 가사, 학생, 파산]
+emotion: 체념
 date: 2022-09-28
 published: 2022-09-28T06:51:39.000Z
 comment:

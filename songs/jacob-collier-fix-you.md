@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Jazz
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Jazz]
+keywords: [눈물, 빛, 집, 뼈, 실수]
+emotion: 위로
 date: 2022-10-06
 published: 2022-10-05T21:26:17.000Z
 comment:

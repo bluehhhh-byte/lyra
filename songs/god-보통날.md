@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Ballad
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Ballad]
+keywords: [아침, 커피, 버스, 라디오, 햇살]
+emotion: 체념
 date: 2022-12-11
 published: 2022-12-11T05:30:54.000Z
 comment:

@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul]
+keywords: [사진, 미소, 눈물, 시간, 용서]
+emotion: 이별
 date: 2022-10-08
 published: 2022-10-08T11:33:34.000Z
 comment:

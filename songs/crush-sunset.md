@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/kr/album/sunset/1488587815?i=1488587822&uo=4
 trackId: 1488587822
 duration: 199
-genre:
+genre: R&B/Soul
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul, 2019]
+keywords: [노을, 바람, 날개, 우주, 별, 하늘]
+emotion: 몽환
 date: 2023-01-31
 published: 2023-01-31T13:09:01.000Z
 comment:

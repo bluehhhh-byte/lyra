@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop]
+keywords: [빛, 꿈, 기억, 눈빛, 풍경, 이름]
+emotion: 그리움
 date: 2022-10-03
 published: 2022-10-02T15:20:10.000Z
 comment:

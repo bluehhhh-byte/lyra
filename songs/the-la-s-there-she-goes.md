@@ -4,16 +4,16 @@ title_ko:
 artist: The La's
 artist_ko:
 album: The La's
-year: 
+year: 1990
 artwork: https://cdn-images.dzcdn.net/images/cover/173dda41a54b7ab5872ba308c7013646/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/e/c/0/5ecadaac90c7a3e8d8925bad2a76cb71.mp3?hdnea=exp=1786584421~acl=/api/1/1/5/e/c/0/5ecadaac90c7a3e8d8925bad2a76cb71.mp3*~data=user_id=0,application_id=42~hmac=af71be1d1513c692038249a1173fc26df678bd358343da9f5eb282d3d731079f
 trackId:
 duration: 162
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 1990]
+keywords: [이름, 혈관, 고통, 머리, 마음]
+emotion: 그리움
 date: 2023-02-10
 published: 2023-02-10T10:55:45.000Z
 comment:

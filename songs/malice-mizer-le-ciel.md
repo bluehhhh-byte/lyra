@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: [1998]
-keywords: []
-emotion:
+tags: [일본, Visual Kei, 1998]
+keywords: [눈물, 바람, 목소리, 손가락, 하늘, 입맞춤]
+emotion: 이별
 date: 2024-04-13
 published: 2024-04-13T08:57:20.000Z
 comment:

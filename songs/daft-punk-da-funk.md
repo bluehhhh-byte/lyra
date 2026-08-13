@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/da-funk/696884422?i=696885792&uo=4
 trackId: 696885792
 duration: 329
-genre:
+genre: House
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [유럽, House, 1995]
+keywords: [로봇, 기계, 거리, 밤, 춤]
+emotion: 기쁨
 date: 2023-05-24
 published: 2023-05-24T14:55:51.000Z
 comment:

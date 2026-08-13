@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Indie Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Indie Pop]
+keywords: [사진, 웃음, 눈물, 마음]
+emotion: 사랑
 date: 2022-10-28
 published: 2022-10-28T13:28:56.000Z
 comment:

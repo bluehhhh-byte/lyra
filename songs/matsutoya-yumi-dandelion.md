@@ -4,16 +4,16 @@ title_ko: 늦게 피는 민들레
 artist: Matsutoya Yumi
 artist_ko:
 album:
-year: 
+year: 1979
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 1979]
+keywords: [민들레, 노을, 씨앗, 바람, 편지, 겨울]
+emotion: 위로
 date: 2023-02-13
 published: 2023-02-12T23:25:34.000Z
 comment:

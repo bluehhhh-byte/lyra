@@ -4,16 +4,16 @@ title_ko:
 artist: Bon Jovi
 artist_ko:
 album: Bon Jovi Greatest Hits - The Ultimate Collection (Deluxe)
-year: 
+year: 1994
 artwork: https://cdn-images.dzcdn.net/images/cover/58ca1d20e8d19c1e5f8e821d07412c74/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/8/1/0/3812ba24a462aea21f738661313fde34.mp3?hdnea=exp=1786584271~acl=/api/1/1/3/8/1/0/3812ba24a462aea21f738661313fde34.mp3*~data=user_id=0,application_id=42~hmac=4bb2b1a33b434a16472e0af794756c48534ca16294ebabd10a05aa815c72af9f
 trackId:
 duration: 278
-genre:
+genre: Hard Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Hard Rock, 1994]
+keywords: [토요일, 월요일, 거리, 자동차, 꿈, 이름]
+emotion: 희망
 date: 2022-12-10
 published: 2022-12-09T22:06:23.000Z
 comment:

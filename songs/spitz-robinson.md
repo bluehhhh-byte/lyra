@@ -4,16 +4,16 @@ title_ko:
 artist: Spitz
 artist_ko:
 album: Cycle Hit 1991-1997 Spitz Complete Single Collection
-year: 
+year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/7/3/0/a7307574e1e99ad95c79ff4c2e65e00a.mp3?hdnea=exp=1786584408~acl=/api/1/1/a/7/3/0/a7307574e1e99ad95c79ff4c2e65e00a.mp3*~data=user_id=0,application_id=42~hmac=5da0ff3847c7f8789c190023a1504a860b2372f5253e362bac89ef2de1785030
 trackId:
 duration: 261
-genre:
+genre: J-Pop
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, J-Pop, 1995]
+keywords: [자전거, 강가, 레코드, 마법, 우주, 하늘]
+emotion: 몽환
 date: 2023-05-26
 published: 2023-05-26T01:44:44.000Z
 comment:

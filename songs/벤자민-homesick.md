@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [신발, 발자국, 초침, 걸음마, 물, 길]
+emotion: 고독
 date: 2022-12-06
 published: 2022-12-06T14:53:18.000Z
 comment:

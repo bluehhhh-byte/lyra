@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop]
+keywords: [하늘, 불빛, 은하수, 구름, 밤, 향기]
+emotion: 설렘
 date: 2023-04-07
 published: 2023-04-06T23:25:26.000Z
 comment:

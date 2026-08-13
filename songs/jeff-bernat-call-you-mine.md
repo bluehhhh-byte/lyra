@@ -4,16 +4,16 @@ title_ko:
 artist: Jeff Bernat
 artist_ko:
 album:
-year: 
+year: 2012
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: R&B/Soul
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, R&B/Soul, 2012]
+keywords: [전화, 밤, 별, 잔디, 식사]
+emotion: 사랑
 date: 2023-02-10
 published: 2023-02-09T15:19:34.000Z
 comment:

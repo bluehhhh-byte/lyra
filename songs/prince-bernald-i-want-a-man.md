@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Pop]
+keywords: [부엌, 침실, 프라이팬, 손, 등]
+emotion: 사랑
 date: 2023-02-12
 published: 2023-02-12T00:33:08.000Z
 comment:

@@ -3,17 +3,19 @@ title: Another One
 title_ko: 
 artist: Mac Demarco
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
-genre:
+album: Another One
+year: 2015
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d8/68/9b/d8689b2a-f26c-cf97-e6d9-6073cf95b497/cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/2c/f4/a72cf406-f6b3-850a-7547-53ba33d1f4f0/mzaf_11076555550762957468.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/another-one/6789828391?i=6789828847&uo=4
+trackId: 6789828847
+duration: 161
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Rock, 2015]
+keywords: [문, 시계, 내일, 소리]
+emotion: 불안
 date: 2022-09-17
 published: 2022-09-17T04:57:49.000Z
 comment:

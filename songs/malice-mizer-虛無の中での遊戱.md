@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [유리조각, 빛, 어둠, 그림자, 파편, 시간]
+emotion: 몽환
 date: 2023-01-10
 published: 2023-01-10T09:51:17.000Z
 comment:

@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b30dd3c8b15c1becd2105e16c5e35
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/6/a/0/16a29a07ebe0af955903bb8059bd4b0b.mp3?hdnea=exp=1786584429~acl=/api/1/1/1/6/a/0/16a29a07ebe0af955903bb8059bd4b0b.mp3*~data=user_id=0,application_id=42~hmac=3d14e974c854df9aca6dc659c229bbb43b61d19d9339afbc712d8c0ddc89c4c9
 trackId:
 duration: 278
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop]
+keywords: [비, 빛, 꿈, 기억, 말]
+emotion: 회상
 date: 2022-10-03
 published: 2022-10-03T09:39:44.000Z
 comment:

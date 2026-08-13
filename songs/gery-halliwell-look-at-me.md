@@ -4,16 +4,16 @@ title_ko:
 artist: Gery Halliwell
 artist_ko:
 album:
-year: 
+year: 1999
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Pop, 1999]
+keywords: [얼굴, 화장, 거짓말, 눈, 가십]
+emotion: 저항
 date: 2023-04-19
 published: 2023-04-18T23:26:24.000Z
 comment:

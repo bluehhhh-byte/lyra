@@ -4,16 +4,16 @@ title_ko:
 artist: JVKE
 artist_ko:
 album: this is what ____ feels like (Vol. 1-4)
-year: 
+year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/ff66669185174ac6f6b7a6342c93fca5/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/2/3/0/023d0937cc1fbbd163195c3eeb43592b.mp3?hdnea=exp=1786584329~acl=/api/1/1/0/2/3/0/023d0937cc1fbbd163195c3eeb43592b.mp3*~data=user_id=0,application_id=42~hmac=3f139d46fb216675b025d82db88bcc2566df3c72b43d32736e9330eaa2d5d65f
 trackId:
 duration: 145
-genre:
+genre: Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Pop, 2022]
+keywords: [립스틱, 눈물, 거짓말, 비밀, 친구]
+emotion: 이별
 date: 2022-12-13
 published: 2022-12-12T23:40:42.000Z
 comment:

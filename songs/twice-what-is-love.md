@@ -4,16 +4,16 @@ title_ko:
 artist: TWICE
 artist_ko:
 album:
-year: 
+year: 2018
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: K-Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [한국, K-Pop, 2018]
+keywords: [영화, 책, 드라마, 사탕, 하늘, 상상]
+emotion: 설렘
 date: 2023-03-10
 published: 2023-03-10T13:20:29.000Z
 comment:

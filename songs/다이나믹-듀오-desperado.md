@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Hip-Hop
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, Hip-Hop]
+keywords: [무법자, 넥타이, 유리천장, 돈, 총]
+emotion: 분노
 date: 2022-12-22
 published: 2022-12-22T14:30:01.000Z
 comment:

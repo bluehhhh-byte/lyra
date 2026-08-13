@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/kr/album/we-are-young-feat-janelle-mon%C3%A1e/463207143?i=463207147&uo=4
 trackId: 463207147
 duration: 251
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Indie Pop, 2011]
+keywords: [술집, 밤, 친구, 흉터, 불, 태양]
+emotion: 기쁨
 date: 2023-04-10
 published: 2023-04-10T10:59:32.000Z
 comment:

@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a75f1e10b9703e60373e1b9e1de66
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/9/c/0/89c5792aded0edd74b358b41f061f5a9.mp3?hdnea=exp=1786584337~acl=/api/1/1/8/9/c/0/89c5792aded0edd74b358b41f061f5a9.mp3*~data=user_id=0,application_id=42~hmac=577a2fd230790e721636344f51cfdb73e0bd84be7e0d75e9b363f1cf5effd3c6
 trackId:
 duration: 425
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [구름, 달빛, 꽃잎, 밤하늘, 새벽, 상처]
+emotion: 사랑
 date: 2022-11-18
 published: 2022-11-17T15:04:15.000Z
 comment:

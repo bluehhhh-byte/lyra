@@ -4,16 +4,16 @@ title_ko:
 artist: Sonic Youth
 artist_ko:
 album: If I Were A Carpenter
-year: 
+year: 1994
 artwork: https://cdn-images.dzcdn.net/images/cover/1a1f5e8428185eb648a53eb5df226ae9/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/2/9/0/22972577eb2265ec52fe62c3b13eb722.mp3?hdnea=exp=1786584407~acl=/api/1/1/2/2/9/0/22972577eb2265ec52fe62c3b13eb722.mp3*~data=user_id=0,application_id=42~hmac=d3faa17e0806d8e8e963b90c7cb21ab351de97e219e372ae4b5dbbd89c9e42ef
 trackId:
 duration: 245
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 1994]
+keywords: [기타, 라디오, 공연, 약속, 기다림]
+emotion: 그리움
 date: 2023-05-03
 published: 2023-05-02T19:54:56.000Z
 comment:

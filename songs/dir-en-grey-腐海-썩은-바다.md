@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei]
+keywords: [눈물, 밤하늘, 기도, 노래, 꿈]
+emotion: 고독
 date: 2022-11-16
 published: 2022-11-15T15:03:36.000Z
 comment:

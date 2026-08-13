@@ -11,11 +11,11 @@ preview_provider: itunes
 external_url: https://music.apple.com/jp/album/aint-afraid-to-die/1624682042?i=1624682043&uo=4
 trackId: 1624682043
 duration: 436
-genre:
+genre: Visual Kei
 lang: ja
-tags: []
-keywords: []
-emotion:
+tags: [일본, Visual Kei, 2001]
+keywords: [눈, 언덕, 꽃, 창가, 약속, 거리]
+emotion: 그리움
 date: 2023-01-18
 published: 2023-01-18T09:34:33.000Z
 comment:

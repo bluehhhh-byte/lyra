@@ -9,11 +9,11 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/3/e/0/a3e9087d36ae9b09561a8ce226f457da.mp3?hdnea=exp=1786584325~acl=/api/1/1/a/3/e/0/a3e9087d36ae9b09561a8ce226f457da.mp3*~data=user_id=0,application_id=42~hmac=2f1df0c72453cd47bb5ab0e968713679abeb1ad694696e5b3eafae5c9d77eb39
 trackId:
 duration: 282
-genre:
+genre: R&B/Soul
 lang: ko
-tags: []
-keywords: []
-emotion:
+tags: [한국, R&B/Soul]
+keywords: [달, 별빛, 비, 무지개, 구름]
+emotion: 체념
 date: 2022-12-18
 published: 2022-12-18T04:56:22.000Z
 comment:

@@ -4,16 +4,16 @@ title_ko:
 artist: LINKIN PARK
 artist_ko:
 album:
-year: 
+year: 2010
 artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock, 2010]
+keywords: [천사, 목소리, 노래, 집, 어둠]
+emotion: 위로
 date: 2022-10-25
 published: 2022-10-25T10:13:20.000Z
 comment:

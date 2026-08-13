@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration:
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [영미, Alternative Rock]
+keywords: [독수리, 새벽, 심장, 키스, 마음]
+emotion: 희망
 date: 2023-02-21
 published: 2023-02-20T23:19:27.000Z
 comment:
