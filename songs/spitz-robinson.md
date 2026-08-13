@@ -3,12 +3,14 @@ title: Robinson
 title_ko: 
 artist: Spitz
 artist_ko:
-album: Cycle Hit 1991-1997 Spitz Complete Single Collection
+album: Hachimitsu
 year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/7/3/0/a7307574e1e99ad95c79ff4c2e65e00a.mp3?hdnea=exp=1786584408~acl=/api/1/1/a/7/3/0/a7307574e1e99ad95c79ff4c2e65e00a.mp3*~data=user_id=0,application_id=42~hmac=5da0ff3847c7f8789c190023a1504a860b2372f5253e362bac89ef2de1785030
-trackId:
-duration: 261
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/robinson/1440745865?i=1440746483&uo=4
+trackId: 1440746483
+duration: 260
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1995]

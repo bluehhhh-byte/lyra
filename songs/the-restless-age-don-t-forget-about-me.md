@@ -3,11 +3,13 @@ title: Don't Forget About Me
 title_ko: 
 artist: The Restless Age
 artist_ko:
-album: The Midnight Romance in Hagwon, Pt. 1 (Original Soundtrack)
+album: The Midnight Romance in Hagwon, Pt. 1 (Original Soundtrack) - Single
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/9c4badbc3b21ddf23c021d2e02a38da3/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/9/8/0/c987a2b6099ee196a332fa1f0f1dc801.mp3?hdnea=exp=1786559440~acl=/api/1/1/c/9/8/0/c987a2b6099ee196a332fa1f0f1dc801.mp3*~data=user_id=0,application_id=42~hmac=d2a48114f20a0ea159e24651e127390fab2e06849fdfb958ad60ff1bd00c36dd
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/dont-forget-about-me/1745022837?i=1745022838&uo=4
+trackId: 1745022838
 duration: 233
 genre: Folk
 lang: en

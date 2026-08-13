@@ -16,7 +16,7 @@ keywords: [하늘, 별빛, 눈물, 밤, 세상]
 emotion: 사랑
 date: 2022-10-02
 published: 2022-10-02T08:03:54.000Z
-comment:
+comment: 울고 있는 상대에게 하늘의 별빛을 가리키며 건네는 위로다. 가진 것은 없어도 이 마음만은 누구에게도 지지 않는다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

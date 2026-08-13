@@ -3,12 +3,14 @@ title: Goodbye To Romance
 title_ko: 
 artist: Ozzy Osbourne
 artist_ko:
-album: Blizzard Of Ozz (40th Anniversary Expanded Edition)
+album: Blizzard of Ozz (40th Anniversary Expanded Edition)
 year: 1980
 artwork: https://cdn-images.dzcdn.net/images/cover/44b30866dcb6ea27c35da9efb37b83d6/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/6/c/0/26cde761e9b89ec63fcfcac4fa6b7a7a.mp3?hdnea=exp=1786584374~acl=/api/1/1/2/6/c/0/26cde761e9b89ec63fcfcac4fa6b7a7a.mp3*~data=user_id=0,application_id=42~hmac=9ca9c3b69ce405dc2de7919bb64e77b866bdbb2864edb7ba3407126d786cb541
-trackId:
-duration: 333
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/goodbye-to-romance/1531535089?i=1531535288&uo=4
+trackId: 1531535288
+duration: 336
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1980]

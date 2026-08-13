@@ -3,12 +3,14 @@ title: Scar Tissue
 title_ko: 스카 티슈
 artist: Red Hot Chili Peppers
 artist_ko:
-album: Bled Dry
+album: Californication (Remastered)
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/1009e54af0c5c36fb6513f06872ed4ba/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/8/1/0/4811aba51cd5757b5fd4989fb1bec356.mp3?hdnea=exp=1786559415~acl=/api/1/1/4/8/1/0/4811aba51cd5757b5fd4989fb1bec356.mp3*~data=user_id=0,application_id=42~hmac=df5ff5253abb9a6e1137e523d4ac446fe68ffceddccbc67d5c9d9f21c06406ee
-trackId: 
-duration: 234
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/scar-tissue/945575406?i=945575409&uo=4
+trackId: 945575409
+duration: 217
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]

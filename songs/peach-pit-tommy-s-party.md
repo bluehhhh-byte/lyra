@@ -16,7 +16,7 @@ keywords: [신발, 맥주, 밤, 담배, 웃음]
 emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:20:40.000Z
-comment:
+comment: 파티 다음 날 친구에게 안부를 묻는 형식이지만 실제로는 옆자리를 빼앗긴 마음을 말한다. 내가 그랬던 것처럼이라는 후렴이 달라진 관계를 못 박는다.
 source: instagram
 source_tag: 
 source_note: 

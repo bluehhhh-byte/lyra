@@ -3,12 +3,14 @@ title: special
 title_ko: 스페셜
 artist: Richie Kotzen
 artist_ko:
-album: The Essential Richie Kotzen
+album: Get Up
 year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/a28c0df6e34ed64ecad557cad0a395d8/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/0/d/0/60ddc315890312340fee220135190b11.mp3?hdnea=exp=1786559417~acl=/api/1/1/6/0/d/0/60ddc315890312340fee220135190b11.mp3*~data=user_id=0,application_id=42~hmac=f592583fdaf861fcbb789366e8dfb1a4f2dd325a2074b5d064a9f3975aac2f7f
-trackId: 
-duration: 233
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/special/65294290?i=65294268&uo=4
+trackId: 65294268
+duration: 312
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2004]

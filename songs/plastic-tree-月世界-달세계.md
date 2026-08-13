@@ -18,7 +18,7 @@ keywords: [밤하늘, 별빛, 에스컬레이터, 개, 소원]
 emotion: 몽환
 date: 2022-09-18
 published: 2022-09-17T17:35:51.000Z
-comment:
+comment: 몽유병자가 에스컬레이터를 타고 밤하늘을 오르는 장면에서 시작한다. 잠들지 못한 채 별에 소원을 빌다 바늘 같은 초승달에 스치는 꿈이 이어진다.
 source: instagram
 source_tag: 
 source_note: 

@@ -7,7 +7,9 @@ album: Alpha Zulu
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/c23cb99c99b75d2148d21f6d60750cf3/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/b/6/0/0b6c9f2f9c6acfbc3953926b910fbf4e.mp3?hdnea=exp=1786559409~acl=/api/1/1/0/b/6/0/0b6c9f2f9c6acfbc3953926b910fbf4e.mp3*~data=user_id=0,application_id=42~hmac=1dc3c1760ad618f7b661efdcc45ec240b5387c333ce6e839fda255f9a7183606
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/identical/1638412765?i=1638413360&uo=4
+trackId: 1638413360
 duration: 302
 genre: Indie Pop
 lang: en

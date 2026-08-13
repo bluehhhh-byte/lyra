@@ -7,7 +7,9 @@ album: God Fixation
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/88a6f51e50ae9d6ba87207391440a515/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/3/0/f63f0e19b8c322e944a4e31c161e0d9f.mp3?hdnea=exp=1786584378~acl=/api/1/1/f/6/3/0/f63f0e19b8c322e944a4e31c161e0d9f.mp3*~data=user_id=0,application_id=42~hmac=8d20b4275d8fbcb0f2da2ae031ad2b7df36da133658a3ffa49ce92a2ae5882b6
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/if-i-had-to-die-for-someone/1165979182?i=1165979183&uo=4
+trackId: 1165979183
 duration: 279
 genre: Hard Rock
 lang: en

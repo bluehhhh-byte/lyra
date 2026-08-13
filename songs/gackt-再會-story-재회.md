@@ -16,7 +16,7 @@ keywords: [빛, 꿈, 기억, 눈빛, 풍경, 이름]
 emotion: 그리움
 date: 2022-10-03
 published: 2022-10-02T15:20:10.000Z
-comment:
+comment: 엷어져가는 기억 속에서 한 번만 더 안고 싶다며 이름을 부르는 곡이다. 곧 자신이 사라진다는 것을 알면서도 그 사람만은 놓지 않겠다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

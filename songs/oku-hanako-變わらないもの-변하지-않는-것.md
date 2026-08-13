@@ -16,7 +16,7 @@ keywords: [가로등, 눈동자, 목소리, 길, 밤, 추억]
 emotion: 그리움
 date: 2022-10-03
 published: 2022-10-03T14:30:17.000Z
-comment:
+comment: 변하지 않는 것을 찾아 헤맸지만 손에 쥔 것은 형체 없는 기억뿐이다. 함께 걷던 길의 가로등만 그대로 남아 지금도 그 시절을 비추고 있다.
 source: instagram
 source_tag: 
 source_note: 

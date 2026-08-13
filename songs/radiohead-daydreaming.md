@@ -7,7 +7,9 @@ album: A Moon Shaped Pool
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/e9232e4391ed1206cc0bd6ab17822177/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/5/d/0/75d41035ef25f59e5c7bedd19eae5050.mp3?hdnea=exp=1786584390~acl=/api/1/1/7/5/d/0/75d41035ef25f59e5c7bedd19eae5050.mp3*~data=user_id=0,application_id=42~hmac=a6dca408c68be102018e86294e573453095ee48d004137b57dc575d023a44735
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/daydreaming/1111577743?i=1111577949&uo=4
+trackId: 1111577949
 duration: 384
 genre: Alternative Rock
 lang: en

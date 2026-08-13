@@ -3,12 +3,14 @@ title: hello!
 title_ko: 
 artist: ROLE MODEL
 artist_ko:
-album: pov: ur on a beach
+album: oh, how perfect - EP
 year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/68fee4c8720618ab229f72bcb1b6b9ce/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/8/6/0/68663f47fdfdd21804b7d47ab31eb4f7.mp3?hdnea=exp=1786559420~acl=/api/1/1/6/8/6/0/68663f47fdfdd21804b7d47ab31eb4f7.mp3*~data=user_id=0,application_id=42~hmac=726d3a5a6442b52b7f932fccc1ee931620a141a01b2761f6e85b19829efc4ed7
-trackId: 
-duration: 188
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/hello/1485955877?i=1485955882&uo=4
+trackId: 1485955882
+duration: 189
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2019]

@@ -16,7 +16,7 @@ keywords: [물, 사진, 세상, 시간, 후회]
 emotion: 고독
 date: 2022-09-26
 published: 2022-09-25T23:16:45.000Z
-comment:
+comment: 지금 당장 사라지고 싶다는 말을 반복하며 아무도 모른다고 못 박는다. 다 떠나고 나서야 소비하는 세태를 짚으며 사라지는 것이 정상이라고 말한다.
 source: instagram
 source_tag: 
 source_note: 

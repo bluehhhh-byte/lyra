@@ -18,7 +18,7 @@ keywords: [라디오, 주파수, 신청곡, 빗물, 전광판, 교통사고]
 emotion: 고독
 date: 2022-09-28
 published: 2022-09-28T06:39:37.000Z
-comment:
+comment: 라디오에서 이어지는 웃음소리 속에서 자기만 섬 같다고 느끼는 밤을 그린다. 빗물에 비친 교통사고 전광판의 사망자 1이라는 숫자에서 자기 외로움을 본다.
 source: instagram
 source_tag: 
 source_note: 

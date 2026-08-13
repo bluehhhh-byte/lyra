@@ -3,12 +3,14 @@ title: LOL
 title_ko: LOL
 artist: sokodomo
 artist_ko:
-album: LOL
+album: LOL - Single
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/154ed52987b05a5a36205b47474afd06/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/7/0/4b727dc09aec849ef30e2ffcfd992592.mp3?hdnea=exp=1786559427~acl=/api/1/1/4/b/7/0/4b727dc09aec849ef30e2ffcfd992592.mp3*~data=user_id=0,application_id=42~hmac=f943289ecb7cb82cc701e3bc00d6770d93a66d03c264abbc10c592e2ee013637
-trackId: 
-duration: 154
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/lol/1510532996?i=1510533000&uo=4
+trackId: 1510533000
+duration: 155
 genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2020]

@@ -3,12 +3,14 @@ title: You're Lost Little Girl
 title_ko: 
 artist: The Doors
 artist_ko:
-album: European Son (Live 1968)
+album: Strange Days (50th Anniversary Deluxe Edition)
 year: 1967
 artwork: https://cdn-images.dzcdn.net/images/cover/1a8f4f1180a7f3a4bcb115d31f983f69/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/4/5/0/24576bea1b55583dda77a90108241d1c.mp3?hdnea=exp=1786559439~acl=/api/1/1/2/4/5/0/24576bea1b55583dda77a90108241d1c.mp3*~data=user_id=0,application_id=42~hmac=939a1c0c15e25c032327a73285b6aa5770062a2ef0492ba7ea06653ccac5509b
-trackId: 
-duration: 196
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/youre-lost-little-girl/1287538882?i=1287538889&uo=4
+trackId: 1287538889
+duration: 185
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1967]

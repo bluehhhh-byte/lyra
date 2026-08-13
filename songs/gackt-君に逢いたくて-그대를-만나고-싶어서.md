@@ -18,7 +18,7 @@ keywords: [손, 별, 하늘, 온기, 마음]
 emotion: 그리움
 date: 2022-10-03
 published: 2022-10-02T15:09:45.000Z
-comment:
+comment: 이별이 올 줄 알았으면서도 잊지 못하는 마음을 계속 되풀이한다. 별 하늘 아래 처음 만난 순간과 늘 따뜻했던 맞잡은 손으로 자꾸 돌아간다.
 source: instagram
 source_tag: 
 source_note: 

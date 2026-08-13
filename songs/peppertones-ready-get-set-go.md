@@ -3,12 +3,14 @@ title: Ready, Get Set, Go!
 title_ko: Ready, Get Set, Go!
 artist: Peppertones
 artist_ko:
-album: Colorful Express
+album: Antenna music Warriors
 year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/85f7ac5672ba1d2c15ce0005f7a55d0e/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/9/3/0/193ea2d40ff4b38698ce72bb677d84ca.mp3?hdnea=exp=1786584377~acl=/api/1/1/1/9/3/0/193ea2d40ff4b38698ce72bb677d84ca.mp3*~data=user_id=0,application_id=42~hmac=feba049ef1ba344730f16c20aab312468ef674a2a5c179f280f54e43fa550d70
-trackId:
-duration: 305
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/ready-get-set-go/1623108843?i=1623108845&uo=4
+trackId: 1623108845
+duration: 325
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2008]

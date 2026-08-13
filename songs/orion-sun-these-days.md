@@ -3,12 +3,14 @@ title: These Days
 title_ko: 
 artist: Orion Sun
 artist_ko:
-album: These Days
+album: Orion
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/231a5db3d94f04d0a078bd1baa951796/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/1/4/0/0147c2c3343e2e97d2f476ec4a0a79f2.mp3?hdnea=exp=1786559406~acl=/api/1/1/0/1/4/0/0147c2c3343e2e97d2f476ec4a0a79f2.mp3*~data=user_id=0,application_id=42~hmac=eed838ea16e77056d963381245a8beebb2e4f9f3ade0726fb497229bc8d9fd6b
-trackId: 
-duration: 194
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/these-days/1890558726?i=1890558814&uo=4
+trackId: 1890558814
+duration: 195
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2024]

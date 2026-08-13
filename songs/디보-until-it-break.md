@@ -16,7 +16,7 @@ keywords: [꽃, 달빛, 혼란, 거짓말, 삶]
 emotion: 사랑
 date: 2022-09-27
 published: 2022-09-26T21:38:22.000Z
-comment:
+comment: 혼란 속에 피는 꽃으로 상대를 부르는 짧은 노래다. 거짓 같은 삶에서 나랑 가자며 반드시 구해주겠다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

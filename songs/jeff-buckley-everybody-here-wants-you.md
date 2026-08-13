@@ -18,7 +18,7 @@ keywords: [거리, 밤, 시선, 여름, 방]
 emotion: 사랑
 date: 2022-09-17
 published: 2022-09-17T04:21:58.000Z
-comment:
+comment: 사후에 정리되어 나온 미완성 음반에 실린 곡이다. 멀리서 보기에 좋아 보이는 사람들 사이에서도 그 사람은 자기라고 말하는 대목이 남는다.
 source: instagram
 source_tag: 
 source_note: 

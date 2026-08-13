@@ -18,7 +18,7 @@ keywords: [파도, 바다, 과거, 빛, 숨결]
 emotion: 회상
 date: 2022-09-30
 published: 2022-09-29T21:35:26.000Z
-comment:
+comment: 지명 오하이오와 인사말 oh hi를 겹쳐 쓴 곡이다. 추억의 바다에 머물며 현실로 나아가기를 망설이다 결국 너를 지우겠다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

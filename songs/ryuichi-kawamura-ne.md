@@ -3,12 +3,14 @@ title: Ne
 title_ko: 네에
 artist: Ryuichi Kawamura
 artist_ko:
-album: Ne
+album: Shin Ai - Only One
 year: 2001
 artwork: https://cdn-images.dzcdn.net/images/cover/762808d121a123ab33937d06cce99661/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/c/0/73c90177f72c3f225d66f8f80b501e19.mp3?hdnea=exp=1786559421~acl=/api/1/1/7/3/c/0/73c90177f72c3f225d66f8f80b501e19.mp3*~data=user_id=0,application_id=42~hmac=1c5d490b01c7ce53b2777b7c805b60f7964a362ddd0d60349968a030382efff0
-trackId: 
-duration: 336
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/ne/156875796?i=156875827&uo=4
+trackId: 156875827
+duration: 352
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2001]

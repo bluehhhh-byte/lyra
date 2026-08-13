@@ -16,7 +16,7 @@ keywords: [계층, 바닥, 도시, 음악, 현실]
 emotion: 분노
 date: 2022-09-25
 published: 2022-09-25T13:22:44.000Z
-comment:
+comment: 계층의 바닥부터 꼭대기까지 저마다 던지는 훈수를 그대로 옮겨 적는다. 음악을 켜면 꿈이고 끄면 현실이라는 대비로 도시를 짝사랑한 대가를 말한다.
 source: instagram
 source_tag: 
 source_note: 

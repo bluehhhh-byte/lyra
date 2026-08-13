@@ -18,7 +18,7 @@ keywords: [물, 손, 하늘, 파도, 빛]
 emotion: 몽환
 date: 2022-09-22
 published: 2022-09-22T10:33:14.000Z
-comment:
+comment: 물에 비친 달처럼 흐리면서도 선명한 대상을 손에 담아 비춰 본다. 잡을 수 없다는 걸 알면서도 이대로 손에 잠겨 있어 달라고 청한다.
 source: instagram
 source_tag: 
 source_note: 

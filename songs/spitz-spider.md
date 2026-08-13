@@ -7,8 +7,10 @@ album: Cycle Hit 1991-1997 Spitz Complete Single Collection
 year: 1994
 artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/2/4/0/a24373c41ccb7748d9f6b760bd815305.mp3?hdnea=exp=1786559429~acl=/api/1/1/a/2/4/0/a24373c41ccb7748d9f6b760bd815305.mp3*~data=user_id=0,application_id=42~hmac=9914fb3c174191c174abb1cc8e8737a2107c9bc00ef6f1a0c0612b7fe4939cd7
-trackId: 
-duration: 225
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/spider/1440863443?i=1440863564&uo=4
+trackId: 1440863564
+duration: 226
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1994]

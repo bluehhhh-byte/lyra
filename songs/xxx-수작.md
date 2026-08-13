@@ -18,7 +18,7 @@ keywords: [빈곤, 취업난, 가사, 학생, 파산]
 emotion: 체념
 date: 2022-09-28
 published: 2022-09-28T06:51:39.000Z
-comment:
+comment: 빈곤과 취업난을 나열하며 음악 하는 학생 정도인 처지를 자조한다. 명작 취급을 받지 못하는 수작이라는 제목처럼 한국에서 뜨겠다는 자신을 스스로 비웃는다.
 source: instagram
 source_tag: 
 source_note: 

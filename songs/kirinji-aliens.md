@@ -18,7 +18,7 @@ keywords: [하늘, 달빛, 밤, 도시, 스포츠카]
 emotion: 몽환
 date: 2022-09-17
 published: 2022-09-17T01:57:49.000Z
-comment:
+comment: 잠들지 못한 두 사람을 외계인이라 부르며 도시의 밤을 건너가는 곡이다. 우울한 뉴스가 일출과 함께 내리기 전에 마지막 춤을 추자고 청한다.
 source: instagram
 source_tag: 
 source_note: 

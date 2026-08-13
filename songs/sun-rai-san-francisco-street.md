@@ -3,11 +3,13 @@ title: San Francisco Street
 title_ko: 
 artist: Sun Rai
 artist_ko:
-album: Pocket Music
+album: Pocket Music - EP
 year: 2013
 artwork: https://cdn-images.dzcdn.net/images/cover/a9d25d7d52a95a7692265fa2341e9531/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/3/c/0/33cc0d8ec4e2d109ee6d7805ff40285f.mp3?hdnea=exp=1786559433~acl=/api/1/1/3/3/c/0/33cc0d8ec4e2d109ee6d7805ff40285f.mp3*~data=user_id=0,application_id=42~hmac=79f9642bc9151716978dd787b01612df346a3ad59cfce3ed2996df9794f8c1ee
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/san-francisco-street/659685969?i=659685997&uo=4
+trackId: 659685997
 duration: 267
 genre: Indie Pop
 lang: en

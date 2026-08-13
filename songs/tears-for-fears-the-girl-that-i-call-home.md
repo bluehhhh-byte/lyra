@@ -3,11 +3,13 @@ title: The Girl That I Call Home
 title_ko: 
 artist: Tears For Fears
 artist_ko:
-album: The Girl That I Call Home
+album: Songs For A Nervous Planet
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/25f0dfa34a57c6299ce3b134b257ee89/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/4/8/0/648c77bdd100da628b5285a237a2d35a.mp3?hdnea=exp=1786559436~acl=/api/1/1/6/4/8/0/648c77bdd100da628b5285a237a2d35a.mp3*~data=user_id=0,application_id=42~hmac=c2ec874d21540fafeab694b305984043f1ef6d5ab8b737fbf8ab464b32c86b27
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-girl-that-i-call-home/1763712367?i=1763712832&uo=4
+trackId: 1763712832
 duration: 224
 genre: Synth-Pop
 lang: en

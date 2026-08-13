@@ -18,7 +18,7 @@ keywords: [편지, 밤, 시간, 거짓말, 비밀, 선]
 emotion: 이별
 date: 2022-09-17
 published: 2022-09-17T01:55:48.000Z
-comment:
+comment: 당연하게 여기던 사랑을 잃고 나서야 그것을 알아차리는 곡이다. 낭비한 시간과 서서히 커진 외로움을 되짚으며 작은 기회라도 잡겠다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

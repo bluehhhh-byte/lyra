@@ -18,7 +18,7 @@ keywords: [침대, 방, 아침, 젊음, 소식]
 emotion: 고독
 date: 2022-09-20
 published: 2022-09-20T03:39:08.000Z
-comment:
+comment: 침대에서 나갈 이유를 찾지 못하는 하루를 그린 곡이다. 젊음과 멀어지고 있다고 느끼면서도 더 좋은 것이 네 곁에 있다는 말로 방향을 튼다.
 source: instagram
 source_tag: 
 source_note: 

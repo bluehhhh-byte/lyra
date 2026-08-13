@@ -3,12 +3,14 @@ title: We Need Jesus
 title_ko: We Need Jesus
 artist: Petra
 artist_ko:
-album: The Definitive Collection
+album: Petra Praise, Vol. 2 (We Need Jesus)
 year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/1cb3614c33009a0a74adff492161cde5/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/1/b/0/21bf7a1971a06f283af3b19600344fea.mp3?hdnea=exp=1786559409~acl=/api/1/1/2/1/b/0/21bf7a1971a06f283af3b19600344fea.mp3*~data=user_id=0,application_id=42~hmac=4d34348df2050821db74f78b3c0799b6fc0848eb5cf54d4e3dc42e13bb330531
-trackId: 
-duration: 242
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/we-need-jesus/1167804077?i=1167804195&uo=4
+trackId: 1167804195
+duration: 243
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1997]

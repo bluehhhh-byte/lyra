@@ -3,12 +3,14 @@ title: There Will Be Love There
 title_ko: 데어 윌 비 러브 데어
 artist: the brilliant green
 artist_ko:
-album: SUPER TERRA2000(Live)
+album: the brilliant green
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/794a43cbc490cdf89ab8e0b3de6a878e/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/9/b/0/19b8a0299a794fbc47f4cbfd5bf6822c.mp3?hdnea=exp=1786559438~acl=/api/1/1/1/9/b/0/19b8a0299a794fbc47f4cbfd5bf6822c.mp3*~data=user_id=0,application_id=42~hmac=8a501c7ff442898a28393e6b5a05e3c09ac8802d17e6dff57d3e1884509a5b98
-trackId: 
-duration: 243
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/there-will-be-love-there/1536130933?i=1536130943&uo=4
+trackId: 1536130943
+duration: 241
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1999]

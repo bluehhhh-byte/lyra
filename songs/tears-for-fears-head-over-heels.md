@@ -3,12 +3,14 @@ title: Head Over Heels
 title_ko: 
 artist: Tears For Fears
 artist_ko:
-album: Songs From The Big Chair (Deluxe)
+album: Songs From the Big Chair (Super Deluxe Version)
 year: 1985
 artwork: https://cdn-images.dzcdn.net/images/cover/5413c924601f881a7209bab7b1909880/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/7/0/0/7701ebc9e79817f70e01ffe3bbe5d520.mp3?hdnea=exp=1786584417~acl=/api/1/1/7/7/0/0/7701ebc9e79817f70e01ffe3bbe5d520.mp3*~data=user_id=0,application_id=42~hmac=d8bbeab74ea3e6fcbf0157c81e97ed294c46130629576e6e78e482dadd050b97
-trackId:
-duration: 302
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/head-over-heels/1440825207?i=1440825700&uo=4
+trackId: 1440825700
+duration: 257
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 1985]

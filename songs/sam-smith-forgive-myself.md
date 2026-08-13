@@ -3,11 +3,13 @@ title: Forgive Myself
 title_ko: 
 artist: Sam Smith
 artist_ko:
-album: Love Goes
+album: Violets Are Blue - EP
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/5952ccc871445c625459eeb11a269611/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/9/f/0/59fda950706719cebb909e117425c875.mp3?hdnea=exp=1786559423~acl=/api/1/1/5/9/f/0/59fda950706719cebb909e117425c875.mp3*~data=user_id=0,application_id=42~hmac=cb554cec1b71dbf4e3ec51a70d0d62a79796bbdc151dad51edcf620d2d0a5443
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/forgive-myself/1540873830?i=1540873941&uo=4
+trackId: 1540873941
 duration: 220
 genre: R&B/Soul
 lang: en

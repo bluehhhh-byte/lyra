@@ -16,7 +16,7 @@ keywords: [편두통, 기차, 쓰레기통, 맨발, 병원, 숲]
 emotion: 슬픔
 date: 2022-09-24
 published: 2022-09-23T23:25:07.000Z
-comment:
+comment: 시한부 선고를 받은 오랜 친구와 그의 연인을 부르는 곡이다. 쓰레기통의 저녁밥과 빈 기차 칸을 늘어놓다가 내년에도 볼 수 있을지 묻고 끝난다.
 source: instagram
 source_tag: 
 source_note: 

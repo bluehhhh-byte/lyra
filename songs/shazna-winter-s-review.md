@@ -3,11 +3,13 @@ title: Winter's Review
 title_ko: 
 artist: SHAZNA
 artist_ko:
-album: Winter's Review
-year: 
+album: Winter's Review - EP
+year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/21d10745cd13a4fc871467a5797157f7/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/c/4/0/8c4170a3ff43d7f6624cf135408a4ea7.mp3?hdnea=exp=1786584402~acl=/api/1/1/8/c/4/0/8c4170a3ff43d7f6624cf135408a4ea7.mp3*~data=user_id=0,application_id=42~hmac=33de8bdf18dcef79372017081da82cd2a15b6f20aafa4b4550fdd7c8c6601202
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/winters-review/1605746378?i=1605746379&uo=4
+trackId: 1605746379
 duration: 327
 genre: Visual Kei
 lang: ja

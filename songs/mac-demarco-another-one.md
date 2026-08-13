@@ -18,7 +18,7 @@ keywords: [문, 시계, 내일, 소리]
 emotion: 불안
 date: 2022-09-17
 published: 2022-09-17T04:57:49.000Z
-comment:
+comment: 그녀의 문을 두드리는 사람이 누구일지 의심하는 마음을 반복한다. 진심이라는 말을 들어도 가시지 않는 불안이 멈추지 않는 시계처럼 이어진다.
 source: instagram
 source_tag: 
 source_note: 

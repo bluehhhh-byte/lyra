@@ -18,7 +18,7 @@ keywords: [조각가, 거울, 작품, 인생, 축복, 몸]
 emotion: 위로
 date: 2022-09-24
 published: 2022-09-24T10:57:18.000Z
-comment:
+comment: 자신을 조각가의 작품으로 두고 신앙에 기대 존재를 긍정하는 곡이다. 미움받을 만한 사람일지라도 사랑받을 사람인 건 확실하다는 말이 중심에 있다.
 source: instagram
 source_tag: 
 source_note: 

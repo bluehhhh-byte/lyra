@@ -16,7 +16,7 @@ keywords: [비, 빛, 꿈, 기억, 말]
 emotion: 회상
 date: 2022-10-03
 published: 2022-10-03T09:39:44.000Z
-comment:
+comment: 비 오는 날에 기대어 지나간 나날을 되짚는 곡이다. 할 말을 찾지 못한 채 멈춰 서서 모든 것이 예전 같았으면 하고 바라는 마음이 반복된다.
 source: instagram
 source_tag: 
 source_note: 

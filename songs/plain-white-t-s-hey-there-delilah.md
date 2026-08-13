@@ -3,12 +3,14 @@ title: Hey There Delilah
 title_ko: 
 artist: Plain White T's
 artist_ko:
-album: Hey There Delilah
+album: Every Second Counts
 year: 2006
 artwork: https://cdn-images.dzcdn.net/images/cover/7a83573cb86eb70c8903db13b5fdd2c3/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/1/c/0/f1c0d5f32486c8c534252a1eb34f4ba8.mp3?hdnea=exp=1786559410~acl=/api/1/1/f/1/c/0/f1c0d5f32486c8c534252a1eb34f4ba8.mp3*~data=user_id=0,application_id=42~hmac=2e6adfce9a16dcf4b2f5cfe928314c47cfcd8752dc2d70f527648408d98c7b9e
-trackId: 
-duration: 232
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/hey-there-delilah/1442825106?i=1442825350&uo=4
+trackId: 1442825350
+duration: 233
 genre: Folk
 lang: en
 tags: [영미, Folk, 2006]

@@ -16,7 +16,7 @@ keywords: [기적, 기차, 소리, 님]
 emotion: 이별
 date: 2022-09-20
 published: 2022-09-20T13:50:15.000Z
-comment:
+comment: 일본 가수가 한국어 트로트로 부른 이별 노래다. 님을 실은 마지막 밤차의 기적 소리가 멀어지는데도 언젠가 다시 만난다며 외롭지 않다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

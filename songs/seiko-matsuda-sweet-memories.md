@@ -3,12 +3,14 @@ title: Sweet Memories
 title_ko: 
 artist: Seiko Matsuda
 artist_ko:
-album: Touch Me, Seiko
+album: Seiko Matsuda Sweet Days
 year: 1983
 artwork: https://cdn-images.dzcdn.net/images/cover/b68171245b3b7830e30b2a27c7db8c14/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/9/1/0/c912f43df43e66da430a3b2677ebe6d9.mp3?hdnea=exp=1786584400~acl=/api/1/1/c/9/1/0/c912f43df43e66da430a3b2677ebe6d9.mp3*~data=user_id=0,application_id=42~hmac=eb9e82d5ea96284f14dd15467dbc63cc62be8d6bc023f64294a8ffbf86d06bd1
-trackId:
-duration: 274
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/sweet-memories/1536797171?i=1536797261&uo=4
+trackId: 1536797261
+duration: 275
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1983]

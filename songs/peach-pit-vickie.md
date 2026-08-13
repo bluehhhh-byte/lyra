@@ -3,12 +3,14 @@ title: Vickie
 title_ko: 
 artist: Peach Pit
 artist_ko:
-album: Vickie
+album: From 2 to 3
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/ba7de57f1ea107e403e0608f3561d32f/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/b/a/0/6babbba4f9403f43015c733a9e8a3c30.mp3?hdnea=exp=1786559408~acl=/api/1/1/6/b/a/0/6babbba4f9403f43015c733a9e8a3c30.mp3*~data=user_id=0,application_id=42~hmac=665fae5de3f0100006b61988d254dc90347504770fe0acb632a5e1ae3f2231b2
-trackId: 
-duration: 223
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/vickie/1593899354?i=1593899361&uo=4
+trackId: 1593899361
+duration: 224
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2022]

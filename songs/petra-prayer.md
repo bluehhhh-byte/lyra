@@ -3,12 +3,14 @@ title: Prayer
 title_ko: 
 artist: Petra
 artist_ko:
-album: Prayer - A Meditation to Encounter the Goddess
-year: 
+album: Beyond Belief
+year: 1990
 artwork: https://cdn-images.dzcdn.net/images/cover/3782d23828ec1ee084529a1cec2dbd34/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/8/5/0/485369bafefd47f7771cdc43c16b5edf.mp3?hdnea=exp=1786584379~acl=/api/1/1/4/8/5/0/485369bafefd47f7771cdc43c16b5edf.mp3*~data=user_id=0,application_id=42~hmac=fb0fb5580c669ad95b785374b63e7d31d138463259a4c592a3b59cc62831ead6
-trackId:
-duration: 679
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/prayer/1165972947?i=1165972957&uo=4
+trackId: 1165972957
+duration: 256
 genre: Electronic
 lang: en
 tags: [영미, Electronic]

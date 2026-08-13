@@ -3,12 +3,14 @@ title: 不滅花
 title_ko: 
 artist: Raphael
 artist_ko:
-album: 
+album: Love story -2000020220161101-
 year: 2001
 artwork: https://dn720803.ca.archive.org/0/items/mbid-3d424da4-7c8e-42a1-9e96-7a9aea22a486/mbid-3d424da4-7c8e-42a1-9e96-7a9aea22a486-43862100458_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b8/79/f9/b879f9f3-4e2b-d841-fa23-86a93e516dbd/mzaf_14397351148369046993.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/%E4%B8%8D%E6%BB%85%E8%8A%B1/1164358333?i=1164358360&uo=4
+trackId: 1164358360
+duration: 285
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2001]

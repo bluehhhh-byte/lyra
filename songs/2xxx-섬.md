@@ -18,7 +18,7 @@ keywords: [눈빛, 푸른빛, 마음, 사랑, 아픔]
 emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:14:38.000Z
-comment:
+comment: 푸르게 바랜 사랑을 상대의 마음으로 흘려보내는 짧은 곡이다. 눈빛이 너무 아파 견딜 수 없고 무슨 말이라도 들으면 얼어버릴 거라고 말한다.
 source: instagram
 source_tag: 
 source_note: 

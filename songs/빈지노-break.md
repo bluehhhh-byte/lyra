@@ -18,7 +18,7 @@ keywords: [줄자, 기계, 화약, 미꾸라지, 꿈, 일]
 emotion: 저항
 date: 2022-09-27
 published: 2022-09-26T23:15:43.000Z
-comment:
+comment: 기계처럼 일만 하다 고장 나기는 싫다는 거부에서 출발한다. 재고 따지는 줄자 같은 사람들 사이에서 시끄럽게 쥐뿔 없고 싶다며 다 깨부수겠다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

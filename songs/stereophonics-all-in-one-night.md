@@ -3,12 +3,14 @@ title: All In One Night
 title_ko: 
 artist: Stereophonics
 artist_ko:
-album: 
+album: Scream Above the Sounds (Deluxe)
 year: 2007
 artwork: https://dn710003.ca.archive.org/0/items/mbid-1143dfe4-b656-4cc0-9d46-d9fe44b4a957/mbid-1143dfe4-b656-4cc0-9d46-d9fe44b4a957-33331691812_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/d7/9e/83/d79e834a-f37f-2c56-90ea-46ef1db8e414/mzaf_8134235522863213871.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/all-in-one-night/1262384478?i=1262384495&uo=4
+trackId: 1262384495
+duration: 317
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]

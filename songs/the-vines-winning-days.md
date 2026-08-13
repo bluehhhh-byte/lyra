@@ -7,8 +7,10 @@ album: Winning Days
 year: 2006
 artwork: https://cdn-images.dzcdn.net/images/cover/66c90172ce9d66633d75f3281f544df0/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/5/f/0/85f62ae25ea5d68078ec21326c3542f5.mp3?hdnea=exp=1786559444~acl=/api/1/1/8/5/f/0/85f62ae25ea5d68078ec21326c3542f5.mp3*~data=user_id=0,application_id=42~hmac=e6e37f220930f1f40cf8b2865cb52d9a6511804ccb2a6d1c611d1b1eb5a56d01
-trackId: 
-duration: 213
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/winning-days/716350692?i=716351137&uo=4
+trackId: 716351137
+duration: 214
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]

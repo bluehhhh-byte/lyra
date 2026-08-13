@@ -18,7 +18,7 @@ keywords: [색깔, 흑백, 산소, 카메라, 관, 비석]
 emotion: 불안
 date: 2022-09-25
 published: 2022-09-25T01:44:28.000Z
-comment:
+comment: 색깔과 흑백이 번갈아 덮치는 감각으로 숨 막히는 상태를 그린다. 비석에 새겨질 것이 사랑과 직업뿐이라면서도 허락된 것보다 더 원한다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

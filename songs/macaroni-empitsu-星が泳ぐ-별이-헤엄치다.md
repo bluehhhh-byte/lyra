@@ -16,7 +16,7 @@ keywords: [바다, 고양이, 파도, 여름, 노래, 별]
 emotion: 그리움
 date: 2022-10-03
 published: 2022-10-03T14:33:20.000Z
-comment:
+comment: 바다에 갔다 돌아오지 않은 사람을 여름 풍경 속에 남겨둔 곡이다. 영혼까지 사랑했다고 말하면서도 전하지 못한 말만 쌓였다며 작별을 고한다.
 source: instagram
 source_tag: 
 source_note: 

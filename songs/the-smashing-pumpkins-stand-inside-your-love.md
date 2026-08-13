@@ -3,12 +3,14 @@ title: Stand Inside Your Love
 title_ko: 
 artist: The Smashing Pumpkins
 artist_ko:
-album: Machina / The Machines Of God (25th Anniversary Edition)
+album: Machina / The Machines Of God
 year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/24550dd8cd39adae6f89c615089ce84c/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/7/3/0/f734704c98e1779f569aa9add3167ffd.mp3?hdnea=exp=1786584422~acl=/api/1/1/f/7/3/0/f734704c98e1779f569aa9add3167ffd.mp3*~data=user_id=0,application_id=42~hmac=8a2e79491ffc13731bf46e2c362655b96fef7f9faf34b2f43b1dce02fcf38389
-trackId:
-duration: 253
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/stand-inside-your-love/712756036?i=712756043&uo=4
+trackId: 712756043
+duration: 254
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2000]

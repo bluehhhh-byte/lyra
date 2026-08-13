@@ -16,7 +16,7 @@ keywords: [계약서, 담배, 무덤, 그림, 목줄]
 emotion: 체념
 date: 2022-10-01
 published: 2022-10-01T11:41:13.000Z
-comment:
+comment: 준비 없이 계약서에 서명한 뒤 무너진 기대를 되짚는 곡이다. 사랑도 사람도 믿지 못하게 된 자리에서 딱 10년만 달라며 제 무덤은 제가 판다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

@@ -7,8 +7,10 @@ album: Post Orgasmic Chill
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/91eaa68573b3df97060bbd0864cc0f64/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3?hdnea=exp=1786584406~acl=/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3*~data=user_id=0,application_id=42~hmac=d58cbac60a75af5c5f719b3f81c62c135fb2d4b1e572b55c5fba2eeef6cf2f51
-trackId:
-duration: 233
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/lately/1763748152?i=1763748635&uo=4
+trackId: 1763748635
+duration: 234
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]

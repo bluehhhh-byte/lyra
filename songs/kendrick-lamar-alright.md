@@ -18,7 +18,7 @@ keywords: [기도, 호텔, 밤, 악마, 거리]
 emotion: 희망
 date: 2022-09-26
 published: 2022-09-25T23:39:06.000Z
-comment:
+comment: To Pimp a Butterfly 수록곡으로, 분노와 깊은 우울을 통과하고도 그래도 괜찮을 거라고 말한다. 발표 뒤 미국의 시위 현장에서 구호처럼 불린 곡이다.
 source: instagram
 source_tag: 
 source_note: 

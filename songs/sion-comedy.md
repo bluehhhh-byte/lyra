@@ -18,7 +18,7 @@ keywords: [코미디쇼, 사슴, 벽, 인형, 눈물]
 emotion: 이별
 date: 2022-09-17
 published: 2022-09-17T09:10:45.000Z
-comment:
+comment: 함께 보던 코미디쇼를 남은 기억의 마지막 조각으로 붙잡는 곡이다. 사냥당한 사슴처럼 벽에 걸리고 꼭두각시로 팔려 가는 상상까지 밀고 나간다.
 source: instagram
 source_tag: 
 source_note: 

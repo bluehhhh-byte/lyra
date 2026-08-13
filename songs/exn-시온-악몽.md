@@ -18,7 +18,7 @@ keywords: [악몽, 밤, 바늘, 실, 꼭두각시, 인형]
 emotion: 불안
 date: 2022-09-25
 published: 2022-09-24T18:00:29.000Z
-comment:
+comment: 만난 뒤로 매일 밤 찾아오는 악몽을 인형술사와 꼭두각시에 빗댄다. 붉은 실이 싫다면 끊으면 그만이라면서도 정신줄만 끊긴 상태가 이어진다.
 source: instagram
 source_tag: 
 source_note: 

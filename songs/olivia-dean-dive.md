@@ -7,8 +7,10 @@ album: Messy
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/0f3f905b35a640121180f26a422dcfd7/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/5/1/0/651a9dc58d19e686e4cff33d67b4cb36.mp3?hdnea=exp=1786559404~acl=/api/1/1/6/5/1/0/651a9dc58d19e686e4cff33d67b4cb36.mp3*~data=user_id=0,application_id=42~hmac=aa89391e27ec7231fa730df5ee507811181988a7e8bde4fe1e0b05712989734a
-trackId: 
-duration: 200
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/dive/1676252821?i=1676252825&uo=4
+trackId: 1676252825
+duration: 201
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2023]

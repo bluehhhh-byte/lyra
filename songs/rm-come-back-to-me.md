@@ -3,12 +3,14 @@ title: Come Back To Me
 title_ko: 
 artist: RM
 artist_ko:
-album: 
+album: Come back to me - Single
 year: 2024
 artwork: https://dn721809.ca.archive.org/0/items/mbid-b91e409c-46d4-4828-9176-4ae54a4bf9f4/mbid-b91e409c-46d4-4828-9176-4ae54a4bf9f4-45600783094_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/2f/d7/be2fd74f-7ebc-2e24-176c-25bd89cb7d1a/mzaf_586900977232830106.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/come-back-to-me/1745374881?i=1745374885&uo=4
+trackId: 1745374885
+duration: 389
 genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2024]

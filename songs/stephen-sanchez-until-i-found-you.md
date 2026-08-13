@@ -3,12 +3,14 @@ title: Until I Found You
 title_ko: 
 artist: Stephen Sanchez
 artist_ko:
-album: Until I Found You
+album: Until I Found You - Single
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/8a6477b222dac17081d9b9b1729a1ca4/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/b/b/0/abba1de052373c1d6b18e948a5cb1e67.mp3?hdnea=exp=1786584411~acl=/api/1/1/a/b/b/0/abba1de052373c1d6b18e948a5cb1e67.mp3*~data=user_id=0,application_id=42~hmac=2fcec806688baa898934626e267f75b943951b699e3afc43b73fbcce8677ed09
-trackId:
-duration: 177
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/until-i-found-you/1581702082?i=1581702085&uo=4
+trackId: 1581702085
+duration: 178
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2021]

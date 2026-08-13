@@ -18,7 +18,7 @@ keywords: [강, 물, 중력, 리본, 하늘, 바다]
 emotion: 사랑
 date: 2022-09-17
 published: 2022-09-17T05:29:02.000Z
-comment:
+comment: 강물이 흐르고 계절이 바뀌듯 사랑도 자연스러운 일이라고 말한다. 성장통처럼 아플 때도 바다를 건너고 폭풍을 뚫겠다는 다짐이 뒤따른다.
 source: instagram
 source_tag: 
 source_note: 

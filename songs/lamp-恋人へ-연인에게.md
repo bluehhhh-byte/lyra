@@ -16,7 +16,7 @@ keywords: [계절, 풍경, 여름, 거리, 밤]
 emotion: 그리움
 date: 2022-09-17
 published: 2022-09-17T01:18:22.000Z
-comment:
+comment: 좋아하는 계절은 짧아서 모르는 사이 녹아 사라진다고 말한다. 변해가는 풍경 속에 홀로 서서 상대를 떠올리는 장면이 전부인 곡이다.
 source: instagram
 source_tag: 
 source_note: 

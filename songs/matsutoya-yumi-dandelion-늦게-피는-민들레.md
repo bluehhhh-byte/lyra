@@ -16,7 +16,7 @@ keywords: [민들레, 노을, 씨앗, 바람, 편지, 겨울]
 emotion: 위로
 date: 2022-09-19
 published: 2022-09-18T16:15:52.000Z
-comment:
+comment: 상처받은 날들을 운명이 준비한 레슨이라 부르며 상대를 민들레에 빗댄다. 바람에 실려 온 덧없는 씨앗 같은 사랑이 겨울을 넘어간다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

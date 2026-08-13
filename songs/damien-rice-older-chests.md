@@ -18,7 +18,7 @@ keywords: [수납장, 벽, 선반, 책, 시간]
 emotion: 위로
 date: 2022-09-17
 published: 2022-09-17T01:05:25.000Z
-comment:
+comment: 오래된 수납장이 벽에 생긴 금처럼 속을 드러낸다는 비유로 시작한다. 변하는 것과 그대로인 것을 나란히 두고 그저 시간을 달라고 말한다.
 source: instagram
 source_tag: 
 source_note: 

@@ -16,7 +16,7 @@ keywords: [벽, 눈물, 바늘, 실, 파랑, 마음]
 emotion: 그리움
 date: 2022-09-21
 published: 2022-09-21T14:29:15.000Z
-comment:
+comment: 타임머신은 오지 않는다는 사실을 노래로 되뇌는 곡이다. 바늘과 실로 마음을 이어 붙이려 하지만 나머지 한 쪽을 끝내 찾지 못한다.
 source: instagram
 source_tag: 
 source_note: 

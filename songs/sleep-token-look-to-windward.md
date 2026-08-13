@@ -7,7 +7,9 @@ album: Even In Arcadia
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/88cb1ee2758133c9dd4514deea199c0b/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/9/0/1a91060dc2431616fa359bb5d0357716.mp3?hdnea=exp=1786559426~acl=/api/1/1/1/a/9/0/1a91060dc2431616fa359bb5d0357716.mp3*~data=user_id=0,application_id=42~hmac=3c97ff349847d421b4debc049f0ca7f5da76f4fe00d565490d7a2d34ab3180f0
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/look-to-windward/1800532611?i=1800532870&uo=4
+trackId: 1800532870
 duration: 466
 genre: Metal
 lang: en

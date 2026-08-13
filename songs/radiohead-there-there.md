@@ -3,12 +3,14 @@ title: There, There
 title_ko: 
 artist: Radiohead
 artist_ko:
-album: Hail To the Thief
+album: Hail to the Thief
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/d3d9e1f53d60c5d2c764b20870aab69e/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/b/a/5/0/ba53fb74b4a2d5a215d5273c8663038b.mp3?hdnea=exp=1786584394~acl=/api/1/1/b/a/5/0/ba53fb74b4a2d5a215d5273c8663038b.mp3*~data=user_id=0,application_id=42~hmac=3ad4a148651dac22c415bbdd195ba2ca6cabb399bb1ec8793279ba0d70bcc888
-trackId:
-duration: 323
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/there-there/1097863576?i=1097863832&uo=4
+trackId: 1097863832
+duration: 324
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]

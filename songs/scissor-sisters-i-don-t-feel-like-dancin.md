@@ -3,12 +3,14 @@ title: I Don't Feel Like Dancin'
 title_ko: 
 artist: Scissor Sisters
 artist_ko:
-album: I Don’t Feel Like Dancin’
+album: Ta-Dah
 year: 2009
 artwork: https://cdn-images.dzcdn.net/images/cover/5334799f2cf9fae5cb7ced93cca1c2f0/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/8/e/0/38e2dc8200469addaa388be33098e6c4.mp3?hdnea=exp=1786559423~acl=/api/1/1/3/8/e/0/38e2dc8200469addaa388be33098e6c4.mp3*~data=user_id=0,application_id=42~hmac=4d5e280dfe3b257c9729a85658cc8a6b170acf6cdb067cbb2a07619da31333a2
-trackId: 
-duration: 248
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/i-dont-feel-like-dancin/1443836075?i=1443836265&uo=4
+trackId: 1443836265
+duration: 288
 genre: Disco
 lang: en
 tags: [영미, Disco, 2009]

@@ -18,7 +18,7 @@ keywords: [바다, 향기, 기억, 시간, 손]
 emotion: 그리움
 date: 2022-09-20
 published: 2022-09-19T15:13:43.000Z
-comment:
+comment: 시간이 약이라는 말과 사랑은 사랑으로 잊는다는 말을 모두 거짓말이라 부른다. 부산 바다에서의 하루에 시간이 멈춘 채 굳어가는 그리움을 담는다.
 source: instagram
 source_tag: 
 source_note: 

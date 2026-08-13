@@ -7,8 +7,10 @@ album: Without You I'm Nothing
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/704fc1d3226cbe373dfd6c00345f16f9/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/2/a/0/52a9f53926c34057d594c120c4aa6115.mp3?hdnea=exp=1786584383~acl=/api/1/1/5/2/a/0/52a9f53926c34057d594c120c4aa6115.mp3*~data=user_id=0,application_id=42~hmac=9c6f7e5863c1aa086779040710da3d07fdf5af929fe0f5a2e4f5c5dcb2d6822e
-trackId:
-duration: 213
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/every-you-every-me/961067195?i=961067403&uo=4
+trackId: 961067403
+duration: 214
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]

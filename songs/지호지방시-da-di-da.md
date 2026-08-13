@@ -18,7 +18,7 @@ keywords: [전화, 카톡, 곁, 다짐]
 emotion: 사랑
 date: 2022-09-27
 published: 2022-09-26T21:24:07.000Z
-comment:
+comment: 사랑한다는 말과 곁을 지키겠다는 다짐만 남긴 짧은 곡이다. 필요하면 전화하고 카톡하라는 말이 되풀이된다.
 source: instagram
 source_tag: 
 source_note: 

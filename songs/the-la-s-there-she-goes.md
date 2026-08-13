@@ -7,7 +7,9 @@ album: The La's
 year: 1990
 artwork: https://cdn-images.dzcdn.net/images/cover/173dda41a54b7ab5872ba308c7013646/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/e/c/0/5ecadaac90c7a3e8d8925bad2a76cb71.mp3?hdnea=exp=1786584421~acl=/api/1/1/5/e/c/0/5ecadaac90c7a3e8d8925bad2a76cb71.mp3*~data=user_id=0,application_id=42~hmac=af71be1d1513c692038249a1173fc26df678bd358343da9f5eb282d3d731079f
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/there-she-goes/1444167004?i=1444167313&uo=4
+trackId: 1444167313
 duration: 162
 genre: Indie Rock
 lang: en

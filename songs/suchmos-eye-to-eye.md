@@ -3,12 +3,14 @@ title: Eye to Eye
 title_ko: 아이 투 아이
 artist: Suchmos
 artist_ko:
-album: Sunburst
+album: Sunburst - EP
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/7cd798608052d6f8cec940fadc500085/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/a/0/eda983749aaeae6c263945e2a232ef14.mp3?hdnea=exp=1786559433~acl=/api/1/1/e/d/a/0/eda983749aaeae6c263945e2a232ef14.mp3*~data=user_id=0,application_id=42~hmac=87324332a99f653a07febfd0415eb5101732384019d113a1c203a196c290a2fa
-trackId: 
-duration: 327
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/eye-to-eye/1814576975?i=1814576976&uo=4
+trackId: 1814576976
+duration: 328
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]

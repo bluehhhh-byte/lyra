@@ -7,8 +7,10 @@ album: In Rainbows
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/4/9/0/f498987d69eae84f80772b7c32c4e603.mp3?hdnea=exp=1786584395~acl=/api/1/1/f/4/9/0/f498987d69eae84f80772b7c32c4e603.mp3*~data=user_id=0,application_id=42~hmac=e4bed008075fd1bf3b9a849fc996e5aa4a1043806789c9f4bbfeed75acd8d98b
-trackId:
-duration: 279
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/videotape/1109714933?i=1109715479&uo=4
+trackId: 1109715479
+duration: 280
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
@@ -16,7 +18,7 @@ keywords: [천국, 비디오테이프, 악마, 문, 색깔]
 emotion: 체념
 date: 2022-10-03
 published: 2022-10-03T08:49:04.000Z
-comment:
+comment: In Rainbows의 마지막 곡으로, 천국의 문 앞에서 자신이 남긴 비디오테이프를 떠올린다. 얼굴을 마주하고는 못 할 작별을 녹화된 하루에 맡기며 오늘이 가장 완벽한 날이었다고 말한다.
 source: instagram
 source_tag: 
 source_note: 

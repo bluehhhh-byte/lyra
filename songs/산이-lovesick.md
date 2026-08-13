@@ -16,7 +16,7 @@ keywords: [병, 의사, 심장, 미소, 꿈, 눈물]
 emotion: 사랑
 date: 2022-10-01
 published: 2022-10-01T11:58:25.000Z
-comment:
+comment: 짝사랑을 병으로 놓고 의사와 주고받는 문답 형식으로 풀어낸 곡이다. 자고 나면 눈물과 함께 눈을 뜬다며 이 병이 불치냐고 묻는 대목이 중심이다.
 source: instagram
 source_tag: 
 source_note: 

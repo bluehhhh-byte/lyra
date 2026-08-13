@@ -7,7 +7,9 @@ album: ACCESS OK
 year: 2011
 artwork: https://cdn-images.dzcdn.net/images/cover/3b68f423c5c0071a2e01dde4d5be3862/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/b/4/0/1b4de6c02474465a577a1f26326e4b4c.mp3?hdnea=exp=1786584420~acl=/api/1/1/1/b/4/0/1b4de6c02474465a577a1f26326e4b4c.mp3*~data=user_id=0,application_id=42~hmac=1e8ddbc763575e5199ba9686d97ae64896ade3739b72aa9e34b2674eb46964f4
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/12-00/1416397990?i=1416398061&uo=4
+trackId: 1416398061
 duration: 258
 genre: Indie Rock
 lang: en

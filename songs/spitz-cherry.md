@@ -3,12 +3,14 @@ title: Cherry
 title_ko: 
 artist: Spitz
 artist_ko:
-album: Cycle Hit 1991-1997 Spitz Complete Single Collection
+album: Indigo Chiheisen
 year: 1996
 artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/f/6/0/6f6018c099de50b341404a22759ea19c.mp3?hdnea=exp=1786559428~acl=/api/1/1/6/f/6/0/6f6018c099de50b341404a22759ea19c.mp3*~data=user_id=0,application_id=42~hmac=5a3862be2d5d65caa7465e40cd9bc2d946718ec32abc60389359400e544342ae
-trackId: 
-duration: 261
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/cherry/1440746376?i=1440747285&uo=4
+trackId: 1440747285
+duration: 260
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1996]

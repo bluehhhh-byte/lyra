@@ -18,7 +18,7 @@ keywords: [밤, 대화, 아침, 카메라, 안개]
 emotion: 사랑
 date: 2022-09-17
 published: 2022-09-17T01:53:24.000Z
-comment:
+comment: 밤새 이야기를 나눈 사이가 어느새 삶의 일부가 되었다고 말하는 곡이다. 상대가 우울하면 무엇이든 하겠다는 다짐이 가벼운 리듬 위에 얹힌다.
 source: instagram
 source_tag: 
 source_note: 

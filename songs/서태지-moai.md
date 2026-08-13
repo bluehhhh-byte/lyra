@@ -18,7 +18,7 @@ keywords: [바다, 별빛, 파도, 어둠, 바람, 물결]
 emotion: 고독
 date: 2022-09-30
 published: 2022-09-30T09:58:11.000Z
-comment:
+comment: 이스터섬의 석상을 빌려 어둠 속에 홀로 선 감각을 그린다. 차가운 바닷속에 몸을 담근 채 성난 파도를 멍하니 바라보는 장면만 남는다.
 source: instagram
 source_tag: 
 source_note: 

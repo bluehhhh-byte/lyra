@@ -3,12 +3,14 @@ title: Pale Blue Eyes
 title_ko: 
 artist: The Velvet Underground
 artist_ko:
-album: The Velvet Underground (45th Anniversary)
+album: The Velvet Underground
 year: 1969
 artwork: https://cdn-images.dzcdn.net/images/cover/b8438109e927f41cf792f84503f15983/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/d/a/0/0da7949b8c05b6dc6584580957b7ec52.mp3?hdnea=exp=1786559442~acl=/api/1/1/0/d/a/0/0da7949b8c05b6dc6584580957b7ec52.mp3*~data=user_id=0,application_id=42~hmac=6269f3fd70fdaf48b44916c357f9e358e0c7b23e42948701cbf0377dc8cf4c05
-trackId: 
-duration: 338
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/pale-blue-eyes/1440814049?i=1440814573&uo=4
+trackId: 1440814573
+duration: 340
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 1969]

@@ -7,7 +7,9 @@ album: Highly Evolved
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/05569c3fcb4e498d04989115491e4ebc/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/1/3/0/713e239a8d4089b33fe3006452cbbf2f.mp3?hdnea=exp=1786559443~acl=/api/1/1/7/1/3/0/713e239a8d4089b33fe3006452cbbf2f.mp3*~data=user_id=0,application_id=42~hmac=7fff3ba23858ac9ffef79ebd64fe239740f8e2c239948426a46919d95f09617c
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/country-yard/724725293?i=724725590&uo=4
+trackId: 724725590
 duration: 226
 genre: Indie Rock
 lang: en

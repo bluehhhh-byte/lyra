@@ -18,7 +18,7 @@ keywords: [바다, 파도, 욕망, 환상, 태양]
 emotion: 체념
 date: 2022-09-17
 published: 2022-09-17T04:26:16.000Z
-comment:
+comment: 사랑도 욕망도 바다 끝에서 파도처럼 부서져 환상이 된다면, 하고 가정하는 짧은 곡이다. 지금 나를 불태워 달라고 태양에 청하는 말로 끝난다.
 source: instagram
 source_tag: 
 source_note: 

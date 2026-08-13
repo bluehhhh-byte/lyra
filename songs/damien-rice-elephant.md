@@ -18,7 +18,7 @@ keywords: [코끼리, 방, 침묵, 무게, 거짓말]
 emotion: 체념
 date: 2022-09-22
 published: 2022-09-22T14:33:07.000Z
-comment:
+comment: 방 안의 코끼리처럼 모두 알면서 말하지 않는 것을 두고 이제 그만해야 한다고 되뇐다. 내려놓아야 한다는 말만 남긴 채 곡이 끝난다.
 source: instagram
 source_tag: 
 source_note: 

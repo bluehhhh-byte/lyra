@@ -3,12 +3,14 @@ title: Michelle
 title_ko: 
 artist: The Beatles
 artist_ko:
-album: Michelle (Take 1)
+album: Rubber Soul
 year: 1965
 artwork: https://cdn-images.dzcdn.net/images/cover/e6b1f1fe4b354609ba357015a52c9921/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/b/1/1/0/b1147c38b162821a02b1ec27e43f5f73.mp3?hdnea=exp=1786559437~acl=/api/1/1/b/1/1/0/b1147c38b162821a02b1ec27e43f5f73.mp3*~data=user_id=0,application_id=42~hmac=931219ce8ec1f9ea8d892515e8ed5f4263dcd139738ebdd47ebc23b406a0a2c3
-trackId: 
-duration: 196
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/michelle/1441164359?i=1441164629&uo=4
+trackId: 1441164629
+duration: 162
 genre: Folk
 lang: en
 tags: [영미, Folk, 1965]

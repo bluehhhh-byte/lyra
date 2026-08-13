@@ -3,12 +3,14 @@ title: Going To A Town
 title_ko: Going To A Town
 artist: Rufus Wainwright
 artist_ko:
-album: Rufus Wainwright: Live from the Artists Den
+album: Release the Stars
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/055698d1f363d8c88f8b5d7908fdaec6/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd1d67df0a.mp3?hdnea=exp=1786559420~acl=/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd1d67df0a.mp3*~data=user_id=0,application_id=42~hmac=4f7933cfd8e12c042c23532ed5a756b1d1c3c92d3e54d3d60246804e4969b458
-trackId: 
-duration: 268
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/going-to-a-town/1445830616?i=1445830626&uo=4
+trackId: 1445830626
+duration: 245
 genre: Folk
 lang: en
 tags: [영미, Folk, 2007]
