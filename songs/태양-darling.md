@@ -3,12 +3,14 @@ title: DARLING
 title_ko: DARLING
 artist: 태양
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: WHITE NIGHT
+year: 2017
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ed/8f/34/ed8f3494-5cd2-5e67-0ba0-e9428649568f/TAEYANG_WHITENIGHT_COVER.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a5/b2/f4/a5b2f421-9ac1-4afb-baf7-8705ba979d88/mzaf_8929130176071736866.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/darling/1271987373?i=1271987376&uo=4
+trackId: 1271987376
+duration: 210
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul]

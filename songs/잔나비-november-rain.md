@@ -3,12 +3,14 @@ title: November Rain
 title_ko: November Rain
 artist: 잔나비
 artist_ko:
-album:
+album: November Rain - Single
 year: 2016
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/1e/f8/9c/1ef89c01-51a3-4ad1-62a7-32ba9de6793b/cover-_November_Rain_NEW.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ef/bf/10/efbf10ee-539e-5892-6016-56a2dd8e11f2/mzaf_891302359580451226.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/november-rain/1466696202?i=1466696203&uo=4
+trackId: 1466696203
+duration: 258
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2016]

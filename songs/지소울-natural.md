@@ -3,12 +3,14 @@ title: Natural
 title_ko: 
 artist: 지소울
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Natural - EP
+year: 2021
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/03/00/12/03001221-69a2-e543-219e-b7eb04a750b6/190296322792.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/99/c2/56/99c25676-114b-b8a3-92c4-b53dca5c1aed/mzaf_4260525412815488948.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/natural/1597724867?i=1597724870&uo=4
+trackId: 1597724870
+duration: 145
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul]

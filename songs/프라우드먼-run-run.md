@@ -3,12 +3,14 @@ title: RUN RUN
 title_ko: RUN RUN
 artist: 프라우드먼
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: RUN RUN - Single
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/d4/69/24/d4692456-13da-26e7-bdc7-1eaf1635bc07/cover_KM0016696_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/bf/e5/a1bfe53b-fbe5-1605-85f0-1e84eba5df50/mzaf_14668424234815508494.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/run-run/1661522417?i=1661522418&uo=4
+trackId: 1661522418
+duration: 168
 genre: Dance
 lang: ko
 tags: [한국, Dance]

@@ -3,12 +3,14 @@ title: Unpretty Tattoo
 title_ko: Unpretty Tattoo
 artist: 퓨어킴
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Bluetube 2020 - EP
+year: 2020
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f4/d9/b3/f4d9b3ba-9811-5569-c8b0-a1746bce3a88/8809712287073.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b4/d3/f2/b4d3f28c-e741-76d5-8563-f07d4905bea1/mzaf_7588877625201185517.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/unpretty-tattoo/1537358821?i=1537359127&uo=4
+trackId: 1537359127
+duration: 195
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop]

@@ -3,12 +3,14 @@ title: HUG
 title_ko: HUG
 artist: 이영지
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 쇼미더머니 11 Final
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e8/27/47/e82747fb-249b-0077-e17b-c4b806f81005/888272111057_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/80/87/6e/80876e9d-abd0-8369-b9d6-685f24d39411/mzaf_3492613395309376089.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/hug-feat-zion-t-wonstein/1661923162?i=1661923163&uo=4
+trackId: 1661923163
+duration: 237
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

@@ -3,12 +3,14 @@ title: I Believe
 title_ko: I Believe
 artist: 신승훈
 artist_ko:
-album:
+album: 8집
 year: 2001
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/9c/b4/db/mzi.oniwyoww.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0f/23/8a/0f238a9d-400b-19b9-5722-3756e96c9204/mzaf_4622175804804175794.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/i-believe/347425911?i=347426212&uo=4
+trackId: 347426212
+duration: 284
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2001]

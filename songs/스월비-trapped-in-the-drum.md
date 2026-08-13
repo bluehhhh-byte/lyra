@@ -3,12 +3,14 @@ title: Trapped in the Drum
 title_ko: Trapped in the Drum
 artist: 스월비
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Undercover Angel
+year: 2020
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5e/13/cf/5e13cf2b-70d0-9c19-894b-a9a1fd3f5126/cover_KM0021110_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/f5/37/b3f537f7-3f69-4bc6-7bd8-25b57da294fa/mzaf_1166490946370338340.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/trapped-in-the-drum-feat-justhis/1804642967?i=1804643004&uo=4
+trackId: 1804643004
+duration: 304
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

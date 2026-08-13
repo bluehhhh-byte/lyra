@@ -3,12 +3,14 @@ title: It's Over
 title_ko: It's Over
 artist: 에디킴
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 너 사용법 (Deluxe Edition)
+year: 2014
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/28/98/c2289884-a181-7bc7-4749-d4ee8884d50c/8804775056734.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/b9/1d/7cb91d3b-bd5d-a7cd-3927-b71399959ff2/mzaf_16456695411733446314.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/its-over/1788843548?i=1788843556&uo=4
+trackId: 1788843556
+duration: 279
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

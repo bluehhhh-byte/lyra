@@ -3,12 +3,14 @@ title: Beyond Myself
 title_ko: 
 artist: 예레미
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: The Very Best of Jeremy
+year: 2005
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/38/0e/36/mzi.jqtulpfc.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/52/93/db/5293db0f-0077-d16c-91d8-fa44741edda5/mzaf_17799113937342954402.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/beyond-myself/362060697?i=362060702&uo=4
+trackId: 362060702
+duration: 287
 genre: Heavy Metal
 lang: en
 tags: [한국, Heavy Metal]

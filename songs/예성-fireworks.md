@@ -3,12 +3,14 @@ title: Fireworks
 title_ko: Fireworks
 artist: 예성
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Beautiful Night - The 4th Mini Album
+year: 2021
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/0a/43/ac0a437f-c0e4-4aef-a36f-e728c99091fd/Cover_YESUNG.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/03/83/18/03831804-8082-8fa9-dcb8-12dce0b79e24/mzaf_1231332971461460400.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/fireworks/1565271053?i=1565271062&uo=4
+trackId: 1565271062
+duration: 215
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop]

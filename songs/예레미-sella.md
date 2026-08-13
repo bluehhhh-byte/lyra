@@ -3,12 +3,14 @@ title: Sella
 title_ko: Sella
 artist: 예레미
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: The Dawn of the Universe
+year: 2014
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/c4/b6/e8/c4b6e81b-1f37-a31e-c90c-9337a3159069/asset.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e3/53/c5/e353c5a7-c766-5fe9-0eb6-9b4e69dfb8aa/mzaf_5360419279052089155.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/sella/879996712?i=879996717&uo=4
+trackId: 879996717
+duration: 325
 genre: Heavy Metal
 lang: ko
 tags: [한국, Heavy Metal]

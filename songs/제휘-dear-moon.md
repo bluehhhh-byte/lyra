@@ -3,12 +3,14 @@ title: Dear Moon
 title_ko: Dear Moon
 artist: 제휘
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 나의 아저씨, Pt. 4 (Original Television Soundtrack) - Single
+year: 2018
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c0/54/f5/c054f549-e6eb-1a2f-c31e-5447365fa944/8809603541406_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/4e/5c/9c/4e5c9cc1-d49a-62a0-1c62-5d8eaaedd7ac/mzaf_8047609490038322393.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/dear-moon/1657299113?i=1657299116&uo=4
+trackId: 1657299116
+duration: 299
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop]

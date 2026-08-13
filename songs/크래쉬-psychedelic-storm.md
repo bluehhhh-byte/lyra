@@ -3,12 +3,14 @@ title: Psychedelic Storm
 title_ko: Psychedelic Storm
 artist: 크래쉬
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: The Massive Crush
+year: 2003
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/41/dd/3c/41dd3cab-6630-5acd-795f-2581a9f02fcf/8809500389507_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/91/0d/ce/910dce37-f6b9-e96f-26a5-24a267ad3ab9/mzaf_5261793805388061837.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/psychedelic-storm/1641454538?i=1641454545&uo=4
+trackId: 1641454545
+duration: 233
 genre: Metal
 lang: ko
 tags: [한국, Metal]

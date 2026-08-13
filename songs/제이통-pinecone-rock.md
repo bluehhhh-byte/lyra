@@ -3,12 +3,14 @@ title: Pinecone Rock
 title_ko: Pinecone Rock
 artist: 제이통
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Pinecone Rock (feat. Lowdown 30) - Single
+year: 2018
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c9/33/9c/c9339c86-516f-ff17-2199-4ab51a274891/8809856790729.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b4/54/23/b454230a-ad65-ca17-0393-6d00e7f32fd8/mzaf_5089115560570177694.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/pinecone-rock-feat-lowdown-30/1703526713?i=1703526714&uo=4
+trackId: 1703526714
+duration: 222
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

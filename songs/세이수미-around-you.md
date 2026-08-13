@@ -3,12 +3,14 @@ title: Around You
 title_ko: 
 artist: 세이수미
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: The Last Thing Left
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5b/02/bf/5b02bfe5-2563-2478-ee99-0f5565246e22/0016027948409.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/32/30/0a323012-9462-7e9b-8ec2-358a55c22476/mzaf_14654223506277886025.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/around-you/1613167403?i=1613167411&uo=4
+trackId: 1613167411
+duration: 223
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock]

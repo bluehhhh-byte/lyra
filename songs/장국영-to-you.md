@@ -3,12 +3,14 @@ title: To You
 title_ko: 
 artist: 장국영
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 最熱
+year: 1990
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/1c/c1/dc/1cc1dc83-5084-d39f-825a-ba72587ae081/00602527049793.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/fd/1a/46fd1a1e-eb19-d8a8-68d1-e4d8a13d509b/mzaf_10470331946309182878.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/to-you-%E8%8B%B1/1443373499?i=1443373897&uo=4
+trackId: 1443373897
+duration: 216
 genre: Ballad
 lang: en
 tags: [아시아, Ballad]

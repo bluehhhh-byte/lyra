@@ -3,12 +3,14 @@ title: Moai
 title_ko: Moai
 artist: 서태지
 artist_ko:
-album:
+album: Seotaiji 8th Atomos
 year: 2008
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/e5/cf/14/e5cf1457-6be7-2881-0e27-a83173714512/8809704420723_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/ac/19/39/ac19390b-5220-3da6-98a3-6fcbfd896fd2/mzaf_15568422485699113121.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/moai/1661247100?i=1661247104&uo=4
+trackId: 1661247104
+duration: 226
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2008]

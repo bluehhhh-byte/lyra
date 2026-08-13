@@ -13,9 +13,9 @@ trackId: 952639
 duration: 267
 genre: Dance
 lang: en
-tags: [Dance, 1998]
-keywords: []
-emotion:
+tags: [영미, Dance, 1998]
+keywords: [빛, 세상, 마음, 하루, 눈물]
+emotion: 위로
 date: 2023-04-14
 published: 2023-04-14T14:15:25.000Z
 comment:

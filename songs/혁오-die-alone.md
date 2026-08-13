@@ -3,12 +3,14 @@ title: Die Alone
 title_ko: Die Alone
 artist: 혁오
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 23
+year: 2017
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/20/de/43/20de43fe-733e-3734-cab9-7bd787411260/Cover_HYUKOH_23.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fe/d8/83/fed8839b-ccab-04a7-eebd-2d999c767368/mzaf_13136617518708363478.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/die-alone/1450778313?i=1450778321&uo=4
+trackId: 1450778321
+duration: 298
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock]

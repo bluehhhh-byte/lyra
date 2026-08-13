@@ -3,12 +3,14 @@ title: Ohio
 title_ko: 
 artist: 혁오
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 20 - EP
+year: 2014
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/21/d2/d3/21d2d3e3-ea98-140a-ef2d-33beeb06889f/dj.hbgytaml.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/50/79/2d/50792da3-0877-24a9-8529-0bd3ee9b4e3e/mzaf_18392784247449327509.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/ohio/1450779334?i=1450779337&uo=4
+trackId: 1450779337
+duration: 250
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock]

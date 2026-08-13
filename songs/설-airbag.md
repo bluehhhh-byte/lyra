@@ -3,12 +3,14 @@ title: Airbag
 title_ko: Airbag
 artist: 설
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Airbag - Single
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/14/b7/50/14b750a3-fc94-7644-3fdb-c2814d72b747/8809887708885.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/ba/8f/4dba8f5e-1463-a323-ec54-6dd6f8224b9a/mzaf_15653498342102523452.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/airbag/1708860371?i=1708860372&uo=4
+trackId: 1708860372
+duration: 353
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

@@ -3,12 +3,14 @@ title: Single
 title_ko: Single
 artist: 원슈타인
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Single - Single
+year: 2023
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a8/e7/11/a8e7116b-8e3a-bc9a-bcfb-a49499f91ef6/8809933191197.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/2e/56/dc/2e56dc3f-d00f-98ad-afaa-f476f7a7f2fa/mzaf_8330691717533370997.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/single/1698627060?i=1698627061&uo=4
+trackId: 1698627061
+duration: 165
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

@@ -3,12 +3,14 @@ title: You And Me
 title_ko: You And Me
 artist: 자우림
 artist_ko:
-album:
+album: Ashes to Ashes
 year: 2006
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f4/33/fb/f433fb96-e1d7-2037-98bc-148c0d26fe5b/Ashes_To_Ashes.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/39/e8/ff/39e8ffc1-cdbc-e07a-9646-39286ee32e29/mzaf_8785025824646291873.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/you-and-me/1486524085?i=1486524089&uo=4
+trackId: 1486524089
+duration: 206
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2006]

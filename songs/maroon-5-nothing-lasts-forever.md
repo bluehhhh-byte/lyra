@@ -11,9 +11,9 @@ preview_provider: itunes
 external_url: https://music.apple.com/us/album/nothing-lasts-forever/1440850452?i=1440850463&uo=4
 trackId: 1440850463
 duration: 188
-genre: Pop
+genre: R&B/Soul
 lang: en
-tags: [영미, Pop, 2007]
+tags: [영미, R&B/Soul, 2007]
 keywords: [침대, 벽, 추억, 영혼, 바닥]
 emotion: 이별
 date: 2023-04-14
