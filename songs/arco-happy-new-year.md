@@ -4,14 +4,14 @@ title_ko: 새해 복 많이 받아
 artist: Arco
 artist_ko:
 album: Restraint
-year: 
+year: 2004
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m02/d14/h21/s05.frbnnxua.tif/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6d/fd/12/6dfd1216-2d9b-e1ee-6564-622b200354db/mzaf_5809866772175683998.plus.aac.p.m4a
 trackId: 45255474
 duration: 219
 genre: Indie Pop
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, Indie Pop, 2004]
 keywords: [1월, 하늘, 공기]
 emotion: 희망
 date: 2024-01-01

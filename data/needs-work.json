@@ -1,117 +1,19 @@
 {
- "at": "2026-08-13T15:51:05.290Z",
+ "at": "2026-08-13T22:42:36.951Z",
  "total": {
   "songs": 768,
-  "songsNeedingWork": 30,
+  "songsNeedingWork": 13,
   "moviesNeedingWork": 16
  },
  "byNeed": {
-  "번역 없음 2줄": 1,
-  "번역 없음 1줄": 3,
-  "연도 없음": 11,
-  "가사 없음": 3,
-  "번역 없음 8줄": 1,
-  "키워드 근거 약함": 10,
-  "독음 없음 2줄": 1
+  "가사 없음": 2,
+  "번역 없음 1줄": 1,
+  "키워드 근거 약함": 8,
+  "독음 없음 2줄": 1,
+  "연도 없음": 1
  },
  "songBatches": [
   [
-   {
-    "id": "sokodomo-lol",
-    "kind": "song",
-    "title": "LOL",
-    "artist": "sokodomo",
-    "lang": "en",
-    "year": "2020",
-    "needs": [
-     "번역 없음 2줄"
-    ],
-    "counts": {
-     "translation": 2,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "the-vines-country-yard",
-    "kind": "song",
-    "title": "Country Yard",
-    "artist": "The Vines",
-    "lang": "en",
-    "year": "2002",
-    "needs": [
-     "번역 없음 1줄"
-    ],
-    "counts": {
-     "translation": 1,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "yoko-kanno-blue",
-    "kind": "song",
-    "title": "Blue",
-    "artist": "Yoko Kanno",
-    "lang": "en",
-    "year": "2001",
-    "needs": [
-     "번역 없음 1줄"
-    ],
-    "counts": {
-     "translation": 1,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "arco-happy-new-year",
-    "kind": "song",
-    "title": "Happy New Year",
-    "artist": "Arco",
-    "lang": "en",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
    {
     "id": "르세라핌-이브-프시케-그리고-푸른-수염의-아내",
     "kind": "song",
@@ -161,54 +63,6 @@
     }
    },
    {
-    "id": "daft-punk-da-funk",
-    "kind": "song",
-    "title": "Da Funk",
-    "artist": "Daft Punk",
-    "lang": "ko",
-    "year": "1995",
-    "needs": [
-     "가사 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 1
-    }
-   },
-   {
-    "id": "nirvana-lithium",
-    "kind": "song",
-    "title": "Lithium",
-    "artist": "Nirvana",
-    "lang": "en",
-    "year": "1991",
-    "needs": [
-     "번역 없음 8줄"
-    ],
-    "counts": {
-     "translation": 8,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "hoobastank-the-reason",
     "kind": "song",
     "title": "The Reason",
@@ -253,174 +107,6 @@
      "titleKo": 0,
      "artwork": 0,
      "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "a-r-t-슬픈-얼굴",
-    "kind": "song",
-    "title": "슬픈 얼굴",
-    "artist": "A.R.T",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "프리즘-모험아이",
-    "kind": "song",
-    "title": "모험아이",
-    "artist": "프리즘",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "공공구-산책",
-    "kind": "song",
-    "title": "산책",
-    "artist": "공공구",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "피터팬-컴플렉스-feliz-navidad",
-    "kind": "song",
-    "title": "Feliz Navidad",
-    "artist": "피터팬 컴플렉스",
-    "lang": "en",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "피터팬-컴플렉스-the-first-noel",
-    "kind": "song",
-    "title": "The First Noel",
-    "artist": "피터팬 컴플렉스",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "블랙넛-가가라이브",
-    "kind": "song",
-    "title": "가가라이브",
-    "artist": "블랙넛",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "mac-kidd-love",
-    "kind": "song",
-    "title": "LOVE",
-    "artist": "Mac Kidd",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
      "lyrics": 0
     }
    },
@@ -545,54 +231,6 @@
     }
    },
    {
-    "id": "다민이-dog-or-chick-2-0",
-    "kind": "song",
-    "title": "DOG OR CHICK 2.0",
-    "artist": "다민이",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "damien-rice-elephant",
-    "kind": "song",
-    "title": "Elephant",
-    "artist": "Damien Rice",
-    "lang": "en",
-    "year": "2006",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "백예린-지켜줄게",
     "kind": "song",
     "title": "지켜줄게",
@@ -641,60 +279,12 @@
     }
    },
    {
-    "id": "onishi-yukari-밤차",
-    "kind": "song",
-    "title": "밤차",
-    "artist": "Onishi Yukari",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "rufus-wainwright-sonnet-20",
     "kind": "song",
     "title": "Sonnet 20",
     "artist": "Rufus Wainwright",
     "lang": "en",
     "year": "2010",
-    "needs": [
-     "키워드 근거 약함"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "jeff-buckley-everybody-here-wants-you",
-    "kind": "song",
-    "title": "Everybody Here Wants You",
-    "artist": "Jeff Buckley",
-    "lang": "en",
-    "year": "1998",
     "needs": [
      "키워드 근거 약함"
     ],

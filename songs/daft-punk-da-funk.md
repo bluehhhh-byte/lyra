@@ -12,6 +12,7 @@ external_url: https://music.apple.com/us/album/da-funk/696884422?i=696885792&uo=
 trackId: 696885792
 duration: 329
 genre: House
+instrumental: true
 lang: ko
 tags: [유럽, House, 1995]
 keywords: [로봇, 기계, 거리, 밤, 춤]

@@ -7,7 +7,7 @@
 import fs from "fs";
 import { getAllSongs } from "../lib/songs.js";
 import { getAllMovies } from "../lib/movies.js";
-import { songNeeds, summarizeNeeds, isNoteLine } from "../lib/admin/needs.js";
+import { songNeeds, summarizeNeeds, isNoteLine, keywordsUngrounded } from "../lib/admin/needs.js";
 
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || `--${k}=${d}`).split("=")[1];
 const BATCH_SONG = Number(arg("batch", 30));   // 음악 30곡씩
@@ -18,14 +18,9 @@ const songs = getAllSongs();
 const rows = [];
 for (const s of songs) {
   const n = songNeeds(s);
-  // 가사에 실제로 나오지 않는 키워드가 대부분이면 근거가 약한 것으로 본다
-  const text = s.stanzas.flatMap((st) => st.lines).map((l) => `${l.en || ""} ${l.ko || ""}`).join(" ");
-  const kws = s.keywords || [];
-  const ungrounded = kws.length && kws.filter((k) => !text.includes(k)).length >= Math.ceil(kws.length * 0.6);
   const hasLyrics = s.stanzas.flatMap((st) => st.lines).some((l) => (l.en || "").trim() && !isNoteLine(l.en));
-
   const needs = summarizeNeeds(s);
-  if (ungrounded && hasLyrics) needs.push("키워드 근거 약함");
+  if (hasLyrics && keywordsUngrounded(s)) needs.push("키워드 근거 약함");
   if (!needs.length) continue;
   if (FIELD && !needs.some((t) => t.includes(FIELD))) continue;
   rows.push({

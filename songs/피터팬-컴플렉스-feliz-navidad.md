@@ -4,14 +4,14 @@ title_ko: 펠리스 나비다드
 artist: 피터팬 컴플렉스
 artist_ko:
 album: Happy Rock Christmas
-year: 
+year: 2006
 artwork: https://image.bugsm.co.kr/album/images/500/80230/8023068.jpg
 preview:
 trackId:
 duration:
 genre: Indie Rock
 lang: en
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2006]
 keywords: [성탄절, 새해, 인사, 마음]
 emotion: 기쁨
 date: 2022-12-24

@@ -4,14 +4,14 @@ title_ko: 슬픈 얼굴
 artist: A.R.T
 artist_ko:
 album: All Radio Television Debut
-year: 
+year: 1997
 artwork: https://image.bugsm.co.kr/album/images/500/52/5272.jpg
 preview:
 trackId:
 duration:
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 1997]
 keywords: [눈물, 손, 바람, 먼지, 여행, 어둠]
 emotion: 이별
 date: 2023-01-27

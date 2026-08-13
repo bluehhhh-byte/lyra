@@ -4,14 +4,14 @@ title_ko: The First Noel
 artist: 피터팬 컴플렉스
 artist_ko:
 album: Happy Rock Christmas
-year: 
+year: 2006
 artwork: https://image.bugsm.co.kr/album/images/500/80230/8023068.jpg
 preview:
 trackId:
 duration:
 genre: Indie Rock
 lang: ko
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2006]
 keywords: [별, 목자, 천사, 아기, 예물, 동방]
 emotion: 기쁨
 date: 2022-12-24
