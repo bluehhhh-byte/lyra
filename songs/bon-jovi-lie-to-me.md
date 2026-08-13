@@ -23,28 +23,34 @@ source_note:
 source_hash: 74f4c1f966dce377181084aee2ca3b4b0656264f
 ---
 Rumor has it that your daddy’s coming down
+> 소문엔 네 아버지가 이쪽으로 오고 계신다더라고
 he’s gonna pay the rent
->^2 소문엔 네 아버지가 이번 달 집세 내주신다며
+> 소문엔 네 아버지가 이번 달 집세 내주신다며
 Tell me baby, is this as good as this life is gonna get
 > 우리가 누릴 수 있는 게 고작 이 정도야
 It feels like there’s a stranger
+> 마치 낯선 누군가가 들어와 있는 기분이야
 whose standing in these shoes
->^2 요즘 내 모습이 내가 아닌 기분이야
+> 요즘 내 모습이 내가 아닌 기분이야
 But I know I can’t lose me, ‘cause then I’d be losing you
 > 근데 나를 잃으면 너도 잃는 거잖아
 
 I know I promised baby, I would be the one
+> 내가 오직 너만의 사람이 되겠다고 약속했던 건 기억해
 who would make our dreams come true
->^2 우리 꿈 이뤄주겠다고 약속했는데
+> 우리 꿈 이뤄주겠다고 약속했는데
 I ain’t too proud of all the struggles and
+> 그동안의 수많은 방황과 힘겨움이 자랑스럽진 않지만
 the hard times we’ve been through
->^2 우리가 겪은 고생들, 자랑스럽진 않아
+> 우리가 겪은 고생들, 자랑스럽진 않아
 When this cold world comes between us,
+> 이 차가운 세상이 우리 사이를 갈라놓으려 할 때
 please tell me you’ll be brave
->^2 세상이 우리 사이를 갈라도, 넌 제발 강해졌으면 해
+> 세상이 우리 사이를 갈라도, 넌 제발 강해졌으면 해
 ‘Cause I can’t realize the danger
+> 난 다가오는 위험조차 깨닫지 못하고 있으니까
 when forgiveness fades away
->^2 용서가 사라지면, 무슨 일이 날지도 몰라서
+> 용서가 사라지면, 무슨 일이 날지도 몰라서
 
 If you don’t love me, lie to me
 > 날 더 이상 사랑하지 않아도 그냥 거짓말해줘
@@ -56,17 +62,21 @@ Right now, if you don’t love me baby, lie to me
 > 지금 당장은 날 사랑하지 않아도 괜찮아, 거짓말해줘
 
 Pour another cup of coffee, babe
+> 커피 한 잔만 더 따라줘, 그대
 I got something to say to you
->^2 커피 한 잔만 더 줘 할 말 있어
+> 커피 한 잔만 더 줘 할 말 있어
 I ain’t got the winning ticket,
+> 내 손에 쥐어진 행운의 티켓 따위는 없지만
 not the one that’s gonna pull us through
->^2 우릴 살릴 비장의 무기 같은 건 나한텐 없어
+> 우릴 살릴 비장의 무기 같은 건 나한텐 없어
 No one said that it’d be easy,
+> 삶이 쉬울 거라고 말한 사람은 아무도 없었잖아
 let your old man take you home
->^2 인생이 쉽다 한 사람 없잖아, 네 아버지 데려가셔도 돼
+> 인생이 쉽다 한 사람 없잖아, 네 아버지 데려가셔도 돼
 But know that if you walk out on me,
+> 하지만 당신이 날 버리고 떠나버린다면, 이것만은 알아줘
 that darling, I’d be gone
->^2 근데 네가 떠나면 나도 진짜 무너질 거야
+> 근데 네가 떠나면 나도 진짜 무너질 거야
 
 If you don’t love me, lie to me
 > 사랑하지 않아도 그냥 거짓말해줘

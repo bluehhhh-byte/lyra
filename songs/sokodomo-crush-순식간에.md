@@ -36,7 +36,9 @@ source_hash: 8abfeae08ff6e73db781f12a2eab72c28ada4b59
 내게 몰아친 순간의 파도 위 물결
 > Ripples on the wave of the moment that crashed over me
 Baby You a Blur
+> 그대 모습이 잔상처럼 아른거려
 (자기야, 너는 흐릿하게 보여)
+> (Baby, you're all a blur)
 
 숨 쉴 틈도 없이 네게 빠져들었지
 > No room to even breathe — I fell right into you
@@ -68,27 +70,37 @@ Baby You a Blur
 > and the way you moved that instant, it—
 
 You got me feeling wavy
+> 너 때문에 맘이 출렁거리고 있어
 (너 때문에 내 마음이 출렁여)
+> (You've got my heart swaying)
 떨림은 발끝까지
 > The shiver runs down to my toes
 더 깊이 가볼까
 > Shall we go a little deeper?
 And then I realized
+> 그제야 문득 깨달은 거야
 (그리고 나서 깨달았어)
+> (And that's when I realized)
 
 사랑이란 건 푸른 줄만 알았지
 > I thought love only ever came in blue
 내게 보여줘 여러 색의 galaxy(우주)
 > Show me a galaxy of every color
 I’m in love baby
+> 내가 사랑에 빠졌다는 걸
 (나 사랑에 빠진 거야, 자기야)
+> (I'm deep in love, baby)
 거짓말 같아
 > It feels like a lie
 
 So, baby come here just a little bit
+> 그러니 이리 조금만 더 다가와봐
 (그러니까, 베이비, 여기 조금만 더 와줘)
+> (So come a little closer, babe)
 Whisper in your ear just a little bit
+> 네 귓가에 살며시 속삭여줄게
 (네 귀에 살짝 속삭이고 싶어)
+> (I just wanna whisper in your ear)
 
 숨 쉴 틈도 없이 네게 빠져들었지
 > No room to even breathe — I fell right into you

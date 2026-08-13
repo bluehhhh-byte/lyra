@@ -34,9 +34,11 @@ So come and hold me tight
 > (그러니 와서 날 꼭 안아줘)
 
 눈을 맞추고 네 소리를 들려줘
+> Look into my eyes and let me hear your voice
 짙은 향기 속
+> Amidst this deep fragrance
 I feel so drowned
->^3 (나는 완전히 빠져들었어)
+> (나는 완전히 빠져들었어)
 Oh girl, I know what you need
 > (오, 네가 뭘 원하는지 알아)
 > 조금 더 가까이 전율 속 거친 춤을 춰
@@ -68,9 +70,11 @@ Baby just give me the sign
 > 밤새 가득히 Repeat
 
 눈을 맞추고 네 소리를 들려줘
+> Look into my eyes and let me hear your voice
 짙은 향기 속 I feel so drowned
+> Amidst this deep fragrance, I feel so drowned
 Oh girl, I know what you need
->^3 조금 더 가까이 전율 속 거친 춤을 춰
+> 조금 더 가까이 전율 속 거친 춤을 춰
 Shall we dance
 > (우리 춤출까)
 
