@@ -978,6 +978,105 @@
    "sourceCommit": "27dd449",
    "status": "translated",
    "reviewedAt": "2026-08-13T00:11:43.655Z"
+  },
+  {
+   "slug": "paul-blanco-be-o-summer",
+   "batch": 6,
+   "originalLineCount": 78,
+   "addedTranslationCount": 61,
+   "skippedCount": 17,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.213Z"
+  },
+  {
+   "slug": "빈지노-always-awake",
+   "batch": 6,
+   "originalLineCount": 46,
+   "addedTranslationCount": 40,
+   "skippedCount": 6,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.217Z"
+  },
+  {
+   "slug": "god-0",
+   "batch": 6,
+   "originalLineCount": 36,
+   "addedTranslationCount": 36,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.219Z"
+  },
+  {
+   "slug": "m-c-the-max-마지막-내-숨소리",
+   "batch": 6,
+   "originalLineCount": 31,
+   "addedTranslationCount": 31,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.221Z"
+  },
+  {
+   "slug": "델리스파이스-고백",
+   "batch": 6,
+   "originalLineCount": 28,
+   "addedTranslationCount": 28,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.224Z"
+  },
+  {
+   "slug": "염따-더콰이엇",
+   "batch": 6,
+   "originalLineCount": 33,
+   "addedTranslationCount": 26,
+   "skippedCount": 7,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.226Z"
+  },
+  {
+   "slug": "이승열-비상",
+   "batch": 6,
+   "originalLineCount": 24,
+   "addedTranslationCount": 24,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.229Z"
+  },
+  {
+   "slug": "루시드폴-오-사랑",
+   "batch": 6,
+   "originalLineCount": 21,
+   "addedTranslationCount": 21,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.231Z"
+  },
+  {
+   "slug": "김경호-사랑-그-시린-아픔으로",
+   "batch": 6,
+   "originalLineCount": 20,
+   "addedTranslationCount": 20,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "be0b952",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:12:00.233Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
