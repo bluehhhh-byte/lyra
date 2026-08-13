@@ -34,6 +34,7 @@ Fist of grief
 Tarnished with saliva
 > 타액으로 더럽혀진
 耳障りな吐息
++ 미미자와리나 토이키
 > 듣기싫은 한숨
 
 Do not Obey

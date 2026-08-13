@@ -1,0 +1,1371 @@
+{
+ "at": "2026-08-13T15:46:54.737Z",
+ "total": {
+  "songs": 768,
+  "songsNeedingWork": 50,
+  "moviesNeedingWork": 16
+ },
+ "byNeed": {
+  "번역 없음 2줄": 1,
+  "번역 없음 1줄": 3,
+  "키워드 근거 약함": 30,
+  "연도 없음": 11,
+  "가사 없음": 3,
+  "번역 없음 8줄": 1,
+  "독음 없음 2줄": 1
+ },
+ "songBatches": [
+  [
+   {
+    "id": "sokodomo-lol",
+    "kind": "song",
+    "title": "LOL",
+    "artist": "sokodomo",
+    "lang": "en",
+    "year": "2020",
+    "needs": [
+     "번역 없음 2줄"
+    ],
+    "counts": {
+     "translation": 2,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "the-vines-country-yard",
+    "kind": "song",
+    "title": "Country Yard",
+    "artist": "The Vines",
+    "lang": "en",
+    "year": "2002",
+    "needs": [
+     "번역 없음 1줄"
+    ],
+    "counts": {
+     "translation": 1,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "muse-hate-this-and-i-ll-love-you",
+    "kind": "song",
+    "title": "Hate This And I'll Love You",
+    "artist": "Muse",
+    "lang": "en",
+    "year": "1999",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "yoko-kanno-blue",
+    "kind": "song",
+    "title": "Blue",
+    "artist": "Yoko Kanno",
+    "lang": "en",
+    "year": "2001",
+    "needs": [
+     "번역 없음 1줄"
+    ],
+    "counts": {
+     "translation": 1,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "arco-happy-new-year",
+    "kind": "song",
+    "title": "Happy New Year",
+    "artist": "Arco",
+    "lang": "en",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "mase-feel-so-good",
+    "kind": "song",
+    "title": "Feel So Good",
+    "artist": "Mase",
+    "lang": "en",
+    "year": "1997",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "puff-daddy-been-around-the-world",
+    "kind": "song",
+    "title": "Been Around The World",
+    "artist": "Puff Daddy",
+    "lang": "en",
+    "year": "1997",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "limp-bizkit-boiler",
+    "kind": "song",
+    "title": "Boiler",
+    "artist": "Limp Bizkit",
+    "lang": "en",
+    "year": "2000",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "x-japan-silent-jealousy",
+    "kind": "song",
+    "title": "JAPAN - Silent Jealousy",
+    "artist": "X",
+    "lang": "ja",
+    "year": "1991",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "르세라핌-이브-프시케-그리고-푸른-수염의-아내",
+    "kind": "song",
+    "title": "이브, 프시케 그리고 푸른 수염의 아내",
+    "artist": "르세라핌",
+    "lang": "ko",
+    "year": "2023",
+    "needs": [
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "원슈타인-single",
+    "kind": "song",
+    "title": "Single",
+    "artist": "원슈타인",
+    "lang": "ko",
+    "year": "2023",
+    "needs": [
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "daft-punk-da-funk",
+    "kind": "song",
+    "title": "Da Funk",
+    "artist": "Daft Punk",
+    "lang": "ko",
+    "year": "1995",
+    "needs": [
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "nirvana-lithium",
+    "kind": "song",
+    "title": "Lithium",
+    "artist": "Nirvana",
+    "lang": "en",
+    "year": "1991",
+    "needs": [
+     "번역 없음 8줄"
+    ],
+    "counts": {
+     "translation": 8,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "frank-ocean-pink-white",
+    "kind": "song",
+    "title": "Pink + White",
+    "artist": "Frank Ocean",
+    "lang": "en",
+    "year": "2016",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "madonna-nothing-really-matters",
+    "kind": "song",
+    "title": "Nothing Really Matters",
+    "artist": "Madonna",
+    "lang": "en",
+    "year": "1998",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "placebo-every-you-every-me",
+    "kind": "song",
+    "title": "Every You Every Me",
+    "artist": "Placebo",
+    "lang": "en",
+    "year": "1998",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "hoobastank-the-reason",
+    "kind": "song",
+    "title": "The Reason",
+    "artist": "Hoobastank",
+    "lang": "en",
+    "year": "2003",
+    "needs": [
+     "번역 없음 1줄"
+    ],
+    "counts": {
+     "translation": 1,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "ap-alchemy-no-one-likes-us",
+    "kind": "song",
+    "title": "No One Likes US",
+    "artist": "AP Alchemy",
+    "lang": "en",
+    "year": "2023",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "장국영-to-you",
+    "kind": "song",
+    "title": "To You",
+    "artist": "장국영",
+    "lang": "en",
+    "year": "1990",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "시나위-꽃잎",
+    "kind": "song",
+    "title": "꽃잎",
+    "artist": "시나위",
+    "lang": "ko",
+    "year": "1997",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "버즈-forever-love",
+    "kind": "song",
+    "title": "Forever Love",
+    "artist": "버즈",
+    "lang": "ko",
+    "year": "2015",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "barbar-gough-when-i-fall-in-love",
+    "kind": "song",
+    "title": "When I Fall In Love",
+    "artist": "Barbar Gough",
+    "lang": "en",
+    "year": "2013",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "a-r-t-슬픈-얼굴",
+    "kind": "song",
+    "title": "슬픈 얼굴",
+    "artist": "A.R.T",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "프리즘-모험아이",
+    "kind": "song",
+    "title": "모험아이",
+    "artist": "프리즘",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "keane-sovereign-light-cafe",
+    "kind": "song",
+    "title": "Sovereign Light Cafe",
+    "artist": "Keane",
+    "lang": "en",
+    "year": "2012",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "공공구-산책",
+    "kind": "song",
+    "title": "산책",
+    "artist": "공공구",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "petra-prayer",
+    "kind": "song",
+    "title": "Prayer",
+    "artist": "Petra",
+    "lang": "en",
+    "year": "1990",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "the-koxx-12-00",
+    "kind": "song",
+    "title": "12:00",
+    "artist": "THE KOXX",
+    "lang": "en",
+    "year": "2011",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "피터팬-컴플렉스-feliz-navidad",
+    "kind": "song",
+    "title": "Feliz Navidad",
+    "artist": "피터팬 컴플렉스",
+    "lang": "en",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "피터팬-컴플렉스-the-first-noel",
+    "kind": "song",
+    "title": "The First Noel",
+    "artist": "피터팬 컴플렉스",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   }
+  ],
+  [
+   {
+    "id": "블랙넛-가가라이브",
+    "kind": "song",
+    "title": "가가라이브",
+    "artist": "블랙넛",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "pet-shop-boys-yesterday-when-i-was-mad",
+    "kind": "song",
+    "title": "Yesterday When I Was Mad",
+    "artist": "Pet Shop Boys",
+    "lang": "en",
+    "year": "1993",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "mac-kidd-love",
+    "kind": "song",
+    "title": "LOVE",
+    "artist": "Mac Kidd",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "interpol-c-mere",
+    "kind": "song",
+    "title": "C'mere",
+    "artist": "Interpol",
+    "lang": "en",
+    "year": "2004",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "퓨어킴-unpretty-tattoo",
+    "kind": "song",
+    "title": "Unpretty Tattoo",
+    "artist": "퓨어킴",
+    "lang": "ko",
+    "year": "2020",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "kent-747",
+    "kind": "song",
+    "title": "747",
+    "artist": "Kent",
+    "lang": "en",
+    "year": "1997",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "gackt-再會-story-재회",
+    "kind": "song",
+    "title": "再會 ~Story~ 재회",
+    "artist": "Gackt",
+    "lang": "ja",
+    "year": "2000",
+    "needs": [
+     "독음 없음 2줄"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 2,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "레이지본-사랑하고-싶어",
+    "kind": "song",
+    "title": "사랑하고 싶어",
+    "artist": "레이지본",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "kendrick-lamar-alright",
+    "kind": "song",
+    "title": "Alright",
+    "artist": "Kendrick Lamar",
+    "lang": "en",
+    "year": "2015",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "다민이-dog-or-chick-2-0",
+    "kind": "song",
+    "title": "DOG OR CHICK 2.0",
+    "artist": "다민이",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "그림자-궁전-중화반응",
+    "kind": "song",
+    "title": "중화반응",
+    "artist": "그림자 궁전",
+    "lang": "ko",
+    "year": "2007",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "damien-rice-elephant",
+    "kind": "song",
+    "title": "Elephant",
+    "artist": "Damien Rice",
+    "lang": "en",
+    "year": "2006",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "백예린-지켜줄게",
+    "kind": "song",
+    "title": "지켜줄게",
+    "artist": "백예린",
+    "lang": "ko",
+    "year": "2019",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "제이통-미안",
+    "kind": "song",
+    "title": "미안",
+    "artist": "제이통",
+    "lang": "ko",
+    "year": "2020",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "onishi-yukari-밤차",
+    "kind": "song",
+    "title": "밤차",
+    "artist": "Onishi Yukari",
+    "lang": "ko",
+    "year": "",
+    "needs": [
+     "연도 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 1,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "rufus-wainwright-sonnet-20",
+    "kind": "song",
+    "title": "Sonnet 20",
+    "artist": "Rufus Wainwright",
+    "lang": "en",
+    "year": "2010",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "jeff-buckley-everybody-here-wants-you",
+    "kind": "song",
+    "title": "Everybody Here Wants You",
+    "artist": "Jeff Buckley",
+    "lang": "en",
+    "year": "1998",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "harry-styles-late-night-talking",
+    "kind": "song",
+    "title": "Late Night Talking",
+    "artist": "Harry Styles",
+    "lang": "en",
+    "year": "2022",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "lamp-恋人へ-연인에게",
+    "kind": "song",
+    "title": "恋人へ 연인에게",
+    "artist": "Lamp",
+    "lang": "ja",
+    "year": "2004",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "damien-rice-older-chests",
+    "kind": "song",
+    "title": "Older Chests",
+    "artist": "Damien Rice",
+    "lang": "en",
+    "year": "2002",
+    "needs": [
+     "키워드 근거 약함"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   }
+  ]
+ ],
+ "movieBatches": [
+  [
+   {
+    "id": "스파이더맨-브랜드-뉴-데이-2026",
+    "kind": "movie",
+    "title": "스파이더맨: 브랜드 뉴 데이",
+    "director": "데스틴 대니얼 크레턴",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "스완의-사랑-1984",
+    "kind": "movie",
+    "title": "스완의 사랑",
+    "director": "Volker Schlöndorff",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "펀치-드렁크-러브-2002",
+    "kind": "movie",
+    "title": "펀치 드렁크 러브",
+    "director": "폴 토마스 앤더슨",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "바닐라-스카이-2001",
+    "kind": "movie",
+    "title": "바닐라 스카이",
+    "director": "카메론 크로우",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "연인-1992",
+    "kind": "movie",
+    "title": "연인",
+    "director": "장자크 아르노",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "아비정전-1990",
+    "kind": "movie",
+    "title": "아비정전",
+    "director": "왕가위",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "항구의-니쿠코짱-2021",
+    "kind": "movie",
+    "title": "항구의 니쿠코짱!",
+    "director": "와타나베 아유무",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "영웅-2002",
+    "kind": "movie",
+    "title": "영웅",
+    "director": "장이머우",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "원더랜드-2024",
+    "kind": "movie",
+    "title": "원더랜드",
+    "director": "김태용",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "괴물-2023",
+    "kind": "movie",
+    "title": "괴물",
+    "director": "고레에다 히로카즈",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "악은-존재하지-않는다-2023",
+    "kind": "movie",
+    "title": "악은 존재하지 않는다",
+    "director": "하마구치 류스케",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "존-오브-인터레스트-2023",
+    "kind": "movie",
+    "title": "존 오브 인터레스트",
+    "director": "조나단 글레이저",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "하이재킹-2024",
+    "kind": "movie",
+    "title": "하이재킹",
+    "director": "Kim Sung-han",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "룩백-2024",
+    "kind": "movie",
+    "title": "룩백",
+    "director": "오시야마 키요타카",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "해피엔드-2024",
+    "kind": "movie",
+    "title": "해피엔드",
+    "director": "소라 네오",
+    "needs": [
+     "줄거리 없음"
+    ]
+   },
+   {
+    "id": "신사장-프로젝트-2025",
+    "kind": "movie",
+    "title": "신사장 프로젝트",
+    "director": "Shin Kyung-soo",
+    "needs": [
+     "코멘트 없음"
+    ]
+   }
+  ]
+ ]
+}

@@ -80,7 +80,9 @@ for (const s of songs) {
   let oi = 0, tail = 0, fixed = 0;
   for (let bi = 0; bi < body.length; bi++) {
     const line = body[bi];
-    const derived = /^>/.test(line);
+    // 우리가 덧붙이는 줄: `>` 번역과 `+` 독음. 둘 다 원문에는 없던 것이고
+    // 원문 줄 사이에 끼워 넣기만 한다 — 원본 대조에서는 없는 셈 친다.
+    const derived = /^[>+]/.test(line);
     const bare = norm(line.replace(/^>(\^\d+)?\s?/, ""));
     // 근거가 기록된 '삭제'는 원본 줄을 건너뛴다 (가사가 아닌 줄을 뺀 경우)
     while (oi < original.length && approved.deleted.has(lineHash(original[oi].trim()))) { oi++; fixed++; }

@@ -741,6 +741,28 @@ ${listed}`,
     return Response.json({ field: field || "any", count: rows.length, total: songs.length, items: rows });
   }
 
+  // Gemini는 '무엇부터 손볼지' 고르는 데만 쓴다 — 원문 전체를 주지 않고
+  // 요약된 목록(제목·아티스트·부족 항목)만 넘긴다. 무료 티어 호출 한 번 분량이다.
+  if (action === "bulkPriority") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    const items = (Array.isArray(body.items) ? body.items : []).slice(0, 300);
+    if (!items.length) return Response.json({ error: "items가 비어 있습니다" }, { status: 422 });
+    const pick = Math.min(Number(body.pick) || 20, 60);
+    const lines = items
+      .map((it, i) => `${i + 1}. ${it.artist || ""} — ${it.title || ""} [${(it.needs || []).join(", ")}]`)
+      .join("\n");
+    const prompt =
+      `아래는 개인 음악 아카이브에서 메타데이터가 부족한 곡 목록이다. ` +
+      `이 중 먼저 손봐야 할 ${pick}곡의 번호만 고르라. ` +
+      `기준: 컬렉션에서 자주 보이는 아티스트, 대표곡, 부족한 항목이 많은 곡을 앞에 둔다. ` +
+      `설명 없이 번호만 쉼표로 출력한다.\n\n${lines}`;
+    const raw = await geminiText(prompt, key, GEMINI_LITE_MODEL);
+    const idx = String(raw || "").match(/\d+/g)?.map(Number) || [];
+    const chosen = [...new Set(idx)].filter((n) => n >= 1 && n <= items.length).slice(0, pick).map((n) => items[n - 1]);
+    return Response.json({ picked: chosen.length, items: chosen });
+  }
+
   // 밖에서 채워 온 결과를 검증하고 쓴다. 닫힌 어휘(감정·장르·국가)를 벗어난 값,
   // 4자리가 아닌 연도, https가 아닌 커버는 받지 않는다 — 대량 작업일수록
   // 잘못된 값 하나가 조용히 768곡에 섞인다.
