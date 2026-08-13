@@ -7,7 +7,9 @@ album: TEEN TROUBLES
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/1f57b42c78f64db752978fded1d5c123/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/3/6/0/0364baa36e3d3bdf17619368ce9586c5.mp3?hdnea=exp=1786584438~acl=/api/1/1/0/3/6/0/0364baa36e3d3bdf17619368ce9586c5.mp3*~data=user_id=0,application_id=42~hmac=59e48b94b914da9a4668bbe4c20434bc76e4d30dd1c8a245036d824ad084d7a8
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/flying-bobs/1644821406?i=1644821407&uo=4
+trackId: 1644821407
 duration: 243
 genre: Indie Rock
 lang: ko

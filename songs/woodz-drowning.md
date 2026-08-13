@@ -3,12 +3,14 @@ title: Drowning
 title_ko: Drowning
 artist: WOODZ
 artist_ko:
-album: Back to the Woodz
+album: OO-LI
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/599d4c15a3a0a30b0002e67a5c0b7efd/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/e/7/0/ae7e3719ab02f05f0ce3da39cdfa812d.mp3?hdnea=exp=1786559449~acl=/api/1/1/a/e/7/0/ae7e3719ab02f05f0ce3da39cdfa812d.mp3*~data=user_id=0,application_id=42~hmac=0f54c927b403c1172602b6ba44a18278327e7de85804691a2b11a146cc3bbfa4
-trackId: 
-duration: 134
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/drowning/1683448653?i=1683448656&uo=4
+trackId: 1683448656
+duration: 245
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2023]

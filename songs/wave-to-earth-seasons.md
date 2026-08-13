@@ -3,11 +3,13 @@ title: seasons
 title_ko: 
 artist: wave to earth
 artist_ko:
-album: summer flows 0.02
+album: summer flows 0.02 - EP
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/e7b1e6fc4bc81a5c04775d9587773d31/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/4/c/0/64c1b236371881bfb145fc395709c292.mp3?hdnea=exp=1786559448~acl=/api/1/1/6/4/c/0/64c1b236371881bfb145fc395709c292.mp3*~data=user_id=0,application_id=42~hmac=ab792d318ff335b4996f7e616d1f408b5b7437cf99d74c20fcfe0b69086e68fa
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/seasons/1781856626?i=1781856632&uo=4
+trackId: 1781856632
 duration: 256
 genre: Indie Rock
 lang: en

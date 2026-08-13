@@ -3,12 +3,14 @@ title: Take Two
 title_ko: Take Two
 artist: 서태지
 artist_ko:
-album: 
+album: Seotaiji V
 year: 1998
 artwork: https://dn710607.ca.archive.org/0/items/mbid-a4de2aa7-0105-4384-8f72-fa952168639a/mbid-a4de2aa7-0105-4384-8f72-fa952168639a-3630138829_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/38/e2/ba/38e2baea-03df-efae-b9de-8b1b4e822847/mzaf_17612947730837722024.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/take-two/1701402754?i=1701403015&uo=4
+trackId: 1701403015
+duration: 240
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 1998]
