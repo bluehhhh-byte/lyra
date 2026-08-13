@@ -70,5 +70,7 @@ And the reason is you
 > 그 이유는 바로 너야
 ​
 🗨 이 노래가 처음 나왔을 당시, 스쿨밴드를 처음 시작하며 한창 메탈음악에 빠져 있었기 때문에 이 노래를 부르는 밴드들을 엄청 별로라고 생각했었는데.. 십몇년 만에 다시 듣곤 생각을 바꿔먹게 되었다. 
+> 🗨 When this song first came out, I was deeply into metal music while just starting a school band, so I thought bands covering this song were totally lame... But listening to it again after over a decade, I completely changed my mind.
 
 🗨 어젯밤 넷플릭스를 보다가 <성난사람들(Beef)> EP1. 엔딩에 이 노래가 나오는데 어찌나 선곡이 죽이던지. 찌질한 복수를 한 스티븐 연이 웃으며 도망갈 때 중지를 들며 이 노래가 나오는데 가사가 역설적이면서도 주제를 관통하는 내용이더라. 세상에 나쁜 개는 없듯이 나쁜 노래도 없구나, 제 짝을 못 찾았을 뿐😂 반성합니다.. 비프 너무 재미있습니다 추천🔥👁️‍🗨️👍🏻
+> 🗨 Last night while watching Netflix's <BEEF>, this song played at the end of Episode 1, and man, what a killer choice. As Steven Yeun drives off laughing after getting his petty revenge, flipping the bird while this song plays, the lyrics felt ironically spot-on for the core theme. Just like there are no bad dogs, I guess there are no bad songs—they just haven't found their perfect match yet😂 Lesson learned.. BEEF is incredible, highly recommended🔥👁️‍🗨️👍🏻
