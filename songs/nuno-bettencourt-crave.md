@@ -7,7 +7,9 @@ album: Schizophonic
 year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/ad823313f2a5fcc6e27b00c69b93ff27/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/8/b/0/28b517598aa2d7f2d454db45bdba5fa3.mp3?hdnea=exp=1786559403~acl=/api/1/1/2/8/b/0/28b517598aa2d7f2d454db45bdba5fa3.mp3*~data=user_id=0,application_id=42~hmac=e8d2ff22fa1fb4d4f27491e8bc06a60033e77f2407f6c4515bb37020bf29fbcf
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/crave/1443491534?i=1443491694&uo=4
+trackId: 1443491694
 duration: 276
 genre: Hard Rock
 lang: en

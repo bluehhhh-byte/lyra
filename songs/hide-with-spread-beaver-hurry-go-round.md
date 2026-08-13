@@ -3,12 +3,14 @@ title: HURRY GO ROUND
 title_ko: 
 artist: hide with Spread Beaver
 artist_ko:
-album: Cogal
+album: We Love hide~The Best in The World~
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/c575b75525e4df47e14bb0ba39a9a8fb/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/4/7/0/d479d8faef4b025773f20dce92765566.mp3?hdnea=exp=1786584313~acl=/api/1/1/d/4/7/0/d479d8faef4b025773f20dce92765566.mp3*~data=user_id=0,application_id=42~hmac=2221b8222d02ff98ed8c7c943321fed4dc12f22a25d73af6222f55892fc9f55e
-trackId:
-duration: 300
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/hurry-go-round/1440666148?i=1440666589&uo=4
+trackId: 1440666589
+duration: 301
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1998]

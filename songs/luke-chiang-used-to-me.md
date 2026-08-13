@@ -3,12 +3,14 @@ title: Used To Me
 title_ko: 
 artist: Luke Chiang
 artist_ko:
-album: Used to Me
-year: 
+album: Used to Me - Single
+year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/d7178ef64c72c2fbc39bdab38d4d1a21/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/4/3/0/7433ff8389d9f3113cb6d7475cf28538.mp3?hdnea=exp=1786584343~acl=/api/1/1/7/4/3/0/7433ff8389d9f3113cb6d7475cf28538.mp3*~data=user_id=0,application_id=42~hmac=80967970782babed1a72c42074898e369161b90d4f75e49b0998e4bc123c68d8
-trackId:
-duration: 179
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/used-to-me/1645600089?i=1645600095&uo=4
+trackId: 1645600095
+duration: 180
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop]

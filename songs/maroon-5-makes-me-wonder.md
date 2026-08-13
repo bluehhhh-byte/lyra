@@ -3,11 +3,13 @@ title: Makes Me Wonder
 title_ko: 메이크스 미 원더
 artist: Maroon 5
 artist_ko:
-album: Singles
+album: Kids Driving Pac
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/c673f9397dd6eca59786537172af79df/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/b/9/0/1b9cd371d8e3018dad22f40d1a4fab19.mp3?hdnea=exp=1786559394~acl=/api/1/1/1/b/9/0/1b9cd371d8e3018dad22f40d1a4fab19.mp3*~data=user_id=0,application_id=42~hmac=1aa1906650ee0c76183c891e3dcb4c5ef72774e3c05668464c8fe4de5e2317c7
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/makes-me-wonder/1442466106?i=1442466288&uo=4
+trackId: 1442466288
 duration: 211
 genre: Funk
 lang: en

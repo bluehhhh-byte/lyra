@@ -3,12 +3,14 @@ title: 마지막 내 숨소리
 title_ko: 마지막 내 숨소리
 artist: M.C The Max
 artist_ko:
-album: M.C The Max! Vol.1
+album: M.C THE MAX!, Vol. 1
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/8d97791f6121a2aafee5d2b51cd734f0/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/3/1/0/631e147331667f4a46075609353db4aa.mp3?hdnea=exp=1786559391~acl=/api/1/1/6/3/1/0/631e147331667f4a46075609353db4aa.mp3*~data=user_id=0,application_id=42~hmac=23c24b5221201c4a8b80b211d4c986da0ebf015db29f5ed883577d80ed3520f3
-trackId: 
-duration: 262
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%EB%A7%88%EC%A7%80%EB%A7%89-%EB%82%B4-%EC%88%A8%EC%86%8C%EB%A6%AC/1449537320?i=1449537324&uo=4
+trackId: 1449537324
+duration: 263
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2002]

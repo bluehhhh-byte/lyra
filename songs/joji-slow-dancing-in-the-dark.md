@@ -7,7 +7,9 @@ album: BALLADS 1
 year: 2018
 artwork: https://cdn-images.dzcdn.net/images/cover/63ff8d3ecdf658d156d34d40058442c1/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/f/7/0/0f79a8f7cde64b4b9afc92f624a19414.mp3?hdnea=exp=1786559387~acl=/api/1/1/0/f/7/0/0f79a8f7cde64b4b9afc92f624a19414.mp3*~data=user_id=0,application_id=42~hmac=691b62c7a31532fe06768e090742b180b6d22f1616e9b6e0ec4ca22b1e80efc8
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/slow-dancing-in-the-dark/1724896193?i=1724896195&uo=4
+trackId: 1724896195
 duration: 209
 genre: R&B/Soul
 lang: en

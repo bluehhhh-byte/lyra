@@ -3,12 +3,14 @@ title: Without Your Love
 title_ko: Without Your Love
 artist: JTL
 artist_ko:
-album: JTL The 1st Live Concert
-year: 
+album: Run Away
+year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/3/e/0/a3e9087d36ae9b09561a8ce226f457da.mp3?hdnea=exp=1786584325~acl=/api/1/1/a/3/e/0/a3e9087d36ae9b09561a8ce226f457da.mp3*~data=user_id=0,application_id=42~hmac=2f1df0c72453cd47bb5ab0e968713679abeb1ad694696e5b3eafae5c9d77eb39
-trackId:
-duration: 282
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/without-your-love/1454460914?i=1454460917&uo=4
+trackId: 1454460917
+duration: 254
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul]

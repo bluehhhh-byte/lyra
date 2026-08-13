@@ -3,12 +3,14 @@ title: Mull
 title_ko: Mull
 artist: Keith Ape
 artist_ko:
-album: Ape Into Space
-year: 
+album: Ape Into Space - EP
+year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/f2230b73c501ad3952c4cf36cf66b202/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/0/5/0/5055948bb186e9d4a74ca670b6246f0f.mp3?hdnea=exp=1786584331~acl=/api/1/1/5/0/5/0/5055948bb186e9d4a74ca670b6246f0f.mp3*~data=user_id=0,application_id=42~hmac=c9a3c4c3fe06b6a69961de28b21733e15968c00acb4ab57b41af76c58a1e3754
-trackId:
-duration: 178
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/mull/1652529469?i=1652529470&uo=4
+trackId: 1652529470
+duration: 179
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

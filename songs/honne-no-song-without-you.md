@@ -3,12 +3,14 @@ title: no song without you
 title_ko: 
 artist: HONNE
 artist_ko:
-album: 
+album: no song without you
 year: 2020
 artwork: https://ia800509.us.archive.org/35/items/mbid-a60effe3-80d2-48a7-9b2b-27dcc0254a98/mbid-a60effe3-80d2-48a7-9b2b-27dcc0254a98-36627127944_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/29/11/df/2911dfc7-193f-01b9-d5d7-8b9d3aede42e/mzaf_5723270489116961763.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/no-song-without-you/1518053387?i=1518053389&uo=4
+trackId: 1518053389
+duration: 160
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2020]

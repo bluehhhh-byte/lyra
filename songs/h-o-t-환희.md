@@ -7,7 +7,9 @@ album: I yah! - The 4th Album
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/7571dd2689b70d3249c1042590f18f13/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/c/e/0/0cec64751b48ec91f2b2656e8705be87.mp3?hdnea=exp=1786584310~acl=/api/1/1/0/c/e/0/0cec64751b48ec91f2b2656e8705be87.mp3*~data=user_id=0,application_id=42~hmac=cf92020168f9ae410fe36e8482917964e3b33392effe0dad3b7b8d715bf23dcc
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%ED%99%98%ED%9D%AC/1060435162?i=1060435619&uo=4
+trackId: 1060435619
 duration: 260
 genre: K-Pop
 lang: ko

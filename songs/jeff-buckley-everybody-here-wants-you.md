@@ -3,12 +3,14 @@ title: Everybody Here Wants You
 title_ko: 
 artist: Jeff Buckley
 artist_ko:
-album: So Real: Songs from Jeff Buckley (Expanded Edition)
+album: Sketches for My Sweetheart the Drunk (Expanded Edition)
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/e312a454530da3adade0274820fedb46/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/5/0/79528d796a404bc7c2aa46f6337b1ac9.mp3?hdnea=exp=1786584324~acl=/api/1/1/7/9/5/0/79528d796a404bc7c2aa46f6337b1ac9.mp3*~data=user_id=0,application_id=42~hmac=699c3a3b90ec5f528fd239d5d2add3c1fb2482248bb81bf65a53e58d88fc0900
-trackId:
-duration: 285
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/everybody-here-wants-you/1476888879?i=1476888881&uo=4
+trackId: 1476888881
+duration: 287
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]

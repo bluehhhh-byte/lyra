@@ -7,7 +7,9 @@ album: Six
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/ffe1e2af8d722bbb7d738426f6c60599/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/1/7/0/f17dc322250ef9f9f9da64e9355042b1.mp3?hdnea=exp=1786584351~acl=/api/1/1/f/1/7/0/f17dc322250ef9f9f9da64e9355042b1.mp3*~data=user_id=0,application_id=42~hmac=dba7edf5a82774dc0393e4088995f5a5acc0300a84a82875d76df56f337cdc28
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/six/1770063407?i=1770063688&uo=4
+trackId: 1770063688
 duration: 487
 genre: Alternative Rock
 lang: en

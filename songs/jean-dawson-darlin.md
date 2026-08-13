@@ -7,8 +7,10 @@ album: Glimmer of God
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/36cac95669599584ae51962989f3dcc2/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/1/5/0/d15d04f2e6cb46f0ca68bb956a72184d.mp3?hdnea=exp=1786559386~acl=/api/1/1/d/1/5/0/d15d04f2e6cb46f0ca68bb956a72184d.mp3*~data=user_id=0,application_id=42~hmac=30141b5469380c5aefbf30ea71c0e9cac60b7ad697af1302da301728aeb9fd92
-trackId: 
-duration: 208
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/darlin/1773193822?i=1773193831&uo=4
+trackId: 1773193831
+duration: 209
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2024]

@@ -7,8 +7,10 @@ album: Kleptomania 1
 year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/4e0eb74fa4f14e138b6bddb18c570c48/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/9/f/0/d9f47bf953a6532b783baad2e1d7448b.mp3?hdnea=exp=1786584349~acl=/api/1/1/d/9/f/0/d9f47bf953a6532b783baad2e1d7448b.mp3*~data=user_id=0,application_id=42~hmac=399fdc14f2024caa7d11abb97371bfccd837d5c17d23e349d5fa16f924a08f24
-trackId:
-duration: 238
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/keep-telling-myself/1774524243?i=1774524458&uo=4
+trackId: 1774524458
+duration: 239
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]

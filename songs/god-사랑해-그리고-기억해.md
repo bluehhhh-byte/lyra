@@ -4,10 +4,12 @@ title_ko: 사랑해 그리고 기억해
 artist: god
 artist_ko:
 album: Chapter 2
-year: 
+year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/ff7eedd095d017734427b2a44db9f542/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/b/1/0/ab12057fd38ccfc39b0110edcab4ab8f.mp3?hdnea=exp=1786584308~acl=/api/1/1/a/b/1/0/ab12057fd38ccfc39b0110edcab4ab8f.mp3*~data=user_id=0,application_id=42~hmac=6e4ad3f3db61d7e2f099702a36194222d87027c1ccf3317562d85615c733c397
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%EC%82%AC%EB%9E%91%ED%95%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EA%B8%B0%EC%96%B5%ED%95%B4/1671478992?i=1671478994&uo=4
+trackId: 1671478994
 duration: 262
 genre: Ballad
 lang: ko

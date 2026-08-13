@@ -7,8 +7,10 @@ album: Harry's House
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/b0e936124f59e669ddba02ebe5893f95/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/2/b/0/e2b065b5086ac8ced8d6c10810dd130d.mp3?hdnea=exp=1786584311~acl=/api/1/1/e/2/b/0/e2b065b5086ac8ced8d6c10810dd130d.mp3*~data=user_id=0,application_id=42~hmac=d789458108e8776d90960e6221ef1ae0079ed11bc23c963cccafd4957df6e301
-trackId:
-duration: 177
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/late-night-talking/1615584999?i=1615585006&uo=4
+trackId: 1615585006
+duration: 178
 genre: Funk
 lang: en
 tags: [영미, Funk, 2022]

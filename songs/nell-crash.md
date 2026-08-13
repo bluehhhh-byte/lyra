@@ -3,12 +3,14 @@ title: Crash
 title_ko: Crash
 artist: NELL
 artist_ko:
-album: Evil Minded : Halloween Edition
+album: Crash - Single
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/b11795c9225c243255ba3ea95a116787/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/3/4/0/93405d7c5e0e816790bcfbd9d1f801d4.mp3?hdnea=exp=1786559400~acl=/api/1/1/9/3/4/0/93405d7c5e0e816790bcfbd9d1f801d4.mp3*~data=user_id=0,application_id=42~hmac=c1a2ea17c0be01765b0aecc098a8bf3d05d87046d56da31772baf5bddf9b0bce
-trackId: 
-duration: 167
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/crash/1714221606?i=1714221607&uo=4
+trackId: 1714221607
+duration: 235
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2021]

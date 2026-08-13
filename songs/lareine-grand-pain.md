@@ -4,10 +4,12 @@ title_ko:
 artist: LAREINE
 artist_ko:
 album: SCREAM
-year: 
+year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/a75f1e10b9703e60373e1b9e1de66829/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/9/c/0/89c5792aded0edd74b358b41f061f5a9.mp3?hdnea=exp=1786584337~acl=/api/1/1/8/9/c/0/89c5792aded0edd74b358b41f061f5a9.mp3*~data=user_id=0,application_id=42~hmac=577a2fd230790e721636344f51cfdb73e0bd84be7e0d75e9b363f1cf5effd3c6
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/grand-pain/588640763?i=588640809&uo=4
+trackId: 588640809
 duration: 425
 genre: Visual Kei
 lang: ja

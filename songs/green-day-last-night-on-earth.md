@@ -3,12 +3,14 @@ title: Last Night On Earth
 title_ko: 
 artist: Green Day
 artist_ko:
-album: Mellow Heavy Ballads
+album: 21st Century Breakdown
 year: 2009
 artwork: https://cdn-images.dzcdn.net/images/cover/be7c43ae2cc2cb08017de11813b7dd92/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee897b53259.mp3?hdnea=exp=1786559380~acl=/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee897b53259.mp3*~data=user_id=0,application_id=42~hmac=ab8955be1463fd6c6ec6678c2e043751b29e1391ee0036c55c721c8666e69a62
-trackId: 
-duration: 256
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/last-night-on-earth/346245355?i=346258077&uo=4
+trackId: 346258077
+duration: 237
 genre: Punk Rock
 lang: en
 tags: [영미, Punk Rock, 2009]

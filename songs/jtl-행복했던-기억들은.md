@@ -3,12 +3,14 @@ title: 행복했던 기억들은...
 title_ko: 행복했던 기억들은...
 artist: JTL
 artist_ko:
-album: JTL The 1st Live Concert
-year: 
+album: Love Story
+year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/f/2/0/0f2e9518f981480db4e43e55120ac80d.mp3?hdnea=exp=1786584326~acl=/api/1/1/0/f/2/0/0f2e9518f981480db4e43e55120ac80d.mp3*~data=user_id=0,application_id=42~hmac=c7a138b40da04a2f67231bdaf0a3f933ab8b4d6b688e76cd09c0ccf65afd5503
-trackId:
-duration: 353
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%ED%96%89%EB%B3%B5%ED%96%88%EB%8D%98-%EA%B8%B0%EC%96%B5%EB%93%A4%EC%9D%80/1454460171?i=1454460172&uo=4
+trackId: 1454460172
+duration: 253
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

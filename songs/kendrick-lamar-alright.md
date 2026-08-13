@@ -3,12 +3,14 @@ title: Alright
 title_ko: 
 artist: Kendrick Lamar
 artist_ko:
-album: Alright
+album: To Pimp a Butterfly
 year: 2015
 artwork: https://cdn-images.dzcdn.net/images/cover/5c163a572dc76597231aa942375dec89/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/4/0/0/3408fbe4a3ac1ac3f710510e65769f57.mp3?hdnea=exp=1786584332~acl=/api/1/1/3/4/0/0/3408fbe4a3ac1ac3f710510e65769f57.mp3*~data=user_id=0,application_id=42~hmac=d94490d7157c970212bbf51fad428efcea932a97d6a04251a46b05d9e38932cc
-trackId:
-duration: 194
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/alright/1440871877?i=1440871886&uo=4
+trackId: 1440871886
+duration: 219
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 2015]
