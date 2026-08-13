@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ee/
 trackId: 1483713075
 duration: 287
 lang: ja
-tags: [일본, Visual Kei, 2018]
+tags: [일본, Visual Kei, 1999]
 keywords: [사랑, 상처, 무구, 쾌감]
 emotion: 불안
 date: 2026-08-12
