@@ -42,9 +42,11 @@ source_hash: 50212817b23d0d6b2be888d67d6b4906d8dda4ee
 > And there's nothing I can do
 
 I guess I am
+> 결국 그렇게 되나 봐
 (아마 난 그런 걸까)
 > (Maybe that's what I am)
 I’m crashin’ into you
+> 너에게로 난 거침없이 부딪혀 가
 (너에게 부딪히고 있어)
 > (I'm crashing into you)
 
@@ -66,14 +68,18 @@ I’m crashin’ into you
 > And there's nothing I can do
 
 I guess I am
+> 결국 그렇게 되나 봐
 (아마 난 그럴 거야)
 > (I guess that's how I'll be)
 I’m crashin’ into you
+> 너에게로 난 거침없이 부딪혀 가
 (계속 너에게 부딪히고 있어)
 > (I keep crashing into you)
 Crash, crash, crash
+> 부딪히고, 깨어지고, 무너지며
 (쿵, 쿵, 쿵)
 > (Thud, thud, thud)
 I’m crashin’ into you
+> 너에게로 온몸을 던져 부딪혀 가
 (멈추지 않고 너에게 닿아가)
 > (Never stopping, reaching all the way to you)
