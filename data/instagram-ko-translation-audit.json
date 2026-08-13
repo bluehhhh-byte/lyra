@@ -1077,6 +1077,28 @@
    "sourceCommit": "be0b952",
    "status": "translated",
    "reviewedAt": "2026-08-13T00:12:00.233Z"
+  },
+  {
+   "slug": "서태지-take-two",
+   "batch": 13,
+   "originalLineCount": 1,
+   "addedTranslationCount": 2,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "a97e909",
+   "status": "topup",
+   "reviewedAt": "2026-08-13T00:13:01.424Z"
+  },
+  {
+   "slug": "기리보이-2000-90",
+   "batch": 13,
+   "originalLineCount": 1,
+   "addedTranslationCount": 1,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "a97e909",
+   "status": "topup",
+   "reviewedAt": "2026-08-13T00:13:01.431Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
