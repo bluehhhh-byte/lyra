@@ -1,6 +1,6 @@
 ---
 title: Virtual Insanity
-title_ko: 
+title_ko: 가상의 광기
 artist: Jamiroquai
 artist_ko:
 album: Travelling Without Moving (20th Anniversary Edition) [2016 Remaster]

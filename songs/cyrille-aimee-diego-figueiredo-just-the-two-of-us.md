@@ -1,6 +1,6 @@
 ---
 title: Just The Two Of Us
-title_ko: 
+title_ko: 우리 둘만
 artist: Cyrille Aimee , Diego Figueiredo
 artist_ko:
 album: Jazz Dictionary J

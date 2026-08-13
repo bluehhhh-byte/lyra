@@ -1,6 +1,6 @@
 ---
 title: Before I Forget
-title_ko: 
+title_ko: 잊기 전에
 artist: Slipknot
 artist_ko:
 album: Vol. 3 The Subliminal Verses

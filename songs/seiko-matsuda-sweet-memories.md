@@ -1,6 +1,6 @@
 ---
 title: Sweet Memories
-title_ko: 
+title_ko: 달콤한 추억
 artist: Seiko Matsuda
 artist_ko:
 album: Seiko Matsuda Sweet Days

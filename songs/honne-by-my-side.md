@@ -1,6 +1,6 @@
 ---
 title: by my side
-title_ko: 
+title_ko: 내 곁에
 artist: HONNE
 artist_ko:
 album: no song without you

@@ -1,6 +1,6 @@
 ---
 title: When I Fall In Love
-title_ko: 
+title_ko: 사랑에 빠질 때
 artist: Barbar Gough
 artist_ko:
 album: About Time

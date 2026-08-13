@@ -1,6 +1,6 @@
 ---
 title: Beyond Myself
-title_ko: 
+title_ko: 나를 넘어서
 artist: 예레미
 artist_ko:
 album: The Very Best of Jeremy

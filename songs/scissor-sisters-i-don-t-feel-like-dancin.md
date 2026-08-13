@@ -1,6 +1,6 @@
 ---
 title: I Don't Feel Like Dancin'
-title_ko: 
+title_ko: 춤추고 싶지 않아
 artist: Scissor Sisters
 artist_ko:
 album: Ta-Dah

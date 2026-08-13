@@ -1,6 +1,6 @@
 ---
 title: Cassiopeia Keiryuujo
-title_ko: 
+title_ko: 카시오페아 계류소
 artist: amazarashi
 artist_ko:
 album: Cassiopeia Keiryuujo - Single

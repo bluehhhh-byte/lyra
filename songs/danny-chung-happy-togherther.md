@@ -1,6 +1,6 @@
 ---
 title: Happy Togherther
-title_ko: 
+title_ko: 해피 투게더
 artist: Danny Chung
 artist_ko:
 album: 

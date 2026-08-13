@@ -1,6 +1,6 @@
 ---
 title: Dawn Chorus
-title_ko: 
+title_ko: 새벽의 합창
 artist: Thom Yorke
 artist_ko:
 album: ANIMA

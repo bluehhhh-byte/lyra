@@ -1,6 +1,6 @@
 ---
 title: Sisyphus
-title_ko: 
+title_ko: 시시포스
 artist: Andrew Bird
 artist_ko:
 album: My Finest Work Yet

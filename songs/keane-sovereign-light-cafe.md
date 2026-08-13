@@ -1,6 +1,6 @@
 ---
 title: Sovereign Light Cafe
-title_ko: 
+title_ko: 소버린 라이트 카페
 artist: Keane
 artist_ko:
 album:

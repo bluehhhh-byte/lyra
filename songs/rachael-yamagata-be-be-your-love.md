@@ -1,6 +1,6 @@
 ---
 title: Be Be Your Love
-title_ko: 
+title_ko: 네 사랑이 될게
 artist: Rachael Yamagata
 artist_ko:
 album: Happenstance (Deluxe Version)

@@ -1,6 +1,6 @@
 ---
 title: free love
-title_ko: 
+title_ko: 자유로운 사랑
 artist: HONNE
 artist_ko:
 album: no song without you

@@ -1,6 +1,6 @@
 ---
 title: Where Did You Sleep Last Night
-title_ko: 
+title_ko: 어젯밤 어디서 잤나
 artist: Nirvana
 artist_ko:
 album: 1993-12-31: Oakland-Alameda County Coliseum Arena, Oakland, CA, USA

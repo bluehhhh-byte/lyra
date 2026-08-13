@@ -1,6 +1,6 @@
 ---
 title: Hypocreep
-title_ko: 
+title_ko: 하이포크립
 artist: The Volunteers
 artist_ko:
 album: New Plant

@@ -1,6 +1,6 @@
 ---
 title: Feel So Good
-title_ko: 
+title_ko: 기분 참 좋아
 artist: Mase
 artist_ko:
 album: Harlem World

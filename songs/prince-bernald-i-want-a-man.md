@@ -1,6 +1,6 @@
 ---
 title: I Want A Man
-title_ko: 
+title_ko: 남자가 필요해
 artist: Prince Bernald
 artist_ko:
 album:

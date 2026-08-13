@@ -1,6 +1,6 @@
 ---
 title: The Massanger
-title_ko: 
+title_ko: 전령
 artist: LINKIN PARK
 artist_ko:
 album:

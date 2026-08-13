@@ -1,6 +1,6 @@
 ---
 title: Shangri-La
-title_ko: 
+title_ko: 샹그릴라
 artist: Denki Groove
 artist_ko:
 album: A

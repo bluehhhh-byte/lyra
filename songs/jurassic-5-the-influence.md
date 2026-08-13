@@ -1,6 +1,6 @@
 ---
 title: The Influence
-title_ko: 
+title_ko: 영향력
 artist: Jurassic 5
 artist_ko:
 album: Quality Control

@@ -1,6 +1,6 @@
 ---
 title: The Emptiness Machine
-title_ko: 
+title_ko: 공허의 기계
 artist: Linkin Park
 artist_ko:
 album: From Zero: A Cappellas + Instrumentals

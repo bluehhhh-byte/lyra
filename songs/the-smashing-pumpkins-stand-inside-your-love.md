@@ -1,6 +1,6 @@
 ---
 title: Stand Inside Your Love
-title_ko: 
+title_ko: 네 사랑 안에 서서
 artist: The Smashing Pumpkins
 artist_ko:
 album: Machina / The Machines Of God

@@ -1,6 +1,6 @@
 ---
 title: Winter's Review
-title_ko: 
+title_ko: 겨울의 회상
 artist: SHAZNA
 artist_ko:
 album: Winter's Review - EP

@@ -1,6 +1,6 @@
 ---
 title: Inhaler
-title_ko: 
+title_ko: 흡입기
 artist: Foals
 artist_ko:
 album: Holy Fire

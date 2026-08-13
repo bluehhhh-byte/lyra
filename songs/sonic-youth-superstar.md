@@ -1,6 +1,6 @@
 ---
 title: Superstar
-title_ko: 
+title_ko: 슈퍼스타
 artist: Sonic Youth
 artist_ko:
 album: If I Were a Carpenter

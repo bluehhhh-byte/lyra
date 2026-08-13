@@ -1,6 +1,6 @@
 ---
 title: Maybe One Day
-title_ko: 
+title_ko: 언젠가는
 artist: Mina Okabe
 artist_ko:
 album: Maybe One Day - Single

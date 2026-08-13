@@ -1,6 +1,6 @@
 ---
 title: These Days
-title_ko: 
+title_ko: 요즘
 artist: Orion Sun
 artist_ko:
 album: Orion

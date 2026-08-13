@@ -1,6 +1,6 @@
 ---
 title: Lost In Space
-title_ko: 
+title_ko: 우주 미아
 artist: Foster The People
 artist_ko:
 album: Paradise State of Mind

@@ -1,6 +1,6 @@
 ---
 title: seasons
-title_ko: 
+title_ko: 계절
 artist: wave to earth
 artist_ko:
 album: summer flows 0.02 - EP

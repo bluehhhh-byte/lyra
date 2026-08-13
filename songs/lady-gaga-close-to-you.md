@@ -1,6 +1,6 @@
 ---
 title: Close To You
-title_ko: 
+title_ko: 네 곁에
 artist: Lady Gaga
 artist_ko:
 album: Harlequin

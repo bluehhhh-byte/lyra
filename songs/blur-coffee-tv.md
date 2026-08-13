@@ -1,6 +1,6 @@
 ---
 title: Coffee & TV
-title_ko: 
+title_ko: 커피와 TV
 artist: Blur
 artist_ko:
 album: 13 (Special Edition)

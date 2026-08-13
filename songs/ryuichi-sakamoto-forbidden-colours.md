@@ -1,6 +1,6 @@
 ---
 title: Forbidden Colours
-title_ko: 
+title_ko: 금지된 색채
 artist: Ryuichi Sakamoto
 artist_ko:
 album: A Victim of Stars 1982-2012

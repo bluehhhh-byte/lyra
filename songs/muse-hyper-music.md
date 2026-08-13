@@ -1,6 +1,6 @@
 ---
 title: Hyper Music
-title_ko: 
+title_ko: 하이퍼 뮤직
 artist: Muse
 artist_ko:
 album: Origin of Symmetry

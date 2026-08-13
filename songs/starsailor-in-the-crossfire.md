@@ -1,6 +1,6 @@
 ---
 title: In The Crossfire
-title_ko: 
+title_ko: 십자포화 속에서
 artist: Starsailor
 artist_ko:
 album: On the Outside (Bonus Track Version)

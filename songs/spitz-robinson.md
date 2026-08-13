@@ -1,6 +1,6 @@
 ---
 title: Robinson
-title_ko: 
+title_ko: 로빈슨
 artist: Spitz
 artist_ko:
 album: Hachimitsu

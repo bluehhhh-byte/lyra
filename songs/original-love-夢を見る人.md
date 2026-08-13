@@ -1,6 +1,6 @@
 ---
 title: 夢を見る人
-title_ko: 
+title_ko: 꿈꾸는 사람
 artist: Original Love
 artist_ko:
 album: 夢を見る人 - EP

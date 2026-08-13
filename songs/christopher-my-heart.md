@@ -1,6 +1,6 @@
 ---
 title: My Heart
-title_ko: 
+title_ko: 내 마음
 artist: Christopher
 artist_ko:
 album: Under the Surface

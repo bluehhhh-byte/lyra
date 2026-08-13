@@ -1,6 +1,6 @@
 ---
 title: Forgive Myself
-title_ko: 
+title_ko: 나를 용서해
 artist: Sam Smith
 artist_ko:
 album: Violets Are Blue - EP

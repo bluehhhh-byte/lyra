@@ -1,6 +1,6 @@
 ---
 title: Loving Is Easy
-title_ko: 
+title_ko: 사랑은 쉬워
 artist: Rex Orange County
 artist_ko:
 album: Loving is Easy

@@ -1,6 +1,6 @@
 ---
 title: What If
-title_ko: 
+title_ko: 만약에
 artist: Coldplay
 artist_ko:
 album: X&Y

@@ -1,6 +1,6 @@
 ---
 title: Greener
-title_ko: 
+title_ko: 더 푸르게
 artist: FKJ
 artist_ko:
 album: V I N C E N T

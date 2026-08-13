@@ -1,6 +1,6 @@
 ---
 title: Perth
-title_ko: 
+title_ko: 퍼스
 artist: Bon Iver
 artist_ko:
 album: Bon Iver, Bon Iver

@@ -1,6 +1,6 @@
 ---
 title: Blower's Daughter
-title_ko: 
+title_ko: 블로워의 딸
 artist: Damien Rice
 artist_ko:
 album: O

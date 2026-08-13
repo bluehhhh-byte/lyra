@@ -1,6 +1,6 @@
 ---
 title: Buriburi
-title_ko: 
+title_ko: 부리부리
 artist: Balming Tiger
 artist_ko:
 album: January Never Dies

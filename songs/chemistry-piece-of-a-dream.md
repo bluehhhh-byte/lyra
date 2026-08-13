@@ -1,6 +1,6 @@
 ---
 title: Piece Of A Dream
-title_ko: 
+title_ko: 꿈의 조각
 artist: CHEMISTRY
 artist_ko:
 album:

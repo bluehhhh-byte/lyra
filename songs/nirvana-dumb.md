@@ -1,6 +1,6 @@
 ---
 title: Dumb
-title_ko: 
+title_ko: 바보
 artist: Nirvana
 artist_ko:
 album: In Utero (20th Anniversary Edition)

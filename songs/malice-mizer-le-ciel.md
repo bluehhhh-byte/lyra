@@ -1,6 +1,6 @@
 ---
 title: Le ciel
-title_ko: 
+title_ko: 하늘
 artist: MALICE MIZER
 artist_ko:
 album: La Collection ”merveilles” –L’édition Limitée–

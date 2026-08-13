@@ -1,6 +1,6 @@
 ---
 title: Michelle
-title_ko: 
+title_ko: 미셸
 artist: The Beatles
 artist_ko:
 album: Rubber Soul

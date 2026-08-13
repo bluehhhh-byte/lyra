@@ -1,6 +1,6 @@
 ---
 title: Lately
-title_ko: 
+title_ko: 요즘
 artist: Skunk Anansie
 artist_ko:
 album: Post Orgasmic Chill

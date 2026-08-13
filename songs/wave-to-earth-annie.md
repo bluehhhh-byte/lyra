@@ -1,6 +1,6 @@
 ---
 title: annie.
-title_ko: 
+title_ko: 애니
 artist: wave to earth
 artist_ko:
 album: play with earth! 0.03 (Extended Version)

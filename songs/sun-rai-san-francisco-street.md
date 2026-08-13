@@ -1,6 +1,6 @@
 ---
 title: San Francisco Street
-title_ko: 
+title_ko: 샌프란시스코 거리
 artist: Sun Rai
 artist_ko:
 album: Pocket Music - EP

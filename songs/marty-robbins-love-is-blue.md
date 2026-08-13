@@ -1,6 +1,6 @@
 ---
 title: Love Is Blue
-title_ko: 
+title_ko: 사랑은 푸른빛
 artist: Marty Robbins
 artist_ko:
 album: By the Time I Get to Phoenix

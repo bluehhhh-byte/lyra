@@ -1,6 +1,6 @@
 ---
 title: 君に逢いたくて 그대를 만나고 싶어서
-title_ko: 
+title_ko: 그대를 만나고 싶어서
 artist: Gackt
 artist_ko:
 album: 君に逢いたくて

@@ -1,6 +1,6 @@
 ---
 title: Toking, Dozing
-title_ko: 
+title_ko: 피우고 졸고
 artist: Feng Suave
 artist_ko:
 album: Toking, Dozing - Single

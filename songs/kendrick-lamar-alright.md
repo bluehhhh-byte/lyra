@@ -1,6 +1,6 @@
 ---
 title: Alright
-title_ko: 
+title_ko: 괜찮아
 artist: Kendrick Lamar
 artist_ko:
 album: To Pimp a Butterfly

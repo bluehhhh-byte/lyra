@@ -1,6 +1,6 @@
 ---
 title: She-Wolf
-title_ko: 
+title_ko: 암늑대
 artist: Megadeth
 artist_ko:
 album: Cryptic Writings (Remastered)

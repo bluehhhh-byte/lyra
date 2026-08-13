@@ -1,6 +1,6 @@
 ---
 title: Stripper Vicar
-title_ko: 
+title_ko: 스트리퍼 목사
 artist: Mansun
 artist_ko:
 album: Attack of the Grey Lantern (Collector's Edition)

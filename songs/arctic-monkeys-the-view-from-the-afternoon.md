@@ -1,6 +1,6 @@
 ---
 title: The View From The Afternoon
-title_ko: 
+title_ko: 오후의 풍경
 artist: Arctic Monkeys
 artist_ko:
 album: Whatever People Say I Am, That's What I'm Not

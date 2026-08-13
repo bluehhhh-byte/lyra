@@ -1,6 +1,6 @@
 ---
 title: Timeline
-title_ko: 
+title_ko: 타임라인
 artist: hey, nothing
 artist_ko:
 album: Maine - EP

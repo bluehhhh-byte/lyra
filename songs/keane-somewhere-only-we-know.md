@@ -1,6 +1,6 @@
 ---
 title: Somewhere Only We Know
-title_ko: 
+title_ko: 우리만 아는 어딘가
 artist: Keane
 artist_ko:
 album: Somewhere Only We Know - EP

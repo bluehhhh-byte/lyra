@@ -1,6 +1,6 @@
 ---
 title: What Happens After You?
-title_ko: 
+title_ko: 너 다음엔 무엇이 올까
 artist: Weezer
 artist_ko:
 album: SZNZ: Autumn

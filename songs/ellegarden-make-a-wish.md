@@ -1,6 +1,6 @@
 ---
 title: Make A Wish
-title_ko: 
+title_ko: 소원을 빌어
 artist: Ellegarden
 artist_ko:
 album: Pepperoni Quattro

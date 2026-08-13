@@ -1,6 +1,6 @@
 ---
 title: Masterplan
-title_ko: 
+title_ko: 마스터플랜
 artist: Oasis
 artist_ko:
 album: (What's The Story) Morning Glory? [Deluxe Remastered Edition]

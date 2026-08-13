@@ -1,6 +1,6 @@
 ---
 title: 理由 이유
-title_ko: 
+title_ko: 이유
 artist: Dir en grey
 artist_ko:
 album:

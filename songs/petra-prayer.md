@@ -1,6 +1,6 @@
 ---
 title: Prayer
-title_ko: 
+title_ko: 기도
 artist: Petra
 artist_ko:
 album: Beyond Belief

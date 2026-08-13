@@ -1,6 +1,6 @@
 ---
 title: Regent's Park
-title_ko: 
+title_ko: 리젠트 파크
 artist: Bruno Major
 artist_ko:
 album: To Let A Good Thing Die

@@ -1,6 +1,6 @@
 ---
 title: What is Love?
-title_ko: 
+title_ko: 사랑이 뭐야
 artist: TWICE
 artist_ko:
 album: What is Love? - EP

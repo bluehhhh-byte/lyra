@@ -1,6 +1,6 @@
 ---
 title: 1685
-title_ko: 
+title_ko: 1685
 artist: Zedd, Muse
 artist_ko:
 album: Telos

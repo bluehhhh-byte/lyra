@@ -1,6 +1,6 @@
 ---
 title: no song without you
-title_ko: 
+title_ko: 너 없인 노래도 없어
 artist: HONNE
 artist_ko:
 album: no song without you

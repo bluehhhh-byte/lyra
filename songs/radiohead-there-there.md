@@ -1,6 +1,6 @@
 ---
 title: There, There
-title_ko: 
+title_ko: 괜찮아 괜찮아
 artist: Radiohead
 artist_ko:
 album: Hail to the Thief

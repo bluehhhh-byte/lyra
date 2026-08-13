@@ -1,6 +1,6 @@
 ---
 title: Keep Telling Myself
-title_ko: 
+title_ko: 스스로에게 되뇌어
 artist: Mansun
 artist_ko:
 album: Kleptomania 1

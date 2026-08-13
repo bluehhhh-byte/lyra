@@ -1,6 +1,6 @@
 ---
 title: Weird Fishes/ Arpeggi
-title_ko: 
+title_ko: 이상한 물고기 / 아르페지
 artist: Radiohead
 artist_ko:
 album: In Rainbows

@@ -1,6 +1,6 @@
 ---
 title: Try, Try, Try
-title_ko: 
+title_ko: 해보고 또 해봐
 artist: The Smashing Pumpkins
 artist_ko:
 album: Machina / The Machines Of God

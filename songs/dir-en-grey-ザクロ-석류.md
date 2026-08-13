@@ -1,6 +1,6 @@
 ---
 title: ザクロ 석류
-title_ko: 
+title_ko: 석류
 artist: Dir en grey
 artist_ko:
 album:

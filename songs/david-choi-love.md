@@ -1,6 +1,6 @@
 ---
 title: Love
-title_ko: 
+title_ko: 사랑
 artist: David Choi
 artist_ko:
 album: Only You

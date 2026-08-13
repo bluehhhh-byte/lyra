@@ -1,6 +1,6 @@
 ---
 title: 再會 ~Story~ 재회
-title_ko: 
+title_ko: 재회
 artist: Gackt
 artist_ko:
 album:

@@ -1,6 +1,6 @@
 ---
 title: 星が泳ぐ 별이 헤엄치다
-title_ko: 
+title_ko: 별이 헤엄치다
 artist: Macaroni Empitsu
 artist_ko:
 album:

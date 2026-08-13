@@ -1,6 +1,6 @@
 ---
 title: And We Go
-title_ko: 
+title_ko: 그리고 우리는 나아가
 artist: 성시경
 artist_ko:
 album: And We Go - Single

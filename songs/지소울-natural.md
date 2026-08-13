@@ -1,6 +1,6 @@
 ---
 title: Natural
-title_ko: 
+title_ko: 자연스럽게
 artist: 지소울
 artist_ko:
 album: Natural - EP

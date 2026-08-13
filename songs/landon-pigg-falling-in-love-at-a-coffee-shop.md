@@ -1,6 +1,6 @@
 ---
 title: Falling In Love At A Coffee Shop
-title_ko: 
+title_ko: 커피숍에서 사랑에 빠지다
 artist: Landon Pigg
 artist_ko:
 album: Falling In Love At a Coffee Shop - Single

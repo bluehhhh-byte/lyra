@@ -1,6 +1,6 @@
 ---
 title: New Rocket
-title_ko: 
+title_ko: 새 로켓
 artist: Full Flower Moon Band
 artist_ko:
 album: Death Or Hell - EP

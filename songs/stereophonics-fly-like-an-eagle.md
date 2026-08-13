@@ -1,6 +1,6 @@
 ---
 title: Fly Like An Eagle
-title_ko: 
+title_ko: 독수리처럼 날아
 artist: Stereophonics
 artist_ko:
 album: Kind (Deluxe)

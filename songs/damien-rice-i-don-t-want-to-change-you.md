@@ -1,6 +1,6 @@
 ---
 title: I Don't Want To Change You
-title_ko: 
+title_ko: 널 바꾸고 싶지 않아
 artist: Damien Rice
 artist_ko:
 album: My Favourite Faded Fantasy

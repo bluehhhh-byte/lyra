@@ -1,6 +1,6 @@
 ---
 title: Free Loop
-title_ko: 
+title_ko: 프리 루프
 artist: Daniel Powter
 artist_ko:
 album: Daniel Powter

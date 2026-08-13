@@ -1,6 +1,6 @@
 ---
 title: Nothing Lasts Forever
-title_ko: 
+title_ko: 영원한 건 없어
 artist: Maroon 5
 artist_ko:
 album: It Won't Be Soon Before Long

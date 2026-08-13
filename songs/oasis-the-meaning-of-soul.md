@@ -1,6 +1,6 @@
 ---
 title: The Meaning Of Soul
-title_ko: 
+title_ko: 영혼의 의미
 artist: Oasis
 artist_ko:
 album: Don't Believe the Truth

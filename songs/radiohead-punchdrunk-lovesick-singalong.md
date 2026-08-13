@@ -1,6 +1,6 @@
 ---
 title: Punchdrunk Lovesick Singalong
-title_ko: 
+title_ko: 몽롱한 상사병 노래
 artist: Radiohead
 artist_ko:
 album: My Iron Lung - EP

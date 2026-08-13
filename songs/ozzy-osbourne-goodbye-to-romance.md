@@ -1,6 +1,6 @@
 ---
 title: Goodbye To Romance
-title_ko: 
+title_ko: 로맨스여 안녕
 artist: Ozzy Osbourne
 artist_ko:
 album: Blizzard of Ozz (40th Anniversary Expanded Edition)

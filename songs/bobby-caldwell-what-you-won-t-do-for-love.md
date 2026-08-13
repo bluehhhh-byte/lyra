@@ -1,6 +1,6 @@
 ---
 title: What You Won't Do For Love
-title_ko: 
+title_ko: 사랑을 위해서라면
 artist: Bobby Caldwell
 artist_ko:
 album: What You Won't Do for Love

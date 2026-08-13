@@ -1,6 +1,6 @@
 ---
 title: golden hour
-title_ko: 
+title_ko: 골든 아워
 artist: JVKE
 artist_ko:
 album: this is what ____ feels like (Vol. 1-4)

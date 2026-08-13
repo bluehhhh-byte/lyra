@@ -1,6 +1,6 @@
 ---
 title: No One Likes US
-title_ko: 
+title_ko: 아무도 우릴 좋아하지 않아
 artist: AP Alchemy
 artist_ko:
 album:

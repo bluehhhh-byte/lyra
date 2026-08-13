@@ -1,6 +1,6 @@
 ---
 title: New World
-title_ko: 
+title_ko: 새로운 세계
 artist: L'Arc~en~Ciel
 artist_ko:
 album: AWAKE

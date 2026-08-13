@@ -1,6 +1,6 @@
 ---
 title: Distractions
-title_ko: 
+title_ko: 산만함
 artist: Zero 7
 artist_ko:
 album: Simple Things Special Edition

@@ -1,6 +1,6 @@
 ---
 title: Heat Waves
-title_ko: 
+title_ko: 아지랑이
 artist: Glass Animals
 artist_ko:
 album: Dreamland

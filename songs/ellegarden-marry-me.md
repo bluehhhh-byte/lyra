@@ -1,6 +1,6 @@
 ---
 title: Marry Me
-title_ko: 
+title_ko: 나와 결혼해줘
 artist: Ellegarden
 artist_ko:
 album: Figureheads Compilation

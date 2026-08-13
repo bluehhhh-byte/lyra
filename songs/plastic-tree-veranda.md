@@ -1,6 +1,6 @@
 ---
 title: Veranda.
-title_ko: 
+title_ko: 베란다
 artist: Plastic Tree
 artist_ko:
 album: Parade

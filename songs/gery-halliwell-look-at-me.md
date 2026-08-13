@@ -1,6 +1,6 @@
 ---
 title: Look At Me
-title_ko: 
+title_ko: 날 봐
 artist: Gery Halliwell
 artist_ko:
 album:

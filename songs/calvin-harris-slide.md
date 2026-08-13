@@ -1,6 +1,6 @@
 ---
 title: Slide
-title_ko: 
+title_ko: 미끄러지듯
 artist: Calvin Harris
 artist_ko:
 album: Ushuaïa Ibiza: Sept 12, 2025 (DJ Mix)

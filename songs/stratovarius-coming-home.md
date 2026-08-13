@@ -1,6 +1,6 @@
 ---
 title: Coming Home
-title_ko: 
+title_ko: 집으로 돌아가
 artist: Stratovarius
 artist_ko:
 album: Visions

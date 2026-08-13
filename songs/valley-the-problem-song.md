@@ -1,6 +1,6 @@
 ---
 title: The Problem Song
-title_ko: 
+title_ko: 문제의 노래
 artist: Valley
 artist_ko:
 album: The Problem Song - Single

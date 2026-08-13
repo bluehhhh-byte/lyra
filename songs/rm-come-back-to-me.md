@@ -1,6 +1,6 @@
 ---
 title: Come Back To Me
-title_ko: 
+title_ko: 내게 돌아와
 artist: RM
 artist_ko:
 album: Come back to me - Single

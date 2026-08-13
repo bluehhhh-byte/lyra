@@ -1,6 +1,6 @@
 ---
 title: Nothing Really Matters
-title_ko: 
+title_ko: 아무것도 중요하지 않아
 artist: Madonna
 artist_ko:
 album: Ray of Light

@@ -1,6 +1,6 @@
 ---
 title: Moon In Water
-title_ko: 
+title_ko: 물에 비친 달
 artist: 더 폴스
 artist_ko:
 album: Moon In Water - Single

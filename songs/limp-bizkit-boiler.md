@@ -1,6 +1,6 @@
 ---
 title: Boiler
-title_ko: 
+title_ko: 보일러
 artist: Limp Bizkit
 artist_ko:
 album: Chocolate Starfish And The Hot Dog Flavored Water

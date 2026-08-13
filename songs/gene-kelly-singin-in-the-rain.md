@@ -1,6 +1,6 @@
 ---
 title: Singin' In The Rain
-title_ko: 
+title_ko: 빗속에서 노래를
 artist: Gene Kelly
 artist_ko:
 album: Singin' in the Rain (Original Motion Picture Soundtrack)

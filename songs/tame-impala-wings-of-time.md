@@ -1,6 +1,6 @@
 ---
 title: Wings Of Time
-title_ko: 
+title_ko: 시간의 날개
 artist: Tame Impala
 artist_ko:
 album: Wings Of Time (From the Motion Picture Dungeons & Dragons: Honor Among Thieves) - Single

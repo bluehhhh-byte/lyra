@@ -1,6 +1,6 @@
 ---
 title: Normal People
-title_ko: 
+title_ko: 평범한 사람들
 artist: Joji
 artist_ko:
 album: Nectar

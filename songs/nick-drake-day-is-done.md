@@ -1,6 +1,6 @@
 ---
 title: Day Is Done
-title_ko: 
+title_ko: 하루가 저물고
 artist: Nick Drake
 artist_ko:
 album: Digital Box Set

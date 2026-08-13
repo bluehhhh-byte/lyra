@@ -1,6 +1,6 @@
 ---
 title: Call You Mine
-title_ko: 
+title_ko: 널 내 사람이라 부를게
 artist: Jeff Bernat
 artist_ko:
 album: The Gentleman Approach

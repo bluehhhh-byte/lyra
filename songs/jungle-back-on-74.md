@@ -1,6 +1,6 @@
 ---
 title: Back On 74
-title_ko: 
+title_ko: 74로 돌아가
 artist: Jungle
 artist_ko:
 album: Volcano

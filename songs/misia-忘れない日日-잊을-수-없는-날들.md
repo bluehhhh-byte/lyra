@@ -1,6 +1,6 @@
 ---
 title: 忘れない日日 잊을 수 없는 날들
-title_ko: 
+title_ko: 잊을 수 없는 날들
 artist: MISIA
 artist_ko:
 album:

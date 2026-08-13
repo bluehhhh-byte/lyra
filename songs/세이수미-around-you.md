@@ -1,6 +1,6 @@
 ---
 title: Around You
-title_ko: 
+title_ko: 네 곁에
 artist: 세이수미
 artist_ko:
 album: The Last Thing Left

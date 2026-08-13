@@ -1,6 +1,6 @@
 ---
 title: 腐海 썩은 바다
-title_ko: 
+title_ko: 썩은 바다
 artist: Dir en grey
 artist_ko:
 album:

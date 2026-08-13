@@ -1,6 +1,6 @@
 ---
 title: how deep?
-title_ko: 
+title_ko: 얼마나 깊이
 artist: Tai Verdes
 artist_ko:
 album: HDTV

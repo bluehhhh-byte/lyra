@@ -1,6 +1,6 @@
 ---
 title: Killer Car
-title_ko: 
+title_ko: 살인 자동차
 artist: Radiohead
 artist_ko:
 album: High & Dry / Planet Telex - EP

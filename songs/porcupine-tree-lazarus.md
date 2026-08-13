@@ -1,6 +1,6 @@
 ---
 title: Lazarus
-title_ko: 
+title_ko: 라자루스
 artist: Porcupine Tree
 artist_ko:
 album: Deadwing

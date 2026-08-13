@@ -1,6 +1,6 @@
 ---
 title: Darlin'
-title_ko: 
+title_ko: 달링
 artist: Jean Dawson
 artist_ko:
 album: Glimmer of God

@@ -1,6 +1,6 @@
 ---
 title: 12:00
-title_ko: 
+title_ko: 12:00
 artist: THE KOXX
 artist_ko:
 album: ACCESS OK

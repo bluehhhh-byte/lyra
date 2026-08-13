@@ -1,6 +1,6 @@
 ---
 title: Blue
-title_ko: 
+title_ko: 파랑
 artist: Yoko Kanno
 artist_ko:
 album: Blue feat. Maya

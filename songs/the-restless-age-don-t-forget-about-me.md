@@ -1,6 +1,6 @@
 ---
 title: Don't Forget About Me
-title_ko: 
+title_ko: 날 잊지 마
 artist: The Restless Age
 artist_ko:
 album: The Midnight Romance in Hagwon, Pt. 1 (Original Soundtrack) - Single

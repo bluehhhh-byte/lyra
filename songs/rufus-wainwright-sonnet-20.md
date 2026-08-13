@@ -1,6 +1,6 @@
 ---
 title: Sonnet 20
-title_ko: 
+title_ko: 소네트 20
 artist: Rufus Wainwright
 artist_ko:
 album: All Days Are Nights: Songs For Lulu (Expanded Edition)

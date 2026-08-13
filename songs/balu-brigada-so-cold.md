@@ -1,6 +1,6 @@
 ---
 title: So Cold
-title_ko: 
+title_ko: 너무 차가워
 artist: Balu Brigada
 artist_ko:
 album: Portal

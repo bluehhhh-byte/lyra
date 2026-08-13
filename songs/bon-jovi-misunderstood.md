@@ -1,6 +1,6 @@
 ---
 title: Misunderstood
-title_ko: 
+title_ko: 오해받은 사람
 artist: Bon Jovi
 artist_ko:
 album: Bounce

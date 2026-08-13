@@ -1,6 +1,6 @@
 ---
 title: Highway
-title_ko: 
+title_ko: 고속도로
 artist: Quruli
 artist_ko:
 album: Highway - Single

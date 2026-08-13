@@ -1,6 +1,6 @@
 ---
 title: Pink + White
-title_ko: 
+title_ko: 분홍과 흰색
 artist: Frank Ocean
 artist_ko:
 album: Blonde

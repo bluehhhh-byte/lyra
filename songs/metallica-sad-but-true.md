@@ -1,6 +1,6 @@
 ---
 title: Sad But True
-title_ko: 
+title_ko: 슬프지만 사실이야
 artist: Metallica
 artist_ko:
 album: Metallica (Deluxe Box Set)

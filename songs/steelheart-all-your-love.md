@@ -1,6 +1,6 @@
 ---
 title: All Your Love
-title_ko: 
+title_ko: 너의 모든 사랑
 artist: Steelheart
 artist_ko:
 album: Tangled In Reins

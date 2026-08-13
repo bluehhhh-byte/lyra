@@ -1,6 +1,6 @@
 ---
 title: Crush
-title_ko: 
+title_ko: 짝사랑
 artist: Lola Young
 artist_ko:
 album: This Wasn't Meant For You Anyway

@@ -1,6 +1,6 @@
 ---
 title: Remember
-title_ko: 
+title_ko: 기억해
 artist: KATIE
 artist_ko:
 album: Remember - Single

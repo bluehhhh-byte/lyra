@@ -1,6 +1,6 @@
 ---
 title: Last Flower
-title_ko: 
+title_ko: 마지막 꽃
 artist: Radiohead
 artist_ko:
 album:

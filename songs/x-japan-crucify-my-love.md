@@ -1,6 +1,6 @@
 ---
 title: JAPAN - Crucify My Love
-title_ko: 
+title_ko: 내 사랑을 못 박아
 artist: X
 artist_ko:
 album: DAHLIA

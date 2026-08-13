@@ -1,6 +1,6 @@
 ---
 title: Feliz Navidad
-title_ko: 
+title_ko: 펠리스 나비다드
 artist: 피터팬 컴플렉스
 artist_ko:
 album:

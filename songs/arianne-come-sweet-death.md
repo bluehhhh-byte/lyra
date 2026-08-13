@@ -1,6 +1,6 @@
 ---
 title: Come Sweet Death
-title_ko: 
+title_ko: 오라 달콤한 죽음이여
 artist: Arianne
 artist_ko:
 album: 

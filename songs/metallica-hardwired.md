@@ -1,6 +1,6 @@
 ---
 title: Hardwired
-title_ko: 
+title_ko: 각인된
 artist: Metallica
 artist_ko:
 album: Hardwired…To Self-Destruct

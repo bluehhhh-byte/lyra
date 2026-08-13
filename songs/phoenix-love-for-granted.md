@@ -1,6 +1,6 @@
 ---
 title: Love for Granted
-title_ko: 
+title_ko: 당연해진 사랑
 artist: Phoenix
 artist_ko:
 album: Alphabetical

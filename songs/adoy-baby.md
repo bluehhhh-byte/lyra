@@ -1,6 +1,6 @@
 ---
 title: Baby
-title_ko: 
+title_ko: 베이비
 artist: ADOY
 artist_ko:
 album: Baby - Single

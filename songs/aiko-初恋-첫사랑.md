@@ -1,6 +1,6 @@
 ---
 title: 初恋 첫사랑
-title_ko: 
+title_ko: 첫사랑
 artist: Aiko
 artist_ko:
 album:

@@ -1,6 +1,6 @@
 ---
 title: I'll Be Your Home Now
-title_ko: 
+title_ko: 이제 내가 네 집이 될게
 artist: Mac Ayres
 artist_ko:
 album: Comfortable Enough

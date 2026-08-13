@@ -1,6 +1,6 @@
 ---
 title: Tango
-title_ko: 
+title_ko: 탱고
 artist: Abir
 artist_ko:
 album: Mint - EP

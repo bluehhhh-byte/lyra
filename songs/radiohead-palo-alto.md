@@ -1,6 +1,6 @@
 ---
 title: Palo Alto
-title_ko: 
+title_ko: 팔로 알토
 artist: Radiohead
 artist_ko:
 album: No Surprises - Single

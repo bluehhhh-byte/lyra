@@ -1,6 +1,6 @@
 ---
 title: 1234
-title_ko: 
+title_ko: 1234
 artist: Feist
 artist_ko:
 album: The Reminder (Deluxe Version)

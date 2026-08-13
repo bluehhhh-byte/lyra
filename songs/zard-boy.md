@@ -1,6 +1,6 @@
 ---
 title: Boy
-title_ko: 
+title_ko: 소년
 artist: ZARD
 artist_ko:
 album: この愛に泳ぎ疲れても・Boy - Single

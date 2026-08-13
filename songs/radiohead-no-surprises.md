@@ -1,6 +1,6 @@
 ---
 title: No Surprises
-title_ko: 
+title_ko: 놀랄 일은 없어
 artist: Radiohead
 artist_ko:
 album: OK Computer

@@ -1,6 +1,6 @@
 ---
 title: Videotape
-title_ko: 
+title_ko: 비디오테이프
 artist: Radiohead
 artist_ko:
 album: In Rainbows

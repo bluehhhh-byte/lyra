@@ -1,6 +1,6 @@
 ---
 title: Golden
-title_ko: 
+title_ko: 황금빛
 artist: Barns Courtney
 artist_ko:
 album: Golden - Single

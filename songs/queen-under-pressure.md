@@ -1,6 +1,6 @@
 ---
 title: Under Pressure
-title_ko: 
+title_ko: 압박 속에서
 artist: Queen
 artist_ko:
 album: Hot Space (Deluxe Edition)

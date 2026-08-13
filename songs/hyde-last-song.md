@@ -1,6 +1,6 @@
 ---
 title: LAST SONG
-title_ko: 
+title_ko: 마지막 노래
 artist: HYDE
 artist_ko:
 album: HYDE [INSIDE]

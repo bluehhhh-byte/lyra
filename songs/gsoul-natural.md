@@ -1,6 +1,6 @@
 ---
 title: Natural
-title_ko: 
+title_ko: 자연스럽게
 artist: GSoul
 artist_ko:
 album: Natural - EP

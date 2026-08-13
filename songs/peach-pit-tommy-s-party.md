@@ -1,6 +1,6 @@
 ---
 title: Tommy's Party
-title_ko: 
+title_ko: 토미의 파티
 artist: Peach Pit
 artist_ko:
 album:

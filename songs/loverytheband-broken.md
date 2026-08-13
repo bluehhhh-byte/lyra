@@ -1,6 +1,6 @@
 ---
 title: Broken
-title_ko: 
+title_ko: 부서진
 artist: Loverytheband
 artist_ko:
 album: 

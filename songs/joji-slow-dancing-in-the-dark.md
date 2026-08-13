@@ -1,6 +1,6 @@
 ---
 title: Slow Dancing In The Dark
-title_ko: 
+title_ko: 어둠 속의 슬로우 댄스
 artist: Joji
 artist_ko:
 album: BALLADS 1

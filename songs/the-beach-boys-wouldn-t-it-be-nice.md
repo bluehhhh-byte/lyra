@@ -1,6 +1,6 @@
 ---
 title: Wouldn't It Be Nice
-title_ko: 
+title_ko: 좋지 않을까
 artist: The Beach Boys
 artist_ko:
 album: Greatest Hits

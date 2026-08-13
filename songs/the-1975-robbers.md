@@ -1,6 +1,6 @@
 ---
 title: Robbers
-title_ko: 
+title_ko: 도둑들
 artist: The 1975
 artist_ko:
 album: The 1975

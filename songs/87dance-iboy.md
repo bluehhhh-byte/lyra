@@ -1,6 +1,6 @@
 ---
 title: iBoy
-title_ko: 
+title_ko: 아이보이
 artist: 87dance
 artist_ko:
 album: Palchilldance - EP

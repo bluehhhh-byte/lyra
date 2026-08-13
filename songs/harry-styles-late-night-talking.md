@@ -1,6 +1,6 @@
 ---
 title: Late Night Talking
-title_ko: 
+title_ko: 늦은 밤의 대화
 artist: Harry Styles
 artist_ko:
 album: Harry's House

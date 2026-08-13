@@ -1,6 +1,6 @@
 ---
 title: Vickie
-title_ko: 
+title_ko: 비키
 artist: Peach Pit
 artist_ko:
 album: From 2 to 3

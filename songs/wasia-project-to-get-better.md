@@ -1,6 +1,6 @@
 ---
 title: To Get Better
-title_ko: 
+title_ko: 나아지기 위해
 artist: Wasia Project
 artist_ko:
 album: Isotope

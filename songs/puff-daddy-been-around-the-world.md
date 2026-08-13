@@ -1,6 +1,6 @@
 ---
 title: Been Around The World
-title_ko: 
+title_ko: 온 세상을 돌아다녔지
 artist: Puff Daddy
 artist_ko:
 album: No Way Out (Remastered Edition)

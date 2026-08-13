@@ -1,6 +1,6 @@
 ---
 title: Good Boy
-title_ko: 
+title_ko: 굿 보이
 artist: GD X TAEYANG
 artist_ko:
 album: GOOD BOY - Single

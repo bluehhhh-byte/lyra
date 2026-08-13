@@ -1,6 +1,6 @@
 ---
 title: 1979
-title_ko: 
+title_ko: 1979
 artist: The Smashing Pumpkins
 artist_ko:
 album: Mellon Collie and the Infinite Sadness (Deluxe Edition)

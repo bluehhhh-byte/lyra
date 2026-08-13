@@ -1,6 +1,6 @@
 ---
 title: Elephant
-title_ko: 
+title_ko: 코끼리
 artist: Damien Rice
 artist_ko:
 album: 9

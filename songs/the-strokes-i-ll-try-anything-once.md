@@ -1,6 +1,6 @@
 ---
 title: I'll Try Anything Once
-title_ko: 
+title_ko: 뭐든 한 번은 해볼래
 artist: The Strokes
 artist_ko:
 album: Racing Against Sunbeams

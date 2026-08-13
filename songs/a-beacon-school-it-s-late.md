@@ -1,6 +1,6 @@
 ---
 title: It's Late
-title_ko: 
+title_ko: 늦었어
 artist: A Beacon School
 artist_ko:
 album: Cola

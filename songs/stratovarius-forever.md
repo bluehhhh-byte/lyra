@@ -1,6 +1,6 @@
 ---
 title: Forever
-title_ko: 
+title_ko: 영원히
 artist: Stratovarius
 artist_ko:
 album: Episode

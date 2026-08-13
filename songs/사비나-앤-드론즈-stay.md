@@ -1,6 +1,6 @@
 ---
 title: Stay
-title_ko: 
+title_ko: 머물러줘
 artist: 사비나 앤 드론즈
 artist_ko:
 album:

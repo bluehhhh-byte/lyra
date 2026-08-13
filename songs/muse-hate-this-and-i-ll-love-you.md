@@ -1,6 +1,6 @@
 ---
 title: Hate This And I'll Love You
-title_ko: 
+title_ko: 이걸 미워해 그럼 널 사랑할게
 artist: Muse
 artist_ko:
 album: Showbiz

@@ -1,6 +1,6 @@
 ---
 title: Road Movie
-title_ko: 
+title_ko: 로드 무비
 artist: Takahashi Yu
 artist_ko:
 album: 

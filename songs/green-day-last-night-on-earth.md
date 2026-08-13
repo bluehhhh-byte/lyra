@@ -1,6 +1,6 @@
 ---
 title: Last Night On Earth
-title_ko: 
+title_ko: 지구에서의 마지막 밤
 artist: Green Day
 artist_ko:
 album: 21st Century Breakdown

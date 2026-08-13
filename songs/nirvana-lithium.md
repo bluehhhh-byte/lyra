@@ -1,6 +1,6 @@
 ---
 title: Lithium
-title_ko: 
+title_ko: 리튬
 artist: Nirvana
 artist_ko:
 album: Nevermind

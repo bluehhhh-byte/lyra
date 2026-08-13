@@ -1,6 +1,6 @@
 ---
 title: DIE 4 YOU
-title_ko: 
+title_ko: 널 위해 죽을게
 artist: DEAN
 artist_ko:
 album: DIE 4 YOU - Single

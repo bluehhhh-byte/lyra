@@ -1,6 +1,6 @@
 ---
 title: Head In The Clouds
-title_ko: 
+title_ko: 구름 속에 잠긴 머리
 artist: Hayd
 artist_ko:
 album: Changes - EP

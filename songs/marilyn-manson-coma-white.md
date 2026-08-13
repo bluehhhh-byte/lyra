@@ -1,6 +1,6 @@
 ---
 title: Coma White
-title_ko: 
+title_ko: 코마 화이트
 artist: Marilyn Manson
 artist_ko:
 album: Mechanical Animals

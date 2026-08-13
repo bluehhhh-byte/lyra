@@ -1,6 +1,6 @@
 ---
 title: Pale Blue Eyes
-title_ko: 
+title_ko: 창백한 푸른 눈
 artist: The Velvet Underground
 artist_ko:
 album: The Velvet Underground

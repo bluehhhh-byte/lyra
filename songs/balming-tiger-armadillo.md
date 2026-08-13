@@ -1,6 +1,6 @@
 ---
 title: Armadillo
-title_ko: 
+title_ko: 아르마딜로
 artist: Balming Tiger
 artist_ko:
 album: Armadillo (feat. Omega Sapien & Byung un)

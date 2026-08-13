@@ -1,6 +1,6 @@
 ---
 title: Used To Me
-title_ko: 
+title_ko: 내게 익숙해져
 artist: Luke Chiang
 artist_ko:
 album: Used to Me - Single

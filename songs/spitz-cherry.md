@@ -1,6 +1,6 @@
 ---
 title: Cherry
-title_ko: 
+title_ko: 체리
 artist: Spitz
 artist_ko:
 album: Indigo Chiheisen

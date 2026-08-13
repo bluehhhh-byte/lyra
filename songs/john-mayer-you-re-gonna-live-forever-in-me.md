@@ -1,6 +1,6 @@
 ---
 title: You're Gonna Live Forever In Me
-title_ko: 
+title_ko: 넌 내 안에서 영원히 살아
 artist: John Mayer
 artist_ko:
 album: The Search for Everything

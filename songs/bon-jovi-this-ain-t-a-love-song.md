@@ -1,6 +1,6 @@
 ---
 title: This Ain't A Love Song
-title_ko: 
+title_ko: 이건 사랑 노래가 아냐
 artist: Bon Jovi
 artist_ko:
 album: These Days

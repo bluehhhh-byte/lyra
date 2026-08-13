@@ -1,6 +1,6 @@
 ---
 title: 聖なる海とサンシャイン 성스러운 바다와 선샤인
-title_ko: 
+title_ko: 성스러운 바다와 선샤인
 artist: THE YELLOW MONKEY
 artist_ko:
 album: 聖なる海とサンシャイン

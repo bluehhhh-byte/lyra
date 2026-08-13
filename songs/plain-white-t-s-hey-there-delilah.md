@@ -1,6 +1,6 @@
 ---
 title: Hey There Delilah
-title_ko: 
+title_ko: 안녕 딜라일라
 artist: Plain White T's
 artist_ko:
 album: Every Second Counts

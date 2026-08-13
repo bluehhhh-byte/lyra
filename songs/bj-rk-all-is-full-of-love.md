@@ -1,6 +1,6 @@
 ---
 title: All Is Full Of Love
-title_ko: 
+title_ko: 모든 것은 사랑으로 가득해
 artist: Björk
 artist_ko:
 album: Björk's Greatest Hits

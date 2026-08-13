@@ -1,6 +1,6 @@
 ---
 title: Die With A Smile
-title_ko: 
+title_ko: 웃으며 죽을게
 artist: Lady Gaga, Bruno Mars
 artist_ko:
 album: Die With A Smile - Single

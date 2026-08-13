@@ -1,6 +1,6 @@
 ---
 title: Perspective
-title_ko: 
+title_ko: 관점
 artist: Cafuné
 artist_ko:
 album: Love Songs for the End

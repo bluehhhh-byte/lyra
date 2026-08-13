@@ -1,6 +1,6 @@
 ---
 title: Someday I'll be Saturday Night
-title_ko: 
+title_ko: 언젠가 난 토요일 밤이 될 거야
 artist: Bon Jovi
 artist_ko:
 album: Cross Road

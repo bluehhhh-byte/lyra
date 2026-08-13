@@ -1,6 +1,6 @@
 ---
 title: undecided
-title_ko: 
+title_ko: 미정
 artist: DIR EN GREY
 artist_ko:
 album: 鬼葬-KISOU-

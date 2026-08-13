@@ -1,6 +1,6 @@
 ---
 title: HURRY GO ROUND
-title_ko: 
+title_ko: 허리 고 라운드
 artist: hide with Spread Beaver
 artist_ko:
 album: We Love hide~The Best in The World~

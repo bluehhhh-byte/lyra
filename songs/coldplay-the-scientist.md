@@ -1,6 +1,6 @@
 ---
 title: The Scientist
-title_ko: 
+title_ko: 과학자
 artist: Coldplay
 artist_ko:
 album: A Rush of Blood to the Head

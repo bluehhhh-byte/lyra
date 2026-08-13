@@ -1,6 +1,6 @@
 ---
 title: Head Over Heels
-title_ko: 
+title_ko: 홀딱 반해
 artist: Tears For Fears
 artist_ko:
 album: Songs From the Big Chair (Super Deluxe Version)

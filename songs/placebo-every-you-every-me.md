@@ -1,6 +1,6 @@
 ---
 title: Every You Every Me
-title_ko: 
+title_ko: 모든 너 모든 나
 artist: Placebo
 artist_ko:
 album: Without You I'm Nothing

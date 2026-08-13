@@ -1,6 +1,6 @@
 ---
 title: i am not who i was
-title_ko: 
+title_ko: 난 예전의 내가 아니야
 artist: Chance Peña
 artist_ko:
 album: i am not who i was - Single

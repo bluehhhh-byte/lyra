@@ -1,6 +1,6 @@
 ---
 title: Happy New Year
-title_ko: 
+title_ko: 새해 복 많이 받아
 artist: Arco
 artist_ko:
 album: Restraint

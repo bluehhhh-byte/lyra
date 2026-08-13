@@ -1,6 +1,6 @@
 ---
 title: Perfect Day
-title_ko: 
+title_ko: 완벽한 하루
 artist: Lou Reed
 artist_ko:
 album: The Essential Lou Reed (Remastered)

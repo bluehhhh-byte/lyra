@@ -1,6 +1,6 @@
 ---
 title: The Reason
-title_ko: 
+title_ko: 그 이유
 artist: Hoobastank
 artist_ko:
 album: Best of Hoobastank

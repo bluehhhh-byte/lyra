@@ -1,6 +1,6 @@
 ---
 title: this is what falling in love feels like
-title_ko: 
+title_ko: 사랑에 빠지는 건 이런 느낌
 artist: JVKE
 artist_ko:
 album: this is what falling in love feels like - Single

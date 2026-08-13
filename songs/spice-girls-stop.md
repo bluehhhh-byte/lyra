@@ -1,6 +1,6 @@
 ---
 title: Stop
-title_ko: 
+title_ko: 멈춰
 artist: Spice Girls
 artist_ko:
 album: Spiceworld

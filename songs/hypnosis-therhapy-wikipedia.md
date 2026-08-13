@@ -1,6 +1,6 @@
 ---
 title: WIKIPEDIA
-title_ko: 
+title_ko: 위키피디아
 artist: HYPNOSIS THERHAPY
 artist_ko:
 album:

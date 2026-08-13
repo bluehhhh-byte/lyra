@@ -1,6 +1,6 @@
 ---
 title: comedy
-title_ko: 
+title_ko: 코미디
 artist: Sion
 artist_ko:
 album: love - EP

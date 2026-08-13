@@ -1,6 +1,6 @@
 ---
 title: Beautiful
-title_ko: 
+title_ko: 아름다워
 artist: Christina Aguilera
 artist_ko:
 album: Stripped

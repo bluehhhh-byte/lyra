@@ -1,6 +1,6 @@
 ---
 title: Teenage Blue
-title_ko: 
+title_ko: 십대의 우울
 artist: Dreamgirl
 artist_ko:
 album: Illuminaughty - EP

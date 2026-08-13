@@ -1,6 +1,6 @@
 ---
 title: Another One
-title_ko: 
+title_ko: 또 하나
 artist: Mac Demarco
 artist_ko:
 album: Another One

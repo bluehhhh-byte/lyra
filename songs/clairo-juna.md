@@ -1,6 +1,6 @@
 ---
 title: Juna
-title_ko: 
+title_ko: 주나
 artist: Clairo
 artist_ko:
 album: Charm

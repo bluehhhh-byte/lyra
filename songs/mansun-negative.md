@@ -1,6 +1,6 @@
 ---
 title: Negative
-title_ko: 
+title_ko: 부정적
 artist: Mansun
 artist_ko:
 album: Six

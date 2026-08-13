@@ -1,6 +1,6 @@
 ---
 title: You're Lost Little Girl
-title_ko: 
+title_ko: 길 잃은 소녀
 artist: The Doors
 artist_ko:
 album: Strange Days (50th Anniversary Deluxe Edition)

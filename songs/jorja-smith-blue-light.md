@@ -1,6 +1,6 @@
 ---
 title: Blue Light
-title_ko: 
+title_ko: 푸른 불빛
 artist: Jorja Smith
 artist_ko:
 album: Lost & Found

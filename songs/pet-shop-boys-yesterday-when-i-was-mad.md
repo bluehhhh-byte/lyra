@@ -1,6 +1,6 @@
 ---
 title: Yesterday When I Was Mad
-title_ko: 
+title_ko: 어제 내가 화가 났을 때
 artist: Pet Shop Boys
 artist_ko:
 album: Very: Further Listening 1992-1994 (Deluxe Edition) [2018 Remaster]

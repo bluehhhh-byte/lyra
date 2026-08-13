@@ -1,6 +1,6 @@
 ---
 title: To You
-title_ko: 
+title_ko: 너에게
 artist: 장국영
 artist_ko:
 album: 最熱

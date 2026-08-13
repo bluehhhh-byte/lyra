@@ -1,6 +1,6 @@
 ---
 title: The Handshake
-title_ko: 
+title_ko: 악수
 artist: MGMT
 artist_ko:
 album: Oracular Spectacular

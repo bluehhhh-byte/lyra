@@ -1,6 +1,6 @@
 ---
 title: Hey Now Now
-title_ko: 
+title_ko: 헤이 나우 나우
 artist: The Cloud Roon
 artist_ko:
 album: 

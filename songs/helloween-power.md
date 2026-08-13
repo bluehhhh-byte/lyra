@@ -1,6 +1,6 @@
 ---
 title: Power
-title_ko: 
+title_ko: 힘
 artist: Helloween
 artist_ko:
 album: Treasure Chest (Bonus Track Edition)

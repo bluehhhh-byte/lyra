@@ -1,6 +1,6 @@
 ---
 title: So Far From Me
-title_ko: 
+title_ko: 내게서 너무 먼
 artist: Brett Dennen
 artist_ko:
 album: Hope For The Hopeless

@@ -1,6 +1,6 @@
 ---
 title: Megalomaniac
-title_ko: 
+title_ko: 과대망상가
 artist: Incubus
 artist_ko:
 album: Look Alive

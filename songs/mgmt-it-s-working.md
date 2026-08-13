@@ -1,6 +1,6 @@
 ---
 title: It's Working
-title_ko: 
+title_ko: 효과가 있어
 artist: MGMT
 artist_ko:
 album: Congratulations

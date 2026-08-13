@@ -1,6 +1,6 @@
 ---
 title: 恋人へ 연인에게
-title_ko: 
+title_ko: 연인에게
 artist: Lamp
 artist_ko:
 album:

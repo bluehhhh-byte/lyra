@@ -1,6 +1,6 @@
 ---
 title: Everybody's Gotta Learn Sometime
-title_ko: 
+title_ko: 누구나 언젠간 배워야 해
 artist: Beck
 artist_ko:
 album: Everybody's Gotta Learn Sometime - Single

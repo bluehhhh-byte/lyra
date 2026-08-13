@@ -1,6 +1,6 @@
 ---
 title: 變わらないもの 변하지 않는 것
-title_ko: 
+title_ko: 변하지 않는 것
 artist: Oku Hanako
 artist_ko:
 album:

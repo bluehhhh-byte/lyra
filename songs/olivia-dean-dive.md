@@ -1,6 +1,6 @@
 ---
 title: Dive
-title_ko: 
+title_ko: 뛰어들어
 artist: Olivia Dean
 artist_ko:
 album: Messy

@@ -1,6 +1,6 @@
 ---
 title: The Girl That I Call Home
-title_ko: 
+title_ko: 내 집이라 부르는 그녀
 artist: Tears For Fears
 artist_ko:
 album: Songs For A Nervous Planet

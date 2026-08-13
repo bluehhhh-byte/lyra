@@ -1,6 +1,6 @@
 ---
 title: If I Had To Die For Someone
-title_ko: 
+title_ko: 누군가를 위해 죽어야 한다면
 artist: Petra
 artist_ko:
 album: God Fixation

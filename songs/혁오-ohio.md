@@ -1,6 +1,6 @@
 ---
 title: Ohio
-title_ko: 
+title_ko: 오하이오
 artist: 혁오
 artist_ko:
 album: 20 - EP

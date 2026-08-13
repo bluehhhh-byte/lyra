@@ -1,6 +1,6 @@
 ---
 title: Hummer
-title_ko: 
+title_ko: 허머
 artist: Foals
 artist_ko:
 album: Hummer - Single

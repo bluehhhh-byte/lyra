@@ -1,6 +1,6 @@
 ---
 title: ain't afraid to die
-title_ko: 
+title_ko: 죽음이 두렵지 않아
 artist: Dir en grey
 artist_ko:
 album: ain’t afraid to die - Single

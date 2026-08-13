@@ -1,6 +1,6 @@
 ---
 title: All In One Night
-title_ko: 
+title_ko: 하룻밤 사이에
 artist: Stereophonics
 artist_ko:
 album: Scream Above the Sounds (Deluxe)

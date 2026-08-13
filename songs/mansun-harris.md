@@ -1,6 +1,6 @@
 ---
 title: Harris
-title_ko: 
+title_ko: 해리스
 artist: Mansun
 artist_ko:
 album: Kleptomania 1

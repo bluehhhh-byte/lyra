@@ -1,6 +1,6 @@
 ---
 title: Bullet Proof... I Wish I Was
-title_ko: 
+title_ko: 방탄이었으면
 artist: Radiohead
 artist_ko:
 album: The Bends

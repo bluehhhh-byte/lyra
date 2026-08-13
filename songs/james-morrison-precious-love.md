@@ -1,6 +1,6 @@
 ---
 title: Precious Love
-title_ko: 
+title_ko: 소중한 사랑
 artist: James Morrison
 artist_ko:
 album: Songs for You, Truths for Me

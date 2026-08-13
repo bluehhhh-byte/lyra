@@ -1,6 +1,6 @@
 ---
 title: Identical
-title_ko: 
+title_ko: 똑같아
 artist: Phoenix
 artist_ko:
 album: Alpha Zulu

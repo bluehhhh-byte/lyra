@@ -1,6 +1,6 @@
 ---
 title: somewhere
-title_ko: 
+title_ko: 어딘가
 artist: the neverminds
 artist_ko:
 album: somewhere - Single

@@ -1,6 +1,6 @@
 ---
 title: C'mere
-title_ko: 
+title_ko: 이리 와
 artist: Interpol
 artist_ko:
 album: Antics

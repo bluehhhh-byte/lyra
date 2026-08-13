@@ -1,6 +1,6 @@
 ---
 title: Twilight Zone
-title_ko: 
+title_ko: 트와일라잇 존
 artist: S.E.S.
 artist_ko:
 album: LOVE - The 3rd Album

@@ -1,6 +1,6 @@
 ---
 title: Novacaine For The Soul
-title_ko: 
+title_ko: 영혼을 위한 노보카인
 artist: EELS
 artist_ko:
 album: Tune Up No. 98

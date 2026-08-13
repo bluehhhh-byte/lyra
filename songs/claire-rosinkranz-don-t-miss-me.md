@@ -1,6 +1,6 @@
 ---
 title: don't miss me
-title_ko: 
+title_ko: 날 그리워하지 마
 artist: Claire Rosinkranz
 artist_ko:
 album: don’t miss me - Single

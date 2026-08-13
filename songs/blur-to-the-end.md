@@ -1,6 +1,6 @@
 ---
 title: To the End
-title_ko: 
+title_ko: 끝까지
 artist: Blur
 artist_ko:
 album: Parklife (Special Edition)

@@ -1,6 +1,6 @@
 ---
 title: People In The Streets
-title_ko: 
+title_ko: 거리의 사람들
 artist: MGMT
 artist_ko:
 album: Loss Of Life

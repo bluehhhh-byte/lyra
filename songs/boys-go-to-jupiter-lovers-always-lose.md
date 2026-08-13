@@ -1,6 +1,6 @@
 ---
 title: Lovers Always Lose
-title_ko: 
+title_ko: 연인은 언제나 진다
 artist: Boys Go To Jupiter
 artist_ko:
 album: Lovers Always Lose - Single

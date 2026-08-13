@@ -1,6 +1,6 @@
 ---
 title: Someone I'll Wait
-title_ko: 
+title_ko: 내가 기다릴 사람
 artist: Mhir
 artist_ko:
 album: Someone i'll wait

@@ -1,6 +1,6 @@
 ---
 title: Dandelion 늦게 피는 민들레
-title_ko: 
+title_ko: 늦게 피는 민들레
 artist: Matsutoya Yumi
 artist_ko:
 album:

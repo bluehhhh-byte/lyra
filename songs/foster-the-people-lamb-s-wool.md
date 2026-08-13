@@ -1,6 +1,6 @@
 ---
 title: Lamb's Wool
-title_ko: 
+title_ko: 양털
 artist: Foster The People
 artist_ko:
 album: Lamb's Wool - Single

@@ -1,6 +1,6 @@
 ---
 title: Let Me Know
-title_ko: 
+title_ko: 알려줘
 artist: Towa Tei
 artist_ko:
 album: LAST CENTURY MODERN

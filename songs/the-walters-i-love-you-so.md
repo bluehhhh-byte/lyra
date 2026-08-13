@@ -1,6 +1,6 @@
 ---
 title: I Love You So
-title_ko: 
+title_ko: 널 정말 사랑해
 artist: The Walters
 artist_ko:
 album: I Love You So - Single

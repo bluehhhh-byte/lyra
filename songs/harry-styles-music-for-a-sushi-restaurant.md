@@ -1,6 +1,6 @@
 ---
 title: Music For a Sushi Restaurant
-title_ko: 
+title_ko: 스시 레스토랑을 위한 음악
 artist: Harry Styles
 artist_ko:
 album: Harry's House

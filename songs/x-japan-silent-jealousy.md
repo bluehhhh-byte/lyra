@@ -1,6 +1,6 @@
 ---
 title: JAPAN - Silent Jealousy
-title_ko: 
+title_ko: 조용한 질투
 artist: X
 artist_ko:
 album: Jealousy

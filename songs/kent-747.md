@@ -1,6 +1,6 @@
 ---
 title: 747
-title_ko: 
+title_ko: 747
 artist: Kent
 artist_ko:
 album: 747 - EP

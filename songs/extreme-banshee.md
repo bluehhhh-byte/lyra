@@ -1,6 +1,6 @@
 ---
 title: BANSHEE
-title_ko: 
+title_ko: 밴시
 artist: Extreme
 artist_ko:
 album: SIX

@@ -1,6 +1,6 @@
 ---
 title: Fake Plastic Tree
-title_ko: 
+title_ko: 가짜 플라스틱 나무
 artist: Radiohead
 artist_ko:
 album: The Bends

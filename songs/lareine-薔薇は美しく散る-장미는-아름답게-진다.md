@@ -1,6 +1,6 @@
 ---
 title: 薔薇は美しく散る 장미는 아름답게 진다
-title_ko: 
+title_ko: 장미는 아름답게 진다
 artist: LAREINE
 artist_ko:
 album: Lillie Charlotte

@@ -1,6 +1,6 @@
 ---
 title: Best Day Of My Life
-title_ko: 
+title_ko: 내 인생 최고의 날
 artist: American Authors
 artist_ko:
 album: Oh, What a Life

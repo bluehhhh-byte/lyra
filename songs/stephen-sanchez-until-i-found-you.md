@@ -1,6 +1,6 @@
 ---
 title: Until I Found You
-title_ko: 
+title_ko: 널 찾기 전까지
 artist: Stephen Sanchez
 artist_ko:
 album: Until I Found You - Single

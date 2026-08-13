@@ -1,6 +1,6 @@
 ---
 title: Slide Away
-title_ko: 
+title_ko: 미끄러지듯 떠나
 artist: Oasis
 artist_ko:
 album: Definitely Maybe

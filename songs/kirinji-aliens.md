@@ -1,6 +1,6 @@
 ---
 title: Aliens
-title_ko: 
+title_ko: 외계인들
 artist: Kirinji
 artist_ko:
 album: 3

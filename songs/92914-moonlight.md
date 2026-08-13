@@ -1,6 +1,6 @@
 ---
 title: Moonlight
-title_ko: 
+title_ko: 달빛
 artist: 92914
 artist_ko:
 album: Moonlight - Single

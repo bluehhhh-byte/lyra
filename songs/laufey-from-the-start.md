@@ -1,6 +1,6 @@
 ---
 title: From The Start
-title_ko: 
+title_ko: 처음부터
 artist: Laufey
 artist_ko:
 album: From The Start - Single

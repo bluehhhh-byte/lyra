@@ -1,6 +1,6 @@
 ---
 title: Older Chests
-title_ko: 
+title_ko: 오래된 가슴
 artist: Damien Rice
 artist_ko:
 album: O

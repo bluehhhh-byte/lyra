@@ -1,6 +1,6 @@
 ---
 title: Highway Star, Speed Star
-title_ko: 
+title_ko: 하이웨이 스타, 스피드 스타
 artist: Cymbals
 artist_ko:
 album: Highway Star, Speed Star - Single

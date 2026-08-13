@@ -1,6 +1,6 @@
 ---
 title: Loser
-title_ko: 
+title_ko: 패배자
 artist: Charlie Puth
 artist_ko:
 album: CHARLIE

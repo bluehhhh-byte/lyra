@@ -1,6 +1,6 @@
 ---
 title: Everybody Here Wants You
-title_ko: 
+title_ko: 여기 모두가 널 원해
 artist: Jeff Buckley
 artist_ko:
 album: Sketches for My Sweetheart the Drunk (Expanded Edition)

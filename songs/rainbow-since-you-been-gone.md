@@ -1,6 +1,6 @@
 ---
 title: Since You Been Gone
-title_ko: 
+title_ko: 네가 떠난 뒤로
 artist: Rainbow
 artist_ko:
 album: Down to Earth

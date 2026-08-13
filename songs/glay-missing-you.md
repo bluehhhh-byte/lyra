@@ -1,6 +1,6 @@
 ---
 title: Missing You
-title_ko: 
+title_ko: 네가 그리워
 artist: GLAY
 artist_ko:
 album: Missing You - EP

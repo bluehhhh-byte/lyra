@@ -1,6 +1,6 @@
 ---
 title: hello!
-title_ko: 
+title_ko: 안녕!
 artist: ROLE MODEL
 artist_ko:
 album: oh, how perfect - EP

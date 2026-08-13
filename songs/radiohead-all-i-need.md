@@ -1,6 +1,6 @@
 ---
 title: All I Need
-title_ko: 
+title_ko: 내게 필요한 전부
 artist: Radiohead
 artist_ko:
 album: In Rainbows

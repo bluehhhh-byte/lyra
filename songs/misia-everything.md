@@ -1,6 +1,6 @@
 ---
 title: Everything
-title_ko: 
+title_ko: 모든 것
 artist: MISIA
 artist_ko:
 album: Everything - EP

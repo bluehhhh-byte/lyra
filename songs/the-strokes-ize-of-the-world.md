@@ -1,6 +1,6 @@
 ---
 title: Ize Of The World
-title_ko: 
+title_ko: 아이즈 오브 더 월드
 artist: The Strokes
 artist_ko:
 album: First Impressions Of Earth

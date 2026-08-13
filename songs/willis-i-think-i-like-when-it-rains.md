@@ -1,6 +1,6 @@
 ---
 title: I Think I Like When It Rains
-title_ko: 
+title_ko: 비 오는 날이 좋은 것 같아
 artist: Willis
 artist_ko:
 album: Locals 2 - EP

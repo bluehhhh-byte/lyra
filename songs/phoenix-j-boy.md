@@ -1,6 +1,6 @@
 ---
 title: J-Boy
-title_ko: 
+title_ko: 제이 보이
 artist: Phoenix
 artist_ko:
 album: Ti Amo

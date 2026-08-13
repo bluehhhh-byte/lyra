@@ -1,6 +1,6 @@
 ---
 title: Daydreaming
-title_ko: 
+title_ko: 백일몽
 artist: Radiohead
 artist_ko:
 album: A Moon Shaped Pool

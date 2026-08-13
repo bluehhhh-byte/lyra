@@ -1,6 +1,6 @@
 ---
 title: Grand Pain
-title_ko: 
+title_ko: 커다란 고통
 artist: LAREINE
 artist_ko:
 album: SCREAM

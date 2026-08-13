@@ -1,6 +1,6 @@
 ---
 title: Anthem
-title_ko: 
+title_ko: 찬가
 artist: Leonard Cohen
 artist_ko:
 album: The Essential Leonard Cohen

@@ -1,6 +1,6 @@
 ---
 title: King Nothing
-title_ko: 
+title_ko: 아무것도 아닌 왕
 artist: Metallica
 artist_ko:
 album: Load (Remastered Deluxe Box Set)

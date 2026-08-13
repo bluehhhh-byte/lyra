@@ -1,6 +1,6 @@
 ---
 title: All You're Dreaming Of
-title_ko: 
+title_ko: 네가 꿈꾸는 모든 것
 artist: Liam Gallagher
 artist_ko:
 album: Kids Christmas

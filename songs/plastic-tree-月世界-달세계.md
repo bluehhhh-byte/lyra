@@ -1,6 +1,6 @@
 ---
 title: 「月世界」달세계
-title_ko: 
+title_ko: 달세계
 artist: Plastic Tree
 artist_ko:
 album: Single Collection

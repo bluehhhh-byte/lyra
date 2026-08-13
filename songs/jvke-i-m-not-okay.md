@@ -1,6 +1,6 @@
 ---
 title: i'm not okay
-title_ko: 
+title_ko: 난 괜찮지 않아
 artist: JVKE
 artist_ko:
 album: this is what ____ feels like (Vol. 1-4)

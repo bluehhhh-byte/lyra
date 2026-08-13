@@ -1,6 +1,6 @@
 ---
 title: We Are Young
-title_ko: 
+title_ko: 우리는 젊어
 artist: Fun.
 artist_ko:
 album: We Are Young (feat. Janelle Monáe) - Single

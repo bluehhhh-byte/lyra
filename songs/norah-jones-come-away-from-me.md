@@ -1,6 +1,6 @@
 ---
 title: Come Away From Me
-title_ko: 
+title_ko: 나와 함께 떠나요
 artist: Norah Jones
 artist_ko:
 album: 

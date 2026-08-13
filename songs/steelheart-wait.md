@@ -1,6 +1,6 @@
 ---
 title: Wait
-title_ko: 
+title_ko: 기다려
 artist: Steelheart
 artist_ko:
 album: WAIT

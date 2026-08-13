@@ -1,6 +1,6 @@
 ---
 title: Sunburn
-title_ko: 
+title_ko: 햇볕에 타다
 artist: Almost Monday
 artist_ko:
 album: can't slow down - Single

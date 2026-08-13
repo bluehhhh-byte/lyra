@@ -1,6 +1,6 @@
 ---
 title: There She Goes
-title_ko: 
+title_ko: 그녀가 간다
 artist: The La's
 artist_ko:
 album: The La's
