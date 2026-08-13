@@ -4,7 +4,7 @@ title_ko: 예감
 artist: DIR EN GREY
 artist_ko: 디르 앙 그레이
 album: VESTIGE OF SCRATCHES
-year: 2018
+year: 1999
 genre: メタル
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/1d/41/1e1d41cc-e600-8edf-242f-297f6c685d2b/4529123106674.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ee/b1/a8/eeb1a8e1-f14a-649f-4941-3a8b042b3b5d/mzaf_3347208983324006762.plus.aac.p.m4a
