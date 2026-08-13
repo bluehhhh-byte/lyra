@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/dd7cb0320b7cd2ea2c2103a5e96ae
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/0/0/0/10008bcc841537f3ac18cbbb78df473f.mp3?hdnea=exp=1786559357~acl=/api/1/1/1/0/0/0/10008bcc841537f3ac18cbbb78df473f.mp3*~data=user_id=0,application_id=42~hmac=9f47abae5c78ef3d643e2bbbe58865f361f6be4b3fb5663a3e1ecd4a54985077
 trackId: 
 duration: 237
-genre: 
+genre: Synth-Pop
 lang: en
 tags: [한국, Synth-Pop, 2021]
 keywords: [춤, 시선, 곁]

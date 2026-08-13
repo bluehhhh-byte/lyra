@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/63ff8d3ecdf658d156d34d4005844
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/f/7/0/0f79a8f7cde64b4b9afc92f624a19414.mp3?hdnea=exp=1786559387~acl=/api/1/1/0/f/7/0/0f79a8f7cde64b4b9afc92f624a19414.mp3*~data=user_id=0,application_id=42~hmac=691b62c7a31532fe06768e090742b180b6d22f1616e9b6e0ec4ca22b1e80efc8
 trackId: 
 duration: 209
-genre: 
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2018]
 keywords: [친구, 하룻밤, 곁]

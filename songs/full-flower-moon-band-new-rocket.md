@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/add7b4ebc7711210280f0893c1fa1
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/2/d/0/a2dd55e782bece6cf33fda5e4b0d5327.mp3?hdnea=exp=1786559378~acl=/api/1/1/a/2/d/0/a2dd55e782bece6cf33fda5e4b0d5327.mp3*~data=user_id=0,application_id=42~hmac=5c9a30b60c1d157df21b2a04d8697dbded8b037d976da2fa93a1cb15774d48c0
 trackId: 
 duration: 184
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2020]
 keywords: [로켓, 도시, 콘센트]

@@ -11,7 +11,7 @@ trackId: 45255474
 duration: 219
 genre: 팝
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, 팝]
 keywords: [1월, 하늘, 공기]
 emotion: 희망
 date: 2024-01-01

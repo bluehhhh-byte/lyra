@@ -3,10 +3,12 @@ title: 薔薇は美しく散る 장미는 아름답게 진다
 title_ko: 
 artist: LAREINE
 artist_ko:
-album:
-year: 
-artwork:
+album: Lillie Charlotte
+year: 1998
+artwork: https://coverartarchive.org/release-group/80d45c08-072a-3a6f-89d5-3cb76ad285dd/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/80d45c08-072a-3a6f-89d5-3cb76ad285dd
 trackId:
 duration:
 genre: Visual Kei

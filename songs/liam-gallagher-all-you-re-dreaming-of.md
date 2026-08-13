@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/cf/bb/d8cfbb6f-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/bd/42/92/bd429224-3ad6-d313-5fae-50f2dcecfd7c/mzaf_6308344809967579152.plus.aac.p.m4a
 trackId: 1651365933
 duration: 242
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2020]
 keywords: [밤하늘, 별, 달빛]

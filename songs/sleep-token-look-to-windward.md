@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/88cb1ee2758133c9dd4514deea199
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/9/0/1a91060dc2431616fa359bb5d0357716.mp3?hdnea=exp=1786559426~acl=/api/1/1/1/a/9/0/1a91060dc2431616fa359bb5d0357716.mp3*~data=user_id=0,application_id=42~hmac=3c97ff349847d421b4debc049f0ca7f5da76f4fe00d565490d7a2d34ab3180f0
 trackId: 
 duration: 466
-genre: 
+genre: Metal
 lang: en
 tags: [영미, Metal, 2025]
 keywords: [목소리, 어둠, 그림자]

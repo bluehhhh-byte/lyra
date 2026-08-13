@@ -9,7 +9,7 @@ artwork: https://dn710808.ca.archive.org/0/items/mbid-ff32390c-9590-44f7-b39d-37
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [영미, Alternative Rock, 1997]
 keywords: [이름, 명성, 다리]

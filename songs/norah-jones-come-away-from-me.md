@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Jazz
 lang: en
 tags: [영미, Jazz, 2002]
 keywords: [밤, 노래, 버스]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/6ad43155ca2c06dcc1394fb60705f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/e/a/0/cea04d26a91ba46ae928931d3924b9c7.mp3?hdnea=exp=1786559452~acl=/api/1/1/c/e/a/0/cea04d26a91ba46ae928931d3924b9c7.mp3*~data=user_id=0,application_id=42~hmac=6b8e7631384d8e8290584a45bb17d232956aa09a31b9965b553924ef28483b45
 trackId: 
 duration: 243
-genre: 
+genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2008]
 keywords: [우주, 태양, 눈보라]

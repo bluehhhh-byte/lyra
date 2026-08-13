@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/c4b3d908119b322fae29f17d226fd
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/5/6/0/2569734036bf8abcbbfbd3bea43fe5de.mp3?hdnea=exp=1786559365~acl=/api/1/1/2/5/6/0/2569734036bf8abcbbfbd3bea43fe5de.mp3*~data=user_id=0,application_id=42~hmac=c4cf1346df6093871817f5239391eeae6f5de11a60a87e9bdf47b90a8ec49fa5
 trackId: 
 duration: 121
-genre: 
+genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2018]
 keywords: [사랑, 약점, 척]

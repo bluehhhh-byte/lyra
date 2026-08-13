@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/eb9bf656a10442b3dc2078d93a760
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/1/0/73162015c04f6215c128a1b429f7972d.mp3?hdnea=exp=1786559383~acl=/api/1/1/7/3/1/0/73162015c04f6215c128a1b429f7972d.mp3*~data=user_id=0,application_id=42~hmac=a87a4ca792714bb7b3ad1ee56cf7ebb228284b9e6b4c3e334cdeb9f5526722d5
 trackId: 
 duration: 332
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2024]
 keywords: [타이밍, 시간선, 불]

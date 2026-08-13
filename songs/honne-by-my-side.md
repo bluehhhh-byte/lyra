@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/a0/44/37/a04437b0-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3c/38/55/3c38557f-0159-be5d-9c55-63d5190a071f/mzaf_2481319651183724110.plus.aac.p.m4a
 trackId: 1518053394
 duration: 250
-genre: 
+genre: Electronic
 lang: en
 tags: [영미, Electronic, 2020]
 keywords: [어깨, 세상, 힘]

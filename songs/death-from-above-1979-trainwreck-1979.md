@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/c682ef27585a4cd72e2d7ff791990
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/1/c/0/01cb9c5c69ef336bfb698f2635fe9a5e.mp3?hdnea=exp=1786559372~acl=/api/1/1/0/1/c/0/01cb9c5c69ef336bfb698f2635fe9a5e.mp3*~data=user_id=0,application_id=42~hmac=8643220f76e23fcf6be3bc3b186bcb281efe68952e3d58adca9294f42d6b0404
 trackId: 
 duration: 227
-genre: 
+genre: Punk Rock
 lang: en
 tags: [영미, Punk Rock, 2014]
 keywords: [기차, 고속도로, 심장]

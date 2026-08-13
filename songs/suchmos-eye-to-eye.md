@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/7cd798608052d6f8cec940fadc500
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/a/0/eda983749aaeae6c263945e2a232ef14.mp3?hdnea=exp=1786559433~acl=/api/1/1/e/d/a/0/eda983749aaeae6c263945e2a232ef14.mp3*~data=user_id=0,application_id=42~hmac=87324332a99f653a07febfd0415eb5101732384019d113a1c203a196c290a2fa
 trackId: 
 duration: 327
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
 keywords: [마음, 자존심, 스피드웨이]

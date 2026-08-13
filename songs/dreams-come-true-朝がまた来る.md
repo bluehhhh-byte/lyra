@@ -9,7 +9,7 @@ artwork: https://dn710906.ca.archive.org/0/items/mbid-2ff5a9f3-9285-4d9e-9d4c-33
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1999]
 keywords: [아침, 교차로, 우산]

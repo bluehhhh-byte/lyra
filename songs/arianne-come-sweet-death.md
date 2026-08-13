@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Soundtrack
 lang: en
 tags: [영미, Soundtrack, 2020]
 keywords: [상처, 고통, 존중]

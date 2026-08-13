@@ -3,10 +3,12 @@ title: 수작
 title_ko: 수작
 artist: XXX
 artist_ko:
-album:
-year: 
-artwork:
+album: LANGUAGE
+year: 2018
+artwork: https://coverartarchive.org/release-group/6dc6987b-f510-4004-b923-61f621d793e7/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/6dc6987b-f510-4004-b923-61f621d793e7
 trackId:
 duration:
 genre: Hip-Hop

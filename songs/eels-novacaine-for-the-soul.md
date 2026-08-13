@@ -3,10 +3,12 @@ title: Novacaine For The Soul
 title_ko: 
 artist: EELS
 artist_ko:
-album:
+album: Tune Up No. 98
 year: 1996
-artwork:
+artwork: https://coverartarchive.org/release-group/9d6cd04b-b217-4411-9af5-698ecd1835ea/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/9d6cd04b-b217-4411-9af5-698ecd1835ea
 trackId:
 duration:
 genre: Alternative Rock

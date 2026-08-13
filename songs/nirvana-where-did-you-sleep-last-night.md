@@ -3,13 +3,15 @@ title: Where Did You Sleep Last Night
 title_ko: 
 artist: Nirvana
 artist_ko:
-album: 
+album: 1993-12-31: Oakland-Alameda County Coliseum Arena, Oakland, CA, USA
 year: 1993
-artwork: 
+artwork: https://coverartarchive.org/release-group/09ffaa3a-cf91-386e-9ce1-236eabd4759d/front-500
 preview: 
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/09ffaa3a-cf91-386e-9ce1-236eabd4759d
 trackId: 
 duration: 
-genre: 
+genre: Grunge
 lang: en
 tags: [영미, Grunge, 1993]
 keywords: [소나무, 태양, 거짓말]

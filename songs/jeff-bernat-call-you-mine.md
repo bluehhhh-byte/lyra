@@ -3,10 +3,12 @@ title: Call You Mine
 title_ko: 
 artist: Jeff Bernat
 artist_ko:
-album:
+album: The Gentleman Approach
 year: 2012
-artwork:
+artwork: https://coverartarchive.org/release-group/b1d3b280-4636-4523-b5e0-4bc3f31d89db/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/b1d3b280-4636-4523-b5e0-4bc3f31d89db
 trackId:
 duration:
 genre: R&B/Soul

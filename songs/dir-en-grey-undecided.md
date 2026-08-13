@@ -4,14 +4,14 @@ title_ko:
 artist: DIR EN GREY
 artist_ko:
 album: GLASS SKIN
-year: 
+year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/72236b98980e113c11f8ecfd0fe7599b/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/8/2/0/08230837e6684a6aa4b3d0f0b88cc5f3.mp3?hdnea=exp=1786584287~acl=/api/1/1/0/8/2/0/08230837e6684a6aa4b3d0f0b88cc5f3.mp3*~data=user_id=0,application_id=42~hmac=b7057ca5658376ff000e833b2e39c4d6c01927f8f864fcfddf91bf8baa7731fd
 trackId:
 duration: 297
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2008]
 keywords: [비, 발자국, 파도, 바다, 계절, 눈물]
 emotion: 이별
 date: 2023-04-26

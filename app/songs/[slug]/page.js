@@ -6,6 +6,7 @@ import { parseEmotion } from "../../../lib/keywords";
 import { getAllMovies } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 import LyricsView from "./lyrics-view";
+import { appleUrl, isExactApple } from "../../../lib/apple";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
 import SongNav from "./song-nav";
@@ -172,21 +173,21 @@ export default async function SongPage({ params }) {
                     artwork: song.artwork,
                     preview: song.preview,
                     provider: song.preview_provider || "",
-                    externalUrl: song.external_url || (song.trackId ? `https://music.apple.com/kr/song/${song.trackId}` : ""),
+                    externalUrl: appleUrl(song),
                   }}
                 />
               )}
               <YouTubeEmbed artist={song.artist} title={song.title} query={song.youtube} id={song.youtube_id} />
-              {song.trackId && (
-                <a
-                  href={`https://music.apple.com/kr/song/${song.trackId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
-                >
-                  ♪ Apple Music
-                </a>
-              )}
+              {/* 커버·미리듣기를 스토어에서 가져다 쓰므로 그 곡의 스토어 페이지로 가는
+                  길은 언제나 열어 둔다 — 정확 매칭이 없으면 검색 결과로 보낸다 */}
+              <a
+                href={appleUrl(song)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
+              >
+                ♪ Apple Music{isExactApple(song) ? "" : " 검색"}
+              </a>
               <ShareButton title={song.title} artist={song.artist} />
             </div>
           </div>

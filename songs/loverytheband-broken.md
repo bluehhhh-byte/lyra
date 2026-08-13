@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2018]
 keywords: [바보, 외로움]

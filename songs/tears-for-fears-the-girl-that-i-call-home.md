@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/25f0dfa34a57c6299ce3b134b257e
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/4/8/0/648c77bdd100da628b5285a237a2d35a.mp3?hdnea=exp=1786559436~acl=/api/1/1/6/4/8/0/648c77bdd100da628b5285a237a2d35a.mp3*~data=user_id=0,application_id=42~hmac=c2ec874d21540fafeab694b305984043f1ef6d5ab8b737fbf8ab464b32c86b27
 trackId: 
 duration: 224
-genre: 
+genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 2024]
 keywords: [물, 칼, 십자가]

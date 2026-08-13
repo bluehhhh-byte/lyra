@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/762808d121a123ab33937d06cce99
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/c/0/73c90177f72c3f225d66f8f80b501e19.mp3?hdnea=exp=1786559421~acl=/api/1/1/7/3/c/0/73c90177f72c3f225d66f8f80b501e19.mp3*~data=user_id=0,application_id=42~hmac=1c5d490b01c7ce53b2777b7c805b60f7964a362ddd0d60349968a030382efff0
 trackId: 
 duration: 336
-genre: 
+genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2001]
 keywords: [사랑, 아픔, 자유]

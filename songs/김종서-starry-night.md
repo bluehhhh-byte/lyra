@@ -9,7 +9,7 @@ artwork: https://dn721606.ca.archive.org/0/items/mbid-a7eedd06-e934-42e8-8eb3-66
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hard Rock
 lang: ko
 tags: [한국, Hard Rock, 2001]
 keywords: [외로움, 미소, 두려움]

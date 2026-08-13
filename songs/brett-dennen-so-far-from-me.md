@@ -9,7 +9,7 @@ artwork: https://dn710707.ca.archive.org/0/items/mbid-1c8877a4-9308-499d-92b1-6e
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Folk
 lang: en
 tags: [영미, Folk, 2008]
 keywords: [까마귀, 허수아비, 빈병]

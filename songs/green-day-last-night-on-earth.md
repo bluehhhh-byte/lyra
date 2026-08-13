@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/be7c43ae2cc2cb08017de11813b7d
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee897b53259.mp3?hdnea=exp=1786559380~acl=/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee897b53259.mp3*~data=user_id=0,application_id=42~hmac=ab8955be1463fd6c6ec6678c2e043751b29e1391ee0036c55c721c8666e69a62
 trackId: 
 duration: 256
-genre: 
+genre: Punk Rock
 lang: en
 tags: [영미, Punk Rock, 2009]
 keywords: [엽서, 달빛, 심장]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b11795c9225c243255ba3ea95a116
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/3/4/0/93405d7c5e0e816790bcfbd9d1f801d4.mp3?hdnea=exp=1786559400~acl=/api/1/1/9/3/4/0/93405d7c5e0e816790bcfbd9d1f801d4.mp3*~data=user_id=0,application_id=42~hmac=c1a2ea17c0be01765b0aecc098a8bf3d05d87046d56da31772baf5bddf9b0bce
 trackId: 
 duration: 167
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2021]
 keywords: [바보, 말, 머릿속]

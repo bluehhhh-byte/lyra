@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2022]
 keywords: [바다, 여름, 파도소리]

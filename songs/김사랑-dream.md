@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/cc48fdd49e47626573193c647c116
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/8/1/0/281a0c782e78893cd6511ff7bf599c72.mp3?hdnea=exp=1786559467~acl=/api/1/1/2/8/1/0/281a0c782e78893cd6511ff7bf599c72.mp3*~data=user_id=0,application_id=42~hmac=82c8e555bf26d50a132119d282b2999cb1bb651de38a939c027cad8b2f06bebc
 trackId: 
 duration: 194
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 1999]
 keywords: [눈물, 사랑, 기관차]

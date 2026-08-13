@@ -9,7 +9,7 @@ artwork: https://dn710909.ca.archive.org/0/items/mbid-e5656e38-a4a8-4ee1-9ea4-42
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2012]
 keywords: [환상, 총알, 길]

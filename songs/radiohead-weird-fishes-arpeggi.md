@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/a/f/0/5afea1001a936755ae5404c829e1954a.mp3?hdnea=exp=1786559413~acl=/api/1/1/5/a/f/0/5afea1001a936755ae5404c829e1954a.mp3*~data=user_id=0,application_id=42~hmac=35cde7747791efb314d3d5a40eb0c2373292d9079c7198576ba8eb74379c3121
 trackId: 
 duration: 318
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2006]
 keywords: [바다, 밑바닥, 눈]

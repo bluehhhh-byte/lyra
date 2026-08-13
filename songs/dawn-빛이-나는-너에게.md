@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2023]
 keywords: [빛, 우리]

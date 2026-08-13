@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2018]
 keywords: [길, 집, 거짓말]

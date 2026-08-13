@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2019]
 keywords: [심장, 파도, 목요일]

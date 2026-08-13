@@ -9,7 +9,7 @@ artwork: https://dn710603.ca.archive.org/0/items/mbid-e209bc41-5650-41ae-b143-68
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2006]
 keywords: [눈물, 기억, 전부]

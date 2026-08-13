@@ -9,7 +9,7 @@ artwork: https://dn710009.ca.archive.org/0/items/mbid-20af560f-45c2-416e-9abb-0f
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2005]
 keywords: [거울, 눈, 강]

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/42/9c/e6/429ce6b1-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/7d/5e/657d5e76-c2ef-a64e-dcbd-89133ef69457/mzaf_9951022493852410481.plus.aac.p.m4a
 trackId: 1865062191
 duration: 249
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2023]
 keywords: [꿈, 재앙, 날씨]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/db776aa36c21952e0e6b97737ca7f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/3/d/0/33d065edd4d68474e245870dbd0657e9.mp3?hdnea=exp=1786559396~acl=/api/1/1/3/3/d/0/33d065edd4d68474e245870dbd0657e9.mp3*~data=user_id=0,application_id=42~hmac=253b9945df309bf1d52ab7e014e71d7227e4cb873fe3cee53d5f817ae2428a3a
 trackId: 
 duration: 337
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [삶, 태양, 빛]

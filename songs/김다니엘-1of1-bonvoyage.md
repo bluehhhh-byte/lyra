@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b1/e2/5e/b1e25eaa-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/6a/a8/a16aa805-77d7-a7a8-9894-c3edb9891f1b/mzaf_11683707583685877869.plus.aac.p.m4a
 trackId: 1816687886
 duration: 295
-genre: 
+genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2025]
 keywords: [도시, 미래, 먼지]

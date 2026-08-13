@@ -9,7 +9,7 @@ artwork: https://dn721806.ca.archive.org/0/items/mbid-c77cb8fa-f141-4e02-9aa6-be
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2014]
 keywords: [삶, 시간, 연인들]

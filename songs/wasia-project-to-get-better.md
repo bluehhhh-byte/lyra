@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/409f73a0ea34868be521723e9242f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/8/a/0/c8a65054b869b68a2c2b069e48a2152c.mp3?hdnea=exp=1786559447~acl=/api/1/1/c/8/a/0/c8a65054b869b68a2c2b069e48a2152c.mp3*~data=user_id=0,application_id=42~hmac=7233e8f733dd1cbe5c8c92d1ae02d095aca76c83fc0c569fa2cc768007df8dfd
 trackId: 
 duration: 317
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [방, 차, 모래]

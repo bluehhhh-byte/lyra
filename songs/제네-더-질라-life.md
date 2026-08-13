@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2024]
 keywords: [가사, 미련, 10년]

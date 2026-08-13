@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/ad823313f2a5fcc6e27b00c69b93f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/8/b/0/28b517598aa2d7f2d454db45bdba5fa3.mp3?hdnea=exp=1786559403~acl=/api/1/1/2/8/b/0/28b517598aa2d7f2d454db45bdba5fa3.mp3*~data=user_id=0,application_id=42~hmac=e8d2ff22fa1fb4d4f27491e8bc06a60033e77f2407f6c4515bb37020bf29fbcf
 trackId: 
 duration: 276
-genre: 
+genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1997]
 keywords: [집, 주소, 키스]

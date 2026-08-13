@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a1/35/fe/a135fe18-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/a8/60/69a860a4-22e0-acf2-ee5e-0ee2adc6911e/mzaf_13346004038842782241.plus.aac.p.m4a
 trackId: 1479062292
 duration: 341
-genre: 
+genre: Funk
 lang: en
 tags: [영미, Funk, 1996]
 keywords: [삶, 마법, 세상]

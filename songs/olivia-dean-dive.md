@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/0f3f905b35a640121180f26a422dc
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/5/1/0/651a9dc58d19e686e4cff33d67b4cb36.mp3?hdnea=exp=1786559404~acl=/api/1/1/6/5/1/0/651a9dc58d19e686e4cff33d67b4cb36.mp3*~data=user_id=0,application_id=42~hmac=aa89391e27ec7231fa730df5ee507811181988a7e8bde4fe1e0b05712989734a
 trackId: 
 duration: 200
-genre: 
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2023]
 keywords: [파도, 서핑, 예술]

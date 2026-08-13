@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/96e97b013989547f7ffb5684847a7
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/4/7/0/e47d9677cf6d26890dfa5d90972a7b97.mp3?hdnea=exp=1786559440~acl=/api/1/1/e/4/7/0/e47d9677cf6d26890dfa5d90972a7b97.mp3*~data=user_id=0,application_id=42~hmac=2f108e66c5edeabdf37938085eacb14ffb6d156cf1ff9daaafc0c4a311c033d0
 trackId: 
 duration: 240
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2023]
 keywords: [7월, 기차, 날짜]

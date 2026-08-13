@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5e/13/cf/5e13cf2b-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/f5/37/b3f537f7-3f69-4bc6-7bd8-25b57da294fa/mzaf_1166490946370338340.plus.aac.p.m4a
 trackId: 1804643004
 duration: 304
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2020]
 keywords: [사랑, 색깔, 손목]

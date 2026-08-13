@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/b87844e9396b07f5bf553ae60414f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/8/0/cf82ca554200ea6820ea55031c81cadb.mp3?hdnea=exp=1786559360~acl=/api/1/1/c/f/8/0/cf82ca554200ea6820ea55031c81cadb.mp3*~data=user_id=0,application_id=42~hmac=abc8f83a6a3f9cedbc3ec7bccda9e2180409c9811c42aca9a064565b88f932a4
 trackId: 
 duration: 220
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2023]
 keywords: [컨트롤러, 부리부리, 정신]

@@ -3,10 +3,12 @@ title: Megalomaniac
 title_ko: 
 artist: Incubus
 artist_ko:
-album:
+album: Look Alive
 year: 2004
-artwork:
+artwork: https://coverartarchive.org/release-group/34bf0299-a8b0-3ff8-80c2-a68408a83f6c/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/34bf0299-a8b0-3ff8-80c2-a68408a83f6c
 trackId:
 duration:
 genre: Alternative Rock

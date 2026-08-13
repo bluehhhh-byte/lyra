@@ -9,7 +9,7 @@ artwork: https://dn720803.ca.archive.org/0/items/mbid-3d424da4-7c8e-42a1-9e96-7a
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2001]
 keywords: [계절, 바람, 꽃]

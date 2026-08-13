@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/90/68/b6/9068b687-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1c/59/77/1c597774-262a-d209-d673-829ee7551d63/mzaf_7600304337519613174.plus.aac.p.m4a
 trackId: 1270576312
 duration: 225
-genre: 
+genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1999]
 keywords: [비눗방울, 흐름, 마음]

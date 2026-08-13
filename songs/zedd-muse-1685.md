@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/329748078b69e60d32f9e31416031
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/1/2/0/812058f492d64dff4da9543a5ae9cfac.mp3?hdnea=exp=1786559449~acl=/api/1/1/8/1/2/0/812058f492d64dff4da9543a5ae9cfac.mp3*~data=user_id=0,application_id=42~hmac=e03ac578e509388afa4abaa31a083a691eb92e6f2d85c24bed16fee58a7f7c29
 trackId: 
 duration: 371
-genre: 
+genre: Electronic
 lang: en
 tags: [영미, Electronic, 2024]
 keywords: [마리아, 상처, 황홀경]

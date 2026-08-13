@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/564a574cd0bb4decf3e7fa176774d
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/c/0/11c4a9545bbd70c9728c64a131bdbecf.mp3?hdnea=exp=1786559392~acl=/api/1/1/1/1/c/0/11c4a9545bbd70c9728c64a131bdbecf.mp3*~data=user_id=0,application_id=42~hmac=1fd4db5b65912b5589922e0d99fad854c124382a775a373e0b17225ead244a31
 trackId: 
 duration: 374
-genre: 
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2023]
 keywords: [집, 계절, 기회]

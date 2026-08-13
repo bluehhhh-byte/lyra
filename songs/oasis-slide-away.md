@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9f/e7/ea/9fe7eac2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/5e/e8/db5ee8c8-5018-6245-5476-665fdb3fbeac/mzaf_12235809280652988610.plus.aac.p.m4a
 trackId: 1517507454
 duration: 393
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1994]
 keywords: [꿈, 하루, 세상]

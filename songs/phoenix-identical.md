@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/c23cb99c99b75d2148d21f6d60750
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/b/6/0/0b6c9f2f9c6acfbc3953926b910fbf4e.mp3?hdnea=exp=1786559409~acl=/api/1/1/0/b/6/0/0b6c9f2f9c6acfbc3953926b910fbf4e.mp3*~data=user_id=0,application_id=42~hmac=1dc3c1760ad618f7b661efdcc45ec240b5387c333ce6e839fda255f9a7183606
 trackId: 
 duration: 302
-genre: 
+genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2020]
 keywords: [내성적]

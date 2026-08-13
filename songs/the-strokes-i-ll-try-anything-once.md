@@ -3,13 +3,15 @@ title: I'll Try Anything Once
 title_ko: 
 artist: The Strokes
 artist_ko:
-album: 
+album: Racing Against Sunbeams
 year: 2006
-artwork: 
+artwork: https://coverartarchive.org/release-group/82fe9463-e3bf-43dd-a19f-8404d7361031/front-500
 preview: 
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/82fe9463-e3bf-43dd-a19f-8404d7361031
 trackId: 
 duration: 
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
 keywords: [선택지, 학교, 방법]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/ec1c737594159334d0eac9a649771
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/5/2/0/052ddaf1ca0f460f416db0af766540b3.mp3?hdnea=exp=1786559446~acl=/api/1/1/0/5/2/0/052ddaf1ca0f460f416db0af766540b3.mp3*~data=user_id=0,application_id=42~hmac=7ca1f6ebc6a1900fba71b8ed5cb84a660883799cbaf654f3308ef675374a5425
 trackId: 
 duration: 208
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1998]
 keywords: [타르, 탱크, 증오]

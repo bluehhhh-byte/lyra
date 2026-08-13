@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/05569c3fcb4e498d04989115491e4
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/1/3/0/713e239a8d4089b33fe3006452cbbf2f.mp3?hdnea=exp=1786559443~acl=/api/1/1/7/1/3/0/713e239a8d4089b33fe3006452cbbf2f.mp3*~data=user_id=0,application_id=42~hmac=7fff3ba23858ac9ffef79ebd64fe239740f8e2c239948426a46919d95f09617c
 trackId: 
 duration: 226
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2002]
 keywords: [도피, 눈]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a83bee700b17db400f18924eea791
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/f/0/0/7f06d6346aa7eba2a5e460dd8d0dbada.mp3?hdnea=exp=1786559358~acl=/api/1/1/7/f/0/0/7f06d6346aa7eba2a5e460dd8d0dbada.mp3*~data=user_id=0,application_id=42~hmac=4b2173f7903deef0673c83a615df0539bec051a5a5771d437b87607afa758737
 trackId: 
 duration: 375
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2022]
 keywords: [선착장, 가로등, 우주]

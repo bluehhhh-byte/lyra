@@ -9,7 +9,7 @@ artwork: https://dn721809.ca.archive.org/0/items/mbid-b91e409c-46d4-4828-9176-4a
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2024]
 keywords: [봄, 눈]

@@ -3,10 +3,12 @@ title: 聖なる海とサンシャイン 성스러운 바다와 선샤인
 title_ko: 
 artist: THE YELLOW MONKEY
 artist_ko:
-album:
+album: 聖なる海とサンシャイン
 year: 1996
-artwork:
+artwork: https://coverartarchive.org/release-group/ebf18ec8-4d00-34a0-9282-b5e68132b0a8/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/ebf18ec8-4d00-34a0-9282-b5e68132b0a8
 trackId:
 duration:
 genre: J-Rock

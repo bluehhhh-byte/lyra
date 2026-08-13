@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]
 keywords: [상상, 전화, 동전]

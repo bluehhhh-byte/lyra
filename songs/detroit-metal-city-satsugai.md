@@ -4,14 +4,14 @@ title_ko: 살해
 artist: Detroit Metal City
 artist_ko:
 album:
-year: 
+year: 2008
 artwork:
 preview:
 trackId:
 duration:
 genre: Heavy Metal
 lang: ja
-tags: [일본, Heavy Metal]
+tags: [일본, Heavy Metal, 2008]
 keywords: [지옥, 피, 부모, 형제, 미래, 추억]
 emotion: 분노
 date: 2023-03-07

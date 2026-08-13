@@ -76,6 +76,63 @@ async function deezerSearch(term) {
   } catch { return []; }
 }
 
+// MusicBrainz(메타) + Cover Art Archive(커버). iTunes·Deezer 둘 다 못 찾은 곡의
+// 마지막 경로다. 미리듣기는 없고 커버·앨범·연도만 얻는다.
+// MB는 초당 1회 이하 + User-Agent 필수. CAA는 커버가 없으면 404를 준다.
+async function musicbrainzSearch(term, artist) {
+  // 곡은 recording으로 찾는다 — release-group은 앨범 단위라 곡 제목으로는 안 걸린다.
+  // 커버는 그 곡이 실린 릴리스의 release-group에 붙어 있다.
+  // 따옴표로 묶으면 정확 일치라 거의 안 걸린다("One Republic" ≠ "OneRepublic").
+  // 특수문자만 걷어내고 느슨하게 물은 뒤, 걸러내는 건 pickTrack이 한다.
+  const clean = (s) => String(s || "").replace(/[:"~^(){}\[\]\\/!+\-]/g, " ").replace(/\s+/g, " ").trim();
+  const q = `recording:(${clean(term)}) AND artist:(${clean(artist)})`;
+  try {
+    const r = await fetch(
+      `https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(q)}&fmt=json&limit=5`,
+      { headers: { "User-Agent": UA, Accept: "application/json" } }
+    );
+    if (!r.ok) return [];
+    const j = await r.json();
+    const groups = [];
+    const seen = new Set();
+    for (const rec of j.recordings || []) {
+      for (const rel of rec.releases || []) {
+        const g = rel["release-group"];
+        if (!g?.id || seen.has(g.id)) continue;
+        seen.add(g.id);
+        groups.push({
+          id: g.id,
+          title: rec.title,
+          artist: (rec["artist-credit"] || []).map((a) => a.name).join(" "),
+          album: rel.title || g.title || "",
+          year: (rel.date || g["first-release-date"] || "").slice(0, 4),
+        });
+      }
+    }
+    const out = [];
+    for (const g of groups.slice(0, 4)) {
+      const cover = `https://coverartarchive.org/release-group/${g.id}/front-500`;
+      // 커버가 실제로 있는 것만 후보로 — 없는 릴리스그룹을 채우면 깨진 이미지가 된다
+      let ok = false;
+      try {
+        const head = await fetch(cover, { method: "HEAD", redirect: "follow", headers: { "User-Agent": UA } });
+        ok = head.ok;
+      } catch {}
+      await sleep(1100);
+      if (!ok) continue;
+      out.push({
+        title: g.title, artist: g.artist,
+        artwork: cover, preview: "", trackId: "", duration: "", album: g.album,
+        provider: "coverartarchive",
+        externalUrl: `https://musicbrainz.org/release-group/${g.id}`,
+        year: g.year,
+      });
+      break; // 커버가 붙은 첫 릴리스면 충분하다
+    }
+    return out;
+  } catch { return []; }
+}
+
 // ── canary — iTunes 재개 판정 (10초 간격 5회 전부 정상 JSON이어야) ─────────
 async function canary() {
   console.log("canary 5회 (10초 간격)…");
@@ -93,12 +150,19 @@ async function canary() {
 }
 
 // ── 대상 수집 ───────────────────────────────────────────────────────────────
+// 기본은 커버 없는 곡. --links는 커버가 있어도 Apple 링크(trackId)가 없는 곡을 노린다 —
+// Deezer·CAA로 커버만 채운 곡들은 스토어 링크가 비어 있다.
+const LINKS_ONLY = args.includes("--links");
 const targets = [];
 for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
   const raw = fs.readFileSync("songs/" + f, "utf8").replace(/\r\n/g, "\n");
   const m = raw.match(FM);
   if (!m) continue;
-  if ((fmValue(m[1], "artwork") || "").startsWith("https")) continue; // 검증된 커버는 덮지 않음
+  if (LINKS_ONLY) {
+    const hasApple = /^\d+$/.test((fmValue(m[1], "trackId") || "").trim()) ||
+      (fmValue(m[1], "external_url") || "").includes("music.apple.com");
+    if (hasApple) continue;
+  } else if ((fmValue(m[1], "artwork") || "").startsWith("https")) continue; // 검증된 커버는 덮지 않음
   targets.push({
     f, raw,
     title: fmValue(m[1], "title"), artist: fmValue(m[1], "artist"),
@@ -130,6 +194,9 @@ for (const t of targets.slice(0, LIMIT)) {
     if (PROVIDER === "deezer") {
       results = await deezerSearch(`artist:"${t.artist}" track:"${t.title}"`);
       await sleep(300);
+    } else if (PROVIDER === "musicbrainz") {
+      results = await musicbrainzSearch(t.title, t.artist);
+      await sleep(1100); // MB는 초당 1회 이하
     } else {
       for (const store of storeOrder(t)) {
         results = await itunesSearch(`${t.title} ${t.artist}`, store);
@@ -157,9 +224,11 @@ for (const t of targets.slice(0, LIMIT)) {
       if (!fs.existsSync("songs/" + t.f)) { console.log(`  건너뜀(그새 삭제됨): ${t.f}`); continue; }
       let out = fs.readFileSync("songs/" + t.f, "utf8").replace(/\r\n/g, "\n");
       if (!out.match(FM)) { console.log(`  건너뜀(형식 깨짐): ${t.f}`); continue; }
-      if ((fmValue(out.match(FM)[1], "artwork") || "").startsWith("https")) { console.log(`  건너뜀(그새 채워짐): ${t.f}`); continue; }
-      out = setField(out, "artwork", hit.artwork, "year");
-      if (hit.preview) out = setField(out, "preview", hit.preview, "artwork");
+      if (!LINKS_ONLY && (fmValue(out.match(FM)[1], "artwork") || "").startsWith("https")) { console.log(`  건너뜀(그새 채워짐): ${t.f}`); continue; }
+      // --links는 링크·미리듣기만 채운다 — 이미 검증된 커버를 다른 스토어 것으로 바꾸지 않는다
+      const keepArt = LINKS_ONLY && (fmValue(out.match(FM)[1], "artwork") || "").startsWith("https");
+      if (!keepArt && hit.artwork) out = setField(out, "artwork", hit.artwork, "year");
+      if (hit.preview && !fmValue(out.match(FM)[1], "preview")) out = setField(out, "preview", hit.preview, "artwork");
       if (hit.trackId) out = setField(out, "trackId", String(hit.trackId), "preview");
       if (hit.duration) out = setField(out, "duration", String(hit.duration), "trackId");
       if (hit.album) out = setField(out, "album", hit.album, "artist_ko");

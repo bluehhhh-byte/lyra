@@ -9,7 +9,7 @@ artwork: https://dn710208.ca.archive.org/0/items/mbid-305c4915-a319-455f-99af-55
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2023]
 keywords: [대화, 길, 방향]

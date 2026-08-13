@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Heavy Metal
 lang: ja
 tags: [일본, Heavy Metal, 1999]
 keywords: [태도, 천벌, 분노]

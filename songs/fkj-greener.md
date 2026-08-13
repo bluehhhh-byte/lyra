@@ -9,7 +9,7 @@ artwork: https://dn711508.ca.archive.org/0/items/mbid-b657be8f-8d31-4376-b616-93
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Electronic
 lang: en
 tags: [유럽, Electronic, 2022]
 keywords: [선물, 초록색, 마음]

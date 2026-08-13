@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/53fe71ab65755e57eab15ac57678c
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/b/e/0/1be6d18d5175121d0a483e7f083aadb3.mp3?hdnea=exp=1786559397~acl=/api/1/1/1/b/e/0/1be6d18d5175121d0a483e7f083aadb3.mp3*~data=user_id=0,application_id=42~hmac=19e74a3ffca359f0b13a90027180726f4083d66fc346357ac48570c57131fd43
 trackId: 
 duration: 213
-genre: 
+genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2024]
 keywords: [실수, 마음, 처음]

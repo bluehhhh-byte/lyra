@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a0c46c4052d39629420f657cb37f6
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/5/4/0/f54780e852fb59e50cb11b2b716bac9d.mp3?hdnea=exp=1786559407~acl=/api/1/1/f/5/4/0/f54780e852fb59e50cb11b2b716bac9d.mp3*~data=user_id=0,application_id=42~hmac=627a8201ec27b417b05f21e3534b87be66d80802ccf187789e16fd080d6e193b
 trackId: 
 duration: 199
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
 keywords: [해, 이름, 어제]

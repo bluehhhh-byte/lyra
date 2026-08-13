@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/8f/d2/26/8fd226d2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b5/35/04/b5350468-f899-413c-30c5-94419bc4663c/mzaf_14665111085337118558.plus.aac.p.m4a
 trackId: 1514990695
 duration: 263
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2013]
 keywords: [불한당, 서울, 한강]

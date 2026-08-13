@@ -9,7 +9,7 @@ artwork: https://dn721903.ca.archive.org/0/items/mbid-3fc54511-fd60-3380-91ec-95
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: J-Rock
 lang: en
 tags: [일본, J-Rock, 2005]
 keywords: [결혼, 색종이, 소녀]

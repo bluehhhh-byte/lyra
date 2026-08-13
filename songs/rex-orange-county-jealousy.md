@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/c819d020d5769a1eab7b6c29cda04
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/c/1/0/5c1fa05d9baaf75e6caa1f0b629642a6.mp3?hdnea=exp=1786559415~acl=/api/1/1/5/c/1/0/5c1fa05d9baaf75e6caa1f0b629642a6.mp3*~data=user_id=0,application_id=42~hmac=f2cb3ff07df58ff55b7ebc9887c8145a20469584e609d6fef8662b2810e443b0
 trackId: 
 duration: 240
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [질투, 감정]

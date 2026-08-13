@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/68fee4c8720618ab229f72bcb1b6b
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/8/6/0/68663f47fdfdd21804b7d47ab31eb4f7.mp3?hdnea=exp=1786559420~acl=/api/1/1/6/8/6/0/68663f47fdfdd21804b7d47ab31eb4f7.mp3*~data=user_id=0,application_id=42~hmac=726d3a5a6442b52b7f932fccc1ee931620a141a01b2761f6e85b19829efc4ed7
 trackId: 
 duration: 188
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2019]
 keywords: [햇살, 춤, 현실]

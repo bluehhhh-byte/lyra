@@ -4,14 +4,14 @@ title_ko: 환희
 artist: H.O.T.
 artist_ko:
 album: I yah! - The 4th Album
-year: 
+year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/7571dd2689b70d3249c1042590f18f13/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/c/e/0/0cec64751b48ec91f2b2656e8705be87.mp3?hdnea=exp=1786584310~acl=/api/1/1/0/c/e/0/0cec64751b48ec91f2b2656e8705be87.mp3*~data=user_id=0,application_id=42~hmac=cf92020168f9ae410fe36e8482917964e3b33392effe0dad3b7b8d715bf23dcc
 trackId:
 duration: 260
 genre: K-Pop
 lang: ko
-tags: [한국, K-Pop]
+tags: [한국, K-Pop, 1999]
 keywords: [눈물, 눈빛, 거리, 추억, 입맞춤]
 emotion: 그리움
 date: 2023-01-25

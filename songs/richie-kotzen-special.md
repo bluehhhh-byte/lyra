@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/a28c0df6e34ed64ecad557cad0a39
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/0/d/0/60ddc315890312340fee220135190b11.mp3?hdnea=exp=1786559417~acl=/api/1/1/6/0/d/0/60ddc315890312340fee220135190b11.mp3*~data=user_id=0,application_id=42~hmac=f592583fdaf861fcbb789366e8dfb1a4f2dd325a2074b5d064a9f3975aac2f7f
 trackId: 
 duration: 233
-genre: 
+genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2004]
 keywords: [사람, 부, 특별함]

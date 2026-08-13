@@ -9,7 +9,7 @@ artwork: https://dn710003.ca.archive.org/0/items/mbid-1143dfe4-b656-4cc0-9d46-d9
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
 keywords: [새벽, 클럽, 파티]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/154ed52987b05a5a36205b47474af
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/7/0/4b727dc09aec849ef30e2ffcfd992592.mp3?hdnea=exp=1786559427~acl=/api/1/1/4/b/7/0/4b727dc09aec849ef30e2ffcfd992592.mp3*~data=user_id=0,application_id=42~hmac=f943289ecb7cb82cc701e3bc00d6770d93a66d03c264abbc10c592e2ee013637
 trackId: 
 duration: 154
-genre: 
+genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2020]
 keywords: [문제, 속옷, 신경]

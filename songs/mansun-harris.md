@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/4e0eb74fa4f14e138b6bddb18c570
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/9/3/0/a9304328ce9f4a1695380742a8c21350.mp3?hdnea=exp=1786559394~acl=/api/1/1/a/9/3/0/a9304328ce9f4a1695380742a8c21350.mp3*~data=user_id=0,application_id=42~hmac=7f6e21b68e2592911c441b61020147fd64e1b716e6f23ed4b1a7813bd5a03105
 trackId: 
 duration: 205
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
 keywords: [국기, 동상, 미소]

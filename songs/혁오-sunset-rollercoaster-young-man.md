@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/dd/b8/30ddb8ea-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/f8/fe/d2f8fefb-691c-92d4-2a34-ad1e7734cc26/mzaf_15677363100465764619.plus.aac.p.m4a
 trackId: 1754100092
 duration: 257
-genre: 
+genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2024]
 keywords: [불, 바다, 친구]

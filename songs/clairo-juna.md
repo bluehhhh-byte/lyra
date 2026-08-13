@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/6dfa4ea965a74b93870a85daa74b7
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/d/8/0/2d83d10ddb21a8338f189a62613b72b0.mp3?hdnea=exp=1786559368~acl=/api/1/1/2/d/8/0/2d83d10ddb21a8338f189a62613b72b0.mp3*~data=user_id=0,application_id=42~hmac=77148067df7ae482869167881f02e4ce4a5e700754075e23a6ac2ecae582adbb
 trackId: 
 duration: 195
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [피부, 말, 요즘]

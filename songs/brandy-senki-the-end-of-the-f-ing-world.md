@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/59639437352ccd150c8851f73349a
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/2/a/0/62ae3c0e41b1a773b936b427d3566989.mp3?hdnea=exp=1786559362~acl=/api/1/1/6/2/a/0/62ae3c0e41b1a773b936b427d3566989.mp3*~data=user_id=0,application_id=42~hmac=5d4586909acffd39d9fbf2859d7f5d2748d5ae0eda38681d144cc4c347f1dbf4
 trackId: 
 duration: 244
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
 keywords: [저주, 여행, 장미꽃]

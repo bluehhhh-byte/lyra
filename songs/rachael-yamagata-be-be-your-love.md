@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/5f23c59fe58e8c1b4f3cfee81c42b
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/9/3/0/c93aa6bf59962fe9c9b6317fc4c1077b.mp3?hdnea=exp=1786559411~acl=/api/1/1/c/9/3/0/c93aa6bf59962fe9c9b6317fc4c1077b.mp3*~data=user_id=0,application_id=42~hmac=7e0aa9027d9295ff1adfe3641a024bc1925965bc628371b2bf08aa9ef6a19e38
 trackId: 
 duration: 251
-genre: 
+genre: Folk
 lang: en
 tags: [영미, Folk, 2004]
 keywords: [여왕, 생각, 사랑]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/9c4badbc3b21ddf23c021d2e02a38
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/9/8/0/c987a2b6099ee196a332fa1f0f1dc801.mp3?hdnea=exp=1786559440~acl=/api/1/1/c/9/8/0/c987a2b6099ee196a332fa1f0f1dc801.mp3*~data=user_id=0,application_id=42~hmac=d2a48114f20a0ea159e24651e127390fab2e06849fdfb958ad60ff1bd00c36dd
 trackId: 
 duration: 233
-genre: 
+genre: Folk
 lang: en
 tags: [영미, Folk, 2024]
 keywords: [책, 학교, 역사]

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/794a43cbc490cdf89ab8e0b3de6a8
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/9/b/0/19b8a0299a794fbc47f4cbfd5bf6822c.mp3?hdnea=exp=1786559438~acl=/api/1/1/1/9/b/0/19b8a0299a794fbc47f4cbfd5bf6822c.mp3*~data=user_id=0,application_id=42~hmac=8a501c7ff442898a28393e6b5a05e3c09ac8802d17e6dff57d3e1884509a5b98
 trackId: 
 duration: 243
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1999]
 keywords: [모퉁이, 기다림, 불안함]

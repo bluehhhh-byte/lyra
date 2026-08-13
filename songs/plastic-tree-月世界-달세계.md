@@ -3,10 +3,12 @@ title: 「月世界」달세계
 title_ko: 
 artist: Plastic Tree
 artist_ko:
-album:
-year: 
-artwork:
+album: Single Collection
+year: 2001
+artwork: https://coverartarchive.org/release-group/84ec66bd-2ce1-30da-af1a-4b32736046d0/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/84ec66bd-2ce1-30da-af1a-4b32736046d0
 trackId:
 duration:
 genre: Visual Kei

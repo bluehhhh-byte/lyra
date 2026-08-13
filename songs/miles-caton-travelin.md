@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/118238ffbaa664dd94ceced16c5f8
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/f/2/0/3f2cb10ca352a3de99f56974d55edabd.mp3?hdnea=exp=1786559397~acl=/api/1/1/3/f/2/0/3f2cb10ca352a3de99f56974d55edabd.mp3*~data=user_id=0,application_id=42~hmac=5adc5ce6c2530c72929c3e0fac1c0f0bdc6d668ebee9974f3d0b19cda0bc09ba
 trackId: 
 duration: 94
-genre: 
+genre: Blues
 lang: en
-tags: [영미, R&B/Soul, 2025]
+tags: [영미, Blues, 2025]
 keywords: [길, 황야, 여인]
 emotion: 고독
 date: 2025-06-05

@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/66c90172ce9d66633d75f3281f544
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/5/f/0/85f62ae25ea5d68078ec21326c3542f5.mp3?hdnea=exp=1786559444~acl=/api/1/1/8/5/f/0/85f62ae25ea5d68078ec21326c3542f5.mp3*~data=user_id=0,application_id=42~hmac=e6e37f220930f1f40cf8b2865cb52d9a6511804ccb2a6d1c611d1b1eb5a56d01
 trackId: 
 duration: 213
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
 keywords: [승리, 황금, 날들]

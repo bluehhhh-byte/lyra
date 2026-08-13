@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/7aa895fc7e3c22d5533817649f54f
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/f/0/1aff6cdc5665214210619d977eb84d73.mp3?hdnea=exp=1786559401~acl=/api/1/1/1/a/f/0/1aff6cdc5665214210619d977eb84d73.mp3*~data=user_id=0,application_id=42~hmac=8d54be7e3f79f2c410c0f4a6a3ff5dc562b0071a7e529756f15e599c8127186c
 trackId: 
 duration: 149
-genre: 
+genre: Grunge
 lang: en
 tags: [영미, Grunge, 1993]
 keywords: [멍청이, 해, 빛]

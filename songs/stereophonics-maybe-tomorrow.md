@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/670e40dc5fdac8230c60e162c4f7c
 preview: https://cdnt-preview.dzcdn.net/api/1/1/b/6/5/0/b6515b6328031bc0c6d189a9027f0346.mp3?hdnea=exp=1786559432~acl=/api/1/1/b/6/5/0/b6515b6328031bc0c6d189a9027f0346.mp3*~data=user_id=0,application_id=42~hmac=a20dfa7f8e757dca38087463e9dd312990a7f6048e71a317cef7a3cee28eb61f
 trackId: 
 duration: 272
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]
 keywords: [먹구름, 시간]

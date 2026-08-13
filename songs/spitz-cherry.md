@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a6379
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/f/6/0/6f6018c099de50b341404a22759ea19c.mp3?hdnea=exp=1786559428~acl=/api/1/1/6/f/6/0/6f6018c099de50b341404a22759ea19c.mp3*~data=user_id=0,application_id=42~hmac=5a3862be2d5d65caa7465e40cd9bc2d946718ec32abc60389359400e544342ae
 trackId: 
 duration: 261
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1996]
 keywords: [태양, 모래, 미래]

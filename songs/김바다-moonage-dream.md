@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/8d/0f/6d/8d0f6dea-d6
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/57/7c/3b/577c3bce-a436-1803-a9b7-11ce7bc66e61/mzaf_8030372266906923238.plus.aac.p.m4a
 trackId: 824516708
 duration: 198
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2014]
 keywords: [태양, 함성, 순간]

@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Soundtrack
 lang: ja
 tags: [일본, Soundtrack, 2002]
 keywords: [가슴, 꿈, 하늘]

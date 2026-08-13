@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c1/26/ed/c126edcc-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/30/3d/87303dd5-2503-52e3-738e-a13bdd27fce7/mzaf_16219532538634226139.plus.aac.p.m4a
 trackId: 1747041276
 duration: 259
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [백일몽, 유리, 하늘]

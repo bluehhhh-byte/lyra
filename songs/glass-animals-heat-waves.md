@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/04ea51c6eb90a6208f2e47da861cf
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/c/e/0/3ce23f319354c1eb009e7d11c57b75e2.mp3?hdnea=exp=1786559379~acl=/api/1/1/3/c/e/0/3ce23f319354c1eb009e7d11c57b75e2.mp3*~data=user_id=0,application_id=42~hmac=c4c6400d237a47308f588bd6e38841c09b3d66db58a377bfe2ad06beec7a5c0d
 trackId: 
 duration: 239
-genre: 
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2020]
 keywords: [열기, 거울, 도로]

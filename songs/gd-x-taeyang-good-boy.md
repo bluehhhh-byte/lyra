@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/acc7a55e8629c6298ae3cfd8fad2e
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/e/f/0/0efb92d45cd1693c70f63181db91ade3.mp3?hdnea=exp=1786559379~acl=/api/1/1/0/e/f/0/0efb92d45cd1693c70f63181db91ade3.mp3*~data=user_id=0,application_id=42~hmac=5063131550505573b61b5ab84bf37bb8eca8b3a97baee18be6753b77c2cfc750
 trackId: 
 duration: 245
-genre: 
+genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2018]
 keywords: [옷, 눈웃음, 게임]

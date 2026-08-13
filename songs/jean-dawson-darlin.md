@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/36cac95669599584ae51962989f3d
 preview: https://cdnt-preview.dzcdn.net/api/1/1/d/1/5/0/d15d04f2e6cb46f0ca68bb956a72184d.mp3?hdnea=exp=1786559386~acl=/api/1/1/d/1/5/0/d15d04f2e6cb46f0ca68bb956a72184d.mp3*~data=user_id=0,application_id=42~hmac=30141b5469380c5aefbf30ea71c0e9cac60b7ad697af1302da301728aeb9fd92
 trackId: 
 duration: 208
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2024]
 keywords: [꽃, 관, 그대]

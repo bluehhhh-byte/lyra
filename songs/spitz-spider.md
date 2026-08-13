@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a6379
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/2/4/0/a24373c41ccb7748d9f6b760bd815305.mp3?hdnea=exp=1786559429~acl=/api/1/1/a/2/4/0/a24373c41ccb7748d9f6b760bd815305.mp3*~data=user_id=0,application_id=42~hmac=9914fb3c174191c174abb1cc8e8737a2107c9bc00ef6f1a0c0612b7fe4939cd7
 trackId: 
 duration: 225
-genre: 
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1994]
 keywords: [거미, 피아노, 블라우스]

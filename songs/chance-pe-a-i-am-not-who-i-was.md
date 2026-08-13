@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/18ad1bb30ab2639139e304e6e7721
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/8/a/0/f8ae74ed90023c0567c93a7dcc1de444.mp3?hdnea=exp=1786559366~acl=/api/1/1/f/8/a/0/f8ae74ed90023c0567c93a7dcc1de444.mp3*~data=user_id=0,application_id=42~hmac=2115518470e5db8ae3710153378aa895cabfb17aabc830f7afd63d3d7732aa28
 trackId: 
 duration: 145
-genre: 
+genre: Folk
 lang: en
 tags: [영미, Folk, 2023]
 keywords: [떠돌이, 영혼, 집]

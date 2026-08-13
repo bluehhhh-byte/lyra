@@ -3,10 +3,12 @@ title: Le ciel
 title_ko: 
 artist: MALICE MIZER
 artist_ko:
-album:
+album: La Collection ”merveilles” –L’édition Limitée–
 year: 1998
-artwork:
+artwork: https://coverartarchive.org/release-group/ebf50c90-18bb-4887-9587-38bc839a37f7/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/ebf50c90-18bb-4887-9587-38bc839a37f7
 trackId:
 duration:
 genre: Visual Kei

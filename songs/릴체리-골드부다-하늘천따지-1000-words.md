@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2020]
 keywords: [무대, 돈, 우등상]

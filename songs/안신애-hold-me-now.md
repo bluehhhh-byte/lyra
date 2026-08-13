@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/02/ac/1a/02ac1a44-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/7d/50/757d5030-d02f-e96c-5697-285a51c44257/mzaf_14153469292406497950.plus.aac.p.m4a
 trackId: 1840597666
 duration: 192
-genre: 
+genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2024]
 keywords: [속마음, 손, 세상]

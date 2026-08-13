@@ -9,7 +9,7 @@ artwork: https://dn721609.ca.archive.org/0/items/mbid-6a60a969-c0de-401e-81a4-9b
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
 keywords: [자몽, 하늘, 조합]

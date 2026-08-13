@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2012]
 keywords: [서울, 밤, 심장]

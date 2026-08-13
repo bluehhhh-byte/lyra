@@ -9,9 +9,9 @@ artwork: https://cdn-images.dzcdn.net/images/cover/e8679978abb780b5e923383c575a7
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/4/a/0/74a74be2c44bea42bd191ead1c099b97.mp3?hdnea=exp=1786559447~acl=/api/1/1/7/4/a/0/74a74be2c44bea42bd191ead1c099b97.mp3*~data=user_id=0,application_id=42~hmac=d940536856fadf73deba264a997771399d51edf82cb55de2e15564d43d4a1003
 trackId: 
 duration: 323
-genre: 
+genre: Electronic
 lang: en
-tags: [영미, Alternative Rock, 2019]
+tags: [영미, Electronic, 2019]
 keywords: [골목, 생각]
 emotion: 체념
 date: 2024-08-09

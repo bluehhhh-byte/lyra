@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2024]
 keywords: [권력, 영향력, 존재감]

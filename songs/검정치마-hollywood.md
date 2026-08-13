@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/54164f4083d43ee0dc78aee887a1c
 preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/7/0/cf737d2118664b2690e40be8dd46c8b9.mp3?hdnea=exp=1786559453~acl=/api/1/1/c/f/7/0/cf737d2118664b2690e40be8dd46c8b9.mp3*~data=user_id=0,application_id=42~hmac=0bf448b37828baa5ed5c2120fd856266a94d05e8fc2971edb559254baa973d14
 trackId: 
 duration: 331
-genre: 
+genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2015]
 keywords: [영화, 조명, 땅]

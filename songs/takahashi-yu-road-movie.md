@@ -9,7 +9,7 @@ artwork:
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2017]
 keywords: [길, 날들, 얼굴]

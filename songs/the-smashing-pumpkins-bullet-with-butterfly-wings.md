@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/a3/bb/caa3bba6-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4c/bc/4f/4cbc4fc5-fc8c-b159-9c78-c8c91ecf2c94/mzaf_1762488723687916470.plus.aac.p.m4a
 trackId: 712732631
 duration: 257
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
 keywords: [흡혈귀, 세상, 고통]

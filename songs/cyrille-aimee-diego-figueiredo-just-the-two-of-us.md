@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/65/18/82/65188276-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d6/b2/12/d6b212f1-fcd8-3bb4-8272-c45f8df47a72/mzaf_10555130620931600364.plus.aac.p.m4a
 trackId: 1238079002
 duration: 301
-genre: 
+genre: Jazz
 lang: en
 tags: [유럽, Jazz, 2016]
 keywords: [빗방울, 태양, 무지개]

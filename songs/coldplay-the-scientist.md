@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/249fc78bd75bb8bfe2ae8c05e0665
 preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/6/0/73695cce07d5e5ef7b0bfc5d5bb01402.mp3?hdnea=exp=1786559368~acl=/api/1/1/7/3/6/0/73695cce07d5e5ef7b0bfc5d5bb01402.mp3*~data=user_id=0,application_id=42~hmac=942c877802cfeacb14abc70ac033e325692b86ea111c3799f94d6ccdc50fcb31
 trackId: 
 duration: 237
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2002]
 keywords: [비밀, 처음, 말]

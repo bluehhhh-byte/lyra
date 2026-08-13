@@ -1,237 +1,366 @@
 {
  "motifs": [
   {
-   "name": "밤과 어둠",
-   "description": "깊은 밤이나 어둠 속에서 마주하는 고독과 내면의 솔직한 감정을 다룹니다.",
+   "name": "밤과 새벽",
+   "description": "잠들지 못한 시간에 혼자 남아 마음을 들여다보는 노래들.",
    "keywords": [
     "밤",
-    "어둠",
     "새벽",
-    "별",
+    "달",
+    "어둠",
     "불빛"
    ],
    "songs": [
     {
-     "slug": "jasmin-tabatabai-another-sad-song-live",
-     "quote": ""
+     "slug": "신해경-그대는-총천연색",
+     "quote": "어두운 밤 그대처럼 깊어지면"
     },
     {
-     "slug": "miyavi-holy-nights",
-     "quote": ""
+     "slug": "원위-너의-우주는",
+     "quote": "작은 별에 새긴 이야기 잃어버린 밤"
     },
     {
-     "slug": "새소년-긴-꿈",
-     "quote": ""
+     "slug": "아침-불꽃놀이",
+     "quote": "밤새 떠드는 여자 아이들"
     },
     {
-     "slug": "잔나비-그-밤-그-밤",
-     "quote": ""
+     "slug": "검정치마-섬",
+     "quote": "밤이 오려나"
     },
     {
      "slug": "김광석-혼자-남은-밤",
-     "quote": ""
+     "quote": "외로운 밤을 홀로 지샌 내 모습"
     },
     {
-     "slug": "수민-슬롬-왜-왜-왜",
-     "quote": ""
+     "slug": "제휘-dear-moon",
+     "quote": "내가 너무나 짙은 밤이기 때문인 걸"
+    },
+    {
+     "slug": "예성-fireworks",
+     "quote": "내 어두웠던 밤의 Finale"
+    },
+    {
+     "slug": "ladie-s-code-galaxy",
+     "quote": "달을 가른 별 춤추는 심장"
     }
    ]
   },
   {
-   "name": "세상과의 투쟁",
-   "description": "부조리한 세상과 타인의 시선에 맞서며 자신의 정체성을 지키려는 저항을 노래합니다.",
+   "name": "눈물과 상처",
+   "description": "울음을 참거나 흘리며 아픔을 통과하는 순간들.",
    "keywords": [
-    "세상",
-    "저항",
-    "규칙",
-    "거짓말",
-    "싸움"
+    "눈물",
+    "상처",
+    "아픔",
+    "한숨",
+    "고통"
    ],
    "songs": [
     {
-     "slug": "keane-is-it-any-wonder",
+     "slug": "디어클라우드-기억에-흩어지다",
+     "quote": "앙상하게 남겨진 마음으로 눈물짓지 않기를 바래"
+    },
+    {
+     "slug": "quruli-奇跡",
      "quote": ""
     },
     {
-     "slug": "ozzy-osbourne-crazy-train",
+     "slug": "김윤아-담",
+     "quote": "나의 깊은 상처를 당신이 보았더라면"
+    },
+    {
+     "slug": "dir-en-grey-理由-이유",
      "quote": ""
     },
     {
-     "slug": "the-smashing-pumpkins-bullet-with-butterfly-wings",
+     "slug": "김바다-베인",
+     "quote": "나 커진 너의 그 눈물"
+    },
+    {
+     "slug": "arianne-come-sweet-death",
      "quote": ""
     },
     {
-     "slug": "삐삐롱스타킹-바보버스",
+     "slug": "lareine-metamorphose",
      "quote": ""
     },
     {
-     "slug": "mr-big-wake-up",
+     "slug": "hoobastank-the-reason",
      "quote": ""
     }
    ]
   },
   {
    "name": "바다와 파도",
-   "description": "아득한 바다와 일렁이는 파도를 바라보며 상실감과 아득한 그리움을 표출합니다.",
+   "description": "물가에 서서 멀어진 것을 바라보는 마음.",
    "keywords": [
     "바다",
     "파도",
-    "강물",
-    "배",
-    "부둣가"
+    "강",
+    "모래",
+    "우산"
    ],
    "songs": [
     {
-     "slug": "검정치마-이별노래",
+     "slug": "아이유-밤편지",
+     "quote": "난 파도가 머물던 모래 위에 적힌 글씨처럼"
+    },
+    {
+     "slug": "macaroni-empitsu-星が泳ぐ-별이-헤엄치다",
      "quote": ""
     },
     {
-     "slug": "radiohead-weird-fishes-arpeggi",
+     "slug": "the-yellow-monkey-聖なる海とサンシャイン",
      "quote": ""
     },
     {
-     "slug": "macaroni-empitsu-星が泳ぐ",
+     "slug": "the-yellow-monkey-聖なる海とサンシャイン-성스러운-바다와-선샤인",
      "quote": ""
     },
     {
-     "slug": "사비나-앤-드론즈-귀머거리-인생",
+     "slug": "검정치마-혜야",
+     "quote": "강이 바다가 돼 넘쳐도"
+    },
+    {
+     "slug": "x-japan-crucify-my-love",
      "quote": ""
     },
     {
-     "slug": "kt-tunstall-other-side-of-the-world",
+     "slug": "서태지-moai",
+     "quote": "성난 파도를 바라보고 있어"
+    },
+    {
+     "slug": "지소울-natural",
      "quote": ""
     }
    ]
   },
   {
-   "name": "시간과 추억",
-   "description": "지난날의 기억과 흘러가는 시간 속에서 지나간 사랑과 시절을 회상합니다.",
+   "name": "거리와 골목",
+   "description": "도시의 길 위에서 스치는 사람과 풍경.",
    "keywords": [
-    "시간",
-    "기억",
-    "추억",
-    "세월",
-    "그 시절"
-   ],
-   "songs": [
-    {
-     "slug": "woo-hyuk-jang-시간이-멈춘-날",
-     "quote": ""
-    },
-    {
-     "slug": "나얼-언젠가는",
-     "quote": ""
-    },
-    {
-     "slug": "hayd-head-in-the-clouds",
-     "quote": ""
-    },
-    {
-     "slug": "katie-remember",
-     "quote": ""
-    }
-   ]
-  },
-  {
-   "name": "길과 방황",
-   "description": "낯선 길과 거리를 거닐며 느껴지는 정처 없는 방황과 외로움을 담아냅니다.",
-   "keywords": [
-    "길",
     "거리",
     "골목",
-    "방황",
-    "도시"
+    "도시",
+    "버스",
+    "가로등"
    ],
    "songs": [
     {
-     "slug": "miles-caton-travelin",
+     "slug": "패닉-눈-녹듯",
+     "quote": "골목 가로등 아래 반짝이는 눈 속에"
+    },
+    {
+     "slug": "the-smashing-pumpkins-1979",
      "quote": ""
     },
     {
-     "slug": "강산에-거꾸로-강을-거슬러-오르는-저-힘찬-연어들처럼",
+     "slug": "kent-747",
      "quote": ""
     },
     {
-     "slug": "sun-rai-san-francisco-street",
+     "slug": "다이나믹-듀오-가끔씩-오래-보자",
+     "quote": "바쁘게 정신없이 아등바등 거리며 산다"
+    },
+    {
+     "slug": "hideki-kaji-甘い-人",
      "quote": ""
     },
     {
-     "slug": "keane-somewhere-only-we-know",
-     "quote": ""
+     "slug": "잔나비-나의-기쁨-나의-노래",
+     "quote": "거리를 나뒹구는 쉬운 마음 되어라"
     },
     {
-     "slug": "아이유-분홍신",
-     "quote": ""
+     "slug": "롤러코스터-내게로-와",
+     "quote": "거리는 또 눈부시게 화려한 손짓을 하네"
+    },
+    {
+     "slug": "김경호-마치-너인-것처럼",
+     "quote": "차가운 바람이 부는 거리 스치는 얼굴 하나"
     }
    ]
   },
   {
-   "name": "사랑과 서약",
-   "description": "소중한 사람을 향한 순수한 애정과 따뜻한 다짐을 표현합니다.",
-   "keywords": [
-    "사랑",
-    "마음",
-    "손",
-    "목소리",
-    "고백"
-   ],
-   "songs": [
-    {
-     "slug": "유재하-우리들의-사랑",
-     "quote": ""
-    },
-    {
-     "slug": "rick-astley-never-gonna-give-you-up",
-     "quote": ""
-    },
-    {
-     "slug": "lady-gaga-close-to-you",
-     "quote": ""
-    },
-    {
-     "slug": "잔나비-주저하는-연인들을-위해",
-     "quote": ""
-    },
-    {
-     "slug": "87dance-iboy",
-     "quote": ""
-    }
-   ]
-  },
-  {
-   "name": "환상과 꿈",
-   "description": "현실을 벗어나 몽환적인 꿈과 상상의 세계를 떠돌며 느끼는 감각입니다.",
+   "name": "꿈과 몽환",
+   "description": "현실과 꿈의 경계가 흐려지는 자리.",
    "keywords": [
     "꿈",
-    "환상",
     "구름",
-    "백일몽",
-    "거미"
+    "우주",
+    "천사",
+    "영혼"
    ],
    "songs": [
     {
-     "slug": "mew-the-zookeeper-s-boy",
+     "slug": "glay-空が青空であるために",
      "quote": ""
     },
     {
-     "slug": "foster-the-people-lost-in-space",
+     "slug": "misia-忘れない日日-잊을-수-없는-날들",
      "quote": ""
     },
     {
-     "slug": "김동률-여름의-끝자락",
+     "slug": "american-authors-best-day-of-my-life",
      "quote": ""
     },
     {
-     "slug": "아침-불꽃축제",
+     "slug": "raphael-eternal-wish-屆かぬ君へ",
      "quote": ""
     },
     {
-     "slug": "spitz-spider",
+     "slug": "기리보이-2000-90",
+     "quote": "꿈에서 깨지 나는"
+    },
+    {
+     "slug": "검정치마-99",
+     "quote": "부서진 꿈 위에 집을 짓고 사는 99%"
+    },
+    {
+     "slug": "아이유-겨울잠",
+     "quote": "무슨 꿈을 꾸니?"
+    },
+    {
+     "slug": "벤-꿈처럼",
+     "quote": "눈을 뜨면 희미해져 버릴 꿈처럼 놔줘"
+    }
+   ]
+  },
+  {
+   "name": "계절과 날씨",
+   "description": "바람·비·햇살로 시간이 흐르는 것을 재는 노래들.",
+   "keywords": [
+    "바람",
+    "비",
+    "여름",
+    "겨울",
+    "햇살"
+   ],
+   "songs": [
+    {
+     "slug": "김경호-너를-사랑해",
+     "quote": "아프도록 불어오는 시린 바람에 뒤척이다"
+    },
+    {
+     "slug": "김경호-마치-너인-것처럼",
+     "quote": "차가운 바람이 부는 거리 스치는 얼굴 하나"
+    },
+    {
+     "slug": "선미-열이-올라요",
+     "quote": "따가운 햇살 적당한 바람"
+    },
+    {
+     "slug": "matsutoya-yumi-dandelion",
      "quote": ""
+    },
+    {
+     "slug": "matsutoya-yumi-dandelion-늦게-피는-민들레",
+     "quote": ""
+    },
+    {
+     "slug": "잔나비-november-rain",
+     "quote": "비가 온다 그날처럼"
+    },
+    {
+     "slug": "the-smashing-pumpkins-try-try-try",
+     "quote": ""
+    },
+    {
+     "slug": "plastic-tree-ぬけがら",
+     "quote": ""
+    }
+   ]
+  },
+  {
+   "name": "기억과 사진",
+   "description": "지나간 것을 붙잡아 두려는 기록들.",
+   "keywords": [
+    "기억",
+    "추억",
+    "사진",
+    "편지",
+    "약속"
+   ],
+   "songs": [
+    {
+     "slug": "day6-너는-지금쯤",
+     "quote": "갈 수 없는 지난 날들 이젠 기억 속에 사라지고"
+    },
+    {
+     "slug": "woo-hyuk-jang-시간이-멈춘-날",
+     "quote": "너와 둘의 기억도 흐려져가"
+    },
+    {
+     "slug": "브라운아이드소울-똑같다면",
+     "quote": "마음이 아직 나를 기억해서"
+    },
+    {
+     "slug": "싸이-마지막-장면-feat-이성경",
+     "quote": "기억에"
+    },
+    {
+     "slug": "김종서-아프다",
+     "quote": "쓸쓸한 뒷모습 기억에 남기고 사라진다"
+    },
+    {
+     "slug": "g-dragon-무제",
+     "quote": "그 기억도 행복했던 추억도"
+    },
+    {
+     "slug": "잔나비-그-밤-그-밤",
+     "quote": "기억은 쏟아버린 구슬처럼"
+    },
+    {
+     "slug": "loveholic-그대만-있다면",
+     "quote": "온통 너와의 기억뿐인"
+    }
+   ]
+  },
+  {
+   "name": "저항과 세상",
+   "description": "바깥의 규칙과 시선에 맞서는 목소리.",
+   "keywords": [
+    "세상",
+    "거짓말",
+    "돈",
+    "총",
+    "지옥"
+   ],
+   "songs": [
+    {
+     "slug": "다이나믹-듀오-desperado",
+     "quote": "이 질투 많은 세상에 튀는 건 바보지"
+    },
+    {
+     "slug": "mansun-negative",
+     "quote": ""
+    },
+    {
+     "slug": "feist-1234",
+     "quote": ""
+    },
+    {
+     "slug": "nell-기생충",
+     "quote": ""
+    },
+    {
+     "slug": "핑클-너의-마음을-내게-준다면",
+     "quote": "이 세상 끝까지라도 가리"
+    },
+    {
+     "slug": "김정민-마지막-사랑",
+     "quote": "세상 어디 있어도 이젠 널 찾을 수 있어"
+    },
+    {
+     "slug": "김종서-별",
+     "quote": "고마워요 아름다운 세상 속에 살게 해 줘서"
+    },
+    {
+     "slug": "술탄-오브-더-디스코-웨-feat-블랙넛",
+     "quote": "세상 다 살아봤다는 듯이"
     }
    ]
   }
  ],
- "count": 336,
- "at": "2026-08-12T19:29:45.252Z"
+ "count": 768,
+ "at": "2026-08-13T10:23:48.014Z"
 }

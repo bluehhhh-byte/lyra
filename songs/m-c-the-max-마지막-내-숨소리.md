@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/8d97791f6121a2aafee5d2b51cd73
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/3/1/0/631e147331667f4a46075609353db4aa.mp3?hdnea=exp=1786559391~acl=/api/1/1/6/3/1/0/631e147331667f4a46075609353db4aa.mp3*~data=user_id=0,application_id=42~hmac=23c24b5221201c4a8b80b211d4c986da0ebf015db29f5ed883577d80ed3520f3
 trackId: 
 duration: 262
-genre: 
+genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2002]
 keywords: [숨소리, 눈, 후회]

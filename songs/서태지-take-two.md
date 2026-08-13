@@ -9,7 +9,7 @@ artwork: https://dn710607.ca.archive.org/0/items/mbid-a4de2aa7-0105-4384-8f72-fa
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 1998]
 keywords: [가슴, 지옥, 힘]

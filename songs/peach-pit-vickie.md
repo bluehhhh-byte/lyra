@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/ba7de57f1ea107e403e0608f3561d
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/b/a/0/6babbba4f9403f43015c733a9e8a3c30.mp3?hdnea=exp=1786559408~acl=/api/1/1/6/b/a/0/6babbba4f9403f43015c733a9e8a3c30.mp3*~data=user_id=0,application_id=42~hmac=665fae5de3f0100006b61988d254dc90347504770fe0acb632a5e1ae3f2231b2
 trackId: 
 duration: 223
-genre: 
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2022]
 keywords: [길, 대마초, 근처]

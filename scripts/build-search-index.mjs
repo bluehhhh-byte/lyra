@@ -13,6 +13,7 @@ import { getAllMovies } from "../lib/movies.js";
 import { getAllPeople } from "../lib/people.js";
 import { getWatched } from "../lib/watched.js";
 import { tmdbUrl } from "../lib/tmdb-link.js";
+import { appleUrl } from "../lib/apple.js";
 
 const low = (v) => String(v || "").toLowerCase();
 const join = (...v) => v.flat().filter(Boolean).map(low).join("  ");
@@ -65,7 +66,7 @@ const items = getAllSongs()
   .map((s) => ({
     slug: s.slug, title: s.title, artist: s.artist, artwork: s.artwork, preview: s.preview,
     provider: s.preview_provider || "",
-    externalUrl: s.external_url || (s.trackId ? `https://music.apple.com/kr/song/${s.trackId}` : ""),
+    externalUrl: appleUrl(s),
   }));
 fs.writeFileSync("data/playlist.json", JSON.stringify({ items }));
 console.log(`플레이어 목록: 미리듣기 있는 곡 ${items.length} — ${Math.round(fs.statSync("data/playlist.json").size / 1024)}KB`);

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a9/5c/1ba95cac-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/88/7c/92/887c92d6-0979-9f01-1e9b-6762fca517bd/mzaf_1998812167371306210.plus.aac.p.m4a
 trackId: 1097862845
 duration: 291
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
 keywords: [플라스틱, 고무, 마을]

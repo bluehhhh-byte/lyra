@@ -9,7 +9,7 @@ artwork: https://dn721604.ca.archive.org/0/items/mbid-95987162-073e-4cdf-97b2-c7
 preview: 
 trackId: 
 duration: 
-genre: 
+genre: Ballad
 lang: en
 tags: [한국, Ballad, 2020]
 keywords: [세상, 리듬, 영혼]

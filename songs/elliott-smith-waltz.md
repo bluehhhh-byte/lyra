@@ -3,10 +3,12 @@ title: Waltz
 title_ko: XO
 artist: Elliott Smith
 artist_ko:
-album:
+album: Jan Douwe Kroeske Presents: The Best of 2 Meter Sessions 1987–2009
 year: 1998
-artwork:
+artwork: https://coverartarchive.org/release-group/82fec461-dd84-4b01-8c9c-115725034f5f/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/82fec461-dd84-4b01-8c9c-115725034f5f
 trackId:
 duration:
 genre: Indie Rock

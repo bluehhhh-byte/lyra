@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/653aff456ecc458c427fef92e2d86
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/e/d/0/5ed91252d45a1caf9698dfd2e745fdb6.mp3?hdnea=exp=1786559445~acl=/api/1/1/5/e/d/0/5ed91252d45a1caf9698dfd2e745fdb6.mp3*~data=user_id=0,application_id=42~hmac=f8df87495efc10b58f4939f6748475e96e21ac87c190efcbd675847a707b69ef
 trackId: 
 duration: 221
-genre: 
+genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2022]
 keywords: [괴물, 위선자, 광경]

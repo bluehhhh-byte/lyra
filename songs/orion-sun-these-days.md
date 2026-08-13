@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/231a5db3d94f04d0a078bd1baa951
 preview: https://cdnt-preview.dzcdn.net/api/1/1/0/1/4/0/0147c2c3343e2e97d2f476ec4a0a79f2.mp3?hdnea=exp=1786559406~acl=/api/1/1/0/1/4/0/0147c2c3343e2e97d2f476ec4a0a79f2.mp3*~data=user_id=0,application_id=42~hmac=eed838ea16e77056d963381245a8beebb2e4f9f3ade0726fb497229bc8d9fd6b
 trackId: 
 duration: 194
-genre: 
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2024]
 keywords: [사랑, 칼, 태양]

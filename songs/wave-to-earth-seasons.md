@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/e7b1e6fc4bc81a5c04775d9587773
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/4/c/0/64c1b236371881bfb145fc395709c292.mp3?hdnea=exp=1786559448~acl=/api/1/1/6/4/c/0/64c1b236371881bfb145fc395709c292.mp3*~data=user_id=0,application_id=42~hmac=ab792d318ff335b4996f7e616d1f408b5b7437cf99d74c20fcfe0b69086e68fa
 trackId: 
 duration: 256
-genre: 
+genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2020]
 keywords: [사랑, 삶, 기도]

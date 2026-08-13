@@ -3,10 +3,12 @@ title: 君に逢いたくて 그대를 만나고 싶어서
 title_ko: 
 artist: Gackt
 artist_ko:
-album:
-year: 
-artwork:
+album: 君に逢いたくて
+year: 2004
+artwork: https://coverartarchive.org/release-group/6ce2e9a6-1037-3528-8a8d-77286c5f5585/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/6ce2e9a6-1037-3528-8a8d-77286c5f5585
 trackId:
 duration:
 genre: J-Pop

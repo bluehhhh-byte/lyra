@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/1009e54af0c5c36fb6513f06872ed
 preview: https://cdnt-preview.dzcdn.net/api/1/1/4/8/1/0/4811aba51cd5757b5fd4989fb1bec356.mp3?hdnea=exp=1786559415~acl=/api/1/1/4/8/1/0/4811aba51cd5757b5fd4989fb1bec356.mp3*~data=user_id=0,application_id=42~hmac=df5ff5253abb9a6e1137e523d4ac446fe68ffceddccbc67d5c9d9f21c06406ee
 trackId: 
 duration: 234
-genre: 
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]
 keywords: [흉터, 새, 풍경]

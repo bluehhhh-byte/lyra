@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/83d86caacbc5a95f1638048252c01
 preview: https://cdnt-preview.dzcdn.net/api/1/1/8/d/a/0/8daf84f63065a4c06f360649b366de14.mp3?hdnea=exp=1786559425~acl=/api/1/1/8/d/a/0/8daf84f63065a4c06f360649b366de14.mp3*~data=user_id=0,application_id=42~hmac=387dec8c262ab217818daf310cd226f2350a3c64c06a210dce9ec2d24e2c78b1
 trackId: 
 duration: 274
-genre: 
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 1999]
 keywords: [불빛, 식당, 돈]

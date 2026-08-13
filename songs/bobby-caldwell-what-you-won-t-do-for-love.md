@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/0218fd347b94d34935dd025cdd7a7
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e92991d4fa.mp3?hdnea=exp=1786559362~acl=/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e92991d4fa.mp3*~data=user_id=0,application_id=42~hmac=bed029249b0cbb0b279cb124e562917b1c8e6dbfb24337bcb09b83ae97cf74bb
 trackId: 
 duration: 286
-genre: 
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 1978]
 keywords: [사랑, 친구, 마음]

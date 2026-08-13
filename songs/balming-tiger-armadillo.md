@@ -9,7 +9,7 @@ artwork: https://cdn-images.dzcdn.net/images/cover/dae451a9f1e22c409ad76cdd9c879
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/5/5/0/555a5d994a03ef5e21debc912bef12a8.mp3?hdnea=exp=1786559360~acl=/api/1/1/5/5/5/0/555a5d994a03ef5e21debc912bef12a8.mp3*~data=user_id=0,application_id=42~hmac=1536d009b273208d55e3afc70b163c2f800d3f5f8e5a907ec77a80b0815a026b
 trackId: 
 duration: 150
-genre: 
+genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2019]
 keywords: [갑옷, 거울, 돈]
