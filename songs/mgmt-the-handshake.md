@@ -3,12 +3,14 @@ title: The Handshake
 title_ko: 
 artist: MGMT
 artist_ko:
-album:
+album: Oracular Spectacular
 year: 2007
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/72/f3/ed/72f3edba-cbb0-4887-bb89-4aedf97ecd12/888880287779.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/c6/c7/38c6c753-d807-67f3-4356-9e06bfd908d4/mzaf_15860553590236837927.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-handshake/264720008?i=264720190&uo=4
+trackId: 264720190
+duration: 220
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2007]

@@ -3,12 +3,14 @@ title: 가슴 뛰도록
 title_ko: 가슴 뛰도록
 artist: SG Wannabe
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: The Voice - EP
+year: 2015
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/c5/50/b3/c550b38b-8dd9-fa8f-4ff3-50af4002dbdc/8809435817205_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/8d/3e/29/8d3e2945-e2dd-f4ac-0a71-0973fbe874f5/mzaf_16989349531066569696.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EA%B0%80%EC%8A%B4-%EB%9B%B0%EB%8F%84%EB%A1%9D/1619280886?i=1619280890&uo=4
+trackId: 1619280890
+duration: 252
 genre: Ballad
 lang: ko
 tags: [한국, Ballad]

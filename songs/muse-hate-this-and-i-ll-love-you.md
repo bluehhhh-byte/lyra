@@ -3,12 +3,14 @@ title: Hate This And I'll Love You
 title_ko: 
 artist: Muse
 artist_ko:
-album:
+album: Showbiz
 year: 1999
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/28/d3/f4/28d3f494-3740-5f4f-6177-c44ce99e529a/825646097340.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a7/09/94/a709943e-0ca7-70d2-0475-1e731e388ac3/mzaf_17386059274265335821.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/hate-this-and-ill-love-you/992626782?i=992627345&uo=4
+trackId: 992627345
+duration: 310
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]

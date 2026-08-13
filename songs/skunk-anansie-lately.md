@@ -29,22 +29,22 @@ That we savoured for the last
 Get crushed between the good and bad
 From pressures we have had
 > 우리가 겪었던 압박으로부터
-좋은 것과 나쁜 것 사이에 짓눌려
+> 좋은 것과 나쁜 것 사이에 짓눌려
 But you know I can't conceive the day
 When feelings run too high
 > 하지만 감정이 너무 올라갔을 때는
-그 순간들을 상상할 수 없다는 걸 알잖아
+> 그 순간들을 상상할 수 없다는 걸 알잖아
 To work out all the stale terrain
 Emotions try to hide when I try
 > 퀴퀴한 지형을 헤쳐나가기 위해
-난 감정을 숨기려 노력하네
+> 난 감정을 숨기려 노력하네
 
 Lately I can't seem to color what we've lost
 > 요즘 나는 우리가 잃어버린 것을 색칠할 수 없어
 It all seems like bad means
 When lovers turn from lust
 > 연인들이 욕정에서 벗어났을 때
-모든 것이 나쁘게 보이는 것처럼 말야
+> 모든 것이 나쁘게 보이는 것처럼 말야
 Then I try
 > 그래도 난 노력해볼게
 
@@ -62,7 +62,7 @@ Lately I can't seem to color what we've lost
 It all seems like bad means
 When lovers turn from lust
 > 연인들이 욕정에서 벗어났을 때
-모든 것이 나쁘게 보이는 것처럼 말야
+> 모든 것이 나쁘게 보이는 것처럼 말야
 Then I try
 > 그렇지만 난 노력해볼게
 

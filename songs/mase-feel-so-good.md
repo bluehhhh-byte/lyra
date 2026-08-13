@@ -3,12 +3,14 @@ title: Feel So Good
 title_ko: 
 artist: Mase
 artist_ko:
-album:
+album: Harlem World
 year: 1997
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/79/3d/f8/793df8a5-9d8c-0d95-5139-31a48dff4f23/075679984487.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/d5/df/f0/d5dff0c2-12df-79d6-a3a1-679d5d634657/mzaf_6586586169642047064.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/feel-so-good/587084001?i=587084074&uo=4
+trackId: 587084074
+duration: 205
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]

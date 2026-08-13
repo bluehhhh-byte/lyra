@@ -3,12 +3,14 @@ title: Been Around The World
 title_ko: 
 artist: Puff Daddy
 artist_ko:
-album:
+album: No Way Out (Remastered Edition)
 year: 1997
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f3/7a/df/f37adf7e-b4ad-68a7-9c01-6f9e32a6a9fe/603497898749.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/bc/34/b1/bc34b1e8-c108-a600-4452-d799fc792faa/mzaf_1983281403441356027.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/been-around-the-world-feat-the-notorious-b-i-g-mase/906589196?i=906589224&uo=4
+trackId: 906589224
+duration: 315
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]

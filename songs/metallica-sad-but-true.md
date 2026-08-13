@@ -3,12 +3,14 @@ title: Sad But True
 title_ko: 
 artist: Metallica
 artist_ko:
-album:
+album: Metallica (Deluxe Box Set)
 year: 1991
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2e/94/95/2e9495d7-dfe3-ddc8-87ef-6ef797a60218/850007452056.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b6/58/43/b6584348-6199-c57c-d689-f28b24deae06/mzaf_11462536859467719758.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/sad-but-true/1572051816?i=1572051819&uo=4
+trackId: 1572051819
+duration: 325
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1991]

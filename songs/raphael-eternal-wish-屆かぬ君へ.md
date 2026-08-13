@@ -3,12 +3,14 @@ title: Eternal Wish ~屆かぬ君へ
 title_ko: 닿을 수 없는 그대에게
 artist: Raphael
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Never - 1997040719990429
+year: 2016
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music20/v4/13/75/56/137556a6-8cf9-ee4c-ae1c-310c9a9275cc/AVCD-93418.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b8/20/55/b82055a2-2e8a-16a4-f2eb-e5205f026530/mzaf_14674588057270417196.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/eternal-wish/1108275166?i=1108275176&uo=4
+trackId: 1108275176
+duration: 321
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei]

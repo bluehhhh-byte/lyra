@@ -67,7 +67,7 @@ I lock the door I don't know why
 It seems to me I'm much too old
 To wear a scarf out in the cold
 > 추운 날씨에 스카프를 두르는 건
-너무 나이들어 보이는 것 같기도 하고
+> 너무 나이들어 보이는 것 같기도 하고
 But I want to live until I die
 > 난 죽을 때까지 계속 살고 싶을 뿐인데 말이죠
 

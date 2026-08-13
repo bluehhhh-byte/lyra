@@ -3,12 +3,14 @@ title: King Nothing
 title_ko: 
 artist: Metallica
 artist_ko:
-album:
+album: Load (Remastered Deluxe Box Set)
 year: 1996
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4f/d7/62/4fd762ee-9e0d-7cb4-f3f2-a451e218c8f0/810083963143.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/38/25/bf38259d-7200-7780-3d16-d63bccfc89dd/mzaf_12067315860956729924.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/king-nothing-tepid-mix/1808799652?i=1808799976&uo=4
+trackId: 1808799976
+duration: 308
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1996]

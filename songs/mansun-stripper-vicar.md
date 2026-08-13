@@ -51,11 +51,11 @@ Or whether I should egg him on to turn professional?
 > 아니면 그가 전업 스트리퍼로 전향하도록 설득해야 할까?
 If I dob on him they'll call him plastic scouser
 > 만약 내가 그를 배신한다면
-사람들은 그를 슬럼가 출신이라고 할 거야
+> 사람들은 그를 슬럼가 출신이라고 할 거야
 But the only thing the Stripper Vicar
 Wears is plastic trousers
 > 하지만 스트리퍼 신부가 입는 유일한 옷은
-플라스틱 바지뿐이거든
+> 플라스틱 바지뿐이거든
 
 Dear Mavis thought I'd follow up my letter
 > 친애하는 마비스에게, 난 내 편지대로 행동해야 한다고 생각해

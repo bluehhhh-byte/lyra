@@ -25,10 +25,10 @@ source_body_hash: cc8b0bda0f6ea63dfab923d45636109803195c62
 ---
 Crucify My Love, If my love is blind
 > 내 사랑이 눈 멀었다면,
-이 사랑을 십자가에 매달아 줘
+> 이 사랑을 십자가에 매달아 줘
 Crucify my love, If it sets me free
 > 그것이 나를 자유롭게 한다면,
-내 사랑을 십자가에 매달아 줘
+> 내 사랑을 십자가에 매달아 줘
 Never know Never trust
 > 알 수도 믿을 수도 없을 거야
 That love should see a color
@@ -84,10 +84,10 @@ Where's the answer Is this forever
 
 Crucify My Love, If my love is blind
 > 내 사랑이 눈 멀었다면,
-이 사랑을 십자가에 매달아 줘
+> 이 사랑을 십자가에 매달아 줘
 Crucify my love, If it sets me free
 > 그것이 나를 자유롭게 한다면,
-내 사랑을 십자가에 매달아 줘
+> 내 사랑을 십자가에 매달아 줘
 Never know Never trust
 > 알 수도 믿을 수도 없을 거야
 That love should see a color

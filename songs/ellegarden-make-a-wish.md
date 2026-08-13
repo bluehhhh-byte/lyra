@@ -40,7 +40,7 @@ Nothing lasts forever
 > 그 어떤 것도 영원하지 않다는 걸
 But we have too many things gone too fast
 > 하지만 우리의 아주 많은 것들이
-너무 빨리 사라져 버린 걸
+> 너무 빨리 사라져 버린 걸
 
 Let's a make a wish
 > 소원을 하나 빌자

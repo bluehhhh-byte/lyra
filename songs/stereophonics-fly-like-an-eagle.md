@@ -46,7 +46,7 @@ To fly like an eagle into the dawn and
 > 독수리처럼 새벽을 날아서
 You know I always feel like the blinds are drawing
 > 언제나 눈앞이 보이지 않는 사람이
-그림을 그리는 것 같은 기분이야
+> 그림을 그리는 것 같은 기분이야
 To fly like an eagle and dare to reborn and
 > 독수리처럼 날아서 다시 태어날 거야
 
@@ -83,7 +83,7 @@ To fly like an eagle into the dawn and
 > 독수리처럼 새벽을 날아서
 You know I always feel like the blinds are drawing
 > 언제나 눈앞이 보이지 않는 사람이
-그림을 그리는 것 같은 기분이야
+> 그림을 그리는 것 같은 기분이야
 To fly like an eagle and dare to reborn and
 > 독수리처럼 날아서 다시 태어날 거야
 

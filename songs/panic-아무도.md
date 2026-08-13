@@ -3,12 +3,14 @@ title: 아무도
 title_ko: 아무도
 artist: PANIC
 artist_ko:
-album:
+album: Panic
 year: 1995
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/90/50/51/905051e7-d20f-0304-4a2a-dc4d90bf4133/cover_KM0021246_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/37/1a/5c371ade-d54e-8b35-3bf3-857f36c93f61/mzaf_8550551268883461800.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%EC%95%84%EB%AC%B4%EB%8F%84/1804626503?i=1804626506&uo=4
+trackId: 1804626506
+duration: 198
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 1995]

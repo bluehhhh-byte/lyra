@@ -35,7 +35,7 @@ It's something fane
 > 이건 기쁜 일이야
 This is not a place
 > 장소를 말하는 게 아냐
-(*Bon Iver의 모든 곡명은 도시이름임)
+> (*Bon Iver의 모든 곡명은 도시이름임)
 Not yet awake, I'm raised of make
 > 아직 깨어나지 않았지만 난 일어섰지
 

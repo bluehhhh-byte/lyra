@@ -3,12 +3,14 @@ title: Killer Car
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: High & Dry / Planet Telex - EP
+year: 1995
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/de/29/39/de293979-fa6b-aa11-c122-be20fb66be3e/634904080068.png/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e7/ac/e7/e7ace7f5-3d36-1e52-431c-349634e93a4d/mzaf_14671650526718612326.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/killer-cars/1112408551?i=1112409076&uo=4
+trackId: 1112409076
+duration: 184
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock]

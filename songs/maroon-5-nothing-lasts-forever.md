@@ -3,15 +3,17 @@ title: Nothing Lasts Forever
 title_ko: 
 artist: Maroon 5
 artist_ko:
-album:
+album: It Won't Be Soon Before Long
 year: 2007
-artwork:
-preview:
-trackId:
-duration:
-genre: Funk
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d1/f6/02/d1f602c4-e185-4ce5-c361-23af7c857628/07UMGIM06094.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9d/8a/af/9d8aaf75-7de7-d23b-5bfc-b4982f84ce2a/mzaf_10954067499278813164.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/nothing-lasts-forever/1440850452?i=1440850463&uo=4
+trackId: 1440850463
+duration: 188
+genre: Pop
 lang: en
-tags: [영미, Funk, 2007]
+tags: [영미, Pop, 2007]
 keywords: [침대, 벽, 추억, 영혼, 바닥]
 emotion: 이별
 date: 2023-04-14

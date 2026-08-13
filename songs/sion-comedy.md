@@ -49,7 +49,7 @@ To watch it with you
 Noway, tell me this is just a part
 Of a comedy TV-show or a prank?
 > 안돼, 이건
-그냥 코미디쇼나 장난의 일부지?
+> 그냥 코미디쇼나 장난의 일부지?
 You told me that
 we'll only have to laugh
 > 우린 웃기만하면 된다고 했잖아
@@ -71,19 +71,19 @@ To a puppeteer
 He'll make me a puppet
 for a comedy show
 > 나를 꼭두각시로 만들겠지
-코미디쇼를 위해
+> 코미디쇼를 위해
 Kids will love my scent
 > 아이들은 내 향기를 좋아하겠지만
 But they will not notice that everything 
 > 눈치채지 못할거야 
 They smell is a piece of broken love
 > 그들이 맡은 건
-깨진 사랑의 조각이라는 걸
+> 깨진 사랑의 조각이라는 걸
 
 Noway, tell me this is just a part
 Of a comedy TV-show or a prank?
 > 안돼, 이건
-그냥 코미디쇼나 장난의 일부지?
+> 그냥 코미디쇼나 장난의 일부지?
 You told me that
 we'll only have to laugh
 > 우린 웃기만하면 된다고 했잖아

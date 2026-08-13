@@ -115,9 +115,9 @@ I say goodnight
 > 작별 인사를 건네
 Cest La Vie
 > 이것도 다 인생이지 뭐
-몇번이고 돌아와
+> 몇번이고 돌아와
 > I keep coming back over and over
-눈을 뜨면 다시
+> 눈을 뜨면 다시
 > When I open my eyes, once again
 
 [Outro]

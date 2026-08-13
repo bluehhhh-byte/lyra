@@ -68,7 +68,7 @@ Don't want them dealing with my brain
 But suddenly he's got me folding
 'Cause I only want him to hold me, yuck
 > 그런데 갑자기 사랑에 빠지고 만 거야,
-난 그냥 갖고 놀고만 싶었는데
+> 난 그냥 갖고 놀고만 싶었는데
 'Cause I can't take my feelings and I can't trust my heart
 > 나도 내 감정을 감당 못해, 내 마음을 모르겠어
 So I never take my chances 'cause I know I'll break apart

@@ -62,7 +62,7 @@ I throw myself into my work
 > 난 나 자신을 나의 직업에 집어 놓고선
 I'm too lazy, I've been kidding myself for so long
 > 너무나도 게을러졌다고,
-스스로를 오랜 시간동안 비웃기도 했었지
+> 스스로를 오랜 시간동안 비웃기도 했었지
 
 But I'm okay, how are you?
 > 그러나 난 괜찮아, 넌 어떻게 지내니?

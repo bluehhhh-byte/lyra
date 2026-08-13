@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a5/f5/df/a5f5dfac-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/bc/96/83/bc9683da-1ff5-e60d-4ee6-e8117bc4dc8d/mzaf_8048064287043714552.plus.aac.p.m4a
 trackId: 269762305
 duration: 311
-lang: en
+lang: ja
 tags: [일본, J-Rock, 1999]
 emotion: 회상
 keywords: [청춘, 사랑, 미래, 기억, 환상]

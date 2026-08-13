@@ -48,7 +48,7 @@ There were nights that I died for you baby
 I tried and I tried to deny,
 your love drove me crazy baby
 > 당신이 나를 미치게 한다는 것을
-부정하려 무슨 짓이든 해보려 했어
+> 부정하려 무슨 짓이든 해보려 했어
 
 If the love that I've got for you is gone
 > 당신을 향한 나의 사랑이 끝나버렸다면

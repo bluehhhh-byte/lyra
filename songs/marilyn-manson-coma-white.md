@@ -55,7 +55,7 @@ And she was waiting to fall
 > 그녀는 쓰러지길 기다리고 있었어
 Just bleeding like a polaroid that lost all her dolls
 > 그녀는 인형을 다 잃어버린
-폴라로이드 사진처럼 피를 흘리면서
+> 폴라로이드 사진처럼 피를 흘리면서
 
 'Cause you were from a perfect world
 > 넌 완벽한 세상에서 왔으니까

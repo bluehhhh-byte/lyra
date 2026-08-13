@@ -3,12 +3,14 @@ title: Ditto
 title_ko: Ditto
 artist: NewJeans
 artist_ko:
-album:
+album: Ditto - Single
 year: 2022
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f6/29/42/f629426e-92fe-535c-cbe4-76e70850819b/196922287107_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/72/66/8572665a-d35f-ce5d-43c5-9ae4b69b4b46/mzaf_2317272666428796662.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/ditto/1657231957?i=1657231962&uo=4
+trackId: 1657231962
+duration: 186
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2022]

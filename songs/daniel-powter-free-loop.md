@@ -40,7 +40,7 @@ I've been fabulous through to find my tattered name
 I'll be stewed tomorrow
 If I don't leave as them both the same
 > 우리 둘 다 서로를 떠나지 않는다면
-내일은 엉망진창이 될테니까
+> 내일은 엉망진창이 될테니까
 But I don't know enough
 > 하지만 나도 잘 모르겠어
 I get some kinda lazy day

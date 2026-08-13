@@ -69,10 +69,10 @@ Such a pretty house, such a pretty garden
 > 그토록 아름다운 집과 아름다운 정원에서
 No alarms and no surprises (let me out of here)
 > 그 어떤 불안이나 놀라움이 없기를
-(나는 이 곳을 벗어나고 있어요)
+> (나는 이 곳을 벗어나고 있어요)
 No alarms and no surprises (let me out of here)
 > 그 어떤 불안이나 놀라움이 없기를
-(나는 이 곳을 벗어나고 있어요)
+> (나는 이 곳을 벗어나고 있어요)
 No alarms and no surprises please (let me out of here)
 > 그 어떤 불안이나 놀라움이 없기를
-(나는 이 곳을 벗어나고 있어요)
+> (나는 이 곳을 벗어나고 있어요)

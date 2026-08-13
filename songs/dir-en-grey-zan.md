@@ -10,7 +10,7 @@ preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7a
 trackId:
 duration: 272
 genre: Metal
-lang: ja
+lang: en
 tags: [일본, Metal]
 keywords: [죽음, 공포, 함정, 자유, 한숨, 왜곡]
 emotion: 저항

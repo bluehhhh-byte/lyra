@@ -27,46 +27,46 @@ Things haven't been quite the same
 There's a haze on the horizon, babe
 It's only been a couple of days and I miss you, mmm, yeah
 > 삶이 예전 같지 않아
-눈 앞이 흐려지기도 해
-며칠 밖에 지나지 않았는데, 네가 보고싶어
+> 눈 앞이 흐려지기도 해
+> 며칠 밖에 지나지 않았는데, 네가 보고싶어
 
 When nothing really goes to plan
 You stub your toe or break your camera
 I'll do everything I can to help you through
 > 계획대로 되는 게 하나도 없는 날
-네가 발을 다치거나 카메라가 부서지면
-난 널 돕기 위해 무엇이든 할거야
+> 네가 발을 다치거나 카메라가 부서지면
+> 난 널 돕기 위해 무엇이든 할거야
 
 If you're feeling down, 
 I just wanna make you happier, baby
 Wish I was around, 
 I just wanna make you happier, baby
 > 네가 우울하다면 그저 널 행복하게 해주고 싶어
-네 곁에 있고 싶어, 널 행복하게 해주고 싶어
+> 네 곁에 있고 싶어, 널 행복하게 해주고 싶어
 
 We've been doin' all this late-night talkin'
 'Bout anything you want until the morning
 > 우린 밤새도록 이야기를 나눴지
-네가 원하는 이야기를 아침까지 했어
+> 네가 원하는 이야기를 아침까지 했어
 
 Now you're in my life
 I can't get you off my mind
 > 이제 넌 내 삶의 일부야
-네가 내 머릿 속에서 떠나지 않을 정도로
+> 네가 내 머릿 속에서 떠나지 않을 정도로
 
 I've never been a fan of change
 But I'd follow you to any place
 If it's Hollywood or Bishopsgate, I'm coming, too
 > 바뀌는 것에는 흥미가 없지만
-네가 원하는 곳에 어디든 따라갈게
-헐리우드나 비숍게이트라도 함께 할거야
+> 네가 원하는 곳에 어디든 따라갈게
+> 헐리우드나 비숍게이트라도 함께 할거야
 
 Can't get you off my mind
 Can't get you off my mind
 > 네 생각을 그만둘 수가 없어
-네 생각을 멈출 수가 없는데
+> 네 생각을 멈출 수가 없는데
 
 I won't even try
 To get you off my mind
 > 널 잊으려는 시도 조차 안 해봤어
-네 생각을 멈출 수가 없으니까
+> 네 생각을 멈출 수가 없으니까

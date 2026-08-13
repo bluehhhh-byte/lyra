@@ -73,5 +73,5 @@ playboi carti, sheck wes,
 Justice, justin bieber,
 The Chemical Brothers
 > 그중에서 XXXTENTACION
-제일 좋아함
-돌아가셨을 때 울 뻔했음
+> 제일 좋아함
+> 돌아가셨을 때 울 뻔했음

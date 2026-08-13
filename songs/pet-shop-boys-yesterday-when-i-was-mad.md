@@ -3,12 +3,14 @@ title: Yesterday When I Was Mad
 title_ko: 
 artist: Pet Shop Boys
 artist_ko:
-album:
+album: Very: Further Listening 1992-1994 (Deluxe Edition) [2018 Remaster]
 year: 1993
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/ce/a1/ddcea14a-a3ea-aca0-820e-a8a2ae882275/190295788346.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6d/7b/c3/6d7bc347-24dd-49e8-3c07-bf47d5a17adc/mzaf_18422809839619743998.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/yesterday-when-i-was-mad/1393146194?i=1393146202&uo=4
+trackId: 1393146202
+duration: 236
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 1993]

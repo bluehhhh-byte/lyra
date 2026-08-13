@@ -40,7 +40,7 @@ Oh, such a perfect day,
 you just keep me hanging on,
 you just keep me hanging on
 > 아주 완벽한 날이야, 당신이 나를 목매이게 하지,
-이렇게 들뜨게끔 말야
+> 이렇게 들뜨게끔 말야
 
 Just a perfect day, problems all left alone
 > 완벽한 날이야, 문제들은 모두 남아 있지만

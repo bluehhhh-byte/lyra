@@ -3,12 +3,14 @@ title: Drones
 title_ko: 
 artist: Muse
 artist_ko:
-album:
+album: Drones
 year: 2015
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fe/e2/d0/fee2d0c2-a1cc-4804-97d5-0db67a7895ed/825646121205.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d3/fd/e2/d3fde257-f851-64a0-0ae9-601f1a4627de/mzaf_4296555254073697778.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/drones/973555620?i=973556131&uo=4
+trackId: 973556131
+duration: 170
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2015]

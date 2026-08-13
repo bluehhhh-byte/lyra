@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ba/e7/17/bae7170f-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/8d/c9/e98dc9d3-9cf1-c076-00a9-8e9b66727ce7/mzaf_14282528730996174770.plus.aac.p.m4a
 trackId: 1742129537
 duration: 168
-lang: en
+lang: ko
 tags: [한국, Hip-Hop, 2024]
 keywords: [재능, 총, 방아쇠, 녹취록]
 emotion: 저항

@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a3/01/69/a3016964-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/55/89/e3/5589e366-d63d-be97-731e-3e88388b4c12/mzaf_17081167464481068223.plus.aac.p.m4a
 trackId: 1519359646
 duration: 225
-lang: en
+lang: ko
 tags: [한국, K-Pop, 2011]
 emotion: 이별
 keywords: [시간, 기억, 추억, 사진]

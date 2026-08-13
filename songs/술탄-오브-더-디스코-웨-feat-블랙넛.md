@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3d/9b/80/3d9b80c9-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/aa/a2/3c/aaa23cd5-5699-60cd-7df6-5415f2ec6159/mzaf_108830429429194749.plus.aac.p.m4a
 trackId: 1614184500
 duration: 221
-lang: en
+lang: ko
 tags: [한국, Disco, 2014]
 keywords: [사람들, 세상, 손해, 신발]
 emotion: 분노

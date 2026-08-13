@@ -29,7 +29,7 @@ You think I can't handle dancing on my own
 > 넌 나 혼자서 춤을 추지 못할 거라고 생각하지
 It takes two to tango but only one to let go
 > 탱고를 추려면 두 사람이 필요하지만
-손을 놓는 건 한 사람이면 돼
+> 손을 놓는 건 한 사람이면 돼
 
 I'm sorry I can't answer,
 > 대답 못해 미안해
@@ -50,7 +50,7 @@ Praying for some different problems
 > 서로 다른 문제들을 위해 기도하느라
 I know that it's not that deep but all I can say is
 > ​그렇게 심각하지 않다는 걸 알았지만
-내가 할 수 있는 말은
+> 내가 할 수 있는 말은
 
 I'm doing fine, thought you should know
 > 나는 잘 지내, 네가 알아야 한다고 생각했어
@@ -76,7 +76,7 @@ Don't think I don't got no options
 > 내게 선택의 여지가 없다고 생각하지 마
 I know that it's not that deep but all I can say is
 > 그렇게 심각하지 않다는 걸 알았지만
-내가 할 수 있는 말은
+> 내가 할 수 있는 말은
 
 I'm doing fine, thought you should know
 > 나는 잘 지내, 네가 알아야 한다고 생각했어
@@ -102,4 +102,4 @@ You think I can't handle dancing on my own
 > 넌 나 혼자서 춤을 추지 못할 거라고 생각하지
 It takes two to tango but only one to let go
 > 탱고를 추려면 두 사람이 필요하지만
-손을 놓는 건 한 사람이면 돼
+> 손을 놓는 건 한 사람이면 돼

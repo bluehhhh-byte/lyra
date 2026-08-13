@@ -36,7 +36,7 @@ It's unavoidable, miserable situation
 11 o'clock is last chance
 For the people who fear failure
 > 밤 11시는 실패를 두려워하는 사람들에겐
-마지막 기회일테니까
+> 마지막 기회일테니까
 
 열 두시가 되면은 문을 닫는다
 
@@ -54,7 +54,7 @@ It's unavoidable, miserable situation
 11 o'clock is last chance
 For the people who fear failure
 > 밤 11시는 실패를 두려워하는 사람들에겐
-마지막 기회일테니까
+> 마지막 기회일테니까
 
 열 두시가 되면은 문을 닫는다
 

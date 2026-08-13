@@ -26,7 +26,7 @@ source_body_hash: 5c08f3e75ee6f33eae67dd1eda59478be48557ce
 I wrapped you inside my coat
 When they came to firebomb the house
 > 그들이 집을 폭파하러 왔을 때
-당신을 내 코트 안으로 감싸 안았어
+> 당신을 내 코트 안으로 감싸 안았어
 I didn't feel pain,
 > 난 고통을 느끼지 않아
 Cause no one can touch me
@@ -60,4 +60,4 @@ Can turn your world into dust
 I stood in front of her face
 When the first bullet was shot
 > 첫 번째 총알이 발사된 순간
-난 그녀의 얼굴 앞에 서 있었지
+> 난 그녀의 얼굴 앞에 서 있었지

@@ -25,22 +25,22 @@ source_body_hash: 5ac9615a4b21d0086fe52a84377785fec276e91b
 ---
 I wanted to be with you alone and talk about the weather
 > 나는 당신과 함께 하길 원했고
-날씨에 대한 이야기를 하고 싶었어요
+> 날씨에 대한 이야기를 하고 싶었어요
 But traditions I can trace against the child in your face
 won't escape my attention
 > 순진한 당신의 모습과는 정반대인 당신의 과거는
-내 관심을 피해갈 수 없지만요
+> 내 관심을 피해갈 수 없지만요
 You keep your distance with a system of touch
 and gentle persuasion
 > 당신은 마치 접근체계처럼 거리를 두고
-부드럽게 설득하기만 해요
+> 부드럽게 설득하기만 해요
 I'm lost in admiration could I need you this much
 > 난 이토록 당신이 필요한데
-당신을 향한 감탄에 빠져 있어요
+> 당신을 향한 감탄에 빠져 있어요
 Oh you're just wasting my time
 you're just wasting time
 > 하지만 당신은 내 시간을 낭비하고 있어요
-내 시간을 빼앗기만 하네요
+> 내 시간을 빼앗기만 하네요
 
 Something happens and I'm head over heels
 > 뭔가가 일어나는 순간 속에 난 완전히 빠져버렸어요
@@ -62,7 +62,7 @@ no no no have you no ambition
 My mother and my brother's used to
 breathing clean air and dreaming I'm a doctor
 > 어머니와 형은 맑은 공기를 마시며
-내가 의사가 되길 바라고 있지만
+> 내가 의사가 되길 바라고 있지만
 It's hard to be a man when there's a gun in your hand
 > 당신이 총으로 나를 좌지우지할 때 난 남자가 되기 힘들어요
 Oh I feel so
@@ -82,4 +82,4 @@ La, la, la, la, la, la one little boy, one little man
 La, la-la-la, la, la la la la la la, la, la, la, la, la,
 funny how time flies
 > 라라라, 당신과 있으면 시간이 이렇게
-쏜살같이 지나간다니 얼마나 우스워요
+> 쏜살같이 지나간다니 얼마나 우스워요

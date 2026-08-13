@@ -30,7 +30,7 @@ I can see a washed out moon through the fog
 And then a voice inside my head
 breaks the analogue and says
 > 그리고 곧 지나간 것들을 부숴버리는
-한 목소리가 내 머리 속에 들리지
+> 한 목소리가 내 머리 속에 들리지
 
 Follow me down to the valley below
 > 저 계곡 아래로 나를 따라오렴
@@ -42,7 +42,7 @@ I survived against the will of my twisted folk
 > 나는 일그러진 사람들의 의지에 맞서 살아남았어
 But in the deafness of my world the silence broke it said
 > 하지만 아무것도 들리지 않는 나의 세상에서
-침묵을 깨며 그 목소리는 이렇게 말했지
+> 침묵을 깨며 그 목소리는 이렇게 말했지
 
 Follow me down to the valley below
 > 저 계곡 아래로 나를 따라오렴
@@ -74,4 +74,4 @@ From out of your soul
 Come to us, Lazarus
 It's time for you to go
 > 우리에게 오렴, 나사로여
-이제 너를 위해 떠나야 할 시간이니
+> 이제 너를 위해 떠나야 할 시간이니

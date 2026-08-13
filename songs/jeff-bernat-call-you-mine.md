@@ -48,7 +48,7 @@ Call you my one and only girl
 > 널 내 여자라고 불러도 될까
 (Can I) Call you my everything call you my baby
 > (해도 될까) 널 내 모든 것이라 부르고
-그대라고 불러도 될까
+> 그대라고 불러도 될까
 
 I remember this night we had
 > 난 우리가 함께한 밤을 기억해

@@ -3,12 +3,14 @@ title: She-Wolf
 title_ko: 
 artist: Megadeth
 artist_ko:
-album:
+album: Cryptic Writings (Remastered)
 year: 1997
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/24/63/98/246398d8-735b-3c6c-cdba-ca4c8b4fe5cd/00724359862552.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ef/6d/d3/ef6dd363-8445-2820-f99a-c1e294b60624/mzaf_13000531264040432069.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/she-wolf/723975910?i=723975997&uo=4
+trackId: 723975997
+duration: 218
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1997]

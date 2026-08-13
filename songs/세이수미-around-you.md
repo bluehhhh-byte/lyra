@@ -50,7 +50,7 @@ I'm just missing what I liked
 But something that makes me think about
 something else is waiting for me when I go out
 > 하지만 내가 외출할 때 어떤 것에 대해 
-생각하게 만드는 무언가 기다리고 있어
+> 생각하게 만드는 무언가 기다리고 있어
 
 I haven't seen anyone for a few days
 > 난 며칠 동안 아무도 만나지 못했어

@@ -25,15 +25,15 @@ source_body_hash: 5efa8453ab9a8f03f5eae830b18532f09167c3ee
 ---
 And you see, I kind of shivered to conformity
 > 그리고 너는 보고 있지,
-내가 순응하기 위해서 얼마나 떨고 있는지
+> 내가 순응하기 위해서 얼마나 떨고 있는지
 Did you see the way I cowered to authority
 > 내가 권위 앞에 어떻게 복종하는지 보고 있어?
 You see, my life, it's a series of compromises anyway
 > 넌 보고 있지, 내 인생을
-그건 어쨌든 타협의 연속이었어
+> 그건 어쨌든 타협의 연속이었어
 It's a shame, and I'm conditioned to accept it all, you see
 > 정말 부끄러운 일이야, 난 이 모든 것을
-받아들이는 것으로 정해져있어, 보고 있잖아
+> 받아들이는 것으로 정해져있어, 보고 있잖아
 
 (More) than I had before
 > 내가 가지고 있던 것들보다 더
@@ -69,7 +69,7 @@ The Jabberwocky haunts me, in my memory it's caged
 > 무의미한 말들이, 갇혀버린 내 기억 속에서 날 따라다녀
 But if you punched me in the stomach then I'd feel it again
 > 만약 네가 내 복부를 세게 때린다면,
-아마 난 다시 정신차릴 거야
+> 아마 난 다시 정신차릴 거야
 
 Life is a compromise anyway
 > 삶은 그저 타협일 뿐이야
