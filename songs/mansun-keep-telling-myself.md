@@ -3,12 +3,12 @@ title: Keep Telling Myself
 title_ko: 
 artist: Mansun
 artist_ko:
-album:
+album: Kleptomania 1
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/4e0eb74fa4f14e138b6bddb18c570c48/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/d/9/f/0/d9f47bf953a6532b783baad2e1d7448b.mp3?hdnea=exp=1786584349~acl=/api/1/1/d/9/f/0/d9f47bf953a6532b783baad2e1d7448b.mp3*~data=user_id=0,application_id=42~hmac=399fdc14f2024caa7d11abb97371bfccd837d5c17d23e349d5fa16f924a08f24
 trackId:
-duration:
+duration: 238
 genre:
 lang: en
 tags: []

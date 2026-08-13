@@ -3,12 +3,12 @@ title: Last Dance
 title_ko: Last Dance
 artist: BIGBANG
 artist_ko:
-album:
+album: MADE
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/73f9614becfcecc25782335cacc49cd2/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3?hdnea=exp=1786584267~acl=/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3*~data=user_id=0,application_id=42~hmac=83b369eca3ad8d781484049b6a38c26bdefc9c77495c909a1977b8299556b54c
 trackId:
-duration:
+duration: 279
 genre:
 lang: ko
 tags: []

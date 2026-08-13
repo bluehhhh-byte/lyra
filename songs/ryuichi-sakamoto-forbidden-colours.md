@@ -3,12 +3,12 @@ title: Forbidden Colours
 title_ko: 
 artist: Ryuichi Sakamoto
 artist_ko:
-album:
+album: Synthesizer Greatest 2
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/52e26d766dab8c9603e34713644b2bb2/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/d/6/0/0/d6063f54a08101b466419134c911a3d4.mp3?hdnea=exp=1786584398~acl=/api/1/1/d/6/0/0/d6063f54a08101b466419134c911a3d4.mp3*~data=user_id=0,application_id=42~hmac=a158b120975642895a4aa0b5545b22be87e2ce8c55ed1a6f41487e2a424264cc
 trackId:
-duration:
+duration: 275
 genre:
 lang: en
 tags: []

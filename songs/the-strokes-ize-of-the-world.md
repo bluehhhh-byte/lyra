@@ -3,12 +3,12 @@ title: Ize Of The World
 title_ko: 
 artist: The Strokes
 artist_ko:
-album:
+album: First Impressions Of Earth
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/26b25d58623f89e163b8e4c4a5ae2ca2/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/0/f/0/a0fa864a6abdecfd5296421bafcf7f6c.mp3?hdnea=exp=1786584423~acl=/api/1/1/a/0/f/0/a0fa864a6abdecfd5296421bafcf7f6c.mp3*~data=user_id=0,application_id=42~hmac=694e711ea993dc88171614e7f2e6a747d7fc75b8c73604a486dce65a79377b8a
 trackId:
-duration:
+duration: 265
 genre:
 lang: en
 tags: []

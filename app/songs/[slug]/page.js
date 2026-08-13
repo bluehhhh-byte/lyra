@@ -171,6 +171,8 @@ export default async function SongPage({ params }) {
                     artist: song.artist,
                     artwork: song.artwork,
                     preview: song.preview,
+                    provider: song.preview_provider || "",
+                    externalUrl: song.external_url || (song.trackId ? `https://music.apple.com/kr/song/${song.trackId}` : ""),
                   }}
                 />
               )}

@@ -3,12 +3,14 @@ title: Digital Love
 title_ko: 
 artist: Daft Punk
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Discovery
+year: 2001
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fd/4a/77/fd4a77db-0ebc-d043-41a2-f32fa1bb0fb4/dj.qrikkdwj.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/9a/10/16/9a101659-7e2b-2af5-47ca-2399aa11d41d/mzaf_2308252532029859970.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/digital-love/697194953?i=697195633&uo=4
+trackId: 697195633
+duration: 301
 genre:
 lang: en
 tags: []

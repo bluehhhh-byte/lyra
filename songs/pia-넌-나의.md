@@ -3,12 +3,12 @@ title: 넌 나의
 title_ko: 넌 나의
 artist: PIA
 artist_ko:
-album:
+album: PIA 15years
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c1df27d11403804319a335209ef4b38f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/4/1/0/b41e2693ab8563ab3477de120486b6a8.mp3?hdnea=exp=1786584382~acl=/api/1/1/b/4/1/0/b41e2693ab8563ab3477de120486b6a8.mp3*~data=user_id=0,application_id=42~hmac=5115bb808289df220db592fa7e05d2e8342e9ab9ff40746b7940246bd7667303
 trackId:
-duration:
+duration: 184
 genre:
 lang: ko
 tags: []

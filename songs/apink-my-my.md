@@ -3,12 +3,14 @@ title: My My
 title_ko: My My
 artist: Apink
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Snow Pink - EP
+year: 2011
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/fc/35/65/fc35656a-56ef-7ebf-df15-166139304423/cover-.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d2/f9/29/d2f929eb-d044-7e31-c359-b96f84c1f703/mzaf_4301256512889017538.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/my-my/1004834141?i=1004834147&uo=4
+trackId: 1004834147
+duration: 235
 genre:
 lang: ko
 tags: []

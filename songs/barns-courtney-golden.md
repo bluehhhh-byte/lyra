@@ -3,12 +3,12 @@ title: Golden
 title_ko: 
 artist: Barns Courtney
 artist_ko:
-album:
+album: Golden Dandelions
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9081ba7e5916d6beb00145c1f5060854/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3?hdnea=exp=1786584265~acl=/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3*~data=user_id=0,application_id=42~hmac=b028038bdca5d6287eb691dc4a15185eae1d3c8c6b6699479d3923e125b0f4a7
 trackId:
-duration:
+duration: 203
 genre:
 lang: en
 tags: []

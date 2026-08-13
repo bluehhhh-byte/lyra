@@ -3,12 +3,14 @@ title: 악몽
 title_ko: 악몽
 artist: EXN, 시온
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 리슨업 EP.1
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/e9/52/5fe952a7-1b16-1fcd-1523-562b98981d98/8804775268694.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/69/94/27/6994277f-928a-bcd1-4d9f-5824a84a4afc/mzaf_6658175955457158744.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%95%85%EB%AA%BD-with-%ED%94%84%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%A8%BC/1828890973?i=1828890975&uo=4
+trackId: 1828890975
+duration: 186
 genre:
 lang: ko
 tags: []

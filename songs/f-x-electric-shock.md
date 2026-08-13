@@ -3,12 +3,12 @@ title: Electric Shock
 title_ko: Electric Shock
 artist: f(x)
 artist_ko:
-album:
+album: Electric Shock - The 2nd Mini Album
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/4f04e465a2e190d9ec46ccb6ef29587f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3?hdnea=exp=1786584296~acl=/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3*~data=user_id=0,application_id=42~hmac=49d2b23ef4c7eebd5e4fed61d50581c875329ddf435f3ad3c93b2367ab240465
 trackId:
-duration:
+duration: 196
 genre:
 lang: ko
 tags: []

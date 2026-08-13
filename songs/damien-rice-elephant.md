@@ -3,12 +3,14 @@ title: Elephant
 title_ko: 
 artist: Damien Rice
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 9
+year: 2006
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/93/a5/07/93a50719-b09c-6960-7625-588f322b17f6/mzi.xkgoqruc.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/a7/c4/2ea7c417-5054-090e-9df6-64f9c8e3bd48/mzaf_443975730218692195.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/elephant/203880553?i=203880800&uo=4
+trackId: 203880800
+duration: 357
 genre:
 lang: en
 tags: []

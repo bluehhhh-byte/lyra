@@ -3,12 +3,14 @@ title: 오래된 친구
 title_ko: 오래된 친구
 artist: 45RPM
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: RAPPERTORY
+year: 2015
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/d5/f2/cb/d5f2cb97-3999-e6b7-87a2-af86bfa6b42e/8809435818721_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/5d/9e/a0/5d9ea01b-a511-a3cb-f7b4-3f213a03606f/mzaf_4487923781217446332.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%98%A4%EB%9E%98%EB%90%9C-%EC%B9%9C%EA%B5%AC-feat-%EB%A1%9C%EA%BC%AC/1655801741?i=1655802101&uo=4
+trackId: 1655802101
+duration: 213
 genre:
 lang: ko
 tags: []

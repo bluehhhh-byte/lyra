@@ -3,12 +3,14 @@ title: ain't afraid to die
 title_ko: 
 artist: Dir en grey
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: ain’t afraid to die - Single
+year: 2001
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f1/cd/68/f1cd6876-366b-d3ad-678e-812f83585318/4529123109132.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/73/22/f0/7322f07d-4919-6616-1fba-dd185ea730eb/mzaf_14248431904579077662.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/aint-afraid-to-die/1624682042?i=1624682043&uo=4
+trackId: 1624682043
+duration: 436
 genre:
 lang: ja
 tags: []

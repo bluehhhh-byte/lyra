@@ -3,12 +3,12 @@ title: LOVE
 title_ko: LOVE
 artist: Mac Kidd
 artist_ko:
-album:
+album: POPBOX
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a6a810f19a3d9cad53695c754f88c09c/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/f/2/0/af271557f073eb8fc1ea8cd78f3fac99.mp3?hdnea=exp=1786584345~acl=/api/1/1/a/f/2/0/af271557f073eb8fc1ea8cd78f3fac99.mp3*~data=user_id=0,application_id=42~hmac=0705030a4a7a320961377c560817f5d582e1b6c63909458dd91a0bee1a174de9
 trackId:
-duration:
+duration: 116
 genre:
 lang: ko
 tags: []

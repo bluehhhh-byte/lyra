@@ -3,12 +3,14 @@ title: FEET - 第ゼロ感
 title_ko: 0번째 감각
 artist: 10
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 第ゼロ感 - Single
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/27/00/69/27006904-8a8c-7802-65fa-c41ad71bb634/22UM1IM11789.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/2e/4b/3b2e4b07-23f5-fe1f-1117-678a1e6f689d/mzaf_13515127015760753156.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/%E7%AC%AC%E3%82%BC%E3%83%AD%E6%84%9F/1652587487?i=1652587504&uo=4
+trackId: 1652587504
+duration: 288
 genre:
 lang: ja
 tags: []

@@ -3,12 +3,12 @@ title: Since You Been Gone
 title_ko: 
 artist: Rainbow
 artist_ko:
-album:
+album: Down To Earth
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9e025543eb511f1e6b7c62622099924c/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/c/9/0/2c93e490ad1d42bfab3dba88f02640cf.mp3?hdnea=exp=1786584396~acl=/api/1/1/2/c/9/0/2c93e490ad1d42bfab3dba88f02640cf.mp3*~data=user_id=0,application_id=42~hmac=7e29973af9fa0244b8087c4f378b3b3a10adc57d5341a7e8d3d76968963bb78f
 trackId:
-duration:
+duration: 196
 genre:
 lang: en
 tags: []

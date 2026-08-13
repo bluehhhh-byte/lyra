@@ -3,12 +3,12 @@ title: Love Is Blue
 title_ko: 
 artist: Marty Robbins
 artist_ko:
-album:
+album: Marty Robbins' All-Time Greatest Hits
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/5bb1ce411838e00e9098231726d9d811/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/9/0/7998a89601745873b95b7e9a86ce50f9.mp3?hdnea=exp=1786584354~acl=/api/1/1/7/9/9/0/7998a89601745873b95b7e9a86ce50f9.mp3*~data=user_id=0,application_id=42~hmac=69aa82327f386638eb51bd7176ef41e00113f76df8cf68a87c79a9183b709a62
 trackId:
-duration:
+duration: 145
 genre:
 lang: en
 tags: []

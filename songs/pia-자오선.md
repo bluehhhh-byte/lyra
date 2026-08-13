@@ -3,12 +3,12 @@ title: 자오선
 title_ko: 자오선
 artist: PIA
 artist_ko:
-album:
+album: 자오선
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/34b5da2d35c25244081c47a1a9ba42ca/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/8/b/0/b8bc06df29b6bdb10c51c6e417be3d83.mp3?hdnea=exp=1786584382~acl=/api/1/1/b/8/b/0/b8bc06df29b6bdb10c51c6e417be3d83.mp3*~data=user_id=0,application_id=42~hmac=5def7221fce1144bcb88bfaa6bc4a6a63c5ca1ab5e2a04f6b7169b6b9ddd0160
 trackId:
-duration:
+duration: 296
 genre:
 lang: ko
 tags: []

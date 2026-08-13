@@ -3,12 +3,12 @@ title: Highway
 title_ko: 
 artist: Quruli
 artist_ko:
-album:
+album: Highway
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9f5448fc452f407eb55d526b69775848/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/9/5/0/49503d3e3b35a86e9aa242113bb3b64d.mp3?hdnea=exp=1786584387~acl=/api/1/1/4/9/5/0/49503d3e3b35a86e9aa242113bb3b64d.mp3*~data=user_id=0,application_id=42~hmac=6a34dbdedac12750e35a4c42ad565515442548efe13ff3cbda96189106bd250e
 trackId:
-duration:
+duration: 263
 genre:
 lang: ja
 tags: []

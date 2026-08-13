@@ -3,12 +3,12 @@ title: Mahal
 title_ko: 
 artist: Glass Beams
 artist_ko:
-album:
+album: Mahal
 year: 2024
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0b7b4e49bb63067255b0b7e2d43632cb/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/0/c/0/00c50d6a41b0d85db386635858e45a1b.mp3?hdnea=exp=1786584304~acl=/api/1/1/0/0/c/0/00c50d6a41b0d85db386635858e45a1b.mp3*~data=user_id=0,application_id=42~hmac=556fba3366008f7c56a465c50fb9b551d261ae73d275f3ca2b2918a68e83a315
 trackId:
-duration:
+duration: 201
 genre:
 lang: en
 tags: [2024]

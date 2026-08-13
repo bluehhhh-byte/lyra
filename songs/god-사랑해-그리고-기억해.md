@@ -3,12 +3,12 @@ title: 사랑해 그리고 기억해
 title_ko: 사랑해 그리고 기억해
 artist: god
 artist_ko:
-album:
+album: Chapter 2
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ff7eedd095d017734427b2a44db9f542/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/b/1/0/ab12057fd38ccfc39b0110edcab4ab8f.mp3?hdnea=exp=1786584308~acl=/api/1/1/a/b/1/0/ab12057fd38ccfc39b0110edcab4ab8f.mp3*~data=user_id=0,application_id=42~hmac=6e4ad3f3db61d7e2f099702a36194222d87027c1ccf3317562d85615c733c397
 trackId:
-duration:
+duration: 262
 genre:
 lang: ko
 tags: []

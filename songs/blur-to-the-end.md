@@ -3,12 +3,14 @@ title: To the End
 title_ko: 
 artist: Blur
 artist_ko:
-album:
+album: Parklife (Special Edition)
 year: 1994
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/03/e7/e4/03e7e46b-2cf3-25b4-a131-dadde8ddbd22/5099991496553.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/36/5f/8d/365f8d71-6cec-f9e2-9001-e60a5f77b736/mzaf_16653355964865861864.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/to-the-end/699606030?i=699606144&uo=4
+trackId: 699606144
+duration: 245
 genre:
 lang: en
 tags: [1994]

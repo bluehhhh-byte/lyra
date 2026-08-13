@@ -3,12 +3,12 @@ title: HAPPENING
 title_ko: HAPPENING
 artist: AKMU
 artist_ko:
-album:
+album: HAPPENING
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f2c288e502c7ec1c3df7a188aa328303/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/3/e/d/0/3edd9d91d0336a5201856111c802dd59.mp3?hdnea=exp=1786584256~acl=/api/1/1/3/e/d/0/3edd9d91d0336a5201856111c802dd59.mp3*~data=user_id=0,application_id=42~hmac=ef19577c3772cd669a07a6a24a2f56ca2afd554d3efeebfcb87bf2ab13445a26
 trackId:
-duration:
+duration: 224
 genre:
 lang: ko
 tags: []

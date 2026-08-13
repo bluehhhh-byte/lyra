@@ -3,12 +3,14 @@ title: 너는 지금쯤
 title_ko: 너는 지금쯤
 artist: DAY6
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: 친구와 우정을 지키는 방법 - 봄여름가을겨울 트리뷰트
+year: 2024
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e9/a2/5a/e9a25a77-c252-33f9-5e73-f4032e1f7ecc/cover_KM0020790_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/b7/23/85b72356-4a7c-db33-dd60-0cb15be5f25d/mzaf_1979238919635373711.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%EB%84%88%EB%8A%94-%EC%A7%80%EA%B8%88%EC%AF%A4/1787112766?i=1787113050&uo=4
+trackId: 1787113050
+duration: 235
 genre:
 lang: ko
 tags: []

@@ -3,12 +3,12 @@ title: 夢を見る人
 title_ko: 
 artist: Original Love
 artist_ko:
-album:
+album: RAINBOW RACE
 year: 1996
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9469e8766abdd194eacc97a996ff374f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/9/6/0/b96809403942353f628de30bd3037776.mp3?hdnea=exp=1786584373~acl=/api/1/1/b/9/6/0/b96809403942353f628de30bd3037776.mp3*~data=user_id=0,application_id=42~hmac=ebe4394b40c0b7e356208da0bba233c74f3fc5f6beb535aadd3644068c5770cb
 trackId:
-duration:
+duration: 320
 genre:
 lang: ja
 tags: [1996]

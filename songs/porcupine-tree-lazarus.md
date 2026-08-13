@@ -3,12 +3,12 @@ title: Lazarus
 title_ko: 
 artist: Porcupine Tree
 artist_ko:
-album:
+album: Deadwing
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/6f05a1da9c11b4940f0e18f72eb83f90/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/e/1/0/fe146d447dee815901cff088a1fb0ed6.mp3?hdnea=exp=1786584384~acl=/api/1/1/f/e/1/0/fe146d447dee815901cff088a1fb0ed6.mp3*~data=user_id=0,application_id=42~hmac=249a8ce4f3ccec866fbc6d7ddf0f5763dcaccd1ef8b3974ae321cb0e9936c79e
 trackId:
-duration:
+duration: 258
 genre:
 lang: en
 tags: []

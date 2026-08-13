@@ -3,12 +3,12 @@ title: There, There
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
+album: Hail To the Thief
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/d3d9e1f53d60c5d2c764b20870aab69e/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/a/5/0/ba53fb74b4a2d5a215d5273c8663038b.mp3?hdnea=exp=1786584394~acl=/api/1/1/b/a/5/0/ba53fb74b4a2d5a215d5273c8663038b.mp3*~data=user_id=0,application_id=42~hmac=3ad4a148651dac22c415bbdd195ba2ca6cabb399bb1ec8793279ba0d70bcc888
 trackId:
-duration:
+duration: 323
 genre:
 lang: en
 tags: []

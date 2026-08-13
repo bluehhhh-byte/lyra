@@ -3,12 +3,14 @@ title: 섬
 title_ko: 섬
 artist: 2xxx
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Life+Unconsciousness
+year: 2017
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/bd/f7/65/bdf765fd-4559-6be4-d475-d6373a187838/00602567873419.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/23/09/df/2309dfa2-0a9b-e5cb-0f42-9a7dec63363e/mzaf_1374499399691402982.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%84%AC-rough-feat-colde/1406820407?i=1406822544&uo=4
+trackId: 1406822544
+duration: 97
 genre:
 lang: ko
 tags: []

@@ -3,12 +3,12 @@ title: Storm Is Coming
 title_ko: Storm Is Coming
 artist: PIA
 artist_ko:
-album:
+album: Storm Is Coming
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f55378f3941cc32a3adcbfa26ba2453e/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/c/f/0/4cf98adf0e7a53ac0c3cfde932badc61.mp3?hdnea=exp=1786584381~acl=/api/1/1/4/c/f/0/4cf98adf0e7a53ac0c3cfde932badc61.mp3*~data=user_id=0,application_id=42~hmac=c5f03a1d6d2f82c3e5a679541641096a3e96cf4fb3e6137246da6179ad947f38
 trackId:
-duration:
+duration: 237
 genre:
 lang: ko
 tags: []

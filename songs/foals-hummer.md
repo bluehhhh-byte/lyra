@@ -3,12 +3,14 @@ title: Hummer
 title_ko: 
 artist: Foals
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Hummer - Single
+year: 2007
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/11/42/04/mzi.shdzgodw.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/94/46/cd/9446cda8-d491-8519-fe94-7a5e7f0f2e06/mzaf_3339817473481033406.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/hummer/217602349?i=217602354&uo=4
+trackId: 217602354
+duration: 178
 genre:
 lang: en
 tags: []

@@ -3,12 +3,14 @@ title: Tango
 title_ko: 
 artist: Abir
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Mint - EP
+year: 2018
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f1/39/d0/f139d0b6-b8df-0463-a289-4f69bc11bf40/075679860057.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/fb/56/53/fb56533f-0c6f-f3fc-d705-2ecfa72b0de4/mzaf_8965713565824686806.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/tango/1438896266?i=1438896267&uo=4
+trackId: 1438896267
+duration: 186
 genre:
 lang: en
 tags: []

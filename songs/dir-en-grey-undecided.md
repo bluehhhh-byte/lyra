@@ -3,12 +3,12 @@ title: undecided
 title_ko: 
 artist: DIR EN GREY
 artist_ko:
-album:
+album: GLASS SKIN
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/72236b98980e113c11f8ecfd0fe7599b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/8/2/0/08230837e6684a6aa4b3d0f0b88cc5f3.mp3?hdnea=exp=1786584287~acl=/api/1/1/0/8/2/0/08230837e6684a6aa4b3d0f0b88cc5f3.mp3*~data=user_id=0,application_id=42~hmac=b7057ca5658376ff000e833b2e39c4d6c01927f8f864fcfddf91bf8baa7731fd
 trackId:
-duration:
+duration: 297
 genre:
 lang: ja
 tags: []

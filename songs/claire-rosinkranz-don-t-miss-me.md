@@ -3,12 +3,12 @@ title: don't miss me
 title_ko: 
 artist: Claire Rosinkranz
 artist_ko:
-album:
+album: don’t miss me
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/4b4a1145cc777f1bf8fdb24d9fd518e3/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/4/c/0/44c06c31d28c6918717d331881c6e634.mp3?hdnea=exp=1786584276~acl=/api/1/1/4/4/c/0/44c06c31d28c6918717d331881c6e634.mp3*~data=user_id=0,application_id=42~hmac=c841acb9098debe8e62ef99a08b5b514720468ec1ae41071ae843cee7ea03484
 trackId:
-duration:
+duration: 126
 genre:
 lang: en
 tags: []

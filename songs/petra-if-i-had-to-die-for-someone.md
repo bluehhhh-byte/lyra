@@ -3,12 +3,12 @@ title: If I Had To Die For Someone
 title_ko: 
 artist: Petra
 artist_ko:
-album:
+album: God Fixation
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/88a6f51e50ae9d6ba87207391440a515/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/3/0/f63f0e19b8c322e944a4e31c161e0d9f.mp3?hdnea=exp=1786584378~acl=/api/1/1/f/6/3/0/f63f0e19b8c322e944a4e31c161e0d9f.mp3*~data=user_id=0,application_id=42~hmac=8d20b4275d8fbcb0f2da2ae031ad2b7df36da133658a3ffa49ce92a2ae5882b6
 trackId:
-duration:
+duration: 279
 genre:
 lang: en
 tags: []

@@ -3,12 +3,12 @@ title: It's Working
 title_ko: 
 artist: MGMT
 artist_ko:
-album:
+album: Congratulations
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/45b1228d06903dd42c8150f1c493b0ea/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/1/0/4b12c4708f596fed5bce5c9d5791eed4.mp3?hdnea=exp=1786584359~acl=/api/1/1/4/b/1/0/4b12c4708f596fed5bce5c9d5791eed4.mp3*~data=user_id=0,application_id=42~hmac=eab2f4b37925ce916e778b4709af1ae6abaeb88432c703adb6bccf185949562b
 trackId:
-duration:
+duration: 245
 genre:
 lang: en
 tags: []

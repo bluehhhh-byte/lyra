@@ -3,12 +3,12 @@ title: Distractions
 title_ko: 
 artist: Zero 7
 artist_ko:
-album:
+album: RECORD
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/81e0f50c101b0144784c30396f6436b9/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/6/0/0/06034a93d7c8042ef131bcf8d9ace3df.mp3?hdnea=exp=1786584434~acl=/api/1/1/0/6/0/0/06034a93d7c8042ef131bcf8d9ace3df.mp3*~data=user_id=0,application_id=42~hmac=d8c05ea52fa551180fc2e6f59d047d8ba11690966551a6dd0ae8c6222efddacb
 trackId:
-duration:
+duration: 316
 genre:
 lang: en
 tags: []

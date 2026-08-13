@@ -3,12 +3,12 @@ title: golden hour
 title_ko: 
 artist: JVKE
 artist_ko:
-album:
+album: golden hour
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/845eff477946539849c7291510d61daf/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/3/b/7/0/3b72afc4e823cc61cd71bd7c795221b6.mp3?hdnea=exp=1786584328~acl=/api/1/1/3/b/7/0/3b72afc4e823cc61cd71bd7c795221b6.mp3*~data=user_id=0,application_id=42~hmac=641bdc7eaec0a796a17a68de1536c8bb8d7107287a679f75aec48493968fda2d
 trackId:
-duration:
+duration: 209
 genre:
 lang: en
 tags: []

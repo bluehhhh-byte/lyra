@@ -3,12 +3,12 @@ title: Passenger
 title_ko: 
 artist: INTERNET ISLANDS
 artist_ko:
-album:
+album: Passenger
 year: 2023
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9abab585295a894961d2f947ddfbbafb/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/5/f/0/a5f19a7d6b34b394d78bbc44e342e10a.mp3?hdnea=exp=1786584319~acl=/api/1/1/a/5/f/0/a5f19a7d6b34b394d78bbc44e342e10a.mp3*~data=user_id=0,application_id=42~hmac=ab19be38683f6dc0b73428bf5d22e24867510f6f462d0fce2e4165baab2bdbac
 trackId:
-duration:
+duration: 193
 genre:
 lang: en
 tags: [2023]

@@ -3,12 +3,12 @@ title: A Better Day
 title_ko: A Better Day
 artist: JTL
 artist_ko:
-album:
+album: JTL The 1st Live Concert
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/4/0/2e491a27756b8be569ec128ebbd542ab.mp3?hdnea=exp=1786584324~acl=/api/1/1/2/e/4/0/2e491a27756b8be569ec128ebbd542ab.mp3*~data=user_id=0,application_id=42~hmac=6791941894b6c4621e40ce991f5aff64107a5f81fe0065e99655b13d021ded03
 trackId:
-duration:
+duration: 265
 genre:
 lang: ko
 tags: []

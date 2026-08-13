@@ -3,12 +3,12 @@ title: Wait
 title_ko: 
 artist: Steelheart
 artist_ko:
-album:
+album: WAIT
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/52479f8a11c8277b75c8a93bc57679a6/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/7/c/0/07cbd62e3083b19647274155ed44ca6e.mp3?hdnea=exp=1786584410~acl=/api/1/1/0/7/c/0/07cbd62e3083b19647274155ed44ca6e.mp3*~data=user_id=0,application_id=42~hmac=694d81f90dc870922a8f3e1debd9cbf508a15184a402fa6b77193517283396b2
 trackId:
-duration:
+duration: 269
 genre:
 lang: en
 tags: []

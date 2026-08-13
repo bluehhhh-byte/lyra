@@ -3,12 +3,14 @@ title: Da Funk
 title_ko: Da Funk
 artist: Daft Punk
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Homework
+year: 1995
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/34/8d/c7/348dc71c-d75e-9baf-671a-994e9e74b018/dj.pimdxdmf.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/fe/e7/7e/fee77e8a-cf60-9a8c-13c7-cda7d55841b9/mzaf_404691638546000822.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/da-funk/696884422?i=696885792&uo=4
+trackId: 696885792
+duration: 329
 genre:
 lang: ko
 tags: []

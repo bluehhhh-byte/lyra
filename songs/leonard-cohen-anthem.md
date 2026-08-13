@@ -3,12 +3,12 @@ title: Anthem
 title_ko: 
 artist: Leonard Cohen
 artist_ko:
-album:
+album: More Best Of
 year: 1992
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b62532055cff127e398cecbd1c9894d4/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/1/c/0/51cd3dec75bb5fbfdbf54e983d5e2393.mp3?hdnea=exp=1786584340~acl=/api/1/1/5/1/c/0/51cd3dec75bb5fbfdbf54e983d5e2393.mp3*~data=user_id=0,application_id=42~hmac=b9e7daee22026477d893f40620072da10639ee2d08b0b06487ff92f2df110366
 trackId:
-duration:
+duration: 366
 genre:
 lang: en
 tags: [1992]

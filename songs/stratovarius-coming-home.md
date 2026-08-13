@@ -3,12 +3,12 @@ title: Coming Home
 title_ko: 
 artist: Stratovarius
 artist_ko:
-album:
+album: Visions
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ba78bda9106ada0a2fcb19f04d402228/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/d/4/b/0/d4bc5f7a136baad162d9ee0a6f79c70a.mp3?hdnea=exp=1786584412~acl=/api/1/1/d/4/b/0/d4bc5f7a136baad162d9ee0a6f79c70a.mp3*~data=user_id=0,application_id=42~hmac=9f5f2bc247022c0866b97ad16d4ec43aa26e2b62ba6b52a9d1e547e2035ebae4
 trackId:
-duration:
+duration: 336
 genre:
 lang: en
 tags: []

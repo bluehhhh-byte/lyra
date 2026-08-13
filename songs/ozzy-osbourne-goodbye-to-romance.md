@@ -3,12 +3,12 @@ title: Goodbye To Romance
 title_ko: 
 artist: Ozzy Osbourne
 artist_ko:
-album:
+album: Blizzard Of Ozz (40th Anniversary Expanded Edition)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/44b30866dcb6ea27c35da9efb37b83d6/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/6/c/0/26cde761e9b89ec63fcfcac4fa6b7a7a.mp3?hdnea=exp=1786584374~acl=/api/1/1/2/6/c/0/26cde761e9b89ec63fcfcac4fa6b7a7a.mp3*~data=user_id=0,application_id=42~hmac=9ca9c3b69ce405dc2de7919bb64e77b866bdbb2864edb7ba3407126d786cb541
 trackId:
-duration:
+duration: 333
 genre:
 lang: en
 tags: []

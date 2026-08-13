@@ -3,12 +3,12 @@ title: Shangri-La
 title_ko: 
 artist: Denki Groove
 artist_ko:
-album:
+album: Shangri-La
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c02e93814b4a9ce7de572dd5563d601a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/f/c/0/1fc772ec71f59342ee897728a5b9a4e4.mp3?hdnea=exp=1786584284~acl=/api/1/1/1/f/c/0/1fc772ec71f59342ee897728a5b9a4e4.mp3*~data=user_id=0,application_id=42~hmac=88811c8509429b6beaa4fc9da3af10ae3f22c9436fe74cbdab3e709f3e0021f1
 trackId:
-duration:
+duration: 240
 genre:
 lang: ja
 tags: []

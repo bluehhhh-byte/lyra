@@ -55,6 +55,8 @@ async function itunesSearch(term, store) {
     artwork: (x.artworkUrl100 || "").replace("100x100", "600x600"),
     preview: x.previewUrl || "", trackId: x.trackId || "",
     duration: Math.round((x.trackTimeMillis || 0) / 1000) || "", album: x.collectionName || "",
+    // 미리듣기·커버는 스토어 홍보 조건으로 쓰는 것이라 출처와 원문 링크를 같이 남긴다
+    provider: "itunes", externalUrl: x.trackViewUrl || "", year: (x.releaseDate || "").slice(0, 4),
   })); } catch {}
   state.cache[key] = results;
   saveState(state);
@@ -69,6 +71,7 @@ async function deezerSearch(term) {
       title: x.title, artist: x.artist?.name,
       artwork: x.album?.cover_xl || x.album?.cover_big || "",
       preview: x.preview || "", trackId: "", duration: String(x.duration || ""), album: x.album?.title || "",
+      provider: "deezer", externalUrl: x.link || "", year: "",
     }));
   } catch { return []; }
 }
@@ -154,6 +157,11 @@ for (const t of targets.slice(0, LIMIT)) {
       if (hit.trackId) out = setField(out, "trackId", String(hit.trackId), "preview");
       if (hit.duration) out = setField(out, "duration", String(hit.duration), "trackId");
       if (hit.album) out = setField(out, "album", hit.album, "artist_ko");
+      // 출처 표시용 — 어느 스토어의 미리듣기인지, 그 곡의 원문 페이지가 어디인지
+      if (hit.provider) out = setField(out, "preview_provider", hit.provider, "preview");
+      if (hit.externalUrl) out = setField(out, "external_url", hit.externalUrl, "preview_provider");
+      // 보관 게시물에는 발매연도가 없는 캡션이 많다 — 카탈로그에서만 채운다(덮어쓰지 않음)
+      if (hit.year && !fmValue(t.raw.match(FM)[1], "year")) out = setField(out, "year", hit.year, "album");
       fs.writeFileSync("songs/" + t.f, out);
     }
   }

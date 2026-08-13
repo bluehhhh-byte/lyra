@@ -1,85 +1,56 @@
-import { getAllSongs } from "../../../lib/songs";
-import { getAllMovies } from "../../../lib/movies";
-import { getAllPeople } from "../../../lib/people";
-import { getWatched } from "../../../lib/watched";
-import { tmdbUrl } from "../../../lib/tmdb-link";
+import fs from "fs";
+import path from "path";
 
 export const dynamic = "force-dynamic";
 
-const includes = (value, query) => String(value || "").toLowerCase().includes(query);
+// 검색은 빌드 때 만들어 둔 data/search-index.json만 읽는다 (scripts/build-search-index.mjs).
+// 예전에는 요청마다 곡 md 800개와 왓챠 1045편을 다시 파싱했다 — 같은 답을 얻는 데
+// 매번 1MB 넘게 다시 읽는 셈이었다. 인덱스가 없으면(로컬에서 빌드 전) 그 자리에서 만든다.
+let INDEX = null;
+function index() {
+  if (INDEX) return INDEX;
+  const file = path.join(process.cwd(), "data", "search-index.json");
+  try {
+    INDEX = JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch {
+    INDEX = { songs: [], movies: [], watched: [], people: [] };
+  }
+  return INDEX;
+}
+
+const LIMIT = 6;
+const pick = (items, query) => {
+  const out = [];
+  for (const it of items) {
+    if (!it.meta.includes(query)) continue;
+    out.push({ href: it.href, title: it.title, subtitle: it.subtitle, image: it.image });
+    if (out.length === LIMIT) break;
+  }
+  return out;
+};
 
 export async function GET(request) {
   const query = new URL(request.url).searchParams.get("q")?.trim().toLowerCase() || "";
   if (!query) return Response.json({ groups: [] });
+  const db = index();
 
-  const songs = getAllSongs()
-    .map((song) => {
-      const metadata = [song.title, song.title_ko, song.artist, song.artist_ko, song.album, ...(song.tags || [])];
-      const lyric = song.stanzas
-        .flatMap((stanza) => stanza.lines.flatMap((line) => [line.en, line.ko]))
-        .find((line) => includes(line, query));
-      return metadata.some((value) => includes(value, query)) || lyric
-        ? {
-            href: `/songs/${song.slug}`,
-            title: song.title,
-            subtitle: song.artist,
-            image: song.artwork,
-            snippet: lyric || "",
-          }
-        : null;
-    })
-    .filter(Boolean)
-    .slice(0, 6);
-
-  const allMovies = getAllMovies();
-  const movies = allMovies
-    .filter((movie) =>
-      [
-        movie.title, movie.title_ko, movie.director, movie.director_ko,
-        movie.cast, movie.comment, movie.synopsis.join(" "), ...(movie.tags || []),
-      ].some((value) => includes(value, query))
-    )
-    .slice(0, 6)
-    .map((movie) => ({
-      href: `/movies/${movie.slug}`,
-      title: movie.title_ko || movie.title,
-      subtitle: movie.director_ko || movie.director,
-      image: movie.poster,
-    }));
-
-
-  // 평가한 왓챠 영화 1045편 — 개별 페이지가 없어 TMDB로 링크. 위 .md 영화와
-  // tmdbId가 겹치면(같은 작품) 뺀다.
-  const mdTmdb = new Set(allMovies.map((m) => String(m.tmdbId)).filter(Boolean));
-  const watched = getWatched()
-    .filter((m) => m.rating != null && !mdTmdb.has(String(m.tmdbId)))
-    .filter((m) =>
-      [m.title, m.title_ko, m.director, m.director_ko, ...(Array.isArray(m.cast) ? m.cast : [m.cast])]
-        .some((value) => includes(value, query))
-    )
-    .slice(0, 6)
-    .map((m) => ({
-      href: tmdbUrl(m.tmdbId, m.media),
-      title: m.title_ko || m.title,
-      subtitle: [m.director_ko || m.director, m.year, m.rating != null ? `★${m.rating}` : ""].filter(Boolean).join(" · "),
-      image: m.poster,
-    }));
-
-  const people = getAllPeople()
-    .filter((person) => includes(person.name, query))
-    .slice(0, 6)
-    .map((person) => ({
-      href: `/people/${encodeURIComponent(person.name)}`,
-      title: person.name,
-      subtitle: `${person.directed.length ? `감독 ${person.directed.length}편` : ""}${person.directed.length && person.acted.length ? " · " : ""}${person.acted.length ? `출연 ${person.acted.length}편` : ""}`,
-    }));
+  // 곡만 가사까지 본다 — 맞은 줄을 스니펫으로 보여주기 위해서다
+  const songs = [];
+  for (const s of db.songs) {
+    const lyric = s.meta.includes(query)
+      ? s.lines.find((l) => l.toLowerCase().includes(query)) || ""
+      : s.lines.find((l) => l.toLowerCase().includes(query));
+    if (!s.meta.includes(query) && !lyric) continue;
+    songs.push({ href: s.href, title: s.title, subtitle: s.subtitle, image: s.image, snippet: lyric || "" });
+    if (songs.length === LIMIT) break;
+  }
 
   return Response.json({
     groups: [
       ["음악", songs],
-      ["영화·드라마", movies],
-      ["평가한 영화", watched],
-      ["인물", people],
+      ["영화·드라마", pick(db.movies, query)],
+      ["평가한 영화", pick(db.watched, query)],
+      ["인물", pick(db.people, query)],
     ].filter(([, items]) => items.length),
   });
 }

@@ -3,12 +3,12 @@ title: 버퍼링 (Glitch Mode)
 title_ko: 
 artist: NCT DREAM
 artist_ko:
-album:
+album: Glitch Mode - The 2nd Album
 year: 2023
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/adefcf3fda4b134b5fbee0b787aae8e6/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/0/1/0/80172724087e0af036f46b86d03e8de5.mp3?hdnea=exp=1786584364~acl=/api/1/1/8/0/1/0/80172724087e0af036f46b86d03e8de5.mp3*~data=user_id=0,application_id=42~hmac=a4feae22030e3687899ec2a2f24561b4be0330dd594f2de5dd7d89e795a8eafb
 trackId:
-duration:
+duration: 207
 genre:
 lang: en
 tags: [2023]

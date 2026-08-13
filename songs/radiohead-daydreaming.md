@@ -3,12 +3,12 @@ title: Daydreaming
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
+album: A Moon Shaped Pool
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/e9232e4391ed1206cc0bd6ab17822177/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/5/d/0/75d41035ef25f59e5c7bedd19eae5050.mp3?hdnea=exp=1786584390~acl=/api/1/1/7/5/d/0/75d41035ef25f59e5c7bedd19eae5050.mp3*~data=user_id=0,application_id=42~hmac=a6dca408c68be102018e86294e573453095ee48d004137b57dc575d023a44735
 trackId:
-duration:
+duration: 384
 genre:
 lang: en
 tags: []

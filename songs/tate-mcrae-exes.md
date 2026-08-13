@@ -3,12 +3,12 @@ title: exes
 title_ko: 
 artist: Tate McRae
 artist_ko:
-album:
+album: THINK LATER
 year: 2023
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/6f05ad1f5ec636827d9db5683188d980/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/5/7/0/0579c37a08513362ba2d919761704836.mp3?hdnea=exp=1786584416~acl=/api/1/1/0/5/7/0/0579c37a08513362ba2d919761704836.mp3*~data=user_id=0,application_id=42~hmac=856903d5bfb4ead6d8c030eab79426d3f8f4a0f1a149e4faff2b1817ef5f8c56
 trackId:
-duration:
+duration: 159
 genre:
 lang: en
 tags: [2023]

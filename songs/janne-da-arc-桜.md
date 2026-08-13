@@ -3,12 +3,14 @@ title: 桜
 title_ko: 벚꽃
 artist: Janne Da Arc
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: D・N・A
+year: 2000
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1c/22/57/1c225767-6f62-7212-6142-3d0e6f4665a5/ANTCD-9901.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a2/52/82/a25282aa-134d-0b92-179b-9a8538966e7d/mzaf_6630979508550787153.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/%E6%A1%9C/730850899?i=730850924&uo=4
+trackId: 730850924
+duration: 348
 genre:
 lang: ja
 tags: []

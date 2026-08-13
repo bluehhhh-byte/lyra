@@ -3,12 +3,12 @@ title: Stripper Vicar
 title_ko: 
 artist: Mansun
 artist_ko:
-album:
+album: Legacy: The Best of Mansun
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/7e5ae56f87437601f08886755883fc8a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/f/3/0/4f32702b1e69f78faf659e08e33d774e.mp3?hdnea=exp=1786584352~acl=/api/1/1/4/f/3/0/4f32702b1e69f78faf659e08e33d774e.mp3*~data=user_id=0,application_id=42~hmac=cb47bc13afa41d7c834159706a705dcec78de8f2177c3e18c3bc326d274b43d4
 trackId:
-duration:
+duration: 245
 genre:
 lang: en
 tags: []

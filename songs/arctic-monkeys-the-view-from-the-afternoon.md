@@ -3,12 +3,14 @@ title: The View From The Afternoon
 title_ko: 
 artist: Arctic Monkeys
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Whatever People Say I Am, That's What I'm Not
+year: 2006
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/cf/9b/96/cf9b9637-f619-eceb-5382-e9b4d44e74fb/dj.npwkgmai.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3a/58/d8/3a58d850-d878-b06d-6458-9aa2e5db153e/mzaf_10063283014383622252.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-view-from-the-afternoon/111153953?i=111153346&uo=4
+trackId: 111153346
+duration: 218
 genre:
 lang: en
 tags: []

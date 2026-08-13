@@ -3,12 +3,12 @@ title: 행복했던 기억들은...
 title_ko: 행복했던 기억들은...
 artist: JTL
 artist_ko:
-album:
+album: JTL The 1st Live Concert
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/f/2/0/0f2e9518f981480db4e43e55120ac80d.mp3?hdnea=exp=1786584326~acl=/api/1/1/0/f/2/0/0f2e9518f981480db4e43e55120ac80d.mp3*~data=user_id=0,application_id=42~hmac=c7a138b40da04a2f67231bdaf0a3f933ab8b4d6b688e76cd09c0ccf65afd5503
 trackId:
-duration:
+duration: 353
 genre:
 lang: ko
 tags: []

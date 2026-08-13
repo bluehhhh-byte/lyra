@@ -3,12 +3,12 @@ title: All Your Love
 title_ko: 
 artist: Steelheart
 artist_ko:
-album:
+album: Tangled In Reins
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c910661d5cce74b8188911f2a3a92b7a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/a/a/0/5aae5d48971ee94fcf857feaeaefdcd1.mp3?hdnea=exp=1786584409~acl=/api/1/1/5/a/a/0/5aae5d48971ee94fcf857feaeaefdcd1.mp3*~data=user_id=0,application_id=42~hmac=ea8dd0e8e7de95a27e7ccbdb4c2dbd79695c151a3a855992ec1308312ed09a73
 trackId:
-duration:
+duration: 412
 genre:
 lang: en
 tags: []

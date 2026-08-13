@@ -3,12 +3,12 @@ title: i'm not okay
 title_ko: 
 artist: JVKE
 artist_ko:
-album:
+album: this is what ____ feels like (Vol. 1-4)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ff66669185174ac6f6b7a6342c93fca5/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/2/3/0/023d0937cc1fbbd163195c3eeb43592b.mp3?hdnea=exp=1786584329~acl=/api/1/1/0/2/3/0/023d0937cc1fbbd163195c3eeb43592b.mp3*~data=user_id=0,application_id=42~hmac=3f139d46fb216675b025d82db88bcc2566df3c72b43d32736e9330eaa2d5d65f
 trackId:
-duration:
+duration: 145
 genre:
 lang: en
 tags: []

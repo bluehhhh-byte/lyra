@@ -3,12 +3,14 @@ title: Make A Wish
 title_ko: 
 artist: Ellegarden
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Pepperoni Quattro
+year: 2004
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/bc/b2/f3/bcb2f337-a989-ac0d-8dc6-af4ae6995a11/mzm.pzccjetf.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/98/66/a9/9866a998-fadc-6ea6-6f13-059b946b6391/mzaf_11928967624183491471.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/make-a-wish/1058302637?i=1058302641&uo=4
+trackId: 1058302641
+duration: 138
 genre:
 lang: en
 tags: []

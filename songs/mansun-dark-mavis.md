@@ -3,12 +3,12 @@ title: Dark Mavis
 title_ko: 
 artist: Mansun
 artist_ko:
-album:
+album: Attack of the Grey Lantern (Collector's Edition)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/3bdc0bb2021a118991c1529b645fb006/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/3/c/0/13c0c59c43b05d2e3e65ee22db4ddb79.mp3?hdnea=exp=1786584349~acl=/api/1/1/1/3/c/0/13c0c59c43b05d2e3e65ee22db4ddb79.mp3*~data=user_id=0,application_id=42~hmac=b44fc2ac94e484c8e9a13312ad2f44514848f56a3e02d61b5822a68e751b55b2
 trackId:
-duration:
+duration: 519
 genre:
 lang: en
 tags: []

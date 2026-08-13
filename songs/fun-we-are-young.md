@@ -3,12 +3,14 @@ title: We Are Young
 title_ko: 
 artist: Fun.
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: We Are Young (feat. Janelle Monáe) - Single
+year: 2011
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/71/91/8e/71918e0d-b892-b901-db2d-4ccf6d42ea04/mzi.xqnmexwi.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6f/62/d8/6f62d83b-186b-baf2-7c0f-1abe42b3ea7b/mzaf_241398284353259324.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/we-are-young-feat-janelle-mon%C3%A1e/463207143?i=463207147&uo=4
+trackId: 463207147
+duration: 251
 genre:
 lang: en
 tags: []

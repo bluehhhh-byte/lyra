@@ -3,12 +3,12 @@ title: Singin' In The Rain
 title_ko: 
 artist: Gene Kelly
 artist_ko:
-album:
+album: Singing In The Rain - Original Film Soundtrack
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b122052f255a1d34a3d0cb76c190085e/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3?hdnea=exp=1786584303~acl=/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3*~data=user_id=0,application_id=42~hmac=4d67a090f5dd59e028bbacccafd35e7dba71738d89496a107bb4a0b9be914952
 trackId:
-duration:
+duration: 175
 genre:
 lang: en
 tags: []

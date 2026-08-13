@@ -3,12 +3,12 @@ title: Last Return
 title_ko: Last Return
 artist: The Dead Science
 artist_ko:
-album:
+album: Frost Giant
 year: 2006
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/91889da73df14f3e322513c0327fbbdf/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/0/6/0/b06c11edcd96be3621e45f460a376767.mp3?hdnea=exp=1786584419~acl=/api/1/1/b/0/6/0/b06c11edcd96be3621e45f460a376767.mp3*~data=user_id=0,application_id=42~hmac=5c8e0879365dcc6db58d40a7cc8379ad90c039ad8c61c41d3057d6214007b1a7
 trackId:
-duration:
+duration: 168
 genre:
 lang: ko
 tags: [2006]

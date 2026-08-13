@@ -3,12 +3,12 @@ title: Highway Star, Speed Star
 title_ko: 
 artist: Cymbals
 artist_ko:
-album:
+album: requests!
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/bea4f72802442aea03cc02c63187528c/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3?hdnea=exp=1786584277~acl=/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3*~data=user_id=0,application_id=42~hmac=0990e17632302201d26fa84ec6d2a523bb72deed23fb9657de8ef602c6ac0f23
 trackId:
-duration:
+duration: 254
 genre:
 lang: ja
 tags: []

@@ -3,12 +3,12 @@ title: Wings Of Time
 title_ko: 
 artist: Tame Impala
 artist_ko:
-album:
+album: Wings Of Time (From the Motion Picture Dungeons & Dragons: Honor Among Thieves)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/eebc5acaf3db742a016cb021745d920a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/4/5/0/445cbee73bfe7753cf89a6bfd520d019.mp3?hdnea=exp=1786584415~acl=/api/1/1/4/4/5/0/445cbee73bfe7753cf89a6bfd520d019.mp3*~data=user_id=0,application_id=42~hmac=e9f0574feb88cd09d7fc8b051251e716772d9f4a2110434efdc8f73b2ae8ec46
 trackId:
-duration:
+duration: 168
 genre:
 lang: en
 tags: []

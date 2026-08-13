@@ -3,12 +3,12 @@ title: Head Over Heels
 title_ko: 
 artist: Tears For Fears
 artist_ko:
-album:
+album: Songs From The Big Chair (Deluxe)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/5413c924601f881a7209bab7b1909880/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/7/0/0/7701ebc9e79817f70e01ffe3bbe5d520.mp3?hdnea=exp=1786584417~acl=/api/1/1/7/7/0/0/7701ebc9e79817f70e01ffe3bbe5d520.mp3*~data=user_id=0,application_id=42~hmac=d8bbeab74ea3e6fcbf0157c81e97ed294c46130629576e6e78e482dadd050b97
 trackId:
-duration:
+duration: 302
 genre:
 lang: en
 tags: []

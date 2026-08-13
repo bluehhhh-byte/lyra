@@ -3,12 +3,12 @@ title: Robbers
 title_ko: 
 artist: The 1975
 artist_ko:
-album:
+album: The 1975 (Deluxe)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/8f71d66a99bcb46e0768bced1769d0f9/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/3/b/0/f3b41f56e8ebbc6808b56b6ba823b9bb.mp3?hdnea=exp=1786584418~acl=/api/1/1/f/3/b/0/f3b41f56e8ebbc6808b56b6ba823b9bb.mp3*~data=user_id=0,application_id=42~hmac=a11b37dbf3c14f15ac4ef23a4cfc5d8208cff3b39d8e7354bc1dd916cbf3ce43
 trackId:
-duration:
+duration: 263
 genre:
 lang: en
 tags: []

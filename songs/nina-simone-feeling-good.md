@@ -3,12 +3,12 @@ title: Feeling Good
 title_ko: cover. RAYE
 artist: Nina Simone
 artist_ko:
-album:
+album: Feeling Good: The Very Best Of Nina Simone
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/03ff2061c4aa5cfd402c7c01bd06a48a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/9/0/799d0ea320d9762806e71efa6c68693d.mp3?hdnea=exp=1786584367~acl=/api/1/1/7/9/9/0/799d0ea320d9762806e71efa6c68693d.mp3*~data=user_id=0,application_id=42~hmac=25e1a607c283b89168291356a485f99b03b29315c598565cded5d3be2c186d05
 trackId:
-duration:
+duration: 174
 genre:
 lang: en
 tags: []

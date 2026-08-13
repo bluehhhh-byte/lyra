@@ -3,12 +3,12 @@ title: Videotape
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
+album: In Rainbows
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/4/9/0/f498987d69eae84f80772b7c32c4e603.mp3?hdnea=exp=1786584395~acl=/api/1/1/f/4/9/0/f498987d69eae84f80772b7c32c4e603.mp3*~data=user_id=0,application_id=42~hmac=e4bed008075fd1bf3b9a849fc996e5aa4a1043806789c9f4bbfeed75acd8d98b
 trackId:
-duration:
+duration: 279
 genre:
 lang: en
 tags: []

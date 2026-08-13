@@ -3,12 +3,14 @@ title: Loser
 title_ko: 
 artist: Charlie Puth
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: CHARLIE
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/7e/5f/22/7e5f2239-6143-7cf4-dfe1-d9b53d47c4c0/075679736307.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/96/5f/18/965f1818-d539-588c-b1f7-d09afeedc534/mzaf_13922110800064255059.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/loser/1633318292?i=1633318763&uo=4
+trackId: 1633318763
+duration: 204
 genre:
 lang: en
 tags: []

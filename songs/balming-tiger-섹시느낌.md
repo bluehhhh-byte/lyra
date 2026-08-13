@@ -3,12 +3,14 @@ title: 섹시느낌
 title_ko: 
 artist: Balming Tiger
 artist_ko:
-album:
+album: 섹시느낌 (feat. RM of BTS) - Single
 year: 2023
-artwork:
-preview:
-trackId:
-duration:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/57/00/b1/5700b17c-f1a8-6717-ccfa-05d5e285eaa6/Balming_Tiger_feat._RM_of_BTS.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/c5/9a/18c59a2b-6423-7b5f-e51b-10f1561ec46b/mzaf_18149122381581324517.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%84%B9%EC%8B%9C%EB%8A%90%EB%82%8C-feat-rm-of-bts/1642264423?i=1642264424&uo=4
+trackId: 1642264424
+duration: 230
 genre:
 lang: en
 tags: [2023]

@@ -3,12 +3,14 @@ title: When I Fall In Love
 title_ko: 
 artist: Barbar Gough
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: About Time
+year: 2013
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ee/72/50/ee7250c1-7218-3d63-e128-441eb7dd4814/13UAAIM79327.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/de/b1/cbdeb180-8f2d-6ada-5925-dca86b17665a/mzaf_16496484054003424071.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/when-i-fall-in-love/1440861012?i=1440861659&uo=4
+trackId: 1440861659
+duration: 183
 genre:
 lang: en
 tags: []

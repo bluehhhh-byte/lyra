@@ -3,12 +3,12 @@ title: Leave With Me
 title_ko: 
 artist: Yeek
 artist_ko:
-album:
+album: Future Reference
 year: 2023
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ff87d11664a4923bf2f59eda268fbb55/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/a/b/0/2abec0f27da7adcc656c6811685a09c3.mp3?hdnea=exp=1786584432~acl=/api/1/1/2/a/b/0/2abec0f27da7adcc656c6811685a09c3.mp3*~data=user_id=0,application_id=42~hmac=4fa75fda4311bbc778ab4b542e72ce369cc598144192b370f7a3d9001a47673a
 trackId:
-duration:
+duration: 196
 genre:
 lang: en
 tags: [2023]

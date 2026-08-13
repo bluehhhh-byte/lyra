@@ -3,12 +3,12 @@ title: Perfect Day
 title_ko: 
 artist: Lou Reed
 artist_ko:
-album:
+album: Perfect Day
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c7fc290739360180dcafa405e60b8122/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/a/2/0/8a22222637c75aef8454970fe5ea7df8.mp3?hdnea=exp=1786584342~acl=/api/1/1/8/a/2/0/8a22222637c75aef8454970fe5ea7df8.mp3*~data=user_id=0,application_id=42~hmac=e4b06b7a908e11fa5c2cb62595683539c0e8769549f62de193cf4498793ea488
 trackId:
-duration:
+duration: 225
 genre:
 lang: en
 tags: []

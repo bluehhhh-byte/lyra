@@ -3,12 +3,12 @@ title: All I Need
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
+album: In Rainbows
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/9/5/0/5959cc901e473e3ce7592d4a13ce429e.mp3?hdnea=exp=1786584388~acl=/api/1/1/5/9/5/0/5959cc901e473e3ce7592d4a13ce429e.mp3*~data=user_id=0,application_id=42~hmac=59f34c0605048c91b5889efe0b61de211bf415c53de65d1cf34e254ae7a6abfb
 trackId:
-duration:
+duration: 228
 genre:
 lang: en
 tags: []

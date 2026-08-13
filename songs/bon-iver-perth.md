@@ -3,12 +3,12 @@ title: Perth
 title_ko: 
 artist: Bon Iver
 artist_ko:
-album:
+album: Bon Iver, Bon Iver
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/1457f0d27076538d484625fa706541b7/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/1/1/0/a11289a24e14d09293908ab22280c60b.mp3?hdnea=exp=1786584270~acl=/api/1/1/a/1/1/0/a11289a24e14d09293908ab22280c60b.mp3*~data=user_id=0,application_id=42~hmac=8369f3647784882ea2980d4a9c9fde96629ed52070bdfd4ee08eb20d79e41803
 trackId:
-duration:
+duration: 262
 genre:
 lang: en
 tags: []

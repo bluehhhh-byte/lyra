@@ -3,12 +3,14 @@ title: 하지하지마
 title_ko: 하지하지마
 artist: GOT7
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Identify
+year: 2014
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1e/1e/ff/1e1eff82-cfb7-ef38-8372-8dcc8f0a5b09/799975600123.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ea/be/60/eabe60e0-d633-c548-ae4d-b69878dd3aef/mzaf_10098385242925293646.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%ED%95%98%EC%A7%80%ED%95%98%EC%A7%80%EB%A7%88/1695485415?i=1695485536&uo=4
+trackId: 1695485536
+duration: 197
 genre:
 lang: ko
 tags: []

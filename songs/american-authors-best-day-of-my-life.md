@@ -3,12 +3,12 @@ title: Best Day Of My Life
 title_ko: 
 artist: American Authors
 artist_ko:
-album:
+album: Oh, What A Life
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b965a1aa1b44e52fa89ab7b393a80eeb/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/c/9/0/1c92390597d0b3dc1376eb30c54f6fd4.mp3?hdnea=exp=1786584257~acl=/api/1/1/1/c/9/0/1c92390597d0b3dc1376eb30c54f6fd4.mp3*~data=user_id=0,application_id=42~hmac=7a17e1c9c6486c23be7bead00b6fb65fd3d2c249a7961501486af6b30eecd857
 trackId:
-duration:
+duration: 196
 genre:
 lang: en
 tags: []

@@ -3,12 +3,12 @@ title: 생각해
 title_ko: 생각해
 artist: ABTB
 artist_ko:
-album:
+album: 튠업 헌정 앨범 신중현 THE ORIGIN PART 2
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/52921f5ca0beeb02f925ba9ed570a05f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/6/8/a/0/68a3600f14127c5596e3c78a94301a08.mp3?hdnea=exp=1786584255~acl=/api/1/1/6/8/a/0/68a3600f14127c5596e3c78a94301a08.mp3*~data=user_id=0,application_id=42~hmac=48c96f232ee8dfcfcbd56e18bb4a4260ca3ce4411650cf6899b10552a2846386
 trackId:
-duration:
+duration: 253
 genre:
 lang: ko
 tags: []

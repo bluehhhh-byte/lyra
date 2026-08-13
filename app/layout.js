@@ -3,7 +3,7 @@ import PlayerProvider from "./player";
 import Header from "./header";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
-import { getAllSongs } from "../lib/songs";
+
 
 // Runs before the first paint, so a reader who picked light never sees dark flash.
 // Dark is the default — anything but a stored "light" resolves to it.
@@ -27,28 +27,19 @@ export const metadata = {
 export const viewport = { colorScheme: "dark light" };
 
 export default function RootLayout({ children }) {
-  // playlist for the player's prev/next + auto-advance — only songs with a preview,
-  // in the collection's default order (same as the home grid)
-  const playlist = getAllSongs()
-    .filter((s) => s.preview)
-    .map((s) => ({
-      slug: s.slug,
-      title: s.title,
-      artist: s.artist,
-      artwork: s.artwork,
-      preview: s.preview,
-    }));
-
   return (
     // the no-flash script mutates <html> before hydration — that mismatch is intended
     <html lang="ko" suppressHydrationWarning>
       <body className="font-sans min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
-        <PlayerProvider playlist={playlist}>
+        <PlayerProvider>
         <Header />
         <main className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
           가사의 저작권은 원저작자에게 있습니다. 번역과 코멘트는 개인 감상입니다.
+          <br />
+          앨범 커버와 30초 미리듣기는 Apple(iTunes Search API)·Deezer가 제공하며, 각 곡 페이지의
+          스토어 링크로 연결됩니다. 저장하지 않고 원본 주소에서 바로 재생합니다.
         </footer>
         </PlayerProvider>
       </body>

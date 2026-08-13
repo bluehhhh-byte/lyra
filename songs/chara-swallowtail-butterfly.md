@@ -3,12 +3,12 @@ title: Swallowtail Butterfly
 title_ko: 
 artist: Chara
 artist_ko:
-album:
+album: LIVE 97-99 MOOD
 year: 1996
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0ab3e9979f362f2c885ae88e1c00f272/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/1/a/0/51a1c3606107442facd02856cdcb51ca.mp3?hdnea=exp=1786584272~acl=/api/1/1/5/1/a/0/51a1c3606107442facd02856cdcb51ca.mp3*~data=user_id=0,application_id=42~hmac=a2fb0a05a3f685dbf2c2b1f15689fceab112292d3823f61af8ba142680cbdd48
 trackId:
-duration:
+duration: 299
 genre:
 lang: en
 tags: [1996]

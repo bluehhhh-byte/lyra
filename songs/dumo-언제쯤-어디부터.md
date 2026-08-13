@@ -3,12 +3,14 @@ title: 언제쯤, 어디부터
 title_ko: 언제쯤, 어디부터
 artist: Dumo
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: From when, where - Single
+year: 2023
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/d4/54/2fd4542c-dbf1-7b99-b3c9-c4f159cd6872/23UMGIM38232.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/73/0e/40/730e4036-c880-209b-1d03-92a923376a80/mzaf_1854806133206818072.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%96%B8%EC%A0%9C%EC%AF%A4-%EC%96%B4%EB%94%94%EB%B6%80%ED%84%B0-feat-%ED%94%84%EB%A6%AC%EB%93%A0/1680521395?i=1680521397&uo=4
+trackId: 1680521397
+duration: 208
 genre:
 lang: ko
 tags: []

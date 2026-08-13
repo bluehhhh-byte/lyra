@@ -3,12 +3,12 @@ title: Winter's Review
 title_ko: 
 artist: SHAZNA
 artist_ko:
-album:
+album: Winter's Review
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/21d10745cd13a4fc871467a5797157f7/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/c/4/0/8c4170a3ff43d7f6624cf135408a4ea7.mp3?hdnea=exp=1786584402~acl=/api/1/1/8/c/4/0/8c4170a3ff43d7f6624cf135408a4ea7.mp3*~data=user_id=0,application_id=42~hmac=33de8bdf18dcef79372017081da82cd2a15b6f20aafa4b4550fdd7c8c6601202
 trackId:
-duration:
+duration: 327
 genre:
 lang: ja
 tags: []

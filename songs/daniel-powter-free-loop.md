@@ -3,12 +3,14 @@ title: Free Loop
 title_ko: 
 artist: Daniel Powter
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Daniel Powter
+year: 2005
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/90/db/17/mzi.tiuteyft.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/38/72/df3872e4-1407-373f-700a-517d0c2b928b/mzaf_13538376958179518875.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/free-loop/63816246?i=63816163&uo=4
+trackId: 63816163
+duration: 233
 genre:
 lang: en
 tags: []

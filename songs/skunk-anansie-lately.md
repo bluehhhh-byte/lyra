@@ -3,12 +3,12 @@ title: Lately
 title_ko: 
 artist: Skunk Anansie
 artist_ko:
-album:
+album: Post Orgasmic Chill
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/91eaa68573b3df97060bbd0864cc0f64/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3?hdnea=exp=1786584406~acl=/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3*~data=user_id=0,application_id=42~hmac=d58cbac60a75af5c5f719b3f81c62c135fb2d4b1e572b55c5fba2eeef6cf2f51
 trackId:
-duration:
+duration: 233
 genre:
 lang: en
 tags: []

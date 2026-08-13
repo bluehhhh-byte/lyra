@@ -3,12 +3,14 @@ title: Love
 title_ko: 
 artist: David Choi
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Only You
+year: 2008
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ee/b9/d1/eeb9d162-ad78-dacf-ec37-7b423a778066/859700900659_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d5/83/f0/d583f07f-9caf-a73d-4acf-e445f923b516/mzaf_15230535080471338203.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/love/292190946?i=292190962&uo=4
+trackId: 292190962
+duration: 226
 genre:
 lang: en
 tags: []

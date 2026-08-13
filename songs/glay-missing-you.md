@@ -3,12 +3,14 @@ title: Missing You
 title_ko: 
 artist: GLAY
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Missing You - EP
+year: 2000
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/8e/72/65/8e72654c-2740-e9f7-23d4-cbcb00c441a2/MissingYou_itunes.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/62/ad/29/62ad29af-fbc6-f509-aa49-4e76736f004b/mzaf_301156192447278791.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/missing-you/991565109?i=991565115&uo=4
+trackId: 991565115
+duration: 350
 genre:
 lang: ja
 tags: []

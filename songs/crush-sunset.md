@@ -3,12 +3,14 @@ title: Sunset
 title_ko: Sunset
 artist: Crush
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: From Midnight To Sunrise
+year: 2019
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b2/da/b1/b2dab1a3-501a-68d3-cddd-7a9c0da82d66/191953055794.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/94/79/44/947944d4-e35e-d7e7-2fea-1bc57104c054/mzaf_4327553619091395631.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/sunset/1488587815?i=1488587822&uo=4
+trackId: 1488587822
+duration: 199
 genre:
 lang: ko
 tags: []

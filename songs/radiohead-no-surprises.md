@@ -3,12 +3,12 @@ title: No Surprises
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
+album: No Surprises
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/7a378976d3ff1b1fd7b21ee0c7f95fa5/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/f/1/0/1f10e9c9eda91f9331f6c42c0dd077a2.mp3?hdnea=exp=1786584392~acl=/api/1/1/1/f/1/0/1f10e9c9eda91f9331f6c42c0dd077a2.mp3*~data=user_id=0,application_id=42~hmac=c0b38079fb125b3ca8d557a99904ae06233232605df6bccb4894852d94e490b4
 trackId:
-duration:
+duration: 229
 genre:
 lang: en
 tags: []

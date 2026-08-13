@@ -3,12 +3,12 @@ title: Under Pressure
 title_ko: 
 artist: Queen
 artist_ko:
-album:
+album: Queen at the Opera - Original Cast Recording
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f6ab025bc6edfd74c683705fc62d493a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/c/5/0/fc5c4885dbe7ed942b7929ff0d8844b1.mp3?hdnea=exp=1786584386~acl=/api/1/1/f/c/5/0/fc5c4885dbe7ed942b7929ff0d8844b1.mp3*~data=user_id=0,application_id=42~hmac=3833328647a2669ded5133eff6ee51dc0bc9d717248fb489924ca1efe38bf3e8
 trackId:
-duration:
+duration: 225
 genre:
 lang: en
 tags: []

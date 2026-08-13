@@ -10,3 +10,7 @@ skills-lock.json
 .vercel
 .visual-check/
 .backfill/
+
+# 빌드 때 생성 (scripts/build-search-index.mjs)
+data/search-index.json
+data/playlist.json

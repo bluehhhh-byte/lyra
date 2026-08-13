@@ -3,12 +3,12 @@ title: Dreaming
 title_ko: 
 artist: Duke Ellington
 artist_ko:
-album:
+album: New York New York 1970-72
 year: 1968
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ab28d58e94192d602bfcb3cd49be22e6/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/d/0/b/0/d0bceb2eff4e5b6af54d278fac10f69e.mp3?hdnea=exp=1786584290~acl=/api/1/1/d/0/b/0/d0bceb2eff4e5b6af54d278fac10f69e.mp3*~data=user_id=0,application_id=42~hmac=5abaa12dba7f9836bfb1b53282cab5bc1a9408f0b399014a55b871fa3dff3c2d
 trackId:
-duration:
+duration: 199
 genre:
 lang: en
 tags: [1968]

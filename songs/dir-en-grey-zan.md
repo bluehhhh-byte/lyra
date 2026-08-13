@@ -3,12 +3,12 @@ title: ZAN
 title_ko: Remake
 artist: DIR EN GREY
 artist_ko:
-album:
+album: VESTIGE OF SCRATCHES (Disc 3)
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ba9b6789fc43c332eebfcfaa8bdff17f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7ae3aa7791.mp3?hdnea=exp=1786584287~acl=/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7ae3aa7791.mp3*~data=user_id=0,application_id=42~hmac=8e85606a398cce174bd5e5172bfefebe36da1631bac662a5b6a902428739fd55
 trackId:
-duration:
+duration: 272
 genre:
 lang: ja
 tags: []

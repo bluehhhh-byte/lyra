@@ -3,12 +3,12 @@ title: Changes
 title_ko: 
 artist: Lauv
 artist_ko:
-album:
+album: ~how i'm feeling~
 year: 2020
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/5290bc62c3f5def2da7cbaba5b015c93/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/8/1/0/b81176d5f2177df44dff0729cb09cccb.mp3?hdnea=exp=1786584338~acl=/api/1/1/b/8/1/0/b81176d5f2177df44dff0729cb09cccb.mp3*~data=user_id=0,application_id=42~hmac=f211209c626cf64da7581d187a1157c5d6c7847638eef2d3801f23fe39e932ab
 trackId:
-duration:
+duration: 160
 genre:
 lang: en
 tags: [2020]

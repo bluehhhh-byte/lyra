@@ -3,12 +3,12 @@ title: This Ain't A Love Song
 title_ko: 
 artist: Bon Jovi
 artist_ko:
-album:
+album: These Days
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f62f9e5464282d2cc30bfe2c38a53e13/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/9/e/5/0/9e5d25bd7d00b22601d86bc5409a43e0.mp3?hdnea=exp=1786584272~acl=/api/1/1/9/e/5/0/9e5d25bd7d00b22601d86bc5409a43e0.mp3*~data=user_id=0,application_id=42~hmac=683fabead57f6819d71557186e2fb234be2a239179b35c1c91620fea9fc8366c
 trackId:
-duration:
+duration: 306
 genre:
 lang: en
 tags: []

@@ -3,12 +3,12 @@ title: Punchdrunk Lovesick Singalong
 title_ko: 
 artist: Radiohead
 artist_ko:
-album:
+album: My Iron Lung
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c48d2c12230b84fa39edf8ffe08cca7f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/8/a/0/b8a47c4c5f894585a9b668672e25587d.mp3?hdnea=exp=1786584394~acl=/api/1/1/b/8/a/0/b8a47c4c5f894585a9b668672e25587d.mp3*~data=user_id=0,application_id=42~hmac=598d092b56b5eb5d1792cc6d698c5944e2e16f4cfb4f5e76e1ea75fc3d70c924
 trackId:
-duration:
+duration: 281
 genre:
 lang: en
 tags: []

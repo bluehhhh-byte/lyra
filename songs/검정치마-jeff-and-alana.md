@@ -3,12 +3,12 @@ title: Jeff And Alana
 title_ko: Jeff And Alana
 artist: 검정치마
 artist_ko:
-album:
+album: TEEN TROUBLES
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/1f57b42c78f64db752978fded1d5c123/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/b/0/73bfab1730a0537c5adef48f3a77d522.mp3?hdnea=exp=1786584439~acl=/api/1/1/7/3/b/0/73bfab1730a0537c5adef48f3a77d522.mp3*~data=user_id=0,application_id=42~hmac=b890469839cfd8b19c9b608e1d612fd2c1f6ccbce8408ba3d697f011e19fe274
 trackId:
-duration:
+duration: 147
 genre:
 lang: ko
 tags: []

@@ -3,12 +3,12 @@ title: Alright
 title_ko: 
 artist: Kendrick Lamar
 artist_ko:
-album:
+album: Alright
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/5c163a572dc76597231aa942375dec89/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/3/4/0/0/3408fbe4a3ac1ac3f710510e65769f57.mp3?hdnea=exp=1786584332~acl=/api/1/1/3/4/0/0/3408fbe4a3ac1ac3f710510e65769f57.mp3*~data=user_id=0,application_id=42~hmac=d94490d7157c970212bbf51fad428efcea932a97d6a04251a46b05d9e38932cc
 trackId:
-duration:
+duration: 194
 genre:
 lang: en
 tags: []

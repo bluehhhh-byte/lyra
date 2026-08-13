@@ -3,12 +3,12 @@ title: Misunderstood
 title_ko: 
 artist: Bon Jovi
 artist_ko:
-album:
+album: Rock 2000
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/28b37419d082445c1df7be553d26d643/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/7/e/0/b7ec976cf4e275cfd59ee8b0cfe6a045.mp3?hdnea=exp=1786584270~acl=/api/1/1/b/7/e/0/b7ec976cf4e275cfd59ee8b0cfe6a045.mp3*~data=user_id=0,application_id=42~hmac=26fc8fbbae64b60f337b19a781e9419737927970723b3cd4881612477beb73f6
 trackId:
-duration:
+duration: 210
 genre:
 lang: en
 tags: []

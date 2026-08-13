@@ -3,12 +3,12 @@ title: Everything
 title_ko: 
 artist: MISIA
 artist_ko:
-album:
+album: Everything
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/708534999cd5a8c65c7f5287acec7d99/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/c/d/8/0/cd87a47e4ded11d684fc0c83210fd7ee.mp3?hdnea=exp=1786584361~acl=/api/1/1/c/d/8/0/cd87a47e4ded11d684fc0c83210fd7ee.mp3*~data=user_id=0,application_id=42~hmac=51e710d7c5b151155ced6b71259bedc762eef1bf63e9b95e957ed9e85b824852
 trackId:
-duration:
+duration: 437
 genre:
 lang: ja
 tags: []

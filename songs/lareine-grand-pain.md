@@ -3,12 +3,12 @@ title: Grand Pain
 title_ko: 
 artist: LAREINE
 artist_ko:
-album:
+album: SCREAM
 year: 
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a75f1e10b9703e60373e1b9e1de66829/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/9/c/0/89c5792aded0edd74b358b41f061f5a9.mp3?hdnea=exp=1786584337~acl=/api/1/1/8/9/c/0/89c5792aded0edd74b358b41f061f5a9.mp3*~data=user_id=0,application_id=42~hmac=577a2fd230790e721636344f51cfdb73e0bd84be7e0d75e9b363f1cf5effd3c6
 trackId:
-duration:
+duration: 425
 genre:
 lang: ja
 tags: []
