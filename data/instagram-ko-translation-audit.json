@@ -890,6 +890,94 @@
    "sourceCommit": "e478eba",
    "status": "translated",
    "reviewedAt": "2026-08-12T22:51:33.324Z"
+  },
+  {
+   "slug": "epik-high-난-사람이-제일-무서워",
+   "batch": 9,
+   "originalLineCount": 61,
+   "addedTranslationCount": 52,
+   "skippedCount": 9,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.626Z"
+  },
+  {
+   "slug": "검정치마-섬",
+   "batch": 9,
+   "originalLineCount": 50,
+   "addedTranslationCount": 41,
+   "skippedCount": 9,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.631Z"
+  },
+  {
+   "slug": "woodz-drowning",
+   "batch": 9,
+   "originalLineCount": 48,
+   "addedTranslationCount": 34,
+   "skippedCount": 14,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.634Z"
+  },
+  {
+   "slug": "hash-swan-알렉산더처럼-왕",
+   "batch": 9,
+   "originalLineCount": 34,
+   "addedTranslationCount": 31,
+   "skippedCount": 3,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.638Z"
+  },
+  {
+   "slug": "loveholic-그대만-있다면",
+   "batch": 9,
+   "originalLineCount": 27,
+   "addedTranslationCount": 27,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.643Z"
+  },
+  {
+   "slug": "검정치마-antifreeze",
+   "batch": 9,
+   "originalLineCount": 26,
+   "addedTranslationCount": 26,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.647Z"
+  },
+  {
+   "slug": "c-jamm-어떤",
+   "batch": 9,
+   "originalLineCount": 23,
+   "addedTranslationCount": 23,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.652Z"
+  },
+  {
+   "slug": "김사랑-dream",
+   "batch": 9,
+   "originalLineCount": 22,
+   "addedTranslationCount": 22,
+   "skippedCount": 0,
+   "uncertainCount": 0,
+   "sourceCommit": "27dd449",
+   "status": "translated",
+   "reviewedAt": "2026-08-13T00:11:43.655Z"
   }
  ],
  "at": "2026-08-12T19:47:09.539Z"
