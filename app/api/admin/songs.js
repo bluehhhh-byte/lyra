@@ -15,7 +15,7 @@ import { kstToday } from "../../../lib/kst";
 import { summarizeMusicTaste } from "../../../lib/music-taste-core";
 import { makeBasedOnCleaner } from "../../../lib/admin/based-on";
 import { TYPES as CORRECTION_TYPES, lineHash } from "../../../lib/admin/corrections";
-import { songNeeds, summarizeNeeds } from "../../../lib/admin/needs";
+import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 
@@ -281,8 +281,23 @@ export async function handleSongs(action, body) {  if (action === "search") {
         !t.startsWith(">") &&
         !t.startsWith("+") &&
         !t.startsWith("//") &&
+        !isNoteLine(t) &&                       // 🗨·✏는 본인 해설 — 가사가 아니다
         !(t.startsWith("[") && t.endsWith("]"))
       );
+    };
+    // 이 줄을 아래쪽 `>^N` 번역이 덮고 있는지 — 덮인 줄에 번역을 또 붙이면
+    // 같은 구절이 두 번 나오고 `>^N` 범위가 어긋난다 (실제로 그렇게 깨졌다).
+    const coveredBySpan = (i) => {
+      let gap = 0;
+      for (let j = i + 1; j < lines.length; j++) {
+        const t = lines[j].trim();
+        if (!t || /^\[.*\]$/.test(t)) return false;
+        const sp = t.match(/^>\^(\d+)/);
+        if (sp) return Number(sp[1]) > gap + 1;   // 자기 줄 말고 위쪽까지 덮는가
+        if (/^[>+]/.test(t) || t.startsWith("//")) return false;
+        gap++;
+      }
+      return false;
     };
     const needs = []; // { i, text, wantReading, wantKo }
     for (let i = 0; i < lines.length; i++) {
@@ -296,7 +311,10 @@ export async function handleSongs(action, body) {  if (action === "search") {
       }
       const text = lines[i].trim();
       const wantReading = isJaLine(text) && !hasReading;
-      const wantKo = !hasKo && !skipTranslate;
+      // 이미 한글인 줄에 한국어 번역을 붙이지 않는다 (외국곡 속 한국어 가사·표시 빠진 번역)
+      const hangul = (text.match(/[가-힣]/g) || []).length;
+      const alreadyKorean = hangul >= 2 && (text.match(/[a-zA-Z぀-ヿ一-鿿]/g) || []).length < hangul;
+      const wantKo = !hasKo && !skipTranslate && !alreadyKorean && !coveredBySpan(i);
       if (wantReading || wantKo) needs.push({ i, text, wantReading, wantKo });
     }
 
