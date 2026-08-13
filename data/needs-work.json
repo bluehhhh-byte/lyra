@@ -1,9 +1,9 @@
 {
- "at": "2026-08-13T22:42:36.951Z",
+ "at": "2026-08-13T22:43:45.018Z",
  "total": {
   "songs": 768,
   "songsNeedingWork": 13,
-  "moviesNeedingWork": 16
+  "moviesNeedingWork": 1
  },
  "byNeed": {
   "가사 없음": 2,
@@ -337,141 +337,6 @@
     "director": "데스틴 대니얼 크레턴",
     "needs": [
      "줄거리 없음"
-    ]
-   },
-   {
-    "id": "스완의-사랑-1984",
-    "kind": "movie",
-    "title": "스완의 사랑",
-    "director": "Volker Schlöndorff",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "펀치-드렁크-러브-2002",
-    "kind": "movie",
-    "title": "펀치 드렁크 러브",
-    "director": "폴 토마스 앤더슨",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "바닐라-스카이-2001",
-    "kind": "movie",
-    "title": "바닐라 스카이",
-    "director": "카메론 크로우",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "연인-1992",
-    "kind": "movie",
-    "title": "연인",
-    "director": "장자크 아르노",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "아비정전-1990",
-    "kind": "movie",
-    "title": "아비정전",
-    "director": "왕가위",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "항구의-니쿠코짱-2021",
-    "kind": "movie",
-    "title": "항구의 니쿠코짱!",
-    "director": "와타나베 아유무",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "영웅-2002",
-    "kind": "movie",
-    "title": "영웅",
-    "director": "장이머우",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "원더랜드-2024",
-    "kind": "movie",
-    "title": "원더랜드",
-    "director": "김태용",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "괴물-2023",
-    "kind": "movie",
-    "title": "괴물",
-    "director": "고레에다 히로카즈",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "악은-존재하지-않는다-2023",
-    "kind": "movie",
-    "title": "악은 존재하지 않는다",
-    "director": "하마구치 류스케",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "존-오브-인터레스트-2023",
-    "kind": "movie",
-    "title": "존 오브 인터레스트",
-    "director": "조나단 글레이저",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "하이재킹-2024",
-    "kind": "movie",
-    "title": "하이재킹",
-    "director": "Kim Sung-han",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "룩백-2024",
-    "kind": "movie",
-    "title": "룩백",
-    "director": "오시야마 키요타카",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "해피엔드-2024",
-    "kind": "movie",
-    "title": "해피엔드",
-    "director": "소라 네오",
-    "needs": [
-     "줄거리 없음"
-    ]
-   },
-   {
-    "id": "신사장-프로젝트-2025",
-    "kind": "movie",
-    "title": "신사장 프로젝트",
-    "director": "Shin Kyung-soo",
-    "needs": [
-     "코멘트 없음"
     ]
    }
   ]
