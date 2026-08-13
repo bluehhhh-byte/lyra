@@ -3,6 +3,7 @@ import { getAllSongs } from "../../../lib/songs";
 import { readData } from "../../../lib/store";
 import { summarizeMusicTaste, interpretMusicTaste, recentShift } from "../../../lib/music-taste-core";
 import { emotionValence, valenceColor } from "../../../lib/keywords";
+import CoverImage from "../../cover-image";
 
 export const metadata = {
   title: "음악 취향 | Lyra",
@@ -40,6 +41,54 @@ function Section({ title, hint, children }) {
       <h2 className="text-sm font-semibold text-muted">{title}</h2>
       {hint && <p className="mt-0.5 text-xs text-muted/60">{hint}</p>}
       <div className="mt-4 space-y-2">{children}</div>
+    </section>
+  );
+}
+
+function representativeSongs(songs, taste) {
+  const topEmotion = taste.emotion[0]?.[0];
+  const topGenre = taste.genre[0]?.[0];
+  const topDecade = taste.decade[0]?.[0];
+  const decade = parseInt(topDecade, 10);
+  return songs
+    .map((song) => {
+      const emotionHit = parseEmotion(song.emotion) === topEmotion;
+      const genreHit = topGenre && song.tags.includes(topGenre);
+      const decadeHit = Number.isFinite(decade) && +song.year >= decade && +song.year < decade + 10;
+      return { song, score: Number(emotionHit) + Number(genreHit) + Number(decadeHit) };
+    })
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5)
+    .map(({ song }) => {
+      const line = song.stanzas.flatMap((stanza) => stanza.lines).find((item) => item.ko || item.en);
+      return { ...song, quote: line?.ko || line?.en || "" };
+    });
+}
+
+function Evidence({ songs, taste }) {
+  const examples = representativeSongs(songs, taste);
+  if (!examples.length) return null;
+  return (
+    <section className="mb-12 rounded-2xl border border-line bg-surface/60 p-5 sm:p-7">
+      <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
+        <div>
+          <h2 className="text-sm font-semibold">이 취향을 만든 기록</h2>
+          <p className="mt-1 text-xs text-muted">대표 감정·장르·시대가 겹치는 실제 곡과 가사입니다.</p>
+        </div>
+        <Link href={`/?emotion=${encodeURIComponent(taste.emotion[0]?.[0] || "")}`} className="text-xs text-accent hover:underline">
+          같은 감정의 모든 곡 →
+        </Link>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-5">
+        {examples.map((song) => (
+          <Link key={song.slug} href={`/songs/${song.slug}`} className="group min-w-0">
+            <CoverImage src={song.artwork} alt="" label={song.title} loading="lazy" className="aspect-square w-full rounded-lg object-cover" />
+            <p className="mt-2 truncate text-xs font-semibold group-hover:text-accent">{song.title}</p>
+            {song.quote && <p className="mt-1 line-clamp-2 font-serif text-[11px] leading-4 text-muted">“{song.quote}”</p>}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }
@@ -95,6 +144,8 @@ export default function MusicTastePage() {
           {text}
         </div>
       )}
+
+      <Evidence songs={songs} taste={t} />
 
       {/* Gemini 리포트 — admin의 '취향 리포트 생성'이 저장한 교차 해석.
           위 한 줄 요약은 코드 계산(항상 최신), 이건 생성 시점 스냅샷. */}
