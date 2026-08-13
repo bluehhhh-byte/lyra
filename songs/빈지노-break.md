@@ -3,12 +3,14 @@ title: Break
 title_ko: Break
 artist: 빈지노
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: Break - Single
+year: 2015
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ad/4a/8c/ad4a8c62-aa02-0e1f-dc94-5e229e24431e/8809435818783_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/7c/21/2e/7c212ea6-7b17-5725-f55e-e552c8c6f533/mzaf_13274866606850519522.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/break/1623970662?i=1623970665&uo=4
+trackId: 1623970665
+duration: 185
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

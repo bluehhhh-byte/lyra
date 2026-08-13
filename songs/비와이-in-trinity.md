@@ -3,12 +3,14 @@ title: In Trinity
 title_ko: In Trinity
 artist: 비와이
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: In Trinity - Single
+year: 2015
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8c/38/1b/8c381b4e-bc74-e299-afdd-f848d0ac3a98/197189991318.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/9b/3f/55/9b3f557f-0a31-85a8-2a3e-f8a61e46e396/mzaf_14240827701019703008.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/in-trinity/1708786982?i=1708786984&uo=4
+trackId: 1708786984
+duration: 271
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]

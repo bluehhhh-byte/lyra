@@ -3,12 +3,14 @@ title: Lonely Stoner
 title_ko: Lonely Stoner
 artist: 빌스택스
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
-duration:
+album: DETOX
+year: 2020
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/df/7e/a1/df7ea15d-15d5-731d-e2e2-8d4a34c09d65/555.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/65/40/72/654072c5-591b-45c8-e1f7-9cf5ca169767/mzaf_328020604804863401.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/lonely-stoner-feat-%EC%97%BC%EB%94%B0-rakon/1559672592?i=1559672601&uo=4
+trackId: 1559672601
+duration: 235
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop]
