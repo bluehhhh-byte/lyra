@@ -61,6 +61,7 @@ source_hash: 6e0ed98f8856beec226f410d54b3b4a717197d09
 인생 뭐 있냐, 어차피 알 수 없는 내일인데
 > What's life anyway? Tomorrow's a mystery regardless
 I know, I know you will never take me back
+> 알아, 네가 날 다시 받아주지 않을 거란 걸
 마음이 약해질 수록 술이 더 세지네
 > The weaker my heart gets, the stronger the drinks get
 이런 내가 싫겠지만 이해해
@@ -68,6 +69,7 @@ I know, I know you will never take me back
 인생 뭐 있냐, 몇 장 뒤엔 마지막 페이지인데
 > What's life anyway? The last page is just a few pages away
 I know, I know you will never take me back
+> 알아, 네가 날 다시 받아주지 않을 거란 걸
 그칠 때만 되면 또 다시 비가 내리네
 > Just when it's about to stop, the rain comes down again
 난 잘 지내
@@ -92,6 +94,7 @@ I know, I know you will never take me back
 사랑 뭐 있냐, 어차피 돌아서면 남인데
 > What's love anyway? Turn around and we're strangers
 I know, I know you will never take me back
+> 알아, 네가 날 다시 받아주지 않을 거란 걸
 몸이 멀어질 수록 멀어지는게 마음인데
 > The further apart the bodies, the further apart the hearts
 이런 내가 싫겠지만 이해해
@@ -99,6 +102,7 @@ I know, I know you will never take me back
 사랑 뭐 있냐, 몇 장 뒤엔 마지막 페이지인데
 > What's love anyway? The last page is just a few pages away
 I know, I know you will never take me back
+> 알아, 네가 날 다시 받아주지 않을 거란 걸
 그칠 때만 되면 또 다시 비가 내리네
 > Just when it's about to stop, the rain comes down again
 잘 지내
