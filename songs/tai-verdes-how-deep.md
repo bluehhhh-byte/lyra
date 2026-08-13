@@ -16,7 +16,7 @@ keywords: [열쇠, 와인, 하루, 일주일, 집]
 emotion: 설렘
 date: 2023-04-11
 published: 2023-04-11T10:09:41.000Z
-comment:
+comment: 안녕이 하루 어땠냐가 되고 열쇠를 건네는 사이가 되는 과정을 순서대로 늘어놓는다. 이렇게 깊이 빠질 줄 몰랐다는 말로 그 속도를 인정한다.
 source: instagram
 source_tag: 230411_1909
 source_note: 

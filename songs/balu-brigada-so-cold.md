@@ -16,7 +16,7 @@ keywords: [헤드라이트, 이유, 시작]
 emotion: 불안
 date: 2024-07-04
 published: 2024-07-04T13:38:42.000Z
-comment:
+comment: 답을 이미 알면서도 상대의 연락을 기다리는 관계의 끝을 그린다. 이건 너답지 않다고 반복하지만 실은 유령을 쫓고 있다는 자각이 함께 있다.
 source: instagram
 source_tag: 240704_2237
 source_note: 

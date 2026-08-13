@@ -16,7 +16,7 @@ keywords: [재산, 비평가, 이력서, 목소리, 지붕]
 emotion: 기쁨
 date: 2023-06-07
 published: 2023-06-07T10:25:29.000Z
-comment:
+comment: 네 명의 래퍼가 주고받으며 자신의 영향력과 저항의 이력을 늘어놓는다. 2000년에 나온 정규 데뷔작 Quality Control에 실린 곡이다.
 source: instagram
 source_tag: 230607_1925
 source_note: 

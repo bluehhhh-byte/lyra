@@ -3,13 +3,13 @@ title: アクロの丘
 title_ko: 아크로의 언덕
 artist: DIR EN GREY
 album: VESTIGE OF SCRATCHES
-year: 2018
+year: 1999
 genre: Metal
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/1d/41/1e1d41cc-e600-8edf-242f-297f6c685d2b/4529123106674.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/62/03/d86203b3-d2c4-3139-2927-84fd447ffd85/mzaf_9222938714775326752.plus.aac.p.m4a
 trackId: 1483713068
 lang: ja
-tags: [일본, J-Rock, 2018]
+tags: [일본, J-Rock, 1999]
 emotion: 그리움
 keywords: [언덕, 하늘, 꽃, 꿈]
 date: 2026-07-07

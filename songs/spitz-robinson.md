@@ -16,7 +16,7 @@ keywords: [자전거, 강가, 레코드, 마법, 우주, 하늘]
 emotion: 몽환
 date: 2023-05-26
 published: 2023-05-26T01:44:44.000Z
-comment:
+comment: 자전거로 강가를 달리는 사람을 쫓아가며 누구도 닿을 수 없는 둘만의 나라를 상상한다. 10년 가까운 무명 끝에 스피츠의 전성기를 연 1995년 싱글이다.
 source: instagram
 source_tag: 230526_1043
 source_note: 

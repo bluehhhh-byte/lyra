@@ -16,7 +16,7 @@ keywords: [나방, 곤충, 동물, 자동차, 갈대, 빛]
 emotion: 사랑
 date: 2022-12-04
 published: 2022-12-04T12:27:41.000Z
-comment:
+comment: 화자는 자신을 나방과 곤충, 갇힌 동물에 빗대며 상대에게 들러붙는다. 사랑 노래의 형식을 빌렸지만 실제로는 일방적인 집착에 가깝고, 마지막의 맞다와 틀렸다의 반복이 그 모순을 드러낸다.
 source: instagram
 source_tag: 221204_2127
 source_note: 

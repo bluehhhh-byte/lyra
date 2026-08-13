@@ -16,7 +16,7 @@ keywords: [눈물, 상처, 이유, 하루, 사람]
 emotion: 사랑
 date: 2023-04-08
 published: 2023-04-08T09:33:14.000Z
-comment:
+comment: 완벽하지 않다고 인정하면서 달라질 이유를 상대에게서 찾는다. 사과처럼 들리지만 결국 자기 변화를 선언하는 쪽에 가까운 가사다.
 source: instagram
 source_tag: 230408_1832
 source_note: 

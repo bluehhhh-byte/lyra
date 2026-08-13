@@ -16,7 +16,7 @@ keywords: [손, 눈물, 구름, 연인, 친구, 꿈]
 emotion: 이별
 date: 2022-11-15
 published: 2022-11-14T23:34:15.000Z
-comment:
+comment: 연인이라고 부를 수 있는 마지막 순간에 손을 잡고 나누는 말이다. 언젠가 친구로 부를 날이 온다면서도 흘린 눈물만은 잊지 말아 달라고 부탁하는 데서 이별의 결이 갈린다.
 source: instagram
 source_tag: 221115_0833
 source_note: 

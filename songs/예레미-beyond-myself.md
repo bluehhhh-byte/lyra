@@ -18,7 +18,7 @@ keywords: [아이, 젊음, 영혼, 구원]
 emotion: 희망
 date: 2022-11-20
 published: 2022-11-20T14:47:15.000Z
-comment:
+comment: 삶에 지친 화자가 자기 자신을 넘어서기 위해 싸우겠다고 말한다. 길 잃은 아이였고 젊은 날이 무모했다고 돌아본 뒤, 구원자라 부르는 대상에게서 영혼을 되찾는 것으로 끝난다.
 source: instagram
 source_tag: 221120_2344
 source_note: 

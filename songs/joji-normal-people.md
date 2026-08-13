@@ -16,7 +16,7 @@ keywords: [악마, 연기, 웃음]
 emotion: 불안
 date: 2024-06-21
 published: 2024-06-20T23:45:39.000Z
-comment:
+comment: 보통 사람인 척할 수 있다는 사실을 믿기 어려워하며, 웃음 뒤에 있는 무언가를 두려워한다. 앨범 Nectar에 실렸고 숨어 있는 동안만 안전하다고 말한다.
 source: instagram
 source_tag: 240621_0843
 source_note: 

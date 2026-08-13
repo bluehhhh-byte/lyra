@@ -16,7 +16,7 @@ keywords: [비행기, 하늘, 숨, 밤, 도시]
 emotion: 고독
 date: 2022-10-06
 published: 2022-10-06T13:09:29.000Z
-comment:
+comment: 스웨덴 밴드 켄트의 곡으로, 가끔은 도무지 숨을 쉴 수 없다는 짧은 문장만 남긴다. 이번엔 낫지 않을 거라는 말이 반복되고, 나머지 자리는 긴 연주가 대신 채운다.
 source: instagram
 source_tag: 
 source_note: 

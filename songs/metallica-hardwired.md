@@ -16,7 +16,7 @@ keywords: [행성, 불길, 공포, 경계, 파괴]
 emotion: 분노
 date: 2022-11-22
 published: 2022-11-21T15:57:24.000Z
-comment:
+comment: 인류가 스스로를 파괴하도록 타고났다는 문장을 삼 분도 안 되게 몰아친다. 팔 년 만의 정규작에서 가장 먼저 공개된 곡이고, 절망과 고통의 이름으로라는 반복이 그 냉소를 세운다.
 source: instagram
 source_tag: 221122_0054
 source_note: 

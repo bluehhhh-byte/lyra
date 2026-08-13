@@ -16,7 +16,7 @@ keywords: [바보, 외로움]
 emotion: 위로
 date: 2024-06-11
 published: 2024-06-11T14:31:38.000Z
-comment:
+comment: 망가지고 외로운 상대가 좋다고 말하며 함께 외로울 수 있음을 이유로 든다. 인생은 좋아하는 사랑 노래가 아니라 부서진 조각을 고쳐나가는 일이라 정리한다.
 source: instagram
 source_tag: 240611_2329
 source_note: 

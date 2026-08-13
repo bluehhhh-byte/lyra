@@ -16,7 +16,7 @@ keywords: [하늘, 별, 꿈, 자유, 빛]
 emotion: 몽환
 date: 2024-05-11
 published: 2024-05-11T02:50:18.000Z
-comment:
+comment: 본 적 없는 푸른 하늘이 다가온다고 말하며 별들 사이를 날아 자유로워지겠다고 노래한다. 애니메이션 카우보이 비밥 마지막 화의 엔딩곡이다.
 source: instagram
 source_tag: 240511_1145
 source_note: 

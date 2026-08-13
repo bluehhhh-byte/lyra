@@ -16,7 +16,7 @@ keywords: [칼날, 관점]
 emotion: 분노
 date: 2024-09-12
 published: 2024-09-11T23:10:58.000Z
-comment:
+comment: 원하는 모습이 되려고 자신을 내주고 베이는 관계를 공허를 찍어내는 기계에 비유한다. 에밀리 암스트롱이 합류한 뒤 낸 첫 싱글로 앨범 From Zero에 실렸다.
 source: instagram
 source_tag: 240912_0810
 source_note: 

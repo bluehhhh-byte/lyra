@@ -16,7 +16,7 @@ keywords: [어둠, 진흙, 실, 운명, 상처, 소리]
 emotion: 희망
 date: 2023-05-31
 published: 2023-05-30T23:37:28.000Z
-comment:
+comment: 되돌릴 수 없는 시절을 떠올리면서도 지켜야 할 것이 있어 일어선다고 말한다. 애니메이션 귀멸의 칼날 삽입곡으로, 가사가 주인공의 대사와 행동을 따라간다.
 source: instagram
 source_tag: 230531_0837
 source_note: 

@@ -16,7 +16,7 @@ keywords: [공원, 동물원, 영화, 주말, 집]
 emotion: 기쁨
 date: 2022-11-29
 published: 2022-11-28T23:51:46.000Z
-comment:
+comment: 공원과 동물원과 영화관을 도는 평범한 하루를 완벽하다고 부른다. 데이비드 보위가 프로듀스한 1972년 앨범에 실렸고, 뿌린 대로 거둔다는 마지막 한 줄이 이 다정함 아래의 그늘을 드러낸다.
 source: instagram
 source_tag: 221129_0851
 source_note: 

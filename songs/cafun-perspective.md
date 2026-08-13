@@ -3,12 +3,14 @@ title: Perspective
 title_ko: 
 artist: Cafuné
 artist_ko:
-album: 
+album: Love Songs for the End
 year: 2023
 artwork: https://dn710208.ca.archive.org/0/items/mbid-305c4915-a319-455f-99af-559b6a1a63d5/mbid-305c4915-a319-455f-99af-559b6a1a63d5-36967828677_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/c3/2b/c0c32bf3-efd5-cfb0-ae63-29eb4a7fa0eb/mzaf_3465724873912400742.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/perspective/1805292428?i=1805292438&uo=4
+trackId: 1805292438
+duration: 163
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2023]
@@ -16,7 +18,7 @@ keywords: [대화, 길, 방향]
 emotion: 불안
 date: 2024-06-17
 published: 2024-06-16T15:22:09.000Z
-comment:
+comment: 진행되지 않는 대화를 반복하다 길 위에서 방향을 잃는 상태를 그린다. 남은 햇빛 동안 상대의 낯빛이 어두워지는 것을 보며 시야를 잃어간다고 말한다.
 source: instagram
 source_tag: 240617_0020
 source_note: 

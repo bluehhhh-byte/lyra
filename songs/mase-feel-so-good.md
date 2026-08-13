@@ -18,7 +18,7 @@ keywords: [수표, 무대, 자동차, 거리, 돈]
 emotion: 기쁨
 date: 2023-06-06
 published: 2023-06-06T11:43:18.000Z
-comment:
+comment: 힘든 삶에서 달콤한 삶으로 옮겨온 과정을 나열하며 성공의 기분을 그대로 옮긴다. 앨범 Harlem World에 실렸고, 힘을 뺀 랩이 노골적인 가사와 대비된다.
 source: instagram
 source_tag: 230606_2043
 source_note: 

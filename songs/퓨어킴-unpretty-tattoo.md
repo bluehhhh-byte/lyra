@@ -18,7 +18,7 @@ keywords: [사진, 웃음, 눈물, 마음]
 emotion: 사랑
 date: 2022-10-28
 published: 2022-10-28T13:28:56.000Z
-comment:
+comment: 상대가 하지 않아도 자기가 생각하고 사랑하겠다는 일방적인 선언이다. 웃는 얼굴은 다 찍어 두고 울리는 사람은 찢어 주겠다는 말로, 지워지지 않는 문신에 그 마음을 빗댄다.
 source: instagram
 source_tag: 
 source_note: 

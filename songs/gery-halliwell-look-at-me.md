@@ -16,7 +16,7 @@ keywords: [얼굴, 화장, 거짓말, 눈, 가십]
 emotion: 저항
 date: 2023-04-19
 published: 2023-04-18T23:26:24.000Z
-comment:
+comment: 보이는 것과 실제는 다르다는 말을 늘어놓은 뒤, 다음에는 네 눈으로 나를 보라고 요구한다. 스파이스 걸스를 나온 제리 할리웰이 솔로로 처음 낸 곡이다.
 source: instagram
 source_tag: 230419_0819
 source_note: 

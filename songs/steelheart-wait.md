@@ -16,7 +16,7 @@ keywords: [세상, 빛, 햇빛, 비, 심장]
 emotion: 고독
 date: 2023-03-20
 published: 2023-03-20T10:56:51.000Z
-comment:
+comment: 세상이 외로운 곳이라 말하면서 아픔을 숨기는 게 자기뿐일까 되묻는다. 기다리겠다는 말을 사랑을 구하는 방식으로 삼은 곡이다.
 source: instagram
 source_tag: 230320_1956
 source_note: 

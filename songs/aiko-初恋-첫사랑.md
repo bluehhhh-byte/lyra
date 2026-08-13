@@ -16,7 +16,7 @@ keywords: [손가락, 눈물, 망상, 몸짓, 내일, 입술]
 emotion: 설렘
 date: 2022-11-14
 published: 2022-11-13T19:45:02.000Z
-comment:
+comment: 눈 깜박이는 것도 아깝다는 첫 문장으로 시선이 붙잡힌 상태를 말한다. 손가락이 닿는 사소한 순간과 일부러 닿게 하는 서투름 사이에서, 상대의 보폭에 맞춰 걷는 것으로 끝난다.
 source: instagram
 source_tag: 
 source_note: 

@@ -16,7 +16,7 @@ keywords: [날씨, 불, 총, 네잎클로버, 시간]
 emotion: 사랑
 date: 2022-11-28
 published: 2022-11-27T18:44:25.000Z
-comment:
+comment: 짝사랑의 감탄과 시간 낭비라는 원망이 한 곡 안에 같이 들어 있다. 네잎클로버를 자기 몫의 행운으로 부르면서도 확신하지 못하고, 후렴의 반복이 그 들뜬 혼란을 밀고 간다.
 source: instagram
 source_tag: 221128_0343
 source_note: 

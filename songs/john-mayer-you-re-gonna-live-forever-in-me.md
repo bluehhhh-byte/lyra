@@ -16,7 +16,7 @@ keywords: [우주, 공룡, 운석]
 emotion: 사랑
 date: 2024-07-23
 published: 2024-07-22T23:24:25.000Z
-comment:
+comment: 빅뱅과 공룡과 운석까지 끌어와 모든 것이 끝난다고 말한 뒤, 그래도 너는 내 안에 영원히 산다고 잇는다. 결혼하지 못할 이유를 목사가 물어도 자리를 지키겠다고 한다.
 source: instagram
 source_tag: 240723_0823
 source_note: 

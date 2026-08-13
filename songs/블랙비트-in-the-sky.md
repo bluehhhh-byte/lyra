@@ -16,7 +16,7 @@ keywords: [사진, 미소, 눈물, 시간, 용서]
 emotion: 이별
 date: 2022-10-08
 published: 2022-10-08T11:33:34.000Z
-comment:
+comment: 사진 속 미소를 보며 잘못한 일들만 떠오른다고 말한다. 아낀다는 이유로 아무것도 해주지 못했다는 뒤늦은 자각이, 돌아와 달라는 부탁으로 이어진다.
 source: instagram
 source_tag: 
 source_note: 

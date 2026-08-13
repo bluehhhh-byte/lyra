@@ -16,7 +16,7 @@ keywords: [친구, 부모, 축구, 응원가, 패거리]
 emotion: 저항
 date: 2023-04-04
 published: 2023-04-03T23:19:07.000Z
-comment:
+comment: 아무도 우리를 좋아하지 않고 우리도 신경 쓰지 않는다는 밀월 FC 응원가를 그대로 태도로 삼는다. 욕설의 나열이 곧 소속을 확인하는 방식이 된다.
 source: instagram
 source_tag: 230404_0818
 source_note: 

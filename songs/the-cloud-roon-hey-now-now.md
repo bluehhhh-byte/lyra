@@ -16,7 +16,7 @@ keywords: [꿈, 손]
 emotion: 불안
 date: 2024-09-09
 published: 2024-09-08T23:20:24.000Z
-comment:
+comment: 잠든 사이 누군가 꿈을 꺼내 잘라서 도로 집어넣는다는 이미지로 시작한다. 사소한 것들에 짓눌리면서도 새로 살아갈 이유를 찾아 다시 꿈꾸려 한다.
 source: instagram
 source_tag: 240909_0818
 source_note: 

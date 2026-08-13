@@ -16,7 +16,7 @@ keywords: [손, 시간, 방식]
 emotion: 사랑
 date: 2024-08-22
 published: 2024-08-21T23:10:53.000Z
-comment:
+comment: 손을 잡고 시간을 확인하던 장면만 반복하며 너와 나라는 말을 되뇐다. 내 것이었다는 문장이 과거형으로 바뀌면서 남은 것은 기억뿐임이 드러난다.
 source: instagram
 source_tag: 240822_0809
 source_note: 

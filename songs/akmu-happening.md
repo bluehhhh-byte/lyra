@@ -3,11 +3,13 @@ title: HAPPENING
 title_ko: HAPPENING
 artist: AKMU
 artist_ko:
-album: HAPPENING
+album: HAPPENING - Single
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/f2c288e502c7ec1c3df7a188aa328303/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/3/e/d/0/3edd9d91d0336a5201856111c802dd59.mp3?hdnea=exp=1786584256~acl=/api/1/1/3/e/d/0/3edd9d91d0336a5201856111c802dd59.mp3*~data=user_id=0,application_id=42~hmac=ef19577c3772cd669a07a6a24a2f56ca2afd554d3efeebfcb87bf2ab13445a26
-trackId:
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/happening/1539384380?i=1539384381&uo=4
+trackId: 1539384381
 duration: 224
 genre: K-Pop
 lang: ko
@@ -16,7 +18,7 @@ keywords: [경고, 눈빛, 추억, 미련, 마지막]
 emotion: 이별
 date: 2023-03-15
 published: 2023-03-14T15:32:48.000Z
-comment:
+comment: 마지막 경고라고 선을 그으면서도 젖은 눈을 보고 진지해져 버렸다고 인정한다. 이별을 해프닝으로 이름 붙이려다 실패하는 과정이 그대로 남는다.
 source: instagram
 source_tag: 230315_0032
 source_note: 

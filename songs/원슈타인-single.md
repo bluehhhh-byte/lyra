@@ -18,7 +18,7 @@ keywords: [우산, 비, 노래, 차, 아침]
 emotion: 고독
 date: 2023-05-28
 published: 2023-05-27T23:05:38.000Z
-comment:
+comment: 혼자인 편이 낫다고 말하면서 우산이 없어 젖어도 웃을 수 있다고 덧붙인다. 불안한 듯 흔들리는 창법이 그 태연한 말과 겹쳐 들리는 곡이다.
 source: instagram
 source_tag: 230528_0805
 source_note: 

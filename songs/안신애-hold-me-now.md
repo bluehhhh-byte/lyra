@@ -16,7 +16,7 @@ keywords: [속마음, 손, 세상]
 emotion: 슬픔
 date: 2024-07-13
 published: 2024-07-13T14:05:16.000Z
-comment:
+comment: 잘 먹고 잘 자는 일이 가장 어렵다는 고백과 함께, 무너질 때 붙잡아달라고 청하는 곡이다. 혼자 쓰러지지 않고 스스로 설 자리를 달라는 말로 끝난다.
 source: instagram
 source_tag: 240713_2304
 source_note: 

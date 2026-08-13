@@ -16,7 +16,7 @@ keywords: [불꽃, 물결, 어둠, 빛, 숯]
 emotion: 체념
 date: 2022-11-20
 published: 2022-11-20T07:37:41.000Z
-comment:
+comment: 오렌지빛 오후와 살을 에는 물결 사이에서 지난 변명들을 되짚는다. 뜨거운 숯을 몸에 두르고 끝으로 달린다는 구절과 사라진다는 반복이, 소진되는 감각을 그대로 밀고 간다.
 source: instagram
 source_tag: 221120_1636
 source_note: 

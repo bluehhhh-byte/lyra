@@ -18,7 +18,7 @@ keywords: [드론, 가족, 손가락, 목숨, 기도]
 emotion: 저항
 date: 2023-06-03
 published: 2023-06-03T12:10:27.000Z
-comment:
+comment: 드론이 가족을 죽였다고 말하며 목숨이 누군가의 손가락에 달려 있음을 지적한다. 같은 제목의 2015년 콘셉트 앨범에 실린 아카펠라 곡이다.
 source: instagram
 source_tag: 230603_2109
 source_note: 

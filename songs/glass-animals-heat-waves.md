@@ -16,7 +16,7 @@ keywords: [열기, 거울, 도로]
 emotion: 그리움
 date: 2024-06-23
 published: 2024-06-22T23:59:53.000Z
-comment:
+comment: 더 이상 행복하게 해줄 수 없다는 자각과 놓지 못하는 마음이 열기와 신기루의 이미지로 반복된다. 앨범 Dreamland에 실린 곡이다.
 source: instagram
 source_tag: 240623_0859
 source_note: 

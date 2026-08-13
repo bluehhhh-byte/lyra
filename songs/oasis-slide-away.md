@@ -16,7 +16,7 @@ keywords: [꿈, 하루, 세상]
 emotion: 그리움
 date: 2024-06-18
 published: 2024-06-18T00:08:05.000Z
-comment:
+comment: 세상이 잠들었을 때 붙잡아달라고 하며 함께 슬며시 떠나자고 말한다. 노엘 갤러거가 쓴 데뷔작 Definitely Maybe 수록곡이다.
 source: instagram
 source_tag: 240618_0853
 source_note: 

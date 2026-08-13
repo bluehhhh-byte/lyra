@@ -4,7 +4,7 @@ title_ko:
 artist: Radiohead
 artist_ko:
 album: In Rainbows
-year: 2006
+year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/a/f/0/5afea1001a936755ae5404c829e1954a.mp3?hdnea=exp=1786559413~acl=/api/1/1/5/a/f/0/5afea1001a936755ae5404c829e1954a.mp3*~data=user_id=0,application_id=42~hmac=35cde7747791efb314d3d5a40eb0c2373292d9079c7198576ba8eb74379c3121
 trackId: 
@@ -16,7 +16,7 @@ keywords: [바다, 밑바닥, 눈]
 emotion: 몽환
 date: 2024-06-12
 published: 2024-06-11T23:44:30.000Z
-comment:
+comment: 바다 밑바닥까지 따라 내려갔다가 바닥을 치고 도망치겠다고 말한다. 앨범 In Rainbows에 실렸고 벌레와 이상한 물고기에게 먹힌다는 이미지가 중심에 있다.
 source: instagram
 source_tag: 240612_0843
 source_note: 

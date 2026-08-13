@@ -16,7 +16,7 @@ keywords: [눈물, 빛, 집, 뼈, 실수]
 emotion: 위로
 date: 2022-10-06
 published: 2022-10-05T21:26:17.000Z
-comment:
+comment: 콜드플레이의 곡을 제이컵 콜리어가 다시 부른 것이다. 최선을 다해도 되지 않는 순간들을 나열한 뒤, 빛이 집으로 인도할 거라며 고쳐 보겠다는 약속으로 넘어간다.
 source: instagram
 source_tag: 
 source_note: 

@@ -16,7 +16,7 @@ keywords: [소녀]
 emotion: 몽환
 date: 2024-06-25
 published: 2024-06-25T14:31:22.000Z
-comment:
+comment: 길 잃은 소녀에게 너는 누구냐고 묻고, 네가 무엇을 할지 안다고 되풀이한다. 로비 크리거가 쓴 1967년 앨범 Strange Days 수록곡이다.
 source: instagram
 source_tag: 240625_2329
 source_note: 

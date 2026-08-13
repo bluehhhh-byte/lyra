@@ -16,7 +16,7 @@ keywords: [기차, 여름, 비]
 emotion: 희망
 date: 2024-06-20
 published: 2024-06-19T23:41:00.000Z
-comment:
+comment: 오래 묶여 있던 것에서 벗어나는 중이라 말하며 이 마음을 조금 더 붙잡아두라고 한다. 앨범 Machina/The Machines of God 수록곡이다.
 source: instagram
 source_tag: 240620_0838
 source_note: 

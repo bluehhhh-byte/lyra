@@ -16,7 +16,7 @@ keywords: [거짓말, 상처, 잠, 이유]
 emotion: 분노
 date: 2023-06-05
 published: 2023-06-04T23:29:05.000Z
-comment:
+comment: 피하는 것도 속이는 것도 끝났다고 말하며 어떻게 그럴 수 있었냐고 되묻는다. 다시는 돌아가지 않겠다는 선언과 이유를 캐묻는 물음만 남는 곡이다.
 source: instagram
 source_tag: 230605_0826
 source_note: 

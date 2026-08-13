@@ -3,12 +3,14 @@ title: 생각해
 title_ko: 생각해
 artist: ABTB
 artist_ko:
-album: 튠업 헌정 앨범 신중현 THE ORIGIN PART 2
-year: 
+album: 튠업 헌정 앨범 신중현 The Origin
+year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/52921f5ca0beeb02f925ba9ed570a05f/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/8/a/0/68a3600f14127c5596e3c78a94301a08.mp3?hdnea=exp=1786584255~acl=/api/1/1/6/8/a/0/68a3600f14127c5596e3c78a94301a08.mp3*~data=user_id=0,application_id=42~hmac=48c96f232ee8dfcfcbd56e18bb4a4260ca3ce4411650cf6899b10552a2846386
-trackId:
-duration: 253
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%83%9D%EA%B0%81%ED%95%B4/1248174289?i=1248174292&uo=4
+trackId: 1248174292
+duration: 252
 genre: Hard Rock
 lang: ko
 tags: [한국, Hard Rock]
@@ -16,7 +18,7 @@ keywords: [창문, 꽃, 눈, 웃음, 모습]
 emotion: 그리움
 date: 2022-11-07
 published: 2022-11-07T09:29:28.000Z
-comment:
+comment: 신중현의 곡을 에이비티비가 헌정 앨범에서 다시 부른 것이다. 멀리서 바라보는 마음이 창문 너머의 모습으로 이어지고, 다가와 웃는 얼굴이 꽃이 되었다는 데서 멎는다.
 source: instagram
 source_tag: 
 source_note: 

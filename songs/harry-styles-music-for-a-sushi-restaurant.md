@@ -16,7 +16,7 @@ keywords: [아이스크림, 풍선껌, 볶음밥]
 emotion: 기쁨
 date: 2024-06-11
 published: 2024-06-10T23:40:40.000Z
-comment:
+comment: 음식과 맛의 비유로만 애정을 늘어놓는 곡이다. 앨범 Harry's House의 첫 트랙이며, 제목 그대로 어딘가의 배경음악이 되기를 자처한다.
 source: instagram
 source_tag: 240611_0833
 source_note: 

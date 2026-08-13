@@ -3,12 +3,14 @@ title: Otonablue
 title_ko: 어른의 우울
 artist: ATARASHII GAKKO!
 artist_ko:
-album: OTONABLUE
+album: Otonablue - Single
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/011ea7436c1b1ff2e01abde85a3aa598/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/0/0/ec0a8c673d95d439562bc7b46701336c.mp3?hdnea=exp=1786584263~acl=/api/1/1/e/c/0/0/ec0a8c673d95d439562bc7b46701336c.mp3*~data=user_id=0,application_id=42~hmac=6a17aa30aaf827b1be297474f31b9408d84ff6ad18912134e1b299d37fe233b9
-trackId:
-duration: 185
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/otonablue/1499479111?i=1499479112&uo=4
+trackId: 1499479112
+duration: 186
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2020]
@@ -16,7 +18,7 @@ keywords: [입술, 거리, 시선, 꽃봉오리, 땀, 몸]
 emotion: 설렘
 date: 2023-03-14
 published: 2023-03-14T14:25:41.000Z
-comment:
+comment: 어른의 사랑을 동경하면서 아직 피지 않은 꽃봉오리인 채 어른인 척한다고 말한다. 마음만 앞질러 가는 상태를 곡 내내 되풀이한다.
 source: instagram
 source_tag: 230314_2324
 source_note: 아마릴리스 : 수선화과 식물, 붉거나 흰색 꽃

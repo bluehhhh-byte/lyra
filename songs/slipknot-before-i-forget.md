@@ -16,7 +16,7 @@ keywords: [세상, 휘발유, 얼룩, 반란, 호흡]
 emotion: 분노
 date: 2023-04-20
 published: 2023-04-20T00:01:20.000Z
-comment:
+comment: 세상과 단절된 채 갇혀 있다고 말하면서, 망각하기 전에 기억하겠다는 문장을 반복해 붙든다. 3집 수록곡이며 밴드에 그래미를 안겨 준 트랙이다.
 source: instagram
 source_tag: 
 source_note: 

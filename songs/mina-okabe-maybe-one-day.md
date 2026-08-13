@@ -16,7 +16,7 @@ keywords: [실수, 마음, 처음]
 emotion: 이별
 date: 2024-08-21
 published: 2024-08-20T23:57:45.000Z
-comment:
+comment: 잘 맞지 않는다는 말을 자기 입으로 꺼내며 타이밍 탓으로 돌리지 않겠다고 한다. 언젠가는 좋아하게 됐을지도 모른다는 가정만 남기고 거리를 둔다.
 source: instagram
 source_tag: 240821_0857
 source_note: 

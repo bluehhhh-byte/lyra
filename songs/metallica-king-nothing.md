@@ -18,7 +18,7 @@ keywords: [왕관, 성, 손가락, 이름, 왕]
 emotion: 체념
 date: 2022-11-22
 published: 2022-11-21T15:33:41.000Z
-comment:
+comment: 왕이 되려고 쫓아다닌 끝에 성이 무너지고 이름만 남은 인물을 향해 왕관은 어디 있느냐고 묻는다. 손가락을 들어 탓할 상대조차 남지 않은 자리가 이 곡의 결말이다.
 source: instagram
 source_tag: 221122_0032
 source_note: 

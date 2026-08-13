@@ -16,7 +16,7 @@ keywords: [결혼, 색종이, 소녀]
 emotion: 체념
 date: 2024-10-10
 published: 2024-10-09T19:07:35.000Z
-comment:
+comment: 짝사랑하던 여자의 결혼식에 하객으로 서서 색종이를 든 채 부자였다면 잘생겼다면 하는 가정법만 늘어놓는다. 다음 생에는 나와 결혼해달라는 말로 끝난다.
 source: instagram
 source_tag: 241010_0406
 source_note: 

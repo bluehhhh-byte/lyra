@@ -16,7 +16,7 @@ keywords: [영화, 조명, 땅]
 emotion: 불안
 date: 2024-08-18
 published: 2024-08-17T18:27:53.000Z
-comment:
+comment: 밟고 선 땅이 꺼질 것 같다는 불안 위에 영화 속에 사는 상대를 지켜본다. 타버려도 좋으니 돌아가지 않겠다며 할리우드로 떠나는 이야기로 이어진다.
 source: instagram
 source_tag: 240819_0333
 source_note: 

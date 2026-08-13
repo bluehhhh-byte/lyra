@@ -16,7 +16,7 @@ keywords: [기억, 균열, 시간]
 emotion: 회상
 date: 2024-06-19
 published: 2024-06-18T23:34:55.000Z
-comment:
+comment: 기억의 균열을 들여다보며 선택권 없이 끝나버린 관계를 되짚는다. 환상 속에서 길을 잃었다고 인정하면서도 아직 빠져 있다고 말한다.
 source: instagram
 source_tag: 240619_0834
 source_note: 

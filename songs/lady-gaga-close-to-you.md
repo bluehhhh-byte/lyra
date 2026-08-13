@@ -16,7 +16,7 @@ keywords: [새, 별, 하늘]
 emotion: 사랑
 date: 2024-10-03
 published: 2024-10-03T08:09:27.000Z
-comment:
+comment: 버트 배커랙과 핼 데이비드가 쓰고 카펜터스가 부른 곡을 다시 부른 것으로, 영화 조커 속편에 맞춰 낸 앨범 Harlequin에 실렸다. 곁에 있고 싶은 마음을 새와 별에 빗댄다.
 source: instagram
 source_tag: 241003_1708
 source_note: 

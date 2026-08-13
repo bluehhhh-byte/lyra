@@ -16,7 +16,7 @@ keywords: [숫자, 밤, 눈물, 문, 돈]
 emotion: 회상
 date: 2023-04-12
 published: 2023-04-12T00:54:31.000Z
-comment:
+comment: 숫자를 세며 더 많이 사랑한다고 말해 달라 청하고, 돈으로는 그 사랑을 되살 수 없다고 잘라 말한다. 샐리 셀트먼이 쓴 곡을 파이스트가 편곡해 알려졌다.
 source: instagram
 source_tag: 230412_0932
 source_note: 

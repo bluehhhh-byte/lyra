@@ -16,7 +16,7 @@ keywords: [사랑, 상처, 눈빛]
 emotion: 사랑
 date: 2024-08-11
 published: 2024-08-10T22:44:25.000Z
-comment:
+comment: 모두가 헤어지라고 말리는 사랑을 두고 성공 확률 0퍼센트라 부르면서도 그래도 해보겠다고 답한다. 안타깝다는 말은 하지 말라는 요구가 곡의 끝을 맡는다.
 source: instagram
 source_tag: 240811_0742
 source_note: 

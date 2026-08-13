@@ -16,7 +16,7 @@ keywords: [가방, 책상, 춤, 꿈, 물건]
 emotion: 몽환
 date: 2023-03-14
 published: 2023-03-13T23:53:26.000Z
-comment:
+comment: 가방에도 책상에도 없는 무언가를 계속 찾겠느냐 묻고, 찾기를 그만두었을 때 오히려 눈에 띈다고 말한다. 이노우에 요스이가 1973년에 발표한 곡이다.
 source: instagram
 source_tag: 230314_0852
 source_note: 

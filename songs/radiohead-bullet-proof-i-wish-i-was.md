@@ -16,7 +16,7 @@ keywords: [밀랍, 핀, 총알, 구멍, 거품, 이빨]
 emotion: 불안
 date: 2022-12-04
 published: 2022-12-04T12:15:23.000Z
-comment:
+comment: 밀랍으로 본을 뜨고 달군 핀을 꽂는 저주 인형의 이미지로 타인에게 훼손당하는 감각을 말한다. 방탄이 되고 싶다는 바람은 끝내 이루어지지 않고, 돈을 내고 쏴보라는 자조로 이어진다.
 source: instagram
 source_tag: 221204_2114
 source_note: 

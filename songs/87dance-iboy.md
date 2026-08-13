@@ -16,7 +16,7 @@ keywords: [행복, 미소, 와인]
 emotion: 사랑
 date: 2024-07-02
 published: 2024-07-02T10:15:15.000Z
-comment:
+comment: 상대의 주말과 미소와 밤이 되어주겠다는 약속을 목록처럼 나열한다. 원하는 모든 방식으로 변하겠다는 말이 곡 전체를 지탱한다.
 source: instagram
 source_tag: 240702_1914
 source_note: 

@@ -16,7 +16,7 @@ keywords: [기타, 라디오, 공연, 약속, 기다림]
 emotion: 그리움
 date: 2023-05-03
 published: 2023-05-02T19:54:56.000Z
-comment:
+comment: 돌아오겠다던 기타리스트를 라디오로만 듣는 사람의 기다림을 노래한다. 카펜터스의 곡을 소닉 유스가 헌정 앨범에서 다시 부른 버전이다.
 source: instagram
 source_tag: 
 source_note: 

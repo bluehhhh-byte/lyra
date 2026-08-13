@@ -18,7 +18,7 @@ keywords: [어둠, 겨울, 들판, 햇빛, 먼지, 별]
 emotion: 회상
 date: 2023-05-05
 published: 2023-05-04T22:15:37.000Z
-comment:
+comment: 겨울이 너무 빨리 왔다며 어린 시절의 들판을 회상하다, 바람과 먼지처럼 어디에도 머물지 않았다고 고백한다. 국내에서는 드라마 첫사랑의 엔딩으로 널리 알려졌다.
 source: instagram
 source_tag: 230505_0715
 source_note: 

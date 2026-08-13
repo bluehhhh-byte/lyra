@@ -18,7 +18,7 @@ keywords: [마이크, 담배, 노래, 인형, 기억]
 emotion: 슬픔
 date: 2023-04-22
 published: 2023-04-22T02:33:03.000Z
-comment:
+comment: 노래하는 여자와 그를 데리고 다니는 남자를 지켜보며 그녀의 마음을 결코 알 수 없다고 말한다. 엘리엇 스미스가 어머니와 의붓아버지를 두고 쓴 곡으로 알려져 있다.
 source: instagram
 source_tag: 230422_1132
 source_note: '60년대 활동한 미국의 포크 듀오인 'The Everly Brothers'의 곡 · * '70년대 활동한 여자 포크 가수인 'Linda Ronstadt' 곡의 가사 · ** XO는 키스와 포옹을 의미하는 숙어로 X는 두 입술이 포개진 모양을, O는 손깍지를 낄 정도로 꽉 껴안은 것을 형상화한다.

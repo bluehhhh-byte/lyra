@@ -18,7 +18,7 @@ keywords: [십자가, 바람, 강, 바다, 그림자]
 emotion: 이별
 date: 2023-05-06
 published: 2023-05-06T10:57:41.000Z
-comment:
+comment: 눈먼 사랑이라면 차라리 십자가에 매달아 달라 청하며 이별을 견디는 쪽으로 마음을 돌린다. 요시키가 쓴 곡으로 앨범 DAHLIA에 실렸다.
 source: instagram
 source_tag: 230506_1956
 source_note: 

@@ -18,7 +18,7 @@ keywords: [당근, 토마토, 마늘, 솔방울, 햇빛, 나무]
 emotion: 기쁨
 date: 2022-10-07
 published: 2022-10-07T12:25:19.000Z
-comment:
+comment: 채소와 곡물, 운동과 햇빛을 랩의 소재로 삼는 특이한 구성이다. 제철 봄나물과 탄수화물로 자기 플로와 라임을 설명하고, 건강하자는 말로 곡을 닫는다.
 source: instagram
 source_tag: 
 source_note: 

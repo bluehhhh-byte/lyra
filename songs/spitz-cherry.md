@@ -16,7 +16,7 @@ keywords: [태양, 모래, 미래]
 emotion: 희망
 date: 2024-08-15
 published: 2024-08-15T03:39:59.000Z
-comment:
+comment: 사랑한다는 말의 울림만으로 강해질 것 같았다고 되뇌며 굽은 길을 걸어간다. 상상보다 시끄러운 미래가 기다린다는 문장이 곡의 중심에 있다.
 source: instagram
 source_tag: 240815_1237
 source_note: 

@@ -18,7 +18,7 @@ keywords: [빚, 안정감, 곳]
 emotion: 불안
 date: 2024-09-23
 published: 2024-09-23T10:01:46.000Z
-comment:
+comment: 다섯 줄뿐인 가사로 무너져 접히는 자리와 갚아야 할 빚을 말하고, 발 딛고 서 있다는 느낌은 이걸로 끝이라고 접는다.
 source: instagram
 source_tag: 240923_1900
 source_note: 

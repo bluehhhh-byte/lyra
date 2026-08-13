@@ -16,7 +16,7 @@ keywords: [로켓, 도시, 콘센트]
 emotion: 고독
 date: 2024-08-12
 published: 2024-08-12T14:32:39.000Z
-comment:
+comment: 새 로켓 같다, 콘센트 같다, 빈 주머니 같다는 비유를 갈아 끼우며 이 동네에 혼자라는 감각만 반복한다. 어떻게 해야 할지 모르겠다는 말이 매번 뒤따른다.
 source: instagram
 source_tag: 240812_2331
 source_note: 

@@ -16,7 +16,7 @@ keywords: [집, 계절, 기회]
 emotion: 위로
 date: 2024-06-17
 published: 2024-06-16T15:08:37.000Z
-comment:
+comment: 이제 내가 너의 집이 되겠다는 말로 시작해 계절이 바뀌고 있다고 덧붙인다. 혼자 잠들지 못하는 밤을 고백하며 너무 많은 걸 바라는지 되묻는다.
 source: instagram
 source_tag: 240617_0004
 source_note: 

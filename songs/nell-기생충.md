@@ -16,7 +16,7 @@ keywords: [벌레, 피, 기도, 눈물, 거짓말]
 emotion: 불안
 date: 2023-05-08
 published: 2023-05-07T17:58:49.000Z
-comment:
+comment: 화자를 사람이 아니라 아픔과 위선에 기생하는 벌레 쪽에 두고, 네가 피눈물을 흘릴 때 비로소 행복하다고 말한다. 고통이 스스로를 먹여 살리는 구조를 그린다.
 source: instagram
 source_tag: 220508_0258
 source_note: 

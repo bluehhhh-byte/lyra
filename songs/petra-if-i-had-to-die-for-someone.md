@@ -16,7 +16,7 @@ keywords: [안전벨트, 무릎, 스카프, 폭풍, 문]
 emotion: 사랑
 date: 2023-05-01
 published: 2023-05-01T12:08:16.000Z
-comment:
+comment: 안전벨트를 매고 위험을 피하는 일상을 늘어놓은 뒤, 남을 위해 죽는 일은 상상조차 못 하겠다고 인정한다. 페트라는 1974년에 시작한 미국의 CCM 록밴드다.
 source: instagram
 source_tag: 
 source_note: 

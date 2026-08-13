@@ -16,7 +16,7 @@ keywords: [미셸, 단어]
 emotion: 사랑
 date: 2024-07-08
 published: 2024-07-07T23:48:53.000Z
-comment:
+comment: 프랑스어와 영어를 섞어 이름 하나를 계속 부르며, 알아들을 수 있는 말로만 마음을 전하겠다고 한다. 폴 매카트니가 쓴 Rubber Soul 수록곡이다.
 source: instagram
 source_tag: 240708_0848
 source_note: 

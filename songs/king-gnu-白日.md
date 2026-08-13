@@ -16,7 +16,7 @@ keywords: [죄, 내일, 예전]
 emotion: 체념
 date: 2024-06-09
 published: 2024-06-09T02:24:37.000Z
-comment:
+comment: 모르는 사이에 누군가를 상처 입힌 죄를 뒤늦게 알고도 내일로 걸어갈 수밖에 없다고 말한다. 후회뿐인 인생이라 하면서 완전히 새로 태어나고 싶다고 덧붙인다.
 source: instagram
 source_tag: 240609_1123
 source_note: 

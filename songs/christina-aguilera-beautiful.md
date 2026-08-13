@@ -16,7 +16,7 @@ keywords: [아픔, 숨, 매일]
 emotion: 위로
 date: 2024-09-26
 published: 2024-09-26T12:31:42.000Z
-comment:
+comment: 말이 나를 무너뜨릴 수 없다는 후렴을 반복하며 수치심과 불안을 정면으로 말한다. 린다 페리가 쓴 곡으로 2002년 앨범 Stripped에 실렸다.
 source: instagram
 source_tag: 240926_2130
 source_note: 

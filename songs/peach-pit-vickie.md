@@ -16,7 +16,7 @@ keywords: [길, 대마초, 근처]
 emotion: 회상
 date: 2024-07-13
 published: 2024-07-13T12:18:34.000Z
-comment:
+comment: 네가 길 건너에 살았다면 어땠을까라는 가정을 반복하며 비키라는 사람과의 거리를 되짚는다. 가깝지 않아 다행이라는 말로 애정과 안도를 함께 드러낸다.
 source: instagram
 source_tag: 240713_2114
 source_note: 

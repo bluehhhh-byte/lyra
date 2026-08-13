@@ -18,7 +18,7 @@ keywords: [밤, 비, 이름, 태양, 살결, 하룻밤]
 emotion: 체념
 date: 2023-05-09
 published: 2023-05-09T11:08:40.000Z
-comment:
+comment: 떠나지 않으면 내일이 엉망이 될 줄 알면서도 정리되지 않는 하룻밤의 감정을 붙들고 있다. 제목의 반복은 자기 뜻과 무관하게 되풀이되는 상태를 가리킨다.
 source: instagram
 source_tag: 230509_2003
 source_note: 

@@ -16,7 +16,7 @@ keywords: [꿈, 작별인사, 내일]
 emotion: 사랑
 date: 2024-09-11
 published: 2024-09-11T14:48:19.000Z
-comment:
+comment: 작별을 고하는 꿈에서 깬 뒤 매일 밤을 마지막처럼 사랑하겠다고 말한다. 세상이 끝난다면 네 옆에서 웃으며 죽고 싶다는 후렴이 곡의 전부다.
 source: instagram
 source_tag: 240911_2345
 source_note: 

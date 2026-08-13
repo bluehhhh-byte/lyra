@@ -16,7 +16,7 @@ keywords: [한사람]
 emotion: 사랑
 date: 2024-07-16
 published: 2024-07-16T12:35:07.000Z
-comment:
+comment: 모든 게 무너지는 와중에도 아무 데도 가지 않겠다고 말한다. 이미 늦은 걸 알면서 한 번만 더 죽여달라고 청하는 자리에서 사랑이 자해에 가까워진다.
 source: instagram
 source_tag: 240716_2134
 source_note: 

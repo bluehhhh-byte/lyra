@@ -18,7 +18,7 @@ keywords: [꿈, 별, 새, 하늘, 노래]
 emotion: 사랑
 date: 2023-05-16
 published: 2023-05-16T11:09:25.000Z
-comment:
+comment: 무슨 꿈을 꾸는지 알려 달라고 반복하며 상대에게 자신을 다 걸어 보인다. 시부야케이의 전자음 위에 차라의 목소리가 얹혀 고백을 가볍게 띄운다.
 source: instagram
 source_tag: 230516_2008
 source_note: 

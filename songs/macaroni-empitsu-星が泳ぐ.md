@@ -16,7 +16,7 @@ keywords: [바다, 여름, 파도소리]
 emotion: 슬픔
 date: 2024-06-24
 published: 2024-06-23T23:38:51.000Z
-comment:
+comment: 바다에 갔다 돌아오지 않은 사람을 두고 남겨진 여름을 이야기한다. 전하지 못한 말만 남았다고 하면서도 영혼까지 사랑했다는 문장을 끝에 놓는다.
 source: instagram
 source_tag: 240624_0837
 source_note: 

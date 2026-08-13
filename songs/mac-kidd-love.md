@@ -16,7 +16,7 @@ keywords: [인사, 천사, 천국, 미래, 정적]
 emotion: 설렘
 date: 2022-11-19
 published: 2022-11-19T10:45:29.000Z
-comment:
+comment: 인사도 민망하고 내일 이야기도 미루자면서 지금 원한다는 말만 남긴다. 상대를 천사라 부르고 천국을 약속하는 과장이, 정적을 견디지 못하는 조바심과 붙어 있다.
 source: instagram
 source_tag: 221119_1945
 source_note: 

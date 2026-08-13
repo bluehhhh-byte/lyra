@@ -4,7 +4,7 @@ title_ko: Good Bye
 artist: 서태지와 아이들
 artist_ko:
 album: Goodbye Best Album
-year: 1996
+year: 1995
 artwork: https://coverartarchive.org/release-group/cbe6cc8a-d3a7-3a1a-87d1-15907af2ad92/front-500
 preview:
 preview_provider: coverartarchive
@@ -13,7 +13,7 @@ trackId:
 duration:
 genre: Ballad
 lang: ko
-tags: [한국, Ballad, 1996]
+tags: [한국, Ballad, 1995]
 keywords: [기억, 미소, 눈물, 시간, 곁]
 emotion: 이별
 date: 2022-12-30

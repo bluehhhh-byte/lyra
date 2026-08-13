@@ -16,7 +16,7 @@ keywords: [세월, 지도, 손끝]
 emotion: 사랑
 date: 2024-08-14
 published: 2024-08-14T10:53:44.000Z
-comment:
+comment: 지도를 손끝으로 따라가듯 되지는 않는다며 상대를 얼마나 아는지 자문한다. 변해가는 순간마다 그 눈동자 안에 살고 싶다는 말이 후렴이다.
 source: instagram
 source_tag: 240814_1951
 source_note: 

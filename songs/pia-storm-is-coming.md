@@ -16,7 +16,7 @@ keywords: [도시, 불빛, 꿈, 파도, 혼돈]
 emotion: 불안
 date: 2022-11-20
 published: 2022-11-20T07:05:02.000Z
-comment:
+comment: 쇼는 끝났고 폭풍이 온다는 선언으로 시작한다. 도시의 불빛을 아름다운 꿈에 빗대고, 영원할 줄 알았느냐고 물으며 돌이킬 수 없는 그날이 오늘이라고 못박는다.
 source: instagram
 source_tag: 221120_1604
 source_note: 

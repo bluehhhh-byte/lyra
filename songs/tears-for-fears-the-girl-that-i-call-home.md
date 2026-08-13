@@ -16,7 +16,7 @@ keywords: [물, 칼, 십자가]
 emotion: 사랑
 date: 2024-09-23
 published: 2024-09-22T21:12:40.000Z
-comment:
+comment: 평범한 삶도 칼처럼 벨 수 있다는 말로 시작해, 상처를 감추는 남자가 자기 어둠을 빛으로 채워주는 상대를 집이라 부른다.
 source: instagram
 source_tag: 240923_0611
 source_note: 

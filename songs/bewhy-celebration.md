@@ -3,12 +3,14 @@ title: Celebration
 title_ko: Celebration
 artist: BewhY
 artist_ko:
-album: 
+album: 032 Funk - EP
 year: 2021
 artwork: https://dn721609.ca.archive.org/0/items/mbid-6a60a969-c0de-401e-81a4-9b1405aeabbf/mbid-6a60a969-c0de-401e-81a4-9b1405aeabbf-33322040473_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cb/ce/92/cbce9200-e1db-7dab-1194-4eea37dfac16/mzaf_4306265792800609654.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/celebration/1823637413?i=1823637420&uo=4
+trackId: 1823637420
+duration: 196
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]

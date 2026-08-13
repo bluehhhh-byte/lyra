@@ -16,7 +16,7 @@ keywords: [방, 차, 모래]
 emotion: 위로
 date: 2024-09-04
 published: 2024-09-03T22:23:34.000Z
-comment:
+comment: 방 구석과 차 뒷좌석을 오가며 자기 자신과 함께 있기 싫어진 상태를 말한다. 웃는 것이 어렵다고 인정하면서도 나아지려 애쓰는 중이라고 반복한다.
 source: instagram
 source_tag: 240904_0722
 source_note: 

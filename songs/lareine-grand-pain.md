@@ -16,7 +16,7 @@ keywords: [구름, 달빛, 꽃잎, 밤하늘, 새벽, 상처]
 emotion: 사랑
 date: 2022-11-18
 published: 2022-11-17T15:04:15.000Z
-comment:
+comment: 구름에 남은 상처와 달빛이 헤아리는 종말 위에서, 살아가면서 불타는 사람을 바라본다. 그곳에 증오는 없고 사랑만 있었다는 문장이 쌓아 올린 것을 지키려는 태도로 이어진다.
 source: instagram
 source_tag: 221118_0003
 source_note: 

@@ -16,7 +16,7 @@ keywords: [해, 마을, 그네]
 emotion: 몽환
 date: 2024-09-08
 published: 2024-09-08T14:30:53.000Z
-comment:
+comment: 해 질 무렵 아무도 없는 낯선 마을을 함께 걷던 기억이 백미러에 남은 얼굴로 되돌아온다. 브라우티건의 책 표지 같은 사진을 찍었다는 구절이 그 시절을 붙든다.
 source: instagram
 source_tag: 240908_2329
 source_note: 

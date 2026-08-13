@@ -16,7 +16,7 @@ keywords: [눈물, 밤하늘, 기도, 노래, 꿈]
 emotion: 고독
 date: 2022-11-16
 published: 2022-11-15T15:03:36.000Z
-comment:
+comment: 마음 바닥에서부터 기도했다는 말을 반복하지만 그 마음은 끝내 차갑다. 무엇을 붙잡고 무엇을 버려야 하는지 모른 채, 마음과 몸의 거리조차 메우지 못하는 상태를 노래한다.
 source: instagram
 source_tag: 221116_0002
 source_note: 

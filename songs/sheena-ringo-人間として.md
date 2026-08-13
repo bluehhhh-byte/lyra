@@ -16,7 +16,7 @@ keywords: [정의, 우주, 불꽃, 얼굴, 손, 자연]
 emotion: 저항
 date: 2024-04-21
 published: 2024-04-21T03:45:41.000Z
-comment:
+comment: 정의를 사람처럼 불러 세워 놓고 그것이 그리 간단한 게 아니라고 따진다. 약과 독을 모두 삼킨 뒤에야 서로를 존중할 수 있을지 모른다고 말한다.
 source: instagram
 source_tag: 240421_1241
 source_note: 

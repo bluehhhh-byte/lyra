@@ -18,7 +18,7 @@ keywords: [술, 말, 햇살, 사랑, 끝]
 emotion: 이별
 date: 2024-06-09
 published: 2024-06-08T17:47:50.000Z
-comment:
+comment: 취해서 내뱉은 말들 사이에서 사랑이 무너지는 과정을 담담하게 정리한다. 앨범 Parklife에 실렸고 기어이 끝까지 갔다는 문장을 후렴에 놓는다.
 source: instagram
 source_tag: 240609_0246
 source_note: 

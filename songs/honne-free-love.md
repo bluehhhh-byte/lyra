@@ -16,7 +16,7 @@ keywords: [집, 언덕, 강아지]
 emotion: 희망
 date: 2024-07-21
 published: 2024-07-21T13:16:39.000Z
-comment:
+comment: 언덕 위 집과 마당의 강아지까지 그려보다 우리 형편으로는 안 되는 꿈이라고 스스로 접는다. 대신 줄 수 있는 것은 사랑뿐이라며 단순한 것으로 충분하냐고 묻는다.
 source: instagram
 source_tag: 240721_2215
 source_note: 

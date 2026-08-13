@@ -7,8 +7,10 @@ album: MADE
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/73f9614becfcecc25782335cacc49cd2/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3?hdnea=exp=1786584267~acl=/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3*~data=user_id=0,application_id=42~hmac=83b369eca3ad8d781484049b6a38c26bdefc9c77495c909a1977b8299556b54c
-trackId:
-duration: 279
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/last-dance/1313175579?i=1313176078&uo=4
+trackId: 1313176078
+duration: 280
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2016]
@@ -16,7 +18,7 @@ keywords: [별, 불빛, 눈물, 어른, 친구]
 emotion: 그리움
 date: 2022-12-01
 published: 2022-11-30T18:05:19.000Z
-comment:
+comment: 영원할 줄 알았던 것들이 하나씩 저무는 자리에서 어른이 되어간다는 감각을 말한다. 빅뱅이 입대를 앞두고 낸 정규 앨범에 실려서, 듣는 쪽에는 작별 인사처럼 남은 곡이다.
 source: instagram
 source_tag: 221201_0303
 source_note: 

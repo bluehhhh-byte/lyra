@@ -16,7 +16,7 @@ keywords: [가슴, 꿈, 하늘]
 emotion: 희망
 date: 2024-09-18
 published: 2024-09-18T13:32:29.000Z
-comment:
+comment: 기무라 유미가 만들고 부른 센과 치히로의 행방불명 주제가로, 가쿠 와카코가 가사를 썼다. 산산이 부서진 거울 위에도 새 풍경이 비친다며 빛나는 것은 이미 내 안에 있다고 맺는다.
 source: instagram
 source_tag: 240918_2230
 source_note: 

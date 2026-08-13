@@ -16,7 +16,7 @@ keywords: [베란다, 구름, 꽃]
 emotion: 그리움
 date: 2024-08-14
 published: 2024-08-13T23:41:00.000Z
-comment:
+comment: 베란다에서 구름과 박쥐를 바라보며 올 사람을 계속 기다린다. 언젠가 썩어 문드러지면 이 자리에 작고 흰 꽃이 필 거라는 말 뒤에 기다린다는 한마디만 남는다.
 source: instagram
 source_tag: 240814_0840
 source_note: 

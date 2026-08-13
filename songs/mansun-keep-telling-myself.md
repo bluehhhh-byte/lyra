@@ -16,7 +16,7 @@ keywords: [태양, 달, 행진, 영혼, 세상]
 emotion: 위로
 date: 2023-03-23
 published: 2023-03-23T13:16:22.000Z
-comment:
+comment: 달을 보는 사람들 사이에서 혼자 태양을 본다고 말하며, 다 괜찮을 거라는 문장을 스스로에게 되풀이한다. 위로를 남이 아니라 자기 입으로 만들어 내는 곡이다.
 source: instagram
 source_tag: 230323_2215
 source_note: 

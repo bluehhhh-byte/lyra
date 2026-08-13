@@ -18,7 +18,7 @@ keywords: [빛, 세상, 마음, 하루, 눈물]
 emotion: 위로
 date: 2023-04-14
 published: 2023-04-14T14:15:25.000Z
-comment:
+comment: 어릴 땐 아무것도 중요하지 않았다고 시작해, 내가 준 사랑이 돌아온다는 쪽으로 생각을 바꾼 과정을 정리한다. 윌리엄 오빗과 만든 앨범 Ray of Light의 수록곡이다.
 source: instagram
 source_tag: 230414_2314
 source_note: 

@@ -18,7 +18,7 @@ keywords: [아침, 심장, 하루, 미소, 눈물, 어깨]
 emotion: 사랑
 date: 2023-03-17
 published: 2023-03-16T23:21:30.000Z
-comment:
+comment: 매일 아침 눈 뜰 때마다 설레게 하는 사람을 두고 태어난 이유이자 살아갈 이유라고 말한다. 감정을 감추지 않고 그대로 크게 부르는 쪽을 택한 곡이다.
 source: instagram
 source_tag: 230317_0820
 source_note: 

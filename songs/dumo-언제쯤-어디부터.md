@@ -18,7 +18,7 @@ keywords: [아침, 시계, 밤, 거리, 잠, 꿈]
 emotion: 그리움
 date: 2023-05-10
 published: 2023-05-10T14:23:50.000Z
-comment:
+comment: 시간이 약이라는 말이 지겹다고 하면서, 아침에 깨어도 같이 걷던 거리에 멈춰 있는 상태를 반복해 보여준다. 회복이 아니라 정체를 서술하는 곡이다.
 source: instagram
 source_tag: 230510_2315
 source_note: 

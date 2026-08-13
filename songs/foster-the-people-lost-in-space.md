@@ -16,7 +16,7 @@ keywords: [백일몽, 유리, 하늘]
 emotion: 몽환
 date: 2024-09-30
 published: 2024-09-29T23:33:36.000Z
-comment:
+comment: 유리 심장이 깨진 뒤 백일몽 속을 떠도는 상태를 우주 미아에 빗댄다. 어둠에게 배운 것이 원하던 것보다 많았다고 말하며 빛나는 내세를 찾는다.
 source: instagram
 source_tag: 240930_0832
 source_note: 

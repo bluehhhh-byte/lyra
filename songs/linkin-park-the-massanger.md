@@ -16,7 +16,7 @@ keywords: [천사, 목소리, 노래, 집, 어둠]
 emotion: 위로
 date: 2022-10-25
 published: 2022-10-25T10:13:20.000Z
-comment:
+comment: 혼자라고 느낄 때 자기 마음의 소리를 들으라고 말하는 위로의 노래다. 삶이 눈을 멀게 해도 사랑이 우리를 지킨다는 문장이 중심이고, 밴드의 이천십 년 앨범을 닫는 자리에 놓였다.
 source: instagram
 source_tag: 
 source_note: 

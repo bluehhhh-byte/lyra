@@ -16,7 +16,7 @@ keywords: [선물, 나무, 하늘]
 emotion: 설렘
 date: 2024-08-20
 published: 2024-08-19T23:35:08.000Z
-comment:
+comment: 나무 이름을 다 아는 사람에게 줄 선물을 고르는 장면에서 시작해, 햇빛 아래 서서도 우는 이유를 묻는다. 연인은 늘 진다는 말을 체념처럼 반복한다.
 source: instagram
 source_tag: 240820_0834
 source_note: 

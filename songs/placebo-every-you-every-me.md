@@ -16,7 +16,7 @@ keywords: [팔, 이름, 상자, 독, 접시]
 emotion: 체념
 date: 2023-04-12
 published: 2023-04-12T12:06:11.000Z
-comment:
+comment: 다른 사랑을 했어도 결과는 같았을 거라며 관계 자체를 소진으로 규정한다. 영화 사랑보다 아름다운 유혹에 쓰이며 널리 알려진 곡이다.
 source: instagram
 source_tag: 
 source_note: 

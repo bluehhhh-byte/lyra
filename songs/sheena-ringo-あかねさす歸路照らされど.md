@@ -16,7 +16,7 @@ keywords: [교차로, 헤드폰, 바다, 빌딩, 황혼, 눈물]
 emotion: 그리움
 date: 2024-04-25
 published: 2024-04-25T00:10:00.000Z
-comment:
+comment: 교차로에서 헤어지는 저녁을 반복하며 확실한 것 하나 없는 두 사람을 그린다. 헤드폰 속 노랫소리에 기대 울음을 참는 곡으로, 데뷔작 무죄 모라토리엄에 실렸다.
 source: instagram
 source_tag: 240425_0908
 source_note: 

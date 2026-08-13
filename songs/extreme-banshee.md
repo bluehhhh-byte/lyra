@@ -16,7 +16,7 @@ keywords: [달빛, 강풍, 날개, 천사, 지옥, 키스]
 emotion: 불안
 date: 2023-04-28
 published: 2023-04-28T01:39:47.000Z
-comment:
+comment: 죽음을 예고하는 아일랜드 전승의 정령 밴시에 치명적인 매력을 겹쳐, 끌려 들어가면서도 그 끝을 아는 상태를 노래한다. 익스트림이 오랜만에 낸 앨범 SIX의 수록곡이다.
 source: instagram
 source_tag: 230428_1035
 source_note: 

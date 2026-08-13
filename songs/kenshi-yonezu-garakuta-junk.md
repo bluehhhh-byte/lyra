@@ -16,7 +16,7 @@ keywords: [공허, 밤, 알람]
 emotion: 위로
 date: 2024-09-04
 published: 2024-09-03T23:17:30.000Z
-comment:
+comment: 잘 해내지 못한 채 텅 비어버린 둘이 서로를 고물이라 부르며 그래도 곁에서 살아 있어달라 청한다. 2024년 앨범 LOST CORNER에 실렸다.
 source: instagram
 source_tag: 240904_0814
 source_note: 

@@ -18,7 +18,7 @@ keywords: [술, 벽, 미로, 여정, 세상]
 emotion: 사랑
 date: 2022-12-01
 published: 2022-11-30T18:34:29.000Z
-comment:
+comment: 모진 말로 끝을 내려다가 결국 다시 붙드는 관계를 그린다. 상대를 독한 술과 미로와 벽에 차례로 빗대면서도 그 안에서 행복하다고 말하는 데서 이 노래의 모순이 나온다.
 source: instagram
 source_tag: 221201_0333
 source_note: 

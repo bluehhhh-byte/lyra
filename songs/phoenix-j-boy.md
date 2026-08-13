@@ -16,7 +16,7 @@ keywords: [보석, 팔찌, 무도회, 수족관, 골목, 숲]
 emotion: 몽환
 date: 2023-04-06
 published: 2023-04-06T10:57:04.000Z
-comment:
+comment: 보석과 무도회, 텅 빈 수족관 같은 이미지를 이어 붙여 누군가의 세계에 끼어든 감각을 그린다. 이탈리아식 여름을 컨셉으로 삼은 앨범 Ti Amo의 곡이다.
 source: instagram
 source_tag: 
 source_note: 

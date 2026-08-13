@@ -16,7 +16,7 @@ keywords: [꿈, 노래, 기억, 추억, 거짓말]
 emotion: 이별
 date: 2022-12-01
 published: 2022-11-30T18:15:58.000Z
-comment:
+comment: 돌아오기 어려울 걸 알면서도 꿈에서라도 다시 만나자고 비는 노래다. 사과와 체념이 뒤섞이고, 기타 한 대에 목소리만 얹은 편성이 그 후회를 더 앙상하게 남긴다.
 source: instagram
 source_tag: 221201_0315
 source_note: 

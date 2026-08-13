@@ -16,7 +16,7 @@ keywords: [선물, 초록색, 마음]
 emotion: 체념
 date: 2024-06-14
 published: 2024-06-14T10:38:36.000Z
-comment:
+comment: 원하던 선물을 받고도 늘 다른 쪽이 더 푸르다며 눈을 돌리는 사람을 이야기한다. 그렇게 돌고 돌아 다시 혼자가 될 거라고 말하는 곡이다.
 source: instagram
 source_tag: 240614_1937
 source_note: 

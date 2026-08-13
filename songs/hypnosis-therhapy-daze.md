@@ -16,7 +16,7 @@ keywords: [세상, 꿈, 야망, 시련, 싸움]
 emotion: 저항
 date: 2022-11-25
 published: 2022-11-24T23:24:09.000Z
-comment:
+comment: 세상은 원래 그런 거라는 말에 욕부터 뱉고 시작한다. 참을 건 참아도 꿈을 건드리는 건 못 참는다는 태도로, 이기고 지는 걸 반복하면서도 결국 자기가 이긴다고 밀어붙인다.
 source: instagram
 source_tag: 221125_0815
 source_note: 

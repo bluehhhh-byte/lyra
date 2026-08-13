@@ -16,7 +16,7 @@ keywords: [내성적]
 emotion: 고독
 date: 2024-09-24
 published: 2024-09-23T23:12:49.000Z
-comment:
+comment: 소피아 코폴라의 영화 On the Rocks를 위해 만든 곡으로 나중에 앨범 Alpha Zulu에도 실렸다. 나는 예언자가 아니라 친구이니 실수하라는 말을 건넨다.
 source: instagram
 source_tag: 240924_0811
 source_note: 

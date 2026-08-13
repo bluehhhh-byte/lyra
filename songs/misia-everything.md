@@ -16,7 +16,7 @@ keywords: [시간, 기적, 문, 밤, 손, 미래]
 emotion: 사랑
 date: 2022-11-14
 published: 2022-11-13T19:34:01.000Z
-comment:
+comment: 스쳐 지나가는 시간 속에서 만난 것을 기적이라 부르고, 어느 정도의 시간을 영원이라 할 수 있느냐고 묻는다. 일본 드라마 야마토 나데시코의 주제가로 쓰이며 널리 알려졌다.
 source: instagram
 source_tag: 
 source_note: 

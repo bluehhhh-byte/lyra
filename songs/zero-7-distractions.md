@@ -16,7 +16,7 @@ keywords: [저택, 자동차, 가방, 농담, 아이]
 emotion: 체념
 date: 2023-06-03
 published: 2023-06-02T19:37:55.000Z
-comment:
+comment: 저택과 위자료 같은 단어로 이루어질 수 없는 관계를 그린다. 사랑한다고 말한 뒤 곧바로 농담이라 물리는 화법이 곡 전체를 이끌고, 시아가 노래했다.
 source: instagram
 source_tag: 230603_0433
 source_note: 

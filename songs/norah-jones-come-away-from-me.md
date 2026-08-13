@@ -16,7 +16,7 @@ keywords: [밤, 노래, 버스]
 emotion: 사랑
 date: 2024-06-30
 published: 2024-06-30T09:30:15.000Z
-comment:
+comment: 밤에 버스를 타고 함께 떠나자는 청유로만 이루어진 곡이다. 노란 풀밭과 양철 지붕의 빗소리 같은 장면으로 도피의 목적지를 구체적으로 그린다.
 source: instagram
 source_tag: 240630_1828
 source_note: 

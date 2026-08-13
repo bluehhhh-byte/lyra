@@ -16,7 +16,7 @@ keywords: [삶, 태양, 빛]
 emotion: 불안
 date: 2024-07-12
 published: 2024-07-11T23:08:26.000Z
-comment:
+comment: 거리의 사람들은 함께 노래하지 않는다는 관찰로 집단과 자신 사이의 거리를 그린다. 앨범 Loss of Life에 실렸고, 합류하고 싶지만 두렵다는 고백으로 닫힌다.
 source: instagram
 source_tag: 
 source_note: 

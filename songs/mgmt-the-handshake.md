@@ -18,7 +18,7 @@ keywords: [악수, 구름, 눈물, 신용카드, 대리석, 담배]
 emotion: 불안
 date: 2022-11-12
 published: 2022-11-12T11:20:00.000Z
-comment:
+comment: 악수 한 번으로 되돌릴 수 없게 된 계약을 이야기한다. 죽음의 맛이 나지만 짜릿했다는 말과 검은 신용카드, 씻기지 않는 피가 이어지며 성공의 대가를 거래의 형식으로 그린다.
 source: instagram
 source_tag: 
 source_note: 

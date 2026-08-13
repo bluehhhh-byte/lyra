@@ -16,7 +16,7 @@ keywords: [엽서, 달빛, 심장]
 emotion: 사랑
 date: 2024-07-19
 published: 2024-07-18T23:01:49.000Z
-comment:
+comment: 엽서 같은 문자를 보내며 닿았는지 묻고, 달빛 같은 사람에게 모든 사랑을 보낸다고 말한다. 불 속에서 전부를 잃더라도 마음만은 보내겠다고 덧붙인다.
 source: instagram
 source_tag: 240719_0800
 source_note: 

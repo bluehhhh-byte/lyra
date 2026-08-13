@@ -16,7 +16,7 @@ keywords: [거울, 눈, 강]
 emotion: 불안
 date: 2024-09-28
 published: 2024-09-28T11:01:52.000Z
-comment:
+comment: 거울에도 강 건너에도 국기에도 자기 모습이 보이지 않는다고 반복하며, 라디오에서 들리는 비명과 무너진 집의 잿더미를 겹쳐놓는다.
 source: instagram
 source_tag: 240928_2000
 source_note: 

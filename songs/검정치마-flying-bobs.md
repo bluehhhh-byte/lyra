@@ -16,7 +16,7 @@ keywords: [매미, 여름밤, 계절, 저주, 열일곱]
 emotion: 회상
 date: 2023-04-30
 published: 2023-04-30T11:32:21.000Z
-comment:
+comment: 매미가 울던 1999년의 여름밤과 열일곱의 실수를 저주였을까 되묻다가, 돌아가도 같을 것이고 그래도 괜찮다고 맺는다. 조휴일이 99년에 부치는 편지라 밝힌 앨범의 곡이다.
 source: instagram
 source_tag: 230430_2030
 source_note: 

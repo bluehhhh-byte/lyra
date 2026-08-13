@@ -16,7 +16,7 @@ keywords: [책, 학교, 역사]
 emotion: 위로
 date: 2024-06-30
 published: 2024-06-30T14:30:59.000Z
-comment:
+comment: 64페이지를 펴자는 말로 시작해, 좁은 학교의 경쟁 속에서도 언젠가 역사가 네 이름을 기억할 거라고 말한다. 드라마 졸업의 사운드트랙에 실린 곡이다.
 source: instagram
 source_tag: 240630_2330
 source_note: 

@@ -16,7 +16,7 @@ keywords: [밤하늘, 별, 달빛]
 emotion: 위로
 date: 2024-09-28
 published: 2024-09-27T22:38:34.000Z
-comment:
+comment: 밤하늘에 별을 칠해 어둠을 막아둔다는 이미지로, 세상이 최악일 때 곁에 남는 사랑이 어떤 것인지 묻는다. 2020년 크리스마스에 맞춰 나온 싱글이다.
 source: instagram
 source_tag: 240928_0737
 source_note: 

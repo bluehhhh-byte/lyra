@@ -16,7 +16,7 @@ keywords: [감정, 방법, 곁]
 emotion: 사랑
 date: 2024-09-18
 published: 2024-09-17T16:05:15.000Z
-comment:
+comment: 사랑하는 법을 모른다고 말하면서도 몇 년이 걸리든 기다리겠다고 되풀이한다. 거리가 있어도 전부를 주겠다는 다짐이 곡 전체를 이룬다.
 source: instagram
 source_tag: 240918_0103
 source_note: 

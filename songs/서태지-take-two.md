@@ -16,7 +16,7 @@ keywords: [가슴, 지옥, 힘]
 emotion: 분노
 date: 2024-10-01
 published: 2024-10-01T13:18:41.000Z
-comment:
+comment: 화질 나쁜 티비를 못 찾겠다는 후렴을 반복하며 상대를 향한 욕설에 가까운 말과 자기혐오를 뒤섞는다. 1998년 서태지 솔로 1집에 실린 곡이다.
 source: instagram
 source_tag: 241001_2216
 source_note: 

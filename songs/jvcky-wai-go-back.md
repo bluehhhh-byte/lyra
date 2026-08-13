@@ -16,7 +16,7 @@ keywords: [서울, 강남, 샴페인, 지폐, 집세]
 emotion: 저항
 date: 2022-11-19
 published: 2022-11-19T10:41:17.000Z
-comment:
+comment: 서울 출신임을 앞세우고 정답대로 살지 않아 부자가 됐다고 말한다. 작은 몸과 째진 눈이라는 시선을 그대로 받아 되돌려 주는 방식으로, 뒤로는 돌아가지 않겠다고 선을 긋는다.
 source: instagram
 source_tag: 221119_1936
 source_note: 

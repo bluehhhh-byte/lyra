@@ -18,7 +18,7 @@ keywords: [밤하늘, 꿈, 천사, 소원, 얼굴]
 emotion: 그리움
 date: 2023-05-14
 published: 2023-05-14T14:34:28.000Z
-comment:
+comment: 전하지 못한 마음을 꿈속에서만 꺼내 놓고, 깨어나면 말하겠다는 다짐으로 끝난다. 라파엘은 리더 카즈키가 열아홉에 세상을 떠나며 활동을 멈춘 밴드다.
 source: instagram
 source_tag: 230514_2333
 source_note: 

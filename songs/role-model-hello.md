@@ -16,7 +16,7 @@ keywords: [햇살, 춤, 현실]
 emotion: 위로
 date: 2024-09-18
 published: 2024-09-18T08:20:08.000Z
-comment:
+comment: 왜 상해 있는지 자기도 모른다고 말하면서, 모든 것이 무뎌진 채로 햇살 아래 춤추고 싶다고 한다. 전화를 걸면 뭐라 답할 거냐는 물음으로 끝난다.
 source: instagram
 source_tag: 240918_1718
 source_note: 

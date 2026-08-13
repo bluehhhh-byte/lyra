@@ -16,7 +16,7 @@ keywords: [피부, 말, 요즘]
 emotion: 설렘
 date: 2024-09-05
 published: 2024-09-04T23:43:45.000Z
-comment:
+comment: 가까이서 말할 때 피부로 느껴지는 감각에서 시작해, 평소에는 잘 열지 않던 마음이 이 사람 앞에서는 꾸밀 필요가 없어진다고 말한다. 2024년 앨범 Charm에 실렸다.
 source: instagram
 source_tag: 240905_0842
 source_note: 

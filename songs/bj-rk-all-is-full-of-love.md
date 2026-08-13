@@ -3,12 +3,14 @@ title: All Is Full Of Love
 title_ko: 
 artist: Björk
 artist_ko:
-album: Screaming Masterpiece (Original Motion Picture Soundtrack)
+album: Björk's Greatest Hits
 year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/9ed6c568004b157f2eb9d049e4910f67/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/5/0/f65e901c98d0559dc13316f9e56135b1.mp3?hdnea=exp=1786584268~acl=/api/1/1/f/6/5/0/f65e901c98d0559dc13316f9e56135b1.mp3*~data=user_id=0,application_id=42~hmac=25be91a2c2c4b793688f68dc16fc7a7058c62a8f171a1fbbc1e35efdac6c68ae
-trackId:
-duration: 223
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/all-is-full-of-love/262483556?i=262483586&uo=4
+trackId: 262483586
+duration: 287
 genre: Electronic
 lang: en
 tags: [유럽, Electronic, 1997]
@@ -16,7 +18,7 @@ keywords: [사랑, 마음, 주위, 믿음]
 emotion: 위로
 date: 2022-11-29
 published: 2022-11-28T23:43:31.000Z
-comment:
+comment: 사랑은 이미 사방에 있고 다만 받지 못할 뿐이라고 말한다. 수화기가 내려져 있고 문이 닫혀 있다는 비유가 그 단절을 가리키며, 크리스 커닝햄이 만든 로봇 영상으로도 알려진 곡이다.
 source: instagram
 source_tag: 221129_0842
 source_note: 

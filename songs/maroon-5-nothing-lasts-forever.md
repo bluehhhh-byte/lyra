@@ -18,7 +18,7 @@ keywords: [침대, 벽, 추억, 영혼, 바닥]
 emotion: 이별
 date: 2023-04-14
 published: 2023-04-13T23:45:17.000Z
-comment:
+comment: 슬픔이 서로를 해치기 전에 놓아주자고 말하면서도, 손을 잡고 싶다는 마음을 끝까지 지우지 못한다. 관계가 무너지는 중이라는 사실만 분명한 곡이다.
 source: instagram
 source_tag: 230414_0844
 source_note: 

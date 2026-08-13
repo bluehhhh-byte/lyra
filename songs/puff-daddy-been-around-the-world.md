@@ -18,7 +18,7 @@ keywords: [춤, 돈, 여자, 소문, 거리]
 emotion: 기쁨
 date: 2023-06-06
 published: 2023-06-06T10:44:26.000Z
-comment:
+comment: 돈과 안티팬 이야기를 늘어놓으며 배드 보이 진영 전체를 소개하는 곡이다. 앨범 No Way Out에 실렸고 메이스와 노토리어스 B.I.G.가 함께 랩을 나눈다.
 source: instagram
 source_tag: 230606_1944
 source_note: 

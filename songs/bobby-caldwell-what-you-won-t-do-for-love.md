@@ -7,7 +7,9 @@ album: What You Won't Do for Love
 year: 1978
 artwork: https://cdn-images.dzcdn.net/images/cover/0218fd347b94d34935dd025cdd7a7e09/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e92991d4fa.mp3?hdnea=exp=1786559362~acl=/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e92991d4fa.mp3*~data=user_id=0,application_id=42~hmac=bed029249b0cbb0b279cb124e562917b1c8e6dbfb24337bcb09b83ae97cf74bb
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/what-you-wont-do-for-love/1606064414?i=1606064876&uo=4
+trackId: 1606064876
 duration: 286
 genre: R&B/Soul
 lang: en

@@ -16,7 +16,7 @@ keywords: [밤, 친구, 숨, 작별, 세상]
 emotion: 분노
 date: 2023-04-24
 published: 2023-04-24T10:35:53.000Z
-comment:
+comment: 숨 막혔던 날들에 작별을 고하며 다 부수고 꺼지라는 말을 반복한다. 분노를 정리하지 않고 소리 그대로 내지르는 쪽을 택한 곡이다.
 source: instagram
 source_tag: 230424_1934
 source_note: 

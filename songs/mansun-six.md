@@ -16,7 +16,7 @@ keywords: [타협, 권위, 기억, 신념, 고통]
 emotion: 체념
 date: 2023-03-22
 published: 2023-03-22T10:17:43.000Z
-comment:
+comment: 권위 앞에서 떨며 순응해 온 삶을 타협의 연속이라 부르고, 고통스럽지 않다는 말을 끝내 다 맺지 못한다. 앨범 Six의 표제곡이다.
 source: instagram
 source_tag: 230322_1916
 source_note: 

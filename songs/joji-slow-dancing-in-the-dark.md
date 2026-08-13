@@ -16,7 +16,7 @@ keywords: [친구, 하룻밤, 곁]
 emotion: 그리움
 date: 2024-07-26
 published: 2024-07-25T15:33:54.000Z
-comment:
+comment: 친구는 원하지 않는다는 첫 문장부터 관계를 되돌릴 수 없음을 안다. 이미 마음을 정한 상대 앞에서 어둠 속 느린 춤은 추기 싫다고 말한다.
 source: instagram
 source_tag: 240726_0029
 source_note: 

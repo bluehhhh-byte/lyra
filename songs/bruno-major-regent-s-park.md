@@ -7,7 +7,9 @@ album: To Let A Good Thing Die
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/818c716c3a4789da6fd087f378e847d4/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/6/0/1/0/601510e5675e0bd5df109630d6288b03.mp3?hdnea=exp=1786559364~acl=/api/1/1/6/0/1/0/601510e5675e0bd5df109630d6288b03.mp3*~data=user_id=0,application_id=42~hmac=aaa6de14adc52ee4cc139365387ee94c80eca2272f6a705d5c041cff4e2aaa95
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/regents-park/1500454251?i=1500454363&uo=4
+trackId: 1500454363
 duration: 177
 genre: Jazz
 lang: en
@@ -16,7 +18,7 @@ keywords: [시, 미소, 노래]
 emotion: 슬픔
 date: 2024-09-17
 published: 2024-09-17T06:27:31.000Z
-comment:
+comment: 웃는 모습에 대해 시를 사백 편이나 보냈다는 말로 시작해, 리젠츠 파크 꽃밭에서 다시 반해버리는 자신을 본다. 마음을 돌릴 말이 없어 봄날에 작별을 고한다.
 source: instagram
 source_tag: 240917_1526
 source_note: 

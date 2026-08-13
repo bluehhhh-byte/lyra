@@ -16,7 +16,7 @@ keywords: [눈물, 무지개, 태양, 밤, 침대]
 emotion: 그리움
 date: 2023-05-06
 published: 2023-05-05T23:00:00.000Z
-comment:
+comment: 파랑과 회색, 빨강과 초록으로 이별 뒤의 마음 상태를 하나씩 칠해 나간다. 원곡은 1967년 유로비전에 나온 프랑스 샹송이고 여러 언어로 다시 불렸다.
 source: instagram
 source_tag: 230506_0746
 source_note: 

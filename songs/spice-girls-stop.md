@@ -16,7 +16,7 @@ keywords: [한걸음, 선택지]
 emotion: 설렘
 date: 2024-08-23
 published: 2024-08-22T23:43:33.000Z
-comment:
+comment: 너무 빨리 달려오는 상대에게 속도를 늦추라고 말하는 곡이다. 지금 당장 멈추라는 후렴과 사람다운 손길이 필요하다는 요구가 나란히 놓인다.
 source: instagram
 source_tag: 240823_0842
 source_note: 

@@ -16,7 +16,7 @@ keywords: [삶, 이야기]
 emotion: 그리움
 date: 2024-08-16
 published: 2024-08-15T19:13:43.000Z
-comment:
+comment: 너에게서 눈을 뗄 수 없다는 문장만 반복하며 사랑도 영광도 없는 짧은 이야기라고 정리한다. 2002년 앨범 O에 실렸고 영화 클로저에 쓰이며 널리 알려졌다.
 source: instagram
 source_tag: 240816_0412
 source_note: 

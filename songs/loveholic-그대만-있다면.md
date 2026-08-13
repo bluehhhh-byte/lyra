@@ -16,7 +16,7 @@ keywords: [눈물, 기억, 전부]
 emotion: 이별
 date: 2024-07-21
 published: 2024-07-20T23:00:05.000Z
-comment:
+comment: 날 사랑해서 떠난다는 말을 믿을 수 없다면서도 힘들어하는 상대를 잡지 못한다. 세상 전부를 잃어도 그대만 있으면 된다는 문장을 끝까지 반복한다.
 source: instagram
 source_tag: 240721_0758
 source_note: 

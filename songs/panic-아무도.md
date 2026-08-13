@@ -18,7 +18,7 @@ keywords: [미소, 입술, 머리, 아침, 눈물, 꿈]
 emotion: 고독
 date: 2023-03-29
 published: 2023-03-29T10:23:54.000Z
-comment:
+comment: 내 곁엔 너마저 없다는 말을 반복하며, 아침이 와도 잠이 목을 조를 거라고 말한다. 이적과 김진표가 만든 패닉의 첫 앨범에 실린 곡이다.
 source: instagram
 source_tag: 230329_1923
 source_note: 

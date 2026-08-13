@@ -16,7 +16,7 @@ keywords: [거리, 강가, 땅]
 emotion: 그리움
 date: 2024-08-25
 published: 2024-08-24T20:13:02.000Z
-comment:
+comment: 손바닥처럼 아는 빈 땅과 강가를 걸으며 예전의 단순한 것이 어디로 갔는지 묻는다. 기댈 곳이 필요하다며 우리만 아는 곳으로 가자고 청한다.
 source: instagram
 source_tag: 240825_0510
 source_note: 

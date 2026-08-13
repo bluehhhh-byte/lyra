@@ -16,7 +16,7 @@ keywords: [방, 창문, 햇살, 문, 상처]
 emotion: 몽환
 date: 2022-12-02
 published: 2022-12-02T05:58:53.000Z
-comment:
+comment: 몽상가는 배우지 않는다는 말로 시작해 돌이킬 수 없는 지점을 이미 지났다고 말한다. 톰 요크가 오랜 반려와 헤어진 뒤 만든 앨범에 실렸고, 하얀 방과 창문의 이미지가 그 상실을 감싼다.
 source: instagram
 source_tag: 221201_1458
 source_note: 

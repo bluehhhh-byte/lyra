@@ -16,7 +16,7 @@ keywords: [7월, 기차, 날짜]
 emotion: 그리움
 date: 2024-06-10
 published: 2024-06-09T23:38:05.000Z
-comment:
+comment: 7월 말까지 날짜를 세며 오지 않는 기차를 기다린다. 붙잡을 수 없다는 걸 알면서도 네가 가는 길 어딘가에 있겠다고 약속하는 곡이다.
 source: instagram
 source_tag: 240610_0832
 source_note: 

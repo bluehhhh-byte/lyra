@@ -3,12 +3,14 @@ title: So Far From Me
 title_ko: 
 artist: Brett Dennen
 artist_ko:
-album: 
+album: Hope For The Hopeless
 year: 2008
 artwork: https://dn710707.ca.archive.org/0/items/mbid-1c8877a4-9308-499d-92b1-6e3aa9fda5f5/mbid-1c8877a4-9308-499d-92b1-6e3aa9fda5f5-1602419189_thumb500.jpg
-preview: 
-trackId: 
-duration: 
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/29/bc/0629bc46-5ed7-7f99-8157-c42cb549af22/mzaf_434218851427462718.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/so-far-from-me/1758105412?i=1758106260&uo=4
+trackId: 1758106260
+duration: 246
 genre: Folk
 lang: en
 tags: [영미, Folk, 2008]
@@ -16,7 +18,7 @@ keywords: [까마귀, 허수아비, 빈병]
 emotion: 그리움
 date: 2024-06-21
 published: 2024-06-21T09:55:47.000Z
-comment:
+comment: 까마귀와 허수아비의 이미지로 질투와 패배를 깔아둔 뒤, 전화나 편지로는 대신할 수 없는 거리를 이야기한다. 오직 그 한 사람만 원한다는 말로 닫힌다.
 source: instagram
 source_tag: 240621_1854
 source_note: 

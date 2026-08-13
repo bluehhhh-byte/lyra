@@ -16,7 +16,7 @@ keywords: [날개, 시간, 세상, 지평선, 하늘]
 emotion: 기쁨
 date: 2023-04-10
 published: 2023-04-09T23:45:31.000Z
-comment:
+comment: 우리가 제대로 해냈다고 말하며 시간의 날개를 타고 옛 지평선 너머의 집으로 돌아가겠다고 한다. 케빈 파커가 영화 던전 앤 드래곤을 위해 쓴 곡이다.
 source: instagram
 source_tag: 230410_0844
 source_note: 

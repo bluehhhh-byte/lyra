@@ -16,7 +16,7 @@ keywords: [삶, 시간, 연인들]
 emotion: 이별
 date: 2024-07-08
 published: 2024-07-07T23:25:10.000Z
-comment:
+comment: 떠나야 한다는 판단과 여전히 사랑한다는 사실이 한 문장 안에서 부딪힌다. 상대의 다른 연인들을 감당할 수 없어 짐을 싸면서도 제발 보내달라고 부탁한다.
 source: instagram
 source_tag: 240708_0823
 source_note: 

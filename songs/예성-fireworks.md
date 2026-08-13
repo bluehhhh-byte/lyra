@@ -18,7 +18,7 @@ keywords: [하늘, 불빛, 은하수, 구름, 밤, 향기]
 emotion: 설렘
 date: 2023-04-07
 published: 2023-04-06T23:25:26.000Z
-comment:
+comment: 무덤덤하던 일상에 들어온 사람을 깜깜한 하늘의 불빛으로 놓고, 사라진 뒤에 오래 남는 빛으로 그린다. 예성의 네 번째 미니 앨범에 실린 곡이다.
 source: instagram
 source_tag: 230407_0824
 source_note: 

@@ -16,7 +16,7 @@ keywords: [계절, 회전목마, 넝쿨, 열매, 풍경]
 emotion: 체념
 date: 2023-05-02
 published: 2023-05-02T01:21:48.000Z
-comment:
+comment: 넝쿨에 감긴 몸이 썩어 흙으로 돌아가 다시 꽃이 된다는 순환을 회전목마에 겹쳐 놓고 봄에 다시 만나자고 한다. 히데가 세상을 떠난 뒤 발표되어 유작처럼 남은 곡이다.
 source: instagram
 source_tag: 230502_1020
 source_note: 

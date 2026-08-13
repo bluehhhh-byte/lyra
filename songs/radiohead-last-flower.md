@@ -16,7 +16,7 @@ keywords: [가전제품, 집, 저녁, 발, 빛]
 emotion: 불안
 date: 2022-10-31
 published: 2022-10-31T13:17:45.000Z
-comment:
+comment: 가전제품이 광폭해지고 집이 움직여 말한다는 이미지로 견딜 수 없는 상태를 그린다. 저녁을 똑바로 볼 수 없다는 말이 반복되고, 너무 밝고 강하다는 짧은 문장들로 무너진다.
 source: instagram
 source_tag: 
 source_note: 

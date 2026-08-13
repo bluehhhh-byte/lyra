@@ -18,7 +18,7 @@ keywords: [기억, 침묵, 질투, 밤, 상처]
 emotion: 슬픔
 date: 2023-05-29
 published: 2023-05-29T14:32:25.000Z
-comment:
+comment: 어디로 가야 이 괴로움을 사랑할 수 있는지 물으며 피어오르는 기억을 지워달라고 청한다. 요시키가 쓴 곡으로 1991년 앨범 Jealousy에 실렸다.
 source: instagram
 source_tag: 230529_2332
 source_note: 

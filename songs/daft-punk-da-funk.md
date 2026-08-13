@@ -18,7 +18,7 @@ keywords: [로봇, 기계, 거리, 밤, 춤]
 emotion: 기쁨
 date: 2023-05-24
 published: 2023-05-24T14:55:51.000Z
-comment:
+comment: 가사 없이 필터를 건 신스 리프와 묵직한 비트만으로 굴러가는 하우스 트랙이다. 기계음으로 사람의 감정을 다루겠다는 다프트 펑크의 출발점에 해당한다.
 source: instagram
 source_tag: 230524_2355
 source_note: 

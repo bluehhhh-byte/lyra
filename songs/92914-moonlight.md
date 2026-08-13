@@ -18,7 +18,7 @@ keywords: [길, 별, 춤]
 emotion: 불안
 date: 2024-07-05
 published: 2024-07-04T23:18:38.000Z
-comment:
+comment: 올바른 길을 가고 있는지 묻다가 결국 누워 하늘의 별을 보겠다고 말한다. 별더러 춤을 춰달라는 요청이 위안을 구하는 방식으로 쓰인다.
 source: instagram
 source_tag: 240705_0817
 source_note: 

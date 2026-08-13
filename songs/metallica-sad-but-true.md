@@ -18,7 +18,7 @@ keywords: [꿈, 눈, 고통, 거짓말, 대가]
 emotion: 분노
 date: 2022-11-21
 published: 2022-11-21T14:53:13.000Z
-comment:
+comment: 화자는 상대의 꿈이자 눈이자 고통이라고 자처하는 또 다른 자아다. 내가 곧 너라는 마지막 선언으로 이 목소리의 정체가 밝혀지고, 느리고 무거운 리프가 그 압박을 받친다.
 source: instagram
 source_tag: 221121_2352
 source_note: 

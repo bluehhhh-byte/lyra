@@ -16,7 +16,7 @@ keywords: [어깨, 세상, 힘]
 emotion: 위로
 date: 2024-07-16
 published: 2024-07-15T23:41:26.000Z
-comment:
+comment: 가장 어두울 때 곁을 지켜준 사람에게 보내는 감사와, 정작 상처받았을 때 어디 있었냐는 물음이 같은 후렴에 겹친다. 앨범 no song without you에 실렸다.
 source: instagram
 source_tag: 240716_0837
 source_note: 

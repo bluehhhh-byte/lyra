@@ -18,7 +18,7 @@ keywords: [거짓말, 습관, 타인, 상처, 미움]
 emotion: 이별
 date: 2024-04-27
 published: 2024-04-27T12:29:01.000Z
-comment:
+comment: 어디까지가 사랑이었고 언제부터 혼자였는지 되묻는 곡이다. 만나서 사랑하고 결국 타인이 되는 과정을 습관과 거짓말이라는 단어로 정리한다.
 source: instagram
 source_tag: 240427_2127
 source_note: 

@@ -3,12 +3,14 @@ title: FAKE LOVE
 title_ko: FAKE LOVE
 artist: BTS
 artist_ko:
-album: No Roses for the Driver
+album: Love Yourself 結 'Answer'
 year: 2018
 artwork: https://cdn-images.dzcdn.net/images/cover/c4b3d908119b322fae29f17d226fd687/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/2/5/6/0/2569734036bf8abcbbfbd3bea43fe5de.mp3?hdnea=exp=1786559365~acl=/api/1/1/2/5/6/0/2569734036bf8abcbbfbd3bea43fe5de.mp3*~data=user_id=0,application_id=42~hmac=c4cf1346df6093871817f5239391eeae6f5de11a60a87e9bdf47b90a8ec49fa5
-trackId: 
-duration: 121
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/fake-love/1598730614?i=1598730630&uo=4
+trackId: 1598730630
+duration: 242
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2018]
@@ -16,7 +18,7 @@ keywords: [사랑, 약점, 척]
 emotion: 슬픔
 date: 2024-07-30
 published: 2024-07-30T14:43:58.000Z
-comment:
+comment: 상대를 위해 슬퍼도 기쁜 척하다 자신을 지워 인형이 되려 했다고 인정한다. 사랑이 약점을 다 가려주기를 바랐던 마음이 가짜였음을 스스로 말한다.
 source: instagram
 source_tag: 240730_2343
 source_note: 

@@ -18,7 +18,7 @@ keywords: [어둠, 비, 밤, 노을, 품]
 emotion: 체념
 date: 2022-10-04
 published: 2022-10-04T09:41:27.000Z
-comment:
+comment: 내가 바랐던 건 그대가 아니라 하늘을 함께 볼 누군가였다고 먼저 밝힌다. 영원은 없다는 걸 인정한 채로 곁에 있고, 저물어간 노을 같다는 말로 관계를 정리한다.
 source: instagram
 source_tag: 
 source_note: 

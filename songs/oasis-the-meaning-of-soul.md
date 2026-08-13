@@ -16,7 +16,7 @@ keywords: [밤, 눈, 빛, 길]
 emotion: 기쁨
 date: 2023-05-30
 published: 2023-05-30T11:11:36.000Z
-comment:
+comment: 영혼의 의미가 무엇인지 보여주겠다고 선언하는 짧은 곡이다. 앨범 Don't Believe the Truth에 실렸고 상대의 눈에서 사랑을 보고 빛이 되어주겠다고 한다.
 source: instagram
 source_tag: 230530_2011
 source_note: 

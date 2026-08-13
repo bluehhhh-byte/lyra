@@ -18,7 +18,7 @@ keywords: [손길, 어깨, 미소, 심장, 팔짱]
 emotion: 설렘
 date: 2023-03-16
 published: 2023-03-15T23:49:37.000Z
-comment:
+comment: 웃어 주거나 팔을 잡는 사소한 행동마다 참기 어렵다며 그만하라고 반복한다. 거절이 아니라 겨우 참고 있다는 고백으로 쓰인 제목이다.
 source: instagram
 source_tag: 230316_0848
 source_note: 

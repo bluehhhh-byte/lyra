@@ -18,7 +18,7 @@ keywords: [술, 밤, 잠, 마음]
 emotion: 이별
 date: 2022-11-12
 published: 2022-11-12T10:28:00.000Z
-comment:
+comment: 놓친 사람을 두고 스스로를 루저라 부르며 술과 불면으로 밤을 버틴다. 상대가 새 사랑을 시작해 자기 순위가 밀렸다는 자각이 후렴의 자조를 계속 반복하게 만든다.
 source: instagram
 source_tag: 
 source_note: 

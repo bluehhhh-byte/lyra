@@ -16,7 +16,7 @@ keywords: [삶, 마법, 세상]
 emotion: 저항
 date: 2024-06-09
 published: 2024-06-09T04:17:26.000Z
-comment:
+comment: 기술로 뒤틀린 세계를 가상의 광기라 부르며 자연에게 받기만 하는 삶을 비판한다. 앨범 Travelling Without Moving에 실렸고 지하에 사는 미래를 그린다.
 source: instagram
 source_tag: 240609_1315
 source_note: GMO는 유전자 조합을 통해 변형시킨 농산물을 원료로 제조·가공한 식품을 뜻함

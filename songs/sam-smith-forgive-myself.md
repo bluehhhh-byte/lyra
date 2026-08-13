@@ -16,7 +16,7 @@ keywords: [캘리포니아, 거짓말, 하늘]
 emotion: 슬픔
 date: 2024-07-19
 published: 2024-07-19T05:19:33.000Z
-comment:
+comment: 캘리포니아에 혼자 있을 상대를 떠올리며 더 줄 수 있었다고 인정한다. 스스로를 용서하기 전까지는 누구도 사랑할 수 없다는 데서 곡이 멈춘다.
 source: instagram
 source_tag: 240719_1343
 source_note: 

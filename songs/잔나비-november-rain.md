@@ -18,7 +18,7 @@ keywords: [비, 눈, 빗소리, 낙엽, 겨울, 커튼]
 emotion: 그리움
 date: 2022-10-30
 published: 2022-10-30T05:40:36.000Z
-comment:
+comment: 눈이 되지 못한 비를 십일월의 기억으로 놓는다. 빗소리에 감춰둔 기억까지 젖는다고 했다가, 그 비가 언젠가 따스한 추억으로 흐르기를 바라는 쪽으로 옮겨 간다.
 source: instagram
 source_tag: 
 source_note: 

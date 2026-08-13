@@ -18,7 +18,7 @@ keywords: [영혼, 하늘, 불길, 죽음, 시간]
 emotion: 분노
 date: 2024-06-09
 published: 2024-06-08T19:46:25.000Z
-comment:
+comment: 모든 걸 빼앗긴 자리에서 증오가 자란다고 말하는 곡이다. 데뷔작 Showbiz의 마지막 트랙으로, 무너뜨리겠다는 선언과 강해지고 있다는 말이 반복된다.
 source: instagram
 source_tag: 240609_0443
 source_note: 

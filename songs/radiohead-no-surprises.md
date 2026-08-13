@@ -16,7 +16,7 @@ keywords: [정원, 집, 정부, 일산화탄소, 매립장]
 emotion: 체념
 date: 2022-10-31
 published: 2022-10-31T12:51:31.000Z
-comment:
+comment: 매립장처럼 가득 찬 마음과 서서히 죽이는 직장을 늘어놓고, 아무 놀랄 일 없는 조용한 삶을 청한다. 일산화탄소와 악수한다는 구절이 그 조용함의 정체를 드러낸다.
 source: instagram
 source_tag: 
 source_note: 

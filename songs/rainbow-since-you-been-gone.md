@@ -16,7 +16,7 @@ keywords: [꿈, 밤, 침대, 신발, 벽]
 emotion: 이별
 date: 2023-05-07
 published: 2023-05-07T03:54:23.000Z
-comment:
+comment: 매일 밤 추락하는 꿈에서 깨어나고, 떠난 사람이 걸어 둔 주문을 풀어 달라고 청한다. 러스 발라드가 쓴 곡을 레인보우가 그레이엄 보넷의 목소리로 다시 부른 것이다.
 source: instagram
 source_tag: 230507_1253
 source_note: 

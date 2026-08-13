@@ -16,7 +16,7 @@ keywords: [라디오, 문자, 새벽, 약속, 시간]
 emotion: 설렘
 date: 2023-04-27
 published: 2023-04-26T23:33:43.000Z
-comment:
+comment: 문자만 주고받는 사이가 지겨워졌다며 여덟 시에 만나자고 먼저 약속을 잡는다. 새벽까지 깨어 있으면 전화해도 되겠냐 묻는 정도의 조심스러움이 곡 전체를 채운다.
 source: instagram
 source_tag: 230427_0827
 source_note: 

@@ -16,7 +16,7 @@ keywords: [삶, 직장, 눈빛]
 emotion: 설렘
 date: 2024-07-04
 published: 2024-07-03T23:30:27.000Z
-comment:
+comment: 스쳐 지나갈 사람인 걸 알면서도 오늘 밤은 그 이상을 원한다고 말한다. 신경 쓰는 자신이 역겹다는 자조까지 붙여 짝사랑을 냉정하게 기록한다.
 source: instagram
 source_tag: 240704_0829
 source_note: 

@@ -18,7 +18,7 @@ keywords: [소나무, 태양, 거짓말]
 emotion: 불안
 date: 2024-09-25
 published: 2024-09-24T22:13:52.000Z
-comment:
+comment: 미국 남부에서 전해 내려온 민요를 리드 벨리의 버전으로 커트 코베인이 다시 부른 것이다. 해가 들지 않는 소나무 숲과 머리만 발견된 남편 이야기가 붙어 있다.
 source: instagram
 source_tag: 240925_0710
 source_note: 

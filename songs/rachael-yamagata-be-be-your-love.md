@@ -16,7 +16,7 @@ keywords: [여왕, 생각, 사랑]
 emotion: 사랑
 date: 2024-07-27
 published: 2024-07-26T23:06:08.000Z
-comment:
+comment: 다들 내가 네 사랑이 될 수 없다고 말하지만 그래도 되고 싶다는 문장을 반복한다. 하룻밤만 있어달라는 부탁이 그 간절함을 대신한다.
 source: instagram
 source_tag: 240727_0757
 source_note: 

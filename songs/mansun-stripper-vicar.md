@@ -16,7 +16,7 @@ keywords: [편지, 신부, 의사, 추기경, 스타킹, 바지]
 emotion: 저항
 date: 2023-03-27
 published: 2023-03-26T23:40:25.000Z
-comment:
+comment: 스트리퍼라고 고백한 신부를 두고 고발할지 말지를 편지로 상의하는 이야기다. 맨선의 1집은 이런 인물들이 사는 마을 하나를 통째로 그린 앨범이다.
 source: instagram
 source_tag: 
 source_note: 

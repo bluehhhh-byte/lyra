@@ -16,7 +16,7 @@ keywords: [멍청이, 해, 빛]
 emotion: 체념
 date: 2024-08-25
 published: 2024-08-24T20:42:14.000Z
-comment:
+comment: 남들과 다르지만 그런 척은 할 수 있다며 자기를 멍청이라 부르고, 곧이어 그냥 행복한 건지도 모르겠다고 고쳐 말한다. 1993년 앨범 In Utero에 실렸다.
 source: instagram
 source_tag: 240825_0540
 source_note: 

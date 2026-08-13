@@ -18,7 +18,7 @@ keywords: [무대, 박수, 거짓, 웃음, 칭찬]
 emotion: 분노
 date: 2022-11-28
 published: 2022-11-27T18:57:17.000Z
-comment:
+comment: 업계 사람들이 무대 뒤에서 건네는 칭찬을 그대로 옮겨 적어 그 공허함을 드러낸다. 화가 났던 어제와 외로워져 마음을 바꾼 오늘 사이를 오가며, 밝은 신스팝 위에 냉소를 얹었다.
 source: instagram
 source_tag: 221128_0356
 source_note: 

@@ -16,7 +16,7 @@ keywords: [비, 발자국, 파도, 바다, 계절, 눈물]
 emotion: 이별
 date: 2023-04-26
 published: 2023-04-25T16:08:56.000Z
-comment:
+comment: 등을 돌린 두 사람의 발자국이 파도에 하나씩 지워지는 장면으로 이별을 그린다. 헤어지고 싶지 않다는 말과 행복을 빈다는 말을 나란히 둔다.
 source: instagram
 source_tag: 230426_0108
 source_note: 

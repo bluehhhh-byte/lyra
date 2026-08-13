@@ -16,7 +16,7 @@ keywords: [편지, 꿈, 반지, 베개, 눈물, 밤]
 emotion: 슬픔
 date: 2022-11-16
 published: 2022-11-16T14:06:00.000Z
-comment:
+comment: 떠난 사람의 편지를 베개 밑에 두고 매일 새벽 네 시 반에 깨어나는 화자를 그린다. 반지를 쥔 채 우는 밤과 늘어나는 손목의 상처가 이어지고, 결국 편지도 마음도 재가 된다.
 source: instagram
 source_tag: 221116_2305
 source_note: 

@@ -16,7 +16,7 @@ keywords: [눈, 책상, 시장, 배우, 밤, 부두]
 emotion: 저항
 date: 2023-04-04
 published: 2023-04-04T11:44:04.000Z
-comment:
+comment: 수정되는 난자에서 무신경한 세대까지 한 줄씩 나열하며 사람이 처리되는 순서를 늘어놓는다. 온 세상이 잠든 것 같다는 말이 그 목록의 결론이 된다.
 source: instagram
 source_tag: 
 source_note: 

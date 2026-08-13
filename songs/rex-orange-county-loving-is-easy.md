@@ -16,7 +16,7 @@ keywords: [사랑, 완벽]
 emotion: 기쁨
 date: 2024-07-15
 published: 2024-07-15T12:56:19.000Z
-comment:
+comment: 혼자인 게 거의 편해질 무렵 늦지 않게 도착한 사랑을 두고 사랑하기가 어렵지 않더라고 말한다. Benny Sings가 함께한 트랙이다.
 source: instagram
 source_tag: 240715_2155
 source_note: 

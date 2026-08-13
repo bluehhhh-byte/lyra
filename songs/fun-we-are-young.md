@@ -18,7 +18,7 @@ keywords: [술집, 밤, 친구, 흉터, 불, 태양]
 emotion: 기쁨
 date: 2023-04-10
 published: 2023-04-10T10:59:32.000Z
-comment:
+comment: 취한 밤의 호기로운 후렴 아래에, 자기가 낸 상처를 만회하려 애쓰는 화자가 놓여 있다. 자넬 모네가 참여했고 젊음을 외치는 문구만 따로 유명해진 곡이다.
 source: instagram
 source_tag: 230410_2000
 source_note: 

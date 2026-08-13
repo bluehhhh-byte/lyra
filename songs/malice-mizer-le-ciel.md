@@ -18,7 +18,7 @@ keywords: [눈물, 바람, 목소리, 손가락, 하늘, 입맞춤]
 emotion: 이별
 date: 2024-04-13
 published: 2024-04-13T08:57:20.000Z
-comment:
+comment: 하늘로 돌아가기 전까지 더 세게 안아달라고 청하는 이별의 노래다. 넘쳐흐르는 눈물을 이별의 말이라 부르며 사라지지 않도록 붙잡아달라고 반복한다.
 source: instagram
 source_tag: 240413_1751
 source_note: 

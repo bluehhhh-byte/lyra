@@ -18,7 +18,7 @@ keywords: [커피숍, 눈동자, 그림자, 물결, 빛]
 emotion: 설렘
 date: 2023-05-10
 published: 2023-05-10T01:41:42.000Z
-comment:
+comment: 커피숍에서 마주친 순간을 두고 이것이 사랑인지 그저 그 가게가 좋았던 건지 끝내 결론을 내리지 못한다. 랜던 피그는 배우로도 활동한 인디 싱어송라이터다.
 source: instagram
 source_tag: 230510_1040
 source_note: 

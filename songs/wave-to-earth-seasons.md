@@ -16,7 +16,7 @@ keywords: [사랑, 삶, 기도]
 emotion: 슬픔
 date: 2024-07-24
 published: 2024-07-23T23:35:29.000Z
-comment:
+comment: 네 사랑이 될 수 없다고 말하면서도 늘 기도하겠다고 덧붙인다. 곁에 있을 수 있다면 남은 삶과 계절을 전부 주겠다는 문장이 곡의 중심이다.
 source: instagram
 source_tag: 240724_0834
 source_note: 

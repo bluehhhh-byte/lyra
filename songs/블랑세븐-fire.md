@@ -16,7 +16,7 @@ keywords: [밤하늘, 별, 손, 순간, 가슴, 곁]
 emotion: 사랑
 date: 2022-10-08
 published: 2022-10-08T11:48:01.000Z
-comment:
+comment: 밤하늘의 별을 보며 상대를 떠올리는 마음을 그대로 늘어놓는다. 바보라 해도 한 사람만 사랑한다는 말과 이 순간을 영원히 간직하고 싶다는 바람이 곡을 이끈다.
 source: instagram
 source_tag: 
 source_note: 

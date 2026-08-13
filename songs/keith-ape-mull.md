@@ -16,7 +16,7 @@ keywords: [손목, 금, 얼음, 보석, 서울]
 emotion: 저항
 date: 2022-11-19
 published: 2022-11-19T10:25:06.000Z
-comment:
+comment: 손목의 금과 목의 얼음을 늘어놓으며 그 무게로 걸음이 무겁다고 말한다. 두 글자씩 겹쳐 받는 각운으로 밀고 가고, 그리운 서울과 차가운 보석이 같은 자리에 놓인다.
 source: instagram
 source_tag: 221119_1924
 source_note: 

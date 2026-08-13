@@ -16,7 +16,7 @@ keywords: [세상, 리듬, 영혼]
 emotion: 기쁨
 date: 2024-07-14
 published: 2024-07-13T21:02:48.000Z
-comment:
+comment: 상대의 웃음이 세상을 밝힌다는 데서 출발해, 어디로 가는지 모른 채 둘의 리듬대로 걸어간다고 노래한다. 우리가 우주의 먼지만은 아닐 거라는 말이 중심에 놓인다.
 source: instagram
 source_tag: 240714_0600
 source_note: 

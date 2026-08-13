@@ -16,7 +16,7 @@ keywords: [심장, 눈물, 키스, 손, 웃음, 밤]
 emotion: 사랑
 date: 2023-03-21
 published: 2023-03-20T19:35:38.000Z
-comment:
+comment: 받은 사랑을 하나씩 세며 나이가 들어도 사랑해 줄 것인지 묻는다. 키스 하나면 백만 킬로미터도 기어가겠다는 과장이 곡의 화법을 그대로 보여준다.
 source: instagram
 source_tag: 230321_0435
 source_note: 

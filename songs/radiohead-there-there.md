@@ -16,7 +16,7 @@ keywords: [어둠, 나뭇가지, 사이렌, 암초, 풍경]
 emotion: 불안
 date: 2023-05-16
 published: 2023-05-15T18:00:18.000Z
-comment:
+comment: 느낀다고 해서 그것이 거기 있는 것은 아니라는 후렴으로 자기 감각을 믿지 못하는 상태를 말한다. 탐탐 드럼을 쌓다 기타로 터뜨리는 구성이 그 불안을 그대로 옮긴다.
 source: instagram
 source_tag: 230516_0256
 source_note: 

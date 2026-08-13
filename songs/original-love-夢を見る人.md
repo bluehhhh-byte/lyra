@@ -16,7 +16,7 @@ keywords: [열차, 아침, 이슬, 지붕, 풀밭, 무지개]
 emotion: 희망
 date: 2024-08-26
 published: 2024-08-25T23:23:42.000Z
-comment:
+comment: 지붕에 해가 닿는 아침, 이슬 젖은 첫차를 보며 짐 없이 떠나자고 말한다. 꿈꾸는 일밖에 못 한다면 태어난 자리에서 떠나겠다는 다짐이 후렴이다.
 source: instagram
 source_tag: 240826_0823
 source_note: 

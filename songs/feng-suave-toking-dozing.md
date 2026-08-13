@@ -16,7 +16,7 @@ keywords: [돌고래, 고래, 담배]
 emotion: 몽환
 date: 2024-09-02
 published: 2024-09-01T23:33:23.000Z
-comment:
+comment: 죽으면 어디로 가는지 묻다가 돌고래의 기도는 누가 듣느냐는 농담으로 새어버린다. 감정도 생각도 없이 피우고 조는 상태로 이 좋은 시대를 흘려보낸다.
 source: instagram
 source_tag: 240902_0832
 source_note: 

@@ -18,7 +18,7 @@ keywords: [향기, 불빛, 꽃, 해변, 겨울]
 emotion: 사랑
 date: 2022-11-19
 published: 2022-11-19T10:58:21.000Z
-comment:
+comment: 갈색과 분홍빛 향기로 사랑을 감각하고, 금방 지는 꽃과 예고 없는 손님에 그것을 빗댄다. 뻔한 사랑 노래라고 스스로 말하면서도 옆에 둬 달라는 부탁을 끝까지 놓지 않는다.
 source: instagram
 source_tag: 221119_1957
 source_note: 

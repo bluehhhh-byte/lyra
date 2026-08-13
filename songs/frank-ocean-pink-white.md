@@ -16,7 +16,7 @@ keywords: [하늘, 땅, 남쪽, 북쪽, 구름]
 emotion: 회상
 date: 2023-05-12
 published: 2023-05-12T10:02:53.000Z
-comment:
+comment: 네가 보여준 것이라는 말을 반복하며 배운 사랑을 되짚고, 허리케인이 지나간 자리와 여름 그늘을 나란히 놓는다. 앨범 Blonde의 곡이고 비욘세가 배킹 보컬로 참여했다.
 source: instagram
 source_tag: 
 source_note: Halfway : 야구에서 베이스 중 하나에 도달한 타자를 이르는 말. 주루하기 위해 머무르는 중간 위치를 의미.

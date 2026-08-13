@@ -16,7 +16,7 @@ keywords: [고향, 휴식, 비]
 emotion: 회상
 date: 2024-06-09
 published: 2024-06-09T01:28:45.000Z
-comment:
+comment: 1974년으로 돌아갈까 묻지만 결국 나아가겠다며 이제 놓아달라고 한다. 앨범 Volcano에 실렸고 함께 죄를 나누던 시절의 기억을 재료로 삼는다.
 source: instagram
 source_tag: 240609_1025
 source_note: 

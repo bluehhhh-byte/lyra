@@ -16,7 +16,7 @@ keywords: [타이밍, 시간선, 불]
 emotion: 그리움
 date: 2024-10-02
 published: 2024-10-02T12:52:23.000Z
-comment:
+comment: 말을 걸 타이밍을 끝내 잡지 못한 채 상대와 어긋나는 시간을 그린다. 이름조차 모르고 헤어지면서 왜 이렇게 아픈지 스스로 묻는다.
 source: instagram
 source_tag: 241002_2251
 source_note: 

@@ -16,7 +16,7 @@ keywords: [노래, 기분, 빈털털이]
 emotion: 사랑
 date: 2024-07-01
 published: 2024-06-30T23:43:37.000Z
-comment:
+comment: 네가 없었다면 이 노래도 없었을 거라는 문장을 축으로, 빈털터리가 된 기분일 때 구해준 사람을 이야기한다. 같은 제목의 앨범에 실린 표제곡이다.
 source: instagram
 source_tag: 240701_0843
 source_note: 

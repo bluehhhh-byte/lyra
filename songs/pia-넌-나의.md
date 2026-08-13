@@ -16,7 +16,7 @@ keywords: [그림자, 노을, 태양, 소음, 입김]
 emotion: 불안
 date: 2022-11-20
 published: 2022-11-20T07:18:55.000Z
-comment:
+comment: 불면을 너라고 부르며 자신을 끌어내리지 말라고 말한다. 커진 그림자와 시들지 않는 흑백의 소음 사이에서, 섬뜩함에 익숙해지고도 여전히 떨고 있다는 대목이 이 곡의 자리다.
 source: instagram
 source_tag: 221120_1618
 source_note: 

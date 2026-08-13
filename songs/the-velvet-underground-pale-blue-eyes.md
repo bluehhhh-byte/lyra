@@ -16,7 +16,7 @@ keywords: [눈동자, 행복]
 emotion: 사랑
 date: 2024-06-27
 published: 2024-06-27T13:26:55.000Z
-comment:
+comment: 행복과 미칠 것 같은 상태를 오가며 이미 남의 사람이 된 상대를 떠올린다. 루 리드가 쓴 곡으로, 죄인 줄 알면서 다시 그러고 싶다는 문장에서 멈춘다.
 source: instagram
 source_tag: 240627_2224
 source_note: 

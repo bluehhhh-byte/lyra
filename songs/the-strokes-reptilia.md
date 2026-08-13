@@ -16,7 +16,7 @@ keywords: [이야기, 동네, 구역]
 emotion: 저항
 date: 2024-09-12
 published: 2024-09-11T15:05:19.000Z
-comment:
+comment: 짧은 대화 조각을 주고받으며 속도를 늦추지 말라고 밀어붙인다. 방이 불타는데 머리를 매만지는 장면이 곡의 냉소를 요약한다. 2003년 앨범 Room on Fire에 실렸다.
 source: instagram
 source_tag: 240912_0004
 source_note: 

@@ -3,12 +3,14 @@ title: My Heart
 title_ko: 
 artist: Christopher
 artist_ko:
-album: Back To School
-year: 
+album: Under the Surface
+year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/83b56f331a3403ccd692c13eb4fca817/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/a/1/e/0/a1e761b546d098bf96c5ee47c3471f82.mp3?hdnea=exp=1786584275~acl=/api/1/1/a/1/e/0/a1e761b546d098bf96c5ee47c3471f82.mp3*~data=user_id=0,application_id=42~hmac=2629bff21bbec6af79d2ba331880921e4bfe18c8ab6318d2c5add143609aec66
-trackId:
-duration: 124
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/my-heart/1451821184?i=1451821186&uo=4
+trackId: 1451821186
+duration: 196
 genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop]

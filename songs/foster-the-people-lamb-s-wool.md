@@ -16,7 +16,7 @@ keywords: [눈, 숨, 거리]
 emotion: 위로
 date: 2024-06-11
 published: 2024-06-10T17:04:26.000Z
-comment:
+comment: 마지막일지 모르는 이별을 앞에 두고 두려움 없이 사랑하겠다고 말한다. 먼지가 우리 이름을 품는다는 이미지로 이야기를 죽음 이후까지 밀고 간다.
 source: instagram
 source_tag: 240611_0203
 source_note: 

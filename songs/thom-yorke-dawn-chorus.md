@@ -16,7 +16,7 @@ keywords: [골목, 생각]
 emotion: 체념
 date: 2024-08-09
 published: 2024-08-08T23:24:39.000Z
-comment:
+comment: 막다른 골목에서 다시 할 수 있다면 어떻게 하겠느냐는 물음을 반복하지만 끝내 답을 내지 않는다. 2019년 앨범 ANIMA에 실렸다.
 source: instagram
 source_tag: 240809_0823
 source_note: 

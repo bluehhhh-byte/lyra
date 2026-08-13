@@ -16,7 +16,7 @@ keywords: [밤, 잠, 저녁, 시간, 마음]
 emotion: 그리움
 date: 2022-11-12
 published: 2022-11-12T09:38:24.000Z
-comment:
+comment: 이미 다른 사람과 사랑에 빠진 상대를 두고 그건 나여야 한다고 되뇐다. 늦어버렸다는 인정과 약속을 잡아보자는 미련이 같은 곡 안에 있고, 잠든 밤의 반복으로 흐려진다.
 source: instagram
 source_tag: 
 source_note: 

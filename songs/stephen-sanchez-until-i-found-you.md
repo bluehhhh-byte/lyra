@@ -16,7 +16,7 @@ keywords: [조지아, 팔, 어둠, 품]
 emotion: 사랑
 date: 2023-05-31
 published: 2023-05-31T10:27:35.000Z
-comment:
+comment: 조지아라는 이름을 부르며 그녀를 찾기 전까지 사랑에 빠지지 않겠다고 했던 말을 되짚는다. 어둠 속을 헤매다 마침내 찾아냈다는 고백으로 끝난다.
 source: instagram
 source_tag: 230531_1927
 source_note: 

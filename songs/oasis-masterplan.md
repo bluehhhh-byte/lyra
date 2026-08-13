@@ -16,7 +16,7 @@ keywords: [파도, 희망, 해안가]
 emotion: 위로
 date: 2024-08-29
 published: 2024-08-28T23:23:50.000Z
-comment:
+comment: 노엘 갤러거가 쓴 곡으로 원래 Wonderwall의 B면이었다가 1998년 비사이드 모음집의 표제곡이 되었다. 어떻게 될지 아무도 모른다고 인정한 뒤 그래도 춤추라고 권한다.
 source: instagram
 source_tag: 240829_0822
 source_note: 

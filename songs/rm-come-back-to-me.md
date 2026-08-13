@@ -16,7 +16,7 @@ keywords: [봄, 눈]
 emotion: 그리움
 date: 2024-07-13
 published: 2024-07-13T01:06:33.000Z
-comment:
+comment: 이 바다에서 무언가가 되지 않으려 애쓰는 상태를 그리며, 돌아와달라는 말과 언젠가 돌아올 것을 안다는 말을 겹쳐 놓는다. 2024년 솔로 앨범에 실린 곡이다.
 source: instagram
 source_tag: 240713_1003
 source_note: 

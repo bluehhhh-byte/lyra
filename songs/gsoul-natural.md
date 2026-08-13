@@ -16,7 +16,7 @@ keywords: [강, 중력, 노래]
 emotion: 사랑
 date: 2024-08-02
 published: 2024-08-02T12:40:01.000Z
-comment:
+comment: 강물이 흐르고 봄이 여름이 되듯 사랑하는 일이 자연스럽다고 말한다. 중력처럼 끌려가 곁을 지키겠다는 다짐이 후렴 자리에 놓인다.
 source: instagram
 source_tag: 240802_2139
 source_note: 

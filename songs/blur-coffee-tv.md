@@ -16,7 +16,7 @@ keywords: [마트, 사람들, 마음]
 emotion: 고독
 date: 2024-08-27
 published: 2024-08-26T23:39:02.000Z
-comment:
+comment: 그레이엄 콕슨이 쓰고 직접 부른 곡으로 1999년 앨범 13에 실렸다. 사람에 지쳐 커피와 티비만 달라던 화자가 이 크고 나쁜 세상에서 데려가 달라고 청한다.
 source: instagram
 source_tag: 240827_0838
 source_note: 

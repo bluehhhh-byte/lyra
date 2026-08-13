@@ -16,7 +16,7 @@ keywords: [나이, 세상]
 emotion: 설렘
 date: 2024-07-22
 published: 2024-07-22T14:30:55.000Z
-comment:
+comment: 지금보다 나이가 많았다면 기다리지 않아도 됐을 거라는 가정으로 시작해 함께 사는 상상을 이어간다. 브라이언 윌슨이 만든 곡으로 1966년 앨범 Pet Sounds의 첫 곡이다.
 source: instagram
 source_tag: 240722_2329
 source_note: 

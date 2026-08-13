@@ -3,11 +3,13 @@ title: Baby
 title_ko: 
 artist: ADOY
 artist_ko:
-album: Baby
+album: Baby - Single
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/dd7cb0320b7cd2ea2c2103a5e96ae377/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/1/0/0/0/10008bcc841537f3ac18cbbb78df473f.mp3?hdnea=exp=1786559357~acl=/api/1/1/1/0/0/0/10008bcc841537f3ac18cbbb78df473f.mp3*~data=user_id=0,application_id=42~hmac=9f47abae5c78ef3d643e2bbbe58865f361f6be4b3fb5663a3e1ecd4a54985077
-trackId: 
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/baby/1575186579?i=1575186585&uo=4
+trackId: 1575186585
 duration: 237
 genre: Synth-Pop
 lang: en
@@ -16,7 +18,7 @@ keywords: [춤, 시선, 곁]
 emotion: 사랑
 date: 2024-07-17
 published: 2024-07-16T21:28:49.000Z
-comment:
+comment: 춤추는 법을 알면서도 오늘은 아니라고 미루는 사람이 상대의 시선 안에 머물고 싶다는 마음만 반복해 말한다. 다들 흔들린다는 걸 알면서도 그 곁을 택하는 곡이다.
 source: instagram
 source_tag: 240717_0607
 source_note: 

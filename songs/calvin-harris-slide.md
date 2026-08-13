@@ -16,7 +16,7 @@ keywords: [잔고, 피카소, 사랑]
 emotion: 설렘
 date: 2024-06-09
 published: 2024-06-08T19:00:41.000Z
-comment:
+comment: 잔고가 비어도 피카소를 사겠다는 과장으로 하룻밤의 들뜬 기분을 그린다. 프랭크 오션과 미고스가 참여했고, 이런 쉬운 사랑을 매일 밤 하느냐고 묻는다.
 source: instagram
 source_tag: 240609_0359
 source_note: 

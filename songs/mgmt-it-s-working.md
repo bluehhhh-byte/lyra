@@ -16,7 +16,7 @@ keywords: [빛, 멍, 심장, 피, 성냥]
 emotion: 몽환
 date: 2023-05-01
 published: 2023-05-01T00:05:04.000Z
-comment:
+comment: 깜빡이는 빛과 작은 멍을 노화의 징후로 읽으면서도 아직 심장은 뛰고 있다고 말한다. 히트곡 대신 실험 쪽으로 방향을 튼 2집 Congratulations의 수록곡이다.
 source: instagram
 source_tag: 230501_0851
 source_note: 

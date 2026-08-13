@@ -18,7 +18,7 @@ keywords: [탱고, 춤, 열쇠, 침대, 기도]
 emotion: 이별
 date: 2023-03-29
 published: 2023-03-28T23:41:18.000Z
-comment:
+comment: 탱고는 둘이 춰야 하지만 손을 놓는 건 한 사람이면 된다는 문장으로 이별을 정리한다. 잘 지낸다는 통보를 곡 전체의 태도로 삼는다.
 source: instagram
 source_tag: 230329_0839
 source_note: 'It takes two to tango'는 "손바닥도 마주쳐야 소리가 난다"는 우리나라 속담과 비슷한 뜻. 어떤 일에 대해 양쪽 다 책임이 있다는 의미로 쓰임.

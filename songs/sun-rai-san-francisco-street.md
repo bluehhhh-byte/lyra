@@ -16,7 +16,7 @@ keywords: [고속도로, LA, 미래]
 emotion: 고독
 date: 2024-09-11
 published: 2024-09-10T23:19:49.000Z
-comment:
+comment: LA 고속도로에서 길을 잃은 채 머물 곳도 없이 자기 미래를 의심한다. 샌프란시스코의 어느 집에서 깨어나는 꿈이 그 외로움의 유일한 출구로 놓인다.
 source: instagram
 source_tag: 240911_0818
 source_note: 

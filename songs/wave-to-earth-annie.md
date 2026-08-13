@@ -16,7 +16,7 @@ keywords: [유명인, 보석, 파티]
 emotion: 사랑
 date: 2024-09-07
 published: 2024-09-06T15:22:05.000Z
-comment:
+comment: 큰 이름도 보석도 화려한 파티도 원하지 않는다고 선을 긋고, 타협하라는 요구에 욕으로 답한다. 웃음을 지어내느라 자신을 잃는 쪽은 택하지 않겠다는 노래다.
 source: instagram
 source_tag: 240907_0021
 source_note: 

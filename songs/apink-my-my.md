@@ -18,7 +18,7 @@ keywords: [눈, 마음, 자리, 첫날]
 emotion: 사랑
 date: 2023-04-29
 published: 2023-04-28T22:00:06.000Z
-comment:
+comment: 기쁠 때나 슬플 때나 부를 수 있게 변치 말고 그 자리에 있어 달라는 말이 전부인 곡이다. 첫눈 내리던 날을 처음 본 날과 겹쳐 놓는다.
 source: instagram
 source_tag: 230429_0659
 source_note: 

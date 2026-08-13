@@ -18,7 +18,7 @@ keywords: [마취제, 구멍, 영혼, 예수, 엄마]
 emotion: 체념
 date: 2022-10-06
 published: 2022-10-06T13:02:02.000Z
-comment:
+comment: 삶은 어렵고 자기도 그렇다는 문장으로 시작해 영혼의 마취제를 요구한다. 정해진 대로 색칠하는 삶이 머리를 망친다는 말과 엄마의 실수였다는 자조가 그 구멍을 설명한다.
 source: instagram
 source_tag: 
 source_note: 

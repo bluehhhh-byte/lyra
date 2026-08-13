@@ -16,7 +16,7 @@ keywords: [불빛, 사이렌, 경찰차]
 emotion: 불안
 date: 2024-09-29
 published: 2024-09-29T13:03:29.000Z
-comment:
+comment: 경찰차의 파란 불빛을 무대 조명으로 바꾸고 싶다는 말로 시작해, 잘못한 것 없이도 사이렌을 두려워하게 된 흑인 청소년의 하루를 따라간다.
 source: instagram
 source_tag: 240929_2202
 source_note: 이어쓴 댓글 병합

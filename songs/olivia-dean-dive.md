@@ -16,7 +16,7 @@ keywords: [파도, 서핑, 예술]
 emotion: 설렘
 date: 2024-06-24
 published: 2024-06-24T14:42:58.000Z
-comment:
+comment: 물음표로 가득한 자신을 파도에 빗대고, 그 위에서 서핑하는 상대에게 뛰어들 준비가 됐다고 말한다. 앨범 Messy에 실린 곡이다.
 source: instagram
 source_tag: 240624_2342
 source_note: 

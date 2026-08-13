@@ -16,7 +16,7 @@ keywords: [화상, 캘리포니아, 폭염]
 emotion: 그리움
 date: 2024-06-14
 published: 2024-06-14T09:39:14.000Z
-comment:
+comment: 짧게 함께한 시간을 지워지지 않는 화상 자국에 빗댄다. 캘리포니아의 폭염과 전화로 통보된 이별이 같은 여름 안에 나란히 놓인다.
 source: instagram
 source_tag: 240614_1837
 source_note: 

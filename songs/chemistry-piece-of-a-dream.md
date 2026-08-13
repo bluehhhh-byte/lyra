@@ -16,7 +16,7 @@ keywords: [꿈, 장난감, 주머니, 손끝, 내일, 상처]
 emotion: 그리움
 date: 2022-11-14
 published: 2022-11-13T19:17:13.000Z
-comment:
+comment: 엉터리 꿈을 장난감처럼 굴리던 시절과 그때 서로에게 낸 상처를 함께 돌아본다. 전하지 못한 말이 아직 주머니에 남아 있다는 이미지가, 돌아갈 수 없다는 자각으로 이어진다.
 source: instagram
 source_tag: 
 source_note: 

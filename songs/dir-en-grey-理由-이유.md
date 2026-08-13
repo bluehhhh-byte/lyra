@@ -16,7 +16,7 @@ keywords: [하늘, 구름, 상처, 지면, 눈물]
 emotion: 슬픔
 date: 2022-11-16
 published: 2022-11-15T15:56:47.000Z
-comment:
+comment: 사람을 믿지 못하면서 상처를 준다는 깨달음으로 시작해, 그래도 사랑하는 이유를 되묻는다. 팔월 오일 맑은 하늘과 지면에 펼쳐지는 자신이라는 구절이 그 끝을 짐작하게 한다.
 source: instagram
 source_tag: 221116_0055
 source_note: 

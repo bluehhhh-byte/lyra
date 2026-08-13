@@ -3,12 +3,14 @@ title: Golden
 title_ko: 
 artist: Barns Courtney
 artist_ko:
-album: Golden Dandelions
-year: 
+album: Golden - Single
+year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/9081ba7e5916d6beb00145c1f5060854/1000x1000-000000-80-0-0.jpg
 preview: https://cdnt-preview.dzcdn.net/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3?hdnea=exp=1786584265~acl=/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3*~data=user_id=0,application_id=42~hmac=b028038bdca5d6287eb691dc4a15185eae1d3c8c6b6699479d3923e125b0f4a7
-trackId:
-duration: 203
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/golden/1682884056?i=1682884285&uo=4
+trackId: 1682884285
+duration: 171
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock]
@@ -16,7 +18,7 @@ keywords: [입술, 피, 황금, 기도, 하늘]
 emotion: 사랑
 date: 2023-06-01
 published: 2023-06-01T01:01:55.000Z
-comment:
+comment: 오필리아를 불러내며 잠든 별 아래의 아름다움을 황금빛이라 부른다. 결국 모두 죽어 유령이었다는 문장으로 사랑의 이미지를 죽음 쪽으로 끌고 간다.
 source: instagram
 source_tag: 230601_1001
 source_note: 

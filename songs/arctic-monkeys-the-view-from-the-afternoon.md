@@ -18,7 +18,7 @@ keywords: [밤, 술, 문자, 휴대폰, 저녁]
 emotion: 불안
 date: 2023-06-02
 published: 2023-06-02T11:31:02.000Z
-comment:
+comment: 술기운에 보낸 문자와 기대만 앞선 밤을 관찰하듯 그린다. 데뷔작의 첫 트랙으로, 밤 아홉 시 이후의 연락은 소용없다는 말로 끝난다.
 source: instagram
 source_tag: 230602_2030
 source_note: 

@@ -18,7 +18,7 @@ keywords: [장미, 풀숲, 바람, 별, 꽃잎]
 emotion: 체념
 date: 2022-11-17
 published: 2022-11-17T14:40:56.000Z
-comment:
+comment: 애니메이션 베르사유의 장미 주제가를 라렌이 다시 부른 것이다. 이름 없이 피는 풀꽃 대신 장미의 운명을 받았다며, 고귀하게 피고 아름답게 지는 것을 자기 몫으로 삼는다.
 source: instagram
 source_tag: 221117_2340
 source_note: 

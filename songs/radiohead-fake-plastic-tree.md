@@ -16,7 +16,7 @@ keywords: [플라스틱, 고무, 마을]
 emotion: 체념
 date: 2024-06-25
 published: 2024-06-24T23:44:31.000Z
-comment:
+comment: 가짜 플라스틱으로 채워진 마을에서 사람들이 서서히 닳아가는 풍경을 그린다. 앨범 The Bends에 실렸고, 네가 원하는 사람이 될 수 있다면이라는 가정으로 끝난다.
 source: instagram
 source_tag: 240625_0843
 source_note: 

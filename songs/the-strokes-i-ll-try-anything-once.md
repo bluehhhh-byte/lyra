@@ -18,7 +18,7 @@ keywords: [선택지, 학교, 방법]
 emotion: 회상
 date: 2024-08-19
 published: 2024-08-18T15:45:39.000Z
-comment:
+comment: You Only Live Once의 데모 버전으로 알려진 곡이다. 인생을 정하는 열 번의 결정 중 다섯만 알아챈다는 말로 시작해, 누구에게나 실패하는 때가 온다고 짚는다.
 source: instagram
 source_tag: 240819_0044
 source_note: 

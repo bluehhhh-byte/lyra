@@ -16,7 +16,7 @@ keywords: [아픔, 시간, 친구, 꿈, 거짓말]
 emotion: 그리움
 date: 2023-03-13
 published: 2023-03-13T14:13:28.000Z
-comment:
+comment: 행복하냐고 묻지 말라며 거짓말은 잘 못 한다고 답하고, 잃어버린 꿈만 아름다워 보인다고 말한다. 1983년에 나와 광고를 타고 뒤늦게 알려진 곡이다.
 source: instagram
 source_tag: 230313_2313
 source_note: 

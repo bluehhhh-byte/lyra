@@ -18,7 +18,7 @@ keywords: [얼굴, 보물, 마음, 세상, 방향]
 emotion: 위로
 date: 2023-05-20
 published: 2023-05-19T21:45:43.000Z
-comment:
+comment: 찡그린 얼굴을 한 사람에게 집착과 고집을 내려놓으라 권하고, 사랑은 결코 사람을 무너뜨리지 않는다고 말한다. 위로를 감정이 아니라 태도로 다루는 가사다.
 source: instagram
 source_tag: 230520_0645
 source_note: 

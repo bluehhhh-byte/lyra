@@ -18,7 +18,7 @@ keywords: [브레이크, 트렁크, 도로, 달, 식물]
 emotion: 불안
 date: 2022-11-02
 published: 2022-11-02T12:14:18.000Z
-comment:
+comment: 브레이크가 듣지 않으면 어떻게 되느냐는 가정으로 시작해 도로 위의 죽음을 상상한다. 살인 자동차라는 표현으로 운전하는 모두를 가해자 자리에 놓고, 고속도로에서 죽지 말라고 청한다.
 source: instagram
 source_tag: 
 source_note: 

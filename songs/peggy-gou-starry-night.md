@@ -16,7 +16,7 @@ keywords: [바다, 별, 밤, 노래, 순간]
 emotion: 몽환
 date: 2023-05-08
 published: 2023-05-08T10:34:44.000Z
-comment:
+comment: 다 알 필요는 없다는 한 줄을 중심에 두고 바다와 별과 지금의 우리를 한국어로 나열한다. 페기 구는 한국어 가사를 그대로 얹는 방식을 자기 색으로 삼아 왔다.
 source: instagram
 source_tag: 230508_1928
 source_note: 

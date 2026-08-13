@@ -16,7 +16,7 @@ keywords: [코트, 집, 자동차, 먼지, 소녀]
 emotion: 사랑
 date: 2022-10-31
 published: 2022-10-31T13:37:57.000Z
-comment:
+comment: 집이 폭격당하는 와중에 상대를 코트 안에 감싸 안았다는 장면으로 시작한다. 총알이 날아든 순간에도 예전엔 아무것도 신경 쓰지 않았다고 반복하며, 사랑을 재난 한복판에 놓는다.
 source: instagram
 source_tag: 
 source_note: 

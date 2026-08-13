@@ -16,7 +16,7 @@ keywords: [햇살, 사랑, 감정]
 emotion: 설렘
 date: 2024-07-28
 published: 2024-07-28T07:12:40.000Z
-comment:
+comment: 피부에 닿는 햇살 같다는 비유로 사랑에 빠지는 감각을 설명한다. 뻔한 말인 줄 알면서도 그렇게 말할 수밖에 없다고 덧붙인다.
 source: instagram
 source_tag: 240728_1611
 source_note: 

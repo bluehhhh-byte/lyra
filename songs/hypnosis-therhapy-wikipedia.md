@@ -16,7 +16,7 @@ keywords: [부산, 졸업, 앨범, 운동, 혈액형]
 emotion: 회상
 date: 2022-11-25
 published: 2022-11-24T23:26:57.000Z
-comment:
+comment: 자기 이름과 생년월일, 학력과 발매 이력을 위키백과 항목처럼 나열한다. 좋아하는 아티스트 목록까지 그대로 읊어서, 자기소개 자체를 하나의 트랙으로 만들어 버린 곡이다.
 source: instagram
 source_tag: 221125_0825
 source_note: 

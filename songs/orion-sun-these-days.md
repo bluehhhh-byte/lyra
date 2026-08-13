@@ -16,7 +16,7 @@ keywords: [사랑, 칼, 태양]
 emotion: 슬픔
 date: 2024-09-24
 published: 2024-09-24T10:09:47.000Z
-comment:
+comment: 간신히 물 위로 머리만 내밀고 버티는 나날을 회전목마처럼 반복된다고 말한다. 태양에 너무 가까이 날았다가 잃은 것을 되돌리려는 상대를 지켜본다.
 source: instagram
 source_tag: 240924_1909
 source_note: 

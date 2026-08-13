@@ -18,7 +18,7 @@ keywords: [벚꽃, 눈, 바람, 약속, 꽃잎]
 emotion: 그리움
 date: 2023-04-05
 published: 2023-04-04T23:41:07.000Z
-comment:
+comment: 벚꽃을 보면 조금은 기억해 달라던 약속을 떠올리며, 상대가 이미 다른 계절을 살고 있을지 묻는다. 잔다르크의 초기 앨범에 실린 곡이다.
 source: instagram
 source_tag: 230405_0840
 source_note: 

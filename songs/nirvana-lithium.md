@@ -16,7 +16,7 @@ keywords: [거울, 촛불, 신, 친구, 머리, 일요일]
 emotion: 고독
 date: 2023-05-21
 published: 2023-05-20T22:32:11.000Z
-comment:
+comment: 행복하다는 말과 외롭다는 말을 같은 목소리로 붙여 놓고, 신을 찾았다는 고백조차 약 기운처럼 들리게 만든다. 커트 코베인은 연인을 잃고 종교에 기댄 인물의 이야기라고 설명한 바 있다.
 source: instagram
 source_tag: 230521_0731
 source_note: 
