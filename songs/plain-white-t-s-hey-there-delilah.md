@@ -26,7 +26,7 @@ Hey there Delilah, what’s it like in New York City?
 > 델라일라, 뉴욕은 어때?
 I’m a thousand miles away
 But girl, tonight you look so pretty
-> 천 마일이나 떨어져 있지만, 오늘 밤 넌 정말 예뻐 보여
+>^2 천 마일이나 떨어져 있지만, 오늘 밤 넌 정말 예뻐 보여
 Yes you do
 > 정말 그래
 Times Square can’t shine as bright as you
@@ -38,7 +38,7 @@ Hey there Delilah, don’t you worry about the distance
 > 델라일라, 우리 사이의 먼거리는 걱정하지마
 I’m right there if you get lonely
 give this song another listen
-> 네가 외로울 때면 이 노래를 다시 한 번 들어줘
+>^2 네가 외로울 때면 이 노래를 다시 한 번 들어줘
 Close your eyes, Listen to my voice
 > 눈을 감고 내 목소리를 들어줘
 It’s my disguise, I’m by your side
@@ -48,7 +48,7 @@ Hey there Delilah, I know times are getting hard
 > 델라일라, 힘든 시기인 걸 알아
 But just believe me, girl
 Someday I’ll pay the bills with this guitar
-> 하지만 믿어줘, 난 언젠가 이 기타로 돈을 벌거야
+>^2 하지만 믿어줘, 난 언젠가 이 기타로 돈을 벌거야
 We’ll have it good
 > 우리는 좋은 날을 보낼 거야
 We’ll have the life we knew we would, my word is good
@@ -58,7 +58,7 @@ Hey there Delilah, I’ve got so much left to say
 > 델라일라, 아직도 할 말이 많아
 If every simple song
 I wrote to you would take your breath away
-> 내가 쓴 단순한 모든 노래가 널 심쿵하게 할 수 있다면
+>^2 내가 쓴 단순한 모든 노래가 널 심쿵하게 할 수 있다면
 I’d write it all
 > 난 그걸 다 노래로 만들거야
 Even more in love with me you’d fall, we’d have it all
@@ -79,10 +79,10 @@ We know that none of them have felt this way
 
 Delilah, I can promise you
 that by the time we get through
-> 델라일라, 약속할게, 우리가 이 모든 걸 이겨냈을 때
+>^2 델라일라, 약속할게, 우리가 이 모든 걸 이겨냈을 때
 The world will never ever be the same
 And you’re to blame
-> 세상은 절대 예전 같지 않을 거야, 그건 다 네 덕분이야
+>^2 세상은 절대 예전 같지 않을 거야, 그건 다 네 덕분이야
 
 Hey there Delilah, you be good and don’t you miss me
 > 델라일라, 잘 지내고 날 그리워하지 마

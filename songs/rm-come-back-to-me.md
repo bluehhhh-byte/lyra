@@ -68,10 +68,10 @@ What a life is about
 
 (Ooh ooh ooh ooh- ooh)
 I see you come back to me
-> 언젠가 다시 돌아올 거란 걸 알아
+>^2 언젠가 다시 돌아올 거란 걸 알아
 (Ooh ooh ooh ooh- ooh)
 I see you come back to me
-> 언젠가 다시 돌아올 거란 걸 알아
+>^2 언젠가 다시 돌아올 거란 걸 알아
 
 You are my pain, divine, divine
 > 넌 나에게 고통이야, 신성한

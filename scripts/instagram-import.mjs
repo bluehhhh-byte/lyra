@@ -1,204 +1,99 @@
 // 인스타그램 내보내기 → Lyra 곡 임포트 (원문 보존).
-//   node scripts/instagram-import.mjs "<export 폴더>" [--dry]
+//   node scripts/instagram-import.mjs "<export 폴더>" [--write]
+//
+// 기본은 dry-run — --write 없이는 파일을 만들지 않는다.
+// 읽는 파일: posts_1.json(피드) · archived_posts.json(보관) · reels.json(릴스).
+// 같은 캡션이 여러 파일에 있으면 곡은 하나만 만들고 게시 이력은 전부 남긴다.
 //
 // 원칙: 인스타 캡션 본문이 1차 원본이다.
 //  - 줄·순서 그대로 보존, 원문·번역 쌍에만 Lyra 문법(`> `)을 앞에 붙인다
 //  - Gemini 재번역·lrclib 교체·누락 보완 없음
 //  - 변환 후 `> `만 제거해 원본과 대조(무손실 검증) — 다르면 저장하지 않고 검토로
-//  - 기존 컬렉션과 겹치는 곡은 건드리지 않는다 (기존 곡 유지)
+//  - 기존 컬렉션과 겹치는 곡은 건드리지 않는다 (title+artist 또는 source_hash 일치)
 //  - 가사 없는 게시글은 data/instagram-pending.json에 대기 (나중에 일반 생성)
-// 메타데이터(아트워크·미리듣기·trackId)는 iTunes에서 보강 — 가사와 무관한 장식.
+//
+// 커버·미리듣기·앨범 같은 메타는 여기서 채우지 않는다. 임포트는 원문만 옮기고,
+// 외부 카탈로그 조회는 scripts/meta-backfill.mjs가 엄격 매칭(lib/admin/match.js)과
+// rate-limit circuit breaker를 갖고 따로 돈다. 예전 임포터는 아티스트만 맞으면
+// 곡을 채택해 커버·미리듣기가 통째로 다른 곡이 되는 사고를 냈다.
 import fs from "fs";
 import path from "path";
-import crypto from "crypto";
 import { getAllSongs } from "../lib/songs.js";
-import { normText } from "../lib/admin/itunes.js";
-import { kstDay } from "../lib/kst.js";
+import { adaptPosts, dedupePosts, planImport, sourceHash, bodyHash, extractBody } from "../lib/admin/instagram.js";
 
 const [exportDir, ...flags] = process.argv.slice(2);
-const DRY = flags.includes("--dry");
+const WRITE = flags.includes("--write");
 if (!exportDir) {
-  console.error("사용법: node scripts/instagram-import.mjs <export 폴더> [--dry]");
+  console.error("사용법: node scripts/instagram-import.mjs <export 폴더> [--write]");
   process.exit(1);
 }
 
-// Meta 내보내기는 UTF-8 바이트를 latin1로 이스케이프한다 — 복구
-const fix = (s) => Buffer.from(s || "", "latin1").toString("utf8");
+export const SOURCE_FILES = ["posts_1.json", "archived_posts.json", "reels.json"];
+const mediaDir = path.join(exportDir, "your_instagram_activity", "media");
 
-const postsPath = path.join(exportDir, "your_instagram_activity", "media", "posts_1.json");
-const posts = JSON.parse(fs.readFileSync(postsPath, "utf8")).map((p) => ({
-  caption: fix(p.title || p.media?.[0]?.title || ""),
-  ts: p.creation_timestamp || p.media?.[0]?.creation_timestamp || 0,
-}));
-
-// ── 파싱 ────────────────────────────────────────────────────────────────────
-// 헤더: `| 아티스트 - 제목 (한국어제목, 연도)` — 괄호는 (연도)만일 수도 있다
-function parseHeader(caption) {
-  const first = caption.split("\n")[0].replace(/#\S+/g, "").trim();
-  const m = first.match(/^\|\s*(.+?)\s*[-–—]\s*(.+?)\s*(?:\(([^)]*)\))?\s*$/);
-  if (!m) return null;
-  let title_ko = "", year = "";
-  if (m[3]) {
-    const pm = m[3].match(/^(?:(.*?),\s*)?(\d{4})$/);
-    if (pm) { title_ko = (pm[1] || "").trim(); year = pm[2]; }
-    else title_ko = m[3].trim();
-  }
-  return { artist: m[1].trim(), title: m[2].trim(), title_ko, year };
+const raw = [];
+for (const f of SOURCE_FILES) {
+  const p = path.join(mediaDir, f);
+  if (!fs.existsSync(p)) { console.log(`  (없음) ${f}`); continue; }
+  const got = adaptPosts(JSON.parse(fs.readFileSync(p, "utf8")), f.replace(".json", ""));
+  console.log(`  ${f}: ${got.length}건`);
+  raw.push(...got);
 }
+const posts = dedupePosts(raw);
+console.log(`읽음 ${raw.length}건 · 같은 캡션 묶어 ${posts.length}건 (재게시 ${raw.length - posts.length})`);
 
-// 본문: 헤더 다음 줄부터, 끝의 해시태그 블록 제거. `*설명` 줄은 source_note로.
-function extractBody(caption) {
-  let lines = caption.split("\n").slice(1);
-  while (lines.length && !lines[0].trim()) lines.shift();
-  while (lines.length && (!lines.at(-1).trim() || /^#/.test(lines.at(-1).trim()))) lines.pop();
-  const notes = lines.filter((l) => /^\s*[*※]/.test(l)).map((l) => l.replace(/^\s*[*※]\s*/, "").trim());
-  lines = lines.filter((l) => !/^\s*[*※]/.test(l));
-  while (lines.length && !lines.at(-1).trim()) lines.pop();
-  return { lines, note: notes.join(" · ") };
-}
-
-const hasKo = (l) => /[가-힣]/.test(l);
-const hasKana = (l) => /[ぁ-んァ-ン]/.test(l);
-const hasForeign = (l) => /[a-zA-Zぁ-んァ-ン一-龯]/.test(l);
-
-// 원문·번역 쌍 → `> `. 한국어 곡(한글 우세)은 손대지 않는다.
-function convert(lines) {
-  const nonblank = lines.filter((l) => l.trim());
-  const koCount = nonblank.filter((l) => hasKo(l) && !hasKana(l)).length;
-  const isKoSong = nonblank.length > 0 && koCount / nonblank.length > 0.65;
-  if (isKoSong) return { out: [...lines], lang: "ko" };
-
-  const out = [];
-  for (let i = 0; i < lines.length; i++) {
-    const cur = lines[i];
-    const next = lines[i + 1];
-    if (
-      cur?.trim() && next?.trim() &&
-      hasForeign(cur) && !hasKo(cur) &&
-      hasKo(next) && !hasKana(next)
-    ) {
-      out.push(cur, `> ${next}`);
-      i++;
-    } else {
-      out.push(cur);
-    }
-  }
-  const lang = nonblank.some((l) => hasKana(l)) ? "ja" : "en";
-  return { out, lang };
-}
-
-// ── iTunes 보강 (아트워크·미리듣기·trackId — 본문과 무관한 장식) ────────────
-async function enrich(title, artist, lang) {
-  const stores = lang === "ja" ? ["JP", "US"] : ["US", "KR"];
-  const term = encodeURIComponent(`${title} ${artist}`);
-  for (const c of stores) {
-    try {
-      const r = await fetch(
-        `https://itunes.apple.com/search?term=${term}&entity=song&limit=5&country=${c}`
-      ).then((x) => x.json());
-      const hit = (r.results || []).find(
-        (x) =>
-          normText(x.artistName).includes(normText(artist)) ||
-          normText(artist).includes(normText(x.artistName))
-      );
-      if (hit)
-        return {
-          artwork: (hit.artworkUrl100 || "").replace("100x100", "600x600"),
-          preview: hit.previewUrl || "",
-          trackId: hit.trackId || "",
-          duration: Math.round((hit.trackTimeMillis || 0) / 1000) || "",
-          album: hit.collectionName || "",
-          genre: hit.primaryGenreName || "",
-          year: (hit.releaseDate || "").slice(0, 4),
-        };
-    } catch {}
-  }
-  return null;
-}
-
-// ── 실행 ────────────────────────────────────────────────────────────────────
 const existing = getAllSongs();
-const haveKey = new Set(
-  existing.flatMap((s) => [
-    normText(`${s.title}|${s.artist}`),
-    normText(`${(s.title_ko || "")}|${s.artist}`),
-  ])
-);
-const usedSlugs = new Set(existing.map((s) => s.slug));
-const slugOf = (artist, title) => {
-  let slug = `${artist} ${title}`
-    .toLowerCase()
-    .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
-    .replace(/^-|-$/g, "") || "insta";
-  while (usedSlugs.has(slug)) slug += "-2";
-  usedSlugs.add(slug);
-  return slug;
-};
+const { files, pending, review, dupSkipped } = planImport(posts, existing);
 
-const stats = { saved: 0, dupSkipped: 0, pending: 0, review: [] };
-const pending = [];
-
-for (const post of posts) {
-  const h = parseHeader(post.caption);
-  if (!h) { stats.review.push({ reason: "헤더 파싱 실패", head: post.caption.split("\n")[0] }); continue; }
-
-  const dateTag = (post.caption.match(/#(\d{6}_\d{4})/) || [])[1] || "";
-  const isDup = haveKey.has(normText(`${h.title}|${h.artist}`)) || (h.title_ko && haveKey.has(normText(`${h.title_ko}|${h.artist}`)));
-  if (isDup) { stats.dupSkipped++; continue; }
-
-  const { lines, note } = extractBody(post.caption);
-  if (lines.filter((l) => l.trim()).length < 4) {
-    stats.pending++;
-    pending.push({ artist: h.artist, title: h.title, title_ko: h.title_ko, year: h.year, ts: post.ts, tag: dateTag });
-    continue;
-  }
-
-  const { out, lang } = convert(lines);
-  // 무손실 검증 — 붙인 `> `만 벗겨 원본과 대조
-  const stripped = out.map((l) => l.replace(/^> /, ""));
-  if (stripped.join("\n") !== lines.join("\n")) {
-    stats.review.push({ reason: "무손실 검증 실패", head: `${h.artist} - ${h.title}` });
-    continue;
-  }
-
-  const meta = DRY ? null : await enrich(h.title, h.artist, lang);
-  const published = new Date(post.ts * 1000).toISOString();
-  const md = `---
-title: ${h.title}
-title_ko: ${h.title_ko || (lang === "ko" ? h.title : "")}
-artist: ${h.artist}
-artist_ko:
-album: ${meta?.album || ""}
-year: ${h.year || meta?.year || ""}
-artwork: ${meta?.artwork || ""}
-preview: ${meta?.preview || ""}
-trackId: ${meta?.trackId || ""}
-duration: ${meta?.duration || ""}
-genre: ${meta?.genre || ""}
-lang: ${lang}
-tags: [${h.year || meta?.year || ""}]
-keywords: []
-emotion:
-date: ${kstDay(published)}
-published: ${published}
-comment:
-source: instagram
-source_tag: ${dateTag}
-source_note: ${note}
-source_hash: ${crypto.createHash("sha1").update(post.caption).digest("hex")}
----
-${out.join("\n")}
-`;
-  const slug = slugOf(h.artist, h.title);
-  if (!DRY) fs.writeFileSync(path.join("songs", `${slug}.md`), md);
-  stats.saved++;
+// 원본 대조표 — 내보내기 원본이 없어도 나중에 무결성 검증을 할 수 있게 남긴다.
+// 기존에 들어온 곡도 source_hash로 이번 내보내기와 맞춰 함께 기록한다.
+const byHash = new Map(posts.map((p) => [sourceHash(p.caption), p]));
+const manifest = [];
+for (const s of existing) {
+  const p = s.source_hash && byHash.get(s.source_hash);
+  if (!p) continue;
+  const { lines } = extractBody(p.caption);
+  manifest.push({
+    slug: s.slug,
+    sourceHash: s.source_hash,
+    sourceBodyHash: bodyHash(lines),
+    originalLineCount: lines.length,
+    sourceFile: p.sourceFile,
+    postedAt: p.ts ? new Date(p.ts * 1000).toISOString() : "",
+    reposts: (p.reposts || []).map((r) => ({ at: new Date(r.ts * 1000).toISOString(), sourceFile: r.sourceFile })),
+  });
 }
+for (const f of files) {
+  const p = byHash.get(f.sourceHash);
+  manifest.push({
+    slug: f.slug,
+    sourceHash: f.sourceHash,
+    sourceBodyHash: f.sourceBodyHash,
+    originalLineCount: f.originalLineCount,
+    sourceFile: p?.sourceFile || "",
+    postedAt: p?.ts ? new Date(p.ts * 1000).toISOString() : "",
+    reposts: (p?.reposts || []).map((r) => ({ at: new Date(r.ts * 1000).toISOString(), sourceFile: r.sourceFile })),
+  });
+}
+manifest.sort((a, b) => a.slug.localeCompare(b.slug));
 
-if (!DRY)
+if (WRITE) {
+  for (const f of files) fs.writeFileSync(path.join("songs", `${f.slug}.md`), f.md);
   fs.writeFileSync(
     path.join("data", "instagram-pending.json"),
     JSON.stringify({ items: pending, at: new Date().toISOString() }, null, 1)
   );
+  fs.writeFileSync(
+    path.join("data", "instagram-source-manifest.json"),
+    JSON.stringify({ items: manifest, at: new Date().toISOString() }, null, 1)
+  );
+}
 
-console.log(`저장 ${stats.saved} · 기존 곡 중복 스킵 ${stats.dupSkipped} · 가사 없음(대기) ${stats.pending} · 검토 ${stats.review.length}${DRY ? " (dry)" : ""}`);
-stats.review.forEach((r) => console.log(`  검토: [${r.reason}] ${r.head}`));
+console.log(
+  `저장 ${files.length} · 기존 곡 중복 스킵 ${dupSkipped} · 가사 없음(대기) ${pending.length}` +
+  ` · 검토 ${review.length} · 대조표 ${manifest.length}곡${WRITE ? "" : " (dry-run — 적용하려면 --write)"}`
+);
+const reasons = {};
+for (const r of review) reasons[r.reason] = (reasons[r.reason] || 0) + 1;
+for (const [reason, n] of Object.entries(reasons)) console.log(`  검토: ${reason} ${n}건`);
+if (WRITE && files.length) console.log("메타(커버·미리듣기)는 node scripts/meta-backfill.mjs --write 로 따로 채운다");

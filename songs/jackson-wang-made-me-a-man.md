@@ -30,7 +30,7 @@ Was chasin’ the highs but I still missed the mark
 > 기쁨을 좇았지만 여전히 목표엔 닿지 못했어
 But you were the light,
 you were the light when I was lost in the dark
-> 하지만 어둠 속에 길을 잃었을 때, 너는 내 빛이었어
+>^2 하지만 어둠 속에 길을 잃었을 때, 너는 내 빛이었어
 
 I told myself enough is enough
 > 더는 못 하겠다고 내게 말했어

@@ -43,10 +43,10 @@ But what if it's only lies, twisted apart by fear?
 > 만약 거짓말이라거나 두려움에 의해 왜곡된 거라면?
 Well, that's when the brain waves goodbye
 From the front of the train where the coal is burned
-> 마치 증기기관차의 연기처럼 나는 이별을 결심했네 
+>^2 마치 증기기관차의 연기처럼 나는 이별을 결심했네 
 And you know the refrain without hearing a sound
 So you sing it again
-> 넌 소리를 듣지 않고도 다시 후렴구를 노래하네
+>^2 넌 소리를 듣지 않고도 다시 후렴구를 노래하네
 'Cause you won't learn from the people in the streets
 > 넌 거리의 사람들로부터 배우지 않을 테니까
 

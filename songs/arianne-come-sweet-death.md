@@ -40,7 +40,7 @@ So, with sadness in my heart
 > 그래서, 가슴 속의 슬픔을 안고
 Feel the best thing
 I could do is end it all and leave forever
-> 내가 모든 걸 끝내고 영원히 떠나는 게 최선일 것 같아
+>^2 내가 모든 걸 끝내고 영원히 떠나는 게 최선일 것 같아
 
 What’s done is done, it feels so bad
 > 이미 저지른 일, 너무나 끔찍해
@@ -69,13 +69,13 @@ It all returns to nothing
 > 모든 것이 무로 돌아가
 It all comes tumbling down,
 Tumbling down, tumbling down
-> 모든 것이 무너져 내려, 무너져 내려, 무너져 내려
+>^2 모든 것이 무너져 내려, 무너져 내려, 무너져 내려
 
 It all returns to nothing
 > 모든 것이 무로 돌아가
 I just keep letting me down,
 Letting me down, letting me down
-> 나는 계속해서 나 자신을 실망시켜, 실망시켜, 실망시켜
+>^2 나는 계속해서 나 자신을 실망시켜, 실망시켜, 실망시켜
 In my heart of hearts
 > 내 마음 깊은 곳에서
 

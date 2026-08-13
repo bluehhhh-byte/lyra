@@ -42,7 +42,7 @@ Got nothin' to show for it
 Is it all
 Is it all
 Is it all
-> 이 모든 게
+>^3 이 모든 게
 Too much
 > 많은 걸 바라는 걸까
 
@@ -75,7 +75,7 @@ I breathe 'til my head's numb
 Is it all
 Is it all
 Is it all
-> 이 모든 게
+>^3 이 모든 게
 Too much
 > 많은 걸 바라는 걸까,
 Too, too much, yeah

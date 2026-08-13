@@ -63,7 +63,7 @@ Sick and tired of being everyone’s fool
 > 모두의 바보가 되는 게 지긋지긋해
 You think daddy’s gun is
 gonna erase all the scars and the pain
-> 아빠의 총이 모든 상처와 아픔을 지워줄 거라 생각해
+>^2 아빠의 총이 모든 상처와 아픔을 지워줄 거라 생각해
 
 But you better weigh it out don’t ever doubt
 > 하지만 다시 생각해봐, 절대 의심하지 마

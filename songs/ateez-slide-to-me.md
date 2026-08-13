@@ -36,7 +36,7 @@ So come and hold me tight
 눈을 맞추고 네 소리를 들려줘
 짙은 향기 속
 I feel so drowned
-> (나는 완전히 빠져들었어)
+>^3 (나는 완전히 빠져들었어)
 Oh girl, I know what you need
 > (오, 네가 뭘 원하는지 알아)
 > 조금 더 가까이 전율 속 거친 춤을 춰
@@ -70,7 +70,7 @@ Baby just give me the sign
 눈을 맞추고 네 소리를 들려줘
 짙은 향기 속 I feel so drowned
 Oh girl, I know what you need
-> 조금 더 가까이 전율 속 거친 춤을 춰
+>^3 조금 더 가까이 전율 속 거친 춤을 춰
 Shall we dance
 
 Hey, Slide to me

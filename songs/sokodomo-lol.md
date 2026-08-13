@@ -70,7 +70,7 @@ To an energy you never noticed
 Give me 뽀뽀
 (나한테 뽀뽀해줘)
 Fo fo free
-> (무료로 뽀뽀)
+>^3 (무료로 뽀뽀)
 Go go home home
 > (집으로 가자 집으로)
 Because you know know

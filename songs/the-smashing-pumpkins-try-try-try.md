@@ -26,11 +26,11 @@ Pop tart
 > 한 조각의 타르트
 What's our mission,
 Do we know but never listen
-> 우리는 무엇을 해야 할지 알고 있었지만
+>^2 우리는 무엇을 해야 할지 알고 있었지만
 > 전혀 신경 쓰지 않았어요
 For too long they held me under
 But I hear it's almost over
-> 너무 오랫동안 나를 묶어두었던 것들로부터
+>^2 너무 오랫동안 나를 묶어두었던 것들로부터
 > 이젠 거의 끝나가고 있다고 들었거든요
 
 In Detroit on a Memphis train
@@ -70,7 +70,7 @@ Can you envision a free world of clear division
 > 그대는 명확히 구분된 자유로운 세상을 상상할 수 있나요?
 For too long they held us under
 But I know we're getting over
-> 너무 오랫동안 우리를 억눌렀던 것들로부터
+>^2 너무 오랫동안 우리를 억눌렀던 것들로부터
 > 우리는 이겨내고 있다는 걸 난 알아요
 
 In Detroit with the Nashville tears
@@ -92,7 +92,7 @@ And no one should deny
 
 We tried to hold on to the pulse of the feedback current
 Into the flow of encrypted movement
-> 암호화된 움직임의 흐름 속에서
+>^2 암호화된 움직임의 흐름 속에서
 > 다시 돌아오는 맥박을 붙잡으려 했어요
 Slapback kills the ancient remnants
 > 아주 오래된 파편들은 지워버려요

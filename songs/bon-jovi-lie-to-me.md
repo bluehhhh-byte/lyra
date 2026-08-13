@@ -24,27 +24,27 @@ source_hash: 74f4c1f966dce377181084aee2ca3b4b0656264f
 ---
 Rumor has it that your daddy’s coming down
 he’s gonna pay the rent
-> 소문엔 네 아버지가 이번 달 집세 내주신다며
+>^2 소문엔 네 아버지가 이번 달 집세 내주신다며
 Tell me baby, is this as good as this life is gonna get
 > 우리가 누릴 수 있는 게 고작 이 정도야
 It feels like there’s a stranger
 whose standing in these shoes
-> 요즘 내 모습이 내가 아닌 기분이야
+>^2 요즘 내 모습이 내가 아닌 기분이야
 But I know I can’t lose me, ‘cause then I’d be losing you
 > 근데 나를 잃으면 너도 잃는 거잖아
 
 I know I promised baby, I would be the one
 who would make our dreams come true
-> 우리 꿈 이뤄주겠다고 약속했는데
+>^2 우리 꿈 이뤄주겠다고 약속했는데
 I ain’t too proud of all the struggles and
 the hard times we’ve been through
-> 우리가 겪은 고생들, 자랑스럽진 않아
+>^2 우리가 겪은 고생들, 자랑스럽진 않아
 When this cold world comes between us,
 please tell me you’ll be brave
-> 세상이 우리 사이를 갈라도, 넌 제발 강해졌으면 해
+>^2 세상이 우리 사이를 갈라도, 넌 제발 강해졌으면 해
 ‘Cause I can’t realize the danger
 when forgiveness fades away
-> 용서가 사라지면, 무슨 일이 날지도 몰라서
+>^2 용서가 사라지면, 무슨 일이 날지도 몰라서
 
 If you don’t love me, lie to me
 > 날 더 이상 사랑하지 않아도 그냥 거짓말해줘
@@ -57,16 +57,16 @@ Right now, if you don’t love me baby, lie to me
 
 Pour another cup of coffee, babe
 I got something to say to you
-> 커피 한 잔만 더 줘 할 말 있어
+>^2 커피 한 잔만 더 줘 할 말 있어
 I ain’t got the winning ticket,
 not the one that’s gonna pull us through
-> 우릴 살릴 비장의 무기 같은 건 나한텐 없어
+>^2 우릴 살릴 비장의 무기 같은 건 나한텐 없어
 No one said that it’d be easy,
 let your old man take you home
-> 인생이 쉽다 한 사람 없잖아, 네 아버지 데려가셔도 돼
+>^2 인생이 쉽다 한 사람 없잖아, 네 아버지 데려가셔도 돼
 But know that if you walk out on me,
 that darling, I’d be gone
-> 근데 네가 떠나면 나도 진짜 무너질 거야
+>^2 근데 네가 떠나면 나도 진짜 무너질 거야
 
 If you don’t love me, lie to me
 > 사랑하지 않아도 그냥 거짓말해줘

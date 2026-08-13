@@ -35,7 +35,7 @@ Just like the gravity that's pulling me down
 > 나를 끌어당기는 중력처럼
 I’m always gon’ be right there
 To hold you down down down 
-> 너를 붙잡기 위해 늘 그 자리에 있을 거야 
+>^2 너를 붙잡기 위해 늘 그 자리에 있을 거야 
 Just like the song you're my ribbon in the sky 
 > 그 노래처럼 나에게 넌 하늘의 리본이야 
 As long as you’re with me that is all I care

@@ -35,10 +35,10 @@ Did you wanna be rich did you wanna feel special
 > 넌 부와 특별함을 원했던 거야?
 Did you wonder in all this time
 How I was livin’ without you
-> 내가 너 없이 어떻게 지냈는지 궁금했어?
+>^2 내가 너 없이 어떻게 지냈는지 궁금했어?
 Did you wanna be cruel
 Did you think that I never would go on
-> 날 힘들게 하고 싶었니, 내가 널 잊지 못할 거라 생각했어?
+>^2 날 힘들게 하고 싶었니, 내가 널 잊지 못할 거라 생각했어?
 Now all the things you thought you had have gone
 > 이젠 네가 가졌던 것들도 다 사라졌잖아
 Let that be a lesson to you
@@ -72,5 +72,5 @@ All things that you wanted now you know were wrong
 > 네가 원했던 게 결국 잘못된 선택이었단 걸 알겠지
 You gave up love for something more
 Let that be a lesson to you
-> 넌 사랑을 버리고 더 큰 걸 쫓았지만,
+>^2 넌 사랑을 버리고 더 큰 걸 쫓았지만,
 > 그게 어떤 의미였는지 이제 알겠지

@@ -50,7 +50,7 @@ Live the life we never had like we're never going back
 
 Yeah
 This is falling, falling in love
-> 이런 게 정말, 사랑에 빠졌다는거구나
+>^2 이런 게 정말, 사랑에 빠졌다는거구나
 Ooh, ooh
 This is falling, falling in love
-> 난 빠져버렸어, 사랑에 빠져버렸어
+>^2 난 빠져버렸어, 사랑에 빠져버렸어

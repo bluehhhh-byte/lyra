@@ -28,10 +28,10 @@ This used to be the life but I don’t need another one
 > 이런 게 삶이었지만 이제 더 이상은 필요 없어
 You like cutting up and carrying on
 you wear them gowns
-> 너는 흥청망청 놀고 화려한 드레스를 입는 걸 좋아하지
+>^2 너는 흥청망청 놀고 화려한 드레스를 입는 걸 좋아하지
 So how come I feel so lonely
 when you’re up getting down?
-> 그런데 왜 네가 신나게 즐길 때 나는 이렇게 외로운 걸까?
+>^2 그런데 왜 네가 신나게 즐길 때 나는 이렇게 외로운 걸까?
 
 So I play along when I hear that special song
 > 그래서 그 특별한 노래가 들리면 나도 따라 하는 척해
@@ -46,10 +46,10 @@ But I don’t feel like dancing when the old Joanna plays
 > 하지만 그 오래된 피아노가 연주될 때 춤추고 싶지 않아
 My heart could take a chance
 but my two feet can’t find a way
-> 내 마음은 모험을 할 수 있지만 두 발은 방법을 찾지 못해
+>^2 내 마음은 모험을 할 수 있지만 두 발은 방법을 찾지 못해
 You’d think that I could muster up
 a little soft shoe, gentle sway
-> 네가 보기엔 내가 살짝 발을 움직이며
+>^2 네가 보기엔 내가 살짝 발을 움직이며
 > 부드럽게 흔들 수 있을 것 같겠지
 But I don’t feel like dancin’, no sir, no dancin’ today.
 > 하지만 춤추고 싶지 않아, 아니, 오늘은 춤추지 않을 거야
@@ -66,7 +66,7 @@ Don’t feel like dancin’, dancin’
 > 춤추고 싶지 않아, 춤추고 싶지 않아
 I’d Rather be home with the one
 in the bed till dawn with you
-> 차라리 집에서 새벽까지 침대에 누워 너와 함께 있고 싶어
+>^2 차라리 집에서 새벽까지 침대에 누워 너와 함께 있고 싶어
 
 You can’t make me dance around.
 > 날 춤추게 할 순 없어
@@ -74,7 +74,7 @@ But your two-step makes my chest pound.
 > 하지만 네 투스텝이 내 가슴을 뛰게 해
 Just lay me down as you float away
 into the shimmer light
-> 넌 반짝이는 빛 속으로 떠나가고, 날 그저 눕혀줘
+>^2 넌 반짝이는 빛 속으로 떠나가고, 날 그저 눕혀줘
 But I don’t feel like dancin’ when the old Joanna plays
 > 하지만 그 오래된 피아노가 연주될 때 춤추고 싶지 않아
 

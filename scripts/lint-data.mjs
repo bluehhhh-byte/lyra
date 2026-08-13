@@ -45,12 +45,16 @@ for (const s of songs) {
   if (!s.emotion) warn(f, "emotion 없음 (admin 키워드·감정 일괄 추출로 채움)");
   if (!s.keywords?.length) warn(f, "keywords 없음");
 
-  // 번역 누락 — en/ja 곡의 가사 줄에는 `>` 번역이 붙어야 한다 (ko는 원문만)
+  // 번역 누락 — en/ja 곡의 가사 줄에는 `>` 번역이 붙어야 한다 (ko는 원문만).
+  // `>^N`으로 아래 줄 번역이 덮는 줄(koMerged)은 누락이 아니다.
+  const lines = s.stanzas.flatMap((st) => st.lines);
   if (s.lang !== "ko") {
-    const lines = s.stanzas.flatMap((st) => st.lines);
-    const missing = lines.filter((l) => l.en?.trim() && !l.ko?.trim()).length;
+    const missing = lines.filter((l) => l.en?.trim() && !l.ko?.trim() && !l.koMerged).length;
     if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
   }
+  // `>^N`이 문단 밖까지 가리키면 어느 줄을 덮는지가 불분명하다 — 조용히 넘기지 않는다
+  const overflow = lines.filter((l) => l.koSpanError).length;
+  if (overflow) err(f, `>^N 범위가 문단을 넘어감 ${overflow}곳`);
 
   const key = `${s.title}|${s.artist}`.toLowerCase();
   if (songKey.has(key)) err(f, `중복 곡 (${songKey.get(key)}와 같은 title+artist)`);

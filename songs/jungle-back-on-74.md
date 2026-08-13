@@ -33,7 +33,7 @@ But that don't change when it breakdown
 
 Then we were talking 'bout the same
 Were talking 'bout the same crime
-> 그렇게 서로 죄악을 나누었을 적에
+>^2 그렇게 서로 죄악을 나누었을 적에
 No, it don't hurt when it rains now
 > 이런, 더는 비가 와도 슬프지 않았어
 Learnt my lesson at the same time

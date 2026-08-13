@@ -187,6 +187,9 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
             )}
             <div className={s.gap}>
               {stanza.lines.map((line, j) => (
+                // `>^N`으로 덮인 줄은 번역이 비어 있다 — 번역만 보기에서는 빈 칸만
+                // 남으므로 건너뛴다 (원문 보기·둘 다 보기에서는 그대로 나온다)
+                mode === "trans" && !line.ko ? null : (
                 <div key={j} className="lyric-line">
                   {mode !== "trans" && (
                     <p lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
@@ -216,6 +219,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                       </p>
                     ))}
                 </div>
+                )
               ))}
             </div>
             {editing === i ? (

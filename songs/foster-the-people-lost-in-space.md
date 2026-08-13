@@ -26,7 +26,7 @@ I was a trapped inside a glass heart
 > 나는 유리 심장 안에 갇혀 있었어
 Shattered by the lights
 That were bouncing off the walls inside
-> 내부 벽에서 튕겨나는 빛에 의해 산산조각 났지
+>^2 내부 벽에서 튕겨나는 빛에 의해 산산조각 났지
 And I've been drifting in a daydream
 > 그리고 나는 백일몽 속을 떠돌고 있었어
 Fantasies that keep me in my bed and awake at night
@@ -55,7 +55,7 @@ I let the darkness in to teach me
 > 나는 어둠이 나를 가르치도록 들여보냈어
 I learned more than I wanted
 When I tried I couldn't look away
-> 내가 시도했을 때 눈을 돌릴 수 없었고,
+>^2 내가 시도했을 때 눈을 돌릴 수 없었고,
 > 원했던 것보다 더 많이 배웠어
 Floating and drifting and flying through the open sky
 > 열린 하늘을 떠다니고 표류하고 날아다니며

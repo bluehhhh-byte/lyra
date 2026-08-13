@@ -81,7 +81,7 @@ I don’t need ya, I’ll be just fine
 > 난 네가 필요 없어, 난 괜찮을 거야
 Now that I got no more tears left to cry
 (Girl, I’m good, good)
-> 이제 더 이상 흘릴 눈물도 없으니까 (나 정말 괜찮아)
+>^2 이제 더 이상 흘릴 눈물도 없으니까 (나 정말 괜찮아)
 I’m good without ya, take my advice
 > 너 없이도 잘 지내, 내 조언을 들어봐
 If you don’t treat me right

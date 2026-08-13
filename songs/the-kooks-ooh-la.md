@@ -48,7 +48,7 @@ And ooh la, she was such a good girl to me
 > 울라, 그녀는 내게 참 좋은 아이였어
 And ooh la, the world just chewed her up
 and spat her out
-> 울라, 하지만 세상은 그녀를 삼키고 차갑게 내버렸지
+>^2 울라, 하지만 세상은 그녀를 삼키고 차갑게 내버렸지
 
 The world can be a very big place
 > 세상은 끝없이 크고 험난한 곳이야
@@ -83,4 +83,4 @@ And ooh la, she was such a good girl to me
 > 울라, 그녀는 내게 참으로 소중한 아이였어
 And ooh la, the world just chewed her up
 and spat her out
-> 울라, 하지만 세상은 그녀를 삼키고 결국 버려버렸지
+>^2 울라, 하지만 세상은 그녀를 삼키고 결국 버려버렸지

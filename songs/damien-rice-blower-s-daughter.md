@@ -72,7 +72,7 @@ Did I say that I loathe you
 > 내가 당신이 밉다고 말했었나
 Did I say that I want to
 Leave it all behind
-> 모든 걸 뒤로 한 채 떠나고 싶다고 말했던가
+>^2 모든 걸 뒤로 한 채 떠나고 싶다고 말했던가
 
 I can't take my mind off of you
 > 하지만 내 마음을 그만둘 수가 없어

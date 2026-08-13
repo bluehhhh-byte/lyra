@@ -67,7 +67,7 @@ I don’t know what to do but then that’s nothing new
 > 뭘 해야 할지 모르겠지만, 새삼스러운 일도 아니야
 Stuck between hell and high water
 I need a cure to make it through
-> 지옥과 파도 사이에 갇혀, 벗어날 묘책이 필요해
+>^2 지옥과 파도 사이에 갇혀, 벗어날 묘책이 필요해
 
 Off the nasty things that people say
 > 사람들의 험담을 떨쳐버려

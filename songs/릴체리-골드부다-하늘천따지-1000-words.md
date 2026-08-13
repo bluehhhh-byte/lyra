@@ -55,12 +55,12 @@ Have you ever stopped for a sec and feel this, Breathe
 > 잠깐 멈춰서 숨 쉬고, 이 순간을 느껴본 적 있어?
 Have you ever count up
 all them money give youngins for free
-> 돈을 세고 그걸 아이들한테 그냥 나눠준 적 있어?
+>^2 돈을 세고 그걸 아이들한테 그냥 나눠준 적 있어?
 I just pull up to the side and I see they loving me
 > 차를 세웠더니 사람들이 날 좋아하고 있었어
 Have you ever turn your head up looking
 all them palm trees
-> 고개 들고 야자수들 본 적 있어?
+>^2 고개 들고 야자수들 본 적 있어?
 Have you ever stayed up all night with your homies
 > 친구들이랑 밤새워본 적 있어?
 Hang on wait a second, bout to smoke that doobie

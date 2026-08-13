@@ -38,7 +38,7 @@ Going backwards and forwards
 
 Tender placement
 A bruise that's never fading
-> 섬세한 위치의 영원히 사라지지 않는 멍
+>^2 섬세한 위치의 영원히 사라지지 않는 멍
 Picking favorites with the phrase that pays
 > 대가를 지불하고 마음에 드는 문장을 골랐네
 
@@ -53,7 +53,7 @@ To live as much as you learn
 
 And I saw your face fall
 Through the hours of daylight left
-> 남아있는 햇빛의 시간 동안
+>^2 남아있는 햇빛의 시간 동안
 > 너의 낯빛이 어두워지는 것을 보았어
 Now we're running out of time
 > 이제 우리에게 남은 시간이 없네

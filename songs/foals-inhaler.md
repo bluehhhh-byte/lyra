@@ -24,12 +24,12 @@ source_hash: 0ee51e4bf00c2fe87cecb1e31de90620376b68e7
 ---
 Sticks and stones don’t break my bones,
 They’re make-believe
-> 돌과 막대기가 내 뼈를 부러뜨릴 수는 없어, 그건 그저 환상이야
+>^2 돌과 막대기가 내 뼈를 부러뜨릴 수는 없어, 그건 그저 환상이야
 It’s lock ‘n’ load, it’s a dead end road for you and me
 > 총알을 장전하는 소리, 너와 나에게는 막다른 길일 뿐이야
 And I’m rusted gold,
 I’m stripped and sold, I’m make believe
-> 나는 녹슨 금처럼 벗겨지고 팔려나가는 환상일 뿐이야
+>^2 나는 녹슨 금처럼 벗겨지고 팔려나가는 환상일 뿐이야
 And I’m up for rent, my head is spent, I guarantee
 > 나는 임대 가능하고, 머리는 다 소진됐어, 이건 확실해
 
@@ -57,7 +57,7 @@ My lungs defeat, I cannot breathe, don’t follow me
 > 내 폐는 무너지고, 숨을 쉴 수 없어, 나를 따라오지 마
 And you push and shove,
 I’ve had enough, you best believe
-> 너는 밀치고 떠밀어, 나는 이제 충분히 참았어, 믿어야 할 거야
+>^2 너는 밀치고 떠밀어, 나는 이제 충분히 참았어, 믿어야 할 거야
 
 So can you not go away? If just for one day?
 > 그러니까 떠나지 않을 수 있겠어? 단 하루만이라도

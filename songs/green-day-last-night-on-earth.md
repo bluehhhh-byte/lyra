@@ -48,7 +48,7 @@ I'm sending all my love to you
 With every breath that I am worth
 Here on earth
 I'm sending all my love to you
-> 내가 가진 모든 숨결마다
+>^3 내가 가진 모든 숨결마다
 > 내 모든 사랑을 너에게 보내기 위해
 > 난 이 땅 위에 서 있어
 

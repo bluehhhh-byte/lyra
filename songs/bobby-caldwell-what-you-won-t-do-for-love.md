@@ -60,7 +60,7 @@ You’ve tried everything but you won’t give up
 > 당신은 모든 걸 시도했고 절대 포기하지 않을 거예요
 In my world, only you make me do for love
 What I would not do
-> 내 세상에서 오직 당신만이 사랑을 위해
+>^2 내 세상에서 오직 당신만이 사랑을 위해
 > 하지 않았을 일도 하게 만들어요
 
 Make me do for love what I would not do
