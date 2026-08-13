@@ -3,9 +3,9 @@ title: Come Away From Me
 title_ko: 나와 함께 떠나요
 artist: Norah Jones
 artist_ko:
-album: 
+album: Come Away with Me
 year: 2002
-artwork: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a0/a0/8d/a0a08df2-390b-ad05-0d32-6673bcf7a2a9/13UABIM02784.rgb.jpg/600x600bb.jpg
 preview: 
 trackId: 
 duration: 

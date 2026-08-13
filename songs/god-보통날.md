@@ -3,9 +3,9 @@ title: 보통날
 title_ko: 보통날
 artist: god
 artist_ko:
-album:
-year: 
-artwork:
+album: 보통날
+year: 2004
+artwork: https://image.bugsm.co.kr/album/images/500/80034/8003496.jpg
 preview:
 trackId:
 duration:

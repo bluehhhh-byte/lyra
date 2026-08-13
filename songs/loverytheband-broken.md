@@ -3,9 +3,9 @@ title: Broken
 title_ko: 부서진
 artist: Loverytheband
 artist_ko:
-album: 
+album: Finding It Hard to Smile
 year: 2018
-artwork: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/17/49/ae1749db-712c-0c2a-5d13-a7747417d15e/886447104675.jpg/600x600bb.jpg
 preview: 
 trackId: 
 duration: 

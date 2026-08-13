@@ -3,9 +3,9 @@ title: Hey Now Now
 title_ko: 헤이 나우 나우
 artist: The Cloud Roon
 artist_ko:
-album: 
+album: The Cloud Room
 year: 2006
-artwork: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e6/d0/65/e6d06511-8672-2700-a225-e04b42fb87e6/829410520874_cover.jpg/600x600bb.jpg
 preview: 
 trackId: 
 duration: 

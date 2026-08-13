@@ -3,9 +3,9 @@ title: Go Back
 title_ko: Go Back
 artist: Jvcky Wai
 artist_ko:
-album:
-year: 
-artwork:
+album: Go Back
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/98/9d/7f/989d7f04-e737-27ed-27f0-e1a80ac15dca/cover_KM0016267_1.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

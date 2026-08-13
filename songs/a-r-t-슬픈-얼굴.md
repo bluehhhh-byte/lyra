@@ -3,9 +3,9 @@ title: 슬픈 얼굴
 title_ko: 슬픈 얼굴
 artist: A.R.T
 artist_ko:
-album:
+album: All Radio Television Debut
 year: 
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/500/52/5272.jpg
 preview:
 trackId:
 duration:

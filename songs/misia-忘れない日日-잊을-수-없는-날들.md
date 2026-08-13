@@ -3,9 +3,9 @@ title: 忘れない日日 잊을 수 없는 날들
 title_ko: 잊을 수 없는 날들
 artist: MISIA
 artist_ko:
-album:
-year: 
-artwork:
+album: 忘れない日々
+year: 1999
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cd/d1/24/cdd124e4-7e90-cff4-9af0-e1324657dd1c/jacket_BVCS29016B00Z_550.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: 腐海 썩은 바다
 title_ko: 썩은 바다
 artist: Dir en grey
 artist_ko:
-album:
-year: 
-artwork:
+album: かすみ
+year: 2003
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/4b/89/b2/4b89b20a-5903-6627-3f79-3e4c0c466f12/4529123109071.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

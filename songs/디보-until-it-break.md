@@ -3,9 +3,9 @@ title: Until It Break
 title_ko: Until It Break
 artist: 디보
 artist_ko:
-album:
-year: 
-artwork:
+album: Wonderful Disaster 3
+year: 2021
+artwork: https://i.scdn.co/image/ab67616d0000b273c8f527db86c965c0430538ab
 preview:
 trackId:
 duration:

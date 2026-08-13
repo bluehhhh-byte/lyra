@@ -3,9 +3,9 @@ title: Gone
 title_ko: Gone
 artist: 저스디스
 artist_ko:
-album:
-year: 
-artwork:
+album: Re: Tired.
+year: 2021
+artwork: https://image.bugsm.co.kr/album/images/500/202142/20214269.jpg
 preview:
 trackId:
 duration:

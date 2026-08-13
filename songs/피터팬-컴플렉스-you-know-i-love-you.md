@@ -3,9 +3,9 @@ title: You Know I Love You
 title_ko: You Know I Love You
 artist: 피터팬 컴플렉스
 artist_ko:
-album:
-year: 
-artwork:
+album: Transistor
+year: 2004
+artwork: https://image.bugsm.co.kr/album/images/500/80002/8000237.jpg
 preview:
 trackId:
 duration:

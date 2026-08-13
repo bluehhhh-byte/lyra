@@ -3,9 +3,9 @@ title: 甘い戀人
 title_ko: 달콤한 연인
 artist: Hideki Kaji
 artist_ko:
-album:
-year: 
-artwork:
+album: ロリポップ
+year: 2008
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music60/v4/f3/5a/41/f35a41af-b134-ab15-163f-3babf5553987/4544163460050_cov.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

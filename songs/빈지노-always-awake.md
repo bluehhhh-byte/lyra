@@ -3,9 +3,9 @@ title: Always Awake
 title_ko: Always Awake
 artist: 빈지노
 artist_ko:
-album: 
+album: 2 4 : 2 6
 year: 2012
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/3338/333800.jpg
 preview: 
 trackId: 
 duration: 

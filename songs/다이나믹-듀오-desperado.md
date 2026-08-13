@@ -3,9 +3,9 @@ title: Desperado
 title_ko: Desperado
 artist: 다이나믹 듀오
 artist_ko:
-album:
-year: 
-artwork:
+album: OFF DUTY
+year: 2019
+artwork: https://image.bugsm.co.kr/album/images/500/9570/957076.jpg
 preview:
 trackId:
 duration:

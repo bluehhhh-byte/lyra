@@ -3,9 +3,9 @@ title: Sovereign Light Cafe
 title_ko: 소버린 라이트 카페
 artist: Keane
 artist_ko:
-album:
+album: Strangeland
 year: 2012
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/84/56/a6/8456a60a-5db8-2cad-8e14-c203f98f3ba1/00602537013739.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

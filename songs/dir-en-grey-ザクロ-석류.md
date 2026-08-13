@@ -3,9 +3,9 @@ title: ザクロ 석류
 title_ko: 석류
 artist: Dir en grey
 artist_ko:
-album:
-year: 
-artwork:
+album: MACABRE
+year: 2000
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/37/30/c2/3730c27b-dd65-cc30-1bd2-55c825458f67/SFCD-0001-MACABRE_rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

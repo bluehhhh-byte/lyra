@@ -3,9 +3,9 @@ title: Life
 title_ko: Life
 artist: 제네 더 질라
 artist_ko:
-album: 
+album: 94-24
 year: 2024
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/206868/20686831.jpg
 preview: 
 trackId: 
 duration: 

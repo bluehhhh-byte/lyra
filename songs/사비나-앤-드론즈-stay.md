@@ -3,9 +3,9 @@ title: Stay
 title_ko: 머물러줘
 artist: 사비나 앤 드론즈
 artist_ko:
-album:
-year: 
-artwork:
+album: Gayo
+year: 2011
+artwork: https://image.bugsm.co.kr/album/images/500/2612/261211.jpg
 preview:
 trackId:
 duration:

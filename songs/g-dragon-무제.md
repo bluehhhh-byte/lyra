@@ -3,9 +3,9 @@ title: DRAGON - 무제
 title_ko: DRAGON - 무제
 artist: G
 artist_ko:
-album:
+album: 권지용 (Kwon Ji Yong)
 year: 2017
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/08/7d/c9/087dc979-4295-daa3-f22a-3c4f141c7ad0/GD_DS_4000_2.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

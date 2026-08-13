@@ -3,9 +3,9 @@ title: PROTO TYPE
 title_ko: PROTO TYPE
 artist: 쿤타
 artist_ko:
-album:
-year: 
-artwork:
+album: PROTO TYPE
+year: 2021
+artwork: https://image.bugsm.co.kr/album/images/500/40693/4069381.jpg
 preview:
 trackId:
 duration:

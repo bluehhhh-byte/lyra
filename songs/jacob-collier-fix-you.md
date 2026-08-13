@@ -3,9 +3,9 @@ title: Fix You
 title_ko: Coldplay Cover
 artist: Jacob Collier
 artist_ko:
-album:
-year: 
-artwork:
+album: Fix You (Live for There With Care) - Single
+year: 2021
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/29/10/cd/2910cd99-6a67-59c1-75b6-309b8afec835/21UM1IM51979.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: 星が泳ぐ
 title_ko: 별이 헤엄치다
 artist: Macaroni Empitsu
 artist_ko:
-album: 
+album: 星が泳ぐ - Single
 year: 2022
-artwork: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a3/56/d7/a356d7b0-91b0-5588-5c20-6343f1c348b4/4517331073741.jpg/600x600bb.jpg
 preview: 
 trackId: 
 duration: 

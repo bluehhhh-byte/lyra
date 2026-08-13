@@ -3,9 +3,9 @@ title: Happy Togherther
 title_ko: 해피 투게더
 artist: Danny Chung
 artist_ko:
-album: 
+album: Happy Together (Original Motion Picture Soundtrack)
 year: 1997
-artwork: 
+artwork: https://i.scdn.co/image/ab67616d0000b27306554d7c4d095928c1d29456
 preview: 
 trackId: 
 duration: 

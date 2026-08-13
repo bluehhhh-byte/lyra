@@ -3,9 +3,9 @@ title: POWER
 title_ko: POWER
 artist: 지드래곤
 artist_ko:
-album: 
+album: PO￦ER
 year: 2024
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/41092/4109223.jpg
 preview: 
 trackId: 
 duration: 

@@ -3,9 +3,9 @@ title: 恋人へ 연인에게
 title_ko: 연인에게
 artist: Lamp
 artist_ko:
-album:
-year: 
-artwork:
+album: 恋人へ
+year: 2004
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/34/bd/9634bd06-4484-3792-ce1b-a64a96710d22/4521640105079_cover.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

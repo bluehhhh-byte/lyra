@@ -3,9 +3,9 @@ title: The First Noel
 title_ko: The First Noel
 artist: 피터팬 컴플렉스
 artist_ko:
-album:
+album: Happy Rock Christmas
 year: 
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/500/80230/8023068.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: No One Likes US
 title_ko: 아무도 우릴 좋아하지 않아
 artist: AP Alchemy
 artist_ko:
-album:
-year: 
-artwork:
+album: AP Alchemy : Side A
+year: 2023
+artwork: https://i.scdn.co/image/ab67616d0000b27318ef8b6544b4b332816489a2
 preview:
 trackId:
 duration:

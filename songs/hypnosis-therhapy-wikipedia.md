@@ -3,9 +3,9 @@ title: WIKIPEDIA
 title_ko: 위키피디아
 artist: HYPNOSIS THERHAPY
 artist_ko:
-album:
-year: 
-artwork:
+album: HYPNOSIS THERAPY
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ce/f9/50/cef9505e-27ff-a014-9d5c-ed187d6aa4a7/8809900752734.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

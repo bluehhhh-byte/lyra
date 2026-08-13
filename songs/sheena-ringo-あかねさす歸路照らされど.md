@@ -3,9 +3,9 @@ title: あかねさす歸路照らされど..
 title_ko: 황혼이 돌아가는 길에 비춰져도
 artist: Sheena Ringo
 artist_ko:
-album:
+album: 無罪モラトリアム
 year: 1999
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/bd/da/b4/bddab4d2-176e-6438-76dc-54bd4eac3914/18UMGIM22257.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

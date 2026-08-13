@@ -3,9 +3,9 @@ title: I Want A Man
 title_ko: 남자가 필요해
 artist: Prince Bernald
 artist_ko:
-album:
-year: 
-artwork:
+album: Babylon (Music from the Motion Picture)
+year: 2022
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/cf/f8/b0/cff8b083-3821-4aa1-d15c-64bada3a7744/22UM1IM27641.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

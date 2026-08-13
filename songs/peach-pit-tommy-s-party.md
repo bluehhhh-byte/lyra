@@ -3,9 +3,9 @@ title: Tommy's Party
 title_ko: 토미의 파티
 artist: Peach Pit
 artist_ko:
-album:
+album: Being So Normal
 year: 2020
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c1/d4/3d/c1d43d94-2c88-d796-6c62-5efa41cfcc74/886447136270.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

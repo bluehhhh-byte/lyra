@@ -3,9 +3,9 @@ title: LoveSick
 title_ko: LoveSick
 artist: 산이
 artist_ko:
-album:
-year: 
-artwork:
+album: LoveSick
+year: 2010
+artwork: https://image.bugsm.co.kr/album/images/500/2443/244386.jpg
 preview:
 trackId:
 duration:

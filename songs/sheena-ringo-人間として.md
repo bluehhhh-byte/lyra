@@ -3,9 +3,9 @@ title: 人間として
 title_ko: 인간으로서
 artist: Sheena Ringo
 artist_ko:
-album:
+album: 人間として
 year: 2024
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/41/70/b4/4170b44d-4219-aac7-cf4e-35bfc893b8fd/24UMGIM40827.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

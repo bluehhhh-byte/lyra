@@ -3,9 +3,9 @@ title: Little Baby
 title_ko: Little Baby
 artist: 노브레인
 artist_ko:
-album:
-year: 
-artwork:
+album: 안녕, Mary Poppins
+year: 2003
+artwork: https://image.bugsm.co.kr/album/images/500/314/31472.jpg
 preview:
 trackId:
 duration:

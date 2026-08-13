@@ -3,9 +3,9 @@ title: Come Sweet Death
 title_ko: 오라 달콤한 죽음이여
 artist: Arianne
 artist_ko:
-album: 
+album: EVANGELION FINALLY
 year: 2020
-artwork: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/43/42/33/4342336e-f364-6d71-0b1e-6cc6099b57b9/KICA-92583.jpg/600x600bb.jpg
 preview: 
 trackId: 
 duration: 

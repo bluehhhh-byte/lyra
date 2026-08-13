@@ -3,9 +3,9 @@ title: 느린심장박동
 title_ko: 느린심장박동
 artist: Layone, Ja Mezz
 artist_ko:
-album: 
+album: 느린심장박동
 year: 2019
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/9562/956216.jpg
 preview: 
 trackId: 
 duration: 

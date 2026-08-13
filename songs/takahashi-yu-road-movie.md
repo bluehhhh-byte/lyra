@@ -3,9 +3,9 @@ title: Road Movie
 title_ko: 로드 무비
 artist: Takahashi Yu
 artist_ko:
-album: 
+album: road movie
 year: 2017
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/40130/4013091.jpg
 preview: 
 trackId: 
 duration: 

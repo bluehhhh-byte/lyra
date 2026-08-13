@@ -3,9 +3,9 @@ title: ル―ジュの佺言
 title_ko: 루즈의 전언
 artist: Arai Yumi
 artist_ko:
-album:
+album: ルージュの伝言 (Single)
 year: 1975
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/de/07/02/de0702e7-5bbf-85c1-52c3-4db3a7eb4146/00602567987819.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

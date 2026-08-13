@@ -3,9 +3,9 @@ title: 노땡큐
 title_ko: 노땡큐
 artist: Epik High
 artist_ko:
-album:
-year: 
-artwork:
+album: WE'VE DONE SOMETHING WONDERFUL
+year: 2017
+artwork: https://image.bugsm.co.kr/album/images/500/201253/20125321.jpg
 preview:
 trackId:
 duration:

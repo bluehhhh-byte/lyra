@@ -3,9 +3,9 @@ title: Piece Of A Dream
 title_ko: 꿈의 조각
 artist: CHEMISTRY
 artist_ko:
-album:
+album: PIECES OF A DREAM
 year: 2001
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/27/f9/3f/27f93ffd-c3ca-7fe1-bb9b-0e6f4b2df984/jacket_DFXX00293B00Z_550.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

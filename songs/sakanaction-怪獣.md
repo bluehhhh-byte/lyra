@@ -3,9 +3,9 @@ title: 怪獣
 title_ko: 괴수
 artist: Sakanaction
 artist_ko:
-album: 
+album: 怪獣
 year: 2025
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/41152/4115248.jpg
 preview: 
 trackId: 
 duration: 

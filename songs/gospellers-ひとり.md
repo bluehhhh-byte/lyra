@@ -3,9 +3,9 @@ title: ひとり
 title_ko: 한 사람
 artist: Gospellers
 artist_ko:
-album:
-year: 
-artwork:
+album: ひとり
+year: 2001
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/26/15/eb/2615eb77-fe62-cb36-2b6f-19dcf99b39ad/jacket_KSC200371B00Z_550.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: SATSUGAI
 title_ko: 살해
 artist: Detroit Metal City
 artist_ko:
-album:
+album: SATSUGAI / 甘い恋人 (Single)
 year: 2008
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/16/61/62/mzi.bznwszjm.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

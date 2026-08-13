@@ -3,9 +3,9 @@ title: KEY - 건물 사이에 피어난 장미
 title_ko: KEY - 건물 사이에 피어난 장미
 artist: H1
 artist_ko:
-album:
+album: Rose Blossom
 year: 2023
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/64/c3/de/64c3de97-2049-06e5-9411-e0723a1d25b1/196589704559.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

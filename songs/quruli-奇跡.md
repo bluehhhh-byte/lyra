@@ -3,9 +3,9 @@ title: 奇跡
 title_ko: 기적
 artist: Quruli
 artist_ko:
-album:
-year: 
-artwork:
+album: 奇跡
+year: 2011
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/fe/27/24/fe272436-b521-03ea-ed0c-15c9e4f74117/VICL-36647.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

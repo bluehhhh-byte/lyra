@@ -3,9 +3,9 @@ title: 빛이 나는 너에게
 title_ko: 빛이 나는 너에게
 artist: DAWN
 artist_ko:
-album: 
+album: 빛이 나는 너에게
 year: 2023
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/40854/4085468.jpg
 preview: 
 trackId: 
 duration: 

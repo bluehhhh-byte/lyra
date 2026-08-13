@@ -3,9 +3,9 @@ title: Dandelion 늦게 피는 민들레
 title_ko: 늦게 피는 민들레
 artist: Matsutoya Yumi
 artist_ko:
-album:
+album: VOYAGER
 year: 1979
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/4b/d4/c0/4bd4c0a7-35de-c7ae-c008-87962c3fb6e8/00602567988359.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

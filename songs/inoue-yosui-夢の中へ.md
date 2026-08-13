@@ -3,9 +3,9 @@ title: 夢の中へ
 title_ko: 꿈속으로
 artist: Inoue Yosui
 artist_ko:
-album:
+album: 夢の中へ (Single)
 year: 1973
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ef/b8/9a/efb89ab8-ec2e-a89d-5c98-02d51c5b1e0c/00602557393644.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

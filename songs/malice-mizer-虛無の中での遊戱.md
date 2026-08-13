@@ -3,9 +3,9 @@ title: 虛無の中での遊戱
 title_ko: 허무 속의 유희
 artist: Malice Mizer
 artist_ko:
-album:
-year: 
-artwork:
+album: 虚無の中での遊戯
+year: 2000
+artwork: https://upload.wikimedia.org/wikipedia/en/e/ea/Malice_Mizer_-_Kyomu_no_Naka_de_no_Y%C5%ABgi.jpg
 preview:
 trackId:
 duration:

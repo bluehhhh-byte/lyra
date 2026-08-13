@@ -3,9 +3,9 @@ title: 알렉산더처럼 왕
 title_ko: 알렉산더처럼 왕
 artist: Hash Swan
 artist_ko:
-album: 
+album: Alexandrite
 year: 2018
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/201492/20149232.jpg
 preview: 
 trackId: 
 duration: 

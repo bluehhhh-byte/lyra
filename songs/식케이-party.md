@@ -3,9 +3,9 @@ title: party
 title_ko: party
 artist: 식케이
 artist_ko:
-album:
-year: 
-artwork:
+album: H.A.L.F (Have A Little Fun)
+year: 2017
+artwork: https://image.bugsm.co.kr/album/images/500/201011/20101196.jpg
 preview:
 trackId:
 duration:

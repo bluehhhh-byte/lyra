@@ -3,9 +3,9 @@ title: The Massanger
 title_ko: 전령
 artist: LINKIN PARK
 artist_ko:
-album:
+album: A Thousand Suns
 year: 2010
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c8/48/6b/c8486bda-1628-6fd9-68f4-27a256a4bf3b/093624948940.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

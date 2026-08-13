@@ -3,9 +3,9 @@ title: I'm Good
 title_ko: I'm Good
 artist: 이센스
 artist_ko:
-album:
-year: 
-artwork:
+album: I'm Good
+year: 2014
+artwork: https://image.bugsm.co.kr/album/images/500/4213/421359.jpg
 preview:
 trackId:
 duration:

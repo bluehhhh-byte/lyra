@@ -3,9 +3,9 @@ title: いつも何度でも
 title_ko: 언제나 몇 번이라도
 artist: 千と千尋の神隱し(센과 치히로의 행방불명) OST
 artist_ko: 센과 치히로의 행방불명 OST
-album: 
+album: 千と千尋の神隠し サウンドトラック
 year: 2002
-artwork: 
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/7d/34/827d34f1-f358-78e0-e62c-eeb8f1dbe14f/TKCA-72165.jpg/600x600bb.jpg
 preview: 
 trackId: 
 duration: 

@@ -3,9 +3,9 @@ title: 再會 ~Story~ 재회
 title_ko: 재회
 artist: Gackt
 artist_ko:
-album:
-year: 
-artwork:
+album: 再会~Story~
+year: 2000
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/cd/74/e7/mzi.kualjrki.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

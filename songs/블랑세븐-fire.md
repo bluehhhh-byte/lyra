@@ -3,9 +3,9 @@ title: Fire
 title_ko: Fire
 artist: 블랑세븐
 artist_ko:
-album:
-year: 
-artwork:
+album: Prism
+year: 2017
+artwork: https://image.bugsm.co.kr/album/images/500/200845/20084528.jpg
 preview:
 trackId:
 duration:

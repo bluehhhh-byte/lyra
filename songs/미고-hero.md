@@ -3,9 +3,9 @@ title: Hero
 title_ko: Hero
 artist: 미고
 artist_ko:
-album:
-year: 
-artwork:
+album: 약한영웅 Class 1 (Original Soundtrack)
+year: 2022
+artwork: https://image.bugsm.co.kr/album/images/500/205301/20530138.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: 기생충
 title_ko: 기생충
 artist: NELL
 artist_ko:
-album:
-year: 
-artwork:
+album: Let It Rain
+year: 2003
+artwork: https://image.bugsm.co.kr/album/images/500/317/31739.jpg
 preview:
 trackId:
 duration:

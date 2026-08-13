@@ -3,9 +3,9 @@ title: 竈門炭治郎のうた
 title_ko: 카마도 탄지로의 노래
 artist: Go Shiina
 artist_ko:
-album:
+album: 竈門炭治郎のうた (feat. 中川奈美)
 year: 2019
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2f/83/63/2f8363e3-f4ae-2ce5-1620-82f3c4c8e9b8/jacket_ANXX00947B00Z_550.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

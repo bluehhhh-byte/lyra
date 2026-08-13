@@ -3,9 +3,9 @@ title: Tekken ll
 title_ko: 텍켄 II
 artist: Sex Machineguns
 artist_ko:
-album: 
+album: Made In Japan
 year: 1999
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/351951/35195185.jpg
 preview: 
 trackId: 
 duration: 

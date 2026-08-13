@@ -3,9 +3,9 @@ title: Nobody
 title_ko: Nobody
 artist: One Republic
 artist_ko:
-album: 
+album: Nobody (from Kaiju No. 8)
 year: 2024
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/347063/34706332.jpg
 preview: 
 trackId: 
 duration: 

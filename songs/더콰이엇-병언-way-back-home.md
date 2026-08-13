@@ -3,9 +3,9 @@ title: way back home
 title_ko: way back home
 artist: 더콰이엇, 병언
 artist_ko:
-album: 
+album: glow forever
 year: 2018
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/201928/20192807.jpg
 preview: 
 trackId: 
 duration: 

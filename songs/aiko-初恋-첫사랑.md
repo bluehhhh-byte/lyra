@@ -3,9 +3,9 @@ title: 初恋 첫사랑
 title_ko: 첫사랑
 artist: Aiko
 artist_ko:
-album:
+album: 初恋
 year: 2001
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/e3/39/23/e3392340-2af9-6a58-9646-cf0f1cb8bdf9/PCCA_01525.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

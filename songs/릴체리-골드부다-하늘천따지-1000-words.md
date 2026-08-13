@@ -3,9 +3,9 @@ title: 하늘천따지 1000 Words
 title_ko: 하늘천따지 1000 Words
 artist: 릴체리, 골드부다
 artist_ko:
-album: 
+album: CHEF TALK
 year: 2020
-artwork: 
+artwork: https://image.bugsm.co.kr/album/images/500/40174/4017404.jpg
 preview: 
 trackId: 
 duration: 

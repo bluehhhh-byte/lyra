@@ -3,9 +3,9 @@ title: In The Sky
 title_ko: In The Sky
 artist: 블랙비트
 artist_ko:
-album:
-year: 
-artwork:
+album: Black Beat #2002 - The First Performance #001
+year: 2002
+artwork: https://image.bugsm.co.kr/album/images/500/159/15948.jpg
 preview:
 trackId:
 duration:

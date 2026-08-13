@@ -3,9 +3,9 @@ title: Look At Me
 title_ko: 날 봐
 artist: Gery Halliwell
 artist_ko:
-album:
+album: Schizophonic
 year: 1999
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0d/53/3d/0d533de0-71e1-94b2-540e-2439abeabe1d/0724352100958_1500x1500_300dpi.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

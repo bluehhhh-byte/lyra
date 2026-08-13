@@ -3,9 +3,9 @@ title: 變わらないもの 변하지 않는 것
 title_ko: 변하지 않는 것
 artist: Oku Hanako
 artist_ko:
-album:
+album: ガーネット
 year: 2006
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/06/7b/c3/mzi.auucgwej.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: Last Flower
 title_ko: 마지막 꽃
 artist: Radiohead
 artist_ko:
-album:
+album: In Rainbows Disk 2
 year: 2007
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/13/39/3c/13393c12-a1cf-445f-5dd0-07988cbe540d/634904032449.png/600x600bb.jpg
 preview:
 trackId:
 duration:

@@ -3,9 +3,9 @@ title: ギブス
 title_ko: 깁스
 artist: Sheena Ringo
 artist_ko:
-album:
+album: ギブス (Single)
 year: 2000
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/16/7e/0d/167e0ddd-56a3-052a-8ef4-b014b9f96a44/00602567661221.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration:
