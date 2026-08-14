@@ -1,23 +1,11 @@
 {
- "at": "2026-08-14T19:41:37.052Z",
+ "at": "2026-08-14T19:49:39.040Z",
  "total": {
   "songs": 917,
   "songsNeedingWork": 0,
-  "moviesNeedingWork": 1
+  "moviesNeedingWork": 0
  },
  "byNeed": {},
  "songBatches": [],
- "movieBatches": [
-  [
-   {
-    "id": "스파이더맨-브랜드-뉴-데이-2026",
-    "kind": "movie",
-    "title": "스파이더맨: 브랜드 뉴 데이",
-    "director": "데스틴 대니얼 크레턴",
-    "needs": [
-     "줄거리 없음"
-    ]
-   }
-  ]
- ]
+ "movieBatches": []
 }
