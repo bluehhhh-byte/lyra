@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { CULTURAL_THEMES } from "../../lib/themes";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -64,6 +65,7 @@ export default function MovieForm() {
   const [polished, setPolished] = useState(""); // Gemini-tidied 줄거리
   const [comment, setComment] = useState("");
   const [tags, setTags] = useState("");
+  const [themes, setThemes] = useState([]);
   const [rating, setRating] = useState(0);
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
@@ -94,6 +96,7 @@ export default function MovieForm() {
       setSynopsis(detail.overview || ""); // auto-load TMDB synopsis
       setPolished("");
       setComment("");
+      setThemes([]);
       setTags([detail.country, detail.genre, detail.year].filter(Boolean).join(", "));
     })();
 
@@ -131,6 +134,7 @@ export default function MovieForm() {
       backdrop: movie.backdrop,
       tmdbId: movie.tmdbId,
       tags,
+      themes,
       comment,
       synopsis: polished || synopsis,
     });
@@ -231,6 +235,25 @@ export default function MovieForm() {
           />
           <div className="mt-3 space-y-3">
             <input className={input} placeholder="태그 (국가·장르·연도)" value={tags} onChange={(e) => setTags(e.target.value)} />
+            <div>
+              <p className="mb-2 text-xs text-muted">공통 주제 1~3개 · 음악과 영화를 의미로 잇는 검수 어휘</p>
+              <div className="flex flex-wrap gap-1.5">
+                {CULTURAL_THEMES.map((theme) => {
+                  const active = themes.includes(theme);
+                  return (
+                    <button
+                      type="button"
+                      key={theme}
+                      aria-pressed={active}
+                      onClick={() => setThemes((current) => active ? current.filter((item) => item !== theme) : current.length < 3 ? [...current, theme] : current)}
+                      className={`rounded-full border px-3 py-1 text-xs ${active ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}
+                    >
+                      {theme}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
             <textarea className={input + " h-20"} placeholder="감상 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />
           </div>
           <button className={btn + " mt-3"} disabled={busy} onClick={save}>

@@ -14,7 +14,7 @@ export const metadata = {
 // '많이 담은'이다 — '좋아하는'이 아니라. 숫자·기록 나열은 /stats 담당.
 function Bar({ label, n, max, total, color, href }) {
   return (
-    <div className="flex items-center gap-3 text-sm">
+    <span className="flex items-center gap-3 text-sm">
       {href ? (
         <Link href={href} className="w-32 shrink-0 truncate hover:text-accent hover:underline sm:w-40">
           {label}
@@ -22,16 +22,17 @@ function Bar({ label, n, max, total, color, href }) {
       ) : (
         <span className="w-32 shrink-0 truncate sm:w-40">{label}</span>
       )}
-      <div className="h-4 flex-1 overflow-hidden rounded bg-line/50">
-        <div
+      <span className="h-4 flex-1 overflow-hidden rounded bg-line/50">
+        <span
+          aria-hidden
           className="h-full rounded"
-          style={{ width: `${Math.max(2, (n / max) * 100)}%`, background: color || "var(--color-accent)" }}
+          style={{ display: "block", width: `${Math.max(2, (n / max) * 100)}%`, background: color || "var(--color-accent)" }}
         />
-      </div>
+      </span>
       <span className="w-20 shrink-0 text-right text-xs tabular-nums text-muted">
         {n}곡 · {Math.round((n / total) * 100)}%
       </span>
-    </div>
+    </span>
   );
 }
 
@@ -90,6 +91,42 @@ function Evidence({ songs, taste }) {
         ))}
       </div>
     </section>
+  );
+}
+
+function EmotionEvidence({ emotion, n, songs, taste }) {
+  const matched = songs.filter((song) => parseEmotion(song.emotion) === emotion);
+  const counts = (values) => {
+    const map = new Map();
+    for (const value of values.filter(Boolean)) map.set(value, (map.get(value) || 0) + 1);
+    return [...map.entries()].sort((a, b) => b[1] - a[1]);
+  };
+  const decades = counts(matched.map((song) => song.year && `${Math.floor(+song.year / 10) * 10}년대`));
+  const keywords = counts(matched.flatMap((song) => song.keywords || []));
+  const examples = matched.slice(0, 5);
+  return (
+    <details className="group rounded-lg border border-transparent open:border-line open:bg-surface/50 open:p-4">
+      <summary className="cursor-pointer list-none">
+        <Bar emotionPanel label={emotion} n={n} max={taste.emotion[0]?.[1] || 1} total={taste.count} color={valenceColor(emotionValence(emotion))} />
+      </summary>
+      <div className="mt-4 border-t border-line pt-4">
+        <p className="text-xs leading-5 text-muted">
+          {decades[0] ? `${emotion}은 ${decades.slice(0, 2).map(([name, count]) => `${name} ${count}곡`).join(" · ")}에서 많이 나타납니다.` : "시대 정보가 있는 곡이 더 필요합니다."}
+          {keywords.length > 0 && ` 함께 반복된 말은 ${keywords.slice(0, 5).map(([word]) => word).join(", ")}입니다.`}
+        </p>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-5">
+          {examples.map((song) => (
+            <Link key={song.slug} href={`/songs/${song.slug}`} className="group/song min-w-0">
+              <CoverImage src={song.artwork} alt="" label={song.title} loading="lazy" className="aspect-square w-full rounded-lg object-cover" />
+              <p className="mt-1.5 truncate text-xs group-hover/song:text-accent">{song.title}</p>
+            </Link>
+          ))}
+        </div>
+        <Link href={`/?emotion=${encodeURIComponent(emotion)}`} className="mt-4 inline-block text-xs text-accent hover:underline">
+          {emotion}에 해당하는 {n}곡 모두 보기 →
+        </Link>
+      </div>
+    </details>
   );
 }
 
@@ -179,14 +216,12 @@ export default function MusicTastePage() {
         hint={`${t.count}곡 중 ${t.covered.emotion}곡 기준 — 감정을 누르면 그 감정의 곡만, 색은 밝음(주황) ↔ 어두움(파랑)`}
       >
         {t.emotion.map(([e, n]) => (
-          <Bar
+          <EmotionEvidence
             key={e}
-            label={e}
+            emotion={e}
             n={n}
-            max={t.emotion[0]?.[1] || 1}
-            total={t.count}
-            color={valenceColor(emotionValence(e))}
-            href={`/?emotion=${encodeURIComponent(e)}`}
+            songs={songs}
+            taste={t}
           />
         ))}
         {t.emotion.length > 0 && (

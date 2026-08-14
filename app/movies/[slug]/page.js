@@ -54,12 +54,14 @@ function formatPublished(v) {
 
 function relatedMovies(movie, all) {
   const tags = new Set(movie.tags);
+  const themes = new Set(movie.themes || []);
   return all
     .filter((m) => m.slug !== movie.slug)
     .map((m) => {
       let score = 0;
       if (m.director === movie.director) score += 5;
       score += m.tags.filter((t) => tags.has(t)).length;
+      score += (m.themes || []).filter((theme) => themes.has(theme)).length * 2;
       return { m, score };
     })
     .filter((x) => x.score > 0)
@@ -146,6 +148,19 @@ export default async function MoviePage({ params }) {
                 </Link>
               ))}
             </div>
+            {movie.themes?.length > 0 && (
+              <div className="mt-2 flex flex-wrap justify-center gap-1.5 sm:justify-start" aria-label="작품의 공통 주제">
+                {movie.themes.map((theme) => (
+                  <Link
+                    key={theme}
+                    href={`/archive?theme=${encodeURIComponent(theme)}`}
+                    className="rounded-full bg-accent/10 px-2.5 py-1 text-xs text-accent hover:bg-accent/20"
+                  >
+                    {theme}
+                  </Link>
+                ))}
+              </div>
+            )}
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
               <YouTubeEmbed artist={movie.director || ""} title={`${movie.title} 예고편`} />
               <MovieCardButton

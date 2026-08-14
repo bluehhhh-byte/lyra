@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { buildArchive } from "../../lib/archive";
+import { buildArchive, summarizeArchiveMonth } from "../../lib/archive";
 import { valenceColor } from "../../lib/keywords";
+import { CULTURAL_THEMES } from "../../lib/themes";
 
 export const metadata = {
   title: "문화 아카이브 | Lyra",
@@ -22,12 +23,24 @@ const dayLabel = (day) =>
 
 export default async function ArchivePage({ searchParams }) {
   const archive = buildArchive();
-  const months = [...new Set(archive.map((entry) => entry.day.slice(0, 7)))];
-  const requested = (await searchParams)?.month;
+  const params = (await searchParams) || {};
+  const theme = CULTURAL_THEMES.includes(params.theme) ? params.theme : "";
+  const relevant = theme
+    ? archive.filter((entry) => entry.items.some((item) => item.type === "movie" && item.themes?.includes(theme)))
+    : archive;
+  const months = [...new Set(relevant.map((entry) => entry.day.slice(0, 7)))];
+  const requested = params.month;
   const month = months.includes(requested) ? requested : months.at(-1);
-  const entries = archive.filter((entry) => entry.day.startsWith(month)).reverse();
+  const monthEntries = archive.filter((entry) => entry.day.startsWith(month)).reverse();
+  const summary = summarizeArchiveMonth(monthEntries);
+  const entries = theme
+    ? monthEntries
+        .map((entry) => ({ ...entry, items: entry.items.filter((item) => item.type === "movie" && item.themes?.includes(theme)) }))
+        .filter((entry) => entry.items.length)
+    : monthEntries;
   const index = months.indexOf(month);
   const itemCount = entries.reduce((sum, entry) => sum + entry.items.length, 0);
+  const monthHref = (value) => `/archive?month=${value}${theme ? `&theme=${encodeURIComponent(theme)}` : ""}`;
 
   if (!month) return <p className="py-20 text-center text-sm text-muted">아직 기록이 없습니다.</p>;
 
@@ -40,7 +53,7 @@ export default async function ArchivePage({ searchParams }) {
 
       <nav className="mb-8 flex items-center justify-between border-y border-line py-3" aria-label="월 이동">
         {months[index - 1] ? (
-          <Link href={`/archive?month=${months[index - 1]}`} className="text-sm text-muted hover:text-accent">
+          <Link href={monthHref(months[index - 1])} className="text-sm text-muted hover:text-accent">
             ← {Number(months[index - 1].slice(5))}월
           </Link>
         ) : <span />}
@@ -49,11 +62,32 @@ export default async function ArchivePage({ searchParams }) {
           <p className="text-xs text-muted">{entries.length}일 · {itemCount}개 기록</p>
         </div>
         {months[index + 1] ? (
-          <Link href={`/archive?month=${months[index + 1]}`} className="text-sm text-muted hover:text-accent">
+          <Link href={monthHref(months[index + 1])} className="text-sm text-muted hover:text-accent">
             {Number(months[index + 1].slice(5))}월 →
           </Link>
         ) : <span />}
       </nav>
+
+      {summary.text && !theme && (
+        <section className="mb-8 rounded-2xl border border-line bg-surface px-5 py-5 sm:px-7">
+          <p className="text-xs font-semibold text-accent">그때의 나 · {monthLabel(month)}</p>
+          <p className="mt-2 max-w-3xl font-serif text-lg leading-8">{summary.text}</p>
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {summary.themes.slice(0, 4).map(([name, count]) => (
+              <Link key={name} href={`/archive?month=${month}&theme=${encodeURIComponent(name)}`} className="rounded-full border border-line px-2.5 py-1 text-xs text-muted hover:text-accent">
+                {name} · {count}편
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {theme && (
+        <div className="mb-8 flex items-center gap-3 rounded-xl border border-accent/30 bg-accent/5 px-4 py-3 text-sm">
+          <span><b>{theme}</b>을 다룬 영화 기록</span>
+          <Link href={`/archive?month=${month}`} className="ml-auto text-xs text-accent hover:underline">전체 기록 보기</Link>
+        </div>
+      )}
 
       <ol className="divide-y divide-line border-y border-line">
         {entries.map((entry) => (
@@ -75,7 +109,7 @@ export default async function ArchivePage({ searchParams }) {
                   <h2 className="font-semibold group-hover:text-accent">{dayLabel(entry.day)}</h2>
                 </div>
                 <p className="mt-1 pl-[18px] text-xs text-muted">
-                  {[entry.songs && `음악 ${entry.songs}`, entry.movies && `영화 ${entry.movies}`]
+                    {[entry.items.filter((item) => item.type === "song").length && `음악 ${entry.items.filter((item) => item.type === "song").length}`, entry.items.filter((item) => item.type === "movie").length && `영화 ${entry.items.filter((item) => item.type === "movie").length}`]
                     .filter(Boolean)
                     .join(" · ")}
                 </p>
