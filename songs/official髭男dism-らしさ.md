@@ -2,7 +2,7 @@
 title: らしさ
 title_ko: 나다움
 artist: Official髭男dism
-artist_ko:
+artist_ko: 오피셜 히게단 디즘
 album: らしさ - Single
 year: 2025
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b4/6f/6a/b46f6ad1-b73c-4563-b05b-5edd2c9fbd08/PCSP_06691_A.jpg/600x600bb.jpg
