@@ -29,6 +29,15 @@ node scripts/worktree.mjs done readings  # main에 합치고 worktree 제거
 쓰기 스크립트는 `main`에서 실행하면 스스로 멈춘다(`lib/admin/preflight.js`).
 정말 필요하면 `--force`를 붙이되, 그 순간 admin 자동 저장과 경쟁한다는 뜻이다.
 
+`main`은 GitHub 쪽에서도 보호해 둔다 — **force push와 브랜치 삭제만** 막는다.
+필수 상태 검사나 PR 필수는 걸지 않았다. 배포된 admin이 GitHub API로 `main`에 바로
+커밋해야 Vercel이 재배포되는데, 그 경로가 막히면 관리자 화면의 저장이 통째로 죽는다.
+되돌리려면 저장소 Settings → Branches에서 규칙을 지우면 된다.
+
+`worktree.mjs done`은 `main` 작업 트리가 깨끗해야 합친다. `data/needs-work.json`처럼
+진단 스크립트가 건드린 파일이 남아 있으면 병합이 중단되고 브랜치만 남는다 —
+그때는 `git checkout -- data/needs-work.json` 후 다시 합친다.
+
 ---
 
 ## 1. 진단 — 무엇이 부족한가
