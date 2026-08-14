@@ -9,7 +9,7 @@ import { getWatched } from "../lib/watched.js";
 import { EMOTIONS } from "../lib/keywords.js";
 import { genreTagOf, genreIssue } from "../lib/genre.js";
 import { readData } from "../lib/store.js";
-import { needsKo } from "../lib/admin/needs.js";
+import { needsKo, isNonLyricLine } from "../lib/admin/needs.js";
 
 const errors = [];
 const warns = [];
@@ -54,7 +54,7 @@ for (const s of songs) {
   if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
   // 가사 없이 해설만 있는 곡 — 캡션에 가사를 안 적었거나 연주곡이다.
   // 화면에는 노트만 뜨므로 어느 쪽인지 사람이 확인해 채우거나 표시해야 한다.
-  const noLyrics = !lines.some((l) => l.en?.trim() || l.ko?.trim());
+  const noLyrics = !lines.some((l) => (l.en?.trim() || l.ko?.trim()) && !isNonLyricLine(l.en));
   if (noLyrics && !s.instrumental && !s.lyrics_none)
     warn(f, "가사 줄 없음 (해설만 있음 — 연주곡이거나 가사 미기입)");
   // '원문이 어디에도 없음'은 확인한 사실이어야 한다 — 근거 없는 포기는 그냥 미기입이다
