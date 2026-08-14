@@ -54,7 +54,12 @@ for (const s of songs) {
   if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
   // 가사 없이 해설만 있는 곡 — 캡션에 가사를 안 적었거나 연주곡이다.
   // 화면에는 노트만 뜨므로 어느 쪽인지 사람이 확인해 채우거나 표시해야 한다.
-  if (!lines.some((l) => l.en?.trim() || l.ko?.trim())) warn(f, "가사 줄 없음 (해설만 있음 — 연주곡이거나 가사 미기입)");
+  const noLyrics = !lines.some((l) => l.en?.trim() || l.ko?.trim());
+  if (noLyrics && !s.instrumental && !s.lyrics_none)
+    warn(f, "가사 줄 없음 (해설만 있음 — 연주곡이거나 가사 미기입)");
+  // '원문이 어디에도 없음'은 확인한 사실이어야 한다 — 근거 없는 포기는 그냥 미기입이다
+  if (s.lyrics_none && !String(s.lyrics_note || "").trim()) err(f, "lyrics_none인데 lyrics_note(확인한 내용) 없음");
+  if (s.lyrics_none && !noLyrics) err(f, "lyrics_none인데 본문에 가사가 있음");
 
   // `>^N`이 문단 밖까지 가리키면 어느 줄을 덮는지가 불분명하다 — 조용히 넘기지 않는다
   const overflow = lines.filter((l) => l.koSpanError).length;

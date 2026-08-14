@@ -23,6 +23,7 @@ source: instagram
 source_tag: 251231_2350
 source_note: 
 source_hash: 3a50c8f185a8c8f072b8b01940f5d3678534ba7b
+instrumental: true
 lyrics_external: 
 lyrics_source: 
 ---

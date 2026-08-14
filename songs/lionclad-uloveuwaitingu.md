@@ -23,6 +23,8 @@ source: instagram
 source_tag: 260323_0854
 source_note: 
 source_hash: 441b3e2c4b3b268a576088a519a9a55a49ca727d
+lyrics_note: Genius가 '가사 미공개'로 표시한다. 벅스에 곡은 있지만 가사가 등록돼 있지 않다.
+lyrics_none: true
 lyrics_external: 
 lyrics_source: 
 ---

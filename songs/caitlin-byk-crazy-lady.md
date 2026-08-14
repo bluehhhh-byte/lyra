@@ -23,6 +23,8 @@ source: instagram
 source_tag: 260223_0326
 source_note: 
 source_hash: 86cab37a99d2074ec4c20400aea96b38be5e4c01
+lyrics_note: lrclib에 같은 아티스트의 다른 곡(Blow Away, Faded)만 있다. 벅스에는 곡만 있고 가사가 없다.
+lyrics_none: true
 lyrics_external: 
 lyrics_source: 
 ---

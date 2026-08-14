@@ -377,7 +377,25 @@
     "rufus-wainwright-sonnet-20",
     "damien-rice-older-chests"
    ]
+  },
+  {
+   "at": "2026-08-14T16:47:58.001Z",
+   "files": [
+    "meta-out-11.json"
+   ],
+   "applied": 1,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 1
+   },
+   "fields": [
+    "emotion",
+    "keywords"
+   ],
+   "slugs": [
+    "kiyoharu-eternal"
+   ]
   }
  ],
- "at": "2026-08-14T16:01:02.563Z"
+ "at": "2026-08-14T16:47:58.001Z"
 }

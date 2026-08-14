@@ -21,6 +21,9 @@ source: instagram
 source_tag: 260330_0846
 source_note: 
 source_hash: a8f146372d2906783b33afacb1cc809b0640fa20
+artwork_none: true
+lyrics_note: lrclib에 hu57la의 다른 곡은 있으나 이 곡은 없다. 벅스·지니·Genius에도 없다.
+lyrics_none: true
 lyrics_external: 
 lyrics_source: 
 ---

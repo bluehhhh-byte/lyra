@@ -23,8 +23,14 @@ const lyricLess = () =>
 
 if (args.includes("--list") || !slug) {
   const rows = lyricLess();
-  console.log(`가사 없는 곡 ${rows.length}개\n`);
-  for (const s of rows) console.log(`  ${s.slug}\n    ${s.artist} — ${s.title} (${s.year || "연도 없음"})`);
+  const open = rows.filter((s) => !s.lyrics_none);
+  console.log(`가사 없는 곡 ${rows.length}개 (채울 수 있는 것 ${open.length})\n`);
+  for (const s of rows) {
+    // 어디에도 원문이 없다고 확인해 둔 곡은 표시만 한다 — 나중에 구하면 그대로 붙이면 된다
+    const mark = s.lyrics_none ? "  · 원문 없음으로 표시됨" : "";
+    console.log(`  ${s.slug}${mark}\n    ${s.artist} — ${s.title} (${s.year || "연도 없음"})`);
+    if (s.lyrics_none && s.lyrics_note) console.log(`    ${s.lyrics_note}`);
+  }
   console.log(`\n사용법: node scripts/add-lyrics.mjs <slug> <가사파일.txt> [--source=<URL>] --write`);
   process.exit(0);
 }

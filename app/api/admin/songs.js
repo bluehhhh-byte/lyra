@@ -866,9 +866,10 @@ ${listed}`,
     const risky = songs.map((s) => {
       const lines = s.stanzas.flatMap((st) => st.lines);
       const reasons = [];
-      // 가사 자체가 없는 곡 — 어디에서도 원문을 못 찾은 것들이다.
-      // 여기 목록에 띄워야 사람이 직접 붙여넣을 수 있다(연주곡은 제외).
-      if (!s.instrumental && !lines.some((l) => l.en?.trim() || l.ko?.trim())) reasons.push("가사 없음");
+      // 가사 자체가 없는 곡 — 여기 목록에 띄워야 사람이 직접 붙여넣을 수 있다.
+      // 연주곡과 '어디에도 원문이 없다'고 확인해 둔 곡(lyrics_none)은 제외한다.
+      if (!s.instrumental && !s.lyrics_none && !lines.some((l) => l.en?.trim() || l.ko?.trim()))
+        reasons.push("가사 없음");
       if (/댓글\s*병합/.test(s.source_note || "")) reasons.push("댓글에서 복원");
       if (lines.some((l) => l.koSpan > 1)) reasons.push("병합 번역");
       if (lines.length >= 60) reasons.push("긴 캡션");
