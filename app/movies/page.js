@@ -1,5 +1,6 @@
 import { getAllMovies } from "../../lib/movies";
 import MovieBrowse from "./browse";
+import SynoNav from "../syno-nav";
 
 export const metadata = {
   title: "Syno. | Lyra",
@@ -44,10 +45,16 @@ export default async function MoviesPage({ searchParams }) {
     };
   });
 
-  if (movies.length === 0) {
-    return <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>;
-  }
-
-  // 헤더 로고가 이미 Syno. 라 페이지 제목 없음 — 홈(Lyra)과 같은 시작
-  return <MovieBrowse movies={movies} initial={{ q: q || "", media: media || "all", sort: sort || "recorded" }} />;
+  // 헤더 로고가 이미 Syno. 라 페이지 제목 없음 — 홈(Lyra)과 같은 시작.
+  // 서브내비는 목록이 비어도 그대로 둔다 — 별점 쪽으로 가는 길은 항상 있어야 한다.
+  return (
+    <>
+      <SynoNav active="movies" />
+      {movies.length === 0 ? (
+        <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>
+      ) : (
+        <MovieBrowse movies={movies} initial={{ q: q || "", media: media || "all", sort: sort || "recorded" }} />
+      )}
+    </>
+  );
 }

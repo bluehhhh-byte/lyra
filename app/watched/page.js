@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getWatched } from "../../lib/watched";
 import WatchedGrid from "./grid";
+import SynoNav from "../syno-nav";
 
 export const metadata = {
   title: "평가한 영화 | Syno.",
@@ -24,12 +25,13 @@ export default function WatchedPage() {
 
   return (
     <>
+      <SynoNav active="watched" />
       <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">평가한 영화</h1>
+          <h1 className="text-2xl font-bold">별점 평가</h1>
           <p className="mt-1 text-sm text-muted">
-            {all.length}편 기록
-            {rated.length > 0 && ` · ${rated.length}편 평가 · 평균 ★${mean}`}
+            {all.length.toLocaleString("ko-KR")}편 기록
+            {rated.length > 0 && ` · ${rated.length.toLocaleString("ko-KR")}편 평가 · 평균 ★${mean}`}
           </p>
         </div>
         <Link href="/watched/taste" className="text-sm text-accent hover:underline">
