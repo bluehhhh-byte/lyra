@@ -25,50 +25,91 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Damien%20Rice&track_name=The%20Blower's%20Daughter
 ---
 And so it is
+> 그래서 이렇게 됐어
 Just like you said it would be
+> 네가 그렇게 될 거라고 말한 그대로
 Life goes easy on me
+> 삶은 내게 수월하게 흘러가
 Most of the time
+> 대부분은
 
 And so it is
+> 그래서 이렇게 됐어
 The shorter story
+> 더 짧은 이야기
 No love, no glory
+> 사랑도 영광도 없이
 No hero in her sky
+> 그녀의 하늘엔 영웅도 없이
 
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes
+> 눈을 뗄 수가 없어
 
 And so it is
+> 그래서 이렇게 됐어
 Just like you said it should be
+> 네가 그래야 한다고 말한 그대로
 We'll both forget the breeze
+> 우린 둘 다 그 바람을 잊겠지
 Most of the time
+> 대부분은
 
 And so it is
+> 그래서 이렇게 됐어
 The colder water
+> 더 차가운 물도
 The blower's daughter
+> 유리 부는 사람의 딸도
 The pupil in denial
+> 부정하는 제자도
 
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 Can't take my eyes off you
+> 너에게서 눈을 뗄 수가 없어
 I can't take my eyes
+> 눈을 뗄 수가 없어
 
 Oh, did I say
+> 오, 내가 말했던가
 That I loathe you?
+> 널 지긋지긋해한다고?
 Did I say that I want to
+> 내가 말했던가
 Leave it all behind?
+> 전부 두고 떠나고 싶다고?
 
 I can't take my mind off you
+> 너에게서 마음을 뗄 수가 없어
 I can't take my mind off you
+> 너에게서 마음을 뗄 수가 없어
 I can't take my mind off you
+> 너에게서 마음을 뗄 수가 없어
 I can't take my mind off you
+> 너에게서 마음을 뗄 수가 없어
 Can't take my mind off you
+> 너에게서 마음을 뗄 수가 없어
 I can't take my mind
+> 마음을 뗄 수가 없어
 My mind
+> 내 마음을
 My mind
+> 내 마음을
 'Til I find somebody new
+> 새로운 누군가를 찾기 전까진

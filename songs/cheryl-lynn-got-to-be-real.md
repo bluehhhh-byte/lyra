@@ -25,62 +25,113 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Cheryl%20Lynn&track_name=Got%20to%20Be%20Real
 ---
 What you find-ah
+> 네가 찾아낸 것
 What you feel now
+> 지금 네가 느끼는 것
 What you know-ah
+> 네가 아는 것
 To be real
+> 그게 진짜여야 해
 
 What you find, ah
+> 네가 찾아낸 것
 (I think I love you, baby)
+> (널 사랑하는 것 같아)
 What you feel now
+> 지금 네가 느끼는 것
 (I feel I need you, baby)
+> (네가 필요한 것 같아)
 What you know-ah
+> 네가 아는 것
 To be real
+> 그게 진짜여야 해
 
 Ooh, your love's for real now
+> 우, 네 사랑은 이제 진짜야
 You know that your love is my love
+> 알잖아 네 사랑이 내 사랑이라는 걸
 My love is your love
+> 내 사랑은 네 사랑이야
 Our love is here to stay
+> 우리 사랑은 여기 머물 거야
 
 What you find-ah
+> 네가 찾아낸 것
 (I think I love you, baby)
+> (널 사랑하는 것 같아)
 What you feel now
+> 지금 네가 느끼는 것
 (I feel I need you, baby)
+> (네가 필요한 것 같아)
 What you know-ah
+> 네가 아는 것
 To be real
+> 그게 진짜여야 해
 
 Ooh, your love's for real now
+> 우, 네 사랑은 이제 진짜야
 You know that your love is my love
+> 알잖아 네 사랑이 내 사랑이라는 걸
 And my love is your love
+> 그리고 내 사랑은 네 사랑이야
 Our love is here to stay-ay-ay
+> 우리 사랑은 여기 머물 거야
 
 What you find-ah
+> 네가 찾아낸 것
 (I think I love you, baby)
+> (널 사랑하는 것 같아)
 What you feel now
+> 지금 네가 느끼는 것
 I feel I need you
+> 네가 필요한 것 같아
 What you know-ah
+> 네가 아는 것
 To be real
+> 그게 진짜여야 해
 
 What you find-ah
+> 네가 찾아낸 것
 I think I love you
+> 널 사랑하는 것 같아
 What you feel now
+> 지금 네가 느끼는 것
 I feel I need you
+> 네가 필요한 것 같아
 What you know-ah
+> 네가 아는 것
 To be real (it's time to be real)
+> 진짜여야 해 (이제 진짜일 때야)
 To be real (it's time to be real)
+> 진짜여야 해 (이제 진짜일 때야)
 To be real
+> 그게 진짜여야 해
 
 What you find-ah
+> 네가 찾아낸 것
 What you feel now
+> 지금 네가 느끼는 것
 What you know-ah
+> 네가 아는 것
 To be real
+> 그게 진짜여야 해
 
 What you find-ah (oh, ah, what you feel)
+> 네가 찾아낸 것 (오, 아, 네가 느끼는 것)
 What you feel now (oh, ah, what you know)
+> 지금 네가 느끼는 것 (오, 아, 네가 아는 것)
 What you know-ah (tell you want)
+> 네가 아는 것 (원하는 걸 말해)
 To be real (oh yeah, yeah)
+> 진짜여야 해 (오 예, 예)
 
 To be real (it's got to be, it's got to be real)
+> 진짜여야 해 (그래야만 해, 진짜여야만 해)
 To be real (it's got to be, it's got to be real)
+> 진짜여야 해 (그래야만 해, 진짜여야만 해)
 To be real (it's got to be, it's got to be real)
+> 진짜여야 해 (그래야만 해, 진짜여야만 해)
 To be real (it's got to be, it's got to be real)
+> 진짜여야 해 (그래야만 해, 진짜여야만 해)
 To be real (oh, real, real, real) to be real (real, real, real, real, real)
+> 진짜여야 해 (오, 진짜, 진짜, 진짜) 진짜여야 해 (진짜, 진짜, 진짜, 진짜, 진짜)

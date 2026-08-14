@@ -29,23 +29,36 @@ lyrics_source: https://lrclib.net/api/get?artist_name=BTS&track_name=2.0
 웃기기는 한데 사실 안 웃기지
 10년은 말야 어림 반 푼어치
 Stop, ride
+> 멈춰, 올라타
 
 Yuh yuh yuh yuh, yeah
+> 여 여 여 여, 그래
 Pull up at your block
+> 네 동네로 차를 대
 We gon' knock knock knock knock, yeah
+> 우린 두드릴 거야 똑 똑 똑 똑, 그래
 Had your little fun, fella?
+> 실컷 놀았냐, 친구?
 Pop pop pop pop, yeah
+> 팡 팡 팡 팡, 그래
 Came back for what's mine, we don't
+> 내 것을 찾으러 돌아왔어, 우린 안 그래
 Stop, ride
+> 멈춰, 올라타
 
 You know how I do do do do do do
+> 내가 어떻게 하는지 알잖아
 You know how I do do do do do
+> 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
 붙여 brand new
 Yeah we on that brand new
+> 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
+> 우리가 어떻게 하는지 알잖아
 
 Ay ay ay
+> 에이 에이 에이
 그래, 기분 마치 brand new
 Spec 다른 step, 뛰지 않는 step two
 Two, two point oh 업데이트된 후
@@ -55,52 +68,90 @@ Two, two point oh 업데이트된 후
 수거하러 가
 여유 있게 다시 수고하러
 Stop, ride
+> 멈춰, 올라타
 
 Yuh yuh yuh yuh, yeah
+> 여 여 여 여, 그래
 Pull up at your block
+> 네 동네로 차를 대
 We gon' knock knock knock knock, yeah
+> 우린 두드릴 거야 똑 똑 똑 똑, 그래
 Had your little fun, fella?
+> 실컷 놀았냐, 친구?
 Pop pop pop pop, yeah
+> 팡 팡 팡 팡, 그래
 Came back for what's mine, we don't
+> 내 것을 찾으러 돌아왔어, 우린 안 그래
 Stop, ride
+> 멈춰, 올라타
 
 You know how I do do do do do do
+> 내가 어떻게 하는지 알잖아
 You know how I do do do do do
+> 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
 붙여 brand new
 Yeah we on that brand new
+> 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
+> 우리가 어떻게 하는지 알잖아
 
 Pop pop pop pop pop pop pop pop pop pop
+> 팡 팡 팡 팡 팡 팡 팡 팡 팡 팡
 Baby gettin' too lit rah rah rah rah rah rah
+> 판이 너무 뜨거워지고 있어 라 라 라 라 라 라
 Hit 'em up like pop
+> 팡 하고 후려쳐
 Hit 'em with the truth like rah
+> 진실로 후려쳐 라 하고
 Time to pay your debt
+> 빚을 갚을 시간이야
 Fear me or fear me not
+> 날 두려워하든 말든
 Let it be
+> 그냥 두든가
 Let it bleed
+> 피 흘리게 두든가
 Hit a lick
+> 한탕 치고
 In a split
+> 순식간에
 Stop, ride
+> 멈춰, 올라타
 
 Yuh yuh yuh yuh, yeah
+> 여 여 여 여, 그래
 Pull up at your block
+> 네 동네로 차를 대
 We gon' knock knock knock knock, yeah
+> 우린 두드릴 거야 똑 똑 똑 똑, 그래
 Had your little fun, fella?
+> 실컷 놀았냐, 친구?
 Pop pop pop pop, yeah
+> 팡 팡 팡 팡, 그래
 Came back for what's mine, we don't
+> 내 것을 찾으러 돌아왔어, 우린 안 그래
 Stop, ride
+> 멈춰, 올라타
 
 You know how I do do do do do do
+> 내가 어떻게 하는지 알잖아
 You know how I do do do do do
+> 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
 붙여 brand new
 Yeah we on that brand new
+> 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
+> 우리가 어떻게 하는지 알잖아
 
 You know how I do do do do do do
+> 내가 어떻게 하는지 알잖아
 You know how I do do do do do
+> 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
 붙여 brand new
 Yeah we on that brand new
+> 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
+> 우리가 어떻게 하는지 알잖아

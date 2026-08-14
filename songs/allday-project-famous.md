@@ -27,54 +27,82 @@ lyrics_source: https://lrclib.net/api/get?artist_name=ALLDAY%20PROJECT&track_nam
 분명 나쁜 아이는 아니어도
 또 틀에 가두면 we break it
 Bum no bigger than the girl nextdoor
+> 옆집 여자애만도 못한 놈
 무대 서면 we fake it
 No white collar 근데 얜 좀 쳐
 When I put mans in their places
+> 내가 남자들을 제자리에 앉힐 때
 모든 시선들은 날 따라와
 But we ain't even famous
+> 근데 우린 유명하지도 않아
 
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 Don't you play me we on the floor
+> 날 가지고 놀지 마, 우린 무대 위야
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 (We ain’t even famous)
+> (우린 유명하지도 않아)
 
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 Don't you play me we on the floor
+> 날 가지고 놀지 마, 우린 무대 위야
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 (We ain’t even famous)
+> (우린 유명하지도 않아)
 
 Money don’t make friends, only got my fam
+> 돈으론 친구가 안 생겨, 내겐 내 식구뿐
 Pull up with my M’s and I make the money dance
+> 억을 싣고 나타나 돈을 춤추게 해
 Funny how it goes but this is how it ends
+> 웃기게 흘러가지만 끝은 이래
 This is how I live by the name Tarzzan
+> 타잔이란 이름으로 난 이렇게 살아
 I ain’t even famous
+> 난 유명하지도 않아
 다들 날 보면 오 they say less
 And my kit in my whip is the latest
+> 내 차에 실린 것들은 전부 최신이지
 내 가친 조 단위 임마 불러봐
 Name is “The Greatest Unfamous”
+> 이름은 '가장 위대한 무명'
 
 느껴져 내 분위기
 When I walk 다 돌아봐
 I be gettin what I need
+> 난 필요한 건 손에 넣어
 Those things I’ve got
+> 내가 가진 그것들
 Think it’s going to my head
+> 머리끝까지 오르는 것 같아
 Know you lookin’ when I dance
+> 내가 춤출 때 네가 보는 거 알아
 Take a quick pic for your friend
+> 친구 보여주게 얼른 한 장 찍어
 내 이름 알아둬
 
 분명 나쁜 아이는 아니어도
 또 틀에 가두면 we break it
 Bum no bigger than the girl nextdoor
+> 옆집 여자애만도 못한 놈
 무대 서면 we fake it
 No white collar 근데 얜 좀 쳐
 When I put mans in their places
+> 내가 남자들을 제자리에 앉힐 때
 모든 시선들은 날 따라와
 But we ain't even famous
+> 근데 우린 유명하지도 않아
 
 I'm stacking my dollars
+> 난 돈을 쌓아 올려
 난 뿌리부터 달라, 초록 빛깔 color
 감출 수 없어, 나잖아 빛이
 Not even famous but they wanna be us
+> 유명하지도 않은데 다들 우리가 되고 싶어 해
 같은 공기지만 우린 너무 다른 위치
 비교 말어 걔넨 전부 구려
 똑같은 걸 해도 I do it better
@@ -84,10 +112,15 @@ All day show ‘em 끝없는 체력
 내 표적은 네 머리
 When I walk 다 돌아봐
 I be gettin what I need
+> 난 필요한 건 손에 넣어
 Those things I’ve got
+> 내가 가진 그것들
 Think it’s going to my head
+> 머리끝까지 오르는 것 같아
 Know you lookin’ when I dance
+> 내가 춤출 때 네가 보는 거 알아
 Take a quick pic for your friend
+> 친구 보여주게 얼른 한 장 찍어
 내 이름 알아둬
 
 분명 나쁜 아이는 아니어도
@@ -96,15 +129,25 @@ Take a quick pic for your friend
 겁 없이 I just face it
 No white collar 근데 얜 좀 쳐
 When I put mans in their places
+> 내가 남자들을 제자리에 앉힐 때
 모든 시선들은 날 따라와
 But we ain't even famous
+> 근데 우린 유명하지도 않아
 
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 Don't you play me we on the floor
+> 날 가지고 놀지 마, 우린 무대 위야
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 (We ain’t even famous)
+> (우린 유명하지도 않아)
 
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 Don't you play me we on the floor
+> 날 가지고 놀지 마, 우린 무대 위야
 Don't you try me I want some more
+> 날 시험하지 마, 난 더 원해
 (We ain’t even famous)
+> (우린 유명하지도 않아)

@@ -25,48 +25,92 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Extreme&track_name=Tragic%20Comic
 ---
 Flowers, I sent
+> 내가 보낸 꽃은
 Were found dead on their arrival
+> 도착했을 때 이미 시들어 있었지
 The words, I said
+> 내가 한 말은
 Inserted foot in my mouthful
+> 입에 발을 처넣은 꼴이었고
 So when, we dance
+> 그러니 우리가 춤출 때
 My lead it ain't so graceful
+> 내 리드는 그리 우아하지 않아
 (Isn't so, not ain't so)
+> (그렇지 않다, ain't so가 아니라)
 
 I'm a hapless romantic
+> 난 운 없는 낭만주의자
 St-t-tuttering p-poet
+> 마-말 더듬는 시-시인
 Just call me a tragic comic
+> 그냥 비극적인 코미디언이라고 불러줘
 'Cause i'm, in, in love with you
+> 난 너와, 사, 사랑에 빠졌으니까
 Ah ha
+> 아 하
 Ah ha
+> 아 하
 Seconds
+> 한 번 더
 And when, we dine
+> 그리고 우리가 식사할 때
 I forget to push in your seat
+> 난 네 의자 밀어주는 걸 잊어버리고
 I wear, the wine
+> 와인을 몸에 걸치지
 Spilling hearts all over my sleeve
+> 소매 위에 마음을 온통 쏟으면서
 A stitch, in time
+> 제때의 바느질 한 땀
 Proposing down on my knees
+> 무릎 꿇고 청혼하다가
 (Splitting between the seams)
+> (솔기 사이가 터져버리고)
 I'm a hapless romantic
+> 난 운 없는 낭만주의자
 St-t-tuttering p-poet
+> 마-말 더듬는 시-시인
 Just call me a tragic comic
+> 그냥 비극적인 코미디언이라고 불러줘
 'Cause i'm, in, in love with you
+> 난 너와, 사, 사랑에 빠졌으니까
 Ah ha
+> 아 하
 Ah ha ha ha ha ha
+> 아 하 하 하 하 하
 Nobody, can know the
+> 아무도 모를 거야
 Trouble I've, seen
+> 내가 겪은 곤경을
 Nobody, can know the
+> 아무도 모를 거야
 Trouble I've, seen
+> 내가 겪은 곤경을
 Nobody, can know the
+> 아무도 모를 거야
 Trouble I've, get into
+> 내가 빠져드는 곤경을
 When always tragic comedy
+> 언제나 비극적 희극일 때
 
 I'm a hapless romantic
+> 난 운 없는 낭만주의자
 St-t-tuttering p-poet
+> 마-말 더듬는 시-시인
 Just call me a tragic comic
+> 그냥 비극적인 코미디언이라고 불러줘
 'Cause i'm, in, in love with you
+> 난 너와, 사, 사랑에 빠졌으니까
 I'm a hapless romantic
+> 난 운 없는 낭만주의자
 St-t-tuttering p-poet
+> 마-말 더듬는 시-시인
 Just call me a tragic comic
+> 그냥 비극적인 코미디언이라고 불러줘
 'Cause I'm (tragic comic), in, in love with you
+> 난 (비극적 코미디언) 너와, 사, 사랑에 빠졌으니까
 Ah ha
+> 아 하
 Ah ha ha ha ha ha
+> 아 하 하 하 하 하

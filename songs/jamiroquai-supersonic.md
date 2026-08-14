@@ -25,33 +25,64 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Jamiroquai&track_name=Supersonic
 ---
 Supersonic, supersonic, supersonic
+> 초음속, 초음속, 초음속
 Supersonic, supersonic, supersonic
+> 초음속, 초음속, 초음속
 Supersonic, supersonic, supersonic
+> 초음속, 초음속, 초음속
 In the whites of his eyes
+> 그의 흰자위 속엔
 There's a supersonic vibe
+> 초음속의 기운이 있어
 You can tell by the tears
+> 눈물만 봐도 알 수 있지
 He's a warrior who cries
+> 그는 우는 전사야
 He's supersonic
+> 그는 초음속이야
 I think he's supersonic
+> 그는 초음속인 것 같아
 Supersonic
+> 초음속
 Supersonic
+> 초음속
 In the whites of his eyes
+> 그의 흰자위 속엔
 There's a supersonic vibe
+> 초음속의 기운이 있어
 You can tell by the tears
+> 눈물만 봐도 알 수 있지
 He's a warrior who cries
+> 그는 우는 전사야
 He's supersonic
+> 그는 초음속이야
 I think he's supersonic
+> 그는 초음속인 것 같아
 Supersonic
+> 초음속
 Supersonic
+> 초음속
 In the whites of his eyes
+> 그의 흰자위 속엔
 There's a supersonic vibe
+> 초음속의 기운이 있어
 You can tell by the tears
+> 눈물만 봐도 알 수 있지
 He's a warrior who cries
+> 그는 우는 전사야
 He's supersonic
+> 그는 초음속이야
 I think he's supersonic
+> 그는 초음속인 것 같아
 I think he's supersonic
+> 그는 초음속인 것 같아
 I think he's supersonic
+> 그는 초음속인 것 같아
 I think he's supersonic
+> 그는 초음속인 것 같아
 I think he's supersonic
+> 그는 초음속인 것 같아
 Supersonic
+> 초음속
 Supersonic
+> 초음속

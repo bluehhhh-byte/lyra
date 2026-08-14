@@ -25,68 +25,114 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=IVE&track_name=BANG%20BANG
 ---
 It's a new scene, it's aggressive
+> 새로운 장면이야, 거칠지
 이미 알아차렸겠지, 그치 언니?
 모든 소문 속의 problem, yeah, I'm 걔지
 벽에 붙은 나의 picture, 아래 wanted (아래 wanted)
 
 Wake up, 주저하지 말고 (말고, 말고)
+> 일어나, 주저하지 말고 (말고, 말고)
 다른 시선들은 뭐 그리
 I don't give a 쉿, what you say
+> 네가 뭐라 하든 난 신경 안 써
 Yeah, I be going out with a
+> 그래, 난 이렇게 터뜨리며 나가
 
 Bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅
 Bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅
 Bang, bang, bang, bang, bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅
 Bang, bang, bang, bang, bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅
 
 I be going out with a bang
+> 난 한 방 터뜨리며 나가
 Shaking my head, this is my way, ah-ya-ya
+> 고개를 흔들며, 이게 내 방식이야, 아-야-야
 I be going out with a bang
+> 난 한 방 터뜨리며 나가
 This is my day, 밤이 올 때, ah-ya-ya
+> 오늘은 내 날이야, 밤이 올 때, 아-야-야
 I be going out with a
+> 난 이렇게 터뜨리며 나가
 
 Bang, bang
+> 쾅, 쾅
 Bang, bang
+> 쾅, 쾅
 Bang, bang
+> 쾅, 쾅
 Bang, bang
+> 쾅, 쾅
 
 더 다가와 더, 빨리 go 더, taking my 쉿, gotta pop my gum
 Gimme that grr, gimme that kiss, hey, I told you
+> 그 으르렁을 줘, 그 키스를 줘, 이봐, 말했잖아
 It's explosive, it's aggressive
+> 폭발적이야, 거칠어
 It's a little bit offensive, yeah, I said it (yeah)
+> 조금 불쾌할 수도 있지, 그래, 내가 말했어 (그래)
 
 Wake up, 주저하지 말고 (말고, 말고)
+> 일어나, 주저하지 말고 (말고, 말고)
 그냥 맘 가는 대로
 I don't give a 쉿, what you say
+> 네가 뭐라 하든 난 신경 안 써
 Yeah, I be going out with a
+> 그래, 난 이렇게 터뜨리며 나가
 
 Bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅
 Bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅
 Bang, bang, bang, bang, bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅
 Bang, bang, bang, bang, bang, bang, bang, bang
+> 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅, 쾅
 
 I be going out with a bang
+> 난 한 방 터뜨리며 나가
 Shaking my head, this is my way, ah-ya-ya
+> 고개를 흔들며, 이게 내 방식이야, 아-야-야
 I be going out with a bang
+> 난 한 방 터뜨리며 나가
 This is my day, 밤이 올 때, ah-ya-ya
+> 오늘은 내 날이야, 밤이 올 때, 아-야-야
 I be going out with a
+> 난 이렇게 터뜨리며 나가
 
 Bang, bang
+> 쾅, 쾅
 Bang, bang
+> 쾅, 쾅
 Bang, bang
+> 쾅, 쾅
 Bang, bang
+> 쾅, 쾅
 
 Hot issue, 대체 누굴까?
+> 화제의 인물, 대체 누굴까?
 다들 찾기 위해서 안달 나
 연기처럼 disappear, catch me if you can, baby
+> 연기처럼 사라져, 잡을 수 있으면 잡아봐
 조금만 더 놀아줄게 (four, three, two, one)
 
 Bang, shaking my head, this is my way, ah-ya-ya
+> 쾅, 고개를 흔들며, 이게 내 방식이야, 아-야-야
 I be going out with a bang
+> 난 한 방 터뜨리며 나가
 This is my day, 밤이 올 때, ah-ya-ya
+> 오늘은 내 날이야, 밤이 올 때, 아-야-야
 I be going out with a
+> 난 이렇게 터뜨리며 나가
 
 Bang, bang (yeah)
+> 쾅, 쾅 (그래)
 Bang, bang (yeah, yeah, yeah)
+> 쾅, 쾅 (그래, 그래, 그래)
 Bang, bang (yeah)
+> 쾅, 쾅 (그래)
 Bang, bang
+> 쾅, 쾅
