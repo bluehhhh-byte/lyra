@@ -1,0 +1,48 @@
+---
+title: 베르사유의 장미
+title_ko: 베르사유의 장미
+artist: Nemesis
+artist_ko:
+album:
+year: 2005
+artwork:
+preview:
+trackId:
+duration: 241
+genre:
+lang: ko
+tags: [2005]
+keywords: []
+emotion:
+date: 2025-10-19
+published: 2025-10-18T16:15:50.000Z
+comment: 
+source: instagram
+source_tag: 251019_0115
+source_note: 
+source_hash: f1be926792a41ec052b2aeb36fa25c7720a7d21a
+lyrics_external: true
+lyrics_source: https://lrclib.net/api/get?artist_name=%EB%B9%A8%EA%B0%84%EB%A8%B8%EB%A6%AC%EC%95%A4&track_name=%EB%B2%A0%EB%A5%B4%EC%82%AC%EC%9C%A0%EC%9D%98%20%EC%9E%A5%EB%AF%B8
+---
+바람한점 없어도 향기로운 꽃
+가시돋혀 피어나도 아름다운 꽃
+혼자 피어 있어도 외롭지 않는
+세상마냥 즐거움에 피는 꽃 장미
+
+나는 장미로 태어난 오스칼
+정열과 화려함 속에서 살다갈거야
+장미 장미는 화사하게 피고
+장미 장미는 순결하게 지네
+
+바람한점 없어도 향기로운 꽃
+가시돋혀 피어나도 아름다운 꽃
+혼자 피어 있어도 외롭지 않는
+세상마냥 즐거움에 피는 꽃 장미
+
+나는 장미로 태어난 오스칼
+정열과 화려함 속에서 살다갈거야
+장미 장미는 화사하게 피고
+장미 장미는 순결하게 지네
+
+장미 장미는 화사하게 피고
+장미 장미는 순결하게 지네

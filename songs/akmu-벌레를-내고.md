@@ -1,0 +1,55 @@
+---
+title: 벌레를 내고
+title_ko: 벌레를 내고
+artist: AKMU
+artist_ko:
+album:
+year: 2026
+artwork:
+preview:
+trackId:
+duration: 221
+genre:
+lang: ko
+tags: [2026]
+keywords: []
+emotion:
+date: 2026-04-13
+published: 2026-04-12T23:37:49.000Z
+comment: 외투에 스며든 풀 냄새와 반짝이는 불빛을 따라 걷는 길, 지구가 둥글다는 사실을 두 눈으로 확인하기 위해 버스와 기차에 몸을 실은 이의 어느 환상적인 모험기.
+source: instagram
+source_tag: 260413_0837
+source_note: 
+source_hash: 54219125181aee712211d7511e802f0934569f98
+lyrics_external: true
+lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%EB%A0%88%EB%A5%BC%20%EB%82%B4%EA%B3%A0
+---
+두 마리의 벌레를 내고 버스를 탔지
+아주 멋진 저녁 식사였어
+힘들게 번 돈 이곳에 다 써도
+아깝지 아니하겠네
+내일은 어디로 갈까
+잔뜩 부풀었지
+오늘은 한숨 잘까
+또 한참을 걸어야 할 테니까
+감기는 눈꺼풀이 아쉬워
+잘그락대는 나의 영혼
+시간은 짧고 누릴 것은 많구나
+열두 마리의 벌레를 내고 기차를 탔지
+굉장히 멋진 모험이었어
+외투 속에 스며든 풀 냄새
+간밤에 꿈을 꾸겠네
+내일은 어디로 갈까
+잔뜩 부풀었지
+지구가 둥글다는 말
+두 눈으로 다 확인해 볼 거야
+감기는 눈꺼풀이 아쉬워
+잘그락대는 나의 영혼
+시간은 짧고 누릴 것은 많구나
+야야야야야야 야야야
+야야야 야야야 야야야야
+야야야야야야 야야야
+야야야 야야야 야야야야
+반짝이는 불빛이 간지러
+어물쩍대는 나의 영혼
+시간은 짧고 누릴 것은 많구나

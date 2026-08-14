@@ -61,13 +61,17 @@ const norm = (s) => (s || "").replace(/[​-‍﻿]/g, "").replace(/ /g, " ").t
 const errors = [], warns = [];
 const songs = getAllSongs().filter((s) => s.source === "instagram");
 const seenHash = new Map();
-let checked = 0, noSource = 0;
+let checked = 0, noSource = 0, external = 0;
 
 for (const s of songs) {
   const f = `songs/${s.slug}.md`;
   if (!s.source_hash) { noSource++; continue; }
   if (seenHash.has(s.source_hash)) errors.push(`${f}: source_hash 중복 (${seenHash.get(s.source_hash)}와 같은 게시글)`);
   else seenHash.set(s.source_hash, f);
+
+  // 캡션에 가사가 없던 게시글(요약만 올린 글)은 가사를 밖에서 가져왔다.
+  // 본문이 인스타에서 온 게 아니므로 줄 대조 대상이 아니다 — 게시글 식별만 본다.
+  if (s.lyrics_external) { external++; continue; }
 
   const post = byHash.get(s.source_hash);
   if (!post) { warns.push(`${f}: 이번 내보내기에 원본 게시글이 없음 (삭제됐거나 다른 계정)`); continue; }
@@ -102,6 +106,7 @@ for (const s of songs) {
     const nextIsSame = derived && bi + 1 < body.length && !/^>/.test(body[bi + 1]) && norm(body[bi + 1]) === want;
     if (want !== null && bare === want && !nextIsSame) { oi++; continue; }
     if (derived) continue; // 우리가 덧붙인 번역
+    if (!line.trim()) continue; // 원본을 다 따라간 뒤 남은 빈 줄은 내용이 아니다
     if (commentMerged) { tail++; continue; } // 댓글에서 이어 붙인 꼬리
     errors.push(`${f}: 원본에 없는 줄 — "${line.slice(0, 40)}"`);
   }
@@ -125,7 +130,7 @@ for (const s of songs) {
 for (const w of warns) console.log(`  ⚠ ${w}`);
 for (const e of errors) console.log(`  ✗ ${e}`);
 console.log(
-  `\n인스타 출처 곡 ${songs.length} · 원본 대조 ${checked} · source_hash 없음 ${noSource}` +
+  `\n인스타 출처 곡 ${songs.length} · 원본 대조 ${checked} · 외부 가사 ${external} · source_hash 없음 ${noSource}` +
   ` · 승인 교정 ${approvedUsed}줄 — 오류 ${errors.length} · 경고 ${warns.length}`
 );
 process.exit(errors.length ? 1 : 0);

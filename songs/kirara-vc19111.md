@@ -1,0 +1,27 @@
+---
+title: vc19111
+title_ko: 
+artist: KIRARA
+artist_ko:
+album:
+year: 2021
+artwork:
+preview:
+trackId:
+duration: 
+genre:
+lang: en
+tags: [2021]
+keywords: []
+emotion:
+date: 2026-03-05
+published: 2026-03-04T23:47:14.000Z
+comment: 끝내는 그 악의 없는 말과 행동들에 상처받지 않는 방법을 찾았지만, 문득 나는 내 상처를 핑계로 당신을 갉아먹고 있더라고요. 나는, 나는 그렇게 살고 싶지 않아요. 우리 인연이 남아 있다면 우리 새로, 새롭게 만나요. 당신도 건강하게 지내세요.
+source: instagram
+source_tag: 260305_0846
+source_note: 
+source_hash: e4cc51436e3900779287a472e77a21d06d169bcc
+lyrics_external: 
+lyrics_source: 
+---
+

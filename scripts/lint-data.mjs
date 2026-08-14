@@ -101,6 +101,8 @@ for (const s of songs) {
   // 검증 기록이 있으면 근거가 있어야 한다 — 근거 없는 '확인함'은 확인이 아니다
   if (s.lyrics_verified_at && !s.lyrics_source) err(f, "lyrics_verified_at이 있는데 lyrics_source(근거 URL) 없음");
   if (s.lyrics_source && !/^https?:\/\//.test(s.lyrics_source)) err(f, `lyrics_source가 URL이 아님: "${s.lyrics_source}"`);
+  // 캡션에 가사가 없어 밖에서 가져온 곡 — 어디서 가져왔는지가 없으면 대조할 수 없다
+  if (s.lyrics_external && !s.lyrics_source) err(f, "lyrics_external인데 lyrics_source(가사 출처 URL) 없음");
 
   const key = `${s.title}|${s.artist}`.toLowerCase();
   if (songKey.has(key)) err(f, `중복 곡 (${songKey.get(key)}와 같은 title+artist)`);

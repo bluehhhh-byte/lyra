@@ -1,0 +1,123 @@
+---
+title: 에라 모르겠다
+title_ko: 에라 모르겠다
+artist: BIGBANG
+artist_ko:
+album:
+year: 2016
+artwork:
+preview:
+trackId:
+duration: 194
+genre:
+lang: ko
+tags: [2016]
+keywords: []
+emotion:
+date: 2026-04-07
+published: 2026-04-07T10:27:38.000Z
+comment: 나이 먹어도 사랑은 단 1도 모르겠어. 진정한 사랑? 그냥 내 생각엔.. 에라 모르겠다, 다 사랑해, 에라 모르겠다, 널 사랑해.
+source: instagram
+source_tag: 260407_1927
+source_note: 
+source_hash: 2b1adf80d196dd2ff098226abdc9e8c1fb0ecea1
+lyrics_external: true
+lyrics_source: https://lrclib.net/api/get?artist_name=BIGBANG&track_name=%EC%97%90%EB%9D%BC%20%EB%AA%A8%EB%A5%B4%EA%B2%A0%EB%8B%A4
+---
+No I don't wanna go too fast
+Cuz nothing really lasts
+I think I need some time
+But I can't get you off my mind
+
+일단 시작부터 제일 센 걸로 부탁해 바텐더
+연속해 들이키고 나니
+모두 다 예뻐 보여 침이 고여
+These ladies so loyal
+그러다 널 처음 봤어
+Geez girl love me tender
+
+난 씩씩하게 말을 걸어
+넌 저기 시시한 여자와는 달리 틱틱 거려
+칙칙하던 분위기에 한 줄기 빛
+설렘 정도가 지나쳐 마치 사춘기
+
+훔치는 너의 눈빛에
+입술은 바짝 마르지
+오랜만에 느껴보는 이런 떨림
+이러지도 저러지도 못해 나
+이 밤이 다 가기 전에
+난 널 내 품 안에 원해
+Real love?
+I think I wanna just
+고민고민 하지마 Hey
+
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+Girl I wanna get down
+에라 모르겠다
+에라 모르겠다
+에라 모르겠다
+Girl I wanna get down
+
+설렘을 찾고 싶어 마르고 닳도록
+난 여러 명의 포로
+도망치네 이곳 빠삐용
+나 지긋지긋 희끗희끗 흰머리가 나
+양아치 이제 끝 바람둥이 한 가닥
+
+나라는 남자를 모르던 그런 네가 좋았지
+몰래 난 원래 모든 Girl 싫증 잘 느끼는 벌레
+나이를 먹어도 사랑은 단 1도 모르겠어
+
+뒤처리를 못해
+피눈물 없는 로맨스
+장단 없는 game
+너는 오락가락하고
+멜로디가 다른 알토와 소프라노
+어차피 우리는 끊어질 거야 딱 잘라 말할게
+타락해버린 꿈에 Eldorado
+
+훔치는 너의 눈빛에
+입술은 바짝 마르지
+오랜만에 느껴보는 이런 떨림
+이러지도 저러지도 못해 나
+이 밤이 다 가기 전에
+난 널 내 품 안에 원해
+Real love? I think I wanna just
+고민고민 하지마 Hey
+
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+Girl I wanna get down
+에라 모르겠다
+에라 모르겠다
+에라 모르겠다
+Girl I wanna get down
+
+You & me
+같이 차를 타고 ride
+술 취했으니 눈 좀 붙여 잠깐만
+어디 가서 쉴까 baby 난 손만 잡고 자
+속은 뻔해 honey honey
+But I want it and you know it
+
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+에라 모르겠다 에라 모르겠다
+에라 모르겠다
+에라 모르겠다
+에라 모르겠다
+Girl I wanna get down
+Girl I wanna get down
+Girl I wanna get down
+
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+에라 모르겠다 I Love ya
+Girl I wanna get down
+에라 모르겠다
+에라 모르겠다
+에라 모르겠다
+Girl I wanna get dow
