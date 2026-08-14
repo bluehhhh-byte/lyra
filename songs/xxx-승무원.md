@@ -3,20 +3,22 @@ title: 승무원
 title_ko: 승무원
 artist: XXX
 artist_ko:
-album:
+album: KYOMI
 year: 2016
-artwork:
+artwork: https://coverartarchive.org/release-group/ed52c518-c367-4d7b-8f74-d283e3d9413a/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/ed52c518-c367-4d7b-8f74-d283e3d9413a
 trackId:
 duration: 227
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2016]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2016]
+keywords: [비행, 미소, 자리, 시차, 집]
+emotion: 체념
 date: 2025-11-24
 published: 2025-11-23T23:40:35.000Z
-comment: 
+comment: 장거리 비행의 온갖 불편을 늘어놓다가 같은 시차, 같은 집에서 일어나 일하러 가고 싶다고 말한다. 화려해 보이는 이동이 실은 피로다.
 source: instagram
 source_tag: 251124_0840
 source_note: 

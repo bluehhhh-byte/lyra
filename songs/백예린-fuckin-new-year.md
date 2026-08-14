@@ -1,6 +1,6 @@
 ---
 title: Fuckin’ New Year
-title_ko: 
+title_ko: 빌어먹을 새해
 artist: 백예린
 artist_ko:
 album:
@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration: 169
-genre:
+genre: Indie Pop
 lang: en
-tags: [2023]
-keywords: []
-emotion:
+tags: [Indie Pop, 2023]
+keywords: [밤, 집, 흉터, 손목, 기회]
+emotion: 불안
 date: 2026-01-03
 published: 2026-01-03T04:37:02.000Z
 comment: 제발 나를 구하지 마세요. 찬란한 새해의 문턱에서 도리어 어둠 속으로 침잠하기를 선택한, 세상에서 가장 외롭고도 단호한 거절의 편지.

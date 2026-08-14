@@ -3,17 +3,19 @@ title: Andrew
 title_ko: Andrew
 artist: 이찬혁
 artist_ko:
-album:
+album: EROS
 year: 2025
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cd/70/83/cd708321-2be1-ffa8-67db-a40d473e9557/8809519880798_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/8a/e2/ff8ae217-5c93-d9f8-1507-a46a887722f2/mzaf_15999342646106633537.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/andrew/1825027867?i=1825027876&uo=4
+trackId: 1825027876
 duration: 228
-genre:
+genre: Indie Rock
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Rock, 2025]
+keywords: [도시, 가시덤불, 손, 돌, 괴물]
+emotion: 저항
 date: 2026-02-25
 published: 2026-02-24T23:42:03.000Z
 comment: 가시덤불을 짚고 일어선 피투성이 손으로, 사람들이 괴물이라 불러도 네가 떠난 도시의 끝을 향해 멈추지 않고 걷는 발걸음.

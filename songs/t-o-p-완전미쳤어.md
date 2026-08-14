@@ -3,17 +3,19 @@ title: 완전미쳤어!
 title_ko: 완전미쳤어!
 artist: T.O.P
 artist_ko:
-album:
+album: TOP SPOT - 다중관점
 year: 2026
-artwork:
-preview:
-trackId:
-duration: 
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ae/09/aa/ae09aa63-fc99-fd3d-cdc0-821dea78f9a1/cover_KM0024438_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/03/89/e803891c-0026-29f3-7cac-9e1299d27e7e/mzaf_15923851612334271018.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%99%84%EC%A0%84%EB%AF%B8%EC%B3%A4%EC%96%B4/1889117489?i=1889117492&uo=4
+trackId: 1889117492
+duration: 212
+genre: Hip-Hop
 lang: ko
-tags: [2026]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2026]
+keywords: [기억, 악몽, 자유, 이별, 구두]
+emotion: 저항
 date: 2026-04-09
 published: 2026-04-09T03:40:09.000Z
 comment: 쾌락을 좇던 악몽과 20대 빅뱅의 기억을 뒤로하고, 프라다 구두 대신 가벼운 반스를 신은 채 해방을 선포하며 새로운 주파수를 찾아가는 이야기.

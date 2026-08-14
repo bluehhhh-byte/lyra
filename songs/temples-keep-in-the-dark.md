@@ -1,19 +1,21 @@
 ---
 title: Keep In The Dark
-title_ko: 
+title_ko: 어둠 속에 머물러
 artist: Temples
 artist_ko:
-album:
+album: Keep in the Dark
 year: 2014
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/4378b09a3d6341305061d3ceb2e7135b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/f/7/0/7f7fed1505247564c5be495c65c95dde.mp3?hdnea=exp=1786684385~acl=/api/1/1/7/f/7/0/7f7fed1505247564c5be495c65c95dde.mp3*~data=user_id=0,application_id=42~hmac=221e61249fc431754ac55e928f8365ec6f5ba96b55dacd0b38229edb18875a33
+preview_provider: deezer
+external_url: https://www.deezer.com/track/70078868
 trackId:
-duration: 277
-genre:
+duration: 218
+genre: Dream Pop
 lang: en
-tags: [2014]
-keywords: []
-emotion:
+tags: [Dream Pop, 2014]
+keywords: [어둠, 빛, 햇살, 밤, 꿈]
+emotion: 몽환
 date: 2026-05-14
 published: 2026-05-14T04:06:30.000Z
 comment: 빛을 피하기 위해 어둠 속에 머물러요. 그저 어둠 속에 머물기 위해서 계속 꿈을 꿔도, 잠이 당신을 밤으로부터 구해주진 못할 거예요.

@@ -3,17 +3,19 @@ title: Over & Over
 title_ko: Over & Over
 artist: 삐삐밴드, Zion.T
 artist_ko:
-album:
+album: pppb - EP
 year: 2015
-artwork:
-preview:
-trackId:
-duration: 
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b6/cd/07/b6cd07e4-f79d-f037-600a-649145c5951c/cover_KM0022198_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/ce/48/6fce48d8-379f-3f31-de2b-0ab836e93121/mzaf_16314117217390275388.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/over-over-feat-zion-t/1817428238?i=1817428241&uo=4
+trackId: 1817428241
+duration: 260
+genre: Indie Rock
 lang: ko
-tags: [2015]
-keywords: []
-emotion:
+tags: [Indie Rock, 2015]
+keywords: [문, 미소, 눈빛, 입술, 아침]
+emotion: 고독
 date: 2026-07-03
 published: 2026-07-02T23:32:50.000Z
 comment: 누군가 날 가지고 날 가지지 않고, 누군가 날 안고 날 안아주지 않네. 투명한 문을 두고 두드리는 누군가 미소는 짓고 웃지는 않네. 쳐다보는 눈빛이 바라보진 않고, 말하는 입술이 이야기 하진 않네.

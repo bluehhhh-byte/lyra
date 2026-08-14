@@ -1,19 +1,21 @@
 ---
 title: Got To Be Real
-title_ko: 
+title_ko: 진짜여야 해
 artist: Cheryl Lynn
 artist_ko:
-album:
+album: Cheryl Lynn (Expanded Edition)
 year: 1978
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9b8cf84dd4a66a2323dcb397aa7c2c22/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/c/0/2ec3d9f1604e40093862c4c369805d5b.mp3?hdnea=exp=1786684336~acl=/api/1/1/2/e/c/0/2ec3d9f1604e40093862c4c369805d5b.mp3*~data=user_id=0,application_id=42~hmac=65d85c6dd1e980150f9298cd04c03afa24164514be4f02e824c2f5f312ec1f85
+preview_provider: deezer
+external_url: https://www.deezer.com/track/8014760
 trackId:
 duration: 307
-genre:
+genre: Disco
 lang: en
-tags: [1978]
-keywords: []
-emotion:
+tags: [Disco, 1978]
+keywords: [사랑, 진짜, 마음, 느낌]
+emotion: 기쁨
 date: 2026-05-09
 published: 2026-05-09T12:21:58.000Z
 comment: 모호한 썸의 감정을 지나, 서로의 진심을 확인한 두 연인이 가식의 가면을 벗고 영원한 사랑의 춤을 시작하는 뜨거운 고백의 순간.

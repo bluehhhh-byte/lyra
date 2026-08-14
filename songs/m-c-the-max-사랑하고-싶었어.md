@@ -3,17 +3,19 @@ title: 사랑하고 싶었어
 title_ko: 사랑하고 싶었어
 artist: M.C The Max
 artist_ko:
-album:
+album: M.C The Max! Vol.1
 year: 2002
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/8d97791f6121a2aafee5d2b51cd734f0/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/6/4/0/a64f28d6bf1beb8dad1be380dab71aee.mp3?hdnea=exp=1786684359~acl=/api/1/1/a/6/4/0/a64f28d6bf1beb8dad1be380dab71aee.mp3*~data=user_id=0,application_id=42~hmac=a5ac3a7e46f24833a461bcd42a99824d4e30ae756a21b745ad13f3c6ebeb3472
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1437409942
 trackId:
-duration: 187
-genre:
+duration: 208
+genre: Ballad
 lang: ko
-tags: [2002]
-keywords: []
-emotion:
+tags: [Ballad, 2002]
+keywords: [눈빛, 사랑, 시간, 마음, 눈물]
+emotion: 이별
 date: 2026-04-28
 published: 2026-04-28T03:53:35.000Z
 comment: 상처받은 너의 마음을 나에게 그냥 기대면 안 되니. 보내줘야 해, 너의 모든 걸. 너를 사랑하고 싶었어.

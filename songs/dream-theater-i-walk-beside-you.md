@@ -1,22 +1,24 @@
 ---
 title: I Walk Beside You
-title_ko: 
+title_ko: 네 곁에서 함께 걸어
 artist: Dream Theater
 artist_ko:
-album:
+album: Octavarium
 year: 2005
-artwork:
-preview:
-trackId:
-duration: 267
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m05/d25/h10/s05.uwlzforq.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/9c/c0/8c/9cc08c1d-478d-c84b-9442-6a761ffa7e9d/mzaf_3222966737848311294.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/i-walk-beside-you/65615441?i=65615219&uo=4
+trackId: 65615219
+duration: 269
+genre: Metal
 lang: en
-tags: [2005]
-keywords: []
-emotion:
+tags: [Metal, 2005]
+keywords: [눈, 미소, 상처, 손, 신전]
+emotion: 위로
 date: 2025-09-09
 published: 2025-09-08T23:56:48.000Z
-comment: 
+comment: 미소 뒤의 상처를 읽고 가라앉을 때 붙들어주는 사람이 되겠다고 한다. 거슬러 헤엄치던 물살이 결국 집으로 데려다줄 거라 말한다.
 source: instagram
 source_tag: 250909_0856
 source_note: 

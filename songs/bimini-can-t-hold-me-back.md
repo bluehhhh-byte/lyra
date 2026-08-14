@@ -1,22 +1,24 @@
 ---
 title: Can't Hold Me Back
-title_ko: 
+title_ko: 날 막을 수 없어
 artist: BIMINI
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Can't Hold Me Back
+year: 2023
+artwork: https://cdn-images.dzcdn.net/images/cover/c82eac033ab8402b56ca7b1db18ba94b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/9/1/0/a918554983af8628e8650b2344ade42f.mp3?hdnea=exp=1786684331~acl=/api/1/1/a/9/1/0/a918554983af8628e8650b2344ade42f.mp3*~data=user_id=0,application_id=42~hmac=66e4c2a9f1ac661374fb152e44de13602a94aa3bb4b29103b2e3251f05783433
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1392455202
 trackId:
-duration: 
-genre:
+duration: 118
+genre: Dance
 lang: en
-tags: []
+tags: [Dance, 2023]
 keywords: []
 emotion:
 date: 2023-05-24
 published: 2023-05-23T23:50:51.000Z
-comment: 
+comment: 가사 원문을 아직 채우지 못했다. 본문에는 BPM에 관한 감상만 남아 있다.
 source: instagram
 source_tag: 230524_0850
 source_note: 

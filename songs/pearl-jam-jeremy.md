@@ -1,22 +1,24 @@
 ---
 title: Jeremy
-title_ko: 
+title_ko: 제레미
 artist: Pearl Jam
 artist_ko:
-album:
+album: Ten
 year: 1991
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/00ee8c40862fb4e258fcbeaa17d7199e/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/3/0/1a30bdfae3cbfd5fb87c32706221a2ea.mp3?hdnea=exp=1786684368~acl=/api/1/1/1/a/3/0/1a30bdfae3cbfd5fb87c32706221a2ea.mp3*~data=user_id=0,application_id=42~hmac=694d24f171d1ac6d6993dd8465ddb68ff48df4a47f10c641b4accb1dfca47ee7
+preview_provider: deezer
+external_url: https://www.deezer.com/track/7675133
 trackId:
-duration: 319
-genre:
+duration: 318
+genre: Grunge
 lang: en
-tags: [1991]
-keywords: []
-emotion:
+tags: [Grunge, 1991]
+keywords: [그림, 태양, 교실, 아빠, 엄마]
+emotion: 분노
 date: 2025-08-26
 published: 2025-08-25T23:12:10.000Z
-comment: 
+comment: 관심도 애정도 받지 못한 아이가 교실에서 말했다는 한 줄로 사건을 끝낸다. 잊으려 해도 칠판에서 지워지지 않는다.
 source: instagram
 source_tag: 250826_0812
 source_note: 

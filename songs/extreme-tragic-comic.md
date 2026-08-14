@@ -1,19 +1,21 @@
 ---
 title: Tragic Comic
-title_ko: 
+title_ko: 비극적인 코미디언
 artist: Extreme
 artist_ko:
-album:
+album: 20th Century Masters: The Millennium Collection: Best Of Extreme
 year: 1992
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/1e5d50193b0a906c4cffe0c91a39a26b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/8/6/0/586242391431bd20d4639e135f689699.mp3?hdnea=exp=1786684342~acl=/api/1/1/5/8/6/0/586242391431bd20d4639e135f689699.mp3*~data=user_id=0,application_id=42~hmac=f6881c350ccfecb00d997f5cff8444e2d549281005551f8764867d578e9daabc
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1579736
 trackId:
-duration: 284
-genre:
+duration: 285
+genre: Hard Rock
 lang: en
-tags: [1992]
-keywords: []
-emotion:
+tags: [Hard Rock, 1992]
+keywords: [꽃, 말, 춤, 시인, 와인]
+emotion: 설렘
 date: 2026-02-08
 published: 2026-02-08T10:11:10.000Z
 comment: 완벽한 고백을 꿈꾸지만 현실은 온통 엉망진창인 불운한 로맨티스트, 그의 서툰 몸짓 뒤에 숨겨진 진심을 찾는 비극적 희극.

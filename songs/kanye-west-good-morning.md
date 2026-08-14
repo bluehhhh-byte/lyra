@@ -1,22 +1,24 @@
 ---
 title: Good Morning
-title_ko: 
+title_ko: 좋은 아침
 artist: Kanye West
 artist_ko:
-album:
+album: Graduation
 year: 2007
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cb/09/59/cb0959cd-fcc5-66a3-c293-ed58a7ad9c43/mzaf_7396332483720740039.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/good-morning/1442845779?i=1442846038&uo=4
+trackId: 1442846038
 duration: 195
-genre:
+genre: Hip-Hop
 lang: en
-tags: [2007]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2007]
+keywords: [아침, 시험, 졸업식, 거리, 청바지]
+emotion: 희망
 date: 2025-11-18
 published: 2025-11-17T23:40:23.000Z
-comment: 
+comment: 성적표와 커닝의 기억을 학위 논문이라 부르며 졸업식을 연다. 거리를 벗어나야 비로소 졸업이라는 말이 이 앨범의 문을 연다.
 source: instagram
 source_tag: 251118_0840
 source_note: 

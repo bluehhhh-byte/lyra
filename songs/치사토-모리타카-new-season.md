@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration: 281
-genre:
+genre: J-Pop
 lang: ja
-tags: [1987]
-keywords: []
-emotion:
+tags: [J-Pop, 1987]
+keywords: [사랑, 비디오, 조수석, 전화, 추억]
+emotion: 이별
 date: 2026-02-22
 published: 2026-02-22T10:11:56.000Z
 comment: 낯선 도시의 거리가 아직은 조금 무섭지만, 코끝을 스치는 바람의 향기가 알려주는 ‘새로운 계절’을 믿고 기어이 홀로 발을 내딛는 이야기.

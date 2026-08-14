@@ -1,6 +1,6 @@
 ---
 title: Piece of What
-title_ko: 
+title_ko: 무엇의 조각
 artist: MGMT
 artist_ko:
 album:
@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: Indie Pop
 lang: en
-tags: [2006]
+tags: [Indie Pop, 2006]
 keywords: []
 emotion:
 date: 2026-07-07

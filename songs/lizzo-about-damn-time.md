@@ -1,22 +1,24 @@
 ---
 title: About Damn Time
-title_ko: 
+title_ko: 이제야 때가 됐어
 artist: Lizzo
 artist_ko:
-album:
+album: Special
 year: 2022
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b8/20/f9/b820f951-e53c-93bf-e75d-33df6165e7c1/075679736109.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1f/1d/91/1f1d9169-e7a4-85f4-c614-845640028993/mzaf_14417727468767979062.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/about-damn-time/1634655863?i=1634655870&uo=4
+trackId: 1634655870
 duration: 192
-genre:
+genre: Funk
 lang: en
-tags: [2022]
-keywords: []
-emotion:
+tags: [Funk, 2022]
+keywords: [음악, 감정, 건물, 잔, 밤]
+emotion: 기쁨
 date: 2025-09-07
 published: 2025-09-07T02:18:54.000Z
-comment: 
+comment: 가라앉아 있었고 압박에 눌렸다고 인정한 뒤 음악을 키우고 불을 낮춘다. 예전의 내가 아니라 어쩌면 더 나아졌다고 말한다.
 source: instagram
 source_tag: 250907_1117
 source_note: 

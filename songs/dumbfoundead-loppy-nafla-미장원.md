@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2015]
+tags: [Hip-Hop, 2015]
 keywords: []
 emotion:
 date: 2026-02-06

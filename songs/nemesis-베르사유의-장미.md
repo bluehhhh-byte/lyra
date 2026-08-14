@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 241
-genre:
+genre: Heavy Metal
 lang: ko
-tags: [2005]
-keywords: []
-emotion:
+tags: [Heavy Metal, 2005]
+keywords: [바람, 꽃, 가시, 장미, 세상]
+emotion: 저항
 date: 2025-10-19
 published: 2025-10-18T16:15:50.000Z
-comment: 
+comment: 가시가 돋아도 아름답고 혼자 피어도 외롭지 않은 꽃으로 오스칼을 부른다. 정열과 화려함 속에서 살다 가겠다는 선언이다.
 source: instagram
 source_tag: 251019_0115
 source_note: 

@@ -3,20 +3,22 @@ title: echo
 title_ko: echo
 artist: THE KOXX
 artist_ko:
-album:
+album: the new normal
 year: 2017
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c9a1494b25d3809d3081a9b79998e531/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/d/b/0/fdbb03448ff5d2da0f49590fe2c8e4da.mp3?hdnea=exp=1786684389~acl=/api/1/1/f/d/b/0/fdbb03448ff5d2da0f49590fe2c8e4da.mp3*~data=user_id=0,application_id=42~hmac=d104be7674f257a638cc105129880311f20fea23e63e9da27549e0101f10f846
+preview_provider: deezer
+external_url: https://www.deezer.com/track/530456831
 trackId:
 duration: 282
-genre:
+genre: Indie Rock
 lang: ko
-tags: [2017]
-keywords: []
-emotion:
+tags: [Indie Rock, 2017]
+keywords: [자리, 눈물, 한숨, 웃음, 목소리]
+emotion: 그리움
 date: 2025-10-27
 published: 2025-10-27T14:10:58.000Z
-comment: 
+comment: 웃음 뒤에 끝이라 말하던 마지막 목소리가 아직 안에 남아 있다. 진한 그리움에 닿았을 때 메마른 향기에 찔린다.
 source: instagram
 source_tag: 251027_2310
 source_note: 

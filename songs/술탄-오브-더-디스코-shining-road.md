@@ -3,17 +3,19 @@ title: Shining Road
 title_ko: Shining Road
 artist: 술탄 오브 더 디스코
 artist_ko:
-album:
+album: Easy Listening For Love
 year: 2019
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/4d/98/e7/4d98e7bb-05a3-c935-0e55-d22ecd1dfab4/191953033693.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/b9/40/e9/b940e92b-9b7f-d5e2-ad93-5a00b81e951a/mzaf_5499864217531304863.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/shining-road/1686874594?i=1686874596&uo=4
+trackId: 1686874596
 duration: 215
-genre:
+genre: Funk
 lang: ko
-tags: [2019]
-keywords: []
-emotion:
+tags: [Funk, 2019]
+keywords: [구름, 햇빛, 무지개, 바람, 고속도로]
+emotion: 기쁨
 date: 2026-06-27
 published: 2026-06-27T11:50:37.000Z
 comment: 구름이 걷히고 난 뒤 눈부신 햇빛을 받으니, 뚜껑이 열린 차를 타고 너와 단둘이 달린다. 간혹 어둠이 떠올라 괴로워진대도 난 너만 있으면, 달릴 수만 있다면 언제든 난 계속.

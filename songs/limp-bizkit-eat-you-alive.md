@@ -1,19 +1,21 @@
 ---
 title: Eat You Alive
-title_ko: 
+title_ko: 널 산 채로 삼켜버릴 거야
 artist: Limp Bizkit
 artist_ko:
-album:
+album: Results May Vary
 year: 2009
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/4e4079efc832fe8d0fbb2c4ffd36da17/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/a/d/0/7ad80c542ad294bec6f87062cc220b9f.mp3?hdnea=exp=1786684355~acl=/api/1/1/7/a/d/0/7ad80c542ad294bec6f87062cc220b9f.mp3*~data=user_id=0,application_id=42~hmac=b279901e158c652eef973529bfdb72b01596aa033adf7bc80606be851af67074
+preview_provider: deezer
+external_url: https://www.deezer.com/track/104959794
 trackId:
 duration: 236
-genre:
+genre: Metal
 lang: en
-tags: [2009]
-keywords: []
-emotion:
+tags: [Metal, 2009]
+keywords: [향기, 짐승, 여자, 남자, 피부]
+emotion: 분노
 date: 2026-02-05
 published: 2026-02-05T12:01:40.000Z
 comment: 가질 수 없는 아름다움에 중독되어, 사랑하는 대신 집어삼키기로 결심한 한 남자의 본능적인 사냥.

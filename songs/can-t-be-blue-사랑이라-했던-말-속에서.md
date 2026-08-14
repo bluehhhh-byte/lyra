@@ -3,20 +3,22 @@ title: 사랑이라 했던 말 속에서
 title_ko: 사랑이라 했던 말 속에서
 artist: can’t be blue
 artist_ko:
-album:
+album: 사랑이라 했던 말 속에서 - Single
 year: 2024
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3c/55/c7/3c55c79c-d02e-b17c-66cd-4a88c0720000/8721093328919_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/1a/8a/db1a8a9d-efe1-88db-5b20-10ef74a030ca/mzaf_17803693007270617234.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%EC%82%AC%EB%9E%91%EC%9D%B4%EB%9D%BC-%ED%96%88%EB%8D%98-%EB%A7%90-%EC%86%8D%EC%97%90%EC%84%9C/1751882412?i=1751882414&uo=4
+trackId: 1751882414
 duration: 200
-genre:
+genre: Indie Rock
 lang: ko
-tags: [2024]
-keywords: []
-emotion:
+tags: [Indie Rock, 2024]
+keywords: [표정, 눈물, 거짓말, 칼, 사랑]
+emotion: 이별
 date: 2025-10-15
 published: 2025-10-14T23:01:30.000Z
-comment: 
+comment: 한결같았던 상대 앞에서 늘 바뀌는 건 자기였다고 인정한다. 다시 품에 안게 되면 가슴에 칼을 꽂아달라는 말이 후렴이다.
 source: instagram
 source_tag: 251015_0801
 source_note: 

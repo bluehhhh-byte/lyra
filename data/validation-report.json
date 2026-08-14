@@ -1,6 +1,216 @@
 {
- "at": "2026-08-13T22:49:09.084Z",
- "applied": [],
+ "at": "2026-08-14T05:09:26.717Z",
+ "applied": [
+  {
+   "slug": "태양-live-fast-die-slow",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "silica-gel-ph-1004",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "anoyingbox-train-to-the-galaxy",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "pierrot-psychedelic-lover",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "b-free-hukky-shibaseki-get-it",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "lionclad-uloveuwaitingu",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "kirara-vc19111",
+   "changed": [
+    "title_ko"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "봄여름가을겨울-못다한-내-마음을",
+   "changed": [
+    "comment"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "디오-내일의-우리",
+   "changed": [
+    "comment"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "perfume-human-factory",
+   "changed": [
+    "comment"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "bimini-can-t-hold-me-back",
+   "changed": [
+    "comment"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "michael-jackson-janet-jackson-scream",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "robbie-williams-the-road-to-mandalay",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "maytree-when-snowflakes-fell-on-your-head",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "5-seconds-of-summer-everyone-s-a-star",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "onerepublic-i-ain-t-worried",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "derik-fein-1991",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "the-beatles-a-day-in-the-life",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "oasis-let-there-be-love",
+   "changed": [
+    "genre"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-14T13:10:00Z",
+   "prompt_version": "meta-v1",
+   "reviewed": false
+  }
+ ],
  "rejected": [],
  "ignored": []
 }

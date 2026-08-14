@@ -3,20 +3,22 @@ title: Sea of Love
 title_ko: Sea of Love
 artist: Fly to the Sky
 artist_ko:
-album:
+album: Sea of Love - The 3rd Album
 year: 2002
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/d240c05db7714227243e8c12b5b2edb6/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/d/7/0/8d790a9d0a8f30f912bfcd82f977e1f9.mp3?hdnea=exp=1786684343~acl=/api/1/1/8/d/7/0/8d790a9d0a8f30f912bfcd82f977e1f9.mp3*~data=user_id=0,application_id=42~hmac=a8331d6d459b661ce9726bf6d78fb1da5484ef5f3f1c04637813423263d0dcc3
+preview_provider: deezer
+external_url: https://www.deezer.com/track/728599612
 trackId:
-duration: 262
-genre:
+duration: 263
+genre: R&B/Soul
 lang: ko
-tags: [2002]
-keywords: []
-emotion:
+tags: [R&B/Soul, 2002]
+keywords: [눈물, 비, 바람, 바닷가, 기다림]
+emotion: 그리움
 date: 2025-08-31
 published: 2025-08-31T04:06:14.000Z
-comment: 
+comment: 꿈에는 늘 비가 내리고 차가운 바람이 분다. 사랑한다는 게 오직 기다림뿐이었다는 걸 왜 몰랐냐고 묻는다.
 source: instagram
 source_tag: 250831_1305
 source_note: 

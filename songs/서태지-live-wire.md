@@ -3,17 +3,19 @@ title: Live Wire
 title_ko: Live Wire
 artist: 서태지
 artist_ko:
-album:
+album: Seotaiji 7th Issue
 year: 2024
-artwork:
-preview:
-trackId:
-duration: 
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/24/77/a8/2477a8bd-a1b8-1d4f-217b-8b2873b6d484/8809704420716_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/30/6c/14/306c140b-67d8-64a7-1a50-d9c18a7b05fc/mzaf_9166823024183004419.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/live-wire/1648230025?i=1648230040&uo=4
+trackId: 1648230040
+duration: 232
+genre: Alternative Rock
 lang: ko
-tags: [2024]
-keywords: []
-emotion:
+tags: [Alternative Rock, 2024]
+keywords: [자유, 마이크, 꿈, 기억, 경계선]
+emotion: 저항
 date: 2026-01-02
 published: 2026-01-01T20:57:53.000Z
 comment: 세상의 편견과 억압이라는 경계선을 넘어, 음악이라는 유일한 무기로 내 삶의 주권을 되찾는 ‘나만의 독립기념일’을 선포하다.

@@ -1,19 +1,21 @@
 ---
 title: This Too Shall Pass
-title_ko: 
+title_ko: 이것 또한 지나가리라
 artist: OK Go
 artist_ko:
-album:
+album: Twelve Remixes of Four Songs
 year: 2010
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b797bd6010f9973a6cec70d71dfdcd02/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/1/3/0/4135f199b7c01eb74b6971a9ed47504b.mp3?hdnea=exp=1786684367~acl=/api/1/1/4/1/3/0/4135f199b7c01eb74b6971a9ed47504b.mp3*~data=user_id=0,application_id=42~hmac=ab505dbfbb64d55156e32119de1951b5e12aea4eaf8b0283e933ee6eb7e96730
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2912188411
 trackId:
 duration: 188
-genre:
+genre: Indie Rock
 lang: en
-tags: [2010]
-keywords: []
-emotion:
+tags: [Indie Rock, 2010]
+keywords: [아침, 무릎, 아이, 짐]
+emotion: 위로
 date: 2026-06-16
 published: 2026-06-16T00:04:33.000Z
 comment: 그냥 흘려보내, 이 또한 지나가리니.

@@ -1,19 +1,21 @@
 ---
 title: BANG BANG
-title_ko: 
+title_ko: 뱅뱅
 artist: IVE
 artist_ko:
-album:
+album: BANG BANG - Single
 year: 2026
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cd/8b/c2/cd8bc294-4ff3-d952-1bc1-4fb03ed9c4bc/199806248171.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/f2/e3/52f2e3c3-4193-9276-61b2-4d41dafca603/mzaf_16657816216153694111.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/bang-bang/1872627662?i=1872628039&uo=4
+trackId: 1872628039
 duration: 178
-genre:
+genre: K-Pop
 lang: en
-tags: [2026]
-keywords: []
-emotion:
+tags: [K-Pop, 2026]
+keywords: [소문, 벽, 시선, 연기, 밤]
+emotion: 저항
 date: 2026-02-19
 published: 2026-02-19T12:02:47.000Z
 comment: 소문 속 문제아로 낙인찍힌 주인공이 타인의 시선을 비웃듯 화려하게 판을 흔들고, 자신만의 방식으로 세상에 강렬한 한 방을 날리는 당당한 도주극.

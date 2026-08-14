@@ -1,22 +1,24 @@
 ---
 title: 4EVA
-title_ko: 
+title_ko: 영원히
 artist: KAYTRAMINÉ
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: 4EVA (feat. Pharrell Williams)
+year: 2023
+artwork: https://cdn-images.dzcdn.net/images/cover/7ae7c85be7f134b975fd9db9b2774532/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/7/9/0/879b736b835d304dfbe767d56fe0eed8.mp3?hdnea=exp=1786684349~acl=/api/1/1/8/7/9/0/879b736b835d304dfbe767d56fe0eed8.mp3*~data=user_id=0,application_id=42~hmac=509ec1034b8a9303dbda314513d99251ce6443a1d16927559e166bd1c58b7e14
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2222173517
 trackId:
 duration: 190
-genre:
+genre: Hip-Hop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Hip-Hop, 2023]
+keywords: [영원, 사랑, 다이아몬드, 샴페인, 눈]
+emotion: 사랑
 date: 2023-05-22
 published: 2023-05-22T10:00:40.000Z
-comment: 
+comment: 사랑한다고 말하면 그건 진심이라며 영원을 몇 번이고 되뇐다. 가벼운 농담과 자랑 사이에 의리라는 단어가 계속 끼어든다.
 source: instagram
 source_tag: 230522_1900
 source_note: 

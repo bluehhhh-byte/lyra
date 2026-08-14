@@ -1,22 +1,24 @@
 ---
 title: Flip!
-title_ko: 
+title_ko: 뒤집혔어!
 artist: Apollo Sunshine
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Apollo Sunshine
+year: 2008
+artwork: https://cdn-images.dzcdn.net/images/cover/70b6e91c626f7874b7527885b760c882/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/e/7/0/fe730df51d40904dd966155cef8dd6e7.mp3?hdnea=exp=1786684327~acl=/api/1/1/f/e/7/0/fe730df51d40904dd966155cef8dd6e7.mp3*~data=user_id=0,application_id=42~hmac=c4749969fdb67506423765c1b693de63c3c2182ebe5cec3cc77244f70f3ad07e
+preview_provider: deezer
+external_url: https://www.deezer.com/track/133388704
 trackId:
 duration: 255
-genre:
+genre: Indie Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Indie Rock, 2008]
+keywords: [세상, 태양, 빙하, 땅, 별]
+emotion: 불안
 date: 2023-05-25
 published: 2023-05-25T13:27:16.000Z
-comment: 
+comment: 뭔가가 뒤집혀 세상의 반대편에 와 있다고 말하며 문장이 행 중간에서 끊긴다. 별과 하늘과 모래가 답한 말은 계속 숨 쉬라는 것뿐이다.
 source: instagram
 source_tag: 230525_2225
 source_note: 

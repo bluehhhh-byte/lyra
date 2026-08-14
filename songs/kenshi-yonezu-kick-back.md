@@ -1,22 +1,24 @@
 ---
 title: Kick Back
-title_ko: 
+title_ko: 킥 백
 artist: Kenshi Yonezu
 artist_ko:
-album:
+album: KICK BACK
 year: 2024
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/219b98615e49c9df44727bc3d9d57c8e/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/4/5/0/8458385a640b0f2eacc512d61ed3a753.mp3?hdnea=exp=1786684351~acl=/api/1/1/8/4/5/0/8458385a640b0f2eacc512d61ed3a753.mp3*~data=user_id=0,application_id=42~hmac=2eadf88ea81df5679a0f0e250ca8a4aa53f8d0e3099990bda6b76a193804c963
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1946911957
 trackId:
 duration: 193
-genre:
+genre: J-Pop
 lang: en
-tags: [2024]
-keywords: []
-emotion:
+tags: [J-Pop, 2024]
+keywords: [빨래방, 목소리, 심장, 지옥, 나사]
+emotion: 분노
 date: 2025-11-27
 published: 2025-11-26T22:20:32.000Z
-comment: 
+comment: 행복과 노력과 미래라는 말을 조롱하듯 빠르게 뱉는다. 존엄을 빼앗고 웃어달라는 요구가 지옥을 얼핏 보여준다.
 source: instagram
 source_tag: 251127_0720
 source_note: 

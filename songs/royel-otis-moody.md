@@ -1,22 +1,24 @@
 ---
 title: moody
-title_ko: 
+title_ko: 기분파
 artist: Royel Otis
 artist_ko:
-album:
+album: hickey
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/db5635a16270ecad28ed8fe87855b1f5/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/4/b/0/f4b22dbd839dd550b103c42b83a9b0c1.mp3?hdnea=exp=1786684376~acl=/api/1/1/f/4/b/0/f4b22dbd839dd550b103c42b83a9b0c1.mp3*~data=user_id=0,application_id=42~hmac=06d61e23e22d0fa3e629e3433112c5946608c0e2a34aef819f18f2ebf9e057bf
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3509397671
 trackId:
-duration: 176
-genre:
+duration: 175
+genre: Indie Rock
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Rock, 2025]
+keywords: [전화, 벽, 질투, 밤, 눈]
+emotion: 불안
 date: 2025-09-02
 published: 2025-09-01T23:24:06.000Z
-comment: 
+comment: 좋은 마음으로 한 일이 매번 몰아세움으로 돌아온다. 지독하다고 투덜대면서도 그녀가 전부라 놓지 못한다.
 source: instagram
 source_tag: 250902_0823
 source_note: 

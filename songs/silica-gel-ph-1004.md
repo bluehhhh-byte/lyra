@@ -1,19 +1,21 @@
 ---
 title: PH-1004
-title_ko: 
+title_ko: PH-1004
 artist: Silica Gel
 artist_ko:
-album:
+album: POWER ANDRE 99
 year: 2023
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/bf6adddf91fe6e6be4c7c808eac4d334/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/6/4/0/7643db21aa030900c6c50680c42619d3.mp3?hdnea=exp=1786684381~acl=/api/1/1/7/6/4/0/7643db21aa030900c6c50680c42619d3.mp3*~data=user_id=0,application_id=42~hmac=121718d6734cf385a8de083fd19c346227ab688ac26119a2e9809dd14d259729
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3746278472
 trackId:
-duration: 118
-genre:
+duration: 117
+genre: Indie Rock
 lang: en
-tags: [2023]
-keywords: []
-emotion:
+tags: [Indie Rock, 2023]
+keywords: [마음, 시간, 얼굴, 사랑]
+emotion: 그리움
 date: 2026-06-30
 published: 2026-06-29T23:26:42.000Z
 comment: 아, 너의 마음을 아는 건 내가 할 수 있는 그 어떤 일보다 어려워. 젠장, 도대체 나한테 무슨 말을 듣고 싶은 거야? 우리 예전처럼 다시 이야기할 수 없을까?

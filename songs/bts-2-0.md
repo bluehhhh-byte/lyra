@@ -1,19 +1,21 @@
 ---
 title: 2.0
-title_ko: 
+title_ko: 2.0
 artist: BTS
 artist_ko:
-album:
+album: ARIRANG
 year: 2026
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/0a/7b/690a7bb3-4483-2418-158c-9276d7d98f81/823375049500_Cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/d9/ea/2dd9ea2b-efd2-db31-9716-c371a39dafd5/mzaf_10575139416275079790.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/2-0/1885720384?i=1885720394&uo=4
+trackId: 1885720394
 duration: 170
-genre:
+genre: K-Pop
 lang: en
-tags: [2026]
-keywords: []
-emotion:
+tags: [K-Pop, 2026]
+keywords: [뜀틀, 불, 빚, 진실]
+emotion: 저항
 date: 2026-04-05
 published: 2026-04-04T16:18:42.000Z
 comment: 그래, 기분은 마치 완전히 새것 같아. 2.0 버전으로 업데이트 된 후에 여기저기서 또 한 번 사고를 쳤지. 이젠 못 쓰는 폐품들은 버려. 여유 있게, 다시 내 일을 하러 가보자고. 멈춰, 그리고 달려.

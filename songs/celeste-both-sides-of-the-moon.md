@@ -1,22 +1,24 @@
 ---
 title: Both Sides Of The Moon
-title_ko: 
+title_ko: 달의 양쪽
 artist: Celeste
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Compilation 1.1
+year: 2019
+artwork: https://cdn-images.dzcdn.net/images/cover/723e5b8121b0a3459924997b6edcb85a/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/3/0/0/1307e7fb7ef70336a0303f1edb7fc6b4.mp3?hdnea=exp=1786684336~acl=/api/1/1/1/3/0/0/1307e7fb7ef70336a0303f1edb7fc6b4.mp3*~data=user_id=0,application_id=42~hmac=f0416400197934d2fcb8cfa8ff784b3e924b0343a6dfbb8039cba99529ec6b53
+preview_provider: deezer
+external_url: https://www.deezer.com/track/822660302
 trackId:
-duration: 254
-genre:
+duration: 255
+genre: R&B/Soul
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [R&B/Soul, 2019]
+keywords: [의심, 계피, 머리칼, 달, 조수]
+emotion: 슬픔
 date: 2023-05-27
 published: 2023-05-27T09:29:29.000Z
-comment: 
+comment: 의심이 늘 옳았다는 걸 확인하고도 그 자리를 떠나지 못한다. 달이 조수의 노예이듯 사랑도 물때에 물들어버린다.
 source: instagram
 source_tag: 230527_1827
 source_note: 

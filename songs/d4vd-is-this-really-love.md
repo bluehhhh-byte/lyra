@@ -1,22 +1,24 @@
 ---
 title: Is This Really Love?
-title_ko: 
+title_ko: 이게 정말 사랑일까?
 artist: d4vd
 artist_ko:
-album:
+album: WITHERED
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0e4f2f0fc6a39f96c9981ac6c71864f2/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/3/9/9/0/399b9de0500f06f857c5da2cff0a546b.mp3?hdnea=exp=1786684338~acl=/api/1/1/3/9/9/0/399b9de0500f06f857c5da2cff0a546b.mp3*~data=user_id=0,application_id=42~hmac=f4808506ed4a1ff533685667c6f5d3041cd2613c0a47fd11a79fc887fe81969a
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3575349461
 trackId:
-duration: 195
-genre:
+duration: 192
+genre: Indie Pop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Pop, 2025]
+keywords: [사랑, 말, 자리, 허세]
+emotion: 이별
 date: 2025-08-25
 published: 2025-08-24T23:32:07.000Z
-comment: 
+comment: 네겐 가짜였고 내겐 진짜였다는 비대칭을 정확히 짚는다. 미워하는 것만으로는 부족해 내 사랑을 되찾고 싶다고 말한다.
 source: instagram
 source_tag: 250825_0825
 source_note: 

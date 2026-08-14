@@ -1,19 +1,21 @@
 ---
 title: Supersonic
-title_ko: 
+title_ko: 초음속
 artist: Jamiroquai
 artist_ko:
-album:
+album: Synkronized
 year: 1999
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/85/bc/ac85bc53-8562-60a9-5dda-1dfc424859c7/886449503339.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8a/6d/84/8a6d8441-15a5-b1d5-2f39-193fd8835fc9/mzaf_12837668037782546601.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/supersonic/1583958639?i=1583958967&uo=4
+trackId: 1583958967
 duration: 316
-genre:
+genre: Funk
 lang: en
-tags: [1999]
-keywords: []
-emotion:
+tags: [Funk, 1999]
+keywords: [흰자위, 기운, 눈물, 전사]
+emotion: 몽환
 date: 2026-01-06
 published: 2026-01-05T23:31:35.000Z
 comment: 강인함 속에 섬세함을 간직한 채, 오직 음악이라는 궤도를 따라 끊임없이 전진하는 고독하면서도 에너제틱한 영혼.

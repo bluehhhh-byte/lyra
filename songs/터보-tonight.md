@@ -3,20 +3,22 @@ title: Tonight
 title_ko: Tonight
 artist: 터보
 artist_ko:
-album:
+album: E-Mail My Heart
 year: 2000
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ec/be/cc/ecbeccc7-d173-250f-e331-0dfd359a317f/asset.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/72/1c/0a/721c0aed-7d65-c791-3c9a-74a0ac27abb1/mzaf_16069576256949266167.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/tonight/1158866749?i=1158866762&uo=4
+trackId: 1158866762
 duration: 277
-genre:
+genre: Dance
 lang: ko
-tags: [2000]
-keywords: []
-emotion:
+tags: [Dance, 2000]
+keywords: [향기, 숨결, 얼굴, 밤, 입술]
+emotion: 사랑
 date: 2024-01-29
 published: 2024-01-28T23:19:19.000Z
-comment: 
+comment: 오늘 밤 단둘이 먼 여행을 떠나겠다는 말로 시작해, 이미 다른 사랑이 있던 사람을 향한 안타까움으로 넘어간다. 짧은 순간의 기억만으로도 살아갈 만큼 사랑한다고 한다.
 source: instagram
 source_tag: 240128_0430
 source_note: 새벽 4시 30분에 고속도로를 달리던 중 라디오에서 나온 음악.

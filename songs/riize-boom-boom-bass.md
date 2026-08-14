@@ -1,22 +1,24 @@
 ---
 title: Boom Boom Bass
-title_ko: 
+title_ko: 붐 붐 베이스
 artist: RIIZE
 artist_ko:
-album:
+album: RIIZING - The 1st Mini Album
 year: 2024
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b5ce73e5d7e52c71f3c339c788f85187/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/e/a/0/0/ea0a7298cae3a2a5d5d37dd5e8121583.mp3?hdnea=exp=1786684374~acl=/api/1/1/e/a/0/0/ea0a7298cae3a2a5d5d37dd5e8121583.mp3*~data=user_id=0,application_id=42~hmac=dfe5be6017871469ad401f0b98dd995e824ad4f7656e4c55c92a037a8d9c84d6
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2827155082
 trackId:
 duration: 152
-genre:
+genre: K-Pop
 lang: en
-tags: [2024]
-keywords: []
-emotion:
+tags: [K-Pop, 2024]
+keywords: [리듬, 음악, 베이스, 박자, 손]
+emotion: 기쁨
 date: 2025-11-26
 published: 2025-11-25T23:44:25.000Z
-comment: 
+comment: 베이스 줄을 감고 당기는 동작을 그대로 연애의 밀당으로 옮긴다. 음이 자꾸 플랫이어도 괜찮다며 둘만의 타임라인을 만든다.
 source: instagram
 source_tag: 251126_0843
 source_note: 

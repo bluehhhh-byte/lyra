@@ -1,17 +1,19 @@
 ---
 title: Wish
-title_ko: 
+title_ko: 위시
 artist: KIRARA
 artist_ko:
-album:
+album: Sarah
 year: 2018
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/4ce13980c06897067914605644b969db/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/0/6/0/106dd9fc9f7eadc4a0ef9a82eb3636ce.mp3?hdnea=exp=1786684353~acl=/api/1/1/1/0/6/0/106dd9fc9f7eadc4a0ef9a82eb3636ce.mp3*~data=user_id=0,application_id=42~hmac=92d9765237b12c52dffcd41ace638c4845e8bcb43577d1bcd5a77e34be647196
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3681531062
 trackId:
-duration: 
-genre:
+duration: 355
+genre: Electronic
 lang: en
-tags: [2018]
+tags: [Electronic, 2018]
 keywords: []
 emotion:
 date: 2026-01-20

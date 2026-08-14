@@ -1,19 +1,1076 @@
 {
- "at": "2026-08-13T22:43:45.018Z",
+ "at": "2026-08-14T05:26:55.214Z",
  "total": {
-  "songs": 768,
-  "songsNeedingWork": 13,
+  "songs": 917,
+  "songsNeedingWork": 56,
   "moviesNeedingWork": 1
  },
  "byNeed": {
-  "가사 없음": 2,
+  "키워드 없음": 18,
+  "감정 없음": 18,
+  "커버 없음": 23,
+  "가사 없음": 14,
+  "번역 없음 15줄": 2,
+  "번역 없음 16줄": 1,
+  "독음 없음 7줄": 1,
+  "번역 없음 12줄": 1,
+  "번역 없음 4줄": 1,
+  "번역 없음 14줄": 1,
+  "번역 없음 2줄": 2,
+  "키워드 근거 약함": 10,
   "번역 없음 1줄": 1,
-  "키워드 근거 약함": 8,
   "독음 없음 2줄": 1,
   "연도 없음": 1
  },
  "songBatches": [
   [
+   {
+    "id": "mgmt-piece-of-what",
+    "kind": "song",
+    "title": "Piece of What",
+    "artist": "MGMT",
+    "lang": "en",
+    "year": "2006",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "태양-live-fast-die-slow",
+    "kind": "song",
+    "title": "LIVE FAST DIE SLOW",
+    "artist": "태양",
+    "lang": "en",
+    "year": "2026",
+    "needs": [
+     "번역 없음 15줄"
+    ],
+    "counts": {
+     "translation": 15,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "michael-jackson-janet-jackson-scream",
+    "kind": "song",
+    "title": "Scream",
+    "artist": "Michael Jackson, Janet Jackson",
+    "lang": "en",
+    "year": "1995",
+    "needs": [
+     "번역 없음 16줄"
+    ],
+    "counts": {
+     "translation": 16,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "엘리스유-도주",
+    "kind": "song",
+    "title": "도주",
+    "artist": "엘리스유",
+    "lang": "ko",
+    "year": "2026",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "유다빈-밴드-꿈보다-더",
+    "kind": "song",
+    "title": "꿈보다 더",
+    "artist": "유다빈 밴드",
+    "lang": "ko",
+    "year": "2023",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "anoyingbox-train-to-the-galaxy",
+    "kind": "song",
+    "title": "train to the galaxy",
+    "artist": "AnoyingBox",
+    "lang": "en",
+    "year": "2026",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "epikhigh-don-t-hate-me",
+    "kind": "song",
+    "title": "Don’t Hate Me",
+    "artist": "EPIKHIGH",
+    "lang": "ko",
+    "year": "2012",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "official髭男dism-らしさ",
+    "kind": "song",
+    "title": "らしさ",
+    "artist": "Official髭男dism",
+    "lang": "ja",
+    "year": "2025",
+    "needs": [
+     "독음 없음 7줄"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 7,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "kenshi-yonezu-地球儀",
+    "kind": "song",
+    "title": "地球儀",
+    "artist": "Kenshi Yonezu",
+    "lang": "ja",
+    "year": "2023",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "kiyoharu-eternal",
+    "kind": "song",
+    "title": "ETERNAL",
+    "artist": "KIYOHARU",
+    "lang": "en",
+    "year": "2024",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "bts-2-0",
+    "kind": "song",
+    "title": "2.0",
+    "artist": "BTS",
+    "lang": "en",
+    "year": "2026",
+    "needs": [
+     "번역 없음 12줄"
+    ],
+    "counts": {
+     "translation": 12,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "김하온-창모-꼴통",
+    "kind": "song",
+    "title": "꼴통",
+    "artist": "김하온, 창모",
+    "lang": "ko",
+    "year": "2024",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "b-free-hukky-shibaseki-get-it",
+    "kind": "song",
+    "title": "Free, Hukky Shibaseki - Get It",
+    "artist": "B",
+    "lang": "en",
+    "year": "2024",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "hu57la-내-모든-것",
+    "kind": "song",
+    "title": "내 모든 것",
+    "artist": "hu57la",
+    "lang": "ko",
+    "year": "2025",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "lionclad-uloveuwaitingu",
+    "kind": "song",
+    "title": "UloveUwaitingU",
+    "artist": "Lionclad",
+    "lang": "en",
+    "year": "2024",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "kirara-vc19111",
+    "kind": "song",
+    "title": "vc19111",
+    "artist": "KIRARA",
+    "lang": "en",
+    "year": "2021",
+    "needs": [
+     "키워드 없음",
+     "감정 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "caitlin-byk-crazy-lady",
+    "kind": "song",
+    "title": "Crazy Lady",
+    "artist": "Caitlin Byk",
+    "lang": "en",
+    "year": "2025",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "치사토-모리타카-new-season",
+    "kind": "song",
+    "title": "New Season",
+    "artist": "치사토 모리타카",
+    "lang": "ja",
+    "year": "1987",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "ive-bang-bang",
+    "kind": "song",
+    "title": "BANG BANG",
+    "artist": "IVE",
+    "lang": "en",
+    "year": "2026",
+    "needs": [
+     "번역 없음 4줄"
+    ],
+    "counts": {
+     "translation": 4,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "bill-stax-dok2-the-quiett-천재노창-don",
+    "kind": "song",
+    "title": "DON",
+    "artist": "Bill Stax, Dok2, The Quiett, 천재노창",
+    "lang": "ko",
+    "year": "2014",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "dumbfoundead-loppy-nafla-미장원",
+    "kind": "song",
+    "title": "미장원",
+    "artist": "Dumbfoundead, Loppy, Nafla",
+    "lang": "ko",
+    "year": "2015",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "hiromi-tomoaki-bada-shun-ishiwaka-n-e-w",
+    "kind": "song",
+    "title": "N.E.W.",
+    "artist": "Hiromi, Tomoaki Bada, Shun Ishiwaka",
+    "lang": "en",
+    "year": "2023",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "steve-vai-the-crying-machine",
+    "kind": "song",
+    "title": "The Crying Machine",
+    "artist": "Steve Vai",
+    "lang": "en",
+    "year": "1998",
+    "needs": [
+     "키워드 없음",
+     "감정 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "kirara-wish",
+    "kind": "song",
+    "title": "Wish",
+    "artist": "KIRARA",
+    "lang": "en",
+    "year": "2018",
+    "needs": [
+     "키워드 없음",
+     "감정 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "백예린-fuckin-new-year",
+    "kind": "song",
+    "title": "Fuckin’ New Year",
+    "artist": "백예린",
+    "lang": "en",
+    "year": "2023",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "siam-shade-triptych",
+    "kind": "song",
+    "title": "Triptych",
+    "artist": "Siam Shade",
+    "lang": "en",
+    "year": "2000",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "maytree-when-snowflakes-fell-on-your-head",
+    "kind": "song",
+    "title": "When Snowflakes Fell On Your Head",
+    "artist": "Maytree",
+    "lang": "en",
+    "year": "2021",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "장석훈-장석훈",
+    "kind": "song",
+    "title": "장석훈",
+    "artist": "장석훈",
+    "lang": "ko",
+    "year": "2019",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "riize-boom-boom-bass",
+    "kind": "song",
+    "title": "Boom Boom Bass",
+    "artist": "RIIZE",
+    "lang": "en",
+    "year": "2024",
+    "needs": [
+     "번역 없음 14줄"
+    ],
+    "counts": {
+     "translation": 14,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "스카이민혁-알트-날개",
+    "kind": "song",
+    "title": "날개",
+    "artist": "스카이민혁, 알트",
+    "lang": "ko",
+    "year": "2022",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   }
+  ],
+  [
+   {
+    "id": "sigur-ros-hoppipolla",
+    "kind": "song",
+    "title": "Hoppipolla",
+    "artist": "Sigur Ros",
+    "lang": "en",
+    "year": "2005",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "allday-project-famous",
+    "kind": "song",
+    "title": "FAMOUS",
+    "artist": "ALLDAY PROJECT",
+    "lang": "en",
+    "year": "2025",
+    "needs": [
+     "번역 없음 15줄"
+    ],
+    "counts": {
+     "translation": 15,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "nemesis-베르사유의-장미",
+    "kind": "song",
+    "title": "베르사유의 장미",
+    "artist": "Nemesis",
+    "lang": "ko",
+    "year": "2005",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "네미시스-베르사유의-장미",
+    "kind": "song",
+    "title": "베르사유의 장미",
+    "artist": "네미시스",
+    "lang": "ko",
+    "year": "2005",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "봄여름가을겨울-못다한-내-마음을",
+    "kind": "song",
+    "title": "못다한 내 마음을",
+    "artist": "봄여름가을겨울",
+    "lang": "ko",
+    "year": "1989",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "제이통-woof",
+    "kind": "song",
+    "title": "Woof",
+    "artist": "제이통",
+    "lang": "ko",
+    "year": "2025",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "디오-내일의-우리",
+    "kind": "song",
+    "title": "내일의 우리",
+    "artist": "디오",
+    "lang": "ko",
+    "year": "2024",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "커버 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "tyler-the-creater-i-ll-take-care-of-you",
+    "kind": "song",
+    "title": "I’ll Take Care of You",
+    "artist": "Tyler, The Creater",
+    "lang": "en",
+    "year": "2025",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "perfume-human-factory",
+    "kind": "song",
+    "title": "Human Factory",
+    "artist": "Perfume",
+    "lang": "en",
+    "year": "2025",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 1
+    }
+   },
+   {
+    "id": "머쉬베놈-신빠람-이박사-돌림판",
+    "kind": "song",
+    "title": "돌림판",
+    "artist": "머쉬베놈, 신빠람 이박사",
+    "lang": "ko",
+    "year": "2025",
+    "needs": [
+     "커버 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 1,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "kim-gordon-bye-bye",
+    "kind": "song",
+    "title": "Bye Bye",
+    "artist": "Kim Gordon",
+    "lang": "en",
+    "year": "2024",
+    "needs": [
+     "번역 없음 2줄"
+    ],
+    "counts": {
+     "translation": 2,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "astor-piazzolla-oblivion",
+    "kind": "song",
+    "title": "Oblivion",
+    "artist": "Astor Piazzolla",
+    "lang": "en",
+    "year": "1982",
+    "needs": [
+     "번역 없음 2줄"
+    ],
+    "counts": {
+     "translation": 2,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 0,
+     "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
    {
     "id": "르세라핌-이브-프시케-그리고-푸른-수염의-아내",
     "kind": "song",
@@ -22,7 +1079,7 @@
     "lang": "ko",
     "year": "2023",
     "needs": [
-     "가사 없음"
+     "키워드 근거 약함"
     ],
     "counts": {
      "translation": 0,
@@ -35,7 +1092,7 @@
      "titleKo": 0,
      "artwork": 0,
      "year": 0,
-     "lyrics": 1
+     "lyrics": 0
     }
    },
    {
@@ -46,7 +1103,7 @@
     "lang": "ko",
     "year": "2023",
     "needs": [
-     "가사 없음"
+     "키워드 근거 약함"
     ],
     "counts": {
      "translation": 0,
@@ -55,6 +1112,32 @@
      "genre": "",
      "keywords": 0,
      "emotion": 0,
+     "comment": 0,
+     "titleKo": 0,
+     "artwork": 0,
+     "year": 0,
+     "lyrics": 0
+    }
+   },
+   {
+    "id": "bimini-can-t-hold-me-back",
+    "kind": "song",
+    "title": "Can't Hold Me Back",
+    "artist": "BIMINI",
+    "lang": "en",
+    "year": "2023",
+    "needs": [
+     "키워드 없음",
+     "감정 없음",
+     "가사 없음"
+    ],
+    "counts": {
+     "translation": 0,
+     "reading": 0,
+     "inline": 0,
+     "genre": "",
+     "keywords": 1,
+     "emotion": 1,
      "comment": 0,
      "titleKo": 0,
      "artwork": 0,

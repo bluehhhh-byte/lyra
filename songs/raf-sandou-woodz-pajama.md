@@ -1,19 +1,21 @@
 ---
 title: PAJAMA
-title_ko: 
+title_ko: 파자마
 artist: Raf Sandou, WOODZ
 artist_ko:
-album:
+album: Show Me The Money 12 Semi Final
 year: 2026
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/8591e1ed487a7a3e216ade12d8599971/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/a/4/4/0/a44eec0dde8a83795629ac3ee42d18e2.mp3?hdnea=exp=1786684372~acl=/api/1/1/a/4/4/0/a44eec0dde8a83795629ac3ee42d18e2.mp3*~data=user_id=0,application_id=42~hmac=546584737af2c84c4140d477e314a28f3d8c127e6caea5555718b67e38f72d78
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3919980161
 trackId:
-duration: 
-genre:
+duration: 258
+genre: Hip-Hop
 lang: ko
-tags: [2026]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2026]
+keywords: [이불, 구름, 거울, 카페인, 노트]
+emotion: 희망
 date: 2026-04-01
 published: 2026-03-31T23:27:04.000Z
 comment: 자신의 음악을 비웃던 세상을 뒤로 하고, 9 to 5의 삶 대신 밤을 지새우며 마침내 거울 속 확신에 찬 목소리로, 내 음악 비웃었던 그 직원 도대체 넌 어디야 right now.

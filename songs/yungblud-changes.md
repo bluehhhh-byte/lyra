@@ -1,22 +1,24 @@
 ---
 title: Changes
-title_ko: 
+title_ko: 변화
 artist: YUNGBLUD
 artist_ko:
-album:
+album: Idols
 year: 2025
-artwork:
-preview:
-trackId:
-duration: 340
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a3/3e/db/a33edb69-e698-02d9-e953-b9165a64f4c5/25UMGIM43189.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/10/4d/45104d98-7947-eb5d-ebc8-805325184085/mzaf_4816688862484237441.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/change/1809000175?i=1809000186&uo=4
+trackId: 1809000186
+duration: 208
+genre: Hard Rock
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Hard Rock, 2025]
+keywords: [친구, 세월, 사랑, 눈물, 손]
+emotion: 슬픔
 date: 2026-01-13
 published: 2026-01-12T15:22:38.000Z
-comment: 
+comment: 가장 좋은 친구이자 연인이었던 사람을 잃고 변해간다고 되뇐다. 블랙 사바스의 곡을 무대 위 떼창으로 받아 안는다.
 source: instagram
 source_tag: 260113_0022
 source_note: 

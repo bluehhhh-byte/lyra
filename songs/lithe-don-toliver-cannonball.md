@@ -1,19 +1,21 @@
 ---
 title: Cannonball
-title_ko: 
+title_ko: 대포알
 artist: Lithe, Don Toliver
 artist_ko:
-album:
+album: Get Up
 year: 2025
-artwork:
+artwork: https://coverartarchive.org/release-group/1032c033-9025-4b11-a1ba-3952f9bba91c/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/1032c033-9025-4b11-a1ba-3952f9bba91c
 trackId:
 duration: 122
-genre:
+genre: Hip-Hop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2025]
+keywords: [대포알, 클럽, 손목, 주사위, 호텔]
+emotion: 몽환
 date: 2026-03-26
 published: 2026-03-25T23:52:40.000Z
 comment: 난 복잡한 건 싫어, 그저 즐기고 싶을 뿐, 난 주사위를 굴려왔고, 여전히 이 바닥에 있어.

@@ -1,22 +1,24 @@
 ---
 title: Everyone’s A Star!
-title_ko: 
+title_ko: 다들 스타야!
 artist: 5 Seconds of Summer
 artist_ko:
-album:
+album: EVERYONE'S A STAR!
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0d7e41c430ed14a32adfb8d63d08dd77/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/e/5/e/0/e5eac52c9fe2a06dbf0ff72d13cebe51.mp3?hdnea=exp=1786684324~acl=/api/1/1/e/5/e/0/e5eac52c9fe2a06dbf0ff72d13cebe51.mp3*~data=user_id=0,application_id=42~hmac=968bc737189f121d42491cb35fd0d5ffe174f7eb9d5175b2d41a809a6bc7bb84
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3642904642
 trackId:
 duration: 195
-genre:
+genre: Synth-Pop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Synth-Pop, 2025]
+keywords: [부스, 불빛, 어둠, 조명, 스피커]
+emotion: 몽환
 date: 2025-12-26
 published: 2025-12-25T15:30:26.000Z
-comment: 
+comment: 번쩍이는 조명과 망가진 스피커 사이에서 다들 스타라고 외친다. 반짝이 속에 살면서도 아무것도 느끼지 못한다는 자각이 후렴 밑에 깔려 있다.
 source: instagram
 source_tag: 251226_0030
 source_note: 

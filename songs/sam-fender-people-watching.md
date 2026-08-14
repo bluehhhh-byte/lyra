@@ -1,22 +1,24 @@
 ---
 title: People Watching
-title_ko: 
+title_ko: 사람 구경
 artist: Sam Fender
 artist_ko:
-album:
+album: People Watching
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/7091444b5768f64e8cd2ddeafede0d9f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/0/9/0/f09abf7113bf1dbcf07de42dde963ab3.mp3?hdnea=exp=1786684378~acl=/api/1/1/f/0/9/0/f09abf7113bf1dbcf07de42dde963ab3.mp3*~data=user_id=0,application_id=42~hmac=e9407b4c8e4c55f6559886df411726599fa1430f4245aa19524c105c9c86e8f0
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3087699371
 trackId:
-duration: 311
-genre:
+duration: 304
+genre: Indie Rock
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Rock, 2025]
+keywords: [사람, 희망, 젊음, 거리, 간호사]
+emotion: 회상
 date: 2025-12-25
 published: 2025-12-24T16:16:16.000Z
-comment: 
+comment: 집으로 가는 길에 남을 구경하며 잠시 자아 밖으로 나간다. 칠 년 만에 돌아와 요양원에서 밤새 곁을 지킨 기억이 곡의 심장이다.
 source: instagram
 source_tag: 251225_0116
 source_note: 

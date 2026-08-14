@@ -1,22 +1,24 @@
 ---
 title: Set It On Fire
-title_ko: 
+title_ko: 불을 붙여
 artist: Blood Cultures
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: LUNO
+year: 2016
+artwork: https://cdn-images.dzcdn.net/images/cover/168b79fd1afe6586e0c39af9cb4a74e7/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/c/6/9/0/c699cfd27217570e1d2422057d52160a.mp3?hdnea=exp=1786684332~acl=/api/1/1/c/6/9/0/c699cfd27217570e1d2422057d52160a.mp3*~data=user_id=0,application_id=42~hmac=1807a23a353e90199cd92255bbdd3d65dd8506d4f14015cce85e630b4aeca14b
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3219704841
 trackId:
 duration: 213
-genre:
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Indie Pop, 2016]
+keywords: [꿈, 날개, 믿음, 올가미, 불]
+emotion: 분노
 date: 2023-05-25
 published: 2023-05-24T23:30:51.000Z
-comment: 
+comment: 꿈도 물건도 믿음도 전부 가져가 불을 붙이라고 내민다. 목에 올가미를 걸어둔 상대에게 그건 좀 아니라고 말한다.
 source: instagram
 source_tag: 230525_0830
 source_note: 

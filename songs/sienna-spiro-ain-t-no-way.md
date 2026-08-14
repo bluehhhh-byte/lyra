@@ -1,22 +1,24 @@
 ---
 title: Ain’t No Way
-title_ko: 
+title_ko: 방법이 없어
 artist: SIENNA SPIRO
 artist_ko:
-album:
+album: Ain’t No Way (Live at KOKO)
 year: 2025
-artwork:
+artwork: https://coverartarchive.org/release-group/8655b9e7-4bee-4832-8eaa-ed9cc296ff84/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/8655b9e7-4bee-4832-8eaa-ed9cc296ff84
 trackId:
 duration: 279
-genre:
+genre: R&B/Soul
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [R&B/Soul, 2025]
+keywords: [사랑, 여자, 남자, 손]
+emotion: 슬픔
 date: 2025-12-24
 published: 2025-12-23T22:38:08.000Z
-comment: 
+comment: 두 손을 다 묶어놓고 사랑을 요구하는 상대에게 그럴 방법이 없다고 답한다. 도리라는 말로 씌워진 굴레를 그대로 되돌려준다.
 source: instagram
 source_tag: 251224_0738
 source_note: 

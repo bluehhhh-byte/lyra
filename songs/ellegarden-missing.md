@@ -1,19 +1,21 @@
 ---
 title: Missing
-title_ko: 
+title_ko: 사라진 채로
 artist: ELLEGARDEN
 artist_ko:
-album:
+album: RIOT ON THE GRILL
 year: 2005
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/4e/83/67/mzi.htmusnpd.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/43/95/08/439508df-4189-40d5-c5e9-3ffca577daef/mzaf_3140552369352068954.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/missing/126114112?i=126117708&uo=4
+trackId: 126117708
 duration: 207
-genre:
+genre: J-Rock
 lang: ja
-tags: [2005]
-keywords: []
-emotion:
+tags: [J-Rock, 2005]
+keywords: [하늘, 노래, 기억, 보석, 금화]
+emotion: 회상
 date: 2026-02-27
 published: 2026-02-27T00:11:23.000Z
 comment: 가장 소중한 것을 잃어버렸을 때(Missing), 비로소 시작되는 처절하고도 아름다운 그리움(Missing)의 멜로디

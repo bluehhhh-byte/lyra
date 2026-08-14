@@ -3,17 +3,19 @@ title: 벌레를 내고
 title_ko: 벌레를 내고
 artist: AKMU
 artist_ko:
-album:
+album: FLOWERING
 year: 2026
-artwork:
+artwork: https://coverartarchive.org/release-group/e05d8474-fde9-4cd2-89a0-5d83f9bc5493/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/e05d8474-fde9-4cd2-89a0-5d83f9bc5493
 trackId:
 duration: 221
-genre:
+genre: Folk
 lang: ko
-tags: [2026]
-keywords: []
-emotion:
+tags: [Folk, 2026]
+keywords: [벌레, 버스, 기차, 영혼, 지구]
+emotion: 기쁨
 date: 2026-04-13
 published: 2026-04-12T23:37:49.000Z
 comment: 외투에 스며든 풀 냄새와 반짝이는 불빛을 따라 걷는 길, 지구가 둥글다는 사실을 두 눈으로 확인하기 위해 버스와 기차에 몸을 실은 이의 어느 환상적인 모험기.

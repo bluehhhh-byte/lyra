@@ -1,22 +1,24 @@
 ---
 title: Find Your Love
-title_ko: 
+title_ko: 네 사랑을 찾아
 artist: Rude John
 artist_ko:
-album:
+album: Find your love
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/882ebaf2f9606163b8934da49ae98815/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/3/0/0/f306ae0cdac08bca7ef75c206790b098.mp3?hdnea=exp=1786684377~acl=/api/1/1/f/3/0/0/f306ae0cdac08bca7ef75c206790b098.mp3*~data=user_id=0,application_id=42~hmac=1ddd90be374fee78b05673466b3c7541cef3dadc2982b0ba5c3e7af482988782
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3587962631
 trackId:
-duration: 
-genre:
+duration: 177
+genre: R&B/Soul
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [R&B/Soul, 2025]
+keywords: [손길, 품, 빈자리, 아픔, 그늘]
+emotion: 위로
 date: 2025-10-23
 published: 2025-10-23T10:09:55.000Z
-comment: 
+comment: 사랑을 가져본 적 없이 사랑을 바라는 마음이 뭘 모르는 것이라고 짚는다. 그늘진 곳에 꽃이 피기 어렵다는 말이 후렴을 지탱한다.
 source: instagram
 source_tag: 251023_1909
 source_note: 

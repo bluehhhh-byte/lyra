@@ -1,6 +1,6 @@
 ---
 title: Don’t Hate Me
-title_ko: 
+title_ko: 날 미워하지 마
 artist: EPIKHIGH
 artist_ko:
 album:
@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration: 224
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2012]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2012]
+keywords: [세상, 눈물, 손가락, 방패, 도마]
+emotion: 분노
 date: 2026-05-15
 published: 2026-05-14T23:31:21.000Z
 comment: 세상 모두가 나를 미워해도, 손뼉 쳐줄 단 한 사람만 있다면 살 수 있다고 믿어. 난 너만 내 편이면, 내 팬이면 돼.

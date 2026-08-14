@@ -3,20 +3,22 @@ title: Rise
 title_ko: Rise
 artist: 듀스
 artist_ko:
-album:
+album: Rise - Single
 year: 2025
-artwork:
-preview:
-trackId:
-duration: 
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/29/e3/da/29e3da59-3361-d452-3ba4-855e7fe1f87f/888272171693.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/a3/bd/4fa3bd37-08fb-a40c-dcb3-1f0e4e9fa30c/mzaf_17672498466435519602.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/rise/1855437293?i=1855437295&uo=4
+trackId: 1855437295
+duration: 202
+genre: Dance
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [Dance, 2025]
+keywords: [태양, 어둠, 침묵, 빛, 시간]
+emotion: 희망
 date: 2025-12-14
 published: 2025-12-13T20:09:08.000Z
-comment: 
+comment: 어제보다 지금 이 순간을 믿는다며 다시 떠오르는 태양에 자신을 겹친다. 두 개의 심장으로 한계를 뛰어넘겠다는 선언이다.
 source: instagram
 source_tag: 251214_0509
 source_note: 

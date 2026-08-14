@@ -1,19 +1,21 @@
 ---
 title: PSYCHEDELIC LOVER
-title_ko: 
+title_ko: 사이키델릭 러버
 artist: PIERROT
 artist_ko:
-album:
+album: PSYCHEDELIC LOVER
 year: 2002
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b5d766660e016c7d462e8c52c42747f2/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/8/8/0/1880224d537fc6aeb6a84afdcbcf05de.mp3?hdnea=exp=1786684371~acl=/api/1/1/1/8/8/0/1880224d537fc6aeb6a84afdcbcf05de.mp3*~data=user_id=0,application_id=42~hmac=bc828adc9e90cb446fee0996c1ca9bd7ff9e1aa1f4493a8812b7c4d661bbea25
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2975396161
 trackId:
-duration: 261
-genre:
+duration: 260
+genre: Visual Kei
 lang: ja
-tags: [2002]
-keywords: []
-emotion:
+tags: [Visual Kei, 2002]
+keywords: [감정, 역광, 날개, 아침, 달빛]
+emotion: 사랑
 date: 2026-05-06
 published: 2026-05-05T20:34:14.000Z
 comment: 과거의 죄책감과 고독에 갇혀 날개를 꺾어버린 두 남녀가 서로를 구원자로 맞이하며, 상실의 잿빛 세상을 벗어나 찬란한 ‘극채색의 미래’를 그려나가는 재생의 드라마.

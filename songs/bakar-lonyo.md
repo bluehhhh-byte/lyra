@@ -1,22 +1,24 @@
 ---
 title: Lonyo!
-title_ko: 
+title_ko: 로뇨!
 artist: Bakar
 artist_ko:
-album:
+album: Lonyo! - Single
 year: 2025
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/70/9b/d8/709bd8e0-f774-08c1-3534-a09ab905cc08/5034644747101.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fc/9d/b5/fc9db54a-ff5f-8420-9c0d-9513b4703759/mzaf_6681446419656813928.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/lonyo/1819526317?i=1819526318&uo=4
+trackId: 1819526318
 duration: 215
-genre:
+genre: Indie Pop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Pop, 2025]
+keywords: [마음, 영혼, 여름, 사랑, 소리]
+emotion: 기쁨
 date: 2025-08-26
 published: 2025-08-26T14:20:25.000Z
-comment: 
+comment: 다시는 너를 생각하지 않겠다는 스페인어 후렴 위에 사랑의 여름을 얹는다. 잊겠다는 다짐과 신나는 비트가 서로를 배반한다.
 source: instagram
 source_tag: 250826_2319
 source_note: 

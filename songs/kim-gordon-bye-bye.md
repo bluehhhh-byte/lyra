@@ -1,22 +1,24 @@
 ---
 title: Bye Bye
-title_ko: 
+title_ko: 바이바이
 artist: Kim Gordon
 artist_ko:
-album:
+album: The Collective
 year: 2024
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/59916bc7291414589f68978060348aa8/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/2/a/0/72acfdf4889be64e135aaa01a9c472e4.mp3?hdnea=exp=1786684352~acl=/api/1/1/7/2/a/0/72acfdf4889be64e135aaa01a9c472e4.mp3*~data=user_id=0,application_id=42~hmac=06b30470c75dcdf52905b8e1739eef2557d85e1843e91226e70084c90e156a74
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2663835912
 trackId:
 duration: 254
-genre:
+genre: Electronic
 lang: en
-tags: [2024]
-keywords: []
-emotion:
+tags: [Electronic, 2024]
+keywords: [가방, 세탁소, 담배, 여권, 잠옷]
+emotion: 고독
 date: 2024-05-17
 published: 2024-05-17T14:05:13.000Z
-comment: 
+comment: 떠나기 전 챙길 목록을 처음부터 끝까지 읊는 것이 가사 전부다. 감정을 한마디도 말하지 않는데 이별이 다 들린다.
 source: instagram
 source_tag: 240517_2258
 source_note: 

@@ -1,6 +1,6 @@
 ---
 title: I’ll Take Care of You
-title_ko: 
+title_ko: 내가 널 돌봐줄게
 artist: Tyler, The Creater
 artist_ko:
 album:
@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 201
-genre:
+genre: Hip-Hop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2025]
+keywords: [사랑, 마음, 영혼, 몸]
+emotion: 사랑
 date: 2025-09-08
 published: 2025-09-08T14:31:29.000Z
-comment: 
+comment: 돌봐주겠다는 약속과 겁쟁이였던 적 없다는 허세가 번갈아 나온다. 몸이 식을 때까지 함께 가겠다는 말이 진심 쪽으로 기운다.
 source: instagram
 source_tag: 250908_2331
 source_note: 

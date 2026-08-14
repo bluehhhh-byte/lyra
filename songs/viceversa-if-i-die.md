@@ -3,17 +3,19 @@ title: IF I DIE
 title_ko: IF I DIE
 artist: viceversa
 artist_ko:
-album:
+album: ANIMAL FKRY
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0407c0fad7f0b469eec2f0a4c527579c/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/e/2/2/0/e22739eee0977276004f39ecc6d63280.mp3?hdnea=exp=1786684393~acl=/api/1/1/e/2/2/0/e22739eee0977276004f39ecc6d63280.mp3*~data=user_id=0,application_id=42~hmac=d3e623fc1af799e7e931579a2a2c92c641b57b73bb6001ab46054b2315650f06
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3247562921
 trackId:
 duration: 200
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2025]
+keywords: [장례식, 눈, 야수, 전쟁, 병실]
+emotion: 분노
 date: 2026-03-07
 published: 2026-03-07T05:10:39.000Z
 comment: 승리만을 쫓다 야수의 눈을 갖게 된 사내가 침묵 속에 죽어가는 아버지의 두 눈동자에 비친 괴물이 된 자신을 마주하고 신에게 바다 같은 안식을 간구하는 이야기.

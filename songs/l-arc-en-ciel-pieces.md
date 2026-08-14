@@ -1,19 +1,21 @@
 ---
 title: Pieces
-title_ko: 
+title_ko: 조각들
 artist: L’Arc~en~Ciel
 artist_ko:
-album:
+album: Pieces
 year: 1999
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/6ac5a0128c00feef6e45aeffbcd9b4fa/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/7/2/0/47261c48823246581e3af1e0b2c91fd9.mp3?hdnea=exp=1786684355~acl=/api/1/1/4/7/2/0/47261c48823246581e3af1e0b2c91fd9.mp3*~data=user_id=0,application_id=42~hmac=ea3b9ec6ba62210814f341f2b35d6085a15450d5b49fb0e4dcf516a4abacb2ea
+preview_provider: deezer
+external_url: https://www.deezer.com/track/975920692
 trackId:
-duration: 349
-genre:
+duration: 344
+genre: J-Rock
 lang: ja
-tags: [1999]
-keywords: []
-emotion:
+tags: [J-Rock, 1999]
+keywords: [눈동자, 슬픔, 꽃, 햇살, 바다]
+emotion: 위로
 date: 2026-03-25
 published: 2026-03-24T23:49:12.000Z
 comment: 나의 조각인 아이가 슬픔에 머물지 않고 진실을 바라보며, 뒤돌아보지 말고 넓은 바다를 건너 힘차게 날아가길 바라는 부모의 마음.

@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2025]
+keywords: [마이크, 부산, 정글, 동물, 거리]
+emotion: 저항
 date: 2025-09-23
 published: 2025-09-23T14:49:29.000Z
-comment: 
+comment: 미친 개처럼 짖으며 콘크리트 정글을 자기 삶이라 부른다. 굶주린 야생 동물이라는 자기 규정이 곡 내내 유지된다.
 source: instagram
 source_tag: 250923_2349
 source_note: 

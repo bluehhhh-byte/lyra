@@ -1,22 +1,24 @@
 ---
 title: Talk To Me
-title_ko: 
+title_ko: 나한테 말해줘
 artist: Mina Okabe
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Spinning Around
+year: 2021
+artwork: https://cdn-images.dzcdn.net/images/cover/3e3886d8dd1f101dc80321af5a590981/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/b/1/0/5b1f063fe49c2068f12b99a3faec56dc.mp3?hdnea=exp=1786684364~acl=/api/1/1/5/b/1/0/5b1f063fe49c2068f12b99a3faec56dc.mp3*~data=user_id=0,application_id=42~hmac=5c863c86a04b84e39612ecda97ca999c9857829ba9fcd7694f845bd9f22f235b
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2195330817
 trackId:
-duration: 177
-genre:
+duration: 176
+genre: Indie Pop
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Indie Pop, 2021]
+keywords: [침묵, 마음, 믿음, 눈, 거짓말]
+emotion: 불안
 date: 2023-05-23
 published: 2023-05-23T10:08:37.000Z
-comment: 
+comment: 침묵이 자기를 죽이고 있다며 말 좀 해달라고 청한다. 바쁘다는 말만 남기고 사라지는 상대를 지루한 사람이라 부른다.
 source: instagram
 source_tag: 230523_1908
 source_note: 

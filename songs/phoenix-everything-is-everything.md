@@ -1,19 +1,21 @@
 ---
 title: Everything is Everything
-title_ko: 
+title_ko: 모든 게 다 그런 거야
 artist: Phoenix
 artist_ko:
-album:
+album: Everything Is Everything - Single
 year: 2004
-artwork:
-preview:
-trackId:
-duration: 179
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/8e/31/2b/8e312b22-bc8b-bab5-e8c7-4bc0f9f9b201/0724386136657_1404x1404_300dpi.tif/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/17/24/e6/1724e6ce-5d36-16a5-6a3e-baad170f1bd9/mzaf_2990881935926576702.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/everything-is-everything/734799785?i=734801060&uo=4
+trackId: 734801060
+duration: 180
+genre: Indie Pop
 lang: en
-tags: [2004]
-keywords: []
-emotion:
+tags: [Indie Pop, 2004]
+keywords: [가망, 집, 말, 통제]
+emotion: 체념
 date: 2026-04-22
 published: 2026-04-22T11:32:45.000Z
 comment: 세상의 모든 소음이 뒤섞여 결국 아무것도 아닌 것이 되어버릴 때, ‘모든 건 그저 모든 것일 뿐’이라며 담담히 웃어넘길 수 있는 건 오직 당신이 곁에 있기 때문에.

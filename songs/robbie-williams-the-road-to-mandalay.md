@@ -1,19 +1,21 @@
 ---
 title: The Road To Mandalay
-title_ko: 
+title_ko: 만달레이로 가는 길
 artist: Robbie Williams
 artist_ko:
-album:
+album: Sing When You're Winning
 year: 2000
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/d260fa442f925e1eb1c95bb29941f636/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/8/0/0/0/80080c737ee3af059904bac736182d81.mp3?hdnea=exp=1786684375~acl=/api/1/1/8/0/0/0/80080c737ee3af059904bac736182d81.mp3*~data=user_id=0,application_id=42~hmac=981796ca920a2c06844ee0d8d9241b656d854c2ef1625e56395ef542f4defff1
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3102428
 trackId:
 duration: 237
-genre:
+genre: Ballad
 lang: en
-tags: [2000]
-keywords: []
-emotion:
+tags: [Ballad, 2000]
+keywords: [집, 말, 얼굴, 마음, 시간]
+emotion: 그리움
 date: 2026-01-02
 published: 2026-01-01T23:51:26.000Z
 comment: 모든 것을 황금으로 바꿨지만 정작 사랑하는 것들은 모두 부수어버린 한 남자가, 화려한 성공 뒤에 숨겨진 공허함과 평생의 실수를 되새기며 떠나는 고독한 인생의 순례.

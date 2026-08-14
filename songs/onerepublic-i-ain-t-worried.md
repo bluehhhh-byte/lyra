@@ -1,22 +1,24 @@
 ---
 title: I Ain’t Worried
-title_ko: 
+title_ko: 난 걱정하지 않아
 artist: OneRepublic
 artist_ko:
-album:
+album: I Ain’t Worried (Music From The Motion Picture "Top Gun: Maverick")
 year: 2022
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/cce4a8aa45410b7ed85432bca9d9c913/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/d/1/c/0/d1c72616e05256b8b07f42b6052fefd3.mp3?hdnea=exp=1786684368~acl=/api/1/1/d/1/c/0/d1c72616e05256b8b07f42b6052fefd3.mp3*~data=user_id=0,application_id=42~hmac=32fc421daa4fef5760930b88222738d92206f34b2fa67530d9375fe9e8a18236
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1749916957
 trackId:
 duration: 148
-genre:
+genre: Indie Pop
 lang: en
-tags: [2022]
-keywords: []
-emotion:
+tags: [Indie Pop, 2022]
+keywords: [시간, 꿈, 영웅, 구름, 금]
+emotion: 희망
 date: 2025-11-20
 published: 2025-11-19T23:08:35.000Z
-comment: 
+comment: 시간이 끝나간다는 걸 알면서도 지금은 걱정하지 않는다고 말한다. 홍수 속을 헤엄치며 발밑의 구름 위에서 춤춘다.
 source: instagram
 source_tag: 251120_0808
 source_note: 

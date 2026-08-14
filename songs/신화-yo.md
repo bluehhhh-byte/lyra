@@ -3,20 +3,22 @@ title: Yo!
 title_ko: Yo!
 artist: 신화
 artist_ko:
-album:
+album: First Mythology
 year: 1999
-artwork:
+artwork: https://coverartarchive.org/release-group/86af400b-db30-3d7d-b4c6-48ef17fa40c9/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/86af400b-db30-3d7d-b4c6-48ef17fa40c9
 trackId:
 duration: 238
-genre:
+genre: K-Pop
 lang: ko
-tags: [1999]
-keywords: []
-emotion:
+tags: [K-Pop, 1999]
+keywords: [꿈, 인생, 바보, 사랑, 자신감]
+emotion: 저항
 date: 2025-12-05
 published: 2025-12-05T10:55:49.000Z
-comment: 
+comment: 네 멋대로 살아서 뭐가 되겠냐고 몰아붙이다가, 사랑하는 법을 가르치는 곳이 하나도 없다고 되받는다. 하늘보다 높은 꿈을 달라는 외침으로 끝난다.
 source: instagram
 source_tag: 251205_1955
 source_note: 

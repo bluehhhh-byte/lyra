@@ -1,19 +1,21 @@
 ---
 title: HOMEBIRD
-title_ko: 
+title_ko: 집새
 artist: Zior Park
 artist_ko:
-album:
+album: SYNDROMEZ
 year: 2021
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/78/37/b2/7837b210-efe8-800a-5144-d2965e3c2813/cover_KM0019295_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c7/c0/1b/c7c01bd8-f6d0-561f-a167-8240e1310eef/mzaf_14184722076335382993.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/homebird/1723424632?i=1723424634&uo=4
+trackId: 1723424634
 duration: 225
-genre:
+genre: R&B/Soul
 lang: en
-tags: [2021]
-keywords: []
-emotion:
+tags: [R&B/Soul, 2021]
+keywords: [노래, 돈, 새, 둥지, 깃털]
+emotion: 그리움
 date: 2026-01-05
 published: 2026-01-05T00:32:18.000Z
 comment: 자식을 위해 자신의 핑크빛 날개를 꺾고 회색빛 일상을 견뎌온 어머니와, 그녀의 헌신 뒤에 가려진 우울한 밤의 진실을 마주하며 비로소 그 눈물의 무게를 이해하게 된 아들의 참회록.

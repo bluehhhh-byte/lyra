@@ -1,6 +1,6 @@
 ---
 title: When Snowflakes Fell On Your Head
-title_ko: 
+title_ko: 네 머리 위로 눈송이가 내렸을 때
 artist: Maytree
 artist_ko:
 album:
@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 152
-genre:
+genre: Indie Pop
 lang: en
-tags: [2021]
-keywords: []
-emotion:
+tags: [Indie Pop, 2021]
+keywords: [눈송이, 천사, 미소, 구름, 숨소리]
+emotion: 사랑
 date: 2025-12-28
 published: 2025-12-28T11:26:17.000Z
-comment: 
+comment: 눈송이가 내리는 순간을 천사의 종소리로 받아 적는다. 눈이 다 녹아 사라져도 그 사람 생각뿐이라는 아카펠라 러브송이다.
 source: instagram
 source_tag: 251228_2026
 source_note: 

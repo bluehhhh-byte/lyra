@@ -1,17 +1,19 @@
 ---
 title: Free, Hukky Shibaseki - Get It
-title_ko: 
+title_ko: 겟 잇
 artist: B
 artist_ko:
-album:
+album: Free Hukky Shibaseki & the God Sun Symphony Group : Odyssey.1
 year: 2024
-artwork:
-preview:
-trackId:
-duration: 
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/89/cc/86/89cc86ff-8be1-5f30-3ae0-9ff7d735b6d3/5021732414724.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/ca/db/76cadba1-87a8-4df0-3f20-7ddcdead48f7/mzaf_12398426655338784971.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/get-it/1752941119?i=1752941377&uo=4
+trackId: 1752941377
+duration: 170
+genre: Hip-Hop
 lang: en
-tags: [2024]
+tags: [Hip-Hop, 2024]
 keywords: []
 emotion:
 date: 2026-03-31

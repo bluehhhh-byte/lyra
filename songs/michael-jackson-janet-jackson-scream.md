@@ -1,19 +1,21 @@
 ---
 title: Scream
-title_ko: 
+title_ko: 비명
 artist: Michael Jackson, Janet Jackson
 artist_ko:
-album:
+album: HIStory - PAST, PRESENT AND FUTURE - BOOK I
 year: 1995
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/fbed9a8cfcdd8a5e48cebbea8d8078ea/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/f/0/f6f0870cafd14edeaee4e60e8e864dc1.mp3?hdnea=exp=1786684363~acl=/api/1/1/f/6/f/0/f6f0870cafd14edeaee4e60e8e864dc1.mp3*~data=user_id=0,application_id=42~hmac=368a84851fa34e6564b5079c363e2c4bd5e6fa642f086d7054191cda9898b5c5
+preview_provider: deezer
+external_url: https://www.deezer.com/track/8164641
 trackId:
-duration: 244
-genre:
+duration: 277
+genre: R&B/Soul
 lang: en
-tags: [1995]
-keywords: []
-emotion:
+tags: [R&B/Soul, 1995]
+keywords: [불의, 그림자, 빛, 영혼, 싸움]
+emotion: 분노
 date: 2026-06-30
 published: 2026-06-30T10:48:42.000Z
 comment: 그림자에도 한 줄기 빛이 들어오는 걸. 내가 틀렸다고 하는데, 그럼 네가 맞다는 걸 증명해봐. 넌 영혼까지 팔아넘기지만, 난 그러진 않아. 내가 더 강해져야겠어, 절대 무릎 꿇지 않아.

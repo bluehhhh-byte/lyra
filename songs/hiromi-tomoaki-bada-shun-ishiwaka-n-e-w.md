@@ -1,6 +1,6 @@
 ---
 title: N.E.W.
-title_ko: 
+title_ko: 뉴
 artist: Hiromi, Tomoaki Bada, Shun Ishiwaka
 artist_ko:
 album:
@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: Jazz
 lang: en
-tags: [2023]
+tags: [Jazz, 2023]
 keywords: []
 emotion:
 date: 2026-01-30
 published: 2026-01-30T08:22:26.000Z
-comment: 
+comment: 가사 없는 재즈 트리오 연주곡이다. 피아노와 베이스와 드럼이 서로를 밀고 당기며 곡을 끌고 간다.
 source: instagram
 source_tag: 260130_1722
 source_note: 

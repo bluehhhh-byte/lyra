@@ -1,22 +1,24 @@
 ---
 title: Life is Golden
-title_ko: 
+title_ko: 삶은 금빛이야
 artist: Suede
 artist_ko:
-album:
+album: The Blue Hour
 year: 2016
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/8f/1d/49/8f1d4928-29d8-cf7d-7110-c5401ee18126/190295637903.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/c6/f8/68/c6f868b8-acd3-4385-c692-787eda5237f7/mzaf_2693824547863534041.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/life-is-golden/1377616906?i=1377616919&uo=4
+trackId: 1377616919
 duration: 238
-genre:
+genre: Alternative Rock
 lang: en
-tags: [2016]
-keywords: []
-emotion:
+tags: [Alternative Rock, 2016]
+keywords: [피, 미소, 하늘, 빛, 겨울]
+emotion: 위로
 date: 2025-09-26
 published: 2025-09-26T14:02:27.000Z
-comment: 
+comment: 같은 피와 같은 삐뚤어진 미소를 가진 사람에게 혼자가 아니라고 말한다. 세상이 겨울을 다 쏟아부어도 네 삶은 금빛이라 한다.
 source: instagram
 source_tag: 250926_2302
 source_note: 

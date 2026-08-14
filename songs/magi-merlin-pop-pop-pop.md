@@ -1,19 +1,21 @@
 ---
 title: POP POP POP
-title_ko: 
+title_ko: 팝 팝 팝
 artist: Magi Merlin
 artist_ko:
-album:
+album: POP POP POP - Single
 year: 2025
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ae/67/83/ae6783f4-4fd0-c949-fdd8-81ce252fb214/5063778980375_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e7/bc/e5/e7bce5dc-2e55-2bc9-0e5e-869ea4cb9241/mzaf_11919938156044861354.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/pop-pop-pop/1836486326?i=1836486328&uo=4
+trackId: 1836486328
 duration: 163
-genre:
+genre: Indie Pop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Pop, 2025]
+keywords: [기쁨, 치어리더, 황소, 잉어, 미소]
+emotion: 기쁨
 date: 2026-02-08
 published: 2026-02-07T16:25:49.000Z
 comment: 사랑은 때로 대신 베이는 일, 네 고통이 사라질수록 내 상처가 의미가 되는 기이한 기쁨.

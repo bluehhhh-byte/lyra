@@ -3,17 +3,19 @@ title: 백야
 title_ko: 백야
 artist: NELL
 artist_ko:
-album:
+album: Newton's Apple
 year: 2014
-artwork:
+artwork: https://coverartarchive.org/release-group/0c79a183-cf99-4dcd-89a1-a32a2d8cb2bd/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/0c79a183-cf99-4dcd-89a1-a32a2d8cb2bd
 trackId:
 duration: 234
-genre:
+genre: Alternative Rock
 lang: ko
-tags: [2014]
-keywords: []
-emotion:
+tags: [Alternative Rock, 2014]
+keywords: [조각, 시간, 공간, 숨결, 약속]
+emotion: 그리움
 date: 2026-04-08
 published: 2026-04-07T23:53:34.000Z
 comment: 난 네가 필요해. 난 오늘도 이렇게 내 안에 남겨진 너의 조각들과 또 사랑에 빠지고 다시 이별을 하지.

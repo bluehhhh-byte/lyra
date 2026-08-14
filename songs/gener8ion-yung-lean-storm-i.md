@@ -1,19 +1,21 @@
 ---
 title: STORM I
-title_ko: 
+title_ko: 폭풍 I
 artist: GENER8ION, Yung Lean
 artist_ko:
-album:
+album: STORM
 year: 2026
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/ea9782202a27ecb386625846177f8f30/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/4/7/0/0/470411573702c48dc3a65b038de3ca92.mp3?hdnea=exp=1786684344~acl=/api/1/1/4/7/0/0/470411573702c48dc3a65b038de3ca92.mp3*~data=user_id=0,application_id=42~hmac=44eb95512ebaba9b3ad02f27b168de49b997aa23a78d23bd9523c971c45b5190
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3937217871
 trackId:
 duration: 209
-genre:
+genre: Electronic
 lang: en
-tags: [2026]
-keywords: []
-emotion:
+tags: [Electronic, 2026]
+keywords: [명단, 입술, 블랙리스트]
+emotion: 저항
 date: 2026-04-30
 published: 2026-04-30T10:34:32.000Z
 comment: 살기 위해 도망칠 것인가, 아니면 죽음을 각오하고 무언가를 지지할 것인가. 자신을 노리는 보이지 않는 적을 쫓으며, 그는 무엇을 위해 살고 무엇을 위해 죽을 것인가.

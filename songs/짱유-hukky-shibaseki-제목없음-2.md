@@ -3,17 +3,19 @@ title: 제목없음 2
 title_ko: 제목없음 2
 artist: 짱유, Hukky Shibaseki
 artist_ko:
-album:
+album: Untitled - Single
 year: 2023
-artwork:
-preview:
-trackId:
-duration: 
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/56/70/a0/5670a0dc-0881-2b14-88a0-6e49b328bfb6/8809964651349.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/45/b5/19/45b519dc-5e28-8a48-279a-56131e3091e0/mzaf_7788841310154803009.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%A0%9C%EB%AA%A9%EC%97%86%EC%9D%8C-2/1707830486?i=1707830488&uo=4
+trackId: 1707830488
+duration: 196
+genre: Hip-Hop
 lang: ko
-tags: [2023]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2023]
+keywords: [친구, 가족, 경찰서, 어른, 파도]
+emotion: 불안
 date: 2026-01-12
 published: 2026-01-11T23:53:18.000Z
 comment: 탐욕과 비극으로 얼룩진 회색 도시에서 소중한 이들을 잃고 무너진 남자가, 오염된 진실 대신 ‘모르는 게 약’이었던 순수로 회귀하기 위해 자신을 비워내며 망망대해로 나아가는 영혼의 사투.

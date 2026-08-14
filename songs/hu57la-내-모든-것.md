@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: R&B/Soul
 lang: ko
-tags: [2025]
+tags: [R&B/Soul, 2025]
 keywords: []
 emotion:
 date: 2026-03-30

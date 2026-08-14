@@ -1,19 +1,21 @@
 ---
 title: So Far So Fake
-title_ko: 
+title_ko: 여기까지 다 가짜야
 artist: Pierce The Veil
 artist_ko:
-album:
+album: The Jaws Of Life
 year: 2023
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/9a2170713e07863b75e05f24a5c7785b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/c/4/2/0/c42c44bcfb248019e6be7702e9e6ed73.mp3?hdnea=exp=1786684370~acl=/api/1/1/c/4/2/0/c42c44bcfb248019e6be7702e9e6ed73.mp3*~data=user_id=0,application_id=42~hmac=adfe9c4f12cb90ef865dec404b9ec56777409ae0822c142c9e92c93606b0fc4c
+preview_provider: deezer
+external_url: https://www.deezer.com/track/2135303897
 trackId:
 duration: 236
-genre:
+genre: Emo
 lang: en
-tags: [2023]
-keywords: []
-emotion:
+tags: [Emo, 2023]
+keywords: [전화, 비, 혈관, 피부, 스피커]
+emotion: 분노
 date: 2026-03-21
 published: 2026-03-21T03:57:43.000Z
 comment: 이기적인 사과만을 남기고 사라진 연인을 추적하던 주인공이 마스터 테이프에 묻은 피와 같은 가식적인 진실들을 마주하며, 결국 머리는 그저 위험한 짐 덩어리일 뿐 임을 깨닫고 모든 기억을 지워내는 과정을 그린 드라마.

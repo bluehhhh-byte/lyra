@@ -1,22 +1,24 @@
 ---
 title: Trust
-title_ko: 
+title_ko: 믿음
 artist: Megadeth
 artist_ko:
-album:
+album: Cryptic Writings (Remastered)
 year: 1997
-artwork:
-preview:
-trackId:
-duration: 310
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/24/63/98/246398d8-735b-3c6c-cdba-ca4c8b4fe5cd/00724359862552.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/5d/70/45/5d704527-1db3-140e-bbe8-5f74dcbc32bc/mzaf_7746815682732440259.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/trust/723975910?i=723975977&uo=4
+trackId: 723975977
+duration: 312
+genre: Heavy Metal
 lang: en
-tags: [1997]
-keywords: []
-emotion:
+tags: [Heavy Metal, 1997]
+keywords: [꿈, 눈물, 작별, 욕망, 거짓말]
+emotion: 분노
 date: 2025-10-24
 published: 2025-10-24T14:28:23.000Z
-comment: 
+comment: 서로에게 너무 많이 거짓말해서 이제 아무것도 믿지 못한다. 믿음이 왜 고통과 같은 말이 되었는지 묻는다.
 source: instagram
 source_tag: 251024_2328
 source_note: 

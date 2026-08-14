@@ -1,19 +1,21 @@
 ---
 title: Berghain
-title_ko: 
+title_ko: 베르크하인
 artist: ROSALÍA, Björk, Yves Tumor
 artist_ko:
-album:
+album: LUX
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0dd6cd0e783f1505cd57778953ab77a1/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/b/e/0/2beaaca61dea2b1dff152fe63abcd8f5.mp3?hdnea=exp=1786684376~acl=/api/1/1/2/b/e/0/2beaaca61dea2b1dff152fe63abcd8f5.mp3*~data=user_id=0,application_id=42~hmac=a7d8bf715cc17eb1c241f86dc46b25ab3e35e649660f9234466b83398f88ddf1
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3640140942
 trackId:
-duration: 179
-genre:
+duration: 178
+genre: Electronic
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Electronic, 2025]
+keywords: [두려움, 분노, 사랑, 피, 불꽃]
+emotion: 몽환
 date: 2026-03-07
 published: 2026-03-07T05:41:28.000Z
 comment: 그가 느끼는 두려움은 곧 나의 두려움이고, 그의 분노는 내 안의 분노가 되고, 그의 사랑은 나의 사랑이 되며, 그의 피는 내 피가 된다. 나를 사랑할 때까지, 너를 먹을거야. 나를 사랑할 때까지.

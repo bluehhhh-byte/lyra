@@ -1,19 +1,21 @@
 ---
 title: Dark Necessities
-title_ko: 
+title_ko: 어두운 필연
 artist: Red Hot Chili Peppers
 artist_ko:
-album:
+album: The Getaway
 year: 2016
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/22/3e/ed/223eedeb-3ad1-2bd8-c863-ab6fb39d658a/093624920137.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/11/19/4c/11194c03-9bdc-0469-b8c4-f813e7fbc545/mzaf_16668293031515151214.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/dark-necessities/1109250450?i=1109250843&uo=4
+trackId: 1109250843
 duration: 302
-genre:
+genre: Funk
 lang: en
-tags: [2016]
-keywords: []
-emotion:
+tags: [Funk, 2016]
+keywords: [대낮, 달, 그림자, 어둠, 빛]
+emotion: 몽환
 date: 2026-02-22
 published: 2026-02-21T17:54:56.000Z
 comment: 세상은 내가 추락한다고 말하겠지만, 사실 어둠의 필연성은 내 설계도의 일부일 뿐. 그 어둠을 친구 삼아 묵묵히 빛을 향해 나아가는 과정.

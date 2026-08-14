@@ -1,22 +1,24 @@
 ---
 title: Say That You're Mine
-title_ko: 
+title_ko: 네가 내 것이라고 말해줘
 artist: Valentine
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
+album: Say That You're Mine - EP
+year: 2021
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ed/0f/7b/ed0f7b3b-141f-774b-950b-f1a2f3aae49a/artwork.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/25/0d/93/250d93af-4ff3-8496-dd92-d3accfbb3d58/mzaf_5382308206860902187.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/say-that-youre-mine/1696599723?i=1696599724&uo=4
+trackId: 1696599724
 duration: 192
-genre:
+genre: R&B/Soul
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [R&B/Soul, 2021]
+keywords: [마음, 얼굴, 눈, 별]
+emotion: 사랑
 date: 2023-05-27
 published: 2023-05-26T15:34:36.000Z
-comment: 
+comment: 떨어져 있을 때마다 떠오르는 사람에게 곁에 머물겠다고 약속한다. 오늘 밤 네가 내 것이라고 말해달라는 청이 전부다.
 source: instagram
 source_tag: 230527_0034
 source_note: 

@@ -1,22 +1,24 @@
 ---
 title: らしさ
-title_ko: 
+title_ko: 나다움
 artist: Official髭男dism
 artist_ko:
-album:
+album: らしさ - Single
 year: 2025
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b4/6f/6a/b46f6ad1-b73c-4563-b05b-5edd2c9fbd08/PCSP_06691_A.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/7a/9f/2f7a9f5e-5f66-64bf-2da4-5d3dac516363/mzaf_5952007295907455265.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/%E3%82%89%E3%81%97%E3%81%95/1826940239?i=1826940240&uo=4
+trackId: 1826940240
 duration: 303
-genre:
+genre: J-Pop
 lang: ja
-tags: [2025]
-keywords: []
-emotion:
+tags: [J-Pop, 2025]
+keywords: [재능, 성격, 꿈, 안대, 속도]
+emotion: 저항
 date: 2026-04-20
 published: 2026-04-20T10:23:34.000Z
-comment: 
+comment: 절대적인 1위는 못 잡는다는 걸 알면서도 직감이 납득하지 못한다. '나다움'이라는 성가신 장점을 끌어안은 채 숨이 다할 때까지 울고 웃겠다는 곡이다.
 source: instagram
 source_tag: 260420_1923
 source_note: 

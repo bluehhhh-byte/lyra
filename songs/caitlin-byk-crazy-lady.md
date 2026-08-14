@@ -1,17 +1,19 @@
 ---
 title: Crazy Lady
-title_ko: 
+title_ko: 미친 여자
 artist: Caitlin Byk
 artist_ko:
-album:
+album: Crazy Lady
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/99510931348997ae5de91ea434a15e6f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/8/6/0/28679c9702d1dbc24de7bc8f9e249c2f.mp3?hdnea=exp=1786684334~acl=/api/1/1/2/8/6/0/28679c9702d1dbc24de7bc8f9e249c2f.mp3*~data=user_id=0,application_id=42~hmac=dc524a772d4d21ee54d0599dc59ea8ddb7403dbcb1792dbb818f692b41e41fc8
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3619385972
 trackId:
-duration: 
-genre:
+duration: 161
+genre: Indie Pop
 lang: en
-tags: [2025]
+tags: [Indie Pop, 2025]
 keywords: []
 emotion:
 date: 2026-02-23

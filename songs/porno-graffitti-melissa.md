@@ -1,22 +1,24 @@
 ---
 title: Melissa
-title_ko: 
+title_ko: 멜리사
 artist: Porno Graffitti
 artist_ko:
-album:
+album: PORNO GRAFFITTI BEST BLUE'S
 year: 2003
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f154a20fd9beb5cae14c187153d7919b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/b/1/0/5b1a543e2771e6df2ac5a27a6264b76a.mp3?hdnea=exp=1786684372~acl=/api/1/1/5/b/1/0/5b1a543e2771e6df2ac5a27a6264b76a.mp3*~data=user_id=0,application_id=42~hmac=3b71e233da4e62bb783b96e02ff8e7bbaeaf2fa47fcef0468187c882f734c971
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1355560622
 trackId:
-duration: 275
-genre:
+duration: 274
+genre: J-Rock
 lang: ja
-tags: [2003]
-keywords: []
-emotion:
+tags: [J-Rock, 2003]
+keywords: [기억, 슬픔, 새, 날개, 자물쇠]
+emotion: 이별
 date: 2026-06-24
 published: 2026-06-24T10:28:04.000Z
-comment: 
+comment: 먼 날의 기억을 네 손으로 갈라 슬픔의 숨통을 끊어달라고 청한다. 날개를 바라지 않고 허공에 흩날리는 잎이 되겠다는 체념이 아름답다.
 source: instagram
 source_tag: 260624_1927
 source_note: 

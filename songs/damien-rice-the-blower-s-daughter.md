@@ -1,19 +1,21 @@
 ---
 title: The Blower’s Daughter
-title_ko: 
+title_ko: 유리 부는 사람의 딸
 artist: Damien Rice
 artist_ko:
-album:
+album: O
 year: 2002
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/7f/b2/df/mzi.tadwdynv.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/75/c1/1775c1c9-e3d7-e178-9bee-9f641de8543e/mzaf_7962275660222794854.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-blowers-daughter/2249511?i=2249495&uo=4
+trackId: 2249495
 duration: 287
-genre:
+genre: Folk
 lang: en
-tags: [2002]
-keywords: []
-emotion:
+tags: [Folk, 2002]
+keywords: [삶, 사랑, 영웅, 눈, 바람]
+emotion: 그리움
 date: 2026-02-20
 published: 2026-02-19T17:00:05.000Z
 comment: 사랑이 떠난 자리, 스스로를 속이며 괜찮은 척 살아가려 하지만 결국 새로운 누군가를 찾기 전까지는 그 시선조차 거둘 수 없는 한 남자의 지독한 집착과 방황.

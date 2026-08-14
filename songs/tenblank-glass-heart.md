@@ -1,22 +1,24 @@
 ---
 title: Glass Heart
-title_ko: 
+title_ko: 글래스 하트
 artist: TENBLANK
 artist_ko:
-album:
+album: Glass Heart
 year: 2025
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fb/92/bd/fb92bdf8-7be8-cf28-140c-ee6497395681/5021732848093.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/a8/a9/c6a8a97e-6217-130a-e9e8-6f3b9273edb7/mzaf_2560589274023704217.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/glass-heart/1822249986?i=1822249999&uo=4
+trackId: 1822249999
 duration: 318
-genre:
+genre: J-Rock
 lang: ja
-tags: [2025]
-keywords: []
-emotion:
+tags: [J-Rock, 2025]
+keywords: [노래, 마음, 고요함, 정적, 거리]
+emotion: 불안
 date: 2025-08-30
 published: 2025-08-30T13:54:45.000Z
-comment: 
+comment: 태어나기 전부터 들려오던 노래가 있었다는 문장으로 시작한다. 왜냐고 묻던 사람이 침묵하자 고요함이 시끄럽게 날뛴다.
 source: instagram
 source_tag: 250830_2253
 source_note: 

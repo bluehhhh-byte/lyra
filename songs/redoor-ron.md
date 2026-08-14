@@ -3,17 +3,19 @@ title: Ron
 title_ko: Ron
 artist: Redoor
 artist_ko:
-album:
+album: Hospital
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/33e7a3459b4b41395d8b9d5ec97ffab6/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/b/f/1/0/bf1b21dc9b6243644149e43f4555bb8d.mp3?hdnea=exp=1786684374~acl=/api/1/1/b/f/1/0/bf1b21dc9b6243644149e43f4555bb8d.mp3*~data=user_id=0,application_id=42~hmac=c1907daf3478ea262c7862f00fcd4483c5505e4a1338edbf49581cc877591a8a
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3407067051
 trackId:
 duration: 172
-genre:
+genre: Indie Pop
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [Indie Pop, 2025]
+keywords: [날개, 어깨, 기억, 눈물, 손길]
+emotion: 고독
 date: 2026-04-09
 published: 2026-04-08T21:44:18.000Z
 comment: 나의 눈물은 금가루야. 너의 손길은 빛 한 줄기야. 미안하단 말로는 한없이 부족했었네. 기억을 조각내어 몸에 예쁜 선을 그었지.

@@ -3,20 +3,22 @@ title: XXL
 title_ko: XXL
 artist: YOUNG POSSE
 artist_ko:
-album:
+album: XXL EP
 year: 2024
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3d/90/b1/3d90b1b5-6a39-6641-a19c-38b1469e0ef7/cover_KM0019614_1.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0b/32/5b/0b325bfb-25ba-6e63-655c-8a44d549013e/mzaf_16204690320166605162.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/xxl/1735852952?i=1735852954&uo=4
+trackId: 1735852954
 duration: 153
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2024]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2024]
+keywords: [티셔츠, 지진, 구름, 빌딩, 공룡]
+emotion: 기쁨
 date: 2024-05-16
 published: 2024-05-16T13:48:41.000Z
-comment: 
+comment: 헐렁한 옷과 큰 사이즈를 태도로 삼아 판을 키우자고 한다. 160 언저리 키로 자이언트 스텝을 밟겠다는 말이 이 곡의 농담이자 선언이다.
 source: instagram
 source_tag: 240516_1923
 source_note: 

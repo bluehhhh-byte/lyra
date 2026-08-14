@@ -1,19 +1,21 @@
 ---
 title: Dungeon
-title_ko: 
+title_ko: 던전
 artist: Chun Chun
 artist_ko:
-album:
+album: Dungeon
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/3874d31b038f7812c5079437c348dc7f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/7/0/2e71eef34f85702d77ebb5c4d4ea38e2.mp3?hdnea=exp=1786684337~acl=/api/1/1/2/e/7/0/2e71eef34f85702d77ebb5c4d4ea38e2.mp3*~data=user_id=0,application_id=42~hmac=787e1cc10940a31daf7c3648b91f69f390fa57bb66f72d1f1c3d0ce84497a60f
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3148384931
 trackId:
-duration: 100
-genre:
+duration: 174
+genre: Hip-Hop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2025]
+keywords: [집, 무대, 클럽]
+emotion: 분노
 date: 2026-04-11
 published: 2026-04-10T17:46:07.000Z
 comment: 드래곤에게 연인을 빼앗긴 나약한 검사가 상처 입은 성장을 거듭하며, 마법과 시련이 가득한 새로운 세계의 문을 열고 사랑을 되찾기 위해 광활한 대지로 나아가는 처절하고도 찬란한 모험.

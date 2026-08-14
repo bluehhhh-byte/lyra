@@ -1,19 +1,21 @@
 ---
 title: Die On This Hill
-title_ko: 
+title_ko: 이 언덕에서 죽을게
 artist: SIENNA SPIRO
 artist_ko:
-album:
+album: Die On This Hill
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/77290d7d77df3c72816dc8d5ad11cf1b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/9/b/e/0/9bea3186a703cbfa52bdfb72045ac680.mp3?hdnea=exp=1786684380~acl=/api/1/1/9/b/e/0/9bea3186a703cbfa52bdfb72045ac680.mp3*~data=user_id=0,application_id=42~hmac=7f9885c7dc362e89a11323c38b2d874d7ad609d1f375b3291ccc6bb2f17e5b3b
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3584616411
 trackId:
-duration: 218
-genre:
+duration: 217
+genre: Ballad
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [Ballad, 2025]
+keywords: [자존심, 언덕, 밤, 책, 훈장]
+emotion: 체념
 date: 2026-02-28
 published: 2026-02-28T10:35:12.000Z
 comment: 상대의 무관심이라는 벼랑 끝에서도, 사랑이라는 지독한 고집을 증명하기 위해 기꺼이 자신을 파괴하며 자리를 지키는 가장 고독하고도 단단한 진심.

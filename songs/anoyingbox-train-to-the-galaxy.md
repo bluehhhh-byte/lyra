@@ -1,6 +1,6 @@
 ---
 title: train to the galaxy
-title_ko: 
+title_ko: 은하로 가는 기차
 artist: AnoyingBox
 artist_ko:
 album:
@@ -9,9 +9,9 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: Electronic
 lang: en
-tags: [2026]
+tags: [Electronic, 2026]
 keywords: []
 emotion:
 date: 2026-05-20

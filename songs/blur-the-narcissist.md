@@ -1,22 +1,24 @@
 ---
 title: The Narcissist
-title_ko: 
+title_ko: 나르시시스트
 artist: Blur
 artist_ko:
-album:
-year: 
-artwork:
-preview:
-trackId:
+album: The Ballad Of Darren
+year: 2023
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/25/5e/55/255e55f8-46d3-ebeb-c742-d67aa2181093/5054197688263.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/a3/51/c8a351f0-7262-eacb-4b69-2c78ad3e5ecf/mzaf_9095865558343931024.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-narcissist/1688020024?i=1688020907&uo=4
+trackId: 1688020907
 duration: 245
-genre:
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Alternative Rock, 2023]
+keywords: [거울, 조명, 메아리, 자아, 피에로]
+emotion: 몽환
 date: 2023-05-22
 published: 2023-05-21T16:01:42.000Z
-comment: 
+comment: 거울 속에 선 사람들 쪽으로 걸어 들어가 자아와 초월을 차례로 찾아낸다. 네 눈에 빛을 비추면 그 빛이 되돌아오지만 이번엔 넘어가지 않겠다고 한다.
 source: instagram
 source_tag: 230522_0100
 source_note: 

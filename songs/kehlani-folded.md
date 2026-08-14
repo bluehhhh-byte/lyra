@@ -1,19 +1,21 @@
 ---
 title: Folded
-title_ko: 
+title_ko: 개켜둔 옷
 artist: Kehlani
 artist_ko:
-album:
+album: Kehlani
 year: 2025
-artwork:
-preview:
-trackId:
-duration: 239
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/da/ea/6c/daea6c92-0990-d691-3283-6f019c4c8529/075679584670.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/04/12/0e041222-09a2-1e8a-a0d5-513721bf8e71/mzaf_13958734421753567020.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/folded/1885055310?i=1885055409&uo=4
+trackId: 1885055409
+duration: 238
+genre: R&B/Soul
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [R&B/Soul, 2025]
+keywords: [옷, 문, 약속, 장미, 정원]
+emotion: 이별
 date: 2026-02-23
 published: 2026-02-22T18:05:01.000Z
 comment: 입술로는 차갑게 안녕을 뱉어놓고, 당신의 체온이 남은 옷을 하나하나 정성껏 개며 이 밤이 가기 전 당신이 다시 그 문을 열어주길 바라는 서툰 미련.

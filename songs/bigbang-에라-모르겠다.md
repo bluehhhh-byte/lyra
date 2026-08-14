@@ -3,17 +3,19 @@ title: 에라 모르겠다
 title_ko: 에라 모르겠다
 artist: BIGBANG
 artist_ko:
-album:
+album: MADE
 year: 2016
-artwork:
-preview:
-trackId:
-duration: 194
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/5b/9b/8e/5b9b8ef2-998e-1210-8454-dfebfbf6271c/BB_COVER_IMAGE_4000.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/51/94/16/5194166f-4bff-a0a4-5aa8-fb9a33c2c160/mzaf_17142295893078043667.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/%EC%97%90%EB%9D%BC-%EB%AA%A8%EB%A5%B4%EA%B2%A0%EB%8B%A4/1313175579?i=1313176077&uo=4
+trackId: 1313176077
+duration: 232
+genre: K-Pop
 lang: ko
-tags: [2016]
-keywords: []
-emotion:
+tags: [K-Pop, 2016]
+keywords: [바텐더, 눈빛, 입술, 떨림, 밤]
+emotion: 설렘
 date: 2026-04-07
 published: 2026-04-07T10:27:38.000Z
 comment: 나이 먹어도 사랑은 단 1도 모르겠어. 진정한 사랑? 그냥 내 생각엔.. 에라 모르겠다, 다 사랑해, 에라 모르겠다, 널 사랑해.

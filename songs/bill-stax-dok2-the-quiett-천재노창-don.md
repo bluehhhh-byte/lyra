@@ -9,11 +9,11 @@ artwork:
 preview:
 trackId:
 duration: 
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2014]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2014]
+keywords: [지갑, 주머니, 은행계좌, 돈, 잔돈]
+emotion: 기쁨
 date: 2026-02-13
 published: 2026-02-12T23:33:16.000Z
 comment: 신발 밑창에 숨긴 푼돈부터 은행 계좌 속 큰돈까지, 돈 냄새가 나는 곳이라면 어디든 들이닥쳐 씨를 말려버리는 무자비한 돈 사냥꾼들.

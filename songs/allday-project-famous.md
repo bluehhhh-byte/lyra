@@ -1,22 +1,24 @@
 ---
 title: FAMOUS
-title_ko: 
+title_ko: 유명해
 artist: ALLDAY PROJECT
 artist_ko:
-album:
+album: FAMOUS
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0c7fa36afe33d9d6a5eb648f3fae7e8b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/f/6/0/2f6bafcae84ceafe27f199b17cf13be1.mp3?hdnea=exp=1786684325~acl=/api/1/1/2/f/6/0/2f6bafcae84ceafe27f199b17cf13be1.mp3*~data=user_id=0,application_id=42~hmac=6b250c7ce9350e3d9c4e229ed0cc583ddce865de5938b8ad35e318eaa44454b7
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3426284411
 trackId:
 duration: 180
-genre:
+genre: K-Pop
 lang: en
-tags: [2025]
-keywords: []
-emotion:
+tags: [K-Pop, 2025]
+keywords: [무대, 시선, 돈, 이름, 공기]
+emotion: 저항
 date: 2025-10-23
 published: 2025-10-22T23:46:51.000Z
-comment: 
+comment: 모든 시선이 따라오는데도 우린 유명하지도 않다고 받아친다. 가장 위대한 무명이라는 이름이 이 곡의 태도다.
 source: instagram
 source_tag: 251023_0846
 source_note: 

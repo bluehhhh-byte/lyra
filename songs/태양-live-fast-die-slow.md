@@ -1,19 +1,21 @@
 ---
 title: LIVE FAST DIE SLOW
-title_ko: 
+title_ko: 빠르게 살고 천천히 죽어
 artist: 태양
 artist_ko:
-album:
+album: QUINTESSENCE
 year: 2026
-artwork:
-preview:
-trackId:
-duration: 181
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4d/5c/6e/4d5c6e20-4618-1f9a-a4ac-a2b4ca7a2aba/8800374615389_cover.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/ad/53/06ad5372-1080-863b-d610-d1c267ae51be/mzaf_2781121319317279231.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/live-fast-die-slow/6768878794?i=6768878796&uo=4
+trackId: 6768878796
+duration: 180
+genre: R&B/Soul
 lang: en
-tags: [2026]
-keywords: []
-emotion:
+tags: [R&B/Soul, 2026]
+keywords: [기억, 트라우마, 게임, 고통, 사랑]
+emotion: 희망
 date: 2026-07-01
 published: 2026-07-01T03:53:03.000Z
 comment: 세상은 날 위해 멈추지 않아. 여전히 넌, 여전히 꿈 같던 그때 그 모습 그대로 날 깨워줘.

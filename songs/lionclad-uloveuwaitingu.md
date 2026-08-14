@@ -1,17 +1,19 @@
 ---
 title: UloveUwaitingU
-title_ko: 
+title_ko: 널 사랑해 널 기다려
 artist: Lionclad
 artist_ko:
-album:
+album: UloveUwaitingU
 year: 2024
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/a2715c0c05cf7931d0fa80f6acdb810b/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/6/d/6/0/6d6078228d2e8bccee4b03bf570f86f7.mp3?hdnea=exp=1786684356~acl=/api/1/1/6/d/6/0/6d6078228d2e8bccee4b03bf570f86f7.mp3*~data=user_id=0,application_id=42~hmac=2d11406d9486cffb5d87ef972fddaa1103fbca2d3e00321cca7e396d6b5e5980
+preview_provider: deezer
+external_url: https://www.deezer.com/track/4169986842
 trackId:
-duration: 
-genre:
+duration: 134
+genre: Indie Pop
 lang: en
-tags: [2024]
+tags: [Indie Pop, 2024]
 keywords: []
 emotion:
 date: 2026-03-23

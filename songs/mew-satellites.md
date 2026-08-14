@@ -1,22 +1,24 @@
 ---
 title: Satellites
-title_ko: 
+title_ko: 위성
 artist: MEW
 artist_ko:
-album:
+album: + - (Deluxe Edition)
 year: 2015
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/456463cb10a613ed2cb1110eb6cd04c3/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/9/0/2e9f18e94cd9f50374f1702bde0f86c0.mp3?hdnea=exp=1786684361~acl=/api/1/1/2/e/9/0/2e9f18e94cd9f50374f1702bde0f86c0.mp3*~data=user_id=0,application_id=42~hmac=ff08af9ff782a165367b0387fc464a7a51d2511997160c57146e437c99450797
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1145158192
 trackId:
 duration: 369
-genre:
+genre: Dream Pop
 lang: en
-tags: [2015]
-keywords: []
-emotion:
+tags: [Dream Pop, 2015]
+keywords: [햇살, 전류, 위성, 전화, 여름]
+emotion: 몽환
 date: 2025-10-30
 published: 2025-10-29T23:28:51.000Z
-comment: 
+comment: 빠르게 헤엄치며 자기 안의 전류를 알아간다. 차라리 위성이 되겠다는 말이 흐릿한 기타 위에 떠 있다.
 source: instagram
 source_tag: 251040_0828
 source_note: 

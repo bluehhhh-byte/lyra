@@ -1,19 +1,21 @@
 ---
 title: zeitgeist
-title_ko: 
+title_ko: 시대정신
 artist: THE KOXX
 artist_ko:
-album:
+album: the new normal
 year: 2015
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/c9a1494b25d3809d3081a9b79998e531/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/e/0/0/7e0f9254db1c270df4edc1f33e443a92.mp3?hdnea=exp=1786684389~acl=/api/1/1/7/e/0/0/7e0f9254db1c270df4edc1f33e443a92.mp3*~data=user_id=0,application_id=42~hmac=a03a668736cdf9dcc8d24777a0e42664c3ea208d4beccc0844609990767fcf42
+preview_provider: deezer
+external_url: https://www.deezer.com/track/530456791
 trackId:
-duration: 199
-genre:
+duration: 198
+genre: Indie Rock
 lang: en
-tags: [2015]
-keywords: []
-emotion:
+tags: [Indie Rock, 2015]
+keywords: [왕좌, 사람들, 금, 먼지, 왕관]
+emotion: 저항
 date: 2026-04-06
 published: 2026-04-05T23:52:46.000Z
 comment: 몰락한 권위와 방향을 잃은 군중, 그리고 피할 수 없는 허무를.

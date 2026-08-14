@@ -1,6 +1,6 @@
 ---
 title: 地球儀
-title_ko: 
+title_ko: 지구본
 artist: Kenshi Yonezu
 artist_ko:
 album:
@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 273
-genre:
+genre: J-Pop
 lang: ja
-tags: [2023]
-keywords: []
-emotion:
+tags: [J-Pop, 2023]
+keywords: [하늘, 계절, 그림자, 바람, 문]
+emotion: 회상
 date: 2026-04-19
 published: 2026-04-19T02:14:38.000Z
-comment: 
+comment: 태어난 날의 하늘과 다녀오라던 목소리에서 시작해, 잔해를 넘어 길 끝에서 기다리는 누군가에게 간다. 지구본을 돌리듯 성에 차지 않아 계속 생각을 달린다.
 source: instagram
 source_tag: 260419_1114
 source_note: 

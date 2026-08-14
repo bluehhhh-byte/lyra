@@ -3,20 +3,22 @@ title: Better
 title_ko: Better
 artist: BoA
 artist_ko:
-album:
+album: BETTER - The 10th Album
 year: 2020
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/fb7aa818561b63d61173e977bf7066cf/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/3/7/6/0/376fd1e0b416d67b973baed46686c4c8.mp3?hdnea=exp=1786684333~acl=/api/1/1/3/7/6/0/376fd1e0b416d67b973baed46686c4c8.mp3*~data=user_id=0,application_id=42~hmac=b20394f0f0639b21e1862c4adf1b4fc9ccb6541a4efa54af7ee6c06af5af01e6
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1156943922
 trackId:
-duration: 200
-genre:
+duration: 199
+genre: K-Pop
 lang: ko
-tags: [2020]
-keywords: []
-emotion:
+tags: [K-Pop, 2020]
+keywords: [걸음, 정적, 말투, 시간, 게임]
+emotion: 설렘
 date: 2025-11-28
 published: 2025-11-27T23:37:53.000Z
-comment: 
+comment: 뒤돌아보지 말고 걸어오라며 위험한 게 재미있다고 부추긴다. 상상만으로는 가질 수 없는, 싸워 이긴 자가 독차지하는 게임이다.
 source: instagram
 source_tag: 251128_0837
 source_note: 

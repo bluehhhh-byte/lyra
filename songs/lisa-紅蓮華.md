@@ -3,20 +3,22 @@ title: 紅蓮華
 title_ko: 홍련화
 artist: LiSA
 artist_ko:
-album:
+album: 紅蓮華 - EP
 year: 2020
-artwork:
-preview:
-trackId:
-duration: 238
-genre:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b3/ae/3b/b3ae3bd0-47cc-6349-1d0d-a01928796a62/jacket_VVXX00432B00Z_550.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/18/a3/bf18a344-fc40-17b4-28fc-c82ecb193c5a/mzaf_4385169665479594539.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/jp/album/%E7%B4%85%E8%93%AE%E8%8F%AF/1538286722?i=1538286723&uo=4
+trackId: 1538286723
+duration: 239
+genre: J-Pop
 lang: ja
-tags: [2020]
-keywords: []
-emotion:
+tags: [J-Pop, 2020]
+keywords: [주마등, 손, 꿈, 슬픔, 연꽃]
+emotion: 저항
 date: 2025-08-28
 published: 2025-08-27T23:21:58.000Z
-comment: 
+comment: 세상에 두들겨 맞고서야 지는 것의 의미를 알았다고 말한다. 슬픔에 고맙다고 인사한 뒤 붉은 연꽃에게 흐드러지게 피라 명한다.
 source: instagram
 source_tag: 250828_0820
 source_note: 

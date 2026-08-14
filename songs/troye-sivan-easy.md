@@ -1,22 +1,24 @@
 ---
 title: Easy
-title_ko: 
+title_ko: 쉽게
 artist: Troye Sivan
 artist_ko:
-album:
+album: Easy
 year: 2021
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f9ed5ff4f56e514d47eff123972e1fae/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/2/7/3/0/27336e9f7adf35ba5d67e4602996e253.mp3?hdnea=exp=1786684391~acl=/api/1/1/2/7/3/0/27336e9f7adf35ba5d67e4602996e253.mp3*~data=user_id=0,application_id=42~hmac=c2f50f51ad9aedf8b093d37dc9474f32e9addb7af3801683a4c1be407d9f7954
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1172418672
 trackId:
-duration: 227
-genre:
+duration: 213
+genre: Synth-Pop
 lang: en
-tags: [2021]
-keywords: []
-emotion:
+tags: [Synth-Pop, 2021]
+keywords: [집, 눈물, 햇살, 머리카락, 낯선]
+emotion: 슬픔
 date: 2025-10-14
 published: 2025-10-14T13:54:41.000Z
-comment: 
+comment: 그는 그걸 쉽게 만들었다는 말만 되풀이하며 불타는 집을 바라본다. 떠나지 말라는 청이 끝까지 남는다.
 source: instagram
 source_tag: 251014_2254
 source_note: 

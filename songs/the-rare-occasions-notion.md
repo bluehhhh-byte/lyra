@@ -1,19 +1,21 @@
 ---
 title: Notion
-title_ko: 
+title_ko: 관념
 artist: The Rare Occasions
 artist_ko:
-album:
+album: Notion - Single
 year: 2016
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/09/54/1f/09541f3f-7013-a259-b468-88cf507f1319/075679761576.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/56/83/b1/5683b146-1bda-0f16-cce0-f71ee177ed92/mzaf_14341814493413112868.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/notion/1598145620?i=1598145621&uo=4
+trackId: 1598145621
 duration: 195
-genre:
+genre: Indie Rock
 lang: en
-tags: [2016]
-keywords: []
-emotion:
+tags: [Indie Rock, 2016]
+keywords: [거짓말, 죽음, 창문, 한계, 햇빛]
+emotion: 체념
 date: 2026-02-23
 published: 2026-02-22T23:22:57.000Z
 comment: 영원이라는 환상을 걷어내고, 끝이 있기에 선명한 ‘지금’을 온전히 살아내려는 인생의 정면돌파.

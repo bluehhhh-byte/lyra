@@ -1,22 +1,24 @@
 ---
 title: Let There Be Love
-title_ko: 
+title_ko: 사랑이 있으라
 artist: Oasis
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Time Flies...1994-2009
+year: 2005
+artwork: https://cdn-images.dzcdn.net/images/cover/807022475dba6041ce009ac3d906f4e4/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/e/0/79e3c76f86320c27c07a3a9db847afa5.mp3?hdnea=exp=1786684366~acl=/api/1/1/7/9/e/0/79e3c76f86320c27c07a3a9db847afa5.mp3*~data=user_id=0,application_id=42~hmac=1c9049beab644ef090396c2d94399329a842a00c07195efedf29773fb2700259
+preview_provider: deezer
+external_url: https://www.deezer.com/track/15596514
 trackId:
-duration: 332
-genre:
+duration: 330
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Alternative Rock, 2005]
+keywords: [하늘, 천국, 태양, 사랑, 꿈]
+emotion: 위로
 date: 2023-05-23
 published: 2023-05-22T16:23:03.000Z
-comment: 
+comment: 하늘에 구멍을 뚫어 천국을 울린 게 누구냐고 묻고는 사랑이 있으라 선언한다. 지친 눈을 흔들어 깨우라며 곁에 있겠다고 한다.
 source: instagram
 source_tag: 230523_0123
 source_note: 

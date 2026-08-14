@@ -1,17 +1,19 @@
 ---
 title: vc19111
-title_ko: 
+title_ko: vc19111
 artist: KIRARA
 artist_ko:
-album:
+album: 4-3
 year: 2021
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/b4dd1d34a98bd558f66e589ce666aaad/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/8/0/11828696d12ac710541231a0ab8794fb.mp3?hdnea=exp=1786684353~acl=/api/1/1/1/1/8/0/11828696d12ac710541231a0ab8794fb.mp3*~data=user_id=0,application_id=42~hmac=ceaabf6a65f03b5806c45f01af2494747c23ff7f3ad4afdcca9ae094d1662462
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3681512932
 trackId:
-duration: 
-genre:
+duration: 323
+genre: Electronic
 lang: en
-tags: [2021]
+tags: [Electronic, 2021]
 keywords: []
 emotion:
 date: 2026-03-05

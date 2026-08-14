@@ -1,19 +1,21 @@
 ---
 title: Rat Race
-title_ko: 
+title_ko: 쳇바퀴
 artist: Impellitteri
 artist_ko:
-album:
+album: Screaming Symphony
 year: 1996
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/0a427c8aa23e8f74c5738c6fa29442be/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/6/2/d/0/62d5c48aab5192a93cda0f38047f0fd2.mp3?hdnea=exp=1786684346~acl=/api/1/1/6/2/d/0/62d5c48aab5192a93cda0f38047f0fd2.mp3*~data=user_id=0,application_id=42~hmac=4ab24487ce4d9b1044a92e42c5675e6d399281019d3dbb29809f7431b5f76a8a
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1620672142
 trackId:
 duration: 251
-genre:
+genre: Heavy Metal
 lang: en
-tags: [1996]
-keywords: []
-emotion:
+tags: [Heavy Metal, 1996]
+keywords: [쳇바퀴, 경주, 결승선, 시간, 돈]
+emotion: 체념
 date: 2026-07-02
 published: 2026-07-01T23:35:53.000Z
 comment: 쳇바퀴 같은 삶의 노예로 살다 보니 인생은 덧없이 흘러가고, 마침내 결승선을 넘어설 때 내게 남는 것은 무엇일까. 나는 지금, 삶을 낭비하고 있는가.

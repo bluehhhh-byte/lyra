@@ -1,19 +1,21 @@
 ---
 title: Always There For You
-title_ko: 
+title_ko: 언제나 네 곁에
 artist: Stryper
 artist_ko:
-album:
+album: Can't Stop The Rock
 year: 1988
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/fc49ce4934ef5bb826f20872c8a767fd/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/a/2/0/7a28fcd090e7236d54b69b4a41d8a0e7.mp3?hdnea=exp=1786684383~acl=/api/1/1/7/a/2/0/7a28fcd090e7236d54b69b4a41d8a0e7.mp3*~data=user_id=0,application_id=42~hmac=6da1fa8fd7d1b055a8d9236f7824adfe02caff42baf53bcbee701fbf7ecdca22
+preview_provider: deezer
+external_url: https://www.deezer.com/track/4234314
 trackId:
-duration: 250
-genre:
+duration: 251
+genre: Heavy Metal
 lang: en
-tags: [1988]
-keywords: []
-emotion:
+tags: [Heavy Metal, 1988]
+keywords: [사랑, 외로움, 약속, 세상, 곁]
+emotion: 위로
 date: 2026-04-26
 published: 2026-04-25T16:24:32.000Z
 comment: 사랑은 너무나 차갑고 세상이 모든 문을 닫아버려 더 이상 나아갈 수 없을 때, 상처 입은 연인에게 말뿐인 약속이 아닌 진정한 사랑을 보여주며 영원히 곁을 지키겠다고 다짐하는 한 남자.

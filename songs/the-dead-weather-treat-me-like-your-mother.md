@@ -1,19 +1,21 @@
 ---
 title: Treat Me Like Your Mother
-title_ko: 
+title_ko: 날 네 엄마처럼 대해
 artist: The Dead Weather
 artist_ko:
-album:
+album: Horehound
 year: 2006
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f3b5aa69cf2adbcf35aa4b613f17ca58/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/7/c/3/0/7c3828ed779674d808d4f172076bfd6c.mp3?hdnea=exp=1786684388~acl=/api/1/1/7/c/3/0/7c3828ed779674d808d4f172076bfd6c.mp3*~data=user_id=0,application_id=42~hmac=8207562b4bbf98bac79f67b2a333f059eea708c89589dc8db8cb38907cd5bf56
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3783640
 trackId:
 duration: 250
-genre:
+genre: Blues
 lang: en
-tags: [2006]
-keywords: []
-emotion:
+tags: [Blues, 2006]
+keywords: [연기, 악수, 엄마, 눈, 거짓말]
+emotion: 분노
 date: 2026-04-22
 published: 2026-04-22T03:57:22.000Z
 comment: 어머니라는 이름의 서늘한 권위 아래 모든 비밀은 해체되고, 마침내 은폐된 진실이 붉은 속살을 드러낸다. 거짓말의 해부.

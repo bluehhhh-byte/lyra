@@ -1,22 +1,24 @@
 ---
 title: A Day In The Life
-title_ko: 
+title_ko: 어느 하루
 artist: The Beatles
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Sgt. Pepper's Lonely Hearts Club Band
+year: 1967
+artwork: https://cdn-images.dzcdn.net/images/cover/b4d604768b6afd2cd8743001f855e8b4/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/3/a/9/0/3a9203876a2168e645ebdd5cc9028d67.mp3?hdnea=exp=1786684387~acl=/api/1/1/3/a/9/0/3a9203876a2168e645ebdd5cc9028d67.mp3*~data=user_id=0,application_id=42~hmac=dae11c187c98df9446825cd8ef4f1f26b1a1e3b8510c2fc706253ed5b20bd5f1
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1028518712
 trackId:
-duration: 335
-genre:
+duration: 252
+genre: Alternative Rock
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Alternative Rock, 1967]
+keywords: [뉴스, 사진, 영화, 침대, 버스]
+emotion: 몽환
 date: 2023-05-24
 published: 2023-05-24T10:16:43.000Z
-comment: 
+comment: 신문에서 읽은 죽음과 아침의 지각을 같은 무게로 늘어놓는다. 앨버트 홀을 채울 구멍이 몇 개인지 세는 마지막 줄이 서늘하다.
 source: instagram
 source_tag: 230524_1916
 source_note: 

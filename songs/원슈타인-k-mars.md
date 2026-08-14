@@ -3,17 +3,19 @@ title: K-Mars
 title_ko: K-Mars
 artist: 원슈타인
 artist_ko:
-album:
+album: 방과 후 전쟁활동 (Original Television Soundtrack) Special
 year: 2023
-artwork:
-preview:
-trackId:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/54/99/2f54994e-394a-8755-3602-ae82aeee2658/191953280455.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/00/78/f7/0078f7ea-0b14-271c-c1f2-49d3b526cdd8/mzaf_13344230753374045498.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/kr/album/k-mars/1684438858?i=1684438860&uo=4
+trackId: 1684438860
 duration: 164
-genre:
+genre: Hip-Hop
 lang: ko
-tags: [2023]
-keywords: []
-emotion:
+tags: [Hip-Hop, 2023]
+keywords: [악마, 태양, 서울, 얼굴, 본능]
+emotion: 불안
 date: 2026-03-21
 published: 2026-03-21T12:02:16.000Z
 comment: 기댈 곳 없는 숨 막히는 전쟁터 한복판, 얼마나 견딜 수 있느냐는 강요된 물음 앞에서 오직 본능 하나로 버티며 짐승처럼 변해가는 병사의 외침.

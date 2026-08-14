@@ -3,20 +3,22 @@ title: 스타스 STARS
 title_ko: 스타스 STARS
 artist: 자우림
 artist_ko:
-album:
+album: LIFE!
 year: 2025
-artwork:
+artwork: https://coverartarchive.org/release-group/f6369d54-0b25-4ec2-90d0-036ce310de88/front-500
 preview:
+preview_provider: coverartarchive
+external_url: https://musicbrainz.org/release-group/f6369d54-0b25-4ec2-90d0-036ce310de88
 trackId:
 duration: 
-genre:
+genre: Alternative Rock
 lang: ko
-tags: [2025]
-keywords: []
-emotion:
+tags: [Alternative Rock, 2025]
+keywords: [별, 눈, 밤하늘, 은하수, 입술]
+emotion: 사랑
 date: 2025-11-11
 published: 2025-11-10T23:27:33.000Z
-comment: 
+comment: 너무 예뻐서 눈물이 난다는 말로 시작해 별이 가득한 눈을 기적이라 부른다. 오래된 별빛 아래에서 먼 미래를 그려본다.
 source: instagram
 source_tag: 251111_0827
 source_note: 

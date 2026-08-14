@@ -1,22 +1,24 @@
 ---
 title: Endless
-title_ko: 
+title_ko: 끝없이
 artist: TOMOO
 artist_ko:
-album:
+album: DEAR MYSTERIES
 year: 2025
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/360c82e73c679a8a2a09a2fdac18a588/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/5/e/7/0/5e7a8c38bda62ea53ed7fad32bec6b06.mp3?hdnea=exp=1786684391~acl=/api/1/1/5/e/7/0/5e7a8c38bda62ea53ed7fad32bec6b06.mp3*~data=user_id=0,application_id=42~hmac=f3cccc386cdff56ec530524be35e6b3ae82b393a9da7ea4ed8ba6992241d2f68
+preview_provider: deezer
+external_url: https://www.deezer.com/track/3618499812
 trackId:
-duration: 242
-genre:
+duration: 247
+genre: J-Pop
 lang: ja
-tags: [2025]
-keywords: []
-emotion:
+tags: [J-Pop, 2025]
+keywords: [리본, 나선, 풍경, 목소리, 그림]
+emotion: 사랑
 date: 2026-05-25
 published: 2026-05-25T11:51:03.000Z
-comment: 
+comment: 묶이지 않은 두 리본이 각자 나선을 그리며 나란히 이어진다. 아무도 모르는 풍경을 함께 보는 것, 상대의 행복이 되는 것이 가장 기쁜 일이다.
 source: instagram
 source_tag: 260525_2050
 source_note: 

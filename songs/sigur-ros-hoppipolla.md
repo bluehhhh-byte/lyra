@@ -1,6 +1,6 @@
 ---
 title: Hoppipolla
-title_ko: 
+title_ko: 웅덩이에 뛰어들며
 artist: Sigur Ros
 artist_ko:
 album:
@@ -9,14 +9,14 @@ artwork:
 preview:
 trackId:
 duration: 269
-genre:
+genre: Post-Rock
 lang: en
-tags: [2005]
-keywords: []
-emotion:
+tags: [Post-Rock, 2005]
+keywords: [세상, 장화, 껍질, 바람, 머리카락]
+emotion: 기쁨
 date: 2025-11-15
 published: 2025-11-14T16:01:48.000Z
-comment: 
+comment: 장화도 없이 웅덩이에 뛰어들고 코피가 나도 다시 일어난다. 온 세상이 흐릿한데 상대가 선 자리만 또렷하다는 아이슬란드어 노래다.
 source: instagram
 source_tag: 251115_0101
 source_note: 

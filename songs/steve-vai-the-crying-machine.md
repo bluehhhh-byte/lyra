@@ -1,17 +1,19 @@
 ---
 title: The Crying Machine
-title_ko: 
+title_ko: 우는 기계
 artist: Steve Vai
 artist_ko:
-album:
+album: Naked Tracks Vol. 3 (Fire Garden / Plus - Mixes With No Lead Guitar)
 year: 1998
-artwork:
-preview:
+artwork: https://cdn-images.dzcdn.net/images/cover/f4e6902eee750c922369bf688cd832a8/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/8/0/ec83a96f753803a38548ff4faddf4bb2.mp3?hdnea=exp=1786684382~acl=/api/1/1/e/c/8/0/ec83a96f753803a38548ff4faddf4bb2.mp3*~data=user_id=0,application_id=42~hmac=8ecb0c45c111c5df5f40a3e4c7ebdf82eb4e76e814ffbf150953035615c0d6e3
+preview_provider: deezer
+external_url: https://www.deezer.com/track/63246167
 trackId:
-duration: 
-genre:
+duration: 291
+genre: Hard Rock
 lang: en
-tags: [1998]
+tags: [Hard Rock, 1998]
 keywords: []
 emotion:
 date: 2026-01-29

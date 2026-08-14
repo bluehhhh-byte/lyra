@@ -3,20 +3,22 @@ title: Oblivion
 title_ko: perf. HAUSER
 artist: Astor Piazzolla
 artist_ko:
-album:
-year: 
-artwork:
-preview:
+album: Piazzolla En Suite
+year: 1982
+artwork: https://cdn-images.dzcdn.net/images/cover/8ade68277239ca3c24fe75e61a50ad9f/1000x1000-000000-80-0-0.jpg
+preview: https://cdnt-preview.dzcdn.net/api/1/1/1/d/5/0/1d5d8a77c630b2171855eaf8018289d2.mp3?hdnea=exp=1786684328~acl=/api/1/1/1/d/5/0/1d5d8a77c630b2171855eaf8018289d2.mp3*~data=user_id=0,application_id=42~hmac=c8c03ad0cf80aaa618b30cbfec2966d5d5ba655ae5df03396f769666782f79ae
+preview_provider: deezer
+external_url: https://www.deezer.com/track/1453410
 trackId:
 duration: 214
-genre:
+genre: Jazz
 lang: en
-tags: []
-keywords: []
-emotion:
+tags: [Jazz, 1982]
+keywords: [망각, 신앙, 우물, 심장, 빛]
+emotion: 체념
 date: 2024-03-20
 published: 2024-03-19T15:29:29.000Z
-comment: 
+comment: 망각을 왕이자 법이자 별의 마법사로 부르는 스페인어 가사를 얹었다. 그토록 행복했던 시절의 빛이 목 잘린 채 지워진다.
 source: instagram
 source_tag: 240320_0024
 source_note: 
