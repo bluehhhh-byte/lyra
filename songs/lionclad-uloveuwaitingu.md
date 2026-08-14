@@ -11,20 +11,20 @@ preview_provider: deezer
 external_url: https://www.deezer.com/track/4169986842
 trackId:
 duration: 134
-genre: Indie Pop
+genre: Electronic
 lang: en
-tags: [Indie Pop, 2024]
+tags: [Electronic, 2024]
 keywords: []
 emotion:
 date: 2026-03-23
 published: 2026-03-22T23:54:36.000Z
-comment: 기다림마저 경쾌한 놀이가 되는 순간. 다채로운 루핑 사운드 위로 쏟아지는 노트를 쉴 새 없이 두드리며, 비트 위에서 펼쳐지는 ‘나’와 ‘너’의 마법 같은 리듬 게임.
+comment: 가사 없는 라이브 루핑 연주곡이다. 드럼·건반·샘플러로 실시간 녹음한 마디를 겹겹이 쌓아 올린다.
 source: instagram
 source_tag: 260323_0854
 source_note: 
 source_hash: 441b3e2c4b3b268a576088a519a9a55a49ca727d
-lyrics_note: Genius가 '가사 미공개'로 표시한다. 벅스에 곡은 있지만 가사가 등록돼 있지 않다.
-lyrics_none: true
+lyrics_note: 라이브 루핑 연주곡이다. 레이블(Azikazin Magic World) 소개글이 드럼·건반·루퍼 연주로만 설명하고, Musixmatch·Genius에도 가사가 없다.
+instrumental: true
 lyrics_external: 
 lyrics_source: 
 ---

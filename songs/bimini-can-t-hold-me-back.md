@@ -23,7 +23,7 @@ source: instagram
 source_tag: 230524_0850
 source_note: 
 source_hash: 3d6f6de00f6b2b9bc8650c92aa0c435b84e51d4a
-lyrics_note: 벅스에 곡은 있으나 가사가 등록돼 있지 않다. lrclib·Genius에도 없다.
+lyrics_note: Musixmatch가 곡은 알지만 has_lyrics=0이다. 벅스·Genius·lyricsify·유튜브 자막 어디에도 없다.
 lyrics_none: true
 lyrics_external: 
 lyrics_source: 

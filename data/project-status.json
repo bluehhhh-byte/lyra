@@ -3,16 +3,16 @@
  "songs": 917,
  "movies": 50,
  "watched": 1045,
- "covers": 912,
+ "covers": 913,
  "previews": 748,
  "appleExact": 671,
  "years": 916,
  "comments": 917,
- "keywords": 906,
- "emotions": 906,
+ "keywords": 909,
+ "emotions": 909,
  "needsWork": 1,
  "translationGaps": 0,
  "readingGaps": 0,
  "lintErrors": 0,
- "lintWarnings": 182
+ "lintWarnings": 176
 }

@@ -395,7 +395,30 @@
    "slugs": [
     "kiyoharu-eternal"
    ]
+  },
+  {
+   "at": "2026-08-14T17:32:15.592Z",
+   "files": [
+    "meta-out-12.json"
+   ],
+   "applied": 4,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 4
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "comment",
+    "genre"
+   ],
+   "slugs": [
+    "엘리스유-도주",
+    "hu57la-내-모든-것",
+    "caitlin-byk-crazy-lady",
+    "lionclad-uloveuwaitingu"
+   ]
   }
  ],
- "at": "2026-08-14T16:47:58.001Z"
+ "at": "2026-08-14T17:32:15.592Z"
 }
