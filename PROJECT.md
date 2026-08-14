@@ -21,7 +21,7 @@
 ## 현재 데이터 현황
 
 <!-- status:start -->
-_2026-08-13 기준 · `node scripts/project-status.mjs --write`로 갱신_
+_2026-08-14 기준 · `node scripts/project-status.mjs --write`로 갱신_
 
 | 항목 | 수치 |
 |---|---|
