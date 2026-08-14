@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllSongs } from "../../../lib/songs";
 import { readData } from "../../../lib/store";
 import { summarizeMusicTaste, interpretMusicTaste, recentShift } from "../../../lib/music-taste-core";
-import { emotionValence, valenceColor } from "../../../lib/keywords";
+import { emotionValence, valenceColor, parseEmotion } from "../../../lib/keywords";
 import CoverImage from "../../cover-image";
 
 export const metadata = {
