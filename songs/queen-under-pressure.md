@@ -65,7 +65,7 @@ This is our last dance
 This is ourselves
 > 이것이 바로 우리 자신이야
 Under pressure
-> 중압감 아래 속 존재
+> 중압감에 시달리는 존재
 Under pressure
 > 중압감에 시달리는 존재
 Pressure

@@ -55,13 +55,13 @@ When the night is cold
 > 밤은 차가워오고
 
 When the bird has flown
-> 저 새가 날아왔을 때
+> 저 새가 날아가 버렸을 때
 Got no-one to call your own
 > 네 것이라 할 수 있는 것은 아무것도
 Got no place to call your home
 > 네 집이라 부를 수 있는 곳 또한 아무 데도 없다네
 When the bird has flown
-> 저 새가 날아왔음에도
+> 저 새가 날아가 버렸을 때
 
 When the game's been fought
 > 경기가 끝났을 때

@@ -31,7 +31,7 @@ The bottom of the sea
 Your eyes
 > 너의 눈
 They turn me
-> 그들이 내게 등을 돌렸어
+> 그 눈이 나를 사로잡아
 
 Why should I stay here?
 > 왜 내가 여기 있어야 하지?
@@ -45,7 +45,7 @@ Follow where you lead
 Your eyes
 > 너의 눈
 They turn me
-> 그들이 나를 떠났어
+> 그 눈이 나를 사로잡아
 
 Turn me on to phantoms (Way out)
 > 나를 유령으로 만들어 줘 (도망쳐)

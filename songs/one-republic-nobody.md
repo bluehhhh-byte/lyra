@@ -61,7 +61,7 @@ So I think it’s finally time that you knew 이제는 네가 알아야 할 �
 
 Nobody got you the way I do
 > 아무도 나처럼 너를 이해하지 못해
-아무도 나처럼 너를 이해하지 못해 Whatever demons you’re fighting through 네가 어떤 악마와 싸우고 있든
+Whatever demons you’re fighting through 네가 어떤 악마와 싸우고 있든
 When you need somebody to turn to 네가 의지할 누군가가 필요할 때
 Nobody got you the way I do 아무도 나처럼 너를 이해하지 못해
 The way I do 내가 이해하는 것처럼

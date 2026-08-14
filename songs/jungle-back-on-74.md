@@ -44,9 +44,9 @@ Ooh-ooh-ooh-ohh where did it
 Go? Back on 74 (When I noticed you)
 > 돌아갈까? 1974년으로 (널 만났을 때)
 Call this place my home
-> 그 시절을 우리 집에서 불러볼까
+> 그 시절을 우리 집으로 불러볼까
 Never gonna cry anymore
-> 더 이상 눈물 보이지 말아줘
+> 더 이상 눈물 보이지 말아야겠어
 Where did it all
 > 어디부터 해야되나
 

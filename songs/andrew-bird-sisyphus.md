@@ -28,7 +28,7 @@ source_body_hash: 8b093e59bb2e130cb833399191c34ecd349348de
 Sisyphus peered into the mist
 > 시시포스는 안갯속을 들여다보았네
 A stone's throw from the precipice, paused
-> 꼭대기에서 바위를 던지기 전 그 잠깐 사이에
+> 절벽에서 돌 던지면 닿을 만큼 가까운 곳에 멈춰 선 채
 Did he jump or did he fall as
 he gazed into the maw of the morning mist?
 >^2 자욱한 새벽안갯속으로
@@ -85,4 +85,4 @@ And everything to do with
 Sisyphus peered into the mist
 > 시시포스는 안갯속을 들여다보았네
 A stone's throw from the precipice, paused
-> 바위가 절벽에서 굴러 떨어지기 전 그 잠깐의 침묵 속에서
+> 절벽에서 돌 던지면 닿을 만큼 가까운 곳에 멈춰 선 채

@@ -40,11 +40,18 @@ try {
 // (인스타에 처음부터 있던 오타를 고친 경우 — source_hash는 원본을 계속 가리킨다)
 const corrections = loadCorrections((p) => fs.readFileSync(p, "utf8")).items;
 const EMPTY_HASH = lineHash("");
-// 교체된 줄(afterHash)과 지운 줄(beforeHash, after가 빈 문자열)을 따로 본다
-const approvedFor = (slug) => ({
-  replaced: new Set(corrections.filter((c) => c.slug === slug && c.afterHash !== EMPTY_HASH).map((c) => c.afterHash)),
-  deleted: new Set(corrections.filter((c) => c.slug === slug && c.afterHash === EMPTY_HASH).map((c) => c.beforeHash)),
-});
+// 교체된 줄(afterHash)과 지운 줄(beforeHash, after가 빈 문자열)을 따로 본다.
+// 번역 줄도 외국어 곡에서는 캡션에 적혀 있던 줄이라 고치면 원본과 달라진다 —
+// 원문 교정과 섞이지 않게 field로 나눠 둔다(한국어 곡의 `>`는 우리가 나중에
+// 붙인 영어 번역이라 원본에 없다 — 아래에서 이 집합을 쓰지 않는다).
+const approvedFor = (slug) => {
+  const mine = corrections.filter((c) => c.slug === slug && c.afterHash !== EMPTY_HASH);
+  return {
+    replaced: new Set(mine.filter((c) => (c.field || "original") !== "translation").map((c) => c.afterHash)),
+    replacedTr: new Set(mine.filter((c) => c.field === "translation").map((c) => c.afterHash)),
+    deleted: new Set(corrections.filter((c) => c.slug === slug && c.afterHash === EMPTY_HASH).map((c) => c.beforeHash)),
+  };
+};
 let approvedUsed = 0;
 
 // 눈에 보이지 않는 문자(제로폭 공백·BOM·NBSP)와 줄 끝 공백은 내용이 아니다.
@@ -88,7 +95,8 @@ for (const s of songs) {
     while (oi < original.length && approved.deleted.has(lineHash(original[oi].trim()))) { oi++; fixed++; }
     const want = oi < original.length ? norm(original[oi]) : null;
     // 근거가 기록된 교정이면 원본과 달라도 통과 — 그 줄이 원본 한 줄을 대신한다
-    if (!derived && approved.replaced.has(lineHash(line.trim())) && want !== null) { oi++; fixed++; continue; }
+    const okSet = derived ? (s.lang === "ko" ? null : approved.replacedTr) : approved.replaced;
+    if (okSet?.has(lineHash(derived ? bare : line.trim())) && want !== null) { oi++; fixed++; continue; }
     // 번역이 원문과 같은 문자열일 때(영어 곡의 영어 후렴 등) 파생 줄이 원문 자리를
     // 먼저 차지해 뒤가 어긋난다 — 바로 다음 줄이 원문 그 자체면 그쪽에 양보한다
     const nextIsSame = derived && bi + 1 < body.length && !/^>/.test(body[bi + 1]) && norm(body[bi + 1]) === want;

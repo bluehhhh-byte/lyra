@@ -73,6 +73,6 @@ I′m not okay
 Yeah, I'm broken by you
 > 난 너로 인해 망가졌어
 I′m not okay
-> 난 안 괜찮지 않지 않아
+> 난 괜찮지 않아
 But that's ay-okay with me
 > 하지만 괜찮아, 나랑

@@ -32,7 +32,7 @@ Who’s returned from the dead
 Who remains
 > 누가 그 자리에 남아있었나
 (Just to spit it in your face)
-> (네 무덤에 침을 뱉으려고)
+> (네 면상에 침을 뱉으려고)
 
 You know that I don’t want you and I never did
 > 당신을 원하지 않아, 그랬던 적도 없어

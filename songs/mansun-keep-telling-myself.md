@@ -85,4 +85,4 @@ Helping me through when my soul is spent
 My soul is spent
 > 내 영혼이 다했을 때
 My soul is spent
-> 내 영혼을 다해서
+> 내 영혼이 다했을 때
