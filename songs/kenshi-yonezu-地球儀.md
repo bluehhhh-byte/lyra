@@ -5,7 +5,7 @@ artist: Kenshi Yonezu
 artist_ko:
 album:
 year: 2023
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/355738/35573873.jpg
 preview:
 trackId:
 duration: 273

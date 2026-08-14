@@ -14,7 +14,7 @@ duration: 467
 genre: Alternative Rock
 lang: en
 tags: [유럽, Alternative Rock]
-keywords: [비행기, 하늘, 숨, 밤, 도시]
+keywords: [숨, 치유, 비행기]
 emotion: 고독
 date: 2022-10-06
 published: 2022-10-06T13:09:29.000Z

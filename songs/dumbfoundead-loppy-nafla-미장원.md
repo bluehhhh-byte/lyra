@@ -5,14 +5,14 @@ artist: Dumbfoundead, Loppy, Nafla
 artist_ko:
 album:
 year: 2015
-artwork:
+artwork: https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/930/779/80930779_1489570884868_1_600x600.JPG
 preview:
 trackId:
 duration: 
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2015]
-keywords: [미장원, 머리, 동네, 손가락, 교회]
+keywords: [미장원, 고래, 참치, 망치, 손가락]
 emotion: 저항
 date: 2026-02-06
 published: 2026-02-06T00:07:40.000Z

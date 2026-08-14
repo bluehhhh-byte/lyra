@@ -350,7 +350,34 @@
     "디오-내일의-우리",
     "perfume-human-factory"
    ]
+  },
+  {
+   "at": "2026-08-14T16:01:02.563Z",
+   "files": [
+    "meta-out-10.json"
+   ],
+   "applied": 11,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 11
+   },
+   "fields": [
+    "keywords"
+   ],
+   "slugs": [
+    "dumbfoundead-loppy-nafla-미장원",
+    "르세라핌-이브-프시케-그리고-푸른-수염의-아내",
+    "원슈타인-single",
+    "barbar-gough-when-i-fall-in-love",
+    "퓨어킴-unpretty-tattoo",
+    "kent-747",
+    "kendrick-lamar-alright",
+    "백예린-지켜줄게",
+    "제이통-미안",
+    "rufus-wainwright-sonnet-20",
+    "damien-rice-older-chests"
+   ]
   }
  ],
- "at": "2026-08-14T06:46:08.745Z"
+ "at": "2026-08-14T16:01:02.563Z"
 }

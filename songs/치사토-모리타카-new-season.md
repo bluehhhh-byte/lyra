@@ -5,7 +5,7 @@ artist: 치사토 모리타카
 artist_ko:
 album:
 year: 1987
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/181888/18188883.jpg
 preview:
 trackId:
 duration: 281

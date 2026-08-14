@@ -5,7 +5,7 @@ artist: Sigur Ros
 artist_ko:
 album:
 year: 2005
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ce/3e/b8/ce3eb805-fb13-0200-5856-081ed0014e13/190296926952.jpg/600x600bb.jpg
 preview:
 trackId:
 duration: 269

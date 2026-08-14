@@ -5,7 +5,7 @@ artist: 제이통
 artist_ko:
 album:
 year: 2025
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/206808/20680887.jpg
 preview:
 trackId:
 duration: 

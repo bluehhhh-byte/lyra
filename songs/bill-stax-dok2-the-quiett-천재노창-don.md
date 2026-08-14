@@ -5,7 +5,7 @@ artist: Bill Stax, Dok2, The Quiett, 천재노창
 artist_ko:
 album:
 year: 2014
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/4546/454650.jpg
 preview:
 trackId:
 duration: 

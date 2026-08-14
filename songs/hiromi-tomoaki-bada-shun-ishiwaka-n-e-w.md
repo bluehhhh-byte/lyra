@@ -5,7 +5,7 @@ artist: Hiromi, Tomoaki Bada, Shun Ishiwaka
 artist_ko:
 album:
 year: 2023
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4c/c0/42/4cc04265-1ff1-4afb-e3dc-ce2e20c8cf71/23UMGIM02518.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
 duration: 

@@ -1,76 +1,125 @@
 {
- "at": "2026-08-14T06:46:08.745Z",
+ "at": "2026-08-14T16:01:02.563Z",
  "applied": [
-  {
-   "slug": "mgmt-piece-of-what",
-   "changed": [
-    "emotion",
-    "keywords"
-   ],
-   "confidence": "high",
-   "model": "claude-opus-5",
-   "generated_at": "2026-08-14T14:00:00Z",
-   "prompt_version": "meta-v1",
-   "reviewed": false
-  },
-  {
-   "slug": "anoyingbox-train-to-the-galaxy",
-   "changed": [
-    "emotion",
-    "keywords"
-   ],
-   "confidence": "high",
-   "model": "claude-opus-5",
-   "generated_at": "2026-08-14T14:00:00Z",
-   "prompt_version": "meta-v1",
-   "reviewed": false
-  },
-  {
-   "slug": "b-free-hukky-shibaseki-get-it",
-   "changed": [
-    "emotion",
-    "keywords"
-   ],
-   "confidence": "high",
-   "model": "claude-opus-5",
-   "generated_at": "2026-08-14T14:00:00Z",
-   "prompt_version": "meta-v1",
-   "reviewed": false
-  },
   {
    "slug": "dumbfoundead-loppy-nafla-미장원",
    "changed": [
-    "emotion",
     "keywords"
    ],
-   "confidence": "high",
+   "confidence": "",
    "model": "claude-opus-5",
-   "generated_at": "2026-08-14T14:00:00Z",
-   "prompt_version": "meta-v1",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
    "reviewed": false
   },
   {
-   "slug": "디오-내일의-우리",
+   "slug": "르세라핌-이브-프시케-그리고-푸른-수염의-아내",
    "changed": [
-    "emotion",
     "keywords"
    ],
-   "confidence": "high",
+   "confidence": "",
    "model": "claude-opus-5",
-   "generated_at": "2026-08-14T14:00:00Z",
-   "prompt_version": "meta-v1",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
    "reviewed": false
   },
   {
-   "slug": "perfume-human-factory",
+   "slug": "원슈타인-single",
    "changed": [
-    "emotion",
     "keywords"
    ],
-   "confidence": "high",
+   "confidence": "",
    "model": "claude-opus-5",
-   "generated_at": "2026-08-14T14:00:00Z",
-   "prompt_version": "meta-v1",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "barbar-gough-when-i-fall-in-love",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "퓨어킴-unpretty-tattoo",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "kent-747",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "kendrick-lamar-alright",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "백예린-지켜줄게",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "제이통-미안",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "rufus-wainwright-sonnet-20",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
+   "reviewed": false
+  },
+  {
+   "slug": "damien-rice-older-chests",
+   "changed": [
+    "keywords"
+   ],
+   "confidence": "",
+   "model": "claude-opus-5",
+   "generated_at": "2026-08-15T09:00:00Z",
+   "prompt_version": "keywords-grounded-v1",
    "reviewed": false
   }
  ],

@@ -5,7 +5,7 @@ artist: Maytree
 artist_ko:
 album:
 year: 2021
-artwork:
+artwork: https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/833/233/81833233_1610070753638_1_600x600.JPG
 preview:
 trackId:
 duration: 152

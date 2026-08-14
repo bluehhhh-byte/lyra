@@ -5,7 +5,7 @@ artist: 백예린
 artist_ko:
 album:
 year: 2023
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/205379/20537963.jpg
 preview:
 trackId:
 duration: 169

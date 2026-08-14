@@ -5,7 +5,7 @@ artist: EPIKHIGH
 artist_ko:
 album:
 year: 2012
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/3452/345211.jpg
 preview:
 trackId:
 duration: 224

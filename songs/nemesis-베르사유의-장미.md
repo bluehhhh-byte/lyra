@@ -5,7 +5,7 @@ artist: Nemesis
 artist_ko:
 album:
 year: 2005
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/80110/8011049.jpg
 preview:
 trackId:
 duration: 241

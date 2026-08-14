@@ -5,7 +5,7 @@ artist: AnoyingBox
 artist_ko:
 album:
 year: 2026
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/208113/20811352.jpg
 preview:
 trackId:
 duration: 

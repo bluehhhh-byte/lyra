@@ -5,7 +5,7 @@ artist: Tyler, The Creater
 artist_ko:
 album:
 year: 2025
-artwork:
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9e/2b/93/9e2b93b7-43a9-e814-e0ae-c55a1b7e17d6/196873463513.jpg/600x600bb.jpg
 preview:
 trackId:
 duration: 201

@@ -5,7 +5,7 @@ artist: MGMT
 artist_ko:
 album:
 year: 2006
-artwork:
+artwork: https://image.bugsm.co.kr/album/images/1200/1557/155714.jpg
 preview:
 trackId:
 duration: 
