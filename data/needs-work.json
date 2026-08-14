@@ -1,41 +1,12 @@
 {
- "at": "2026-08-14T17:34:22.156Z",
+ "at": "2026-08-14T19:41:37.052Z",
  "total": {
   "songs": 917,
-  "songsNeedingWork": 1,
+  "songsNeedingWork": 0,
   "moviesNeedingWork": 1
  },
- "byNeed": {
-  "연도 없음": 1
- },
- "songBatches": [
-  [
-   {
-    "id": "레이지본-사랑하고-싶어",
-    "kind": "song",
-    "title": "사랑하고 싶어",
-    "artist": "레이지본",
-    "lang": "ko",
-    "year": "",
-    "needs": [
-     "연도 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 1,
-     "lyrics": 0
-    }
-   }
-  ]
- ],
+ "byNeed": {},
+ "songBatches": [],
  "movieBatches": [
   [
    {
