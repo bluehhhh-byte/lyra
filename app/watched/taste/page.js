@@ -2,6 +2,9 @@ import Link from "next/link";
 import { getWatched } from "../../../lib/watched";
 import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
 import { readData } from "../../../lib/store";
+import { getAllMovies } from "../../../lib/movies";
+import { themeCounts } from "../../../lib/themes";
+import CoverImage from "../../cover-image";
 
 export const metadata = {
   title: "취향 분석 | Syno.",
@@ -91,9 +94,46 @@ function PrefSection({ title, high, low, mean, link }) {
   );
 }
 
+function CuratedThemeEvidence({ movies }) {
+  const themes = themeCounts(movies).slice(0, 5);
+  if (!themes.length) return null;
+  return (
+    <section className="mb-12 rounded-2xl border border-line bg-surface/50 p-5 sm:p-7">
+      <h2 className="text-sm font-semibold">주제로 다시 읽는 큐레이션 영화</h2>
+      <p className="mt-1 text-xs text-muted">전체 별점 이력이 아니라 직접 감상을 남긴 {movies.length}편의 검수 주제입니다.</p>
+      <div className="mt-5 space-y-5">
+        {themes.map(([theme, count]) => {
+          const examples = movies.filter((movie) => movie.themes.includes(theme)).slice(0, 4);
+          return (
+            <details key={theme} className="group border-b border-line pb-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between text-sm">
+                <span className="font-semibold">{theme}</span>
+                <span className="text-xs text-muted">{count}편 · 근거 보기</span>
+              </summary>
+              <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {examples.map((movie) => (
+                  <Link key={movie.slug} href={`/movies/${movie.slug}`} className="group/movie min-w-0">
+                    <CoverImage src={movie.poster} alt="" label={movie.title} loading="lazy" className="aspect-[2/3] w-full rounded-lg object-cover" />
+                    <p className="mt-2 truncate text-xs font-semibold group-hover/movie:text-accent">{movie.title_ko || movie.title}</p>
+                    {movie.comment && <p className="mt-1 line-clamp-2 text-[11px] leading-4 text-muted">{movie.comment}</p>}
+                  </Link>
+                ))}
+              </div>
+              <Link href={`/archive?theme=${encodeURIComponent(theme)}`} className="mt-4 inline-block text-xs text-accent hover:underline">
+                {theme}의 영화 기록 모두 보기 →
+              </Link>
+            </details>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 export default function TastePage() {
   const rated = getWatched().filter((m) => m.rating != null);
   const report = readData("taste-report.json", null);
+  const curatedMovies = getAllMovies();
 
   if (rated.length === 0) {
     return (
@@ -157,6 +197,8 @@ export default function TastePage() {
         전체 평균보다 <span className="text-green-400">높으면 초록</span>,
         <span className="text-red-400"> 낮으면 빨강</span> — 많이 본 것과 좋아하는 것은 다르다.
       </p>
+
+      <CuratedThemeEvidence movies={curatedMovies} />
 
       <CountSection title="국가별" rows={country.byCount} mean={mean} />
       <CountSection title="장르별" rows={genre.byCount} mean={mean} />

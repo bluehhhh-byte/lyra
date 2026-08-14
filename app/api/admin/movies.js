@@ -5,6 +5,7 @@ import { capGenre } from "../../../lib/genre";
 import { movieMetaGen } from "../../../lib/admin/movie-meta";
 import { FM, fmValue, setField, parseTags } from "../../../lib/admin/frontmatter";
 import { kstToday } from "../../../lib/kst";
+import { parseThemes } from "../../../lib/themes";
 
 export async function handleMovies(action, body) {
   if (action === "movieSearch") {
@@ -36,7 +37,7 @@ export async function handleMovies(action, body) {
   if (action === "movieSave") {
     const {
       title, titleKo, mediaType, director, directorKo, cast, year, runtime,
-      rating, genre, poster, backdrop, tmdbId, tags, comment, synopsis, bodyKind,
+      rating, genre, poster, backdrop, tmdbId, tags, themes, comment, synopsis, bodyKind,
     } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
@@ -57,6 +58,7 @@ poster: ${poster || ""}
 backdrop: ${backdrop || ""}
 tmdbId: ${tmdbId || ""}
 tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
+themes: [${parseThemes(themes).join(", ")}]
 body_kind: ${bodyKind === "review" ? "review" : ""}
 date: ${kstToday()}
 published: ${new Date().toISOString()}
