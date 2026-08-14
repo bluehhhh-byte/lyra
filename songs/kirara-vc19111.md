@@ -6,10 +6,10 @@ artist_ko:
 album: 4-3
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/b4dd1d34a98bd558f66e589ce666aaad/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/8/0/11828696d12ac710541231a0ab8794fb.mp3?hdnea=exp=1786684353~acl=/api/1/1/1/1/8/0/11828696d12ac710541231a0ab8794fb.mp3*~data=user_id=0,application_id=42~hmac=ceaabf6a65f03b5806c45f01af2494747c23ff7f3ad4afdcca9ae094d1662462
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3681512932
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/e9/4f/b2e94f0c-c79f-4662-5e56-5c6841e2c86c/mzaf_13482855964930652877.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/vc19111/1856541207?i=1856541214&uo=4
+trackId: 1856541214
 duration: 323
 genre: Electronic
 lang: en

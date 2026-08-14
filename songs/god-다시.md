@@ -6,7 +6,7 @@ artist_ko:
 album: Chapter 4
 year: 2001
 artwork: https://cdn-images.dzcdn.net/images/cover/06309e53ed3e60baae86dfba28f974f7/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/7/0/0/37019242752874e1ca3f5b516fa525bb.mp3?hdnea=exp=1786584306~acl=/api/1/1/3/7/0/0/37019242752874e1ca3f5b516fa525bb.mp3*~data=user_id=0,application_id=42~hmac=fe044b2b632884e306e9750c1250b3dea393bf6aac56f50f636a4de43545c4b0
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/36/a4/4f/36a44f0a-6571-12a4-d28b-5654c021f1e2/mzaf_6960997043205688272.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/%EB%8B%A4%EC%8B%9C/1669438161?i=1669438165&uo=4
 trackId: 1669438165

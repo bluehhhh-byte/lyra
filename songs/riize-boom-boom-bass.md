@@ -6,10 +6,10 @@ artist_ko:
 album: RIIZING - The 1st Mini Album
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/b5ce73e5d7e52c71f3c339c788f85187/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/a/0/0/ea0a7298cae3a2a5d5d37dd5e8121583.mp3?hdnea=exp=1786684374~acl=/api/1/1/e/a/0/0/ea0a7298cae3a2a5d5d37dd5e8121583.mp3*~data=user_id=0,application_id=42~hmac=dfe5be6017871469ad401f0b98dd995e824ad4f7656e4c55c92a037a8d9c84d6
-preview_provider: deezer
-external_url: https://www.deezer.com/track/2827155082
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/e2/06/01e20685-e5ca-adea-3e2f-e6f398d621f9/mzaf_16034371568655553441.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/boom-boom-bass/1749589149?i=1749589154&uo=4
+trackId: 1749589154
 duration: 152
 genre: K-Pop
 lang: en

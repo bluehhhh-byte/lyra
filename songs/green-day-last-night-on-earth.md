@@ -6,7 +6,7 @@ artist_ko:
 album: 21st Century Breakdown
 year: 2009
 artwork: https://cdn-images.dzcdn.net/images/cover/be7c43ae2cc2cb08017de11813b7dd92/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee897b53259.mp3?hdnea=exp=1786559380~acl=/api/1/1/c/5/4/0/c5416575abfe1c100afa5ee897b53259.mp3*~data=user_id=0,application_id=42~hmac=ab8955be1463fd6c6ec6678c2e043751b29e1391ee0036c55c721c8666e69a62
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d5/e1/f4/d5e1f453-1c53-3d4a-2a52-0ba82aaf8063/mzaf_9151621687269882237.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/last-night-on-earth/346245355?i=346258077&uo=4
 trackId: 346258077
@@ -50,7 +50,7 @@ I'm sending all my love to you
 With every breath that I am worth
 Here on earth
 I'm sending all my love to you
->^3 내가 가진 모든 숨결마다
+> 내가 가진 모든 숨결마다
 > 내 모든 사랑을 너에게 보내기 위해
 > 난 이 땅 위에 서 있어
 

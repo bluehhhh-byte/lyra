@@ -6,7 +6,7 @@ artist_ko:
 album: These Days
 year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/f62f9e5464282d2cc30bfe2c38a53e13/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/e/5/0/9e5d25bd7d00b22601d86bc5409a43e0.mp3?hdnea=exp=1786584272~acl=/api/1/1/9/e/5/0/9e5d25bd7d00b22601d86bc5409a43e0.mp3*~data=user_id=0,application_id=42~hmac=683fabead57f6819d71557186e2fb234be2a239179b35c1c91620fea9fc8366c
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/62/d3/3462d367-418f-964d-37e6-ba9f7bb0ed92/mzaf_7018720405004084813.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/this-aint-a-love-song/1440854323?i=1440854564&uo=4
 trackId: 1440854564
@@ -49,7 +49,7 @@ There were nights that I died for you baby
 > 당신을 위해 죽을 수도 있었던 밤들도 있었어
 I tried and I tried to deny,
 your love drove me crazy baby
->^2 당신이 나를 미치게 한다는 것을
+> 당신이 나를 미치게 한다는 것을
 > 부정하려 무슨 짓이든 해보려 했어
 
 If the love that I've got for you is gone

@@ -6,7 +6,7 @@ artist_ko:
 album: Congratulations
 year: 2010
 artwork: https://cdn-images.dzcdn.net/images/cover/45b1228d06903dd42c8150f1c493b0ea/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/1/0/4b12c4708f596fed5bce5c9d5791eed4.mp3?hdnea=exp=1786584359~acl=/api/1/1/4/b/1/0/4b12c4708f596fed5bce5c9d5791eed4.mp3*~data=user_id=0,application_id=42~hmac=eab2f4b37925ce916e778b4709af1ae6abaeb88432c703adb6bccf185949562b
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c0/4e/6e/c04e6e15-185e-506c-35bb-e21a3edc78e4/mzaf_8875958414848418113.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/its-working/363353526?i=363353791&uo=4
 trackId: 363353791

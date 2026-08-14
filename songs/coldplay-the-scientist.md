@@ -6,7 +6,7 @@ artist_ko:
 album: A Rush of Blood to the Head
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/249fc78bd75bb8bfe2ae8c05e06650ee/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/6/0/73695cce07d5e5ef7b0bfc5d5bb01402.mp3?hdnea=exp=1786559368~acl=/api/1/1/7/3/6/0/73695cce07d5e5ef7b0bfc5d5bb01402.mp3*~data=user_id=0,application_id=42~hmac=942c877802cfeacb14abc70ac033e325692b86ea111c3799f94d6ccdc50fcb31
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/a6/27/aea62715-e6ae-9562-ba81-1f969a2ee2fa/mzaf_9054259057357054559.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/the-scientist/1122775993?i=1122776155&uo=4
 trackId: 1122776155

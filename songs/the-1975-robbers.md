@@ -6,7 +6,7 @@ artist_ko:
 album: The 1975
 year: 2013
 artwork: https://cdn-images.dzcdn.net/images/cover/8f71d66a99bcb46e0768bced1769d0f9/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/3/b/0/f3b41f56e8ebbc6808b56b6ba823b9bb.mp3?hdnea=exp=1786584418~acl=/api/1/1/f/3/b/0/f3b41f56e8ebbc6808b56b6ba823b9bb.mp3*~data=user_id=0,application_id=42~hmac=a11b37dbf3c14f15ac4ef23a4cfc5d8208cff3b39d8e7354bc1dd916cbf3ce43
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/39/73/653973c2-449b-a3c8-dbd0-af97100545a7/mzaf_15794401609046687284.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/robbers/1440818989?i=1440819287&uo=4
 trackId: 1440819287

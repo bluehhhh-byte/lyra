@@ -6,7 +6,7 @@ artist_ko:
 album: Vol. 3 The Subliminal Verses
 year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/abde61289af0a36e980d1a3d715b8dad/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/b/5/0/4b569c4755f2e8e0e6e55878a426e32a.mp3?hdnea=exp=1786584407~acl=/api/1/1/4/b/5/0/4b569c4755f2e8e0e6e55878a426e32a.mp3*~data=user_id=0,application_id=42~hmac=65cbe330b6bdd31a1c119b5139185f8950457d8cd922aa850317a248fb755936
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6a/be/ba/6abeba04-d953-dbef-272b-330a6020130b/mzaf_13892880778275569141.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/before-i-forget/926184050?i=926184076&uo=4
 trackId: 926184076

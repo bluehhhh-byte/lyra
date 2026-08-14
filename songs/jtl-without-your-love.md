@@ -6,7 +6,7 @@ artist_ko:
 album: Run Away
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/3/e/0/a3e9087d36ae9b09561a8ce226f457da.mp3?hdnea=exp=1786584325~acl=/api/1/1/a/3/e/0/a3e9087d36ae9b09561a8ce226f457da.mp3*~data=user_id=0,application_id=42~hmac=2f1df0c72453cd47bb5ab0e968713679abeb1ad694696e5b3eafae5c9d77eb39
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e7/66/1d/e7661dae-44fe-de4f-653e-630d6bc141ff/mzaf_624443883415879264.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/without-your-love/1454460914?i=1454460917&uo=4
 trackId: 1454460917

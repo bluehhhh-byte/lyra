@@ -6,7 +6,7 @@ artist_ko:
 album: Everybody's Gotta Learn Sometime - Single
 year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/4f18f940cd60a2c446f5b3362ac8ad02/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/5/a/0/45ae5be529e8851e5df52d6035db8df8.mp3?hdnea=exp=1786584266~acl=/api/1/1/4/5/a/0/45ae5be529e8851e5df52d6035db8df8.mp3*~data=user_id=0,application_id=42~hmac=e9f1d7ef4333f4a8e43a34c47a89b25709bf8e6f02059bd4969494702b6222e4
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/7a/87/74/7a87745c-94bd-ce3a-57a6-966d2f47b36a/mzaf_5680028184852290400.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/everybodys-gotta-learn-sometime/1650465961?i=1650466118&uo=4
 trackId: 1650466118

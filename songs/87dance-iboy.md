@@ -37,7 +37,7 @@ I'll be on your milk and I'll be on your wine
 
 I'll be on your dress
 When you at another land
->^2 다른 나라에 있을 때
+> 다른 나라에 있을 때
 > 난 너의 드레스가 되어 있을게
 I'll be change up for you
 > 네가 원하는 모든 방식으로
@@ -54,7 +54,7 @@ Please call ma name
 > 내 이름을 불러줘
 Dancing on ma table
 After swimming on the lake
->^2 호수에서 수영한 후
+> 호수에서 수영한 후
 > 내 테이블 위에서 춤을 춰줘
 I'll be on your playlist
 > 너의 플레이리스트에 있을게

@@ -6,7 +6,7 @@ artist_ko:
 album: Death Or Hell - EP
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/add7b4ebc7711210280f0893c1fa1748/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/2/d/0/a2dd55e782bece6cf33fda5e4b0d5327.mp3?hdnea=exp=1786559378~acl=/api/1/1/a/2/d/0/a2dd55e782bece6cf33fda5e4b0d5327.mp3*~data=user_id=0,application_id=42~hmac=5c9a30b60c1d157df21b2a04d8697dbded8b037d976da2fa93a1cb15774d48c0
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/4c/7f/aa/4c7faa50-0fa9-7033-afca-e0782d17f4cb/mzaf_15026615792016410843.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/new-rocket/1551029427?i=1551029738&uo=4
 trackId: 1551029738

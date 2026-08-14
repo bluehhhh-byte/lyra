@@ -6,10 +6,10 @@ artist_ko:
 album: Keep in the Dark
 year: 2014
 artwork: https://cdn-images.dzcdn.net/images/cover/4378b09a3d6341305061d3ceb2e7135b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/f/7/0/7f7fed1505247564c5be495c65c95dde.mp3?hdnea=exp=1786684385~acl=/api/1/1/7/f/7/0/7f7fed1505247564c5be495c65c95dde.mp3*~data=user_id=0,application_id=42~hmac=221e61249fc431754ac55e928f8365ec6f5ba96b55dacd0b38229edb18875a33
-preview_provider: deezer
-external_url: https://www.deezer.com/track/70078868
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f0/42/87/f0428791-619a-7832-8776-775df9c0ee12/mzaf_17435894568909712681.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/keep-in-the-dark/1185720541?i=1185720628&uo=4
+trackId: 1185720628
 duration: 218
 genre: Dream Pop
 lang: en

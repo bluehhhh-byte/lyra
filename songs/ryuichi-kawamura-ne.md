@@ -6,7 +6,7 @@ artist_ko:
 album: Shin Ai - Only One
 year: 2001
 artwork: https://cdn-images.dzcdn.net/images/cover/762808d121a123ab33937d06cce99661/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/c/0/73c90177f72c3f225d66f8f80b501e19.mp3?hdnea=exp=1786559421~acl=/api/1/1/7/3/c/0/73c90177f72c3f225d66f8f80b501e19.mp3*~data=user_id=0,application_id=42~hmac=1c5d490b01c7ce53b2777b7c805b60f7964a362ddd0d60349968a030382efff0
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7a/19/40/7a1940de-4d07-6bc1-851d-ffc5e7ad89d1/mzaf_3296654384958425979.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/ne/156875796?i=156875827&uo=4
 trackId: 156875827

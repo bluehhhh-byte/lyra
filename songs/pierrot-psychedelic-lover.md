@@ -6,10 +6,10 @@ artist_ko:
 album: PSYCHEDELIC LOVER
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/b5d766660e016c7d462e8c52c42747f2/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/8/8/0/1880224d537fc6aeb6a84afdcbcf05de.mp3?hdnea=exp=1786684371~acl=/api/1/1/1/8/8/0/1880224d537fc6aeb6a84afdcbcf05de.mp3*~data=user_id=0,application_id=42~hmac=bc828adc9e90cb446fee0996c1ca9bd7ff9e1aa1f4493a8812b7c4d661bbea25
-preview_provider: deezer
-external_url: https://www.deezer.com/track/2975396161
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/1a/3b/9c1a3bfb-7c29-b0c9-5ae9-e2af79947a92/mzaf_4188109619127370357.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/psychedelic-lover/1766276636?i=1766276645&uo=4
+trackId: 1766276645
 duration: 260
 genre: Visual Kei
 lang: ja

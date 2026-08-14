@@ -6,10 +6,10 @@ artist_ko:
 album: Strange Days (50th Anniversary Deluxe Edition)
 year: 1967
 artwork: https://cdn-images.dzcdn.net/images/cover/1a8f4f1180a7f3a4bcb115d31f983f69/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/4/5/0/24576bea1b55583dda77a90108241d1c.mp3?hdnea=exp=1786559439~acl=/api/1/1/2/4/5/0/24576bea1b55583dda77a90108241d1c.mp3*~data=user_id=0,application_id=42~hmac=939a1c0c15e25c032327a73285b6aa5770062a2ef0492ba7ea06653ccac5509b
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d6/c6/66/d6c66661-2809-bb58-4662-3dbf3ec3c2df/mzaf_15146960583915704075.plus.aac.p.m4a
 preview_provider: itunes
-external_url: https://music.apple.com/us/album/youre-lost-little-girl/1287538882?i=1287538889&uo=4
-trackId: 1287538889
+external_url: https://music.apple.com/us/album/youre-lost-little-girl/1605993599?i=1605994989&uo=4
+trackId: 1605994989
 duration: 185
 genre: Alternative Rock
 lang: en

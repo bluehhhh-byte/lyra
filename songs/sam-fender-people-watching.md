@@ -6,10 +6,10 @@ artist_ko:
 album: People Watching
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/7091444b5768f64e8cd2ddeafede0d9f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/0/9/0/f09abf7113bf1dbcf07de42dde963ab3.mp3?hdnea=exp=1786684378~acl=/api/1/1/f/0/9/0/f09abf7113bf1dbcf07de42dde963ab3.mp3*~data=user_id=0,application_id=42~hmac=e9407b4c8e4c55f6559886df411726599fa1430f4245aa19524c105c9c86e8f0
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3087699371
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/6e/ab/586eab96-fa49-1d56-2a95-547447ccd6a3/mzaf_9349709733899481827.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/people-watching/1778713616?i=1778713618&uo=4
+trackId: 1778713618
 duration: 304
 genre: Indie Rock
 lang: en

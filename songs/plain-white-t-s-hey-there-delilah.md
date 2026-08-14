@@ -6,7 +6,7 @@ artist_ko:
 album: Every Second Counts
 year: 2006
 artwork: https://cdn-images.dzcdn.net/images/cover/7a83573cb86eb70c8903db13b5fdd2c3/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/1/c/0/f1c0d5f32486c8c534252a1eb34f4ba8.mp3?hdnea=exp=1786559410~acl=/api/1/1/f/1/c/0/f1c0d5f32486c8c534252a1eb34f4ba8.mp3*~data=user_id=0,application_id=42~hmac=2e6adfce9a16dcf4b2f5cfe928314c47cfcd8752dc2d70f527648408d98c7b9e
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/48/7c/25/487c2563-f192-6109-c906-eba87621c3aa/mzaf_6141271325212512150.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/hey-there-delilah/1442825106?i=1442825350&uo=4
 trackId: 1442825350

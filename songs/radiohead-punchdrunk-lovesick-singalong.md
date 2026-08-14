@@ -6,7 +6,7 @@ artist_ko:
 album: My Iron Lung - EP
 year: 1994
 artwork: https://cdn-images.dzcdn.net/images/cover/c48d2c12230b84fa39edf8ffe08cca7f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/8/a/0/b8a47c4c5f894585a9b668672e25587d.mp3?hdnea=exp=1786584394~acl=/api/1/1/b/8/a/0/b8a47c4c5f894585a9b668672e25587d.mp3*~data=user_id=0,application_id=42~hmac=598d092b56b5eb5d1792cc6d698c5944e2e16f4cfb4f5e76e1ea75fc3d70c924
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/27/b7/4b/27b74bb4-4131-56a7-ee43-e16fa7e7158c/mzaf_4154860961345073653.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/punchdrunk-lovesick-singalong/1112408006?i=1112408400&uo=4
 trackId: 1112408400
@@ -27,7 +27,7 @@ source_body_hash: 5c08f3e75ee6f33eae67dd1eda59478be48557ce
 ---
 I wrapped you inside my coat
 When they came to firebomb the house
->^2 그들이 집을 폭파하러 왔을 때
+> 그들이 집을 폭파하러 왔을 때
 > 당신을 내 코트 안으로 감싸 안았어
 I didn't feel pain,
 > 난 고통을 느끼지 않아
@@ -61,5 +61,5 @@ Can turn your world into dust
 
 I stood in front of her face
 When the first bullet was shot
->^2 첫 번째 총알이 발사된 순간
+> 첫 번째 총알이 발사된 순간
 > 난 그녀의 얼굴 앞에 서 있었지

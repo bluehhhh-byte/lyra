@@ -34,7 +34,7 @@ I want a man, I want a man
 
 I want a man who'll rub my back at night
 With his big and hairy hands
->^2 이 밤에 크고 털이 수북한 그의 손으로
+> 이 밤에 크고 털이 수북한 그의 손으로
 > 내 등을 쓰다듬어주는 남자
 I want a strong man, caveman, one-man band
 > 난 강하고, 원시적이고, 혼자 해낼 수 있는 남자를 원해

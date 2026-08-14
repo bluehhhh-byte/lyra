@@ -6,7 +6,7 @@ artist_ko:
 album: Cross Road
 year: 1994
 artwork: https://cdn-images.dzcdn.net/images/cover/58ca1d20e8d19c1e5f8e821d07412c74/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/8/1/0/3812ba24a462aea21f738661313fde34.mp3?hdnea=exp=1786584271~acl=/api/1/1/3/8/1/0/3812ba24a462aea21f738661313fde34.mp3*~data=user_id=0,application_id=42~hmac=4bb2b1a33b434a16472e0af794756c48534ca16294ebabd10a05aa815c72af9f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/07/1c/a0071c00-f736-15be-2952-29d22bc22b15/mzaf_1095195280585853064.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/someday-ill-be-saturday-night/1423284802?i=1423285050&uo=4
 trackId: 1423285050
@@ -31,7 +31,7 @@ I'm taking each day and night at a time
 > 매일 밤낮을 보내는 동안
 I'm feeling like a Monday,
 But someday I'll be Saturday night
->^2 월요일 같은 기분이지만
+> 월요일 같은 기분이지만
 > 때로는 토요일 밤 같은 기분이기도 해
 
 Hey my name is Jim, where did I go wrong?
@@ -75,7 +75,7 @@ Like I ain't got nothing but this roll of the dice
 > 주사위 굴리는 것 외에 아무것도 하지 않은 것처럼
 I'm feeling like a Monday,
 But someday I'll be Saturday night
->^2 월요일 같은 기분이지만
+> 월요일 같은 기분이지만
 > 때로는 토요일 밤 같은 기분이기도 해
 
 Now I can't say my name or tell you where I am
@@ -84,7 +84,7 @@ I want to blow myself away, don't know if I can
 > 나 자신을 날려버리고 싶어, 그럴 수 있는진 몰라도
 I wish that I could be in some other time and place
 With someone else's soul, someone else's face
->^2 다른 사람의 영혼, 다른 사람의 얼굴을 갖고
+> 다른 사람의 영혼, 다른 사람의 얼굴을 갖고
 > 다른 시간과 장소에 살고 싶었지만
 I'm gonna pick up all the pieces
 And what's left of my pride

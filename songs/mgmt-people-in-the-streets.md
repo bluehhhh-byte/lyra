@@ -6,7 +6,7 @@ artist_ko:
 album: Loss Of Life
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/db776aa36c21952e0e6b97737ca7f778/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/3/d/0/33d065edd4d68474e245870dbd0657e9.mp3?hdnea=exp=1786559396~acl=/api/1/1/3/3/d/0/33d065edd4d68474e245870dbd0657e9.mp3*~data=user_id=0,application_id=42~hmac=253b9945df309bf1d52ab7e014e71d7227e4cb873fe3cee53d5f817ae2428a3a
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/65/ff/45/65ff45ea-2934-6924-0aef-459f88d74f4d/mzaf_925622667841116774.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/people-in-the-streets/1711646500?i=1711646505&uo=4
 trackId: 1711646505

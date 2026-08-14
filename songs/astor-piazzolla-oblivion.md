@@ -6,10 +6,10 @@ artist_ko:
 album: Piazzolla En Suite
 year: 1982
 artwork: https://cdn-images.dzcdn.net/images/cover/8ade68277239ca3c24fe75e61a50ad9f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/d/5/0/1d5d8a77c630b2171855eaf8018289d2.mp3?hdnea=exp=1786684328~acl=/api/1/1/1/d/5/0/1d5d8a77c630b2171855eaf8018289d2.mp3*~data=user_id=0,application_id=42~hmac=c8c03ad0cf80aaa618b30cbfec2966d5d5ba655ae5df03396f769666782f79ae
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1453410
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0e/20/33/0e2033da-7439-1d28-7c23-d897918d1e76/mzaf_15254443501141138465.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/oblivion/73585031?i=73585004&uo=4
+trackId: 73585004
 duration: 214
 genre: Jazz
 lang: en

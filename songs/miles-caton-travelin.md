@@ -6,7 +6,7 @@ artist_ko:
 album: Sinners (Original Motion Picture Soundtrack)
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/118238ffbaa664dd94ceced16c5f8e3a/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/f/2/0/3f2cb10ca352a3de99f56974d55edabd.mp3?hdnea=exp=1786559397~acl=/api/1/1/3/f/2/0/3f2cb10ca352a3de99f56974d55edabd.mp3*~data=user_id=0,application_id=42~hmac=5adc5ce6c2530c72929c3e0fac1c0f0bdc6d668ebee9974f3d0b19cda0bc09ba
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/e3/bf/ece3bfac-780c-c916-114a-2843469496e9/mzaf_15675770409851830983.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/travelin/1808534010?i=1808534020&uo=4
 trackId: 1808534020

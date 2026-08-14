@@ -6,8 +6,8 @@ artist_ko:
 album: TEEN TROUBLES
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/1f57b42c78f64db752978fded1d5c123/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/b/0/73bfab1730a0537c5adef48f3a77d522.mp3?hdnea=exp=1786584439~acl=/api/1/1/7/3/b/0/73bfab1730a0537c5adef48f3a77d522.mp3*~data=user_id=0,application_id=42~hmac=b890469839cfd8b19c9b608e1d612fd2c1f6ccbce8408ba3d697f011e19fe274
-preview_provider: itunes
+preview: 
+preview_provider: 
 external_url: https://music.apple.com/kr/album/jeff-and-alana/1644821406?i=1644821664&uo=4
 trackId: 1644821664
 duration: 148

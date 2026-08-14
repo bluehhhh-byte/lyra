@@ -6,7 +6,7 @@ artist_ko:
 album: Changes - EP
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/d6fb1b306580ada577a516b00e4c3aeb/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/0/2/0/f02ccfb871bc0792d43bae472899b41c.mp3?hdnea=exp=1786559382~acl=/api/1/1/f/0/2/0/f02ccfb871bc0792d43bae472899b41c.mp3*~data=user_id=0,application_id=42~hmac=14880a1a3b20f57f8ea8cfec1b003a1a690de2d296e1a5e82f27aac9ebb43a66
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/3e/b8/5e3eb8d3-d270-c82c-3932-41857a26433c/mzaf_2074011997705896333.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/head-in-the-clouds/1583125945?i=1583125951&uo=4
 trackId: 1583125951

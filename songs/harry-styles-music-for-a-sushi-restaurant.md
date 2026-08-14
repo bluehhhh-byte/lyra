@@ -6,7 +6,7 @@ artist_ko:
 album: Harry's House
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/b0e936124f59e669ddba02ebe5893f95/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/2/8/0/62805d25eef0e50839abd65fc4e7b24a.mp3?hdnea=exp=1786559381~acl=/api/1/1/6/2/8/0/62805d25eef0e50839abd65fc4e7b24a.mp3*~data=user_id=0,application_id=42~hmac=7772ae5ba173e31580ab678430a36504a3f117296dbe0b1169840ba841278f72
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/30/2b/db302b37-7cfd-947d-b168-2288df0594d9/mzaf_4879334278137199118.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/music-for-a-sushi-restaurant/1615584999?i=1615585001&uo=4
 trackId: 1615585001

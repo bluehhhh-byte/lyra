@@ -6,7 +6,7 @@ artist_ko:
 album: TMGE 106
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/ec1c737594159334d0eac9a6497710e7/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/5/2/0/052ddaf1ca0f460f416db0af766540b3.mp3?hdnea=exp=1786559446~acl=/api/1/1/0/5/2/0/052ddaf1ca0f460f416db0af766540b3.mp3*~data=user_id=0,application_id=42~hmac=7ca1f6ebc6a1900fba71b8ed5cb84a660883799cbaf654f3308ef675374a5425
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/94/3a/41/943a41b0-1268-84be-6c06-db9c21194de4/mzaf_11854982253003534565.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/smokin-billy/716393216?i=716393319&uo=4
 trackId: 716393319

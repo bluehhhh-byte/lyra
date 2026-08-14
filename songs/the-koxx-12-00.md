@@ -6,7 +6,7 @@ artist_ko:
 album: ACCESS OK
 year: 2011
 artwork: https://cdn-images.dzcdn.net/images/cover/3b68f423c5c0071a2e01dde4d5be3862/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/b/4/0/1b4de6c02474465a577a1f26326e4b4c.mp3?hdnea=exp=1786584420~acl=/api/1/1/1/b/4/0/1b4de6c02474465a577a1f26326e4b4c.mp3*~data=user_id=0,application_id=42~hmac=1e8ddbc763575e5199ba9686d97ae64896ade3739b72aa9e34b2674eb46964f4
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d7/a8/c3/d7a8c3a3-e715-67e3-1913-d36f7eeed1ea/mzaf_12541268113668941232.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/12-00/1416397990?i=1416398061&uo=4
 trackId: 1416398061
@@ -37,7 +37,7 @@ It's unavoidable, miserable situation
 > 피할 수 없는, 막막한 상황이야
 11 o'clock is last chance
 For the people who fear failure
->^2 밤 11시는 실패를 두려워하는 사람들에겐
+> 밤 11시는 실패를 두려워하는 사람들에겐
 > 마지막 기회일테니까
 
 열 두시가 되면은 문을 닫는다
@@ -55,7 +55,7 @@ It's unavoidable, miserable situation
 > 피할 수 없는, 비참한 상황이야
 11 o'clock is last chance
 For the people who fear failure
->^2 밤 11시는 실패를 두려워하는 사람들에겐
+> 밤 11시는 실패를 두려워하는 사람들에겐
 > 마지막 기회일테니까
 
 열 두시가 되면은 문을 닫는다

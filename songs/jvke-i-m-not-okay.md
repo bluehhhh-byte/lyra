@@ -6,7 +6,7 @@ artist_ko:
 album: this is what ____ feels like (Vol. 1-4)
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/ff66669185174ac6f6b7a6342c93fca5/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/2/3/0/023d0937cc1fbbd163195c3eeb43592b.mp3?hdnea=exp=1786584329~acl=/api/1/1/0/2/3/0/023d0937cc1fbbd163195c3eeb43592b.mp3*~data=user_id=0,application_id=42~hmac=3f139d46fb216675b025d82db88bcc2566df3c72b43d32736e9330eaa2d5d65f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/2a/90/4c2a90c3-11dc-64b0-c76e-9b562fe11313/mzaf_13525756762039636490.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/im-not-okay/1640157064?i=1640157415&uo=4
 trackId: 1640157415

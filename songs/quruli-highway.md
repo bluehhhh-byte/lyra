@@ -6,7 +6,7 @@ artist_ko:
 album: Highway - Single
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/9f5448fc452f407eb55d526b69775848/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/9/5/0/49503d3e3b35a86e9aa242113bb3b64d.mp3?hdnea=exp=1786584387~acl=/api/1/1/4/9/5/0/49503d3e3b35a86e9aa242113bb3b64d.mp3*~data=user_id=0,application_id=42~hmac=6a34dbdedac12750e35a4c42ad565515442548efe13ff3cbda96189106bd250e
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/76/e2/01/76e20148-64cd-a366-a51f-87e9f265bf2d/mzaf_11631614181677803561.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/highway/1590793760?i=1590793761&uo=4
 trackId: 1590793761

@@ -6,7 +6,7 @@ artist_ko:
 album: HAPPENING - Single
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/f2c288e502c7ec1c3df7a188aa328303/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/e/d/0/3edd9d91d0336a5201856111c802dd59.mp3?hdnea=exp=1786584256~acl=/api/1/1/3/e/d/0/3edd9d91d0336a5201856111c802dd59.mp3*~data=user_id=0,application_id=42~hmac=ef19577c3772cd669a07a6a24a2f56ca2afd554d3efeebfcb87bf2ab13445a26
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/11/6b/90/116b9075-72a5-e62a-fb2b-c1838e198b02/mzaf_16223961222603092796.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/happening/1539384380?i=1539384381&uo=4
 trackId: 1539384381

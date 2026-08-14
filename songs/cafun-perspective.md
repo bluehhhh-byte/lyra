@@ -55,7 +55,7 @@ To live as much as you learn
 
 And I saw your face fall
 Through the hours of daylight left
->^2 남아있는 햇빛의 시간 동안
+> 남아있는 햇빛의 시간 동안
 > 너의 낯빛이 어두워지는 것을 보았어
 Now we're running out of time
 > 이제 우리에게 남은 시간이 없네

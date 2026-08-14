@@ -6,10 +6,10 @@ artist_ko:
 album: Pieces
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/6ac5a0128c00feef6e45aeffbcd9b4fa/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/7/2/0/47261c48823246581e3af1e0b2c91fd9.mp3?hdnea=exp=1786684355~acl=/api/1/1/4/7/2/0/47261c48823246581e3af1e0b2c91fd9.mp3*~data=user_id=0,application_id=42~hmac=ea3b9ec6ba62210814f341f2b35d6085a15450d5b49fb0e4dcf516a4abacb2ea
-preview_provider: deezer
-external_url: https://www.deezer.com/track/975920692
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b4/fc/d9/b4fcd910-8f23-151e-6c5b-0c3ac6cc687c/mzaf_16672939048669947558.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/pieces/1536479078?i=1536479079&uo=4
+trackId: 1536479079
 duration: 344
 genre: J-Rock
 lang: ja

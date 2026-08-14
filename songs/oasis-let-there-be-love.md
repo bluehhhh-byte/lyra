@@ -6,10 +6,10 @@ artist_ko:
 album: Time Flies...1994-2009
 year: 2005
 artwork: https://cdn-images.dzcdn.net/images/cover/807022475dba6041ce009ac3d906f4e4/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/e/0/79e3c76f86320c27c07a3a9db847afa5.mp3?hdnea=exp=1786684366~acl=/api/1/1/7/9/e/0/79e3c76f86320c27c07a3a9db847afa5.mp3*~data=user_id=0,application_id=42~hmac=1c9049beab644ef090396c2d94399329a842a00c07195efedf29773fb2700259
-preview_provider: deezer
-external_url: https://www.deezer.com/track/15596514
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/6d/50/8d6d500b-f4e4-4ec6-6e3b-162a82478c52/mzaf_13539121093482378397.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/let-there-be-love/1517525904?i=1517526412&uo=4
+trackId: 1517526412
 duration: 330
 genre: Alternative Rock
 lang: en

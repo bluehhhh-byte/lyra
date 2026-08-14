@@ -6,7 +6,7 @@ artist_ko:
 album: Attack of the Grey Lantern (Collector's Edition)
 year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/7e5ae56f87437601f08886755883fc8a/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/f/3/0/4f32702b1e69f78faf659e08e33d774e.mp3?hdnea=exp=1786584352~acl=/api/1/1/4/f/3/0/4f32702b1e69f78faf659e08e33d774e.mp3*~data=user_id=0,application_id=42~hmac=cb47bc13afa41d7c834159706a705dcec78de8f2177c3e18c3bc326d274b43d4
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c9/3e/e9/c93ee9d2-0083-6493-f80d-a8c287094c18/mzaf_8111442790816892530.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/stripper-vicar/1770502521?i=1770503029&uo=4
 trackId: 1770503029
@@ -56,7 +56,7 @@ If I dob on him they'll call him plastic scouser
 > 사람들은 그를 슬럼가 출신이라고 할 거야
 But the only thing the Stripper Vicar
 Wears is plastic trousers
->^2 하지만 스트리퍼 신부가 입는 유일한 옷은
+> 하지만 스트리퍼 신부가 입는 유일한 옷은
 > 플라스틱 바지뿐이거든
 
 Dear Mavis thought I'd follow up my letter

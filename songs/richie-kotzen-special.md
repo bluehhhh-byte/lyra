@@ -6,7 +6,7 @@ artist_ko:
 album: Get Up
 year: 2004
 artwork: https://cdn-images.dzcdn.net/images/cover/a28c0df6e34ed64ecad557cad0a395d8/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/0/d/0/60ddc315890312340fee220135190b11.mp3?hdnea=exp=1786559417~acl=/api/1/1/6/0/d/0/60ddc315890312340fee220135190b11.mp3*~data=user_id=0,application_id=42~hmac=f592583fdaf861fcbb789366e8dfb1a4f2dd325a2074b5d064a9f3975aac2f7f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/58/44/00/58440072-90dd-7fff-0682-9df580d833f4/mzaf_8201667832088247227.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/special/65294290?i=65294268&uo=4
 trackId: 65294268
@@ -74,5 +74,5 @@ All things that you wanted now you know were wrong
 > 네가 원했던 게 결국 잘못된 선택이었단 걸 알겠지
 You gave up love for something more
 Let that be a lesson to you
->^2 넌 사랑을 버리고 더 큰 걸 쫓았지만,
+> 넌 사랑을 버리고 더 큰 걸 쫓았지만,
 > 그게 어떤 의미였는지 이제 알겠지

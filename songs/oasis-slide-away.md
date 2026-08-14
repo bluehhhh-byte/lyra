@@ -67,11 +67,11 @@ Slide away, slide away, away
 
 Slide away (And I wanna try now,
 I wanna make you mine now)
->^2 슬며시 떠나 (난 지금 해보고 싶어,
+> 슬며시 떠나 (난 지금 해보고 싶어,
 > 당신을 지금 내 것으로 만들고 싶어)
 Slide away (And I wanna try now,
 I wanna make you mine now)
->^2 슬며시 떠나 (난 지금 해보고 싶어,
+> 슬며시 떠나 (난 지금 해보고 싶어,
 > 당신을 지금 내 것으로 만들고 싶어)
 
 Don't know don't care

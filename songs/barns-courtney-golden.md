@@ -6,7 +6,7 @@ artist_ko:
 album: Golden - Single
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/9081ba7e5916d6beb00145c1f5060854/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3?hdnea=exp=1786584265~acl=/api/1/1/9/7/2/0/9726914698165cd168547dc85f8fe460.mp3*~data=user_id=0,application_id=42~hmac=b028038bdca5d6287eb691dc4a15185eae1d3c8c6b6699479d3923e125b0f4a7
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/f2/6e/68f26eba-6bb0-4898-9197-d4a9e935d504/mzaf_14871132896340021273.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/golden/1682884056?i=1682884285&uo=4
 trackId: 1682884285

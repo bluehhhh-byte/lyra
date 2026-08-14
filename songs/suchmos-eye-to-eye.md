@@ -6,9 +6,9 @@ artist_ko:
 album: Sunburst - EP
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/7cd798608052d6f8cec940fadc500085/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/a/0/eda983749aaeae6c263945e2a232ef14.mp3?hdnea=exp=1786559433~acl=/api/1/1/e/d/a/0/eda983749aaeae6c263945e2a232ef14.mp3*~data=user_id=0,application_id=42~hmac=87324332a99f653a07febfd0415eb5101732384019d113a1c203a196c290a2fa
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/d5/d8/dfd5d8d9-5ff6-fdcc-ada7-32d66ced786c/mzaf_16942164028360373593.plus.aac.p.m4a
 preview_provider: itunes
-external_url: https://music.apple.com/jp/album/eye-to-eye/1814576975?i=1814576976&uo=4
+external_url: https://music.apple.com/us/album/eye-to-eye/1814576975?i=1814576976&uo=4
 trackId: 1814576976
 duration: 328
 genre: J-Rock

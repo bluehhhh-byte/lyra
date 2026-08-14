@@ -6,10 +6,10 @@ artist_ko:
 album: UloveUwaitingU
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/a2715c0c05cf7931d0fa80f6acdb810b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/d/6/0/6d6078228d2e8bccee4b03bf570f86f7.mp3?hdnea=exp=1786684356~acl=/api/1/1/6/d/6/0/6d6078228d2e8bccee4b03bf570f86f7.mp3*~data=user_id=0,application_id=42~hmac=2d11406d9486cffb5d87ef972fddaa1103fbca2d3e00321cca7e396d6b5e5980
-preview_provider: deezer
-external_url: https://www.deezer.com/track/4169986842
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/3a/43/bd3a43d0-99c5-dc90-999c-ede7ffaba9b9/mzaf_7187092038862927440.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/uloveuwaitingu/6795777144?i=6795777148&uo=4
+trackId: 6795777148
 duration: 134
 genre: Electronic
 lang: en

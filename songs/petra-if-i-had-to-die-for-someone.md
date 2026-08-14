@@ -6,7 +6,7 @@ artist_ko:
 album: God Fixation
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/88a6f51e50ae9d6ba87207391440a515/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/3/0/f63f0e19b8c322e944a4e31c161e0d9f.mp3?hdnea=exp=1786584378~acl=/api/1/1/f/6/3/0/f63f0e19b8c322e944a4e31c161e0d9f.mp3*~data=user_id=0,application_id=42~hmac=8d20b4275d8fbcb0f2da2ae031ad2b7df36da133658a3ffa49ce92a2ae5882b6
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4e/aa/9e/4eaa9e02-ebc7-6eeb-c77a-f9e560b7d646/mzaf_9161865584898614150.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/if-i-had-to-die-for-someone/1165979182?i=1165979183&uo=4
 trackId: 1165979183
@@ -68,7 +68,7 @@ I lock the door I don't know why
 > 문단속은 하지만, 사실 이유는 모르겠어요
 It seems to me I'm much too old
 To wear a scarf out in the cold
->^2 추운 날씨에 스카프를 두르는 건
+> 추운 날씨에 스카프를 두르는 건
 > 너무 나이들어 보이는 것 같기도 하고
 But I want to live until I die
 > 난 죽을 때까지 계속 살고 싶을 뿐인데 말이죠

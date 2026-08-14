@@ -6,10 +6,10 @@ artist_ko:
 album: You Gotta Go There To Come Back
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/670e40dc5fdac8230c60e162c4f7c514/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/b/9/0/9b94d9feb38b7fa50fa038c13acaf346.mp3?hdnea=exp=1786684382~acl=/api/1/1/9/b/9/0/9b94d9feb38b7fa50fa038c13acaf346.mp3*~data=user_id=0,application_id=42~hmac=11d3773ea3eec5e086a501950a200de2a09b61b1e2f326ec1fda99b1c2b0999e
-preview_provider: deezer
-external_url: https://www.deezer.com/track/4193695
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/f4/c6/e3f4c694-88d4-9c20-b802-fedfdf334f35/mzaf_1107908530577287132.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/i-miss-you-now/1440953312?i=1440953617&uo=4
+trackId: 1440953617
 duration: 290
 genre: Alternative Rock
 lang: en

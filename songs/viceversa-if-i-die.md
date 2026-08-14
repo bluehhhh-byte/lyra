@@ -6,8 +6,8 @@ artist_ko:
 album: ANIMAL FKRY
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/0407c0fad7f0b469eec2f0a4c527579c/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/2/2/0/e22739eee0977276004f39ecc6d63280.mp3?hdnea=exp=1786684393~acl=/api/1/1/e/2/2/0/e22739eee0977276004f39ecc6d63280.mp3*~data=user_id=0,application_id=42~hmac=d3e623fc1af799e7e931579a2a2c92c641b57b73bb6001ab46054b2315650f06
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/3247562921
 trackId:
 duration: 200

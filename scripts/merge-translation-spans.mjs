@@ -40,6 +40,10 @@ for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
       if (k > 0 && /^>/.test(lines[k - 1])) break;
     }
     if (span < 2) continue; // 1이면 평범한 1:1, 0이면 바로 위가 독음(`+`)인 경우
+    // 이 번역 아래로 `>`가 더 이어지면 블록형이다 — 원문을 먼저 다 적고 번역을 아래에
+    // 몰아 쓴 글. 위에 쌓인 원문은 이 줄 하나가 아니라 묶음 전체가 나눠 덮는다.
+    // 여기서 첫 줄에 span을 매기면 뒤 번역들이 덮을 원문을 잃어 화면에서 사라진다.
+    if (/^>/.test(lines[i + 1] || "")) continue;
     if (span > MAX) { skipped.push(`${f}: ${span}줄 (${lines[i].slice(0, 40)})`); continue; }
     lines[i] = lines[i].replace(/^>/, `>^${span}`);
     hits++;

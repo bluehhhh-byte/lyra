@@ -6,10 +6,10 @@ artist_ko:
 album: FAMOUS
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/0c7fa36afe33d9d6a5eb648f3fae7e8b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/f/6/0/2f6bafcae84ceafe27f199b17cf13be1.mp3?hdnea=exp=1786684325~acl=/api/1/1/2/f/6/0/2f6bafcae84ceafe27f199b17cf13be1.mp3*~data=user_id=0,application_id=42~hmac=6b250c7ce9350e3d9c4e229ed0cc583ddce865de5938b8ad35e318eaa44454b7
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3426284411
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/e4/91/c0e4913c-a770-8085-0dca-ec7333ffab54/mzaf_14471043753895427827.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/famous/1819675760?i=1819675765&uo=4
+trackId: 1819675765
 duration: 180
 genre: K-Pop
 lang: en

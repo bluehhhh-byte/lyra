@@ -6,7 +6,7 @@ artist_ko:
 album: Loving is Easy
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/d805dcdae2effd5781af2eb7662a3c4b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/6/f/0/36fa4acae63522b3305ba59ea97ea770.mp3?hdnea=exp=1786559417~acl=/api/1/1/3/6/f/0/36fa4acae63522b3305ba59ea97ea770.mp3*~data=user_id=0,application_id=42~hmac=924ea03e26a2860594597e4195183016e725b972737ffe51c655d9c3e0ee7746
+preview: 
 trackId: 
 duration: 155
 genre: Indie Pop

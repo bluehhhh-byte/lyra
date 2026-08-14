@@ -6,7 +6,7 @@ artist_ko:
 album: In Rainbows
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/4/9/0/f498987d69eae84f80772b7c32c4e603.mp3?hdnea=exp=1786584395~acl=/api/1/1/f/4/9/0/f498987d69eae84f80772b7c32c4e603.mp3*~data=user_id=0,application_id=42~hmac=e4bed008075fd1bf3b9a849fc996e5aa4a1043806789c9f4bbfeed75acd8d98b
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ac/9f/7e/ac9f7eb6-0a30-5c2a-c571-82392d356592/mzaf_8676348198965838362.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/videotape/1109714933?i=1109715479&uo=4
 trackId: 1109715479

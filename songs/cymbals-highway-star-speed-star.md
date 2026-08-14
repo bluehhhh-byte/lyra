@@ -6,9 +6,9 @@ artist_ko:
 album: Highway Star, Speed Star - Single
 year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/bea4f72802442aea03cc02c63187528c/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3?hdnea=exp=1786584277~acl=/api/1/1/a/7/a/0/a7a51984a051f592c6a5214c85bcc4cd.mp3*~data=user_id=0,application_id=42~hmac=0990e17632302201d26fa84ec6d2a523bb72deed23fb9657de8ef602c6ac0f23
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c6/0f/8b/c60f8b7e-4221-c602-af2e-1f61f9f63b7c/mzaf_4869558234980133959.plus.aac.p.m4a
 preview_provider: itunes
-external_url: https://music.apple.com/jp/album/highway-star-speed-star/1720674244?i=1720674245&uo=4
+external_url: https://music.apple.com/us/album/highway-star-speed-star/1720674244?i=1720674245&uo=4
 trackId: 1720674245
 duration: 263
 genre: Indie Pop

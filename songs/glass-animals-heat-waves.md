@@ -6,7 +6,7 @@ artist_ko:
 album: Dreamland
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/04ea51c6eb90a6208f2e47da861cf1a5/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/c/e/0/3ce23f319354c1eb009e7d11c57b75e2.mp3?hdnea=exp=1786559379~acl=/api/1/1/3/c/e/0/3ce23f319354c1eb009e7d11c57b75e2.mp3*~data=user_id=0,application_id=42~hmac=c4c6400d237a47308f588bd6e38841c09b3d66db58a377bfe2ad06beec7a5c0d
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/4c/b9/a34cb911-40fc-5f0c-e862-14bd171a77aa/mzaf_384792072030970151.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/heat-waves/1508562310?i=1508562516&uo=4
 trackId: 1508562516

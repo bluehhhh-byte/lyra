@@ -6,7 +6,7 @@ artist_ko:
 album: The Physical World
 year: 2014
 artwork: https://cdn-images.dzcdn.net/images/cover/c682ef27585a4cd72e2d7ff791990488/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/1/c/0/01cb9c5c69ef336bfb698f2635fe9a5e.mp3?hdnea=exp=1786559372~acl=/api/1/1/0/1/c/0/01cb9c5c69ef336bfb698f2635fe9a5e.mp3*~data=user_id=0,application_id=42~hmac=8643220f76e23fcf6be3bc3b186bcb281efe68952e3d58adca9294f42d6b0404
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/ca/92/6cca92e1-abc7-345e-b9c5-2b1ff48cfbae/mzaf_14550988032666407088.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/trainwreck-1979/895680668?i=895680675&uo=4
 trackId: 895680675

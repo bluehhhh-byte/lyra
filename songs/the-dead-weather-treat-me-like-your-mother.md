@@ -6,10 +6,10 @@ artist_ko:
 album: Horehound
 year: 2006
 artwork: https://cdn-images.dzcdn.net/images/cover/f3b5aa69cf2adbcf35aa4b613f17ca58/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/c/3/0/7c3828ed779674d808d4f172076bfd6c.mp3?hdnea=exp=1786684388~acl=/api/1/1/7/c/3/0/7c3828ed779674d808d4f172076bfd6c.mp3*~data=user_id=0,application_id=42~hmac=8207562b4bbf98bac79f67b2a333f059eea708c89589dc8db8cb38907cd5bf56
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3783640
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/98/e5/34/98e53414-dd4b-15a0-c1be-b739107743fd/mzaf_103950321854067962.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/treat-me-like-your-mother/320973989?i=320973994&uo=4
+trackId: 320973994
 duration: 250
 genre: Blues
 lang: en

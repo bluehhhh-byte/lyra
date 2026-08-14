@@ -6,7 +6,7 @@ artist_ko:
 album: The Essential Lou Reed (Remastered)
 year: 1972
 artwork: https://cdn-images.dzcdn.net/images/cover/c7fc290739360180dcafa405e60b8122/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/a/2/0/8a22222637c75aef8454970fe5ea7df8.mp3?hdnea=exp=1786584342~acl=/api/1/1/8/a/2/0/8a22222637c75aef8454970fe5ea7df8.mp3*~data=user_id=0,application_id=42~hmac=e4b06b7a908e11fa5c2cb62595683539c0e8769549f62de193cf4498793ea488
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/bf/23/b2/bf23b232-5cf2-9ca5-d852-acd69a3688bc/mzaf_3301908493248705686.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/perfect-day/463899258?i=463899650&uo=4
 trackId: 463899650

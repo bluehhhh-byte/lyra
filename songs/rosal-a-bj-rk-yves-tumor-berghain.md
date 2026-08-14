@@ -6,8 +6,8 @@ artist_ko:
 album: LUX
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/0dd6cd0e783f1505cd57778953ab77a1/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/b/e/0/2beaaca61dea2b1dff152fe63abcd8f5.mp3?hdnea=exp=1786684376~acl=/api/1/1/2/b/e/0/2beaaca61dea2b1dff152fe63abcd8f5.mp3*~data=user_id=0,application_id=42~hmac=a7d8bf715cc17eb1c241f86dc46b25ab3e35e649660f9234466b83398f88ddf1
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/3640140942
 trackId:
 duration: 178

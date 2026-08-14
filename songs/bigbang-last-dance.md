@@ -6,7 +6,7 @@ artist_ko:
 album: MADE
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/73f9614becfcecc25782335cacc49cd2/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3?hdnea=exp=1786584267~acl=/api/1/1/5/f/2/0/5f28eeaebd94a7f112f5c6e6f6d1d8f1.mp3*~data=user_id=0,application_id=42~hmac=83b369eca3ad8d781484049b6a38c26bdefc9c77495c909a1977b8299556b54c
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ae/d5/73/aed5738d-db9b-622b-ef15-8759363a7c9e/mzaf_14228745497447933398.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/last-dance/1313175579?i=1313176078&uo=4
 trackId: 1313176078

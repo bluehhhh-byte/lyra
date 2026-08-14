@@ -6,10 +6,10 @@ artist_ko:
 album: EVERYONE'S A STAR!
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/0d7e41c430ed14a32adfb8d63d08dd77/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/5/e/0/e5eac52c9fe2a06dbf0ff72d13cebe51.mp3?hdnea=exp=1786684324~acl=/api/1/1/e/5/e/0/e5eac52c9fe2a06dbf0ff72d13cebe51.mp3*~data=user_id=0,application_id=42~hmac=968bc737189f121d42491cb35fd0d5ffe174f7eb9d5175b2d41a809a6bc7bb84
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3642904642
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/32/81/70328111-6279-bdba-0c78-01864cada6f4/mzaf_9543092196663602305.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/everyones-a-star/1850324993?i=1850324995&uo=4
+trackId: 1850324995
 duration: 195
 genre: Synth-Pop
 lang: en

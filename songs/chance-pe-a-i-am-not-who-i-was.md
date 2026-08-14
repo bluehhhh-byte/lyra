@@ -6,7 +6,7 @@ artist_ko:
 album: i am not who i was - Single
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/18ad1bb30ab2639139e304e6e77219f9/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/8/a/0/f8ae74ed90023c0567c93a7dcc1de444.mp3?hdnea=exp=1786559366~acl=/api/1/1/f/8/a/0/f8ae74ed90023c0567c93a7dcc1de444.mp3*~data=user_id=0,application_id=42~hmac=2115518470e5db8ae3710153378aa895cabfb17aabc830f7afd63d3d7732aa28
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/96/1d/ac/961dac03-30b1-fb75-1a8b-24073ec42b6e/mzaf_5369191076968602724.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/i-am-not-who-i-was/1705982264?i=1705982596&uo=4
 trackId: 1705982596

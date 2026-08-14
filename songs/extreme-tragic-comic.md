@@ -6,10 +6,10 @@ artist_ko:
 album: 20th Century Masters: The Millennium Collection: Best Of Extreme
 year: 1992
 artwork: https://cdn-images.dzcdn.net/images/cover/1e5d50193b0a906c4cffe0c91a39a26b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/8/6/0/586242391431bd20d4639e135f689699.mp3?hdnea=exp=1786684342~acl=/api/1/1/5/8/6/0/586242391431bd20d4639e135f689699.mp3*~data=user_id=0,application_id=42~hmac=f6881c350ccfecb00d997f5cff8444e2d549281005551f8764867d578e9daabc
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1579736
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f9/79/f6/f979f632-8a12-40cb-ffb6-eb58ce3a5564/mzaf_9487490486838864777.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/tragic-comic/1440724126?i=1440724147&uo=4
+trackId: 1440724147
 duration: 285
 genre: Hard Rock
 lang: en

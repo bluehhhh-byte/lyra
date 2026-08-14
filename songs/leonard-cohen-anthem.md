@@ -6,7 +6,7 @@ artist_ko:
 album: The Essential Leonard Cohen
 year: 1992
 artwork: https://cdn-images.dzcdn.net/images/cover/b62532055cff127e398cecbd1c9894d4/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/1/c/0/51cd3dec75bb5fbfdbf54e983d5e2393.mp3?hdnea=exp=1786584340~acl=/api/1/1/5/1/c/0/51cd3dec75bb5fbfdbf54e983d5e2393.mp3*~data=user_id=0,application_id=42~hmac=b9e7daee22026477d893f40620072da10639ee2d08b0b06487ff92f2df110366
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/74/3a/f2743a83-273f-80d1-6820-1683a1dd0d50/mzaf_5936947370832386766.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/anthem/192677178?i=192678850&uo=4
 trackId: 192678850

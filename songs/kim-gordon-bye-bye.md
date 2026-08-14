@@ -6,10 +6,10 @@ artist_ko:
 album: The Collective
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/59916bc7291414589f68978060348aa8/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/2/a/0/72acfdf4889be64e135aaa01a9c472e4.mp3?hdnea=exp=1786684352~acl=/api/1/1/7/2/a/0/72acfdf4889be64e135aaa01a9c472e4.mp3*~data=user_id=0,application_id=42~hmac=06b30470c75dcdf52905b8e1739eef2557d85e1843e91226e70084c90e156a74
-preview_provider: deezer
-external_url: https://www.deezer.com/track/2663835912
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/52/32/d7/5232d737-28a6-1537-5019-79b9f278ddba/mzaf_14388054334966631240.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/bye-bye/1719712035?i=1719712164&uo=4
+trackId: 1719712164
 duration: 254
 genre: Electronic
 lang: en

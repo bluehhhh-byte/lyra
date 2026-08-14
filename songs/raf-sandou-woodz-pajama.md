@@ -6,10 +6,10 @@ artist_ko:
 album: Show Me The Money 12 Semi Final
 year: 2026
 artwork: https://cdn-images.dzcdn.net/images/cover/8591e1ed487a7a3e216ade12d8599971/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/4/4/0/a44eec0dde8a83795629ac3ee42d18e2.mp3?hdnea=exp=1786684372~acl=/api/1/1/a/4/4/0/a44eec0dde8a83795629ac3ee42d18e2.mp3*~data=user_id=0,application_id=42~hmac=546584737af2c84c4140d477e314a28f3d8c127e6caea5555718b67e38f72d78
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3919980161
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/10/2d/1a/102d1a2e-e093-a9f3-924c-3267f91ef2ad/mzaf_895916362318734798.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/pajama-prod-by-zico-crush-feat-woodz/1887821101?i=1887821789&uo=4
+trackId: 1887821789
 duration: 258
 genre: Hip-Hop
 lang: ko

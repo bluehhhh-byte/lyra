@@ -6,10 +6,10 @@ artist_ko:
 album: Sarah
 year: 2018
 artwork: https://cdn-images.dzcdn.net/images/cover/4ce13980c06897067914605644b969db/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/0/6/0/106dd9fc9f7eadc4a0ef9a82eb3636ce.mp3?hdnea=exp=1786684353~acl=/api/1/1/1/0/6/0/106dd9fc9f7eadc4a0ef9a82eb3636ce.mp3*~data=user_id=0,application_id=42~hmac=92d9765237b12c52dffcd41ace638c4845e8bcb43577d1bcd5a77e34be647196
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3681531062
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/b0/ad/cbb0ad1c-8fcc-f3f6-b47b-bb724503c250/mzaf_3914155348376466371.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/wish/1856541802?i=1856541804&uo=4
+trackId: 1856541804
 duration: 355
 genre: Electronic
 lang: en

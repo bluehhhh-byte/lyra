@@ -6,10 +6,10 @@ artist_ko:
 album: LUNO
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/168b79fd1afe6586e0c39af9cb4a74e7/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/6/9/0/c699cfd27217570e1d2422057d52160a.mp3?hdnea=exp=1786684332~acl=/api/1/1/c/6/9/0/c699cfd27217570e1d2422057d52160a.mp3*~data=user_id=0,application_id=42~hmac=1807a23a353e90199cd92255bbdd3d65dd8506d4f14015cce85e630b4aeca14b
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3219704841
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/93/55/62935508-18e3-3b28-b5c8-37ad8a9ce79e/mzaf_8542117295504560950.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/set-it-on-fire/1794666064?i=1794666069&uo=4
+trackId: 1794666069
 duration: 213
 genre: Indie Pop
 lang: en

@@ -6,8 +6,8 @@ artist_ko:
 album: Mitsubishi Sheets
 year: 2026
 artwork: https://cdn-images.dzcdn.net/images/cover/05c8aa64f2f340fb96d9a30c897585dc/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/1/d/0/31da73f858b519778b4533b6bde134dc.mp3?hdnea=exp=1786684396~acl=/api/1/1/3/1/d/0/31da73f858b519778b4533b6bde134dc.mp3*~data=user_id=0,application_id=42~hmac=b7c31892520ab9b2b6e8f5ff12ffd23878e6ab20b41727443f928136c53258ce
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/3713145482
 trackId:
 duration: 124

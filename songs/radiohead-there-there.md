@@ -6,7 +6,7 @@ artist_ko:
 album: Hail to the Thief
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/d3d9e1f53d60c5d2c764b20870aab69e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/a/5/0/ba53fb74b4a2d5a215d5273c8663038b.mp3?hdnea=exp=1786584394~acl=/api/1/1/b/a/5/0/ba53fb74b4a2d5a215d5273c8663038b.mp3*~data=user_id=0,application_id=42~hmac=3ad4a148651dac22c415bbdd195ba2ca6cabb399bb1ec8793279ba0d70bcc888
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2a/bf/55/2abf5507-0957-fcfa-498a-5eaa5c6216b9/mzaf_3332475156282036842.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/there-there/1097863576?i=1097863832&uo=4
 trackId: 1097863832

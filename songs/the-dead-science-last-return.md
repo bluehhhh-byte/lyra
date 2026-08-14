@@ -6,7 +6,7 @@ artist_ko:
 album: Frost Giant
 year: 2006
 artwork: https://cdn-images.dzcdn.net/images/cover/91889da73df14f3e322513c0327fbbdf/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/0/6/0/b06c11edcd96be3621e45f460a376767.mp3?hdnea=exp=1786584419~acl=/api/1/1/b/0/6/0/b06c11edcd96be3621e45f460a376767.mp3*~data=user_id=0,application_id=42~hmac=5c8e0879365dcc6db58d40a7cc8379ad90c039ad8c61c41d3057d6214007b1a7
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c8/2a/62/c82a621c-b716-5216-6a19-a9c80bf028c1/mzaf_622108283061765582.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/last-return/1716059488?i=1716059495&uo=4
 trackId: 1716059495

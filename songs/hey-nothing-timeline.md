@@ -6,7 +6,7 @@ artist_ko:
 album: Maine - EP
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/eb9bf656a10442b3dc2078d93a760b0d/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/3/1/0/73162015c04f6215c128a1b429f7972d.mp3?hdnea=exp=1786559383~acl=/api/1/1/7/3/1/0/73162015c04f6215c128a1b429f7972d.mp3*~data=user_id=0,application_id=42~hmac=a87a4ca792714bb7b3ad1ee56cf7ebb228284b9e6b4c3e334cdeb9f5526722d5
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c1/42/cc/c142cc12-9fa5-030c-ea90-e76a7f480faa/mzaf_15518233093396663884.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/timeline/1800626807?i=1800626809&uo=4
 trackId: 1800626809

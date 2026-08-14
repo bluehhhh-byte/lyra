@@ -6,7 +6,7 @@ artist_ko:
 album: Ape Into Space - EP
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/f2230b73c501ad3952c4cf36cf66b202/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/0/5/0/5055948bb186e9d4a74ca670b6246f0f.mp3?hdnea=exp=1786584331~acl=/api/1/1/5/0/5/0/5055948bb186e9d4a74ca670b6246f0f.mp3*~data=user_id=0,application_id=42~hmac=c9a3c4c3fe06b6a69961de28b21733e15968c00acb4ab57b41af76c58a1e3754
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/21/6a/da/216ada01-7b0e-bca7-2295-8662a2b42c0a/mzaf_3973622366896793536.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/mull/1652529469?i=1652529470&uo=4
 trackId: 1652529470

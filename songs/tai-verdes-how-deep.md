@@ -6,7 +6,7 @@ artist_ko:
 album: HDTV
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/dddf41b7da9603b499a175e951218fcf/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/2/0/cf211d5b963a88f6443499bb285e48e7.mp3?hdnea=exp=1786584414~acl=/api/1/1/c/f/2/0/cf211d5b963a88f6443499bb285e48e7.mp3*~data=user_id=0,application_id=42~hmac=a54061a3943189eae36d99f0510199c66c1d7f04dff6c267fe32f09334e36041
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/06/4e/58064ec8-0ecf-b9f5-4b10-1db00214960b/mzaf_2585918995367842252.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/how-deep/1640581300?i=1640581691&uo=4
 trackId: 1640581691

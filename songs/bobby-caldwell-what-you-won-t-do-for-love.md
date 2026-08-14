@@ -6,7 +6,7 @@ artist_ko:
 album: What You Won't Do for Love
 year: 1978
 artwork: https://cdn-images.dzcdn.net/images/cover/0218fd347b94d34935dd025cdd7a7e09/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e92991d4fa.mp3?hdnea=exp=1786559362~acl=/api/1/1/e/d/4/0/ed449811d6c03bd61ab8d4e92991d4fa.mp3*~data=user_id=0,application_id=42~hmac=bed029249b0cbb0b279cb124e562917b1c8e6dbfb24337bcb09b83ae97cf74bb
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/50/7f/fe/507ffebc-a7d3-1920-060b-b9852733eff9/mzaf_5871596581747569332.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/what-you-wont-do-for-love/1606064414?i=1606064876&uo=4
 trackId: 1606064876
@@ -62,7 +62,7 @@ You’ve tried everything but you won’t give up
 > 당신은 모든 걸 시도했고 절대 포기하지 않을 거예요
 In my world, only you make me do for love
 What I would not do
->^2 내 세상에서 오직 당신만이 사랑을 위해
+> 내 세상에서 오직 당신만이 사랑을 위해
 > 하지 않았을 일도 하게 만들어요
 
 Make me do for love what I would not do

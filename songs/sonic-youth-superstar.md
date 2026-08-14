@@ -6,7 +6,7 @@ artist_ko:
 album: If I Were a Carpenter
 year: 1994
 artwork: https://cdn-images.dzcdn.net/images/cover/1a1f5e8428185eb648a53eb5df226ae9/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/2/9/0/22972577eb2265ec52fe62c3b13eb722.mp3?hdnea=exp=1786584407~acl=/api/1/1/2/2/9/0/22972577eb2265ec52fe62c3b13eb722.mp3*~data=user_id=0,application_id=42~hmac=d3faa17e0806d8e8e963b90c7cb21ab351de97e219e372ae4b5dbbd89c9e42ef
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fd/d1/ee/fdd1ee50-8450-f92e-ccce-bb39b48cf372/mzaf_1029443399435406159.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/superstar/1443878458?i=1443878463&uo=4
 trackId: 1443878463

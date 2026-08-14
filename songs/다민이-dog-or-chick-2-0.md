@@ -6,7 +6,7 @@ artist_ko:
 album: DOG OR CHICK 2.0
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/99f058375e3464eea2bd63127de09985/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/d/9/e/0/d9e0cd9fe4b0da9e982fc035760573dd.mp3?hdnea=exp=1786584463~acl=/api/1/1/d/9/e/0/d9e0cd9fe4b0da9e982fc035760573dd.mp3*~data=user_id=0,application_id=42~hmac=f8e1901e79679eacd9c8740110fd2431fe05a2e0a1ef9a2d02c70d0cced73954
+preview: 
 trackId:
 duration: 136
 genre: Hip-Hop

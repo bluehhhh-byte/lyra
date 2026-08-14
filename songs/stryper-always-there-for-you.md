@@ -6,10 +6,10 @@ artist_ko:
 album: Can't Stop The Rock
 year: 1988
 artwork: https://cdn-images.dzcdn.net/images/cover/fc49ce4934ef5bb826f20872c8a767fd/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/a/2/0/7a28fcd090e7236d54b69b4a41d8a0e7.mp3?hdnea=exp=1786684383~acl=/api/1/1/7/a/2/0/7a28fcd090e7236d54b69b4a41d8a0e7.mp3*~data=user_id=0,application_id=42~hmac=6da1fa8fd7d1b055a8d9236f7824adfe02caff42baf53bcbee701fbf7ecdca22
-preview_provider: deezer
-external_url: https://www.deezer.com/track/4234314
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/96/a7/78/96a7788b-3ceb-dbd6-db4b-a6bb192d8536/mzaf_9358365430940938999.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/always-there-for-you/1444170327?i=1444170816&uo=4
+trackId: 1444170816
 duration: 251
 genre: Heavy Metal
 lang: en

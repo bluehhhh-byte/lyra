@@ -6,7 +6,7 @@ artist_ko:
 album: Vestige of Scratches
 year: 2009
 artwork: https://cdn-images.dzcdn.net/images/cover/ba9b6789fc43c332eebfcfaa8bdff17f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7ae3aa7791.mp3?hdnea=exp=1786584287~acl=/api/1/1/1/1/5/0/115fef583ff30d3d17a58f7ae3aa7791.mp3*~data=user_id=0,application_id=42~hmac=8e85606a398cce174bd5e5172bfefebe36da1631bac662a5b6a902428739fd55
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6d/7d/3b/6d7d3bed-8961-979d-9976-927c7353fb60/mzaf_11854610008181758543.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/zan/1483713058?i=1483713689&uo=4
 trackId: 1483713689

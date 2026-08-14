@@ -6,7 +6,7 @@ artist_ko:
 album: Cigarettes After Sex
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/2db20377876da16feb8ec9652e835a81/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/9/7/0/697b2adc2271af95c13106c0ff0e433e.mp3?hdnea=exp=1786559367~acl=/api/1/1/6/9/7/0/697b2adc2271af95c13106c0ff0e433e.mp3*~data=user_id=0,application_id=42~hmac=39f30a4593c68da7ce583daae77cdd9f6160abca145b00943f823a3e0a83ea57
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/a4/4a/44a44a75-0576-12fa-6002-2f464c091102/mzaf_17923299166743083363.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/sunsetz/1217977525?i=1217977722&uo=4
 trackId: 1217977722

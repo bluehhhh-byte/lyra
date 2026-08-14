@@ -6,10 +6,10 @@ artist_ko:
 album: Siam Shade XI Complete Best - Heart of Rock
 year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/77f12b18735abdb14034ff158fdfc0c7/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/5/3/0/e53dfca7eb616a3efd79ef17d9f0e98a.mp3?hdnea=exp=1786684378~acl=/api/1/1/e/5/3/0/e53dfca7eb616a3efd79ef17d9f0e98a.mp3*~data=user_id=0,application_id=42~hmac=23479e94317a5682c5be9efb3d825fe0a7db781f91b6c81c930c728836aecb2e
-preview_provider: deezer
-external_url: https://www.deezer.com/track/976732892
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/25/a7/9a/25a79a75-c42d-7fcf-6a78-e1579a9bdf3d/mzaf_1411069469721537440.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/triptych/1538303181?i=1538303189&uo=4
+trackId: 1538303189
 duration: 277
 genre: J-Rock
 lang: en

@@ -6,8 +6,8 @@ artist_ko:
 album: 夢を見る人 - EP
 year: 1996
 artwork: https://cdn-images.dzcdn.net/images/cover/9469e8766abdd194eacc97a996ff374f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/9/6/0/b96809403942353f628de30bd3037776.mp3?hdnea=exp=1786584373~acl=/api/1/1/b/9/6/0/b96809403942353f628de30bd3037776.mp3*~data=user_id=0,application_id=42~hmac=ebe4394b40c0b7e356208da0bba233c74f3fc5f6beb535aadd3644068c5770cb
-preview_provider: itunes
+preview: 
+preview_provider: 
 external_url: https://music.apple.com/jp/album/%E5%A4%A2%E3%82%92%E8%A6%8B%E3%82%8B%E4%BA%BA/274449360?i=274449363&uo=4
 trackId: 274449363
 duration: 318

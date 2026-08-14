@@ -6,7 +6,7 @@ artist_ko:
 album: A
 year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/c02e93814b4a9ce7de572dd5563d601a/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/f/c/0/1fc772ec71f59342ee897728a5b9a4e4.mp3?hdnea=exp=1786584284~acl=/api/1/1/1/f/c/0/1fc772ec71f59342ee897728a5b9a4e4.mp3*~data=user_id=0,application_id=42~hmac=88811c8509429b6beaa4fc9da3af10ae3f22c9436fe74cbdab3e709f3e0021f1
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/54/6e/5e/546e5e81-2f36-c1c1-9806-c920761988e9/mzaf_8442031612546561473.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/shangri-la/1353425819?i=1353427065&uo=4
 trackId: 1353427065

@@ -6,10 +6,10 @@ artist_ko:
 album: Hospital
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/33e7a3459b4b41395d8b9d5ec97ffab6/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/f/1/0/bf1b21dc9b6243644149e43f4555bb8d.mp3?hdnea=exp=1786684374~acl=/api/1/1/b/f/1/0/bf1b21dc9b6243644149e43f4555bb8d.mp3*~data=user_id=0,application_id=42~hmac=c1907daf3478ea262c7862f00fcd4483c5505e4a1338edbf49581cc877591a8a
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3407067051
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/84/6c/ab846ceb-c039-e1aa-e227-85b06068b62b/mzaf_17994368597545972722.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/ron/1819463874?i=1819463880&uo=4
+trackId: 1819463880
 duration: 172
 genre: Indie Pop
 lang: ko

@@ -6,10 +6,10 @@ artist_ko:
 album: Apollo Sunshine
 year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/70b6e91c626f7874b7527885b760c882/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/e/7/0/fe730df51d40904dd966155cef8dd6e7.mp3?hdnea=exp=1786684327~acl=/api/1/1/f/e/7/0/fe730df51d40904dd966155cef8dd6e7.mp3*~data=user_id=0,application_id=42~hmac=c4749969fdb67506423765c1b693de63c3c2182ebe5cec3cc77244f70f3ad07e
-preview_provider: deezer
-external_url: https://www.deezer.com/track/133388704
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/12/86/7e/12867e3e-9b82-ffb6-f703-1cbfff2694a3/mzaf_15016453099847817908.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/flip/1161607081?i=1161607186&uo=4
+trackId: 1161607186
 duration: 255
 genre: Indie Rock
 lang: en

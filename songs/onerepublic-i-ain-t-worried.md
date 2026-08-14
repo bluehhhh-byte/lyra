@@ -6,10 +6,10 @@ artist_ko:
 album: I Ain’t Worried (Music From The Motion Picture "Top Gun: Maverick")
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/cce4a8aa45410b7ed85432bca9d9c913/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/d/1/c/0/d1c72616e05256b8b07f42b6052fefd3.mp3?hdnea=exp=1786684368~acl=/api/1/1/d/1/c/0/d1c72616e05256b8b07f42b6052fefd3.mp3*~data=user_id=0,application_id=42~hmac=32fc421daa4fef5760930b88222738d92206f34b2fa67530d9375fe9e8a18236
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1749916957
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cf/10/95/cf109583-026d-529b-0cb3-67276ad14815/mzaf_4130024475767911410.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/i-aint-worried/1754637001?i=1754637010&uo=4
+trackId: 1754637010
 duration: 148
 genre: Indie Pop
 lang: en

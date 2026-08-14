@@ -6,10 +6,10 @@ artist_ko:
 album: HIStory - PAST, PRESENT AND FUTURE - BOOK I
 year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/fbed9a8cfcdd8a5e48cebbea8d8078ea/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/6/f/0/f6f0870cafd14edeaee4e60e8e864dc1.mp3?hdnea=exp=1786684363~acl=/api/1/1/f/6/f/0/f6f0870cafd14edeaee4e60e8e864dc1.mp3*~data=user_id=0,application_id=42~hmac=368a84851fa34e6564b5079c363e2c4bd5e6fa642f086d7054191cda9898b5c5
-preview_provider: deezer
-external_url: https://www.deezer.com/track/8164641
-trackId:
+preview: 
+preview_provider: 
+external_url: https://music.apple.com/us/music-video/scream-michael-jacksons-vision/405411114?uo=4
+trackId: 405411114
 duration: 277
 genre: R&B/Soul
 lang: en

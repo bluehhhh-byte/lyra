@@ -6,10 +6,10 @@ artist_ko:
 album: Sing When You're Winning
 year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/d260fa442f925e1eb1c95bb29941f636/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/0/0/0/80080c737ee3af059904bac736182d81.mp3?hdnea=exp=1786684375~acl=/api/1/1/8/0/0/0/80080c737ee3af059904bac736182d81.mp3*~data=user_id=0,application_id=42~hmac=981796ca920a2c06844ee0d8d9241b656d854c2ef1625e56395ef542f4defff1
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3102428
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/a2/56/49a256c8-58fe-fc9f-c8b1-43e89fa48faa/mzaf_1443920486666562674.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-road-to-mandalay/725785373?i=725785487&uo=4
+trackId: 725785487
 duration: 237
 genre: Ballad
 lang: en

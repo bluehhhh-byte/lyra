@@ -6,7 +6,7 @@ artist_ko:
 album: Down to Earth
 year: 1979
 artwork: https://cdn-images.dzcdn.net/images/cover/9e025543eb511f1e6b7c62622099924c/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/c/9/0/2c93e490ad1d42bfab3dba88f02640cf.mp3?hdnea=exp=1786584396~acl=/api/1/1/2/c/9/0/2c93e490ad1d42bfab3dba88f02640cf.mp3*~data=user_id=0,application_id=42~hmac=7e29973af9fa0244b8087c4f378b3b3a10adc57d5341a7e8d3d76968963bb78f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/d8/1c/bdd81cdb-a77c-e610-9665-23ed657505f7/mzaf_14561753400864411153.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/since-you-been-gone/1443913143?i=1443913369&uo=4
 trackId: 1443913369

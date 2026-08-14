@@ -6,10 +6,10 @@ artist_ko:
 album: PORNO GRAFFITTI BEST BLUE'S
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/f154a20fd9beb5cae14c187153d7919b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/b/1/0/5b1a543e2771e6df2ac5a27a6264b76a.mp3?hdnea=exp=1786684372~acl=/api/1/1/5/b/1/0/5b1a543e2771e6df2ac5a27a6264b76a.mp3*~data=user_id=0,application_id=42~hmac=3b71e233da4e62bb783b96e02ff8e7bbaeaf2fa47fcef0468187c882f734c971
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1355560622
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9f/9b/38/9f9b38f3-5ab0-5b0d-e5ce-949194aabf6f/mzaf_10338515915756173953.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/melissa/1434040760?i=1434040776&uo=4
+trackId: 1434040776
 duration: 274
 genre: J-Rock
 lang: ja

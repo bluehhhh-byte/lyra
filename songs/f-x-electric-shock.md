@@ -6,7 +6,7 @@ artist_ko:
 album: Electric Shock - EP
 year: 2012
 artwork: https://cdn-images.dzcdn.net/images/cover/4f04e465a2e190d9ec46ccb6ef29587f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3?hdnea=exp=1786584296~acl=/api/1/1/f/d/c/0/fdcfd4fcc2d0031e53340a3ecd5f6a69.mp3*~data=user_id=0,application_id=42~hmac=49d2b23ef4c7eebd5e4fed61d50581c875329ddf435f3ad3c93b2367ab240465
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2c/83/30/2c8330ba-cab7-6d1b-8f84-c5d31cf05148/mzaf_16672530336535516327.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/electric-shock/854917461?i=854917495&uo=4
 trackId: 854917495

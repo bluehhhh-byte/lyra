@@ -6,10 +6,10 @@ artist_ko:
 album: Find your love
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/882ebaf2f9606163b8934da49ae98815/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/3/0/0/f306ae0cdac08bca7ef75c206790b098.mp3?hdnea=exp=1786684377~acl=/api/1/1/f/3/0/0/f306ae0cdac08bca7ef75c206790b098.mp3*~data=user_id=0,application_id=42~hmac=1ddd90be374fee78b05673466b3c7541cef3dadc2982b0ba5c3e7af482988782
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3587962631
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/10/d6/4f10d68e-0f7b-66d3-0683-9b2a3ee53ba8/mzaf_17370941726285975226.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/find-your-love/1842291155?i=1842291163&uo=4
+trackId: 1842291163
 duration: 177
 genre: R&B/Soul
 lang: ko

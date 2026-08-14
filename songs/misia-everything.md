@@ -6,9 +6,9 @@ artist_ko:
 album: Everything - EP
 year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/708534999cd5a8c65c7f5287acec7d99/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/d/8/0/cd87a47e4ded11d684fc0c83210fd7ee.mp3?hdnea=exp=1786584361~acl=/api/1/1/c/d/8/0/cd87a47e4ded11d684fc0c83210fd7ee.mp3*~data=user_id=0,application_id=42~hmac=51e710d7c5b151155ced6b71259bedc762eef1bf63e9b95e957ed9e85b824852
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/72/8a/ae/728aae3f-8e65-2bcd-5c4b-583749b50c38/mzaf_15014765051194857007.plus.aac.p.m4a
 preview_provider: itunes
-external_url: https://music.apple.com/jp/album/everything/1536002897?i=1536002900&uo=4
+external_url: https://music.apple.com/us/album/everything/1536002897?i=1536002900&uo=4
 trackId: 1536002900
 duration: 420
 genre: R&B/Soul

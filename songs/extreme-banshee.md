@@ -6,7 +6,7 @@ artist_ko:
 album: SIX
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/63fe9760a4e79ac7b7bcf8e162631452/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/e/2/0/0e21c59c043c7ec4e6be3e63bb42793f.mp3?hdnea=exp=1786584295~acl=/api/1/1/0/e/2/0/0e21c59c043c7ec4e6be3e63bb42793f.mp3*~data=user_id=0,application_id=42~hmac=1046b0958f7d712001af5b8d111bb8e631080f890255f04a8fae140391e31d46
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/13/c1/5f/13c15f37-085f-7473-584e-3ca7d0a651b7/mzaf_9998832256329475113.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/banshee/1670753921?i=1670753924&uo=4
 trackId: 1670753924

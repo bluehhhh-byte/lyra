@@ -6,7 +6,7 @@ artist_ko:
 album: Digital Box Set
 year: 1969
 artwork: https://cdn-images.dzcdn.net/images/cover/8e1330155275bbb3df49a7a623d2ed54/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/8/3/0/783383b71b4586e75ed7313e0662ca06.mp3?hdnea=exp=1786584367~acl=/api/1/1/7/8/3/0/783383b71b4586e75ed7313e0662ca06.mp3*~data=user_id=0,application_id=42~hmac=14b1261b34b94cfa5928c1a155dcd250e7887290179d4400f25763a54acd3b0d
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/e6/75/51/e6755159-c22b-38bf-d8d5-d934084e4c90/mzaf_10601289704283516099.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/day-is-done/1443930816?i=1443931105&uo=4
 trackId: 1443931105

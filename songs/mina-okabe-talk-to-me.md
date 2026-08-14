@@ -6,10 +6,10 @@ artist_ko:
 album: Spinning Around
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/3e3886d8dd1f101dc80321af5a590981/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/b/1/0/5b1f063fe49c2068f12b99a3faec56dc.mp3?hdnea=exp=1786684364~acl=/api/1/1/5/b/1/0/5b1f063fe49c2068f12b99a3faec56dc.mp3*~data=user_id=0,application_id=42~hmac=5c863c86a04b84e39612ecda97ca999c9857829ba9fcd7694f845bd9f22f235b
-preview_provider: deezer
-external_url: https://www.deezer.com/track/2195330817
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/03/33/0a/03330a79-2ee0-42c3-12e1-123567788c4e/mzaf_12643537220304636511.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/talk-to-me/1676549814?i=1676549819&uo=4
+trackId: 1676549819
 duration: 176
 genre: Indie Pop
 lang: en

@@ -6,7 +6,7 @@ artist_ko:
 album: Antenna music Warriors
 year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/85f7ac5672ba1d2c15ce0005f7a55d0e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/9/3/0/193ea2d40ff4b38698ce72bb677d84ca.mp3?hdnea=exp=1786584377~acl=/api/1/1/1/9/3/0/193ea2d40ff4b38698ce72bb677d84ca.mp3*~data=user_id=0,application_id=42~hmac=feba049ef1ba344730f16c20aab312468ef674a2a5c179f280f54e43fa550d70
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/0f/9d/9e/0f9d9edf-9f16-95be-6c12-f27da1719c76/mzaf_17295801888574614370.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/ready-get-set-go/1623108843?i=1623108845&uo=4
 trackId: 1623108845

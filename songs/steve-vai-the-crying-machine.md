@@ -6,10 +6,10 @@ artist_ko:
 album: Naked Tracks Vol. 3 (Fire Garden / Plus - Mixes With No Lead Guitar)
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/f4e6902eee750c922369bf688cd832a8/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/8/0/ec83a96f753803a38548ff4faddf4bb2.mp3?hdnea=exp=1786684382~acl=/api/1/1/e/c/8/0/ec83a96f753803a38548ff4faddf4bb2.mp3*~data=user_id=0,application_id=42~hmac=8ecb0c45c111c5df5f40a3e4c7ebdf82eb4e76e814ffbf150953035615c0d6e3
-preview_provider: deezer
-external_url: https://www.deezer.com/track/63246167
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/3b/15/94/3b1594e6-93a4-391b-da53-bbc324469d90/mzaf_17613877935162353706.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/the-crying-machine/190372450?i=190372952&uo=4
+trackId: 190372952
 duration: 291
 genre: Hard Rock
 lang: en

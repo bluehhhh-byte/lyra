@@ -6,7 +6,7 @@ artist_ko:
 album: The Reminder (Deluxe Version)
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/980fbd5c10ceb29f2fc3ba390a8e8dcb/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/7/e/0/77e722f21c7489b6c12f47e0637a9fce.mp3?hdnea=exp=1786584296~acl=/api/1/1/7/7/e/0/77e722f21c7489b6c12f47e0637a9fce.mp3*~data=user_id=0,application_id=42~hmac=98f4eb264e35b6a8e8919fd0e23aebb36e7db3077ee42b5156d891bcad3a7c39
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/ba/2f/e7ba2f8e-4825-5553-6492-d688338b3e6c/mzaf_7729667675021683625.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/1234/1440837029?i=1440837804&uo=4
 trackId: 1440837804
@@ -76,7 +76,7 @@ They're breaking your heart
 >^2 어린 소년들이 당신의 마음을 아프게 하나 봐요
 For the teenage boys
 They're breaking your heart
->^2 (나이 들어도 소년의 마음을 가진) 그런 사람들이
+> (나이 들어도 소년의 마음을 가진) 그런 사람들이
 > 당신의 마음을 아프게 하고 있나 봐요
 
 🗨 캐나다 출신의 싱어송라이터 파이스트의 곡으로 롤링스톤, 피치포크에서 2007년 최고의 곡들 중 한 곡으로 선정되었다. 하지만 이 곡은 호주의 싱어송라이터 샐리 셀트먼이 원곡자로 그녀는 음악을 만든 후 마치 파이스트의 곡처럼 들린다고 생각했고, 우연한 기회에 파이스트에게 곡을 전달했다. 처음에는 느리고 섬세했던 곡이었지만, 파이스트의 편곡으로 지금의 분위기를 만들었다고 한다.

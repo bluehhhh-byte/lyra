@@ -6,10 +6,10 @@ artist_ko:
 album: KICK BACK
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/219b98615e49c9df44727bc3d9d57c8e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/4/5/0/8458385a640b0f2eacc512d61ed3a753.mp3?hdnea=exp=1786684351~acl=/api/1/1/8/4/5/0/8458385a640b0f2eacc512d61ed3a753.mp3*~data=user_id=0,application_id=42~hmac=2eadf88ea81df5679a0f0e250ca8a4aa53f8d0e3099990bda6b76a193804c963
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1946911957
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/ef/35/15/ef3515d7-ec49-a0d5-5941-b312a31d89f9/mzaf_6584056106462089749.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/kick-back/1648272179?i=1648272180&uo=4
+trackId: 1648272180
 duration: 193
 genre: J-Pop
 lang: en

@@ -6,10 +6,10 @@ artist_ko:
 album: Results May Vary
 year: 2009
 artwork: https://cdn-images.dzcdn.net/images/cover/4e4079efc832fe8d0fbb2c4ffd36da17/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/a/d/0/7ad80c542ad294bec6f87062cc220b9f.mp3?hdnea=exp=1786684355~acl=/api/1/1/7/a/d/0/7ad80c542ad294bec6f87062cc220b9f.mp3*~data=user_id=0,application_id=42~hmac=b279901e158c652eef973529bfdb72b01596aa033adf7bc80606be851af67074
-preview_provider: deezer
-external_url: https://www.deezer.com/track/104959794
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d7/fa/23/d7fa23c9-b665-9224-1830-6c2ddf01a78b/mzaf_15124959297238860476.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/eat-you-alive/1464793764?i=1464793948&uo=4
+trackId: 1464793948
 duration: 236
 genre: Metal
 lang: en

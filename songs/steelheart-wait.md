@@ -6,7 +6,7 @@ artist_ko:
 album: WAIT
 year: 1996
 artwork: https://cdn-images.dzcdn.net/images/cover/52479f8a11c8277b75c8a93bc57679a6/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/7/c/0/07cbd62e3083b19647274155ed44ca6e.mp3?hdnea=exp=1786584410~acl=/api/1/1/0/7/c/0/07cbd62e3083b19647274155ed44ca6e.mp3*~data=user_id=0,application_id=42~hmac=694d81f90dc870922a8f3e1debd9cbf508a15184a402fa6b77193517283396b2
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c8/9f/7b/c89f7bb1-d991-a42d-efef-4c0b86280ecf/mzaf_3830930484002339918.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/wait/208504480?i=208504593&uo=4
 trackId: 208504593

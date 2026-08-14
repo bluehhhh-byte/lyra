@@ -6,7 +6,7 @@ artist_ko:
 album: LOVE - The 3rd Album
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/d993241d18248982a0a355e1b9001e9b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/d/0/ecd394fc8483807107c5bbe00a49ffc5.mp3?hdnea=exp=1786584399~acl=/api/1/1/e/c/d/0/ecd394fc8483807107c5bbe00a49ffc5.mp3*~data=user_id=0,application_id=42~hmac=52c5a73fe7a68f5b9723bd876206717f2f29b720fbbc3a24c481053c72dc8d1f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/86/30/2b/86302b97-6589-c332-722e-a3fe2291a9c5/mzaf_14466067358145085151.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/twilight-zone/1060470756?i=1060471721&uo=4
 trackId: 1060471721
@@ -40,7 +40,7 @@ Baby you can`t search thing that you want
 그대여 눈물 같은 너의 사랑 
 Would you loving in the twilight zone 
 Just once baby
->^3 (황혼이 질 때까지 사랑해주겠니 한 번만)
+> (황혼이 질 때까지 사랑해주겠니 한 번만)
 > 누구도 너를 데려갈 수 없어 
 > 지금 내 안에 있는 걸 
 

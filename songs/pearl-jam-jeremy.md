@@ -6,8 +6,8 @@ artist_ko:
 album: Ten
 year: 1991
 artwork: https://cdn-images.dzcdn.net/images/cover/00ee8c40862fb4e258fcbeaa17d7199e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/3/0/1a30bdfae3cbfd5fb87c32706221a2ea.mp3?hdnea=exp=1786684368~acl=/api/1/1/1/a/3/0/1a30bdfae3cbfd5fb87c32706221a2ea.mp3*~data=user_id=0,application_id=42~hmac=694d24f171d1ac6d6993dd8465ddb68ff48df4a47f10c641b4accb1dfca47ee7
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/7675133
 trackId:
 duration: 318

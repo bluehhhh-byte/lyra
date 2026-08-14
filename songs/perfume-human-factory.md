@@ -6,10 +6,10 @@ artist_ko:
 album: Human Factory - Denzo Ningen -
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/20bba09e69d0293f11ea0f137ccfba98/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/8/9/0/889bccdf8ebe74d9ce0b5c25f2d2e275.mp3?hdnea=exp=1786684369~acl=/api/1/1/8/8/9/0/889bccdf8ebe74d9ce0b5c25f2d2e275.mp3*~data=user_id=0,application_id=42~hmac=884e509ad14495be163822c4c7b75b2e03dc52990030e8bef85280dd42d3349a
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3210735021
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c9/25/c5/c925c557-c308-a104-0b50-7cb5a2e5bda6/mzaf_8293502949328149558.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/human-factory-denzo-ningen/1793672309?i=1793672551&uo=4
+trackId: 1793672551
 duration: 243
 genre: Synth-Pop
 lang: ja

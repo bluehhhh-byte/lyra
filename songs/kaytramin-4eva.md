@@ -6,8 +6,8 @@ artist_ko:
 album: 4EVA (feat. Pharrell Williams)
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/7ae7c85be7f134b975fd9db9b2774532/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/7/9/0/879b736b835d304dfbe767d56fe0eed8.mp3?hdnea=exp=1786684349~acl=/api/1/1/8/7/9/0/879b736b835d304dfbe767d56fe0eed8.mp3*~data=user_id=0,application_id=42~hmac=509ec1034b8a9303dbda314513d99251ce6443a1d16927559e166bd1c58b7e14
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/2222173517
 trackId:
 duration: 190

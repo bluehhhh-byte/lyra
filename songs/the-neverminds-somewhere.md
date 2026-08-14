@@ -6,7 +6,7 @@ artist_ko:
 album: somewhere - Single
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/96e97b013989547f7ffb5684847a7b0f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/4/7/0/e47d9677cf6d26890dfa5d90972a7b97.mp3?hdnea=exp=1786559440~acl=/api/1/1/e/4/7/0/e47d9677cf6d26890dfa5d90972a7b97.mp3*~data=user_id=0,application_id=42~hmac=2f108e66c5edeabdf37938085eacb14ffb6d156cf1ff9daaafc0c4a311c033d0
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b0/6f/a9/b06fa914-0b7d-cd7e-4c3a-fbfe3b13334f/mzaf_14742261476664016876.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/somewhere/1698766610?i=1698766611&uo=4
 trackId: 1698766611

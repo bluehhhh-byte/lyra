@@ -6,7 +6,7 @@ artist_ko:
 album: Someone i'll wait
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/921e0c5dd0535aba6c8e753d56b1e561/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/6/0/0/560745ef5dd496cf90217f224dbfb4e0.mp3?hdnea=exp=1786559396~acl=/api/1/1/5/6/0/0/560745ef5dd496cf90217f224dbfb4e0.mp3*~data=user_id=0,application_id=42~hmac=87f1236419cec6eebed06f51432b2eb0ef56d1784595a19fd8f0cc06939a44be
+preview: 
 trackId: 
 duration: 215
 genre: Indie Pop

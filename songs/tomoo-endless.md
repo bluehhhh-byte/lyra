@@ -6,10 +6,10 @@ artist_ko:
 album: DEAR MYSTERIES
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/360c82e73c679a8a2a09a2fdac18a588/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/e/7/0/5e7a8c38bda62ea53ed7fad32bec6b06.mp3?hdnea=exp=1786684391~acl=/api/1/1/5/e/7/0/5e7a8c38bda62ea53ed7fad32bec6b06.mp3*~data=user_id=0,application_id=42~hmac=f3cccc386cdff56ec530524be35e6b3ae82b393a9da7ea4ed8ba6992241d2f68
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3618499812
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/5e/1c/ee5e1c32-ee4a-8eb7-2250-2b7e2bd81640/mzaf_14080204829522896631.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/endless/1771797743?i=1771797744&uo=4
+trackId: 1771797744
 duration: 247
 genre: J-Pop
 lang: ja

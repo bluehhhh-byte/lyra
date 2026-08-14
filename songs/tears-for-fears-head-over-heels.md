@@ -6,7 +6,7 @@ artist_ko:
 album: Songs From the Big Chair (Super Deluxe Version)
 year: 1985
 artwork: https://cdn-images.dzcdn.net/images/cover/5413c924601f881a7209bab7b1909880/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/7/0/0/7701ebc9e79817f70e01ffe3bbe5d520.mp3?hdnea=exp=1786584417~acl=/api/1/1/7/7/0/0/7701ebc9e79817f70e01ffe3bbe5d520.mp3*~data=user_id=0,application_id=42~hmac=d8bbeab74ea3e6fcbf0157c81e97ed294c46130629576e6e78e482dadd050b97
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/5e/f3/c45ef383-ea62-18e9-53f2-d20b1d3b189e/mzaf_17682187674438307496.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/head-over-heels/1440825207?i=1440825700&uo=4
 trackId: 1440825700
@@ -30,18 +30,18 @@ I wanted to be with you alone and talk about the weather
 > 날씨에 대한 이야기를 하고 싶었어요
 But traditions I can trace against the child in your face
 won't escape my attention
->^2 순진한 당신의 모습과는 정반대인 당신의 과거는
+> 순진한 당신의 모습과는 정반대인 당신의 과거는
 > 내 관심을 피해갈 수 없지만요
 You keep your distance with a system of touch
 and gentle persuasion
->^2 당신은 마치 접근체계처럼 거리를 두고
+> 당신은 마치 접근체계처럼 거리를 두고
 > 부드럽게 설득하기만 해요
 I'm lost in admiration could I need you this much
 > 난 이토록 당신이 필요한데
 > 당신을 향한 감탄에 빠져 있어요
 Oh you're just wasting my time
 you're just wasting time
->^2 하지만 당신은 내 시간을 낭비하고 있어요
+> 하지만 당신은 내 시간을 낭비하고 있어요
 > 내 시간을 빼앗기만 하네요
 
 Something happens and I'm head over heels
@@ -63,7 +63,7 @@ no no no have you no ambition
 >^2 얼마나 오랫동안 지속될지, 아니 당신은 욕심이 없나요?
 My mother and my brother's used to
 breathing clean air and dreaming I'm a doctor
->^2 어머니와 형은 맑은 공기를 마시며
+> 어머니와 형은 맑은 공기를 마시며
 > 내가 의사가 되길 바라고 있지만
 It's hard to be a man when there's a gun in your hand
 > 당신이 총으로 나를 좌지우지할 때 난 남자가 되기 힘들어요
@@ -83,5 +83,5 @@ La, la, la, la, la, la one little boy, one little man
 > 라라라, 한 어린 아이, 한 어린 남자가
 La, la-la-la, la, la la la la la la, la, la, la, la, la,
 funny how time flies
->^2 라라라, 당신과 있으면 시간이 이렇게
+> 라라라, 당신과 있으면 시간이 이렇게
 > 쏜살같이 지나간다니 얼마나 우스워요

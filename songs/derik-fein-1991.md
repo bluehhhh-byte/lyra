@@ -6,10 +6,10 @@ artist_ko:
 album: 1991
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/f59798761974d626528f15f4ffb88d60/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/4/a/0/54a768ce473849b33d4f053244d358bd.mp3?hdnea=exp=1786684339~acl=/api/1/1/5/4/a/0/54a768ce473849b33d4f053244d358bd.mp3*~data=user_id=0,application_id=42~hmac=7eadf848be2c81f6f7b2c664051d442502e154967ed6709972e62990496d05e7
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3470064121
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/95/09/a395094e-9007-904b-4108-9a2daeb35678/mzaf_3480037252278438381.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/1991/1832041687?i=1832041690&uo=4
+trackId: 1832041690
 duration: 195
 genre: Indie Pop
 lang: en

@@ -6,7 +6,7 @@ artist_ko:
 album: don’t miss me - Single
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/4b4a1145cc777f1bf8fdb24d9fd518e3/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/4/c/0/44c06c31d28c6918717d331881c6e634.mp3?hdnea=exp=1786584276~acl=/api/1/1/4/4/c/0/44c06c31d28c6918717d331881c6e634.mp3*~data=user_id=0,application_id=42~hmac=c841acb9098debe8e62ef99a08b5b514720468ec1ae41071ae843cee7ea03484
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/36/7c/97367cd8-f957-5fdf-54f7-945e7c13ab16/mzaf_1203056072494147758.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/dont-miss-me/1596384554?i=1596384555&uo=4
 trackId: 1596384555
@@ -69,7 +69,7 @@ Don't want them dealing with my brain
 >^2 거리를 두고 싶어, 남들이 날 건드리지 않았으면 좋겠어
 But suddenly he's got me folding
 'Cause I only want him to hold me, yuck
->^2 그런데 갑자기 사랑에 빠지고 만 거야,
+> 그런데 갑자기 사랑에 빠지고 만 거야,
 > 난 그냥 갖고 놀고만 싶었는데
 'Cause I can't take my feelings and I can't trust my heart
 > 나도 내 감정을 감당 못해, 내 마음을 모르겠어

@@ -6,7 +6,7 @@ artist_ko:
 album: Release the Stars
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/055698d1f363d8c88f8b5d7908fdaec6/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd1d67df0a.mp3?hdnea=exp=1786559420~acl=/api/1/1/5/4/1/0/541fc452371eed2b7a00edcd1d67df0a.mp3*~data=user_id=0,application_id=42~hmac=4f7933cfd8e12c042c23532ed5a756b1d1c3c92d3e54d3d60246804e4969b458
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/d7/bb/01d7bb1f-f157-3e29-81fd-9ff45f586991/mzaf_1129272078199898235.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/going-to-a-town/1445830616?i=1445830626&uo=4
 trackId: 1445830626

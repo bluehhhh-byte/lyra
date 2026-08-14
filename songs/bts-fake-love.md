@@ -6,7 +6,7 @@ artist_ko:
 album: Love Yourself 結 'Answer'
 year: 2018
 artwork: https://cdn-images.dzcdn.net/images/cover/c4b3d908119b322fae29f17d226fd687/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/5/6/0/2569734036bf8abcbbfbd3bea43fe5de.mp3?hdnea=exp=1786559365~acl=/api/1/1/2/5/6/0/2569734036bf8abcbbfbd3bea43fe5de.mp3*~data=user_id=0,application_id=42~hmac=c4cf1346df6093871817f5239391eeae6f5de11a60a87e9bdf47b90a8ec49fa5
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/d4/c9/0bd4c96a-42f9-ba5b-61ae-b892eedc07bb/mzaf_13192440704264218610.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/fake-love/1598730614?i=1598730630&uo=4
 trackId: 1598730630

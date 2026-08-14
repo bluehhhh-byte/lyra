@@ -6,10 +6,10 @@ artist_ko:
 album: Easy
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/f9ed5ff4f56e514d47eff123972e1fae/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/7/3/0/27336e9f7adf35ba5d67e4602996e253.mp3?hdnea=exp=1786684391~acl=/api/1/1/2/7/3/0/27336e9f7adf35ba5d67e4602996e253.mp3*~data=user_id=0,application_id=42~hmac=c2f50f51ad9aedf8b093d37dc9474f32e9addb7af3801683a4c1be407d9f7954
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1172418672
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/b3/38/1cb338f5-e032-04bb-d265-9614dc905429/mzaf_3746726070378595075.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/easy/1523006508?i=1523006513&uo=4
+trackId: 1523006513
 duration: 213
 genre: Synth-Pop
 lang: en

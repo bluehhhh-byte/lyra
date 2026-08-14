@@ -6,10 +6,10 @@ artist_ko:
 album: The Jaws Of Life
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/9a2170713e07863b75e05f24a5c7785b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/4/2/0/c42c44bcfb248019e6be7702e9e6ed73.mp3?hdnea=exp=1786684370~acl=/api/1/1/c/4/2/0/c42c44bcfb248019e6be7702e9e6ed73.mp3*~data=user_id=0,application_id=42~hmac=adfe9c4f12cb90ef865dec404b9ec56777409ae0822c142c9e92c93606b0fc4c
-preview_provider: deezer
-external_url: https://www.deezer.com/track/2135303897
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/ee/26/ffee263f-6fe2-1cc0-f966-3eb5309b10a4/mzaf_2555019159710632079.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/so-far-so-fake/1651691458?i=1651691473&uo=4
+trackId: 1651691473
 duration: 236
 genre: Emo
 lang: en

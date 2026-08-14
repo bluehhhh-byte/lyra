@@ -6,8 +6,8 @@ artist_ko:
 album: STORM
 year: 2026
 artwork: https://cdn-images.dzcdn.net/images/cover/ea9782202a27ecb386625846177f8f30/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/7/0/0/470411573702c48dc3a65b038de3ca92.mp3?hdnea=exp=1786684344~acl=/api/1/1/4/7/0/0/470411573702c48dc3a65b038de3ca92.mp3*~data=user_id=0,application_id=42~hmac=44eb95512ebaba9b3ad02f27b168de49b997aa23a78d23bd9523c971c45b5190
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/3937217871
 trackId:
 duration: 209

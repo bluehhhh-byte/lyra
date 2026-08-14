@@ -6,10 +6,10 @@ artist_ko:
 album: Sgt. Pepper's Lonely Hearts Club Band
 year: 1967
 artwork: https://cdn-images.dzcdn.net/images/cover/b4d604768b6afd2cd8743001f855e8b4/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/a/9/0/3a9203876a2168e645ebdd5cc9028d67.mp3?hdnea=exp=1786684387~acl=/api/1/1/3/a/9/0/3a9203876a2168e645ebdd5cc9028d67.mp3*~data=user_id=0,application_id=42~hmac=dae11c187c98df9446825cd8ef4f1f26b1a1e3b8510c2fc706253ed5b20bd5f1
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1028518712
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/28/42/e7/2842e764-d113-4bab-24b9-f28aa922456e/mzaf_2901405551618478483.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/a-day-in-the-life/1441164604?i=1441165168&uo=4
+trackId: 1441165168
 duration: 252
 genre: Alternative Rock
 lang: en

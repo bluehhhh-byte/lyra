@@ -55,7 +55,7 @@ I let the darkness in to teach me
 > 나는 어둠이 나를 가르치도록 들여보냈어
 I learned more than I wanted
 When I tried I couldn't look away
->^2 내가 시도했을 때 눈을 돌릴 수 없었고,
+> 내가 시도했을 때 눈을 돌릴 수 없었고,
 > 원했던 것보다 더 많이 배웠어
 Floating and drifting and flying through the open sky
 > 열린 하늘을 떠다니고 표류하고 날아다니며

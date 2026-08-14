@@ -6,10 +6,10 @@ artist_ko:
 album: Can't Hold Me Back
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/c82eac033ab8402b56ca7b1db18ba94b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/9/1/0/a918554983af8628e8650b2344ade42f.mp3?hdnea=exp=1786684331~acl=/api/1/1/a/9/1/0/a918554983af8628e8650b2344ade42f.mp3*~data=user_id=0,application_id=42~hmac=66e4c2a9f1ac661374fb152e44de13602a94aa3bb4b29103b2e3251f05783433
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1392455202
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/38/5c/9c/385c9cca-d096-b2c5-1fae-19b4c34e2f4d/mzaf_8819831705620231320.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/cant-hold-me-back/1570498260?i=1570498261&uo=4
+trackId: 1570498261
 duration: 118
 genre: Dance
 lang: en

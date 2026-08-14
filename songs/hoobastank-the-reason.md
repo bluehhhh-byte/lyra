@@ -6,7 +6,7 @@ artist_ko:
 album: Best of Hoobastank
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/95919aacfffbd4727a2d468f46cff72d/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/3/5/0/635769c3bc4723a0e40cf04388f86e9b.mp3?hdnea=exp=1786584315~acl=/api/1/1/6/3/5/0/635769c3bc4723a0e40cf04388f86e9b.mp3*~data=user_id=0,application_id=42~hmac=dcb6d8b4fbc219dbe92efc6a2b74ecfaa9bac2c3d53209ab796a6b97a2b3d4a3
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/2f/7e/392f7e9f-77d6-5fdc-0882-dbb0234b0e83/mzaf_17409574784494864897.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/the-reason/1440769594?i=1440769862&uo=4
 trackId: 1440769862

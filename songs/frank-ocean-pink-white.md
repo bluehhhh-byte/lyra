@@ -6,7 +6,7 @@ artist_ko:
 album: Blonde
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/f798a866107715dd6dc1049e498ce21f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/3/9/0/539d5ac2b897f16027d0aaf22d844f15.mp3?hdnea=exp=1786584298~acl=/api/1/1/5/3/9/0/539d5ac2b897f16027d0aaf22d844f15.mp3*~data=user_id=0,application_id=42~hmac=3e9c58aebdbddd6b944af0d0f739c0f54ed2b139436e76c37c48018cbd191a5c
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/a8/a2/45a8a2e0-9516-86b2-66ea-e8b2bf71de68/mzaf_10773372944954067241.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/pink-white/1146195596?i=1146195714&uo=4
 trackId: 1146195714

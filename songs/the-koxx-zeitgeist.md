@@ -6,10 +6,10 @@ artist_ko:
 album: the new normal
 year: 2015
 artwork: https://cdn-images.dzcdn.net/images/cover/c9a1494b25d3809d3081a9b79998e531/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/e/0/0/7e0f9254db1c270df4edc1f33e443a92.mp3?hdnea=exp=1786684389~acl=/api/1/1/7/e/0/0/7e0f9254db1c270df4edc1f33e443a92.mp3*~data=user_id=0,application_id=42~hmac=a03a668736cdf9dcc8d24777a0e42664c3ea208d4beccc0844609990767fcf42
-preview_provider: deezer
-external_url: https://www.deezer.com/track/530456791
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/5b/b9/e15bb978-cc09-47a0-b882-3a8d1794bdda/mzaf_8345598742642986759.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/zeitgeist/1416405016?i=1416405024&uo=4
+trackId: 1416405024
 duration: 198
 genre: Indie Rock
 lang: en

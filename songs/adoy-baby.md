@@ -6,7 +6,7 @@ artist_ko:
 album: Baby - Single
 year: 2021
 artwork: https://cdn-images.dzcdn.net/images/cover/dd7cb0320b7cd2ea2c2103a5e96ae377/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/0/0/0/10008bcc841537f3ac18cbbb78df473f.mp3?hdnea=exp=1786559357~acl=/api/1/1/1/0/0/0/10008bcc841537f3ac18cbbb78df473f.mp3*~data=user_id=0,application_id=42~hmac=9f47abae5c78ef3d643e2bbbe58865f361f6be4b3fb5663a3e1ecd4a54985077
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6f/47/16/6f4716a1-be83-be86-866a-3ff679413118/mzaf_7774719439111222867.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/baby/1575186579?i=1575186585&uo=4
 trackId: 1575186585

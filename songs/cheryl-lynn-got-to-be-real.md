@@ -6,10 +6,10 @@ artist_ko:
 album: Cheryl Lynn (Expanded Edition)
 year: 1978
 artwork: https://cdn-images.dzcdn.net/images/cover/9b8cf84dd4a66a2323dcb397aa7c2c22/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/c/0/2ec3d9f1604e40093862c4c369805d5b.mp3?hdnea=exp=1786684336~acl=/api/1/1/2/e/c/0/2ec3d9f1604e40093862c4c369805d5b.mp3*~data=user_id=0,application_id=42~hmac=65d85c6dd1e980150f9298cd04c03afa24164514be4f02e824c2f5f312ec1f85
-preview_provider: deezer
-external_url: https://www.deezer.com/track/8014760
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/63/fe/11/63fe110d-709c-f70c-9c11-2e7e0afa0817/mzaf_9182308545834365067.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/got-to-be-real/410731494?i=410731495&uo=4
+trackId: 410731495
 duration: 307
 genre: Disco
 lang: en

@@ -6,10 +6,10 @@ artist_ko:
 album: hickey
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/db5635a16270ecad28ed8fe87855b1f5/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/4/b/0/f4b22dbd839dd550b103c42b83a9b0c1.mp3?hdnea=exp=1786684376~acl=/api/1/1/f/4/b/0/f4b22dbd839dd550b103c42b83a9b0c1.mp3*~data=user_id=0,application_id=42~hmac=06d61e23e22d0fa3e629e3433112c5946608c0e2a34aef819f18f2ebf9e057bf
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3509397671
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/bb/30/5bbb30ce-5137-d658-3eb1-110998cd0a87/mzaf_12300795247392343012.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/moody/1811506877?i=1811506878&uo=4
+trackId: 1811506878
 duration: 175
 genre: Indie Rock
 lang: en

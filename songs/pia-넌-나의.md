@@ -6,7 +6,7 @@ artist_ko:
 album: PIA 15years
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/c1df27d11403804319a335209ef4b38f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/4/1/0/b41e2693ab8563ab3477de120486b6a8.mp3?hdnea=exp=1786584382~acl=/api/1/1/b/4/1/0/b41e2693ab8563ab3477de120486b6a8.mp3*~data=user_id=0,application_id=42~hmac=5115bb808289df220db592fa7e05d2e8342e9ab9ff40746b7940246bd7667303
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/e7/5f/4b/e75f4bab-099d-d69a-2d92-60e52fda841b/mzaf_17088609354456421191.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/%EB%84%8C-%EB%82%98%EC%9D%98/1637927155?i=1637927242&uo=4
 trackId: 1637927242

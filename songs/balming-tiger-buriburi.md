@@ -6,7 +6,7 @@ artist_ko:
 album: January Never Dies
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/b87844e9396b07f5bf553ae60414f780/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/8/0/cf82ca554200ea6820ea55031c81cadb.mp3?hdnea=exp=1786559360~acl=/api/1/1/c/f/8/0/cf82ca554200ea6820ea55031c81cadb.mp3*~data=user_id=0,application_id=42~hmac=abc8f83a6a3f9cedbc3ec7bccda9e2180409c9811c42aca9a064565b88f932a4
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/e7/db/90e7db21-e23c-2dd8-14da-0ea061d2eb74/mzaf_3576487695978835341.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/buriburi/1708055508?i=1708055530&uo=4
 trackId: 1708055530

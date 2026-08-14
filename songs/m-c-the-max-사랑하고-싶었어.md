@@ -6,10 +6,10 @@ artist_ko:
 album: M.C The Max! Vol.1
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/8d97791f6121a2aafee5d2b51cd734f0/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/6/4/0/a64f28d6bf1beb8dad1be380dab71aee.mp3?hdnea=exp=1786684359~acl=/api/1/1/a/6/4/0/a64f28d6bf1beb8dad1be380dab71aee.mp3*~data=user_id=0,application_id=42~hmac=a5ac3a7e46f24833a461bcd42a99824d4e30ae756a21b745ad13f3c6ebeb3472
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1437409942
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b4/1b/57/b41b57a9-8383-16a6-cdd8-bd7e8682f552/mzaf_7293470924770786104.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/%EC%82%AC%EB%9E%91%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%97%88%EC%96%B4/1449537320?i=1449537323&uo=4
+trackId: 1449537323
 duration: 208
 genre: Ballad
 lang: ko

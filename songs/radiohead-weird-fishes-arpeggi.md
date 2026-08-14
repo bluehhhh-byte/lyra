@@ -6,7 +6,7 @@ artist_ko:
 album: In Rainbows
 year: 2007
 artwork: https://cdn-images.dzcdn.net/images/cover/a175af9b7d329bc678cb4d26fc13d6de/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/a/f/0/5afea1001a936755ae5404c829e1954a.mp3?hdnea=exp=1786559413~acl=/api/1/1/5/a/f/0/5afea1001a936755ae5404c829e1954a.mp3*~data=user_id=0,application_id=42~hmac=35cde7747791efb314d3d5a40eb0c2373292d9079c7198576ba8eb74379c3121
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/2e/48/d8/2e48d83b-0dd4-5336-ba90-a08a14771bc3/mzaf_6995897912540104374.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/weird-fishes-arpeggi/1109714933?i=1109715168&uo=4
 trackId: 1109715168

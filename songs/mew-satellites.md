@@ -6,10 +6,10 @@ artist_ko:
 album: + - (Deluxe Edition)
 year: 2015
 artwork: https://cdn-images.dzcdn.net/images/cover/456463cb10a613ed2cb1110eb6cd04c3/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/e/9/0/2e9f18e94cd9f50374f1702bde0f86c0.mp3?hdnea=exp=1786684361~acl=/api/1/1/2/e/9/0/2e9f18e94cd9f50374f1702bde0f86c0.mp3*~data=user_id=0,application_id=42~hmac=ff08af9ff782a165367b0387fc464a7a51d2511997160c57146e437c99450797
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1145158192
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1c/61/a1/1c61a1b6-e3f2-1ae7-a462-64d3c1c6e1d0/mzaf_7217386550638376027.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/satellites/958897208?i=958897212&uo=4
+trackId: 958897212
 duration: 369
 genre: Dream Pop
 lang: en

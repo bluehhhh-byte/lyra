@@ -6,10 +6,10 @@ artist_ko:
 album: Sea of Love - The 3rd Album
 year: 2002
 artwork: https://cdn-images.dzcdn.net/images/cover/d240c05db7714227243e8c12b5b2edb6/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/8/d/7/0/8d790a9d0a8f30f912bfcd82f977e1f9.mp3?hdnea=exp=1786684343~acl=/api/1/1/8/d/7/0/8d790a9d0a8f30f912bfcd82f977e1f9.mp3*~data=user_id=0,application_id=42~hmac=a8331d6d459b661ce9726bf6d78fb1da5484ef5f3f1c04637813423263d0dcc3
-preview_provider: deezer
-external_url: https://www.deezer.com/track/728599612
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/03/b2/e1/03b2e112-d6fe-64d4-d802-f0b9cbbbf37c/mzaf_11415432572531558738.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/sea-of-love/1061009345?i=1061010226&uo=4
+trackId: 1061010226
 duration: 263
 genre: R&B/Soul
 lang: ko

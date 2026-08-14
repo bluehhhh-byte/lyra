@@ -6,7 +6,7 @@ artist_ko:
 album: Singin' in the Rain (Original Motion Picture Soundtrack)
 year: 1952
 artwork: https://cdn-images.dzcdn.net/images/cover/b122052f255a1d34a3d0cb76c190085e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3?hdnea=exp=1786584303~acl=/api/1/1/e/a/e/0/eae5bf4ed93ac6192dd584162f9cc1f1.mp3*~data=user_id=0,application_id=42~hmac=4d67a090f5dd59e028bbacccafd35e7dba71738d89496a107bb4a0b9be914952
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/f5/9b/faf59be0-1e7f-cdcf-c7ef-a4cfbd39337e/mzaf_5870940111830237809.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/singin-in-the-rain/1455420325?i=1455420758&uo=4
 trackId: 1455420758

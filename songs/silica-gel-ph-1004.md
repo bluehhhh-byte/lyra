@@ -6,10 +6,10 @@ artist_ko:
 album: POWER ANDRE 99
 year: 2023
 artwork: https://cdn-images.dzcdn.net/images/cover/bf6adddf91fe6e6be4c7c808eac4d334/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/6/4/0/7643db21aa030900c6c50680c42619d3.mp3?hdnea=exp=1786684381~acl=/api/1/1/7/6/4/0/7643db21aa030900c6c50680c42619d3.mp3*~data=user_id=0,application_id=42~hmac=121718d6734cf385a8de083fd19c346227ab688ac26119a2e9809dd14d259729
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3746278472
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/33/fa/1b33fadd-4d2e-49d6-461e-b7ffbff1c494/mzaf_1603800160924866735.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/ph-1004/1865062012?i=1865062199&uo=4
+trackId: 1865062199
 duration: 117
 genre: Indie Rock
 lang: en

@@ -6,7 +6,7 @@ artist_ko:
 album: You Gotta Go There to Come Back
 year: 2003
 artwork: https://cdn-images.dzcdn.net/images/cover/670e40dc5fdac8230c60e162c4f7c514/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/6/5/0/b6515b6328031bc0c6d189a9027f0346.mp3?hdnea=exp=1786559432~acl=/api/1/1/b/6/5/0/b6515b6328031bc0c6d189a9027f0346.mp3*~data=user_id=0,application_id=42~hmac=a20dfa7f8e757dca38087463e9dd312990a7f6048e71a317cef7a3cee28eb61f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/94/36/ca/9436ca9b-f5ff-30e9-0a0a-e98f3823c9a4/mzaf_6939471848854324780.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/maybe-tomorrow/1440953312?i=1440953513&uo=4
 trackId: 1440953513

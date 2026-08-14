@@ -6,7 +6,7 @@ artist_ko:
 album: Noise On Fire (Remastered) [Deluxe Edition]
 year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/0af11eb5b73e64c76a3d35f978b32911/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/7/1/0/171e8b3297ce74babdee3f7da964711d.mp3?hdnea=exp=1786584302~acl=/api/1/1/1/7/1/0/171e8b3297ce74babdee3f7da964711d.mp3*~data=user_id=0,application_id=42~hmac=0cac9560dbed6da94990ae57bc2d92af8ba3fcb6d9d14bfd4f67482b42fdefb8
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fe/f8/ea/fef8ea6f-95bd-aebf-f796-4fce5605a8a5/mzaf_16237942736338713410.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/bye-bye-planet/493445850?i=493445914&uo=4
 trackId: 493445914

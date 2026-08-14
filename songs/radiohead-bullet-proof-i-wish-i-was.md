@@ -6,7 +6,7 @@ artist_ko:
 album: The Bends
 year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/0d2ccaf5f7b35af57f3d9c8f4504a6e6/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/a/0/3/0/a032918c09ed6f709cb2878a7fbeffdc.mp3?hdnea=exp=1786584389~acl=/api/1/1/a/0/3/0/a032918c09ed6f709cb2878a7fbeffdc.mp3*~data=user_id=0,application_id=42~hmac=a9c0f2f5457547b7a411aa68bcf4c5f1179ee566bcf3eb7b932402a6c9960db5
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5e/ae/9a/5eae9a9f-32d7-d8d6-fa80-7be5c2eb1ece/mzaf_649507979241863335.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/bullet-proof-i-wish-i-was/1097862703?i=1097863210&uo=4
 trackId: 1097863210

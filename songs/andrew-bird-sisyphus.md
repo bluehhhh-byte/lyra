@@ -6,7 +6,7 @@ artist_ko:
 album: My Finest Work Yet
 year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/a0c5b52c7d3a6dd34dcde771669c5ff3/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/0/b/0/40b8ea55184d12667566658cebaedb88.mp3?hdnea=exp=1786584258~acl=/api/1/1/4/0/b/0/40b8ea55184d12667566658cebaedb88.mp3*~data=user_id=0,application_id=42~hmac=1107843c5fc2b914187e674c5a7dfe873ac517426063fea41038b664968d7aba
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9e/26/08/9e260895-8ee3-8e52-1eb0-f320c4a92283/mzaf_13913858859310995268.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/sisyphus/1449649405?i=1449649586&uo=4
 trackId: 1449649586
@@ -31,11 +31,11 @@ A stone's throw from the precipice, paused
 > 절벽에서 돌 던지면 닿을 만큼 가까운 곳에 멈춰 선 채
 Did he jump or did he fall as
 he gazed into the maw of the morning mist?
->^2 자욱한 새벽안갯속으로
+> 자욱한 새벽안갯속으로
 > 그는 뛰어내렸나 아니면 굴러 떨어졌나
 Did he raise both fists and say,
 "To hell with this" and just let the rock roll?
->^2 아니면 두 주먹을 치켜들고
+> 아니면 두 주먹을 치켜들고
 > "될 대로 되라지"라며 그저 바위가 떨어지게 놔두었던가
 
 Let it roll, let it crash down low
@@ -56,7 +56,7 @@ And everything to do with you
 
 I'd rather fail like a mortal than flail
 like a god on a lightning rod
->^2 신처럼 피뢰침 위에서 번개로 위협하느니
+> 신처럼 피뢰침 위에서 번개로 위협하느니
 > 인간처럼 죽음을 기다릴게
 History forgets the moderates
 > 어설프게 중간에 낀 자는 역사에서 잊혀지기 마련이지
@@ -64,7 +64,7 @@ For those who sit recalcitrant and taciturn
 > 자리에 앉아 고집부리며 침묵하는 이들에게
 You know I'd rather turn and
 burn than scale this edifice, yeah
->^2 이 무거운 전당을 들어 올리느니
+> 이 무거운 전당을 들어 올리느니
 > 차라리 괴로움에 몸부림치며 불에 타버리겠어
 Where's my accomplice?
 > 내 편은 도대체 어디 있는거야?

@@ -6,7 +6,7 @@ artist_ko:
 album: A Victim of Stars 1982-2012
 year: 1983
 artwork: https://cdn-images.dzcdn.net/images/cover/52e26d766dab8c9603e34713644b2bb2/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/d/6/0/0/d6063f54a08101b466419134c911a3d4.mp3?hdnea=exp=1786584398~acl=/api/1/1/d/6/0/0/d6063f54a08101b466419134c911a3d4.mp3*~data=user_id=0,application_id=42~hmac=a158b120975642895a4aa0b5545b22be87e2ce8c55ed1a6f41487e2a424264cc
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/67/e5/56/67e556ba-f1bb-1e1a-3c4f-cbcf76476265/mzaf_7533223163442511733.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/forbidden-colours/1443820543?i=1443820560&uo=4
 trackId: 1443820560

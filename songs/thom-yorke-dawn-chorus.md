@@ -6,7 +6,7 @@ artist_ko:
 album: ANIMA
 year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/e8679978abb780b5e923383c575a7803/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/4/a/0/74a74be2c44bea42bd191ead1c099b97.mp3?hdnea=exp=1786559447~acl=/api/1/1/7/4/a/0/74a74be2c44bea42bd191ead1c099b97.mp3*~data=user_id=0,application_id=42~hmac=d940536856fadf73deba264a997771399d51edf82cb55de2e15564d43d4a1003
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/95/3c/d0/953cd08f-089b-f53f-240f-f402a1ded32f/mzaf_6517642207652401425.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/dawn-chorus/1467347588?i=1467347667&uo=4
 trackId: 1467347667

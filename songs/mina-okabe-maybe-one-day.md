@@ -6,7 +6,7 @@ artist_ko:
 album: Maybe One Day - Single
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/53fe71ab65755e57eab15ac57678c072/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/b/e/0/1be6d18d5175121d0a483e7f083aadb3.mp3?hdnea=exp=1786559397~acl=/api/1/1/1/b/e/0/1be6d18d5175121d0a483e7f083aadb3.mp3*~data=user_id=0,application_id=42~hmac=19e74a3ffca359f0b13a90027180726f4083d66fc346357ac48570c57131fd43
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/42/c5/1c/42c51ced-e903-0f50-197e-9bd3b3cb7ce2/mzaf_5591850167076748097.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/maybe-one-day/1737314154?i=1737314157&uo=4
 trackId: 1737314157

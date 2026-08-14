@@ -6,7 +6,7 @@ artist_ko:
 album: No Surprises - Single
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/7a378976d3ff1b1fd7b21ee0c7f95fa5/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/f/2/0/cf2203c4542f336a75ab187d31116549.mp3?hdnea=exp=1786584393~acl=/api/1/1/c/f/2/0/cf2203c4542f336a75ab187d31116549.mp3*~data=user_id=0,application_id=42~hmac=20680e3abd89da4be88c15fca7c8c12e0cf3efc838c74784d33289f9c33b4302
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/20/ce/ac/20ceac91-854e-e7e3-efe8-002247c8ebc8/mzaf_12687341985963656476.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/palo-alto/1112407306?i=1112408326&uo=4
 trackId: 1112408326

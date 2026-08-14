@@ -6,7 +6,7 @@ artist_ko:
 album: 나는 18살이다
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/cc48fdd49e47626573193c647c116f1b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/2/8/1/0/281a0c782e78893cd6511ff7bf599c72.mp3?hdnea=exp=1786559467~acl=/api/1/1/2/8/1/0/281a0c782e78893cd6511ff7bf599c72.mp3*~data=user_id=0,application_id=42~hmac=82c8e555bf26d50a132119d282b2999cb1bb651de38a939c027cad8b2f06bebc
+preview: 
 trackId: 
 duration: 194
 genre: Alternative Rock

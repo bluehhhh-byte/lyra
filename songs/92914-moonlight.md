@@ -6,7 +6,7 @@ artist_ko:
 album: Moonlight - Single
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/34056cf405bd249a8b0be0d1bc10745d/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/b/6/0/9b6fe8d6b06b8a2670f9d8d7dc1c1120.mp3?hdnea=exp=1786559356~acl=/api/1/1/9/b/6/0/9b6fe8d6b06b8a2670f9d8d7dc1c1120.mp3*~data=user_id=0,application_id=42~hmac=8243ca17fd6e97f00fe7f8a25a7823bcde172a89152df5ec27d00489a94f0f8c
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/e8/6c/1ce86c80-bb3b-c1cf-58d8-d438d3c076a8/mzaf_10265119836829957596.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/moonlight/1809385465?i=1809385466&uo=4
 trackId: 1809385466

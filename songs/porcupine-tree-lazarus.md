@@ -6,7 +6,7 @@ artist_ko:
 album: Deadwing
 year: 2005
 artwork: https://cdn-images.dzcdn.net/images/cover/6f05a1da9c11b4940f0e18f72eb83f90/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/e/1/0/fe146d447dee815901cff088a1fb0ed6.mp3?hdnea=exp=1786584384~acl=/api/1/1/f/e/1/0/fe146d447dee815901cff088a1fb0ed6.mp3*~data=user_id=0,application_id=42~hmac=249a8ce4f3ccec866fbc6d7ddf0f5763dcaccd1ef8b3974ae321cb0e9936c79e
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/60/86/29608611-d6ae-a305-0259-703e09bba17e/mzaf_17651128504194011609.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/lazarus/1770060647?i=1770061128&uo=4
 trackId: 1770061128
@@ -31,7 +31,7 @@ I can see a washed out moon through the fog
 > 나는 안개 속의 빛 바랜 달을 볼 수가 있어
 And then a voice inside my head
 breaks the analogue and says
->^2 그리고 곧 지나간 것들을 부숴버리는
+> 그리고 곧 지나간 것들을 부숴버리는
 > 한 목소리가 내 머리 속에 들리지
 
 Follow me down to the valley below
@@ -75,5 +75,5 @@ From out of your soul
 
 Come to us, Lazarus
 It's time for you to go
->^2 우리에게 오렴, 나사로여
+> 우리에게 오렴, 나사로여
 > 이제 너를 위해 떠나야 할 시간이니

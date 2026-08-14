@@ -6,7 +6,7 @@ artist_ko:
 album: Mellon Collie and the Infinite Sadness (Deluxe Edition)
 year: 1995
 artwork: https://cdn-images.dzcdn.net/images/cover/4b20b26269ab740644f405dcbf763c6c/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/3/b/0/43b091be7e5a8a23d7a676d9ece2ab2c.mp3?hdnea=exp=1786584421~acl=/api/1/1/4/3/b/0/43b091be7e5a8a23d7a676d9ece2ab2c.mp3*~data=user_id=0,application_id=42~hmac=ec67e056a32dfdaeb33973443adcc455971bc6b0468dda7dfba3f2bc26ca45e6
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/2f/b1/662fb191-3a6b-eac1-3091-dab8c0361a0e/mzaf_7118806059161861981.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/1979/1455510683?i=1455510933&uo=4
 trackId: 1455510933

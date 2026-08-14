@@ -6,8 +6,8 @@ artist_ko:
 album: Mechanical Animals
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/6ccbcde98df5080d38f41e895910fb12/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/8/b/0/98bc91f0638bf88b300fa656ea54dbd8.mp3?hdnea=exp=1786584352~acl=/api/1/1/9/8/b/0/98bc91f0638bf88b300fa656ea54dbd8.mp3*~data=user_id=0,application_id=42~hmac=75f88dafe487417dd43f406c95e0aa1fece234b591a8fa936f551c074838643e
-trackId:
+preview: 
+trackId: 1445847386
 duration: 340
 genre: Alternative Rock
 lang: en

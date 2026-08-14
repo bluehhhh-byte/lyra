@@ -6,7 +6,7 @@ artist_ko:
 album: Ta-Dah
 year: 2009
 artwork: https://cdn-images.dzcdn.net/images/cover/5334799f2cf9fae5cb7ced93cca1c2f0/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/8/e/0/38e2dc8200469addaa388be33098e6c4.mp3?hdnea=exp=1786559423~acl=/api/1/1/3/8/e/0/38e2dc8200469addaa388be33098e6c4.mp3*~data=user_id=0,application_id=42~hmac=4d5e280dfe3b257c9729a85658cc8a6b170acf6cdb067cbb2a07619da31333a2
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0d/d5/71/0dd57141-0417-3bc8-fe33-a693edfee7b9/mzaf_13414035075553529726.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/i-dont-feel-like-dancin/1443836075?i=1443836265&uo=4
 trackId: 1443836265
@@ -51,7 +51,7 @@ but my two feet can’t find a way
 >^2 내 마음은 모험을 할 수 있지만 두 발은 방법을 찾지 못해
 You’d think that I could muster up
 a little soft shoe, gentle sway
->^2 네가 보기엔 내가 살짝 발을 움직이며
+> 네가 보기엔 내가 살짝 발을 움직이며
 > 부드럽게 흔들 수 있을 것 같겠지
 But I don’t feel like dancin’, no sir, no dancin’ today.
 > 하지만 춤추고 싶지 않아, 아니, 오늘은 춤추지 않을 거야

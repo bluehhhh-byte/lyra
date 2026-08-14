@@ -6,10 +6,10 @@ artist_ko:
 album: the new normal
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/c9a1494b25d3809d3081a9b79998e531/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/d/b/0/fdbb03448ff5d2da0f49590fe2c8e4da.mp3?hdnea=exp=1786684389~acl=/api/1/1/f/d/b/0/fdbb03448ff5d2da0f49590fe2c8e4da.mp3*~data=user_id=0,application_id=42~hmac=d104be7674f257a638cc105129880311f20fea23e63e9da27549e0101f10f846
-preview_provider: deezer
-external_url: https://www.deezer.com/track/530456831
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e4/a9/60/e4a960f6-d370-4079-4659-856df8538f1d/mzaf_14496605322667312317.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/echo/1416405016?i=1416405028&uo=4
+trackId: 1416405028
 duration: 282
 genre: Indie Rock
 lang: ko

@@ -6,7 +6,7 @@ artist_ko:
 album: Machina / The Machines Of God
 year: 2000
 artwork: https://cdn-images.dzcdn.net/images/cover/24550dd8cd39adae6f89c615089ce84c/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/7/3/0/f734704c98e1779f569aa9add3167ffd.mp3?hdnea=exp=1786584422~acl=/api/1/1/f/7/3/0/f734704c98e1779f569aa9add3167ffd.mp3*~data=user_id=0,application_id=42~hmac=8a2e79491ffc13731bf46e2c362655b96fef7f9faf34b2f43b1dce02fcf38389
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/1c/97/4e1c97ea-bc83-8b70-f040-c8b722115217/mzaf_228326877156681861.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/stand-inside-your-love/712756036?i=712756043&uo=4
 trackId: 712756043
@@ -27,25 +27,25 @@ source_body_hash: 9cceffb2677699a28cf06f8fef80b5312d81ba98
 ---
 You and me 
 Meant to be immutable, impossible
->^2 너와 나
+> 너와 나
 > 모든 것이 불변이고, 불가능이듯
 
 It’s destiny, pure lunacy 
 Incalculable, insufferable
->^2 이것은 운명, 순수한 광기
+> 이것은 운명, 순수한 광기
 > 측정할 수 없는, 견딜 수 없는
 
 But for the last time 
 You’re everything that i want and ask for 
 You’re all that i’d dreamed
->^3 항상 마지막 순간에
+> 항상 마지막 순간에
 > 너는 내가 갈구하고 원하는 모든 것
 > 내가 꿈꿔왔던 모든 것
 
 For the first time 
 I’m telling you how much
 I need and bleed for
->^3 얼마나 원하고
+> 얼마나 원하고
 > 처절하게 갈망하는지
 > 처음으로 네게 말하고 있어
 

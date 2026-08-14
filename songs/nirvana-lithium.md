@@ -6,7 +6,7 @@ artist_ko:
 album: Nevermind
 year: 1991
 artwork: https://cdn-images.dzcdn.net/images/cover/f0282817b697279e56df13909962a54a/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/1/7/0/1174a6c09fbc3fe39c1d01e49de8c85b.mp3?hdnea=exp=1786584368~acl=/api/1/1/1/1/7/0/1174a6c09fbc3fe39c1d01e49de8c85b.mp3*~data=user_id=0,application_id=42~hmac=042202c604c2193c8e2ce97e1430544f8d38dfed940e0be7e8635a874bc5fa60
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9e/50/da/9e50da93-eaeb-7f1f-4b7b-2f571ee5ea5e/mzaf_5211214176058454055.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/lithium/1440783617?i=1440783764&uo=4
 trackId: 1440783764

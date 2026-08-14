@@ -6,10 +6,10 @@ artist_ko:
 album: Screaming Symphony
 year: 1996
 artwork: https://cdn-images.dzcdn.net/images/cover/0a427c8aa23e8f74c5738c6fa29442be/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/2/d/0/62d5c48aab5192a93cda0f38047f0fd2.mp3?hdnea=exp=1786684346~acl=/api/1/1/6/2/d/0/62d5c48aab5192a93cda0f38047f0fd2.mp3*~data=user_id=0,application_id=42~hmac=4ab24487ce4d9b1044a92e42c5675e6d399281019d3dbb29809f7431b5f76a8a
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1620672142
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/aa/bb/7e/aabb7e2c-0671-f731-7353-85494eef0981/mzaf_14005046352598820268.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/rat-race/1711594199?i=1711596322&uo=4
+trackId: 1711596322
 duration: 251
 genre: Heavy Metal
 lang: en

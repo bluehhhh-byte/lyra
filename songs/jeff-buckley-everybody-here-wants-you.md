@@ -6,7 +6,7 @@ artist_ko:
 album: Sketches for My Sweetheart the Drunk (Expanded Edition)
 year: 1998
 artwork: https://cdn-images.dzcdn.net/images/cover/e312a454530da3adade0274820fedb46/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/5/0/79528d796a404bc7c2aa46f6337b1ac9.mp3?hdnea=exp=1786584324~acl=/api/1/1/7/9/5/0/79528d796a404bc7c2aa46f6337b1ac9.mp3*~data=user_id=0,application_id=42~hmac=699c3a3b90ec5f528fd239d5d2add3c1fb2482248bb81bf65a53e58d88fc0900
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/83/92/9a/83929aa4-b96c-9232-f4a3-373acb8ea51a/mzaf_8846094203565182636.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/everybody-here-wants-you/1476888879?i=1476888881&uo=4
 trackId: 1476888881
@@ -27,5 +27,5 @@ source_body_hash: 79670b8846c8c484edc0ec4008575c2d03d169b6
 ---
 I know they all looked so good from a distance
 But I tell you I'm the one
->^2 멀리서 당신과 그 사람이 좋아보인다는 걸 알고 있지만
+> 멀리서 당신과 그 사람이 좋아보인다는 걸 알고 있지만
 > 나는 오직 당신 뿐이라고 말하고 싶어

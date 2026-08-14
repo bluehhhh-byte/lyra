@@ -6,10 +6,10 @@ artist_ko:
 album: WITHERED
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/0e4f2f0fc6a39f96c9981ac6c71864f2/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/9/9/0/399b9de0500f06f857c5da2cff0a546b.mp3?hdnea=exp=1786684338~acl=/api/1/1/3/9/9/0/399b9de0500f06f857c5da2cff0a546b.mp3*~data=user_id=0,application_id=42~hmac=f4808506ed4a1ff533685667c6f5d3041cd2613c0a47fd11a79fc887fe81969a
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3575349461
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/92/1d/7f921dc6-28dc-bc3a-f1f4-98d8b5e1043e/mzaf_6791806718366267805.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/is-this-really-love/1842454032?i=1842454194&uo=4
+trackId: 1842454194
 duration: 192
 genre: Indie Pop
 lang: en

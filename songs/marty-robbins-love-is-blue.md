@@ -6,7 +6,7 @@ artist_ko:
 album: By the Time I Get to Phoenix
 year: 1966
 artwork: https://cdn-images.dzcdn.net/images/cover/5bb1ce411838e00e9098231726d9d811/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/9/9/0/7998a89601745873b95b7e9a86ce50f9.mp3?hdnea=exp=1786584354~acl=/api/1/1/7/9/9/0/7998a89601745873b95b7e9a86ce50f9.mp3*~data=user_id=0,application_id=42~hmac=69aa82327f386638eb51bd7176ef41e00113f76df8cf68a87c79a9183b709a62
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7e/d6/5c/7ed65cb1-b8f8-7988-fffd-e5bf571573d8/mzaf_13772574028139913040.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/love-is-blue/1045261226?i=1045261231&uo=4
 trackId: 1045261231

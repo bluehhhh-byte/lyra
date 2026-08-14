@@ -6,7 +6,7 @@ artist_ko:
 album: 자오선 - Single
 year: 2016
 artwork: https://cdn-images.dzcdn.net/images/cover/34b5da2d35c25244081c47a1a9ba42ca/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/b/8/b/0/b8bc06df29b6bdb10c51c6e417be3d83.mp3?hdnea=exp=1786584382~acl=/api/1/1/b/8/b/0/b8bc06df29b6bdb10c51c6e417be3d83.mp3*~data=user_id=0,application_id=42~hmac=5def7221fce1144bcb88bfaa6bc4a6a63c5ca1ab5e2a04f6b7169b6b9ddd0160
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/48/1d/cc/481dcc73-e138-1f35-5ceb-ae4fe0b5aac7/mzaf_14429655149589551458.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/%EC%9E%90%EC%98%A4%EC%84%A0/1553381783?i=1553381784&uo=4
 trackId: 1553381784

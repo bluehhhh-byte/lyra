@@ -6,7 +6,7 @@ artist_ko:
 album: the brilliant green
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/794a43cbc490cdf89ab8e0b3de6a878e/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/9/b/0/19b8a0299a794fbc47f4cbfd5bf6822c.mp3?hdnea=exp=1786559438~acl=/api/1/1/1/9/b/0/19b8a0299a794fbc47f4cbfd5bf6822c.mp3*~data=user_id=0,application_id=42~hmac=8a501c7ff442898a28393e6b5a05e3c09ac8802d17e6dff57d3e1884509a5b98
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/98/bf/de98bf20-27f8-90cd-36ef-9390c4a26be5/mzaf_11984121836352277940.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/there-will-be-love-there/1536130933?i=1536130943&uo=4
 trackId: 1536130943

@@ -6,7 +6,7 @@ artist_ko:
 album: The Best Of Me: Never Edition
 year: 1987
 artwork: https://cdn-images.dzcdn.net/images/cover/a37761cd98b72998ff1d8cbfedbf0863/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/7/7/0/e773d9a1121ced48f2e74bca4271699c.mp3?hdnea=exp=1786559418~acl=/api/1/1/e/7/7/0/e773d9a1121ced48f2e74bca4271699c.mp3*~data=user_id=0,application_id=42~hmac=7dad33c038d625c6e4886f31d4b9e14c00301a1880db298c3c1bac8e6aac71a8
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/b3/33/6eb33356-a55e-a371-d05b-1a2fc578099e/mzaf_3270305946600257414.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/never-gonna-give-you-up/1773292758?i=1773293184&uo=4
 trackId: 1773293184

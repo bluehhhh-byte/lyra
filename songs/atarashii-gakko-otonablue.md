@@ -6,7 +6,7 @@ artist_ko:
 album: Otonablue - Single
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/011ea7436c1b1ff2e01abde85a3aa598/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/e/c/0/0/ec0a8c673d95d439562bc7b46701336c.mp3?hdnea=exp=1786584263~acl=/api/1/1/e/c/0/0/ec0a8c673d95d439562bc7b46701336c.mp3*~data=user_id=0,application_id=42~hmac=6a17aa30aaf827b1be297474f31b9408d84ff6ad18912134e1b299d37fe233b9
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/4a/f0/bb/4af0bbd5-9afc-bf98-6bb2-fe8a2f95c950/mzaf_11030088690924584255.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/otonablue/1499479111?i=1499479112&uo=4
 trackId: 1499479112

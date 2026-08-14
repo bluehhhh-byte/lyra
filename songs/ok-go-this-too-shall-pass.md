@@ -6,10 +6,10 @@ artist_ko:
 album: Twelve Remixes of Four Songs
 year: 2010
 artwork: https://cdn-images.dzcdn.net/images/cover/b797bd6010f9973a6cec70d71dfdcd02/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/4/1/3/0/4135f199b7c01eb74b6971a9ed47504b.mp3?hdnea=exp=1786684367~acl=/api/1/1/4/1/3/0/4135f199b7c01eb74b6971a9ed47504b.mp3*~data=user_id=0,application_id=42~hmac=ab505dbfbb64d55156e32119de1951b5e12aea4eaf8b0283e933ee6eb7e96730
-preview_provider: deezer
-external_url: https://www.deezer.com/track/2912188411
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/61/df/a061dfbb-bd60-6883-ca94-e45aa9103be4/mzaf_11600415774859108037.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/this-too-shall-pass/1759483203?i=1759483205&uo=4
+trackId: 1759483205
 duration: 188
 genre: Indie Rock
 lang: en

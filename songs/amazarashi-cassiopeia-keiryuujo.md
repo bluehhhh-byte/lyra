@@ -6,7 +6,7 @@ artist_ko:
 album: Cassiopeia Keiryuujo - Single
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/a83bee700b17db400f18924eea791b93/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/7/f/0/0/7f06d6346aa7eba2a5e460dd8d0dbada.mp3?hdnea=exp=1786559358~acl=/api/1/1/7/f/0/0/7f06d6346aa7eba2a5e460dd8d0dbada.mp3*~data=user_id=0,application_id=42~hmac=4b2173f7903deef0673c83a615df0539bec051a5a5771d437b87607afa758737
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/9a/0b/c5/9a0bc577-5923-05b1-ea03-958fa4b8f3c3/mzaf_8291085545835867019.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/cassiopeia-keiryuujo/1629869564?i=1629869580&uo=4
 trackId: 1629869580

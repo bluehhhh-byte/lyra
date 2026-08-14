@@ -6,10 +6,10 @@ artist_ko:
 album: BETTER - The 10th Album
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/fb7aa818561b63d61173e977bf7066cf/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/7/6/0/376fd1e0b416d67b973baed46686c4c8.mp3?hdnea=exp=1786684333~acl=/api/1/1/3/7/6/0/376fd1e0b416d67b973baed46686c4c8.mp3*~data=user_id=0,application_id=42~hmac=b20394f0f0639b21e1862c4adf1b4fc9ccb6541a4efa54af7ee6c06af5af01e6
-preview_provider: deezer
-external_url: https://www.deezer.com/track/1156943922
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a9/ec/99/a9ec9999-e3c1-2a60-46dc-15233bc63218/mzaf_12712175331610613619.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/better/1541290640?i=1541290648&uo=4
+trackId: 1541290648
 duration: 199
 genre: K-Pop
 lang: ko

@@ -6,7 +6,7 @@ artist_ko:
 album: Locals 2 - EP
 year: 2017
 artwork: https://cdn-images.dzcdn.net/images/cover/b30dd3c8b15c1becd2105e16c5e35656/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/6/a/0/16a29a07ebe0af955903bb8059bd4b0b.mp3?hdnea=exp=1786584429~acl=/api/1/1/1/6/a/0/16a29a07ebe0af955903bb8059bd4b0b.mp3*~data=user_id=0,application_id=42~hmac=3d14e974c854df9aca6dc659c229bbb43b61d19d9339afbc712d8c0ddc89c4c9
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/76/fb/8e76fbb6-0553-6717-5e08-8daf18b2f3e9/mzaf_16921637347785787725.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/i-think-i-like-when-it-rains/1739790859?i=1739790869&uo=4
 trackId: 1739790869

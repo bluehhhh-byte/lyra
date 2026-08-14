@@ -6,7 +6,7 @@ artist_ko:
 album: To Let A Good Thing Die
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/818c716c3a4789da6fd087f378e847d4/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/0/1/0/601510e5675e0bd5df109630d6288b03.mp3?hdnea=exp=1786559364~acl=/api/1/1/6/0/1/0/601510e5675e0bd5df109630d6288b03.mp3*~data=user_id=0,application_id=42~hmac=aaa6de14adc52ee4cc139365387ee94c80eca2272f6a705d5c041cff4e2aaa95
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/30/c6/6e/30c66ed7-76b5-5efa-9d08-e000645f8217/mzaf_9994508287973057877.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/regents-park/1500454251?i=1500454363&uo=4
 trackId: 1500454363

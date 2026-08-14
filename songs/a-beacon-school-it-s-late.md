@@ -6,7 +6,7 @@ artist_ko:
 album: Cola
 year: 2018
 artwork: https://cdn-images.dzcdn.net/images/cover/0580f60314ab3e22378d360c192210ea/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/3/2/e/0/32ed9189a3420ecc5416391dc157f9ca.mp3?hdnea=exp=1786559357~acl=/api/1/1/3/2/e/0/32ed9189a3420ecc5416391dc157f9ca.mp3*~data=user_id=0,application_id=42~hmac=a6386d56dc10e58eb377e05eb8dc5c046ae6b9f23597706578fcf1b1b952518f
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/b6/ad/8d/b6ad8d8a-37f9-5458-6559-f9318f01874d/mzaf_554415576684655343.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/its-late/1453094978?i=1453095123&uo=4
 trackId: 1453095123

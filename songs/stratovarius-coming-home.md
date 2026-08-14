@@ -6,7 +6,7 @@ artist_ko:
 album: Visions
 year: 1997
 artwork: https://cdn-images.dzcdn.net/images/cover/ba78bda9106ada0a2fcb19f04d402228/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/d/4/b/0/d4bc5f7a136baad162d9ee0a6f79c70a.mp3?hdnea=exp=1786584412~acl=/api/1/1/d/4/b/0/d4bc5f7a136baad162d9ee0a6f79c70a.mp3*~data=user_id=0,application_id=42~hmac=9f5f2bc247022c0866b97ad16d4ec43aa26e2b62ba6b52a9d1e547e2035ebae4
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/59/a8/cd/59a8cd3b-bf26-0adf-564d-a7e4d18257fa/mzaf_13607887288214367113.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/coming-home/1872045063?i=1872045552&uo=4
 trackId: 1872045552

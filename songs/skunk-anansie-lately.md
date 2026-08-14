@@ -6,7 +6,7 @@ artist_ko:
 album: Post Orgasmic Chill
 year: 1999
 artwork: https://cdn-images.dzcdn.net/images/cover/91eaa68573b3df97060bbd0864cc0f64/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3?hdnea=exp=1786584406~acl=/api/1/1/0/9/0/0/090af41535c058ac6520f269a3b54b2e.mp3*~data=user_id=0,application_id=42~hmac=d58cbac60a75af5c5f719b3f81c62c135fb2d4b1e572b55c5fba2eeef6cf2f51
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/2e/ac/e32eac66-45cb-3a38-0df3-4c58ebc5ed4d/mzaf_11871486481837732201.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/lately/1763748152?i=1763748635&uo=4
 trackId: 1763748635
@@ -30,22 +30,22 @@ That we savoured for the last
 >^2 때때로 우리가 마지막으로 맛 본 모든 순간들이
 Get crushed between the good and bad
 From pressures we have had
->^2 우리가 겪었던 압박으로부터
+> 우리가 겪었던 압박으로부터
 > 좋은 것과 나쁜 것 사이에 짓눌려
 But you know I can't conceive the day
 When feelings run too high
->^2 하지만 감정이 너무 올라갔을 때는
+> 하지만 감정이 너무 올라갔을 때는
 > 그 순간들을 상상할 수 없다는 걸 알잖아
 To work out all the stale terrain
 Emotions try to hide when I try
->^2 퀴퀴한 지형을 헤쳐나가기 위해
+> 퀴퀴한 지형을 헤쳐나가기 위해
 > 난 감정을 숨기려 노력하네
 
 Lately I can't seem to color what we've lost
 > 요즘 나는 우리가 잃어버린 것을 색칠할 수 없어
 It all seems like bad means
 When lovers turn from lust
->^2 연인들이 욕정에서 벗어났을 때
+> 연인들이 욕정에서 벗어났을 때
 > 모든 것이 나쁘게 보이는 것처럼 말야
 Then I try
 > 그래도 난 노력해볼게
@@ -63,7 +63,7 @@ Lately I can't seem to color what we've lost
 > 요즘 나는 우리가 잃어버린 것을 색칠할 수 없어
 It all seems like bad means
 When lovers turn from lust
->^2 연인들이 욕정에서 벗어났을 때
+> 연인들이 욕정에서 벗어났을 때
 > 모든 것이 나쁘게 보이는 것처럼 말야
 Then I try
 > 그렇지만 난 노력해볼게

@@ -6,8 +6,8 @@ artist_ko:
 album: 201 (Special Edition)
 year: 2008
 artwork: https://cdn-images.dzcdn.net/images/cover/6ad43155ca2c06dcc1394fb60705ffa1/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/c/e/a/0/cea04d26a91ba46ae928931d3924b9c7.mp3?hdnea=exp=1786559452~acl=/api/1/1/c/e/a/0/cea04d26a91ba46ae928931d3924b9c7.mp3*~data=user_id=0,application_id=42~hmac=6b8e7631384d8e8290584a45bb17d232956aa09a31b9965b553924ef28483b45
-preview_provider: itunes
+preview: 
+preview_provider: 
 external_url: https://music.apple.com/kr/album/antifreeze/1316404325?i=1316404636&uo=4
 trackId: 1316404636
 duration: 244

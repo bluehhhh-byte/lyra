@@ -6,7 +6,7 @@ artist_ko:
 album: The Alexander Technique
 year: 2024
 artwork: https://cdn-images.dzcdn.net/images/cover/c819d020d5769a1eab7b6c29cda04b58/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/5/c/1/0/5c1fa05d9baaf75e6caa1f0b629642a6.mp3?hdnea=exp=1786559415~acl=/api/1/1/5/c/1/0/5c1fa05d9baaf75e6caa1f0b629642a6.mp3*~data=user_id=0,application_id=42~hmac=f2cb3ff07df58ff55b7ebc9887c8145a20469584e609d6fef8662b2810e443b0
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/16/89/be/1689be37-7e41-e53a-45b0-2a0834bfe1cd/mzaf_14363099462789388778.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/jealousy/1757507089?i=1757507101&uo=4
 trackId: 1757507101

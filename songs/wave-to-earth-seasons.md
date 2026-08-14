@@ -6,7 +6,7 @@ artist_ko:
 album: summer flows 0.02 - EP
 year: 2020
 artwork: https://cdn-images.dzcdn.net/images/cover/e7b1e6fc4bc81a5c04775d9587773d31/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/6/4/c/0/64c1b236371881bfb145fc395709c292.mp3?hdnea=exp=1786559448~acl=/api/1/1/6/4/c/0/64c1b236371881bfb145fc395709c292.mp3*~data=user_id=0,application_id=42~hmac=ab792d318ff335b4996f7e616d1f408b5b7437cf99d74c20fcfe0b69086e68fa
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/0d/db/460ddbcc-1719-f42d-f446-fbcb08822db4/mzaf_15444859185091026401.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/seasons/1781856626?i=1781856632&uo=4
 trackId: 1781856632

@@ -6,10 +6,10 @@ artist_ko:
 album: Die On This Hill
 year: 2025
 artwork: https://cdn-images.dzcdn.net/images/cover/77290d7d77df3c72816dc8d5ad11cf1b/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/b/e/0/9bea3186a703cbfa52bdfb72045ac680.mp3?hdnea=exp=1786684380~acl=/api/1/1/9/b/e/0/9bea3186a703cbfa52bdfb72045ac680.mp3*~data=user_id=0,application_id=42~hmac=7f9885c7dc362e89a11323c38b2d874d7ad609d1f375b3291ccc6bb2f17e5b3b
-preview_provider: deezer
-external_url: https://www.deezer.com/track/3584616411
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/23/52/cf/2352cf4b-ba6b-093d-4e93-87e0c93fa85f/mzaf_8444733662699596132.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/die-on-this-hill/1841769601?i=1841769602&uo=4
+trackId: 1841769602
 duration: 217
 genre: Ballad
 lang: en

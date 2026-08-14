@@ -6,8 +6,8 @@ artist_ko:
 album: One More Last Time
 year: 2022
 artwork: https://cdn-images.dzcdn.net/images/cover/9084bc8ad292475bb310cbb052b55fac/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/d/e/4/0/de49908e37c4a5d13667a720512aac11.mp3?hdnea=exp=1786684344~acl=/api/1/1/d/e/4/0/de49908e37c4a5d13667a720512aac11.mp3*~data=user_id=0,application_id=42~hmac=be1c003eb4703ed0f19b47def46c03f237743a68f6230c2a96edb1877e0121a1
-preview_provider: deezer
+preview: 
+preview_provider: 
 external_url: https://www.deezer.com/track/1735256337
 trackId:
 duration: 129

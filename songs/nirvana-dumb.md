@@ -6,7 +6,7 @@ artist_ko:
 album: In Utero (20th Anniversary Edition)
 year: 1993
 artwork: https://cdn-images.dzcdn.net/images/cover/7aa895fc7e3c22d5533817649f54f13f/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/a/f/0/1aff6cdc5665214210619d977eb84d73.mp3?hdnea=exp=1786559401~acl=/api/1/1/1/a/f/0/1aff6cdc5665214210619d977eb84d73.mp3*~data=user_id=0,application_id=42~hmac=8d54be7e3f79f2c410c0f4a6a3ff5dc562b0071a7e529756f15e599c8127186c
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3f/9e/dc/3f9edcf0-85bd-4f77-f76b-fd8dddf54833/mzaf_15265546566067665047.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/dumb/1440858699?i=1440859361&uo=4
 trackId: 1440859361

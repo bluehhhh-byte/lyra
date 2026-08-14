@@ -6,10 +6,10 @@ artist_ko:
 album: Compilation 1.1
 year: 2019
 artwork: https://cdn-images.dzcdn.net/images/cover/723e5b8121b0a3459924997b6edcb85a/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/1/3/0/0/1307e7fb7ef70336a0303f1edb7fc6b4.mp3?hdnea=exp=1786684336~acl=/api/1/1/1/3/0/0/1307e7fb7ef70336a0303f1edb7fc6b4.mp3*~data=user_id=0,application_id=42~hmac=f0416400197934d2fcb8cfa8ff784b3e924b0343a6dfbb8039cba99529ec6b53
-preview_provider: deezer
-external_url: https://www.deezer.com/track/822660302
-trackId:
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/3e/9e/e9/3e9ee94d-eb23-baad-8e2e-abb51b69df1a/mzaf_15239230014362419933.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/both-sides-of-the-moon/1681347214?i=1681347475&uo=4
+trackId: 1681347475
 duration: 255
 genre: R&B/Soul
 lang: en

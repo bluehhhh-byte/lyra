@@ -6,7 +6,7 @@ artist_ko:
 album: Hot Space (Deluxe Edition)
 year: 1981
 artwork: https://cdn-images.dzcdn.net/images/cover/f6ab025bc6edfd74c683705fc62d493a/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/f/c/5/0/fc5c4885dbe7ed942b7929ff0d8844b1.mp3?hdnea=exp=1786584386~acl=/api/1/1/f/c/5/0/fc5c4885dbe7ed942b7929ff0d8844b1.mp3*~data=user_id=0,application_id=42~hmac=3833328647a2669ded5133eff6ee51dc0bc9d717248fb489924ca1efe38bf3e8
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/74/42/5f/74425f2e-4c63-0514-951a-891ad9753097/mzaf_3082293095615590695.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/under-pressure/1440805941?i=1440806739&uo=4
 trackId: 1440806739
@@ -30,11 +30,11 @@ Pressure on people - people on streets
 > 그 압박감은 사람들을 거리로 내몰아가네
 Turned away from it all like a blind man
 Sat on a fence but it don't work
->^2 눈먼 사람처럼 울타리 위에 앉아서, 
+> 눈먼 사람처럼 울타리 위에 앉아서, 
 > 이 모든 것을 외면해 보지만 아무 소용이 없어
 Keep coming up with love
 But it's so slashed and torn
->^2 사랑이 오고 있지만,
+> 사랑이 오고 있지만,
 > 그 사랑은 갈가리 찢겨져 있네
 
 Why, why, why?
@@ -53,11 +53,11 @@ Why can't we give love that one more chance?
 
 And love dares you to care for
 The people on the edge of the night
->^2 하지만 사랑은 우리에게 어둠의 가장자리로
+> 하지만 사랑은 우리에게 어둠의 가장자리로
 > 내몰린 사람들을 돌볼 용기를 주네
 And love dares you to change
 Our way of caring about ourselves
->^2 그리고 사랑은 우리 스스로를
+> 그리고 사랑은 우리 스스로를
 > 사랑하는 방법을 감히 바꿀 수 있도록 하네
 
 This is our last dance

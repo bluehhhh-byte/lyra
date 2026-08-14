@@ -6,7 +6,7 @@ artist_ko:
 album: Songs for You, Truths for Me
 year: 2011
 artwork: https://cdn-images.dzcdn.net/images/cover/d87ce114c26e3f6297290bed8936a379/1000x1000-000000-80-0-0.jpg
-preview: https://cdnt-preview.dzcdn.net/api/1/1/9/6/5/0/96556d626fd0b835d86dcf98f7034f91.mp3?hdnea=exp=1786584321~acl=/api/1/1/9/6/5/0/96556d626fd0b835d86dcf98f7034f91.mp3*~data=user_id=0,application_id=42~hmac=e967727f82cd23e51bc2e9291a0efd2626dd9c81a63b8cdeee18ac600626ef80
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b4/8f/4a/b48f4aa1-32a9-6895-b893-55436df106b3/mzaf_4429842378901597880.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/precious-love/1440742842?i=1440742868&uo=4
 trackId: 1440742868
