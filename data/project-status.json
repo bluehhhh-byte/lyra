@@ -8,11 +8,11 @@
  "appleExact": 671,
  "years": 916,
  "comments": 917,
- "keywords": 899,
- "emotions": 899,
- "needsWork": 46,
+ "keywords": 905,
+ "emotions": 905,
+ "needsWork": 44,
  "translationGaps": 81,
  "readingGaps": 9,
  "lintErrors": 0,
- "lintWarnings": 246
+ "lintWarnings": 229
 }

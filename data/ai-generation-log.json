@@ -327,7 +327,30 @@
     "the-beatles-a-day-in-the-life",
     "oasis-let-there-be-love"
    ]
+  },
+  {
+   "at": "2026-08-14T06:46:08.745Z",
+   "files": [
+    "meta-out-9.json"
+   ],
+   "applied": 6,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 6
+   },
+   "fields": [
+    "emotion",
+    "keywords"
+   ],
+   "slugs": [
+    "mgmt-piece-of-what",
+    "anoyingbox-train-to-the-galaxy",
+    "b-free-hukky-shibaseki-get-it",
+    "dumbfoundead-loppy-nafla-미장원",
+    "디오-내일의-우리",
+    "perfume-human-factory"
+   ]
   }
  ],
- "at": "2026-08-14T05:09:26.717Z"
+ "at": "2026-08-14T06:46:08.745Z"
 }

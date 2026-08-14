@@ -1,23 +1,23 @@
 {
- "at": "2026-08-14T05:26:55.214Z",
+ "at": "2026-08-14T06:46:28.918Z",
  "total": {
   "songs": 917,
-  "songsNeedingWork": 56,
+  "songsNeedingWork": 54,
   "moviesNeedingWork": 1
  },
  "byNeed": {
-  "키워드 없음": 18,
-  "감정 없음": 18,
   "커버 없음": 23,
-  "가사 없음": 14,
   "번역 없음 15줄": 2,
   "번역 없음 16줄": 1,
+  "키워드 없음": 12,
+  "감정 없음": 12,
+  "가사 없음": 8,
   "독음 없음 7줄": 1,
   "번역 없음 12줄": 1,
   "번역 없음 4줄": 1,
+  "키워드 근거 약함": 11,
   "번역 없음 14줄": 1,
   "번역 없음 2줄": 2,
-  "키워드 근거 약함": 10,
   "번역 없음 1줄": 1,
   "독음 없음 2줄": 1,
   "연도 없음": 1
@@ -32,23 +32,20 @@
     "lang": "en",
     "year": "2006",
     "needs": [
-     "키워드 없음",
-     "감정 없음",
-     "커버 없음",
-     "가사 없음"
+     "커버 없음"
     ],
     "counts": {
      "translation": 0,
      "reading": 0,
      "inline": 0,
      "genre": "",
-     "keywords": 1,
-     "emotion": 1,
+     "keywords": 0,
+     "emotion": 0,
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
      "year": 0,
-     "lyrics": 1
+     "lyrics": 0
     }
    },
    {
@@ -158,23 +155,20 @@
     "lang": "en",
     "year": "2026",
     "needs": [
-     "키워드 없음",
-     "감정 없음",
-     "커버 없음",
-     "가사 없음"
+     "커버 없음"
     ],
     "counts": {
      "translation": 0,
      "reading": 0,
      "inline": 0,
      "genre": "",
-     "keywords": 1,
-     "emotion": 1,
+     "keywords": 0,
+     "emotion": 0,
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
      "year": 0,
-     "lyrics": 1
+     "lyrics": 0
     }
    },
    {
@@ -321,32 +315,6 @@
      "artwork": 1,
      "year": 0,
      "lyrics": 0
-    }
-   },
-   {
-    "id": "b-free-hukky-shibaseki-get-it",
-    "kind": "song",
-    "title": "Free, Hukky Shibaseki - Get It",
-    "artist": "B",
-    "lang": "en",
-    "year": "2024",
-    "needs": [
-     "키워드 없음",
-     "감정 없음",
-     "가사 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 1,
-     "emotion": 1,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 1
     }
    },
    {
@@ -533,23 +501,21 @@
     "lang": "ko",
     "year": "2015",
     "needs": [
-     "키워드 없음",
-     "감정 없음",
      "커버 없음",
-     "가사 없음"
+     "키워드 근거 약함"
     ],
     "counts": {
      "translation": 0,
      "reading": 0,
      "inline": 0,
      "genre": "",
-     "keywords": 1,
-     "emotion": 1,
+     "keywords": 0,
+     "emotion": 0,
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
      "year": 0,
-     "lyrics": 1
+     "lyrics": 0
     }
    },
    {
@@ -773,9 +739,7 @@
      "year": 0,
      "lyrics": 0
     }
-   }
-  ],
-  [
+   },
    {
     "id": "sigur-ros-hoppipolla",
     "kind": "song",
@@ -799,7 +763,9 @@
      "year": 0,
      "lyrics": 0
     }
-   },
+   }
+  ],
+  [
    {
     "id": "allday-project-famous",
     "kind": "song",
@@ -930,23 +896,20 @@
     "lang": "ko",
     "year": "2024",
     "needs": [
-     "키워드 없음",
-     "감정 없음",
-     "커버 없음",
-     "가사 없음"
+     "커버 없음"
     ],
     "counts": {
      "translation": 0,
      "reading": 0,
      "inline": 0,
      "genre": "",
-     "keywords": 1,
-     "emotion": 1,
+     "keywords": 0,
+     "emotion": 0,
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
      "year": 0,
-     "lyrics": 1
+     "lyrics": 0
     }
    },
    {
@@ -971,32 +934,6 @@
      "artwork": 1,
      "year": 0,
      "lyrics": 0
-    }
-   },
-   {
-    "id": "perfume-human-factory",
-    "kind": "song",
-    "title": "Human Factory",
-    "artist": "Perfume",
-    "lang": "en",
-    "year": "2025",
-    "needs": [
-     "키워드 없음",
-     "감정 없음",
-     "가사 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 1,
-     "emotion": 1,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 1
     }
    },
    {

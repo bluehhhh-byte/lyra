@@ -126,6 +126,29 @@ node scripts/validate-bulk.mjs out.json --write --overwrite   # 기존 값도 �
 거부 목록을 읽고 고친 뒤 **그 배치만** 다시 돌린다. 이미 반영된 항목은 기존 값이
 있으므로 다시 써지지 않는다 — 그래서 재실행이 안전하다.
 
+## 4-1. 가사가 없는 곡 — 직접 채우기
+
+캡션에 가사를 안 적은 게시글은 밖에서 원문을 가져온다(lrclib → 벅스 → 지니 → Genius 순으로
+찾아봤다). 그래도 어디에도 없는 곡이 남는다. 그건 사람이 붙여넣는 수밖에 없다.
+
+```bash
+node scripts/add-lyrics.mjs --list                     # 가사 없는 곡 목록
+node scripts/add-lyrics.mjs <slug> lyrics.txt --source=<URL> --write
+```
+
+붙여넣은 본문은 `lyrics_external: true`로 표시되고 출처가 남는다 — 인스타 캡션에서 온 게
+아니므로 원본 대조가 이 곡의 본문을 캡션과 맞춰보지 않는다. 이미 본문이 있으면 덮어쓰지 않는다.
+
+브라우저에서 하려면 `/admin` → **가사 정확성 검토**에도 같은 곡들이 "가사 없음"으로 맨 위에
+뜬다. 왼쪽 칸에 붙여넣고 저장하면 된다.
+
+채운 뒤에는 번역을 붙인다.
+
+```bash
+node scripts/apply-translations.mjs tr-out.json   # { "songs": { "<slug>": { "map": { "원문": "번역" } } } }
+node scripts/apply-readings.mjs rd-out.json       # 일본어 곡 한글 독음
+```
+
 ## 5. 마무리
 
 ```bash
