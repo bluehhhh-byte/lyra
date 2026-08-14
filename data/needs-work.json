@@ -1,25 +1,16 @@
 {
- "at": "2026-08-14T06:46:28.918Z",
+ "at": "2026-08-14T15:37:01.596Z",
  "total": {
   "songs": 917,
-  "songsNeedingWork": 54,
+  "songsNeedingWork": 43,
   "moviesNeedingWork": 1
  },
  "byNeed": {
   "커버 없음": 23,
-  "번역 없음 15줄": 2,
-  "번역 없음 16줄": 1,
   "키워드 없음": 12,
   "감정 없음": 12,
   "가사 없음": 8,
-  "독음 없음 7줄": 1,
-  "번역 없음 12줄": 1,
-  "번역 없음 4줄": 1,
   "키워드 근거 약함": 11,
-  "번역 없음 14줄": 1,
-  "번역 없음 2줄": 2,
-  "번역 없음 1줄": 1,
-  "독음 없음 2줄": 1,
   "연도 없음": 1
  },
  "songBatches": [
@@ -44,54 +35,6 @@
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "태양-live-fast-die-slow",
-    "kind": "song",
-    "title": "LIVE FAST DIE SLOW",
-    "artist": "태양",
-    "lang": "en",
-    "year": "2026",
-    "needs": [
-     "번역 없음 15줄"
-    ],
-    "counts": {
-     "translation": 15,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "michael-jackson-janet-jackson-scream",
-    "kind": "song",
-    "title": "Scream",
-    "artist": "Michael Jackson, Janet Jackson",
-    "lang": "en",
-    "year": "1995",
-    "needs": [
-     "번역 없음 16줄"
-    ],
-    "counts": {
-     "translation": 16,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
      "year": 0,
      "lyrics": 0
     }
@@ -196,30 +139,6 @@
     }
    },
    {
-    "id": "official髭男dism-らしさ",
-    "kind": "song",
-    "title": "らしさ",
-    "artist": "Official髭男dism",
-    "lang": "ja",
-    "year": "2025",
-    "needs": [
-     "독음 없음 7줄"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 7,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "kenshi-yonezu-地球儀",
     "kind": "song",
     "title": "地球儀",
@@ -267,30 +186,6 @@
      "artwork": 0,
      "year": 0,
      "lyrics": 1
-    }
-   },
-   {
-    "id": "bts-2-0",
-    "kind": "song",
-    "title": "2.0",
-    "artist": "BTS",
-    "lang": "en",
-    "year": "2026",
-    "needs": [
-     "번역 없음 12줄"
-    ],
-    "counts": {
-     "translation": 12,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
     }
    },
    {
@@ -441,30 +336,6 @@
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "ive-bang-bang",
-    "kind": "song",
-    "title": "BANG BANG",
-    "artist": "IVE",
-    "lang": "en",
-    "year": "2026",
-    "needs": [
-     "번역 없음 4줄"
-    ],
-    "counts": {
-     "translation": 4,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
      "year": 0,
      "lyrics": 0
     }
@@ -693,30 +564,6 @@
     }
    },
    {
-    "id": "riize-boom-boom-bass",
-    "kind": "song",
-    "title": "Boom Boom Bass",
-    "artist": "RIIZE",
-    "lang": "en",
-    "year": "2024",
-    "needs": [
-     "번역 없음 14줄"
-    ],
-    "counts": {
-     "translation": 14,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "스카이민혁-알트-날개",
     "kind": "song",
     "title": "날개",
@@ -760,32 +607,6 @@
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
-     "year": 0,
-     "lyrics": 0
-    }
-   }
-  ],
-  [
-   {
-    "id": "allday-project-famous",
-    "kind": "song",
-    "title": "FAMOUS",
-    "artist": "ALLDAY PROJECT",
-    "lang": "en",
-    "year": "2025",
-    "needs": [
-     "번역 없음 15줄"
-    ],
-    "counts": {
-     "translation": 15,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
      "year": 0,
      "lyrics": 0
     }
@@ -935,7 +756,9 @@
      "year": 0,
      "lyrics": 0
     }
-   },
+   }
+  ],
+  [
    {
     "id": "머쉬베놈-신빠람-이박사-돌림판",
     "kind": "song",
@@ -956,54 +779,6 @@
      "comment": 0,
      "titleKo": 0,
      "artwork": 1,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "kim-gordon-bye-bye",
-    "kind": "song",
-    "title": "Bye Bye",
-    "artist": "Kim Gordon",
-    "lang": "en",
-    "year": "2024",
-    "needs": [
-     "번역 없음 2줄"
-    ],
-    "counts": {
-     "translation": 2,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "astor-piazzolla-oblivion",
-    "kind": "song",
-    "title": "Oblivion",
-    "artist": "Astor Piazzolla",
-    "lang": "en",
-    "year": "1982",
-    "needs": [
-     "번역 없음 2줄"
-    ],
-    "counts": {
-     "translation": 2,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
      "year": 0,
      "lyrics": 0
     }
@@ -1083,30 +858,6 @@
     }
    },
    {
-    "id": "hoobastank-the-reason",
-    "kind": "song",
-    "title": "The Reason",
-    "artist": "Hoobastank",
-    "lang": "en",
-    "year": "2003",
-    "needs": [
-     "번역 없음 1줄"
-    ],
-    "counts": {
-     "translation": 1,
-     "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
     "id": "barbar-gough-when-i-fall-in-love",
     "kind": "song",
     "title": "When I Fall In Love",
@@ -1167,30 +918,6 @@
     "counts": {
      "translation": 0,
      "reading": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 0
-    }
-   },
-   {
-    "id": "gackt-再會-story-재회",
-    "kind": "song",
-    "title": "再會 ~Story~ 재회",
-    "artist": "Gackt",
-    "lang": "ja",
-    "year": "2000",
-    "needs": [
-     "독음 없음 2줄"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 2,
      "inline": 0,
      "genre": "",
      "keywords": 0,

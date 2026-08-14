@@ -8,6 +8,7 @@
 //
 // 원문은 건드리지 않는다. 이미 번역이 붙은 줄은 넘어간다.
 import fs from "fs";
+import { isSectionLabel } from "../lib/songs.js";
 import { FM } from "../lib/admin/frontmatter.js";
 import { guard } from "../lib/admin/preflight.js";
 
@@ -36,7 +37,9 @@ for (const file of process.argv.slice(2)) {
       out.push(lines[i]);
       const t = norm(lines[i]);
       // 번역·독음·문단 메모·구간 표시([Chorus])·본인 해설(🗨✏)은 번역 대상이 아니다
-      if (!t || /^[>+]/.test(t) || t.startsWith("//") || /^\[.*\]$/.test(t) || /^[🗨✏]/u.test(t)) continue;
+      // `[…]`가 전부 구간 표시는 아니다 — 파서와 같은 기준(isSectionLabel)으로 가른다
+      if (!t || /^[>+]/.test(t) || t.startsWith("//") || /^[🗨✏]/u.test(t)) continue;
+      if (t.startsWith("[") && t.endsWith("]") && isSectionLabel(t.slice(1, -1))) continue;
       // 원문 다음 줄이 독음이면 번역은 그 아래로 간다
       let j = i;
       while ((lines[j + 1] || "").trim().startsWith("+")) { out.push(lines[++j]); }
