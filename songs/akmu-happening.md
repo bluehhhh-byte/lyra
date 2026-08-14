@@ -30,6 +30,7 @@ source_body_hash: fdc23ad5febe43709753d9a7ef51ac0ce4301b47
 거창한 표현을 주기엔
 너무 가벼웠잖아
 You are too close
+> 넌 너무 가까이 있어
 (넌 너무 가까워)
 마음 아픈 건 질색이니까
 
@@ -38,7 +39,9 @@ You are too close
 우린 너무 여려
 다음번에 만나면
 못 본 척하고 지나쳐줘 Baby
+> 못 본 척하고 지나쳐줘, 그대
 You just my happening
+> 넌 그저 내게 일어난 일일 뿐
 (넌 그저 나의 해프닝)
 
 같은 말을 두 번 하게
@@ -46,6 +49,7 @@ You just my happening
 젖은 너의 두 눈을 봐
 진지해져 버렸잖아
 You are too good
+> 넌 너무 좋은 사람이야
 (넌 너무 착해)
 넌 나보다 좋은 사람이니까
 
@@ -58,5 +62,7 @@ You are too good
 우린 너무 여려
 다음번에 만나면
 못 본 척하고 지나쳐줘 Baby
+> 못 본 척하고 지나쳐줘, 그대
 You just my happening
+> 넌 그저 내게 일어난 일일 뿐
 (넌 그저 나의 해프닝)

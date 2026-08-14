@@ -12,7 +12,7 @@ external_url: https://music.apple.com/kr/album/moon-in-water/1406659647?i=140665
 trackId: 1406659659
 duration: 260
 genre: Dream Pop
-lang: en
+lang: ko
 tags: [한국, Dream Pop]
 keywords: [물, 손, 하늘, 파도, 빛]
 emotion: 몽환

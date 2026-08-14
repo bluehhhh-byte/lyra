@@ -28,18 +28,23 @@ source_body_hash: c2478482e4a70f2b40de10682452fedf979540dd
 끝까지 넌 못됐어
 등돌린 마지막 한마디도
 모질고 독하게 Good bye
+> 모질고 독하게, 잘 가
 
 화가 나서 난 또 이성을 잃어
 그래 때려 쳐 오늘로 끝이라고
 I don’t know 할 만큼 했어 난
+> 모르겠어, 할 만큼 했어 난
 너 때문에 내 모든 게 무너지지만
 
 Darling you
+> 그대여, 너
 내 두려움 속 희망은 너
 Darling you
+> 그대여, 너
 기나긴 여정의 끝에
 영원한 건 없다고 온 세상이 말해도
 Darling Darling you
+> 그대여, 그대여, 너
 내겐 너뿐이야
 
 언제까지 넌 툭하면 울거니
@@ -56,14 +61,18 @@ Darling Darling you
 너라는 미로 속을 헤매지만
 
 Darling you
+> 그대여, 너
 너라는 벽에 나 부딪혀
 이렇게 또 주저앉지만
 너라면 난 행복해
 
 Darling you
+> 그대여, 너
 내 두려움 속 희망은 너
 Darling you
+> 그대여, 너
 기나긴 여정의 끝에
 영원한 건 없다고 온 세상이 말해도
 Darling Darling you
+> 그대여, 그대여, 너
 내겐 너뿐이야

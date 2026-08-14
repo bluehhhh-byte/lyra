@@ -35,9 +35,13 @@ source_body_hash: b1d4affaee4e21dfc481353585521e8fb1eab170
 어디에도 없는 그들
 
 넌 나의 Insomnia
+> 넌 나의 불면증
 Don't you drag me down
+> 날 끌어내리지 마
 넌 나의 Insomnia
+> 넌 나의 불면증
 Don`t you drag me to hell
+> 날 지옥으로 끌고 가지 마
 
 결코 드러나지 않을 줄 알아
 그들의 세상 뒤로
@@ -52,4 +56,6 @@ Don`t you drag me to hell
 섬뜩함조차 익숙해
 여전히 두려워 떠네
 넌 나의 Insomnia
+> 넌 나의 불면증
 넌 나의 Insomnia
+> 넌 나의 불면증

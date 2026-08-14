@@ -74,11 +74,17 @@ lyrics_source: https://lrclib.net/api/get?artist_name=NELL&track_name=%EB%B0%B1%
 > only your breath, deeply soaked in, fills it
 
 I can't get over you
+> 난 널 잊을 수가 없어
 I can't get over you
+> 난 널 잊을 수가 없어
 You just keep shining on and on
+> 넌 계속해서 빛나기만 해
 Through my time
+> 내 시간을 가로질러
 I can't get over you
+> 난 널 잊을 수가 없어
 I can't get over you
+> 난 널 잊을 수가 없어
 
 난 니가 필요해
 > I need you
@@ -103,3 +109,4 @@ I can't get over you
 > you won't be coming back, will you
 
 Come back to me
+> 내게 돌아와줘

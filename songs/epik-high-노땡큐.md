@@ -24,22 +24,30 @@ source_hash: e90362b1aa42a048313280e4627ece105264b420
 source_body_hash: eea65a7704dc0471d624e03083d53c57fc9f0af6
 ---
 Don't, don't worry 'bout
+> 걱정하지 마, 걱정하지 마
 Don't worry, don't worry
+> 걱정하지 마, 걱정하지 마
 Don’t worry ’bout me
+> 내 걱정은 하지 마
 (제발 내 걱정하지 마)
 오지랖 떨지 말고 신경 꺼
 온 세상이 날 등져도
 I don’t give a fuck
+> 난 신경 안 써
 God is watchin’ over me
+> 신이 날 지켜보고 있어
 (난 신경 안 써, 신이 날 보고 있으니까)
 나 죽을 일 없어
 내 걱정은 세상에서 제일 쓸데없는 짓
 
 부정적인 Shit, man I ain’t got time
+> 부정적인 소리, 그런 거에 쓸 시간 없어
 (부정적인 뭣 같은, 난 시간이 없거든)
 썸머소닉 to 코첼라, 글라스톤 베리가 다음
+> 서머소닉에서 코첼라로, 다음은 글래스턴베리
 일상이 축제니까 감사하기도 바빠
 Middle finger to the Devil, stop fuckin’ up my vibe!
+> 악마에게 가운뎃손가락을, 내 기분 망치지 마!
 (악마의 가운데 손가락, 내 분위기 망치지 마)
 
 영화처럼 살았네
@@ -49,21 +57,30 @@ Middle finger to the Devil, stop fuckin’ up my vibe!
 애들이 배우잖아
 
 내 혼을 베어다가 아낌없이 준 내 아티스트리(Artistree)
+> 내 혼을 베어다 아낌없이 준 내 예술의 나무
 다 남을 깎아내릴 때 난 나를 깎아 나눴지
 Cuz I am Groot mo’fucka
+> 난 그루트니까, 임마
 Ay mind yo fuckin’ business
+> 야, 네 일이나 신경 써
 (아이엠 그루트! 빌어먹을, 신경 꺼 나한테)
 
 너는 내 걱정 안 해도 돼
 부러우면 그냥 부럽다고 말해도 돼
 네가 신경 안 써줘도 나는 잘 지내거든
 Don’t you worry ’bout me
+> 내 걱정일랑 하지 마
 U know I’m fly muthafucka
+> 내가 잘 나간다는 거 알잖아, 임마
 Baby never give a fuck about a thang
+> 난 뭐 하나 신경 쓴 적 없어
 (내 걱정 마, 난 잘나가니까 부디 내 신경 꺼주길)
 그게 나에 관한 거라면 더욱더
 No Thanxxx
+> 노 땡큐
 Baby never give a fuck about a thang
+> 난 뭐 하나 신경 쓴 적 없어
 (사절할게, 부디 내 신경 꺼주길)
 내 걱정은 No Thanxxx
+> 내 걱정은, 노 땡큐
 신경 써줘서 고마워

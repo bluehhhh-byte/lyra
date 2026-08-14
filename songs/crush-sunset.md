@@ -37,7 +37,11 @@ source_body_hash: 1839db776d2cfb2224f80a68d5c4977bcc9abd09
 아무 바램 없이 가득 날 채우고 있어
 
 when the sun is going down to me
+> 해가 내 쪽으로 저물어갈 때
 when the sun is going down to me
+> 해가 내 쪽으로 저물어갈 때
 when the sun is going down to me
+> 해가 내 쪽으로 저물어갈 때
 when the sun is going down to me
+> 해가 내 쪽으로 저물어갈 때
 (붉은 노을에 내 마음 번질 때)

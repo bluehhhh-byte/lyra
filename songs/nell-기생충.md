@@ -36,6 +36,7 @@ source_body_hash: 1b52d2c5b7628a724a962d32ccb83bd63fca46da
 아름다운 벌레야
 
 Bleed for me
+> 나를 위해 피 흘려줘
 (나를 위해 흘리는 피)
 
 난 너의 아픔 속에

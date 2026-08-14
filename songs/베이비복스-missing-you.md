@@ -37,10 +37,12 @@ source_body_hash: 93ce40c305b04a16c9bb543f9b4cdf91c732c620
 날 떠나가지만
 
 I'll be missing you
+> 널 그리워할 거야
 (보고 싶을 거야)
 어쩔 수 없죠 숨 쉬는 것조차
 내겐 너무 힘든 이별인 걸요
 I'll be there for you
+> 네 곁에 있어줄게
 (내가 곁에 있을게)
 힘이 들 때면 그대
 언제나 여기서 널 기다리는 날
@@ -59,10 +61,12 @@ I'll be there for you
 내가 기다릴게요
 
 I'll be missing you
+> 널 그리워할 거야
 (보고 싶을 거야)
 어쩔 수 없죠 숨 쉬는 것조차
 내겐 너무 힘든 이별인 걸요
 I'll be there for you
+> 네 곁에 있어줄게
 (내가 곁에 있을게)
 힘이 들 때면 그대
 언제나 여기서 널 기다리는 날

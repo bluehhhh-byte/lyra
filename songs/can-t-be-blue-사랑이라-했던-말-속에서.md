@@ -80,6 +80,7 @@ Hey, baby, 끝까지 넌 한결같았으니까
 한 번만 웃어봐 줄 순 없겠니?
 > Couldn't you smile for me just once?
 Smile for me, baby
+> 나를 위해 웃어줘, 그대
 
 아주 더 멀리, 더 멀리
 > Much farther away, farther still

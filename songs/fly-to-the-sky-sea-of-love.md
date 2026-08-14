@@ -27,10 +27,13 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Fly%20to%20the%20Sky&track_name=Sea%20of%20Love
 ---
 For the moon by the sea
+> 바닷가의 달을 위하여
 Yeah
+> 그래
 눈물이 마를 때까지
 > Until my tears run dry
 Sea of love
+> 사랑의 바다
 
 언제나 내 꿈엔 비가 내려
 > It always rains in my dreams
@@ -49,6 +52,7 @@ Sea of love
 > Won't you show yourself to me even once, come on
 
 For the moon by the sea
+> 바닷가의 달을 위하여
 네가 떠난 바닷가에
 > On the shore where you left me
 눈물이 마를 때까지 (다 마를 때까지)
@@ -70,7 +74,9 @@ For the moon by the sea
 > Let me go
 
 From the bottom of my heart
+> 진심을 다해
 Girl, with you, I'll be true
+> 그대여, 너와 함께라면 난 진실할게
 모두 거짓말인걸 (거짓말야)
 > It's all a lie (it's a lie)
 맘은 그렇게 먹지만 (맘은 그렇게 먹지만)
@@ -81,6 +87,7 @@ Girl, with you, I'll be true
 > I couldn't forget you if I died
 
 For the moon by the sea
+> 바닷가의 달을 위하여
 네가 떠난 바닷가에
 > On the shore where you left me
 눈물이 마를 때까지 (다 마를 때까지)
@@ -102,7 +109,9 @@ For the moon by the sea
 > but mine has only just begun
 
 From the bottom of my heart
+> 진심을 다해
 Still I'm falling in love
+> 그래도 난 사랑에 빠지고 있어
 꿈속에라도 네가 (꿈속에서)
 > Even if only in a dream (in a dream)
 돌아와 kiss 해줘 (나에게 kiss 한다면)
@@ -113,6 +122,7 @@ Still I'm falling in love
 > I'll wait every single day
 
 For the moon by the sea
+> 바닷가의 달을 위하여
 네가 떠난 바닷가에
 > On the shore where you left me
 눈물이 마를 때까지 (다 마를 때까지)
@@ -136,6 +146,7 @@ For the moon by the sea
 > Why didn't I know, oh
 
 For the moon by the sea
+> 바닷가의 달을 위하여
 네가 떠난 바닷가에
 > On the shore where you left me
 눈물이 마를 때까지 (다 마를 때까지)
@@ -148,6 +159,7 @@ For the moon by the sea
 > why didn't I know? (why didn't I know?)
 
 For the moon by the sea
+> 바닷가의 달을 위하여
 네가 떠난 바닷가에
 > On the shore where you left me
 눈물이 마를 때까지 (다 마를 때까지)

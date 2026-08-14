@@ -12,7 +12,7 @@ external_url: https://music.apple.com/us/album/billy-daveys-daughter/1440949724?
 trackId: 1440950426
 duration: 225
 genre: Alternative Rock
-lang: ko
+lang: en
 tags: [영미, Alternative Rock, 1997]
 keywords: [이름, 명성, 다리]
 emotion: 슬픔
@@ -45,11 +45,16 @@ Billy’s left with nothing but a dream 빌리에겐 꿈밖에 남은 게 없�
 He dreams 그는 꿈을 꾸네
 He dreams 그는 꿈을 꾸네
 Dreams 꿈
+> 꿈
 Dreams 꿈
+> 꿈
 
 He Dreams 그는 꿈을 꾸네
 Dreams 꿈
+> 꿈
 Dreams 꿈
+> 꿈
 Dreams 꿈
+> 꿈
 
 Word gets around 소문이 퍼져나가

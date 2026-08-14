@@ -45,12 +45,16 @@ source_body_hash: b1686244eb7198fc0e819e35c231d743080dfcaa
 티비, 잡지, 광고 속에 넌 작은 지면이야
 
 Repeating the same expression
+> 같은 표현을 되풀이하며
 (같은 표현을 반복하지)
 And words over and over again
+> 그리고 같은 말을 몇 번이고 되풀이하며
 (몇 번이나 반복하고 또 다시)
 Faster than the speed of light or breath
+> 빛의 속도보다, 숨결보다 빠르게
 (빛이나 호흡의 속도보다 빠른)
 The massive crush the individual few
+> 거대한 무리가 소수의 개인을 짓밟는다
 (소수의 개인에의 거대한 충돌)
 
 이 빠른 세상 속에서

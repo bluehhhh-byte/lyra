@@ -43,15 +43,19 @@ source_hash: b522a37c6d1e3e4d98001be77023e864e71fbb68
 Life, 예상을 했든, 예상을 못 했든
 > Life, whether you saw it coming or you didn't
 Issa life, yeah
+> 이게 인생이야, 그래
 목표를 가지면 그다음엔 봐야지
 > Once you set a goal, then you gotta face what's next
 Real life, yeah
+> 진짜 인생, 그래
 정답이 어디 있겠어
 > Like there's ever a right answer
 Yo, I’m talk ‘bout life
+> 요, 난 인생 얘길 하는 거야
 대체 난 뭘 위해 여기 있을까
 > What the hell am I even here for?
 For me for life
+> 날 위해, 평생을
 
 조용한 촌 동네 녀석
 > A kid from a quiet country town
@@ -104,6 +108,7 @@ For me for life
 > Going on TV with some broccoli-looking haircut
 
 I signed it with the label
+> 레이블과 계약했어
 거기서 안주하고 말았어
 > And there I ended up settling, getting comfortable
 말려도 하던 그놈
@@ -122,25 +127,33 @@ I signed it with the label
 Life, 예상을 했든, 예상을 못 했든
 > Life, whether you saw it coming or you didn't
 Issa life, yeah
+> 이게 인생이야, 그래
 목표를 가지면 그다음엔 봐야지
 > Once you set a goal, then you gotta face what's next
 Real life, yeah
+> 진짜 인생, 그래
 정답이 어디 있겠어
 > Like there's ever a right answer
 Yo, I’m talk ‘bout life
+> 요, 난 인생 얘길 하는 거야
 대체 난 뭘 위해 여기 있을까
 > What the hell am I even here for?
 For me for life
+> 날 위해, 평생을
 
 예상을 했든, 예상을 못 했든
 > Whether you saw it coming or you didn't
 Issa life, yeah
+> 이게 인생이야, 그래
 목표를 가지면 그다음엔 봐야지
 > Once you set a goal, then you gotta face what's next
 Real life, yeah
+> 진짜 인생, 그래
 정답이 어디 있겠어
 > Like there's ever a right answer
 Yo, I’m talk ‘bout life
+> 요, 난 인생 얘길 하는 거야
 대체 난 뭘 위해 여기 있을까
 > What the hell am I even here for?
 For me for life
+> 날 위해, 평생을

@@ -34,6 +34,7 @@ source_body_hash: 89dac96d7ecd2c625a421dc3cf554964e40395b6
 비가 온다 
 눈이 되지 못한 채 
 기억 속에 November Rain
+> 기억 속에 내리는 십일월의 비
 
 살며시 두 눈가에 맺힌다 또 맺힌다 
 들려오는 빗소리에 
@@ -44,6 +45,7 @@ source_body_hash: 89dac96d7ecd2c625a421dc3cf554964e40395b6
 비가 된다 
 눈이 되지 못한 채
 기억 속에 November Rain
+> 기억 속에 내리는 십일월의 비
 
 또다시 두 눈가에 
 맺힐 땐 또 맺힐 땐 

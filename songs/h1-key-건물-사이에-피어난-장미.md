@@ -45,8 +45,10 @@ source_body_hash: c3a5a603f199a847a87f4970ec2139e05f774ca6
 모두가 내 향기를 맡고 취해 웃을 때까지
 
 No I'm not goin' down I'll be alright
+> 아니, 난 무너지지 않아, 난 괜찮을 거야
 (아니, 난 무너지지 않아 괜찮아질거야)
 Yeah I'm only goin' up and Imma be alright
+> 그래, 난 올라가기만 할 거고 난 괜찮을 거야
 (난 다시 일어날 뿐이야 괜찮을거야)
 
 내가 원해서 여기서 나왔냐고
@@ -61,17 +63,22 @@ Yeah I'm only goin' up and Imma be alright
 자꾸 벌레들이 나를
 괴롭히고 파고들어도
 No 언제나 굴하지 않고
+> 아니, 언제나 굴하지 않고
 쓰러지지 않아 난
 어렵게 나왔잖아
 악착같이 살잖아
 
 Keep it up
+> 계속 그렇게 가
 (계속해 봐)
 It's a song for you and I
+> 이건 너와 나를 위한 노래야
 (이 노래는 너와 나를 위한 거야)
 Say that we're alive
+> 우리가 살아 있다고 말해
 (우리가 살아있다고 말해)
 Celebrate it now
+> 지금 그걸 축하하자
 (지금 축하하자)
 
 나는 건물 사이에 피어난 장미

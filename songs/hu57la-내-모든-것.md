@@ -26,11 +26,17 @@ lyrics_external: true
 lyrics_source: https://www.youtube.com/watch?v=GJcmMbvY3jo
 ---
 For real?
+> 진짜야?
 Okay, yeah
+> 그래, 좋아
 Oh
+> 오
 For sure, for sure
+> 물론이지, 물론이지
 Ugh, what
+> 어, 뭐야
 Yeah, yeah, whoa
+> 그래, 그래, 워
 내가 없으니까 너는 행복하니
 > Are you happy now that I'm gone?
 너가 없으니까 나는 행복하지
@@ -48,6 +54,7 @@ Yeah, yeah, whoa
 내 곁에 없는 것만이 사실이야
 > only that you're not here is a fact
 Whoa
+> 워
 그래서 오늘 난 또 혼자 가지
 > So today I go alone again
 널 그리워하는 생각도 거기까지
@@ -65,9 +72,13 @@ Whoa
 이게 나의 마지막 바램 yeah
 > that's my last wish, yeah
 Uh huh, yeah
+> 어 허, 그래
 For real? Whoa
+> 진짜야? 워
 Hell yeah, hell yeah
+> 당연하지, 당연하지
 Yo, yeah, ah, whoa
+> 요, 그래, 아, 워
 내가 없으니까 너는 행복하니
 > Are you happy now that I'm gone?
 너가 없으니까 난 또 허무하지

@@ -23,15 +23,19 @@ source_note:
 source_hash: ac4327e818f4c89fc5580681b27b003ccc01cf6f
 ---
 Everybody’s walkin in the rain
+> 다들 빗속을 걷고 있어
 모두가 빗속을 걷고 있어
 > Everybody's walking in the rain
 Everybody’s goin their own ways
+> 다들 제 갈 길을 가고 있어
 모두가 각자의 길을 가고 있어
 > Everybody's going their own way
 And I’m right here dreamin of you
+> 그리고 난 여기서 너를 꿈꾸고 있어
 그리고 나는 여기서 너를 꿈꾸고 있어
 > And I'm right here, dreaming of you
 On my way back home
+> 집으로 돌아가는 길에
 집으로 돌아가는 길에
 > On my way back home
 
@@ -50,12 +54,14 @@ On my way back home
 니가 내게 무슨 짓을 했던지
 > No matter what you did to me
 I really wanna get em back home yea
+> 정말 다들 집으로 데려가고 싶어, 그래
 (난 정말 다시 집으로 데려가고 싶어)
 > (I really wanna take them back home)
 
 마음을 기댈 곳이 없네, 이 서울엔
 > Nowhere to rest my heart, not in this Seoul
 Voices in my head i need to run away yea
+> 머릿속 목소리들, 난 달아나야 해, 그래
 (머릿속의 목소리들, 난 도망치고 싶어)
 > (Voices in my head, I wanna run away)
 널 원해 그게 꿈이라도
@@ -64,6 +70,7 @@ Voices in my head i need to run away yea
 > I want you, even if it's just a dream
 
 On my way home now
+> 이제 집으로 가는 길이야
 (이제 집으로 가는 길이야)
 > (I'm on my way home now)
 흘리고 있어 나의 꿈들의 조각
@@ -73,24 +80,31 @@ On my way home now
 사람들은 말하겠지
 > People will say
 That’s the way it goes
+> 원래 그렇게 흘러가는 거야
 (그게 인생이지)
 > (That's the way it goes)
 I gotta let it go
+> 이제 놓아줘야 해
 (이젠 놓아줘야 해)
 > (I gotta let it go now)
 I’m on my way home
+> 난 집으로 가는 길이야
 (난 집으로 가는 길이야)
 > (I'm on my way home)
 
 Everybody’s walkin in the rain
+> 다들 빗속을 걷고 있어
 모두가 빗속을 걷고 있어
 > Everybody's walking in the rain
 Everybody’s goin their own ways
+> 다들 제 갈 길을 가고 있어
 모두가 각자의 길을 가고 있어
 > Everybody's going their own way
 And I’m right here dreamin of you
+> 그리고 난 여기서 너를 꿈꾸고 있어
 그리고 나는 여기서 너를 꿈꾸고 있어
 > And I'm right here, dreaming of you
 On my way back home
+> 집으로 돌아가는 길에
 집으로 돌아가는 길에
 > On my way back home

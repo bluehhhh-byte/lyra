@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/76/98/747698de-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/44/b4/4f44b4d7-7d31-1932-524b-b412607f2e84/mzaf_2846457602607249535.plus.aac.p.m4a
 trackId: 6783698079
 duration: 118
-lang: en
+lang: ko
 tags: [한국, Hip-Hop, 2026]
 keywords: [걱정, 인생, 공기, 생각]
 emotion: 기쁨

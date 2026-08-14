@@ -28,11 +28,14 @@ lyrics_source: https://lrclib.net/api/get?artist_name=%ED%83%9C%EC%96%91&track_n
 ---
 날 불러봐
 눈을 뜬 순간 It’s a comeback
+> 눈을 뜬 순간, 이건 컴백이야
 수십 번 아니 수백 번
 Bet you miss that
 > 분명 그리웠겠지
 파란 헤드 트라우마 향해 buck buck
+> 파란 헤드, 트라우마 향해 탕 탕
 떠난 기억들은 이제 duck duck
+> 떠난 기억들은 이제 피해 피해
 빨리 뛰는 놈 위에 나는 나
 Call me Big Bang
 > 날 빅뱅이라 불러
@@ -40,12 +43,14 @@ Call me Big Bang
 세상은 날 위해 멈추지 않아 여전히
 넌 여전히 꿈 같던 그때 그 모습 그대로 날
 깨워줘 Now, now, now, now, now
+> 깨워줘, 지금, 지금, 지금, 지금, 지금
 
 Play the game
 > 게임을 해
 Drink the pain
 > 고통을 들이켜
 들어 cup
+> 들어, 잔을
 Show me love
 > 사랑을 보여줘
 부숴 봐
@@ -57,6 +62,7 @@ Play the game
 Drink the pain
 > 고통을 들이켜
 들어 cup
+> 들어, 잔을
 Show me love
 > 사랑을 보여줘
 부숴 봐
@@ -83,6 +89,7 @@ I want it, want it all
 Live Fast Die Slow
 > 빠르게 살고 천천히 죽어
 Life is 모 아님 도
+> 인생은 모 아니면 도
 Okay let’s go
 > 좋아, 가자
 I want it, want it all
@@ -95,12 +102,14 @@ I want it, want it all
 세상은 날 위해 멈추지 않아 여전히
 넌 여전히 꿈 같던 그때 그 모습 그대로 날
 깨워줘 Now, now, now, now, now
+> 깨워줘, 지금, 지금, 지금, 지금, 지금
 
 Play the game
 > 게임을 해
 Drink the pain
 > 고통을 들이켜
 들어 cup
+> 들어, 잔을
 Show me love
 > 사랑을 보여줘
 부숴 봐
@@ -112,6 +121,7 @@ Play the game
 Drink the pain
 > 고통을 들이켜
 들어 cup
+> 들어, 잔을
 Show me love
 > 사랑을 보여줘
 부숴 봐
@@ -138,6 +148,7 @@ I want it, want it all
 Live Fast Die Slow
 > 빠르게 살고 천천히 죽어
 Life is 모 아님 도
+> 인생은 모 아니면 도
 Okay let’s go
 > 좋아, 가자
 I want it, want it all

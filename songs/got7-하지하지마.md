@@ -43,8 +43,10 @@ source_body_hash: f96c6f8328619ebd84a0c404be1ce33d0cf65fbd
 너는 내가 얼마나 힘든지 아는지 모르는지
 
 하지마 You're driving me crazy
+> 하지 마, 넌 날 미치게 해
 하지마 더 이상 못 참을지 몰라
 하지마 Please Stop baby stop it
+> 하지 마, 제발 그만해, 그대여 그만해
 하지마 제발 하지마 제발 하지마
 
 네가 한번 해봐 이게 할 수 있는 일인지
@@ -69,6 +71,7 @@ source_body_hash: f96c6f8328619ebd84a0c404be1ce33d0cf65fbd
 내가 너의 이상형과 그렇게 많이 다르니
 나 정말로 아주 괜찮은 남자야
 I'm a good boy
+> 난 착한 남자야
 타석에 한 번만 세워주면 만루 포
 너는 나에겐 숭례문보다 소중한 국보
 그러니 기회를 줘 그게 내겐 가장 큰 축복

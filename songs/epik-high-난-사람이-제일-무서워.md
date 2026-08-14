@@ -43,6 +43,7 @@ source_hash: c5a29d0346738e1e3f48123c6774bbafd1771ef8
 듣기 싫어 평온, 평화를 뺏은 놈들의
 > Sick of hearing it from the bastards who stole our calm, our peace —
 Rest in peace
+> 편히 잠들기를
 (편히 쉬어라)
 > (Rest in peace)
 박수 칠 때 떠나래 떠나야
@@ -59,9 +60,11 @@ Rest in peace
 다 판사 노릇 해도
 > Everyone plays the judge, but
 Sometimes to get to god
+> 때로는 신에게 닿으려면
 (때로는 신에게 닿으려면)
 > (Sometimes to get to god)
 First you gotta meet the devil
+> 먼저 악마를 만나야 해
 (먼저 악마를 만나야 해)
 > (First you gotta meet the devil)
 난 사람이 제일 무서워
@@ -83,6 +86,7 @@ First you gotta meet the devil
 정의가 입이 무거워 쉽게 들리지 않나 봐
 > Justice must keep a heavy tongue — too heavy to be lifted, to be heard
 We at war
+> 우린 전쟁 중이야
 (우린 전쟁 중이야)
 > (We at war)
 난 사람이 제일 무서워
@@ -95,6 +99,7 @@ We at war
 기어 다니는 자의 달콤한 혀를 믿지 마
 > Don't trust the sweet tongue of the thing that crawls
 It’s a lie
+> 그건 거짓말이야
 (그건 거짓이야)
 > (It's a lie)
 난 사람이 제일 무서워
@@ -114,9 +119,11 @@ It’s a lie
 아무도 믿을 수 없어
 > I can't trust anyone
 Cuz you are fucked if you think that
+> 그렇게 생각한다면 넌 이미 망한 거니까
 (왜냐하면 네가 괜찮을 거라고 생각한다면, 넌 망한 거야)
 > (Cuz you are fucked if you think that)
 It’s gonna be okay
+> 다 괜찮아질 거라고
 (괜찮아질 거라고)
 > (It's gonna be okay)
 상상은 자유인데 자유는 상상도 못 해
@@ -136,6 +143,7 @@ It’s gonna be okay
 피투성이지만
 > They're covered in blood, but
 We’ve done something wonderful
+> 우린 멋진 일을 해냈어
 (우린 멋진 일을 해냈어)
 > (We've done something wonderful)
 편히 잠들 수 있어
@@ -144,5 +152,6 @@ We’ve done something wonderful
 > I can sleep in peace
 
 Be with me god
+> 신이시여, 제 곁에 있어주소서
 (나와 함께해줘, 신이시여)
 > (Be with me god)

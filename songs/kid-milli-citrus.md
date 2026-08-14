@@ -26,28 +26,35 @@ source_hash: 0b9fdc981ddb424d543fb0d827dca98e9bf4afdc
 source_body_hash: ac2303594790da622dc52410afbdaf1e897a97a8
 ---
 Think I’m fallin in love 갈색 향기
+> 사랑에 빠진 것 같아, 갈색 향기
 도시의 불빛을 피해서 저 멀리
 해가 넘고 있는 저 선까지
 달려가고 싶어 너와 같이
 
 Fallin in love
+> 사랑에 빠지고 있어
 나는 두렵고도 몰라 내 생각 어떤 건지
 내 사랑이 너에게 예상 못 한 결과 우릴
 다들 손짓하겠지만 점점 더 안 두렵지
 
 Think I’m sick 분홍빛의 향기
+> 내가 아픈 것 같아, 분홍빛의 향기
 사랑은 금방 지는 꽃과도 같지
 갑자기 찾아오는 손님과도 같이
 내게 다가왔네 예고조차 없이
 
 Listen Ms. Citrus
+> 들어봐, 시트러스 양
 아무 생각도 못 했어
 기댈 곳은 너이기를
 너가 내 Favor
+> 네가 내 취향이야
 걱정은 먼 뒤로 미뤘어
 Let me tell you
+> 말해줄게
 난 너에게 갇힌 것 같아
 I love you Ms. Citrus
+> 사랑해, 시트러스 양
 
 나의 손에 너의 손
 나의 손에 남은 향기가
@@ -56,6 +63,7 @@ I love you Ms. Citrus
 
 너의 눈 안엔 맑은 날의
 해변이 보이네 I like it
+> 해변이 보이네, 마음에 들어
 늦게 갔음 해 너랑 있을 때는
 난 시간이 또 빨리 갔음 해 
 떨어져 있을 때는

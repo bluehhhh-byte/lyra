@@ -49,6 +49,10 @@ source_body_hash: 347de053e1eb5ffeea9542eab32753463665eb79
 담아두는 말
 
 You're my hero
+> 넌 나의 영웅이야
 My little hero
+> 나의 작은 영웅
 You're my hero
+> 넌 나의 영웅이야
 My little hero
+> 나의 작은 영웅

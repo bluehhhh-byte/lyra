@@ -43,6 +43,7 @@ source_hash: 24d8817620f2ab626eda32b4412b34e63bf5d9d3
 > You quietly wrapped it in your arms
 
 Starry Night Shinning Bright
+> 별이 빛나는 밤, 환하게 빛나는
 다시 깨어 살아 있는 듯한 이 기분
 > This feeling of waking up, of being alive again
 아직 난 조금 자신없지만
@@ -64,6 +65,7 @@ Starry Night Shinning Bright
 > The words I've saved until now: I love you
 
 Starry Night Shinning Bright
+> 별이 빛나는 밤, 환하게 빛나는
 다시 깨어 살아 있는 듯한 이 기분
 > This feeling of waking up, of being alive again
 아직 난 조금 자신없지만
@@ -77,6 +79,7 @@ Starry Night Shinning Bright
 > In this moment, with you, forever
 
 Starry Night Shinning Bright
+> 별이 빛나는 밤, 환하게 빛나는
 다시 깨어 살아 있는 듯한 이 기분
 > This feeling of waking up, of being alive again
 아직 난 조금 자신없지만

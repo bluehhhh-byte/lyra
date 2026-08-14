@@ -35,12 +35,15 @@ lyrics_source: https://lrclib.net/api/get?artist_name=BoA&track_name=Better
 위험한 게 재미나잖아
 > Dangerous is what makes it fun
 Can't nobody
+> 아무도 못 해
 Tell you how to do it oh
+> 네게 어떻게 하라고 말할 수 없어, 오
 선택은 너의 몫
 > The choice is yours
 도전을 해봤나 해볼까
 > Have you tried? Shall we?
 With the thought from my paradigm
+> 내 방식대로 생각해보면
 깊은 정적 속에 너는 나랑 단둘이
 > In deep silence, it's you and me alone
 우린 끝도 없이 재고 재고 또 쟀고
@@ -52,6 +55,7 @@ With the thought from my paradigm
 그러지 마 상처받게 돼
 > Don't do that, someone gets hurt
 You know what I want
+> 넌 내가 뭘 원하는지 알잖아
 이젠 가져 준비됐어
 > Take it now, I'm ready
 우리만의 시간
@@ -67,7 +71,9 @@ You know what I want
 속 터지게 만들지도 마
 > And don't drive me up the wall
 You better than this
+> 넌 이것보다 나은 사람이야
 You better than this
+> 넌 이것보다 나은 사람이야
 또 내게 맞춘 너의 눈에
 > In your eyes fixed on me again
 초점이 더 희미하게 풀려 가
@@ -89,12 +95,15 @@ You better than this
 잠든 나를 깨워줘
 > Wake me from my sleep
 Give me little kisses tenderness
+> 다정한 입맞춤을 조금만 줘
 Give little touches handless
+> 손끝 하나 없이 스치듯 닿아줘
 만약 잊게 될 게 뻔한 기억
 > If it's a memory I'm bound to forget
 그게 너라도 I'm in love (give me little kisses tenderness)
 > even if that's you, I'm in love (give me little kisses tenderness)
 I know
+> 알아
 이젠 가져 준비됐어
 > Take it now, I'm ready
 우리만의 시간
@@ -110,7 +119,9 @@ I know
 속 터지게 만들지도 마
 > And don't drive me up the wall
 You better than this
+> 넌 이것보다 나은 사람이야
 You better than this
+> 넌 이것보다 나은 사람이야
 You are the one 내가 택한 건
 > You are the one, the one I chose
 네 상상이 뭐든 실현해 줄게
@@ -130,6 +141,7 @@ I'm the only one 너의 이상형
 다 가지려고 하지 않아 정말로
 > I'm not trying to have all of you, really
 Can't nobody tell you how to do it oh
+> 아무도 네게 어떻게 하라고 말할 수 없어, 오
 선택은 너의 몫
 > The choice is yours
 지금은 이걸로도 충분해
@@ -137,6 +149,7 @@ Can't nobody tell you how to do it oh
 나는 만족해
 > I'm satisfied
 Just a little little little piece
+> 아주 조금, 조금, 조각 하나면 돼
 이젠 가져 준비됐어
 > Take it now, I'm ready
 우리만의 시간
@@ -152,4 +165,6 @@ Just a little little little piece
 속 터지게 만들지도 마
 > And don't drive me up the wall
 You better than this
+> 넌 이것보다 나은 사람이야
 You better than this
+> 넌 이것보다 나은 사람이야

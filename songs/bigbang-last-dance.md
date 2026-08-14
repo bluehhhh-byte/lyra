@@ -64,6 +64,7 @@ source_body_hash: 48a9bdf83ead3afd7b8fa77a1901bf1b784958c3
 마지막 춤을 출 거야
 이 순간을 기억해 언제까지라도
 Just one last dance
+> 마지막 춤 한 번만
 
 음악은 계속해서 흐르고
 여기 너를 기다리고 있는
@@ -76,6 +77,7 @@ Just one last dance
 춤을 추던 어젯밤
 찬란히 빛이 나는
 아름다운 One last smile
+> 아름다운, 마지막 미소 하나
 빨주노초 알 수 없던 황홀경
 내가 보고 느끼던
 세상과는 안 어울려

@@ -50,6 +50,7 @@ source_hash: 803e6d9e059b3ecee5d8eda13d71cbf22f89d867
 별을 지나
 > Past the stars —
 Have a good ride, Bon voyage
+> 좋은 여행 되기를, 잘 다녀와
 (좋은 여행하세요)
 또 다른 시간에 만나게 될 거야
 > we'll meet again in some other time
@@ -58,6 +59,7 @@ Have a good ride, Bon voyage
 나란히 우린 걷고있어
 > we're walking side by side
 Bon voyage
+> 잘 다녀와
 (잘 다녀오세요)
 
 넌 나의 모든 날
@@ -92,6 +94,7 @@ Bon voyage
 별을 지나
 > Past the stars —
 Have a good ride, Bon voyage
+> 좋은 여행 되기를, 잘 다녀와
 (좋은 여행하세요)
 또 다른 시간에 만나게 될 거야
 > we'll meet again in some other time
@@ -100,4 +103,5 @@ Have a good ride, Bon voyage
 나란히 우린 걷고있어
 > we're walking side by side
 Bon voyage
+> 잘 다녀와
 (잘 다녀오세요)

@@ -27,9 +27,11 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=LEE%20CHANHYUK&track_name=Andrew
 ---
 Andrew I thought and I thought and I thought
+> 앤드루, 난 생각하고 또 생각하고 또 생각했어
 네가 떠난 도시의 끝으로 난 가려 해
 > I'm heading for the far edge of the city you left
 Andrew I thought and I thought and I thought
+> 앤드루, 난 생각하고 또 생각하고 또 생각했어
 괴물처럼 되어도 나는 계속 가려 해
 > Even if I turn into a monster I mean to keep going
 
@@ -65,15 +67,19 @@ Andrew I thought and I thought and I thought
 > He's like a monster
 
 Andrew I thought and I thought and I thought
+> 앤드루, 난 생각하고 또 생각하고 또 생각했어
 네가 떠난 도시의 끝으로 난 가려 해
 > I'm heading for the far edge of the city you left
 Andrew I thought and I thought and I thought
+> 앤드루, 난 생각하고 또 생각하고 또 생각했어
 괴물처럼 되어도 나는 계속 가려 해
 > Even if I turn into a monster I mean to keep going
 
 Andrew I thought and I thought and I thought
+> 앤드루, 난 생각하고 또 생각하고 또 생각했어
 외로워도 슬퍼도 이 길을 난 가려 해
 > Lonely or sad, I mean to walk this road
 Andrew I thought and I thought and I thought
+> 앤드루, 난 생각하고 또 생각하고 또 생각했어
 괴물처럼 되어도 나는 계속 가려 해
 > Even if I turn into a monster I mean to keep going

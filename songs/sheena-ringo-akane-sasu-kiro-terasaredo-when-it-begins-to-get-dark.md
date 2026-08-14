@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/bd/da/b4/bddab4d2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2c/80/74/2c807464-f850-c3fa-1df3-dbfda9506199/mzaf_4198788688570674332.plus.aac.p.m4a
 trackId: 1384341694
 duration: 247
-lang: en
+lang: ja
 tags: [일본, J-Rock, 1999]
 keywords: [교차로, 헤드폰, 눈물, 저녁노을, 약속]
 emotion: 불안

@@ -26,6 +26,7 @@ source_hash: eede22a5073900f04a396062cce72cd913ce6010
 source_body_hash: 8dcea5e50c277b78d5568da0af96fcf1aaa023cc
 ---
 Wake up in the morning
+> 아침에 눈을 떠
 허전한 이 아침에 어쩌다 시계를 보니
 그냥 그렇게 또 밤이 돼
 끝나지 않는 고민
@@ -41,6 +42,7 @@ Wake up in the morning
 이런저런 이런저런 생각은
 
 다시 Wake up in the morning
+> 다시 아침에 눈을 떠
 나는 아직 혼자 여기에
 같이 걸었던 거리에 멈춰있어
 끝나지 않는 고민

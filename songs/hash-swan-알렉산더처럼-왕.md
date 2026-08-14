@@ -75,6 +75,7 @@ Yeah 어떤 옷을 입던 간에
 누구도 내 인생에 참견할 수 없어
 > Nobody gets to butt into my life
 Yeah Yeah Yeah
+> 예 예 예
 똑같은건 No way way way
 > Being the same? No way way way
 그래야 Be ur favorite thing
@@ -90,5 +91,6 @@ Yeah Yeah Yeah
 난 알렉산더 처럼 왕
 > I'm a king like Alexander — Wang
 Alexander Wang Wang Wang Wang
+> 알렉산더 왕, 왕, 왕, 왕
 
 🖌️ 모두가 특별해지려고 노력하는 상황에서 오히려 평범함을 선택하는 것. 유행을 쫓아가기보다는 자신만의 스타일을 고수하는 것. 남들과 다르게 보이려고 애쓰기보다는 자신의 본질에 충실한 것. 할로윈에 평범하게 입는다는 것은 자신의 정체성을 지키고 남들과의 차별화를 추구하는 하나의 방식.

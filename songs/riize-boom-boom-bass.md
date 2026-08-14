@@ -30,25 +30,30 @@ My baby like to string me on
 > 내 사랑은 날 애태우는 걸 좋아해
 좀 더 내게 다가와
 네게 맞춰 온 My bass
+> 네게 맞춰 온 내 베이스
 살짝 너의 맘을 Slide
+> 살짝 너의 맘을 미끄러뜨려
 
 그냥 놓치긴 아쉬워 난
 넌 어떻게 생각해
 자 Follow me now
 > 자, 이제 날 따라와
 이 리듬이 다시 Make me spin
+> 이 리듬이 다시 날 돌게 만들어
 
 We makin' music
 > 우린 음악을 만들어
 Every day we play
 > 매일 우린 연주해
 가볍게 Groovin'
+> 가볍게 그루브를 타
 느낀 대로 해
 Don't stop the music
 > 음악을 멈추지 마
 Hands up on my bass
 > 베이스 위에 손을 올려
 지금부터 Lower lower lower
+> 지금부터 더 낮게, 낮게, 낮게
 We want that
 > 우린 그걸 원해
 
@@ -59,15 +64,21 @@ That boom ba doom boom boom bass
 We got that boom ba doom on my bass
 > 내 베이스 위엔 그 붐 바 둠이 있어
 우린 좀 더 Lower lower lower
+> 우린 좀 더 낮게, 낮게, 낮게
 We want that
 > 우린 그걸 원해
 
 박자에 맞춰 Up down 줄을 감싸
+> 박자에 맞춰 위아래로 줄을 감싸
 밀고 당겨 Doom slap let's countdown
+> 밀고 당겨, 둠 슬랩, 카운트다운 하자
 음은 자꾸만 Flat 괜찮아 뭐 어때
+> 음은 자꾸만 플랫, 괜찮아 뭐 어때
 우리 사이 Keep going make a bassline
+> 우리 사이, 계속 가며 베이스라인을 만들어
 너도 왠지 템포가 빨라
 따라와 둘만의 Timeline
+> 따라와, 둘만의 시간 위로
 Hands in the sky yeah you know what I like
 > 손을 하늘로, 그래 넌 내가 뭘 좋아하는지 알잖아
 
@@ -76,12 +87,14 @@ We makin' music
 Every day we play
 > 매일 우린 연주해
 가볍게 Groovin'
+> 가볍게 그루브를 타
 느낀 대로 해
 Don't stop the music
 > 음악을 멈추지 마
 Hands up on my bass
 > 베이스 위에 손을 올려
 지금부터 Lower lower lower
+> 지금부터 더 낮게, 낮게, 낮게
 We want that
 > 우린 그걸 원해
 
@@ -92,6 +105,7 @@ That boom ba doom boom boom bass
 We got that boom ba doom on my bass
 > 내 베이스 위엔 그 붐 바 둠이 있어
 우린 좀 더 Lower lower lower
+> 우린 좀 더 낮게, 낮게, 낮게
 We want that
 > 우린 그걸 원해
 
@@ -100,12 +114,14 @@ We makin' music
 Every day we play
 > 매일 우린 연주해
 가볍게 Groovin'
+> 가볍게 그루브를 타
 느낀 대로 해
 Don't stop the music
 > 음악을 멈추지 마
 Hands up on my bass
 > 베이스 위에 손을 올려
 지금부터 Lower lower lower
+> 지금부터 더 낮게, 낮게, 낮게
 We want that
 > 우린 그걸 원해
 
@@ -119,6 +135,7 @@ Aye alright
 > 에이 좋아
 우린 계속 같이 떠올라
 지금부터 Lower lower lower
+> 지금부터 더 낮게, 낮게, 낮게
 We want that
 > 우린 그걸 원해
 

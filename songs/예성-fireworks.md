@@ -39,8 +39,10 @@ source_body_hash: f85ca2fcf26ba169d18e2cfac626f00a33d3eecc
 내 맘을 수놓아
 
 너와 쏘아 올린 Fireworks
+> 너와 쏘아 올린 불꽃
 쏟아지는 은하수 아래
 내 어두웠던 밤의 Finale
+> 내 어두웠던 밤의 피날레
 나를 비춰줘 더 환하게
 이젠 그릴게
 수억 개의 색으로
@@ -56,13 +58,17 @@ source_body_hash: f85ca2fcf26ba169d18e2cfac626f00a33d3eecc
 내 맘을 수놓아
 
 이제 넌 Just stay where you are
+> 이제 넌 그 자리에 그대로 있어
 내가 널 비출 차례야
 우리의 아름다운 밤이야
 Let's light up the sky, yeah
+> 하늘을 밝히자, 그래
 
 너와 쏘아 올린 Fireworks
+> 너와 쏘아 올린 불꽃
 쏟아지는 은하수 아래
 내 어두웠던 밤의 Finale
+> 내 어두웠던 밤의 피날레
 나를 비춰줘 더 환하게
 이젠 그릴게
 수억 개의 색으로

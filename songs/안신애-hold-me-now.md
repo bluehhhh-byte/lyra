@@ -39,7 +39,9 @@ source_hash: 2a76d83866c770893afb59146a1e03628bd5e255
 > I can't fall alone in this pitch-black world
 
 Baby won't you hold me now
+> 자기야, 지금 날 안아주지 않을래
 Baby won't you hold me now
+> 자기야, 지금 날 안아주지 않을래
 무너지는 나를 잡아
 > Catch me as I crumble
 떨어지지 않게
@@ -48,12 +50,15 @@ Baby won't you hold me now
 > So I can stand on my own two feet
 
 Every time I close my eyes
+> 눈을 감을 때마다
 I feel like I just want to cry
+> 그냥 울고 싶어져
 하늘과 땅 그 어디 중간쯤에 내 자리
 > My place is somewhere between heaven and earth
 나 갈 곳 있게 Please
 > Give me somewhere to go, please
 Hold me now
+> 지금 날 안아줘
 
 잘 먹고 잘 자고 잘 입고 잘 쉬고
 > Eating well, sleeping well, dressing well, resting well
@@ -72,7 +77,9 @@ Hold me now
 > I can't fall alone in this cruel world
 
 Baby won't you hold me now
+> 자기야, 지금 날 안아주지 않을래
 Baby won't you hold me now
+> 자기야, 지금 날 안아주지 않을래
 무너지는 나를 잡아
 > Catch me as I crumble
 떨어지지 않게
@@ -81,9 +88,12 @@ Baby won't you hold me now
 > So I can stand on my own two feet
 
 Every time I close my eyes
+> 눈을 감을 때마다
 I feel like I just want to cry
+> 그냥 울고 싶어져
 하늘과 땅 그 어디 중간쯤에 내 자리
 > My place is somewhere between heaven and earth
 나 갈 곳 있게 Please
 > Give me somewhere to go, please
 Hold me now
+> 지금 날 안아줘

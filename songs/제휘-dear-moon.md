@@ -26,11 +26,13 @@ source_hash: 0b92ffa732efc61bd4985de1e87e65bdce44f6b1
 source_body_hash: bec9a8f6c0b4dedc79284456c3b1e55e8d8515eb
 ---
 Dear moon, my moon
+> 사랑하는 달, 나의 달
 가까워지지 않아
 잰걸음으로 따라가도
 닿지 않는 달처럼
 
 Oh moon, like moon
+> 오 달, 달처럼
 왜 사라지지 않아
 뒤돌아 등지고 도망쳐 봐도
 따라오는 저 달처럼
@@ -46,11 +48,13 @@ Oh moon, like moon
 왜인지 난, 다 알 것 같다고
 
 Oh moon, my moon
+> 오 달, 나의 달
 안으려는 게 아냐
 내 품에 안기엔
 턱없이 커다란 걸 알아
 
 Oh moon, my moon
+> 오 달, 나의 달
 가지려는 게 아냐
 네가 나에게 이리 눈 부신 건
 내가 너무나 짙은 밤이기 때문인 걸
@@ -67,6 +71,7 @@ Oh moon, my moon
 잘 살아지지 않아
 
 My only moon
+> 나의 유일한 달
 가닿지 않을 만큼
 깊어진 밤까지
 하얀빛을 그 고요를

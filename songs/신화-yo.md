@@ -27,7 +27,9 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=%EC%8B%A0%ED%99%94(Shinhwa)&track_name=Yo!
 ---
 We return to the battleground
+> 우린 전장으로 돌아왔어
 We are the SHINHWA
+> 우리가 바로 신화야
 
 그대가 서 있을 곳이 아니야
 > This isn't where you should be standing
@@ -41,7 +43,9 @@ We are the SHINHWA
 싶은 꿈이 열린다
 > opens up
 1999, my dream, it's come again
+> 1999년, 내 꿈이 다시 찾아왔어
 Like a birdy the birdy the birdy boom boom track
+> 새처럼, 새, 새, 붐 붐 트랙
 
 너는 인정해 줄 사람하나 없는 바보
 > You're a fool with not a single person to acknowledge you
@@ -66,11 +70,14 @@ Yo 너 뭐 될래
 진짜 니맘대로 살아갖고 뭐 할래
 > Living however you please—what will that get you?
 Do you live for me?
+> 날 위해 사는 거야?
 Niggas answer me
+> 다들 대답해봐
 모든걸 잃어버린 실패자나 되지마
 > Don't end up a failure who's lost everything
 
 Money and power to dust to dust
+> 돈도 권력도 결국 먼지로, 먼지로
 오직 그것만을 쫓는자가 되지않아
 > I won't become someone who chases only that
 세상에서 내가 해줄 몫이 있어
@@ -85,7 +92,9 @@ Rap a rock 신화 daddy's song
 너를 다른 곳에 맞출 필요없어
 > You don't have to fit yourself to anywhere else
 Boogie down baby
+> 신나게 흔들어, 자기야
 Check it boogie down baby
+> 봐봐, 신나게 흔들어, 자기야
 
 내가 왜 악동이 됐나
 > Why did I become the bad kid?
@@ -121,7 +130,9 @@ Yo 너 뭐 될래
 진짜 니맘대로 살아갖고 뭐할래
 > Living however you please—what will that get you?
 Do you live for me?
+> 날 위해 사는 거야?
 Niggas answer me
+> 다들 대답해봐
 모든 걸 잃어버린 실패자나 되지 마
 > Don't end up a failure who's lost everything
 

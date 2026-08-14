@@ -24,6 +24,7 @@ source_hash: c4341b2f05cba58ae9c1250badb7ece6cde21984
 source_body_hash: d86405450d58e60206a5649c5b9c75fcf558094b
 ---
 Prototype game Prototype
+> 시제품 게임, 시제품
 난 준비된 거 없이 계약서에 싸인했지
 난 하던 대로 하면
 모든 게 내일 바뀔 줄 알았지

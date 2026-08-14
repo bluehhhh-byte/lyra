@@ -26,7 +26,9 @@ source_hash: c05ae796d122f979d8f58b2f2426bc3e56eec57c
 source_body_hash: a10f1d3581503b9446af427ed611b5d6a09b02d0
 ---
 Show is over
+> 쇼는 끝났어
 A storm is coming
+> 폭풍이 오고 있어
 마치 아름다운 꿈을 꾸는 듯해
 이 도시의 불빛은
 아직은 알 수 없을 걸
@@ -39,7 +41,9 @@ A storm is coming
 그 날이 오네
 
 The tide is turning
+> 물살이 바뀌고 있어
 You think this can last
+> 이게 계속될 거라 생각하나
 마지막 노랫소리로
 어울리는 듯해
 몰아치는 혼돈은

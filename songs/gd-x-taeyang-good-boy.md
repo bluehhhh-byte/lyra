@@ -33,13 +33,17 @@ Everyday fresh 한 옷 차림에
 주위 사람들 얼어 죽음
 > And everyone around freezes dead
 But I don’t really care
+> 그런데 난 별로 신경 안 써
 And I don’t need that
 > (난 너만 있으면 돼 내게 기대)
 이게 게임이라면 yes
 > If this is a game, then yes
 I’m a player
+> 난 선수야
 And you could be my coach
+> 그리고 넌 내 코치가 될 수 있어
 (Love affair)
+> (사랑의 밀회)
 
 Eh eh eh 보기와는 다르게
 > Eh eh eh, not what I look like
@@ -55,8 +59,11 @@ What you know about me
 > 네가 날 아냐고
 
 I am a good boy
+> 난 착한 남자야
 I am a good good
+> 난 착한, 착한
 I am a good boy
+> 난 착한 남자야
 
 Hey 나와 같이 춤을 춰
 > Hey, dance with me

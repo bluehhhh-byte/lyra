@@ -30,7 +30,9 @@ source_body_hash: 848f02c9c6d711f54890ff50d88e8cc33a042144
 
 난 너를 볼 수가 없어 미안해
 You know I love you
+> 너도 알잖아, 내가 널 사랑한다는 걸
 You know I love you
+> 너도 알잖아, 내가 널 사랑한다는 걸
 제발 날 버리고 떠나지 말아 줘
 
 어리석은 나의 부족한 모습
@@ -41,5 +43,7 @@ You know I love you
 
 이런 난 너에게 사랑을 원해
 You know I love you
+> 너도 알잖아, 내가 널 사랑한다는 걸
 You know I love you
+> 너도 알잖아, 내가 널 사랑한다는 걸
 제발 날 버리고 떠나지 말아 줘

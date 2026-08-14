@@ -35,17 +35,22 @@ source_body_hash: ee7e0e2510147c95c317415bf3ab03e7eac3b964
 네가 있는 곳으로 달려갈게 지금 어디야
 
 You know I just wanna fucking chill
+> 알잖아, 난 그냥 좀 늘어지고 싶을 뿐이야
 With you all day long bae
+> 너와 함께 하루 종일, 자기야
 (난 좀 그냥 존나 쉬고 싶을 뿐이야
 하루종일 너와 함께)
 Yeah I'm down to party
+> 그래, 난 놀 준비 됐어
 But I might shuttin down the party
+> 근데 내가 파티를 끝내버릴지도 몰라
 (난 파티에 왔어
 하지만 여기서 멈출 수도 있지)
 지금 밖에 차가 많진 않길
 지금 차가 막히진 않길
 
 I love to party on the weekend
+> 난 주말에 노는 게 좋아
 (난 주말에 파티 가는 걸 좋아하지만)
 들어가기 싫어 네가 없는 우리 집엔
 나 지금 취했어
@@ -53,9 +58,12 @@ I love to party on the weekend
 널 보러 가기 위해
 
 I shut down the party
+> 내가 파티를 끝장내
 (난 파티를 멈출래)
 오늘은 여기까지
 I miss you so bad
+> 네가 너무 보고 싶어
 (네가 너무 그리워)
 I need you so bad
+> 네가 너무 필요해
 (네가 너무 필요해)

@@ -25,6 +25,7 @@ source_body_hash: 5da21f9a54cb62051539951083ee80022f9cb445
 ---
 진짜 삶에 던져진 기분 넌 어땠어? 
 난 Bittersweet (달콤쌉쌀했어)
+> 난 달콤씁쓸했어 (달콤쌉쌀했어)
 
 설레던 난 달콤하기만을 빌었지
 휴식까지도 비싸진 도시
@@ -36,8 +37,10 @@ source_body_hash: 5da21f9a54cb62051539951083ee80022f9cb445
 예, 그래, 나 잘 지내, 듣고 있듯이
 
 I'm living good I'm living right
+> 난 잘 살고 있어, 제대로 살고 있어
 (나는 잘 지내, 잘 살고 있어)
 Wish you could come see this sight
+> 네가 와서 이 광경을 봤으면 좋겠어
 (네가 이 모습을 봤으면 좋겠어)
 
 넌 그냥 보이는 대로 해

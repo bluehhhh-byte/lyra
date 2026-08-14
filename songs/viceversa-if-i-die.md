@@ -31,8 +31,11 @@ If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
 > Father God, please forgive me—you saw it all, from my own first person
 Couldn’t even cry like I ain’t gon’ lie
+> 울지도 못했어, 솔직히 말해서
 Couldn’t even laugh like I ain’t gon’ lie
+> 웃지도 못했어, 솔직히 말해서
 Couldn’t even pray like I ain’t gon’ lie
+> 기도조차 못 했어, 솔직히 말해서
 장례식장에서 나올때의 나의 눈을
 > Take my eyes as I walked out of that funeral hall
 뽑아놓고 야수 눈이랑 비교를 해봐 어떻게 여기까지 와버린건지 내가
@@ -44,6 +47,7 @@ Couldn’t even pray like I ain’t gon’ lie
 무조건 승리만을 쫓아가야겠어 뇌가 그래, 너 변했어
 > I have to chase nothing but victory—my brain says so, you've changed
 Born as an animal Goin’ through all the fuckery on fuckery
+> 짐승으로 태어나 온갖 개판을 지나오는 중
 생존을 위해서 야생을 누비며 살자고 trip on trip 여기저기
 > To survive I roam the wild, trip on trip, here and there
 고아로 맨땅에 헤딩을 뿔이 다 날아가도 fighting my fuckery
@@ -51,9 +55,11 @@ Born as an animal Goin’ through all the fuckery on fuckery
 먹기 위해 사는 apex predy 가 되기 위해 움직여 여전히
 > Living to eat, still moving to become an apex predator
 Ain’t no sportsmanship in this mother fucking game
+> 이 빌어먹을 판에 스포츠맨십 따윈 없어
 한번 경쟁이면 그건 결국 전쟁이야
 > Once it's a competition, in the end it's war
 Mother fucker my way highway I ain’t goin’ nowhere
+> 내 방식이 아니면 꺼져, 난 어디에도 안 가
 이게 나의 slogan 이야
 > That's my slogan
 그게 아님 뭐가 경쟁이냐 짓밟더라도 이겨야지 않냐
@@ -65,8 +71,11 @@ If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
 > Father God, please forgive me—you saw it all, from my own first person
 Couldn’t even cry like I ain’t gon’ lie
+> 울지도 못했어, 솔직히 말해서
 Couldn’t even laugh like I ain’t gon’ lie
+> 웃지도 못했어, 솔직히 말해서
 Couldn’t even pray like I ain’t gon’ lie
+> 기도조차 못 했어, 솔직히 말해서
 그 곳에선 평온함을 선물 해주소서
 > In that place, grant him peace
 선물 해주소서 응답 해주소서 제발 제게 손이라도 내밀어 주소서
@@ -98,8 +107,11 @@ If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
 > Father God, please forgive me—you saw it all, from my own first person
 Couldn’t even cry like I ain’t gon’ lie
+> 울지도 못했어, 솔직히 말해서
 Couldn’t even laugh like I ain’t gon’ lie
+> 웃지도 못했어, 솔직히 말해서
 Couldn’t even pray like I ain’t gon’ lie
+> 기도조차 못 했어, 솔직히 말해서
 그 곳에선 평온함을 선물 해주소서
 > In that place, grant him peace
 If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
@@ -107,7 +119,10 @@ If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
 > Father God, please forgive me—you saw it all, from my own first person
 Couldn’t even cry like I ain’t gon’ lie
+> 울지도 못했어, 솔직히 말해서
 Couldn’t even laugh like I ain’t gon’ lie
+> 웃지도 못했어, 솔직히 말해서
 Couldn’t even pray like I ain’t gon’ lie
+> 기도조차 못 했어, 솔직히 말해서
 그 곳에선 평온함을 선물 해주소서
 > In that place, grant him peace

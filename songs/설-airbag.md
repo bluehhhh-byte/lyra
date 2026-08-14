@@ -26,6 +26,7 @@ source_hash: 204b44693ee789fc91abd65fbf6c52397a9d7247
 source_body_hash: 779d70787c9072191214bd32d9f90c5eb8a5a91b
 ---
 I need an airbag
+> 난 에어백이 필요해
 다가오는 거대한
 슬픔에 부딪히기 전에
 
@@ -70,4 +71,5 @@ I need an airbag
 다가오는 거대한 슬픔에
 부딪히기 전에
 I need an airbag
+> 난 에어백이 필요해
 피하기엔 너무 늦었어

@@ -36,7 +36,9 @@ source_body_hash: a291ad4f6dc3a6343b34e1fec05041e233569486
 별일 없는 척도 해보지만
 
 It's over It's over girl 가슴아 잊어줘
+> 끝났어, 끝났어, 그녀도, 가슴아 잊어줘
 It's over It's over girl 이젠 끝났잖아
+> 끝났어, 끝났어, 그녀도, 이젠 끝났잖아
 
 다른 밤 같은 패턴의 쳇바퀴
 생활 속에 묻어있는 너의 기억
@@ -49,11 +51,19 @@ It's over It's over girl 이젠 끝났잖아
 별일 없는 척도 해보지만
 
 It's over 가슴아 잊어줘
+> 끝났어, 가슴아 잊어줘
 Forget all about that
+> 그 모든 걸 잊어버려
 아프지 않게 해줘 It's over
+> 아프지 않게 해줘, 끝났어
 
 It's over It's over girl 가슴아 잊어줘
+> 끝났어, 끝났어, 그녀도, 가슴아 잊어줘
 It's over It's over girl 이젠 끝났잖아
+> 끝났어, 끝났어, 그녀도, 이젠 끝났잖아
 It's over o- o- over
+> 끝났어, 끝, 끝, 끝났어
 It's over o- o- over
+> 끝났어, 끝, 끝, 끝났어
 It's over
+> 끝났어

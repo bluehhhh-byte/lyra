@@ -43,21 +43,27 @@ source_hash: 1d384b27b3b5f93e7f98741076bc1f7dcba598a2
 > down deeper, deeper still
 
 Oh I’m drowning
+> 오, 난 가라앉고 있어
 (오, 난 빠져들고 있어)
 > (Oh I'm drowning)
 It’s raining all day
+> 하루 종일 비가 내려
 (하루 종일 비가 내려)
 > (It's raining all day)
 I can’t breathe
+> 숨을 쉴 수가 없어
 (숨을 쉴 수 없어)
 > (I can't breathe)
 Oh oh I’m drowning
+> 오 오, 난 가라앉고 있어
 (오, 난 빠져들고 있어)
 > (Oh I'm drowning)
 Oh I’m drowning
+> 오, 난 가라앉고 있어
 (오, 난 빠져들고 있어)
 > (Oh I'm drowning)
 You’re taking my life from me
+> 넌 내게서 내 삶을 앗아가고 있어
 (넌 내 삶을 앗아가고 있어)
 > (You're taking my life from me)
 
@@ -69,9 +75,11 @@ You’re taking my life from me
 > lay me down, and walk away?
 
 You cut me bad
+> 넌 날 깊이 베었어
 (넌 날 깊이 상처냈어)
 > (You cut me bad)
 I’m still waiting for you
+> 난 아직도 널 기다리고 있어
 (난 아직도 널 기다리고 있어)
 > (I'm still waiting for you)
 너 떠나고 이곳은 잠겨, 눈물로
@@ -87,21 +95,27 @@ I’m still waiting for you
 > down deeper, deeper still
 
 Oh I’m drowning
+> 오, 난 가라앉고 있어
 (오, 난 빠져들고 있어)
 > (Oh I'm drowning)
 It’s raining all day
+> 하루 종일 비가 내려
 (하루 종일 비가 내려)
 > (It's raining all day)
 I can’t breathe
+> 숨을 쉴 수가 없어
 (숨을 쉴 수 없어)
 > (I can't breathe)
 Oh oh I’m drowning
+> 오 오, 난 가라앉고 있어
 (오, 난 빠져들고 있어)
 > (Oh I'm drowning)
 Oh I’m drowning
+> 오, 난 가라앉고 있어
 (오, 난 빠져들고 있어)
 > (Oh I'm drowning)
 You’re taking my life from me
+> 넌 내게서 내 삶을 앗아가고 있어
 (넌 내 삶을 앗아가고 있어)
 > (You're taking my life from me)
 

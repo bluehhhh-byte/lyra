@@ -36,12 +36,16 @@ source_body_hash: 519877a54b3b31d73ae20573a6453030f48d72e4
 양지 바른 곳에 나는 묻힐래
 
 We all die alone
+> 우린 모두 혼자 죽어
 (우리는 모두 혼자 죽어요)
 We are all alone
+> 우린 모두 혼자야
 (우리는 모두 혼자야)
 Lord come take my soul
+> 주여, 와서 내 영혼을 가져가
 (주여 내 영혼을 데려가소서)
 So we can all reborn
+> 그래야 우리 모두 다시 태어날 수 있어
 (우리 모두 다시 태어나게 하소서)
 
 날 떠날 사람은 얼른들 줄을 서요
@@ -55,12 +59,16 @@ So we can all reborn
 양지 바른 곳에 나는 묻힐래
 
 We all die alone
+> 우린 모두 혼자 죽어
 (우리는 모두 혼자 죽어요)
 We are all alone
+> 우린 모두 혼자야
 (우리는 모두 혼자야)
 Lord come take my soul
+> 주여, 와서 내 영혼을 가져가
 (주여 내 영혼을 데려가소서)
 So we can all reborn
+> 그래야 우리 모두 다시 태어날 수 있어
 (우리 모두 다시 태어나게 하소서)
 
 날 떠날 사람은 얼른들 줄을 서요

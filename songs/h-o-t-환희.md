@@ -86,8 +86,11 @@ source_body_hash: 22385af73a9c614ca9db4fe1e85b6c7d264b818d
 널 사랑한 만큼 너의 모든 걸
 
 Surviving lonely days only with my prays
+> 기도 하나에 의지해 외로운 날들을 버텨내
 (기도만으로 외로운 날들을 견뎌내며)
 Thinking about you in never dies just a memories
+> 너를 떠올리면 결코 죽지 않는, 그저 기억들
 (너에 대한 추억들은 결코 사라지지 않아)
 Still lies
+> 여전히 남아 있어
 (여전히 남아있어)

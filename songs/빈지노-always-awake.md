@@ -23,7 +23,9 @@ source_note:
 source_hash: 795f491848f7d0fc1e79c0bc58548010e4bdfed9
 ---
 Say young Young
+> 말해봐, 젊음, 젊음
 Say young Young
+> 말해봐, 젊음, 젊음
 
 서울시가 잠이 든 시간에
 > In the hours when Seoul city is asleep
@@ -48,6 +50,7 @@ I don’t care at all 내 청춘은 Fourteen carat gold
 단지 조금 더 어리단 건 억울하긴 해도 잠재가치가 커
 > Sure it stings being just a bit younger, but the potential value is huge
 So I gotta live my life young, die later
+> 그러니 난 젊게 살아야 해, 죽는 건 나중에
 
 이 밤이 와도 이 밤이 가도 I’m always awake
 > Whether this night comes or this night goes, I’m always awake
@@ -83,12 +86,14 @@ So I gotta live my life young, die later
 가보고는 죽어야지 싶더라고
 > and see it for myself before I die
 Yo, I gotta live my life now, not later
+> 요, 난 지금 내 삶을 살아야 해, 나중이 아니라
 
 꿈 속에서 헤맬 바엔 어서 잠에서 깨길 바래
 > If you're just gonna wander through dreams, I'd rather you hurry and wake
 멋쟁이들은 깨 있는 밤에 게으름뱅이들은
 > The sharp ones stay up through the night, while the lazybones go
 “I beg ya pardon?”
+> "뭐라고 하셨죠?"
 어쨌든간 인생은 딱 한 번
 > Either way, you only get one life
 이 모든 것들이 끝이 난다면
@@ -104,6 +109,7 @@ Yo, I gotta live my life now, not later
 우린 이 젊음을 만끽해야 해
 > We've got to soak up every drop of this youth
 My friend let’s stay awake
+> 친구야, 깨어 있자
 
 이 밤이 와도 이 밤이 가도 I’m always awake
 > Whether this night comes or this night goes, I’m always awake

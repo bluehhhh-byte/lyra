@@ -49,6 +49,7 @@ source_body_hash: 7e2396c8c0eaa8976acb53549e431f8b430f8f9e
 한걸음 떨어져
 그대 지켜줄 거야
 You're like a Fire
+> 넌 불꽃 같아
 내 맘 모두 다 줄게
 내 손을 잡아 나를 바라봐
 넌 그냥 나에게 기대면 돼

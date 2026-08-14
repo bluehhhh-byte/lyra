@@ -46,9 +46,11 @@ source_body_hash: 6351aefa441a689cd9035056f9f8db04d29b46ef
 이제는 끝이라는 마지막이라는
 너의 그 맘을 난 믿을 수 없어
 I can't let go, cuz you never know
+> 놓을 수가 없어, 어떻게 될지 모르니까
 내겐 너 같은 너에겐 나 같은
 그런 사랑은 두 번 다시는 없어
 Nobody knows… we always know
+> 아무도 모르지… 우리는 언제나 알고 있어
 
 제발 단 한 번이라도 너를 볼 수 있다면
 내 모든 걸 다 잃어도 괜찮아

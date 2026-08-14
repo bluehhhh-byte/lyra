@@ -29,9 +29,11 @@ source_hash: 1d90e2cbd0dfeaafccc415bbd6c6bee20d7eb85b
 그냥 입고 또 기어나가 
 > Just throw my clothes on and crawl back out
 Gotta be gettin’ it ‘til I black out
+> 정신을 잃을 때까지 계속 챙겨야 해
 (정신을 잃을 때까지 계속해야 해)
 > (Gotta keep going till I black out)
 Black on my wrist and my neck
+> 손목에도 목에도 온통 검은색
 (손목과 목에 검은색) 
 > (Black on my wrist and my neck)
 색깔이 나를 덮네 
@@ -41,6 +43,7 @@ Black on my wrist and my neck
 산소는 늘 부족해 
 > There's never enough oxygen
 Used to the suffocating
+> 숨 막히는 데는 익숙해졌어
 (질식하는 게 익숙해)
 > (I'm used to suffocating)
 
@@ -59,10 +62,13 @@ I’mma move myself away 문제로부터
 (난 나 자신을 문제로부터 멀리할 거야) 
 > (I'mma move myself away from the trouble)
 Do not make it look like 
+> 이런 것처럼 보이게 하지 마
 I’m finessing for the ransom
+> 내가 몸값을 노리고 수를 쓰는 것처럼
 (내가 몸값을 노리고 수작 부리는 것처럼 보이게 하지 마) 
 > (Don't make it look like I'm finessing for the ransom)
 Fuck your answer
+> 네 대답 따윈 됐어
 (네 대답은 필요 없어) 
 > (I don't need your answer)
 오답을 답이라고 알고 있음 
@@ -82,9 +88,11 @@ Fuck your answer
 > (Got a brand new fire)
 
 You ain’t really with the shit nuh-uh
+> 넌 진짜로 이 판에 있는 게 아니야
 (넌 진짜 이 판에 있지 않아) 
 > (You ain't really in this game)
 Running like you mad ‘bout the
+> 뭐에 화라도 난 것처럼 달리네
 (마치 돈 때문에 미친 듯이 뛰어다니면서)
 > (Running around like you're crazy about the money)
 Money like 그게 단가 뭐 
@@ -122,5 +130,6 @@ Money like 그게 단가 뭐
 내게 허락된 것보다 많은 것 
 > More than what I was ever allowed
 Get that dough then I’m gone
+> 돈을 챙기면 난 사라져
 (돈을 챙기고 난 떠나)
 > (Get that dough, then I'm gone)

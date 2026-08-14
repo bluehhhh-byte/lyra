@@ -26,20 +26,25 @@ source_hash: 2e669c8a2265d10c0adf3f7e057dfe093b3e1264
 source_body_hash: 62b1d2fbaea5107d5104a29371b2f140d8dd2833
 ---
 Gotta go I don't got no options
+> 가야 해, 내겐 선택지가 없어
 (선택의 여지없이 난 가야 해)
 앞으로 가려고 해 봐도
 뒤로 돌아가는 난
 Bae that bass going down and we go low low
+> 자기야, 베이스가 내려앉고 우린 낮게, 낮게 가
 (낮은 베이스를 따라 우리는 아래로)
 
 알아 다 쓸모없다는 걸
 널 보내줘야 한다는 걸
 잊을 수가 없잖아
 Bae that bass going down and we go low low
+> 자기야, 베이스가 내려앉고 우린 낮게, 낮게 가
 (낮은 베이스를 따라 우리는 아래로)
 
 I'm like an engine
+> 난 엔진 같아
 I keep on running
+> 난 계속 달려
 (난 엔진과 같이 계속 달려가)
 반대로 달려가고 있어 너에게로
 깊이 빠져들어가고 있어 나는
@@ -47,21 +52,28 @@ I keep on running
 
 텅 빈 맘으로 밤을 새운 다음
 마침표를 찍어봐도 Burn out
+> 마침표를 찍어봐도 다 타버려
 And 기억 속을 뒷걸음 치다
+> 그리고 기억 속을 뒷걸음 치다
 정신 차려보니 너의 집 앞
 I know you know we want it
+> 너도 알잖아, 우리가 그걸 원한다는 걸
 (우리가 원한다는 걸 우리는 알고 있어)
 
 지난 시간이 담긴 깊은 추억이 멀리
 도망 간대도 남아 있는 걸
 Because babe I need you
+> 자기야, 난 네가 필요하니까
 (내가 널 원하니까)
 가슴에 너의 추억들이 남아 날 아프게 하잖아
 But no you know I don't take no other options
+> 하지만 아니야, 알잖아, 난 다른 선택은 안 해
 (하지만 넌 내가 다른 선택을 하지 않을 것을 알고 있지)
 
 I'm like an engine
+> 난 엔진 같아
 I keep on running
+> 난 계속 달려
 (난 엔진과 같이 계속 달려가)
 반대로 달려가고 있어 너에게로
 깊이 빠져들어가고 있어 나는
@@ -69,5 +81,7 @@ I keep on running
 
 난, 내 안의 너를 찾아
 It's about to go down, down
+> 이제 곧 시작될 거야, 시작될 거야
 About to go down, down
+> 곧 시작될 거야, 시작될 거야
 (곧 가라앉을 거야, 가라앉을 거야)

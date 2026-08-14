@@ -27,6 +27,7 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=XXX&track_name=%EC%8A%B9%EB%AC%B4%EC%9B%90
 ---
 Got 20 plus models on and bitches mad
+> 스무 벌 넘게 걸치고 나오니 다들 배 아파해
 Well, bitches you crazy, 걔넨 나한테 관심없어
 > Well, bitches you crazy—they don't care about me at all
 예쁜 미소로 너를 반길 땐
@@ -46,6 +47,7 @@ Fake oxygen은 pumped
 > hogging my armrest, look at him
 
 아님 these babies king mad
+> 아니면 이 애들이 잔뜩 화가 났거나
 아님 옆자리 코골 때
 > or when the guy beside me snores
 아님 복도자리를 탐한
@@ -54,33 +56,48 @@ Fake oxygen은 pumped
 > with a lady who wanted the aisle
 
 From king Shanghai
+> 상하이에서 출발해
 To Melbourne, to Tennessee Chattanooga
+> 멜버른으로, 테네시 채터누가로
 I fucks with my city, my home town, my 송파
 > I fucks with my city, my home town, my Songpa
 Let's get it, uh
+> 가보자고, 어
 
 When I'm on that thang (thang)
+> 내가 그걸 타고 있을 때 (그거)
 I don't even think king
+> 생각 같은 건 하지도 않아
 I just want to land (land)
+> 그냥 착륙하고 싶을 뿐이야 (착륙)
 제발, 같은 시차, 제발, 같은 집에서
 > Please, the same time zone, please, the same house—
 일어나서 일하러 가고 싶어
 > I want to wake up there and go to work
 Fuck, you know, man, I don't like no changes
+> 젠장, 알잖아, 난 환승이 싫어
 
 I don't need no class
+> 좌석 등급 같은 건 필요 없어
 Wanna buy no more tickets (tickets)
+> 표는 더 사고 싶지 않아 (표)
 Uh, flying 해외는 되도록 피해 (피해)
 > Uh, I avoid flying overseas as much as I can (avoid it)
 Travel domestic them tickets you keep it
+> 국내로만 다닐게, 그 표는 네가 가져
 버스 아님 자가용, bitches I pick up
 > Bus or my own car, bitches I pick up
 
 And, bitches, they hate me
+> 그리고 걔넨 날 미워해
 And, bitches, they bitchin
+> 그리고 걔넨 불평만 해대
 And chasing their dollars
+> 제 돈만 쫓아다니면서
 And, bitch, I ain't paying though
+> 그리고 난 돈 안 낼 건데
 Pay your shit, I ain't eating that
+> 네 건 네가 계산해, 난 그거 안 먹어
 약빨 듣지도 않아, 이 귀밑엔, uh
 > The patch doesn't even work, not behind this ear, uh
 
@@ -88,7 +105,9 @@ Chicken or beef, chicken or beef (난 안 먹어)
 > Chicken or beef, chicken or beef (I'm not eating)
 
 Chicken or beef, chicken or beef
+> 치킨이요 비프요, 치킨이요 비프요
 Chicken or bee, chicken or beef
+> 치킨이요 비, 치킨이요 비프요
 
 승무원 좋지, 다들 tight한 skirt에 (에)
 > Flight attendants are nice, all in tight skirts (skirts)
@@ -102,7 +121,9 @@ Chicken or bee, chicken or beef
 > Their hair looks so thick (thick)
 
 When I'm on that thang (thang)
+> 내가 그걸 타고 있을 때 (그거)
 I don't even think fucking, I just want to land (land)
+> 아무 생각도 안 해, 그냥 착륙하고 싶을 뿐이야 (착륙)
 제발, 같은 시차, 제발, 같은 집
 > Please, the same time zone, please, the same house
 제발, 같은 시차 집 (집, 집, 집, 집)

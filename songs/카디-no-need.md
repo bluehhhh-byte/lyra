@@ -23,6 +23,7 @@ source_note:
 source_hash: d7e3f10ab3f65cba243b56c5d8c70f2ab950e139
 ---
 Start out
+> 시작해
 (시작해)
 > (Start out)
 마침내 I’m gonna start out
@@ -34,11 +35,14 @@ Start out
 마침내 I’m gonna start out
 > At last, I'm gonna start out
 Start out
+> 시작해
 
 Patient
+> 인내
 (인내심)
 > (Patience)
 You’ve always got to be patient
+> 넌 언제나 참아야만 해
 (언제나 인내해야 해)
 > (You've always got to be patient)
 때를 기다려 머지 않은
@@ -46,6 +50,7 @@ You’ve always got to be patient
 곧 다가올 그 때를 기다려
 > Wait for that moment soon to come
 Invasion
+> 침입
 (침입)
 > (Invasion)
 
@@ -58,11 +63,14 @@ Invasion
 내 심장박동을
 > This heartbeat of mine —
 I can’t deny no more
+> 난 더 이상 부정할 수 없어
 (더 이상 부정할 수 없어)
 > (I can't deny it anymore)
 I can’t deny no more
+> 난 더 이상 부정할 수 없어
 
 I won’t stop
+> 난 멈추지 않을 거야
 (멈추지 않을 거야)
 > (I won't stop)
 애써봐 절대 못 막아
@@ -70,24 +78,31 @@ I won’t stop
 아무리 애써도 절대 막을 수 없어
 > Try all you want, you can never hold it back
 Everything is so clear
+> 모든 게 너무나 선명해
 (모든 게 분명해졌어)
 > (Everything is so clear now)
 You can’t deny no more
+> 넌 더 이상 부정할 수 없어
 (넌 더 이상 부정할 수 없어)
 > (You can't deny it anymore)
 You can’t deny no more
+> 넌 더 이상 부정할 수 없어
 
 Let me start, let me start, let me start out
+> 시작하게 해줘, 시작하게 해줘, 시작하게 해줘
 (내가 시작하게 해줘, 시작하게 해줘, 시작하게 해줘)
 > (Let me start, let me start, let me start out)
 I think I would rather be the boss
+> 난 차라리 우두머리가 되는 게 낫겠어
 (난 차라리 보스가 되고 싶어)
 > (I think I would rather be the boss)
 
 NO NEED SOMEBODY
+> 누구도 필요 없어
 (누군가 필요 없어)
 > (No need for somebody)
 THE END IS CLOSE HERE
+> 끝이 여기 가까이 와 있어
 (끝이 가까워졌어)
 > (The end is close)
 덧난 결말의 시작을 보러
@@ -104,9 +119,11 @@ THE END IS CLOSE HERE
 > The grand overture, before everyone's eyes
 
 Won’t be quiet
+> 조용히 있지 않을 거야
 (조용히 있지 않을 거야)
 > (I won't be quiet)
 We’ll drive way higher
+> 우린 훨씬 더 높이 몰아붙일 거야
 (우린 훨씬 더 높이 올라갈 거야)
 > (We'll drive way higher)
 누구든 No way to stop this dozer
@@ -114,18 +131,22 @@ We’ll drive way higher
 (누구든 누구도 이 돌진을 막을 수 없어)
 > (Whoever you are, no one can stop this charge)
 No doubt in me
+> 내 안에 의심은 없어
 (내 안엔 의심이 없어)
 > (No doubt in me)
 Look what i made
+> 내가 뭘 만들었는지 봐
 (내가 만든 걸 봐)
 > (Look what I made)
 나 조차 감당이 안돼
 > Even I can't handle it
 Watch out myself
+> 나 스스로를 지켜봐
 (나 자신도 조심해야 해)
 > (I've got to watch out for myself)
 
 Right here
+> 바로 여기
 (바로 여기서)
 > (Right here)
 모든 걸 걸어 Just right here
@@ -138,6 +159,7 @@ Right here
 > (Smash that shoddy cartel, you know)
 
 Face it
+> 받아들여
 (직면해)
 > (Face it)
 겁날 것 없지 걍 Face it
@@ -147,10 +169,12 @@ Face it
 베일을 벗긴 그 순간부터
 > From the moment the veil came off
 Ready to crash it
+> 부숴버릴 준비가 됐어
 (부술 준비가 됐어)
 > (Ready to crash it)
 
 I won’t stop the scream you hearing now
+> 지금 네가 듣는 이 비명을 난 멈추지 않을 거야
 (지금 네가 듣는 이 비명을 멈추지 않을 거야)
 > (I won't stop the scream you're hearing now)
 더 울려퍼지게
@@ -167,22 +191,28 @@ All I see 저 너머
 > (All I see is what's beyond)
 
 Don’t wanna waste my time longer
+> 더 이상 내 시간을 낭비하고 싶지 않아
 (더 이상 시간 낭비하고 싶지 않아)
 > (Don't wanna waste my time any longer)
 You made this savage stronger
+> 네가 이 야수를 더 강하게 만들었어
 (네가 이 야성을 더 강하게 만들었어)
 > (You made this savage stronger)
 Hey, Come with me through the fire
+> 이봐, 나와 함께 불길을 지나가자
 (이봐, 불길을 함께 지나가자)
 > (Hey, come with me through the fire)
 I-I-I think I would rather be the boss
+> 난, 난, 난 차라리 우두머리가 되는 게 낫겠어
 (난 차라리 보스가 되고 싶어)
 > (I think I would rather be the boss)
 
 NO NEED SOMEBODY
+> 누구도 필요 없어
 (누군가 필요 없어)
 > (No need for somebody)
 THE END IS CLOSE HERE
+> 끝이 여기 가까이 와 있어
 (끝이 가까워졌어)
 > (The end is close)
 덧난 결말의 시작을 보러
@@ -199,9 +229,11 @@ THE END IS CLOSE HERE
 > The grand overture, before everyone's eyes
 
 Won’t be quiet
+> 조용히 있지 않을 거야
 (조용히 있지 않을 거야)
 > (I won't be quiet)
 We’ll drive way higher
+> 우린 훨씬 더 높이 몰아붙일 거야
 (우린 훨씬 더 높이 올라갈 거야)
 > (We'll drive way higher)
 누구든 No way to stop this dozer
@@ -209,9 +241,11 @@ We’ll drive way higher
 (누구도 이 돌진을 막을 수 없어)
 > (No one can stop this charge)
 No doubt in me
+> 내 안에 의심은 없어
 (내 안엔 의심이 없어)
 > (No doubt in me)
 Look what i made
+> 내가 뭘 만들었는지 봐
 (내가 만든 걸 봐)
 > (Look what I made)
 나 조차 감당이 안돼 Watch out myself

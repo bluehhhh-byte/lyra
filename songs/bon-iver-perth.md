@@ -26,6 +26,7 @@ source_hash: 21ec3ffa65719969508ad2f625dc79d8f812d653
 source_body_hash: 229724c11c4fb369334b3a629a5239ebf4df0429
 ---
 (*Perth는 호주에 있는 히스레저의 고향)
+> (퍼스 — 호주에 있는 히스 레저의 고향)
 
 I'm tearing up, acrost your face
 > 너의 얼굴을 마주하면 눈물이 차올라

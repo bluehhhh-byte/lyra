@@ -26,17 +26,23 @@ source_hash: 8024787510c8001cd9c188d6079783db8a59e36f
 source_body_hash: 5f54cbf189d8527276775dfb6ea39e1d28d65858
 ---
 Stay in the middle
+> 가운데에 머물러줘
 (확실하진 않지만)
 Like you a little
+> 네가 조금 좋아
 (널 조금 좋아하는 것 같아)
 Don't want no riddle
+> 수수께끼는 싫어
 (헷갈리게 하지 말고)
 말해줘 say it back (한번 더)
+> 말해줘, 다시 한번 말해줘 (한번 더)
 
 Oh say it ditto
+> 오, 나도 그래, 라고 말해줘
 (너도 날 좋아한다고 말해)
 아침은 너무 멀어
 So say it ditto
+> 그러니 나도 그래, 라고 말해줘
 (그러니까 너도 그렇다고 말해)
 
 훌쩍 커버렸어
@@ -44,62 +50,86 @@ So say it ditto
 널 보는 내 마음은
 어느새 여름 지나 가을
 기다렸지 all this time (언제나)
+> 기다렸지, 이 모든 시간을 (언제나)
 
 Do you want somebody
+> 누군가를 원하니
 (너도 누군가를 좋아하니)
 Like I want somebody
+> 내가 누군가를 원하는 것처럼
 (내가 널 좋아하듯이)
 날 보고 웃었지만
 Do you think about me now
+> 지금 내 생각을 하니
 (넌 지금 내 생각을 하니?)
 All the time
+> 언제나
 (언제나)
 
 I got no time to lose
+> 허비할 시간이 없어
 (난 더 기다리기 싫어)
 내 길었던 하루
 난 보고 싶어
 Ra-ta-ta-ta 울린 심장
+> 라-타-타-타, 울린 심장
 
 I got nothing to lose
+> 잃을 게 없어
 (난 잃을 게 없어)
 널 좋아한다고
 Ra-ta-ta-ta 울린 심장
+> 라-타-타-타, 울린 심장
 But I don't want to
+> 그런데 난 그러고 싶지 않아
 (내가 먼저 말하긴 싫지만)
 
 Not just anybody
+> 아무나는 아니야
 (다른 사람 말고)
 너를 상상했지
 항상 닿아있던
 처음 느낌 그대로 난
 기다렸지 all this time (언제나)
+> 기다렸지, 이 모든 시간을 (언제나)
 
 Stay in the middle
+> 가운데에 머물러줘
 (확실하진 않지만)
 Like you a little
+> 네가 조금 좋아
 (널 조금 좋아하는 것 같아)
 Don't want no riddle
+> 수수께끼는 싫어
 (헷갈리게 하지 말고)
 말해줘 say it back (한번 더)
+> 말해줘, 다시 한번 말해줘 (한번 더)
 
 Oh say it ditto
+> 오, 나도 그래, 라고 말해줘
 (너도 날 좋아한다고 말해)
 아침은 너무 멀어
 So say it ditto
+> 그러니 나도 그래, 라고 말해줘
 (그러니까 너도 그렇다고 말해)
 I don't want to
+> 난 그러고 싶지 않아
 (내가 먼저 말하긴 싫지만)
 
 Walk in this 미로
+> 이 미로 속을 걸어
 (미로를 헤매는 기분이야)
 다 아는 건 아니어도
 바라던 대로
 말해줘 Say it back (한번 더)
+> 말해줘, 다시 한번 말해줘 (한번 더)
 
 Oh say it ditto
+> 오, 나도 그래, 라고 말해줘
 (너도 날 좋아한다고 말해)
 I want you so, want you
+> 널 정말 원해, 널 원해
 (난 널 정말, 정말로 원한다고)
 So say it ditto
+> 그러니 나도 그래, 라고 말해줘
 (너도 그렇다고 말해줘)

@@ -43,24 +43,33 @@ source_hash: 6a2b5a026574e648eb0cc30e53c17a11bf8ca34e
 > I raised a flower that could never bloom
 
 Love you so bad Love you so bad
+> 널 지독하게 사랑해, 널 지독하게 사랑해
 널 위해 예쁜 거짓을 빚어내
 > For you I mold a pretty lie
 Love it's so mad Love it's so mad
+> 사랑은 미친 짓이야, 사랑은 미친 짓이야
 날 지워 너의 인형이 되려 해
 > I erase myself, trying to become your doll
 Love you so bad Love you so bad
+> 널 지독하게 사랑해, 널 지독하게 사랑해
 널 위해 예쁜 거짓을 빚어내
 > For you I mold a pretty lie
 Love it's so mad Love it's so mad
+> 사랑은 미친 짓이야, 사랑은 미친 짓이야
 날 지워 너의 인형이 되려 해
 > I erase myself, trying to become your doll
 
 I'm so sick of this
+> 이제 이런 게 지긋지긋해
 Fake Love Fake Love Fake Love
+> 가짜 사랑, 가짜 사랑, 가짜 사랑
 I'm so sorry but it's
+> 정말 미안하지만 이건
 Fake Love Fake Love Fake Love
+> 가짜 사랑, 가짜 사랑, 가짜 사랑
 
 Why you sad? I don't know 난 몰라
+> 왜 슬퍼? 나도 모르겠어, 난 몰라
 웃어봐 사랑해 말해봐
 > Smile for me, say you love me
 나를 봐 나조차도 버린 나

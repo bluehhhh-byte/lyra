@@ -74,20 +74,27 @@ like turner 터너 터너
 잔소리 하며 안 시켜도 하지
 > nagging myself, doing it before anyone asks
 my shit gettin started
+> 내 판이 이제 시작됐어
 그 느낌이 나지
 > You can feel it
 im makin my young money
+> 난 어린 나이에 돈을 벌어
 nicki minajin
+> 니키 미나즈처럼
 내 성공은 한국 내 실패는 할롱
 > My success is Korea, my failure is Ha Long
 예상을 뒤엎고 비켜나가지
 > I overturn expectations and slip right past
 my dick gettin harder
+> 난 점점 더 뜨거워져
 her pussy got wet
+> 그녀도 달아올랐지
 조금 이따 나 가니 잘 씻겨놔 빨리
 > I'm heading over in a bit, so get cleaned up, quick
 lets go 배춧잎
+> 가자, 배춧잎
 cheese bread my dinero
+> 치즈, 빵, 내 돈
 어제 5천을 시계에 썼지만 달 이내로
 > Yesterday I dropped fifty million on a watch, but within the month
 다시 메꿔 전혀 아무렇지 않은 듯
@@ -97,8 +104,11 @@ cheese bread my dinero
 okay 이젠 롤스 로이스 가 내 목전에
 > Okay, now a Rolls-Royce is right in front of me
 fuck bein on some chill
+> 느긋하게 있는 건 집어치워
 shit i go zero to one hunned
+> 난 0에서 100까지 단숨에 가
 real quick illionaire records
+> 아주 빠르게, 일리네어 레코즈
 벌써 삼년 만에
 > In only three years
 shit 여기까지 왔네
@@ -140,6 +150,7 @@ versace givenchy 옷 빨래를 널어
 거짓말이 아냐 내 인생은 쩔어
 > It's no lie, my life is insane
 fuck bitches get money
+> 여자는 됐고 돈이나 벌어
 내 인생의 motto
 > the motto of my life
 난 50평 아파트에 혼자서 살어
@@ -151,6 +162,7 @@ fuck bitches get money
 새 차 계약하러 mufucka i'm ballin
 > to sign for a new car, motherfucker, I'm ballin'
 1llionaire gang we gettin that money
+> 일리네어 갱, 우린 그 돈을 챙겨
 니 짭퉁 구찌 지갑에 있는 money
 > the money in your fake Gucci wallet
 국세청으로부터 떼이는 money
@@ -164,9 +176,11 @@ fuck bitches get money
 있는 델 알고 우린 털어 워
 > We know where it is and we take it, whoa
 bitch u gotta have my money 워
+> 야, 내 돈은 갖고 있어야지, 워
 매일 하던 거 또 하지 워
 > Doing what we do every day again, whoa
 get money get rich motherfucka 워
+> 돈 벌고 부자 돼, 임마, 워
 
 그대의 장 지갑 혹은 주머니 혹은
 > Your long wallet, or your pocket, or
@@ -214,8 +228,11 @@ get money get rich motherfucka 워
 남아서 되겠냐 어른이?
 > from when you were three—is that a grown man?
 I don’t make money
+> 난 돈을 만들지 않아
 I take money
+> 난 돈을 가져가
 Ya’ll rap money
+> 너희 랩으로 번 돈을
 니 Rap money
 > your rap money
 사실 앵벌이 한 Fake money
@@ -241,10 +258,13 @@ Ya’ll rap money
 니들이 뿌리면 우리가 알아서 걷어
 > you scatter it and we'll collect it ourselves
 Dough, Mula, Racks, Gwala, Cash
+> 돈, 돈, 뭉칫돈, 현찰, 캐시
 있는델 알고 우린 털어 Turn up!
 > We know where it is and we take it, turn up!
 i don’t make money
+> 난 돈을 만들지 않아
 i take money ya’ll rap money
+> 난 가져가, 너희가 랩으로 번 돈을
 이게 내 일거리. Whoa!!
 > This is my line of work. Whoa!!
 

@@ -27,6 +27,7 @@ source_body_hash: cfb2fc2d282386ce3a36ecf66b7ace7e909aadf4
 ---
 별이 눈뜰 때 나를 비추네
 Oh hi you there 나를 알아줘
+> 오, 안녕 거기 너, 나를 알아줘
 언덕에 오를게 손 흔들고 미소 짓는
 날 제발 구해줘
 
@@ -37,6 +38,7 @@ Oh hi you there 나를 알아줘
 
 눈이 떠지면 어두운 공간
 Oh that’s okay 이건 Deja vu
+> 오, 괜찮아, 이건 데자뷔야
 날 아는 사람도
 아무 누구도 없는 이곳
 내 기분도 편안해
@@ -44,18 +46,27 @@ Oh that’s okay 이건 Deja vu
 
 날 데려가 줄래
 To the galaxy (Mayday)
+> 은하로 (메이데이)
 끝없는 Emergency
+> 끝없는 비상 신호
 Here 어둠속에 빛을 내는 Universe
+> 여기, 어둠 속에 빛을 내는 우주
 낯선 날 부디 반겨줄래
 
 Take me to the galaxy
+> 날 은하로 데려가줘
 Save me from the
+> 여기서 날 구해줘
 Jealousy
+> 질투로부터
 
 나를 당겨 줄래
 From the gravity (Hurry)
+> 중력으로부터 (서둘러)
 두 손 잡아 Can you see
+> 두 손 잡아, 보이니
 어둠 속에 빛을 내는 Universe
+> 어둠 속에 빛을 내는 우주
 낯선 날 부디 반겨줄래
 
 닿을 듯 말 듯 초조한 맘

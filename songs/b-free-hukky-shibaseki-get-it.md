@@ -39,6 +39,7 @@ Yeah, 말을 해 원하는 게 있다면 말을 해
 > The beat is the sack my raps go in
 
 Uh, yeah yeah yeah
+> 어, 예 예 예
 나는 입이 마르도록 말할게 음악 없는 인생은
 > I'll say it till my mouth runs dry—a life without music
 만화없는 만화책

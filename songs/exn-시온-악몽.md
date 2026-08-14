@@ -28,6 +28,7 @@ source_body_hash: 21499a03816ae13696d30e2e3d7c2ee590904efc
 더 미쳐가 널 만난 후로
 매일 밤 찾아와 날 괴롭히는
 The mid-nightmare
+> 한밤의 악몽
 
 원망과 원함 사이를 다퉈
 그 간극에 찢긴 영혼의 상처
@@ -49,3 +50,4 @@ The mid-nightmare
 끊어야 해 인연의 실
 정신줄만 끊어버렸지 난 다시
 The mid-nightmare
+> 한밤의 악몽

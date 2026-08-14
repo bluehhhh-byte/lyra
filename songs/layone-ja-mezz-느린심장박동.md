@@ -58,6 +58,7 @@ source_hash: b7a0d125fa30c821b430e541eef9775957e1fe7c
 허클베리핀의 모험
 > The Adventures of Huckleberry Finn
 Very Very Good
+> 아주 아주 좋아
 테레비를 보고
 > Watching the TV
 난 내 미래를 봤어

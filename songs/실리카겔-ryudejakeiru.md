@@ -34,6 +34,7 @@ source_hash: 35087ece6abb89e06bf4b80974da69a3fedb6dd2
 > That rare, precious thing I saw in a dream
 
 Ryudejakeiru
+> 류데자케이루
 백만 가지 재앙 속에서도
 > Even in the midst of a million calamities
 성실하게 지킬 뿐이라고
@@ -56,6 +57,7 @@ Ryudejakeiru
 > (Off to the city of dreams, the place where I'll wake)
 
 Ryudejakeiru
+> 류데자케이루
 백만 가지 재앙 속에서도
 > Even in the midst of a million calamities
 성실하게 지킬 뿐이라고

@@ -27,8 +27,11 @@ lyrics_external: true
 lyrics_source: https://music.bugs.co.kr/track/6381907
 ---
 Never fade away
+> 결코 흐려지지 않아
 We will rise again
+> 우린 다시 일어설 거야
 Never fade away
+> 결코 흐려지지 않아
 무한을 향해
 > Toward the infinite
 
@@ -62,8 +65,11 @@ Never fade away
 > frightens me
 
 Never fade away
+> 결코 흐려지지 않아
 We will rise again
+> 우린 다시 일어설 거야
 Never fade away
+> 결코 흐려지지 않아
 무한을 향해
 > Toward the infinite
 우리는 멈추지 않아
@@ -90,8 +96,11 @@ Never fade away
 > frightens me
 
 Never fade away
+> 결코 흐려지지 않아
 We will rise again
+> 우린 다시 일어설 거야
 Never fade away
+> 결코 흐려지지 않아
 무한을 향해
 > Toward the infinite
 우리는 멈추지 않아
@@ -112,6 +121,7 @@ Never fade away
 영원히 끝나지 않아 계속될 거야
 > It never ends, it will go on
 Cause we rise, we’re gonna fly
+> 우린 일어서니까, 우린 날아오를 거야
 
 시간을 넘어 영원으로
 > beyond time, into forever

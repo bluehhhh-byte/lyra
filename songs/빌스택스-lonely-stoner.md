@@ -27,26 +27,33 @@ source_body_hash: dd5aec673f168c2fc0548f7cc831e951077a72b0
 ---
 비가 내리고 음악이 흐르면
 나 혼자 I get high
+> 나 혼자 취해
 (나 혼자 약에 취해)
 제발 Bitch don't kill my vibe
+> 제발, 내 기분 망치지 마
 (제발 내 분위기 죽이지 마)
 
 아무 계획 없는 게 오늘 계획
 핸드폰 무음 비행기 모드 해
 잠수 타 아무도 모르게
 Beep beep beep beep
+> 삐 삐 삐 삐
 where u at?
+> 너 어디야?
 (삐삐삐삐, 너 어디야?)
 
 오늘 밤은 연락하지 마
 I'm not gonna be around
+> 난 근처에 없을 거야
 (난 여기 있지 않을 거야)
 전해 STAX 형 not in town
+> 전해, 스택스 형은 동네에 없다고
 (이 도시에 없다고)
 
 날 알아봐도 오늘 하루만
 모르는 척하고 지나가 줘
 Please don't kill my high
+> 제발 내 기분 깨지 마
 (제발 내 약 기운 죽이지 말고)
 
 때 놓친 영화 보고
@@ -57,21 +64,28 @@ Please don't kill my high
 잃어버린 나를 찾을 때
 내가 나를 찾을 때
 그때가 되면 I'll be back
+> 그때가 되면 돌아올게
 (다시 돌아올게)
 
 Lonely stoner who I be
+> 외로운 약쟁이, 그게 나야
 (외로운 약쟁이 나는 누굴까)
 떠날게 잠시
 정리가 아직 덜 돼 난 만취
 오 이런 밤이 너무 필요하지
 You know me
+> 너도 날 알잖아
 (너도 알다시피)
 
 Beep beep beep beep
+> 삐 삐 삐 삐
 I feel tipsy
+> 알딸딸해
 (삐삐삐삐, 난 약에 취한 것 같아)
 폰 뒤집지 Yeah
+> 폰 뒤집지, 그래
 No one with me
+> 곁엔 아무도 없어
 (여긴 아무도 없지)
 홀로이 이 방에 있지 왜
 압박들이 방 안에 발 들이지 못하게
@@ -111,6 +125,7 @@ No one with me
 귀찮아 그냥 싹 다 비울까
 괜찮아 뭐 어때
 Ok ok ok ok ok
+> 됐어 됐어 됐어 됐어 됐어
 
 너무 많아도
 너무 아파도

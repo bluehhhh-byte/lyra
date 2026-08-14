@@ -40,4 +40,5 @@ source_body_hash: f38458f342e713df9a8dade136de112923f8f49d
 그러니 됐어 
 
 Unpretty Tattoo 
+> 예쁘지 않은 문신
 내게 끝은 너로 통해 

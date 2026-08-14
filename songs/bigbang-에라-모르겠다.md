@@ -27,9 +27,13 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=BIGBANG&track_name=%EC%97%90%EB%9D%BC%20%EB%AA%A8%EB%A5%B4%EA%B2%A0%EB%8B%A4
 ---
 No I don't wanna go too fast
+> 아니, 너무 서두르고 싶진 않아
 Cuz nothing really lasts
+> 영원한 건 아무것도 없으니까
 I think I need some time
+> 시간이 좀 필요한 것 같아
 But I can't get you off my mind
+> 그런데 널 머릿속에서 지울 수가 없어
 
 일단 시작부터 제일 센 걸로 부탁해 바텐더
 > Start me off with the strongest one you've got, bartender
@@ -38,9 +42,11 @@ But I can't get you off my mind
 모두 다 예뻐 보여 침이 고여
 > Everyone looks beautiful, my mouth waters
 These ladies so loyal
+> 이 여자들은 참 한결같아
 그러다 널 처음 봤어
 > And then I saw you for the first time
 Geez girl love me tender
+> 이런, 그대여 나를 다정하게 사랑해줘
 
 난 씩씩하게 말을 걸어
 > I walk right up and start talking
@@ -64,7 +70,9 @@ Geez girl love me tender
 난 널 내 품 안에 원해
 > I want you in my arms
 Real love?
+> 진짜 사랑일까?
 I think I wanna just
+> 그냥 이러고 싶은 것 같아
 고민고민 하지마 Hey
 > Don't think it over and over, hey
 
@@ -75,6 +83,7 @@ I think I wanna just
 에라 모르겠다 I Love ya
 > To hell with it, I love ya
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 에라 모르겠다
 > To hell with it
 에라 모르겠다
@@ -82,6 +91,7 @@ Girl I wanna get down
 에라 모르겠다
 > To hell with it
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 
 설렘을 찾고 싶어 마르고 닳도록
 > I want to chase that flutter till it's worn to nothing
@@ -129,6 +139,7 @@ Girl I wanna get down
 난 널 내 품 안에 원해
 > I want you in my arms
 Real love? I think I wanna just
+> 진짜 사랑일까? 그냥 이러고 싶은 것 같아
 고민고민 하지마 Hey
 > Don't think it over and over, hey
 
@@ -139,6 +150,7 @@ Real love? I think I wanna just
 에라 모르겠다 I Love ya
 > To hell with it, I love ya
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 에라 모르겠다
 > To hell with it
 에라 모르겠다
@@ -146,8 +158,10 @@ Girl I wanna get down
 에라 모르겠다
 > To hell with it
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 
 You & me
+> 너와 나
 같이 차를 타고 ride
 > Get in the car with me and ride
 술 취했으니 눈 좀 붙여 잠깐만
@@ -157,6 +171,7 @@ You & me
 속은 뻔해 honey honey
 > My intentions are obvious, honey honey
 But I want it and you know it
+> 그런데 난 그걸 원하고, 너도 알잖아
 
 에라 모르겠다 I Love ya
 > To hell with it, I love ya
@@ -171,8 +186,11 @@ But I want it and you know it
 에라 모르겠다
 > To hell with it
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 
 에라 모르겠다 I Love ya
 > To hell with it, I love ya
@@ -181,6 +199,7 @@ Girl I wanna get down
 에라 모르겠다 I Love ya
 > To hell with it, I love ya
 Girl I wanna get down
+> 그대여, 나 제대로 놀고 싶어
 에라 모르겠다
 > To hell with it
 에라 모르겠다
@@ -188,3 +207,4 @@ Girl I wanna get down
 에라 모르겠다
 > To hell with it
 Girl I wanna get dow
+> 그대여, 나 제대로 놀고 싶어

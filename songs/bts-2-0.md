@@ -53,7 +53,9 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
+> 불을 붙여, 완전히 새것으로
 붙여 brand new
+> 붙여, 완전히 새것으로
 Yeah we on that brand new
 > 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
@@ -62,8 +64,11 @@ You know how we do
 Ay ay ay
 > 에이 에이 에이
 그래, 기분 마치 brand new
+> 그래, 기분이 마치 새것 같아
 Spec 다른 step, 뛰지 않는 step two
+> 급이 다른 스텝, 뛰지 않는 두 번째 스텝
 Two, two point oh 업데이트된 후
+> 둘, 2.0으로 업데이트된 뒤
 여기저기 또 한 번 일냈네
 10 out of 10, 10
 > 10점 만점에 10점, 10점
@@ -93,7 +98,9 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
+> 불을 붙여, 완전히 새것으로
 붙여 brand new
+> 붙여, 완전히 새것으로
 Yeah we on that brand new
 > 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
@@ -142,7 +149,9 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
+> 불을 붙여, 완전히 새것으로
 붙여 brand new
+> 붙여, 완전히 새것으로
 Yeah we on that brand new
 > 그래 우린 완전히 새것 위에 올라탔어
 You know how we do
@@ -153,7 +162,9 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
+> 불을 붙여, 완전히 새것으로
 붙여 brand new
+> 붙여, 완전히 새것으로
 Yeah we on that brand new
 > 그래 우린 완전히 새것 위에 올라탔어
 You know how we do

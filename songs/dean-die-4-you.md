@@ -67,9 +67,10 @@ Baby you know I'd die for you
 늦었을지도
 모르지만
 Let you know
-> 어떤 멜로디도
-> 그 어떤 스토리도 내겐
-> 네 잔상일 뿐인데
+> 네게 알려줄게
+어떤 멜로디도
+그 어떤 스토리도 내겐
+네 잔상일 뿐인데
 
 I know it is way too late
 > 너무 늦은 걸 알지만

@@ -41,16 +41,22 @@ source_hash: f8d52b3ea5427ed2f6baec2f6d1ed176de4e8d06
 > Prove to me that this is really the end
 
 Stop it now
+> 이제 그만해
 Make it fly
+> 날아오르게 해
 마지막으로 노는 것 처럼 해
 > Do it like it's the last time you'll ever play
 Stop it now
+> 이제 그만해
 Make it fly
+> 날아오르게 해
 마지막으로 행복하게 끝낼래
 > I wanna end it happy, one last time
 
 It was good
+> 좋았어
 was okay
+> 괜찮았어
 근데 갑자기 날씨가 추워질때
 > But when the weather suddenly turned cold
 깨달은 상처들 나에겐
@@ -69,13 +75,16 @@ was okay
 원래는 신경도 안쓰는데
 > Though normally I wouldn't even care
 Okay now
+> 이제 됐어
 Even if this time doesn’t pay out
+> 이번엔 아무것도 돌아오지 않는대도
 행복을 위해 난 살고
 > I live my life for happiness
 다음 step은 열려라 Chapter
 > For the next step — open up, Chapter
 
 Why do you hate me
+> 왜 날 미워해
 많아진 상처들과
 > With all the wounds piled up
 더해진 아픔들에 무너지는 내 모습봐
@@ -113,9 +122,11 @@ Why do you hate me
 단지 놀 시간이 더 필요할 뿐
 > I just need a little more time to play
 Sing with me
+> 나와 함께 노래해
 이 노래로 지구와는 Byeeeee
 > With this song, it's Byeeeee to the Earth
 Dance for me
+> 나를 위해 춤춰줘
 마지막으로 네 춤을 보게 해줘
 > Let me watch you dance one last time
 

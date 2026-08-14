@@ -27,8 +27,11 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=The%20KOXX&track_name=echo
 ---
 so i look in your smile
+> 그래서 난 네 미소를 들여다봐
 and see the days
+> 그리고 그 시절을 봐
 we gave nothing but love
+> 우리가 사랑만을 주고받던
 워어어워어워어
 난 아직
 > I'm still
@@ -57,11 +60,17 @@ we gave nothing but love
 우우우 우우우 우
 > Ooh ooh ooh, ooh ooh ooh, ooh
 i'm alone with your voice
+> 네 목소리와 함께 혼자 있어
 with a scent of your lips
+> 네 입술의 향기와 함께
 i'm still into you to you
+> 난 아직도 너에게, 너에게 빠져 있어
 so i look in your smile
+> 그래서 난 네 미소를 들여다봐
 and see the days
+> 그리고 그 시절을 봐
 we gave nothing but love
+> 우리가 사랑만을 주고받던
 워어어워어워어
 끊어진 우리
 > The two of us, cut off
@@ -78,17 +87,27 @@ we gave nothing but love
 우우우 우우우 우
 > Ooh ooh ooh, ooh ooh ooh, ooh
 i'm alone with your voice
+> 네 목소리와 함께 혼자 있어
 with a scent of your kiss
+> 네 입맞춤의 향기와 함께
 i'm still into you
+> 난 아직도 너에게 빠져 있어
 to you
+> 너에게
 so i look in your smile
+> 그래서 난 네 미소를 들여다봐
 and see the days
+> 그리고 그 시절을 봐
 we gave nothing but love
+> 우리가 사랑만을 주고받던
 워어어워어워어
 워어어워어워어
 워어어워어워어
 워어어워어워어
 워어어워어워어
 so i look in your smile
+> 그래서 난 네 미소를 들여다봐
 and see the days
+> 그리고 그 시절을 봐
 we gave nothing but love
+> 우리가 사랑만을 주고받던

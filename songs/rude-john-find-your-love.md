@@ -83,7 +83,9 @@ Find your love
 > out of fear of being hurt
 
 and I don't want you
+> 그리고 난 널 원하지 않아
 and I don't want you
+> 그리고 난 널 원하지 않아
 
 생각이 자랄 때 사랑이 머물 곳이 없는 게
 > When thoughts grow and love has nowhere to stay

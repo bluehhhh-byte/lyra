@@ -46,15 +46,26 @@ source_body_hash: bbdc1177a268efedac6ae8d3b75581050b11a10f
 눈이 막 부셔 머릿속은 빙그르르르르
 
 나의 모든 걸 사로잡은 Energy
+> 나의 모든 걸 사로잡은 에너지
 그 눈빛 속에 강렬한 Laser Laser
+> 그 눈빛 속에 강렬한 레이저, 레이저
 내 맘 깊은 곳 증폭되는 Synergy
+> 내 맘 깊은 곳에서 증폭되는 시너지
 대체 끝이 없는 너의 Gauge Gauge
+> 대체 끝이 없는 너의 게이지, 게이지
 
 점점 빨라지는 Beat 점점 더 크게 뛰는데
+> 점점 빨라지는 비트, 점점 더 크게 뛰는데
 이미 한계를 넘어선 I'm In Shock
+> 이미 한계를 넘어섰어, 난 충격에 빠졌어
 E-Electric Shock
+> 전-전기 충격
 
 Nanananananana (Electric) Nanananananana (Electric)
+> 나나나나나나나 (일렉트릭) 나나나나나나나 (일렉트릭)
 Nanananananana E-E-E-Electric Shock
+> 나나나나나나나 전-전-전-전기 충격
 Nanananananana (Electric) Nanananananana (Electric)
+> 나나나나나나나 (일렉트릭) 나나나나나나나 (일렉트릭)
 Nanananananana E-E-E-Electric Shock
+> 나나나나나나나 전-전-전-전기 충격

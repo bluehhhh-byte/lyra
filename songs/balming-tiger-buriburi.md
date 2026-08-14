@@ -25,20 +25,33 @@ source_note:
 source_hash: 782816c7083fb78a9360c2b81c226396ab12a4fa
 ---
 Buriburi, shake, shake your buri right
+> 부리부리, 흔들어, 네 부리를 제대로 흔들어
 Buriburi, shake, shake your buri right
+> 부리부리, 흔들어, 네 부리를 제대로 흔들어
 Buriburi, shake, shake your
+> 부리부리, 흔들어, 네 것을 흔들어
 Buriburi, hoo-ooh 
+> 부리부리, 후-우
 Shake it, shake it yo, shake it, shake it
+> 흔들어, 흔들어, 흔들어, 흔들어
 Shake it, shake it yo, shake it, shake it
+> 흔들어, 흔들어, 흔들어, 흔들어
 Do that thang on me, shake it 
 > I need you closer (I need you closer) 난 네가 더 가까이 있어야 해 (난 네가 더 가까이 있어야 해)
 Hate to be sober (hate to be sober) 정신이 맑은 건 싫어 (정신이 맑은 건 싫어)
+> 정신이 맑은 건 싫어 (정신이 맑은 건 싫어)
 I lost the controller (buriburi, buriburi) 난 컨트롤러를 잃었어 (부리부리, 부리부리)
+> 난 컨트롤러를 잃었어 (부리부리, 부리부리)
 You wanted this? (I wanted this, this) 넌 이걸 원했어? (난 이걸 원했어, 이걸)
+> 넌 이걸 원했어? (난 이걸 원했어, 이걸)
 Givin’ cold shoulder 냉담하게 대하네
+> 냉담하게 대하네
 Yes, I am not over, you, you, you, you 그래, 난 아직 널 잊지 못했어, 너, 너, 너, 너
+> 그래, 난 아직 널 잊지 못했어, 너, 너, 너, 너
 Still thinkin’ ’bout you 아직도 널 생각하고 있어
+> 아직도 널 생각하고 있어
 I say, I say, booted up, booted up 난 말해, 난 말해, 부팅됐어, 부팅됐어
+> 난 말해, 난 말해, 부팅됐어, 부팅됐어
 
 유니크하다 못 해 괴상한 나의 두 볼기짝
 > My two butt cheeks, so unique they're downright bizarre
@@ -74,6 +87,7 @@ I’m with the vibe, where can you find me
 아무리 가도 안 가, 시간이
 > No matter how far we go, time won't move
 (Buriburi, shake, shake your buriburi)
+> (부리부리, 흔들어, 네 부리부리를 흔들어)
 
 Yo, I can’t understand 니가 얼타는 이유를 난 몰라
 > Yo, I can't understand — I don't know why you're spacing out
@@ -113,11 +127,18 @@ How did you know that?
 세상 가장 찬란했던 눈부신 그날은 (hey)
 > The most brilliant, dazzling day this world has ever seen (hey)
 (Buriburi, shake, shake your buriburi)
+> (부리부리, 흔들어, 네 부리부리를 흔들어)
 
 Shake that buri, shake that thang,
+> 그 부리를 흔들어, 그걸 흔들어,
 Shake that buri, shake that thang
+> 그 부리를 흔들어, 그걸 흔들어
 shake that buri, babe
+> 그 부리를 흔들어, 자기야
 
 Shake it, shake it yo, shake it, shake it
+> 흔들어, 흔들어, 흔들어, 흔들어
 shake it, shake it yo, shake it, shake it
+> 흔들어, 흔들어, 흔들어, 흔들어
 Do that thang on me
+> 내게 그걸 해줘

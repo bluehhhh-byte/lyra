@@ -30,7 +30,9 @@ It's a new scene, it's aggressive
 > 새로운 장면이야, 거칠지
 이미 알아차렸겠지, 그치 언니?
 모든 소문 속의 problem, yeah, I'm 걔지
+> 모든 소문 속의 문제아, 그래, 내가 걔야
 벽에 붙은 나의 picture, 아래 wanted (아래 wanted)
+> 벽에 붙은 내 사진, 그 아래 현상수배 (아래 현상수배)
 
 Wake up, 주저하지 말고 (말고, 말고)
 > 일어나, 주저하지 말고 (말고, 말고)
@@ -70,6 +72,7 @@ Bang, bang
 > 쾅, 쾅
 
 더 다가와 더, 빨리 go 더, taking my 쉿, gotta pop my gum
+> 더 다가와 더, 빨리 가 더, 내 것을 가져가, 껌을 터뜨려야지
 Gimme that grr, gimme that kiss, hey, I told you
 > 그 으르렁을 줘, 그 키스를 줘, 이봐, 말했잖아
 It's explosive, it's aggressive
@@ -120,6 +123,7 @@ Hot issue, 대체 누굴까?
 연기처럼 disappear, catch me if you can, baby
 > 연기처럼 사라져, 잡을 수 있으면 잡아봐
 조금만 더 놀아줄게 (four, three, two, one)
+> 조금만 더 놀아줄게 (넷, 셋, 둘, 하나)
 
 Bang, shaking my head, this is my way, ah-ya-ya
 > 쾅, 고개를 흔들며, 이게 내 방식이야, 아-야-야

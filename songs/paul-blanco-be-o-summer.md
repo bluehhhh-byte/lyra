@@ -23,21 +23,26 @@ source_note:
 source_hash: 2eb5b53ce250f52ed0b7cefb810b5ec7f1cfa936
 ---
 The sun goes up
+> 해가 떠올라
 (해가 뜨네)
 > (The sun rises)
 I’m sorry I forgot her name
+> 미안, 그녀 이름을 잊어버렸어
 (그녀의 이름을 잊어서 미안해)
 > (I'm sorry I forgot her name)
 I don’t do love
+> 난 사랑 같은 건 안 해
 (난 사랑은 안해)
 > (I don't do love)
 어제는 잊기로 해
 > I've decided to forget yesterday
 
 I been living like this
+> 난 이렇게 살아왔어
 (난 이렇게 살아왔어)
 > (I've been living like this)
 Living like this
+> 이렇게 살아왔어
 (이렇게 살아가)
 > (Living on like this)
 
@@ -48,6 +53,7 @@ Living like this
 어제보다 더 취해서 집에 가네
 > Heading home drunker than yesterday
 Are you thinking bout me
+> 내 생각 하고 있어?
 (넌 날 어떻게 생각하고 있니)
 > (What do you think of me?)
 
@@ -63,9 +69,11 @@ But 사실 너가 없어서
 샴페인을 쏟아 니가 준 Cartier 위에
 > I spill champagne over the Cartier you gave me
 The fuck is this girl tapping on my back?
+> 내 등을 두드리는 이 여자는 대체 뭐야?
 (빌어먹을, 대체 이 여자 왜 내 등을 두드리는거야?)
 > (Fuck, why the hell is this girl tapping on my back?)
 Are you thinking bout me
+> 내 생각 하고 있어?
 (넌 날 어떻게 생각하고 있니)
 > (What do you think of me?)
 
@@ -79,13 +87,16 @@ Are you thinking bout me
 말처럼 쉽진 않네
 > but it's not as easy as it sounds
 Every night every night
+> 매일 밤, 매일 밤
 (매일 밤, 매일 밤)
 > (Every night, every night)
 
 Ay ay Don Julios gets popped
+> 에이 에이, 돈 훌리오를 터뜨려
 (데낄라를 따네)
 > (Popping open the tequila)
 This yungin from the block
+> 이 동네 출신 젊은 놈
 (이 동네 출신 청년이)
 > (This youngin from the block)
 압구 Zombie walking
@@ -104,10 +115,12 @@ This yungin from the block
 나 며칠 갤러리 안 들어가면 돼
 > I just won't open my gallery for a few days
 It ain’t nothing
+> 별거 아니야
 (그건 아무것도 아니야)
 > (That's nothing at all)
 
 yeah yeah Stay
+> 그래 그래, 머물러
 방금 내가 한 말은 실수였어 oh wait
 > What I just said was a mistake, oh wait
 니가 저질렀던 실수를
@@ -118,6 +131,7 @@ yeah yeah Stay
 > and burn them all away on a cigarette flame, will you come back?
 
 Baby girl I’m sorry
+> 자기야 미안해
 사람 말은 아직 잘 믿지 못하지
 > I still can't quite trust what people say
 기대하지는 마 Please
@@ -137,6 +151,7 @@ Baby girl I’m sorry
 받을 테니까 먼저 전화해
 > I'll pick up, so call me first
 This song is for you
+> 이 노래는 너를 위한 거야
 (이 노래는 너를 위한 거야)
 > (This song is for you)
 아침에 눈 뜨면 다 꿈이어줘
@@ -156,6 +171,7 @@ But 사실 너가 없어서
 > Do you even know it's gone?
 
 yeah yeah Stay
+> 그래 그래, 머물러
 방금 내가 한 말은 실수였어 oh wait
 > What I just said was a mistake, oh wait
 니가 저질렀던 실수를

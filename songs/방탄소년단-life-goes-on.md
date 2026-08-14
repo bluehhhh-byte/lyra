@@ -64,18 +64,25 @@ source_body_hash: 059bb667f352133b25fa3baaf7adedfe03bd6360
 저 미래로 달아나자
 
 Like an echo in the forest
+> 숲속의 메아리처럼
 (숲 속의 메아리처럼)
 하루가 돌아오겠지
 아무 일도 없단 듯이
 Yeah life goes on
+> 그래, 삶은 계속돼
 Like an arrow in the blue sky
+> 푸른 하늘의 화살처럼
 (그래, 삶은 계속되지
 푸른 하늘로 날아가는 화살처럼)
 또 하루 더 날아가지
 On my pillow, on my table
+> 내 베개 위에, 내 책상 위에
 Yeah life goes on
+> 그래, 삶은 계속돼
 Like this again
+> 다시 이렇게
 I remember
+> 난 기억해
 (내 베개 위에서 내 책상 위에서
 그래, 삶은 계속되지
 또 이렇게 다시, 난 명심해)

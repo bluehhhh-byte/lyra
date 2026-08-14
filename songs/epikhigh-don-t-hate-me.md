@@ -25,6 +25,7 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Epik%20High&track_name=Don't%20Hate%20Me
 ---
 Everybody hates me, but you love me and I love you,
+> 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해,
 오오오 (워오오) 난 너만 손뼉치면 돼, baby,
 > Oh oh oh (whoa oh oh) I just need you clapping, baby,
 온세상이 안티, 그런 내가 웃는 이유,
@@ -50,6 +51,7 @@ Everybody hates me, but you love me and I love you,
 네가 없으면 나 미칠 것 같애
 > without you I think I'd lose my mind
 Everybody hates me, but you love me and I love you
+> 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해
 오오오 (워오오) 난 너만 손뼉치면 돼, baby
 > Oh oh oh (whoa oh oh) I just need you clapping, baby
 온 세상이 안티, 그런 내가 웃는 이유
@@ -73,6 +75,7 @@ Everybody hates me, but you love me and I love you
 네가 없으면 나 죽을 것 같애
 > without you I think I'd die
 Everybody hates me, but you love me and I love you
+> 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해
 오오오 (워오오) 난 너만 손뼉치면 돼, baby
 > Oh oh oh (whoa oh oh) I just need you clapping, baby
 온 세상이 안티, 그런 내가 웃는 이유
@@ -92,6 +95,7 @@ Everybody hates me, but you love me and I love you
 Love and hate, 둘 다 고맙지, 뭐
 > Love and hate—I'm grateful for both, I guess
 Everybody hates me, but you love me and I love you
+> 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해
 오오오 (워오오) 난 너만 손뼉치면 돼, baby
 > Oh oh oh (whoa oh oh) I just need you clapping, baby
 온 세상이 안티, 그런 내가 웃는 이유
@@ -99,10 +103,16 @@ Everybody hates me, but you love me and I love you
 오오오 (워오오) 난 너만 내 편이면, 내 팬이면 돼
 > Oh oh oh (whoa oh oh) I just need you on my side, as my fan
 Hate me, hate me, hate me
+> 날 미워해, 날 미워해, 날 미워해
 Hate me, hey hey hey hey
+> 날 미워해, 헤이 헤이 헤이 헤이
 Hate me (don't hate me)
+> 날 미워해 (날 미워하지 마)
 Hate me (don't hate me)
+> 날 미워해 (날 미워하지 마)
 Hate me (don't hate me)
+> 날 미워해 (날 미워하지 마)
 Please love me
+> 제발 날 사랑해줘
 너만 내 팬이면 돼!
 > I just need you as my fan!

@@ -26,6 +26,7 @@ source_hash: c25c331ceea6cd70448bd54275d5613e86c21cc3
 source_body_hash: c4a3918bfeedb4a38f356e3fe00f708b9e28ee82
 ---
 No one's beside me
+> 내 곁엔 아무도 없어
 친해 내가 돌아간 길은
 유치한 말만 입에 남지 
 어제보다는 조용하게 
@@ -36,13 +37,16 @@ No one's beside me
 나는 엉성하지 
 
 Boy I get so wild 
+> 이봐, 난 너무 거칠어져
 For my love of probs 
+> 내가 사랑하는 그 문제들 때문에
 너무 걱정 마 
 나는 멍청하게 
 가고 있어 익숙한 길 위 
 남을 자국 아래로 
 
 The door shine again 
+> 문이 다시 빛나
 맞는 게 없는 신발 
 입이 아프게 말한 이유를 
 찾기까지 오래 걸렸지
@@ -51,13 +55,17 @@ The door shine again
 나는 메말랐어 
 
 Baby, I don’t know how to go home 
+> 자기야, 집에 가는 법을 모르겠어
 Now I’m sick 
+> 이제 난 지쳤어
 내 고인 발이 들어갈 신발을 찾지 
 초침이 늦게 들려 내게 반박 씩 
 소식은 쉽게 들려오네 싸움 같이 
 
 Baby, I don’t know how to go home 
+> 자기야, 집에 가는 법을 모르겠어
 Now I’m sick 
+> 이제 난 지쳤어
 내 더러운 몸을 불려 물에 담갔지 
 초침은 늦게 들려 내게 반박 씩 
 소식은 쉽게 들려오네 마음 같이 

@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b6/cd/07/b6cd07e4-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/ce/48/6fce48d8-379f-3f31-de2b-0ab836e93121/mzaf_16314117217390275388.plus.aac.p.m4a
 trackId: 1817428241
 duration: 260
-lang: en
+lang: ko
 tags: [한국, Post-Punk, 2015]
 emotion: 불안
 keywords: [문, 누군가, 눈빛, 진실, 아침]

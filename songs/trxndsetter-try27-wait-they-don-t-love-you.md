@@ -36,6 +36,7 @@ Wait, they don’t love you like I love you 잠깐, 그들은 내가 널 사�
 Wait, they don’t love you like I love you 잠깐, 그들은 내가 널 사랑하는 것처럼 널 사랑하지 않아
 
 Maps
+> 지도
 "나의 앵거스 제발 머물러줘"라는 뜻 
  Wait, they don’t love you like I love you 잠깐, 그들은 내가 널 사랑하는 것처럼 널 사랑하지 않아
 Wait, they don’t love you like I love you 잠깐, 그들은 내가 널 사랑하는 것처럼 널 사랑하지 않아
@@ -52,6 +53,7 @@ Well, my kind’s your kind 내 마음이 네 마음이야
 I’ll stay the same 난 그대로일 거야
 
 Maps
+> 지도
 나의 앵거스 제발 머물러줘
  Wait, they don’t love you like I love you 잠깐, 그들은 나만큼 널 사랑하지 않아
 Wait, they don’t love you like I love you 잠깐, 그들은 나만큼 널 사랑하지 않아

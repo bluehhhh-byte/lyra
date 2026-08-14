@@ -59,34 +59,44 @@ source_hash: 91922e57ca06121cae45e401726a0f37812dc347
 > And the end feels far away
 
 Baby, I just don't know what to say
+> 자기야, 무슨 말을 해야 할지 모르겠어
 내 사랑, 뭐라 말해야 할지 모르겠어
 > My love, I don't know what to say
 You were my dream
+> 넌 내 꿈이었어
 넌 내 꿈이었는데
 > You were my dream
 You were my dream
+> 넌 내 꿈이었어
 그저 내 꿈이었는데
 > You were only ever my dream
 And now it all feels so real
+> 그리고 이제 다 너무 현실 같아
 이젠 모두 현실이 되었나 봐
 > Now it seems it's all become real
 You are real yea
+> 넌 진짜야, 그래
 정말 그런가 봐
 > I guess it really has
 
 Heavy hugs and light hearted jokes
+> 꽉 안는 포옹과 가벼운 농담들
 깊은 포옹과 가벼운 농담들
 > Deep embraces and lighthearted jokes
 Quit my day job just to stay up all night with you
+> 너와 밤을 새우려고 낮에 하던 일을 그만뒀어
 너와 함께 지새울 밤을 위해 할 일도 모두 그만뒀어
 > I quit everything I had to do, just for nights spent up with you
 We are going to hollywood
+> 우린 할리우드로 가
 우린 할리우드로 가서 
 > We're going to Hollywood
 And never coming back, coming back
+> 그리고 다시는 돌아오지 않아, 돌아오지 않아
 영영 돌아오지 않을 거야
 > And we're never coming back
 Maybe we'll turn to gold
+> 어쩌면 우린 금이 될지도 몰라
 아마 우린 금이 될 거야
 > Maybe we'll turn to gold
 
@@ -109,19 +119,24 @@ Maybe we'll turn to gold
 > Just leave me here
 
 Don't stop
+> 멈추지 마
 멈추지 마
 > Don't stop
 Action, friction
+> 액션, 마찰
 우리의 만남도, 마찰도
 > Our meeting, and our friction too
 Live in a fiction baby
+> 허구 속에 살자, 자기야
 소설 속에서 함께하자, 내 사랑
 > Let's live inside a fiction, my love
 Hollywood
+> 할리우드
 할리우드에서
 > In Hollywood
 
 Love, money, drug, drama
+> 사랑, 돈, 약, 드라마
 사랑, 약간의 돈, 당신이라는 마약과 함께
 > Love, a little money, and the drug that is you
 써내려 갈 우리의 드라마

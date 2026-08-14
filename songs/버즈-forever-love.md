@@ -36,7 +36,9 @@ source_body_hash: cab0b982b3a5e5f1eaa7c329d91566616b60b2f8
 이젠 내가 말할게
 
 FOREVER LOVE
+> 영원한 사랑
 FOREVER LOVE
+> 영원한 사랑
 
 난 괜찮아
 널 위해 살 수 있다면
@@ -47,7 +49,9 @@ FOREVER LOVE
 이젠 내가 널 안아줄게
 
 FOREVER LOVE
+> 영원한 사랑
 FOREVER LOVE
+> 영원한 사랑
 
 기다릴게
 난 너만 지킬게

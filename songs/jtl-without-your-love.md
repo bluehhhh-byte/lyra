@@ -26,6 +26,7 @@ source_hash: 944ebad3698c2da6fe7d674f8a16d958e31316d0
 source_body_hash: b11e32c7cc373449fe4693cb329f1ee79257d766
 ---
 It's without your love
+> 네 사랑 없이는
 아무런 감정은 없어
 나 바보처럼 멈춰서 나의 길을 찾으려
 자, 눈을 감아
@@ -44,17 +45,23 @@ It's without your love
 되돌릴 수 없단 걸 알지
 모든 걸 잊고 시작해볼래
 Without your loving
+> 네 사랑 없이는
 
 햇빛을 내려 비가 내리게
 깨끗이 잊어버리게 영원히 지워버리게
 감정의 흐름을 잃어버려 공간 속에 난 갇혔어
 Without your love
+> 네 사랑 없이는
 
 해님을 담아 별님을 담아
 나 상상했던 이상을 찾아
 Cause I found the future
+> 난 미래를 찾았으니까
 It's without it's without your love
+> 그건 네 사랑 없이는, 네 사랑 없이는
 무지개 닮아 정말 예뻐
 저 하늘에 구름이 되게
 You showed me the future
+> 네가 내게 미래를 보여줬어
 It's without without your love
+> 그건 네 사랑 없이는, 없이는
