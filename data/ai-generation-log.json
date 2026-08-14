@@ -1,0 +1,424 @@
+{
+ "entries": [
+  {
+   "at": "2026-08-14T05:01:40.319Z",
+   "files": [
+    "meta-out-1.json"
+   ],
+   "applied": 25,
+   "rejected": 1,
+   "byModel": {
+    "claude-opus-5": 25
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "comment",
+    "title_ko",
+    "genre"
+   ],
+   "slugs": [
+    "忘れらんねえよ-なんもねえ",
+    "mgmt-piece-of-what",
+    "삐삐밴드-zion-t-over-over",
+    "impellitteri-rat-race",
+    "태양-live-fast-die-slow",
+    "michael-jackson-janet-jackson-scream",
+    "silica-gel-ph-1004",
+    "술탄-오브-더-디스코-shining-road",
+    "porno-graffitti-melissa",
+    "엘리스유-도주",
+    "ok-go-this-too-shall-pass",
+    "유다빈-밴드-꿈보다-더",
+    "최유리-동그라미",
+    "tomoo-endless",
+    "anoyingbox-train-to-the-galaxy",
+    "한로로-0-0",
+    "장기하와-얼굴들-아무도-필요없다",
+    "epikhigh-don-t-hate-me",
+    "temples-keep-in-the-dark",
+    "cheryl-lynn-got-to-be-real",
+    "해파-건강한-사회의-일원",
+    "pierrot-psychedelic-lover",
+    "gener8ion-yung-lean-storm-i",
+    "m-c-the-max-사랑하고-싶었어",
+    "김동률-이소라-사랑한다-말해도"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:03:17.730Z",
+   "files": [
+    "meta-out-2.json"
+   ],
+   "applied": 25,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 25
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "title_ko",
+    "genre",
+    "comment"
+   ],
+   "slugs": [
+    "stryper-always-there-for-you",
+    "phoenix-everything-is-everything",
+    "the-dead-weather-treat-me-like-your-mother",
+    "official髭男dism-らしさ",
+    "kenshi-yonezu-地球儀",
+    "kiyoharu-eternal",
+    "akmu-벌레를-내고",
+    "chun-chun-dungeon",
+    "t-o-p-완전미쳤어",
+    "redoor-ron",
+    "nell-백야",
+    "bigbang-에라-모르겠다",
+    "the-koxx-zeitgeist",
+    "陰陽座-甲賀忍法帖",
+    "bts-2-0",
+    "김하온-창모-꼴통",
+    "raf-sandou-woodz-pajama",
+    "b-free-hukky-shibaseki-get-it",
+    "hu57la-내-모든-것",
+    "lithe-don-toliver-cannonball",
+    "l-arc-en-ciel-pieces",
+    "lionclad-uloveuwaitingu",
+    "원슈타인-k-mars",
+    "pierce-the-veil-so-far-so-fake",
+    "rosal-a-bj-rk-yves-tumor-berghain"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:04:19.981Z",
+   "files": [
+    "meta-out-3.json"
+   ],
+   "applied": 25,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 25
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "genre",
+    "title_ko",
+    "comment"
+   ],
+   "slugs": [
+    "viceversa-if-i-die",
+    "kirara-vc19111",
+    "sienna-spiro-die-on-this-hill",
+    "ellegarden-missing",
+    "이찬혁-andrew",
+    "the-rare-occasions-notion",
+    "caitlin-byk-crazy-lady",
+    "kehlani-folded",
+    "치사토-모리타카-new-season",
+    "red-hot-chili-peppers-dark-necessities",
+    "damien-rice-the-blower-s-daughter",
+    "ive-bang-bang",
+    "bill-stax-dok2-the-quiett-천재노창-don",
+    "zhuli-mitsubishi-sheets",
+    "henry-young-ashley-alisha-one-more-last-time",
+    "extreme-tragic-comic",
+    "magi-merlin-pop-pop-pop",
+    "dumbfoundead-loppy-nafla-미장원",
+    "limp-bizkit-eat-you-alive",
+    "hiromi-tomoaki-bada-shun-ishiwaka-n-e-w",
+    "steve-vai-the-crying-machine",
+    "kirara-wish",
+    "자우림-슬픔이여-이제-안녕",
+    "yungblud-changes",
+    "짱유-hukky-shibaseki-제목없음-2"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:05:38.051Z",
+   "files": [
+    "meta-out-4.json"
+   ],
+   "applied": 25,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 25
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "title_ko",
+    "genre",
+    "comment"
+   ],
+   "slugs": [
+    "jamiroquai-supersonic",
+    "zior-park-homebird",
+    "백예린-fuckin-new-year",
+    "robbie-williams-the-road-to-mandalay",
+    "서태지-live-wire",
+    "siam-shade-triptych",
+    "maytree-when-snowflakes-fell-on-your-head",
+    "5-seconds-of-summer-everyone-s-a-star",
+    "sam-fender-people-watching",
+    "sienna-spiro-ain-t-no-way",
+    "로이킴-그때-헤어지면-돼",
+    "듀스-rise",
+    "카더가든-밤새",
+    "장석훈-장석훈",
+    "stereophonics-i-miss-you-now",
+    "신화-yo",
+    "젝스키스-학원별곡",
+    "boa-better",
+    "kenshi-yonezu-kick-back",
+    "riize-boom-boom-bass",
+    "스카이민혁-알트-날개",
+    "xxx-승무원",
+    "onerepublic-i-ain-t-worried",
+    "kanye-west-good-morning",
+    "검정치마-폭죽과-풍선들"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:06:57.190Z",
+   "files": [
+    "meta-out-5.json"
+   ],
+   "applied": 25,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 25
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "comment",
+    "title_ko",
+    "genre"
+   ],
+   "slugs": [
+    "sigur-ros-hoppipolla",
+    "오존-clouds",
+    "자우림-스타스-stars",
+    "mew-satellites",
+    "the-koxx-echo",
+    "derik-fein-1991",
+    "megadeth-trust",
+    "rude-john-find-your-love",
+    "allday-project-famous",
+    "nemesis-베르사유의-장미",
+    "네미시스-베르사유의-장미",
+    "새소년-파도",
+    "카더가든-파도",
+    "장범준-누나",
+    "can-t-be-blue-사랑이라-했던-말-속에서",
+    "troye-sivan-easy",
+    "suede-life-is-golden",
+    "봄여름가을겨울-못다한-내-마음을",
+    "제이통-woof",
+    "디오-내일의-우리",
+    "시나위-밤이-늦었어",
+    "dream-theater-i-walk-beside-you",
+    "tyler-the-creater-i-ll-take-care-of-you",
+    "아일릿-빌려온-고양이",
+    "lizzo-about-damn-time"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:08:22.887Z",
+   "files": [
+    "meta-out-6.json"
+   ],
+   "applied": 23,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 23
+   },
+   "fields": [
+    "genre",
+    "emotion",
+    "keywords",
+    "comment",
+    "title_ko",
+    "year"
+   ],
+   "slugs": [
+    "perfume-human-factory",
+    "royel-otis-moody",
+    "fly-to-the-sky-sea-of-love",
+    "tenblank-glass-heart",
+    "머쉬베놈-신빠람-이박사-돌림판",
+    "lisa-紅蓮華",
+    "bakar-lonyo",
+    "pearl-jam-jeremy",
+    "d4vd-is-this-really-love",
+    "kim-gordon-bye-bye",
+    "young-posse-xxl",
+    "astor-piazzolla-oblivion",
+    "터보-tonight",
+    "celeste-both-sides-of-the-moon",
+    "valentine-say-that-you-re-mine",
+    "김민성-접점",
+    "apollo-sunshine-flip",
+    "blood-cultures-set-it-on-fire",
+    "the-beatles-a-day-in-the-life",
+    "bimini-can-t-hold-me-back",
+    "mina-okabe-talk-to-me",
+    "oasis-let-there-be-love",
+    "kaytramin-4eva"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:08:44.535Z",
+   "files": [
+    "meta-out-7.json"
+   ],
+   "applied": 2,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 2
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "comment",
+    "title_ko",
+    "genre"
+   ],
+   "slugs": [
+    "blur-the-narcissist",
+    "cheryl-lynn-got-to-be-real"
+   ]
+  },
+  {
+   "at": "2026-08-14T05:09:26.717Z",
+   "files": [
+    "meta-out-8.json"
+   ],
+   "applied": 19,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 19
+   },
+   "fields": [
+    "title_ko",
+    "comment",
+    "genre"
+   ],
+   "slugs": [
+    "태양-live-fast-die-slow",
+    "silica-gel-ph-1004",
+    "anoyingbox-train-to-the-galaxy",
+    "pierrot-psychedelic-lover",
+    "b-free-hukky-shibaseki-get-it",
+    "lionclad-uloveuwaitingu",
+    "kirara-vc19111",
+    "봄여름가을겨울-못다한-내-마음을",
+    "디오-내일의-우리",
+    "perfume-human-factory",
+    "bimini-can-t-hold-me-back",
+    "michael-jackson-janet-jackson-scream",
+    "robbie-williams-the-road-to-mandalay",
+    "maytree-when-snowflakes-fell-on-your-head",
+    "5-seconds-of-summer-everyone-s-a-star",
+    "onerepublic-i-ain-t-worried",
+    "derik-fein-1991",
+    "the-beatles-a-day-in-the-life",
+    "oasis-let-there-be-love"
+   ]
+  },
+  {
+   "at": "2026-08-14T06:46:08.745Z",
+   "files": [
+    "meta-out-9.json"
+   ],
+   "applied": 6,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 6
+   },
+   "fields": [
+    "emotion",
+    "keywords"
+   ],
+   "slugs": [
+    "mgmt-piece-of-what",
+    "anoyingbox-train-to-the-galaxy",
+    "b-free-hukky-shibaseki-get-it",
+    "dumbfoundead-loppy-nafla-미장원",
+    "디오-내일의-우리",
+    "perfume-human-factory"
+   ]
+  },
+  {
+   "at": "2026-08-14T16:01:02.563Z",
+   "files": [
+    "meta-out-10.json"
+   ],
+   "applied": 11,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 11
+   },
+   "fields": [
+    "keywords"
+   ],
+   "slugs": [
+    "dumbfoundead-loppy-nafla-미장원",
+    "르세라핌-이브-프시케-그리고-푸른-수염의-아내",
+    "원슈타인-single",
+    "barbar-gough-when-i-fall-in-love",
+    "퓨어킴-unpretty-tattoo",
+    "kent-747",
+    "kendrick-lamar-alright",
+    "백예린-지켜줄게",
+    "제이통-미안",
+    "rufus-wainwright-sonnet-20",
+    "damien-rice-older-chests"
+   ]
+  },
+  {
+   "at": "2026-08-14T16:47:58.001Z",
+   "files": [
+    "meta-out-11.json"
+   ],
+   "applied": 1,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 1
+   },
+   "fields": [
+    "emotion",
+    "keywords"
+   ],
+   "slugs": [
+    "kiyoharu-eternal"
+   ]
+  },
+  {
+   "at": "2026-08-14T17:32:15.592Z",
+   "files": [
+    "meta-out-12.json"
+   ],
+   "applied": 4,
+   "rejected": 0,
+   "byModel": {
+    "claude-opus-5": 4
+   },
+   "fields": [
+    "emotion",
+    "keywords",
+    "comment",
+    "genre"
+   ],
+   "slugs": [
+    "엘리스유-도주",
+    "hu57la-내-모든-것",
+    "caitlin-byk-crazy-lady",
+    "lionclad-uloveuwaitingu"
+   ]
+  }
+ ],
+ "at": "2026-08-14T17:32:15.592Z"
+}

@@ -14,7 +14,7 @@ duration: 195
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop]
-keywords: [사진, 웃음, 눈물, 마음]
+keywords: [사랑, 생각, 끝]
 emotion: 사랑
 date: 2022-10-28
 published: 2022-10-28T13:28:56.000Z

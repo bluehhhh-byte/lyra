@@ -14,7 +14,7 @@ duration: 179
 genre: Classical
 lang: en
 tags: [영미, Classical, 2010]
-keywords: [여자, 자연, 얼굴, 눈, 마음]
+keywords: [여자, 자연, 사랑]
 emotion: 사랑
 date: 2022-09-17
 published: 2022-09-17T05:01:24.000Z

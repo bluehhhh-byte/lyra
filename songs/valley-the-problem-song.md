@@ -46,7 +46,7 @@ Yeah, we got problems
 Yeah, we need fixin'
 > 그래, 우리는 해결해야 해
 I know it's been a long road
-> 긴 과정이 될 걸 알고 있어
+> 알아, 긴 과정이었지
 And you're runnin' out of patience
 > 네 인내심은 바닥나고 있어
 I put paper to pen

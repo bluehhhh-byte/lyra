@@ -9,6 +9,7 @@ import { getWatched } from "../lib/watched.js";
 import { EMOTIONS } from "../lib/keywords.js";
 import { genreTagOf, genreIssue } from "../lib/genre.js";
 import { readData } from "../lib/store.js";
+import { needsKo } from "../lib/admin/needs.js";
 
 const errors = [];
 const warns = [];
@@ -48,22 +49,17 @@ for (const s of songs) {
   // 번역 누락 — en/ja 곡의 가사 줄에는 `>` 번역이 붙어야 한다 (ko는 원문만).
   // `>^N`으로 아래 줄 번역이 덮는 줄(koMerged)은 누락이 아니다.
   const lines = s.stanzas.flatMap((st) => st.lines);
-  if (s.lang !== "ko") {
-    // 세지 않는 줄: 🗨·✏로 시작하는 본인 해설, 그리고 이미 한글인 줄
-    // (외국어 곡 안의 한국어 가사이거나 표시가 빠진 번역이다 — 어느 쪽이든
-    //  한글 번역을 새로 붙일 대상이 아니다)
-    const missing = lines.filter((l) => {
-      const t = l.en?.trim();
-      if (!t || l.ko?.trim() || l.koMerged) return false;
-      if (/^[🗨✏]/u.test(t)) return false;
-      const ko = (t.match(/[가-힣]/g) || []).length;
-      return ko < 2 || (t.match(/[a-zA-Z぀-ヿ一-鿿]/g) || []).length >= ko;
-    }).length;
-    if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
-  }
+  // 판정은 lib/admin/needs.js 한 곳에서 한다 — 여기서 따로 세면 관리자 화면과 숫자가 갈린다
+  const missing = lines.filter((l) => needsKo(l, s.lang)).length;
+  if (missing) warn(f, `번역 없는 가사 줄 ${missing}개`);
   // 가사 없이 해설만 있는 곡 — 캡션에 가사를 안 적었거나 연주곡이다.
   // 화면에는 노트만 뜨므로 어느 쪽인지 사람이 확인해 채우거나 표시해야 한다.
-  if (!lines.some((l) => l.en?.trim() || l.ko?.trim())) warn(f, "가사 줄 없음 (해설만 있음 — 연주곡이거나 가사 미기입)");
+  const noLyrics = !lines.some((l) => l.en?.trim() || l.ko?.trim());
+  if (noLyrics && !s.instrumental && !s.lyrics_none)
+    warn(f, "가사 줄 없음 (해설만 있음 — 연주곡이거나 가사 미기입)");
+  // '원문이 어디에도 없음'은 확인한 사실이어야 한다 — 근거 없는 포기는 그냥 미기입이다
+  if (s.lyrics_none && !String(s.lyrics_note || "").trim()) err(f, "lyrics_none인데 lyrics_note(확인한 내용) 없음");
+  if (s.lyrics_none && !noLyrics) err(f, "lyrics_none인데 본문에 가사가 있음");
 
   // `>^N`이 문단 밖까지 가리키면 어느 줄을 덮는지가 불분명하다 — 조용히 넘기지 않는다
   const overflow = lines.filter((l) => l.koSpanError).length;
@@ -101,6 +97,8 @@ for (const s of songs) {
   // 검증 기록이 있으면 근거가 있어야 한다 — 근거 없는 '확인함'은 확인이 아니다
   if (s.lyrics_verified_at && !s.lyrics_source) err(f, "lyrics_verified_at이 있는데 lyrics_source(근거 URL) 없음");
   if (s.lyrics_source && !/^https?:\/\//.test(s.lyrics_source)) err(f, `lyrics_source가 URL이 아님: "${s.lyrics_source}"`);
+  // 캡션에 가사가 없어 밖에서 가져온 곡 — 어디서 가져왔는지가 없으면 대조할 수 없다
+  if (s.lyrics_external && !s.lyrics_source) err(f, "lyrics_external인데 lyrics_source(가사 출처 URL) 없음");
 
   const key = `${s.title}|${s.artist}`.toLowerCase();
   if (songKey.has(key)) err(f, `중복 곡 (${songKey.get(key)}와 같은 title+artist)`);

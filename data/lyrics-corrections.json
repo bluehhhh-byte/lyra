@@ -87,7 +87,194 @@
    "reason": "목적어가 '이름'이므로 '불러주다'는 이름을 부르는 것 — 앞 연의 '노래'와의 대비가 흐려짐",
    "sourceUrl": "",
    "reviewedAt": "2026-08-13T10:48:59.749773Z"
+  },
+  {
+   "slug": "one-republic-nobody",
+   "type": "original_duplicate",
+   "field": "original",
+   "lineIndex": 63,
+   "beforeHash": "b89865dabead",
+   "afterHash": "243de6572fc6",
+   "reason": "캡션에서 앞 줄의 번역 '아무도 나처럼 너를 이해하지 못해'가 다음 가사 줄 앞에 한 번 더 복제됐다. 같은 후렴의 다른 두 곳은 복제 없이 한 줄이다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.063Z"
+  },
+  {
+   "slug": "amazarashi-cassiopeia-keiryuujo",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 58,
+   "beforeHash": "05569e56e3f1",
+   "afterHash": "94fdc3e42ace",
+   "reason": "'재가 될 바라면'은 '거라면'의 오타로 문장이 성립하지 않는다. 같은 후렴의 뒤 두 곳은 이미 '거라면'이다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.072Z"
+  },
+  {
+   "slug": "muse-hyper-music",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 34,
+   "beforeHash": "5232144d9dd4",
+   "afterHash": "a3ce2b80735a",
+   "reason": "원문 'in your face'는 얼굴을 가리키는데 '무덤'으로 옮겨 같은 후렴이 서로 다른 대상을 향하게 됐다. 뒤 후렴의 '면상'에 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.075Z"
+  },
+  {
+   "slug": "radiohead-weird-fishes-arpeggi",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 33,
+   "beforeHash": "2844387da0e0",
+   "afterHash": "808a79382b85",
+   "reason": "'They turn me'는 그 눈이 화자를 돌려세운다는 뜻인데 '등을 돌렸어'는 방향이 정반대다. 다음 행 'Turn me on to phantoms'와 이어지지 않는다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.077Z"
+  },
+  {
+   "slug": "radiohead-weird-fishes-arpeggi",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 47,
+   "beforeHash": "b43c9354e2d6",
+   "afterHash": "808a79382b85",
+   "reason": "같은 행의 두 번째 등장. '나를 떠났어'도 방향이 반대라 앞 등장과 같게 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.083Z"
+  },
+  {
+   "slug": "jungle-back-on-74",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 46,
+   "beforeHash": "af7a07d9781b",
+   "afterHash": "e5ffddbf2bdc",
+   "reason": "'우리 집에서 불러볼까'는 조사 '에서' 때문에 장소에서 부른다는 뜻이 된다. 원문은 이곳을 내 집이라 부른다는 뜻이고 뒤 후렴은 이미 '우리 집으로'다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.086Z"
+  },
+  {
+   "slug": "jungle-back-on-74",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 48,
+   "beforeHash": "ab969edf839c",
+   "afterHash": "f7d747e635fa",
+   "reason": "원문은 화자 자신의 다짐인데 '말아줘'는 상대에게 하는 부탁이라 주어가 바뀐다. 뒤 후렴에 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.089Z"
+  },
+  {
+   "slug": "mansun-keep-telling-myself",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 87,
+   "beforeHash": "cad7e7b65b63",
+   "afterHash": "d963e87e0a57",
+   "reason": "'내 영혼을 다해서'는 '온 힘을 다해'로 읽혀 뜻이 반대다. 같은 곡의 다른 두 곳은 '내 영혼이 다했을 때'다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.091Z"
+  },
+  {
+   "slug": "nick-drake-day-is-done",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 57,
+   "beforeHash": "60ff1d7c4fe3",
+   "afterHash": "586819da7bbe",
+   "reason": "'has flown'은 새가 날아가 버렸다는 뜻인데 '날아왔을 때'는 방향이 반대라 뒤따르는 상실의 문맥과 어긋난다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.094Z"
+  },
+  {
+   "slug": "nick-drake-day-is-done",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 63,
+   "beforeHash": "d10ae67fed6e",
+   "afterHash": "586819da7bbe",
+   "reason": "같은 행의 두 번째 등장. '날아왔음에도'도 방향이 반대라 앞 등장과 같게 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.098Z"
+  },
+  {
+   "slug": "queen-under-pressure",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 67,
+   "beforeHash": "3f515faf2e7f",
+   "afterHash": "46815fff517a",
+   "reason": "'중압감 아래 속 존재'는 조사가 겹친 비문이다. 바로 다음 줄의 같은 행 번역에 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.101Z"
+  },
+  {
+   "slug": "andrew-bird-sisyphus",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 30,
+   "beforeHash": "874058053c1d",
+   "afterHash": "888bd512f60a",
+   "reason": "'a stone's throw'는 아주 가까운 거리를 뜻하는 관용구인데 '바위를 던지기 전'으로 직역했다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.104Z"
+  },
+  {
+   "slug": "andrew-bird-sisyphus",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 87,
+   "beforeHash": "c66ac3d7aea2",
+   "afterHash": "888bd512f60a",
+   "reason": "곡을 여닫는 같은 행인데 '바위가 굴러 떨어지기 전'으로 옮겨 앞 등장과 다른 장면이 됐다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.111Z"
+  },
+  {
+   "slug": "valley-the-problem-song",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 48,
+   "beforeHash": "98c47bfc07ba",
+   "afterHash": "3db5cc2ac129",
+   "reason": "'been a long road'는 지나온 시간인데 '될 걸'로 시제를 앞으로 뒤집었다. 뒤 후렴에 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.121Z"
+  },
+  {
+   "slug": "jvke-i-m-not-okay",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 75,
+   "beforeHash": "52caa7cffde3",
+   "afterHash": "9e206af3556b",
+   "reason": "'난 안 괜찮지 않지 않아'는 부정이 세 번 겹쳐 뜻이 뒤집힌다. 같은 후렴 앞 줄에 맞춘다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.135Z"
+  },
+  {
+   "slug": "radiohead-all-i-need",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 48,
+   "beforeHash": "40565f44c7a3",
+   "afterHash": "7ed55ecf6f5e",
+   "reason": "reeds는 갈대인데 '낙엽'으로 옮겼다. 이 곡의 keywords에도 '갈대'가 적혀 있다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.140Z"
+  },
+  {
+   "slug": "radiohead-all-i-need",
+   "type": "translation_wrong",
+   "field": "translation",
+   "lineIndex": 69,
+   "beforeHash": "d2d9228a1e31",
+   "afterHash": "c83d316f6712",
+   "reason": "같은 행의 두 번째 등장. 마찬가지로 '낙엽'을 '갈대'로 고친다.",
+   "sourceUrl": "",
+   "reviewedAt": "2026-08-14T01:44:06.143Z"
   }
  ],
- "at": "2026-08-13T10:48:59.749773Z"
+ "at": "2026-08-14T01:44:06.146Z"
 }

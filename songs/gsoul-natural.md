@@ -12,14 +12,14 @@ duration: 145
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2021]
-keywords: [강, 중력, 노래]
+keywords: [강, 물, 중력, 리본, 하늘, 바다]
 emotion: 사랑
 date: 2024-08-02
 published: 2024-08-02T12:40:01.000Z
 comment: 강물이 흐르고 봄이 여름이 되듯 사랑하는 일이 자연스럽다고 말한다. 중력처럼 끌려가 곁을 지키겠다는 다짐이 후렴 자리에 놓인다.
 source: instagram
 source_tag: 240802_2139
-source_note: 
+source_note: 같은 곡을 2022-09-17에도 올렸다(캡션 34c95944). 곡 페이지는 하나로 합쳤다.
 source_hash: 0a3b5d2b690405ed4bee3e805cd06bb6ee4a2513
 ---
 Just like the water flowing in the river 

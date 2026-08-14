@@ -866,6 +866,10 @@ ${listed}`,
     const risky = songs.map((s) => {
       const lines = s.stanzas.flatMap((st) => st.lines);
       const reasons = [];
+      // 가사 자체가 없는 곡 — 여기 목록에 띄워야 사람이 직접 붙여넣을 수 있다.
+      // 연주곡과 '어디에도 원문이 없다'고 확인해 둔 곡(lyrics_none)은 제외한다.
+      if (!s.instrumental && !s.lyrics_none && !lines.some((l) => l.en?.trim() || l.ko?.trim()))
+        reasons.push("가사 없음");
       if (/댓글\s*병합/.test(s.source_note || "")) reasons.push("댓글에서 복원");
       if (lines.some((l) => l.koSpan > 1)) reasons.push("병합 번역");
       if (lines.length >= 60) reasons.push("긴 캡션");
@@ -879,7 +883,8 @@ ${listed}`,
       };
     });
     // 위험도 높은 순 — 사용자가 준 순서를 그대로 점수로 쓴다
-    const rank = (r) => (r.includes("댓글에서 복원") ? 6 : 0) + (r.includes("병합 번역") ? 5 : 0) +
+    const rank = (r) => (r.includes("가사 없음") ? 10 : 0) +
+      (r.includes("댓글에서 복원") ? 6 : 0) + (r.includes("병합 번역") ? 5 : 0) +
       (r.includes("긴 캡션") ? 4 : 0) + (r.includes("Claude 영어 번역") ? 3 : 0) + (r.includes("일본어") ? 2 : 0);
     risky.sort((a, b) => rank(b.reasons) - rank(a.reasons) || b.lines - a.lines);
     return Response.json({ items: risky.filter((r) => r.reasons.length && !r.verifiedAt).slice(0, 200), total: songs.length });

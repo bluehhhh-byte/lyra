@@ -46,7 +46,7 @@ You′re all I need
 I am in the middle of your picture
 > 당신의 상상 가운데
 Lying in the reeds
-> 낙엽 속에 누워있는
+> 갈대밭에 누워있는
 I am an moth
 > 난 나방이야
 Who just wants to share your light
@@ -67,7 +67,7 @@ You′re all I need
 I am in the middle of your picture
 > 당신의 상상 가운데
 Lying in the reeds
-> 낙엽 속에 누워서
+> 갈대밭에 누워서
 
 It′s alright
 > 모든 게 제대로야
