@@ -25,24 +25,42 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=%EB%B9%A8%EA%B0%84%EB%A8%B8%EB%A6%AC%EC%95%A4&track_name=%EB%B2%A0%EB%A5%B4%EC%82%AC%EC%9C%A0%EC%9D%98%20%EC%9E%A5%EB%AF%B8
 ---
 바람한점 없어도 향기로운 꽃
+> A flower fragrant even without a breath of wind
 가시돋혀 피어나도 아름다운 꽃
+> a flower beautiful even blooming full of thorns
 혼자 피어 있어도 외롭지 않는
+> a flower that isn't lonely even blooming alone
 세상마냥 즐거움에 피는 꽃 장미
+> blooming in joy like the world itself—the rose
 
 나는 장미로 태어난 오스칼
+> I am Oscar, born as a rose
 정열과 화려함 속에서 살다갈거야
+> I will live and go in passion and splendor
 장미 장미는 화사하게 피고
+> Rose, the rose blooms radiant
 장미 장미는 순결하게 지네
+> rose, the rose falls chaste
 
 바람한점 없어도 향기로운 꽃
+> A flower fragrant even without a breath of wind
 가시돋혀 피어나도 아름다운 꽃
+> a flower beautiful even blooming full of thorns
 혼자 피어 있어도 외롭지 않는
+> a flower that isn't lonely even blooming alone
 세상마냥 즐거움에 피는 꽃 장미
+> blooming in joy like the world itself—the rose
 
 나는 장미로 태어난 오스칼
+> I am Oscar, born as a rose
 정열과 화려함 속에서 살다갈거야
+> I will live and go in passion and splendor
 장미 장미는 화사하게 피고
+> Rose, the rose blooms radiant
 장미 장미는 순결하게 지네
+> rose, the rose falls chaste
 
 장미 장미는 화사하게 피고
+> Rose, the rose blooms radiant
 장미 장미는 순결하게 지네
+> rose, the rose falls chaste

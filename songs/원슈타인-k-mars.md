@@ -25,26 +25,46 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=%EC%9B%90%EC%8A%88%ED%83%80%EC%9D%B8&track_name=K-Mars
 ---
 Welcome to the K-Mars, 다채로워 everynight
+> Welcome to the K-Mars, it's kaleidoscopic every night
 저 악마들은 anytime asking me, 얼마나 견딜 수 있어
+> Those demons are asking me anytime, how long can you hold out
 Welcome to the K-Mars, 숨 막혀, no air
+> Welcome to the K-Mars, I'm suffocating, no air
 어디에서 먼저 내려야 할지? (In spaceship)
+> Where should I get off first? (In spaceship)
 
 잠이 안 오네 저 태양 때문에 서울
+> I can't sleep, because of that sun—Seoul
 어디에도 내가 기댈 수 있는 곳은
+> Nowhere in this city is there a place
 찾을 수 없네 나는 여기에서
+> I can lean on, I can't find one here
 외치고 싶어 이 혼란 속에 넌
+> I want to shout—in all this chaos, you
 
 Where you at? (두둥실 뜬) bring me here (내 몸짓은)
+> Where you at? (floating up) bring me here (my movements)
 Where you at? (도저히 적응을 못하는 것 같아)
+> Where you at? (I don't think I can ever adjust)
 Where you at? (보고 싶은) bring me here (그 얼굴을)
+> Where you at? (the one I miss) bring me here (that face)
 Where you at? 다시 느낄 수 있다면
+> Where you at? If I could feel it again
 
 Welcome to the K-Mars, 다채로워 everynight
+> Welcome to the K-Mars, it's kaleidoscopic every night
 저 악마들은 anytime asking me, 얼마나 견딜 수 있어
+> Those demons are asking me anytime, how long can you hold out
 Welcome to the K-Mars, 숨 막혀, no air
+> Welcome to the K-Mars, I'm suffocating, no air
 어디에서 먼저 내려야 할지?
+> Where should I get off first?
 
 너무 날 것 같은 마음을 보았어
+> I saw a heart that felt far too raw
 익숙하지 않은 핏기에 난 고장 났었어
+> and at that unfamiliar flush of blood I broke down
 세상은 선택을 강요해, 우린 본능에 충실해
+> The world forces a choice, we stay true to instinct
 그래서 동물이 되기로 해
+> so we decide to become animals

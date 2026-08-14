@@ -29,18 +29,31 @@ and see the days
 we gave nothing but love
 워어어워어워어
 난 아직
+> I'm still
 그 자리에
+> in that same spot
 멍하니
+> blankly
 그날 생각에 잠겨
+> sunk in the thought of that day
 울던 우린
+> We, who had been crying
 눈물 멈추곤
+> stopped our tears
 한숨을 쉰 후
+> let out a sigh
 웃음 뒤에
+> and behind a smile
 끝이라 말하던
+> said it was over—
 너의 마지막 목소리가
+> your last voice
 내 안에 남아선
+> stayed inside me
 우우우 우우우 우
+> Ooh ooh ooh, ooh ooh ooh, ooh
 우우우 우우우 우
+> Ooh ooh ooh, ooh ooh ooh, ooh
 i'm alone with your voice
 with a scent of your lips
 i'm still into you to you
@@ -49,12 +62,19 @@ and see the days
 we gave nothing but love
 워어어워어워어
 끊어진 우리
+> The two of us, cut off
 진한 그리움에
+> when I reached that thick longing
 닿았을 때
+> at last
 메마른 향기에 찔려
+> pricked by a dried-out scent
 눈물 흘리지 않기를
+> I hope I won't shed tears
 우우우 우우우 우
+> Ooh ooh ooh, ooh ooh ooh, ooh
 우우우 우우우 우
+> Ooh ooh ooh, ooh ooh ooh, ooh
 i'm alone with your voice
 with a scent of your kiss
 i'm still into you
