@@ -74,9 +74,11 @@ ${s.lines}`
       `아래는 한 사람의 영화 취향 집계다.
 ${s.lines}
 이 취향에 맞으면서 '아직 안 본' 영화 32편을 추천하라. JSON 배열로만:
-[{"title":"영화 제목","year":"2019","why":"추천 이유"}]
+[{"title":"영화 제목","year":"2019","why":"추천 이유","direction":"extend|discover"}]
 규칙:
-- 취향의 편애 지점(높은 평균 별점을 준 국가·장르·감독)을 파고들되, 뻔한 대흥행작·프랜차이즈는 피하고 발견의 재미가 있는 작품으로
+- 절반은 취향의 연장선(direction: extend): 높은 평균 별점을 준 국가·장르·감독을 더 깊게 파고들 것
+- 절반은 새로운 방향(direction: discover): 기존 취향과 연결점은 남기되 덜 본 국가·시대·형식으로 한 걸음 옆으로 이동할 것
+- 뻔한 대흥행작·프랜차이즈는 피하고 발견의 재미가 있는 작품으로
 - 이 사람은 영화를 많이 본다. 아래는 그중 높게 평가한 것들이니 이것도, 이와 비슷하게 유명한 것도 피하고 덜 알려진 발견작을 골라라:
 ${seenList}
 - title은 한국 개봉명(없으면 원제). why는 취향과 연결한 한국어 40자 이내 한 구절
@@ -132,6 +134,7 @@ ${seenList}
         year: hit.year,
         poster: hit.thumb,
         why: String(r.why || "").trim(),
+        direction: r.direction === "discover" ? "discover" : "extend",
         at: now,
       });
     }
