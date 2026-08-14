@@ -5,7 +5,9 @@
 import fs from "fs";
 import { FM } from "../lib/admin/frontmatter.js";
 import { isJaLine } from "../lib/admin/song-meta.js";
+import { guard } from "../lib/admin/preflight.js";
 
+guard();
 let added = 0, files = 0, missed = 0, skipped = 0;
 for (const file of process.argv.slice(2)) {
   let songs;

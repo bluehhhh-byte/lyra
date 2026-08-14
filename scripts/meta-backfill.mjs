@@ -14,12 +14,14 @@ import fs from "fs";
 import path from "path";
 import { FM, fmValue, setField } from "../lib/admin/frontmatter.js";
 import { pickTrack } from "../lib/admin/match.js";
+import { guard } from "../lib/admin/preflight.js";
 
 const args = process.argv.slice(2);
 const WRITE = args.includes("--write");
 const PROVIDER = (args.find((a) => a.startsWith("--provider=")) || "--provider=itunes").split("=")[1];
 const LIMIT = Number((args.find((a) => a.startsWith("--limit=")) || "--limit=100").split("=")[1]);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+if (WRITE) guard();
 const UA = "Lyra/1.0 (personal music archive)";
 
 // ── 상태 (iTunes rate limit 회로) ───────────────────────────────────────────

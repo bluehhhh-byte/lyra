@@ -1,5 +1,8 @@
 # push/PR마다 pnpm check(테스트 + 데이터 lint + 빌드 + smoke) 자동 실행.
 # 배포된 admin이 곡을 저장할 때마다 커밋이 생기므로, 데이터 커밋도 매번 검증된다.
+#
+# action 버전은 Node 24 런타임을 쓰는 최신 메이저로 맞춘다 — v4는 Node 20 기반이라
+# "Node.js 20 actions are deprecated" 경고가 매 실행마다 붙었다.
 name: check
 
 on:
@@ -11,11 +14,14 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4 # 버전은 package.json의 packageManager를 따른다
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
+      # 원본 대조는 내보내기 폴더가 있어야 돌아가므로 CI에서는 생략한다.
+      # 대신 진단은 돌려서 데이터 품질 대기열이 갑자기 늘었는지 로그로 남긴다.
+      - run: node scripts/needs-work.mjs

@@ -9,6 +9,7 @@
 //  - 기존 값이 있으면 덮지 않는다 (--overwrite 를 줄 때만 덮는다).
 import fs from "fs";
 import { getAllSongs } from "../lib/songs.js";
+import { guard } from "../lib/admin/preflight.js";
 import { FM, fmValue, setField } from "../lib/admin/frontmatter.js";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../lib/keywords.js";
 import { GENRES, capGenre, COUNTRY_TAGS } from "../lib/genre.js";
@@ -17,15 +18,22 @@ const args = process.argv.slice(2);
 const WRITE = args.includes("--write");
 const OVERWRITE = args.includes("--overwrite");
 const files = args.filter((a) => !a.startsWith("--"));
+if (WRITE) guard();
 
 const bySlug = new Map(getAllSongs().map((s) => [s.slug, s]));
 const report = { at: new Date().toISOString(), applied: [], rejected: [], ignored: [] };
 
+// 어떤 모델이 무엇을 만들었는지 남긴다 — 나중에 "이 문장 누가 썼나"를 물을 수 있어야 한다.
+// 파일 안에 model/generated_at/prompt_version이 있으면 그대로 쓰고, 없으면 인자로 받는다.
+const LEDGER = "data/ai-generation-log.json";
+const argOf = (k) => (args.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1] || "";
+
 for (const file of files) {
-  let items = [];
+  let items = [], meta = {};
   try {
     const j = JSON.parse(fs.readFileSync(file, "utf8"));
     items = Array.isArray(j) ? j : j.items || [];
+    meta = Array.isArray(j) ? {} : { model: j.model, generated_at: j.generated_at, prompt_version: j.prompt_version };
   } catch (e) {
     report.rejected.push({ file, why: `JSON 파싱 실패: ${e.message.slice(0, 60)}` });
     continue;
@@ -92,11 +100,36 @@ for (const file of files) {
 
     if (!changed.length) continue;
     if (WRITE) fs.writeFileSync(p, raw);
-    report.applied.push({ slug, changed, confidence: it.confidence || "" });
+    report.applied.push({
+      slug, changed,
+      confidence: it.confidence || "",
+      model: it.model || meta.model || argOf("model") || "unknown",
+      generated_at: it.generated_at || meta.generated_at || "",
+      prompt_version: it.prompt_version || meta.prompt_version || argOf("prompt-version") || "",
+      reviewed: it.reviewed === true,
+    });
   }
 }
 
 fs.writeFileSync("data/validation-report.json", JSON.stringify(report, null, 1));
+
+// 원장에 이어 붙인다 (덮어쓰지 않는다 — 이력이니까)
+if (WRITE && report.applied.length) {
+  let log = { entries: [] };
+  try { log = JSON.parse(fs.readFileSync(LEDGER, "utf8")); } catch {}
+  log.entries = log.entries || [];
+  log.entries.push({
+    at: report.at,
+    files: files.map((f) => f.split(/[\\/]/).pop()),
+    applied: report.applied.length,
+    rejected: report.rejected.length,
+    byModel: report.applied.reduce((acc, a) => ((acc[a.model] = (acc[a.model] || 0) + 1), acc), {}),
+    fields: [...new Set(report.applied.flatMap((a) => a.changed))],
+    slugs: report.applied.map((a) => a.slug),
+  });
+  log.at = report.at;
+  fs.writeFileSync(LEDGER, JSON.stringify(log, null, 1));
+}
 console.log(`${WRITE ? "반영" : "검증만"} — 통과 ${report.applied.length} · 거부 ${report.rejected.length} · 무시(불변 필드) ${report.ignored.length}`);
 for (const r of report.rejected.slice(0, 10)) console.log(`  ✗ ${r.slug || r.file}${r.field ? `.${r.field}` : ""}: ${r.why}`);
 if (report.rejected.length > 10) console.log(`  … 외 ${report.rejected.length - 10}건 (data/validation-report.json)`);

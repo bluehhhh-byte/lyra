@@ -15,7 +15,10 @@
     "visual": "python scripts/visual-check.py",
     "check": "node scripts/run-tests.mjs && node scripts/lint-data.mjs && next build && node scripts/smoke.mjs",
     "verify:instagram": "node scripts/verify-instagram.mjs",
-    "build:index": "node scripts/build-search-index.mjs"
+    "build:index": "node scripts/build-search-index.mjs",
+    "status": "node scripts/project-status.mjs --write",
+    "needs": "node scripts/needs-work.mjs",
+    "worktree": "node scripts/worktree.mjs"
   },
   "dependencies": {
     "next": "^15.3.0",

@@ -12,12 +12,14 @@
 // 줄 순서·내용은 그대로, 앞에 `> `만 붙인다.
 import fs from "fs";
 import { FM } from "../lib/admin/frontmatter.js";
+import { guard } from "../lib/admin/preflight.js";
 
 const WRITE = process.argv.includes("--write");
 const isNote = (s) => /^[🗨✏]/u.test(s); // 본인이 쓴 해설 — 가사도 번역도 아니다
 const hangul = (s) => (s.match(/[가-힣]/g) || []).length;
 const foreign = (s) => (s.match(/[a-zA-Z぀-ヿ一-鿿]/g) || []).length;
 
+if (WRITE) guard();
 let files = 0, promoted = 0;
 for (const f of fs.readdirSync("songs").filter((x) => x.endsWith(".md"))) {
   const raw = fs.readFileSync("songs/" + f, "utf8").replace(/\r\n/g, "\n");
