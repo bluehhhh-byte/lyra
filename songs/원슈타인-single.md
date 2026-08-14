@@ -23,6 +23,8 @@ source: instagram
 source_tag: 230528_0805
 source_note: 
 source_hash: 8084aa964c15e20ac4d5801892f6a99ae1e0a4a3
+lyrics_external: true
+lyrics_source: https://lrclib.net/api/get?artist_name=Wonstein&track_name=Single
 source_body_hash: 3a38822ea435bd26e9aa0cfe67e4277838e342bf
 ---
 🗨 생각보다 꽤 지난 일이야. 차에서 그 아이에게 원슈타인의 적외선 카메라를 불러준 일은. 난 왜 그랬을까. 그 시절 가장 좋아했고 가장 많이 연습했던 곡이었어. 그 아이가 좋아한다기에. 내 창법도 감성도 많이 바꾸면서. 어울리지 않는 옷이라는 생각은 했지만, 생각보다 잘 어울렸대. 넌 내게 섬세한 사람이라고 했지. 그리고 난 거기까지만 했어. 이유는 잘 모르겠어.

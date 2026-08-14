@@ -21,6 +21,7 @@ source: instagram
 source_tag: 260130_1722
 source_note: 
 source_hash: c34cf8f61c0766ce6cfcaa35d155e92f1d1bead8
+instrumental: true
 lyrics_external: 
 lyrics_source: 
 ---
