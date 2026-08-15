@@ -26,12 +26,15 @@ export default function HomeIntro({ insights }) {
   return (
     <div className="mb-16 pt-4">
       <section className="mb-14 border-b border-line pb-12">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">Collection portrait</p>
-        <h1 className="max-w-4xl font-serif text-3xl leading-tight sm:text-5xl sm:leading-tight">
-          음악과 영화로 남긴<br />한 사람의 문화적 기록
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">A cultural biography</p>
+        {/* 영어 제목 — 단어 중간이 잘리지 않게 balance로 줄을 나눈다 */}
+        <h1 className="max-w-4xl text-balance font-serif text-3xl leading-tight sm:text-5xl sm:leading-tight">
+          The Words that Shaped the World
         </h1>
         <p className="mt-6 max-w-3xl text-sm leading-7 text-muted sm:text-base">
-          {portrait || "좋아한 음악의 가사와 번역, 감상한 영화의 평점과 기억을 함께 모읍니다."}
+          한 줄의 가사와 한 편의 영화가 세계를 이해하는 방식에 남긴 흔적.
+          좋아했던 문장, 번역하고 되새긴 노래, 오래 남은 장면을 시간의 순서로 모은 기록이다.
+          {portrait ? ` ${portrait}` : ""}
         </p>
         <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
           <span>{taste.count}곡</span>

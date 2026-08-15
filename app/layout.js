@@ -11,12 +11,12 @@ const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)})==
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Lyra — 가사 컬렉션",
-  description: "좋아하는 노래의 가사와 한글 번역을 모아두는 곳",
+  title: "Lyra — The Words that Shaped the World",
+  description: "가사와 번역, 영화와 별점을 시간의 순서로 모은 기록 — 한 줄의 문장이 세계를 이해하는 방식에 남긴 흔적",
   openGraph: {
     siteName: "Lyra",
-    title: "Lyra — 가사 컬렉션",
-    description: "좋아하는 노래의 가사와 한글 번역을 모아두는 곳",
+    title: "Lyra — The Words that Shaped the World",
+    description: "가사와 번역, 영화와 별점을 시간의 순서로 모은 기록 — 한 줄의 문장이 세계를 이해하는 방식에 남긴 흔적",
   },
   // iOS ignores the manifest — it needs its own meta tags to install standalone
   appleWebApp: { capable: true, title: "Lyra", statusBarStyle: "black" },

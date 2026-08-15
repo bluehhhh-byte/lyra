@@ -2,9 +2,9 @@
 // installable on a phone home screen (standalone, no browser chrome).
 export default function manifest() {
   return {
-    name: "Lyra — 가사 컬렉션",
+    name: "Lyra — The Words that Shaped the World",
     short_name: "Lyra",
-    description: "좋아하는 노래의 가사와 한글 번역을 모아두는 곳",
+    description: "가사와 번역, 영화와 별점을 시간의 순서로 모은 기록",
     start_url: "/",
     display: "standalone",
     background_color: "#0d0d0f",
