@@ -40,11 +40,12 @@ function DayItem({ item }) {
           loading="lazy"
           className={`w-9 shrink-0 rounded border border-line object-cover ${item.type === "song" ? "aspect-square" : "aspect-[2/3]"}`}
         />
-        <span className="min-w-0 text-sm leading-5">
+        <span className="min-w-0 flex-1 text-sm leading-5">
           <span className="mr-1.5 rounded border border-line px-1 text-[10px] text-muted align-[2px]">
             {item.type === "song" ? "음악" : item.media === "tv" ? "TV" : "영화"}
           </span>
-          <span className="break-keep group-hover:text-accent">{workLabel(item)}</span>
+          {/* 긴 영문 아티스트명이 줄바꿈되지 않아 폭을 밀어내지 않게 — 자르지는 않는다 */}
+          <span className="group-hover:text-accent [overflow-wrap:anywhere]">{workLabel(item)}</span>
         </span>
       </Link>
     </li>
@@ -134,21 +135,21 @@ export default async function ArchivePage({ searchParams }) {
       )}
 
       {!theme && (
-        <section className="mb-10" aria-labelledby="orbit-heading">
+        <section className="mb-10 min-w-0" aria-labelledby="orbit-heading">
           <h2 id="orbit-heading" className="text-lg font-bold">{year}년의 감정 궤도</h2>
           <p className="mb-4 mt-1 text-xs text-muted">
             각 점은 그 달 음악 기록의 감정 좌표다. 점을 고르면 그 달로 이동한다.
           </p>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
+          <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
             <EmotionOrbit stats={yearStats} month={month} monthHref={monthHref} />
             {monthStat?.emotions.length > 0 && (
-              <div>
+              <div className="min-w-0 max-w-full">
                 <h3 className="mb-2 text-sm font-semibold">{Number(month.slice(5))}월의 감정 구성</h3>
                 <EmotionComposition stat={monthStat} />
               </div>
             )}
           </div>
-          <div className="mt-8">
+          <div className="mt-8 min-w-0">
             <h3 className="mb-3 text-sm font-semibold">시간축 일대기</h3>
             <BioTimeline stats={yearStats} month={month} monthHref={monthHref} />
           </div>
@@ -170,7 +171,7 @@ export default async function ArchivePage({ searchParams }) {
 
       <ol className="divide-y divide-line border-y border-line">
         {entries.map((entry) => (
-          <li key={entry.day} className="grid gap-4 py-7 sm:grid-cols-[180px_minmax(0,1fr)]">
+          <li key={entry.day} className="grid min-w-0 gap-4 py-7 sm:grid-cols-[180px_minmax(0,1fr)]">
             <div>
               <div className="flex items-center gap-2">
                 <span
@@ -193,7 +194,7 @@ export default async function ArchivePage({ searchParams }) {
               {entry.dominant && <p className="mt-2 pl-[18px] text-xs text-muted">{entry.dominant}</p>}
             </div>
             <div className="min-w-0">
-              <ul className="grid gap-x-6 sm:grid-cols-2">
+              <ul className="grid min-w-0 gap-x-6 sm:grid-cols-2">
                 {entry.items.slice(0, VISIBLE_ITEMS).map((item) => (
                   <DayItem key={`${item.type}-${item.slug}`} item={item} />
                 ))}
@@ -203,7 +204,7 @@ export default async function ArchivePage({ searchParams }) {
                   <summary className="cursor-pointer list-none text-xs text-accent hover:underline">
                     나머지 {entry.items.length - VISIBLE_ITEMS}개 펼치기
                   </summary>
-                  <ul className="mt-1 grid gap-x-6 sm:grid-cols-2">
+                  <ul className="mt-1 grid min-w-0 gap-x-6 sm:grid-cols-2">
                     {entry.items.slice(VISIBLE_ITEMS).map((item) => (
                       <DayItem key={`${item.type}-${item.slug}`} item={item} />
                     ))}
