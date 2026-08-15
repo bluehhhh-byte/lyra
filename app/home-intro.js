@@ -1,17 +1,18 @@
 import Link from "next/link";
 import CoverImage from "./cover-image";
 import { shiftSentence } from "../lib/home-insights";
+import { workLabel } from "../lib/latest-day";
+import RelativeDay from "./relative-day";
 
-function RecordCard({ item, compact = false }) {
+function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
   return (
     <Link href={href} className="group min-w-0">
-      <div className={`overflow-hidden rounded-xl border border-line bg-surface ${compact && item.kind === "movie" ? "aspect-[2/3]" : "aspect-square"}`}>
+      <div className="aspect-square overflow-hidden rounded-xl border border-line bg-surface">
         <CoverImage
           src={item.image}
           alt=""
           label={item.title}
-          loading={compact ? "lazy" : undefined}
           className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
         />
       </div>
@@ -21,8 +22,37 @@ function RecordCard({ item, compact = false }) {
   );
 }
 
+// 최신 기록 날짜의 감정 분석 — 저장된 문장이 아니라 지금 데이터로 매번 계산된 것이다
+function LatestDay({ latest }) {
+  if (!latest?.text) return null;
+  const link = (item) =>
+    item && (
+      <Link
+        key={`${item.kind}-${item.slug}`}
+        href={item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`}
+        className="text-accent hover:underline [overflow-wrap:anywhere]"
+      >
+        {workLabel(item)}
+      </Link>
+    );
+  const links = [link(latest.repSong), link(latest.repMovie)].filter(Boolean);
+  return (
+    <section className="mb-14 min-w-0 rounded-2xl border border-line bg-surface px-5 py-5 sm:px-7">
+      <p className="text-xs font-semibold text-accent">
+        <RelativeDay day={latest.day} />
+      </p>
+      <p className="mt-2 max-w-3xl font-serif text-base leading-7 sm:text-lg sm:leading-8">{latest.text}</p>
+      {links.length > 0 && (
+        <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+          {links.map((l, i) => <span key={i} className="min-w-0">{l}</span>)}
+        </p>
+      )}
+    </section>
+  );
+}
+
 export default function HomeIntro({ insights }) {
-  const { taste, portrait, shift, recent, revisit } = insights;
+  const { taste, shift, recent, latest } = insights;
   return (
     <div className="mb-16 pt-4">
       <section className="mb-14 border-b border-line pb-12">
@@ -31,10 +61,11 @@ export default function HomeIntro({ insights }) {
         <h1 className="max-w-4xl text-balance font-serif text-3xl leading-tight sm:text-5xl sm:leading-tight">
           The Words that Shaped the World
         </h1>
+        {/* 고정 소개문. 여기에 취향 통계 문장을 이어 붙이지 않는다 — 통계는 아래 줄과
+            /songs/taste에 따로 있다 */}
         <p className="mt-6 max-w-3xl text-sm leading-7 text-muted sm:text-base">
           한 줄의 가사와 한 편의 영화가 세계를 이해하는 방식에 남긴 흔적.
           좋아했던 문장, 번역하고 되새긴 노래, 오래 남은 장면을 시간의 순서로 모은 기록이다.
-          {portrait ? ` ${portrait}` : ""}
         </p>
         <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
           <span>{taste.count}곡</span>
@@ -44,6 +75,8 @@ export default function HomeIntro({ insights }) {
           <Link href="/songs/taste" className="text-accent hover:underline">취향의 근거 보기 →</Link>
         </div>
       </section>
+
+      <LatestDay latest={latest} />
 
       {recent.length > 0 && (
         <section className="mb-14">
@@ -67,18 +100,6 @@ export default function HomeIntro({ insights }) {
         </div>
         <Link href="/songs/taste" className="text-xs text-muted hover:text-accent">변화를 만든 곡 보기 →</Link>
       </section>
-
-      {revisit.length > 0 && (
-        <section>
-          <div className="mb-5">
-            <h2 className="text-lg font-bold">다시 꺼내 본 기록</h2>
-            <p className="mt-1 text-xs text-muted">최근 기록 뒤에 묻힌 오래된 음악과 영화를 다시 만납니다.</p>
-          </div>
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-4">
-            {revisit.map((item) => <RecordCard key={`${item.kind}-${item.slug}`} item={item} compact />)}
-          </div>
-        </section>
-      )}
     </div>
   );
 }
