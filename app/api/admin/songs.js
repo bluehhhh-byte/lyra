@@ -1,5 +1,5 @@
 ﻿// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
-import { readSong, writeSong, deleteSong, readData, writeData } from "../../../lib/store";
+import { readSong, writeSong, deleteSong, readData, writeData, commitFiles } from "../../../lib/store";
 import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
@@ -788,7 +788,7 @@ ${listed}`,
     const items = Array.isArray(body.items) ? body.items : [];
     if (!items.length) return Response.json({ error: "items가 비어 있습니다" }, { status: 422 });
     const bySlug = new Map(getAllSongs().map((s) => [s.slug, s]));
-    const applied = [], rejected = [];
+    const applied = [], rejected = [], pending = [];
     for (const it of items.slice(0, 1000)) {
       const song = bySlug.get(it.slug);
       if (!song) { rejected.push({ slug: it.slug, why: "없는 곡" }); continue; }
@@ -843,10 +843,17 @@ ${listed}`,
       }
 
       if (!changed.length) continue;
-      await writeSong(it.slug, raw, `chore(song): bulk ${changed.join(",")} — ${it.slug}`);
+      // 곡마다 커밋하지 않고 모아 둔다 — 아래에서 한 커밋으로 나간다
+      pending.push({ path: `songs/${it.slug}.md`, content: raw });
       applied.push({ slug: it.slug, changed });
     }
-    return Response.json({ applied: applied.length, rejected, fields: [...new Set(applied.flatMap((a) => a.changed))] });
+    const fields = [...new Set(applied.flatMap((a) => a.changed))];
+    if (pending.length)
+      await commitFiles(
+        pending,
+        `chore(song): bulk ${fields.join(",")} — ${applied.length}곡`
+      );
+    return Response.json({ applied: applied.length, rejected, fields });
   }
 
   if (action === "load") {
@@ -921,7 +928,10 @@ ${listed}`,
       out = setField(out, "lyrics_verified_at", verifiedAt, "published");
       out = setField(out, "lyrics_source", source, "lyrics_verified_at");
     }
-    if (out !== before) await writeSong(slug, out, `fix(lyrics): audit — ${slug}`);
+    // 곡 본문과 교정 이력은 한 저장에서 함께 바뀐다 — 커밋도 하나로 묶는다.
+    // 따로 쓰면 배포가 두 번 돌고, 그 사이 이력 없는 본문이 잠깐 배포된다.
+    const writes = [];
+    if (out !== before) writes.push({ path: `songs/${slug}.md`, content: out });
 
     if (corrections.length) {
       const store = readData(CORRECTIONS_FILE, { items: [] });
@@ -938,8 +948,13 @@ ${listed}`,
           sourceUrl: String(c.sourceUrl || "").trim(),
           reviewedAt: new Date().toISOString(),
         });
-      await writeData(CORRECTIONS_FILE, { items: list, at: new Date().toISOString() }, `chore(audit): corrections — ${slug}`);
+      writes.push({
+        path: `data/${CORRECTIONS_FILE}`,
+        // 들여쓰기 1칸은 data/*.json 전체가 쓰는 형식이다 — 바꾸면 diff가 통째로 뜬다
+        content: `${JSON.stringify({ items: list, at: new Date().toISOString() }, null, 1)}\n`,
+      });
     }
+    if (writes.length) await commitFiles(writes, `fix(lyrics): audit — ${slug}`);
     return Response.json({ ok: true, changed: out !== before, corrections: corrections.length });
   }
 
