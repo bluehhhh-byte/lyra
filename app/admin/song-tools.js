@@ -30,7 +30,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // song that has none (used to give Korean songs the bilingual two-line layout).
 export default function SongTools({ songs }) {
   const [state, setState] = useState({}); // slug -> { busy, comment, msg, err }
-  const [bulk, setBulk] = useState(null); // {done, total} while regenerating all
+  const [bulk, setBulk] = useState(null); // {done, total} while extracting all keywords
 
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
 
@@ -46,20 +46,7 @@ export default function SongTools({ songs }) {
     }
   };
 
-  // one song per request (timeout-safe), sequential to respect the Gemini rate limit
-  const regenAll = async () => {
-    // 곡당 1회 호출 × 전곡 — 무료 일일 한도를 크게 먹는다. 실수 클릭 방지.
-    if (!confirm(`전체 ${songs.length}곡 = Gemini ${songs.length}회 호출 (약 ${Math.ceil((songs.length * 7) / 60)}분).\n태그·코멘트·독음을 전부 덮어씁니다. 계속할까요?`)) return;
-    for (let i = 0; i < songs.length; i++) {
-      setBulk({ done: i, total: songs.length });
-      await regenMeta(songs[i].slug);
-      if (i < songs.length - 1) await sleep(BULK_GAP_MS); // stay under the RPM limit
-    }
-    setBulk({ done: songs.length, total: songs.length });
-    setTimeout(() => setBulk(null), 4000);
-  };
-
-  // keywords+emotion only — regenAll would also clobber comments/tags.
+  // keywords+emotion only — comments and tags stay untouched.
   // Sequential: parallel calls trip the Gemini free-tier rate limit.
   const keywordsAll = async () => {
     if (!confirm(`전체 ${songs.length}곡 = Gemini ${songs.length}회 호출 (약 ${Math.ceil((songs.length * 7) / 60)}분).\nkeywords·emotion만 채웁니다(코멘트·태그 보존). 계속할까요?`)) return;
@@ -167,19 +154,9 @@ export default function SongTools({ songs }) {
 
   return (
     <div className="max-w-2xl">
-      {/* 모바일: 2×2 그리드(버튼 3 + 설명), 데스크톱: 한 줄 — 버튼 3개가
-          min-w 고정 flex라 좁은 화면을 뚫고 나가던 것 */}
+      {/* 모바일: 2열 그리드, 데스크톱: 한 줄 — 고정 폭 버튼이 좁은 화면을
+          뚫고 나가지 않게 한다. */}
       <div className="mb-3 grid grid-cols-2 items-center gap-2 sm:flex sm:gap-3">
-        <button
-          onClick={regenAll}
-          disabled={!!bulk}
-          className="rounded-lg bg-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-bg disabled:opacity-40 sm:min-w-32"
-        >
-          {/* two lines in both states so the button keeps its size while running */}
-          전체 메타
-          <br />
-          {bulk ? `재생성 중… ${bulk.done}/${bulk.total}` : "AI 재생성"}
-        </button>
         <button
           onClick={keywordsAll}
           disabled={!!bulk}
