@@ -9,6 +9,7 @@ const label = {
   READY: "반영 완료",
   ERROR: "배포 실패",
   CANCELED: "배포 취소됨",
+  TRIGGERED: "배포 요청 접수 — 약 2분 뒤 반영",
 };
 
 async function json(res) {
@@ -32,6 +33,7 @@ export default function DeployControl() {
     try {
       let { deployment } = await json(await fetch("/api/admin/deploy", { method: "POST" }));
       setState(deployment.state);
+      if (deployment.pollable === false) return;
       for (let i = 0; i < 90 && !terminal.has(deployment.state); i++) {
         await wait(3000);
         ({ deployment } = await json(
@@ -49,7 +51,7 @@ export default function DeployControl() {
     }
   };
 
-  const busy = !!state && !terminal.has(state);
+  const busy = !!state && state !== "TRIGGERED" && !terminal.has(state);
   return (
     <div className="flex min-h-9 items-center gap-2">
       <button
