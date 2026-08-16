@@ -9,7 +9,7 @@ const label = {
   READY: "반영 완료",
   ERROR: "배포 실패",
   CANCELED: "배포 취소됨",
-  TRIGGERED: "배포 요청 접수 — 약 2분 뒤 반영",
+  TRIGGERED: "빌드 중 — 반영되면 알려준다",
 };
 
 async function json(res) {
@@ -25,15 +25,35 @@ export default function DeployControl() {
   const [error, setError] = useState("");
   const running = useRef(false);
 
+  // Deploy Hook 경로는 진행 상태를 조회할 수 없다(토큰이 있어야 한다). 대신 지금
+  // 서빙 중인 빌드가 바뀌는지를 본다 — 바뀌면 그게 곧 반영 완료다.
+  const buildId = async () => {
+    try {
+      const v = await (await fetch("/api/version", { cache: "no-store" })).json();
+      return `${v.sha}:${v.deploymentId}`;
+    } catch {
+      return "";
+    }
+  };
+
   const deploy = async () => {
     if (running.current) return;
     running.current = true;
     setError("");
     setState("INITIALIZING");
     try {
+      const before = await buildId();
       let { deployment } = await json(await fetch("/api/admin/deploy", { method: "POST" }));
       setState(deployment.state);
-      if (deployment.pollable === false) return;
+      if (deployment.pollable === false) {
+        // 최대 5분. 빌드가 끝나 새 빌드가 응답하기 시작하면 값이 달라진다.
+        for (let i = 0; i < 100; i++) {
+          await wait(3000);
+          const now = await buildId();
+          if (now && before && now !== before) return setState("READY");
+        }
+        throw new Error("배포가 5분 안에 반영되지 않았습니다. Vercel 대시보드에서 확인해 주세요");
+      }
       for (let i = 0; i < 90 && !terminal.has(deployment.state); i++) {
         await wait(3000);
         ({ deployment } = await json(
@@ -51,7 +71,7 @@ export default function DeployControl() {
     }
   };
 
-  const busy = !!state && state !== "TRIGGERED" && !terminal.has(state);
+  const busy = !!state && !terminal.has(state);
   return (
     <div className="flex min-h-9 items-center gap-2">
       <button
