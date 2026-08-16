@@ -77,6 +77,7 @@ for (const { url, expect } of CHECKS) {
 const AUTH_CHECKS = [
   { url: "/admin", ok: (r) => r.status >= 300 && r.status < 400 && r.headers.get("location")?.includes("/admin/login"), desc: "비로그인 /admin → 로그인으로 redirect" },
   { url: "/api/admin", ok: (r) => r.status === 401, desc: "비로그인 /api/admin → 401" },
+  { url: "/api/admin/deploy", ok: (r) => r.status === 401, desc: "비로그인 배포 요청 → 401" },
   { url: "/admin/login", ok: (r) => r.status === 200, desc: "/admin/login 열림" },
 ];
 for (const { url, ok, desc } of AUTH_CHECKS) {

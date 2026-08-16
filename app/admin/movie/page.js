@@ -3,6 +3,7 @@ import { getAllMovies } from "../../../lib/movies";
 import MovieForm from "../movie-form";
 import MovieTools from "../movie-tools";
 import WatchaImport from "../watcha-import";
+import DeployControl from "../deploy-control";
 
 export const metadata = { title: "Syno. 관리 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
@@ -11,11 +12,14 @@ export default function MovieAdminPage() {
   const movies = getAllMovies();
   return (
     <>
-      <div className="mb-8 flex items-center gap-4">
+      <div className="mb-8 flex flex-wrap items-center gap-4">
         <h1 className="text-2xl font-bold">영화 관리</h1>
         <Link href="/admin" className="text-sm text-muted transition hover:text-accent">
           → 곡 관리로
         </Link>
+        <div className="sm:ml-auto">
+          <DeployControl />
+        </div>
       </div>
       <MovieForm />
 

@@ -8,6 +8,7 @@ import SongTools from "./song-tools";
 import ArtworkReview from "./artwork-review";
 import LyricsAudit from "./lyrics-audit";
 import BulkWork from "./bulk-work";
+import DeployControl from "./deploy-control";
 import { readData } from "../../lib/store";
 
 export const metadata = { title: "곡 추가 | Lyra" };
@@ -23,11 +24,14 @@ export default function AdminPage() {
     .map((s) => ({ slug: s.slug, title: s.title, artist: s.artist, year: s.year || "", status: auditStatus.get(s.slug) || "" }));
   return (
     <>
-      <div className="mb-8 flex items-center gap-4">
+      <div className="mb-8 flex flex-wrap items-center gap-4">
         <h1 className="text-2xl font-bold">곡 추가</h1>
         <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent">
           → 영화 관리로
         </Link>
+        <div className="sm:ml-auto">
+          <DeployControl />
+        </div>
       </div>
       <AdminForm />
 
