@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const terminal = new Set(["READY", "ERROR", "CANCELED"]);
 const label = {
@@ -23,7 +23,16 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export default function DeployControl() {
   const [state, setState] = useState("");
   const [error, setError] = useState("");
+  const [status, setStatus] = useState(null);
   const running = useRef(false);
+
+  // 어느 경로로 배포되는지 미리 보여준다 — 훅을 넣고 재배포까지 했는지 여기서 확인된다
+  useEffect(() => {
+    fetch("/api/admin/deploy", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((d) => setStatus(d.status || null))
+      .catch(() => {});
+  }, []);
 
   // Deploy Hook 경로는 진행 상태를 조회할 수 없다(토큰이 있어야 한다). 대신 지금
   // 서빙 중인 빌드가 바뀌는지를 본다 — 바뀌면 그게 곧 반영 완료다.
@@ -72,8 +81,13 @@ export default function DeployControl() {
   };
 
   const busy = !!state && !terminal.has(state);
+  const setup = {
+    hook: { text: "Deploy Hook 사용", tone: "text-muted" },
+    token: { text: "토큰 사용 — 거부되면 Deploy Hook을 만드세요", tone: "text-muted" },
+    none: { text: "배포 설정 없음 — Deploy Hook이 필요합니다", tone: "text-red-500" },
+  }[status?.mode];
   return (
-    <div className="flex min-h-9 items-center gap-2">
+    <div className="flex min-h-9 flex-wrap items-center gap-x-2 gap-y-1">
       <button
         type="button"
         onClick={deploy}
@@ -85,6 +99,12 @@ export default function DeployControl() {
       {(state || error) && (
         <span className={`max-w-64 text-xs ${state === "ERROR" ? "text-red-500" : "text-muted"}`} role="status" aria-live="polite">
           {error || label[state] || state}
+        </span>
+      )}
+      {!state && !error && setup && (
+        <span className={`text-xs ${setup.tone}`}>
+          {setup.text}
+          {status.hook === "invalid" && " (VERCEL_DEPLOY_HOOK 주소 형식이 잘못됨)"}
         </span>
       )}
     </div>
