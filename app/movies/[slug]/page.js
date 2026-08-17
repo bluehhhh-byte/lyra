@@ -8,6 +8,8 @@ import { tmdbUrl } from "../../../lib/tmdb-link";
 import { kstDay } from "../../../lib/kst";
 import { getAllSongsRuntime } from "../../../lib/songs";
 import { COUNTRY_TAGS } from "../../../lib/genre";
+import { getMomentsForTarget } from "../../../lib/moments";
+import MomentConnections from "../../moment-connections";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -73,6 +75,7 @@ export default async function MoviePage({ params }) {
   const movie = all.find((m) => m.slug === decodeURIComponent(slug));
   if (!movie) notFound();
   const related = relatedMovies(movie, all);
+  const moments = await getMomentsForTarget("movie", movie.slug);
 
   // Lyra×Syno 교차 — 같은 시대(±같은 권역이면 우선)의 컬렉션 곡.
   // 같은 사이트에 음악·영화가 함께 사는 것의 배당금.
@@ -234,6 +237,8 @@ export default async function MoviePage({ params }) {
           </Link>
         </p>
       )}
+
+      <MomentConnections moments={moments} targetKind="movie" targetSlug={movie.slug} />
 
       {related.length > 0 && (
         <div className="mx-auto mt-20 max-w-2xl">

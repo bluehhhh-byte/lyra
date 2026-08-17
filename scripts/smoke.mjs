@@ -25,6 +25,7 @@ const CHECKS = [
   { url: "/stats", expect: null },
   { url: "/diary", expect: null },
   { url: "/archive", expect: null },
+  { url: "/moments", expect: "문화 장면" },
   { url: "/people", expect: null },
   { url: `/api/search?q=${encodeURIComponent("a")}`, expect: '"groups"' },
   { url: "/api/lyrics-index", expect: '"slug"' },

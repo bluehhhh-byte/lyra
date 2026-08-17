@@ -7,8 +7,8 @@
 
 - **Next.js 15** (App Router) — 프론트 + API 라우트 한 프로젝트
 - **React 19**, **Tailwind CSS v4**
-- **Vercel** 배포 (GitHub 연동, push 시 자동 재배포)
-- **데이터 저장소**: 곡 하나 = markdown 파일 하나 (`songs/*.md`). DB 없음.
+- **Vercel** 배포 (코드 변경은 관리자 배포 버튼으로 GitHub `main`을 빌드)
+- **데이터 저장소**: 운영은 Neon PostgreSQL, Markdown·JSON은 이관 원본과 로컬 폴백.
 - **외부 API**
   - iTunes Search API — 곡 메타데이터·앨범아트·미리듣기·발매연도 (키 불필요)
   - lrclib.net — 가사 자동 로드 (키 불필요)
@@ -181,9 +181,11 @@ Gemini에는 **원문을 주지 않는다.** 2단계에서 넘기는 건 제목�
   쿠키에는 비밀번호 원문이 아니라 HMAC 서명된 30일 만료 토큰이 담긴다(Web Crypto —
   Edge middleware·Node 라우트 양쪽 동작). 비밀번호를 바꾸면 기존 토큰 전부 무효.
   로컬 dev는 인증 없이 열림.
-- **쓰기 백엔드** (`lib/store.js`): Vercel 서버리스는 파일시스템이 읽기 전용이므로,
-  온라인에서 곡 저장/수정/삭제는 **GitHub Contents API 커밋**으로 처리 → 커밋이 재배포를 트리거.
-  로컬 dev는 `fs`로 직접 쓰기(즉시 반영). `GITHUB_TOKEN`·`GITHUB_REPO`로 분기.
+- **쓰기 백엔드** (`lib/store.js`, `lib/content-db.js`): 운영에서는 Neon에 저장하고 관련 Next.js
+  캐시와 경로를 무효화해 배포 없이 즉시 반영한다. 로컬 dev는 `fs`에 직접 쓰며, GitHub Contents
+  API는 명시적인 호환 폴백과 모바일 코드 배포 소스로만 남긴다.
+- **문화 장면** (`lib/moments.js`): `lyra_moments`에 기간·본문·감정·키워드를, `lyra_moment_links`에
+  연결된 곡·영화·가사 구절·연결 이유를 저장한다. 공개 조회는 서버 컴포넌트가 직접 수행한다.
 - **Gemini 호출 통합**: 곡은 태그·제목·독음·코멘트·키워드·감정을 1회 JSON 호출로, 영화도
   줄거리 정돈+코멘트를 1회 JSON 호출로 묶어 무료 티어 rate limit 회피.
   일괄 작업은 곡당 ~7s 간격(순차)으로 분당 한도(~10 RPM) 아래 유지, 일일 한도 소진 시엔 다음날.
@@ -222,8 +224,10 @@ Gemini에는 **원문을 주지 않는다.** 2단계에서 넘기는 건 제목�
 | 변수 | 용도 | 필수 |
 |------|------|------|
 | `ADMIN_PASSWORD` | admin 로그인 비밀번호 | ✅ |
-| `GITHUB_TOKEN` | 곡 저장용 PAT (lyra 저장소 Contents 읽기·쓰기) | ✅ |
-| `GITHUB_REPO` | `owner/repo` (예: `bluehhhh-byte/lyra`) | ✅ |
+| `DATABASE_URL` | Neon pooled 연결 문자열 | ✅ |
+| `LYRA_CONTENT_STORE` | 운영 콘텐츠 저장소. `neon` | ✅ |
+| `GITHUB_TOKEN` | 모바일 코드 배포 및 파일 저장 폴백용 PAT | 코드 배포에 필수 |
+| `GITHUB_REPO` | `owner/repo` (예: `bluehhhh-byte/lyra`) | 코드 배포에 필수 |
 | `GEMINI_API_KEY` | 번역·태그·코멘트·독음·취향 리포트·추천 생성 | 선택 |
 | `GEMINI_MODEL` | 품질용 Gemini 모델 (미설정 시 `gemini-flash-latest`) | 선택 |
 | `GEMINI_MODEL_LITE` | 분류·일괄용 모델 (미설정 시 `gemini-flash-lite-latest`) | 선택 |
@@ -273,7 +277,8 @@ Gemini에는 **원문을 주지 않는다.** 2단계에서 넘기는 건 제목�
 | `lib/movies.js` | 영화 markdown 파싱 (곡과 같은 프론트매터, 본문은 줄거리 산문) |
 | `lib/genre.js` / `lib/keywords.js` | 장르 / 키워드·감정 어휘·검증·감정 valence |
 | `lib/diary.js` | 날짜별 감정·키워드 집계 (통계·일기 공용) |
-| `lib/store.js` / `lib/tmdb.js` | GitHub·fs 쓰기 백엔드 / TMDB 래퍼(장르 영문화) |
+| `lib/store.js` / `lib/content-db.js` | Neon 우선 콘텐츠 저장 계층과 GitHub·fs 폴백 |
+| `lib/moments.js` / `lib/moments-core.js` | 문화 장면 조회·저장 / 입력 정규화와 검증 |
 | `lib/people.js` / `lib/taste-core.js` | 감독·배우 역색인 (.md+왓챠) / 취향 집계 요약 |
 | `app/api/admin/route.js` | admin API 디스패처(32줄): action 파싱 → 도메인 핸들러 순차 시도 |
 | `app/api/admin/{songs,movies,watcha}.js` | 도메인별 액션 로직 (곡 검색·번역·재검사 / 영화 / 왓챠·취향·추천) |

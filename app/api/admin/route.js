@@ -1,6 +1,7 @@
 import { handleSongs } from "./songs";
 import { handleMovies } from "./movies";
 import { handleWatcha } from "./watcha";
+import { handleMoments } from "./moments";
 
 // per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
 // a few times); 30s is ample and stays within hobby-plan limits.
@@ -24,6 +25,7 @@ export async function POST(req) {
 async function handle(req) {
   const { action, ...body } = await req.json();
   return (
+    (await handleMoments(action, body)) ??
     (await handleMovies(action, body)) ??
     (await handleWatcha(action, body)) ??
     (await handleSongs(action, body)) ??

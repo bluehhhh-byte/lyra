@@ -11,6 +11,8 @@ import PlayButton from "./play-button";
 import ShareButton from "./share-button";
 import SongNav from "./song-nav";
 import YouTubeEmbed from "./youtube-embed";
+import { getMomentsForTarget } from "../../../lib/moments";
+import MomentConnections from "../../moment-connections";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -70,6 +72,7 @@ export default async function SongPage({ params }) {
   const song = all[idx];
   if (!song) notFound();
   const related = relatedSongs(song, all);
+  const moments = await getMomentsForTarget("song", song.slug);
   const pick = (s) => s && { slug: s.slug, title: s.title };
   const prev = pick(all[idx - 1]);
   const next = pick(all[idx + 1]);
@@ -246,6 +249,8 @@ export default async function SongPage({ params }) {
           </ul>
         </div>
       )}
+
+      <MomentConnections moments={moments} targetKind="song" targetSlug={song.slug} />
 
       {/* related */}
       {related.length > 0 && (

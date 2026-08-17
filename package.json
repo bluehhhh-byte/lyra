@@ -21,7 +21,8 @@
     "worktree": "node scripts/worktree.mjs",
     "deploy:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-production.ps1",
     "db:migrate": "node scripts/migrate-content.mjs",
-    "db:verify": "node scripts/migrate-content.mjs --verify"
+    "db:verify": "node scripts/migrate-content.mjs --verify",
+    "db:migrate:moments": "node scripts/migrate-moments.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

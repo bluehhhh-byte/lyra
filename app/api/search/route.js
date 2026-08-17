@@ -3,17 +3,19 @@ import { getAllMoviesRuntime } from "../../../lib/movies";
 import { getWatchedRuntime } from "../../../lib/watched";
 import { getAllPeopleRuntime } from "../../../lib/people";
 import { contentRevision } from "../../../lib/content-db";
+import { getAllMomentsRuntime } from "../../../lib/moments";
 
 export const dynamic = "force-dynamic";
 
 const lower = (...values) => values.flat().filter(Boolean).join(" ").toLowerCase();
 
 async function index() {
-  const [songs, movies, watched, people] = await Promise.all([
+  const [songs, movies, watched, people, moments] = await Promise.all([
     getAllSongsRuntime(),
     getAllMoviesRuntime(),
     getWatchedRuntime(),
     getAllPeopleRuntime(),
+    getAllMomentsRuntime(),
   ]);
   return {
     songs: songs.map((song) => {
@@ -47,6 +49,13 @@ async function index() {
       subtitle: `${person.works.length}편`,
       image: person.works.find((work) => work.poster)?.poster || "",
       meta: lower(person.name, person.works.map((work) => [work.title, work.title_ko])),
+    })),
+    moments: moments.map((moment) => ({
+      href: `/moments/${moment.slug}`,
+      title: moment.title,
+      subtitle: moment.startDate,
+      image: "",
+      meta: lower(moment.title, moment.body, moment.emotions, moment.keywords),
     })),
   };
 }
@@ -91,6 +100,7 @@ export async function GET(request) {
       ["영화·드라마", pick(db.movies, query)],
       ["평가한 영화", pick(db.watched, query)],
       ["인물", pick(db.people, query)],
+      ["문화 장면", pick(db.moments, query)],
     ].filter(([, items]) => items.length),
   });
 }

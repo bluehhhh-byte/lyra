@@ -33,6 +33,9 @@ export default async function AdminPage() {
         <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent">
           → 영화 관리로
         </Link>
+        <Link href="/admin/moments" className="text-sm text-muted transition hover:text-accent">
+          → 장면 관리로
+        </Link>
         <div className="sm:ml-auto">
           <DeployControl contentInDatabase={contentInDatabase} />
         </div>
