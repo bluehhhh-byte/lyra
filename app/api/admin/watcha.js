@@ -9,9 +9,9 @@
 // ~1,000편은 개별 .md가 없으므로 한 파일을 통째로 다시 쓴다(요청 1회).
 // tasteReport — 집계 요약을 Gemini에 넘겨 한국어 리포트를 받아 저장.
 // 원본 1000편이 아니라 요약 숫자만 넘기므로 토큰·rate limit 부담이 작다.
-import { readMovie, writeMovie, readData, writeData } from "../../../lib/store";
+import { readMovie, writeMovie, readRuntimeData, writeData } from "../../../lib/store";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
-import { getAllMovies } from "../../../lib/movies";
+import { getAllMoviesRuntime } from "../../../lib/movies";
 import { summarizeTaste } from "../../../lib/taste-core";
 import { geminiText } from "../../../lib/admin/gemini";
 import { setField } from "../../../lib/admin/frontmatter";
@@ -21,7 +21,7 @@ export async function handleWatcha(action, body) {
   if (action === "tasteReport") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const dataset = readData("watcha-movies.json", []);
+    const dataset = await readRuntimeData("watcha-movies.json", []);
     const rated = dataset.filter((m) => m.rating != null);
     if (rated.length < 20)
       return Response.json({ error: `평가된 영화가 ${rated.length}편뿐입니다 (20편 이상 필요)` }, { status: 422 });
@@ -51,7 +51,7 @@ ${s.lines}`
   if (action === "tasteRecs") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const dataset = readData("watcha-movies.json", []);
+    const dataset = await readRuntimeData("watcha-movies.json", []);
     const rated = dataset.filter((m) => m.rating != null);
     if (rated.length < 20)
       return Response.json({ error: `평가된 영화가 ${rated.length}편뿐입니다 (20편 이상 필요)` }, { status: 422 });
@@ -107,7 +107,7 @@ ${seenList}
     );
     // 누적: 기존 추천을 두고 새 것만 얹는다. 이미 추천한 것(prevTmdb)과
     // 그새 평가한 것(seenTmdb)은 제외한다 — 본 영화는 추천에서 빠진다.
-    const prev = readData("taste-recs.json", { items: [] });
+    const prev = await readRuntimeData("taste-recs.json", { items: [] });
     const prevItems = (prev.items || []).filter((m) => !seenTmdb.has(String(m.tmdbId)));
     const prevTmdb = new Set(prevItems.map((m) => String(m.tmdbId)));
     const now = new Date().toISOString();
@@ -156,7 +156,7 @@ ${seenList}
     }
     if (!byCode.size) return Response.json({ error: "별점이 있는 항목이 없습니다" }, { status: 400 });
 
-    const dataset = readData("watcha-movies.json", []);
+    const dataset = await readRuntimeData("watcha-movies.json", []);
     let matched = 0, changed = 0, unknown = 0;
     for (const m of dataset) {
       if (!byCode.has(m.code)) continue;
@@ -175,7 +175,7 @@ ${seenList}
     if (!item?.title) return Response.json({ error: "title이 없습니다" }, { status: 400 });
 
     const norm = (s) => (s || "").toLowerCase().replace(/[\s:·・!?,.'"()\[\]/-]/g, "");
-    const movies = getAllMovies();
+    const movies = await getAllMoviesRuntime();
     // watcha_code가 박혀 있으면 그게 가장 정확. 없으면 제목+연도로 찾는다.
     const found =
       (item.code && movies.find((m) => m.watcha_code === item.code)) ||

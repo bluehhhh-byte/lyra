@@ -112,7 +112,7 @@ export default function MovieTools({ movies }) {
                 보기
               </a>
               {st.gone ? (
-                <span className="shrink-0 text-xs text-muted">삭제됨 (재배포 후 반영)</span>
+                <span className="shrink-0 text-xs text-muted">삭제 완료</span>
               ) : (
                 <button
                   onClick={() => del(m.slug, m.title)}

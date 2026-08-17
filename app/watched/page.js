@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getWatched } from "../../lib/watched";
+import { getWatchedRuntime } from "../../lib/watched";
 import WatchedGrid from "./grid";
 import SynoNav from "../syno-nav";
 
@@ -10,8 +10,8 @@ export const metadata = {
 
 // 왓챠 별점 목록의 그리드 버전. 별점 높은 순 → 최신 개봉 순.
 // 개별 페이지가 없는 영화라 카드는 링크가 아니라(감상 42편만 곡·영화 페이지로).
-export default function WatchedPage() {
-  const all = getWatched();
+export default async function WatchedPage() {
+  const all = await getWatchedRuntime();
   const rated = all.filter((m) => m.rating != null);
   const noRating = all.length - rated.length;
 

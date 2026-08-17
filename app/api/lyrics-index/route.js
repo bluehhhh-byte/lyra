@@ -1,13 +1,13 @@
-import { getAllSongs } from "../../../lib/songs";
+import { getAllSongsRuntime } from "../../../lib/songs";
 
 // Lyric search index, split out of the home payload so the initial render
 // doesn't ship every song's full lyrics. browse.js fetches this lazily on the
-// first search keystroke. Songs change only on redeploy, so it's static and
-// served from the CDN — one cached fetch per visitor who actually searches.
-export const dynamic = "force-static";
+// first search keystroke. Runtime storage is tag-cached, so a DB save can
+// invalidate this response without rebuilding the application.
+export const dynamic = "force-dynamic";
 
-export function GET() {
-  const index = getAllSongs().map((s) => ({
+export async function GET() {
+  const index = (await getAllSongsRuntime()).map((s) => ({
     slug: s.slug,
     lines: s.stanzas.flatMap((st) => st.lines.flatMap((l) => [l.en, l.ko])).filter(Boolean),
   }));

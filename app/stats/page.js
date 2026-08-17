@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getAllSongs } from "../../lib/songs";
-import { getAllMovies } from "../../lib/movies";
+import { getAllSongsRuntime } from "../../lib/songs";
+import { getAllMoviesRuntime } from "../../lib/movies";
 import { pct, Bars } from "./charts";
 import DrillSection from "./drilldown";
 import EmotionTimeline from "../emotion-timeline";
@@ -37,9 +37,8 @@ function Stars({ value }) {
   );
 }
 
-export default function StatsPage() {
-  const songs = getAllSongs();
-  const movies = getAllMovies();
+export default async function StatsPage() {
+  const [songs, movies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
 
   // movie stats: count, mean rating, rating distribution (5.0 → 0.5), country/genre
   const rated = movies.filter((m) => m.rating != null);
@@ -127,7 +126,7 @@ export default function StatsPage() {
 
   // 일자별 감정 변화 — 상세(키워드·곡 목록)는 /diary로 옮기고, 통계에는
   // 시계열 곡선만 둔다
-  const diary = getDiary();
+  const diary = getDiary(songs);
 
   if (songs.length === 0) {
     return <p className="py-20 text-center text-sm text-muted">아직 곡이 없습니다.</p>;

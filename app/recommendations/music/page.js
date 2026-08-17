@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { readData } from "../../../lib/store";
-import { getAllSongs } from "../../../lib/songs";
+import { readRuntimeData } from "../../../lib/store";
+import { getAllSongsRuntime } from "../../../lib/songs";
 import { normText } from "../../../lib/admin/itunes";
 import SongRecs from "../song-recs";
 
@@ -15,10 +15,12 @@ const kstDate = (iso) =>
 // 관리자 → 등록된 곡 → "추천 곡 생성"이 누적하는 data/song-recs.json.
 // 같은 at을 공유하는 항목이 한 회차 — 최신 회차는 '취향의 연장선'과
 // '새로운 방향'으로 나눠 보여주고, 이전 회차는 날짜별로 접어둔다.
-export default function MusicRecommendationsPage() {
-  const recs = readData("song-recs.json", { items: [], runs: [] });
+export default async function MusicRecommendationsPage() {
+  const [recs, songs] = await Promise.all([
+    readRuntimeData("song-recs.json", { items: [], runs: [] }),
+    getAllSongsRuntime(),
+  ]);
   // 추천 후 컬렉션에 담은 곡은 다음 생성을 기다리지 않고 즉시 숨긴다
-  const songs = getAllSongs();
   const haveTrack = new Set(songs.map((s) => String(s.trackId)).filter(Boolean));
   const haveKey = new Set(songs.map((s) => `${normText(s.title)}|${normText(s.artist)}`));
   const items = (recs.items || []).filter(

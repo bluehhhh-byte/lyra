@@ -5,7 +5,7 @@
   "packageManager": "pnpm@11.10.0",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/build-search-index.mjs && next build",
+    "build": "next build",
     "start": "next start",
     "setup": "pnpm install",
     "add": "node scripts/add-song.mjs",
@@ -19,9 +19,12 @@
     "status": "node scripts/project-status.mjs --write",
     "needs": "node scripts/needs-work.mjs",
     "worktree": "node scripts/worktree.mjs",
-    "deploy:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-production.ps1"
+    "deploy:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-production.ps1",
+    "db:migrate": "node scripts/migrate-content.mjs",
+    "db:verify": "node scripts/migrate-content.mjs --verify"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "next": "^15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -29,6 +32,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",
+    "dotenv": "^17.4.2",
     "tailwindcss": "^4.1.0"
   }
 }

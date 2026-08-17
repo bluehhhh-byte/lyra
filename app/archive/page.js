@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { buildArchive } from "../../lib/archive";
+import { buildArchiveRuntime } from "../../lib/archive";
 import { monthlyStats, statYears, monthNarrative, yearNarrative, workLabel } from "../../lib/archive-stats";
 import { valenceColor } from "../../lib/keywords";
 import { CULTURAL_THEMES } from "../../lib/themes";
@@ -55,7 +55,7 @@ function DayItem({ item }) {
 const VISIBLE_ITEMS = 8;
 
 export default async function ArchivePage({ searchParams }) {
-  const archive = buildArchive();
+  const archive = await buildArchiveRuntime();
   const stats = monthlyStats(archive);
   const years = statYears(stats);
   const params = (await searchParams) || {};

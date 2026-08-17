@@ -1,22 +1,18 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { buildArchive, getArchiveDay } from "../../../lib/archive";
+import { buildArchiveRuntime, getArchiveDayRuntime } from "../../../lib/archive";
 import { valenceColor } from "../../../lib/keywords";
 
-export function generateStaticParams() {
-  return buildArchive().map((entry) => ({ day: entry.day }));
-}
-
 export async function generateMetadata({ params }) {
-  const day = getArchiveDay((await params).day);
+  const day = await getArchiveDayRuntime((await params).day);
   if (!day) return {};
   return { title: `${day.day} 문화 기록 | Lyra` };
 }
 
 export default async function ArchiveDayPage({ params }) {
-  const entry = getArchiveDay((await params).day);
+  const entry = await getArchiveDayRuntime((await params).day);
   if (!entry) notFound();
-  const all = buildArchive();
+  const all = await buildArchiveRuntime();
   const index = all.findIndex((day) => day.day === entry.day);
 
   return (

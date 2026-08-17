@@ -1,23 +1,29 @@
-import { getAllSongs } from "../lib/songs";
-import { getAllMovies } from "../lib/movies";
-import { buildArchive } from "../lib/archive";
-import { getAllPeople } from "../lib/people";
+import { getAllSongsRuntime } from "../lib/songs";
+import { getAllMoviesRuntime } from "../lib/movies";
+import { buildArchiveRuntime } from "../lib/archive";
+import { getAllPeopleRuntime } from "../lib/people";
 import { SITE_URL } from "../lib/site";
 
-export default function sitemap() {
-  const songs = getAllSongs().map((s) => ({
+export default async function sitemap() {
+  const [allSongs, allMovies, allArchive, allPeople] = await Promise.all([
+    getAllSongsRuntime(),
+    getAllMoviesRuntime(),
+    buildArchiveRuntime(),
+    getAllPeopleRuntime(),
+  ]);
+  const songs = allSongs.map((s) => ({
     url: `${SITE_URL}/songs/${encodeURIComponent(s.slug)}`,
     lastModified: s.date || undefined,
   }));
-  const movies = getAllMovies().map((movie) => ({
+  const movies = allMovies.map((movie) => ({
     url: `${SITE_URL}/movies/${encodeURIComponent(movie.slug)}`,
     lastModified: movie.date || undefined,
   }));
-  const archive = buildArchive().map((entry) => ({
+  const archive = allArchive.map((entry) => ({
     url: `${SITE_URL}/archive/${entry.day}`,
     lastModified: entry.day,
   }));
-  const people = getAllPeople().map((person) => ({
+  const people = allPeople.map((person) => ({
     url: `${SITE_URL}/people/${encodeURIComponent(person.name)}`,
   }));
   return [

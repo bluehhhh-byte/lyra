@@ -130,7 +130,7 @@ export default function Backfill() {
 
       {Object.keys(done).length > 0 && (
         <p className="mt-3 text-xs text-muted">
-          온라인 배포본은 재배포 후 반영됩니다. 곡마다 커밋이 하나씩 생깁니다.
+          작업 결과는 곡마다 바로 저장됩니다.
         </p>
       )}
       {error && <p className="mt-3 text-sm text-red-400">{error}</p>}

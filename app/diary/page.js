@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDiary } from "../../lib/diary";
+import { getDiaryRuntime } from "../../lib/diary";
 import DiaryMonth from "./diary-month";
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function DiaryPage({ searchParams }) {
-  const days = getDiary().filter((day) => day.dominant || day.keywords.length);
+  const days = (await getDiaryRuntime()).filter((day) => day.dominant || day.keywords.length);
 
   if (days.length === 0) {
     return (

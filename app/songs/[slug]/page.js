@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllSongs, getSong } from "../../../lib/songs";
+import { getAllSongsRuntime, getSongRuntime } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
-import { getAllMovies } from "../../../lib/movies";
+import { getAllMoviesRuntime } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 import LyricsView from "./lyrics-view";
 import { appleUrl, isExactApple } from "../../../lib/apple";
@@ -12,13 +12,9 @@ import ShareButton from "./share-button";
 import SongNav from "./song-nav";
 import YouTubeEmbed from "./youtube-embed";
 
-export function generateStaticParams() {
-  return getAllSongs().map((s) => ({ slug: s.slug }));
-}
-
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const song = getSong(decodeURIComponent(slug));
+  const song = await getSongRuntime(decodeURIComponent(slug));
   if (!song) return {};
   const title = `${song.title} — ${song.artist}`;
   const description = song.comment || `${song.title} 가사와 한글 번역`;
@@ -69,7 +65,7 @@ function relatedSongs(song, all) {
 
 export default async function SongPage({ params }) {
   const { slug } = await params;
-  const all = getAllSongs();
+  const all = await getAllSongsRuntime();
   const idx = all.findIndex((s) => s.slug === decodeURIComponent(slug));
   const song = all[idx];
   if (!song) notFound();
@@ -95,7 +91,7 @@ export default async function SongPage({ params }) {
   // Lyra×Syno 교차 — 같은 시대의 큐레이션 영화 (같은 권역 우선)
   const songDecadeNum = song.year ? Math.floor(+song.year / 10) * 10 : null;
   const eraMovies = songDecadeNum
-    ? getAllMovies()
+    ? (await getAllMoviesRuntime())
         .filter((m) => m.year && Math.floor(+m.year / 10) * 10 === songDecadeNum)
         .sort((a, b) => (b.tags.includes(region) ? 1 : 0) - (a.tags.includes(region) ? 1 : 0))
         .slice(0, 3)

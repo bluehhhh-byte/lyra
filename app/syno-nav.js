@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getAllMovies } from "../lib/movies";
-import { getWatched } from "../lib/watched";
+import { getAllMoviesRuntime } from "../lib/movies";
+import { getWatchedRuntime } from "../lib/watched";
 
 // Syno에는 성격이 다른 기록이 둘 있다.
 //   감상 기록  movies/*.md — 줄거리·감상을 직접 쓴 작품
@@ -10,10 +10,11 @@ import { getWatched } from "../lib/watched";
 //
 // 편수만 세어 넘긴다 — 별점 1,045편의 목록을 /movies의 HTML에 같이 실으면
 // 첫 화면이 그만큼 무거워진다. 목록은 각자의 페이지에서만 그린다.
-export default function SynoNav({ active }) {
+export default async function SynoNav({ active }) {
+  const [movies, watched] = await Promise.all([getAllMoviesRuntime(), getWatchedRuntime()]);
   const tabs = [
-    { href: "/movies", label: "감상 기록", count: getAllMovies().length, key: "movies" },
-    { href: "/watched", label: "별점 평가", count: getWatched().filter((m) => m.rating != null).length, key: "watched" },
+    { href: "/movies", label: "감상 기록", count: movies.length, key: "movies" },
+    { href: "/watched", label: "별점 평가", count: watched.filter((m) => m.rating != null).length, key: "watched" },
   ];
 
   return (

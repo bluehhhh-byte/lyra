@@ -1,12 +1,12 @@
-import { getAllSongs } from "../../../../lib/songs";
-import { getAllMovies } from "../../../../lib/movies";
+import { getAllSongsRuntime } from "../../../../lib/songs";
+import { getAllMoviesRuntime } from "../../../../lib/movies";
 import { kstToday } from "../../../../lib/kst";
 import { COUNTRY_TAGS } from "../../../../lib/genre";
 
 // The collection stats as one Markdown file — mirrors the /stats page's
-// categories. Prerendered at build time (songs are only guaranteed on disk
-// then; every save redeploys, so it stays current).
-export const dynamic = "force-static";
+// categories. Generated from the active runtime store so DB saves appear
+// without rebuilding the application.
+export const dynamic = "force-dynamic";
 
 const COUNTRY = { ko: "한국", ja: "일본", en: "영미" };
 const isDecadeTag = (t) => /^\d{4}s?$/.test(t);
@@ -30,8 +30,7 @@ function table(rows, total, head = "항목", unit = "곡") {
 }
 
 export async function GET() {
-  const songs = getAllSongs();
-  const movies = getAllMovies();
+  const [songs, movies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
   const lines = songs.flatMap((s) => s.stanzas.flatMap((st) => st.lines));
   const translated = lines.filter((l) => l.ko).length;
   const readings = lines.filter((l) => l.reading).length;

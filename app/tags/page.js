@@ -1,14 +1,13 @@
 import Link from "next/link";
-import { getAllSongs } from "../../lib/songs";
-import { getAllMovies } from "../../lib/movies";
+import { getAllSongsRuntime } from "../../lib/songs";
+import { getAllMoviesRuntime } from "../../lib/movies";
 
 export const metadata = { title: "태그 | Lyra", description: "태그로 둘러보는 가사·영화 컬렉션" };
 
-export default function TagsPage() {
+export default async function TagsPage() {
   // one index over both collections — a year tag like 2004 counts the song AND
   // the film, and clicking it lands on the combined /tags/<tag> page
-  const songs = getAllSongs();
-  const movies = getAllMovies();
+  const [songs, movies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
   const counts = new Map();
   for (const list of [songs, movies])
     for (const item of list)

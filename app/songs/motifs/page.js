@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getAllSongs } from "../../../lib/songs";
-import { readData } from "../../../lib/store";
+import { getAllSongsRuntime } from "../../../lib/songs";
+import { readRuntimeData } from "../../../lib/store";
 import CoverImage from "../../cover-image";
 
 export const metadata = {
@@ -10,9 +10,12 @@ export const metadata = {
 
 // admin '모티프 생성'이 저장한 data/motifs.json — 컬렉션 가사를 관통하는
 // 이미지·주제 클러스터. 구절은 생성 시점에 실제 가사와 대조해 검증됐다.
-export default function MotifsPage() {
-  const data = readData("motifs.json", null);
-  const songs = new Map(getAllSongs().map((s) => [s.slug, s]));
+export default async function MotifsPage() {
+  const [data, allSongs] = await Promise.all([
+    readRuntimeData("motifs.json", null),
+    getAllSongsRuntime(),
+  ]);
+  const songs = new Map(allSongs.map((s) => [s.slug, s]));
   const motifs = (data?.motifs || [])
     .map((m) => ({ ...m, songs: m.songs.filter((x) => songs.has(x.slug)) }))
     .filter((m) => m.songs.length >= 2);

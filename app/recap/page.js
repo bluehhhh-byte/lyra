@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { buildArchive } from "../../lib/archive";
+import { buildArchiveRuntime } from "../../lib/archive";
 import { buildRecap } from "../../lib/recap";
 import { valenceColor } from "../../lib/keywords";
-import { readData } from "../../lib/store";
 import RecapShare from "./recap-share";
 
 export const metadata = {
@@ -16,7 +15,7 @@ const periodLabel = (period) => {
 };
 
 export default async function RecapPage({ searchParams }) {
-  const archive = buildArchive();
+  const archive = await buildArchiveRuntime();
   const months = [...new Set(archive.map((entry) => entry.day.slice(0, 7)))];
   const years = [...new Set(archive.map((entry) => entry.day.slice(0, 4)))];
   const requested = (await searchParams)?.period;

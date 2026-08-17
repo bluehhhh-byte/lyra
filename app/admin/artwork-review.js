@@ -23,7 +23,7 @@ export default function ArtworkReview({ items }) {
     set(slug, { msg: "저장 중…" });
     try {
       await api("setArtwork", none ? { slug, none: true } : { slug, artwork: url });
-      set(slug, { msg: none ? "커버 없음 확정" : "저장됨 (재배포 후 반영)", done: true });
+      set(slug, { msg: none ? "커버 없음 확정" : "저장 완료", done: true });
     } catch (e) {
       set(slug, { msg: e.message });
     }

@@ -1,4 +1,4 @@
-import { getAllMovies } from "../../lib/movies";
+import { getAllMoviesRuntime } from "../../lib/movies";
 import MovieBrowse from "./browse";
 import SynoNav from "../syno-nav";
 
@@ -9,7 +9,7 @@ export const metadata = {
 
 export default async function MoviesPage({ searchParams }) {
   const { q, group, media, country, genre, rating, sort } = (await searchParams) || {};
-  const movies = getAllMovies().map((m) => {
+  const movies = (await getAllMoviesRuntime()).map((m) => {
     const title = m.title_ko || m.title;
     const director = m.director_ko || m.director || "";
     const synopsis = m.synopsis || [];

@@ -84,7 +84,7 @@ export default function SongTools({ songs }) {
     set(slug, { busy: "notes", err: "", msg: "" });
     try {
       const { notes: n } = await api("regenNotes", { slug });
-      set(slug, { msg: `해설 ${n}개 생성 (재배포 후 반영)` });
+      set(slug, { msg: `해설 ${n}개 생성·저장 완료` });
     } catch (e) {
       set(slug, { err: e.message });
     } finally {
@@ -96,7 +96,7 @@ export default function SongTools({ songs }) {
     set(slug, { busy: "stanza", err: "", msg: "" });
     try {
       const { stanzas } = await api("restanza", { slug });
-      set(slug, { msg: `연 ${stanzas}개로 재구성 (재배포 후 반영)` });
+      set(slug, { msg: `연 ${stanzas}개로 재구성·저장 완료` });
     } catch (e) {
       set(slug, { err: e.message });
     } finally {
@@ -112,7 +112,7 @@ export default function SongTools({ songs }) {
     setRecsBusy("추천 생성 중…");
     try {
       const { added, total, mode } = await api("songRecs", { mode: recMode, emotion: recEmotion });
-      setRecsBusy(`추천 +${added}곡 (${mode}, 누적 ${total}) — 재배포 후 반영`);
+      setRecsBusy(`추천 +${added}곡 (${mode}, 누적 ${total}) — 저장 완료`);
     } catch (e) {
       setRecsBusy(`실패: ${e.message}`);
     }
@@ -123,7 +123,7 @@ export default function SongTools({ songs }) {
     setRecsBusy("리포트 생성 중…");
     try {
       const { count } = await api("musicReport", {});
-      setRecsBusy(`리포트 생성됨 (${count}곡 기준) — 재배포 후 반영`);
+      setRecsBusy(`리포트 생성됨 (${count}곡 기준) — 저장 완료`);
     } catch (e) {
       setRecsBusy(`실패: ${e.message}`);
     }
@@ -134,7 +134,7 @@ export default function SongTools({ songs }) {
     setRecsBusy("모티프 분석 중…");
     try {
       const { motifs: n } = await api("motifs", {});
-      setRecsBusy(`모티프 ${n}개 생성됨 — 재배포 후 반영`);
+      setRecsBusy(`모티프 ${n}개 생성됨 — 저장 완료`);
     } catch (e) {
       setRecsBusy(`실패: ${e.message}`);
     }
@@ -144,7 +144,7 @@ export default function SongTools({ songs }) {
     set(slug, { busy: "trans", err: "", msg: "" });
     try {
       await api("addTranslation", { slug });
-      set(slug, { msg: "번역 추가됨 (재배포 후 반영)" });
+      set(slug, { msg: "번역 추가·저장 완료" });
     } catch (e) {
       set(slug, { err: e.message });
     } finally {

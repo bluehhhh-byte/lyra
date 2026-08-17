@@ -1,6 +1,4 @@
-import fs from "fs";
-import path from "path";
-import { getAllSongs } from "../../../lib/songs";
+import { getAllSongsRuntime } from "../../../lib/songs";
 import { appleUrl } from "../../../lib/apple";
 
 // 플레이어의 이전·다음·셔플용 목록. 예전에는 레이아웃이 모든 페이지의 RSC 페이로드에
@@ -9,22 +7,13 @@ import { appleUrl } from "../../../lib/apple";
 // 곡 파일에서 만든다.
 export const dynamic = "force-dynamic";
 
-let CACHE = null;
-
 export async function GET() {
-  if (!CACHE) {
-    const file = path.join(process.cwd(), "data", "playlist.json");
-    try {
-      CACHE = JSON.parse(fs.readFileSync(file, "utf8")).items;
-    } catch {
-      CACHE = getAllSongs()
-        .filter((s) => s.preview)
-        .map((s) => ({
-          slug: s.slug, title: s.title, artist: s.artist, artwork: s.artwork, preview: s.preview,
-          provider: s.preview_provider || "",
-          externalUrl: appleUrl(s),
-        }));
-    }
-  }
-  return Response.json({ items: CACHE });
+  const items = (await getAllSongsRuntime())
+    .filter((s) => s.preview)
+    .map((s) => ({
+      slug: s.slug, title: s.title, artist: s.artist, artwork: s.artwork, preview: s.preview,
+      provider: s.preview_provider || "",
+      externalUrl: appleUrl(s),
+    }));
+  return Response.json({ items });
 }

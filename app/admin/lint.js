@@ -114,7 +114,7 @@ export default function Lint() {
           </ul>
           {Object.keys(fixLog).length > 0 && busy !== "fix" && (
             <p className="mt-2 text-xs text-muted">
-              온라인 배포본은 재배포(약 1분) 후 반영. 반영 뒤 다시 검사하면 결과가 갱신된다.
+              저장한 뒤 다시 검사하면 결과가 갱신됩니다.
             </p>
           )}
         </>

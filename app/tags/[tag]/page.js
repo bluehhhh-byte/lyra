@@ -1,23 +1,19 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllSongs } from "../../../lib/songs";
-import { getAllMovies } from "../../../lib/movies";
+import { getAllSongsRuntime } from "../../../lib/songs";
+import { getAllMoviesRuntime } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 
 // One tag, both collections — clicking 2004 shows that year's songs AND films
 // side by side. Static: every tag in use gets a page at build time.
 
-const tagged = (tag) => ({
-  songs: getAllSongs().filter((s) => s.tags.includes(tag)),
-  movies: getAllMovies().filter((m) => m.tags.includes(tag)),
-});
-
-export function generateStaticParams() {
-  const tags = new Set();
-  for (const s of getAllSongs()) for (const t of s.tags) tags.add(t);
-  for (const m of getAllMovies()) for (const t of m.tags) tags.add(t);
-  return [...tags].map((tag) => ({ tag }));
-}
+const tagged = async (tag) => {
+  const [songs, movies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
+  return {
+    songs: songs.filter((s) => s.tags.includes(tag)),
+    movies: movies.filter((m) => m.tags.includes(tag)),
+  };
+};
 
 export async function generateMetadata({ params }) {
   const { tag } = await params;
@@ -26,7 +22,7 @@ export async function generateMetadata({ params }) {
 
 export default async function TagPage({ params }) {
   const tag = decodeURIComponent((await params).tag);
-  const { songs, movies } = tagged(tag);
+  const { songs, movies } = await tagged(tag);
   if (songs.length === 0 && movies.length === 0) notFound();
 
   return (

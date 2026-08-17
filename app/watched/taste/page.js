@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getWatched } from "../../../lib/watched";
+import { getWatchedRuntime } from "../../../lib/watched";
 import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
-import { readData } from "../../../lib/store";
-import { getAllMovies } from "../../../lib/movies";
+import { readRuntimeData } from "../../../lib/store";
+import { getAllMoviesRuntime } from "../../../lib/movies";
 import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 
@@ -130,10 +130,12 @@ function CuratedThemeEvidence({ movies }) {
   );
 }
 
-export default function TastePage() {
-  const rated = getWatched().filter((m) => m.rating != null);
-  const report = readData("taste-report.json", null);
-  const curatedMovies = getAllMovies();
+export default async function TastePage() {
+  const rated = (await getWatchedRuntime()).filter((m) => m.rating != null);
+  const [report, curatedMovies] = await Promise.all([
+    readRuntimeData("taste-report.json", null),
+    getAllMoviesRuntime(),
+  ]);
 
   if (rated.length === 0) {
     return (

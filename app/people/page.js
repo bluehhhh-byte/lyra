@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { getAllPeople } from "../../lib/people";
+import { getAllPeopleRuntime } from "../../lib/people";
 
 export const metadata = {
   title: "인물 | Syno.",
   description: "기록한 영화와 드라마의 감독·배우",
 };
 
-export default function PeoplePage() {
-  const people = getAllPeople();
+export default async function PeoplePage() {
+  const people = await getAllPeopleRuntime();
   // 데이터셋까지 합치면 인물이 수천 명 — 여러 편 겹치는 사람만 인덱스에 낸다.
   // (개별 인물 페이지는 검색·작품 링크로 여전히 닿는다)
   const directors = people.filter((person) => person.directed.length >= 2);

@@ -9,7 +9,7 @@ import { handleWatcha } from "./watcha";
 export const maxDuration = 60;
 
 // Auth is enforced by middleware.js (password cookie). Writes go through
-// lib/store — fs locally, GitHub commits on Vercel. Actions are split by
+// lib/store — fs locally, Neon in production, GitHub as a migration fallback. Actions are split by
 // domain into ./songs, ./movies, ./watcha; each handler returns a Response
 // for an action it owns, or null so the next handler gets a turn.
 export async function POST(req) {

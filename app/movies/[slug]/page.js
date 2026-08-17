@@ -1,21 +1,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllMovies, getMovie } from "../../../lib/movies";
+import { getAllMoviesRuntime, getMovieRuntime } from "../../../lib/movies";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
 import MovieCardButton from "./movie-card";
 import { splitCast } from "../../../lib/people";
 import { tmdbUrl } from "../../../lib/tmdb-link";
 import { kstDay } from "../../../lib/kst";
-import { getAllSongs } from "../../../lib/songs";
+import { getAllSongsRuntime } from "../../../lib/songs";
 import { COUNTRY_TAGS } from "../../../lib/genre";
-
-export function generateStaticParams() {
-  return getAllMovies().map((m) => ({ slug: m.slug }));
-}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const m = getMovie(decodeURIComponent(slug));
+  const m = await getMovieRuntime(decodeURIComponent(slug));
   if (!m) return {};
   const title = `${m.title_ko || m.title} (${m.year})`;
   const description = m.comment || `${m.title} 줄거리와 감상`;
@@ -73,7 +69,7 @@ function relatedMovies(movie, all) {
 
 export default async function MoviePage({ params }) {
   const { slug } = await params;
-  const all = getAllMovies();
+  const all = await getAllMoviesRuntime();
   const movie = all.find((m) => m.slug === decodeURIComponent(slug));
   if (!movie) notFound();
   const related = relatedMovies(movie, all);
@@ -83,7 +79,7 @@ export default async function MoviePage({ params }) {
   const movieDecade = movie.year ? Math.floor(+movie.year / 10) * 10 : null;
   const movieRegion = movie.tags?.find((t) => COUNTRY_TAGS.includes(t)) || "";
   const eraSongs = movieDecade
-    ? getAllSongs()
+    ? (await getAllSongsRuntime())
         .filter((s) => s.year && Math.floor(+s.year / 10) * 10 === movieDecade)
         .sort((a, b) => (b.tags.includes(movieRegion) ? 1 : 0) - (a.tags.includes(movieRegion) ? 1 : 0))
         .slice(0, 4)

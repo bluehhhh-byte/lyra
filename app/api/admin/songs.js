@@ -1,6 +1,6 @@
 ﻿// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
-import { readSong, writeSong, deleteSong, readData, writeData, commitFiles } from "../../../lib/store";
-import { getAllSongs, capitalizeLyricLines } from "../../../lib/songs";
+import { readSong, writeSong, deleteSong, readRuntimeData, writeData, commitFiles } from "../../../lib/store";
+import { getAllSongsRuntime, capitalizeLyricLines } from "../../../lib/songs";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { geminiText, GEMINI_LITE_MODEL } from "../../../lib/admin/gemini";
@@ -148,12 +148,12 @@ export async function handleSongs(action, body) {  if (action === "search") {
   // gets the roster instantly, then checks one song per request.
   if (action === "requalityList") {
     return Response.json({
-      songs: getAllSongs().map((s) => ({ slug: s.slug, title: s.title, artist: s.artist })),
+      songs: (await getAllSongsRuntime()).map((s) => ({ slug: s.slug, title: s.title, artist: s.artist })),
     });
   }
 
   if (action === "requalityOne") {
-    const s = getAllSongs().find((x) => x.slug === body.slug);
+    const s = (await getAllSongsRuntime()).find((x) => x.slug === body.slug);
     if (!s) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
     const have = s.stanzas.reduce((n, st) => n + st.lines.filter((l) => l.en?.trim()).length, 0);
     const found = await findLyrics(
@@ -244,13 +244,13 @@ export async function handleSongs(action, body) {  if (action === "search") {
   // 예전에는 이 화면이 자체 규칙을 갖고 있어, 파서를 고쳐 해결된 것(병합 번역 `>^N`,
   // 🗨 해설 줄, 외국곡 속 한국어 가사)까지 "번역 없음"으로 세고 있었다.
   if (action === "lint") {
-    const report = getAllSongs()
+    const report = (await getAllSongsRuntime())
       .map((s) => {
         const issues = summarizeNeeds(s).filter((t) => !/커버|연도|가사 없음|코멘트|한글 제목/.test(t));
         return { slug: s.slug, title: s.title, artist: s.artist, issues, genreFix: issues.some((t) => t.startsWith("장르")) };
       })
       .filter((s) => s.issues.length);
-    return Response.json({ report, total: getAllSongs().length });
+    return Response.json({ report, total: (await getAllSongsRuntime()).length });
   }
 
   // Auto-fix what lint found, one song per request (timeout-safe, one commit
@@ -385,7 +385,7 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
   // Which songs are missing generated metadata. `artist_ko` only counts as
   // missing for kanji/kana artists — a latin name has no reading to give.
   if (action === "audit") {
-    const list = getAllSongs()
+    const list = (await getAllSongsRuntime())
       .map((s) => {
         const missing = [];
         if (!s.tags?.length) missing.push("tags");
@@ -578,7 +578,7 @@ ${koText.slice(0, 2000)}`,
     if (!auto.aiOk)
       return Response.json({ error: "AI 호출 실패 (쿼터·과부하) — 기존 장르 유지" }, { status: 502 });
     const newGenre = genreTagOf(auto.tags);
-    const old = genreTagOf(getAllSongs().find((x) => x.slug === body.slug)?.tags || []);
+    const old = genreTagOf((await getAllSongsRuntime()).find((x) => x.slug === body.slug)?.tags || []);
     // rewrite the whole tags line (country·genre·year) so the genre slot updates
     // in place, and sync the frontmatter genre field to match
     let out = setField(raw, "tags", `[${auto.tags.join(", ")}]`, "year");
@@ -734,7 +734,7 @@ ${listed}`,
   if (action === "bulkPlan") {
     const field = body.field || "";           // keywords|emotion|comment|title_ko|reading|genre|year|artwork
     const limit = Math.min(Number(body.limit) || 500, 2000);
-    const songs = getAllSongs();
+    const songs = await getAllSongsRuntime();
     const rows = [];
     for (const s of songs) {
       const n = songNeeds(s);
@@ -787,7 +787,7 @@ ${listed}`,
   if (action === "bulkApply") {
     const items = Array.isArray(body.items) ? body.items : [];
     if (!items.length) return Response.json({ error: "items가 비어 있습니다" }, { status: 422 });
-    const bySlug = new Map(getAllSongs().map((s) => [s.slug, s]));
+    const bySlug = new Map((await getAllSongsRuntime()).map((s) => [s.slug, s]));
     const applied = [], rejected = [], pending = [];
     for (const it of items.slice(0, 1000)) {
       const song = bySlug.get(it.slug);
@@ -867,9 +867,9 @@ ${listed}`,
   // 잘못 들은 단어는 잡히지 않는다. 여기서 고치되 근거를 남긴다 —
   // source_hash는 계속 인스타 원본을 가리키고, 달라진 줄만 교정 이력에 기록한다.
   if (action === "auditQueue") {
-    const items = readData(CORRECTIONS_FILE, { items: [] }).items || [];
+    const items = (await readRuntimeData(CORRECTIONS_FILE, { items: [] })).items || [];
     const done = new Set(items.map((c) => c.slug));
-    const songs = getAllSongs();
+    const songs = await getAllSongsRuntime();
     const risky = songs.map((s) => {
       const lines = s.stanzas.flatMap((st) => st.lines);
       const reasons = [];
@@ -900,7 +900,7 @@ ${listed}`,
   if (action === "auditSong") {
     const song = await readSong(body.slug);
     if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
-    const items = (readData(CORRECTIONS_FILE, { items: [] }).items || []).filter((c) => c.slug === body.slug);
+    const items = ((await readRuntimeData(CORRECTIONS_FILE, { items: [] })).items || []).filter((c) => c.slug === body.slug);
     const raw = song.raw.replace(/\r\n/g, "\n");
     return Response.json({ raw, corrections: items });
   }
@@ -934,7 +934,7 @@ ${listed}`,
     if (out !== before) writes.push({ path: `songs/${slug}.md`, content: out });
 
     if (corrections.length) {
-      const store = readData(CORRECTIONS_FILE, { items: [] });
+      const store = await readRuntimeData(CORRECTIONS_FILE, { items: [] });
       const list = store.items || [];
       for (const c of corrections)
         list.push({
@@ -1022,7 +1022,7 @@ ${lyricBody}
   if (action === "musicReport") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const songs = getAllSongs();
+    const songs = await getAllSongsRuntime();
     if (songs.length < 10)
       return Response.json({ error: `곡이 ${songs.length}곡뿐입니다 (10곡 이상 필요)` }, { status: 422 });
 
@@ -1091,7 +1091,7 @@ ${lines}`
   if (action === "motifs") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const songs = getAllSongs();
+    const songs = await getAllSongsRuntime();
     if (songs.length < 10)
       return Response.json({ error: `곡이 ${songs.length}곡뿐입니다 (10곡 이상 필요)` }, { status: 422 });
 
@@ -1171,7 +1171,7 @@ ${corpus}`,
   if (action === "songRecs") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    const songs = getAllSongs();
+    const songs = await getAllSongsRuntime();
     if (songs.length < 10)
       return Response.json({ error: `곡이 ${songs.length}곡뿐입니다 (10곡 이상 필요)` }, { status: 422 });
 
@@ -1191,7 +1191,7 @@ ${corpus}`,
     const have = songs.map((s) => `${s.title} - ${s.artist}`).join("; ");
     // 취향 리포트가 있으면 추천 프롬프트에 함께 — 숫자 집계가 못 담는
     // 교차 해석(장르×감정, 수집 성향)이 추천 방향을 잡아준다
-    const report = readData("music-report.json", null);
+    const report = await readRuntimeData("music-report.json", null);
     const reportHint = report?.text
       ? `\n이 사람의 취향 리포트(참고해 추천 방향을 잡아라):\n${report.text.slice(0, 1500)}\n`
       : "";
@@ -1267,7 +1267,7 @@ JSON 배열로만:
     // 컬렉션(트랙ID + 제목|아티스트)과 이전 추천 제외, 새 것만 위에 얹는다
     const haveTrack = new Set(songs.map((s) => String(s.trackId)).filter(Boolean));
     const haveKey = new Set(songs.map((s) => `${normText(s.title)}|${normText(s.artist)}`));
-    const prev = readData("song-recs.json", { items: [] });
+    const prev = await readRuntimeData("song-recs.json", { items: [] });
     const prevItems = (prev.items || []).filter(
       (m) => !haveTrack.has(String(m.trackId)) && !haveKey.has(`${normText(m.title)}|${normText(m.artist)}`)
     );

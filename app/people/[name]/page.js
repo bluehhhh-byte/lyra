@@ -1,25 +1,16 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllPeople, getPerson } from "../../../lib/people";
+import { getAllPeopleRuntime, getPersonRuntime } from "../../../lib/people";
 import CoverImage from "../../cover-image";
 
-export function generateStaticParams() {
-  // 데이터셋까지 합치면 인물이 수천 명이라 전부 미리 구우면 빌드가 폭발한다.
-  // 작품 3편 이상인 사람만 정적 생성하고 나머지는 요청 시 렌더(dynamicParams 기본 on).
-  // 이름에 " : * ? < > | 가 있으면 Windows 파일 생성이 실패하므로 그것도 뺀다.
-  return getAllPeople()
-    .filter((person) => person.works.length >= 3 && !/["*:<>?|\\/]/.test(person.name))
-    .map((person) => ({ name: person.name }));
-}
-
 export async function generateMetadata({ params }) {
-  const person = getPerson(decodeURIComponent((await params).name));
+  const person = await getPersonRuntime(decodeURIComponent((await params).name));
   if (!person) return {};
   return { title: `${person.name} | Syno.` };
 }
 
 export default async function PersonPage({ params }) {
-  const person = getPerson(decodeURIComponent((await params).name));
+  const person = await getPersonRuntime(decodeURIComponent((await params).name));
   if (!person) notFound();
   const roles = [
     person.directed.length && `감독 ${person.directed.length}편`,

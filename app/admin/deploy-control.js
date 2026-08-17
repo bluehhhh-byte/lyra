@@ -20,7 +20,7 @@ async function json(res) {
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function DeployControl() {
+export default function DeployControl({ contentInDatabase = false }) {
   const [state, setState] = useState("");
   const [error, setError] = useState("");
   const [status, setStatus] = useState(null);
@@ -94,7 +94,7 @@ export default function DeployControl() {
         disabled={busy}
         className="rounded-lg border border-line px-3 py-2 text-sm font-semibold transition hover:border-accent hover:text-accent disabled:opacity-40"
       >
-        {busy ? "배포 중…" : "변경사항 배포"}
+        {busy ? "배포 중…" : contentInDatabase ? "코드 변경 배포" : "변경사항 배포"}
       </button>
       {(state || error) && (
         <span className={`max-w-64 text-xs ${state === "ERROR" ? "text-red-500" : "text-muted"}`} role="status" aria-live="polite">

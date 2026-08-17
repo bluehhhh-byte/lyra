@@ -367,7 +367,7 @@ export default function AdminForm() {
                 페이지 보기
               </a>
               <span className="block text-xs">
-                온라인 배포본은 재배포(약 1분) 후 반영됩니다.
+                저장이 완료되었습니다.
               </span>
             </span>
           )}

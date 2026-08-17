@@ -1,21 +1,61 @@
-import fs from "fs";
-import path from "path";
+import { getAllSongsRuntime } from "../../../lib/songs";
+import { getAllMoviesRuntime } from "../../../lib/movies";
+import { getWatchedRuntime } from "../../../lib/watched";
+import { getAllPeopleRuntime } from "../../../lib/people";
+import { contentRevision } from "../../../lib/content-db";
 
 export const dynamic = "force-dynamic";
 
-// 검색은 빌드 때 만들어 둔 data/search-index.json만 읽는다 (scripts/build-search-index.mjs).
-// 예전에는 요청마다 곡 md 800개와 왓챠 1045편을 다시 파싱했다 — 같은 답을 얻는 데
-// 매번 1MB 넘게 다시 읽는 셈이었다. 인덱스가 없으면(로컬에서 빌드 전) 그 자리에서 만든다.
+const lower = (...values) => values.flat().filter(Boolean).join(" ").toLowerCase();
+
+async function index() {
+  const [songs, movies, watched, people] = await Promise.all([
+    getAllSongsRuntime(),
+    getAllMoviesRuntime(),
+    getWatchedRuntime(),
+    getAllPeopleRuntime(),
+  ]);
+  return {
+    songs: songs.map((song) => {
+      const lines = song.stanzas.flatMap((stanza) => stanza.lines.flatMap((line) => [line.en, line.ko])).filter(Boolean);
+      return {
+        href: `/songs/${song.slug}`,
+        title: song.title,
+        subtitle: song.artist,
+        image: song.artwork,
+        meta: lower(song.title, song.artist, song.tags, song.keywords, lines),
+        lines,
+      };
+    }),
+    movies: movies.map((movie) => ({
+      href: `/movies/${movie.slug}`,
+      title: movie.title_ko || movie.title,
+      subtitle: movie.director_ko || movie.director || movie.year,
+      image: movie.poster,
+      meta: lower(movie.title, movie.title_ko, movie.director, movie.director_ko, movie.cast, movie.tags, movie.themes),
+    })),
+    watched: watched.map((movie) => ({
+      href: movie.tmdbId ? `https://www.themoviedb.org/${movie.media === "tv" ? "tv" : "movie"}/${movie.tmdbId}` : "",
+      title: movie.title_ko || movie.title,
+      subtitle: movie.director_ko || movie.director || movie.year,
+      image: movie.poster,
+      meta: lower(movie.title, movie.title_ko, movie.director, movie.director_ko, movie.cast, movie.genre, movie.country),
+    })),
+    people: people.map((person) => ({
+      href: `/people/${encodeURIComponent(person.name)}`,
+      title: person.name,
+      subtitle: `${person.works.length}편`,
+      image: person.works.find((work) => work.poster)?.poster || "",
+      meta: lower(person.name, person.works.map((work) => [work.title, work.title_ko])),
+    })),
+  };
+}
+
 let INDEX = null;
-function index() {
-  if (INDEX) return INDEX;
-  const file = path.join(process.cwd(), "data", "search-index.json");
-  try {
-    INDEX = JSON.parse(fs.readFileSync(file, "utf8"));
-  } catch {
-    INDEX = { songs: [], movies: [], watched: [], people: [] };
-  }
-  return INDEX;
+async function currentIndex() {
+  const revision = await contentRevision();
+  if (!INDEX || INDEX.revision !== revision) INDEX = { revision, value: await index() };
+  return INDEX.value;
 }
 
 const LIMIT = 6;
@@ -32,7 +72,7 @@ const pick = (items, query) => {
 export async function GET(request) {
   const query = new URL(request.url).searchParams.get("q")?.trim().toLowerCase() || "";
   if (!query) return Response.json({ groups: [] });
-  const db = index();
+  const db = await currentIndex();
 
   // 곡만 가사까지 본다 — 맞은 줄을 스니펫으로 보여주기 위해서다
   const songs = [];

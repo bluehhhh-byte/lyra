@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllSongs } from "../../lib/songs";
+import { getAllSongsRuntime } from "../../lib/songs";
 import AdminForm from "./form";
 import Backfill from "./backfill";
 import Lint from "./lint";
@@ -9,15 +9,19 @@ import ArtworkReview from "./artwork-review";
 import LyricsAudit from "./lyrics-audit";
 import BulkWork from "./bulk-work";
 import DeployControl from "./deploy-control";
-import { readData } from "../../lib/store";
+import { readRuntimeData } from "../../lib/store";
+import { databaseContentEnabled } from "../../lib/content-db";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
-export default function AdminPage() {
-  const songs = getAllSongs();
+export default async function AdminPage() {
+  const contentInDatabase = databaseContentEnabled();
+  const [songs, artworkAudit] = await Promise.all([
+    getAllSongsRuntime(),
+    readRuntimeData("artwork-backfill-audit.json", { items: [] }),
+  ]);
   // 커버 검토 대상: artwork 없고 '커버 없음 확정'도 아닌 곡 + 백필 감사 상태
-  const artworkAudit = readData("artwork-backfill-audit.json", { items: [] });
   const auditStatus = new Map((artworkAudit.items || []).map((x) => [x.slug, x.status]));
   const artworkless = songs
     .filter((s) => !(s.artwork || "").startsWith("https") && !s.artwork_none)
@@ -30,9 +34,14 @@ export default function AdminPage() {
           → 영화 관리로
         </Link>
         <div className="sm:ml-auto">
-          <DeployControl />
+          <DeployControl contentInDatabase={contentInDatabase} />
         </div>
       </div>
+      <p className="mb-5 rounded-lg border border-line px-3 py-2 text-xs text-muted">
+        {contentInDatabase
+          ? "곡·영화 저장은 즉시 사이트에 반영됩니다. 배포 버튼은 코드 변경 때만 사용합니다."
+          : "현재 GitHub 파일 저장 모드입니다. 저장한 콘텐츠는 배포 후 사이트에 반영됩니다."}
+      </p>
       <AdminForm />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">대량 작업 (Claude·ChatGPT)</h2>

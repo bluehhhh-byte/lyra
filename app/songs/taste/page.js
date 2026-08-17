@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getAllSongs } from "../../../lib/songs";
-import { readData } from "../../../lib/store";
+import { getAllSongsRuntime } from "../../../lib/songs";
+import { readRuntimeData } from "../../../lib/store";
 import { summarizeMusicTaste, interpretMusicTaste, recentShift } from "../../../lib/music-taste-core";
 import { emotionValence, valenceColor, parseEmotion } from "../../../lib/keywords";
 import CoverImage from "../../cover-image";
@@ -130,11 +130,11 @@ function EmotionEvidence({ emotion, n, songs, taste }) {
   );
 }
 
-export default function MusicTastePage() {
-  const songs = getAllSongs();
+export default async function MusicTastePage() {
+  const songs = await getAllSongsRuntime();
   const t = summarizeMusicTaste(songs);
   const text = interpretMusicTaste(t);
-  const report = readData("music-report.json", null);
+  const report = await readRuntimeData("music-report.json", null);
   const shift = recentShift(songs);
 
   if (t.count === 0)
