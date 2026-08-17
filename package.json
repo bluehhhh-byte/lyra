@@ -18,12 +18,14 @@
     "build:index": "node scripts/build-search-index.mjs",
     "status": "node scripts/project-status.mjs --write",
     "needs": "node scripts/needs-work.mjs",
-    "worktree": "node scripts/worktree.mjs"
+    "worktree": "node scripts/worktree.mjs",
+    "deploy:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-production.ps1"
   },
   "dependencies": {
     "next": "^15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tar": "7.5.22"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",

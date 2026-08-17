@@ -83,8 +83,8 @@ export default function DeployControl() {
   const busy = !!state && !terminal.has(state);
   const setup = {
     hook: { text: "Deploy Hook 사용", tone: "text-muted" },
-    token: { text: "토큰 사용 — 거부되면 Deploy Hook을 만드세요", tone: "text-muted" },
-    none: { text: "배포 설정 없음 — Deploy Hook이 필요합니다", tone: "text-red-500" },
+    source: { text: "모바일 직접 배포 사용", tone: "text-muted" },
+    none: { text: "모바일 배포 설정이 필요합니다", tone: "text-red-500" },
   }[status?.mode];
   return (
     <div className="flex min-h-9 flex-wrap items-center gap-x-2 gap-y-1">
