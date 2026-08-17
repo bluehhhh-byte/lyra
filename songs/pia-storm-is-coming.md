@@ -30,30 +30,50 @@ Show is over
 A storm is coming
 > 폭풍이 오고 있어
 마치 아름다운 꿈을 꾸는 듯해
+> It feels like dreaming a beautiful dream
 이 도시의 불빛은
+> The lights of this city
 아직은 알 수 없을 걸
+> You won't know it yet
 이제 곧 그가 오네
+> Soon enough, it comes
 
 영원할 줄 알았겠지 아마
+> You must have thought it would last forever
 널 위해 후회하지는 않아
+> I won't be sorry for your sake
 네게 돌이킬 수 없는
+> The day you can never take back
 그 날이 오네
+> That day is coming
 그 날이 오네
+> That day is coming
 
 The tide is turning
 > 물살이 바뀌고 있어
 You think this can last
 > 이게 계속될 거라 생각하나
 마지막 노랫소리로
+> With the sound of the last song
 어울리는 듯해
+> It seems to fit
 몰아치는 혼돈은
+> The chaos raging in
 아직 그대는 꿈을 꾸는가
+> Are you still dreaming?
 
 네게 돌이킬 수 없는
+> The day you can never take back
 그 날이 오네
+> That day is coming
 네겐 돌이킬 수 없는
+> The day you can never take back
 그 날이 오늘
+> That day is today
 그 날이 오늘
+> That day is today
 
 영원할 줄 알았겠지 아마
+> You must have thought it would last forever
 널 위해 후회하지는 않아
+> I won't be sorry for your sake
