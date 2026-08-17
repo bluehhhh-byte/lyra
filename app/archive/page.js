@@ -140,7 +140,9 @@ export default async function ArchivePage({ searchParams }) {
           <p className="mb-4 mt-1 text-xs text-muted">
             각 점은 그 달 음악 기록의 감정 좌표다. 점을 고르면 그 달로 이동한다.
           </p>
-          <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start">
+          {/* 오른쪽 칸은 감정 구성 그래프와 비율 목록이 한 줄에 나란히 들어갈 만큼 준다.
+              좁으면 목록이 그래프 아래로 떨어져 둘을 같이 읽기 어려워진다 */}
+          <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-start">
             <EmotionOrbit stats={yearStats} month={month} monthHref={monthHref} />
             {monthStat?.emotions.length > 0 && (
               <div className="min-w-0 max-w-full">

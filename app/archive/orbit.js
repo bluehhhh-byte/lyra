@@ -320,13 +320,15 @@ export function EmotionComposition({ stat }) {
   });
 
   return (
-    // 모바일은 그래프와 수치 목록을 세로로 쌓아 폭을 넘기지 않는다
-    <div className="flex min-w-0 flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
+    // 그래프와 비율 목록은 같이 읽는 것이라 한 줄에 붙여 둔다. 줄바꿈을 허용하면
+    // 칸이 조금만 좁아져도 목록이 아래로 떨어져 둘을 견주기 어려워진다.
+    // 폭이 정말 없는 모바일에서만 세로로 쌓는다.
+    <div className="flex min-w-0 flex-col items-start gap-4 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-5">
       <svg
         viewBox={`0 0 ${S} ${S}`}
         role="img"
         aria-label={`${Number(stat.month.slice(5))}월 감정 구성`}
-        className="h-auto w-full max-w-72 sm:w-64"
+        className="h-auto w-full max-w-72 sm:w-56 sm:shrink-0"
       >
         <circle cx={C} cy={C} r={R1 + 8} fill="none" stroke="var(--color-line)" />
         <circle cx={C} cy={C} r={R0 - 6} fill="none" stroke="var(--color-line)" opacity="0.6" />
@@ -344,7 +346,7 @@ export function EmotionComposition({ stat }) {
           </g>
         ))}
       </svg>
-      <ul className="min-w-0 text-xs leading-6 text-muted" aria-label="감정별 비율">
+      <ul className="min-w-0 whitespace-nowrap text-xs leading-6 text-muted" aria-label="감정별 비율">
         {items.map((it) => (
           <li key={it.emotion}>
             <span className="text-ink">{it.emotion}</span> {it.n}곡 · {Math.round((it.n / total) * 100)}%
