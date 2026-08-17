@@ -52,19 +52,27 @@ I can't believe it
 > 믿을 수가 없어
 
 오늘 어땠어? 난 더 미쳤어
+> How was your day? I've gone crazier
 내 인생 곡선은 조금 미쳤어
+> The curve of my life is a little insane
 난 Who 난 Who?
 > 난 누구, 난 누구?
 내 기억 저 편을 되돌아 봤어
+> I looked back at the far side of my memory
 쾌락을 좇던 악몽을 꿨어
+> I dreamed a nightmare of chasing pleasure
 그 꿈 그 꿈 Woah-!
 > 그 꿈, 그 꿈, 워-!
 
 넌 내가 내가 필요해
+> You need me, need me
 난 자유의 몸을 원해
+> I want a body that's free
 너와의 이별이 달콤해 음
+> Parting with you tastes sweet, mm
 
 완전 미쳤어!
+> Completely insane!
 더 미쳤어 OH, GOD!
 > 더 미쳤어, 오, 신이시여!
 미쳤어 OH, GOD!
@@ -72,6 +80,7 @@ I can't believe it
 HEY-COME ON!
 > 헤이, 덤벼!
 눈이 돌고 미쳤어!!!
+> Eyes rolling, gone mad!!!
 
 갈기갈기 찢겨 상처많은 나의 FANS
 > 갈기갈기 찢겨 상처 많은 나의 팬들
@@ -85,11 +94,17 @@ I'm so sorry but I loved
 > 20대의 빅뱅, "말 말고"
 
 모두 다 털고 훌훌 날리고
+> Shake it all off and let it fly
 상처엔 연고 내 모질이 업보
+> ointment on the wounds, my harshness is karma
 소리쳐 만세 빠삐용 같애
+> Shout hurrah, like Papillon
 뒤늦은 칼퇴 나 홀로 밝게
+> a late clean getaway, bright and alone
 해방을 선포 광대짓 접고
+> Declaring liberation, folding up the clown act
 새 주파수 경고 더 고차원 경로
+> a new frequency warning, a higher-dimension route
 
 Not Too Bad
 > 나쁘지 않아
@@ -101,8 +116,11 @@ You Know What I'm Saying, BOY?
 > 무슨 말인지 알겠지?
 
 넌 내가 내가 필요해
+> You need me, need me
 난 자유의 몸을 원해
+> I want a body that's free
 너와의 이별이 달콤해 음
+> Parting with you tastes sweet, mm
 
 완전 미쳤어! HEY-COME ON!
 > 완전 미쳤어! 헤이, 덤벼!
@@ -111,6 +129,7 @@ You Know What I'm Saying, BOY?
 HEY-COME ON!
 > 헤이, 덤벼!
 눈이 돌고 미쳤어!!!
+> Eyes rolling, gone mad!!!
 
 Dirty Sun! Dirty Sun!
 > 더러운 태양! 더러운 태양!
@@ -151,3 +170,4 @@ They just ruined my soul
 That's where I got great new Moon
 > 바로 거기서 새로운 달을 얻었어
 완전 미쳤어!
+> Completely insane!

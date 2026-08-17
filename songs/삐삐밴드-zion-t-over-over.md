@@ -85,6 +85,7 @@ over and over and over and over
 바라보고 싶은데 볼수가 없어
 > I want to look and I can't see
 말하는 입술이 이야기 하진않네
+> The lips that speak aren't telling the story
 쳐다보는 눈빛이 바라보진 않네
 > Eyes that stare don't look at me
 

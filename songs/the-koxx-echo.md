@@ -33,6 +33,7 @@ and see the days
 we gave nothing but love
 > 우리가 사랑만을 주고받던
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 난 아직
 > I'm still
 그 자리에
@@ -72,6 +73,7 @@ and see the days
 we gave nothing but love
 > 우리가 사랑만을 주고받던
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 끊어진 우리
 > The two of us, cut off
 진한 그리움에
@@ -101,10 +103,15 @@ and see the days
 we gave nothing but love
 > 우리가 사랑만을 주고받던
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 워어어워어워어
+> Whoa-oh-oh whoa-oh-oh
 so i look in your smile
 > 그래서 난 네 미소를 들여다봐
 and see the days

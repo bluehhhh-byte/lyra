@@ -28,36 +28,60 @@ source_body_hash: 1fb8e05c547abba5583ab970dd04023b4b26edcb
 I Believe
 > 난 믿어
 그댄 곁에 없지만 
+> You're not beside me, but
 이대로 이별은 아니겠죠 
+> this can't be goodbye, can it
 I Believe 나에게 오는 길은 
 > 난 믿어, 나에게 오는 길은
 조금 멀리 돌아올 뿐이겠죠 
+> You're only taking a longer way back
 모두 지나간 그 기억 속에서 
+> Inside those memories that have all passed
 내가 나를 아프게 하며 눈물을 만들죠
+> I hurt myself and make the tears
 
 나만큼 울지 않기를 
+> I hope you don't cry as much as I do
 그대만은 눈물 없이 날 편하게 떠나 주기를 
+> I hope you at least leave me easily, without tears
 언젠가 다시 돌아올 그대라는 걸 알기에 
+> Because I know you'll come back someday
 난 믿고 있기에 기다릴게요 
+> because I believe it, I'll wait
 난 그대여야만 하죠 
+> It has to be you for me
 
 I Believe
 > 난 믿어
 내가 아파할까 봐 
+> Afraid that I would hurt
 그대는 울지도 못했겠죠 
+> you couldn't even cry, could you
 I Believe 흐르는 내 눈물이 
 > 난 믿어, 흐르는 내 눈물이
 그댈 다시 내게 돌려주겠죠 
+> It will give you back to me
 자꾸 멈추는 내 눈길 속에서 
+> In my gaze that keeps stopping
 그대 모습들이 떠올라 눈물을 만들죠 
+> your face rises up and makes the tears
 
 나 그댈 알기 전
+> Before I knew you
 이 세상도 이렇게 눈부셨는지 
+> was this world this dazzling too
 그 하늘 아래서 이젠 눈물로 남겨졌지만 
+> Under that sky I'm left with tears now, but
 이 자리를 난 지킬게요
+> I'll keep this place
 
 그대란 이유만으로 나에게는 
+> For the sole reason that it's you
 기다림조차 충분히 행복하겠죠 
+> even the waiting will be happiness enough
 사랑한 이유만으로 또 하루가 지나가고 
+> For the sole reason that I loved, another day goes by
 오는 길 잊어도 기다릴게요 
+> and even if you forget the way back, I'll wait
 난 그대여야만 하죠 
+> It has to be you for me

@@ -26,108 +26,172 @@ source_hash: 865b7344f7606e8532c9b49fdc2a5b73ba8352fb
 source_body_hash: dd5aec673f168c2fc0548f7cc831e951077a72b0
 ---
 비가 내리고 음악이 흐르면
+> When the rain falls and the music plays
 나 혼자 I get high
 > 나 혼자 취해
 (나 혼자 약에 취해)
+> (High all by myself)
 제발 Bitch don't kill my vibe
 > 제발, 내 기분 망치지 마
 (제발 내 분위기 죽이지 마)
+> (Please don't kill my vibe)
 
 아무 계획 없는 게 오늘 계획
+> Having no plan is today's plan
 핸드폰 무음 비행기 모드 해
+> Phone on silent, airplane mode on
 잠수 타 아무도 모르게
+> Go off the grid where nobody knows
 Beep beep beep beep
 > 삐 삐 삐 삐
 where u at?
 > 너 어디야?
 (삐삐삐삐, 너 어디야?)
+> (Beep beep beep beep, where are you?)
 
 오늘 밤은 연락하지 마
+> Don't call me tonight
 I'm not gonna be around
 > 난 근처에 없을 거야
 (난 여기 있지 않을 거야)
+> (I won't be around)
 전해 STAX 형 not in town
 > 전해, 스택스 형은 동네에 없다고
 (이 도시에 없다고)
+> (I'm not in this city)
 
 날 알아봐도 오늘 하루만
+> Even if you recognize me, just for today
 모르는 척하고 지나가 줘
+> pretend you don't and walk on by
 Please don't kill my high
 > 제발 내 기분 깨지 마
 (제발 내 약 기운 죽이지 말고)
+> (Please don't kill my high)
 
 때 놓친 영화 보고
+> Watching a movie I missed
 멍 때리면서 천장이나 보고
+> spacing out, staring at the ceiling
 하루 세끼 배민으로 때우고
+> three meals a day off delivery apps
 아침에 자고 저녁에 눈떠도
+> sleeping at dawn, waking at dusk
 오늘 밤은 라임 안 찾을래
+> tonight I won't go looking for rhymes
 잃어버린 나를 찾을 때
+> When I find the self I lost
 내가 나를 찾을 때
+> when I find myself
 그때가 되면 I'll be back
 > 그때가 되면 돌아올게
 (다시 돌아올게)
+> (I'll be back)
 
 Lonely stoner who I be
 > 외로운 약쟁이, 그게 나야
 (외로운 약쟁이 나는 누굴까)
+> (Lonely stoner, who am I)
 떠날게 잠시
+> I'll be gone a while
 정리가 아직 덜 돼 난 만취
+> Still haven't sorted it out, I'm dead drunk
 오 이런 밤이 너무 필요하지
+> Oh, I need a night like this so badly
 You know me
 > 너도 날 알잖아
 (너도 알다시피)
+> (As you know)
 
 Beep beep beep beep
 > 삐 삐 삐 삐
 I feel tipsy
 > 알딸딸해
 (삐삐삐삐, 난 약에 취한 것 같아)
+> (Beep beep beep beep, I think I'm high)
 폰 뒤집지 Yeah
 > 폰 뒤집지, 그래
 No one with me
 > 곁엔 아무도 없어
 (여긴 아무도 없지)
+> (There's no one here)
 홀로이 이 방에 있지 왜
+> Alone in this room, and why
 압박들이 방 안에 발 들이지 못하게
+> so the pressures can't set foot inside
 
 쓸데없는 말은 하고 싶지 않아
+> I don't want to say anything pointless
 쓸데없는 시간이 너무 필요하잖아
+> but I need pointless time so badly
 오늘 밤엔 멍청하길 원해 오
+> Tonight I want to be stupid, oh
 너무 많은 의심이 날 괴롭게 오
+> too much doubt is tormenting me, oh
 
 혼자 내 방 안 의자에 앉아
+> Sitting alone in the chair in my room
 막걸리나 마시다가
+> drinking makgeolli
 취기가 살짝 오르고 나면
+> once the buzz creeps up a little
 조금은 편해질라나
+> will I feel a bit easier
 부재중 전화 한 통조차도 버거울 때
+> When even a single missed call is too much
 그 기분 안다면 오늘만 벗어날게
+> if you know that feeling, let me escape just for today
 
 어쩌면 아무 의미 없는 거라도
+> Even if it turns out to mean nothing
 의미 없게 놔둬 쉴 수 있게 나도
+> let it mean nothing, so I can rest too
 내일 일어나면 후회할 게 뻔하고
+> I'll obviously regret it when I wake tomorrow
 아파하더라도 늘어질게 이 밤은
+> but even hurting, I'll sprawl out tonight
 
 누가 날 안아봤지
+> Who has ever held me
 누가 날 사랑하지
+> Who loves me
 누가 날 알아주지
+> Who understands me
 누가 날 사랑하지
+> Who loves me
 나를 안아 봤나 봐
+> I guess I held myself
 나를 사랑 했나 봐
+> I guess I loved myself
 나를 안아 봤나 봐
+> I guess I held myself
 나를 안아 봤나 봐
+> I guess I held myself
 
 가사도 쓰기 싫은 밤
+> A night I don't even want to write lyrics
 난 12시 위에 앉아
+> I sit on top of midnight
 주사위를 던져
+> and throw the dice
 무거워 결정
+> Decisions are heavy
 빽빽해 한 달이 쓱 지나가
+> Packed tight, a month slides right past
 오늘은 비 온다
+> It's raining today
 귀찮아 그냥 싹 다 비울까
+> Can't be bothered — should I just empty it all
 괜찮아 뭐 어때
+> It's fine, so what
 Ok ok ok ok ok
 > 됐어 됐어 됐어 됐어 됐어
 
 너무 많아도
+> even if it's too much
 너무 아파도
+> even if it hurts too much
 너무 많아도
+> even if it's too much
 너무 아파도
+> even if it hurts too much

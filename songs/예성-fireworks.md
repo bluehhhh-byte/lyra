@@ -26,52 +26,83 @@ source_hash: d2f8c8beb82413454b39ffb2c1f0f1be2ed5fb11
 source_body_hash: f85ca2fcf26ba169d18e2cfac626f00a33d3eecc
 ---
 무덤덤했던 답답함마저 익숙해질 즈음
+> Around the time even the numb frustration grew familiar
 살며시 내게로 다가와 나를 깨워준 너
+> you came to me softly and woke me
 구름 속에 가려져 흐렸던 날도
+> The days clouded over and hidden
 나를 탓하며 상처 줬었던 말도
+> the words that blamed me and left wounds
 아무 의미 없던 일상도
+> the everyday that meant nothing
 모든 게 새로 느껴져
+> all of it feels new
 
 오, 너와 있을 때면
+> Oh, whenever I'm with you
 깜깜한 하늘 속
+> In the pitch-dark sky
 너란 불빛을 밝혀
+> I light the lamp that is you
 기다리던 네가 오면
+> When you, the one I waited for, arrive
 내 맘을 수놓아
+> you embroider my heart
 
 너와 쏘아 올린 Fireworks
 > 너와 쏘아 올린 불꽃
 쏟아지는 은하수 아래
+> Under the pouring Milky Way
 내 어두웠던 밤의 Finale
 > 내 어두웠던 밤의 피날레
 나를 비춰줘 더 환하게
+> shine on me, brighter still
 이젠 그릴게
+> Now I'll paint it
 수억 개의 색으로
+> in hundreds of millions of colors
 네게 난 물들래 우-
+> I want to be dyed by you, ooh
 
 내게 빛을 비춘 너야
+> You're the one who shone light on me
 네가 날 바라볼 때면
+> Whenever you look at me
 너의 향기에 취해서
+> drunk on your scent
 날 전부 들키고 싶어
+> I want to be found out completely
 깜깜한 하늘 속
+> In the pitch-dark sky
 너란 불빛을 밝혀
+> I light the lamp that is you
 기다리던 네가 오면
+> When you, the one I waited for, arrive
 내 맘을 수놓아
+> you embroider my heart
 
 이제 넌 Just stay where you are
 > 이제 넌 그 자리에 그대로 있어
 내가 널 비출 차례야
+> Now it's my turn to shine on you
 우리의 아름다운 밤이야
+> It's our beautiful night
 Let's light up the sky, yeah
 > 하늘을 밝히자, 그래
 
 너와 쏘아 올린 Fireworks
 > 너와 쏘아 올린 불꽃
 쏟아지는 은하수 아래
+> Under the pouring Milky Way
 내 어두웠던 밤의 Finale
 > 내 어두웠던 밤의 피날레
 나를 비춰줘 더 환하게
+> shine on me, brighter still
 이젠 그릴게
+> Now I'll paint it
 수억 개의 색으로
+> in hundreds of millions of colors
 네게 난 물들래 우-
+> I want to be dyed by you, ooh
 
 🗨 어젯밤, 집에서 불꽃놀이를 바라보며 영화 <애프터썬>에서 봤었던 대사였을까, "어쩌면 당신도 지금 다른 곳에서 같은 하늘을 바라보고 있을까" 생각했다. 그렇다고 생각하니 뭔가 마음이 놓였다. 너와 쏘아올린 짧았던 불꽃놀이는 사라지고 나서야 오랫동안 빛으로 남게 되었어.

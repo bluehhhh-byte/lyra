@@ -52,6 +52,7 @@ source_hash: 803e6d9e059b3ecee5d8eda13d71cbf22f89d867
 Have a good ride, Bon voyage
 > 좋은 여행 되기를, 잘 다녀와
 (좋은 여행하세요)
+> (Have a good trip)
 또 다른 시간에 만나게 될 거야
 > we'll meet again in some other time
 닿지 않더라도
@@ -61,6 +62,7 @@ Have a good ride, Bon voyage
 Bon voyage
 > 잘 다녀와
 (잘 다녀오세요)
+> (Come back safely)
 
 넌 나의 모든 날
 > You are all of my days
@@ -96,6 +98,7 @@ Bon voyage
 Have a good ride, Bon voyage
 > 좋은 여행 되기를, 잘 다녀와
 (좋은 여행하세요)
+> (Have a good trip)
 또 다른 시간에 만나게 될 거야
 > we'll meet again in some other time
 닿지 않더라도
@@ -105,3 +108,4 @@ Have a good ride, Bon voyage
 Bon voyage
 > 잘 다녀와
 (잘 다녀오세요)
+> (Come back safely)

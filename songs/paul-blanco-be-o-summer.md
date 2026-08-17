@@ -80,6 +80,7 @@ Are you thinking bout me
 너한텐 My life’s good
 > To you, my life’s good
 (너한텐 내 삶은 괜찮아)
+> (To you, my life is fine)
 나는 불평 못해
 > I can't complain
 아무거나 갖다 네 빈자리를 채우려 하지만

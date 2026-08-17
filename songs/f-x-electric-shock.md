@@ -26,24 +26,40 @@ source_hash: 59a0d2548b9d0658a9af1731f334b8e7fe1e61a6
 source_body_hash: bbdc1177a268efedac6ae8d3b75581050b11a10f
 ---
 전 전 전류들이 몸을 타고 흘러 다녀
+> E-e-electric currents run all through my body
 기 기 기절할 듯 아슬아슬 찌릿찌릿
+> L-l-like I'll faint, right on the edge, tingling
 충 충 충분해 네 사랑이 과분해
+> E-e-enough already, your love is too much for me
 격 격 격하게 날 아끼는 거 다 알아
+> C-c-cherishing me so fiercely — I know it all
 
 블랙홀처럼 빨려 들어가
+> I'm pulled in like a black hole
 끝이 안 보여 떨어져 쿵
+> no end in sight, falling, thud
 여기는 어디? 열심히 딩동딩동
+> Where am I? Ding dong ding dong, hard at work
 도대체 난 누구? 머릿속이 빙그르르르르
+> Who on earth am I? My head spinning round and round
 
 전 전 전압을 좀 맞춰서 날 사랑해줘
+> A-a-adjust the voltage a little when you love me
 기 기척 없이 나를 놀래키진 말아줘
+> D-d-don't startle me without a sound
 충 충돌 하진 말고 살짝 나를 피해줘
+> D-d-don't collide with me, swerve past me gently
 격 격변하는 세계 그 속에 날 지켜줘
+> In this world of upheaval, protect me inside it
 
 의사 선생님 이건 뭔가요?
+> Doctor, what is this?
 숨이 가쁘고 열이 나요
+> I'm short of breath and running a fever
 말문이 막혀 귓가는 딩동딩동
+> Words fail me, my ears go ding dong ding dong
 눈이 막 부셔 머릿속은 빙그르르르르
+> My eyes are dazzled, my head spinning round and round
 
 나의 모든 걸 사로잡은 Energy
 > 나의 모든 걸 사로잡은 에너지

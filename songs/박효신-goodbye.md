@@ -26,31 +26,46 @@ source_hash: af676d4216d1d451c863636c43314f5cb0ef7ca7
 source_body_hash: f6b37b2f118306e1b61391d04f24ccda40b4f23f
 ---
 멀어져 가는 오후를 바라보다
+> Watching the afternoon drift away
 스쳐 지나가 버린 그때 생각이나
+> I think of that time that brushed past and was gone
 기억 모퉁이에 적혀 있던 네가
+> You, written in the corner of memory
 지금 여기에 있다
+> are here right now
 
 이젠 멈춰버린 화면 속에서
+> Inside a frame that has stopped for good
 내게 여름처럼 웃고 있는 너
+> you're smiling at me like summer
 어쩌면 이번이 마지막 Goodbye
 > 어쩌면 이번이 마지막 작별
 오래 머물러 주어서 고마워
+> Thank you for staying so long
 이 말이 뭐라고 그렇게 어려웠을까
+> Why was saying this so hard
 이제 Goodbye
 > 이제 작별이야
 
 우린 다른 꿈을 찾고 있던 거야
+> We were looking for different dreams
 아주 어린 날 놀던 숨바꼭질처럼
+> Like hide-and-seek we played as little kids
 해가 저물도록 혼자 남은 내가
+> left alone until the sun went down
 지금 여기에 있다
+> are here right now
 
 손에 꼭 쥐었던 너와의 Goodbye
 > 손에 꼭 쥐었던 너와의 작별
 끝내 참지 못한 눈물이 나
+> I finally couldn't hold back the tears
 어쩌면 오늘이 마지막 Goodbye
 > 어쩌면 오늘이 마지막 작별
 함께 했던 모든 날이 좋았어
+> Every day we spent together was good
 이 말이 뭐라고 그렇게 어려웠을까
+> Why was saying this so hard
 이제 Goodbye
 > 이제 작별이야
 

@@ -24,42 +24,63 @@ source_hash: e230b1dd2b6db87c1ebb3ba395949f5603f76c3b
 source_body_hash: 06eacfc8b8d91145a1bab0fcfa314bce7485ad23
 ---
 이름 장유석 1992년 3월 15일
+> Name, Jang Yu-seok, March 15, 1992
 부산 양정에서 태어남
+> born in Yangjeong, Busan
 아빠 장명관 엄마 없음
+> father Jang Myeong-gwan, no mother
 인동 장 씨에 외동아들로
+> an only son of the Indong Jang clan
 뭔 파 몇 대손 뭐 그런 건 모름
+> which branch, which generation — don't know that stuff
 키 169.9cm 에 몸무게 59.4kg
 > 키 169.9센티미터에 몸무게 59.4킬로그램
 혈액형 O형 M.B.T.I는 INTP
 > 혈액형은 O형, 엠비티아이는 INTP
 2005년 양덕초 졸업
+> 2005, graduated Yangdeok Elementary
 2008년 덕천중 졸업
+> 2008, graduated Deokcheon Middle School
 2011년 경남고 졸업
+> 2011, graduated Gyeongnam High School
 학력 고졸
+> education, high school
 어제 가슴이랑 삼두 운동했음
+> yesterday I trained chest and triceps
 오늘은 하체 조지는 날
+> today is leg day
 
 2012년 믹스테이프 유명 발표
+> 2012, released the mixtape Yumyeong
 2014년 일랍 정규 1집 발매
+> 2014, released the first full album Ilrap
 2015년 와비사비룸
+> 2015, Wabi-Sabi Room
 첫 번째 EP 비밀꼴라쥬
 > 첫 번째 이피는 비밀꼴라쥬
 두 번째 EP 물질보다 정신 발매
 > 두 번째 이피 <물질보다 정신> 발매
 2016년 정규 1집 장유석 발매
+> 2016, released the full album Jang Yu-seok
 2017년 와비사비룸
+> 2017, Wabi-Sabi Room
 세 번째 EP VIBE 발매
 > 세 번째 이피 <바이브> 발매
 2018년 정규 2집 KOKi7 발매
 > 2018년 정규 2집 <코키7> 발매
 2020년 정규 3집 파도 발매
+> 2020, released the third full album Pado
 2022년 짱유 시바세키
+> 2022, Jjang You and Shibaseki
 그리고 HYPNOSIS THERAPY
 > 그리고 힙노시스 테라피
 출격 준비 완료
+> ready for launch
 드가자 짱유
+> let's go, Jjang You
 
 제일 좋아하는 아티스트
+> favorite artists
 Jflow, hukky shibaseki, kanye
 > 제이플로우, 후키 시바세키, 칸예
 west, king krule, die antwoord,
