@@ -1,8 +1,8 @@
 ---
 title: Lost Boys
 title_ko: 로스트 보이스
-artist: フィービー・ブリジャーズ
-artist_ko: 
+artist: Phoebe Bridgers
+artist_ko: 피비 브리저스
 album: Lost Weekend
 year: 2026
 genre: オルタナティブ
