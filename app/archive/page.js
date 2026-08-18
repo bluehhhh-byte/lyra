@@ -140,13 +140,14 @@ export default async function ArchivePage({ searchParams }) {
           <p className="mb-4 mt-1 text-xs text-muted">
             각 점은 그 달 음악 기록의 감정 좌표다. 점을 고르면 그 달로 이동한다.
           </p>
-          {/* 오른쪽 칸은 감정 구성 그래프와 비율 목록이 한 줄에 나란히 들어갈 만큼 준다.
-              좁으면 목록이 그래프 아래로 떨어져 둘을 같이 읽기 어려워진다 */}
-          <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-start">
+          {/* 감정 구성은 이름·막대·수치가 한 행인 목록이라 좁은 칸이면 충분하다.
+              궤도 그래프에 남는 폭을 주는 편이 점과 라벨을 읽기 쉽다 */}
+          <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
             <EmotionOrbit stats={yearStats} month={month} monthHref={monthHref} />
             {monthStat?.emotions.length > 0 && (
-              <div className="min-w-0 max-w-full">
-                <h3 className="mb-2 text-sm font-semibold">{Number(month.slice(5))}월의 감정 구성</h3>
+              <div className="min-w-0 max-w-full rounded-2xl border border-line bg-surface px-4 py-4">
+                <h3 className="text-sm font-semibold">{Number(month.slice(5))}월의 감정 구성</h3>
+                <p className="mb-3 mt-0.5 text-xs text-muted">막대는 그달 기록 전체에서 차지하는 비율이다.</p>
                 <EmotionComposition stat={monthStat} />
               </div>
             )}

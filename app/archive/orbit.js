@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { valenceColor, emotionValence } from "../../lib/keywords";
-import { emotionAngles, MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
-import { axisRange, placeLabels, clampLabel, textBounds } from "../../lib/orbit-layout";
+import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
+import { axisRange, placeLabels, clampLabel } from "../../lib/orbit-layout";
 import { workLabel } from "../../lib/archive-stats";
 
 // 감정 궤도 — 선택 연도의 월들을 valence(가로)·arousal(세로) 평면에 놓고 시간
@@ -13,7 +13,7 @@ import { workLabel } from "../../lib/archive-stats";
 // 글자가 더 크게 나오도록 하고, 여백(PAD)도 라벨이 들어갈 만큼 넉넉히 준다.
 const VARIANTS = {
   mobile: { key: "m", W: 360, H: 424, PAD: 52, fs: 14, axisFs: 13, quadFs: 13, labelW: 34, labelH: 15 },
-  desktop: { key: "d", W: 640, H: 504, PAD: 64, fs: 13, axisFs: 12, quadFs: 13, labelW: 32, labelH: 14 },
+  desktop: { key: "d", W: 600, H: 420, PAD: 56, fs: 13, axisFs: 12, quadFs: 12, labelW: 32, labelH: 14 },
 };
 
 const mm = (month) => `${Number(month.slice(5))}월`;
@@ -86,12 +86,14 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
     { text: "밝음 →", x: W - PAD, y: rowB, anchor: "end" },
   ].map((a) => ({ ...a, ...clampLabel({ x: a.x, y: a.y, anchor: a.anchor, w: textWidth(a.text, axisFs), h: axisFs }, box) }));
 
+  // 뷰포트를 채우도록 늘리지 않는다 — 점 열두 개짜리 그림이 화면 폭만큼 커지면
+  // 여백만 넓어지고 글자 대비 그림이 성겨져 오히려 읽기 어렵다
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
       role="img"
       aria-labelledby={`${chartId}-title ${chartId}-desc`}
-      className="h-auto w-full max-w-full"
+      className="h-auto w-full max-w-[560px]"
     >
       <title id={`${chartId}-title`}>감정 궤도 — 월별 정서 좌표와 이동</title>
       <desc id={`${chartId}-desc`}>
@@ -269,90 +271,41 @@ export function BioTimeline({ stats, month, monthHref }) {
   );
 }
 
-// 감정 구성 — 선택한 달의 감정 비율. 궤도의 보조 시각화. 원 둘레 배치는
-// 가나다순이 아니라 circumplex 각도(emotionAngle)다. hover 없이도 읽히도록
-// 수치 목록을 항상 같이 보여준다.
-//
-// viewBox를 막대 길이보다 넉넉히 잡고 라벨을 안으로 clamp한다. 예전에는 220 안에서
-// 막대 끝 + 13에 라벨 중심을 두어 원 가장자리 감정("긴장된 저항" 같은 긴 이름은 아니지만
-// 두 글자여도) 한글이 viewBox 밖으로 나갔다.
-const COMP = { S: 272, R0: 30, R1: 96, FS: 13 };
 
+// 감정 구성 — 선택한 달의 감정 비율.
+//
+// 전에는 원 둘레에 막대를 두른 그림과 비율 목록을 나란히 두었다. 그림은 한 감정이
+// 전체의 몇 할인지 읽을 수 없었고(길이가 최댓값 기준이었다), 목록은 그림과 떨어져
+// 있어 어느 막대가 어느 줄인지 눈으로 이어야 했다. 둘을 한 줄로 합친다 —
+// 이름·막대·수치가 같은 행에 있으면 잇는 일 자체가 사라진다.
+//
+// 막대 길이는 전체 대비 비율이다. 옆의 %와 같은 값이라 그림과 숫자가 어긋나지 않는다.
+// 색은 valence(밝음/어두움)라 궤도 그래프의 점 색과 같은 뜻이다.
 export function EmotionComposition({ stat }) {
   if (!stat?.emotions?.length) return null;
   const total = stat.emotions.reduce((s, [, n]) => s + n, 0);
-  const { S, R0, R1, FS } = COMP;
-  const C = S / 2;
-  const max = stat.emotions[0][1];
-  const angles = emotionAngles(stat.emotions.map(([e]) => e));
-
-  const placed = [];
-  const items = stat.emotions.map(([emotion, n]) => {
-    // SVG y축은 아래가 +라서 각도를 뒤집어 위가 고각성이 되게 한다
-    const ang = -angles.get(emotion);
-    const len = R0 + ((R1 - R0) * n) / max;
-    const cos = Math.cos(ang), sin = Math.sin(ang);
-    const w = textWidth(emotion, FS);
-    // 좌우 가장자리에서는 글자가 바깥으로 뻗지 않도록 anchor를 바꾼다
-    const anchor = cos > 0.35 ? "start" : cos < -0.35 ? "end" : "middle";
-    const gap = anchor === "middle" ? 8 : 6;
-    let x = C + cos * (len + gap);
-    let y = C + sin * (len + gap) + FS * 0.35;
-    let pos = clampLabel({ x, y, anchor, w, h: FS }, { width: S, height: S, pad: 3 });
-    // 같은 방향으로 몰린 라벨이 포개지면 반지름 방향으로 조금 더 밀어낸다
-    for (let step = 0; step < 6; step++) {
-      const [l, rr] = textBounds(pos.x, anchor, w);
-      const hit = placed.some((q) => l < q.r + 2 && rr + 2 > q.l && pos.y - FS * 0.8 < q.b + 1 && pos.y + FS * 0.25 + 1 > q.t);
-      if (!hit) break;
-      pos = clampLabel(
-        { x: pos.x + cos * (FS * 0.9), y: pos.y + sin * (FS * 0.9) + (sin >= 0 ? FS * 0.5 : -FS * 0.5), anchor, w, h: FS },
-        { width: S, height: S, pad: 3 }
-      );
-    }
-    const [l, rr] = textBounds(pos.x, anchor, w);
-    placed.push({ l, r: rr, t: pos.y - FS * 0.8, b: pos.y + FS * 0.25 });
-    return {
-      emotion, n, ang, len,
-      x1: C + cos * R0, y1: C + sin * R0,
-      x2: C + cos * len, y2: C + sin * len,
-      label: pos, anchor,
-    };
-  });
 
   return (
-    // 그래프와 비율 목록은 같이 읽는 것이라 한 줄에 붙여 둔다. 줄바꿈을 허용하면
-    // 칸이 조금만 좁아져도 목록이 아래로 떨어져 둘을 견주기 어려워진다.
-    // 폭이 정말 없는 모바일에서만 세로로 쌓는다.
-    <div className="flex min-w-0 flex-col items-start gap-4 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-5">
-      <svg
-        viewBox={`0 0 ${S} ${S}`}
-        role="img"
-        aria-label={`${Number(stat.month.slice(5))}월 감정 구성`}
-        className="h-auto w-full max-w-72 sm:w-56 sm:shrink-0"
-      >
-        <circle cx={C} cy={C} r={R1 + 8} fill="none" stroke="var(--color-line)" />
-        <circle cx={C} cy={C} r={R0 - 6} fill="none" stroke="var(--color-line)" opacity="0.6" />
-        {items.map((it) => (
-          <g key={it.emotion}>
-            <title>{`${it.emotion} ${it.n}곡 · ${Math.round((it.n / total) * 100)}%`}</title>
-            <line x1={it.x1} y1={it.y1} x2={it.x2} y2={it.y2} stroke={valenceColor(emotionValence(it.emotion))} strokeWidth="7" strokeLinecap="round" />
-            <text
-              x={it.label.x} y={it.label.y}
-              textAnchor={it.anchor} fontSize={FS} fill="var(--color-ink)"
-              stroke="var(--color-bg)" strokeWidth="2.5" strokeLinejoin="round" paintOrder="stroke"
-            >
-              {it.emotion}
-            </text>
-          </g>
-        ))}
-      </svg>
-      <ul className="min-w-0 whitespace-nowrap text-xs leading-6 text-muted" aria-label="감정별 비율">
-        {items.map((it) => (
-          <li key={it.emotion}>
-            <span className="text-ink">{it.emotion}</span> {it.n}곡 · {Math.round((it.n / total) * 100)}%
+    <ul className="min-w-0 space-y-2.5" aria-label="감정별 비율">
+      {stat.emotions.map(([emotion, n]) => {
+        const pct = Math.round((n / total) * 100);
+        return (
+          <li key={emotion} className="min-w-0">
+            <div className="flex items-baseline justify-between gap-3 text-xs leading-5">
+              <span className="min-w-0 truncate text-ink">{emotion}</span>
+              <span className="shrink-0 tabular-nums text-muted">
+                {n}곡 · {pct}%
+              </span>
+            </div>
+            <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-line/50">
+              <div
+                className="h-full rounded-full"
+                style={{ width: `${pct}%`, background: valenceColor(emotionValence(emotion)) }}
+              />
+            </div>
           </li>
-        ))}
-      </ul>
-    </div>
+        );
+      })}
+    </ul>
   );
 }
