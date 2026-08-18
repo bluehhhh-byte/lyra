@@ -24,39 +24,66 @@ source_hash: a78a6b5f1dc7226bee096c4d88e27c2bf6b74a7c
 source_body_hash: 6351aefa441a689cd9035056f9f8db04d29b46ef
 ---
 나에게 돌아오기가 어렵고 힘든 걸 알아
+> I know it's hard and difficult to come back to me
 이제 더는 상처받기가 두렵고 싫은 걸 알아
+> I know you're scared of being hurt again and don't want it
 네가 떠나 버린 그날에도 모진 말로 널 울리고
+> Even the day you left I made you cry with cruel words
 뒤돌아 서서 후회해 미안해
+> then turned around and regretted it — I'm sorry
 
 제발 단 한 번이라도 너를 볼 수 있다면
+> If only I could see you just once
 내 모든 걸 다 잃어도 괜찮아
+> I wouldn't mind losing everything I have
 꿈에서라도 너를 만나 다시 사랑하기를
+> May I meet you even in a dream and love you again
 우리 이대로
+> just as we were
 
 너에게 용서받기 보다 죽는 게 더 쉬울지 몰라
+> Dying might be easier than being forgiven by you
 이 노래를 불러보지만 내 진심이 닿을지 몰라
+> I sing this song, but I don't know if my heart reaches you
 네가 행복하기를 바래 그 흔한 거짓말도 못하고
+> I can't even manage the common lie of wishing you happy
 돌아오기만 기도해 미안해
+> I only pray you come back — I'm sorry
 
 제발 단 한 번이라도 너를 볼 수 있다면
+> If only I could see you just once
 내 모든 걸 다 잃어도 괜찮아
+> I wouldn't mind losing everything I have
 꿈에서라도 너를 만나 다시 사랑하기를
+> May I meet you even in a dream and love you again
 우리 이대로
+> just as we were
 
 이제는 끝이라는 마지막이라는
+> That it's over now, that this is the last
 너의 그 맘을 난 믿을 수 없어
+> I can't believe that heart of yours
 I can't let go, cuz you never know
 > 놓을 수가 없어, 어떻게 될지 모르니까
 내겐 너 같은 너에겐 나 같은
+> Someone like you for me, someone like me for you
 그런 사랑은 두 번 다시는 없어
+> a love like that will never come twice
 Nobody knows… we always know
 > 아무도 모르지… 우리는 언제나 알고 있어
 
 제발 단 한 번이라도 너를 볼 수 있다면
+> If only I could see you just once
 내 모든 걸 다 잃어도 괜찮아
+> I wouldn't mind losing everything I have
 꿈에서라도 너를 만나 다시 사랑하기를
+> May I meet you even in a dream and love you again
 
 지금 이 시간이 지나가고 다 잊을 수 있다면
+> If this time passes and I could forget it all
 그 기억도 행복했던 추억도
+> that memory, those happy memories too
 아니 다음 생에도 너를 만나
+> no — may I meet you in the next life too
 다시 사랑하기를 예전 그대로
+> and love you again, just as before

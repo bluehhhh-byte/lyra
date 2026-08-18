@@ -26,42 +26,76 @@ source_hash: 449b1000a7f519b158e5210c4141fcbc429eea70
 source_body_hash: 8894077695aa021e45279c4d71664e374228d212
 ---
 넌 미안하다며 
+> You said you were sorry
 나를 버리고 음, 음,
+> and threw me away, mm, mm
 사랑했다고 거짓말하고 
+> lied that you had loved me
 난 괜찮을 거라 나를 속이고 
+> I deceived myself that I'd be fine
 다 잊을거라 거짓말하고 
+> lied that I'd forget it all
 　 
 어디까지가 사랑인건지 
+> How far of it was love
 언제부터 난 혼자였는지 
+> since when was I alone
 사랑했는지 
+> whether I loved
 미워했는지 
+> whether I hated
 습관이었는지 
+> whether it was habit
 
 어디까지가 사실인건지 
+> How far of it was true
 언제부터 넌 여기 없는지 
+> since when have you not been here
 사랑해봐도 
+> whether I love
 미워해봐도 
+> or whether I hate
 난 너무 아픈 걸 
+> it hurts too much
 
 너와 나는 그렇게 만나 
+> You and I met that way
 사랑을 하고 
+> and fell in love
 너와 나는 사랑을 하고 
+> you and I fell in love
 너와 나는 지금 헤어져 
+> you and I part now
 타인이 되고 
+> and become strangers
 너와 나는 타인이 되고 
+> you and I become strangers
 
 어디까지가 사랑인건지 
+> How far of it was love
 언제부터 난 혼자였는지 
+> since when was I alone
 사랑했는지 
+> whether I loved
 미워했는지 
+> whether I hated
 습관이었는지 
+> whether it was habit
 
 어디까지가 사실인건지 
+> How far of it was true
 언제부터 넌 여기 없는지 
+> since when have you not been here
 사랑해봐도 
+> whether I love
 미워해봐도 
+> or whether I hate
 난 너무 아픈 걸 
+> it hurts too much
  
 넌 미안하다며 
+> You said you were sorry
 나를 버리고 음, 음,
+> and threw me away, mm, mm
 난 다 잊을거라 거짓말 하고
+> and I lie that I'll forget it all

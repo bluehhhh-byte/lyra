@@ -26,13 +26,21 @@ source_hash: 20bec1b0749d71a471756b64b718c8c5eb3975aa
 source_body_hash: b1d4affaee4e21dfc481353585521e8fb1eab170
 ---
 이젠 두려움에 떨지 않기를
+> May you no longer tremble with fear
 커진 그림자들로
+> at the shadows grown large
 이 차가운 입김 견디기를
+> May you bear this cold breath
 타오른 태양 속으로
+> into the blazing sun
 잿빛 스민 노을 속을 내달리다
+> Running through a sunset stained ash-gray
 까마득히 밀려온 이곳은
+> this place I've been swept so far into
 시들지 않는 흑백의 소음 가득히
+> is full of black-and-white noise that never fades
 어디에도 없는 그들
+> and they are nowhere
 
 넌 나의 Insomnia
 > 넌 나의 불면증
@@ -44,17 +52,28 @@ Don`t you drag me to hell
 > 날 지옥으로 끌고 가지 마
 
 결코 드러나지 않을 줄 알아
+> I know it will never be revealed
 그들의 세상 뒤로
+> behind their world
 이미 부러져 조각 나버린
+> already snapped and shattered
 버림받은 자들의 땅
+> the land of the abandoned
 잿빛 스민 노을 속을 내달리다
+> Running through a sunset stained ash-gray
 까마득히 밀려온 이곳
+> this place I've been swept so far into
 시들지 않는 흑백의 소음 가득히
+> is full of black-and-white noise that never fades
 어디에도 없는 그들
+> and they are nowhere
 
 넌 어느새 내 곁에 섰네
+> and you're standing beside me before I knew it
 섬뜩함조차 익숙해
+> Even the dread has grown familiar
 여전히 두려워 떠네
+> and still I tremble with fear
 넌 나의 Insomnia
 > 넌 나의 불면증
 넌 나의 Insomnia

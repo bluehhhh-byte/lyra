@@ -24,21 +24,37 @@ source_hash: 3cc5a1f51bf5a2aa5603318ed4765f4e0e5d6f58
 source_body_hash: 791c99bd110100a573acfc11c34c11ddba5ce4e9
 ---
 멀리 기적이 우네
+> A train whistle cries far off
 나를 두고 멀리 간다네
+> leaving me behind, going far away
 이젠 잊어야 하네
+> Now I have to forget
 잊지 못할 사랑이지만
+> though it's a love I can't forget
 언젠가는 또 만나겠지
+> Someday we'll meet again
 헤어졌다 또 만난다네
+> people part and meet again
 
 기적소리 멀어져가네
+> The whistle fades into the distance
 내 님 실은 마지막 밤차
+> the last night train carrying my love
 멀리 기적이 우네
+> A train whistle cries far off
 그렇지만 외롭지 않네
+> and yet I'm not lonely
 
 언젠가는 또 만나겠지
+> Someday we'll meet again
 헤어졌다 또 만난다네
+> people part and meet again
 기적소리 멀어져가네
+> The whistle fades into the distance
 내 님 실은 마지막 밤차
+> the last night train carrying my love
 
 멀리 기적이 우네
+> A train whistle cries far off
 그렇지만 외롭지 않네
+> and yet I'm not lonely

@@ -26,24 +26,37 @@ source_hash: bf40739a82d8bbe080c60afb9ae94ceeb4da1054
 source_body_hash: 6ed654412584cddab203d05271c64cd9361fea20
 ---
 그대는 차갑게 이별은 편하게
+> You, coldly — the parting, easily
 그래 그렇게 내게 오네
+> yes, that's how it comes to me
 사랑은 너무 뜨거워
+> Love is far too hot
 사랑은 너무 깊어
+> love is far too deep
 그래 그땐 그랬는데
+> yes, that's how it was back then
 
 Goodbye
 > 안녕
 그 한마디면 됐지만
+> One word would have been enough
 담을 수 없었던 그 말
+> but I couldn't hold that word
 Goodbye
 > 안녕
 
 사랑은 네가 필요해
+> Love needs you
 사람은 너무 잔인해
+> people are far too cruel
 끝나지 않는 되뇌임
+> a repeating that never ends
 이젠 Goodbye
 > 이젠 안녕
 
 끝내 그대는 차갑게
+> In the end you, coldly
 한마디 말도 없이 이렇게
+> without a single word, like this
 돌아서게 하네
+> make me turn away

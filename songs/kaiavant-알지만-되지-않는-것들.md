@@ -26,25 +26,45 @@ source_hash: cbd574abdc7cb356596bbfaea3bb5bde8f39ca0f
 source_body_hash: 6438a403496e36a320defcb67969d3d30f42255c
 ---
 네 고통이 진짜라는 걸 알아
+> I know your pain is real
 우리 모두 겪어봤으니까
+> because we've all been through it
 맑은 하늘은 가끔 날 슬프게 해
+> A clear sky sometimes makes me sad
 함께 하지 못한다는 것뿐
+> only because I can't share it
 가끔 머릴 따라가기가 버거워
+> Sometimes it's hard to keep up with my own head
 
 이 또한 지나가리라 그 정돈 알아
+> This too shall pass — I know that much
 모든 일엔 이유가 있다니까
+> They say everything happens for a reason
 단단한 건 늘 깨지고
+> but what's solid always breaks
 악의는 없다고 말하지만
+> They say there was no malice
 우린 늘 다치고
+> and we always get hurt
 쉽게 불타오르지만
+> We catch fire easily
 끝은 늘 허무해
+> but the end is always hollow
 
 늦은 밤이야
+> It's late at night
 기쁠 때 슬플 때
+> in joy and in sorrow
 아직도 네가 제일 먼저 생각나
+> you still come to mind first
 
 이 또한 지나가리라 그 정돈 알아
+> This too shall pass — I know that much
 모든 일엔 이유가 있다니까
+> They say everything happens for a reason
 맑은 하늘은 가끔 날 슬프게 해
+> A clear sky sometimes makes me sad
 함께 하지 못한다는 것뿐
+> only because I can't share it
 함께 하지 못한다는 것뿐
+> only because I can't share it

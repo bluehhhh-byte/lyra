@@ -26,25 +26,43 @@ source_hash: 6bf251202953a742318853e73fd91bc4ea1a30d6
 source_body_hash: f8144718ef4d044491431351bfafc6fcc2f6a90a
 ---
 그때는 알 수 없었지요 
+> Back then I couldn't understand
 왜 나에게 이런 일들이 일어나는지 
+> why these things were happening to me
 ‘어쩌면 저주가 아닐까?’ 
+> 'Maybe it's a curse?'
 라고도 생각해 봤지만 
+> I even wondered that, but
 난 그저 열일곱을 살던 중이었어요 
+> I was only in the middle of being seventeen
 
 귀가 찢어질 듯 매미가 울던 
+> A summer night in 1999
 1999년의 여름밤 
+> when the cicadas screamed loud enough to split your ears
 혹독하고 푸르던 계절이 
+> the place a harsh, blue season
 깊게 긁고 간 자리 
+> scratched deep and left behind
 만약에 그때로 돌아가서 
+> If I could go back to then
 처음부터 다시 할 수 있다면 
+> and start it all over again
 난 당장 무엇이든지 하겠어요 
+> I'd do anything, right away
 
 하지만 돌아간다고 해도 
+> But even if I went back
 나는 아마 같은 실수들을 
+> I'd probably make the same mistakes
 또다시 반복하겠지요 
+> all over again
 그래도 괜찮아요 
+> Still, it's all right
 전부 다 내가 원했던 거예요 
+> all of it was what I wanted
 이 모든 게 다 내가 원했던 거라고요
+> every bit of this was what I wanted
 
 🗨 검정치마 정규 3집의 Part 3 앨범. 개인적으로 2022년에 250의 '뽕'과 함께 가장 많이 들었던 음반. 2023년 한국대중음악상 올해의 음반상을 받진 못했지만, 둘 중 하나를 고르라면 나는 'TEEN TROUBLES'를 골랐을 듯. 둘 다 1번 트랙이 미쳤지만, 가사의 주제의식과 우리나라에서 경험할 수 없을 것 같은 내용의 음악이라는 것에 높은 평가를 하고 싶다. 물론 '뽕'이 우리나라에서만 해낼 수 있는 음악적 성취라고 생각하지만.. 기본적으로 경음악 앨범이라 가사의 비중이 너무 적다는 아쉬움이 있다.
 

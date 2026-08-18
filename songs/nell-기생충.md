@@ -24,28 +24,44 @@ source_hash: ecc64bf5ab038fa43dd571bb279c1220e45297c4
 source_body_hash: 1b52d2c5b7628a724a962d32ccb83bd63fca46da
 ---
 난 너의 머리 위에 있어
+> I'm right above your head
 너의 기도를 듣고 있어
+> listening to your prayers
 아주 숙연한 모습으로, 날 기다려
+> with a solemn face — wait for me
 
 난 네가 고통을 받을 때
+> It's when you suffer
 네가 피눈물을 흘릴 때
+> when you weep tears of blood
 비로소 행복할 수 있어, 날 기다려
+> that I can finally be happy — wait for me
 
 너의 아픔 속에
+> Inside your pain
 너의 고통 속에 기생하고 있는
+> living as a parasite inside your suffering
 아름다운 벌레야
+> a beautiful insect
 
 Bleed for me
 > 나를 위해 피 흘려줘
 (나를 위해 흘리는 피)
+> (The blood you shed for me)
 
 난 너의 아픔 속에
+> I'm inside your pain
 너의 고통 속에 기생하고 있는
+> living as a parasite inside your suffering
 아름다운 벌레야
+> a beautiful insect
 
 너의 위선 속에
+> inside your hypocrisy
 너의 거짓 속에 기생하고 있는
+> living as a parasite inside your lies
 아름다운 벌레야
+> a beautiful insect
 
 🗨  이 노래 때문에 잠 못 이루는 어느 사람에 대한 이야기를 챗GPT와 나눠보았다. 약간의 보완은 있었지만 나쁘지 않은 결과물일까. "(셀프디스) 잘 때 이런 음악을 들으니까 잠을 못 자는 거지, 멍충아..😓"
 

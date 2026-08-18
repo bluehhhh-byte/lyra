@@ -26,14 +26,25 @@ source_hash: 044e92ab4f7d7a5c900c4d028e988f8e471f31dd
 source_body_hash: 1db62ab24505b71dd07d03102970ba11011566d3
 ---
 멀리서 너를 보고 있다네
+> I'm watching you from far away
 멀리서 너의 모습 그리네
+> From far away I draw your figure
 지금 이곳에 내 마음은 알 수 없지만
+> I can't tell what my heart is doing here right now
 너의 모습이 내 눈을 떠나지 않네
+> but your figure won't leave my eyes
 생각해 생각해
+> I think of you, I think of you
 
 이곳에 창문 열고 볼 때에
+> When I open the window here and look
 저곳에 걸어가는 너의 모습
+> there you are, walking
 나의 곁으로 다가와 날 보고 웃을 때
+> and when you come to my side and smile at me
 다시 내 눈에 그 모습은 꽃이 되었네
+> in my eyes that figure became a flower
 생각해 생각해 생각해 생각해
+> I think of you, I think of you, I think of you, I think of you
 생각해 생각해 생각해 생각해
+> I think of you, I think of you, I think of you, I think of you

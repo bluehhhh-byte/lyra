@@ -26,14 +26,24 @@ source_hash: ccf52a6fcee4db196828b4dfbdd6b10dcb2a2b2e
 source_body_hash: d1c1ca5db9a0e9b1c15b46e756384956995821c8
 ---
 새벽 어둔 길 세월을 보내 고인 
+> A dark road at dawn, years sent away and settled
 저 붉은 바다 바람에 젖어
+> that red sea soaked in wind
 슬피 우는 저 검은 하늘의 별빛 
+> the starlight of that black sky crying sorrowfully
 그대 모둔 손 가녀리네요
+> Your gathered hands are so frail
 
 사라져 가는 그대 향기 
+> Your scent, fading away
 작은 새가 되어 슬피 우네
+> becomes a small bird and cries
 
 그대 내 사랑 날 잊었나요 그대여
+> My love, have you forgotten me, my love
 그 세월에 붉게 타 멍든 하늘에
+> In a sky burned red and bruised by those years
 힘 없이 접은 날개 그대
+> you fold your wings without strength
 날 떠나나요 그대여
+> are you leaving me, my love

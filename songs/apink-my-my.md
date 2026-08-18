@@ -26,14 +26,22 @@ source_hash: c220c5f06cb1b421c2675c8131fc61507cb56229
 source_body_hash: 6e0e3e78e2c9756bd4fb5d616cc33e7c6427f938
 ---
 내가 기쁠 때나 슬플 때나
+> Whether I'm happy or sad
 난 널 부르고 싶어
+> I want to call your name
 넌 항상 내 마음 속에
+> You're always in my heart
 
 변치 말고 그 자리에 딱
+> Don't change, just stay right there
 거기 있어주면 돼
+> that's all you have to do
 이렇게 널 사랑해
+> This is how I love you
 
 너를 처음 보았던 날
+> The day I first saw you
 눈이 처음 내렸던 날
+> the day the first snow fell
 
 🗨 비오는 날 이른 아침에 어울리는 곡은 아니지만 갑자기 생각났다. 창밖으로 바다는 해무로 보이지 않고 산등성이에서 물안개가 내려오는 것이 보였다. 그런데 이 노래를 틀어놓고 있으니 가사가 예뻐서 되레 아련한 느낌이 들기도 하고 묘한 아침.

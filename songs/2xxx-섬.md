@@ -26,10 +26,18 @@ source_hash: 4fe7a6b9eb3fdb0dee9b0e44644d99fbd77ab665
 source_body_hash: f5e95a4b5b67338ad1588d0999ec38a2bfd23a5e
 ---
 푸른 빛바랜 그대의 사랑을
+> Your love, faded blue
 나 그대 마음에 흘려 보내
+> I let it flow into your heart
 언제부터인지 모르게
+> Without knowing since when
 나의 안에 두어 온 그대의
+> the eyes of yours I've kept inside me
 눈빛은 너무 아파서
+> hurt so much
 나는 견딜 수 없어
+> that I can't bear it
 그댄 내게 무슨 말이라도 한다면
+> If you said anything at all to me
 난 얼어버릴 거야
+> I would freeze

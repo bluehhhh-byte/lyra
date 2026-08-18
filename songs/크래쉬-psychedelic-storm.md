@@ -26,39 +26,64 @@ source_hash: 2c064b3363072771890a4b7889182133ecb6208b
 source_body_hash: b1686244eb7198fc0e819e35c231d743080dfcaa
 ---
 어제 넌 어제를 보내고 오늘을 꿈꿔
+> Yesterday you sent off yesterday and dreamed of today
 너무 빠른 세대들의 교차에
+> In the crossing of generations moving too fast
 내가 배운 지식은 이미 지난 뉴스 거리
+> what I learned is already yesterday's news
 오늘 넌 오늘을 보내고 내일을 꿈꿔
+> Today you send off today and dream of tomorrow
 언어, 행동, 표정, 몸짓 알지도 못한 채
+> Language, action, expression, gesture — without even knowing
 티비, 잡지, 광고 속에 넌 작은 지면이야
+> in TV, magazines, ads, you're a small page
 
 넌 고작 한낱 이 작은 시대 속의
+> You're nothing but, in this small era
 작은 유행의 적용자일뿐이야
+> someone applying a small trend
 넌 고작 한낱 이 유행 시대 속의
+> You're nothing but, in this age of trends
 작은 도구의 적용자일뿐이야
+> someone applying a small tool
 
 어제 넌 어제를 보내고 오늘을 꿈꿔
+> Yesterday you sent off yesterday and dreamed of today
 너무 빠른 유행에 너무 많은 걸
+> To trends moving too fast you lose
 너는 잃어버리고 지식마저 유행인가
+> far too much — is even knowledge a trend now
 오늘 넌 오늘을 보내고 내일을 꿈꿔
+> Today you send off today and dream of tomorrow
 언어, 행동, 표정, 몸짓 알지도 못한 채
+> Language, action, expression, gesture — without even knowing
 티비, 잡지, 광고 속에 넌 작은 지면이야
+> in TV, magazines, ads, you're a small page
 
 Repeating the same expression
 > 같은 표현을 되풀이하며
 (같은 표현을 반복하지)
+> (Repeating the same expression)
 And words over and over again
 > 그리고 같은 말을 몇 번이고 되풀이하며
 (몇 번이나 반복하고 또 다시)
+> (over and over and again)
 Faster than the speed of light or breath
 > 빛의 속도보다, 숨결보다 빠르게
 (빛이나 호흡의 속도보다 빠른)
+> (Faster than the speed of light or breath)
 The massive crush the individual few
 > 거대한 무리가 소수의 개인을 짓밟는다
 (소수의 개인에의 거대한 충돌)
+> (The massive crush upon the individual few)
 
 이 빠른 세상 속에서
+> inside this fast world
 넌 고작 한낱 이 작은 시대 속의
+> You're nothing but, in this small era
 작은 유행의 적용자일뿐이야
+> someone applying a small trend
 넌 고작 한낱 이 유행 시대 속의
+> You're nothing but, in this age of trends
 작은 도구의 적용자일뿐이야
+> someone applying a small tool

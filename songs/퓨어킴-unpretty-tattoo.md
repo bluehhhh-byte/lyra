@@ -26,19 +26,31 @@ source_hash: 3816c06c36c512cfeeab2832b8117703d3d0d4d4
 source_body_hash: f38458f342e713df9a8dade136de112923f8f49d
 ---
 사랑이 뭔데 그게 내게 중요해 
+> What is love — as if that matters to me
 네가 안 해도 내가 너를 생각해 
+> Even if you don't, I think of you
 그러니 됐어 
+> so that's enough
 
 한번 웃어 봐 내가 다 찍어 놓을게 
+> Smile once and I'll capture all of it
 누가 울려 봐 전부 다 찢어 줄게 
+> Let anyone make you cry and I'll tear them apart
 그러니 됐어 
+> so that's enough
 
 왜냐고 왜 물어 
+> Why — why even ask
 내게 끝은 너로 통해 
+> For me every end leads to you
 어쩔 수 없어 너 하나로 충분해 
+> There's no helping it, you alone are enough
 너는 안 해도 내가 너를 사랑해 
+> Even if you don't, I love you
 그러니 됐어 
+> so that's enough
 
 Unpretty Tattoo 
 > 예쁘지 않은 문신
 내게 끝은 너로 통해 
+> For me every end leads to you

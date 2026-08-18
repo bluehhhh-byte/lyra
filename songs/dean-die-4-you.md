@@ -32,7 +32,9 @@ When everything comes crashing down
 > 모든 게 무너지기 시작했을 때
 
 그냥 왜인지 난
+> For some reason I just
 너가 돌아올 것 같은데
+> feel like you're coming back
 
 I don't wanna go
 > 난 아무데도 가지 않을거야
@@ -46,8 +48,11 @@ Could you tell me once again, again?
 > 다시 한번 더 말해줄 수 있어?
 
 널 안아줬던
+> like that day
 그 날 처럼
+> I held you
 오늘도 비가 오고 있어
+> It's raining today too
 
 Could you kill me once again, again?
 > 한번만 더 날 죽여줄 수 있어?
@@ -63,14 +68,21 @@ Baby you know I'd die for you
 > 알잖아, 널 위해서라면 죽을 수도 있어
 
 네가 떠오르면 나는 미쳐
+> When you come to mind I lose it
 사실 아직 안믿겨
+> honestly I still can't believe it
 늦었을지도
+> It might be too late
 모르지만
+> I don't know, but
 Let you know
 > 네게 알려줄게
 어떤 멜로디도
+> any melody
 그 어떤 스토리도 내겐
+> any story at all, to me
 네 잔상일 뿐인데
+> is nothing but your afterimage
 
 I know it is way too late
 > 너무 늦은 걸 알지만
@@ -82,8 +94,11 @@ Could you tell me once again, again?
 > 다시 한번 더 말해줄 수 있어?
 
 날 떠나갔던
+> Since the day
 그 날부터
+> you left me
 하루도 잊은 적 없어, 난
+> I haven't forgotten for a single day
 
 Could you kill me once again, again?
 > 한번만 더 날 죽여줄 수 있어?

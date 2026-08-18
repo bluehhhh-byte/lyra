@@ -26,30 +26,55 @@ source_hash: 5093a84fd92e00daabb9ec68622666aad9e3a7fc
 source_body_hash: c54f546e4dfd9414d300918b3738e2a34d42aa5a
 ---
 내가 바랬던 건 
+> What I wanted
 그대가 아니에요 
+> wasn't you
 하늘을 바라볼 
+> I needed someone
 누군가가 필요했어
+> to look at the sky with
 그대가 없으면 
+> Truth is, without you
 사실 나는 안 돼요 
+> I can't manage
 난 수줍어서 더듬거려요 
+> I'm shy, so I stumble over my words
 
 어둠이 깔리고 
+> Even when darkness settles
 밤에 비가 내려도 
+> and the rain falls at night
 난 젖은 채로 곁에 있죠 
+> I stay beside you, soaked through
 시간이 지나면 
+> When time passes
 우리는 없겠죠 
+> we won't be here
 영원이라는 건 있지 않아요 
+> there's no such thing as forever
 
 그게 뭐 어때서요 
+> and what of it
 우리가 눈을 맞출 땐 
+> When our eyes meet
 다음 말은 생각나지 않아요 
+> I can't think of what to say next
 난 지금 열이 나지만 
+> I'm running a fever now
 잠든 건 그대 품이죠 
+> but what fell asleep was your embrace
 사랑은 아닐 테니 숨지 말아요 
+> it won't be love, so don't hide
 
 언젠가 다시 만나면 
+> If we meet again someday
 그때는 지나치겠죠 
+> we'll pass each other by
 우리에게는 남은 것이 없어요 
+> there's nothing left for us
 그리움은 남았지만 
+> the longing stayed, but
 난 표현하지 않겠죠 
+> I won't put it into words
 우리는 저물어간 노을 같아요 
+> we're like a sunset that has gone down

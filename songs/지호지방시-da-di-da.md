@@ -26,7 +26,12 @@ source_hash: fed2ba6fdd6b904d755d62871b54a1a8d92c906d
 source_body_hash: 102c2e9ce1a7df753b75096ff936c5a27c69c25e
 ---
 내가 사랑한다고 얘기 했잖아
+> I told you that I love you
 널 위해 곁에 지켜 준다고
+> that I'd stay by your side for you
 필요하면 전화해
+> Call me if you need me
 필요하면 카톡해
+> text me if you need me
 필요하면 카톡해
+> text me if you need me

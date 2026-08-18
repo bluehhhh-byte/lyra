@@ -26,14 +26,22 @@ source_hash: af9b1dbb7b585d42372c6b0824c997c0cda08ab2
 source_body_hash: cab0b982b3a5e5f1eaa7c329d91566616b60b2f8
 ---
 너도 많이 힘들었겠지
+> It must have been hard on you too
 끝도 없이 떨어진 날 보며
+> watching me fall without end
 애써 아무 일 아닌 척
+> You held me, forcing a face
 나를 안아 주던 너
+> that said nothing was wrong
 
 미치도록 하고 싶던 말
+> The words I was dying to say
 단 한번도 널 지운 적 없어
+> I never once erased you
 너도 지쳤단 걸 알아
+> I know you're worn out too
 이젠 내가 말할게
+> now let me be the one to say it
 
 FOREVER LOVE
 > 영원한 사랑
@@ -41,12 +49,18 @@ FOREVER LOVE
 > 영원한 사랑
 
 난 괜찮아
+> I'm all right
 널 위해 살 수 있다면
+> if I can live for you
 나보다 더 사랑하니까
+> because I love you more than myself
 
 울지 말고 나를 봐봐
+> Don't cry, look at me
 지켜봐줘 날
+> watch over me
 이젠 내가 널 안아줄게
+> now I'll be the one to hold you
 
 FOREVER LOVE
 > 영원한 사랑
@@ -54,7 +68,12 @@ FOREVER LOVE
 > 영원한 사랑
 
 기다릴게
+> I'll wait
 난 너만 지킬게
+> I'll protect only you
 난 괜찮아
+> I'm all right
 널 위해 살 수 있다면
+> if I can live for you
 내 삶을 모두 바칠게
+> I'll give my whole life to it

@@ -26,21 +26,37 @@ source_hash: be69dc4cab395a7e46b36c6233640d5f2b1c3e01
 source_body_hash: c0b2e1d5d1ca8caf40a11e2a0d80871be94fc0fd
 ---
 이제 세상은
+> Now the world
 이 어둠을 내게 허락했고
+> has allowed me this darkness
 비로소 작은 별빛이
+> and at last a small starlight
 희미한 나를 비출 때
+> shines on the faint outline of me
 차가운 바닷속에
+> When I lower my body
 내 몸을 담그니
+> into the cold sea
 내 가슴을 흔드는 잔잔한 물결뿐
+> there's only a calm ripple shaking my chest
 나는 멍하니 이 산들바람 속에
+> Blankly, in this soft breeze
 성난 파도를 바라보고 있어
+> I'm watching the angry waves
 
 내 가슴속에 남은 건
+> What's left in my chest
 이 낯선 시간들
+> is this unfamiliar time
 내 눈에 눈물도
+> and the tears in my eyes
 이 바닷속으로
+> go into this sea
 이 낯선 길 위로 조각난 풍경들
+> Scenery broken into pieces on this strange road
 이런 내 맘을 담아서
+> I want to hold a heart like this
 네게 주고 싶은걸
+> and give it to you
 In The Easter Island
 > 이스터 섬에서

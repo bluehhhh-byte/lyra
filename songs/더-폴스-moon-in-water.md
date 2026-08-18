@@ -26,9 +26,13 @@ source_hash: c796f1453e692345ef6773a612a70ddf46e87cf6
 source_body_hash: a7550e8ddeea11b6d346d52845619a5479dc14f1
 ---
 물 속에 비친 너는
+> You reflected in the water
 흐리게도 선명하다
+> are blurred and yet clear
 손에 물을 가득 담아
+> I cup my hands full of water
 너를 한껏 비추어 본다
+> and hold you up to the light
 
 Moon in water
 > 물 속에 비친 달
@@ -40,9 +44,13 @@ Wave in water
 > 물 속에 이는 물결
 
 물 속에 비친 너는
+> You reflected in the water
 여전히 빛이 나고
+> and still you shine
 손에 물을 가득 담아
+> I cup my hands full of water
 너를 한껏 비추어 본다
+> and hold you up to the light
 
 Moon in water
 > 그래 이대로 내 손에 잠겨있어 줘요

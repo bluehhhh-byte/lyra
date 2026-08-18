@@ -26,13 +26,21 @@ source_hash: 766d46a193d2e52f7300e06ec6520d16327c2809
 source_body_hash: de167bbab767355b41533cec652f4c94dac1951a
 ---
 매일같이 영화 속에서나
+> Every single day, in movies
 책 속에서나 드라마 속에서
+> in books, in dramas
 사랑을 느껴 사랑을 배워
+> I feel love, I learn love
 내 일처럼 자꾸 가슴이 뛰어
+> and my heart races like it's happening to me
 두근두근거려 설레임에 부풀어 올라
+> Thumping, thumping, swelling up with excitement
 궁금해서 미칠 것만 같아
+> I'm dying to know
 언젠간 내게도 이런 일이 실제로 일어날까
+> will something like this really happen to me someday
 그게 언제쯤일까 어떤 사람일까
+> When would it be, what kind of person would it be
 
 I wanna know
 > 사탕처럼 달콤하다는데
@@ -53,14 +61,23 @@ What is love?
 > 언젠간 나에게도 사랑이 올까
 
 지금 이런 상상만으로도
+> Even just imagining it now
 떠올려만 봐도
+> even just picturing it
 가슴이 터질 것 같은데
+> my heart feels like it'll burst
 이렇게 좋은데
+> it feels this good
 만일 언젠가 진짜로 내게
+> If love really does come to me
 사랑이 올 때 난 울어버릴지도 몰라
+> someday, I might just cry
 정말 궁금해 미칠 것만 같아
+> I'm really dying to know
 언젠간 내게도 이런 일이 실제로 일어날까
+> will something like this really happen to me someday
 그게 언제쯤일까 어떤 사람일까
+> When would it be, what kind of person would it be
 
 I wanna know
 > 사탕처럼 달콤하다는데
