@@ -4,11 +4,12 @@ import { handleWatcha } from "./watcha";
 import { handleMoments } from "./moments";
 import { lastGeminiError, withReason } from "../../../lib/admin/gemini";
 
-// per-request work is one song's lyric lookup (native chain hits iTunes+lrclib
-// a few times); 30s is ample and stays within hobby-plan limits.
-// Vercel hobby 상한. Gemini(대형 프롬프트 + 재시도 백오프) + TMDB 검색이
-// 30초를 넘겨 FUNCTION_INVOCATION_TIMEOUT이 났다 — 60으로 올린다.
-export const maxDuration = 60;
+// Gemini 호출 하나는 lib/admin/gemini.js가 48초 예산으로 스스로 묶지만, 한 액션이
+// Gemini를 여러 번 부르는 경우가 있다(연 해설 regenNotes는 연마다 한 번씩). 그 합이
+// 60초를 넘기면 Vercel이 함수를 강제 종료해 실패 이유조차 못 돌려준다. Fluid compute
+// 기준 Hobby 상한(300초) 안에서 여유를 둔다 — 느려서 180초를 쓰라는 뜻이 아니라,
+// 우리가 먼저 포기하고 이유를 남길 시간까지 플랫폼이 기다려 주게 하는 것이다.
+export const maxDuration = 180;
 
 // Auth is enforced by middleware.js (password cookie). Writes go through
 // lib/store — fs locally, Neon in production, GitHub as a migration fallback. Actions are split by
