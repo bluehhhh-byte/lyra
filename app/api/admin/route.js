@@ -15,8 +15,22 @@ export const maxDuration = 180;
 // lib/store — fs locally, Neon in production, GitHub as a migration fallback. Actions are split by
 // domain into ./songs, ./movies, ./watcha; each handler returns a Response
 // for an action it owns, or null so the next handler gets a turn.
+// 상태를 바꾸는 POST는 같은 출처에서만 받는다. 쿠키 인증은 middleware가 하지만
+// 쿠키는 브라우저가 어디서든 실어 보낸다 — 다른 사이트의 폼이 저장·삭제를 부르면
+// 안 된다. Origin이 없는 요청(curl 등)은 쿠키도 없으므로 통과시킨다.
+function sameOrigin(req) {
+  const origin = req.headers.get("origin");
+  if (!origin) return true;
+  try {
+    return new URL(origin).host === req.headers.get("host");
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(req) {
   try {
+    if (!sameOrigin(req)) return Response.json({ error: "허용되지 않은 출처입니다" }, { status: 403 });
     return await withGeminiReason(await handle(req));
   } catch (e) {
     // always return JSON so the client never hits an empty-body parse error

@@ -13,8 +13,9 @@ export const dynamic = "force-dynamic";
 export function GET() {
   return Response.json(
     {
-      // Vercel이 빌드할 때 넣어 준다. 로컬에서는 없으므로 "dev"로 둔다.
-      sha: process.env.VERCEL_GIT_COMMIT_SHA || "dev",
+      // Git 연동 배포는 VERCEL_GIT_COMMIT_SHA를 받지만 CLI 업로드 배포는 못 받는다.
+      // 그 경우 배포 생성 시 직접 심은 LYRA_COMMIT_SHA가 대신 답한다. 로컬은 "dev".
+      sha: process.env.VERCEL_GIT_COMMIT_SHA || process.env.LYRA_COMMIT_SHA || "dev",
       // 같은 커밋을 다시 배포(Redeploy)해도 이 값은 달라진다
       deploymentId: process.env.VERCEL_DEPLOYMENT_ID || "",
       // 지금 무엇을 읽고 있는가. Neon 이관을 끝내고도 환경변수 값에 BOM이 붙어
