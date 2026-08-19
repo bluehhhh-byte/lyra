@@ -775,7 +775,7 @@ ${listed}`,
       `이 중 먼저 손봐야 할 ${pick}곡의 번호만 고르라. ` +
       `기준: 컬렉션에서 자주 보이는 아티스트, 대표곡, 부족한 항목이 많은 곡을 앞에 둔다. ` +
       `설명 없이 번호만 쉼표로 출력한다.\n\n${lines}`;
-    const raw = await geminiText(prompt, key, GEMINI_LITE_MODEL);
+    const raw = await geminiText(key, prompt, false, GEMINI_LITE_MODEL);
     const idx = String(raw || "").match(/\d+/g)?.map(Number) || [];
     const chosen = [...new Set(idx)].filter((n) => n >= 1 && n <= items.length).slice(0, pick).map((n) => items[n - 1]);
     return Response.json({ picked: chosen.length, items: chosen });
