@@ -11,9 +11,12 @@ import { workLabel } from "../../lib/archive-stats";
 // 좌표계를 화면 크기별로 따로 둔다. 640×480 하나를 320px 폭에 밀어 넣으면 11px 글자가
 // 5.5px가 되어 한글을 읽을 수 없다. 모바일은 viewBox를 좁게 잡아 같은 물리 크기에서
 // 글자가 더 크게 나오도록 하고, 여백(PAD)도 라벨이 들어갈 만큼 넉넉히 준다.
+// 점과 선은 작게, 판은 넓게 — 이 그림의 정보는 "점들이 평면 어디에 있고 어떻게
+// 이동했는가"다. 마크가 크면 점끼리 뭉치고 화살표가 겹쳐, 판이 아니라 마크를 읽게 된다.
+// rBase/rMax/rK가 점 반지름(rBase + min(rMax, √count × rK)), aw가 화살표 굵기다.
 const VARIANTS = {
-  mobile: { key: "m", W: 360, H: 424, PAD: 52, fs: 14, axisFs: 13, quadFs: 13, labelW: 34, labelH: 15 },
-  desktop: { key: "d", W: 600, H: 420, PAD: 56, fs: 13, axisFs: 12, quadFs: 12, labelW: 32, labelH: 14 },
+  mobile: { key: "m", W: 360, H: 400, PAD: 48, fs: 13, axisFs: 12, quadFs: 12, labelW: 32, labelH: 14, rBase: 4.5, rMax: 5, rK: 1.2, aw: 1.3 },
+  desktop: { key: "d", W: 760, H: 400, PAD: 56, fs: 12, axisFs: 11, quadFs: 11, labelW: 30, labelH: 13, rBase: 3.5, rMax: 4.5, rK: 1.1, aw: 1.1 },
 };
 
 const mm = (month) => `${Number(month.slice(5))}월`;
@@ -31,8 +34,8 @@ const textWidth = (text, fs) => {
 };
 
 function OrbitChart({ points, month, monthHref, v, chartId }) {
-  const { W, H, PAD, fs, axisFs, quadFs, labelW, labelH } = v;
-  const r = (s) => 6 + Math.min(8, Math.sqrt(s.count) * 1.6);
+  const { W, H, PAD, fs, axisFs, quadFs, labelW, labelH, rBase, rMax, rK, aw } = v;
+  const r = (s) => rBase + Math.min(rMax, Math.sqrt(s.count) * rK);
   const T = MOOD_NEUTRAL_BAND;
 
   // 축은 그 해 기록이 실제로 차지하는 범위에 맞춘다 — -3..3 고정이면 점이 한 귀퉁이에
@@ -93,20 +96,32 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
       viewBox={`0 0 ${W} ${H}`}
       role="img"
       aria-labelledby={`${chartId}-title ${chartId}-desc`}
-      className="h-auto w-full max-w-[560px]"
+      className="h-auto w-full max-w-[760px]"
     >
       <title id={`${chartId}-title`}>감정 궤도 — 월별 정서 좌표와 이동</title>
       <desc id={`${chartId}-desc`}>
         가로축은 어두움에서 밝음, 세로축은 고요함에서 고조됨이다. 각 점은 한 달의 기록이고 화살표가 시간 순서를 잇는다.
       </desc>
       <defs>
-        <marker id={`${chartId}-arrow`} viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <marker id={`${chartId}-arrow`} viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
           <path d="M0,0 L8,4 L0,8 z" fill="var(--color-muted)" />
         </marker>
       </defs>
 
       {/* 사분면 배경과 읽는 법 */}
       <rect x={PAD} y={PAD} width={W - PAD * 2} height={H - PAD * 2} fill="none" stroke="var(--color-line)" />
+      {/* 판 자체가 가로축을 설명한다 — 점에 쓰는 valence 색을 좌(어두움)·우(밝음)
+          반면에 아주 옅게 깐다. 범례 없이도 "오른쪽으로 갈수록 밝은 기록"이 읽힌다 */}
+      <rect
+        x={PAD} y={PAD}
+        width={Math.max(0, clampX(sx(0)) - PAD)} height={H - PAD * 2}
+        fill={valenceColor(-2)} opacity="0.05"
+      />
+      <rect
+        x={clampX(sx(0))} y={PAD}
+        width={Math.max(0, W - PAD - clampX(sx(0)))} height={H - PAD * 2}
+        fill={valenceColor(2)} opacity="0.05"
+      />
       {/* 중립 밴드 — 사분면에 억지로 넣지 않는 영역. 보이는 범위와 겹치는 만큼만 */}
       <rect
         x={clampX(sx(-T))} y={clampY(sy(T))}
@@ -142,9 +157,9 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
             key={s.month}
             x1={sx(p.center.v) + a.tx} y1={sy(p.center.a) + a.ty}
             x2={sx(s.center.v) - b.tx} y2={sy(s.center.a) - b.ty}
-            stroke="var(--color-muted)" strokeWidth="1.6"
+            stroke="var(--color-muted)" strokeWidth={aw}
             strokeDasharray={s.prev?.gap > 0 ? "5 4" : "none"}
-            markerEnd={`url(#${chartId}-arrow)`} opacity="0.8"
+            markerEnd={`url(#${chartId}-arrow)`} opacity="0.55"
           />
         );
       })}
@@ -157,13 +172,13 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
         return (
           <a key={s.month} href={monthHref(s.month)} aria-label={pointTitle(s)} aria-current={active ? "page" : undefined}>
             <title>{pointTitle(s)}</title>
-            {active && <circle cx={cx} cy={cy} r={r(s) + 5} fill="none" stroke="var(--color-accent)" strokeWidth="2" />}
+            {active && <circle cx={cx} cy={cy} r={r(s) + 4} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
             <circle
               cx={cx} cy={cy} r={r(s)}
               fill={valenceColor(s.center.v)}
               opacity={s.sparse ? 0.45 : 0.95}
               stroke={s.sparse ? "var(--color-muted)" : "var(--color-bg)"}
-              strokeWidth="1.5"
+              strokeWidth="1"
               strokeDasharray={s.sparse ? "3 2" : "none"}
             />
             {/* 라벨 뒤에 배경을 깔아 선·점 위에서도 읽히게 한다. stroke는 글자 바깥으로
@@ -171,7 +186,7 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
             <text
               x={label.x} y={label.y}
               textAnchor={label.anchor} fontSize={fs} fontWeight={active ? 700 : 400}
-              stroke="var(--color-bg)" strokeWidth="3.5" strokeLinejoin="round" paintOrder="stroke"
+              stroke="var(--color-bg)" strokeWidth="3" strokeLinejoin="round" paintOrder="stroke"
               fill={active ? "var(--color-accent)" : "var(--color-ink)"}
             >
               {mm(s.month)}
