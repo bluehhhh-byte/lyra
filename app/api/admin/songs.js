@@ -979,7 +979,9 @@ ${listed}`,
     // 가사가 어디에도 없는 곡. 데이터 모델은 처음부터 lyrics_none을 읽고 있었지만
     // (needs.js가 이 표시를 보고 번역·독음·키워드 대기열에서 빼 준다) 관리자 화면에
     // 그 표시를 세울 길이 없어서, 가사를 못 구한 곡은 아예 등록조차 되지 않았다.
-    const noLyrics = body.lyricsNone === true || body.lyricsNone === "true";
+    const isInstrumental = body.instrumental === true || body.instrumental === "true";
+    const lyricsUnavailable = body.lyricsNone === true || body.lyricsNone === "true";
+    const noLyrics = isInstrumental || lyricsUnavailable;
 
     // catches the paths that skip translation: a hand-typed body, and the
     // "이대로 사용" bypass that copies Korean lyrics over verbatim
@@ -999,7 +1001,7 @@ ${listed}`,
       } catch {} // never block a publish on the layout pass
     const md = `---
 title: ${title}
-title_ko: ${titleKo || title}
+title_ko: ${titleKo || (lang === "ko" ? title : "")}
 artist: ${artist}
 artist_ko: ${artistKo || ""}
 album: ${album || ""}
@@ -1016,7 +1018,7 @@ emotion: ${parseEmotion(emotion)}
 date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
-${noLyrics ? `lyrics_none: true\nlyrics_note: ${String(body.lyricsNote || "").replace(/\s*\n+\s*/g, " ")}\n` : ""}---
+${isInstrumental ? "instrumental: true\n" : ""}${lyricsUnavailable ? `lyrics_none: true\nlyrics_note: ${String(body.lyricsNote || "").replace(/\s*\n+\s*/g, " ")}\n` : ""}---
 ${lyricBody}
 `;
     await writeSong(slug, md, `add(song): ${slug}`);

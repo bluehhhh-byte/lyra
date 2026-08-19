@@ -59,6 +59,7 @@ export default function AdminForm() {
   // 어디에도 원문이 공개돼 있지 않은 곡. 이 표시가 있으면 needs.js가 번역·독음·
   // 키워드 대기열에서 빼 준다 — 채울 수 없는 항목으로 영원히 남지 않게.
   const [lyricsNone, setLyricsNone] = useState(false);
+  const [instrumental, setInstrumental] = useState(false);
   const [lyricsNote, setLyricsNote] = useState("");
 
   const run = (label, fn) => async () => {
@@ -138,6 +139,10 @@ export default function AdminForm() {
       setLyrics("");
       setTitleKo("");
       setArtistKo("");
+      setComment("");
+      setTranslated("");
+      setLyricsNone(false);
+      setInstrumental(false);
       setSearchLinks(null);
       setTags(baseTags(c, lang).join(", ")); // country/year show up the moment a song is picked
       const { lyrics: found, searchLinks: links } = await api("lyrics", c);
@@ -174,6 +179,7 @@ export default function AdminForm() {
       emotion,
       lyrics: translated,
       lyricsNone,
+      instrumental,
       lyricsNote,
     });
     setSavedSlug(slug);
@@ -345,43 +351,63 @@ export default function AdminForm() {
           {/* 가사를 못 구한 곡의 유일한 출구. 위 버튼들은 모두 가사가 있어야 눌리고,
               3단계는 그 버튼들이 채우는 값이 있어야 나타난다. 그래서 원문이 없는 곡은
               등록 자체가 불가능했다. 이 버튼만 가사를 요구하지 않는다. */}
-          {!lyrics.trim() && !lyricsNone && (
+          {!lyrics.trim() && !lyricsNone && !instrumental && (
             <div className="mt-3 rounded-lg border border-line px-3 py-3">
               <p className="text-xs text-muted">
-                가사를 어디에서도 못 찾았다면 원문 없이 등록할 수 있습니다. 번역·독음·키워드는
-                대기열에 쌓이지 않습니다.
+                연주곡은 음악적 특징을 바탕으로 코멘트와 한글 제목을 자동 생성합니다. 가사가
+                공개되지 않은 보컬곡도 원문 없이 등록할 수 있습니다.
               </p>
-              <button
-                className="mt-2 rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
-                disabled={busy}
-                onClick={() => setLyricsNone(true)}
-              >
-                가사 없이 등록
-              </button>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <button
+                  className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+                  disabled={busy}
+                  onClick={run("autotag", async () => {
+                    setInstrumental(true);
+                    setLyricsNone(false);
+                    await autotag({ ...song, instrumental: true }, "");
+                  })}
+                >
+                  {busy === "autotag" ? "메타 생성 중…" : "연주곡으로 등록"}
+                </button>
+                <button
+                  className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+                  disabled={busy}
+                  onClick={run("autotag", async () => {
+                    setLyricsNone(true);
+                    setInstrumental(false);
+                    await autotag(song, "");
+                  })}
+                >
+                  가사 원문 없이 등록
+                </button>
+              </div>
             </div>
           )}
         </section>
       )}
 
       {/* 3. review + save */}
-      {(translated || lyricsNone) && (
+      {(translated || lyricsNone || instrumental) && (
         <section>
           <Step n="3" label="검수 · 노트 추가 · 저장" />
-          {lyricsNone ? (
+          {lyricsNone || instrumental ? (
             <div className="mb-2 rounded-lg border border-accent/30 bg-accent/5 px-3 py-3">
               <p className="text-xs">
-                <b>가사 없이 등록</b> — 원문 자리는 비워 둡니다. 본문에는 이 곡에 대한 메모나
-                해설을 적어도 됩니다.
+                <b>{instrumental ? "연주곡" : "가사 원문 없이 등록"}</b> — 원문 자리는 비워
+                두며, 자동 생성된 코멘트와 한글 제목은 아래에서 수정할 수 있습니다.
               </p>
               <input
                 className={input + " mt-2"}
-                placeholder="원문이 없는 이유 (예: 어디에도 가사가 공개되지 않음)"
+                placeholder={instrumental ? "선택 메모 (예: 피아노 연주곡)" : "원문이 없는 이유 (예: 어디에도 가사가 공개되지 않음)"}
                 value={lyricsNote}
                 onChange={(e) => setLyricsNote(e.target.value)}
               />
               <button
                 className="mt-2 text-xs text-muted underline hover:text-accent"
-                onClick={() => setLyricsNone(false)}
+                onClick={() => {
+                  setLyricsNone(false);
+                  setInstrumental(false);
+                }}
               >
                 취소하고 가사를 붙여넣기
               </button>
@@ -393,7 +419,7 @@ export default function AdminForm() {
           )}
           <textarea
             className={input + " h-72 font-mono text-xs"}
-            placeholder={lyricsNone ? "비워 두거나, 이 곡에 대한 해설을 적으세요" : ""}
+            placeholder={lyricsNone || instrumental ? "비워 두거나, 이 곡에 대한 해설을 적으세요" : ""}
             value={translated}
             onChange={(e) => setTranslated(e.target.value)}
           />
