@@ -12,8 +12,23 @@ const GROUPS = [
 ];
 
 const RANDOM_PICKS = 6;
+const INITIAL_RENDER = 72; // 첫 화면 + 두어 스크롤 분량
+const RENDER_STEP = 240;
 
-export default function Browse({ songs, initialTag = "", initialQ = "", initialGroup = "none", initialEmotion = "", initialDecade = "" }) {
+export default function Browse({ songs: rawSongs, initialTag = "", initialQ = "", initialGroup = "none", initialEmotion = "", initialDecade = "" }) {
+  // 검색용 소문자 문자열은 여기서 만든다 — 서버가 만들어 보내면 같은 내용이
+  // 919곡 × 두 번(HTML + RSC 페이로드) 실려 초기 응답만 커진다.
+  const songs = useMemo(
+    () =>
+      rawSongs.map((s) => ({
+        ...s,
+        metaSearch: [s.title, s.title_ko, s.artist, s.artist_ko, s.album, s.tags.join(" ")]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase(),
+      })),
+    [rawSongs]
+  );
   const [q, setQ] = useState(initialQ);
   const [tag, setTag] = useState(initialTag);
   const [emotion, setEmotion] = useState(initialEmotion); // 취향 페이지 감정 막대에서 온다
@@ -23,6 +38,10 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
   // slug → lyric lines, fetched once from /api/lyrics-index the first time the
   // user searches. null until then; meta search works without it.
   const [lyrics, setLyrics] = useState(null);
+  // 처음부터 919곡 카드를 전부 렌더하지 않는다 — 서버가 그 전부를 HTML로 그려
+  // 홈 응답의 3분의 2(약 900KB)를 차지했다. 화면에 들어올 만큼만 그리고,
+  // 아래는 버튼으로 이어서 그린다. 데이터는 이미 다 갖고 있으므로 추가 요청은 없다.
+  const [visibleCount, setVisibleCount] = useState(INITIAL_RENDER);
 
   // Mirror the filters into the URL so a refresh or a shared link lands on the
   // same view. replaceState, not pushState — one history entry per keystroke
@@ -79,10 +98,20 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filtered, seed]);
 
+  // 필터·검색이 바뀌면 캡을 처음으로 되돌린다 — 이전 화면에서 늘려 둔 상한이
+  // 새 결과에 그대로 남으면 화면마다 초기 크기가 달라진다.
+  useEffect(() => {
+    setVisibleCount(INITIAL_RENDER);
+  }, [needle, tag, emotion, decade, group]);
+
+  // 캡 적용 — 그룹 나누기 전에 앞에서 자른다. 그룹 화면에서도 상한은 같다.
+  const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+  const hiddenCount = filtered.length - visible.length;
+
   const groups = useMemo(() => {
-    if (group === "none" || group === "random") return [["", filtered]];
+    if (group === "none" || group === "random") return [["", visible]];
     const map = new Map();
-    for (const s of filtered) {
+    for (const s of visible) {
       const k = s[group] || "기타";
       if (!map.has(k)) map.set(k, []);
       map.get(k).push(s);
@@ -93,7 +122,7 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
       group === "decade" ? b[0].localeCompare(a[0]) : b[1].length - a[1].length
     );
     return entries;
-  }, [filtered, group]);
+  }, [visible, group]);
 
   return (
     <>
@@ -188,6 +217,17 @@ export default function Browse({ songs, initialTag = "", initialQ = "", initialG
             <Grid list={list} needle={needle} lyrics={lyrics} />
           </section>
         ))
+      )}
+
+      {group !== "random" && hiddenCount > 0 && (
+        <div className="mb-10 flex justify-center">
+          <button
+            onClick={() => setVisibleCount((n) => n + RENDER_STEP)}
+            className="rounded-full border border-line px-5 py-2 text-sm text-muted transition hover:border-accent hover:text-accent"
+          >
+            나머지 {hiddenCount}곡 더 보기
+          </button>
+        </div>
       )}
     </>
   );

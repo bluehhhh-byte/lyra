@@ -61,8 +61,15 @@ async function index() {
 }
 
 let INDEX = null;
+let revisionCheckedAt = 0;
+// revision 확인을 60초 캐시한다 — 예전에는 타이핑마다(검색 요청마다) Neon에
+// revision 쿼리가 나갔다. 검색 인덱스가 최대 60초 늦는 것은 개인 아카이브에서
+// 아무 문제가 아니고, 무료 컴퓨트 시간은 문제다.
+const REVISION_TTL_MS = 60_000;
 async function currentIndex() {
+  if (INDEX && Date.now() - revisionCheckedAt < REVISION_TTL_MS) return INDEX.value;
   const revision = await contentRevision();
+  revisionCheckedAt = Date.now();
   if (!INDEX || INDEX.revision !== revision) INDEX = { revision, value: await index() };
   return INDEX.value;
 }

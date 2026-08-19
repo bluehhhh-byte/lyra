@@ -15,5 +15,11 @@ export async function GET() {
       provider: s.preview_provider || "",
       externalUrl: appleUrl(s),
     }));
-  return Response.json({ items });
+  // 재생 목록은 곡이 추가될 때만 바뀐다. CDN이 1시간 들고 있게 한다 — 매 첫 재생마다
+  // 함수를 깨워 전곡을 직렬화할 이유가 없다. 새 곡이 셔플에 늦게 잡히는 최대 1시간은
+  // 감수한다(stale-while-revalidate로 그 사이에도 응답은 즉시 나간다).
+  return Response.json(
+    { items },
+    { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } }
+  );
 }

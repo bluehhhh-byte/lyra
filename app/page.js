@@ -28,14 +28,11 @@ export default async function Home({ searchParams }) {
     emotion: parseEmotion(s.emotion),
     country: countryOf(s),
     decade: s.year ? `${Math.floor(+s.year / 10) * 10}s` : "미상",
-    // meta and lyrics are searched separately so a lyric-only match can show
-    // WHICH line matched (snippet under the result card)
-    metaSearch: [s.title, s.title_ko, s.artist, s.artist_ko, s.album, s.tags.join(" ")]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase(),
-    // lyrics live in /api/lyrics-index and load lazily on first search — keeps
-    // the initial payload to meta only (see browse.js).
+    album: s.album || "",
+    // 검색용 소문자 문자열(metaSearch)은 서버에서 만들어 보내지 않는다 — 위 필드들의
+    // 사본이라 919곡 × 두 번(HTML + RSC 페이로드) 실려 초기 응답만 키웠다.
+    // browse.js가 클라이언트에서 같은 재료로 만든다. 가사는 /api/lyrics-index에서
+    // 첫 검색 때만 온다.
   }));
 
   return <>
