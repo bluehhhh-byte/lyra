@@ -1,5 +1,6 @@
 # push/PR마다 pnpm check(테스트 + 데이터 lint + 빌드 + smoke) 자동 실행.
-# 배포된 admin이 곡을 저장할 때마다 커밋이 생기므로, 데이터 커밋도 매번 검증된다.
+# 콘텐츠는 이제 Neon에 저장되고 커밋을 만들지 않는다 — 여기 오는 것은 코드 변경뿐이다.
+# workflow_dispatch는 이벤트 전달이 막혀 있어도(계정 플래그) 손으로 돌릴 수 있게 한다.
 #
 # action 버전은 Node 24 런타임을 쓰는 최신 메이저로 맞춘다 — v4는 Node 20 기반이라
 # "Node.js 20 actions are deprecated" 경고가 매 실행마다 붙었다.
@@ -9,10 +10,18 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+
+# 같은 브랜치에 커밋이 연달아 오면 이전 실행은 취소한다 — 무료 Actions 분을
+# 이미 낡은 커밋 검증에 쓰지 않는다.
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4 # 버전은 package.json의 packageManager를 따른다
