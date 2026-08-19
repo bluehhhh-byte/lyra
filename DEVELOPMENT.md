@@ -231,8 +231,29 @@ Gemini에는 **원문을 주지 않는다.** 2단계에서 넘기는 건 제목�
 | `GEMINI_API_KEY` | 번역·태그·코멘트·독음·취향 리포트·추천 생성 | 선택 |
 | `GEMINI_MODEL` | 품질용 Gemini 모델 (미설정 시 `gemini-flash-latest`) | 선택 |
 | `GEMINI_MODEL_LITE` | 분류·일괄용 모델 (미설정 시 `gemini-flash-lite-latest`) | 선택 |
+| `GEMINI_MODEL_FALLBACKS` | 기본 모델이 503일 때 내려갈 후보 (쉼표 구분) | 선택 |
 | `TMDB_API_KEY` | 영화 검색·상세·왓챠 임포트·추천 매칭 | 영화 기능에 필수 |
 | `NEXT_PUBLIC_SITE_URL` | sitemap·OG 절대 URL (미설정 시 Vercel 도메인 자동 사용) | 선택 |
+
+값을 붙여넣을 때 BOM(U+FEFF)이 딸려 오면 조용히 무시된다. `LYRA_CONTENT_STORE`가
+그래서 이틀 동안 꺼져 있었다 — 화면에는 `neon`으로 보였다. 지금은 코드가 BOM·공백·
+따옴표를 다듬지만, 무엇을 읽고 있는지는 `/api/version`의 `contentStore`로 확인한다.
+
+## 백업 (DB → 파일)
+
+운영 콘텐츠는 Neon에 있고 관리자 저장은 커밋을 만들지 않는다. 그래서 저장소만 보고
+있으면 최근 기록이 없다. 주기적으로 되돌려 놓아야 git이 이력을 맡을 수 있다.
+
+```bash
+node scripts/dump-content.mjs --check   # 무엇이 다른지만 본다 (다르면 exit 1)
+node scripts/dump-content.mjs           # 파일로 쓰고 SHA-256으로 검증
+git add -A songs movies data && git commit
+```
+
+반대 방향(`scripts/migrate-content.mjs`)은 파일을 DB로 올린다. 대량 파일 작업을 한
+뒤에는 이쪽을 써야 사이트에 반영된다. 두 스크립트 모두 쓰고 나서 해시를 다시 비교한다.
+
+`lyra_moments`(문화적 장면)는 md 대응물이 없어 덤프 대상이 아니다.
 
 ## 개발 히스토리 (요약)
 
