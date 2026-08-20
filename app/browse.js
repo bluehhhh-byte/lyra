@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import CoverImage from "./cover-image";
+import { groupSongs } from "../lib/browse-group";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -35,9 +36,10 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
   const [decade, setDecade] = useState(initialDecade); // 취향·곡 페이지 연대 링크에서 온다 (예: 2010s)
   const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
-  // slug → lyric lines, fetched once from /api/lyrics-index the first time the
-  // user searches. null until then; meta search works without it.
-  const [lyrics, setLyrics] = useState(null);
+  // 가사 검색은 서버에 맡긴다 — 예전에는 첫 검색 때 전곡 가사(gzip 757KB)를
+  // 통째로 내려받았다. lyricHits는 {q, map: slug → 맞은 줄}이고, 응답의 q가
+  // 현재 검색어와 일치할 때만 결과에 반영한다(늦게 도착한 이전 응답 무시).
+  const [lyricHits, setLyricHits] = useState({ q: "", map: null });
   // 처음부터 919곡 카드를 전부 렌더하지 않는다 — 서버가 그 전부를 HTML로 그려
   // 홈 응답의 3분의 2(약 900KB)를 차지했다. 화면에 들어올 만큼만 그리고,
   // 아래는 버튼으로 이어서 그린다. 데이터는 이미 다 갖고 있으므로 추가 요청은 없다.
@@ -61,19 +63,28 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
 
   const needle = q.trim().toLowerCase();
 
-  // load the lyric index once, on the first search — lands a lyric match a beat
-  // after typing (or on mount when arriving via a shared ?q= link)
+  // 가사 검색 — 두 글자부터, 300ms 멈춘 뒤에만 서버를 부른다. 한 글자마다
+  // 호출하면 타이핑 한 번에 요청이 대여섯 개다. 새 입력이 오면 타이머와
+  // 진행 중인 요청을 함께 취소한다.
   useEffect(() => {
-    if (!needle || lyrics) return;
-    let alive = true;
-    fetch("/api/lyrics-index")
-      .then((r) => r.json())
-      .then((arr) => alive && setLyrics(Object.fromEntries(arr.map((x) => [x.slug, x.lines]))))
-      .catch(() => {});
+    if (needle.length < 2) return;
+    const controller = new AbortController();
+    const timer = setTimeout(() => {
+      fetch(`/api/search/lyrics?q=${encodeURIComponent(needle)}`, { signal: controller.signal })
+        .then((r) => r.json())
+        .then(({ q: served, hits }) =>
+          setLyricHits({ q: served, map: Object.fromEntries(hits.map((h) => [h.slug, h.line])) })
+        )
+        .catch(() => {}); // 취소 포함 — 취소는 오류가 아니다
+    }, 300);
     return () => {
-      alive = false;
+      clearTimeout(timer);
+      controller.abort();
     };
-  }, [needle, lyrics]);
+  }, [needle]);
+
+  // 현재 검색어에 대한 서버 응답이 도착했을 때만 가사 매치를 켠다
+  const lyricMap = lyricHits.q === needle ? lyricHits.map : null;
 
   const filtered = useMemo(() => {
     return songs.filter(
@@ -81,11 +92,9 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
         (!tag || s.tags.includes(tag)) &&
         (!emotion || s.emotion === emotion) &&
         (!decade || s.decade === decade) &&
-        (!needle ||
-          s.metaSearch.includes(needle) ||
-          (lyrics?.[s.slug] || []).some((l) => l.toLowerCase().includes(needle)))
+        (!needle || s.metaSearch.includes(needle) || Boolean(lyricMap?.[s.slug]))
     );
-  }, [needle, tag, emotion, decade, songs, lyrics]);
+  }, [needle, tag, emotion, decade, songs, lyricMap]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
@@ -104,25 +113,18 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
     setVisibleCount(INITIAL_RENDER);
   }, [needle, tag, emotion, decade, group]);
 
-  // 캡 적용 — 그룹 나누기 전에 앞에서 자른다. 그룹 화면에서도 상한은 같다.
-  const visible = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+  // 렌더 캡은 "전체" 보기에만 적용한다. 초기 SSR이 그리는 것이 바로 이 보기라
+  // 페이로드가 걸린 곳이고, 그룹 보기는 클릭 후 클라이언트 렌더라 비용이 다르다.
+  // 그룹을 캡 이후에 나누면 헤더 수가 실제 그룹 크기와 달라지고 뒤쪽 그룹이
+  // 통째로 사라진다 — 그룹 나누기는 언제나 필터된 전체로 한다.
+  const capped = group === "none";
+  const visible = useMemo(
+    () => (capped ? filtered.slice(0, visibleCount) : filtered),
+    [capped, filtered, visibleCount]
+  );
   const hiddenCount = filtered.length - visible.length;
 
-  const groups = useMemo(() => {
-    if (group === "none" || group === "random") return [["", visible]];
-    const map = new Map();
-    for (const s of visible) {
-      const k = s[group] || "기타";
-      if (!map.has(k)) map.set(k, []);
-      map.get(k).push(s);
-    }
-    // decade: newest first; others: by size then name
-    const entries = [...map.entries()];
-    entries.sort((a, b) =>
-      group === "decade" ? b[0].localeCompare(a[0]) : b[1].length - a[1].length
-    );
-    return entries;
-  }, [visible, group]);
+  const groups = useMemo(() => groupSongs(visible, group), [visible, group]);
 
   return (
     <>
@@ -204,7 +206,7 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
               다시 섞기 ↻
             </button>
           </div>
-          <Grid list={randomList} needle={needle} lyrics={lyrics} />
+          <Grid list={randomList} needle={needle} lyrics={lyricMap} />
         </section>
       ) : (
         groups.map(([name, list]) => (
@@ -214,12 +216,12 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
                 {name} <span className="text-xs">({list.length})</span>
               </h2>
             )}
-            <Grid list={list} needle={needle} lyrics={lyrics} />
+            <Grid list={list} needle={needle} lyrics={lyricMap} />
           </section>
         ))
       )}
 
-      {group !== "random" && hiddenCount > 0 && (
+      {capped && hiddenCount > 0 && (
         <div className="mb-10 flex justify-center">
           <button
             onClick={() => setVisibleCount((n) => n + RENDER_STEP)}
@@ -237,8 +239,8 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
 // show the matching line with the query highlighted
 function Snippet({ song, needle, lyrics }) {
   if (!needle || song.metaSearch.includes(needle)) return null;
-  const line = (lyrics?.[song.slug] || []).find((l) => l.toLowerCase().includes(needle));
-  if (!line) return null;
+  const line = lyrics?.[song.slug] || "";
+  if (!line.toLowerCase().includes(needle)) return null;
   const i = line.toLowerCase().indexOf(needle);
   return (
     <p className="mt-1 line-clamp-2 text-xs italic text-muted/80">

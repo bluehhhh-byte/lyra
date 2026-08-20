@@ -31,8 +31,8 @@ export default async function Home({ searchParams }) {
     album: s.album || "",
     // 검색용 소문자 문자열(metaSearch)은 서버에서 만들어 보내지 않는다 — 위 필드들의
     // 사본이라 919곡 × 두 번(HTML + RSC 페이로드) 실려 초기 응답만 키웠다.
-    // browse.js가 클라이언트에서 같은 재료로 만든다. 가사는 /api/lyrics-index에서
-    // 첫 검색 때만 온다.
+    // browse.js가 클라이언트에서 같은 재료로 만든다. 가사 검색은 /api/search/lyrics가
+    // 맞은 slug와 줄만 돌려준다 — 전곡 가사를 내려받지 않는다.
   }));
 
   return <>
