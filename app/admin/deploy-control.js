@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { delayAt, MAX_POLLS, MAX_ELAPSED_MS } from "../../lib/deploy-poll";
+import { delayAt, MAX_POLLS, MAX_ELAPSED_MS, trackPlan } from "../../lib/deploy-poll";
 
 const terminal = new Set(["READY", "ERROR", "CANCELED"]);
 const label = {
@@ -13,7 +13,6 @@ const label = {
   READY: "반영 완료",
   ERROR: "배포 실패",
   CANCELED: "배포 취소됨",
-  TRIGGERED: "빌드 중 — 반영되면 알려준다",
 };
 
 async function json(res) {
@@ -29,44 +28,67 @@ export default function DeployControl({ contentInDatabase = false }) {
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
   const [status, setStatus] = useState(null);
+  // 루프 단일 실행 보장 — running은 "돌고 있는가", generation은 "지금 루프가
+  // 최신인가"다. 재진입 복구와 버튼 클릭이 겹쳐도 루프는 하나만 남는다.
   const running = useRef(false);
+  const generation = useRef(0);
 
-  // 진행 중 배포 상태 폴링 — 처음엔 촘촘히, 이후 느리게. 5분 동안 최대 15회.
-  // 예전에는 3초 고정 × 100회였다. 빌드는 보통 3~5분이라 대부분 헛돌았다.
-  const poll = async (deploymentId) => {
+  // 하나의 추적 루프가 두 국면을 오간다:
+  //   poll-ledger      deploymentId가 아직 없다(다른 탭이 claim만 한 상태) — 장부 재조회
+  //   poll-deployment  Vercel 배포 상태 조회 (서버가 heartbeat·검증·종결을 겸한다)
+  // 조회 예산(MAX_POLLS / MAX_ELAPSED_MS)은 국면 전환과 무관하게 하나로 센다.
+  const track = async (initialJob, gen) => {
+    let job = initialJob;
     const started = Date.now();
     for (let i = 0; i < MAX_POLLS && Date.now() - started < MAX_ELAPSED_MS; i++) {
+      if (gen !== generation.current) return; // 더 새 루프가 떠 있다 — 이 루프는 조용히 죽는다
+      const plan = trackPlan(job);
+      if (plan.step === "done") return setState("READY");
+      if (plan.step === "error" || plan.step === "give-up") throw new Error(plan.reason);
       await wait(delayAt(i));
-      const { deployment, job } = await json(
-        await fetch(`/api/admin/deploy?id=${encodeURIComponent(deploymentId)}`, { cache: "no-store" })
-      );
-      const s = job?.status === "READY" ? "READY" : deployment.state;
-      setState(s);
-      if (s === "READY") return;
-      if (terminal.has(s)) throw new Error(job?.error || label[s] || s);
+      if (gen !== generation.current) return;
+      if (plan.step === "poll-ledger") {
+        ({ job } = await json(await fetch("/api/admin/deploy", { cache: "no-store" })));
+        setState(job?.status === "BUILDING" ? "QUEUED" : job?.status || "QUEUED");
+      } else {
+        const { deployment, job: served } = await json(
+          await fetch(`/api/admin/deploy?id=${encodeURIComponent(plan.id)}`, { cache: "no-store" })
+        );
+        job = served || job;
+        const s = job?.status === "READY" ? "READY" : deployment.state;
+        setState(s);
+        if (s === "READY") return;
+        if (terminal.has(s)) throw new Error(job?.error || label[s] || s);
+      }
     }
     throw new Error("5분 안에 완료를 확인하지 못했습니다. 잠시 뒤 이 화면을 다시 열면 이어서 확인합니다");
   };
 
-  // 화면 재진입 — 다른 탭/기기에서 시작한 배포도 여기서 이어서 보인다.
+  const startLoop = (job, noteText) => {
+    if (running.current) return;
+    running.current = true;
+    const gen = ++generation.current;
+    if (noteText) setNote(noteText);
+    setState(job?.deploymentId ? "BUILDING" : "QUEUED");
+    track(job, gen)
+      .catch((e) => {
+        if (gen !== generation.current) return;
+        setState("ERROR");
+        setError(e.message);
+      })
+      .finally(() => {
+        if (gen === generation.current) running.current = false;
+      });
+  };
+
+  // 화면 재진입 — 다른 탭/기기에서 시작한 배포도 이어서 보인다.
+  // deploymentId가 아직 없어도(claim 직후) 같은 루프가 장부를 따라간다.
   useEffect(() => {
     fetch("/api/admin/deploy", { cache: "no-store" })
       .then((r) => r.json())
       .then((d) => {
         setStatus(d.status || null);
-        if (d.job?.status === "BUILDING" && d.job.deploymentId && !running.current) {
-          running.current = true;
-          setNote("진행 중인 배포를 이어서 확인합니다");
-          setState("BUILDING");
-          poll(d.job.deploymentId)
-            .catch((e) => {
-              setState("ERROR");
-              setError(e.message);
-            })
-            .finally(() => {
-              running.current = false;
-            });
-        }
+        if (d.job?.status === "BUILDING") startLoop(d.job, "진행 중인 배포를 이어서 확인합니다");
       })
       .catch(() => {});
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -74,62 +96,26 @@ export default function DeployControl({ contentInDatabase = false }) {
 
   const deploy = async () => {
     if (running.current) return;
-    running.current = true;
     setError("");
     setNote("");
     setState("CHECKING");
     try {
       const data = await json(await fetch("/api/admin/deploy", { method: "POST" }));
-      // 서버 장부가 중복을 걸렀다 — 새 배포는 만들어지지 않았다
       if (data.alreadyDeployed) {
         setState("READY");
         setNote("이미 배포된 커밋입니다 — 새 배포를 만들지 않았습니다");
         return;
       }
-      if (data.inProgress) {
-        setNote("이미 진행 중인 배포가 있어 이어서 확인합니다");
-        if (data.job?.deploymentId) {
-          setState("BUILDING");
-          return await poll(data.job.deploymentId);
-        }
-        setState("BUILDING");
-        return;
-      }
-      const deployment = data.deployment;
-      setState(deployment.state === "TRIGGERED" ? "TRIGGERED" : "REQUESTED");
-      if (deployment.pollable === false) {
-        // Deploy Hook 경로 — 진행 조회가 안 되므로 서빙 빌드가 바뀌는 것만 본다
-        const before = await buildId();
-        const started = Date.now();
-        for (let i = 0; i < MAX_POLLS && Date.now() - started < MAX_ELAPSED_MS; i++) {
-          await wait(delayAt(i));
-          const now = await buildId();
-          if (now && before && now !== before) return setState("READY");
-        }
-        throw new Error("배포가 5분 안에 반영되지 않았습니다. Vercel 대시보드에서 확인해 주세요");
-      }
-      setState("BUILDING");
-      await poll(deployment.id);
+      if (data.inProgress) return startLoop(data.job, "이미 진행 중인 배포가 있어 이어서 확인합니다");
+      startLoop({ ...data.job, deploymentId: data.deployment?.id || data.job?.deploymentId });
     } catch (e) {
       setState("ERROR");
       setError(e.message);
-    } finally {
-      running.current = false;
-    }
-  };
-
-  const buildId = async () => {
-    try {
-      const v = await (await fetch("/api/version", { cache: "no-store" })).json();
-      return `${v.sha}:${v.deploymentId}`;
-    } catch {
-      return "";
     }
   };
 
   const busy = !!state && !terminal.has(state);
   const setup = {
-    hook: { text: "Deploy Hook 사용", tone: "text-muted" },
     source: { text: "모바일 직접 배포 사용", tone: "text-muted" },
     none: { text: "모바일 배포 설정이 필요합니다", tone: "text-red-500" },
   }[status?.mode];
@@ -149,10 +135,7 @@ export default function DeployControl({ contentInDatabase = false }) {
         </span>
       )}
       {!state && !error && setup && (
-        <span className={`text-xs ${setup.tone}`}>
-          {setup.text}
-          {status.hook === "invalid" && " (VERCEL_DEPLOY_HOOK 주소 형식이 잘못됨)"}
-        </span>
+        <span className={`text-xs ${setup.tone}`}>{setup.text}</span>
       )}
     </div>
   );

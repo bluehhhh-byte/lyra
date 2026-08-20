@@ -3,6 +3,7 @@ import { handleMovies } from "./movies";
 import { handleWatcha } from "./watcha";
 import { handleMoments } from "./moments";
 import { lastGeminiError, withReason } from "../../../lib/admin/gemini";
+import { sameOrigin, forbiddenOrigin } from "../../../lib/admin/same-origin";
 
 // Gemini 호출 하나는 lib/admin/gemini.js가 48초 예산으로 스스로 묶지만, 한 액션이
 // Gemini를 여러 번 부르는 경우가 있다(연 해설 regenNotes는 연마다 한 번씩). 그 합이
@@ -15,22 +16,9 @@ export const maxDuration = 180;
 // lib/store — fs locally, Neon in production, GitHub as a migration fallback. Actions are split by
 // domain into ./songs, ./movies, ./watcha; each handler returns a Response
 // for an action it owns, or null so the next handler gets a turn.
-// 상태를 바꾸는 POST는 같은 출처에서만 받는다. 쿠키 인증은 middleware가 하지만
-// 쿠키는 브라우저가 어디서든 실어 보낸다 — 다른 사이트의 폼이 저장·삭제를 부르면
-// 안 된다. Origin이 없는 요청(curl 등)은 쿠키도 없으므로 통과시킨다.
-function sameOrigin(req) {
-  const origin = req.headers.get("origin");
-  if (!origin) return true;
-  try {
-    return new URL(origin).host === req.headers.get("host");
-  } catch {
-    return false;
-  }
-}
-
 export async function POST(req) {
   try {
-    if (!sameOrigin(req)) return Response.json({ error: "허용되지 않은 출처입니다" }, { status: 403 });
+    if (!sameOrigin(req)) return forbiddenOrigin();
     return await withGeminiReason(await handle(req));
   } catch (e) {
     // always return JSON so the client never hits an empty-body parse error
