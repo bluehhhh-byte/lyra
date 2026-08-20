@@ -13,6 +13,7 @@ import SongNav from "./song-nav";
 import YouTubeEmbed from "./youtube-embed";
 import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
+import { crossMatches } from "../../../lib/cross-match";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -91,13 +92,10 @@ export default async function SongPage({ params }) {
     countBy((s) => s.artist === song.artist) > 1 && { key: "artist", label: `${song.artist}의 곡`, href: `/?q=${encodeURIComponent(song.artist)}`, count: countBy((s) => s.artist === song.artist) },
   ].filter(Boolean);
 
-  // Lyra×Syno 교차 — 같은 시대의 큐레이션 영화 (같은 권역 우선)
+  // Lyra×Cyno 교차 — 같은 시대 안에서 권역·감정·주제가 가까운 기록을 우선한다.
   const songDecadeNum = song.year ? Math.floor(+song.year / 10) * 10 : null;
   const eraMovies = songDecadeNum
-    ? (await getAllMoviesRuntime())
-        .filter((m) => m.year && Math.floor(+m.year / 10) * 10 === songDecadeNum)
-        .sort((a, b) => (b.tags.includes(region) ? 1 : 0) - (a.tags.includes(region) ? 1 : 0))
-        .slice(0, 3)
+    ? crossMatches(song, await getAllMoviesRuntime(), { countries: COUNTRY_TAGS, limit: 3 })
     : [];
 
   return (
@@ -279,7 +277,7 @@ export default async function SongPage({ params }) {
         </div>
       )}
 
-      {/* Lyra×Syno — 이 곡의 시대를 함께 보는 큐레이션 영화 */}
+      {/* Lyra×Cyno — 이 곡의 시대를 함께 보는 큐레이션 영화 */}
       {eraMovies.length > 0 && (
         <div className="mx-auto mt-14 max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold text-muted">
@@ -298,6 +296,7 @@ export default async function SongPage({ params }) {
                   />
                 </div>
                 <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{m.title_ko || m.title}</h3>
+                <p className="mt-0.5 truncate text-[10px] text-muted/70">{m.crossReason}</p>
               </Link>
             ))}
           </div>

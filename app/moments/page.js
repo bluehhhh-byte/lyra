@@ -14,7 +14,7 @@ export default async function MomentsPage() {
   return (
     <div className="pb-12 pt-8">
       <header className="mb-14 max-w-2xl">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">Lyra × Syno</p>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">Lyra × Cyno</p>
         <h1 className="text-3xl font-bold sm:text-4xl">문화 장면</h1>
         <p className="mt-4 leading-relaxed text-muted">노래와 영화가 같은 시기에 남긴 흔적. 작품의 목록이 아니라, 그 작품을 통해 다시 읽는 시간의 기록이다.</p>
       </header>

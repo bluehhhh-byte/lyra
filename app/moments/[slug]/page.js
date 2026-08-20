@@ -51,7 +51,7 @@ export default async function MomentPage({ params }) {
                 <div className={`h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-bg ${link.targetKind === "movie" ? "w-16" : ""}`}>
                   {link.targetKind === "song" ? <CoverImage src={image} alt="" className="h-full w-full object-cover" /> : image ? <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" /> : null}
                 </div>
-                <div className="min-w-0 py-1"><p className="text-[10px] uppercase tracking-wider text-accent">{link.targetKind === "song" ? "Lyra" : "Syno"}</p><h3 className="mt-1 truncate font-semibold group-hover:text-accent">{title}</h3><p className="truncate text-xs text-muted">{subtitle}</p>{link.note && <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-muted">{link.note}</p>}</div>
+                <div className="min-w-0 py-1"><p className="text-[10px] uppercase tracking-wider text-accent">{link.targetKind === "song" ? "Lyra" : "Cyno"}</p><h3 className="mt-1 truncate font-semibold group-hover:text-accent">{title}</h3><p className="truncate text-xs text-muted">{subtitle}</p>{link.note && <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-muted">{link.note}</p>}</div>
               </div>
               {link.excerpt && <blockquote className="border-t border-line px-4 py-3 font-serif text-sm leading-relaxed">“{link.excerpt}”</blockquote>}
             </Link>;

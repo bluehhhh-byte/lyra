@@ -7,7 +7,7 @@ import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 
 export const metadata = {
-  title: "취향 분석 | Syno.",
+  title: "취향 분석 | Cyno.",
   description: "별점 매긴 영화들의 국가·장르·감독·배우·연대 취향",
 };
 

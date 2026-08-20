@@ -6,7 +6,7 @@ import CoverImage from "../../cover-image";
 export async function generateMetadata({ params }) {
   const person = await getPersonRuntime(decodeURIComponent((await params).name));
   if (!person) return {};
-  return { title: `${person.name} | Syno.` };
+  return { title: `${person.name} | Cyno.` };
 }
 
 export default async function PersonPage({ params }) {
