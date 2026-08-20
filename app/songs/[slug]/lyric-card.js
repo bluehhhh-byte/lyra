@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { buildCaption, buildCarouselCaption } from "../../../lib/caption";
-import { buildCarousel, suggestHooks, groupByStanza, stanzaFits, CAROUSEL_SLIDES } from "../../../lib/carousel";
+import { buildCarousel, autoPick, suggestHooks, groupByStanza, stanzaFits, CAROUSEL_SLIDES } from "../../../lib/carousel";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal previews the card, lets the
@@ -182,6 +182,82 @@ async function drawCard({ song, lines, align = "left" }) {
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
 
+// 4장 전용 — 앨범 커버가 주인공인 카드. 앞선 세 장은 커버를 흐려 배경으로 깔지만
+// 이 장은 그대로 크게 싣는다. 끝까지 넘긴 사람에게만 보이는 자리이므로 곡 정보와
+// 해설, 사이트 안내가 여기 모인다.
+async function drawCoverCard({ song, note }) {
+  const canvas = document.createElement("canvas");
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, 0, W, H);
+
+  // 커버는 카드 폭 전체를 정사각으로 차지한다 — 위쪽 1080×1080
+  let art = null;
+  try {
+    art = await loadImage(song.artwork);
+    const side = Math.min(art.width, art.height); // 정사각 크롭 (2:3 포스터가 눌리지 않게)
+    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, 0, 0, W, W);
+  } catch {
+    ctx.fillStyle = "#1a1a1e";
+    ctx.fillRect(0, 0, W, W);
+  }
+
+  // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다
+  const fade = ctx.createLinearGradient(0, W - 120, 0, W);
+  fade.addColorStop(0, "rgba(13,13,15,0)");
+  fade.addColorStop(1, "rgba(13,13,15,1)");
+  ctx.fillStyle = fade;
+  ctx.fillRect(0, W - 120, W, 120);
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, W, W, H - W);
+
+  const ink = "#f4f4f6";
+  const inkDim = "rgba(244,244,246,0.62)";
+  const pad = 96;
+  const maxW = W - pad * 2;
+  let y = W + 62;
+
+  // 곡 제목
+  ctx.textAlign = "left";
+  ctx.fillStyle = ink;
+  ctx.font = "600 52px Georgia, 'Noto Serif KR', serif";
+  ctx.fillText(song.title, pad, y);
+  y += 44;
+
+  // 아티스트 · 연도 · 감정
+  const meta = [song.artist, song.year, song.emotion].filter(Boolean).join(" · ");
+  ctx.fillStyle = inkDim;
+  ctx.font = "30px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText(meta, pad, y);
+  y += 52;
+
+  // 해설 — 남은 높이에 맞춰 줄바꿈. 아래 안내 문구 자리를 남긴다.
+  if (note) {
+    ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    ctx.fillStyle = "rgba(244,244,246,0.82)";
+    const reserved = 74; // 하단 안내 + 여백
+    for (const line of wrap(ctx, note, maxW)) {
+      if (y > H - reserved) break; // 넘치면 자른다 — 카드 밖으로 흘리지 않는다
+      ctx.fillText(line, pad, y);
+      y += 40;
+    }
+  }
+
+  // 하단 — 워드마크와 유입 안내. 이 장에만 있다.
+  ctx.fillStyle = "rgba(244,244,246,0.45)";
+  ctx.font = "24px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText("전문 · 번역 — 프로필 링크", pad, H - 52);
+  ctx.textAlign = "right";
+  ctx.fillStyle = ink;
+  ctx.font = "600 30px Georgia, serif";
+  ctx.fillText("Lyra.", W - pad, H - 52);
+
+  return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+}
+
 async function shareBlob(blob, song) {
   const file = new File([blob], `lyra-${song.slug}.png`, { type: "image/png" });
   if (navigator.canShare?.({ files: [file] })) {
@@ -230,8 +306,10 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
   // 발행 방식 — "one"은 기존 한 장짜리, "carousel"은 4장 묶음.
   // 캐러셀은 단일 이미지 대비 도달 3배·저장 9배다(2026 측정).
   const [mode, setMode] = useState("one");
-  const [hookIndex, setHookIndex] = useState(() => initial?.[0] ?? 0);
+  // 후크는 열자마자 자동으로 정해진다 — 고를 것을 없애는 것이 이 기능의 요점이다.
+  const [hookIndex, setHookIndex] = useState(() => autoPick(allLines));
   const [openingStanza, setOpeningStanza] = useState(null);
+  const [tweaking, setTweaking] = useState(false); // 조정 패널은 접어 둔다
   const [cards, setCards] = useState([]); // [{ role, label, url }]
   const cardBlobs = useRef([]);
   const [building, setBuilding] = useState(false);
@@ -273,7 +351,10 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     (async () => {
       const made = [];
       for (const slide of carousel.slides) {
-        const blob = await drawCard({ song, lines: slide.lines, align });
+        const blob =
+          slide.role === "cover"
+            ? await drawCoverCard({ song, note: slide.note })
+            : await drawCard({ song, lines: slide.lines, align });
         if (!alive) return;
         if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
       }
@@ -363,7 +444,11 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
 
         <div className="mb-1 mt-3 flex items-center justify-between">
           <p className="text-xs text-muted">
-            {mode === "carousel" ? "1장에 쓸 후크 한 줄" : `포함할 줄 (최대 ${MAX_PAIRS}) — 전체 가사에서 자유롭게`}
+            {mode === "carousel"
+              ? tweaking
+                ? "1장에 쓸 후크 한 줄"
+                : `자동 선정 — "${allLines[hookIndex]?.en || ""}"`
+              : `포함할 줄 (최대 ${MAX_PAIRS}) — 전체 가사에서 자유롭게`}
           </p>
           <div className="flex gap-1">
             {[["left", "좌", "왼쪽"], ["center", "중", "가운데"], ["right", "우", "오른쪽"]].map(([k, label, name]) => (
@@ -383,7 +468,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
             ))}
           </div>
         </div>
-        {mode === "carousel" && hookPicks.length > 0 && (
+        {mode === "carousel" && tweaking && hookPicks.length > 0 && (
           // 923곡을 매번 통독하게 두지 않는다 — 짧고 1인칭인 줄을 먼저 내민다
           <div className="mb-2 flex flex-wrap gap-1">
             {hookPicks.map(({ index, line }) => (
@@ -403,6 +488,15 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           </div>
         )}
 
+        {mode === "carousel" && !tweaking ? (
+          // 기본은 자동 — 결과가 마음에 들지 않을 때만 열어 고친다
+          <button
+            onClick={() => setTweaking(true)}
+            className="w-full rounded-lg border border-line px-3 py-2 text-xs text-muted transition hover:border-accent hover:text-accent"
+          >
+            다른 구절로 바꾸기
+          </button>
+        ) : (
         <ul className="max-h-48 space-y-1 overflow-y-auto">
           {allLines.map((l, i) => (
             <li key={i}>
@@ -426,8 +520,9 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
             </li>
           ))}
         </ul>
+        )}
 
-        {mode === "carousel" && stanzaGroups.length > 1 && (
+        {mode === "carousel" && tweaking && stanzaGroups.length > 1 && (
           <div className="mt-2">
             <p className="mb-1 text-xs text-muted">2장에 쓸 여는 연</p>
             <div className="flex flex-wrap gap-1">
