@@ -1,18 +1,24 @@
 import Link from "next/link";
 import { getWatchedRuntime } from "../../lib/watched";
+import { getAllMoviesMeta } from "../../lib/movies";
+import { attachCuratedLinks } from "../../lib/watched-filter";
 import WatchedGrid from "./grid";
-import SynoNav from "../syno-nav";
+import CynoNav from "../cyno-nav";
 
 export const metadata = {
-  title: "평가한 영화 | Syno.",
+  title: "평가한 영화 | Cyno.",
   description: "왓챠에서 별점 매긴 영화 목록",
 };
 
 // 왓챠 별점 목록의 그리드 버전. 별점 높은 순 → 최신 개봉 순.
 // 개별 페이지가 없는 영화라 카드는 링크가 아니라(감상 42편만 곡·영화 페이지로).
-export default async function WatchedPage() {
-  const all = await getWatchedRuntime();
-  const rated = all.filter((m) => m.rating != null);
+export default async function WatchedPage({ searchParams }) {
+  const [all, curated, initial] = await Promise.all([
+    getWatchedRuntime(),
+    getAllMoviesMeta(),
+    searchParams,
+  ]);
+  const rated = attachCuratedLinks(all.filter((m) => m.rating != null), curated);
   const noRating = all.length - rated.length;
 
   rated.sort(
@@ -25,7 +31,7 @@ export default async function WatchedPage() {
 
   return (
     <>
-      <SynoNav active="watched" />
+      <CynoNav active="watched" />
       <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold">별점 평가</h1>
@@ -47,7 +53,7 @@ export default async function WatchedPage() {
           {noRating > 0 && <p className="mt-2 text-xs text-muted/60">메타데이터는 {all.length}편 준비됨</p>}
         </div>
       ) : (
-        <WatchedGrid rated={rated} />
+        <WatchedGrid rated={rated} initial={initial} />
       )}
     </>
   );

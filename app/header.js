@@ -19,7 +19,7 @@ const MORE = [
     ["/songs/motifs", "가사 모티프"],
     ["/recommendations/music", "추천 곡"],
   ]],
-  ["SYNO", [
+  ["CYNO", [
     ["/watched", "평가한 영화"],
     ["/watched/taste", "영화 취향"],
     ["/recommendations", "추천 영화"],
@@ -63,14 +63,14 @@ export default function Header() {
   return (
     <>
       <header className="relative z-30 mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-6">
-        {/* 로고는 두 세계의 스위치 — Lyra.를 누르면 Syno.(영화)로, Syno.를
+        {/* 로고는 두 세계의 스위치 — Lyra.를 누르면 Cyno.(영화)로, Cyno.를
             누르면 Lyra.(음악)로 넘어간다. 현재 섹션 홈은 내비의 음악/영화가 담당. */}
         <Link
           href={inMovies ? "/" : "/movies"}
-          title={inMovies ? "Lyra. — 음악으로" : "Syno. — 영화로"}
+          title={inMovies ? "Lyra. — 음악으로" : "Cyno. — 영화로"}
           className="shrink-0 text-lg font-bold"
         >
-          {inMovies ? "Syno" : "Lyra"}<span className="text-accent">.</span>
+          {inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span>
         </Link>
 
         <nav className="hidden items-center gap-5 text-xs text-muted md:flex">

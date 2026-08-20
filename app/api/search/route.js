@@ -1,17 +1,10 @@
 import { currentSearchIndex } from "../../../lib/search-index";
+import { rankedSearch, searchScore } from "../../../lib/search-rank";
 
 export const dynamic = "force-dynamic";
 
 const LIMIT = 6;
-const pick = (items, query) => {
-  const out = [];
-  for (const it of items) {
-    if (!it.meta.includes(query)) continue;
-    out.push({ href: it.href, title: it.title, subtitle: it.subtitle, image: it.image });
-    if (out.length === LIMIT) break;
-  }
-  return out;
-};
+const pick = (items, query) => rankedSearch(items, query, LIMIT).map(({ href, title, subtitle, image }) => ({ href, title, subtitle, image }));
 
 export async function GET(request) {
   const query = new URL(request.url).searchParams.get("q")?.trim().toLowerCase() || "";
@@ -19,15 +12,16 @@ export async function GET(request) {
   const db = await currentSearchIndex();
 
   // 곡만 가사까지 본다 — 맞은 줄을 스니펫으로 보여주기 위해서다
-  const songs = [];
-  for (const s of db.songs) {
-    const lyric = s.meta.includes(query)
-      ? s.lines.find((l) => l.toLowerCase().includes(query)) || ""
-      : s.lines.find((l) => l.toLowerCase().includes(query));
-    if (!s.meta.includes(query) && !lyric) continue;
-    songs.push({ href: s.href, title: s.title, subtitle: s.subtitle, image: s.image, snippet: lyric || "" });
-    if (songs.length === LIMIT) break;
-  }
+  const songs = db.songs
+    .map((song, index) => {
+      const lyric = song.lines.find((line) => line.toLowerCase().includes(query)) || "";
+      const score = searchScore(song, query) + (lyric ? 3 : 0);
+      return { song, lyric, score, index };
+    })
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .slice(0, LIMIT)
+    .map(({ song, lyric }) => ({ href: song.href, title: song.title, subtitle: song.subtitle, image: song.image, snippet: lyric }));
 
   return Response.json({
     groups: [

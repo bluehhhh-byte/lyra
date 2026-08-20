@@ -50,7 +50,7 @@ export default function RecapShare({ recap, label }) {
 
     ctx.fillStyle = "#ededf0";
     ctx.font = "600 34px Georgia, serif";
-    ctx.fillText("Lyra. / Syno.", 132, 1220);
+    ctx.fillText("Lyra. / Cyno.", 132, 1220);
 
     const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
     if (!blob) return;

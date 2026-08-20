@@ -10,6 +10,7 @@ import { getAllSongsMeta } from "../../../lib/songs";
 import { COUNTRY_TAGS } from "../../../lib/genre";
 import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
+import { crossMatches } from "../../../lib/cross-match";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -81,15 +82,11 @@ export default async function MoviePage({ params }) {
   const related = relatedMovies(movie, all);
   const moments = await getMomentsForTarget("movie", movie.slug);
 
-  // Lyra×Syno 교차 — 같은 시대(±같은 권역이면 우선)의 컬렉션 곡.
+  // Lyra×Cyno 교차 — 같은 시대 안에서 권역·감정·주제가 가까운 곡을 우선한다.
   // 같은 사이트에 음악·영화가 함께 사는 것의 배당금.
   const movieDecade = movie.year ? Math.floor(+movie.year / 10) * 10 : null;
-  const movieRegion = movie.tags?.find((t) => COUNTRY_TAGS.includes(t)) || "";
   const eraSongs = movieDecade
-    ? (await getAllSongsMeta())
-        .filter((s) => s.year && Math.floor(+s.year / 10) * 10 === movieDecade)
-        .sort((a, b) => (b.tags.includes(movieRegion) ? 1 : 0) - (a.tags.includes(movieRegion) ? 1 : 0))
-        .slice(0, 4)
+    ? crossMatches(movie, await getAllSongsMeta(), { countries: COUNTRY_TAGS, limit: 4 })
     : [];
 
   const meta = [
@@ -269,7 +266,7 @@ export default async function MoviePage({ params }) {
         </div>
       )}
 
-      {/* Lyra×Syno — 이 영화의 시대를 함께 듣는 컬렉션 곡 */}
+      {/* Lyra×Cyno — 이 영화의 시대를 함께 듣는 컬렉션 곡 */}
       {eraSongs.length > 0 && (
         <div className="mx-auto mt-14 max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold text-muted">
@@ -289,6 +286,7 @@ export default async function MoviePage({ params }) {
                 </div>
                 <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{s.title}</h3>
                 <p className="truncate text-xs text-muted">{s.artist}</p>
+                <p className="mt-0.5 truncate text-[10px] text-muted/70">{s.crossReason}</p>
               </Link>
             ))}
           </div>

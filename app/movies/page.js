@@ -1,9 +1,9 @@
 import { getAllMoviesMeta } from "../../lib/movies";
 import MovieBrowse from "./browse";
-import SynoNav from "../syno-nav";
+import CynoNav from "../cyno-nav";
 
 export const metadata = {
-  title: "Syno. | Lyra",
+  title: "Cyno. | Lyra",
   description: "좋아하는 영화와 줄거리·감상",
 };
 
@@ -45,11 +45,11 @@ export default async function MoviesPage({ searchParams }) {
     };
   });
 
-  // 헤더 로고가 이미 Syno. 라 페이지 제목 없음 — 홈(Lyra)과 같은 시작.
+  // 헤더 로고가 이미 Cyno. 라 페이지 제목 없음 — 홈(Lyra)과 같은 시작.
   // 서브내비는 목록이 비어도 그대로 둔다 — 별점 쪽으로 가는 길은 항상 있어야 한다.
   return (
     <>
-      <SynoNav active="movies" />
+      <CynoNav active="movies" />
       {movies.length === 0 ? (
         <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>
       ) : (

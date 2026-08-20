@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllPeopleRuntime } from "../../lib/people";
 
 export const metadata = {
-  title: "인물 | Syno.",
+  title: "인물 | Cyno.",
   description: "기록한 영화와 드라마의 감독·배우",
 };
 

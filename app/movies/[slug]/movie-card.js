@@ -44,7 +44,7 @@ async function drawCard({ movie }) {
   ctx.fillStyle = ink;
   ctx.textAlign = "right";
   ctx.font = "600 34px Georgia, serif";
-  ctx.fillText("Syno.", W - pad, 100);
+  ctx.fillText("Cyno.", W - pad, 100);
 
   // poster — centered near the top, 2:3
   const pw = 320;
