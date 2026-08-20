@@ -19,7 +19,20 @@ import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs"
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 
-export async function handleSongs(action, body) {  if (action === "search") {
+export async function handleSongs(action, body) {
+  // 스크립트로 DB를 직접 고친 뒤 캐시를 비운다. 캐시 무효화는 lib/store.js의
+  // 저장 경로에만 있어서, migrate-content.mjs나 retranslate.mjs로 고친 내용은
+  // 사이트에 반영되지 않고 옛 값이 계속 서빙됐다. 배포로도 지워지지 않는다 —
+  // Next 데이터 캐시는 태그로만 지워진다.
+  if (action === "revalidate") {
+    const { revalidateTag, revalidatePath } = await import("next/cache");
+    for (const tag of ["lyra-content", "lyra-songs", "lyra-movies", "lyra-data", "lyra-moments"])
+      revalidateTag(tag);
+    revalidatePath("/", "layout");
+    return Response.json({ ok: true, revalidated: ["lyra-content", "lyra-songs", "lyra-movies", "lyra-data", "lyra-moments"] });
+  }
+
+  if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
     const offset = body.offset || 0;
     // free-text search across title and artist — iTunes matches both by default
