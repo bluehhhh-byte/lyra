@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { buildCaption } from "../../../lib/caption";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { buildCaption, buildCarouselCaption } from "../../../lib/caption";
+import { buildCarousel, suggestHooks, groupByStanza, stanzaFits, CAROUSEL_SLIDES } from "../../../lib/carousel";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal previews the card, lets the
@@ -197,6 +198,27 @@ async function shareBlob(blob, song) {
   URL.revokeObjectURL(url);
 }
 
+// 캐러셀은 여러 장을 한 번에 넘겨야 한다. 공유 시트는 파일 여러 개를 한 번에 받지만
+// 지원이 고르지 않아, 인스타 업로드 순서가 보이는 파일명으로 내려받는 쪽을 기본으로 둔다.
+async function downloadAll(blobs, song) {
+  const files = blobs.map((b, i) => new File([b], `lyra-${song.slug}-${String(i + 1).padStart(2, "0")}.png`, { type: "image/png" }));
+  if (navigator.canShare?.({ files })) {
+    try {
+      await navigator.share({ files, title: `${song.title} — ${song.artist}` });
+      return;
+    } catch {} // 시트를 닫았거나 여러 파일을 못 받는다 — 내려받기로 넘어간다
+  }
+  for (const file of files) {
+    const url = URL.createObjectURL(file);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = file.name;
+    a.click();
+    URL.revokeObjectURL(url);
+    await new Promise((r) => setTimeout(r, 250)); // 연속 다운로드를 브라우저가 막지 않게
+  }
+}
+
 // `lines` is every line of the song (flattened; section set on stanza-opening
 // lines), so the picker can mix lines from anywhere. `initial` seeds the
 // selection with the stanza that was clicked.
@@ -205,9 +227,25 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [align, setAlign] = useState("left");
   const [url, setUrl] = useState(null);
   const blobRef = useRef(null);
+  // 발행 방식 — "one"은 기존 한 장짜리, "carousel"은 4장 묶음.
+  // 캐러셀은 단일 이미지 대비 도달 3배·저장 9배다(2026 측정).
+  const [mode, setMode] = useState("one");
+  const [hookIndex, setHookIndex] = useState(() => initial?.[0] ?? 0);
+  const [openingStanza, setOpeningStanza] = useState(null);
+  const [cards, setCards] = useState([]); // [{ role, label, url }]
+  const cardBlobs = useRef([]);
+  const [building, setBuilding] = useState(false);
+
+  const hookPicks = useMemo(() => suggestHooks(allLines, 8), [allLines]);
+  const stanzaGroups = useMemo(() => groupByStanza(allLines).filter(stanzaFits), [allLines]);
+  const carousel = useMemo(
+    () => buildCarousel({ lines: allLines, hookIndex, note: song.comment || "", openingStanzaIndex: openingStanza }),
+    [allLines, hookIndex, openingStanza, song.comment]
+  );
 
   // re-render the preview whenever the selection or alignment changes
   useEffect(() => {
+    if (mode !== "one") return;
     let alive = true;
     const lines = allLines.filter((_, i) => sel.has(i));
     if (!lines.length) return;
@@ -222,9 +260,40 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     return () => {
       alive = false;
     };
-  }, [sel, song, allLines, align]);
+  }, [sel, song, allLines, align, mode]);
 
   useEffect(() => () => url && URL.revokeObjectURL(url), [url]);
+
+  // 캐러셀 4장을 한꺼번에 그린다. 같은 drawCard를 반복 호출하므로 렌더링 규칙은
+  // 한 장짜리와 완전히 같다 — 검증된 코드를 그대로 쓴다.
+  useEffect(() => {
+    if (mode !== "carousel" || !carousel.slides.length) return;
+    let alive = true;
+    setBuilding(true);
+    (async () => {
+      const made = [];
+      for (const slide of carousel.slides) {
+        const blob = await drawCard({ song, lines: slide.lines, align });
+        if (!alive) return;
+        if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
+      }
+      if (!alive) {
+        made.forEach((m) => URL.revokeObjectURL(m.url));
+        return;
+      }
+      setCards((old) => {
+        old.forEach((o) => URL.revokeObjectURL(o.url));
+        return made;
+      });
+      cardBlobs.current = made.map((m) => m.blob);
+      setBuilding(false);
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [mode, carousel, song, align]);
+
+  useEffect(() => () => cards.forEach((c) => URL.revokeObjectURL(c.url)), [cards]);
 
   const toggle = (i) =>
     setSel((old) => {
@@ -246,7 +315,45 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
         onClick={(e) => e.stopPropagation()}
         className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
-        {url ? (
+        {/* 발행 방식 — 캐러셀이 기본값은 아니다. 한 장짜리 공유도 그대로 남는다. */}
+        <div className="mb-3 flex gap-1">
+          {[["one", "한 장"], ["carousel", `캐러셀 ${CAROUSEL_SLIDES}장`]].map(([k, label]) => (
+            <button
+              key={k}
+              onClick={() => setMode(k)}
+              aria-pressed={mode === k}
+              className={`flex-1 rounded-lg border px-3 py-1.5 text-xs transition ${
+                mode === k
+                  ? "border-accent bg-accent font-semibold text-bg"
+                  : "border-line text-muted hover:text-accent"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {mode === "carousel" ? (
+          <>
+            {carousel.error ? (
+              <p className="rounded-xl border border-line px-3 py-6 text-center text-sm text-muted">{carousel.error}</p>
+            ) : cards.length ? (
+              // 인스타에서 넘겨 보는 순서 그대로 — 왼쪽부터 1장이다
+              <ol className="-mx-1 flex snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1">
+                {cards.map((c, i) => (
+                  <li key={c.role} className="w-40 shrink-0 snap-center">
+                    <img src={c.url} alt={`${i + 1}번째 카드 — ${c.label}`} className="w-full rounded-lg border border-line" />
+                    <p className="mt-1 text-center text-[10px] text-muted">
+                      {i + 1}. {c.label}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">카드 생성 중…</div>
+            )}
+          </>
+        ) : url ? (
           <img src={url} alt="가사 카드 미리보기" className="w-full rounded-xl border border-line" />
         ) : (
           <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">
@@ -255,7 +362,9 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
         )}
 
         <div className="mb-1 mt-3 flex items-center justify-between">
-          <p className="text-xs text-muted">포함할 줄 (최대 {MAX_PAIRS}) — 전체 가사에서 자유롭게</p>
+          <p className="text-xs text-muted">
+            {mode === "carousel" ? "1장에 쓸 후크 한 줄" : `포함할 줄 (최대 ${MAX_PAIRS}) — 전체 가사에서 자유롭게`}
+          </p>
           <div className="flex gap-1">
             {[["left", "좌", "왼쪽"], ["center", "중", "가운데"], ["right", "우", "오른쪽"]].map(([k, label, name]) => (
               <button
@@ -274,6 +383,26 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
             ))}
           </div>
         </div>
+        {mode === "carousel" && hookPicks.length > 0 && (
+          // 923곡을 매번 통독하게 두지 않는다 — 짧고 1인칭인 줄을 먼저 내민다
+          <div className="mb-2 flex flex-wrap gap-1">
+            {hookPicks.map(({ index, line }) => (
+              <button
+                key={index}
+                onClick={() => setHookIndex(index)}
+                aria-pressed={hookIndex === index}
+                className={`max-w-full truncate rounded-full border px-2.5 py-1 text-[11px] transition ${
+                  hookIndex === index
+                    ? "border-accent bg-accent font-semibold text-bg"
+                    : "border-line text-muted hover:text-accent"
+                }`}
+              >
+                {line.en}
+              </button>
+            ))}
+          </div>
+        )}
+
         <ul className="max-h-48 space-y-1 overflow-y-auto">
           {allLines.map((l, i) => (
             <li key={i}>
@@ -284,24 +413,64 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
               )}
               <label className="flex cursor-pointer items-baseline gap-2 text-xs">
                 <input
-                  type="checkbox"
-                  checked={sel.has(i)}
-                  onChange={() => toggle(i)}
+                  type={mode === "carousel" ? "radio" : "checkbox"}
+                  name={mode === "carousel" ? "hook" : undefined}
+                  checked={mode === "carousel" ? hookIndex === i : sel.has(i)}
+                  onChange={() => (mode === "carousel" ? setHookIndex(i) : toggle(i))}
                   className="translate-y-0.5 accent-(--color-accent)"
                 />
-                <span className={`truncate ${sel.has(i) ? "" : "text-muted"}`}>{l.en}</span>
+                <span className={`truncate ${(mode === "carousel" ? hookIndex === i : sel.has(i)) ? "" : "text-muted"}`}>
+                  {l.en}
+                </span>
               </label>
             </li>
           ))}
         </ul>
 
+        {mode === "carousel" && stanzaGroups.length > 1 && (
+          <div className="mt-2">
+            <p className="mb-1 text-xs text-muted">2장에 쓸 여는 연</p>
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => setOpeningStanza(null)}
+                aria-pressed={openingStanza === null}
+                className={`rounded-full border px-2.5 py-1 text-[11px] transition ${
+                  openingStanza === null
+                    ? "border-accent bg-accent font-semibold text-bg"
+                    : "border-line text-muted hover:text-accent"
+                }`}
+              >
+                자동
+              </button>
+              {stanzaGroups.map((g) => (
+                <button
+                  key={g.stanza}
+                  onClick={() => setOpeningStanza(g.stanza)}
+                  aria-pressed={openingStanza === g.stanza}
+                  className={`max-w-full truncate rounded-full border px-2.5 py-1 text-[11px] transition ${
+                    openingStanza === g.stanza
+                      ? "border-accent bg-accent font-semibold text-bg"
+                      : "border-line text-muted hover:text-accent"
+                  }`}
+                >
+                  {g.section || g.items[0].en}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="mt-4 flex gap-2">
           <button
-            onClick={() => blobRef.current && shareBlob(blobRef.current, song)}
-            disabled={!url}
+            onClick={() =>
+              mode === "carousel"
+                ? cardBlobs.current.length && downloadAll(cardBlobs.current, song)
+                : blobRef.current && shareBlob(blobRef.current, song)
+            }
+            disabled={mode === "carousel" ? building || !cards.length : !url}
             className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
           >
-            공유
+            {mode === "carousel" ? (building ? "만드는 중…" : `${cards.length}장 저장`) : "공유"}
           </button>
           <button
             onClick={onClose}
@@ -311,7 +480,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           </button>
         </div>
 
-        <Caption song={song} />
+        <Caption song={song} mode={mode} hook={allLines[hookIndex]?.en || ""} />
       </div>
     </div>
   );
@@ -319,12 +488,16 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
 
 // Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
 // 타임스탬프를 다시 만든다.
-function Caption({ song }) {
-  const [text, setText] = useState(() => buildCaption(song));
+function Caption({ song, mode = "one", hook = "" }) {
+  const make = () => (mode === "carousel" ? buildCarouselCaption(song, hook) : buildCaption(song));
+  const [text, setText] = useState(make);
   const [copied, setCopied] = useState(false);
 
+  // 모드나 후크가 바뀌면 캡션도 따라 바뀐다 — 복사 버튼을 누르기 전에도 보여야 한다
+  useEffect(() => setText(make()), [mode, hook, song]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const copy = async () => {
-    const fresh = buildCaption(song); // 복사하는 순간의 년월일시로 갱신
+    const fresh = make(); // 복사하는 순간의 년월일시로 갱신
     setText(fresh);
     try {
       await navigator.clipboard.writeText(fresh);

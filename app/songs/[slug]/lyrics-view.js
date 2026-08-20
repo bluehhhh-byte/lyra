@@ -37,8 +37,11 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
     let start = 0;
     stanzas.forEach((st, k) => {
       if (k === idx) start = lines.length;
+      // stanza 인덱스를 함께 실어 보낸다 — 캐러셀은 연 단위로 카드를 만들기 때문에
+      // 어느 줄이 어느 연에 속하는지 모달이 알아야 한다. section 라벨은 없을 수 있어
+      // (라벨 없는 연) 경계 판정에 쓸 수 없다.
       st.lines.forEach((l, j) =>
-        lines.push({ en: l.en, ko: l.ko, section: j === 0 ? st.section : "" })
+        lines.push({ en: l.en, ko: l.ko, section: j === 0 ? st.section : "", stanza: k })
       );
     });
     const count = Math.min(4, stanzas[idx].lines.length);
