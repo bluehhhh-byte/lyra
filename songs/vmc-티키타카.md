@@ -28,7 +28,7 @@ source_body_hash: 51bbf5a1bd1607e99b2af2a90e651404f66939d0
 우린 무언가를 나누듯이 손바닥을 둘러
 > We put our palms together like we're sharing something
 뒷좌석에 탑승 VMC에 들려
-> 뒷좌석에 올라타 VMC에 들러
+> 뒷좌석에 탑승 VMC에 들려
 들러리들에게 VISTY는 Nasty 내 스킬트리
 > 들러리들에게 비스티는 지독하지, 내 스킬 트리
 Skill skill skill 작은 것들 위의 풍경
@@ -74,7 +74,7 @@ Want to get cheese 이 본능을 따라
 > packed with nothing but critique, the same damn lines every time
 
 우리끼리 줘 받지 Tiki-Taka
-> 우리끼리 주고받지, 티키타카
+> 우리끼리 줘 받지 티키타카
 끼지 마라 이건 Mic Tiki-Taka
 > 끼지 마라, 이건 마이크 티키타카
 쳐 맞는 말이 너무 많아 잠깐
@@ -82,7 +82,7 @@ Want to get cheese 이 본능을 따라
 야 인마 내 신발의 밑창이나 닦지
 > Hey kid, why don't you wipe the soles of my shoes
 우리끼리 줘 받지 Tiki-Taka
-> 우리끼리 주고받지, 티키타카
+> 우리끼리 줘 받지 티키타카
 끼지 마라 이건 Mic Tiki-Taka
 > 끼지 마라, 이건 마이크 티키타카
 기립박수 안 쳐도 돼 넌 이미 서있잖아

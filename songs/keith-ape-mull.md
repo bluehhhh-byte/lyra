@@ -60,7 +60,7 @@ source_body_hash: 74ba852b8db54b128e4792692081359eb5a11173
 내 현실이 너에겐 꿈
 > My reality is your dream
 나는 안 따르지 rule
-> 나는 규칙을 따르지 않아
+> 나는 안 따르지 규칙
 아직 나를 따르는 운
 > Luck still follows me
 우리는 필요해 물

@@ -51,7 +51,7 @@ God is watchin’ over me
 (부정적인 뭣 같은, 난 시간이 없거든)
 > (Negative crap — I don't have the time)
 썸머소닉 to 코첼라, 글라스톤 베리가 다음
-> 서머소닉에서 코첼라로, 다음은 글래스턴베리
+> 썸머소닉에서 코첼라, 글라스톤 베리가 다음
 일상이 축제니까 감사하기도 바빠
 > My everyday is a festival, I'm too busy being grateful
 Middle finger to the Devil, stop fuckin’ up my vibe!

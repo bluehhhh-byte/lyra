@@ -41,7 +41,7 @@ Bye 인사는 민망
 > I hate the silence between you and me
 
 Oh 넌 많이 바래왔던
-> 오, 넌 내가 많이 바라던
+> 오 넌 많이 바래왔던
 그런 나의 소원
 > that's my wish
 버겁지만 다른 여자는 모두 싱거워

@@ -73,7 +73,7 @@ source_body_hash: bbdc1177a268efedac6ae8d3b75581050b11a10f
 점점 빨라지는 Beat 점점 더 크게 뛰는데
 > 점점 빨라지는 비트, 점점 더 크게 뛰는데
 이미 한계를 넘어선 I'm In Shock
-> 이미 한계를 넘어섰어, 난 충격에 빠졌어
+> 이미 한계를 넘어선 난 충격에 빠졌어
 E-Electric Shock
 > 전-전기 충격
 

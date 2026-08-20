@@ -59,7 +59,7 @@ Listen Ms. Citrus
 기댈 곳은 너이기를
 > I hope the place I lean on is you
 너가 내 Favor
-> 네가 내 취향이야
+> 너가 내 취향
 걱정은 먼 뒤로 미뤘어
 > I pushed the worries far behind
 Let me tell you

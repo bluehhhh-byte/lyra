@@ -47,7 +47,7 @@ Fake oxygen은 pumped
 > hogging my armrest, look at him
 
 아님 these babies king mad
-> 아니면 이 애들이 잔뜩 화가 났거나
+> 아님 이 애들이 잔뜩 화났거나
 아님 옆자리 코골 때
 > or when the guy beside me snores
 아님 복도자리를 탐한

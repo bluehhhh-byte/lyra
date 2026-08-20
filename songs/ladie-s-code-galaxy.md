@@ -63,7 +63,7 @@ To the galaxy (Mayday)
 끝없는 Emergency
 > 끝없는 비상 신호
 Here 어둠속에 빛을 내는 Universe
-> 여기, 어둠 속에 빛을 내는 우주
+> 여기 어둠속에 빛을 내는 우주
 낯선 날 부디 반겨줄래
 > will you please welcome this unfamiliar me
 

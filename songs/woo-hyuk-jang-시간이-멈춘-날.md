@@ -96,6 +96,6 @@ The way we are the where we are the time is over (time is ove)
 Girl 시간이 됐나봐 더 이상 곁에 둘 수가 없나봐
 > Girl, it seems time is up, I can't keep you by my side anymore.
 Girl I’m so sorry 넌 아름답기에
-> Girl, 정말 미안해, 네가 아름답기 때문에
+> 그대 정말 미안해 넌 아름답기에
 나보다 멋진 남자에게 사랑받으며 살아
 > Live, receiving love from a man cooler than me.

@@ -32,7 +32,7 @@ source_body_hash: 53de0dae9255bece803adf58ef798735f9cbc85e
 뜨거운 지면을 소리없이 스치는
 > grazing the burning ground without a sound
 텅빈 시야와 I am a new black star
-> 텅 빈 시야와 함께, 나는 새로운 검은 별
+> 텅빈 시야와 나는 새로운 검은 별
 
 출발을 알리는 경쾌한 총성
 > The crisp gunshot announcing the start

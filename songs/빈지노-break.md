@@ -62,7 +62,7 @@ source_body_hash: 86852b6438be0d3aea15b9b3d15cfe692b1e36e0
 > I want to be loudly worth nothing
 
 주제파악이고 뭐고 Shut up
-> 주제 파악이고 뭐고 닥쳐
+> 주제파악이고 뭐고 닥쳐
 And let me be who I am
 > 그리고 날 나답게 내버려 둬
 그게 다야

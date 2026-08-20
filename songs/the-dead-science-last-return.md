@@ -19,21 +19,21 @@ published: 2026-08-18T22:38:51.020Z
 comment: 이 곡은 파괴적인 중독과 그 끝에 찾아오는 허무함을 날것의 서정성으로 그려낸다. 차가운 악기 연주 위로 읊조리는 목소리가 위태로운 구원의 찰나를 강렬하게 각인시킨다.
 ---
 [Verse 1]
-Teeth pulled and punctured,
-> 뽑히고 찔려 구멍 난 이빨들,
-The nerves dead worn.
-> 닳고 닳아 죽어버린 신경.
-Stuck in both arms,
-> 양팔에 꽂힌 채,
-Your last return.
-> 너의 마지막 귀환.
+Teeth pulled and punctured
+> 뽑히고 찔려 구멍 난 이빨들
+The nerves dead worn
+> 닳고 닳아 죽어버린 신경
+Stuck in both arms
+> 양팔에 꽂힌 채
+Your last return
+> 너의 마지막 귀환
 
 [Chorus]
-Don't strip the line,
-> 줄을 벗겨내지 마,
-Not sure this time.
-> 이번엔 확신이 없어.
-Stuck in both arms,
-> 양팔에 꽂힌 채,
-Your last return.
-> 너의 마지막 귀환.
+Don't strip the line
+> 줄을 벗겨내지 마
+Not sure this time
+> 이번엔 확신이 없어
+Stuck in both arms
+> 양팔에 꽂힌 채
+Your last return
+> 너의 마지막 귀환

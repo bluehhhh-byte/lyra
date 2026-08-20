@@ -57,11 +57,11 @@ source_body_hash: f96c6f8328619ebd84a0c404be1ce33d0cf65fbd
 > do you know or not how hard this is for me
 
 하지마 You're driving me crazy
-> 하지 마, 넌 날 미치게 해
+> 하지마 넌 날 미치게 해
 하지마 더 이상 못 참을지 몰라
 > don't — I might not be able to hold out any longer
 하지마 Please Stop baby stop it
-> 하지 마, 제발 그만해, 그대여 그만해
+> 하지마 제발 그만해 그만해
 하지마 제발 하지마 제발 하지마
 > Don't, please don't, please don't
 

@@ -107,7 +107,7 @@ Keep dreaming
 얼굴에 피어 난 주름은 당연해 
 > The wrinkles blooming on our faces are only natural
 마치 알파치노 Face 
-> 마치 알 파치노 같은 얼굴로
+> 마치 알파치노 얼굴
 평가는 다 끝난 담에 해 
 > Save the verdict for after it's all over
 긴 인생의 Race 
