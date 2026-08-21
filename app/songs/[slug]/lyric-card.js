@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { buildCaption, buildCarouselCaption } from "../../../lib/caption";
-import { buildCarousel, autoPick, autoSelect, CAROUSEL_SLIDES } from "../../../lib/carousel";
+import { buildCaption } from "../../../lib/caption";
+import { buildCarousel, autoSelect, CAROUSEL_SLIDES } from "../../../lib/carousel";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal previews the card, lets the
@@ -406,11 +406,6 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     () => buildCarousel({ selected: selectedLines, note: song.comment || "" }),
     [selectedLines, song.comment]
   );
-  // 캡션에 인용할 구절 — 고른 가사 중 가장 후크다운 줄
-  const captionHook = useMemo(() => {
-    const idx = autoPick(selectedLines);
-    return idx >= 0 ? selectedLines[idx].en : "";
-  }, [selectedLines]);
 
   // re-render the preview whenever the selection or alignment changes
   useEffect(() => {
@@ -611,7 +606,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           </button>
         </div>
 
-        <Caption song={song} mode={mode} hook={captionHook} />
+        <Caption song={song} />
       </div>
     </div>
   );
@@ -619,13 +614,10 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
 
 // Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
 // 타임스탬프를 다시 만든다.
-function Caption({ song, mode = "one", hook = "" }) {
-  const make = () => (mode === "carousel" ? buildCarouselCaption(song, hook) : buildCaption(song));
+function Caption({ song }) {
+  const make = () => buildCaption(song);
   const [text, setText] = useState(make);
   const [copied, setCopied] = useState(false);
-
-  // 모드나 후크가 바뀌면 캡션도 따라 바뀐다 — 복사 버튼을 누르기 전에도 보여야 한다
-  useEffect(() => setText(make()), [mode, hook, song]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const copy = async () => {
     const fresh = make(); // 복사하는 순간의 년월일시로 갱신
