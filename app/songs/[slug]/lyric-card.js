@@ -1,11 +1,13 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { buildCaption } from "../../../lib/caption";
+import { buildCarousel, autoSelect, CAROUSEL_SLIDES } from "../../../lib/carousel";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
-// art, ink flips black/white to match). CardModal previews the card, lets the
-// user pick which lines to include, then hands the PNG to the native share
-// sheet (download fallback). All client-side, no deps.
+// art, ink flips black/white to match). CardModal builds an Instagram carousel:
+// 커버 → 곡 설명 → 가사 3장. 고를 것은 실을 가사뿐이고, 몇 장에 어떻게 나눌지는
+// lib/carousel.js가 정한다. 다 그리면 인스타 업로드 순서대로 번호를 붙여
+// 공유 시트에 넘긴다(안 되면 순서대로 내려받기). All client-side, no deps.
 
 const W = 1080;
 const H = 1350;
@@ -137,21 +139,11 @@ async function drawCard({ song, lines, align = "left" }) {
     ctx.fillText(b.t, xText, y);
   }
 
-  // footer — small artwork, then title / artist / meta
+  // footer — title / artist / meta. 앨범 썸네일은 그리지 않는다: 캐러셀 1장이
+  // 커버를 정사각으로 크게 싣고 있어 같은 그림이 다섯 장에 여섯 번 나오고,
+  // 썸네일이 차지한 폭만큼 텍스트가 밀려 곡 설명 카드와 하단이 어긋났다.
   const fy = H - 170;
-  if (art) {
-    const size = 96;
-    ctx.save();
-    ctx.beginPath();
-    ctx.roundRect(pad, fy, size, size, 16);
-    ctx.clip();
-    // cover-crop: a 2:3 movie poster would squish if drawn into a square, so
-    // take the largest centered square of the source (no-op for square art)
-    const side = Math.min(art.width, art.height);
-    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, pad, fy, size, size);
-    ctx.restore();
-  }
-  const tx = pad + (art ? 120 : 0);
+  const tx = pad;
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
@@ -171,7 +163,8 @@ async function drawCard({ song, lines, align = "left" }) {
   ctx.fillStyle = inkDim;
   ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, tx, fy + 70);
-  const meta = [song.album, song.year, song.genre].filter(Boolean).join(" · ");
+  // 국가·장르·연도 — 커버·설명 카드와 같은 문법으로 묶음이 한 벌로 읽힌다
+  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
   if (meta) {
     ctx.fillStyle = "rgba(244,244,246,0.4)"; // a step dimmer than inkDim — tertiary info
     ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
@@ -181,57 +174,260 @@ async function drawCard({ song, lines, align = "left" }) {
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
 
-async function shareBlob(blob, song) {
-  const file = new File([blob], `lyra-${song.slug}.png`, { type: "image/png" });
-  if (navigator.canShare?.({ files: [file] })) {
-    try {
-      await navigator.share({ files: [file], title: `${song.title} — ${song.artist}` });
-    } catch {} // dismissed the sheet — nothing to do
-    return;
+// 1장 전용 — 앨범 커버가 주인공인 카드. 뒤의 장들은 커버를 흐려 배경으로 깔지만
+// 이 장은 그대로 크게 싣는다. 피드 썸네일이 곧 이 장이라 계정 그리드가 앨범
+// 진열장으로 읽힌다. 해설은 2장(drawAboutCard)이 맡는다.
+async function drawCoverCard({ song }) {
+  const canvas = document.createElement("canvas");
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, 0, W, H);
+
+  // 커버는 카드 폭 전체를 정사각으로 차지한다 — 위쪽 1080×1080
+  let art = null;
+  try {
+    art = await loadImage(song.artwork);
+    const side = Math.min(art.width, art.height); // 정사각 크롭 (2:3 포스터가 눌리지 않게)
+    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, 0, 0, W, W);
+  } catch {
+    ctx.fillStyle = "#1a1a1e";
+    ctx.fillRect(0, 0, W, W);
   }
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = file.name;
-  a.click();
-  URL.revokeObjectURL(url);
+
+  // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다
+  const fade = ctx.createLinearGradient(0, W - 120, 0, W);
+  fade.addColorStop(0, "rgba(13,13,15,0)");
+  fade.addColorStop(1, "rgba(13,13,15,1)");
+  ctx.fillStyle = fade;
+  ctx.fillRect(0, W - 120, W, 120);
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, W, W, H - W);
+
+  const ink = "#f4f4f6";
+  const inkDim = "rgba(244,244,246,0.62)";
+  const pad = 96;
+  let y = W + 62;
+
+  // 곡 제목 — 영어·일본어 제목이면 한글 번역 제목을 옆에 병기한다 (가사 카드와 같은 규칙)
+  ctx.textAlign = "left";
+  ctx.fillStyle = ink;
+  ctx.font = "600 52px Georgia, 'Noto Serif KR', serif";
+  ctx.fillText(song.title, pad, y);
+  if (song.title_ko) {
+    const after = pad + ctx.measureText(song.title).width + 16;
+    ctx.font = "34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    const label = `(${song.title_ko})`;
+    if (after + ctx.measureText(label).width <= W - pad) {
+      ctx.fillStyle = inkDim;
+      ctx.fillText(label, after, y - 2);
+      ctx.fillStyle = ink;
+    }
+  }
+  y += 46;
+
+  // 아티스트
+  ctx.fillStyle = inkDim;
+  ctx.font = "32px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText(song.artist, pad, y);
+  y += 44;
+
+  // 국가 · 장르 · 연도 — 사이트의 태그 어휘 그대로
+  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  if (meta) {
+    ctx.fillStyle = "rgba(244,244,246,0.4)";
+    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    ctx.fillText(meta, pad, y);
+  }
+
+  // 하단 — 워드마크와 유입 안내. 이 장에만 있다.
+  ctx.fillStyle = "rgba(244,244,246,0.45)";
+  ctx.font = "24px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText("전문 · 번역 — 프로필 링크", pad, H - 52);
+  ctx.textAlign = "right";
+  ctx.fillStyle = ink;
+  ctx.font = "600 30px Georgia, serif";
+  ctx.fillText("Lyra.", W - pad, H - 52);
+
+  return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+}
+
+// 2장 전용 — 곡 설명 카드. 해설은 923곡 전부에 있는 자산이자 다른 가사 계정이
+// 갖지 못한 차별점이라 제 장을 준다. 배경은 가사 카드와 같은 문법(흐린 커버 + 어두운
+// 막)이라 묶음이 한 벌로 읽히고, 글은 해설 하나뿐이라 천천히 읽힌다.
+async function drawAboutCard({ song, note }) {
+  const canvas = document.createElement("canvas");
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  // 배경 — drawCard와 같은 방식 (작게 그려 확대 = 전 브라우저에서 흐림)
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, 0, W, H);
+  try {
+    const art = await loadImage(song.artwork);
+    const D = 16;
+    const tmp = document.createElement("canvas");
+    tmp.width = tmp.height = D;
+    tmp.getContext("2d").drawImage(art, 0, 0, D, D);
+    ctx.imageSmoothingEnabled = true;
+    const sz = Math.max(W, H) * 1.4;
+    ctx.filter = "blur(40px)";
+    ctx.drawImage(tmp, (W - sz) / 2, (H - sz) / 2, sz, sz);
+    ctx.filter = "none";
+  } catch {}
+  ctx.fillStyle = "rgba(0,0,0,0.55)";
+  ctx.fillRect(0, 0, W, H);
+
+  const ink = "#f4f4f6";
+  const inkDim = "rgba(244,244,246,0.62)";
+  const pad = 96;
+  const maxW = W - pad * 2;
+
+  // 워드마크
+  ctx.fillStyle = ink;
+  ctx.textAlign = "right";
+  ctx.font = "600 34px Georgia, serif";
+  ctx.fillText("Lyra.", W - pad, 104);
+
+  // 라벨
+  ctx.textAlign = "left";
+  ctx.fillStyle = inkDim;
+  ctx.font = "600 26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText("노트", pad, 210);
+
+  // 해설 본문 — 세로 중앙. 길면 글자를 줄여 맞춘다(가사 카드와 같은 태도).
+  const text = note || `${song.artist}의 ${song.year || ""}년 곡.`.replace("의 년", "의");
+  let fs = 40;
+  let lines = [];
+  for (; fs >= 26; fs -= 2) {
+    ctx.font = `300 ${fs}px 'Noto Serif KR', Georgia, serif`;
+    lines = wrap(ctx, text, maxW);
+    if (lines.length * (fs + 26) <= H - 480) break;
+  }
+  const lineH = fs + 26;
+  let y = 280 + Math.max(0, (H - 480 - lines.length * lineH) / 2);
+  ctx.fillStyle = ink;
+  ctx.font = `300 ${fs}px 'Noto Serif KR', Georgia, serif`;
+  for (const line of lines) {
+    y += lineH;
+    if (y > H - 190) break; // 극단적으로 긴 해설 — 카드 밖으로 흘리지 않는다
+    ctx.fillText(line, pad, y);
+  }
+
+  // 하단 — 곡 정보 (가사 카드 footer와 같은 자리·크기·규칙)
+  const fy = H - 170;
+  ctx.fillStyle = ink;
+  ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText(song.title, pad, fy + 34);
+  if (song.title_ko) {
+    const after = pad + ctx.measureText(song.title).width + 12;
+    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    const label = `(${song.title_ko})`;
+    if (after + ctx.measureText(label).width <= W - pad) {
+      ctx.fillStyle = inkDim;
+      ctx.fillText(label, after, fy + 33);
+    }
+  }
+  ctx.fillStyle = inkDim;
+  ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText(song.artist, pad, fy + 70);
+  const aboutMeta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  if (aboutMeta) {
+    ctx.fillStyle = "rgba(244,244,246,0.4)";
+    ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    ctx.fillText(aboutMeta, pad, fy + 104);
+  }
+
+  return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+}
+
+// 캐러셀은 여러 장을 한 번에 넘겨야 한다. 공유 시트는 파일 여러 개를 한 번에 받지만
+// 지원이 고르지 않아, 인스타 업로드 순서가 보이는 파일명으로 내려받는 쪽을 기본으로 둔다.
+async function downloadAll(blobs, song) {
+  const files = blobs.map((b, i) => new File([b], `lyra-${song.slug}-${String(i + 1).padStart(2, "0")}.png`, { type: "image/png" }));
+  if (navigator.canShare?.({ files })) {
+    try {
+      await navigator.share({ files, title: `${song.title} — ${song.artist}` });
+      return;
+    } catch {} // 시트를 닫았거나 여러 파일을 못 받는다 — 내려받기로 넘어간다
+  }
+  for (const file of files) {
+    const url = URL.createObjectURL(file);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = file.name;
+    a.click();
+    URL.revokeObjectURL(url);
+    await new Promise((r) => setTimeout(r, 250)); // 연속 다운로드를 브라우저가 막지 않게
+  }
 }
 
 // `lines` is every line of the song (flattened; section set on stanza-opening
 // lines), so the picker can mix lines from anywhere. `initial` seeds the
 // selection with the stanza that was clicked.
 export default function CardModal({ song, lines: allLines, initial, onClose }) {
-  const [sel, setSel] = useState(() => new Set(initial));
   const [align, setAlign] = useState("left");
-  const [url, setUrl] = useState(null);
-  const blobRef = useRef(null);
+  // 실을 줄 — 누른 연에서 시작해 아홉 줄이 기본이다(세 장 × 세 줄).
+  // 체크박스로 자유롭게 바꾼다. 나누는 것은 기계가 한다.
+  const [sel, setSel] = useState(() => new Set(autoSelect(allLines, initial?.[0] ?? 0)));
+  const [cards, setCards] = useState([]); // [{ role, label, url }]
+  const cardBlobs = useRef([]);
+  const [building, setBuilding] = useState(false);
 
-  // re-render the preview whenever the selection or alignment changes
+  const selectedLines = useMemo(
+    () => allLines.map((l, i) => ({ ...l, i })).filter((l) => sel.has(l.i)),
+    [allLines, sel]
+  );
+  const carousel = useMemo(
+    () => buildCarousel({ selected: selectedLines, note: song.comment || "" }),
+    [selectedLines, song.comment]
+  );
+
+  // 다섯 장을 한꺼번에 그린다. 가사 장은 전부 같은 drawCard를 지나므로
+  // 줄 배치·글자 크기 규칙이 장마다 어긋날 일이 없다.
   useEffect(() => {
+    if (!carousel.slides.length) return;
     let alive = true;
-    const lines = allLines.filter((_, i) => sel.has(i));
-    if (!lines.length) return;
-    drawCard({ song, lines, align }).then((blob) => {
-      if (!alive || !blob) return;
-      blobRef.current = blob;
-      setUrl((old) => {
-        if (old) URL.revokeObjectURL(old);
-        return URL.createObjectURL(blob);
+    setBuilding(true);
+    (async () => {
+      const made = [];
+      for (const slide of carousel.slides) {
+        const blob =
+          slide.role === "cover"
+            ? await drawCoverCard({ song })
+            : slide.role === "about"
+              ? await drawAboutCard({ song, note: slide.note })
+              : await drawCard({ song, lines: slide.lines, align });
+        if (!alive) return;
+        if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
+      }
+      if (!alive) {
+        made.forEach((m) => URL.revokeObjectURL(m.url));
+        return;
+      }
+      setCards((old) => {
+        old.forEach((o) => URL.revokeObjectURL(o.url));
+        return made;
       });
-    });
+      cardBlobs.current = made.map((m) => m.blob);
+      setBuilding(false);
+    })();
     return () => {
       alive = false;
     };
-  }, [sel, song, allLines, align]);
+  }, [carousel, song, align]);
 
-  useEffect(() => () => url && URL.revokeObjectURL(url), [url]);
+  useEffect(() => () => cards.forEach((c) => URL.revokeObjectURL(c.url)), [cards]);
 
   const toggle = (i) =>
     setSel((old) => {
       const next = new Set(old);
       if (next.has(i)) next.delete(i);
-      else if (next.size < MAX_PAIRS) next.add(i);
-      return next.size ? next : old; // keep at least one line
+      else next.add(i);
+      return next;
     });
 
   return (
@@ -239,23 +435,37 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
       onClick={onClose}
       className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4 opacity-100 transition-opacity duration-200 ease-out starting:opacity-0 motion-reduce:transition-none"
       role="dialog"
-      aria-label="가사 카드 공유"
+      aria-label="캐러셀 만들기"
     >
       {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
         className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
-        {url ? (
-          <img src={url} alt="가사 카드 미리보기" className="w-full rounded-xl border border-line" />
+        <p className="mb-2 text-xs font-semibold text-muted">
+          인스타그램 캐러셀 {CAROUSEL_SLIDES}장 — 커버 · 곡 설명 · 가사 3장
+        </p>
+
+        {carousel.error ? (
+          <p className="rounded-xl border border-line px-3 py-6 text-center text-sm text-muted">{carousel.error}</p>
+        ) : cards.length ? (
+          // 인스타에서 넘겨 보는 순서 그대로 — 왼쪽부터 1장이다
+          <ol className="-mx-1 flex snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1">
+            {cards.map((c, i) => (
+              <li key={c.role} className="w-40 shrink-0 snap-center">
+                <img src={c.url} alt={`${i + 1}번째 카드 — ${c.label}`} className="w-full rounded-lg border border-line" />
+                <p className="mt-1 text-center text-[10px] text-muted">
+                  {i + 1}. {c.label}
+                </p>
+              </li>
+            ))}
+          </ol>
         ) : (
-          <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">
-            카드 생성 중…
-          </div>
+          <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">카드 생성 중…</div>
         )}
 
         <div className="mb-1 mt-3 flex items-center justify-between">
-          <p className="text-xs text-muted">포함할 줄 (최대 {MAX_PAIRS}) — 전체 가사에서 자유롭게</p>
+          <p className="text-xs text-muted">{sel.size}줄 선택 — 세 장에 고르게 나눠 담습니다</p>
           <div className="flex gap-1">
             {[["left", "좌", "왼쪽"], ["center", "중", "가운데"], ["right", "우", "오른쪽"]].map(([k, label, name]) => (
               <button
@@ -289,7 +499,9 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                   onChange={() => toggle(i)}
                   className="translate-y-0.5 accent-(--color-accent)"
                 />
-                <span className={`truncate ${sel.has(i) ? "" : "text-muted"}`}>{l.en}</span>
+                <span className={`truncate ${sel.has(i) ? "" : "text-muted"}`}>
+                  {l.en}
+                </span>
               </label>
             </li>
           ))}
@@ -297,11 +509,11 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
 
         <div className="mt-4 flex gap-2">
           <button
-            onClick={() => blobRef.current && shareBlob(blobRef.current, song)}
-            disabled={!url}
+            onClick={() => cardBlobs.current.length && downloadAll(cardBlobs.current, song)}
+            disabled={building || !cards.length}
             className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
           >
-            공유
+            {building ? "만드는 중…" : `${cards.length}장 저장`}
           </button>
           <button
             onClick={onClose}
@@ -320,11 +532,12 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
 // Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
 // 타임스탬프를 다시 만든다.
 function Caption({ song }) {
-  const [text, setText] = useState(() => buildCaption(song));
+  const make = () => buildCaption(song);
+  const [text, setText] = useState(make);
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
-    const fresh = buildCaption(song); // 복사하는 순간의 년월일시로 갱신
+    const fresh = make(); // 복사하는 순간의 년월일시로 갱신
     setText(fresh);
     try {
       await navigator.clipboard.writeText(fresh);

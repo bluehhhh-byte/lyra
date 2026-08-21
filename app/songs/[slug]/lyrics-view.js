@@ -28,7 +28,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
   const [owner, setOwner] = useState(false); // see lyra_admin in app/api/login
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
-  const [card, setCard] = useState(null); // { lines, initial } for the share-card modal
+  const [card, setCard] = useState(null); // { lines, initial } for the carousel modal
 
   // the card picker offers every line in the song (section labels included for
   // orientation); the clicked stanza's first lines are just the starting selection
@@ -37,8 +37,11 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
     let start = 0;
     stanzas.forEach((st, k) => {
       if (k === idx) start = lines.length;
+      // stanza 인덱스를 함께 실어 보낸다 — 캐러셀은 연 단위로 카드를 만들기 때문에
+      // 어느 줄이 어느 연에 속하는지 모달이 알아야 한다. section 라벨은 없을 수 있어
+      // (라벨 없는 연) 경계 판정에 쓸 수 없다.
       st.lines.forEach((l, j) =>
-        lines.push({ en: l.en, ko: l.ko, section: j === 0 ? st.section : "" })
+        lines.push({ en: l.en, ko: l.ko, section: j === 0 ? st.section : "", stanza: k })
       );
     });
     const count = Math.min(4, stanzas[idx].lines.length);
@@ -171,8 +174,8 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
             {song && stanza.lines.length > 0 && (
               <button
                 onClick={() => openCard(i)}
-                aria-label="이 구절 이미지 카드로 공유"
-                title="가사 카드 공유"
+                aria-label="이 구절로 인스타그램 캐러셀 만들기"
+                title="캐러셀 만들기"
                 className="absolute -top-1 right-0 rounded p-1 text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
