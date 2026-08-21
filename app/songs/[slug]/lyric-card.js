@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { buildCaption, buildCarouselCaption } from "../../../lib/caption";
 import { buildCarousel, autoPick, autoSelect, CAROUSEL_SLIDES } from "../../../lib/carousel";
+import { buildZip } from "../../../lib/zip";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal previews the card, lets the
@@ -172,8 +173,8 @@ async function drawCard({ song, lines, align = "left" }) {
   ctx.fillStyle = inkDim;
   ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, tx, fy + 70);
-  // 국가·장르·연도 — 커버·설명 카드와 같은 문법으로 묶음이 한 벌로 읽힌다
-  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  // 앨범·국가·장르·연도 — 커버·설명 카드와 같은 문법으로 묶음이 한 벌로 읽힌다
+  const meta = [song.album, song.country, song.genre, song.year].filter(Boolean).join(" · ");
   if (meta) {
     ctx.fillStyle = "rgba(244,244,246,0.4)"; // a step dimmer than inkDim — tertiary info
     ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
@@ -243,8 +244,8 @@ async function drawCoverCard({ song }) {
   ctx.fillText(song.artist, pad, y);
   y += 44;
 
-  // 국가 · 장르 · 연도 — 사이트의 태그 어휘 그대로
-  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  // 앨범 · 국가 · 장르 · 연도 — 사이트의 태그 어휘 그대로
+  const meta = [song.album, song.country, song.genre, song.year].filter(Boolean).join(" · ");
   if (meta) {
     ctx.fillStyle = "rgba(244,244,246,0.4)";
     ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
@@ -343,7 +344,7 @@ async function drawAboutCard({ song, note }) {
   ctx.fillStyle = inkDim;
   ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, pad, fy + 70);
-  const aboutMeta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  const aboutMeta = [song.album, song.country, song.genre, song.year].filter(Boolean).join(" · ");
   if (aboutMeta) {
     ctx.fillStyle = "rgba(244,244,246,0.4)";
     ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
@@ -379,15 +380,18 @@ async function downloadAll(blobs, song) {
       return;
     } catch {} // 시트를 닫았거나 여러 파일을 못 받는다 — 내려받기로 넘어간다
   }
-  for (const file of files) {
-    const url = URL.createObjectURL(file);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = file.name;
-    a.click();
-    URL.revokeObjectURL(url);
-    await new Promise((r) => setTimeout(r, 250)); // 연속 다운로드를 브라우저가 막지 않게
-  }
+  // ZIP 한 파일로 — iOS Safari는 잇단 다운로드를 첫 개 이후 조용히 막는다.
+  // 파일 하나면 어디서나 한 번에 끝나고, 압축 앱 없이도 iOS 파일 앱이 그대로 연다.
+  const entries = await Promise.all(
+    files.map(async (file) => ({ name: file.name, data: new Uint8Array(await file.arrayBuffer()) }))
+  );
+  const zip = new Blob([buildZip(entries)], { type: "application/zip" });
+  const url = URL.createObjectURL(zip);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `lyra-${song.slug}-carousel.zip`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 // `lines` is every line of the song (flattened; section set on stanza-opening
@@ -497,7 +501,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
       {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
+        className="max-h-full w-full max-w-md scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
         {/* 발행 방식 — 캐러셀이 기본값은 아니다. 한 장짜리 공유도 그대로 남는다. */}
         <div className="mb-3 flex gap-1">
@@ -523,13 +527,14 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
               <p className="rounded-xl border border-line px-3 py-6 text-center text-sm text-muted">{carousel.error}</p>
             ) : cards.length ? (
               // 인스타에서 넘겨 보는 순서 그대로 — 왼쪽부터 1장이다
-              <ol className="-mx-1 flex snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1">
+              <ol className="-mx-1 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-1 pb-1.5">
                 {cards.map((c, i) => (
-                  <li key={c.role} className="w-40 shrink-0 snap-center">
+                  <li key={`${c.role}-${i}`} className="relative w-52 shrink-0 snap-center">
                     <img src={c.url} alt={`${i + 1}번째 카드 — ${c.label}`} className="w-full rounded-lg border border-line" />
-                    <p className="mt-1 text-center text-[10px] text-muted">
-                      {i + 1}. {c.label}
-                    </p>
+                    <span className="absolute left-1.5 top-1.5 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white">
+                      {i + 1}/{cards.length}
+                    </span>
+                    <p className="mt-1 truncate text-center text-[10px] text-muted">{c.label}</p>
                   </li>
                 ))}
               </ol>
@@ -609,13 +614,13 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 : blobRef.current && shareBlob(blobRef.current, song)
             }
             disabled={mode === "carousel" ? building || !cards.length : !url}
-            className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
+            className="flex-1 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
           >
-            {mode === "carousel" ? (building ? "만드는 중…" : `${cards.length}장 저장`) : "공유"}
+            {mode === "carousel" ? (building ? "만드는 중…" : `${cards.length}장 한 번에 저장`) : "공유"}
           </button>
           <button
             onClick={onClose}
-            className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent"
+            className="rounded-lg border border-line px-4 py-2.5 text-sm text-muted hover:text-accent"
           >
             닫기
           </button>
