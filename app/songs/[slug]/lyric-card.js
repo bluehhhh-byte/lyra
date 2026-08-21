@@ -138,21 +138,11 @@ async function drawCard({ song, lines, align = "left" }) {
     ctx.fillText(b.t, xText, y);
   }
 
-  // footer — small artwork, then title / artist / meta
+  // footer — title / artist / meta. 앨범 썸네일은 그리지 않는다: 캐러셀 1장이
+  // 커버를 정사각으로 크게 싣고 있어 같은 그림이 다섯 장에 여섯 번 나오고,
+  // 썸네일이 차지한 폭만큼 텍스트가 밀려 곡 설명 카드와 하단이 어긋났다.
   const fy = H - 170;
-  if (art) {
-    const size = 96;
-    ctx.save();
-    ctx.beginPath();
-    ctx.roundRect(pad, fy, size, size, 16);
-    ctx.clip();
-    // cover-crop: a 2:3 movie poster would squish if drawn into a square, so
-    // take the largest centered square of the source (no-op for square art)
-    const side = Math.min(art.width, art.height);
-    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, pad, fy, size, size);
-    ctx.restore();
-  }
-  const tx = pad + (art ? 120 : 0);
+  const tx = pad;
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
