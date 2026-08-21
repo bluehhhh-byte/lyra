@@ -213,6 +213,8 @@ export default async function SongPage({ params }) {
           // the AI-corrected genre lives in tags (J-Rock), not the raw iTunes
           // store field (J-Pop) — show what the rest of the site shows
           genre: genreTagOf(song.tags) || song.genre || "",
+          // 카드 하단 메타에 국가·장르·연도를 함께 적는다 — 사이트가 쓰는 국가 태그 그대로
+          country: song.tags.find((t) => COUNTRY_TAGS.includes(t)) || "",
         }}
       />
 

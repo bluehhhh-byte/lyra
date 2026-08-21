@@ -1,4 +1,5 @@
 import { getAllSongsRuntime } from "../../lib/songs";
+import { genreTagOf, COUNTRY_TAGS } from "../../lib/genre";
 import CarouselStudio from "./studio";
 
 export const metadata = {
@@ -29,7 +30,8 @@ export default async function CarouselLabPage() {
       artist_ko: song.artist_ko || "",
       album: song.album || "",
       year: song.year || "",
-      genre: song.genre || "",
+      genre: genreTagOf(song.tags) || song.genre || "",
+      country: song.tags.find((t) => COUNTRY_TAGS.includes(t)) || "",
       emotion: song.emotion || "",
       artwork: song.artwork || "",
       comment: song.comment || song.source_note || "",

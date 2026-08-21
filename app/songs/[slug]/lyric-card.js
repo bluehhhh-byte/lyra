@@ -172,7 +172,8 @@ async function drawCard({ song, lines, align = "left" }) {
   ctx.fillStyle = inkDim;
   ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.artist, tx, fy + 70);
-  const meta = [song.album, song.year, song.genre].filter(Boolean).join(" · ");
+  // 국가·장르·연도 — 커버·설명 카드와 같은 문법으로 묶음이 한 벌로 읽힌다
+  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
   if (meta) {
     ctx.fillStyle = "rgba(244,244,246,0.4)"; // a step dimmer than inkDim — tertiary info
     ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
@@ -219,19 +220,36 @@ async function drawCoverCard({ song }) {
   const pad = 96;
   let y = W + 62;
 
-  // 곡 제목
+  // 곡 제목 — 영어·일본어 제목이면 한글 번역 제목을 옆에 병기한다 (가사 카드와 같은 규칙)
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
   ctx.font = "600 52px Georgia, 'Noto Serif KR', serif";
   ctx.fillText(song.title, pad, y);
+  if (song.title_ko) {
+    const after = pad + ctx.measureText(song.title).width + 16;
+    ctx.font = "34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    const label = `(${song.title_ko})`;
+    if (after + ctx.measureText(label).width <= W - pad) {
+      ctx.fillStyle = inkDim;
+      ctx.fillText(label, after, y - 2);
+      ctx.fillStyle = ink;
+    }
+  }
+  y += 46;
+
+  // 아티스트
+  ctx.fillStyle = inkDim;
+  ctx.font = "32px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.fillText(song.artist, pad, y);
   y += 44;
 
-  // 아티스트 · 연도 · 감정
-  const meta = [song.artist, song.year, song.emotion].filter(Boolean).join(" · ");
-  ctx.fillStyle = inkDim;
-  ctx.font = "30px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(meta, pad, y);
-  y += 52;
+  // 국가 · 장르 · 연도 — 사이트의 태그 어휘 그대로
+  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  if (meta) {
+    ctx.fillStyle = "rgba(244,244,246,0.4)";
+    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    ctx.fillText(meta, pad, y);
+  }
 
   // 하단 — 워드마크와 유입 안내. 이 장에만 있다.
   ctx.fillStyle = "rgba(244,244,246,0.45)";
@@ -308,14 +326,29 @@ async function drawAboutCard({ song, note }) {
     ctx.fillText(line, pad, y);
   }
 
-  // 하단 — 곡 정보 (가사 카드 footer와 같은 자리·크기)
+  // 하단 — 곡 정보 (가사 카드 footer와 같은 자리·크기·규칙)
   const fy = H - 170;
   ctx.fillStyle = ink;
   ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
   ctx.fillText(song.title, pad, fy + 34);
+  if (song.title_ko) {
+    const after = pad + ctx.measureText(song.title).width + 12;
+    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    const label = `(${song.title_ko})`;
+    if (after + ctx.measureText(label).width <= W - pad) {
+      ctx.fillStyle = inkDim;
+      ctx.fillText(label, after, fy + 33);
+    }
+  }
   ctx.fillStyle = inkDim;
   ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText([song.artist, song.year].filter(Boolean).join(" · "), pad, fy + 70);
+  ctx.fillText(song.artist, pad, fy + 70);
+  const aboutMeta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
+  if (aboutMeta) {
+    ctx.fillStyle = "rgba(244,244,246,0.4)";
+    ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+    ctx.fillText(aboutMeta, pad, fy + 104);
+  }
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }

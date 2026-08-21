@@ -43,11 +43,14 @@ function CoverSlide({ song, index, count }) {
           <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/45">
             {[song.album, song.year].filter(Boolean).join(" · ")}
           </p>
-          <h2 className="mt-2 font-serif text-[clamp(1.35rem,5vw,2rem)] font-semibold leading-tight">{song.title}</h2>
+          <h2 className="mt-2 font-serif text-[clamp(1.35rem,5vw,2rem)] font-semibold leading-tight">
+            {song.title}
+            {song.title_ko && <span className="ml-2 align-middle font-sans text-[0.55em] font-normal text-white/55">({song.title_ko})</span>}
+          </h2>
           <p className="mt-1 text-sm text-white/65">{song.artist}</p>
           <div className="mt-6 flex items-end justify-between">
             <div className="flex gap-1.5 text-[9px] text-white/55">
-              {[song.genre, song.emotion].filter(Boolean).map((tag) => <span key={tag} className="rounded-full border border-white/15 px-2 py-1">{tag}</span>)}
+              {[song.country, song.genre, song.year].filter(Boolean).map((tag) => <span key={tag} className="rounded-full border border-white/15 px-2 py-1">{tag}</span>)}
             </div>
             <Dots active={index} count={count} />
           </div>
@@ -76,8 +79,8 @@ function AboutSlide({ song, index, count }) {
         </p>
         <div className="flex items-end justify-between border-t border-white/10 pt-4">
           <div className="min-w-0 pr-4">
-            <p className="truncate text-xs font-semibold">{song.title}</p>
-            <p className="mt-0.5 truncate text-[10px] text-white/42">{song.artist}</p>
+            <p className="truncate text-xs font-semibold">{song.title}{song.title_ko && <span className="ml-1.5 font-normal text-white/45">({song.title_ko})</span>}</p>
+            <p className="mt-0.5 truncate text-[10px] text-white/42">{[song.artist, song.country, song.genre, song.year].filter(Boolean).join(" · ")}</p>
           </div>
           <Dots active={index} count={count} />
         </div>
