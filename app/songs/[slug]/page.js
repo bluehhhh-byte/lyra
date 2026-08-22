@@ -217,6 +217,11 @@ export default async function SongPage({ params }) {
           genre: genreTagOf(song.tags) || song.genre || "",
           // 카드 하단 메타에 국가·장르·연도를 함께 적는다 — 사이트가 쓰는 국가 태그 그대로
           country: song.tags.find((t) => COUNTRY_TAGS.includes(t)) || "",
+          // 캐러셀 2장(곡 설명)이 그대로 싣는다 — 위 인용문과 같은 글이다
+          comment: song.comment || "",
+          // 커버 카드 하단의 해시태그 — 곡의 소재(keywords)와 감정 한 낱말
+          keywords: song.keywords || [],
+          emotion: song.emotion || "",
         }}
       />
 

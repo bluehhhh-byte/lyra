@@ -242,10 +242,28 @@ async function drawCoverCard({ song }) {
     ctx.fillText(meta, pad, y);
   }
 
-  // 하단 — 워드마크와 유입 안내. 이 장에만 있다.
-  ctx.fillStyle = "rgba(244,244,246,0.45)";
+  // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
+  // (keywords는 곡의 소재, emotion은 감정 한 낱말). 워드마크 폭만큼은 비워 둔다.
   ctx.font = "24px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText("전문 · 번역 — 프로필 링크", pad, H - 52);
+  const markW = (() => {
+    ctx.save();
+    ctx.font = "600 30px Georgia, serif";
+    const w = ctx.measureText("Lyra.").width;
+    ctx.restore();
+    return w;
+  })();
+  const room = W - pad * 2 - markW - 32;
+  const words = [...(song.keywords || []), song.emotion].filter(Boolean);
+  let tagLine = "";
+  for (const w of words) {
+    const next = tagLine ? `${tagLine} #${w}` : `#${w}`;
+    if (ctx.measureText(next).width > room) break; // 넘치면 거기서 끊는다 — 줄바꿈 없이 한 줄
+    tagLine = next;
+  }
+  if (tagLine) {
+    ctx.fillStyle = "rgba(244,244,246,0.45)";
+    ctx.fillText(tagLine, pad, H - 52);
+  }
   ctx.textAlign = "right";
   ctx.fillStyle = ink;
   ctx.font = "600 30px Georgia, serif";
@@ -440,7 +458,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
       {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
+        className="max-h-full w-full max-w-sm scale-100 overflow-y-auto overscroll-contain rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
         <p className="mb-2 text-xs font-semibold text-muted">
           인스타그램 캐러셀 {CAROUSEL_SLIDES}장 — 커버 · 곡 설명 · 가사 3장
@@ -450,10 +468,20 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           <p className="rounded-xl border border-line px-3 py-6 text-center text-sm text-muted">{carousel.error}</p>
         ) : cards.length ? (
           // 인스타에서 넘겨 보는 순서 그대로 — 왼쪽부터 1장이다
-          <ol className="-mx-1 flex snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1">
+          // overscroll-x-contain — 마지막 장에서 더 밀어도 뒤 페이지로 넘어가지 않는다.
+          // 가로 오버스크롤은 브라우저의 "뒤로 가기" 제스처로 이어져, 카드를 넘겨
+          // 보다가 곡 페이지를 벗어나 버린다.
+          <ol className="-mx-1 flex touch-pan-x snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain px-1 pb-1">
             {cards.map((c, i) => (
               <li key={c.role} className="w-40 shrink-0 snap-center">
-                <img src={c.url} alt={`${i + 1}번째 카드 — ${c.label}`} className="w-full rounded-lg border border-line" />
+                {/* draggable=false — 이미지를 끌면 브라우저가 그림 자체를 드래그해
+                    스크롤이 안 먹고 다른 곳에 떨궈진다. 끌면 목록이 넘어가야 한다. */}
+                <img
+                  src={c.url}
+                  alt={`${i + 1}번째 카드 — ${c.label}`}
+                  draggable={false}
+                  className="w-full select-none rounded-lg border border-line"
+                />
                 <p className="mt-1 text-center text-[10px] text-muted">
                   {i + 1}. {c.label}
                 </p>
@@ -484,7 +512,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
             ))}
           </div>
         </div>
-        <ul className="max-h-48 space-y-1 overflow-y-auto">
+        <ul className="max-h-48 space-y-1 overflow-y-auto overscroll-contain">
           {allLines.map((l, i) => (
             <li key={i}>
               {l.section && (
