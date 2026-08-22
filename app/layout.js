@@ -1,6 +1,7 @@
 import "./globals.css";
 import PlayerProvider from "./player";
 import Header from "./header";
+import UsageReporter from "./usage-reporter";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <PlayerProvider>
+        <UsageReporter />
         <Header />
         <main className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
