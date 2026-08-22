@@ -6,7 +6,7 @@
 //
 // 배포가 끝나면 새 빌드가 뜨고 이 값이 바뀐다. 그걸 지켜보면 토큰 없이도 완료를
 // 정확히 알 수 있다. 공개 저장소의 커밋 해시라 숨길 것이 없다.
-import { databaseContentEnabled } from "../../../lib/content-db";
+import { databaseContentEnabled, contentFallbackActive } from "../../../lib/content-db";
 
 export const dynamic = "force-dynamic";
 
@@ -22,6 +22,9 @@ export function GET() {
       // 이틀 동안 파일을 읽고 있었는데, 어디에도 그 사실이 드러나지 않아 아무도
       // 몰랐다. 저장소 모드는 한 눈에 보여야 한다.
       contentStore: databaseContentEnabled() ? "neon" : "files",
+      // DB가 대답하지 못해 파일 백업으로 내려앉았는가(최근 10분 내). 폴백은 사이트를
+      // 살리지만 옛 데이터를 서빙한다 — 조용히 두면 "왜 새 곡이 안 보이지"로 헤맨다.
+      contentFallback: contentFallbackActive(),
     },
     { headers: { "Cache-Control": "no-store" } }
   );
