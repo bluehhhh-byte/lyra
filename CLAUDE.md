@@ -3,13 +3,21 @@
 개인 음악·영화 기록 아카이브. 사용자 1명(소유자 본인), 계정·광고·수익 없음.
 운영: https://lyra-one-zeta.vercel.app · 저장소: github.com/bluehhhh-byte/lyra
 
-## 무엇이 어디에 있는가 (2026-08-19 기준)
+## 무엇이 어디에 있는가 (2026-08-22 기준)
 
 **진실 공급원은 Neon Postgres다. `songs/*.md`는 백업본이다.**
 
-- `lyra_contents(kind, slug, raw)` — 곡 919 + 영화 50, raw는 md 원문 그대로
+2026-08-22에 새 Neon 프로젝트로 이전했다(호스트 `ep-little-rain-axw7fmrs`). 곡·영화
+slug를 파일 백업과 대조해 누락 0건을 확인했다. **DB가 대답하지 못하면 파일 백업으로
+내려앉는다** — 읽기 진입점 네 곳(`lib/songs.js` `lib/movies.js` `lib/store.js`
+`lib/moments.js`)에 폴백이 있고, `/api/version`의 `contentFallback`이 그 사실을 보고한다.
+**쓰기에는 폴백이 없다** — DB가 죽으면 곡 등록·저장은 실패한다.
+
+- `lyra_contents(kind, slug, raw)` — 곡 923 + 영화 50, raw는 md 원문 그대로
 - `lyra_data(name, raw)` — data/*.json 23건
-- `lyra_moments` — 문화적 장면(md 대응물 없음, 덤프 대상 아님)
+- `lyra_moments` — 문화적 장면(md 대응물 없음, 덤프 대상 아님). 현재 0행이고
+  `data/moments.json`도 비어 있다 — 쓰지 않는 테이블로 보인다
+- `lyra_deploy_jobs` — 배포 멱등성 장부. 첫 사용 때 자동 생성된다(현재 미생성)
 - 스위치: `LYRA_CONTENT_STORE=neon`. 현재 모드는 `/api/version`의 `contentStore`로 확인
 - 관리자 저장은 **GitHub 커밋을 만들지 않는다**. 곡 등록 → DB 기록 → 캐시 무효화 → 즉시 반영
 - 배포가 필요한 경우는 둘뿐: 코드 변경, 집계 페이지 갱신(/stats /tags /songs/taste /songs/motifs /recommendations /people /sitemap.xml — 빌드 시점 정적)
@@ -39,7 +47,7 @@
 
 | 서비스 | 한도(대략) | 현재 사용 | 지키는 장치 |
 |---|---|---|---|
-| Neon Free | 저장 0.5GB, 컴퓨트 ~190h/월 | 16MB (3%) | gzip 캐시로 요청당 DB 조회 제거, autosuspend |
+| Neon Free | 저장 0.5GB, **전송 5GB/월**, 컴퓨트 ~190h/월 | 16MB (3%) | gzip 캐시 + 6시간 TTL + 파일 폴백, autosuspend |
 | Vercel Hobby | 대역폭 100GB/월, maxDuration 60s(Fluid 300s) | 홈 HTML 1.4MB | 태그 무효화 캐시, `/api/admin` maxDuration 180 |
 | Gemini Free | 모델별 RPM/RPD 버킷 분리 | 곡 등록 시 1~2회 | 대체 사슬 + 12s/48s 시한, 대량 작업은 lite 모델 |
 | GitHub | abuse 감지(버스트 커밋) | 콘텐츠 커밋 0 | 저장이 커밋을 안 만듦, 백업은 단일 커밋 |
@@ -53,6 +61,7 @@
 
 - **환경변수 BOM**: Vercel에 붙여넣은 값에 U+FEFF가 딸려와 `LYRA_CONTENT_STORE`와 `DATABASE_URL`이 이틀간 조용히 죽어 있었다. 코드가 이제 BOM·공백·따옴표를 다듬지만(`lib/content-db.js`의 `clean`), 새 환경변수를 추가하면 같은 함정을 의심하라.
 - **unstable_cache 2MB 한도**: 초과 시 던지지 않고 조용히 저장을 건너뛴다 — 캐시가 도는 것처럼 보이지만 매 요청 DB를 읽는다. 곡 전량은 gzip으로 넣는다(`packRows`). 압축본이 한도 90%를 넘으면 경고 로그가 뜬다 — 뜨면 분할을 검토하라.
+- **unstable_cache는 전역이다 — 인스턴스별이 아니다**: Vercel Data Cache라 TTL을 짧게 잡으면 전송량이 그대로 곱해진다. 2026-08-22에 시한 5분 때문에 곡+영화 전량 2.3MB를 하루 288번 다시 읽어(월 20GB) Neon 무료 전송 한도 5GB를 태웠다. 모든 DB 읽기가 HTTP 402를 냈고, 사이트는 캐시로 버텼지만 **빌드가 sitemap을 만들다 죽어 배포가 막혔고 관리자 페이지도 열리지 않았다**. 지금은 6시간(`CACHE_TTL_SECONDS`)이라 월 0.6GB다. **시한을 다시 줄이지 마라** — 즉시 반영이 필요한 저장 경로는 원래 태그 무효화를 부르므로 시한과 무관하다. 시한은 무효화를 놓친 경로를 위한 그물일 뿐이다.
 - **Gemini 모델 변덕**: 하루 안에 latest 503→200, 3.6-flash 200→무응답으로 뒤집혔다. 특정 버전을 기본으로 박지 마라. 별칭 + `GEMINI_MODEL_FALLBACKS`가 답이다.
 - **PowerShell Out-File**: 기본으로 BOM을 붙인다. 다른 도구가 읽을 파일은 `-Encoding utf8` 명시.
 - **sr-only를 `<table>`에 직접**: width:1px이 테이블에 안 먹혀 문서 폭이 늘어난다. div로 감싼다.
