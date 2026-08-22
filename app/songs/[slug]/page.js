@@ -9,7 +9,7 @@ import LyricsView from "./lyrics-view";
 import { appleUrl, isExactApple } from "../../../lib/apple";
 import PlayButton from "./play-button";
 import ShareButton from "./share-button";
-import SongNav from "./song-nav";
+import SongBackButton from "./song-back-button";
 import YouTubeEmbed from "./youtube-embed";
 import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
@@ -73,9 +73,6 @@ export default async function SongPage({ params }) {
   if (!song) notFound();
   const related = relatedSongs(song, all);
   const moments = await getMomentsForTarget("song", song.slug);
-  const pick = (s) => s && { slug: s.slug, title: s.title };
-  const prev = pick(all[idx - 1]);
-  const next = pick(all[idx + 1]);
 
   // 컬렉션 안에서 이 곡의 자리 — 같은 장르·감정·시대·권역·아티스트가 몇 곡인지
   const genre = genreTagOf(song.tags);
@@ -311,18 +308,15 @@ export default async function SongPage({ params }) {
         </div>
       )}
 
-      {(prev || next) && <SongNav prev={prev} next={next} />}
-
-      <div className="mx-auto mt-16 flex max-w-2xl justify-between">
-        <Link href="/" className="text-sm text-muted hover:text-accent">
-          ← 음악으로
-        </Link>
-        {process.env.NODE_ENV !== "production" && (
+      {process.env.NODE_ENV !== "production" && (
+        <div className="mx-auto mt-16 flex max-w-2xl justify-end">
           <Link href={`/admin/edit/${song.slug}`} className="text-sm text-muted hover:text-accent">
             수정 ✎
           </Link>
-        )}
-      </div>
+        </div>
+      )}
+
+      <SongBackButton />
     </article>
   );
 }
