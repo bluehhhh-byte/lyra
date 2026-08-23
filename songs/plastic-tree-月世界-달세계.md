@@ -13,7 +13,7 @@ trackId:
 duration:
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2001]
 keywords: [밤하늘, 별빛, 에스컬레이터, 개, 소원]
 emotion: 몽환
 date: 2022-09-18

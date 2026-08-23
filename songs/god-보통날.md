@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2004]
 keywords: [아침, 커피, 버스, 라디오, 햇살]
 emotion: 체념
 date: 2022-12-11

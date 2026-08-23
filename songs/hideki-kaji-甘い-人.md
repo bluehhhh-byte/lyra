@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Indie Pop
 lang: ja
-tags: [일본, Indie Pop]
+tags: [일본, Indie Pop, 2008]
 keywords: [아침, 타르트, 거리, 반지, 침대]
 emotion: 사랑
 date: 2023-03-08

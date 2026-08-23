@@ -13,7 +13,7 @@ trackId: 1661923163
 duration: 237
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [포옹, 팻말, 어깨, 부목, 아이, 목소리]
 emotion: 위로
 date: 2023-01-09

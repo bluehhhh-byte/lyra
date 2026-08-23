@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: R&B/Soul
 lang: ja
-tags: [일본, R&B/Soul]
+tags: [일본, R&B/Soul, 1999]
 keywords: [손, 눈물, 구름, 연인, 친구, 꿈]
 emotion: 이별
 date: 2022-11-15

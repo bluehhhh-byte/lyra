@@ -13,7 +13,7 @@ trackId: 1271987376
 duration: 210
 genre: R&B/Soul
 lang: ko
-tags: [한국, R&B/Soul]
+tags: [한국, R&B/Soul, 2017]
 keywords: [술, 벽, 미로, 여정, 세상]
 emotion: 사랑
 date: 2022-12-01

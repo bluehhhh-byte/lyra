@@ -13,7 +13,7 @@ trackId: 1645304169
 duration: 200
 genre: Alternative Rock
 lang: en
-tags: [영미, Alternative Rock]
+tags: [영미, Alternative Rock, 2022]
 keywords: [신호, 메아리, 기억, 바위, 암호]
 emotion: 그리움
 date: 2023-02-21

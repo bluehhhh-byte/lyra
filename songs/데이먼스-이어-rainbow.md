@@ -13,7 +13,7 @@ trackId: 1790598195
 duration: 246
 genre: Indie Rock
 lang: ko
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2021]
 keywords: [어둠, 비, 밤, 노을, 품]
 emotion: 체념
 date: 2022-10-04

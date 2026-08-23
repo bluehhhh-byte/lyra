@@ -13,7 +13,7 @@ trackId: 1450778321
 duration: 298
 genre: Indie Rock
 lang: ko
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2017]
 keywords: [일몰, 눈물, 짐, 무덤, 영혼]
 emotion: 고독
 date: 2023-03-09

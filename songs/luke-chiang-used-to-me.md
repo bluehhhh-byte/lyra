@@ -13,7 +13,7 @@ trackId: 1645600095
 duration: 180
 genre: Indie Pop
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, Indie Pop, 2019]
 keywords: [라디오, 문자, 새벽, 약속, 시간]
 emotion: 설렘
 date: 2023-04-27

@@ -13,7 +13,7 @@ trackId: 268633674
 duration: 270
 genre: Indie Pop
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, Indie Pop, 2007]
 keywords: [커피숍, 눈동자, 그림자, 물결, 빛]
 emotion: 설렘
 date: 2023-05-10

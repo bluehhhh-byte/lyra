@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [부산, 졸업, 앨범, 운동, 혈액형]
 emotion: 회상
 date: 2022-11-25

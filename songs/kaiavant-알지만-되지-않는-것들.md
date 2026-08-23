@@ -13,7 +13,7 @@ trackId: 1729521186
 duration: 140
 genre: Indie Pop
 lang: ko
-tags: [한국, Indie Pop]
+tags: [한국, Indie Pop, 2022]
 keywords: [하늘, 밤, 고통, 이유, 불]
 emotion: 그리움
 date: 2023-01-02

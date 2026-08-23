@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [세상, 꿈, 야망, 시련, 싸움]
 emotion: 저항
 date: 2022-11-25

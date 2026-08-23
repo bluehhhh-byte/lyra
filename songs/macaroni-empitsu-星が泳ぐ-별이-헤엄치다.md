@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: J-Rock
 lang: ja
-tags: [일본, J-Rock]
+tags: [일본, J-Rock, 2022]
 keywords: [바다, 고양이, 파도, 여름, 노래, 별]
 emotion: 그리움
 date: 2022-10-03

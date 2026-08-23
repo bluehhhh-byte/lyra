@@ -13,7 +13,7 @@ trackId: 1640581691
 duration: 155
 genre: Indie Pop
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, Indie Pop, 2022]
 keywords: [열쇠, 와인, 하루, 일주일, 집]
 emotion: 설렘
 date: 2023-04-11

@@ -13,7 +13,7 @@ trackId: 1475933856
 duration: 273
 genre: Alternative Rock
 lang: en
-tags: [영미, Alternative Rock]
+tags: [영미, Alternative Rock, 2019]
 keywords: [독수리, 새벽, 심장, 키스, 마음]
 emotion: 희망
 date: 2023-02-21

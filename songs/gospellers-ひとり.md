@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: R&B/Soul
 lang: ja
-tags: [일본, R&B/Soul]
+tags: [일본, R&B/Soul, 2001]
 keywords: [약속, 노래, 걸음, 꿈, 곁]
 emotion: 사랑
 date: 2023-02-09

@@ -13,7 +13,7 @@ trackId: 1724310434
 duration: 213
 genre: Indie Pop
 lang: en
-tags: [한국, Indie Pop]
+tags: [한국, Indie Pop, 2022]
 keywords: [코미디쇼, 사슴, 벽, 인형, 눈물]
 emotion: 이별
 date: 2022-09-17

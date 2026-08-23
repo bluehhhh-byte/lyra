@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Punk Rock
 lang: ko
-tags: [한국, Punk Rock]
+tags: [한국, Punk Rock, 2003]
 keywords: [하늘, 별빛, 눈물, 밤, 세상]
 emotion: 사랑
 date: 2022-10-02

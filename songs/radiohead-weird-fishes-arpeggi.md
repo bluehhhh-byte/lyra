@@ -13,7 +13,7 @@ trackId: 1109715168
 duration: 318
 genre: Alternative Rock
 lang: en
-tags: [영미, Alternative Rock, 2006]
+tags: [영미, Alternative Rock, 2007]
 keywords: [바다, 밑바닥, 눈]
 emotion: 몽환
 date: 2024-06-12

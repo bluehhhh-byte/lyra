@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2021]
 keywords: [물, 사진, 세상, 시간, 후회]
 emotion: 고독
 date: 2022-09-26

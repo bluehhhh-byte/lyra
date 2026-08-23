@@ -13,7 +13,7 @@ trackId: 1804756131
 duration: 236
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 1997]
 keywords: [눈물, 고개, 발길, 숨, 기다림]
 emotion: 이별
 date: 2023-02-06

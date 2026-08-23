@@ -13,7 +13,7 @@ trackId: 1605746379
 duration: 327
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 1999]
 keywords: [눈, 겨울, 발자국, 여행, 연인, 봄]
 emotion: 희망
 date: 2023-02-22

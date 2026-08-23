@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2003]
 keywords: [눈물, 밤하늘, 기도, 노래, 꿈]
 emotion: 고독
 date: 2022-11-16

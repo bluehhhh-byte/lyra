@@ -13,7 +13,7 @@ trackId: 362060702
 duration: 287
 genre: Heavy Metal
 lang: en
-tags: [한국, Heavy Metal]
+tags: [한국, Heavy Metal, 2005]
 keywords: [아이, 젊음, 영혼, 구원]
 emotion: 희망
 date: 2022-11-20

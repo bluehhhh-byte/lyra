@@ -13,7 +13,7 @@ trackId: 1792413404
 duration: 229
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2015]
 keywords: [삶, 말, 기다림, 눈물]
 emotion: 사랑
 date: 2023-02-24

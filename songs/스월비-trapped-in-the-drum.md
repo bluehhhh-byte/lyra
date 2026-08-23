@@ -13,7 +13,7 @@ trackId: 1804643004
 duration: 304
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2020]
 keywords: [색깔, 흑백, 산소, 카메라, 관, 비석]
 emotion: 불안
 date: 2022-09-25

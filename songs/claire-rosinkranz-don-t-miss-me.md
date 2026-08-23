@@ -13,7 +13,7 @@ trackId: 1596384555
 duration: 124
 genre: Indie Pop
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, Indie Pop, 2021]
 keywords: [마이크, 애인, 친구, 마음, 연애]
 emotion: 불안
 date: 2022-12-20

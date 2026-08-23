@@ -13,7 +13,7 @@ trackId: 1641454545
 duration: 233
 genre: Metal
 lang: ko
-tags: [한국, Metal]
+tags: [한국, Metal, 2003]
 keywords: [티비, 잡지, 광고, 유행, 도구]
 emotion: 저항
 date: 2023-02-11

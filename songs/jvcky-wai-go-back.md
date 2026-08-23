@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [서울, 강남, 샴페인, 지폐, 집세]
 emotion: 저항
 date: 2022-11-19

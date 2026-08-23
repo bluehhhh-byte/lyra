@@ -13,7 +13,7 @@ trackId: 1454460917
 duration: 254
 genre: R&B/Soul
 lang: ko
-tags: [한국, R&B/Soul]
+tags: [한국, R&B/Soul, 2003]
 keywords: [달, 별빛, 비, 무지개, 구름]
 emotion: 체념
 date: 2022-12-18

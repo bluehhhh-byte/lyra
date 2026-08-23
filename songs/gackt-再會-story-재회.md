@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: J-Pop
 lang: ja
-tags: [일본, J-Pop]
+tags: [일본, J-Pop, 2000]
 keywords: [빛, 꿈, 기억, 눈빛, 풍경, 이름]
 emotion: 그리움
 date: 2022-10-03

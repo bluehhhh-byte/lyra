@@ -13,7 +13,7 @@ trackId: 1631085712
 duration: 186
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [전화, 카톡, 곁, 다짐]
 emotion: 사랑
 date: 2022-09-27

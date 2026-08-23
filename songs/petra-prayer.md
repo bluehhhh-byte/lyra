@@ -13,7 +13,7 @@ trackId: 1165972957
 duration: 256
 genre: Electronic
 lang: en
-tags: [영미, Electronic]
+tags: [영미, Electronic, 1990]
 keywords: [그녀, 공허함, 외로움, 사랑]
 emotion: 고독
 date: 2023-01-11

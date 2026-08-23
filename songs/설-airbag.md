@@ -13,7 +13,7 @@ trackId: 1708860372
 duration: 353
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [라디오, 주파수, 신청곡, 빗물, 전광판, 교통사고]
 emotion: 고독
 date: 2022-09-28

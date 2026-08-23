@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2017]
 keywords: [축제, 악마, 손가락, 나무, 무대]
 emotion: 저항
 date: 2023-02-07

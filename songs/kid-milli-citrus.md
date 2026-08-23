@@ -13,7 +13,7 @@ trackId: 1564914097
 duration: 214
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2021]
 keywords: [향기, 불빛, 꽃, 해변, 겨울]
 emotion: 사랑
 date: 2022-11-19

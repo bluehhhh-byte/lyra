@@ -13,7 +13,7 @@ trackId: 1483713689
 duration: 272
 genre: Metal
 lang: en
-tags: [일본, Metal]
+tags: [일본, Metal, 2009]
 keywords: [죽음, 공포, 함정, 자유, 한숨, 왜곡]
 emotion: 저항
 date: 2023-03-08

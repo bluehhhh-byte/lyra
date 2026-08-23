@@ -13,7 +13,7 @@ trackId: 1561361999
 duration: 237
 genre: Metal
 lang: ko
-tags: [한국, Metal]
+tags: [한국, Metal, 2015]
 keywords: [도시, 불빛, 꿈, 파도, 혼돈]
 emotion: 불안
 date: 2022-11-20

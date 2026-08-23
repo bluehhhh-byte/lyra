@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Alternative Rock
 lang: ko
-tags: [한국, Alternative Rock]
+tags: [한국, Alternative Rock, 2003]
 keywords: [벌레, 피, 기도, 눈물, 거짓말]
 emotion: 불안
 date: 2023-05-08

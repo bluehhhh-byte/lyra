@@ -13,7 +13,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2018]
 keywords: [빈곤, 취업난, 가사, 학생, 파산]
 emotion: 체념
 date: 2022-09-28

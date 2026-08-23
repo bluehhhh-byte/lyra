@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/50/
 trackId: 1886730726
 duration: 152
 lang: en
-tags: [영미, Funk]
+tags: [영미, Funk, 2026]
 keywords: [언젠가, 어딘가, 조화, 길]
 emotion: 희망
 date: 2026-08-03

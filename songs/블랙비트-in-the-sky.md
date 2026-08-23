@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: R&B/Soul
 lang: ko
-tags: [한국, R&B/Soul]
+tags: [한국, R&B/Soul, 2002]
 keywords: [사진, 미소, 눈물, 시간, 용서]
 emotion: 이별
 date: 2022-10-08

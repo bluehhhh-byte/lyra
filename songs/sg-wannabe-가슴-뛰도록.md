@@ -13,7 +13,7 @@ trackId: 1619280890
 duration: 252
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2015]
 keywords: [아침, 심장, 하루, 미소, 눈물, 어깨]
 emotion: 사랑
 date: 2023-03-17
