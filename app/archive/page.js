@@ -5,7 +5,7 @@ import { valenceColor } from "../../lib/keywords";
 import { CULTURAL_THEMES } from "../../lib/themes";
 import CoverImage from "../cover-image";
 import ArchiveCalendar from "./calendar";
-import { EmotionOrbit, BioTimeline, EmotionComposition } from "./orbit";
+import { EmotionOrbit, EmotionTrend, BioTimeline, EmotionComposition } from "./orbit";
 
 export const metadata = {
   title: "문화 아카이브 | Lyra",
@@ -152,6 +152,15 @@ export default async function ArchivePage({ searchParams }) {
               </div>
             )}
           </div>
+          {/* 같은 좌표를 시간축으로 편 그림. 지도는 "어디에 있었나"를, 이쪽은
+              "언제 어떻게 움직였나"를 답한다 — 척도가 고정이라 지도에서는
+              이동 폭이 작아 보이는데 여기서는 열두 칸으로 벌어진다 */}
+          <div className="mt-8 min-w-0">
+            <h3 className="mb-1 text-sm font-semibold">월별 추이</h3>
+            <p className="mb-3 text-xs text-muted">지도의 점을 시간 순서로 편 것이다.</p>
+            <EmotionTrend stats={yearStats} year={year} />
+          </div>
+
           <div className="mt-8 min-w-0">
             <h3 className="mb-3 text-sm font-semibold">시간축 일대기</h3>
             <BioTimeline stats={yearStats} month={month} monthHref={monthHref} />

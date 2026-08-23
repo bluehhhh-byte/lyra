@@ -14,12 +14,34 @@ import { workLabel } from "../../lib/archive-stats";
 // 점과 선은 작게, 판은 넓게 — 이 그림의 정보는 "점들이 평면 어디에 있고 어떻게
 // 이동했는가"다. 마크가 크면 점끼리 뭉치고 화살표가 겹쳐, 판이 아니라 마크를 읽게 된다.
 // rBase/rMax/rK가 점 반지름(rBase + min(rMax, √count × rK)), aw가 화살표 굵기다.
+//
+// 2026-08: 점을 더 줄였다. 모든 해가 같은 −3~+3 척도를 쓰는데 실제 월 좌표는
+// 40개월 중 37개가 ±1.5 안에 있다. 점들이 판 가운데 뭉치는 그림이라, 마크가 크면
+// 서로 겹쳐 어느 달이 어디인지 읽히지 않았다. 척도는 연도 비교를 위해 그대로 두고
+// 마크만 줄인다.
 const VARIANTS = {
-  mobile: { key: "m", W: 360, H: 420, PAD: 46, fs: 13, axisFs: 12, quadFs: 11, labelW: 34, labelH: 15, rBase: 5, rMax: 5, rK: 1.2, aw: 1.5 },
-  desktop: { key: "d", W: 760, H: 420, PAD: 58, fs: 12, axisFs: 11, quadFs: 11, labelW: 32, labelH: 14, rBase: 4, rMax: 5, rK: 1.1, aw: 1.4 },
+  mobile: { key: "m", W: 360, H: 420, PAD: 46, fs: 13, axisFs: 12, quadFs: 11, labelW: 34, labelH: 15, rBase: 3, rMax: 3, rK: 0.75, aw: 1.2 },
+  desktop: { key: "d", W: 760, H: 420, PAD: 58, fs: 12, axisFs: 11, quadFs: 11, labelW: 32, labelH: 14, rBase: 2.5, rMax: 3, rK: 0.7, aw: 1.1 },
 };
 
 const DOMAIN = [-3, 3];
+
+// 점 색은 valence가 아니라 시간 순서다.
+//
+// 예전에는 점을 valence 색으로 칠했다. 그런데 valence는 이미 가로축이다. 같은 값을
+// 두 채널에 그리면 색이 아무 새 정보도 싣지 않고, "언제"를 알려면 화살표를 눈으로
+// 따라가는 수밖에 없다. 점 열두 개가 얽히면 그게 안 된다.
+//
+// 색을 시간에 내주면 화살표를 따라가지 않아도 궤적이 읽힌다. 연초는 흐릿하고
+// 연말로 갈수록 또렷해진다 — 밝기와 진하기가 함께 오르므로 흑백으로 봐도 순서가 남는다.
+// 색상(hue)은 하나로 고정한다. valence 색(파랑→호박)과 섞이면 두 축을 혼동한다.
+const TIME_HUE = 285;
+function timeColor(index, total) {
+  const t = total > 1 ? index / (total - 1) : 1;
+  const lightness = 0.52 + t * 0.28; // 흐림 → 또렷함
+  const chroma = 0.04 + t * 0.11;
+  return `oklch(${lightness.toFixed(3)} ${chroma.toFixed(3)} ${TIME_HUE})`;
+}
 
 const mm = (month) => `${Number(month.slice(5))}월`;
 const fmt1 = (n) => (Math.round(n * 10) / 10).toFixed(1);
@@ -154,9 +176,9 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
             key={s.month}
             x1={sx(p.center.v) + a.tx} y1={sy(p.center.a) + a.ty}
             x2={sx(s.center.v) - b.tx} y2={sy(s.center.a) - b.ty}
-            stroke="var(--color-muted)" strokeWidth={aw}
+            stroke={timeColor(i + 1, points.length)} strokeWidth={aw}
             strokeDasharray={s.prev?.gap > 0 ? "5 4" : "none"}
-            markerEnd={`url(#${chartId}-arrow)`} opacity="0.42"
+            markerEnd={`url(#${chartId}-arrow)`} opacity="0.6"
           />
         );
       })}
@@ -173,11 +195,11 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
             {active && <circle cx={cx} cy={cy} r={r(s) + 4} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
             <circle
               cx={cx} cy={cy} r={r(s)}
-              fill={valenceColor(s.center.v)}
-              opacity={s.sparse ? 0.45 : 0.95}
+              fill={timeColor(i, points.length)}
+              opacity={s.sparse ? 0.5 : 1}
               stroke={s.sparse ? "var(--color-muted)" : "var(--color-bg)"}
-              strokeWidth="1"
-              strokeDasharray={s.sparse ? "3 2" : "none"}
+              strokeWidth="0.8"
+              strokeDasharray={s.sparse ? "2 2" : "none"}
             />
             {/* 라벨 뒤에 배경을 깔아 선·점 위에서도 읽히게 한다. stroke는 글자 바깥으로
                 번지므로 clampLabel의 여백이 그만큼을 이미 비워 뒀다 */}
@@ -193,6 +215,106 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
         );
       })}
     </svg>
+  );
+}
+
+// 정서 추이 — 같은 값을 시간축으로 펴서 본다.
+//
+// 궤도 그림은 "평면 어디에 있었나"를 보여주지만 "언제 어떻게 움직였나"는 화살표를
+// 따라가야 읽힌다. 게다가 모든 해가 같은 −3~+3 척도를 쓰는 탓에 실제 좌표가 가운데
+// 25% 안에 뭉쳐 이동 폭이 작아 보인다. 같은 데이터를 가로=달, 세로=값으로 펴면
+// 폭이 값 범위와 무관하게 열두 칸으로 벌어져 오르내림이 그대로 읽힌다.
+//
+// 두 계열을 겹치지 않고 위아래로 나눈다. 한 판에 두 선을 그으면 교차점마다
+// 어느 선인지 확인해야 하는데, 밝기와 각성은 단위가 달라 교차 자체에 뜻이 없다.
+const TREND = { W: 760, H: 168, PAD_X: 30, PAD_Y: 16, ROW: 68, GAP: 12 };
+
+function TrendRow({ points, yearMonths, label, pick, color, y0, chartId }) {
+  const { W, PAD_X, ROW } = TREND;
+  const step = (W - PAD_X * 2) / Math.max(1, yearMonths.length - 1);
+  const x = (i) => PAD_X + i * step;
+  // 세로는 ±2로 고정한다. 40개월 중 38개가 그 안이고, 넘는 달은 가장자리에 붙는다.
+  // 자동 확대를 쓰면 조용한 해의 미세한 흔들림이 격동처럼 보인다.
+  const LIM = 2;
+  const y = (val) => y0 + ROW / 2 - (Math.max(-LIM, Math.min(LIM, val)) / LIM) * (ROW / 2 - 6);
+
+  const byMonth = new Map(points.map((s) => [s.month, s]));
+  const seq = yearMonths.map((m, i) => ({ i, month: m, stat: byMonth.get(m) }));
+  const filled = seq.filter((d) => d.stat);
+
+  // 기록이 없는 달은 선을 잇지 않는다 — 이어 버리면 없는 값을 있는 것처럼 그린다
+  const runs = [];
+  let run = [];
+  for (const d of seq) {
+    if (d.stat) run.push(d);
+    else if (run.length) (runs.push(run), (run = []));
+  }
+  if (run.length) runs.push(run);
+
+  return (
+    <g>
+      <text x={PAD_X} y={y0 - 4} fontSize="10" fill="var(--color-muted)">{label}</text>
+      <line x1={PAD_X} y1={y(0)} x2={W - PAD_X} y2={y(0)} stroke="var(--color-line)" />
+      {runs.map((r, ri) => (
+        <polyline
+          key={ri}
+          points={r.map((d) => `${x(d.i)},${y(pick(d.stat))}`).join(" ")}
+          fill="none" stroke={color} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
+          opacity="0.75"
+        />
+      ))}
+      {filled.map((d) => (
+        <circle
+          key={d.month}
+          cx={x(d.i)} cy={y(pick(d.stat))} r="2.6"
+          fill={color} opacity={d.stat.sparse ? 0.45 : 1}
+        >
+          <title>{`${mm(d.month)} · ${label} ${fmt1(pick(d.stat))}`}</title>
+        </circle>
+      ))}
+    </g>
+  );
+}
+
+export function EmotionTrend({ stats, year }) {
+  const points = stats.filter((s) => s.center);
+  if (points.length < 2) return null;
+
+  const { W, H, PAD_X, PAD_Y, ROW, GAP } = TREND;
+  // 열두 달을 모두 그린다 — 기록이 없는 달도 자리를 차지해야 공백이 공백으로 보인다
+  const yearMonths = Array.from({ length: 12 }, (_, i) => `${year}-${String(i + 1).padStart(2, "0")}`);
+  const step = (W - PAD_X * 2) / 11;
+  const chartId = `trend-${year}`;
+
+  return (
+    <figure className="min-w-0 max-w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${chartId}-title`} className="h-auto w-full">
+        <title id={`${chartId}-title`}>
+          {year}년 월별 밝기와 각성의 추이. 가로는 1월부터 12월, 세로는 −2에서 +2다.
+        </title>
+        <TrendRow
+          points={points} yearMonths={yearMonths} label="밝기"
+          pick={(s) => s.center.v} color={valenceColor(1.5)} y0={PAD_Y} chartId={chartId}
+        />
+        <TrendRow
+          points={points} yearMonths={yearMonths} label="각성"
+          pick={(s) => s.center.a} color={`oklch(0.7 0.1 ${TIME_HUE})`} y0={PAD_Y + ROW + GAP} chartId={chartId}
+        />
+        {yearMonths.map((m, i) =>
+          i % 2 === 0 ? (
+            <text
+              key={m} x={PAD_X + i * step} y={H - 4}
+              textAnchor="middle" fontSize="10" fill="var(--color-muted)"
+            >
+              {i + 1}
+            </text>
+          ) : null
+        )}
+      </svg>
+      <figcaption className="mt-2 text-[11px] leading-5 text-muted">
+        같은 좌표를 시간축으로 편 그림이다. 선이 끊긴 구간은 기록이 없는 달이고, 세로는 −2~+2로 고정이다.
+      </figcaption>
+    </figure>
   );
 }
 
@@ -228,8 +350,22 @@ export function EmotionOrbit({ stats, month, monthHref }) {
             <span className="mt-0.5 block text-[10px] text-muted">기록량</span>
           </div>
         </div>
+        {/* 색이 시간을 뜻한다는 것을 그림으로 말한다 — 글로만 적으면 아무도 안 읽는다 */}
+        <div className="mt-2 flex items-center gap-2 text-[11px] text-muted">
+          <span className="shrink-0">{mm(points[0].month)}</span>
+          <span
+            aria-hidden
+            className="h-1.5 min-w-0 flex-1 rounded-full"
+            style={{
+              background: `linear-gradient(to right, ${timeColor(0, points.length)}, ${timeColor(points.length - 1, points.length)})`,
+            }}
+          />
+          <span className="shrink-0">{mm(points.at(-1).month)}</span>
+        </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          모든 해가 같은 −3~+3 척도를 쓴다. 점 크기는 기록량, 점선 테두리는 감정 기록 3곡 미만, 점선 이동은 빈 달을 건너뛴 구간이다.
+          점 색은 시간 순서다 — 연초는 흐리고 연말로 갈수록 또렷해진다. 가로 위치가 밝기, 세로가 각성이라
+          색까지 밝기에 쓰면 같은 값을 두 번 그리는 셈이라 시간에 내줬다. 모든 해가 같은 −3~+3 척도를 쓴다.
+          점 크기는 기록량, 점선 테두리는 감정 기록 3곡 미만, 점선 이동은 빈 달을 건너뛴 구간이다.
         </p>
       </figcaption>
 
@@ -311,7 +447,8 @@ export function BioTimeline({ stats, month, monthHref }) {
 // 이름·막대·수치가 같은 행에 있으면 잇는 일 자체가 사라진다.
 //
 // 막대 길이는 전체 대비 비율이다. 옆의 %와 같은 값이라 그림과 숫자가 어긋나지 않는다.
-// 색은 valence(밝음/어두움)라 궤도 그래프의 점 색과 같은 뜻이다.
+// 색은 valence(밝음/어두움)다 — 지도의 점 색이 시간을 뜻하게 바뀐 뒤로는 서로 다른
+// 뜻이니, 두 그림을 색으로 이어 읽지 말 것. 추이 그래프의 '밝기' 선이 이쪽과 같은 축이다.
 export function EmotionComposition({ stat }) {
   if (!stat?.emotions?.length) return null;
   const total = stat.emotions.reduce((s, [, n]) => s + n, 0);
