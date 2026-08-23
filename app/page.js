@@ -1,5 +1,5 @@
-import { getAllSongsRuntime } from "../lib/songs";
-import { getAllMoviesRuntime } from "../lib/movies";
+import { getAllSongsMeta } from "../lib/songs";
+import { getAllMoviesMeta } from "../lib/movies";
 import { parseEmotion } from "../lib/keywords";
 import { buildHomeInsights } from "../lib/home-insights";
 import Browse from "./browse";
@@ -13,7 +13,7 @@ const countryOf = (s) => s.tags.find((t) => COUNTRY_TAGS.includes(t)) || COUNTRY
 
 export default async function Home({ searchParams }) {
   const { tag, q, group, emotion, decade } = (await searchParams) || {};
-  const [allSongs, allMovies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
+  const [allSongs, allMovies] = await Promise.all([getAllSongsMeta(), getAllMoviesMeta()]);
   const hasDiscoveryState = Boolean(tag || q || emotion || decade || (group && group !== "none"));
   const insights = hasDiscoveryState ? null : buildHomeInsights(allSongs, allMovies);
   const songs = allSongs.map((s) => ({

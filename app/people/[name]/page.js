@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllPeopleRuntime, getPersonRuntime } from "../../../lib/people";
+import { getPersonRuntime } from "../../../lib/people";
 import CoverImage from "../../cover-image";
 
 export async function generateMetadata({ params }) {
