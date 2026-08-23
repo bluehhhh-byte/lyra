@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Visual Kei
 lang: en
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2000]
 keywords: [유리조각, 빛, 어둠, 그림자, 파편, 시간]
 emotion: 몽환
 date: 2023-01-10

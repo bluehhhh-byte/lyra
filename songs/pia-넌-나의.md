@@ -13,7 +13,7 @@ trackId: 1637927242
 duration: 185
 genre: Metal
 lang: ko
-tags: [한국, Metal]
+tags: [한국, Metal, 2017]
 keywords: [그림자, 노을, 태양, 소음, 입김]
 emotion: 불안
 date: 2022-11-20

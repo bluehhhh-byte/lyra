@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Indie Rock
 lang: ko
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2004]
 keywords: [모습, 말, 욕심, 마음]
 emotion: 사랑
 date: 2022-12-24

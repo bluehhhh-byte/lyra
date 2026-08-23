@@ -13,7 +13,7 @@ trackId: 1698627061
 duration: 165
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2023]
 keywords: [우산, 비, 음식, 메뉴, 친구]
 emotion: 고독
 date: 2023-05-28

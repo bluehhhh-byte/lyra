@@ -13,7 +13,7 @@ trackId: 1708786984
 duration: 271
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2015]
 keywords: [조각가, 거울, 작품, 인생, 축복, 몸]
 emotion: 위로
 date: 2022-09-24

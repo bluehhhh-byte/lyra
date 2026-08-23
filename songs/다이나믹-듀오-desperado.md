@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2019]
 keywords: [무법자, 넥타이, 유리천장, 돈, 총]
 emotion: 분노
 date: 2022-12-22

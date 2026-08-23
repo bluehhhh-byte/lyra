@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: K-Pop
 lang: ko
-tags: [한국, K-Pop]
+tags: [한국, K-Pop, 2017]
 keywords: [밤하늘, 별, 손, 순간, 가슴, 곁]
 emotion: 사랑
 date: 2022-10-08

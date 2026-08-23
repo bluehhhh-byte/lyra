@@ -13,7 +13,7 @@ trackId: 1537359127
 duration: 195
 genre: Indie Pop
 lang: ko
-tags: [한국, Indie Pop]
+tags: [한국, Indie Pop, 2020]
 keywords: [사랑, 생각, 끝]
 emotion: 사랑
 date: 2022-10-28

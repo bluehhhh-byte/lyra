@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2010]
 keywords: [병, 의사, 심장, 미소, 꿈, 눈물]
 emotion: 사랑
 date: 2022-10-01

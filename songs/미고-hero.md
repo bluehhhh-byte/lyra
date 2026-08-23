@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Indie Pop
 lang: ko
-tags: [한국, Indie Pop]
+tags: [한국, Indie Pop, 2022]
 keywords: [후회, 한숨, 약속, 손, 말]
 emotion: 회상
 date: 2022-12-07

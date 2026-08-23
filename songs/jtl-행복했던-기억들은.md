@@ -13,7 +13,7 @@ trackId: 1454460172
 duration: 253
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2002]
 keywords: [눈, 눈물, 술, 밤, 빈자리]
 emotion: 그리움
 date: 2022-12-18

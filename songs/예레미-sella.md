@@ -13,7 +13,7 @@ trackId: 879996717
 duration: 325
 genre: Heavy Metal
 lang: ko
-tags: [한국, Heavy Metal]
+tags: [한국, Heavy Metal, 2014]
 keywords: [새벽, 바다, 바람, 별빛, 하늘, 날개]
 emotion: 이별
 date: 2023-02-17

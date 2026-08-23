@@ -13,7 +13,7 @@ trackId: 1642913047
 duration: 222
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2010]
 keywords: [한마디, 말, 사랑, 사람, 마음]
 emotion: 이별
 date: 2022-12-30

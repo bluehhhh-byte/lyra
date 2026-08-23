@@ -13,7 +13,7 @@ trackId: 1703526714
 duration: 222
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2018]
 keywords: [당근, 토마토, 마늘, 솔방울, 햇빛, 나무]
 emotion: 기쁨
 date: 2022-10-07

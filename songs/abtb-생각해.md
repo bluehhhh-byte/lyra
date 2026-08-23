@@ -13,7 +13,7 @@ trackId: 1248174292
 duration: 252
 genre: Hard Rock
 lang: ko
-tags: [한국, Hard Rock]
+tags: [한국, Hard Rock, 2017]
 keywords: [창문, 꽃, 눈, 웃음, 모습]
 emotion: 그리움
 date: 2022-11-07

@@ -13,7 +13,7 @@ trackId: 1615714663
 duration: 317
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2014]
 keywords: [동전, 이력서, 휘파람, 비바람, 주름]
 emotion: 희망
 date: 2022-12-22

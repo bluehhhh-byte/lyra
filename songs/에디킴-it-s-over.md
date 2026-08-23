@@ -13,7 +13,7 @@ trackId: 1788843556
 duration: 279
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2014]
 keywords: [아침, 비, 하늘, 거울, 전화, 눈물]
 emotion: 이별
 date: 2023-02-21

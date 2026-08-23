@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Indie Rock
 lang: ko
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2021]
 keywords: [꽃, 달빛, 혼란, 거짓말, 삶]
 emotion: 사랑
 date: 2022-09-27

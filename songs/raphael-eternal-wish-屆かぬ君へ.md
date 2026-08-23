@@ -13,7 +13,7 @@ trackId: 1108275176
 duration: 321
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2016]
 keywords: [밤하늘, 꿈, 천사, 소원, 얼굴]
 emotion: 그리움
 date: 2023-05-14

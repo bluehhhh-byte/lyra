@@ -13,7 +13,7 @@ trackId: 1778635803
 duration: 178
 genre: Indie Rock
 lang: ko
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2017]
 keywords: [바다, 향기, 기억, 시간, 손]
 emotion: 그리움
 date: 2022-09-20

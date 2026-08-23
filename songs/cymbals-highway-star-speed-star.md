@@ -13,7 +13,7 @@ trackId: 1720674245
 duration: 263
 genre: Indie Pop
 lang: ja
-tags: [일본, Indie Pop]
+tags: [일본, Indie Pop, 2000]
 keywords: [미등, 담배, 별, 밤, 손목시계, 선글라스]
 emotion: 설렘
 date: 2023-01-09

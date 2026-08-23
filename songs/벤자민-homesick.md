@@ -13,7 +13,7 @@ trackId: 1656198557
 duration: 278
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [신발, 발자국, 초침, 걸음마, 물, 길]
 emotion: 고독
 date: 2022-12-06

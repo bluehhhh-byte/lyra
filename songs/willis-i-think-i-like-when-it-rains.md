@@ -13,7 +13,7 @@ trackId: 1739790869
 duration: 278
 genre: Indie Pop
 lang: en
-tags: [영미, Indie Pop]
+tags: [영미, Indie Pop, 2017]
 keywords: [비, 빛, 꿈, 기억, 말]
 emotion: 회상
 date: 2022-10-03

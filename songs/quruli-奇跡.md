@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: J-Rock
 lang: ja
-tags: [일본, J-Rock]
+tags: [일본, J-Rock, 2011]
 keywords: [하늘, 눈물, 단추, 꽃, 한숨]
 emotion: 희망
 date: 2023-01-08

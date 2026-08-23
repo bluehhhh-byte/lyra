@@ -13,7 +13,7 @@ trackId: 588640809
 duration: 425
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2000]
 keywords: [구름, 달빛, 꽃잎, 밤하늘, 새벽, 상처]
 emotion: 사랑
 date: 2022-11-18

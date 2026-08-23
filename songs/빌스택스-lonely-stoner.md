@@ -13,7 +13,7 @@ trackId: 1559672601
 duration: 235
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2020]
 keywords: [비, 음악, 핸드폰, 천장, 영화, 밤]
 emotion: 고독
 date: 2023-02-05

@@ -13,7 +13,7 @@ trackId: 1652529470
 duration: 179
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2022]
 keywords: [손목, 금, 얼음, 보석, 서울]
 emotion: 저항
 date: 2022-11-19

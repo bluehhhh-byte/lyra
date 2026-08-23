@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 2000]
 keywords: [하늘, 구름, 상처, 지면, 눈물]
 emotion: 슬픔
 date: 2022-11-16

@@ -13,7 +13,7 @@ trackId: 910760249
 duration: 250
 genre: Electronic
 lang: ja
-tags: [일본, Electronic]
+tags: [일본, Electronic, 1999]
 keywords: [꿈, 별, 새, 하늘, 노래]
 emotion: 사랑
 date: 2023-05-16

@@ -13,7 +13,7 @@ trackId: 1406659659
 duration: 260
 genre: Dream Pop
 lang: ko
-tags: [한국, Dream Pop]
+tags: [한국, Dream Pop, 2018]
 keywords: [물, 손, 하늘, 파도, 빛]
 emotion: 몽환
 date: 2022-09-22

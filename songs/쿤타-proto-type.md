@@ -11,7 +11,7 @@ trackId:
 duration:
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2021]
 keywords: [계약서, 담배, 무덤, 그림, 목줄]
 emotion: 체념
 date: 2022-10-01

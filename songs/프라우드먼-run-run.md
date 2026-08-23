@@ -13,7 +13,7 @@ trackId: 1661522418
 duration: 168
 genre: Dance
 lang: ko
-tags: [한국, Dance]
+tags: [한국, Dance, 2022]
 keywords: [엔진, 밤, 추억, 집, 베이스]
 emotion: 그리움
 date: 2023-01-28

@@ -13,7 +13,7 @@ trackId: 1811703024
 duration: 195
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2017]
 keywords: [손바닥, 무대, 페스티벌, 땀, 마이크, 신발]
 emotion: 저항
 date: 2023-01-11

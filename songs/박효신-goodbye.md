@@ -13,7 +13,7 @@ trackId: 1698506946
 duration: 288
 genre: Ballad
 lang: ko
-tags: [한국, Ballad]
+tags: [한국, Ballad, 2019]
 keywords: [오후, 여름, 화면, 눈물, 숨바꼭질, 기억]
 emotion: 이별
 date: 2022-12-30

@@ -13,7 +13,7 @@ trackId:
 duration:
 genre: J-Pop
 lang: ja
-tags: [일본, J-Pop]
+tags: [일본, J-Pop, 2004]
 keywords: [손, 별, 하늘, 온기, 마음]
 emotion: 그리움
 date: 2022-10-03

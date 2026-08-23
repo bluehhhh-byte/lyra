@@ -13,7 +13,7 @@ trackId: 1657299116
 duration: 299
 genre: Indie Pop
 lang: ko
-tags: [한국, Indie Pop]
+tags: [한국, Indie Pop, 2018]
 keywords: [달, 밤, 얼굴, 목소리, 수화, 그늘]
 emotion: 그리움
 date: 2023-01-17

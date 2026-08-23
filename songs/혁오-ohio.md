@@ -13,7 +13,7 @@ trackId: 1450779337
 duration: 250
 genre: Indie Rock
 lang: en
-tags: [한국, Indie Rock]
+tags: [한국, Indie Rock, 2014]
 keywords: [파도, 바다, 과거, 빛, 숨결]
 emotion: 회상
 date: 2022-09-30

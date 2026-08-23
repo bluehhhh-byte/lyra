@@ -13,7 +13,7 @@ trackId: 1451821186
 duration: 196
 genre: Indie Pop
 lang: en
-tags: [유럽, Indie Pop]
+tags: [유럽, Indie Pop, 2019]
 keywords: [별, 마음, 이유, 밤]
 emotion: 이별
 date: 2022-12-19

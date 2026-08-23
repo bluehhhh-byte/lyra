@@ -13,7 +13,7 @@ trackId:
 duration:
 genre: Visual Kei
 lang: ja
-tags: [일본, Visual Kei]
+tags: [일본, Visual Kei, 1998]
 keywords: [장미, 풀숲, 바람, 별, 꽃잎]
 emotion: 체념
 date: 2022-11-17

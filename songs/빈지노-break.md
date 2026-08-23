@@ -13,7 +13,7 @@ trackId: 1623970665
 duration: 185
 genre: Hip-Hop
 lang: ko
-tags: [한국, Hip-Hop]
+tags: [한국, Hip-Hop, 2015]
 keywords: [줄자, 기계, 화약, 미꾸라지, 꿈, 일]
 emotion: 저항
 date: 2022-09-27
