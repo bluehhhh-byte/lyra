@@ -1,6 +1,6 @@
 ---
 title: over & over (feat. Zion.T)
-title_ko: 오버 앤 오버
+title_ko: 몇 번이고
 artist: 삐삐밴드
 artist_ko: 
 album: pppb - EP

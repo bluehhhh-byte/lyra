@@ -1,6 +1,6 @@
 ---
 title: Wish
-title_ko: 위시
+title_ko: 소원
 artist: KIRARA
 artist_ko:
 album: Sarah

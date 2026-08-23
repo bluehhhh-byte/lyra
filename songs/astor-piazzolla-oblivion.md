@@ -1,6 +1,6 @@
 ---
 title: Oblivion
-title_ko: perf. HAUSER
+title_ko: 망각
 artist: Astor Piazzolla
 artist_ko:
 album: Piazzolla En Suite

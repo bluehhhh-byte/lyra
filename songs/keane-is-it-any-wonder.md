@@ -1,6 +1,6 @@
 ---
 title: Is It Any Wonder?
-title_ko: 이즈 잇 애니 원더?
+title_ko: 놀랄 일인가
 artist: Keane
 artist_ko: 
 album: Under The Iron Sea

@@ -1,6 +1,6 @@
 ---
 title: Never Gonna Give You Up
-title_ko: 네버 고나 기브 유 업
+title_ko: 널 절대 포기하지 않아
 artist: Rick Astley
 artist_ko:
 album: The Best Of Me: Never Edition

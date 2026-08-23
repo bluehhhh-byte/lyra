@@ -1,6 +1,6 @@
 ---
 title: Wake Up
-title_ko: 웨이크 업
+title_ko: 깨어나
 artist: Mr. Big
 artist_ko:
 album: Actual Size

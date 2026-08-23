@@ -1,6 +1,6 @@
 ---
 title: ZAN
-title_ko: Remake
+title_ko: 참
 artist: DIR EN GREY
 artist_ko:
 album: Vestige of Scratches

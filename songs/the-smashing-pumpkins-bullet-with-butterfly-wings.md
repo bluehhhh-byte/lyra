@@ -1,6 +1,6 @@
 ---
 title: Bullet With Butterfly Wings
-title_ko: 불렛 위드 버터플라이 윙스
+title_ko: 나비 날개를 단 총알
 artist: The Smashing Pumpkins
 artist_ko:
 album: Rotten Apples: Greatest Hits

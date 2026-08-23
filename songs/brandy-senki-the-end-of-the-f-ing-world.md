@@ -1,6 +1,6 @@
 ---
 title: The End of the F***ing World
-title_ko: 디 엔드 오브 더 퍽킹 월드
+title_ko: 이 빌어먹을 세상의 끝
 artist: Brandy Senki
 artist_ko:
 album: The End of the F***ing World

@@ -1,6 +1,6 @@
 ---
 title: Sunsetz
-title_ko: 선셋츠
+title_ko: 노을
 artist: Cigarettes After Sex
 artist_ko:
 album: Cigarettes After Sex

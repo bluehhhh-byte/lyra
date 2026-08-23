@@ -1,6 +1,6 @@
 ---
 title: Spider
-title_ko: 스파이ダー
+title_ko: 거미
 artist: Spitz
 artist_ko:
 album: Cycle Hit 1991-1997 Spitz Complete Single Collection

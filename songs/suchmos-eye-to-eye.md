@@ -1,6 +1,6 @@
 ---
 title: Eye to Eye
-title_ko: 아이 투 아이
+title_ko: 눈을 마주하고
 artist: Suchmos
 artist_ko:
 album: Sunburst - EP

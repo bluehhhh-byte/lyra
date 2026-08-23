@@ -1,6 +1,6 @@
 ---
 title: Loser
-title_ko: 루저
+title_ko: 패배자
 artist: Beck
 artist_ko: 
 album: Mellow Gold

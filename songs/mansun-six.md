@@ -1,6 +1,6 @@
 ---
 title: Six
-title_ko: 식스
+title_ko: 여섯
 artist: Mansun
 artist_ko:
 album: Six

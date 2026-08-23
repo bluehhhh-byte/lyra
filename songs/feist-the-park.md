@@ -1,6 +1,6 @@
 ---
 title: The Park
-title_ko: 더 파크
+title_ko: 공원
 artist: Feist
 artist_ko: 
 album: The Reminder (Deluxe Version)

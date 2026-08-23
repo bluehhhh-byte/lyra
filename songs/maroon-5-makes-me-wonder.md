@@ -1,6 +1,6 @@
 ---
 title: Makes Me Wonder
-title_ko: 메이크스 미 원더
+title_ko: 궁금해지네
 artist: Maroon 5
 artist_ko:
 album: Kids Driving Pac

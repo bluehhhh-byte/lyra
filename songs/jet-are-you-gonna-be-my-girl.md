@@ -1,6 +1,6 @@
 ---
 title: Are You Gonna Be My Girl
-title_ko: 아 유 고나 비 마이 걸
+title_ko: 내 여자가 되어줄래
 artist: Jet
 artist_ko:
 album: Get Born (Deluxe Edition)

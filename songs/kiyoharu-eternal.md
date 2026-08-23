@@ -1,6 +1,6 @@
 ---
 title: ETERNAL
-title_ko: 이터널
+title_ko: 영원
 artist: KIYOHARU
 artist_ko:
 album: ETERNAL

@@ -1,6 +1,6 @@
 ---
 title: Stones
-title_ko: 스톤즈
+title_ko: 돌
 artist: Sonic Youth
 artist_ko:
 album: Sonic Nurse

@@ -1,6 +1,6 @@
 ---
 title: Anna Molly
-title_ko: 앤나 몰리
+title_ko: 애나 몰리
 artist: Incubus
 artist_ko: 
 album: Light Grenades

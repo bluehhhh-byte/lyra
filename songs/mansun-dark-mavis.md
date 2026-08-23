@@ -1,6 +1,6 @@
 ---
 title: Dark Mavis
-title_ko: 다크 메이비스
+title_ko: 어둠의 메이비스
 artist: Mansun
 artist_ko:
 album: Attack of the Grey Lantern

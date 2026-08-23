@@ -1,6 +1,6 @@
 ---
 title: Holy Nights
-title_ko: 홀리 나이츠
+title_ko: 성스러운 밤
 artist: MIYAVI
 artist_ko: 미야비
 album: Holy Nights

@@ -1,6 +1,6 @@
 ---
 title: Free
-title_ko: 프리
+title_ko: 자유
 artist: Rumi, Jinu
 artist_ko:
 album: KPop Demon Hunters (Soundtrack from the Netflix Film / Deluxe Version)

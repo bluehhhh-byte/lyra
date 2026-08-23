@@ -1,6 +1,6 @@
 ---
 title: Waltz
-title_ko: XO
+title_ko: 왈츠
 artist: Elliott Smith
 artist_ko:
 album: Jan Douwe Kroeske Presents: The Best of 2 Meter Sessions 1987–2009

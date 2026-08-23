@@ -1,6 +1,6 @@
 ---
 title: Hangar 18
-title_ko: 행어 18
+title_ko: 18번 격납고
 artist: Megadeth
 artist_ko: 
 album: Rust In Peace

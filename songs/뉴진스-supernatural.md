@@ -1,6 +1,6 @@
 ---
 title: Supernatural
-title_ko: 슈퍼내추럴
+title_ko: 초자연
 artist: 뉴진스
 artist_ko: 
 album: Supernatural - Single

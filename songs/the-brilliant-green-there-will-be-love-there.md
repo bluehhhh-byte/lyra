@@ -1,6 +1,6 @@
 ---
 title: There Will Be Love There
-title_ko: 데어 윌 비 러브 데어
+title_ko: 그곳에 사랑이 있을 거야
 artist: the brilliant green
 artist_ko:
 album: the brilliant green

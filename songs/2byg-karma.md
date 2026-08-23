@@ -1,6 +1,6 @@
 ---
 title: Karma
-title_ko: 카르마
+title_ko: 업보
 artist: 2BYG
 artist_ko:
 album: Karma - Single

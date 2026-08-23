@@ -1,6 +1,6 @@
 ---
 title: Reptilia
-title_ko: 렙틸리아
+title_ko: 파충류
 artist: The Strokes
 artist_ko:
 album: Room On Fire

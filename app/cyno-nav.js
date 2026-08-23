@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllMoviesRuntime } from "../lib/movies";
+import { getAllMoviesMeta } from "../lib/movies";
 import { getWatchedRuntime } from "../lib/watched";
 
 const tabs = [
@@ -8,7 +8,7 @@ const tabs = [
 ];
 
 export default async function CynoNav({ active }) {
-  const [movies, watched] = await Promise.all([getAllMoviesRuntime(), getWatchedRuntime()]);
+  const [movies, watched] = await Promise.all([getAllMoviesMeta(), getWatchedRuntime()]);
   const counts = { movies: movies.length, watched: watched.filter((movie) => movie.rating != null).length };
   return (
     <nav aria-label="Cyno 기록 종류" className="mb-6 flex flex-wrap items-center gap-1.5">

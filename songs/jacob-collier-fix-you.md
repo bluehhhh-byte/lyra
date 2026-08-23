@@ -1,6 +1,6 @@
 ---
 title: Fix You
-title_ko: Coldplay Cover
+title_ko: 널 고쳐줄게
 artist: Jacob Collier
 artist_ko:
 album: Fix You (Live for There With Care) - Single

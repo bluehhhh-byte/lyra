@@ -1,6 +1,6 @@
 ---
 title: Human Factory
-title_ko: 전조인간
+title_ko: 인간 공장
 artist: Perfume
 artist_ko:
 album: Human Factory - Denzo Ningen -

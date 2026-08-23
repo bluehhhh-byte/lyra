@@ -1,6 +1,6 @@
 ---
 title: Blur
-title_ko: 블러
+title_ko: 흐릿함
 artist: KREAM & Marlo Rex
 artist_ko: 
 album: Blur - Single

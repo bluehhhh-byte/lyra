@@ -1,6 +1,6 @@
 ---
 title: Crave
-title_ko: 크레이브
+title_ko: 갈망
 artist: Nuno Bettencourt
 artist_ko:
 album: Schizophonic

@@ -1,6 +1,6 @@
 ---
 title: Tekken ll
-title_ko: 텍켄 II
+title_ko: 철권 II
 artist: Sex Machineguns
 artist_ko:
 album: Made In Japan
