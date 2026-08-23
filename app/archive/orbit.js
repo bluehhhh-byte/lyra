@@ -19,9 +19,13 @@ import { workLabel } from "../../lib/archive-stats";
 // 40개월 중 37개가 ±1.5 안에 있다. 점들이 판 가운데 뭉치는 그림이라, 마크가 크면
 // 서로 겹쳐 어느 달이 어디인지 읽히지 않았다. 척도는 연도 비교를 위해 그대로 두고
 // 마크만 줄인다.
+//
+// 2026-08(2): 판을 더 키우고 점을 더 줄였다. 판이 넓어야 라벨이 놓일 자리가 생기고,
+// 점이 작아야 라벨이 점을 피해 갈 여지가 남는다. 둘은 같은 문제의 양면이다 —
+// 이 그림에서 읽어야 하는 것은 마크의 크기가 아니라 마크가 놓인 자리다.
 const VARIANTS = {
-  mobile: { key: "m", W: 360, H: 420, PAD: 46, fs: 13, axisFs: 12, quadFs: 11, labelW: 34, labelH: 15, rBase: 3, rMax: 3, rK: 0.75, aw: 1.2 },
-  desktop: { key: "d", W: 760, H: 420, PAD: 58, fs: 12, axisFs: 11, quadFs: 11, labelW: 32, labelH: 14, rBase: 2.5, rMax: 3, rK: 0.7, aw: 1.1 },
+  mobile: { key: "m", W: 360, H: 480, PAD: 44, fs: 12, axisFs: 11, quadFs: 10, labelW: 30, labelH: 14, rBase: 2.2, rMax: 2.2, rK: 0.55, aw: 1.1 },
+  desktop: { key: "d", W: 760, H: 560, PAD: 54, fs: 12, axisFs: 11, quadFs: 11, labelW: 30, labelH: 14, rBase: 1.8, rMax: 2.2, rK: 0.5, aw: 1 },
 };
 
 const DOMAIN = [-3, 3];
@@ -32,16 +36,32 @@ const DOMAIN = [-3, 3];
 // 두 채널에 그리면 색이 아무 새 정보도 싣지 않고, "언제"를 알려면 화살표를 눈으로
 // 따라가는 수밖에 없다. 점 열두 개가 얽히면 그게 안 된다.
 //
-// 색을 시간에 내주면 화살표를 따라가지 않아도 궤적이 읽힌다. 연초는 흐릿하고
-// 연말로 갈수록 또렷해진다 — 밝기와 진하기가 함께 오르므로 흑백으로 봐도 순서가 남는다.
-// 색상(hue)은 하나로 고정한다. valence 색(파랑→호박)과 섞이면 두 축을 혼동한다.
-const TIME_HUE = 285;
+// 색을 시간에 내주면 화살표를 따라가지 않아도 궤적이 읽힌다.
+//
+// 처음에는 한 색상 안에서 흐림→또렷함으로 갔는데 이웃한 달끼리 구분이 되지 않았다.
+// 명도로 차이를 벌리는 것도 답이 아니다 — 이 사이트는 다크(#0d0d0f)와
+// 라이트(#fdfdfc)를 모두 쓰므로, 어두운 끝은 다크 배경에서 묻히고 밝은 끝은
+// 라이트 배경에서 묻힌다. 두 배경 모두에서 살아남으려면 명도는 중간 띠에
+// 머물러야 한다.
+//
+// 그래서 명도는 0.62~0.80으로 좁게 두고 색상을 보라(300)에서 연둣빛(95)까지
+// 205도 돌린다. 달이 여덟이면 한 칸에 29도씩 벌어져 이웃한 달도 다른 색으로 읽힌다.
+// 보라 → 파랑 → 청록 → 초록 → 연두 순이라 순서 감각도 남는다.
+const TIME_HUE_FROM = 300;
+const TIME_HUE_TO = 95;
+
 function timeColor(index, total) {
   const t = total > 1 ? index / (total - 1) : 1;
-  const lightness = 0.52 + t * 0.28; // 흐림 → 또렷함
-  const chroma = 0.04 + t * 0.11;
-  return `oklch(${lightness.toFixed(3)} ${chroma.toFixed(3)} ${TIME_HUE})`;
+  const hue = TIME_HUE_FROM - t * (TIME_HUE_FROM - TIME_HUE_TO);
+  // 명도는 살짝만 올린다. 색상만으로 순서가 안 읽히는 사람에게 남는 단서다.
+  const lightness = 0.62 + t * 0.18;
+  const chroma = 0.15;
+  return `oklch(${lightness.toFixed(3)} ${chroma} ${hue.toFixed(0)})`;
 }
+
+// 범례용 — 양 끝만 이으면 중간 색상이 실제와 다르게 보간된다(CSS는 최단 경로로 돈다).
+const timeStops = (total, steps = 6) =>
+  Array.from({ length: steps }, (_, i) => timeColor((i / (steps - 1)) * (total - 1), total));
 
 const mm = (month) => `${Number(month.slice(5))}월`;
 const fmt1 = (n) => (Math.round(n * 10) / 10).toFixed(1);
@@ -116,7 +136,7 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
       viewBox={`0 0 ${W} ${H}`}
       role="img"
       aria-labelledby={`${chartId}-title ${chartId}-desc`}
-      className="h-auto w-full max-w-[760px]"
+      className="h-auto w-full"
     >
       <title id={`${chartId}-title`}>정서 지도 — 월별 밝기와 각성도</title>
       <desc id={`${chartId}-desc`}>
@@ -357,13 +377,13 @@ export function EmotionOrbit({ stats, month, monthHref }) {
             aria-hidden
             className="h-1.5 min-w-0 flex-1 rounded-full"
             style={{
-              background: `linear-gradient(to right, ${timeColor(0, points.length)}, ${timeColor(points.length - 1, points.length)})`,
+              background: `linear-gradient(to right, ${timeStops(points.length).join(", ")})`,
             }}
           />
           <span className="shrink-0">{mm(points.at(-1).month)}</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          점 색은 시간 순서다 — 연초는 흐리고 연말로 갈수록 또렷해진다. 가로 위치가 밝기, 세로가 각성이라
+          점 색은 시간 순서다 — 연초 보라에서 연말 연두로 색이 돈다. 가로 위치가 밝기, 세로가 각성이라
           색까지 밝기에 쓰면 같은 값을 두 번 그리는 셈이라 시간에 내줬다. 모든 해가 같은 −3~+3 척도를 쓴다.
           점 크기는 기록량, 점선 테두리는 감정 기록 3곡 미만, 점선 이동은 빈 달을 건너뛴 구간이다.
         </p>
