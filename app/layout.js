@@ -2,6 +2,7 @@ import "./globals.css";
 import PlayerProvider from "./player";
 import Header from "./header";
 import UsageReporter from "./usage-reporter";
+import { usageMetricsEnabled } from "../lib/usage-metrics-core";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
 
@@ -21,6 +22,10 @@ export const metadata = {
   },
   // iOS ignores the manifest — it needs its own meta tags to install standalone
   appleWebApp: { capable: true, title: "Lyra", statusBarStyle: "black" },
+  // 개인 기록이다. 색인도 링크 추적도 원하지 않는다 — app/robots.js와 한 쌍이고,
+  // next.config.mjs의 X-Robots-Tag 헤더가 같은 말을 한 번 더 한다. 메타 태그는
+  // HTML을 파싱한 봇에게만 닿고, 헤더는 이미지·JSON 응답에도 붙는다.
+  robots: { index: false, follow: false, nocache: true },
 };
 
 // lets the UA theme native widgets too — the player's <audio> controls,
@@ -34,7 +39,8 @@ export default function RootLayout({ children }) {
       <body className="font-sans min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <PlayerProvider>
-        <UsageReporter />
+        {/* 계측은 기본 off — 켜지 않으면 방문자 브라우저가 비콘을 보내지 않는다 */}
+        {usageMetricsEnabled() && <UsageReporter />}
         <Header />
         <main className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">

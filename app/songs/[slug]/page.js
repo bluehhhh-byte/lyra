@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllSongsRuntime, getSongRuntime } from "../../../lib/songs";
+import { getAllSongsMeta, getSongRuntime } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
-import { getAllMoviesRuntime } from "../../../lib/movies";
+import { getAllMoviesMeta } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 import LyricsView from "./lyrics-view";
 import { appleUrl, isExactApple } from "../../../lib/apple";
@@ -67,9 +67,12 @@ function relatedSongs(song, all) {
 
 export default async function SongPage({ params }) {
   const { slug } = await params;
-  const all = await getAllSongsRuntime();
-  const idx = all.findIndex((s) => s.slug === decodeURIComponent(slug));
-  const song = all[idx];
+  // 이 곡은 단건 조회로 가져온다 — 목록(all)은 가사를 뺀 메타라 여기서 꺼내면
+  // stanzas가 비어 가사가 통째로 사라진다. 목록은 연관곡과 개수 세기에만 쓴다.
+  const [song, all] = await Promise.all([
+    getSongRuntime(decodeURIComponent(slug)),
+    getAllSongsMeta(),
+  ]);
   if (!song) notFound();
   const related = relatedSongs(song, all);
   const moments = await getMomentsForTarget("song", song.slug);
@@ -91,7 +94,7 @@ export default async function SongPage({ params }) {
   // Lyra×Syno 교차 — 같은 시대의 큐레이션 영화 (같은 권역 우선)
   const songDecadeNum = song.year ? Math.floor(+song.year / 10) * 10 : null;
   const eraMovies = songDecadeNum
-    ? (await getAllMoviesRuntime())
+    ? (await getAllMoviesMeta())
         .filter((m) => m.year && Math.floor(+m.year / 10) * 10 === songDecadeNum)
         .sort((a, b) => (b.tags.includes(region) ? 1 : 0) - (a.tags.includes(region) ? 1 : 0))
         .slice(0, 3)

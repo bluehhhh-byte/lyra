@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllMoviesRuntime, getMovieRuntime } from "../../../lib/movies";
+import { getAllMoviesMeta, getMovieRuntime } from "../../../lib/movies";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
 import MovieCardButton from "./movie-card";
 import { splitCast } from "../../../lib/people";
 import { tmdbUrl } from "../../../lib/tmdb-link";
 import { kstDay } from "../../../lib/kst";
-import { getAllSongsRuntime } from "../../../lib/songs";
+import { getAllSongsMeta } from "../../../lib/songs";
 import { COUNTRY_TAGS } from "../../../lib/genre";
 import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
@@ -71,8 +71,12 @@ function relatedMovies(movie, all) {
 
 export default async function MoviePage({ params }) {
   const { slug } = await params;
-  const all = await getAllMoviesRuntime();
-  const movie = all.find((m) => m.slug === decodeURIComponent(slug));
+  // 이 영화는 단건 조회로 가져온다 — 목록(all)은 줄거리를 뺀 메타라 여기서 꺼내면
+  // synopsis가 비어 본문이 사라진다. 목록은 연관 영화에만 쓴다.
+  const [movie, all] = await Promise.all([
+    getMovieRuntime(decodeURIComponent(slug)),
+    getAllMoviesMeta(),
+  ]);
   if (!movie) notFound();
   const related = relatedMovies(movie, all);
   const moments = await getMomentsForTarget("movie", movie.slug);
@@ -82,7 +86,7 @@ export default async function MoviePage({ params }) {
   const movieDecade = movie.year ? Math.floor(+movie.year / 10) * 10 : null;
   const movieRegion = movie.tags?.find((t) => COUNTRY_TAGS.includes(t)) || "";
   const eraSongs = movieDecade
-    ? (await getAllSongsRuntime())
+    ? (await getAllSongsMeta())
         .filter((s) => s.year && Math.floor(+s.year / 10) * 10 === movieDecade)
         .sort((a, b) => (b.tags.includes(movieRegion) ? 1 : 0) - (a.tags.includes(movieRegion) ? 1 : 0))
         .slice(0, 4)
