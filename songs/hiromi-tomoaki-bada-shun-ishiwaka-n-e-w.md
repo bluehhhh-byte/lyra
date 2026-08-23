@@ -1,6 +1,6 @@
 ---
 title: N.E.W.
-title_ko: 뉴
+title_ko: 새로움
 artist: Hiromi, Tomoaki Bada, Shun Ishiwaka
 artist_ko:
 album:

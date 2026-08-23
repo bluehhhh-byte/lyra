@@ -1,6 +1,6 @@
 ---
 title: Travelin'
-title_ko: 트래블링
+title_ko: 여행 중
 artist: Miles Caton
 artist_ko:
 album: Sinners (Original Motion Picture Soundtrack)

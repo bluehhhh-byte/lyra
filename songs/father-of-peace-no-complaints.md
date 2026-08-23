@@ -1,6 +1,6 @@
 ---
 title: No Complaints
-title_ko: 노 컴플레인츠
+title_ko: 불만 없어
 artist: Father Of Peace
 artist_ko:
 album: Bluish - Single

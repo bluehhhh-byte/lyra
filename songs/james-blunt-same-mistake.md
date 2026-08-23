@@ -1,6 +1,6 @@
 ---
 title: Same Mistake
-title_ko: 세임 미스테이크
+title_ko: 같은 실수
 artist: James Blunt
 artist_ko:
 album: All the Lost Souls (Deluxe)

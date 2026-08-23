@@ -1,6 +1,6 @@
 ---
 title: PSYCHEDELIC LOVER
-title_ko: 사이키델릭 러버
+title_ko: 환각에 빠진 연인
 artist: PIERROT
 artist_ko:
 album: PSYCHEDELIC LOVER

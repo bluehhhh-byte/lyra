@@ -1,6 +1,6 @@
 ---
 title: Drones
-title_ko: 드론들
+title_ko: 드론
 artist: Muse
 artist_ko:
 album: Drones

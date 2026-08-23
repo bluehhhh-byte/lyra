@@ -1,6 +1,6 @@
 ---
 title: Lost Boys
-title_ko: 로스트 보이스
+title_ko: 잃어버린 소년들
 artist: Phoebe Bridgers
 artist_ko: 피비 브리저스
 album: Lost Weekend

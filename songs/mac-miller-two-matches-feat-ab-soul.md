@@ -1,6 +1,6 @@
 ---
 title: Two Matches (feat. Ab-Soul)
-title_ko: 투 매치스
+title_ko: 성냥 두 개비
 artist: Mac Miller
 artist_ko: 
 album: GO:OD AM

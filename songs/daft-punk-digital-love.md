@@ -1,6 +1,6 @@
 ---
 title: Digital Love
-title_ko: 디지털 러브
+title_ko: 디지털 사랑
 artist: Daft Punk
 artist_ko:
 album: Discovery

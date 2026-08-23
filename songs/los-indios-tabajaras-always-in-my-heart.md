@@ -1,6 +1,6 @@
 ---
 title: Always in My Heart
-title_ko: 올웨이즈 인 마이 하트
+title_ko: 언제나 내 마음에
 artist: Los Indios Tabajaras
 artist_ko: 
 album: Always in My Heart

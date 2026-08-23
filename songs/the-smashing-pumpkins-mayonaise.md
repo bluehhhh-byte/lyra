@@ -1,6 +1,6 @@
 ---
 title: Mayonaise
-title_ko: 메이요네즈
+title_ko: 마요네즈
 artist: The Smashing Pumpkins
 artist_ko: 
 album: Siamese Dream

@@ -1,6 +1,6 @@
 ---
 title: Metamorphose
-title_ko: 메타모르포제
+title_ko: 탈바꿈
 artist: Lareine
 artist_ko: 라레인
 album: Lillie Charlotte within Metamorphose

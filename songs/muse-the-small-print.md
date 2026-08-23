@@ -1,6 +1,6 @@
 ---
 title: The Small Print
-title_ko: 더 스몰 프린트
+title_ko: 깨알 같은 약관
 artist: Muse
 artist_ko:
 album: Absolution

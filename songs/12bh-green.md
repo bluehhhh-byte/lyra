@@ -1,6 +1,6 @@
 ---
 title: Green
-title_ko: 그린
+title_ko: 초록
 artist: 12BH
 artist_ko: 
 album: Green - Single

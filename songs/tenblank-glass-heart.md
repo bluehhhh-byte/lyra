@@ -1,6 +1,6 @@
 ---
 title: Glass Heart
-title_ko: 글래스 하트
+title_ko: 유리 심장
 artist: TENBLANK
 artist_ko:
 album: Glass Heart

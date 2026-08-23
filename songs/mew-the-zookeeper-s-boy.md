@@ -1,6 +1,6 @@
 ---
 title: The Zookeeper's Boy
-title_ko: 더 주키퍼스 보이
+title_ko: 사육사의 아들
 artist: Mew
 artist_ko: 
 album: and the Glass Handed Kites

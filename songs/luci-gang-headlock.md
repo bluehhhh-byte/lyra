@@ -1,6 +1,6 @@
 ---
 title: HEADLOCK
-title_ko: 헤드락
+title_ko: 목조르기
 artist: Luci Gang
 artist_ko: 
 album: Rolling Stone

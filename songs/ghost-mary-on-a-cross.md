@@ -1,6 +1,6 @@
 ---
 title: Mary On A Cross
-title_ko: 메리 온 어 크로스
+title_ko: 십자가 위의 메리
 artist: Ghost
 artist_ko:
 album: Seven Inches of Satanic Panic - Single

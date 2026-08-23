@@ -1,6 +1,6 @@
 ---
 title: Spanish Sahara
-title_ko: 스패니시 사하라
+title_ko: 스페인령 사하라
 artist: Foals
 album: Total Life Forever
 year: 2010

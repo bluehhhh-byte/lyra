@@ -1,6 +1,6 @@
 ---
 title: Twilight Zone
-title_ko: 트와일라잇 존
+title_ko: 황혼 지대
 artist: S.E.S.
 artist_ko:
 album: LOVE - The 3rd Album

@@ -1,6 +1,6 @@
 ---
 title: She’s Electric
-title_ko: 쉬즈 일렉트릭
+title_ko: 그녀는 짜릿해
 artist: Oasis
 artist_ko:
 album: (What's the Story) Morning Glory?

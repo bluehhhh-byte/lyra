@@ -1,6 +1,6 @@
 ---
 title: Free, Hukky Shibaseki - Get It
-title_ko: 겟 잇
+title_ko: 손에 넣어
 artist: B
 artist_ko:
 album: Free Hukky Shibaseki & the God Sun Symphony Group : Odyssey.1

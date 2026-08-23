@@ -1,6 +1,6 @@
 ---
 title: Coma White
-title_ko: 코마 화이트
+title_ko: 하얀 혼수상태
 artist: Marilyn Manson
 artist_ko:
 album: Mechanical Animals

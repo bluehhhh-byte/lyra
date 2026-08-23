@@ -1,6 +1,6 @@
 ---
 title: Crazy Train
-title_ko: 크레이지 트레인
+title_ko: 미친 기차
 artist: Ozzy Osbourne
 artist_ko:
 album: Blizzard of Ozz (40th Anniversary Expanded Edition)

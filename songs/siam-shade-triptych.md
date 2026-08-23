@@ -1,6 +1,6 @@
 ---
 title: Triptych
-title_ko: 트립틱
+title_ko: 삼면화
 artist: Siam Shade
 artist_ko:
 album: Siam Shade XI Complete Best - Heart of Rock

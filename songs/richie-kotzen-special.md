@@ -1,6 +1,6 @@
 ---
 title: special
-title_ko: 스페셜
+title_ko: 특별해
 artist: Richie Kotzen
 artist_ko:
 album: Get Up

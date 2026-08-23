@@ -1,6 +1,6 @@
 ---
 title: Scar Tissue
-title_ko: 스카 티슈
+title_ko: 흉터
 artist: Red Hot Chili Peppers
 artist_ko:
 album: Californication (Remastered)

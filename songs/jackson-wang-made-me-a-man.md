@@ -1,6 +1,6 @@
 ---
 title: Made Me a Man
-title_ko: 메이드 미 어 맨
+title_ko: 날 어른으로 만들었어
 artist: Jackson Wang
 artist_ko:
 album: MAGICMAN 2

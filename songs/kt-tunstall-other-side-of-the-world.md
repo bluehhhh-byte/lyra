@@ -1,6 +1,6 @@
 ---
 title: Other Side Of The World
-title_ko: 아더 사이드 오브 더 월드
+title_ko: 세상의 반대편
 artist: KT Tunstall
 artist_ko:
 album: Eye to the Telescope

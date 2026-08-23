@@ -1,6 +1,6 @@
 ---
 title: Pork and Beans
-title_ko: 포크 앤 빈스
+title_ko: 돼지고기와 콩
 artist: Weezer
 artist_ko: 
 album: Weezer (Red Album) [Deluxe Edition]

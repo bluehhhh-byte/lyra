@@ -1,6 +1,6 @@
 ---
 title: Lie To Me
-title_ko: 라이 투 미
+title_ko: 내게 거짓말해줘
 artist: Bon Jovi
 artist_ko:
 album: These Days

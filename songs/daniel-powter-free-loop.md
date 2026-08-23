@@ -1,6 +1,6 @@
 ---
 title: Free Loop
-title_ko: 프리 루프
+title_ko: 끝없는 굴레
 artist: Daniel Powter
 artist_ko:
 album: Daniel Powter

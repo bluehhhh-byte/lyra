@@ -1,6 +1,6 @@
 ---
 title: Last Return
-title_ko: 라스트 리턴
+title_ko: 마지막 귀환
 artist: The Dead Science
 artist_ko: 
 album: Frost Giant

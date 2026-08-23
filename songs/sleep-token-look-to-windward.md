@@ -1,6 +1,6 @@
 ---
 title: Look To Windward
-title_ko: 룩 투 윈드워드
+title_ko: 바람이 불어오는 쪽으로
 artist: Sleep Token
 artist_ko:
 album: Even In Arcadia

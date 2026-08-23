@@ -1,6 +1,6 @@
 ---
 title: Life For Rent
-title_ko: 라이프 포 렌트
+title_ko: 세 놓은 인생
 artist: Dido
 artist_ko:
 album: Life for Rent
