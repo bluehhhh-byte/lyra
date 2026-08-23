@@ -136,9 +136,9 @@ export default async function ArchivePage({ searchParams }) {
 
       {!theme && (
         <section className="mb-10 min-w-0" aria-labelledby="orbit-heading">
-          <h2 id="orbit-heading" className="text-lg font-bold">{year}년의 감정 궤도</h2>
+          <h2 id="orbit-heading" className="text-lg font-bold">{year}년의 정서 지도</h2>
           <p className="mb-4 mt-1 text-xs text-muted">
-            각 점은 그 달 음악 기록의 감정 좌표다. 점을 고르면 그 달로 이동한다.
+            가로는 밝기, 세로는 각성도다. 월을 고르면 그달 기록으로 이동한다.
           </p>
           {/* 감정 구성은 이름·막대·수치가 한 행인 목록이라 좁은 칸이면 충분하다.
               궤도 그래프에 남는 폭을 주는 편이 점과 라벨을 읽기 쉽다 */}
