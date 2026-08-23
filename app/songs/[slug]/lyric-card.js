@@ -474,25 +474,25 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4 opacity-100 transition-opacity duration-200 ease-out starting:opacity-0 motion-reduce:transition-none"
+      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-2 opacity-100 transition-opacity duration-200 ease-out sm:p-4 starting:opacity-0 motion-reduce:transition-none"
       role="dialog"
       aria-label="캐러셀 만들기"
     >
       {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[94vh] w-full max-w-5xl scale-100 overflow-y-auto overscroll-contain rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong sm:p-6 starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
+        className="flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full min-w-0 max-w-[calc(100vw-1rem)] scale-100 flex-col overflow-hidden rounded-2xl border border-line bg-bg p-3 opacity-100 transition duration-200 ease-out-strong sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:max-w-5xl sm:p-6 starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
-        <div className="mb-4 flex items-center justify-between gap-4">
-          <div>
+        <div className="mb-3 flex shrink-0 items-center justify-between gap-3 sm:mb-4 sm:gap-4">
+          <div className="min-w-0">
             <p className="text-sm font-semibold text-ink">인스타그램 캐러셀 {CAROUSEL_SLIDES}장</p>
             <p className="mt-0.5 text-xs text-muted">커버 · 곡 설명 · 가사 3장</p>
           </div>
           <button onClick={onClose} aria-label="캐러셀 닫기" className="rounded-full border border-line px-3 py-1.5 text-xs text-muted hover:text-accent">닫기</button>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)]">
-          <section aria-label="카드 미리보기">
+        <div className="grid min-h-0 min-w-0 flex-1 gap-4 overflow-y-auto overscroll-contain pr-1 sm:gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)]">
+          <section aria-label="카드 미리보기" className="min-w-0">
             {carousel.error ? (
               <p className="rounded-xl border border-line px-3 py-12 text-center text-sm text-muted">{carousel.error}</p>
             ) : cards.length ? (
@@ -501,17 +501,17 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                   src={cards[activeCard]?.url}
                   alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`}
                   draggable={false}
-                  className="mx-auto max-h-[62vh] w-auto max-w-full select-none rounded-xl border border-line shadow-2xl"
+                  className="mx-auto max-h-[42dvh] w-auto max-w-full select-none rounded-xl border border-line shadow-2xl sm:max-h-[56dvh] lg:max-h-[62vh]"
                 />
-                <ol className="mt-3 grid grid-cols-5 gap-2">
+                <ol className="mt-2 grid min-w-0 grid-cols-5 gap-1.5 sm:mt-3 sm:gap-2">
                   {cards.map((card, index) => (
-                    <li key={`${card.role}-${index}`}>
+                    <li key={`${card.role}-${index}`} className="min-w-0">
                       <button
                         type="button"
                         onClick={() => setActiveCard(index)}
                         aria-label={`${index + 1}번째 카드 보기 — ${card.label}`}
                         aria-pressed={activeCard === index}
-                        className={`w-full rounded-lg border p-1 transition ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65 hover:opacity-100"}`}
+                        className={`w-full min-w-0 rounded-lg border p-1 transition ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65 hover:opacity-100"}`}
                       >
                         <img src={card.url} alt="" draggable={false} className="aspect-[4/5] w-full rounded object-cover" />
                         <span className="mt-1 block truncate text-[10px] text-muted">{index + 1}. {card.label}</span>
@@ -521,11 +521,11 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 </ol>
               </>
             ) : (
-              <div className="flex aspect-[4/5] max-h-[62vh] items-center justify-center rounded-xl border border-line text-sm text-muted">카드 생성 중…</div>
+              <div className="flex h-[42dvh] max-h-[420px] items-center justify-center rounded-xl border border-line text-sm text-muted sm:h-auto sm:aspect-[4/5] sm:max-h-[56dvh] lg:max-h-[62vh]">카드 생성 중…</div>
             )}
           </section>
 
-          <section aria-label="가사와 내보내기 설정">
+          <section aria-label="가사와 내보내기 설정" className="min-w-0">
             <div className="mb-2 flex items-center justify-between gap-3">
               <p className="text-sm font-medium text-ink">
                 가사 {sel.size}/{MAX_SELECTED_LINES}줄
