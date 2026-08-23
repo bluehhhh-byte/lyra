@@ -40,13 +40,26 @@ try {
   Write-Host "READY: $site"
   Write-Host "Deployment: $($version.deploymentId)"
 } finally {
-  & git -C $repo worktree remove $deployDir --force 2>$null
-  & git -C $repo worktree prune 2>$null
+  # Windows may keep a freshly built file open for a moment. Cleanup must not
+  # turn an already verified production deployment into a failed command.
+  try { & git -C $repo worktree remove $deployDir --force 2>$null } catch {}
+  try { & git -C $repo worktree prune 2>$null } catch {}
   if (Test-Path -LiteralPath $deployDir) {
     $resolved = (Resolve-Path -LiteralPath $deployDir).Path
     if (-not $resolved.StartsWith($tempRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
       throw "Refusing to remove an unexpected path: $resolved"
     }
-    Remove-Item -LiteralPath $resolved -Recurse -Force
+    $removed = $false
+    for ($attempt = 0; $attempt -lt 5 -and -not $removed; $attempt++) {
+      try {
+        Remove-Item -LiteralPath $resolved -Recurse -Force
+        $removed = -not (Test-Path -LiteralPath $resolved)
+      } catch {
+        Start-Sleep -Milliseconds 500
+      }
+    }
+    if (-not $removed) {
+      Write-Warning "Deployment succeeded, but the temporary folder could not be removed: $resolved"
+    }
   }
 }
