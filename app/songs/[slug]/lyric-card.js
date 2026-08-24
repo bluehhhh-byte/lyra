@@ -110,7 +110,15 @@ export function fitFontSize(ctx, text, maxWidth, sizes, font) {
   return sizes.at(-1);
 }
 
-export function drawBilingualTitleLine(ctx, { line, translatedTitle, x, y, baseSize, font }) {
+export function drawBilingualTitleLine(ctx, {
+  line,
+  translatedTitle,
+  x,
+  y,
+  baseSize,
+  font,
+  translatedPointOffset = TRANSLATED_TITLE_POINT_OFFSET,
+}) {
   const translated = String(translatedTitle || "").trim().replace(/^\((.*)\)$/, "$1").trim();
   const suffix = translated ? `(${translated})` : "";
   if (!suffix || !line.endsWith(suffix)) {
@@ -123,9 +131,8 @@ export function drawBilingualTitleLine(ctx, { line, translatedTitle, x, y, baseS
   ctx.font = font(baseSize);
   if (original) ctx.fillText(original, x, y);
   const offset = original ? ctx.measureText(`${original} `).width : 0;
-  // Keep the original title size unchanged and render only the parenthesized
-  // Korean translation ten points smaller (1pt = 96 / 72 CSS pixels).
-  const translatedSize = Math.max(10, baseSize - (TRANSLATED_TITLE_POINT_OFFSET * 96) / 72);
+  // 표지는 번역을 작게, 곡 설명은 원문과 같은 크기로 쓸 수 있게 카드별 간격을 받는다.
+  const translatedSize = Math.max(10, baseSize - (translatedPointOffset * 96) / 72);
   ctx.font = font(translatedSize);
   ctx.fillText(suffix, x + offset, y);
 }
@@ -269,23 +276,23 @@ async function drawCoverCard({ song, art }) {
   ctx.fillStyle = "#0d0d0f";
   ctx.fillRect(0, 0, W, H);
 
-  // 커버는 카드 폭 전체를 정사각으로 차지한다 — 위쪽 1080×1080
+  // 텍스트 블록에 충분한 숨 쉴 공간을 남기면서 커버의 존재감은 유지한다.
+  const coverArtHeight = 1000;
   if (art) {
-    const side = Math.min(art.width, art.height); // 정사각 크롭 (2:3 포스터가 눌리지 않게)
-    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, 0, 0, W, W);
+    drawImageCover(ctx, art, 0, 0, W, coverArtHeight);
   } else {
     ctx.fillStyle = "#1a1a1e";
-    ctx.fillRect(0, 0, W, W);
+    ctx.fillRect(0, 0, W, coverArtHeight);
   }
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다
-  const fade = ctx.createLinearGradient(0, W - 120, 0, W);
+  const fade = ctx.createLinearGradient(0, coverArtHeight - 120, 0, coverArtHeight);
   fade.addColorStop(0, "rgba(13,13,15,0)");
   fade.addColorStop(1, "rgba(13,13,15,1)");
   ctx.fillStyle = fade;
-  ctx.fillRect(0, W - 120, W, 120);
+  ctx.fillRect(0, coverArtHeight - 120, W, 120);
   ctx.fillStyle = "#0d0d0f";
-  ctx.fillRect(0, W, W, H - W);
+  ctx.fillRect(0, coverArtHeight, W, H - coverArtHeight);
 
   const ink = INK;
   const inkDim = INK_DIM;
@@ -307,7 +314,7 @@ async function drawCoverCard({ song, art }) {
     titleMaxWidth,
     2,
   );
-  const titleTop = W + 22;
+  const titleTop = coverArtHeight + 24;
   ctx.font = `600 ${titleLayout.fontSize}px ${SERIF}`;
   titleLayout.lines.forEach((line, index) => {
     drawBilingualTitleLine(ctx, {
@@ -321,7 +328,7 @@ async function drawCoverCard({ song, art }) {
   });
 
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
-  let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 34;
+  let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 54;
   const artistSize = fitFontSize(
     ctx,
     artistLine,
@@ -333,7 +340,7 @@ async function drawCoverCard({ song, art }) {
     ctx.fillStyle = inkDim;
     ctx.font = `500 ${artistSize}px ${SANS}`;
     ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
-    detailY += artistSize + 9;
+    detailY += artistSize + 14;
     if (meta && detailY <= H - 88) {
       ctx.fillStyle = "rgba(244,244,246,0.4)";
       ctx.font = `500 23px ${SANS}`;
@@ -440,6 +447,7 @@ async function drawAboutCard({ song, note, art, position, total }) {
     y: H - 145,
     baseSize: displaySize,
     font: (size) => `700 ${size}px ${SANS}`,
+    translatedPointOffset: 0,
   });
   const artistSize = fitFontSize(
     ctx,
