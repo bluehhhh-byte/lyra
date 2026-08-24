@@ -3,7 +3,7 @@ import { getAllMoviesRuntime } from "../../../lib/movies";
 import { carouselMovie } from "../../../lib/movie-carousel";
 import CarouselStudio from "./carousel-studio";
 
-export const metadata = { title: "Cyno 캐러셀 제작실 | Lyra" };
+export const metadata = { title: "Cyno 캐러셀 제작실 | Cyno" };
 export const dynamic = "force-dynamic";
 
 export default async function CynoCarouselAdminPage() {
@@ -12,7 +12,7 @@ export default async function CynoCarouselAdminPage() {
     <>
       <div className="mb-8 flex flex-wrap items-center gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Admin studio</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Cyno admin</p>
           <h1 className="mt-1 text-2xl font-bold">Cyno 캐러셀 제작실</h1>
         </div>
         <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent sm:ml-auto">

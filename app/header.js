@@ -43,7 +43,9 @@ export default function Header() {
     (pathname?.startsWith("/recommendations") && !pathname?.startsWith("/recommendations/music")) ||
     pathname?.startsWith("/watched") ||
     pathname?.startsWith("/people") ||
-    pathname?.startsWith("/admin/movie");
+    pathname?.startsWith("/admin/movie") ||
+    pathname?.startsWith("/admin/cyno-carousel") ||
+    pathname?.startsWith("/admin/moments");
 
   useEffect(() => {
     setMenuOpen(false);
@@ -94,7 +96,7 @@ export default function Header() {
           </button>
           <ThemeToggle />
           <Link
-            href="/admin"
+            href={inMovies ? "/admin/movie" : "/admin"}
             aria-label="관리자"
             title="관리자"
             className="flex h-8 w-8 items-center justify-center rounded-md hover:bg-surface hover:text-accent"
