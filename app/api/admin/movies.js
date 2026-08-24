@@ -6,8 +6,20 @@ import { movieMetaGen } from "../../../lib/admin/movie-meta";
 import { FM, fmValue, setField, parseTags } from "../../../lib/admin/frontmatter";
 import { kstToday } from "../../../lib/kst";
 import { parseThemes } from "../../../lib/themes";
+import { getAllMoviesRuntime } from "../../../lib/movies";
+import { getWatchedRuntime } from "../../../lib/watched";
+import { buildConceptCarousel } from "../../../lib/movie-carousel";
 
 export async function handleMovies(action, body) {
+  if (action === "movieCarouselCuration") {
+    const concept = String(body.concept || "").trim();
+    if (!concept) return Response.json({ error: "키워드나 콘셉트를 입력해 주세요" }, { status: 422 });
+    const [watched, reviews] = await Promise.all([getWatchedRuntime(), getAllMoviesRuntime()]);
+    const carousel = buildConceptCarousel(concept, watched, reviews);
+    if (!carousel.selectedCount) return Response.json({ error: "이 주제와 연결되는 영화를 찾지 못했습니다" }, { status: 404 });
+    return Response.json({ carousel });
+  }
+
   if (action === "movieSearch") {
     return Response.json({ results: await searchMovies(body.query) });
   }

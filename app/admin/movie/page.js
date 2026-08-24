@@ -22,6 +22,9 @@ export default async function MovieAdminPage() {
         <Link href="/admin/moments" className="text-sm text-muted transition hover:text-accent">
           → 장면 관리로
         </Link>
+        <Link href="/admin/cyno-carousel" className="text-sm font-semibold text-accent transition hover:underline">
+          → Cyno 캐러셀 제작실
+        </Link>
         <div className="sm:ml-auto">
           <DeployControl contentInDatabase={contentInDatabase} />
         </div>
