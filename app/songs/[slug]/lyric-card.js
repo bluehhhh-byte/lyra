@@ -7,7 +7,11 @@ import {
   CAROUSEL_SLIDES,
   MAX_SELECTED_LINES,
 } from "../../../lib/carousel";
-import { layoutCarouselTitle } from "../../../lib/carousel-title";
+import {
+  carouselTitleParts,
+  layoutCarouselQualifier,
+  layoutCarouselTitle,
+} from "../../../lib/carousel-title";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal builds an Instagram carousel:
@@ -172,7 +176,7 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
   // what the tiers can't (wrapped lines, dense pairs) — the fixed +14 line
   // paddings don't scale linearly with the font, so one pass can land short.
   const pairs = lines.slice(0, MAX_PAIRS);
-  const tiers = [[3, 54, 38], [6, 46, 34], [9, 40, 30]];
+  const tiers = [[3, 54, 38], [4, 48, 34], [5, 42, 30]];
   let [, oSize, tSize] = tiers.find(([n]) => pairs.length <= n) || tiers.at(-1);
   const maxW = W - PAD * 2;
   const build = () => {
@@ -194,10 +198,10 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
   const top = 250;
   const budget = H - 360;
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
-  for (let guard = 4; totalH > budget && guard > 0; guard--) {
+  for (let guard = 6; totalH > budget && guard > 0; guard--) {
     const f = budget / totalH;
-    oSize = Math.max(34, Math.round(oSize * f));
-    tSize = Math.max(27, Math.round(tSize * f));
+    oSize = Math.max(30, Math.round(oSize * f));
+    tSize = Math.max(24, Math.round(tSize * f));
     blocks = build();
     totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   }
@@ -256,18 +260,20 @@ async function drawCoverCard({ song, art }) {
   const ink = INK;
   const inkDim = INK_DIM;
   const pad = 96;
-  // 곡 제목 — 먼저 줄을 늘리고, 그다음 글자를 줄인다. feat./부제가 든 괄호는
-  // 가능한 한 통째로 다음 줄에 내려 제목 끝이 캔버스 밖에서 잘리지 않게 한다.
+  // 곡 제목 — 본제는 크게, 긴 feat. 크레딧은 작은 보조 줄로 분리한다. 데이터에
+  // `아티스트 - 제목`이 들어와도 중복 아티스트를 제거해 커버 영역을 지킨다.
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
   const titleMaxWidth = W - pad * 2;
+  const titleParts = carouselTitleParts(song.title, song.artist);
   const titleLayout = layoutCarouselTitle(
-    song.title,
+    titleParts.main,
     (line, size) => {
       ctx.font = `600 ${size}px ${SERIF}`;
       return ctx.measureText(line).width;
     },
     titleMaxWidth,
+    2,
   );
   const titleTop = W + 22;
   ctx.font = `600 ${titleLayout.fontSize}px ${SERIF}`;
@@ -277,7 +283,23 @@ async function drawCoverCard({ song, art }) {
 
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
   let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 34;
-  if (titleLayout.lines.length === 1) {
+  if (titleParts.qualifier) {
+    const qualifierLayout = layoutCarouselQualifier(
+      titleParts.qualifier,
+      (line, size) => {
+        ctx.font = `500 ${size}px ${SANS}`;
+        return ctx.measureText(line).width;
+      },
+      titleMaxWidth,
+    );
+    ctx.fillStyle = "rgba(247,247,248,0.68)";
+    ctx.font = `500 ${qualifierLayout.fontSize}px ${SANS}`;
+    qualifierLayout.lines.forEach((line, index) => {
+      ctx.fillText(line, pad, detailY + index * qualifierLayout.lineHeight);
+    });
+    detailY += qualifierLayout.lines.length * qualifierLayout.lineHeight + 4;
+  }
+  if (titleLayout.lines.length === 1 && !titleParts.qualifier) {
     if (song.title_ko && song.title_ko !== song.title) {
       ctx.fillStyle = "rgba(247,247,248,0.66)";
       ctx.font = `500 27px ${SANS}`;
@@ -293,11 +315,11 @@ async function drawCoverCard({ song, art }) {
       ctx.font = `500 23px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
-  } else {
+  } else if (detailY <= H - 82) {
     const details = [song.artist, meta].filter(Boolean).join(" · ");
     ctx.fillStyle = inkDim;
-    ctx.font = `500 25px ${SANS}`;
-    ctx.fillText(fitText(ctx, details, titleMaxWidth), pad, Math.min(detailY, H - 88));
+    ctx.font = `500 23px ${SANS}`;
+    ctx.fillText(fitText(ctx, details, titleMaxWidth), pad, detailY);
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
@@ -416,7 +438,7 @@ async function downloadAll(blobs, song) {
 // selection with the stanza that was clicked.
 export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [align, setAlign] = useState("left");
-  // 실을 줄 — 누른 연에서 시작해 아홉 줄이 기본이다(세 장 × 세 줄).
+  // 실을 줄 — 누른 연에서 시작해 열다섯 줄이 기본이다(세 장 × 다섯 줄).
   // 체크박스로 자유롭게 바꾼다. 나누는 것은 기계가 한다.
   const [sel, setSel] = useState(() => new Set(autoSelect(allLines, initial?.[0] ?? 0)));
   const [cards, setCards] = useState([]); // [{ role, label, url }]
@@ -561,7 +583,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 ))}
               </div>
             </div>
-          <p className="mb-2 text-xs leading-relaxed text-muted">작은 화면에서도 읽히도록 최대 9줄까지만 선택할 수 있습니다.</p>
+          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 15줄까지 선택할 수 있습니다.</p>
           <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain rounded-xl border border-line p-2 lg:max-h-[44vh]">
           {allLines.map((l, i) => (
             <li key={i}>
