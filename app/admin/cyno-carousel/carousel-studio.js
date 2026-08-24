@@ -148,7 +148,7 @@ async function drawSingle(slide, images, position, carousel) {
     ctx.font = `600 34px ${SERIF}`;
     ctx.fillText("Cyno.", PAD, H - 74);
   } else if (slide.role === "basic") {
-    header(ctx, "BASIC NOTE · 기본 설명", position);
+    header(ctx, "FILM AT A GLANCE · 작품 개요", position);
     drawPoster(ctx, movie, images, PAD, 205, 330, 495, 22);
     const facts = [
       ["DIRECTOR", movie.director],
@@ -170,7 +170,7 @@ async function drawSingle(slide, images, position, carousel) {
     ctx.beginPath(); ctx.roundRect(PAD, 770, W - PAD * 2, 420, 26); ctx.fill();
     drawFittedParagraph(ctx, slide.text, PAD + 44, 840, W - PAD * 2 - 88, 300, 45, 30);
   } else if (slide.role === "synopsis") {
-    header(ctx, "STORY · 줄거리", position);
+    header(ctx, "STORY · 줄거리 요약", position);
     ctx.fillStyle = "rgba(13,13,15,0.84)";
     ctx.beginPath(); ctx.roundRect(PAD, 205, W - PAD * 2, 990, 30); ctx.fill();
     ctx.fillStyle = ACCENT;
@@ -179,7 +179,7 @@ async function drawSingle(slide, images, position, carousel) {
     drawFittedParagraph(ctx, slide.text, PAD + 48, 370, W - PAD * 2 - 96, 735, 50, 30);
   } else {
     const isViewing = slide.role === "viewing-points";
-    header(ctx, isViewing ? "VIEWING POINTS · 감상 포인트" : "KEY MOMENTS · 주요 내용", position);
+    header(ctx, isViewing ? "VIEWING POINTS · 감상 포인트" : "KEY THEMES · 핵심 내용", position);
     ctx.fillStyle = INK;
     ctx.font = `800 54px ${SANS}`;
     ctx.fillText(isViewing ? "이 영화를 볼 때" : "이야기의 중심", PAD, 245);
@@ -327,6 +327,7 @@ async function adminApi(action, body) {
 }
 
 const inputClass = "w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-base outline-none transition focus:border-accent sm:text-sm";
+const enhancedCopyCache = new Map();
 
 export default function CarouselStudio({ movies }) {
   const [mode, setMode] = useState("single");
@@ -334,7 +335,9 @@ export default function CarouselStudio({ movies }) {
   const [selectedId, setSelectedId] = useState(movies[0]?.id || "");
   const selectedMovie = movies.find((movie) => movie.id === selectedId) || movies[0] || null;
   const [draft, setDraft] = useState(() => selectedMovie ? buildSingleMovieDraft(selectedMovie) : null);
-  const [movieDetailBusy, setMovieDetailBusy] = useState(false);
+  const [copyBusy, setCopyBusy] = useState(false);
+  const [copyState, setCopyState] = useState("local");
+  const [copyNotice, setCopyNotice] = useState("");
   const [concept, setConcept] = useState("");
   const [conceptCarousel, setConceptCarousel] = useState(null);
   const [conceptBusy, setConceptBusy] = useState(false);
@@ -343,6 +346,7 @@ export default function CarouselStudio({ movies }) {
   const [building, setBuilding] = useState(false);
   const [message, setMessage] = useState("");
   const blobs = useRef([]);
+  const copyRequest = useRef(0);
 
   const singleCarousel = useMemo(
     () => selectedMovie && draft ? buildSingleMovieCarousel(selectedMovie, draft) : null,
@@ -388,18 +392,38 @@ export default function CarouselStudio({ movies }) {
 
   useEffect(() => {
     if (!selectedMovie) return;
+    const requestId = ++copyRequest.current;
     let alive = true;
-    setMovieDetailBusy(false);
     setDraft(buildSingleMovieDraft(selectedMovie));
-    if (selectedMovie.bodyKind !== "review" || !selectedMovie.tmdbId) return () => { alive = false; };
-    setMovieDetailBusy(true);
-    adminApi("movieDetail", { tmdbId: selectedMovie.tmdbId, mediaType: selectedMovie.media })
-      .then((detail) => {
-        if (!alive || !detail.overview) return;
-        setDraft(buildSingleMovieDraft({ ...selectedMovie, synopsis: [detail.overview] }));
+    const cached = enhancedCopyCache.get(selectedMovie.slug);
+    if (cached) {
+      setDraft((current) => ({ ...current, ...cached }));
+      setCopyBusy(false);
+      setCopyState("enhanced");
+      setCopyNotice("");
+      return () => { alive = false; };
+    }
+    setCopyBusy(true);
+    setCopyState("loading");
+    setCopyNotice("");
+    adminApi("movieCarouselCopy", { slug: selectedMovie.slug })
+      .then(({ draft: enhancedDraft, enhanced, warning }) => {
+        if (!alive || requestId !== copyRequest.current) return;
+        if (enhanced) {
+          enhancedCopyCache.set(selectedMovie.slug, enhancedDraft);
+          setDraft((current) => ({ ...current, ...enhancedDraft }));
+        }
+        setCopyState(enhanced ? "enhanced" : "fallback");
+        setCopyNotice(warning || "");
       })
-      .catch(() => {})
-      .finally(() => { if (alive) setMovieDetailBusy(false); });
+      .catch((error) => {
+        if (!alive || requestId !== copyRequest.current) return;
+        setCopyState("fallback");
+        setCopyNotice(`AI 문구를 불러오지 못해 수정 가능한 기본 초안을 유지합니다. ${error.message}`);
+      })
+      .finally(() => {
+        if (alive && requestId === copyRequest.current) setCopyBusy(false);
+      });
     return () => { alive = false; };
   }, [selectedMovie]);
 
@@ -409,6 +433,32 @@ export default function CarouselStudio({ movies }) {
   };
 
   const updateDraft = (field, value) => setDraft((current) => ({ ...current, [field]: value }));
+  const regenerateCopy = async () => {
+    if (!selectedMovie || copyBusy) return;
+    const requestId = ++copyRequest.current;
+    setCopyBusy(true);
+    setCopyState("loading");
+    setCopyNotice("");
+    try {
+      const { draft: enhancedDraft, enhanced, warning } = await adminApi("movieCarouselCopy", { slug: selectedMovie.slug });
+      if (requestId !== copyRequest.current) return;
+      if (enhanced) {
+        enhancedCopyCache.set(selectedMovie.slug, enhancedDraft);
+        setDraft((current) => ({ ...current, ...enhancedDraft }));
+        setCopyState("enhanced");
+      } else {
+        // 재생성 실패가 사용자가 직접 고친 문구를 덮어쓰면 안 된다.
+        setCopyState("fallback");
+        setCopyNotice(warning || "AI 생성에 실패해 현재 편집 문구를 유지합니다.");
+      }
+    } catch (error) {
+      if (requestId !== copyRequest.current) return;
+      setCopyState("fallback");
+      setCopyNotice(`AI 생성에 실패해 현재 편집 문구를 유지합니다. ${error.message}`);
+    } finally {
+      if (requestId === copyRequest.current) setCopyBusy(false);
+    }
+  };
   const buildConcept = async () => {
     setConceptBusy(true);
     setMessage("");
@@ -458,12 +508,26 @@ export default function CarouselStudio({ movies }) {
               {draft && (
                 <div className="space-y-4">
                   <h2 className="text-sm font-semibold">2. 자동 작성 문구 검수</h2>
-                  {movieDetailBusy && <p className="text-xs text-accent">감상문 기록이라 TMDB 줄거리를 불러오는 중…</p>}
+                  <div className={`rounded-xl border px-3 py-3 text-xs leading-relaxed ${copyState === "enhanced" ? "border-accent/40 bg-accent/10" : "border-line bg-surface"}`} aria-live="polite">
+                    <p className="font-semibold text-ink">
+                      {copyBusy ? "작품별 문구를 깊게 작성하는 중…" : copyState === "enhanced" ? "작품별 AI 문구 고도화 완료" : "수정 가능한 기본 초안 사용 중"}
+                    </p>
+                    <p className="mt-1 text-muted">
+                      {copyBusy
+                        ? "줄거리·개인 감상·감독·배우·장르·주제를 함께 읽고 있습니다."
+                        : copyState === "enhanced"
+                          ? "구체적인 서사·갈등·감상 근거를 반영했습니다. 아래에서 자유롭게 수정할 수 있습니다."
+                          : copyNotice || "AI를 사용할 수 없을 때도 저장된 기록으로 만든 초안을 편집할 수 있습니다."}
+                    </p>
+                    <button type="button" onClick={regenerateCopy} disabled={copyBusy} className="mt-2 rounded-lg border border-accent/40 px-3 py-1.5 font-semibold text-accent transition hover:bg-accent/10 disabled:opacity-40">
+                      {copyBusy ? "고도화 중…" : "AI 문구 다시 생성"}
+                    </button>
+                  </div>
                   <Editor label="표지 제목" value={draft.headline} onChange={(value) => updateDraft("headline", value)} rows={1} />
-                  <Editor label="기본 설명" value={draft.basicDescription} onChange={(value) => updateDraft("basicDescription", value)} />
-                  <Editor label="줄거리" value={draft.synopsis} onChange={(value) => updateDraft("synopsis", value)} rows={6} />
-                  <Editor label="주요 내용 · 한 줄에 하나" value={draft.keyPoints.join("\n")} onChange={(value) => updateDraft("keyPoints", value.split("\n"))} rows={4} />
-                  <Editor label="감상 포인트 · 한 줄에 하나" value={draft.viewingPoints.join("\n")} onChange={(value) => updateDraft("viewingPoints", value.split("\n"))} rows={4} />
+                  <Editor label="작품 개요" value={draft.basicDescription} onChange={(value) => updateDraft("basicDescription", value)} rows={4} />
+                  <Editor label="줄거리 요약 · 결말 제외" value={draft.synopsis} onChange={(value) => updateDraft("synopsis", value)} rows={7} />
+                  <Editor label="핵심 내용 · 서사 구조 / 갈등 / 주제" value={draft.keyPoints.join("\n")} onChange={(value) => updateDraft("keyPoints", value.split("\n"))} rows={6} />
+                  <Editor label="감상 포인트 · 연출 / 인물 표현 / 공간과 리듬" value={draft.viewingPoints.join("\n")} onChange={(value) => updateDraft("viewingPoints", value.split("\n"))} rows={6} />
                   <Editor label="마지막 장 작품 노트" value={draft.closingNote} onChange={(value) => updateDraft("closingNote", value)} rows={4} />
                 </div>
               )}
@@ -541,7 +605,7 @@ function Editor({ label, value, onChange, rows = 3 }) {
   return (
     <label className="block">
       <span className="mb-1.5 block text-xs font-semibold text-muted">{label}</span>
-      <textarea className={inputClass} rows={rows} value={value} onChange={(event) => onChange(event.target.value)} />
+      <textarea aria-label={label} className={inputClass} rows={rows} value={value} onChange={(event) => onChange(event.target.value)} />
     </label>
   );
 }
