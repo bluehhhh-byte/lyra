@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
-import { buildSingleMovieCarousel, buildSingleMovieDraft } from "../../../lib/movie-carousel";
+import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords } from "../../../lib/movie-carousel";
 import {
   drawArtWash,
   drawImageCover,
@@ -135,18 +135,39 @@ async function drawSingle(slide, images, position, carousel) {
     fade.addColorStop(1, BG);
     ctx.fillStyle = fade;
     ctx.fillRect(0, 580, W, 500);
-    ctx.fillStyle = ACCENT;
-    ctx.font = `700 25px ${SANS}`;
-    ctx.fillText("ONE FILM · FIVE NOTES", PAD, 705);
     ctx.fillStyle = INK;
     ctx.font = `800 74px ${SANS}`;
     wrap(ctx, carousel.headline, 820).slice(0, 3).forEach((line, index) => ctx.fillText(line, PAD, 815 + index * 88));
+    // 메타 — 국가 · 연도 · 감독(공식명 + 한글 독음). 아이브로 문구 대신 작품 정보가 말한다.
     ctx.fillStyle = DIM;
     ctx.font = `500 29px ${SANS}`;
-    ctx.fillText([movie.director, movie.year].filter(Boolean).join(" · "), PAD, 1110);
+    ctx.fillText([movie.country, movie.year, movie.director].filter(Boolean).join(" · "), PAD, 1110);
+    // 하단 — 이 영화의 핵심 키워드 해시태그. Lyra 커버의 keywords·emotion과 같은 문법이다.
+    // 워드마크 폭을 빼고 재서 한 줄에 들어갈 만큼만 싣는다 — 넘치면 거기서 끊는다.
+    ctx.font = `500 27px ${SANS}`;
+    const markWidth = (() => {
+      ctx.save();
+      ctx.font = `600 34px ${SERIF}`;
+      const width = ctx.measureText("Cyno.").width;
+      ctx.restore();
+      return width;
+    })();
+    const room = W - PAD * 2 - markWidth - 32;
+    let tagLine = "";
+    for (const word of coverKeywords(movie)) {
+      const next = tagLine ? `${tagLine} #${word}` : `#${word}`;
+      if (ctx.measureText(next).width > room) break;
+      tagLine = next;
+    }
+    if (tagLine) {
+      ctx.fillStyle = "rgba(247,247,248,0.55)";
+      ctx.fillText(tagLine, PAD, H - 74);
+    }
+    ctx.textAlign = "right";
     ctx.fillStyle = INK;
     ctx.font = `600 34px ${SERIF}`;
-    ctx.fillText("Cyno.", PAD, H - 74);
+    ctx.fillText("Cyno.", W - PAD, H - 74);
+    ctx.textAlign = "left";
   } else if (slide.role === "basic") {
     header(ctx, "FILM AT A GLANCE · 작품 개요", position);
     drawPoster(ctx, movie, images, PAD, 205, 330, 495, 22);
@@ -194,7 +215,7 @@ async function drawSingle(slide, images, position, carousel) {
       ctx.fillStyle = INK;
       drawFittedParagraph(ctx, point, PAD + 120, y, W - PAD * 2 - 168, 160, 45, 32);
     });
-    if (isViewing && slide.note) {
+    if (slide.note) {
       ctx.fillStyle = DIM;
       ctx.font = `500 28px ${SANS}`;
       const note = wrap(ctx, `“${slide.note}”`, W - PAD * 2).slice(0, 3);
@@ -527,8 +548,9 @@ export default function CarouselStudio({ movies }) {
                   <Editor label="작품 개요" value={draft.basicDescription} onChange={(value) => updateDraft("basicDescription", value)} rows={4} />
                   <Editor label="줄거리 요약 · 결말 제외" value={draft.synopsis} onChange={(value) => updateDraft("synopsis", value)} rows={7} />
                   <Editor label="핵심 내용 · 서사 구조 / 갈등 / 주제" value={draft.keyPoints.join("\n")} onChange={(value) => updateDraft("keyPoints", value.split("\n"))} rows={6} />
-                  <Editor label="감상 포인트 · 연출 / 인물 표현 / 공간과 리듬" value={draft.viewingPoints.join("\n")} onChange={(value) => updateDraft("viewingPoints", value.split("\n"))} rows={6} />
-                  <Editor label="마지막 장 작품 노트" value={draft.closingNote} onChange={(value) => updateDraft("closingNote", value)} rows={4} />
+                  <Editor label="감상 포인트 · 장르 / 국가 / 연도의 맥락" value={draft.viewingPoints.join("\n")} onChange={(value) => updateDraft("viewingPoints", value.split("\n"))} rows={6} />
+                  <Editor label="핵심 내용 요약 한 문장 (4장 하단 인용문)" value={draft.keyPointsNote} onChange={(value) => updateDraft("keyPointsNote", value)} rows={2} />
+                  <Editor label="감상 포인트 요약 한 문장 (5장 하단 인용문)" value={draft.viewingPointsNote} onChange={(value) => updateDraft("viewingPointsNote", value)} rows={2} />
                 </div>
               )}
             </>
