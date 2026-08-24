@@ -109,6 +109,24 @@ export function fitFontSize(ctx, text, maxWidth, sizes, font) {
   return sizes.at(-1);
 }
 
+export function drawBilingualTitleLine(ctx, { line, translatedTitle, x, y, baseSize, font }) {
+  const translated = String(translatedTitle || "").trim().replace(/^\((.*)\)$/, "$1").trim();
+  const suffix = translated ? `(${translated})` : "";
+  if (!suffix || !line.endsWith(suffix)) {
+    ctx.font = font(baseSize);
+    ctx.fillText(line, x, y);
+    return;
+  }
+
+  const original = line.slice(0, -suffix.length).trimEnd();
+  ctx.font = font(baseSize);
+  if (original) ctx.fillText(original, x, y);
+  const offset = original ? ctx.measureText(`${original} `).width : 0;
+  const translatedSize = Math.max(10, baseSize - 2);
+  ctx.font = font(translatedSize);
+  ctx.fillText(suffix, x + offset, y);
+}
+
 export function drawProgress(ctx, position, total) {
   const gap = 18;
   const dot = 7;
@@ -289,7 +307,14 @@ async function drawCoverCard({ song, art }) {
   const titleTop = W + 22;
   ctx.font = `600 ${titleLayout.fontSize}px ${SERIF}`;
   titleLayout.lines.forEach((line, index) => {
-    ctx.fillText(line, pad, titleTop + titleLayout.fontSize + index * titleLayout.lineHeight);
+    drawBilingualTitleLine(ctx, {
+      line,
+      translatedTitle: song.title_ko,
+      x: pad,
+      y: titleTop + titleLayout.fontSize + index * titleLayout.lineHeight,
+      baseSize: titleLayout.fontSize,
+      font: (size) => `600 ${size}px ${SERIF}`,
+    });
   });
 
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
@@ -405,7 +430,14 @@ async function drawAboutCard({ song, note, art, position, total }) {
   );
   ctx.fillStyle = INK;
   ctx.font = `700 ${displaySize}px ${SANS}`;
-  ctx.fillText(fitText(ctx, displayTitle, maxW), PAD, H - 145);
+  drawBilingualTitleLine(ctx, {
+    line: fitText(ctx, displayTitle, maxW),
+    translatedTitle: song.title_ko,
+    x: PAD,
+    y: H - 145,
+    baseSize: displaySize,
+    font: (size) => `700 ${size}px ${SANS}`,
+  });
   const artistSize = fitFontSize(
     ctx,
     artistLine,
