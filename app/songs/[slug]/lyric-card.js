@@ -23,7 +23,7 @@ const INK = "#f7f7f8";
 const INK_DIM = "rgba(247,247,248,0.84)";
 const PAD = 84;
 
-async function ensureCarouselFonts() {
+export async function ensureCarouselFonts() {
   if (!document.fonts) return;
   await document.fonts.ready;
   await Promise.all([
@@ -32,7 +32,7 @@ async function ensureCarouselFonts() {
   ]);
 }
 
-function drawImageCover(ctx, image, x, y, width, height) {
+export function drawImageCover(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.width, height / image.height);
   const sw = width / scale;
   const sh = height / scale;
@@ -49,7 +49,7 @@ function drawImageCover(ctx, image, x, y, width, height) {
   );
 }
 
-function drawRoundedArt(ctx, image, x, y, size, radius = 18) {
+export function drawRoundedArt(ctx, image, x, y, size, radius = 18) {
   ctx.save();
   ctx.beginPath();
   ctx.roundRect(x, y, size, size, radius);
@@ -58,7 +58,7 @@ function drawRoundedArt(ctx, image, x, y, size, radius = 18) {
   ctx.restore();
 }
 
-function drawArtWash(ctx, art, scrim = 0.66) {
+export function drawArtWash(ctx, art, scrim = 0.66) {
   ctx.fillStyle = "#0d0d0f";
   ctx.fillRect(0, 0, W, H);
   if (art) {
@@ -75,7 +75,7 @@ function drawArtWash(ctx, art, scrim = 0.66) {
   ctx.fillRect(0, 0, W, H);
 }
 
-function drawPageNumber(ctx, position, total) {
+export function drawPageNumber(ctx, position, total) {
   ctx.save();
   ctx.fillStyle = "rgba(13,13,15,0.58)";
   ctx.beginPath();
@@ -88,14 +88,14 @@ function drawPageNumber(ctx, position, total) {
   ctx.restore();
 }
 
-function fitText(ctx, text, maxWidth) {
+export function fitText(ctx, text, maxWidth) {
   if (ctx.measureText(text).width <= maxWidth) return text;
   let fitted = text;
   while (fitted.length && ctx.measureText(`${fitted}…`).width > maxWidth) fitted = fitted.slice(0, -1);
   return `${fitted}…`;
 }
 
-function drawProgress(ctx, position, total) {
+export function drawProgress(ctx, position, total) {
   const gap = 18;
   const dot = 7;
   const start = (W - ((total - 1) * gap + dot * 2)) / 2;

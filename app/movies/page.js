@@ -1,5 +1,8 @@
 import { getAllMoviesMeta } from "../../lib/movies";
+import { getWatchedRuntime } from "../../lib/watched";
+import { buildMovieCarouselCatalog } from "../../lib/movie-carousel";
 import MovieBrowse from "./browse";
+import MovieCarouselButton from "./movie-carousel";
 import CynoNav from "../cyno-nav";
 
 export const metadata = {
@@ -9,7 +12,9 @@ export const metadata = {
 
 export default async function MoviesPage({ searchParams }) {
   const { q, group, media, country, genre, rating, sort } = (await searchParams) || {};
-  const movies = (await getAllMoviesMeta()).map((m) => {
+  const [movieRecords, watched] = await Promise.all([getAllMoviesMeta(), getWatchedRuntime()]);
+  const carouselPresets = buildMovieCarouselCatalog(watched, movieRecords);
+  const movies = movieRecords.map((m) => {
     const title = m.title_ko || m.title;
     const director = m.director_ko || m.director || "";
     const synopsis = m.synopsis || [];
@@ -50,6 +55,9 @@ export default async function MoviesPage({ searchParams }) {
   return (
     <>
       <CynoNav active="movies" />
+      <div className="mb-4 flex justify-end">
+        <MovieCarouselButton presets={carouselPresets} />
+      </div>
       {movies.length === 0 ? (
         <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>
       ) : (
