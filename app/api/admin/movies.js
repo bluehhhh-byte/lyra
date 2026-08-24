@@ -8,13 +8,34 @@ import { kstToday } from "../../../lib/kst";
 import { parseThemes } from "../../../lib/themes";
 import { getAllMoviesRuntime, getMovieRuntime } from "../../../lib/movies";
 import { getWatchedRuntime } from "../../../lib/watched";
-import { buildConceptCarousel, carouselMovie } from "../../../lib/movie-carousel";
+import { buildConceptCarousel, buildSingleMovieDraft } from "../../../lib/movie-carousel";
+import { movieCarouselCopyGen } from "../../../lib/admin/movie-carousel-copy";
+import { withReason } from "../../../lib/admin/gemini";
 
 export async function handleMovies(action, body) {
-  if (action === "movieCarouselDetail") {
+  if (action === "movieCarouselCopy") {
     const movie = await getMovieRuntime(String(body.slug || ""));
     if (!movie) return Response.json({ error: "작품을 찾을 수 없음" }, { status: 404 });
-    return Response.json({ movie: carouselMovie(movie) });
+
+    let source = movie;
+    // 왓챠 감상문을 본문으로 옮긴 레코드는 plot이 아니다. 이때만 TMDB의
+    // 공개 overview를 보강해 AI가 감상문을 줄거리로 오인하지 않게 한다.
+    if (movie.body_kind === "review") {
+      source = { ...movie, synopsis: [] };
+    }
+    if (movie.body_kind === "review" && movie.tmdbId) {
+      try {
+        const detail = await movieDetail(movie.tmdbId, movie.media === "tv" ? "tv" : "movie");
+        if (detail.overview) source = { ...movie, synopsis: [detail.overview] };
+      } catch {}
+    }
+
+    const fallback = buildSingleMovieDraft(source);
+    const key = process.env.GEMINI_API_KEY;
+    const generated = await movieCarouselCopyGen({ key, movie: source });
+    return Response.json(generated
+      ? { draft: { ...fallback, ...generated }, enhanced: true, warning: "" }
+      : { draft: fallback, enhanced: false, warning: key ? withReason("AI 문구를 만들지 못해 기본 초안을 사용합니다") : "GEMINI_API_KEY가 없어 기본 초안을 사용합니다" });
   }
 
   if (action === "movieCarouselCuration") {
