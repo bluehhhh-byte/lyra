@@ -26,26 +26,40 @@ const INK = "#f7f7f8";
 const DIM = "rgba(247,247,248,0.7)";
 const ACCENT = "#c8b6ff";
 
-const proxiedPoster = (url) =>
+const proxiedImage = (url) =>
   /^https:\/\/image\.tmdb\.org\/t\/p\//.test(url || "") ? `/api/img?url=${encodeURIComponent(url)}` : url;
 
-async function loadPosters(movies) {
+const imagePromiseCache = new Map();
+
+function cachedImage(url) {
+  if (!url) return Promise.resolve(null);
+  const src = proxiedImage(url);
+  if (!imagePromiseCache.has(src)) {
+    imagePromiseCache.set(src, loadImage(src).catch(() => null));
+  }
+  return imagePromiseCache.get(src);
+}
+
+async function loadMovieImages(movies) {
   const unique = [...new Map(movies.map((movie) => [movie.id, movie])).values()];
   const images = new Map();
   let cursor = 0;
   async function worker() {
     while (cursor < unique.length) {
       const movie = unique[cursor++];
-      try {
-        images.set(movie.id, movie.poster ? await loadImage(proxiedPoster(movie.poster)) : null);
-      } catch {
-        images.set(movie.id, null);
-      }
+      const [poster, backdrop] = await Promise.all([
+        cachedImage(movie.poster),
+        cachedImage(movie.backdrop),
+      ]);
+      images.set(movie.id, { poster, backdrop });
     }
   }
   await Promise.all(Array.from({ length: Math.min(POSTER_CONCURRENCY, unique.length) }, worker));
   return images;
 }
+
+const posterOf = (images, movie) => images.get(movie?.id)?.poster || null;
+const backdropOf = (images, movie) => images.get(movie?.id)?.backdrop || posterOf(images, movie);
 
 function canvas2d() {
   const canvas = document.createElement("canvas");
@@ -68,6 +82,19 @@ function roundedPoster(ctx, image, x, y, width, height, radius = 18) {
   ctx.restore();
 }
 
+function roundedScene(ctx, image, x, y, width, height, focalX = 0.5, radius = 18) {
+  const scale = Math.max(width / image.width, height / image.height);
+  const sourceWidth = width / scale;
+  const sourceHeight = height / scale;
+  const sourceX = Math.max(0, Math.min(image.width - sourceWidth, (image.width - sourceWidth) * focalX));
+  ctx.save();
+  ctx.beginPath();
+  ctx.roundRect(x, y, width, height, radius);
+  ctx.clip();
+  ctx.drawImage(image, sourceX, (image.height - sourceHeight) / 2, sourceWidth, sourceHeight, x, y, width, height);
+  ctx.restore();
+}
+
 function posterFallback(ctx, movie, x, y, width, height, radius = 18) {
   ctx.fillStyle = "#29292e";
   ctx.beginPath();
@@ -80,7 +107,7 @@ function posterFallback(ctx, movie, x, y, width, height, radius = 18) {
 }
 
 function drawPoster(ctx, movie, images, x, y, width, height, radius = 18) {
-  const image = movie && images.get(movie.id);
+  const image = posterOf(images, movie);
   if (image) roundedPoster(ctx, image, x, y, width, height, radius);
   else posterFallback(ctx, movie, x, y, width, height, radius);
 }
@@ -116,16 +143,27 @@ function drawFittedParagraph(ctx, text, x, y, width, maxHeight, startSize = 46, 
     lines = wrap(ctx, text || "기록된 설명이 없습니다.", width);
     if (lines.length * (size * 1.55) <= maxHeight) break;
   }
+  const visibleCount = Math.max(1, Math.floor(maxHeight / (size * 1.55)));
+  const overflow = lines.length > visibleCount;
+  const visible = lines.slice(0, visibleCount);
+  if (overflow && visible.length) {
+    let lastLine = visible.at(-1);
+    while (lastLine && ctx.measureText(`${lastLine}…`).width > width) lastLine = lastLine.slice(0, -1).trimEnd();
+    visible[visible.length - 1] = `${lastLine}…`;
+  }
   ctx.fillStyle = color;
   ctx.font = `500 ${size}px ${SANS}`;
-  lines.slice(0, Math.floor(maxHeight / (size * 1.55))).forEach((line, index) => ctx.fillText(line, x, y + index * size * 1.55));
+  visible.forEach((line, index) => ctx.fillText(line, x, y + index * size * 1.55));
+  return overflow;
 }
 
 async function drawSingle(slide, images, position, carousel) {
   const { canvas, ctx } = canvas2d();
   const movie = slide.movie;
-  const image = images.get(movie.id);
-  base(ctx, image, slide.role === "cover" ? 0.62 : 0.9);
+  const poster = posterOf(images, movie);
+  const backdrop = backdropOf(images, movie);
+  let overflow = false;
+  base(ctx, slide.role === "cover" ? poster : backdrop, slide.role === "cover" ? 0.62 : 0.88);
 
   if (slide.role === "cover") {
     drawPoster(ctx, movie, images, 520, 130, 430, 645, 28);
@@ -207,46 +245,79 @@ async function drawSingle(slide, images, position, carousel) {
     });
     ctx.fillStyle = "rgba(13,13,15,0.78)";
     ctx.beginPath(); ctx.roundRect(PAD, 770, W - PAD * 2, 420, 26); ctx.fill();
-    drawFittedParagraph(ctx, slide.text, PAD + 44, 840, W - PAD * 2 - 88, 300, 45, 30);
+    overflow = drawFittedParagraph(ctx, slide.text, PAD + 44, 840, W - PAD * 2 - 88, 300, 45, 30) || overflow;
   } else if (slide.role === "synopsis") {
     header(ctx, "STORY · 줄거리 요약", position);
-    ctx.fillStyle = "rgba(13,13,15,0.84)";
-    ctx.beginPath(); ctx.roundRect(PAD, 205, W - PAD * 2, 990, 30); ctx.fill();
+    if (backdrop) roundedPoster(ctx, backdrop, PAD, 190, W - PAD * 2, 430, 28);
+    const sceneFade = ctx.createLinearGradient(0, 370, 0, 640);
+    sceneFade.addColorStop(0, "rgba(13,13,15,0)");
+    sceneFade.addColorStop(1, BG);
+    ctx.fillStyle = sceneFade;
+    ctx.fillRect(PAD, 360, W - PAD * 2, 290);
     ctx.fillStyle = ACCENT;
     ctx.font = `800 30px ${SANS}`;
-    ctx.fillText(movie.title, PAD + 48, 285);
-    drawFittedParagraph(ctx, slide.text, PAD + 48, 370, W - PAD * 2 - 96, 735, 50, 30);
-  } else {
-    const isViewing = slide.role === "viewing-points";
-    header(ctx, isViewing ? "VIEWING POINTS · 감상 포인트" : "KEY THEMES · 핵심 내용", position);
+    ctx.fillText(movie.title, PAD + 42, 570);
+    ctx.fillStyle = "rgba(13,13,15,0.84)";
+    ctx.beginPath(); ctx.roundRect(PAD, 610, W - PAD * 2, 575, 28); ctx.fill();
+    overflow = drawFittedParagraph(ctx, slide.text, PAD + 48, 680, W - PAD * 2 - 96, 430, 47, 30) || overflow;
+  } else if (slide.role === "key-points") {
+    header(ctx, "STORY AXIS · 핵심 내용", position);
     ctx.fillStyle = INK;
     ctx.font = `800 64px ${SANS}`;
-    ctx.fillText(isViewing ? "이 영화를 볼 때" : "이야기의 중심", PAD, 245);
+    ctx.fillText("이야기의 중심", PAD, 245);
     const points = slide.points?.length ? slide.points : ["인물과 사건이 움직이는 장면을 따라가 보세요."];
+    ctx.strokeStyle = "rgba(200,182,255,0.42)";
+    ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.moveTo(PAD + 34, 330); ctx.lineTo(PAD + 34, 970); ctx.stroke();
     points.slice(0, 3).forEach((point, index) => {
-      const y = 360 + index * 250;
-      ctx.fillStyle = "rgba(13,13,15,0.76)";
-      ctx.beginPath(); ctx.roundRect(PAD, y - 62, W - PAD * 2, 225, 24); ctx.fill();
+      const y = 355 + index * 230;
       ctx.fillStyle = ACCENT;
-      ctx.font = `800 34px ${SANS}`;
-      ctx.fillText(String(index + 1).padStart(2, "0"), PAD + 34, y);
+      ctx.beginPath(); ctx.arc(PAD + 34, y, 18, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(13,13,15,0.76)";
+      ctx.beginPath(); ctx.roundRect(PAD + 78, y - 62, W - PAD * 2 - 78, 190, 24); ctx.fill();
+      ctx.fillStyle = ACCENT;
+      ctx.font = `800 25px ${SANS}`;
+      ctx.fillText(`SCENE ${String(index + 1).padStart(2, "0")}`, PAD + 112, y - 18);
       ctx.fillStyle = INK;
-      drawFittedParagraph(ctx, point, PAD + 120, y, W - PAD * 2 - 168, 160, 45, 32);
+      overflow = drawFittedParagraph(ctx, point, PAD + 112, y + 25, W - PAD * 2 - 150, 100, 40, 30) || overflow;
     });
     if (slide.note) {
       ctx.fillStyle = DIM;
       ctx.font = `500 28px ${SANS}`;
       const note = wrap(ctx, `“${slide.note}”`, W - PAD * 2).slice(0, 3);
-      note.forEach((line, index) => ctx.fillText(line, PAD, 1120 + index * 40));
+      note.forEach((line, index) => ctx.fillText(line, PAD, 1080 + index * 40));
+    }
+  } else {
+    header(ctx, "FRAME NOTES · 감상 포인트", position);
+    ctx.fillStyle = INK;
+    ctx.font = `800 64px ${SANS}`;
+    ctx.fillText("이 영화를 볼 때", PAD, 245);
+    const points = slide.points?.length ? slide.points : ["장면의 분위기와 이야기의 리듬을 살펴보세요."];
+    points.slice(0, 3).forEach((point, index) => {
+      const y = 305 + index * 255;
+      ctx.fillStyle = "rgba(13,13,15,0.82)";
+      ctx.beginPath(); ctx.roundRect(PAD, y, W - PAD * 2, 220, 24); ctx.fill();
+      if (backdrop) roundedScene(ctx, backdrop, PAD + 12, y + 12, 260, 196, [0.18, 0.5, 0.82][index], 16);
+      ctx.fillStyle = ACCENT;
+      ctx.font = `800 22px ${SANS}`;
+      ctx.fillText(`LOOK ${String(index + 1).padStart(2, "0")}`, PAD + 304, y + 48);
+      ctx.fillStyle = INK;
+      overflow = drawFittedParagraph(ctx, point, PAD + 304, y + 92, W - PAD * 2 - 334, 105, 38, 29) || overflow;
+    });
+    if (slide.note) {
+      ctx.fillStyle = DIM;
+      ctx.font = `500 27px ${SANS}`;
+      const note = wrap(ctx, `“${slide.note}”`, W - PAD * 2).slice(0, 2);
+      note.forEach((line, index) => ctx.fillText(line, PAD, 1120 + index * 38));
     }
   }
   drawProgress(ctx, position, TOTAL_SLIDES);
-  return toBlob(canvas);
+  return { blob: await toBlob(canvas), overflow };
 }
 
 async function drawCurationCover(slide, images, carousel) {
   const { canvas, ctx } = canvas2d();
-  const lead = slide.movies[0] && images.get(slide.movies[0].id);
+  const lead = backdropOf(images, slide.movies[0]);
   base(ctx, lead, 0.68);
   slide.movies.slice(0, 3).forEach((movie, index) => drawPoster(ctx, movie, images, 125 + index * 285, 145, 260, 390, 22));
   ctx.fillStyle = ACCENT;
@@ -303,7 +374,7 @@ async function drawCurationList(slide, images, position, carousel) {
 async function drawCurationNote(slide, images, position, carousel) {
   const { canvas, ctx } = canvas2d();
   const movie = slide.movie;
-  base(ctx, movie && images.get(movie.id), 0.82);
+  base(ctx, backdropOf(images, movie), 0.82);
   header(ctx, "CURATION NOTE · 선정 노트", position);
   if (movie) drawPoster(ctx, movie, images, PAD, 220, 300, 450, 22);
   ctx.fillStyle = INK;
@@ -316,19 +387,34 @@ async function drawCurationNote(slide, images, position, carousel) {
   return toBlob(canvas);
 }
 
+const carouselMovies = (carousel) =>
+  carousel.slides.flatMap((slide) => slide.movies || (slide.movie ? [slide.movie] : []));
+
+async function loadCarouselImages(carousel) {
+  const [, images] = await Promise.all([ensureCarouselFonts(), loadMovieImages(carouselMovies(carousel))]);
+  return images;
+}
+
+async function renderCarouselCard(carousel, index, images) {
+  const slide = carousel.slides[index];
+  const position = index + 1;
+  let blob;
+  let overflow = false;
+  if (carousel.kind === "single") {
+    const rendered = await drawSingle(slide, images, position, carousel);
+    blob = rendered.blob;
+    overflow = rendered.overflow;
+  } else if (slide.role === "curation-cover") blob = await drawCurationCover(slide, images, carousel);
+  else if (slide.role === "curation-list") blob = await drawCurationList(slide, images, position, carousel);
+  else blob = await drawCurationNote(slide, images, position, carousel);
+  return { ...slide, blob, overflow, url: URL.createObjectURL(blob) };
+}
+
 async function renderCarousel(carousel) {
-  const movies = carousel.slides.flatMap((slide) => slide.movies || (slide.movie ? [slide.movie] : []));
-  const [, images] = await Promise.all([ensureCarouselFonts(), loadPosters(movies)]);
+  const images = await loadCarouselImages(carousel);
   const made = [];
-  for (const [index, slide] of carousel.slides.entries()) {
-    const position = index + 1;
-    let blob;
-    if (carousel.kind === "single") blob = await drawSingle(slide, images, position, carousel);
-    else if (slide.role === "curation-cover") blob = await drawCurationCover(slide, images, carousel);
-    else if (slide.role === "curation-list") blob = await drawCurationList(slide, images, position, carousel);
-    else blob = await drawCurationNote(slide, images, position, carousel);
-    made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
-  }
+  for (let index = 0; index < carousel.slides.length; index += 1)
+    made.push(await renderCarouselCard(carousel, index, images));
   return made;
 }
 
@@ -385,6 +471,8 @@ export default function CarouselStudio({ movies }) {
   const [building, setBuilding] = useState(false);
   const [message, setMessage] = useState("");
   const blobs = useRef([]);
+  const cardsRef = useRef([]);
+  const renderHint = useRef(null);
   const copyRequest = useRef(0);
 
   const singleCarousel = useMemo(
@@ -392,6 +480,7 @@ export default function CarouselStudio({ movies }) {
     [selectedMovie, draft],
   );
   const carousel = mode === "single" ? singleCarousel : conceptCarousel;
+  const overflowCount = cards.filter((card) => card.overflow).length;
   const filteredMovies = useMemo(() => {
     const term = query.trim().toLocaleLowerCase("ko");
     if (!term) return movies.slice(0, 8);
@@ -401,6 +490,7 @@ export default function CarouselStudio({ movies }) {
   useEffect(() => {
     if (!carousel) {
       setCards((current) => { current.forEach((card) => URL.revokeObjectURL(card.url)); return []; });
+      cardsRef.current = [];
       blobs.current = [];
       return;
     }
@@ -408,26 +498,42 @@ export default function CarouselStudio({ movies }) {
     const timer = setTimeout(async () => {
       setBuilding(true);
       setMessage("");
-      const previous = cards;
+      const previous = cardsRef.current;
+      const hintedIndex = renderHint.current;
+      renderHint.current = null;
+      const canRenderOne = mode === "single"
+        && Number.isInteger(hintedIndex)
+        && previous.length === TOTAL_SLIDES
+        && previous[0]?.movie?.id === carousel.movie?.id;
       try {
-        const made = await renderCarousel(carousel);
-        if (!alive) { made.forEach((card) => URL.revokeObjectURL(card.url)); return; }
-        previous.forEach((card) => URL.revokeObjectURL(card.url));
-        setCards(made);
-        blobs.current = made.map((card) => card.blob);
-        setActiveCard(0);
+        if (canRenderOne) {
+          const images = await loadCarouselImages(carousel);
+          const replacement = await renderCarouselCard(carousel, hintedIndex, images);
+          if (!alive) { URL.revokeObjectURL(replacement.url); return; }
+          const made = previous.map((card, index) => index === hintedIndex ? replacement : card);
+          URL.revokeObjectURL(previous[hintedIndex].url);
+          cardsRef.current = made;
+          setCards(made);
+          blobs.current = made.map((card) => card.blob);
+        } else {
+          const made = await renderCarousel(carousel);
+          if (!alive) { made.forEach((card) => URL.revokeObjectURL(card.url)); return; }
+          previous.forEach((card) => URL.revokeObjectURL(card.url));
+          cardsRef.current = made;
+          setCards(made);
+          blobs.current = made.map((card) => card.blob);
+          setActiveCard((current) => Math.min(current, made.length - 1));
+        }
       } catch {
-        if (alive) setMessage("카드를 만들지 못했습니다. 포스터 연결을 확인해 주세요.");
+        if (alive) setMessage("카드를 만들지 못했습니다. 포스터·장면 이미지 연결을 확인해 주세요.");
       } finally {
         if (alive) setBuilding(false);
       }
     }, 220);
     return () => { alive = false; clearTimeout(timer); };
-    // cards is deliberately replaced only after a complete render.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [carousel]);
+  }, [carousel, mode]);
 
-  useEffect(() => () => cards.forEach((card) => URL.revokeObjectURL(card.url)), [cards]);
+  useEffect(() => () => cardsRef.current.forEach((card) => URL.revokeObjectURL(card.url)), []);
 
   useEffect(() => {
     if (!selectedMovie) return;
@@ -467,11 +573,25 @@ export default function CarouselStudio({ movies }) {
   }, [selectedMovie]);
 
   const pickMovie = (movie) => {
+    renderHint.current = null;
     setSelectedId(movie.id);
     setQuery(movie.title);
+    setActiveCard(0);
   };
 
-  const updateDraft = (field, value) => setDraft((current) => ({ ...current, [field]: value }));
+  const updateDraft = (field, value) => {
+    const slideByField = {
+      headline: 0,
+      basicDescription: 1,
+      synopsis: 2,
+      keyPoints: 3,
+      keyPointsNote: 3,
+      viewingPoints: 4,
+      viewingPointsNote: 4,
+    };
+    renderHint.current = slideByField[field] ?? null;
+    setDraft((current) => ({ ...current, [field]: value }));
+  };
   const regenerateCopy = async () => {
     if (!selectedMovie || copyBusy) return;
     const requestId = ++copyRequest.current;
@@ -519,7 +639,7 @@ export default function CarouselStudio({ movies }) {
           ["single", "한 편 깊이 보기", "기본 · 영화 한 편을 5장으로"],
           ["concept", "주제별 큐레이션", "보조 · 콘셉트로 여러 편 자동 선정"],
         ].map(([id, label, description]) => (
-          <button key={id} type="button" onClick={() => setMode(id)} aria-label={label} aria-pressed={mode === id} className={`min-w-0 rounded-xl px-2 py-3 text-left transition sm:px-4 ${mode === id ? "bg-bg shadow-sm ring-1 ring-accent/40" : "text-muted hover:text-ink"}`}>
+          <button key={id} type="button" onClick={() => { renderHint.current = null; setActiveCard(0); setMode(id); }} aria-label={label} aria-pressed={mode === id} className={`min-w-0 rounded-xl px-2 py-3 text-left transition sm:px-4 ${mode === id ? "bg-bg shadow-sm ring-1 ring-accent/40" : "text-muted hover:text-ink"}`}>
             <span className="block truncate text-sm font-semibold">{label}</span>
             <span className="mt-0.5 hidden text-xs text-muted sm:block">{description}</span>
           </button>
@@ -606,15 +726,23 @@ export default function CarouselStudio({ movies }) {
               </div>
               {building && <span className="shrink-0 text-xs text-accent">다시 그리는 중…</span>}
             </div>
+            {overflowCount > 0 && (
+              <p className="mb-3 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs text-amber-200" role="status">
+                {overflowCount}개 카드의 긴 문장을 말줄임표로 축약했습니다. 해당 카드의 문구를 조금 줄여 주세요.
+              </p>
+            )}
             {cards.length ? (
               <>
-                <img src={cards[activeCard]?.url} alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`} draggable={false} className="mx-auto max-h-[58dvh] w-auto max-w-full rounded-xl border border-line shadow-xl lg:max-h-[68vh]" />
+                <div className="relative mx-auto w-fit max-w-full">
+                  <img src={cards[activeCard]?.url} alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`} draggable={false} className="max-h-[58dvh] w-auto max-w-full rounded-xl border border-line shadow-xl lg:max-h-[68vh]" />
+                  {cards[activeCard]?.overflow && <span className="absolute right-2 top-2 rounded-full bg-amber-300 px-2 py-1 text-[10px] font-bold text-black">문구 축약됨</span>}
+                </div>
                 <ol className="mt-3 grid min-w-0 grid-cols-5 gap-1.5 sm:gap-2">
                   {cards.map((card, index) => (
                     <li key={`${card.role}-${index}`} className="min-w-0">
                       <button type="button" onClick={() => setActiveCard(index)} aria-label={`${index + 1}번째 카드 보기`} aria-pressed={activeCard === index} className={`w-full min-w-0 rounded-lg border p-1 ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65"}`}>
                         <img src={card.url} alt="" className="aspect-[4/5] w-full rounded object-cover" />
-                        <span className="mt-1 block truncate text-[10px] text-muted">{index + 1}. {card.label}</span>
+                        <span className={`mt-1 block truncate text-[10px] ${card.overflow ? "text-amber-300" : "text-muted"}`}>{index + 1}. {card.label}{card.overflow ? " · 축약" : ""}</span>
                       </button>
                     </li>
                   ))}
@@ -622,7 +750,7 @@ export default function CarouselStudio({ movies }) {
               </>
             ) : (
               <div className="flex aspect-[4/5] max-h-[58dvh] items-center justify-center rounded-xl border border-dashed border-line px-6 text-center text-sm text-muted">
-                {building ? "포스터와 카드 생성 중…" : mode === "concept" ? "콘셉트를 입력해 영화를 자동 선택하세요." : "영화를 선택해 주세요."}
+                {building ? "포스터·장면 이미지와 카드 생성 중…" : mode === "concept" ? "콘셉트를 입력해 영화를 자동 선택하세요." : "영화를 선택해 주세요."}
               </div>
             )}
             <button type="button" disabled={building || cards.length !== TOTAL_SLIDES} onClick={async () => {
