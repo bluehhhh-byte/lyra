@@ -137,11 +137,29 @@ async function drawSingle(slide, images, position, carousel) {
     ctx.fillRect(0, 580, W, 500);
     ctx.fillStyle = INK;
     ctx.font = `800 74px ${SANS}`;
-    wrap(ctx, carousel.headline, 820).slice(0, 3).forEach((line, index) => ctx.fillText(line, PAD, 815 + index * 88));
+    const headlineLines = wrap(ctx, carousel.headline, 820).slice(0, 2);
+    headlineLines.forEach((line, index) => ctx.fillText(line, PAD, 800 + index * 88));
+    let cursor = 800 + (headlineLines.length - 1) * 88;
+    // 원제 — 한글 제목 아래에 원어(영어·일어·불어…) 제목을 병기한다.
+    // 데이터 모델이 title=원제, title_ko=한글이라 원제가 한글과 같은 한국 영화는
+    // 자연히 생략된다.
+    if (movie.originalTitle && movie.originalTitle !== movie.title) {
+      cursor += 52;
+      ctx.fillStyle = DIM;
+      ctx.font = `italic 500 31px ${SERIF}`;
+      ctx.fillText(fitText(ctx, movie.originalTitle, 820), PAD, cursor);
+    }
+    // 별점 — 내가 준 별점이 있는 작품만. 없는 41편에서는 줄 자체가 사라진다.
+    if (movie.rating != null) {
+      cursor += 52;
+      ctx.fillStyle = ACCENT;
+      ctx.font = `700 30px ${SANS}`;
+      ctx.fillText(`★ ${movie.rating.toFixed(1)}`, PAD, cursor);
+    }
     // 메타 — 국가 · 연도 · 감독(공식명 + 한글 독음). 아이브로 문구 대신 작품 정보가 말한다.
     ctx.fillStyle = DIM;
     ctx.font = `500 29px ${SANS}`;
-    ctx.fillText([movie.country, movie.year, movie.director].filter(Boolean).join(" · "), PAD, 1110);
+    ctx.fillText([movie.country, movie.year, movie.director].filter(Boolean).join(" · "), PAD, Math.max(1110, cursor + 78));
     // 하단 — 이 영화의 핵심 키워드 해시태그. Lyra 커버의 keywords·emotion과 같은 문법이다.
     // 워드마크 폭을 빼고 재서 한 줄에 들어갈 만큼만 싣는다 — 넘치면 거기서 끊는다.
     ctx.font = `500 27px ${SANS}`;
