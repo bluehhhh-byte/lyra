@@ -8,8 +8,9 @@ import {
   MAX_SELECTED_LINES,
 } from "../../../lib/carousel";
 import {
+  carouselArtistLine,
+  carouselDisplayTitle,
   carouselTitleParts,
-  layoutCarouselQualifier,
   layoutCarouselTitle,
 } from "../../../lib/carousel-title";
 
@@ -268,14 +269,16 @@ async function drawCoverCard({ song, art }) {
   const ink = INK;
   const inkDim = INK_DIM;
   const pad = 96;
-  // 곡 제목 — 본제는 크게, 긴 feat. 크레딧은 작은 보조 줄로 분리한다. 데이터에
-  // `아티스트 - 제목`이 들어와도 중복 아티스트를 제거해 커버 영역을 지킨다.
+  // 제목은 `원문 (한글 번역)`으로 묶고, 긴 feat. 크레딧은 제목이 아니라
+  // 아티스트 정보에 붙인다. 데이터의 `아티스트 - 제목` 중복도 함께 제거한다.
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
   const titleMaxWidth = W - pad * 2;
   const titleParts = carouselTitleParts(song.title, song.artist);
+  const displayTitle = carouselDisplayTitle(song.title, song.title_ko, song.artist);
+  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
   const titleLayout = layoutCarouselTitle(
-    titleParts.main,
+    displayTitle,
     (line, size) => {
       ctx.font = `600 ${size}px ${SERIF}`;
       return ctx.measureText(line).width;
@@ -291,37 +294,23 @@ async function drawCoverCard({ song, art }) {
 
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
   let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 34;
-  if (titleParts.qualifier) {
-    const qualifierLayout = layoutCarouselQualifier(
-      titleParts.qualifier,
-      (line, size) => {
-        ctx.font = `500 ${size}px ${SANS}`;
-        return ctx.measureText(line).width;
-      },
-      titleMaxWidth,
-    );
-    ctx.fillStyle = "rgba(247,247,248,0.68)";
-    ctx.font = `500 ${qualifierLayout.fontSize}px ${SANS}`;
-    qualifierLayout.lines.forEach((line, index) => {
-      ctx.fillText(line, pad, detailY + index * qualifierLayout.lineHeight);
-    });
-    detailY += qualifierLayout.lines.length * qualifierLayout.lineHeight + 4;
-  }
-  if (titleLayout.lines.length === 1 && !titleParts.qualifier) {
+  const artistSize = fitFontSize(
+    ctx,
+    artistLine,
+    titleMaxWidth,
+    [29, 27, 25, 23, 21, 19, 17],
+    (size) => `500 ${size}px ${SANS}`,
+  );
+  if (detailY <= H - 82) {
     ctx.fillStyle = inkDim;
-    ctx.font = `500 29px ${SANS}`;
-    ctx.fillText(fitText(ctx, song.artist, titleMaxWidth), pad, detailY);
-    detailY += 34;
+    ctx.font = `500 ${artistSize}px ${SANS}`;
+    ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
+    detailY += artistSize + 9;
     if (meta && detailY <= H - 88) {
       ctx.fillStyle = "rgba(244,244,246,0.4)";
       ctx.font = `500 23px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
-  } else if (detailY <= H - 82) {
-    const details = [song.artist, meta].filter(Boolean).join(" · ");
-    ctx.fillStyle = inkDim;
-    ctx.font = `500 23px ${SANS}`;
-    ctx.fillText(fitText(ctx, details, titleMaxWidth), pad, detailY);
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
@@ -403,35 +392,30 @@ async function drawAboutCard({ song, note, art, position, total }) {
     ctx.fillText(line, PAD, y);
   }
 
-  // 곡 설명 카드에서만 원문 제목과 한글 제목을 함께 보여 준다. 긴 원문 제목은
-  // 생략하기 전에 글자 크기를 낮춰 전체 제목을 가능한 한 보존한다.
-  const translatedTitle = song.title_ko && song.title_ko !== song.title ? song.title_ko : "";
-  const originalY = translatedTitle ? H - 180 : H - 145;
-  const originalSize = fitFontSize(
+  // 설명 카드도 같은 표기 규칙을 쓴다: `원문 (한글 번역)` / `아티스트 (Feat. …)`.
+  const titleParts = carouselTitleParts(song.title, song.artist);
+  const displayTitle = carouselDisplayTitle(song.title, song.title_ko, song.artist);
+  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
+  const displaySize = fitFontSize(
     ctx,
-    song.title,
+    displayTitle,
     maxW,
     [31, 29, 27, 25, 23],
     (size) => `700 ${size}px ${SANS}`,
   );
   ctx.fillStyle = INK;
-  ctx.font = `700 ${originalSize}px ${SANS}`;
-  ctx.fillText(fitText(ctx, song.title, maxW), PAD, originalY);
-  if (translatedTitle) {
-    const translatedSize = fitFontSize(
-      ctx,
-      translatedTitle,
-      maxW,
-      [27, 25, 23, 21],
-      (size) => `500 ${size}px ${SANS}`,
-    );
-    ctx.fillStyle = "rgba(247,247,248,0.72)";
-    ctx.font = `500 ${translatedSize}px ${SANS}`;
-    ctx.fillText(fitText(ctx, translatedTitle, maxW), PAD, H - 139);
-  }
+  ctx.font = `700 ${displaySize}px ${SANS}`;
+  ctx.fillText(fitText(ctx, displayTitle, maxW), PAD, H - 145);
+  const artistSize = fitFontSize(
+    ctx,
+    artistLine,
+    maxW,
+    [23, 21, 19, 17],
+    (size) => `500 ${size}px ${SANS}`,
+  );
   ctx.fillStyle = INK_DIM;
-  ctx.font = `500 23px ${SANS}`;
-  ctx.fillText(song.artist, PAD, translatedTitle ? H - 100 : H - 106);
+  ctx.font = `500 ${artistSize}px ${SANS}`;
+  ctx.fillText(fitText(ctx, artistLine, maxW), PAD, H - 106);
   drawProgress(ctx, position, total);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
