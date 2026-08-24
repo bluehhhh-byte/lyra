@@ -122,7 +122,9 @@ export function drawBilingualTitleLine(ctx, { line, translatedTitle, x, y, baseS
   ctx.font = font(baseSize);
   if (original) ctx.fillText(original, x, y);
   const offset = original ? ctx.measureText(`${original} `).width : 0;
-  const translatedSize = Math.max(10, baseSize - 2);
+  // Canvas font sizes use CSS pixels, so convert the requested two-point
+  // difference (1pt = 96 / 72px) instead of subtracting two pixels.
+  const translatedSize = Math.max(10, baseSize - (2 * 96) / 72);
   ctx.font = font(translatedSize);
   ctx.fillText(suffix, x + offset, y);
 }
