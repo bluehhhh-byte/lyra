@@ -11,7 +11,8 @@ import {
   carouselArtistLine,
   carouselDisplayTitle,
   carouselTitleParts,
-  layoutCarouselTitle,
+  layoutBilingualCarouselTitle,
+  TRANSLATED_TITLE_POINT_OFFSET,
 } from "../../../lib/carousel-title";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
@@ -123,8 +124,8 @@ export function drawBilingualTitleLine(ctx, { line, translatedTitle, x, y, baseS
   if (original) ctx.fillText(original, x, y);
   const offset = original ? ctx.measureText(`${original} `).width : 0;
   // Keep the original title size unchanged and render only the parenthesized
-  // Korean translation six points smaller (1pt = 96 / 72 CSS pixels).
-  const translatedSize = Math.max(10, baseSize - (6 * 96) / 72);
+  // Korean translation ten points smaller (1pt = 96 / 72 CSS pixels).
+  const translatedSize = Math.max(10, baseSize - (TRANSLATED_TITLE_POINT_OFFSET * 96) / 72);
   ctx.font = font(translatedSize);
   ctx.fillText(suffix, x + offset, y);
 }
@@ -295,10 +296,10 @@ async function drawCoverCard({ song, art }) {
   ctx.fillStyle = ink;
   const titleMaxWidth = W - pad * 2;
   const titleParts = carouselTitleParts(song.title, song.artist);
-  const displayTitle = carouselDisplayTitle(song.title, song.title_ko, song.artist);
   const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
-  const titleLayout = layoutCarouselTitle(
-    displayTitle,
+  const titleLayout = layoutBilingualCarouselTitle(
+    titleParts.main,
+    song.title_ko,
     (line, size) => {
       ctx.font = `600 ${size}px ${SERIF}`;
       return ctx.measureText(line).width;
