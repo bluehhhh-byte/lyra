@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllMoviesRuntime } from "../../../lib/movies";
+import { getAllMoviesMeta } from "../../../lib/movies";
 import { carouselMovie } from "../../../lib/movie-carousel";
 import CarouselStudio from "./carousel-studio";
 
@@ -7,7 +7,7 @@ export const metadata = { title: "Cyno 캐러셀 제작실 | Lyra" };
 export const dynamic = "force-dynamic";
 
 export default async function CynoCarouselAdminPage() {
-  const movies = (await getAllMoviesRuntime()).map(carouselMovie);
+  const movies = (await getAllMoviesMeta()).map((movie) => carouselMovie({ ...movie, synopsis: [], comment: "" }));
   return (
     <>
       <div className="mb-8 flex flex-wrap items-center gap-4">
@@ -20,8 +20,8 @@ export default async function CynoCarouselAdminPage() {
         </Link>
       </div>
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-muted">
-        한 편을 깊게 소개하는 5장 캐러셀이 기본입니다. 여러 작품을 묶을 때만 주제별 큐레이션을 사용하고,
-        자동으로 고른 결과를 확인한 뒤 저장하세요.
+        한 편을 고르면 저장된 총평과 본문 문단으로 3~5장을 자동 구성합니다. 여러 작품을 묶을 때만
+        주제별 큐레이션을 사용하고, 자동으로 고른 결과를 확인한 뒤 저장하세요.
       </p>
       <CarouselStudio movies={movies} />
     </>

@@ -52,7 +52,7 @@ export default async function AdminPage() {
         >
           <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-accent">Cyno studio</span>
           <span className="mt-2 block text-base font-bold">영화 캐러셀 제작실</span>
-          <span className="mt-1 block text-xs leading-relaxed text-muted">영화 한 편을 고르면 작품 개요·줄거리 요약·핵심 내용·감상 포인트 5장을 만듭니다.</span>
+          <span className="mt-1 block text-xs leading-relaxed text-muted">영화 한 편을 고르면 저장된 총평과 본문으로 3~5장을 만듭니다.</span>
           <span className="mt-3 block text-xs font-semibold text-accent group-hover:underline">제작실 열기 →</span>
         </Link>
         <Link href="/admin/movie" className="rounded-2xl border border-line bg-surface p-4 transition hover:border-accent/50">
