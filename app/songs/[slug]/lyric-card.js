@@ -7,6 +7,7 @@ import {
   CAROUSEL_SLIDES,
   MAX_SELECTED_LINES,
 } from "../../../lib/carousel";
+import { layoutCarouselTitle } from "../../../lib/carousel-title";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal builds an Instagram carousel:
@@ -255,37 +256,48 @@ async function drawCoverCard({ song, art }) {
   const ink = INK;
   const inkDim = INK_DIM;
   const pad = 96;
-  let y = W + 62;
-
-  // 곡 제목 — 영어·일본어 제목이면 한글 번역 제목을 옆에 병기한다 (가사 카드와 같은 규칙)
+  // 곡 제목 — 먼저 줄을 늘리고, 그다음 글자를 줄인다. feat./부제가 든 괄호는
+  // 가능한 한 통째로 다음 줄에 내려 제목 끝이 캔버스 밖에서 잘리지 않게 한다.
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
-  ctx.font = "600 52px Georgia, 'Noto Serif KR', serif";
-  ctx.fillText(song.title, pad, y);
-  if (song.title_ko) {
-    const after = pad + ctx.measureText(song.title).width + 16;
-    ctx.font = `500 34px ${SANS}`;
-    const label = `(${song.title_ko})`;
-    if (after + ctx.measureText(label).width <= W - pad) {
-      ctx.fillStyle = inkDim;
-      ctx.fillText(label, after, y - 2);
-      ctx.fillStyle = ink;
-    }
-  }
-  y += 46;
+  const titleMaxWidth = W - pad * 2;
+  const titleLayout = layoutCarouselTitle(
+    song.title,
+    (line, size) => {
+      ctx.font = `600 ${size}px ${SERIF}`;
+      return ctx.measureText(line).width;
+    },
+    titleMaxWidth,
+  );
+  const titleTop = W + 22;
+  ctx.font = `600 ${titleLayout.fontSize}px ${SERIF}`;
+  titleLayout.lines.forEach((line, index) => {
+    ctx.fillText(line, pad, titleTop + titleLayout.fontSize + index * titleLayout.lineHeight);
+  });
 
-  // 아티스트
-  ctx.fillStyle = inkDim;
-  ctx.font = `500 32px ${SANS}`;
-  ctx.fillText(song.artist, pad, y);
-  y += 44;
-
-  // 국가 · 장르 · 연도 — 사이트의 태그 어휘 그대로
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
-  if (meta) {
-    ctx.fillStyle = "rgba(244,244,246,0.4)";
-    ctx.font = `500 26px ${SANS}`;
-    ctx.fillText(meta, pad, y);
+  let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 34;
+  if (titleLayout.lines.length === 1) {
+    if (song.title_ko && song.title_ko !== song.title) {
+      ctx.fillStyle = "rgba(247,247,248,0.66)";
+      ctx.font = `500 27px ${SANS}`;
+      ctx.fillText(fitText(ctx, `(${song.title_ko})`, titleMaxWidth), pad, detailY);
+      detailY += 34;
+    }
+    ctx.fillStyle = inkDim;
+    ctx.font = `500 29px ${SANS}`;
+    ctx.fillText(fitText(ctx, song.artist, titleMaxWidth), pad, detailY);
+    detailY += 34;
+    if (meta && detailY <= H - 88) {
+      ctx.fillStyle = "rgba(244,244,246,0.4)";
+      ctx.font = `500 23px ${SANS}`;
+      ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
+    }
+  } else {
+    const details = [song.artist, meta].filter(Boolean).join(" · ");
+    ctx.fillStyle = inkDim;
+    ctx.font = `500 25px ${SANS}`;
+    ctx.fillText(fitText(ctx, details, titleMaxWidth), pad, Math.min(detailY, H - 88));
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
