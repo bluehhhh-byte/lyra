@@ -309,16 +309,14 @@ export function EmotionTrend({ stats, year }) {
   return (
     <figure className="min-w-0 max-w-full">
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${chartId}-title`} className="h-auto w-full">
-        <title id={`${chartId}-title`}>
-          {year}년 월별 밝기와 각성의 추이. 가로는 1월부터 12월, 세로는 −2에서 +2다.
-        </title>
+        <title id={`${chartId}-title`}>{`${year}년 월별 밝기와 각성의 추이. 가로는 1월부터 12월, 세로는 −2에서 +2다.`}</title>
         <TrendRow
           points={points} yearMonths={yearMonths} label="밝기"
           pick={(s) => s.center.v} color={valenceColor(1.5)} y0={PAD_Y} chartId={chartId}
         />
         <TrendRow
           points={points} yearMonths={yearMonths} label="각성"
-          pick={(s) => s.center.a} color={`oklch(0.7 0.1 ${TIME_HUE})`} y0={PAD_Y + ROW + GAP} chartId={chartId}
+          pick={(s) => s.center.a} color="oklch(0.7 0.1 285)" y0={PAD_Y + ROW + GAP} chartId={chartId}
         />
         {yearMonths.map((m, i) =>
           i % 2 === 0 ? (
