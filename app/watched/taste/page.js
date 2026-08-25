@@ -6,7 +6,7 @@ import { getAllMoviesRuntime } from "../../../lib/movies";
 import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 import RatingInsights from "../rating-insights";
-import { GenreRatingCross } from "../taste-evidence";
+import { CountryDistribution, GenreRatingCross } from "../taste-evidence";
 
 export const metadata = {
   title: "취향 분석 | Cyno.",
@@ -205,9 +205,10 @@ export default async function TastePage() {
 
       <GenreRatingCross movies={rated} />
 
+      <CountryDistribution movies={rated} />
+
       <CuratedThemeEvidence movies={curatedMovies} />
 
-      <CountSection title="국가별" rows={country.byCount} mean={mean} />
       <CountSection title="연대별" rows={decade.byCount} mean={mean} />
       <CountSection title="상영시간" rows={runtime.byCount} mean={mean} />
       <CountSection title="많이 본 감독" rows={director.byCount} mean={mean} link={personLink} />

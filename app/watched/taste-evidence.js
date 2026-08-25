@@ -1,4 +1,4 @@
-import { genreRatingCross } from "../../lib/watched";
+import { countryDistribution, genreRatingCross } from "../../lib/watched";
 
 function Meter({ value, max, tone = "bg-accent/70" }) {
   return (
@@ -48,6 +48,41 @@ export function GenreRatingCross({ movies }) {
                     </div>
                   )}
                 </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+export function CountryDistribution({ movies }) {
+  const result = countryDistribution(movies);
+  return (
+    <section className="mb-12" aria-labelledby="country-distribution-title">
+      <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+        <div>
+          <h2 id="country-distribution-title" className="text-lg font-bold">국가·지역 분포</h2>
+          <p className="mt-1 text-xs text-muted">지도 없이 {result.total.toLocaleString("ko-KR")}편의 분류 전체를 셉니다.</p>
+        </div>
+        <p className="text-xs text-muted">미분류 {result.unclassified.toLocaleString("ko-KR")}편</p>
+      </div>
+      <div className="overflow-hidden rounded-xl border border-line">
+        <table className="w-full text-left text-sm">
+          <thead className="bg-surface/70 text-xs text-muted">
+            <tr>
+              <th className="px-4 py-2 font-medium">국가·지역</th>
+              <th className="px-4 py-2 text-right font-medium">편수</th>
+              <th className="px-4 py-2 text-right font-medium">비중</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-line/60">
+            {result.rows.map((row) => (
+              <tr key={row.country}>
+                <th className="px-4 py-2.5 font-medium">{row.country}</th>
+                <td className="px-4 py-2.5 text-right tabular-nums">{row.count.toLocaleString("ko-KR")}편</td>
+                <td className="px-4 py-2.5 text-right tabular-nums text-muted">{(row.share * 100).toFixed(1)}%</td>
               </tr>
             ))}
           </tbody>
