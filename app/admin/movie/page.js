@@ -6,7 +6,7 @@ import WatchaImport from "../watcha-import";
 import DeployControl from "../deploy-control";
 import { databaseContentEnabled } from "../../../lib/content-db";
 
-export const metadata = { title: "Syno. 관리 | Lyra" };
+export const metadata = { title: "Cyno. 관리 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
 export default async function MovieAdminPage() {
@@ -22,15 +22,13 @@ export default async function MovieAdminPage() {
         <Link href="/admin/moments" className="text-sm text-muted transition hover:text-accent">
           → 장면 관리로
         </Link>
+        <Link href="/admin/tools" className="text-sm text-muted transition hover:text-accent">
+          → 관리 도구
+        </Link>
         <div className="sm:ml-auto">
           <DeployControl contentInDatabase={contentInDatabase} />
         </div>
       </div>
-      <p className="mb-5 rounded-lg border border-line px-3 py-2 text-xs text-muted">
-        {contentInDatabase
-          ? "곡·영화 저장은 즉시 사이트에 반영됩니다. 배포 버튼은 코드 변경 때만 사용합니다."
-          : "현재 GitHub 파일 저장 모드입니다. 저장한 콘텐츠는 배포 후 사이트에 반영됩니다."}
-      </p>
       <MovieForm />
 
       <h2 className="mb-1 mt-16 text-lg font-bold">왓챠 별점 병합</h2>

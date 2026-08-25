@@ -150,7 +150,9 @@ export default function AdminForm() {
         const lg = detectLang(found); // script of the lyrics decides the translation mode
         setLang(lg);
         setLyrics(found);
-        autotag(c, found, lg); // tags + comment from lyrics, no translation needed
+        // 메타 생성은 번역 버튼에서 한 번만 한다. 곡을 고르는 순간 먼저 호출하면
+        // 같은 가사로 Gemini를 다시 부르게 되고, 사용자가 가사를 고쳐도 첫 결과가
+        // 뒤늦게 도착해 수정본을 덮을 수 있다.
       } else {
         setSearchLinks(links || []); // not on lrclib — offer source links to paste from
       }
@@ -164,7 +166,7 @@ export default function AdminForm() {
       lyrics,
     });
     setTranslated(text);
-    autotag(song, lyrics);
+    await autotag(song, lyrics);
   });
 
   const save = run("save", async () => {
@@ -189,7 +191,7 @@ export default function AdminForm() {
     <div className="max-w-2xl space-y-8">
       {/* 1. search */}
       <section>
-        <Step n="1" label="곡 검색" />
+        <Step label="곡검색" />
         <div className="flex flex-wrap gap-2">
           <input
             className={input + " flex-1 basis-48"}
@@ -287,7 +289,7 @@ export default function AdminForm() {
       {/* 2. lyrics + translate */}
       {song && (
         <section>
-          <Step n="2" label="가사 확인 → Gemini 번역" />
+          <Step label="가사 확인 → Gemini 번역" />
           <div className="mb-2 flex items-center gap-2 text-xs text-muted">
             <span>가사 언어 (자동 감지, 틀리면 바꾸세요)</span>
             <select
@@ -389,7 +391,7 @@ export default function AdminForm() {
       {/* 3. review + save */}
       {(translated || lyricsNone || instrumental) && (
         <section>
-          <Step n="3" label="검수 · 노트 추가 · 저장" />
+          <Step label="검수 · 노트 추가 · 저장" />
           {lyricsNone || instrumental ? (
             <div className="mb-2 rounded-lg border border-accent/30 bg-accent/5 px-3 py-3">
               <p className="text-xs">
@@ -456,13 +458,8 @@ export default function AdminForm() {
   );
 }
 
-function Step({ n, label }) {
+function Step({ label }) {
   return (
-    <h2 className="mb-3 text-sm font-semibold">
-      <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-bg">
-        {n}
-      </span>
-      {label}
-    </h2>
+    <h2 className="mb-3 text-sm font-semibold">{label}</h2>
   );
 }

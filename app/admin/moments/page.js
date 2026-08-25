@@ -32,6 +32,7 @@ export default async function MomentAdminPage({ searchParams }) {
         <h1 className="text-2xl font-bold">문화 장면</h1>
         <Link href="/admin" className="text-sm text-muted transition hover:text-accent">← 곡 관리</Link>
         <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent">영화 관리</Link>
+        <Link href="/admin/tools" className="text-sm text-muted transition hover:text-accent">관리 도구</Link>
         <Link href="/moments" className="text-sm text-muted transition hover:text-accent">공개 화면 →</Link>
       </div>
       <p className="mb-6 max-w-2xl text-sm leading-relaxed text-muted">

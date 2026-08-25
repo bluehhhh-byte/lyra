@@ -1,8 +1,10 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import CoverImage from "./cover-image";
 import { groupSongs } from "../lib/browse-group";
+import { parseEmotion } from "../lib/keywords";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -16,7 +18,40 @@ const RANDOM_PICKS = 6;
 const INITIAL_RENDER = 72; // 첫 화면 + 두어 스크롤 분량
 const RENDER_STEP = 240;
 
-export default function Browse({ songs: rawSongs, initialTag = "", initialQ = "", initialGroup = "none", initialEmotion = "", initialDecade = "" }) {
+export default function Browse({ songs: initialSongs, totalSongs = initialSongs.length }) {
+  const searchParams = useSearchParams();
+  const initialTag = searchParams.get("tag") || "";
+  const initialQ = searchParams.get("q") || "";
+  const initialGroup = searchParams.get("group") || "none";
+  const initialEmotion = parseEmotion(searchParams.get("emotion"));
+  const requestedDecade = searchParams.get("decade") || "";
+  const initialDecade = /^\d{4}s$/.test(requestedDecade) ? requestedDecade : "";
+  const [rawSongs, setRawSongs] = useState(initialSongs);
+  const [loadState, setLoadState] = useState("idle");
+  const loadPromise = useRef(null);
+  const allLoaded = rawSongs.length >= totalSongs;
+
+  const loadAllSongs = useCallback(() => {
+    if (allLoaded) return Promise.resolve();
+    if (loadPromise.current) return loadPromise.current;
+    setLoadState("loading");
+    loadPromise.current = fetch("/api/songs/meta")
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(({ songs }) => {
+        if (!Array.isArray(songs)) throw new Error("곡 목록 응답 형식이 올바르지 않습니다");
+        setRawSongs(songs);
+        setLoadState("ready");
+      })
+      .catch(() => setLoadState("error"))
+      .finally(() => {
+        loadPromise.current = null;
+      });
+    return loadPromise.current;
+  }, [allLoaded]);
+
   // 검색용 소문자 문자열은 여기서 만든다 — 서버가 만들어 보내면 같은 내용이
   // 919곡 × 두 번(HTML + RSC 페이로드) 실려 초기 응답만 커진다.
   const songs = useMemo(
@@ -44,6 +79,12 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
   // 홈 응답의 3분의 2(약 900KB)를 차지했다. 화면에 들어올 만큼만 그리고,
   // 아래는 버튼으로 이어서 그린다. 데이터는 이미 다 갖고 있으므로 추가 요청은 없다.
   const [visibleCount, setVisibleCount] = useState(INITIAL_RENDER);
+
+  // 초기 응답은 첫 72곡만 담는다. 전체 목록이 필요한 순간에만 나머지 메타를
+  // 가져와 홈 HTML/RSC의 크기와 첫 응답 시간을 줄인다.
+  useEffect(() => {
+    if (q.trim() || tag || emotion || decade || group !== "none") void loadAllSongs();
+  }, [q, tag, emotion, decade, group, loadAllSongs]);
 
   // Mirror the filters into the URL so a refresh or a shared link lands on the
   // same view. replaceState, not pushState — one history entry per keystroke
@@ -122,7 +163,7 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
     () => (capped ? filtered.slice(0, visibleCount) : filtered),
     [capped, filtered, visibleCount]
   );
-  const hiddenCount = filtered.length - visible.length;
+  const hiddenCount = (allLoaded ? filtered.length : totalSongs) - visible.length;
 
   const groups = useMemo(() => groupSongs(visible, group), [visible, group]);
 
@@ -150,7 +191,7 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
             </button>
           ))}
           <span className="rounded-full border border-line px-3 py-1 text-xs text-muted">
-            총 {songs.length}곡
+            총 {totalSongs}곡
           </span>
         </div>
       </div>
@@ -187,7 +228,7 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
 
       {filtered.length === 0 && (
         <p className="py-20 text-center text-sm text-muted">
-          {songs.length === 0
+          {totalSongs === 0
             ? "아직 곡이 없습니다."
             : q
               ? `"${q}" 검색 결과 없음`
@@ -221,11 +262,25 @@ export default function Browse({ songs: rawSongs, initialTag = "", initialQ = ""
         ))
       )}
 
+      {loadState === "loading" && !allLoaded && (
+        <p className="mb-6 text-center text-xs text-muted">전체 곡 목록을 불러오는 중…</p>
+      )}
+      {loadState === "error" && !allLoaded && (
+        <p className="mb-6 text-center text-xs text-muted">
+          전체 목록을 불러오지 못했습니다.{" "}
+          <button className="text-accent hover:underline" onClick={() => void loadAllSongs()}>다시 시도</button>
+        </p>
+      )}
+
       {capped && hiddenCount > 0 && (
         <div className="mb-10 flex justify-center">
           <button
-            onClick={() => setVisibleCount((n) => n + RENDER_STEP)}
-            className="rounded-full border border-line px-5 py-2 text-sm text-muted transition hover:border-accent hover:text-accent"
+            disabled={loadState === "loading"}
+            onClick={async () => {
+              await loadAllSongs();
+              setVisibleCount((n) => n + RENDER_STEP);
+            }}
+            className="rounded-full border border-line px-5 py-2 text-sm text-muted transition hover:border-accent hover:text-accent disabled:opacity-50"
           >
             나머지 {hiddenCount}곡 더 보기
           </button>

@@ -21,6 +21,8 @@ source: instagram
 source_tag: 241101_0820
 source_note: 핵심 메시지 · 가사 분석 · 상징적 의미
 source_hash: 87fa8a972a72de5de837f0cf04b90112a6eb4db1
+lyrics_none: true
+lyrics_note: 원문 게시물은 가사 전문이 아닌 핵심 메시지와 상징 해설만 수록함
 ---
 이 곡은 자신의 영향력과 성공, 그리고 비판에 대한 초연한 태도를 강력하게 표현한 자전적 힙합 트랙입니다.
 

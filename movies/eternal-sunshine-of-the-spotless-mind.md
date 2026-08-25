@@ -3,7 +3,7 @@ title: Eternal Sunshine of the Spotless Mind
 title_ko: 이터널 선샤인
 director: Michel Gondry
 director_ko: 미셸 공드리
-cast: Jim Carrey, Kate Winslet, Kirsten Dunst
+cast: 짐 캐리, 케이트 윈슬렛, 커스틴 던스트
 year: 2004
 runtime: 108
 rating: 5

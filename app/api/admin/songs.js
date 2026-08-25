@@ -999,19 +999,10 @@ ${listed}`,
     // catches the paths that skip translation: a hand-typed body, and the
     // "이대로 사용" bypass that copies Korean lyrics over verbatim
     let lyricBody = capitalizeLyricLines(String(lyrics || "").trim());
-    // auto-restanza on publish — reorganize the lyrics by musical structure.
-    // Best-effort: if Gemini is down or the body is too short, keep it as typed.
-    // 가사가 없는 글의 본문은 해설이다. 연으로 나눌 것이 없으니 부르지 않는다.
-    if (!noLyrics)
-      try {
-        const restanza = await restanzaBody({
-          title,
-          artist,
-          bodyText: lyricBody,
-          key: process.env.GEMINI_API_KEY,
-        });
-        if (restanza) lyricBody = restanza;
-      } catch {} // never block a publish on the layout pass
+    // 번역 단계가 이미 원문의 섹션·빈 줄을 보존한다. 저장 때 Gemini로 연 구분을
+    // 다시 만들면 정상 등록 한 번에 번역·메타·레이아웃 호출이 연달아 발생한다.
+    // 구조가 좋지 않은 예외만 등록 후 관리 목록의 "연 다시 나누기"를 명시적으로
+    // 실행한다. 저장은 입력한 검수본을 그대로 보존해야 하기도 한다.
     const md = `---
 title: ${title}
 title_ko: ${titleKo || (lang === "ko" ? title : "")}
