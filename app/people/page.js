@@ -11,7 +11,9 @@ export default async function PeoplePage() {
   // 데이터셋까지 합치면 인물이 수천 명 — 여러 편 겹치는 사람만 인덱스에 낸다.
   // (개별 인물 페이지는 검색·작품 링크로 여전히 닿는다)
   const directors = people.filter((person) => person.directedCount >= 2);
-  const actors = people.filter((person) => person.actedCount >= 3);
+  const actors = people
+    .filter((person) => person.actedCount >= 3)
+    .sort((a, b) => b.actedCount - a.actedCount || b.actorAverageRating - a.actorAverageRating || a.name.localeCompare(b.name, "ko"));
 
   return (
     <>
@@ -20,12 +22,12 @@ export default async function PeoplePage() {
         <p className="mt-1 text-sm text-muted">여러 작품에서 만난 감독과 배우</p>
       </header>
       <PeopleSection title={`감독 (${directors.length})`} people={directors} />
-      <PeopleSection title={`배우 (${actors.length})`} people={actors} />
+      <PeopleSection title={`자주 본 배우 (${actors.length})`} people={actors} role="actor" />
     </>
   );
 }
 
-function PeopleSection({ title, people }) {
+function PeopleSection({ title, people, role }) {
   return (
     <section className="mb-14">
       <h2 className="mb-3 text-sm font-semibold">{title}</h2>
@@ -37,7 +39,11 @@ function PeopleSection({ title, people }) {
             className="flex items-center justify-between gap-3 border-b border-line py-3 pr-3 hover:text-accent sm:odd:mr-5"
           >
             <span className="truncate text-sm font-medium">{person.name}</span>
-            <span className="shrink-0 text-xs text-muted">{person.worksCount}편</span>
+            <span className="shrink-0 text-xs text-muted">
+              {role === "actor"
+                ? `${person.actedCount}편${person.actorAverageRating == null ? "" : ` · 평균 ★${person.actorAverageRating.toFixed(2)}`}`
+                : `${person.worksCount}편`}
+            </span>
           </Link>
         ))}
       </div>
