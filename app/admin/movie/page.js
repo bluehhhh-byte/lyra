@@ -31,7 +31,7 @@ export default async function MovieAdminPage() {
           현재 GitHub 파일 저장 모드입니다. 저장한 콘텐츠는 배포 후 사이트에 반영됩니다.
         </p>
       )}
-      <nav className="mb-8 grid gap-3 sm:grid-cols-3" aria-label="Cyno 관리자 메뉴">
+      <nav className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Cyno 관리자 메뉴">
         <Link
           href="/admin/movie"
           aria-current="page"
@@ -49,6 +49,15 @@ export default async function MovieAdminPage() {
           <span className="mt-2 block text-base font-bold">영화 캐러셀 제작실</span>
           <span className="mt-1 block text-xs leading-relaxed text-muted">영화 한 편을 5장의 작품 노트로 만듭니다.</span>
           <span className="mt-3 block text-xs font-semibold text-accent group-hover:underline">제작실 열기 →</span>
+        </Link>
+        <Link
+          href="/admin/publish-queue"
+          className="group rounded-2xl border border-line bg-surface p-4 transition hover:border-accent/50"
+        >
+          <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-muted">Cyno queue</span>
+          <span className="mt-2 block text-base font-bold">오늘의 발행 후보</span>
+          <span className="mt-1 block text-xs leading-relaxed text-muted">최근 기록·높은 별점·테마 묶음에서 다음 카드를 고릅니다.</span>
+          <span className="mt-3 block text-xs font-semibold text-accent group-hover:underline">후보 보기 →</span>
         </Link>
         <Link
           href="/admin/moments"

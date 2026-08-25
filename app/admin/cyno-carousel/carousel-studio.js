@@ -454,16 +454,17 @@ async function adminApi(action, body) {
 const inputClass = "w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-base outline-none transition focus:border-accent sm:text-sm";
 const enhancedCopyCache = new Map();
 
-export default function CarouselStudio({ movies }) {
-  const [mode, setMode] = useState("single");
-  const [query, setQuery] = useState("");
-  const [selectedId, setSelectedId] = useState(movies[0]?.id || "");
+export default function CarouselStudio({ movies, initialMovieId = "", initialConcept = "" }) {
+  const initialMovie = movies.find((movie) => movie.id === initialMovieId) || movies[0] || null;
+  const [mode, setMode] = useState(initialConcept ? "concept" : "single");
+  const [query, setQuery] = useState(initialMovieId ? initialMovie?.title || "" : "");
+  const [selectedId, setSelectedId] = useState(initialMovie?.id || "");
   const selectedMovie = movies.find((movie) => movie.id === selectedId) || movies[0] || null;
   const [draft, setDraft] = useState(() => selectedMovie ? buildSingleMovieDraft(selectedMovie) : null);
   const [copyBusy, setCopyBusy] = useState(false);
   const [copyState, setCopyState] = useState("local");
   const [copyNotice, setCopyNotice] = useState("");
-  const [concept, setConcept] = useState("");
+  const [concept, setConcept] = useState(initialConcept);
   const [conceptCarousel, setConceptCarousel] = useState(null);
   const [conceptBusy, setConceptBusy] = useState(false);
   const [cards, setCards] = useState([]);
@@ -536,7 +537,9 @@ export default function CarouselStudio({ movies }) {
   useEffect(() => () => cardsRef.current.forEach((card) => URL.revokeObjectURL(card.url)), []);
 
   useEffect(() => {
-    if (!selectedMovie) return;
+    // 테마 후보는 결정론적 큐레이션만 준비한다. 한 편용 AI 문구는 실제로
+    // "한 편 깊이 보기"를 열었을 때만 요청한다.
+    if (mode !== "single" || !selectedMovie) return;
     const requestId = ++copyRequest.current;
     let alive = true;
     setDraft(buildSingleMovieDraft(selectedMovie));
@@ -570,7 +573,7 @@ export default function CarouselStudio({ movies }) {
         if (alive && requestId === copyRequest.current) setCopyBusy(false);
       });
     return () => { alive = false; };
-  }, [selectedMovie]);
+  }, [mode, selectedMovie]);
 
   const pickMovie = (movie) => {
     renderHint.current = null;
