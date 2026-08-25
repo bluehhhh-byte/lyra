@@ -6,7 +6,7 @@ import { getAllMoviesRuntime } from "../../../lib/movies";
 import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 import RatingInsights from "../rating-insights";
-import { CountryDistribution, GenreRatingCross, RuntimeEvidence } from "../taste-evidence";
+import { CountryDistribution, GenreRatingCross, RewatchEvidence, RuntimeEvidence } from "../taste-evidence";
 
 export const metadata = {
   title: "취향 분석 | Cyno.",
@@ -207,6 +207,8 @@ export default async function TastePage() {
       <CountryDistribution movies={rated} />
 
       <RuntimeEvidence movies={rated} />
+
+      <RewatchEvidence movies={rated} />
 
       <CuratedThemeEvidence movies={curatedMovies} />
 

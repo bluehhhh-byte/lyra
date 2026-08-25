@@ -1,4 +1,4 @@
-import { countryDistribution, genreRatingCross, runtimeInsights } from "../../lib/watched";
+import { countryDistribution, genreRatingCross, rewatchGroups, runtimeInsights } from "../../lib/watched";
 
 function Meter({ value, max, tone = "bg-accent/70" }) {
   return (
@@ -135,6 +135,28 @@ export function RuntimeEvidence({ movies }) {
           </div>
         </div>
       </div>
+    </section>
+  );
+}
+
+export function RewatchEvidence({ movies }) {
+  const rows = rewatchGroups(movies);
+  return (
+    <section className="mb-12" aria-labelledby="rewatch-title">
+      <h2 id="rewatch-title" className="text-lg font-bold">재관람 기록</h2>
+      <p className="mt-1 text-xs text-muted">TMDB ID를 우선하고, 없으면 제목과 작품 연도로 같은 작품을 찾습니다.</p>
+      {rows.length ? (
+        <ul className="mt-4 divide-y divide-line rounded-xl border border-line">
+          {rows.map((row) => (
+            <li key={row.key} className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 text-sm">
+              <span className="font-medium">{row.title} {row.year && <span className="text-muted">({row.year})</span>}</span>
+              <span className="text-xs text-muted">{row.count}회 · {row.ratings.map((rating) => `★${rating}`).join(" → ") || "별점 없음"}{row.ratingChanged ? " · 별점 변화" : ""}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-4 rounded-xl border border-dashed border-line px-4 py-8 text-center text-sm text-muted">현재 데이터에는 재관람 기록이 없습니다.</p>
+      )}
     </section>
   );
 }
