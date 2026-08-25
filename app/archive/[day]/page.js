@@ -1,18 +1,33 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { buildArchiveRuntime, getArchiveDayRuntime } from "../../../lib/archive";
+import { buildArchiveRuntime } from "../../../lib/archive";
+import { archiveMonths } from "../../../lib/archive-paths";
+import { monthlyStats } from "../../../lib/archive-stats";
 import { valenceColor } from "../../../lib/keywords";
+import ArchiveView from "../archive-view";
+
+export const revalidate = 21600;
+
+export async function generateStaticParams() {
+  return archiveMonths(await buildArchiveRuntime()).map((month) => ({ day: month }));
+}
 
 export async function generateMetadata({ params }) {
-  const day = await getArchiveDayRuntime((await params).day);
-  if (!day) return {};
-  return { title: `${day.day} 문화 기록 | Lyra` };
+  const period = (await params).day;
+  if (/^\d{4}-\d{2}$/.test(period)) return { title: `${period} 문화 아카이브 | Lyra` };
+  const entry = (await buildArchiveRuntime()).find((item) => item.day === period);
+  return entry ? { title: `${entry.day} 문화 기록 | Lyra` } : {};
 }
 
 export default async function ArchiveDayPage({ params }) {
-  const entry = await getArchiveDayRuntime((await params).day);
-  if (!entry) notFound();
+  const period = (await params).day;
   const all = await buildArchiveRuntime();
+  if (archiveMonths(all).includes(period)) {
+    return <ArchiveView archive={all} stats={monthlyStats(all)} month={period} />;
+  }
+
+  const entry = all.find((item) => item.day === period);
+  if (!entry) notFound();
   const index = all.findIndex((day) => day.day === entry.day);
 
   return (
@@ -74,7 +89,7 @@ export default async function ArchiveDayPage({ params }) {
 
       <nav className="mt-10 flex justify-between text-sm text-muted">
         {all[index - 1] ? <Link href={`/archive/${all[index - 1].day}`}>← 이전 기록</Link> : <span />}
-        <Link href={`/archive?month=${entry.day.slice(0, 7)}`} className="hover:text-accent">월별 목록</Link>
+        <Link href={`/archive/${entry.day.slice(0, 7)}`} className="hover:text-accent">월별 목록</Link>
         {all[index + 1] ? <Link href={`/archive/${all[index + 1].day}`}>다음 기록 →</Link> : <span />}
       </nav>
     </>
