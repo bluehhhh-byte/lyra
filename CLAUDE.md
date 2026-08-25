@@ -32,16 +32,39 @@ slug를 파일 백업과 대조해 누락 0건을 확인했다. **DB가 대답�
 
 ## ⚠️ GitHub 계정 플래그 (미해제)
 
-2026-08-12 백필이 4분 30초에 84커밋을 만들어 abuse 오탐. Support 티켓 #4667653 진행 중.
+2026-08-01 20:11~20:22 KST에 Contents API 임포터가 11분간 1,059커밋을 만들어 abuse 오탐.
+(이전에 '08-12에 4분 30초 84커밋'으로 적어 뒀던 것은 부정확했다. 커밋 로그로 재확인한 수치가 위의 것이다.)
+Support 티켓 #4667653 진행 중.
 
-증상: push는 되지만 **이벤트가 발생하지 않는다** → Actions 미실행, Vercel Git 연동 미작동, OAuth 3rd-party 거부, `gh search`도 "flagged as spammy" 거부.
+**증상은 이벤트 억제가 아니라 계정 전체 숨김이다.** 2026-08-26 실측:
+
+| 대상 | 익명 | 토큰 |
+|---|---|---|
+| `github.com/bluehhhh-byte` | 404 | 정상 |
+| `github.com/bluehhhh-byte/<모든 저장소 11개>` | 404 | `visibility: public` |
+| `raw.githubusercontent.com/bluehhhh-byte/...` | 404 | — |
+| `api.github.com/users/bluehhhh-byte` | 404 | 정상 |
+
+즉 **소유자 본인 외에는 계정이 존재하지 않는 것처럼 보인다.** Actions 미실행, Vercel Git
+연동 미작동, OAuth 3rd-party 거부, `gh search`의 "User flagged as spammy"는 전부 이
+하나의 원인에서 나온다 — 그 서비스들이 익명으로 접근하기 때문이다.
+
+재현(대조군 포함):
+```bash
+# 플래그 상태면 앞은 404, 뒤는 200
+curl -s -o /dev/null -w '%{http_code}' https://github.com/bluehhhh-byte; echo
+curl -s -o /dev/null -w '%{http_code}' https://github.com/torvalds; echo
+```
+
+Lyra 런타임은 익명 GitHub 접근에 의존하지 않는다 — 사이트는 영향 없다.
 
 **따라서:**
 - Vercel 대시보드 Redeploy 버튼은 같은 커밋만 다시 빌드한다. 새 커밋은 절대 반영 안 됨.
 - 배포는 CLI 업로드: `pnpm deploy:prod`, 또는 origin/main을 detached worktree로 뽑아
   `VERCEL_ORG_ID=team_vk8fZtA1YueBPh3dnFXZNj0H VERCEL_PROJECT_ID=prj_NMnJerZFyg3lxOiHc3uOPHnT6xug npx vercel deploy --prod --yes --cwd <worktree>`
 - 로컬 폴더를 직접 올리면 미추적 파일이 섞인다 — 반드시 깨끗한 worktree에서.
-- 플래그 해제 확인: `gh api users/bluehhhh-byte/events --jq 'length'`가 0이 아니면 해제된 것.
+- 플래그 해제 확인: `curl -s -o /dev/null -w '%{http_code}' https://github.com/bluehhhh-byte`가 200이면 해제된 것.
+  (`events` 길이보다 이쪽이 정확하다 — 이벤트는 해제 후에도 한동안 0일 수 있다.)
 
 ## 무료 티어 예산과 지키는 법
 
