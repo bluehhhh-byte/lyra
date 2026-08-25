@@ -11,6 +11,14 @@ import { COUNTRY_TAGS } from "../../../lib/genre";
 import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
 import { crossMatches } from "../../../lib/cross-match";
+import { recentStaticParams } from "../../../lib/static-details";
+
+export const revalidate = 21600;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return recentStaticParams(await getAllMoviesMeta());
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;

@@ -14,6 +14,17 @@ import YouTubeEmbed from "./youtube-embed";
 import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
 import { crossMatches } from "../../../lib/cross-match";
+import {
+  STATIC_SONG_LIMIT,
+  recentStaticParams,
+} from "../../../lib/static-details";
+
+export const revalidate = 21600;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return recentStaticParams(await getAllSongsMeta(), STATIC_SONG_LIMIT);
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;

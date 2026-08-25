@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getAllMoviesMeta } from "../../lib/movies";
 import MovieBrowse from "./browse";
 import CynoNav from "../cyno-nav";
@@ -7,8 +8,9 @@ export const metadata = {
   description: "좋아하는 영화와 줄거리·감상",
 };
 
-export default async function MoviesPage({ searchParams }) {
-  const { q, group, media, country, genre, rating, sort } = (await searchParams) || {};
+export const revalidate = 21600;
+
+export default async function MoviesPage() {
   const movieRecords = await getAllMoviesMeta();
   const movies = movieRecords.map((m) => {
     const title = m.title_ko || m.title;
@@ -54,7 +56,9 @@ export default async function MoviesPage({ searchParams }) {
       {movies.length === 0 ? (
         <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>
       ) : (
-        <MovieBrowse movies={movies} initial={{ q: q || "", media: media || "all", sort: sort || "recorded" }} />
+        <Suspense fallback={<p className="py-20 text-center text-sm text-muted">작품을 불러오는 중입니다.</p>}>
+          <MovieBrowse movies={movies} />
+        </Suspense>
       )}
     </>
   );

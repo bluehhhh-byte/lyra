@@ -2,15 +2,19 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import CoverImage from "../cover-image";
 
 // 필터를 검색·매체·정렬 필로 줄였다 — 국가·장르·별점·그룹 필터와 정렬
 // 드롭다운은 49편 규모에 과했다. 정렬은 별점순·랜덤 두 필만: 켜면 적용,
 // 다시 누르면 기본(최근 기록순)으로. 국가·장르 탐색은 /tags가 담당.
-export default function MovieBrowse({ movies, initial = {} }) {
-  const [q, setQ] = useState(initial.q || "");
-  const [media, setMedia] = useState(["all", "movie", "tv"].includes(initial.media) ? initial.media : "all");
-  const [sort, setSort] = useState(["rating-desc", "random"].includes(initial.sort) ? initial.sort : "recorded");
+export default function MovieBrowse({ movies }) {
+  const searchParams = useSearchParams();
+  const initialMedia = searchParams.get("media") || "all";
+  const initialSort = searchParams.get("sort") || "recorded";
+  const [q, setQ] = useState(() => searchParams.get("q") || "");
+  const [media, setMedia] = useState(() => ["all", "movie", "tv"].includes(initialMedia) ? initialMedia : "all");
+  const [sort, setSort] = useState(() => ["rating-desc", "random"].includes(initialSort) ? initialSort : "recorded");
   const [seed, setSeed] = useState(0);
 
   useEffect(() => {
