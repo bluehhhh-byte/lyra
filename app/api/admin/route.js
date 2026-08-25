@@ -21,8 +21,12 @@ export async function POST(req) {
     if (!sameOrigin(req)) return forbiddenOrigin();
     return await withGeminiReason(await handle(req));
   } catch (e) {
+    console.error("[api/admin] request failed", {
+      error: e instanceof Error ? e.message : String(e),
+      stack: e instanceof Error ? e.stack : undefined,
+    });
     // always return JSON so the client never hits an empty-body parse error
-    return Response.json({ error: e.message || "서버 오류" }, { status: 500 });
+    return Response.json({ error: e instanceof Error ? e.message : "서버 오류" }, { status: 500 });
   }
 }
 
