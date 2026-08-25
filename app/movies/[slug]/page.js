@@ -12,6 +12,7 @@ import { getMomentsForTarget } from "../../../lib/moments";
 import MomentConnections from "../../moment-connections";
 import { crossMatches } from "../../../lib/cross-match";
 import { recentStaticParams } from "../../../lib/static-details";
+import { directorOtherWorks, getWatchedRuntime } from "../../../lib/watched";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
@@ -82,12 +83,14 @@ export default async function MoviePage({ params }) {
   const { slug } = await params;
   // 이 영화는 단건 조회로 가져온다 — 목록(all)은 줄거리를 뺀 메타라 여기서 꺼내면
   // synopsis가 비어 본문이 사라진다. 목록은 연관 영화에만 쓴다.
-  const [movie, all] = await Promise.all([
+  const [movie, all, watched] = await Promise.all([
     getMovieRuntime(decodeURIComponent(slug)),
     getAllMoviesMeta(),
+    getWatchedRuntime(),
   ]);
   if (!movie) notFound();
   const related = relatedMovies(movie, all);
+  const directorWorks = directorOtherWorks(watched, movie);
   const moments = await getMomentsForTarget("movie", movie.slug);
 
   // Lyra×Cyno 교차 — 같은 시대 안에서 권역·감정·주제가 가까운 곡을 우선한다.
@@ -272,6 +275,27 @@ export default async function MoviePage({ params }) {
             ))}
           </div>
         </div>
+      )}
+
+      {directorWorks.length > 0 && (
+        <section className="mx-auto mt-14 max-w-2xl" aria-labelledby="director-works-title">
+          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 id="director-works-title" className="text-sm font-semibold text-muted">이 감독의 다른 관람 기록</h2>
+            <Link href={`/people/${encodeURIComponent(movie.director_ko || movie.director)}`} className="text-xs text-accent hover:underline">전작 모두 보기 →</Link>
+          </div>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
+            {directorWorks.map((work) => {
+              const Card = (
+                <>
+                  {work.poster ? <img src={work.poster} alt="" loading="lazy" className="aspect-[2/3] w-full rounded-lg border border-line object-cover" /> : <div className="aspect-[2/3] rounded-lg border border-line bg-surface" />}
+                  <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{work.title}</h3>
+                  <p className="truncate text-xs text-muted">{work.year}{work.rating == null ? " · 별점 없음" : ` · ★${work.rating}`}</p>
+                </>
+              );
+              return work.tmdbId ? <a key={work.key} href={tmdbUrl(work.tmdbId, work.media)} target="_blank" rel="noopener noreferrer" className="group">{Card}</a> : <div key={work.key} className="group">{Card}</div>;
+            })}
+          </div>
+        </section>
       )}
 
       {/* Lyra×Cyno — 이 영화의 시대를 함께 듣는 컬렉션 곡 */}
