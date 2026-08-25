@@ -10,6 +10,7 @@ import { EMOTIONS } from "../lib/keywords.js";
 import { genreTagOf, genreIssue } from "../lib/genre.js";
 import { readData } from "../lib/store.js";
 import { needsKo, isNonLyricLine } from "../lib/admin/needs.js";
+import { translationVariants } from "../lib/translation-variants.js";
 
 const errors = [];
 const warns = [];
@@ -77,14 +78,7 @@ for (const s of songs) {
 
   // 같은 원문 줄에 서로 다른 번역이 붙어 있으면 후렴 하나가 두 가지로 읽힌다.
   // (의도한 변주일 수 있어 경고 — 감사 화면에서 확인한다)
-  const byLine = new Map();
-  for (const l of lines) {
-    const k = l.en?.trim();
-    if (!k || !l.ko?.trim()) continue;
-    if (!byLine.has(k)) byLine.set(k, new Set());
-    byLine.get(k).add(l.ko.trim());
-  }
-  const split = [...byLine.values()].filter((v) => v.size > 1).length;
+  const split = translationVariants(lines).length;
   if (split) warn(f, `같은 원문에 다른 번역이 붙은 구절 ${split}개`);
 
   // 캡션 흔적이 가사에 남은 경우 — 해시태그, 날짜 태그, 연도만 있는 줄

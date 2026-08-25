@@ -20,18 +20,23 @@ async function api(action, body) {
 
 export default function EditForm({ slug }) {
   const [raw, setRaw] = useState(null);
+  const [translationVariants, setTranslationVariants] = useState([]);
   const [status, setStatus] = useState("");
 
   useEffect(() => {
     api("load", { slug })
-      .then((d) => setRaw(d.raw))
+      .then((d) => {
+        setRaw(d.raw);
+        setTranslationVariants(d.translationVariants || []);
+      })
       .catch((e) => setStatus(e.message));
   }, [slug]);
 
   const save = async () => {
     setStatus("저장 중…");
     try {
-      await api("update", { slug, raw });
+      const result = await api("update", { slug, raw });
+      setTranslationVariants(result.translationVariants || []);
       setStatus("저장됨 ✓");
     } catch (e) {
       setStatus(e.message);
@@ -62,6 +67,7 @@ export default function EditForm({ slug }) {
         frontmatter(제목·태그·코멘트)와 가사를 직접 수정.{" "}
         <code>&gt; 번역</code> · <code>+ 독음</code> · <code>// 해설</code> · 빈 줄 = 연 구분
       </p>
+      <TranslationVariantNotice items={translationVariants} />
       <textarea
         className="h-[32rem] w-full rounded-lg border border-line bg-surface px-3 py-2 font-mono text-xs outline-none focus:border-accent"
         value={raw}
@@ -83,5 +89,25 @@ export default function EditForm({ slug }) {
         <span className="text-sm text-muted">{status}</span>
       </div>
     </div>
+  );
+}
+
+function TranslationVariantNotice({ items }) {
+  if (!items.length) return null;
+  return (
+    <aside data-testid="translation-variant-notice" className="mb-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4">
+      <h2 className="text-sm font-semibold text-ink">반복 구절의 번역이 다릅니다</h2>
+      <p className="mt-1 text-xs text-muted">문맥에 따른 차이일 수 있습니다. 원문과 번역을 보고 직접 판단해 주세요.</p>
+      <ul className="mt-3 space-y-3">
+        {items.map((item) => (
+          <li key={item.original}>
+            <p className="font-serif text-sm text-ink">{item.original}</p>
+            <ul className="mt-1 space-y-0.5 text-xs text-muted">
+              {item.translations.map((translation) => <li key={translation}>→ {translation}</li>)}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </aside>
   );
 }

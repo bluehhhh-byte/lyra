@@ -1,6 +1,7 @@
 ﻿// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
 import { readSong, writeSong, deleteSong, readRuntimeData, writeData, commitFiles } from "../../../lib/store";
-import { getAllSongsRuntime, capitalizeLyricLines } from "../../../lib/songs";
+import { getAllSongsRuntime, capitalizeLyricLines, parseFrontmatter, parseLyrics } from "../../../lib/songs";
+import { translationVariants } from "../../../lib/translation-variants";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { geminiText, GEMINI_LITE_MODEL } from "../../../lib/admin/gemini";
@@ -18,6 +19,11 @@ import { TYPES as CORRECTION_TYPES, lineHash } from "../../../lib/admin/correcti
 import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
+
+const variantsFromRaw = (raw) => {
+  const { body } = parseFrontmatter((raw || "").replace(/\r\n/g, "\n"));
+  return translationVariants(parseLyrics(body).flatMap((stanza) => stanza.lines));
+};
 
 export async function handleSongs(action, body) {
   // 스크립트로 DB를 직접 고친 뒤 캐시를 비운다. 캐시 무효화는 lib/store.js의
@@ -872,7 +878,7 @@ ${listed}`,
   if (action === "load") {
     const song = await readSong(body.slug);
     if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
-    return Response.json({ raw: song.raw });
+    return Response.json({ raw: song.raw, translationVariants: variantsFromRaw(song.raw) });
   }
 
   // ── 가사 정확성 감사 ──────────────────────────────────────────────────────
@@ -975,7 +981,7 @@ ${listed}`,
     if (!(await readSong(body.slug)))
       return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
     await writeSong(body.slug, body.raw, `edit(song): ${body.slug}`);
-    return Response.json({ ok: true });
+    return Response.json({ ok: true, translationVariants: variantsFromRaw(body.raw) });
   }
 
   if (action === "delete") {
