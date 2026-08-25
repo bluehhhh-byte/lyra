@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getWatchedRuntime } from "../../lib/watched";
-import { getAllMoviesRuntime } from "../../lib/movies";
+import { getAllMoviesMeta } from "../../lib/movies";
 import { attachCuratedLinks } from "../../lib/watched-filter";
 import WatchedGrid from "./grid";
 import CynoNav from "../cyno-nav";
@@ -15,7 +15,7 @@ export const metadata = {
 export default async function WatchedPage({ searchParams }) {
   const [all, curated, initial] = await Promise.all([
     getWatchedRuntime(),
-    getAllMoviesRuntime(),
+    getAllMoviesMeta(),
     searchParams,
   ]);
   const rated = attachCuratedLinks(all.filter((m) => m.rating != null), curated);

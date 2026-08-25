@@ -9,7 +9,8 @@ export const metadata = {
 
 export default async function MoviesPage({ searchParams }) {
   const { q, group, media, country, genre, rating, sort } = (await searchParams) || {};
-  const movies = (await getAllMoviesMeta()).map((m) => {
+  const movieRecords = await getAllMoviesMeta();
+  const movies = movieRecords.map((m) => {
     const title = m.title_ko || m.title;
     const director = m.director_ko || m.director || "";
     const synopsis = m.synopsis || [];

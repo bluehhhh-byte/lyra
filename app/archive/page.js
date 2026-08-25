@@ -5,7 +5,7 @@ import { valenceColor } from "../../lib/keywords";
 import { CULTURAL_THEMES } from "../../lib/themes";
 import CoverImage from "../cover-image";
 import ArchiveCalendar from "./calendar";
-import { EmotionOrbit, BioTimeline, EmotionComposition } from "./orbit";
+import { EmotionOrbit, EmotionTrend, BioTimeline, EmotionComposition } from "./orbit";
 
 export const metadata = {
   title: "문화 아카이브 | Lyra",
@@ -136,9 +136,9 @@ export default async function ArchivePage({ searchParams }) {
 
       {!theme && (
         <section className="mb-10 min-w-0" aria-labelledby="orbit-heading">
-          <h2 id="orbit-heading" className="text-lg font-bold">{year}년의 감정 궤도</h2>
+          <h2 id="orbit-heading" className="text-lg font-bold">{year}년의 정서 지도</h2>
           <p className="mb-4 mt-1 text-xs text-muted">
-            각 점은 그 달 음악 기록의 감정 좌표다. 점을 고르면 그 달로 이동한다.
+            가로는 밝기, 세로는 각성도다. 월을 고르면 그달 기록으로 이동한다.
           </p>
           {/* 감정 구성은 이름·막대·수치가 한 행인 목록이라 좁은 칸이면 충분하다.
               궤도 그래프에 남는 폭을 주는 편이 점과 라벨을 읽기 쉽다 */}
@@ -152,6 +152,15 @@ export default async function ArchivePage({ searchParams }) {
               </div>
             )}
           </div>
+          {/* 같은 좌표를 시간축으로 편 그림. 지도는 "어디에 있었나"를, 이쪽은
+              "언제 어떻게 움직였나"를 답한다 — 척도가 고정이라 지도에서는
+              이동 폭이 작아 보이는데 여기서는 열두 칸으로 벌어진다 */}
+          <div className="mt-8 min-w-0">
+            <h3 className="mb-1 text-sm font-semibold">월별 추이</h3>
+            <p className="mb-3 text-xs text-muted">지도의 점을 시간 순서로 편 것이다.</p>
+            <EmotionTrend stats={yearStats} year={year} />
+          </div>
+
           <div className="mt-8 min-w-0">
             <h3 className="mb-3 text-sm font-semibold">시간축 일대기</h3>
             <BioTimeline stats={yearStats} month={month} monthHref={monthHref} />

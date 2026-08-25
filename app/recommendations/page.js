@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { readRuntimeData } from "../../lib/store";
-import { getAllMoviesRuntime } from "../../lib/movies";
+import { getAllMoviesMeta } from "../../lib/movies";
 import { getRated } from "../../lib/watched";
 import MovieRecs from "./movie-recs";
 
@@ -15,7 +15,7 @@ export const metadata = {
 export default async function RecommendationsPage() {
   const [recs, movies] = await Promise.all([
     readRuntimeData("taste-recs.json", { items: [] }),
-    getAllMoviesRuntime(),
+    getAllMoviesMeta(),
   ]);
   // 추천 후 평가했거나 등록한 작품은 다음 생성을 기다리지 않고 즉시 숨긴다
   const seen = new Set([

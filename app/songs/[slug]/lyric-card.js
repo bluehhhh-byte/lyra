@@ -1,7 +1,19 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { buildCaption } from "../../../lib/caption";
-import { buildCarousel, autoSelect, CAROUSEL_SLIDES } from "../../../lib/carousel";
+import {
+  buildCarousel,
+  autoSelect,
+  CAROUSEL_SLIDES,
+  MAX_SELECTED_LINES,
+} from "../../../lib/carousel";
+import {
+  carouselArtistLine,
+  carouselDisplayTitle,
+  carouselTitleParts,
+  layoutBilingualCarouselTitle,
+  TRANSLATED_TITLE_POINT_OFFSET,
+} from "../../../lib/carousel-title";
 
 // Stanza → 1080×1350 share card (flat dominant-color background from the album
 // art, ink flips black/white to match). CardModal builds an Instagram carousel:
@@ -11,7 +23,131 @@ import { buildCarousel, autoSelect, CAROUSEL_SLIDES } from "../../../lib/carouse
 
 const W = 1080;
 const H = 1350;
-const MAX_PAIRS = 15;
+const MAX_PAIRS = MAX_SELECTED_LINES;
+const SANS = '"Pretendard Variable", Pretendard, "Apple SD Gothic Neo", sans-serif';
+const SERIF = 'Georgia, "Noto Serif KR", serif';
+const INK = "#f7f7f8";
+const INK_DIM = "rgba(247,247,248,0.84)";
+const PAD = 84;
+
+export async function ensureCarouselFonts() {
+  if (!document.fonts) return;
+  await document.fonts.ready;
+  await Promise.all([
+    document.fonts.load('700 52px "Pretendard Variable"'),
+    document.fonts.load('500 36px "Pretendard Variable"'),
+  ]);
+}
+
+export function drawImageCover(ctx, image, x, y, width, height) {
+  const scale = Math.max(width / image.width, height / image.height);
+  const sw = width / scale;
+  const sh = height / scale;
+  ctx.drawImage(
+    image,
+    (image.width - sw) / 2,
+    (image.height - sh) / 2,
+    sw,
+    sh,
+    x,
+    y,
+    width,
+    height,
+  );
+}
+
+export function drawRoundedArt(ctx, image, x, y, size, radius = 18) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.roundRect(x, y, size, size, radius);
+  ctx.clip();
+  drawImageCover(ctx, image, x, y, size, size);
+  ctx.restore();
+}
+
+export function drawArtWash(ctx, art, scrim = 0.66) {
+  ctx.fillStyle = "#0d0d0f";
+  ctx.fillRect(0, 0, W, H);
+  if (art) {
+    const tiny = document.createElement("canvas");
+    tiny.width = tiny.height = 16;
+    tiny.getContext("2d").drawImage(art, 0, 0, 16, 16);
+    const size = Math.max(W, H) * 1.4;
+    ctx.imageSmoothingEnabled = true;
+    ctx.filter = "blur(40px)";
+    ctx.drawImage(tiny, (W - size) / 2, (H - size) / 2, size, size);
+    ctx.filter = "none";
+  }
+  ctx.fillStyle = `rgba(0,0,0,${scrim})`;
+  ctx.fillRect(0, 0, W, H);
+}
+
+export function drawPageNumber(ctx, position, total) {
+  ctx.save();
+  ctx.fillStyle = "rgba(13,13,15,0.58)";
+  ctx.beginPath();
+  ctx.roundRect(W - PAD - 132, 66, 132, 58, 29);
+  ctx.fill();
+  ctx.textAlign = "right";
+  ctx.fillStyle = "rgba(247,247,248,0.88)";
+  ctx.font = `600 25px ${SANS}`;
+  ctx.fillText(`${String(position).padStart(2, "0")} / ${String(total).padStart(2, "0")}`, W - PAD - 20, 104);
+  ctx.restore();
+}
+
+export function fitText(ctx, text, maxWidth) {
+  if (ctx.measureText(text).width <= maxWidth) return text;
+  let fitted = text;
+  while (fitted.length && ctx.measureText(`${fitted}…`).width > maxWidth) fitted = fitted.slice(0, -1);
+  return `${fitted}…`;
+}
+
+export function fitFontSize(ctx, text, maxWidth, sizes, font) {
+  for (const size of sizes) {
+    ctx.font = font(size);
+    if (ctx.measureText(text).width <= maxWidth) return size;
+  }
+  return sizes.at(-1);
+}
+
+export function drawBilingualTitleLine(ctx, {
+  line,
+  translatedTitle,
+  x,
+  y,
+  baseSize,
+  font,
+  translatedPointOffset = TRANSLATED_TITLE_POINT_OFFSET,
+}) {
+  const translated = String(translatedTitle || "").trim().replace(/^\((.*)\)$/, "$1").trim();
+  const suffix = translated ? `(${translated})` : "";
+  if (!suffix || !line.endsWith(suffix)) {
+    ctx.font = font(baseSize);
+    ctx.fillText(line, x, y);
+    return;
+  }
+
+  const original = line.slice(0, -suffix.length).trimEnd();
+  ctx.font = font(baseSize);
+  if (original) ctx.fillText(original, x, y);
+  const offset = original ? ctx.measureText(`${original} `).width : 0;
+  // 표지는 번역을 작게, 곡 설명은 원문과 같은 크기로 쓸 수 있게 카드별 간격을 받는다.
+  const translatedSize = Math.max(10, baseSize - (translatedPointOffset * 96) / 72);
+  ctx.font = font(translatedSize);
+  ctx.fillText(suffix, x + offset, y);
+}
+
+export function drawProgress(ctx, position, total) {
+  const gap = 18;
+  const dot = 7;
+  const start = (W - ((total - 1) * gap + dot * 2)) / 2;
+  for (let i = 0; i < total; i++) {
+    ctx.beginPath();
+    ctx.arc(start + i * gap, H - 66, i + 1 === position ? dot : 4, 0, Math.PI * 2);
+    ctx.fillStyle = i + 1 === position ? INK : "rgba(247,247,248,0.35)";
+    ctx.fill();
+  }
+}
 
 export function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -50,64 +186,44 @@ export function wrap(ctx, text, maxW) {
   return out;
 }
 
-async function drawCard({ song, lines, align = "left" }) {
+async function drawCard({ song, lines, art, align = "left", position, total }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // background — the album cover, heavily blurred + darkened so the lyrics read.
-  // ctx.filter blur is unsupported on Safari/iOS, so the blur is done by drawing
-  // the art tiny (16px) and upscaling it — bilinear smoothing melts it into a
-  // soft wash in every browser. A dark scrim on top then guarantees contrast,
-  // whether or not the extra filter blur took effect.
-  ctx.fillStyle = "#0d0d0f";
-  ctx.fillRect(0, 0, W, H);
-  let art = null;
-  try {
-    art = await loadImage(song.artwork);
-    const D = 16; // smaller = blurrier
-    const tmp = document.createElement("canvas");
-    tmp.width = tmp.height = D;
-    tmp.getContext("2d").drawImage(art, 0, 0, D, D);
-    ctx.imageSmoothingEnabled = true;
-    const s = Math.max(W, H) * 1.4; // overscan so no hard edges
-    ctx.filter = "blur(40px)"; // extra softening where supported; ignored on Safari
-    ctx.drawImage(tmp, (W - s) / 2, (H - s) / 2, s, s);
-    ctx.filter = "none";
-  } catch {}
-  // dark scrim — the real legibility guarantee, applied regardless of blur support
-  ctx.fillStyle = "rgba(0,0,0,0.55)";
-  ctx.fillRect(0, 0, W, H);
+  drawArtWash(ctx, art);
 
-  // scrimmed dark background → light ink always reads
-  const ink = "#f4f4f6";
-  const inkDim = "rgba(244,244,246,0.62)";
-
-  const pad = 96;
-
-  // wordmark — top-right, clear of the lyric block
-  ctx.fillStyle = ink;
-  ctx.textAlign = "right";
-  ctx.font = "600 34px Georgia, serif";
-  ctx.fillText("Lyra.", W - pad, 104);
+  if (art) drawRoundedArt(ctx, art, PAD, 68, 124);
+  else {
+    ctx.fillStyle = "#26262b";
+    ctx.fillRect(PAD, 68, 124, 124);
+  }
+  ctx.textAlign = "left";
+  ctx.fillStyle = INK;
+  ctx.font = `700 36px ${SANS}`;
+  ctx.fillText(fitText(ctx, song.title, 560), 232, 115);
+  ctx.fillStyle = INK_DIM;
+  ctx.font = `500 27px ${SANS}`;
+  ctx.fillText(song.artist, 232, 157);
+  drawPageNumber(ctx, position, total);
 
   // lyric lines — original (serif, bright) over translation (sans, dimmed).
   // Size steps down with the pair count, then a shrink-to-fit loop handles
-  // what the tiers can't (wrapped lines, 15 dense pairs) — the fixed +14 line
+  // what the tiers can't (wrapped lines, dense pairs) — the fixed +14 line
   // paddings don't scale linearly with the font, so one pass can land short.
   const pairs = lines.slice(0, MAX_PAIRS);
-  const tiers = [[4, 52, 36], [7, 42, 30], [10, 34, 24], [15, 26, 18]];
+  const tiers = [[3, 54, 38], [4, 48, 34], [5, 42, 30]];
   let [, oSize, tSize] = tiers.find(([n]) => pairs.length <= n) || tiers.at(-1);
-  const maxW = W - pad * 2;
+  const maxW = W - PAD * 2;
   const build = () => {
     const blocks = [];
     for (const l of pairs) {
-      ctx.font = `600 ${oSize}px Georgia, 'Noto Serif KR', serif`;
+      ctx.font = `600 ${oSize}px ${SERIF}`;
       for (const t of wrap(ctx, l.en, maxW))
         blocks.push({ t, size: oSize, gap: oSize + 14, dim: false });
       if (l.ko) {
-        ctx.font = `${tSize}px Pretendard, 'Apple SD Gothic Neo', sans-serif`;
+        ctx.font = `500 ${tSize}px ${SANS}`;
         for (const t of wrap(ctx, l.ko, maxW))
           blocks.push({ t, size: tSize, gap: tSize + 14, dim: true });
       }
@@ -116,60 +232,34 @@ async function drawCard({ song, lines, align = "left" }) {
     return blocks;
   };
   let blocks = build();
-  const top = 150; // below the wordmark
-  const budget = H - 190 - top; // frame minus the 3-line footer minus headroom
+  const top = 250;
+  const budget = H - 360;
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
-  for (let guard = 4; totalH > budget && guard > 0; guard--) {
+  for (let guard = 6; totalH > budget && guard > 0; guard--) {
     const f = budget / totalH;
-    oSize = Math.max(16, Math.round(oSize * f));
-    tSize = Math.max(13, Math.round(tSize * f));
+    oSize = Math.max(30, Math.round(oSize * f));
+    tSize = Math.max(24, Math.round(tSize * f));
     blocks = build();
     totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   }
   let y = top + Math.max(0, (budget - totalH) / 2); // centered in the free space
   ctx.textAlign = align;
-  const xText = align === "right" ? W - pad : align === "center" ? W / 2 : pad;
+  const xText = align === "right" ? W - PAD : align === "center" ? W / 2 : PAD;
   for (const b of blocks) {
     y += b.gap;
     if (!b.t) continue;
     ctx.font = b.dim
-      ? `${b.size}px Pretendard, 'Apple SD Gothic Neo', sans-serif`
-      : `600 ${b.size}px Georgia, 'Noto Serif KR', serif`;
-    ctx.fillStyle = b.dim ? inkDim : ink;
+      ? `500 ${b.size}px ${SANS}`
+      : `600 ${b.size}px ${SERIF}`;
+    ctx.fillStyle = b.dim ? INK_DIM : INK;
     ctx.fillText(b.t, xText, y);
   }
 
-  // footer — title / artist / meta. 앨범 썸네일은 그리지 않는다: 캐러셀 1장이
-  // 커버를 정사각으로 크게 싣고 있어 같은 그림이 다섯 장에 여섯 번 나오고,
-  // 썸네일이 차지한 폭만큼 텍스트가 밀려 곡 설명 카드와 하단이 어긋났다.
-  const fy = H - 170;
-  const tx = pad;
   ctx.textAlign = "left";
-  ctx.fillStyle = ink;
-  ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.title, tx, fy + 34);
-  // translated title in dimmer, smaller type right after — only when it differs
-  // and it still fits before the right margin
-  if (song.title_ko) {
-    const after = tx + ctx.measureText(song.title).width + 12;
-    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    const label = `(${song.title_ko})`;
-    if (after + ctx.measureText(label).width <= W - pad) {
-      ctx.fillStyle = inkDim;
-      ctx.fillText(label, after, fy + 33);
-      ctx.fillStyle = ink;
-    }
-  }
-  ctx.fillStyle = inkDim;
-  ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.artist, tx, fy + 70);
-  // 국가·장르·연도 — 커버·설명 카드와 같은 문법으로 묶음이 한 벌로 읽힌다
-  const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
-  if (meta) {
-    ctx.fillStyle = "rgba(244,244,246,0.4)"; // a step dimmer than inkDim — tertiary info
-    ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    ctx.fillText(meta, tx, fy + 104);
-  }
+  ctx.fillStyle = "rgba(247,247,248,0.7)";
+  ctx.font = `600 27px ${SERIF}`;
+  ctx.fillText("Lyra.", PAD, H - 56);
+  drawProgress(ctx, position, total);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
@@ -177,7 +267,7 @@ async function drawCard({ song, lines, align = "left" }) {
 // 1장 전용 — 앨범 커버가 주인공인 카드. 뒤의 장들은 커버를 흐려 배경으로 깔지만
 // 이 장은 그대로 크게 싣는다. 피드 썸네일이 곧 이 장이라 계정 그리드가 앨범
 // 진열장으로 읽힌다. 해설은 2장(drawAboutCard)이 맡는다.
-async function drawCoverCard({ song }) {
+async function drawCoverCard({ song, art }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -186,65 +276,81 @@ async function drawCoverCard({ song }) {
   ctx.fillStyle = "#0d0d0f";
   ctx.fillRect(0, 0, W, H);
 
-  // 커버는 카드 폭 전체를 정사각으로 차지한다 — 위쪽 1080×1080
-  let art = null;
-  try {
-    art = await loadImage(song.artwork);
-    const side = Math.min(art.width, art.height); // 정사각 크롭 (2:3 포스터가 눌리지 않게)
-    ctx.drawImage(art, (art.width - side) / 2, (art.height - side) / 2, side, side, 0, 0, W, W);
-  } catch {
+  // 텍스트 블록에 충분한 숨 쉴 공간을 남기면서 커버의 존재감은 유지한다.
+  const coverArtHeight = 1000;
+  if (art) {
+    drawImageCover(ctx, art, 0, 0, W, coverArtHeight);
+  } else {
     ctx.fillStyle = "#1a1a1e";
-    ctx.fillRect(0, 0, W, W);
+    ctx.fillRect(0, 0, W, coverArtHeight);
   }
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다
-  const fade = ctx.createLinearGradient(0, W - 120, 0, W);
+  const fade = ctx.createLinearGradient(0, coverArtHeight - 120, 0, coverArtHeight);
   fade.addColorStop(0, "rgba(13,13,15,0)");
   fade.addColorStop(1, "rgba(13,13,15,1)");
   ctx.fillStyle = fade;
-  ctx.fillRect(0, W - 120, W, 120);
+  ctx.fillRect(0, coverArtHeight - 120, W, 120);
   ctx.fillStyle = "#0d0d0f";
-  ctx.fillRect(0, W, W, H - W);
+  ctx.fillRect(0, coverArtHeight, W, H - coverArtHeight);
 
-  const ink = "#f4f4f6";
-  const inkDim = "rgba(244,244,246,0.62)";
+  const ink = INK;
+  const inkDim = INK_DIM;
   const pad = 96;
-  let y = W + 62;
-
-  // 곡 제목 — 영어·일본어 제목이면 한글 번역 제목을 옆에 병기한다 (가사 카드와 같은 규칙)
+  // 제목은 `원문 (한글 번역)`으로 묶고, 긴 feat. 크레딧은 제목이 아니라
+  // 아티스트 정보에 붙인다. 데이터의 `아티스트 - 제목` 중복도 함께 제거한다.
   ctx.textAlign = "left";
   ctx.fillStyle = ink;
-  ctx.font = "600 52px Georgia, 'Noto Serif KR', serif";
-  ctx.fillText(song.title, pad, y);
-  if (song.title_ko) {
-    const after = pad + ctx.measureText(song.title).width + 16;
-    ctx.font = "34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    const label = `(${song.title_ko})`;
-    if (after + ctx.measureText(label).width <= W - pad) {
-      ctx.fillStyle = inkDim;
-      ctx.fillText(label, after, y - 2);
-      ctx.fillStyle = ink;
-    }
-  }
-  y += 46;
+  const titleMaxWidth = W - pad * 2;
+  const titleParts = carouselTitleParts(song.title, song.artist);
+  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
+  const titleLayout = layoutBilingualCarouselTitle(
+    titleParts.main,
+    song.title_ko,
+    (line, size) => {
+      ctx.font = `600 ${size}px ${SERIF}`;
+      return ctx.measureText(line).width;
+    },
+    titleMaxWidth,
+    2,
+  );
+  const titleTop = coverArtHeight + 24;
+  ctx.font = `600 ${titleLayout.fontSize}px ${SERIF}`;
+  titleLayout.lines.forEach((line, index) => {
+    drawBilingualTitleLine(ctx, {
+      line,
+      translatedTitle: song.title_ko,
+      x: pad,
+      y: titleTop + titleLayout.fontSize + index * titleLayout.lineHeight,
+      baseSize: titleLayout.fontSize,
+      font: (size) => `600 ${size}px ${SERIF}`,
+    });
+  });
 
-  // 아티스트
-  ctx.fillStyle = inkDim;
-  ctx.font = "32px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.artist, pad, y);
-  y += 44;
-
-  // 국가 · 장르 · 연도 — 사이트의 태그 어휘 그대로
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
-  if (meta) {
-    ctx.fillStyle = "rgba(244,244,246,0.4)";
-    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    ctx.fillText(meta, pad, y);
+  let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 54;
+  const artistSize = fitFontSize(
+    ctx,
+    artistLine,
+    titleMaxWidth,
+    [29, 27, 25, 23, 21, 19, 17],
+    (size) => `500 ${size}px ${SANS}`,
+  );
+  if (detailY <= H - 82) {
+    ctx.fillStyle = inkDim;
+    ctx.font = `500 ${artistSize}px ${SANS}`;
+    ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
+    detailY += artistSize + 14;
+    if (meta && detailY <= H - 88) {
+      ctx.fillStyle = "rgba(244,244,246,0.4)";
+      ctx.font = `500 23px ${SANS}`;
+      ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
+    }
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
   // (keywords는 곡의 소재, emotion은 감정 한 낱말). 워드마크 폭만큼은 비워 둔다.
-  ctx.font = "24px Pretendard, 'Apple SD Gothic Neo', sans-serif";
+  ctx.font = `500 24px ${SANS}`;
   const markW = (() => {
     ctx.save();
     ctx.font = "600 30px Georgia, serif";
@@ -275,89 +381,85 @@ async function drawCoverCard({ song }) {
 // 2장 전용 — 곡 설명 카드. 해설은 923곡 전부에 있는 자산이자 다른 가사 계정이
 // 갖지 못한 차별점이라 제 장을 준다. 배경은 가사 카드와 같은 문법(흐린 커버 + 어두운
 // 막)이라 묶음이 한 벌로 읽히고, 글은 해설 하나뿐이라 천천히 읽힌다.
-async function drawAboutCard({ song, note }) {
+async function drawAboutCard({ song, note, art, position, total }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // 배경 — drawCard와 같은 방식 (작게 그려 확대 = 전 브라우저에서 흐림)
   ctx.fillStyle = "#0d0d0f";
   ctx.fillRect(0, 0, W, H);
-  try {
-    const art = await loadImage(song.artwork);
-    const D = 16;
-    const tmp = document.createElement("canvas");
-    tmp.width = tmp.height = D;
-    tmp.getContext("2d").drawImage(art, 0, 0, D, D);
-    ctx.imageSmoothingEnabled = true;
-    const sz = Math.max(W, H) * 1.4;
-    ctx.filter = "blur(40px)";
-    ctx.drawImage(tmp, (W - sz) / 2, (H - sz) / 2, sz, sz);
-    ctx.filter = "none";
-  } catch {}
-  ctx.fillStyle = "rgba(0,0,0,0.55)";
-  ctx.fillRect(0, 0, W, H);
-
-  const ink = "#f4f4f6";
-  const inkDim = "rgba(244,244,246,0.62)";
-  const pad = 96;
-  const maxW = W - pad * 2;
-
-  // 워드마크
-  ctx.fillStyle = ink;
-  ctx.textAlign = "right";
-  ctx.font = "600 34px Georgia, serif";
-  ctx.fillText("Lyra.", W - pad, 104);
-
-  // 라벨
-  ctx.textAlign = "left";
-  ctx.fillStyle = inkDim;
-  ctx.font = "600 26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText("노트", pad, 210);
-
-  // 해설 본문 — 세로 중앙. 길면 글자를 줄여 맞춘다(가사 카드와 같은 태도).
-  const text = note || `${song.artist}의 ${song.year || ""}년 곡.`.replace("의 년", "의");
-  let fs = 40;
-  let lines = [];
-  for (; fs >= 26; fs -= 2) {
-    ctx.font = `300 ${fs}px 'Noto Serif KR', Georgia, serif`;
-    lines = wrap(ctx, text, maxW);
-    if (lines.length * (fs + 26) <= H - 480) break;
+  const artHeight = 570;
+  if (art) drawImageCover(ctx, art, 0, 0, W, artHeight);
+  else {
+    ctx.fillStyle = "#242428";
+    ctx.fillRect(0, 0, W, artHeight);
   }
-  const lineH = fs + 26;
-  let y = 280 + Math.max(0, (H - 480 - lines.length * lineH) / 2);
-  ctx.fillStyle = ink;
-  ctx.font = `300 ${fs}px 'Noto Serif KR', Georgia, serif`;
+  const fade = ctx.createLinearGradient(0, 330, 0, 690);
+  fade.addColorStop(0, "rgba(13,13,15,0)");
+  fade.addColorStop(0.68, "rgba(13,13,15,0.92)");
+  fade.addColorStop(1, "#0d0d0f");
+  ctx.fillStyle = fade;
+  ctx.fillRect(0, 330, W, 360);
+
+  drawPageNumber(ctx, position, total);
+  ctx.textAlign = "left";
+  ctx.fillStyle = "rgba(247,247,248,0.72)";
+  ctx.font = `700 24px ${SANS}`;
+  ctx.fillText("SONG NOTE", PAD, 630);
+
+  const maxW = W - PAD * 2;
+  const text = note || `${song.artist}의 ${song.year || ""}년 곡.`.replace("의 년", "의");
+  let fs = 42;
+  let lines = [];
+  for (; fs >= 32; fs -= 2) {
+    ctx.font = `500 ${fs}px ${SANS}`;
+    lines = wrap(ctx, text, maxW);
+    if (lines.length * (fs + 22) <= 470) break;
+  }
+  const lineH = fs + 22;
+  let y = 680;
+  ctx.fillStyle = INK;
+  ctx.font = `500 ${fs}px ${SANS}`;
   for (const line of lines) {
     y += lineH;
-    if (y > H - 190) break; // 극단적으로 긴 해설 — 카드 밖으로 흘리지 않는다
-    ctx.fillText(line, pad, y);
+    if (y > H - 230) break;
+    ctx.fillText(line, PAD, y);
   }
 
-  // 하단 — 곡 정보 (가사 카드 footer와 같은 자리·크기·규칙)
-  const fy = H - 170;
-  ctx.fillStyle = ink;
-  ctx.font = "600 34px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.title, pad, fy + 34);
-  if (song.title_ko) {
-    const after = pad + ctx.measureText(song.title).width + 12;
-    ctx.font = "26px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    const label = `(${song.title_ko})`;
-    if (after + ctx.measureText(label).width <= W - pad) {
-      ctx.fillStyle = inkDim;
-      ctx.fillText(label, after, fy + 33);
-    }
-  }
-  ctx.fillStyle = inkDim;
-  ctx.font = "27px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-  ctx.fillText(song.artist, pad, fy + 70);
-  const aboutMeta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
-  if (aboutMeta) {
-    ctx.fillStyle = "rgba(244,244,246,0.4)";
-    ctx.font = "23px Pretendard, 'Apple SD Gothic Neo', sans-serif";
-    ctx.fillText(aboutMeta, pad, fy + 104);
-  }
+  // 설명 카드도 같은 표기 규칙을 쓴다: `원문 (한글 번역)` / `아티스트 (Feat. …)`.
+  const titleParts = carouselTitleParts(song.title, song.artist);
+  const displayTitle = carouselDisplayTitle(song.title, song.title_ko, song.artist);
+  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
+  const displaySize = fitFontSize(
+    ctx,
+    displayTitle,
+    maxW,
+    [31, 29, 27, 25, 23],
+    (size) => `700 ${size}px ${SANS}`,
+  );
+  ctx.fillStyle = INK;
+  ctx.font = `700 ${displaySize}px ${SANS}`;
+  drawBilingualTitleLine(ctx, {
+    line: fitText(ctx, displayTitle, maxW),
+    translatedTitle: song.title_ko,
+    x: PAD,
+    y: H - 145,
+    baseSize: displaySize,
+    font: (size) => `700 ${size}px ${SANS}`,
+    translatedPointOffset: 0,
+  });
+  const artistSize = fitFontSize(
+    ctx,
+    artistLine,
+    maxW,
+    [23, 21, 19, 17],
+    (size) => `500 ${size}px ${SANS}`,
+  );
+  ctx.fillStyle = INK_DIM;
+  ctx.font = `500 ${artistSize}px ${SANS}`;
+  ctx.fillText(fitText(ctx, artistLine, maxW), PAD, H - 106);
+  drawProgress(ctx, position, total);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
@@ -388,10 +490,11 @@ async function downloadAll(blobs, song) {
 // selection with the stanza that was clicked.
 export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [align, setAlign] = useState("left");
-  // 실을 줄 — 누른 연에서 시작해 아홉 줄이 기본이다(세 장 × 세 줄).
+  // 실을 줄 — 누른 연에서 시작해 열다섯 줄이 기본이다(세 장 × 다섯 줄).
   // 체크박스로 자유롭게 바꾼다. 나누는 것은 기계가 한다.
   const [sel, setSel] = useState(() => new Set(autoSelect(allLines, initial?.[0] ?? 0)));
   const [cards, setCards] = useState([]); // [{ role, label, url }]
+  const [activeCard, setActiveCard] = useState(0);
   const cardBlobs = useRef([]);
   const [building, setBuilding] = useState(false);
 
@@ -411,14 +514,19 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     let alive = true;
     setBuilding(true);
     (async () => {
+      const [, art] = await Promise.all([
+        ensureCarouselFonts(),
+        loadImage(song.artwork).catch(() => null),
+      ]);
       const made = [];
-      for (const slide of carousel.slides) {
+      for (const [index, slide] of carousel.slides.entries()) {
+        const page = { position: index + 1, total: carousel.slides.length };
         const blob =
           slide.role === "cover"
-            ? await drawCoverCard({ song })
+            ? await drawCoverCard({ song, art })
             : slide.role === "about"
-              ? await drawAboutCard({ song, note: slide.note })
-              : await drawCard({ song, lines: slide.lines, align });
+              ? await drawAboutCard({ song, note: slide.note, art, ...page })
+              : await drawCard({ song, lines: slide.lines, art, align, ...page });
         if (!alive) return;
         if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
       }
@@ -431,6 +539,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
         return made;
       });
       cardBlobs.current = made.map((m) => m.blob);
+      setActiveCard((current) => Math.min(current, Math.max(0, made.length - 1)));
       setBuilding(false);
     })();
     return () => {
@@ -444,75 +553,90 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     setSel((old) => {
       const next = new Set(old);
       if (next.has(i)) next.delete(i);
-      else next.add(i);
+      else if (next.size < MAX_SELECTED_LINES) next.add(i);
       return next;
     });
 
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4 opacity-100 transition-opacity duration-200 ease-out starting:opacity-0 motion-reduce:transition-none"
+      className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-2 opacity-100 transition-opacity duration-200 ease-out sm:p-4 starting:opacity-0 motion-reduce:transition-none"
       role="dialog"
       aria-label="캐러셀 만들기"
     >
       {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-h-full w-full max-w-sm scale-100 overflow-y-auto overscroll-contain rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out-strong starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
+        className="flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full min-w-0 max-w-[calc(100vw-1rem)] scale-100 flex-col overflow-hidden rounded-2xl border border-line bg-bg p-3 opacity-100 transition duration-200 ease-out-strong sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:max-w-5xl sm:p-6 starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
-        <p className="mb-2 text-xs font-semibold text-muted">
-          인스타그램 캐러셀 {CAROUSEL_SLIDES}장 — 커버 · 곡 설명 · 가사 3장
-        </p>
-
-        {carousel.error ? (
-          <p className="rounded-xl border border-line px-3 py-6 text-center text-sm text-muted">{carousel.error}</p>
-        ) : cards.length ? (
-          // 인스타에서 넘겨 보는 순서 그대로 — 왼쪽부터 1장이다
-          // overscroll-x-contain — 마지막 장에서 더 밀어도 뒤 페이지로 넘어가지 않는다.
-          // 가로 오버스크롤은 브라우저의 "뒤로 가기" 제스처로 이어져, 카드를 넘겨
-          // 보다가 곡 페이지를 벗어나 버린다.
-          <ol className="-mx-1 flex touch-pan-x snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain px-1 pb-1">
-            {cards.map((c, i) => (
-              <li key={c.role} className="w-40 shrink-0 snap-center">
-                {/* draggable=false — 이미지를 끌면 브라우저가 그림 자체를 드래그해
-                    스크롤이 안 먹고 다른 곳에 떨궈진다. 끌면 목록이 넘어가야 한다. */}
-                <img
-                  src={c.url}
-                  alt={`${i + 1}번째 카드 — ${c.label}`}
-                  draggable={false}
-                  className="w-full select-none rounded-lg border border-line"
-                />
-                <p className="mt-1 text-center text-[10px] text-muted">
-                  {i + 1}. {c.label}
-                </p>
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">카드 생성 중…</div>
-        )}
-
-        <div className="mb-1 mt-3 flex items-center justify-between">
-          <p className="text-xs text-muted">{sel.size}줄 선택 — 세 장에 고르게 나눠 담습니다</p>
-          <div className="flex gap-1">
-            {[["left", "좌", "왼쪽"], ["center", "중", "가운데"], ["right", "우", "오른쪽"]].map(([k, label, name]) => (
-              <button
-                key={k}
-                onClick={() => setAlign(k)}
-                aria-label={`${name} 정렬`}
-                aria-pressed={align === k}
-                className={`rounded-full border px-2.5 py-0.5 text-xs transition ${
-                  align === k
-                    ? "border-accent bg-accent font-semibold text-bg"
-                    : "border-line text-muted hover:text-accent"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+        <div className="mb-3 flex shrink-0 items-center justify-between gap-3 sm:mb-4 sm:gap-4">
+          <div className="min-w-0">
+            <p className="text-sm font-semibold text-ink">인스타그램 캐러셀 {CAROUSEL_SLIDES}장</p>
+            <p className="mt-0.5 text-xs text-muted">커버 · 곡 설명 · 가사 3장</p>
           </div>
+          <button onClick={onClose} aria-label="캐러셀 닫기" className="rounded-full border border-line px-3 py-1.5 text-xs text-muted hover:text-accent">닫기</button>
         </div>
-        <ul className="max-h-48 space-y-1 overflow-y-auto overscroll-contain">
+
+        <div className="grid min-h-0 min-w-0 flex-1 gap-4 overflow-y-auto overscroll-contain pr-1 sm:gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)]">
+          <section aria-label="카드 미리보기" className="min-w-0">
+            {carousel.error ? (
+              <p className="rounded-xl border border-line px-3 py-12 text-center text-sm text-muted">{carousel.error}</p>
+            ) : cards.length ? (
+              <>
+                <img
+                  src={cards[activeCard]?.url}
+                  alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`}
+                  draggable={false}
+                  className="mx-auto max-h-[42dvh] w-auto max-w-full select-none rounded-xl border border-line shadow-2xl sm:max-h-[56dvh] lg:max-h-[62vh]"
+                />
+                <ol className="mt-2 grid min-w-0 grid-cols-5 gap-1.5 sm:mt-3 sm:gap-2">
+                  {cards.map((card, index) => (
+                    <li key={`${card.role}-${index}`} className="min-w-0">
+                      <button
+                        type="button"
+                        onClick={() => setActiveCard(index)}
+                        aria-label={`${index + 1}번째 카드 보기 — ${card.label}`}
+                        aria-pressed={activeCard === index}
+                        className={`w-full min-w-0 rounded-lg border p-1 transition ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65 hover:opacity-100"}`}
+                      >
+                        <img src={card.url} alt="" draggable={false} className="aspect-[4/5] w-full rounded object-cover" />
+                        <span className="mt-1 block truncate text-[10px] text-muted">{index + 1}. {card.label}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              </>
+            ) : (
+              <div className="flex h-[42dvh] max-h-[420px] items-center justify-center rounded-xl border border-line text-sm text-muted sm:h-auto sm:aspect-[4/5] sm:max-h-[56dvh] lg:max-h-[62vh]">카드 생성 중…</div>
+            )}
+          </section>
+
+          <section aria-label="가사와 내보내기 설정" className="min-w-0">
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <p className="text-sm font-medium text-ink">
+                가사 {sel.size}/{MAX_SELECTED_LINES}줄
+                <span className="ml-2 text-xs font-normal text-muted">장당 약 {Math.ceil(sel.size / 3)}줄</span>
+              </p>
+              <div className="flex gap-1">
+                {[["left", "좌", "왼쪽"], ["center", "중", "가운데"], ["right", "우", "오른쪽"]].map(([k, label, name]) => (
+                  <button
+                    key={k}
+                    onClick={() => setAlign(k)}
+                    aria-label={`${name} 정렬`}
+                    aria-pressed={align === k}
+                    className={`rounded-full border px-2.5 py-0.5 text-xs transition ${
+                      align === k
+                        ? "border-accent bg-accent font-semibold text-bg"
+                        : "border-line text-muted hover:text-accent"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 15줄까지 선택할 수 있습니다.</p>
+          <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain rounded-xl border border-line p-2 lg:max-h-[44vh]">
           {allLines.map((l, i) => (
             <li key={i}>
               {l.section && (
@@ -525,6 +649,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                   type="checkbox"
                   checked={sel.has(i)}
                   onChange={() => toggle(i)}
+                  disabled={!sel.has(i) && sel.size >= MAX_SELECTED_LINES}
                   className="translate-y-0.5 accent-(--color-accent)"
                 />
                 <span className={`truncate ${sel.has(i) ? "" : "text-muted"}`}>
@@ -533,9 +658,9 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
               </label>
             </li>
           ))}
-        </ul>
+          </ul>
 
-        <div className="mt-4 flex gap-2">
+          <div className="mt-4 flex gap-2">
           <button
             onClick={() => cardBlobs.current.length && downloadAll(cardBlobs.current, song)}
             disabled={building || !cards.length}
@@ -543,15 +668,11 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           >
             {building ? "만드는 중…" : `${cards.length}장 저장`}
           </button>
-          <button
-            onClick={onClose}
-            className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent"
-          >
-            닫기
-          </button>
-        </div>
+          </div>
 
-        <Caption song={song} />
+          <Caption song={song} />
+          </section>
+        </div>
       </div>
     </div>
   );
