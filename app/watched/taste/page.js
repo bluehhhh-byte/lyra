@@ -6,6 +6,7 @@ import { getAllMoviesRuntime } from "../../../lib/movies";
 import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 import RatingInsights from "../rating-insights";
+import { GenreRatingCross } from "../taste-evidence";
 
 export const metadata = {
   title: "취향 분석 | Cyno.",
@@ -153,7 +154,6 @@ export default async function TastePage() {
 
   const mean = rated.reduce((n, m) => n + m.rating, 0) / rated.length;
   const country = aggregate(rated, (m) => m.country);
-  const genre = aggregate(rated, (m) => m.genre);
   const director = directorPreferences(rated);
   const actor = aggregate(rated, (m) => m.cast, { min: 3, top: 10 });
   const decade = aggregate(rated, (m) => decadeOf(m.year), { min: 3 });
@@ -203,10 +203,11 @@ export default async function TastePage() {
 
       <RatingInsights movies={rated} />
 
+      <GenreRatingCross movies={rated} />
+
       <CuratedThemeEvidence movies={curatedMovies} />
 
       <CountSection title="국가별" rows={country.byCount} mean={mean} />
-      <CountSection title="장르별" rows={genre.byCount} mean={mean} />
       <CountSection title="연대별" rows={decade.byCount} mean={mean} />
       <CountSection title="상영시간" rows={runtime.byCount} mean={mean} />
       <CountSection title="많이 본 감독" rows={director.byCount} mean={mean} link={personLink} />
@@ -214,7 +215,6 @@ export default async function TastePage() {
 
       <hr className="my-12 border-line" />
       <h2 className="mb-6 text-lg font-bold">편애와 기피</h2>
-      <PrefSection title="장르" high={genre.byAvg} low={genre.byLow} mean={mean} />
       <PrefSection title="국가" high={country.byAvg} low={country.byLow} mean={mean} />
       <PrefSection
         title="감독"
