@@ -5,6 +5,7 @@ import { readRuntimeData } from "../../../lib/store";
 import { getAllMoviesRuntime } from "../../../lib/movies";
 import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
+import RatingInsights from "../rating-insights";
 
 export const metadata = {
   title: "취향 분석 | Cyno.",
@@ -199,6 +200,8 @@ export default async function TastePage() {
         전체 평균보다 <span className="text-green-400">높으면 초록</span>,
         <span className="text-red-400"> 낮으면 빨강</span> — 많이 본 것과 좋아하는 것은 다르다.
       </p>
+
+      <RatingInsights movies={rated} />
 
       <CuratedThemeEvidence movies={curatedMovies} />
 
