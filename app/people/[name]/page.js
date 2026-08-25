@@ -9,6 +9,31 @@ export async function generateMetadata({ params }) {
   return { title: `${person.name} | Cyno.` };
 }
 
+function FilmGrid({ films }) {
+  return (
+    <div className="grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
+      {films.map((movie) => {
+        const inner = movie.href?.startsWith("/");
+        const Card = (
+          <>
+            <CoverImage src={movie.poster} alt="" label={movie.title_ko || movie.title} className="aspect-[2/3] w-full rounded border border-line object-cover" />
+            <h3 className="mt-2 truncate text-sm font-semibold group-hover:text-accent">{movie.title_ko || movie.title}</h3>
+            <p className="mt-0.5 truncate text-xs text-muted">
+              {movie.year}{movie.rating != null ? ` · ★ ${movie.rating}` : " · 별점 없음"}
+            </p>
+          </>
+        );
+        if (!movie.href) return <div key={movie.key} className="group">{Card}</div>;
+        return inner ? (
+          <Link key={movie.key} href={movie.href} className="group">{Card}</Link>
+        ) : (
+          <a key={movie.key} href={movie.href} target="_blank" rel="noopener noreferrer" className="group">{Card}</a>
+        );
+      })}
+    </div>
+  );
+}
+
 export default async function PersonPage({ params }) {
   const person = await getPersonRuntime(decodeURIComponent((await params).name));
   if (!person) notFound();
@@ -16,6 +41,7 @@ export default async function PersonPage({ params }) {
     person.directed.length && `감독 ${person.directed.length}편`,
     person.acted.length && `출연 ${person.acted.length}편`,
   ].filter(Boolean);
+  const actingOnly = person.acted.filter((movie) => !person.directed.some((directed) => directed.key === movie.key));
 
   return (
     <>
@@ -27,27 +53,19 @@ export default async function PersonPage({ params }) {
         )}
       </header>
 
-      <div className="grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
-        {person.works.map((movie) => {
-          // 내부 페이지(/movies)면 Link, 데이터셋 영화면 TMDB 외부 링크, 없으면 링크 없음
-          const inner = movie.href?.startsWith("/");
-          const Card = (
-            <>
-              <CoverImage src={movie.poster} alt="" label={movie.title_ko || movie.title} className="aspect-[2/3] w-full rounded border border-line object-cover" />
-              <h2 className="mt-2 truncate text-sm font-semibold group-hover:text-accent">{movie.title_ko || movie.title}</h2>
-              <p className="mt-0.5 truncate text-xs text-muted">
-                {movie.year}{movie.rating != null ? ` · ★ ${movie.rating}` : ""}
-              </p>
-            </>
-          );
-          if (!movie.href) return <div key={movie.key} className="group">{Card}</div>;
-          return inner ? (
-            <Link key={movie.key} href={movie.href} className="group">{Card}</Link>
-          ) : (
-            <a key={movie.key} href={movie.href} target="_blank" rel="noopener noreferrer" className="group">{Card}</a>
-          );
-        })}
-      </div>
+      {person.directed.length > 0 && (
+        <section aria-labelledby="directed-films-title">
+          <h2 id="directed-films-title" className="mb-4 text-lg font-bold">감독으로 본 전체 기록 ({person.directed.length})</h2>
+          <FilmGrid films={person.directed} />
+        </section>
+      )}
+
+      {actingOnly.length > 0 && (
+        <section className={person.directed.length ? "mt-14" : ""} aria-labelledby="acted-films-title">
+          <h2 id="acted-films-title" className="mb-4 text-lg font-bold">출연작 기록 ({actingOnly.length})</h2>
+          <FilmGrid films={actingOnly} />
+        </section>
+      )}
 
       <Link href="/people" className="mt-12 inline-block text-sm text-muted hover:text-accent">← 전체 인물</Link>
     </>
