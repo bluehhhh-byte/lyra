@@ -1,4 +1,4 @@
-import { countryDistribution, genreRatingCross } from "../../lib/watched";
+import { countryDistribution, genreRatingCross, runtimeInsights } from "../../lib/watched";
 
 function Meter({ value, max, tone = "bg-accent/70" }) {
   return (
@@ -87,6 +87,53 @@ export function CountryDistribution({ movies }) {
             ))}
           </tbody>
         </table>
+      </div>
+    </section>
+  );
+}
+
+export function RuntimeEvidence({ movies }) {
+  const result = runtimeInsights(movies);
+  const maxBucket = Math.max(...result.buckets.map((row) => row.count), 1);
+  const maxPeriod = Math.max(...result.periods.map((row) => row.known), 1);
+  return (
+    <section className="mb-12 rounded-2xl border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="runtime-evidence-title">
+      <div className="flex flex-wrap items-end justify-between gap-2">
+        <div>
+          <h2 id="runtime-evidence-title" className="text-lg font-bold">러닝타임과 장편의 시기</h2>
+          <p className="mt-1 text-xs text-muted">시기는 관람일이 아닌 작품 공개연도 5년 구간 기준입니다.</p>
+        </div>
+        <p className="text-xs text-muted">러닝타임 있음 {result.known.toLocaleString("ko-KR")}편 · 누락 {result.missing.toLocaleString("ko-KR")}편</p>
+      </div>
+      <div className="mt-7 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <h3 className="text-sm font-semibold">러닝타임 분포</h3>
+          <div className="mt-4 space-y-3">
+            {result.buckets.map((row) => (
+              <div key={row.bucket} className="grid grid-cols-[5rem_1fr_3rem] items-center gap-2 text-xs">
+                <span>{row.bucket}</span>
+                <Meter value={row.count} max={maxBucket} />
+                <span className="text-right tabular-nums text-muted">{row.count}편</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold">{result.longMinutes}분 이상 장편의 작품 연도</h3>
+          <p className="mt-1 text-xs text-muted">전체 막대는 러닝타임 확인 편수, 초록 막대는 그중 장편 {result.longCount}편입니다.</p>
+          <div className="mt-4 max-h-72 space-y-2 overflow-y-auto pr-2">
+            {result.periods.map((row) => (
+              <div key={row.start} className="grid grid-cols-[5.5rem_1fr_4.5rem] items-center gap-2 text-xs">
+                <span className="tabular-nums text-muted">{row.start}–{row.end}</span>
+                <div className="relative h-3 overflow-hidden rounded-full bg-surface">
+                  <div className="absolute inset-y-0 left-0 rounded-full bg-accent/30" style={{ width: `${(row.known / maxPeriod) * 100}%` }} />
+                  <div className="absolute inset-y-0 left-0 rounded-full bg-green-500/75" style={{ width: `${(row.long / maxPeriod) * 100}%` }} />
+                </div>
+                <span className="text-right tabular-nums text-muted">{row.long}/{row.known}편</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

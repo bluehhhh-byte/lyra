@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { directorPreferences, getWatchedRuntime } from "../../../lib/watched";
-import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
+import { aggregate, decadeOf } from "../../../lib/taste-core";
 import { readRuntimeData } from "../../../lib/store";
 import { getAllMoviesRuntime } from "../../../lib/movies";
 import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 import RatingInsights from "../rating-insights";
-import { CountryDistribution, GenreRatingCross } from "../taste-evidence";
+import { CountryDistribution, GenreRatingCross, RuntimeEvidence } from "../taste-evidence";
 
 export const metadata = {
   title: "취향 분석 | Cyno.",
@@ -157,7 +157,6 @@ export default async function TastePage() {
   const director = directorPreferences(rated);
   const actor = aggregate(rated, (m) => m.cast, { min: 3, top: 10 });
   const decade = aggregate(rated, (m) => decadeOf(m.year), { min: 3 });
-  const runtime = aggregate(rated, (m) => runtimeBucket(m.runtime), { min: 3 });
 
   return (
     <>
@@ -207,10 +206,11 @@ export default async function TastePage() {
 
       <CountryDistribution movies={rated} />
 
+      <RuntimeEvidence movies={rated} />
+
       <CuratedThemeEvidence movies={curatedMovies} />
 
       <CountSection title="연대별" rows={decade.byCount} mean={mean} />
-      <CountSection title="상영시간" rows={runtime.byCount} mean={mean} />
       <CountSection title="많이 본 감독" rows={director.byCount} mean={mean} link={personLink} />
       <CountSection title="많이 본 배우" rows={actor.byCount} mean={mean} link={personLink} />
 
