@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getAllSongsRuntime } from "../../lib/songs";
 import AdminForm from "./form";
 import SongTools from "./song-tools";
