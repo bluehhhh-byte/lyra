@@ -36,7 +36,9 @@ try {
   Write-Host "3/4 Uploading origin/main to Vercel..."
   $env:VERCEL_ORG_ID = $teamId
   $env:VERCEL_PROJECT_ID = $projectId
-  Run "pnpm" @("dlx", "vercel@59.1.3", "deploy", "--prod", "--yes", "--cwd", $deployDir)
+  # Restored build cache has previously produced a READY deployment with a missing
+  # server chunk. Production deploys favor a complete artifact over a short build.
+  Run "pnpm" @("dlx", "vercel@59.1.3", "deploy", "--prod", "--force", "--yes", "--cwd", $deployDir)
 
   Write-Host "4/4 Verifying production..."
   Run "node" @("scripts/verify-production.mjs", $site, [string]$beforeDeployment)

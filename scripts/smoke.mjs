@@ -123,11 +123,20 @@ try {
     throw new Error("Server Component 렌더링 오류");
   }
   console.log("  ✓ /admin (로그인 후 Server Component 렌더링)");
+
+  const deployHealth = await fetch(BASE + "/api/admin/deploy", {
+    headers: { cookie: authCookie },
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!deployHealth.ok) throw new Error(`배포 API HTTP ${deployHealth.status}`);
+  const deployBody = await deployHealth.json();
+  if (!deployBody?.status) throw new Error("배포 API 상태 진단 없음");
+  console.log("  ✓ /api/admin/deploy (로그인 후 서버 청크 로드)");
 } catch (e) {
   failed++;
   console.log(`  ✗ /admin — 로그인 후 렌더링: ${e.message}`);
 }
 
 kill();
-console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length + 1}개 통과`);
+console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length + 2}개 통과`);
 process.exit(failed ? 1 : 0);

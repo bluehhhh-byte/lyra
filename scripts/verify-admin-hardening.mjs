@@ -20,5 +20,6 @@ assert.match(errorBoundary, /onClick=\{reset\}/, "관리자 오류 화면에서 
 assert.match(errorBoundary, /error\?\.digest/, "관리자 오류 화면에 안전한 오류 코드를 보여줘야 한다");
 assert.match(loading, /role="status"/, "관리자 로딩 화면은 보조기기에 상태를 알려야 한다");
 assert.match(deployScript, /scripts\/verify-production\.mjs/, "배포는 운영 인증 경계 검증을 실행해야 한다");
+assert.match(deployScript, /"--force"/, "운영 배포는 캐시된 서버 청크 누락을 피하도록 전체 산출물을 다시 빌드해야 한다");
 
 console.log("admin hardening verification passed");
