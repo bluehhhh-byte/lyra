@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getWatchedRuntime } from "../../../lib/watched";
+import { directorPreferences, getWatchedRuntime } from "../../../lib/watched";
 import { aggregate, decadeOf, runtimeBucket } from "../../../lib/taste-core";
 import { readRuntimeData } from "../../../lib/store";
 import { getAllMoviesRuntime } from "../../../lib/movies";
@@ -55,7 +55,7 @@ function CountSection({ title, rows, mean, link }) {
 }
 
 // 편애/기피 — 평균 별점이 전체 평균에서 얼마나 벗어났나
-function PrefSection({ title, high, low, mean, link }) {
+function PrefSection({ title, high, low, mean, link, note = "3편 이상만" }) {
   if (!high.length && !low.length) return null;
   const chip = (r, tone) => {
     const cls = `inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${
@@ -78,7 +78,7 @@ function PrefSection({ title, high, low, mean, link }) {
   return (
     <section className="mb-10">
       <h2 className="mb-1 text-sm font-semibold text-muted">{title}</h2>
-      <p className="mb-3 text-xs text-muted/60">전체 평균 ★{mean.toFixed(2)} 대비 · 3편 이상만</p>
+      <p className="mb-3 text-xs text-muted/60">전체 평균 ★{mean.toFixed(2)} 대비 · {note}</p>
       {high.length > 0 && (
         <div className="mb-2">
           <p className="mb-1.5 text-xs text-green-400">편애 ↑</p>
@@ -154,7 +154,7 @@ export default async function TastePage() {
   const mean = rated.reduce((n, m) => n + m.rating, 0) / rated.length;
   const country = aggregate(rated, (m) => m.country);
   const genre = aggregate(rated, (m) => m.genre);
-  const director = aggregate(rated, (m) => m.director_ko || m.director, { min: 2, top: 10 });
+  const director = directorPreferences(rated);
   const actor = aggregate(rated, (m) => m.cast, { min: 3, top: 10 });
   const decade = aggregate(rated, (m) => decadeOf(m.year), { min: 3 });
   const runtime = aggregate(rated, (m) => runtimeBucket(m.runtime), { min: 3 });
@@ -216,7 +216,14 @@ export default async function TastePage() {
       <h2 className="mb-6 text-lg font-bold">편애와 기피</h2>
       <PrefSection title="장르" high={genre.byAvg} low={genre.byLow} mean={mean} />
       <PrefSection title="국가" high={country.byAvg} low={country.byLow} mean={mean} />
-      <PrefSection title="감독" high={director.byAvg} low={director.byLow} mean={mean} link={personLink} />
+      <PrefSection
+        title="감독"
+        high={director.high}
+        low={director.low}
+        mean={mean}
+        link={personLink}
+        note={`3편 이상만 · 3편 미만 감독 ${director.excluded.toLocaleString("ko-KR")}명 제외`}
+      />
       <PrefSection title="연대" high={decade.byAvg} low={decade.byLow} mean={mean} />
     </>
   );
