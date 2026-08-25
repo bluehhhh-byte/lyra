@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getAllMoviesRuntime } from "../../../lib/movies";
-import { publishCandidates } from "../../../lib/publish-candidates";
+import { publishCandidates, unwrittenHighRatedCandidates } from "../../../lib/publish-candidates";
+import { getWatchedRuntime } from "../../../lib/watched";
+import { tmdbUrl } from "../../../lib/tmdb-link";
 
 export const metadata = { title: "발행 후보 | Cyno" };
 export const dynamic = "force-dynamic";
@@ -40,7 +42,9 @@ function CandidateSection({ title, description, items }) {
 }
 
 export default async function PublishQueuePage() {
-  const candidates = publishCandidates(await getAllMoviesRuntime());
+  const [movies, watched] = await Promise.all([getAllMoviesRuntime(), getWatchedRuntime()]);
+  const candidates = publishCandidates(movies);
+  const unwritten = unwrittenHighRatedCandidates(watched, movies);
   return (
     <>
       <header className="mb-8 flex flex-wrap items-end gap-4">
@@ -53,6 +57,25 @@ export default async function PublishQueuePage() {
       <p className="max-w-3xl rounded-xl border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
         최근 기록과 높은 별점, 반복되는 테마만으로 고른다. 발행 이력은 따로 저장하지 않으므로 이미 올린 작품인지 마지막 판단은 사람이 한다.
       </p>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-bold">글 없는 고평점 영화 ({unwritten.length})</h2>
+        <p className="mt-1 text-sm text-muted">왓챠에서 ★4.5 이상을 줬지만 아직 감상 글이 없는 작품이다. 별점이 높은 순서로 보여준다.</p>
+        {unwritten.length ? (
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {unwritten.map((item) => (
+              <li key={item.key} className="grid grid-cols-[64px_minmax(0,1fr)] gap-3 rounded-2xl border border-line bg-surface p-3">
+                {item.poster ? <img src={item.poster} alt="" className="aspect-[2/3] w-16 rounded-lg border border-line object-cover" /> : <span className="aspect-[2/3] w-16 rounded-lg border border-line bg-bg" />}
+                <span className="min-w-0 self-center">
+                  <span className="block truncate font-semibold">{item.title}</span>
+                  <span className="mt-0.5 block truncate text-xs text-muted">{[item.year, item.director, `★${item.rating.toFixed(1)}`].filter(Boolean).join(" · ")}</span>
+                  {item.tmdbId && <a href={tmdbUrl(item.tmdbId, item.media)} target="_blank" rel="noopener noreferrer" className="mt-2 block text-xs font-semibold text-accent hover:underline">TMDB에서 확인 →</a>}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : <p className="mt-4 rounded-xl border border-dashed border-line p-6 text-center text-sm text-muted">조건에 맞는 미작성 영화가 없습니다.</p>}
+      </section>
 
       <CandidateSection
         title="최근 기록"
