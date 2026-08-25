@@ -4,13 +4,26 @@ import AdminForm from "./form";
 import SongTools from "./song-tools";
 import DeployControl from "./deploy-control";
 import { databaseContentEnabled } from "../../lib/content-db";
+import { toAdminSong } from "../../lib/admin/admin-song";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
 export default async function AdminPage() {
   const contentInDatabase = databaseContentEnabled();
-  const songs = await getAllSongsRuntime();
+  let songs;
+  try {
+    songs = await getAllSongsRuntime();
+  } catch (error) {
+    console.error(JSON.stringify({
+      level: "error",
+      msg: "admin_song_list_load_failed",
+      route: "/admin",
+      error: error instanceof Error ? error.message : String(error),
+    }));
+    throw error;
+  }
+  const adminSongs = songs.map(toAdminSong);
   return (
     <>
       <div className="mb-8 flex flex-wrap items-center gap-4">
@@ -29,17 +42,8 @@ export default async function AdminPage() {
       )}
       <AdminForm />
 
-      <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({songs.length})</h2>
-      <SongTools
-        songs={songs.map((s) => ({
-          slug: s.slug,
-          title: s.title,
-          artist: s.artist,
-          artwork: s.artwork,
-          comment: s.comment || "",
-          hasTranslation: s.stanzas.some((st) => st.lines.some((l) => l.ko)),
-        }))}
-      />
+      <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({adminSongs.length})</h2>
+      <SongTools songs={adminSongs} />
     </>
   );
 }

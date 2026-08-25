@@ -39,15 +39,8 @@ try {
   Run "pnpm" @("dlx", "vercel@59.1.3", "deploy", "--prod", "--yes", "--cwd", $deployDir)
 
   Write-Host "4/4 Verifying production..."
-  $version = Invoke-RestMethod -Uri "$site/api/version" -Headers @{ "Cache-Control" = "no-cache" }
-  if (-not $version.deploymentId) {
-    throw "Production did not return a deployment ID"
-  }
-  if ($beforeDeployment -and $version.deploymentId -eq $beforeDeployment) {
-    throw "Production alias still points to the previous deployment: $beforeDeployment"
-  }
+  Run "node" @("scripts/verify-production.mjs", $site, [string]$beforeDeployment)
   Write-Host "READY: $site"
-  Write-Host "Deployment: $($version.deploymentId)"
 } finally {
   # Windows may keep a freshly built file open for a moment. Cleanup must not
   # turn an already verified production deployment into a failed command.
