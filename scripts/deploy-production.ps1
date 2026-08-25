@@ -6,6 +6,12 @@ $deployDir = Join-Path $tempRoot ("lyra-deploy-" + [guid]::NewGuid().ToString("N
 $teamId = "team_vk8fZtA1YueBPh3dnFXZNj0H"
 $projectId = "prj_NMnJerZFyg3lxOiHc3uOPHnT6xug"
 $site = "https://lyra-one-zeta.vercel.app"
+$beforeDeployment = $null
+try {
+  $beforeDeployment = (Invoke-RestMethod -Uri "$site/api/version" -Headers @{ "Cache-Control" = "no-cache" }).deploymentId
+} catch {
+  Write-Warning "Could not read the current production deployment ID; post-deploy verification will still run."
+}
 
 function Run([string]$command, [string[]]$arguments, [string]$cwd = $repo) {
   Push-Location $cwd
@@ -36,6 +42,9 @@ try {
   $version = Invoke-RestMethod -Uri "$site/api/version" -Headers @{ "Cache-Control" = "no-cache" }
   if (-not $version.deploymentId) {
     throw "Production did not return a deployment ID"
+  }
+  if ($beforeDeployment -and $version.deploymentId -eq $beforeDeployment) {
+    throw "Production alias still points to the previous deployment: $beforeDeployment"
   }
   Write-Host "READY: $site"
   Write-Host "Deployment: $($version.deploymentId)"

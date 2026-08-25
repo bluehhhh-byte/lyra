@@ -8,13 +8,14 @@ import path from "path";
 
 const PORT = 3199;
 const BASE = `http://localhost:${PORT}`;
+const SMOKE_ADMIN_PASSWORD = "lyra-smoke-admin-render-check";
 
 // 곡·태그 slug는 파일에서 하나 집어온다 — 하드코딩하면 곡 지울 때 깨진다
 const firstSong = fs.readdirSync("songs").find((f) => f.endsWith(".md"))?.replace(/\.md$/, "");
 const firstMovie = fs.readdirSync("movies").find((f) => f.endsWith(".md"))?.replace(/\.md$/, "");
 
 const CHECKS = [
-  { url: "/", expect: "곡·가수·가사 검색" },
+  { url: "/", expect: "음악 컬렉션" },
   { url: `/songs/${firstSong}`, expect: "기록" },
   { url: "/movies", expect: null },
   { url: `/movies/${firstMovie}`, expect: null },
@@ -41,7 +42,10 @@ if (!fs.existsSync(path.join(".next", "BUILD_ID"))) {
 const server = spawn(
   process.execPath,
   ["node_modules/next/dist/bin/next", "start", "-p", String(PORT)],
-  { stdio: ["ignore", "pipe", "pipe"] }
+  {
+    stdio: ["ignore", "pipe", "pipe"],
+    env: { ...process.env, ADMIN_PASSWORD: SMOKE_ADMIN_PASSWORD },
+  }
 );
 
 const kill = () => { try { server.kill(); } catch {} };
@@ -94,6 +98,36 @@ for (const { url, ok, desc } of AUTH_CHECKS) {
   }
 }
 
+// 인증 redirect만 확인하면 관리자 Server Component가 실제로 렌더링되는지 알 수 없다.
+// 로그인 쿠키로 /admin 본문까지 요청해, 누락 import 같은 운영 전용 런타임 오류를 잡는다.
+try {
+  const login = await fetch(BASE + "/api/login", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ password: SMOKE_ADMIN_PASSWORD }),
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!login.ok) throw new Error(`로그인 HTTP ${login.status}`);
+  const authCookie = login.headers.get("set-cookie")?.match(/lyra_auth=[^;]+/)?.[0];
+  if (!authCookie) throw new Error("인증 쿠키 없음");
+
+  const admin = await fetch(BASE + "/admin", {
+    headers: { cookie: authCookie },
+    redirect: "manual",
+    signal: AbortSignal.timeout(15000),
+  });
+  const body = await admin.text();
+  if (!admin.ok) throw new Error(`HTTP ${admin.status}`);
+  if (!body.includes("곡 추가")) throw new Error("관리자 본문 없음");
+  if (body.includes("An error occurred in the Server Components render")) {
+    throw new Error("Server Component 렌더링 오류");
+  }
+  console.log("  ✓ /admin (로그인 후 Server Component 렌더링)");
+} catch (e) {
+  failed++;
+  console.log(`  ✗ /admin — 로그인 후 렌더링: ${e.message}`);
+}
+
 kill();
-console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length}개 통과`);
+console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length + 1}개 통과`);
 process.exit(failed ? 1 : 0);

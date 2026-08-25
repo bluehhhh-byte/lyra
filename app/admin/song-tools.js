@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { EMOTIONS } from "../../lib/keywords";
+import { filterAdminSongs } from "../../lib/admin/song-search";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -31,6 +32,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 export default function SongTools({ songs }) {
   const [state, setState] = useState({}); // slug -> { busy, comment, msg, err }
   const [bulk, setBulk] = useState(null); // {done, total} while extracting all keywords
+  const [query, setQuery] = useState("");
+  const filteredSongs = useMemo(() => filterAdminSongs(songs, query), [songs, query]);
 
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
 
@@ -220,20 +223,52 @@ export default function SongTools({ songs }) {
           {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움"}
         </span>
       </div>
+      <div className="mb-3 rounded-lg border border-line bg-surface p-3">
+        <label htmlFor="registered-song-search" className="mb-1.5 block text-xs font-semibold text-muted">
+          등록된 곡 검색
+        </label>
+        <div className="flex gap-2">
+          <input
+            id="registered-song-search"
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="곡 제목 또는 아티스트"
+            autoComplete="off"
+            className="min-w-0 flex-1 rounded-lg border border-line bg-bg px-3 py-2 text-sm outline-none placeholder:text-muted/70 focus:border-accent"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={() => setQuery("")}
+              className="shrink-0 rounded-lg border border-line px-3 py-2 text-xs text-muted transition hover:border-accent hover:text-accent"
+            >
+              초기화
+            </button>
+          )}
+        </div>
+        <p className="mt-1.5 text-xs text-muted" aria-live="polite">
+          {query ? `검색 결과 ${filteredSongs.length}곡 / 전체 ${songs.length}곡` : `전체 ${songs.length}곡`}
+        </p>
+      </div>
       <ul className="divide-y divide-line rounded-lg border border-line">
-      {songs.map((s) => {
+      {filteredSongs.map((s) => {
         const st = state[s.slug] || {};
         return (
           <li key={s.slug} className="px-3 py-2 text-sm">
             {/* title on its own line, actions underneath — the row ran out of
                 width once there were five of them */}
             <div className="flex items-start gap-3">
-              <img
-                src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
-                alt=""
-                loading="lazy"
-                className="h-9 w-9 shrink-0 rounded"
-              />
+              {s.artwork ? (
+                <img
+                  src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
+                  alt=""
+                  loading="lazy"
+                  className="h-9 w-9 shrink-0 rounded"
+                />
+              ) : (
+                <span aria-hidden="true" className="h-9 w-9 shrink-0 rounded bg-line" />
+              )}
               <div className="min-w-0 flex-1">
               <p className="truncate">
                 <span className="font-medium">{s.title}</span>
@@ -295,6 +330,11 @@ export default function SongTools({ songs }) {
           </li>
         );
       })}
+      {filteredSongs.length === 0 && (
+        <li className="px-4 py-8 text-center text-sm text-muted">
+          일치하는 곡이 없습니다.
+        </li>
+      )}
       </ul>
     </div>
   );
