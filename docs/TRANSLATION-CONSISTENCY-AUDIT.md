@@ -1,0 +1,599 @@
+# 번역 일관성 감사
+
+감사 기준: 2026-08-25T07:05:53.064Z · 150곡의 불일치 258구절
+
+## 요약
+
+| 유형 | 건수 | 처리 |
+|---|---:|---|
+| 문장부호·공백 | 12 | 수정 |
+| 명백한 오류 | 4 | 수정 |
+| 문체 흔들림 | 144 | 유지 |
+| 맥락에 따른 정당한 차이 | 12 | 유지 |
+| 판단 보류 | 86 | 유지 |
+
+## 문장부호·공백 (12)
+
+- **L'Arc en Ciel — 瞳の住人** · `そばにいてずっと君の笑顔を見つめていたい` → `곁에 있어 줘 계속, 너의 미소를 바라보고 싶어` / `곁에 있어 줘 계속, 너의 미소를 바라보고 싶어`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `곁에 있어 줘 계속, 너의 미소를 바라보고 싶어`
+- **Mac Ayres — I'll Be Your Home Now** · `Too much` → `많은 걸 바라는 걸까` / `많은 걸 바라는 걸까,`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `많은 걸 바라는 걸까`
+- **Arco — Happy New Year** · `Holding on tight, millions all hoping` → `꼭 붙잡은 채 수 많은 사람들이 기원한다` / `꼭 붙잡은 채 수많은 사람들이 기원한다`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `꼭 붙잡은 채 수많은 사람들이 기원한다`
+- **GLAY — Missing You** · `聲を屆けてよいつものように` → `목소리를 들려줘, 언제나처럼` / `목소리를 들려줘 언제나처럼`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `목소리를 들려줘, 언제나처럼`
+- **GLAY — Missing You** · `今はまだ 容赦なく吹きすさぶ風に` → `지금은 아직 용서 없이 휘몰아치는 바람에` / `지금은 아직 용서없이 휘몰아치는 바람에`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `지금은 아직 용서 없이 휘몰아치는 바람에`
+- **Valley — The Problem Song** · `Maybe we could start again` → `우리가 다시 시작할 수 있을거래` / `우리가 다시 시작할 수 있을 거래`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `우리가 다시 시작할 수 있을 거래`
+- **Valley — The Problem Song** · `But I know we can fix them` → `우린 고칠 수 있을거야` / `우린 고칠 수 있을 거야`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `우린 고칠 수 있을 거야`
+- **Bon Jovi — This Ain't A Love Song** · `Then I'm wrong, yeah I'm wrong` → `그럼 내가 틀린 거야, 그래, 나는 틀린 거야` / `그럼 내가 틀린 거야, 그래, 나는 틀린거야`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `그럼 내가 틀린 거야, 그래, 나는 틀린 거야`
+- **Dir en grey — 理由 이유** · `これ以上これ以上は傷つきたくない` → `이 이상은 더 이상은 상처받고 싶지 않아` / `이 이상은 더 이상은 상처 받고 싶지 않아`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `이 이상은 더 이상은 상처받고 싶지 않아`
+- **CHEMISTRY — Piece Of A Dream** · `指先にふれては感じる懷かしい痛みが` → `손끝으로 느끼고나서야 느끼는 그리운 아픔이` / `손끝으로 느끼고 나서야 느끼는 그리운 아픔이`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `손끝으로 느끼고 나서야 느끼는 그리운 아픔이`
+- **Kirinji — Aliens** · `魔法をかけてみせるさ` → `마법을 걸어 보이겠어` / `마법을 걸어보이겠어`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `마법을 걸어 보이겠어`
+- **Phoenix — Love for Granted** · `Hang on to a little chance, you bet I'm in` → `작은 기회라도 준다면, 너의 제안을 받아들일게` / `작은 기회라도 준다면 너의 제안을 받아들일게`
+  - 공백과 문장부호를 제거하면 번역 문자열이 같다. 통일값: `작은 기회라도 준다면, 너의 제안을 받아들일게`
+
+## 명백한 오류 (4)
+
+- **nafla — adrenaline** · `너네들 다 먹어` → `너희들을 전부 다 먹어치워` / `너희들을 전부 다`
+  - 반복 네 곳 중 두 곳의 번역이 목적어에서 잘려 있다. 통일값: `너희들을 전부 다 먹어치워`
+- **Green Day — Last Night On Earth** · `I'm sending all my love to you` → `내 모든 사랑을 너에게 보낼 거야` / `난 이 땅 위에 서 있어`
+  - 3행 번역 블록의 순서가 뒤바뀌어 이 원문에 ‘난 이 땅 위에 서 있어’가 붙었다. 통일값: `내 모든 사랑을 너에게 보낼 거야`
+- **Prince Bernald — I Want A Man** · `I want a man, I want a man` → `내가 그런 남자가, 남자가 되길` / `그런 남자를 원해, 남자를 말야`
+  - 화자가 남자를 원한다는 원문을 화자가 남자가 되길 원한다는 뜻으로 잘못 옮겼다. 통일값: `그런 남자를 원해, 남자를 말야`
+- **Phoenix — Love for Granted** · `Don't tell me 'bout your secrets` → `말하지 말아 줘, 너의 비밀들` / `말하지 말아 줘, 너의 거짓말들 말하지 말아 줘, 너의 비밀들`
+  - 번역 span이 앞의 보이지 않는 줄까지 잘못 세어 lies와 secrets 번역이 한 줄로 합쳐졌다. 통일값: `말하지 말아 줘, 너의 비밀들`
+
+## 문체 흔들림 (144)
+
+- **Calvin Harris — Feels (feat. Pharrell Williams, Katy Perry & Big Sean)** · `Do you mind if I steal a kiss, tho? (Chop, chop)` → `키스 하나 훔쳐도 될까? (빨리, 빨리)` / `키스 하나 살짝 훔쳐도 될까? (빨리, 빨리)`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Calvin Harris — Feels (feat. Pharrell Williams, Katy Perry & Big Sean)** · `Baby, I know you ain't scared to catch feels` → `베이비, 너도 감정을 느끼는 걸 무서워하지 않는다는 걸 아는 걸` / `베이비, 너도 감정을 느끼는 걸 무서워하지 않는다는 걸 알아`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **혁오 — Godspeed!** · `(Fuck you)` → `(엿이나 처먹어)` / `(엿이나 먹어)`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mew — The Zookeeper's Boy** · `You have to climb to find its head` → `머리를 보려면 올라가야만 하죠` / `그 머리를 보려면 올라가야만 하죠`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mew — The Zookeeper's Boy** · `But if there's a glitch` → `하지만 자그마한 결함이라도 생기면` / `하지만 결함이라도 생기면`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **The Strokes — Lonely in the Future** · `I did that yesterday when I was a kid` → `내가 어렸던 어제, 이미 다 해본 거라고` / `내가 어렸던 어제, 이미 해버렸다고`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mac Miller — Two Matches (feat. Ab-Soul)** · `Ain't nothin' wrong with a little bit of fun` → `약간의 즐거움을 즐기는 건 전혀 나쁠 게 없지` / `약간의 즐거움을 즐기는 건 전혀 나쁠 게 없어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — House of Cards** · `Denial, denial` → `부정하고, 또 부정해보지만` / `부정하고, 또 부정해도`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Barry Manilow — Copacabana (At the Copa)** · `She was a showgirl` → `그녀는 쇼걸이었어요` / `그녀는 쇼걸이었죠`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **The Hives — Won't Be Long** · `And I can't` → `그리고 난 못 하니까` / `그리고 난 못 해`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **The Kooks — Ooh La** · `And ooh la, she was such a good girl to me` → `울라, 그녀는 내게 참 좋은 아이였어` / `울라, 그녀는 내게 참으로 소중한 아이였어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **The Kooks — Ooh La** · `and spat her out` → `울라, 하지만 세상은 그녀를 삼키고 차갑게 내버렸지` / `울라, 하지만 세상은 그녀를 삼키고 결국 버려버렸지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **ZARD — Boy** · `そっと抱きしめてあげたい` → `조용히 안아주고 싶으니까` / `조용히 안아주고 싶어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Rumi, Jinu — Free** · `Why does it feel like I can tell you anything?` → `왜 너에겐 뭐든 털어놓을 수 있을 것만 같을까?` / `왜 너에겐 뭐든 말할 수 있을 것 같을까?`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Rumi, Jinu — Free** · `What if we find a way to escape it?` → `함께 벗어날 방법을 찾으면 어떨까?` / `만약 벗어날 길을 찾는다면 어떨까?`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Sonic Youth — Stones** · `The dead are alright with me` → `죽은 자들과 함께 있어도 난 괜찮아` / `죽은 자들과 함께해도 난 괜찮아`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Sonic Youth — Stones** · `We’re not gonna leave you stranger` → `낯선 이인 너를 버려두지 않을 거야` / `낯선 이인 너를 홀로 두지 않을 거야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Sonic Youth — Stones** · `We turn the light on your lonely home` → `우리는 너의 외로운 집에 불을 밝혀줘` / `우리는 너의 외로운 집에 빛을 밝혀줄 거야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Ozzy Osbourne — Crazy Train** · `Mental wounds not healing` → `정신의 상처는 쉽사리 아물지 않고` / `정신의 상처는 쉬이 낫지 않고`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Ozzy Osbourne — Crazy Train** · `I’m going off the rails on a crazy train` → `나는 미친 기차에서 탈선하고 있어` / `나는 미친 기차에 타고 있어, 탈선하고 있어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Oasis — She’s Electric** · `‘Cause I’ll be you and you’ll be me` → `내가 너가 되고 네가 내가 될 거니까` / `내가 너가 되고 네가 내가 될 테니까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **이찬혁 — 멸종위기사랑** · `(오늘 밤 끝이야)` → `It all ends tonight` / `It ends tonight`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **이찬혁 — 멸종위기사랑** · `(도대체 에로스는 어디로 가는 걸까)` → `Where on earth is Eros going?` / `Where on earth is Eros heading?`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Jackson Wang — Made Me a Man** · `I told myself enough is enough` → `더는 못 하겠다고 내게 말했어` / `더는 안 된다고 내게 말했어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Jackson Wang — Made Me a Man** · `It’s all been a little too much` → `이 모든 게 내겐 너무 벅찼지` / `이 모든 게 내겐 너무 과했어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Jackson Wang — Made Me a Man** · `But you made me a man` → `하지만 너는 날 어른으로 만들어줬어` / `하지만 너는 나를 어른으로 만들어줬어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Jackson Wang — Made Me a Man** · `Take off the past` → `과거를 벗어버려` / `과거를 벗어던져`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Jackson Wang — Made Me a Man** · `Take off the mask` → `가면을 벗어` / `가면도 벗어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **ATEEZ — Slide To Me** · `Oh girl, I know what you need` → `(오, 네가 뭘 원하는지 알아) 조금 더 가까이 전율 속 거친 춤을 춰` / `조금 더 가까이 전율 속 거친 춤을 춰`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Bon Jovi — Lie To Me** · `If you don’t love me, lie to me` → `날 더 이상 사랑하지 않아도 그냥 거짓말해줘` / `사랑하지 않아도 그냥 거짓말해줘`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Bon Jovi — Lie To Me** · `‘Cause baby, you’re the one thing I believe` → `넌 내가 믿는 유일한 존재야` / `넌 내가 아직 믿고 있는 유일한 사람이야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Bon Jovi — Lie To Me** · `Let it all fall down around us if that’s what’s meant to be` → `모든 게 무너져도 그게 운명이라면 받아들일게` / `주변이 다 무너져도 그게 운명이라면 받아들여야지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **James Blunt — Same Mistake** · `So here I go` → `그래서 난 다시 나아가` / `그래서 난 또 나아가`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **KT Tunstall — Other Side Of The World** · `You’re the other side of the world` → `넌 내게 세상의 반대편이야` / `넌 세상의 반대편`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **NELL — Crash** · `I’m crashin’ into you` → `너에게로 난 거침없이 부딪혀 가` / `너에게로 온몸을 던져 부딪혀 가`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Father Of Peace — No Complaints** · `Fuck my life` → `삶이란 참 힘들어` / `삶이란 참 힘들다고`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Ghost — Mary On A Cross** · `Mary on a, Mary on a cross` → `십자가 위의 마리아처럼` / `십자가 위의 마리아`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Ghost — Mary On A Cross** · `Not just another Bloody Mary` → `그냥 흔한 블러디 메리가 아니야` / `그냥 또 다른 블러디 메리가 아니야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Richie Kotzen — special** · `All the things you thought you had have gone` → `네가 가졌던 것들은 이제 다 없어졌어` / `네가 가졌던 건 이제 다 사라졌지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Miles Caton — Travelin'** · `Travelin’` → `떠돌이 길을 걷네` / `또 다시 떠돌이 길을 걷네`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **DREAMS COME TRUE — 朝がまた来る** · `あなたのいない朝は来るから` → `네가 없는 아침은 어김없이 찾아오니까` / `네가 없는 아침은 또 찾아오니까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **The Smashing Pumpkins — Bullet With Butterfly Wings** · `Despite all my rage, I am still just a rat in a cage` → `분노가 끓어올라도, 결국 나는 우리 안의 쥐일 뿐` / `분노해도, 결국 나는 우리 안의 쥐일 뿐`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **The Smashing Pumpkins — Bullet With Butterfly Wings** · `And I still believe that I cannot be saved` → `그리고 난 아직도 구원받을 수 없다고 믿어` / `그리고 난 여전히 구원받을 수 없다고 믿어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Takahashi Yu — Road Movie** · `繋がっているよ離れていても` → `이어져 있어, 떨어져 있다고 하더라도` / `이어져 있어, 떨어져 있더라도`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Takahashi Yu — Road Movie** · `繋がっているよなにがあっても` → `이어져 있는 거야, 무슨 일이 있더라도` / `이어져 있어, 무슨 일이 있더라도`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Leonard Cohen — Anthem** · `That’s how the light gets in` → `그 틈으로 빛이 들어오는 거죠` / `그 틈으로 빛이 들어오는 거예요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Coldplay — What If** · `What if you should decide` → `만약 당신이 벌써 결정을 했다면요?` / `하지만 당신이 벌써 결정을 했다면요?`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mr.Big — Superfantastic** · `Morning glory` → `아침에 피는 예쁜 꽃처럼` / `아침에 피는 꽃처럼`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mansun — Harris** · `Harris smiles` → `해리스가 미소 짓는다` / `해리스는 미소 짓네`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Lady Gaga — Close To You** · `Just like me, they long to be close to you` → `마치 나처럼, 그들도 당신 곁에 있고 싶어 하나 봐요` / `나처럼, 그들도 당신 곁에 있고 싶어 하나 봐요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Liam Gallagher — All You're Dreaming Of** · `All you're dreamin' of (all you're dreaming of)` → `네가 꿈꾸는 모든 것 같은 사랑 (네가 꿈꾸는 모든 것)` / `네가 꿈꾸는 모든 것 (네가 꿈꾸는 모든 것)`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Orion Sun — These Days** · `I've got it for you` → `난 그걸 널 위해 가지고 있어` / `널 위해 가지고 있어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Bruno Major — Regent's Park** · `Cause in the sun, you look so lovely` → `햇살 아래 네가 너무 아름다워서` / `햇살 아래에서 넌 너무나 아름다워`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Lady Gaga, Bruno Mars — Die With A Smile** · `Like it's the last night` → `마지막 밤인 것처럼` / `마치 마지막 밤인 것처럼`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Lady Gaga, Bruno Mars — Die With A Smile** · `If the world was ending` → `만약 이 세상이 끝난다면` / `만약 세상이 끝난다면`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Cigarettes After Sex — Sunsetz** · `And when you go away I still see you` → `그리고 네가 떠나가도 난 여전히 널 보고 있어` / `그리고 네가 떠나가도 난 여전히 널 봐`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Clairo — Juna** · `I don't have to think` → `생각할 필요도 없어` / `생각할 필요 없어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Oasis — Masterplan** · `Say it loud, and sing it proud today` → `큰 소리로, 자랑스러운 오늘을 노래하라고` / `큰 소리로, 자랑스러운 오늘을 노래하는 거야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Oasis — Masterplan** · `Please, brother, take a chance` → `형제여, 그냥 해보게나` / `형제여, 그냥 그렇게 해보게나`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Nirvana — Dumb** · `Think I'm just happy` → `그냥 행복하다고 생각해야지` / `그냥 행복하다고 생각할 거야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Keane — Somewhere Only We Know** · `This could be the end of everything` → `이게 모든 것의 끝일 수도 있지만` / `이 세상 모든 것의 끝일 수도 있지만`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Keane — Somewhere Only We Know** · `Somewhere only we know` → `우리 둘만 아는 그곳으로` / `우리만 아는 곳으로`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Spice Girls — Stop** · `Baby, gotta have some fun` → `우리가 즐거우려면 말이에요` / `우리가 함께 즐거우려면 말예요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Boys Go To Jupiter — Lovers Always Lose** · `Do we cry cry cry cry like this isn't all true?` → `왜 울어? 마치 이게 다 진짜가 아닌 것처럼` / `우린 울고 있을까? 이게 다 진짜가 아닌 것처럼`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Damien Rice — Blower's Daughter** · `And so it is` → `그게 그렇지` / `그게 참 그렇지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Damien Rice — Blower's Daughter** · `I can't take my eyes off of you` → `네게서 눈을 뗄 수가 없어` / `네게서 눈을 뗄 수 없어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Spitz — Cherry** · `いつかまたこの場所で君とめぐり会いたい` → `언젠가 다시 이곳에서 너랑 우연히 만나고싶어` / `언젠간 다시 이 곳에서 너를 우연히 만나고 싶어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Thom Yorke — Dawn Chorus** · `Please let me know` → `내게도 좀 알려줄래` / `좀 알려줄래`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Rachael Yamagata — Be Be Your Love** · `Everybody's talking how I can't can't be your love` → `모두 내가 너의 사랑이 될 수 없다고 말해` / `모두들 내가 너의 사랑이 될 수 없다고 말하지만`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Joji — Slow Dancing In The Dark** · `You looked at me like I was someone else, oh well` → `네가 날 쳐다보는 게 마치 다른 사람 보는 것 같잖아` / `날 쳐다보는 게 정말 다른 사람 보는 것 같잖아`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Joji — Slow Dancing In The Dark** · `Can't you see?` → `모르겠니?` / `아직도 모르겠니?`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **John Mayer — You're Gonna Live Forever In Me** · `But you're gonna live forever in me` → `그래도 당신은 내 안에서 영원할 거예요` / `당신은 내 안에서 영원할 거니까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **HONNE — free love** · `This is beyond our means` → `이건 우리에게 과분해요` / `이건 우리에겐 과분해요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **HONNE — free love** · `It's just a dream` → `이건 꿈일 거예요` / `이건 꿈일 뿐이에요` / `이건 꿈일 뿐이죠`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **HONNE — free love** · `But I can give you all my love` → `내 모든 사랑을 줄 순 있어요` / `내 모든 사랑을 당신에게 줄 순 있어요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **HONNE — by my side** · `You were by my side` → `넌 내 곁에 있었잖아` / `넌 내 곁에 있어줬잖아` / `넌 내 곁에 있었어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Balu Brigada — So Cold** · `It isn't like you (You)` → `이건 너답지 않아 (넌)` / `이건 너답지 않아 (널)`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **HONNE — no song without you** · `Ooh, there'd be no song without you, without you` → `너 없이는 이 노래도 없을 거야` / `너 없이는 이 노래도 없을 거야, 너 없이는`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Norah Jones — Come Away From Me** · `Come away with me in the night` → `밤이 되면 나와 함께 떠나요` / `밤이 되면 나와 같이 떠나요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Norah Jones — Come Away From Me** · `Come away with me` → `나와 같이 떠나요` / `나와 함께 떠나요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — Fake Plastic Tree** · `It wears her out` → `그것이 그녀를 점점 지치게 해` / `그것이 그녀를 더 지치게 해`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Olivia Dean — Dive** · `And I'm ready to dive` → `너에게 다이빙할 준비가 되었어` / `난 너에게 다이빙할 준비가 되었어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Glass Animals — Heat Waves** · `Heat waves been fakin' me out` → `그 뜨거운 열기들이 날 어떻게 했나 봐` / `뜨거운 열기들이 날 어떻게 했나 봐`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — Weird Fishes/ Arpeggi** · `I'll hit the bottom` → `난 바닥에 닿을 거야` / `난 바닥을 칠거야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Harry Styles — Music For a Sushi Restaurant** · `You know I love you, babe` → `내가 널 사랑하는 거 알잖아` / `내가 널 사랑한다는거 알잖아`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **the neverminds — somewhere** · `But I'll be somewhere on the way` → `하지만 네가 가는 길 어딘가에 내가 있을 거야` / `하지만 난 네가 가는 길 어딘가에 있을 거야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Jungle — Back On 74** · `Call this place my home` → `그 시절을 우리 집으로 불러볼까` / `그냥 그 시절을 우리 집으로 불러볼까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Calvin Harris — Slide** · `Put some spotlight on the slide` → `나랑 맘껏 즐기자` / `맘껏 즐기자`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Zero 7 — Distractions** · `I only make jokes to distract myself` → `난 그저 농담하고 있는 것뿐이야` / `난 그저 헛소리하고 있는 것 뿐이야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Stephen Sanchez — Until I Found You** · `Oh, I used to say` → `난 이렇게 말하곤 했지` / `오, 난 이렇게 말하곤 했지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Oasis — The Meaning Of Soul** · `But that ain't enough alright` → `그 정도로는 충분하지 않다 이거야` / `그 정도로는 충분하지 않아, 전혀`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **David Choi — Love** · `To keep you in the right direction` → `당신이 올바른 방향으로 나아갈 수 있도록` / `당신이 올바른 방향으로 나아갈 수 있도록 하죠`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Frank Ocean — Pink + White** · `You showed me love` → `네가 준 사랑을` / `네가 준 사랑처럼`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Landon Pigg — Falling In Love At A Coffee Shop** · `I think that possibly, maybe I'm falling for you` → `어쩌면 나는 아마도, 빠져들고 있어` / `어쩌면 나는 빠져들고 있어, 너에게`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Landon Pigg — Falling In Love At A Coffee Shop** · `I never knew just what it was` → `내가 어떤 감정인지 미처 몰랐지만` / `내가 어떤 감정인지도`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Landon Pigg — Falling In Love At A Coffee Shop** · `All of the while I never knew` → `난 그저 그게 무엇인지 몰랐어` / `난 그저 그게 무엇인지 몰랐을 뿐`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Daniel Powter — Free Loop** · `I get some kinda lazy day` → `오늘은 침울한 하루를 보내게 될 것 같아` / `오늘은 무기력한 하루를 보내게 될 것 같아`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Rainbow — Since You Been Gone** · `Since you been gone` → `네가 떠난 후에` / `네가 날 떠난 후` / `네가 날 떠난 후부터`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Rainbow — Since You Been Gone** · `I'm out of my head can't take it` → `난 제정신이 아니지, 감당할 수 없어` / `난 제정신이 아니야, 감당할 수 없지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Marty Robbins — Love Is Blue** · `Blue is my world since I'm without you` → `너 없는 나의 세상은 많이 슬프구나` / `너 없는 나의 세상은 참 많이 슬프구나`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Stratovarius — Forever** · `Will you wait for me forever` → `그대, 날 위해 영원히 기다려줄 수 있는지` / `그대, 날 위해 영원토록 기다려줘`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Luke Chiang — Used To Me** · `Don't stay up too late` → `너무 늦게까지 깨있지마` / `너무 늦게까지 밤새진 마`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Elliott Smith — Waltz** · `I'm never gonna know you now` → `지금의 난 그녀를 결코 알 수 없겠지만` / `지금의 난 그녀의 마음을 결코 알 수 없겠지만`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Gery Halliwell — Look At Me** · `Superficial expectations` → `표면적인 기대들` / `피상적인 기대들`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Placebo — Every You Every Me** · `'Cause there's nothing else to do` → `왜냐면, 달리 할 수 있는 게 없으니까` / `왜냐면, 달리 할 수 있는 게 아무것도 없으니까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Placebo — Every You Every Me** · `Every me and every you` → `너나, 나나 모두` / `너나, 나나 우리 모두` / `너나, 나나 서로 모두`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Feist — 1234** · `Money can't buy you back the love that you had then` → `돈을 많이 벌어도 당신의 사랑을 다시 찾을 수 있을까요` / `성공하고 돈이 많아도 당신의 사랑을 다시 찾을 수 있을까요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Feist — 1234** · `They're breaking your heart` → `어린 소년들이 당신의 마음을 아프게 하나 봐요` / `당신의 마음을 아프게 하고 있나 봐요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Tai Verdes — how deep?** · `I found a thing when I wasn't even looking for a thing` → `난 굳이 애쓰지 않고서도 알게 되었어` / `난 굳이 애쓰지 않고서도 알게 되었지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Tai Verdes — how deep?** · `How I'm 'posed to know how deep I'd fall?` → `너에게 이렇게 깊이 빠져버릴 줄이야` / `너에게 이렇게 깊이 빠져버릴 줄 말야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Tai Verdes — how deep?** · `Didn't mean to take that leap, my fault` → `그렇게 무작정 뛰어들 생각은 아니었는데, 내 잘못이야` / `이렇게 무작정 뛰어들 생각은 아니었는데, 내 잘못이야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Ryuichi Sakamoto — Forbidden Colours** · `My love wears forbidden colours` → `내 사랑을 금지된 색깔로 덧입혔지` / `내 사랑을 금지된 색채로 덧입힌 채로` / `내 사랑을 금지된 색깔로 덧입힌 채로` / `내 사랑을 금지된 색채로 덧입혔지`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Ryuichi Sakamoto — Forbidden Colours** · `My life believes in you once again` → `난 당신을 한 번 더 믿기로 했어` / `난 당신을 한 번 더 믿어보기로 했어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Skunk Anansie — Lately** · `Then I try` → `그래도 난 노력해볼게` / `그렇지만 난 노력해볼게`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Abir — Tango** · `I know that it's not that deep but all I can say is` → `​그렇게 심각하지 않다는 걸 알았지만 내가 할 수 있는 말은` / `그렇게 심각하지 않다는 걸 알았지만 내가 할 수 있는 말은`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mansun — Dark Mavis** · `Until the end of the month` → `이번 달이 끝나기 전까지` / `이번 달이 끝나기 전까지만`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Mansun — Keep Telling Myself** · `Keep telling myself` → `스스로에게 이야기해` / `스스로에게 말해`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Nick Drake — Day Is Done** · `When the night is cold` → `밤은 차가워져 가는데` / `밤은 차가워오고`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **空氣公團(공기공단) — 旅をしませんか** · `だからどこへでも行けるのさ` → `그렇기에 어디든지 갈 수 있어요` / `그렇기에 어디라도 갈 수 있는 거에요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **American Authors — Best Day Of My Life** · `This is gonna be the best day of my life` → `지금이 내 인생에서 최고의 날이야` / `지금이 내 인생에서 가장 좋은 날이야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **THE KOXX — 12:00** · `It's unavoidable, miserable situation` → `피할 수 없는, 막막한 상황이야` / `피할 수 없는, 비참한 상황이야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **THE KOXX — 12:00** · `You'll try to remember even today` → `오늘을 기억하려고 노력하겠지` / `오늘을 기억하려고 노력하겠지만`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Andrew Bird — Sisyphus** · `It's got nothing to do with fate` → `이건 운명과는 아무 상관없어` / `이건 운명과는 아무 상관없이`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **JVKE — golden hour** · `She's got glitter for skin` → `그녀의 빛나는 피부` / `그녀의 환한 피부`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **JVKE — golden hour** · `My radiant beam in the night` → `내 밤을 밝혀주는 빛` / `밤을 밝혀주는 한줄기 빛`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **JVKE — golden hour** · `It's your golden hour Oh-oh-oh` → `너의 빛나는 시간` / `네가 빛나는 시간`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Bon Jovi — This Ain't A Love Song** · `This ain't a love song` → `이건 사랑 노래가 아니니까` / `이건 사랑 노래가 아니야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — All I Need** · `You′re all I need` → `당신은 내가 원하는 모든 것` / `당신은 내가 원하는 전부야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — All I Need** · `Lying in the reeds` → `갈대밭에 누워있는` / `갈대밭에 누워서`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Björk — All Is Full Of Love** · `All is full of love` → `모든 것이 사랑으로 가득찼어요` / `모든 게 사랑으로 가득찼어요` / `모든 게 사랑으로 가득 찼어요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Metallica — Hardwired** · `Shit outta luck` → `운이 없어` / `​운이 없어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Metallica — Hardwired** · `Hardwired to self-destruct` → `스스로를 파괴하길 타고났지` / `스스로를 파괴하길 타고났어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **예레미 — Beyond Myself** · `Beyond myself` → `나 자신을 넘어서` / `나 자신을 뛰어 넘어서`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Dir en grey — 腐海 썩은 바다** · `心から祈ってる` → `내 마음에 바닥에서부터` / `난 내 마음에 바닥에서부터 기도를 했어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **MISIA — 忘れない日日 잊을 수 없는 날들** · `過ぎ行く時の中きっと思い出して` → `지나가 버린 시간 속에서 꼭 생각해 줘` / `지나가는 시간 속에서 꼭 생각해 줘`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **MISIA — Everything** · `やさしい噓ならいらない欲しいのはあなた` → `우아한 거짓말같은 건 필요없어요 내가 원하는 것은 당신` / `우아한 거짓말같은 건 필요없어 내가 원하는 것은 당신`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — Killer Car** · `What if there's someone overtaking?` → `만약 추월하는 누군가가 있다면` / `만약 추월하는 누가 있다면`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — Killer Car** · `Packed with foam and blind drunk` → `거품으로 가득찬 인사불성인 그 트렁크에` / `거품으로 가득차고 인사불성인 그 트렁크에`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — Killer Car** · `Because they all drive killer cars` → `왜냐하면 그들은 모두 살인 자동차를 운전을 하니까` / `왜냐하면 그들은 모두 살인 자동차를 운전하니까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Radiohead — Last Flower** · `And you can't offer me escape` → `그리고 넌 내게 도망치자고 제안할 수 없지` / `그리고 넌 내게 도망치자고 제안할 수 없으니까`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **LINKIN PARK — The Massanger** · `It keeps us kind` → `사랑은 그래` / `사랑은 늘 그래`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Oku Hanako — 變わらないもの 변하지 않는 것** · `變わらないもの探していた` → `변하지 않는 것을 찾고 있었어요` / `변하지 않는 것을 찾고 있어요`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Harry Styles — Late Night Talking** · `I just wanna make you happier, baby` → `네가 우울하다면 그저 널 행복하게 해주고 싶어` / `네 곁에 있고 싶어, 널 행복하게 해주고 싶어`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+- **Peach Pit — Tommy's Party** · `just like I used to` → `내가 그랬던 것처럼` / `내가 그랬던 것처럼 말야`
+  - 핵심 뜻은 유지되지만 수식어·존대·어휘 선택이 흔들린다.
+
+## 맥락에 따른 정당한 차이 (12)
+
+- **Phoebe Bridgers — Lost Boys** · `Lost boys` → `길 잃은 소년들은` / `길 잃은 소년들이여`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **Suede — Trash** · `We're the litter on the breeze,` → `우린 바람에 날리는 부스러기들,` / `바람에 날리는 부스러기들이지.`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **Suede — Trash** · `We're the lovers on the street,` → `길거리의 연인들이지.` / `우린 길거리의 연인들,`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **Damien Rice — Blower's Daughter** · `My mind` → `내 마음` / `내 마음을`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **Radiohead — Weird Fishes/ Arpeggi** · `And weird fishes` → `그리고 이상한 물고기들에게` / `이상한 물고기들도`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **Zero 7 — Distractions** · `From the truth, from the truth` → `당신은 날 선택하지 않을 거니까` / `그런 진실로부터 멀리하고 싶어서`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **David Choi — Love** · `Love, love, love, love, love` → `사랑, 사랑, 사랑, 사랑, 사랑` / `사랑, 사랑, 사랑, 사랑, 사랑은`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **TWICE — What is Love?** · `I wanna know` → `사탕처럼 달콤하다는데` / `하늘을 나는 것 같다는데` / `하루 종일 웃고 있다는데` / `세상이 다 아름답다는데`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **Nick Drake — Day Is Done** · `When the day is done` → `하루가 저물어갈 때` / `하루가 저물어갈 때 말야` / `하루가 끝나갈 때` / `하루가 끝나갈 때서야` / `하루가 저물어갈 때 비로소`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **혁오 — Ohio** · `That we made before` → `우리가 이루어낸 것을` / `우리가 전에 밝히던 빛을`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **더 폴스 — Moon In Water** · `Moon in water` → `물 속에 비친 달` / `그래 이대로 내 손에 잠겨있어 줘요` / `그래 이대로 항상 내 곁에 있어줘요`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+- **더 폴스 — Moon In Water** · `Wave in water` → `물 속에 이는 물결` / `하늘 위로 헤엄쳐 갈 수 있으면 해`
+  - 반복 위치의 앞뒤 문장에 맞춰 조사·어미·생략 대상을 달리한 번역이다.
+
+## 판단 보류 (86)
+
+- **Feist — The Park** · `The past` → `과거로` / `지나간 시간으로` / `그 과거로`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Feist — The Park** · `My one...` → `나의 단 한 사람...` / `내 유일한 사랑...`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Jasmin Tabatabai — Another Sad Song (Live)** · `But all that comes out is another sad song` → `그저 또 하나의 슬픈 노래만 흘러나올 뿐이죠` / `하지만 흘러나오는 건 그저 또 하나의 슬픈 노래뿐`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The Strokes — Lonely in the Future** · `You don't get it, it's a pity` → `넌 이해 못 해, 참 안타깝지` / `넌 알아듣지 못해, 유감이지`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The Strokes — Lonely in the Future** · `Maybe you'll catch up sooner` → `언젠간 따라잡을지도 모르겠지` / `생각보다 일찍 따라잡을지도 몰라`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Incubus — Anna Molly** · `A cloud hangs over` → `먹구름이 짙게 내려앉아` / `먹구름이 드리워`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Radiohead — House of Cards** · `(Your ears should be burning)` → `(누군가 당신 이야기를 하고 있겠죠)` / `(귀가 간지럽지도 않나요)`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The Kooks — Ooh La** · `In all situations` → `어떤 순간 속에서도` / `모든 순간 속에서 빛나는 너`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **ZARD — Boy** · `疲れた時は　何も言わずに` → `지쳤을 땐 아무 말 하지 않아도 돼` / `지칠 때마다 그냥 말 없이`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **ZARD — Boy** · `人が言う程　強くないよね` → `사람들이 생각하는 것만큼 강하지 않다는 걸` / `사람들 말처럼 그렇게 강하지 않으니까`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Rumi, Jinu — Free** · `Why does it feel right every time I let you in?` → `널 받아들일 때마다 왜 이렇게 자연스러울까?` / `왜 널 받아들일 때마다 옳다고 느껴질까?`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Rumi, Jinu — Free** · `We can’t fix it if we never face it` → `직면하지 않으면 고칠 수 없어` / `직면하지 않으면 절대 고쳐지지 않아` / `직면하지 않는다면 고칠 수 없어` / `마주보지 않으면 고칠 수 없어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Rumi, Jinu — Free** · `Let the past be the past ‘til it’s weightless` → `과거는 그냥 과거로 흘려보내, 더는 짐이 되지 않게` / `과거는 흘려보내, 더는 짐이 되지 않게` / `과거는 그냥 흘려보내, 무게 없이`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Sonic Youth — Stones** · `There’s danger` → `위험은 존재해` / `위험은 여전히 있어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **이찬혁 — 멸종위기사랑** · `It’s over tonight` → `오늘 밤, 모든 게 끝납니다` / `오늘 밤으로 끝이야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **이찬혁 — 멸종위기사랑** · `(예전에는)` → `In the old days` / `Back then` / `In days gone by` / `In the past` / `Back in the day`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **이찬혁 — 멸종위기사랑** · `(어떻게든 되살려줘)` → `Bring it back somehow` / `Revive it somehow`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Jackson Wang — Made Me a Man** · `Tired of livin’ life for the rush` → `순간의 흥분을 위해 사는 삶에 지쳤어` / `순간의 쾌락을 위해 살아가는 게 지겨워`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Dido — Life For Rent** · `It’s just a thought, only a thought` → `그냥 문득 든 생각일 뿐이야` / `음… 그냥 잠깐 스쳐 지나간 생각이야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Dido — Life For Rent** · `And I don’t learn to buy` → `그리고 내가 그걸 진짜 내 걸로 만들 줄 모른다면` / `그리고 그걸 진짜 내 걸로 만들 줄 모른다면` / `내 것으로 만드는 법을 배우지 못했다면`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Dido — Life For Rent** · `Well I deserve nothing more than I get` → `그럼 내가 지금 가진 것 이상을 바랄 자격은 없는 거지, 뭐` / `그럼 내가 지금 가진 것보다 더 바랄 순 없지` / `내가 가진 그대로가 전부인 걸지도 몰라`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Dido — Life For Rent** · `’Cause nothing I have is truly mine` → `왜냐면 가진 게 다 내 것 같지가 않거든` / `사실 가진 게 전부 진짜 내 거 같지 않으니까` / `왜냐면 진짜 내 거라고 느껴지는 게 없으니까` / `진짜 내 거라고 할 수 있는 게… 하나도 없거든` / `정말 그래, 내 삶에서 진짜 내 거라 부를 수 있는 게 없어` / `그게 제일 슬픈 진심인 것 같아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Dido — Life For Rent** · `If my life is for rent` → `내 인생이 누군가한테서 잠깐 빌린 거라면` / `진짜, 내 삶이 빌린 것처럼 느껴진다면`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Father Of Peace — No Complaints** · `One of those days I’ll go to my mama` → `언젠가 엄마한테 갈 거야` / `언젠가 엄마를 찾아가서 난`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Richie Kotzen — special** · `Let that be a lesson to you` → `이게 교훈이 됐으면 해` / `이게 너한테 교훈이 되길 바라` / `그게 어떤 의미였는지 이제 알겠지`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Miles Caton — Travelin'** · `I don’t know why in the hell I’m here` → `이 거친 땅에 내가 왜 있는지 나도 몰라` / `이 황야에 내가 왜 있는지 알 수가 없어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **2BYG — Karma** · `’Round and ’round` → `빙글빙글 돌고 돌아` / `계속 돌고 돌아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **2BYG — Karma** · `’Round and around` → `빙글빙글 돌아` / `계속 돌아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The Smashing Pumpkins — Bullet With Butterfly Wings** · `Like ol’ Job` → `욥처럼, 끝까지 버티며 (욥: 고난 속에서도 신을 향해 절규한 인물)` / `욥처럼`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **릴체리, 골드부다 — 하늘천따지 1000 Words** · `Back in the day, get them honor rolls` → `예전엔 우등상도 많이 받았지` / `그땐 정말 공부 잘했어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **릴체리, 골드부다 — 하늘천따지 1000 Words** · `Dancing in a rolls royce` → `그 안에서 춤을 추는 거야` / `롤스로이스에서 춤추는 거야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Trxndsetter, Try27 — Wait They Don't Love You** · `Wait, they don’t love you like I love you` → `잠깐, 그들은 내가 널 사랑하는 것처럼 널 사랑하지 않아` / `잠깐, 그들은 나만큼 널 사랑하지 않아` / `잠깐, 그들은 나만큼 널 사랑하지 않아 이 문구는 노래의 핵심 가사가 되었고, 사랑과 거리 사이의 갈등을 표현했죠. 하지만 투어 생활 속에서 끊임없이 반복되는 만남과 이별, 그리고 그 사이의 공허함은 둘 사이를 점점 멀어지게 했고, 결국 결별로 이어졌습니다. 이 사건은 밴드의 음악적 색깔에도 큰 변화를 가져왔습니다. 결별 이후, 그들은 이전의 거칠고 생동감 넘치는 사운드에서 벗어나 댄스 팝과 같은 상업적인 음악 대신, 로파이하고 개인적이며 조용한 음악 스타일을 선택하게 됩니다. 이러한 변화는 밴드가 더 성숙하고 실험적인 음악적 방향으로 나아가는 계기가 되었죠. 최근 틱톡에서 이 곡이 바이럴 히트를 치는 모습을 보며 문득 생각했습니다. 극심한 상실의 경험은 우리를 어떻게 바꾸고 성장시킬 수 있을까요? 그리고 나는 이제 어떻게 해야 될까요.`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Trxndsetter, Try27 — Wait They Don't Love You** · `Maps` → `지도` / `지도 나의 앵거스 제발 머물러줘`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Sisqo — Incomplete** · `That without you girl my life is incomplete` → `너 없는 내 인생은 채워지지 않는다는 걸` / `너 없는 내 인생은 의미가 없어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Coldplay — What If** · `That you don’t want me there in your life` → `당신이 나를 원하지 않는다고` / `당신이 더 이상 나의 존재를 원하지 않는다고 말이에요`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Coldplay — What If** · `Ooh, that’s right` → `그래, 맞아요` / `그래, 그렇게` / `그래요, 그게 맞을 거예요`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Mr.Big — Superfantastic** · `Everything is beautiful` → `다 예뻐 보이고` / `모든 것이 다 예뻐`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **혁오, Sunset Rollercoaster — Young Man** · `We, the young, forever mercy (woo)` → `우리, 젊은이들, 영원한 자비를 (우)` / `우리, 젊은이들, 영원한 자비를 (우) 슬픔은 늘 떼로 온다 기쁨은 늘 스쳐 간다 슬픔은 늘 떼로 온다 기쁨은 없다`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Cyrille Aimee , Diego Figueiredo — Just The Two Of Us** · `Just the two of us` → `단둘이서` / `우리 둘만이`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Linkin Park — The Emptiness Machine** · `Just like you always do` → `항상 그래왔듯이` / `늘 그래왔던 것처럼`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Boys Go To Jupiter — Lovers Always Lose** · `So why why why why, as we stand in the sunshine` → `근데 왜, 우리는 햇빛 속에 서 있는데` / `그래서 왜, 햇빛 속에 서 있으면서`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Damien Rice — Blower's Daughter** · `Most of the time` → `거의 대부분은` / `대개는 말이지`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **JVKE — this is what falling in love feels like** · `This is falling, falling in love` → `이런 게 정말, 사랑에 빠졌다는거구나` / `난 빠져버렸어, 사랑에 빠져버렸어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Rachael Yamagata — Be Be Your Love** · `Want to be your love for real` → `정말로 너의 사랑이 되고 싶단 말이야` / `진심으로 너의 사랑이 되고 싶어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Rachael Yamagata — Be Be Your Love** · `Please sir don't you walk away` → `제발 날 떠나지 마` / `제발 가지 말아 줘`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Joji — Slow Dancing In The Dark** · `You should be with him, I can't compete` → `넌 그와 함께 해야지, 난 경쟁 상대가 안 돼` / `넌 그와 함께 해야지, 난 네게 어울리지 않아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Joji — Slow Dancing In The Dark** · `Can you?` → `그래 줄래?` / `넌 어때?`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The Beach Boys — Wouldn't It Be Nice** · `Wouldn't it be nice` → `멋지지 않겠니?` / `더 즐겁지 않을까?` / `더 좋아지지 않겠니?`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **HONNE — free love** · `As wonderful as this all seems` → `이 모든 장면이 경이롭지 않나요` / `그리고 이 모든 장면은 경이롭지만`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **DEAN — DIE 4 YOU** · `I'll be loving you` → `널 사랑할 거란 걸` / `계속 사랑할 걸 알아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **RM — Come Back To Me** · `I see you come back to me` → `언젠가 다시 돌아올 거란 걸 알아` / `내게 다시 돌아오는 너를 보네`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **92914 — Moonlight** · `Sometimes I wonder` → `가끔 난 궁금해` / `이따금씩 난 궁금해`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **92914 — Moonlight** · `So then we can watch` → `우리가 너의 모습을 볼 수 있게` / `우리가 위안을 얻을 수 있도록`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **92914 — Moonlight** · `Lay down and watch` → `그저 맘편히 누워` / `하늘의 별들을 바라보겠지`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The Velvet Underground — Pale Blue Eyes** · `Sometimes I feel so happy` → `가끔은 행복하고` / `행복할 때도 있지만`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Radiohead — Fake Plastic Tree** · `All the time` → `언제나 말이야` / `언제나`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Harry Styles — Music For a Sushi Restaurant** · `It's 'cause I love you, babe` → `널 사랑하니까` / `그래서 널 사랑해`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Harry Styles — Music For a Sushi Restaurant** · `Music for a sushi restaurant` → `스시집에 딱 어울리는 노래야` / `스시집에 어울리는 노래지` / `스시 먹을 때 좋은 노래야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Jungle — Back On 74** · `Where did it all` → `어디부터 해야되나` / `어디부터 해야할지 몰라도`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Barns Courtney — Golden** · `It's golden` → `황금빛이야` / `황금빛` / `탐스러운` / `이건 황금빛이야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Radiohead — There, There** · `We are accidents` → `우리는 사고뭉치야` / `우리는 문젯덩어리야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Frank Ocean — Pink + White** · `It's the same way you showed me` → `그건 네가 나에게 보여준 것과 같은 거야` / `네가 보여준 것처럼`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Landon Pigg — Falling In Love At A Coffee Shop** · `About this old coffee shop I love so much` → `내가 너무나도 좋아하는 이 오래된 커피숍에 대해서도` / `그냥 이 오래된 커피숍이 좋아서였나 봐`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Luke Chiang — Used To Me** · `(Let's just go talk about it, I got time if you're about it)` → `(이야기라도 한번 해보자, 너만 괜찮으면 난 시간 있으니까)` / `(그러니 한번 이야기 해보자, 너만 좋다면 시간은 충분해)` / `(그러니 한번 이야기 해보자, 시간은 충분해)`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Feist — 1234** · `Oh, you're changing your heart` → `당신의 마음이 변하고 있나요` / `자, 당신의 마음도 변하고 있나요` / `오, 드디어 마음이 바뀌고 있나요`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Phoenix — J-Boy** · `Is it so bad?` → `이런 일들이 그렇게 심하니?` / `내가 겪어야 할 일들이 그렇게 나쁜 거야?`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Mansun — Negative** · `Someone nudged me in the street` → `길거리에서 어떤 사람은 날 밀쳤어` / `어떤 사람은 길거리에서 날 밀쳤어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Incubus — Megalomaniac** · `You're no Jesus` → `넌 구세주가 아니야` / `이봐, 미치광이 넌 구세주가 아냐`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Steelheart — All Your Love** · `Oh just the thought of` → `그대와 눈이 마주칠 때 난 녹아버려요 그대를 안고 싶어요, 단지 그 생각뿐` / `난 오늘 밤 사랑을 이룰 거예요, 기다릴 수 없어요 그대를 안고 싶어요, 그 생각만으로도`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **TWICE — What is Love?** · `What is love?` → `사랑이 어떤 느낌인지` / `언젠간 나에게도 사랑이 올까`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Gene Kelly — Singin' In The Rain** · `I'm happy again` → `다시 행복해져서 기분이 너무 좋아요` / `난 다시 행복해져요`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **The La's — There She Goes** · `And I just can't contain this feelin' that remains` → `남겨져 버린 내 마음을 차마 감당할 수 없을거야` / `혼자 버림받은 내 마음을 차마 감당할 수 없을거야` / `남겨져 버린 내 마음을 차마 감당할 수 없기에` / `혼자 버림받은 나의 이 마음을 차마 감당할 수 없을 거야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Jeff Bernat — Call You Mine** · `Call you my one and only girl` → `널 내 여자라고 불러도 될까` / `널 내 여자라고 부를 거야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **JVKE — i'm not okay** · `Down, bad` → `좋지 않아` / `정말이지 안 좋아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **JVKE — golden hour** · `I was all alone with the love of my life` → `난 내 사랑 그녀와 오직 단둘이 있었지` / `내 운명의 사랑과 오직 단둘이`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **JVKE — golden hour** · `I don't need no light to see you` → `넌 나에게 빛이야` / `내겐 널 보기 위한 빛이 필요 없어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **JVKE — golden hour** · `You slow down time` → `시간을 멈추게 하는` / `시간이 천천히 흐르는 듯한`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **JVKE — golden hour** · `in your golden hour Oh-oh-oh` → `네가 빛나는 시간` / `너의 특별한 시간`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Radiohead — Daydreaming** · `They never learn` → `그들은 배우려고 하지 않네` / `배우지 않네 그리고는`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Radiohead — Daydreaming** · `Of no return` → `어떠한 지점을 넘어 돌아오지 않아` / `제자리로 돌아오지 않아`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Radiohead — Daydreaming** · `The damage is done` → `이미 너무 망가져버렸지` / `상처가 생겨버렸어`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Charlie Puth — Loser** · `Oh maybe I must of been out of my mind` → `내가 잠깐 정신이 나갔었나 봐` / `내 머리가 어떻게 됐었던 게 분명해`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Charlie Puth — Loser** · `I’ll never recover` → `되돌릴 수 없을거야` / `다시 되돌릴 수 없겠지`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Charlie Puth — Loser** · `I’ll never be fine ‘cause I` → `괜찮아질 수 없겠지, 왜냐하면 난` / `절대 괜찮아지지 않을 거야`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Phoenix — Love for Granted** · `I think about the time we wasted` → `난 우리가 낭비해버린 시간을` / `우리가 낭비한 시간을 생각하며` / `우리가 낭비해버린 시간을 생각해`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+- **Harry Styles — Late Night Talking** · `Can't get you off my mind` → `네 생각을 그만둘 수가 없어` / `네 생각을 멈출 수가 없는데`
+  - 번역 사이의 의미 차이가 커 자동 통일하지 않고 원문 문맥 판단 대상으로 남긴다.
+
+## 원문과 동일한 번역 검토
+
+19곡의 경고 111줄을 검토해 뜻이 있는 영어 가사 14종 31줄만 보완하고, 나머지는 유지한다.
+
+- **nafla — adrenaline** · `다시 흘러가지` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **nafla — adrenaline** · `어린아이처럼` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **Mac Miller — Two Matches (feat. Ab-Soul)** · `Soul!` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **The Weeknd — Cry For Me** · `Ooh, yeah` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **The Weeknd — Cry For Me** · `(Ooh, yeah)` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **새소년 — 긴 꿈** · `I want to shoot a movie with you` (2회): 누락 보완 → `너와 함께 영화를 찍고 싶어` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **새소년 — 긴 꿈** · `Hold your hand and walk, run, fly with you` (2회): 누락 보완 → `네 손을 잡고 걷고, 달리고, 너와 날고 싶어` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **새소년 — 긴 꿈** · `Why am I blooming when I look at you` (2회): 누락 보완 → `왜 너를 바라보면 내가 피어날까` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **새소년 — 긴 꿈** · `I can change the world to be with you` (2회): 누락 보완 → `너와 함께라면 세상을 바꿀 수 있어` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **새소년 — 긴 꿈** · `So take my hand and walk run fly with you` (2회): 누락 보완 → `그러니 내 손을 잡고 함께 걷고, 달리고, 날아가자` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **삐삐밴드, Zion.T — Over & Over** · `over and over and over and over` (14회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **EPIKHIGH — Don’t Hate Me** · `1, 2, 3, 4!` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **B — Free, Hukky Shibaseki - Get It** · `cuz ~~` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **The Rare Occasions — Notion** · `♫♬♫` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **Henry Young, Ashley Alisha — One More Last Time** · `One more last time` (2회): 누락 보완 → `마지막으로 한 번만 더` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **Henry Young, Ashley Alisha — One More Last Time** · `My baby` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **검정치마 — 폭죽과 풍선들** · `Oh, look at 'em go baby go` (1회): 누락 보완 → `오, 저것들 날아가는 것 좀 봐, 자 가자` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **오존 — Clouds** · `Maybe I'll make you feel good` (2회): 누락 보완 → `어쩌면 내가 널 기분 좋게 해줄지도 몰라` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **자우림 — 스타스 STARS** · `Stars…` (3회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **Rude John — Find Your Love** · `Find your love` (8회): 누락 보완 → `너의 사랑을 찾아` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **아일릿 — 빌려온 고양이** · `So curious` (2회): 누락 보완 → `너무 궁금해` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **아일릿 — 빌려온 고양이** · `So fabulous` (1회): 누락 보완 → `너무 멋져` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **아일릿 — 빌려온 고양이** · `Like a roller coaster ride` (2회): 누락 보완 → `롤러코스터를 타는 것처럼` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **아일릿 — 빌려온 고양이** · `My heart starts to` (1회): 누락 보완 → `내 심장이 움직이기 시작해` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **아일릿 — 빌려온 고양이** · `Dance` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **아일릿 — 빌려온 고양이** · `Do a little` (4회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **아일릿 — 빌려온 고양이** · `Do ah` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **아일릿 — 빌려온 고양이** · `Do you wanna dance?` (2회): 누락 보완 → `춤추고 싶어?` — 뜻이 있는 영어 가사인데 번역 자리에 원문이 복사돼 있다.
+- **아일릿 — 빌려온 고양이** · `Do the dance, ah oui` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **Bakar — Lonyo!** · `Bk, Bk, Bk` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **터보 — Tonight** · `Tonight, tonight` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **터보 — Tonight** · `Tonight, tonight, tonight, tonight` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **르세라핌 — 이브, 프시케 그리고 푸른 수염의 아내** · `Get it like boom boom boom` (24회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **르세라핌 — 이브, 프시케 그리고 푸른 수염의 아내** · `Boom boom now` (3회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **원슈타인 — Single** · `Single again, again, again` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **원슈타인 — Single** · `Again, again, again, again` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **원슈타인 — Single** · `Single again` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **원슈타인 — Single** · `Single again (again, single again)` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+- **VMC — 티키타카** · `뒷좌석에 탑승 VMC에 들려` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
+
+## emotion·keywords 누락(범위 밖)
+
+- lionclad-uloveuwaitingu: emotion, keywords
+- kirara-vc19111: emotion, keywords
+- hiromi-tomoaki-bada-shun-ishiwaka-n-e-w: emotion, keywords
+- steve-vai-the-crying-machine: emotion, keywords
+- kirara-wish: emotion, keywords
+- siam-shade-triptych: emotion, keywords
+- 봄여름가을겨울-못다한-내-마음을: emotion, keywords
+- bimini-can-t-hold-me-back: emotion, keywords

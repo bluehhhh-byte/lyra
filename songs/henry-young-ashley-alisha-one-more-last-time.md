@@ -54,7 +54,7 @@ Thinking 'bout you, yeah, only you, 너만 보여
 널 한번 붙잡아 봐
 > Let me try to hold on to you
 One more last time
-> One more last time
+> 마지막으로 한 번만 더
 바람이 불어와
 > The wind comes in
 모두 버리기엔
@@ -92,7 +92,7 @@ Thinking 'bout you, yeah, only you, 너만 보여
 널 한번 붙잡아 봐
 > Let me try to hold on to you
 One more last time
-> One more last time
+> 마지막으로 한 번만 더
 바람이 불어와
 > The wind comes in
 모두 버리기엔

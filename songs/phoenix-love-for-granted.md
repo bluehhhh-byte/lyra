@@ -91,7 +91,7 @@ As long as you are hiding somewhere
 ​
 Don't tell me 'bout your lies
 Don't tell me 'bout your secrets
->^3 말하지 말아 줘, 너의 거짓말들
+>^2 말하지 말아 줘, 너의 거짓말들
 > 말하지 말아 줘, 너의 비밀들
 
 Even though we've said it all
@@ -107,4 +107,4 @@ If it is for better
 Disillusion comes after, it's true
 Hang on to a little chance, you bet I'm in
 > 나를 환멸로 이끄네, 정말이지
-> 작은 기회라도 준다면 너의 제안을 받아들일게
+> 작은 기회라도 준다면, 너의 제안을 받아들일게

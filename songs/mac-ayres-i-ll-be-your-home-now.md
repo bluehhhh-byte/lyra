@@ -79,6 +79,6 @@ Is it all
 Is it all
 >^3 이 모든 게
 Too much
-> 많은 걸 바라는 걸까,
+> 많은 걸 바라는 걸까
 Too, too much, yeah
 > 너무나도 많은 걸, 그래

@@ -89,6 +89,6 @@ If the pain that I'm feeling's so strong
 Is the reason that I'm holding on
 > 당신을 붙잡는 이유가 될 수 있을까
 Then I'm wrong, yeah I'm wrong
-> 그럼 내가 틀린 거야, 그래, 나는 틀린거야
+> 그럼 내가 틀린 거야, 그래, 나는 틀린 거야
 This ain't a love song
 > 이건 사랑 노래가 아니야

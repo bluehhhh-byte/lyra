@@ -47,6 +47,6 @@ lyrics_source: https://music.bugs.co.kr/track/32062671
 함께 Love 함께 Love
 > Together, love, together, love
 Maybe I'll make you feel good
-> Maybe I'll make you feel good
+> 어쩌면 내가 널 기분 좋게 해줄지도 몰라
 Maybe I'll make you feel good
-> Maybe I'll make you feel good
+> 어쩌면 내가 널 기분 좋게 해줄지도 몰라

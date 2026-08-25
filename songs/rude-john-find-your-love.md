@@ -63,13 +63,13 @@ lyrics_source: https://music.bugs.co.kr/track/33702821
 > if it's because of the fear in a corner of your heart
 
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 
 어느 순간부터 사랑을 잊었네
 > At some point I forgot what love was
@@ -106,10 +106,10 @@ and I don't want you
 > is that the beauty was blinding
 
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 Find your love
-> Find your love
+> 너의 사랑을 찾아
 Find your love
-> Find your love
+> 너의 사랑을 찾아

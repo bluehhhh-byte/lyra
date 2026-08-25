@@ -36,7 +36,7 @@ Happy new year the world just keeps turning
 Day into night, night into day
 > 낮에서 밤으로, 밤에서 낮으로
 Holding on tight, millions all hoping
-> 꼭 붙잡은 채 수 많은 사람들이 기원한다
+> 꼭 붙잡은 채 수많은 사람들이 기원한다
 Something like love will light up the way
 > 사랑과 같은 어떤 것이 앞길을 비춰주기를
 

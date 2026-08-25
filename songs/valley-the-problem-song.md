@@ -54,11 +54,11 @@ I put paper to pen
 And therapy said
 > 상담사가 그러더라
 Maybe we could start again
-> 우리가 다시 시작할 수 있을거래
+> 우리가 다시 시작할 수 있을 거래
 Yeah, we got problems, baby
 > 그래, 우리에겐 문제가 있지만
 But I know we can fix them
-> 우린 고칠 수 있을거야
+> 우린 고칠 수 있을 거야
 
 So what we got our problems
 > 우리에게 문제가 있을지라도

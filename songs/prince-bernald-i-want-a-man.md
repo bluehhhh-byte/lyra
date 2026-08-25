@@ -26,7 +26,7 @@ source_body_hash: b486c227cb208c889f2902bff808e79fd8e5081e
 I want a man, I want a man, I do
 > 난 남자를 원해, 남자를 원해, 난 그래
 I want a man, I want a man
-> 내가 그런 남자가, 남자가 되길
+> 그런 남자를 원해, 남자를 말야
 I want a hunky-dunky, chunky man
 > 늠름하고 땅딸막한 남자를
 I want a man, I want a man
@@ -53,7 +53,7 @@ Shaking my sweet titties like a flan
 I want a man, I want a man, I do
 > 난 남자를 원해, 남자를 원해, 난 그래
 I want a man, I want a man
-> 내가 그런 남자가, 남자가 되길
+> 그런 남자를 원해, 남자를 말야
 I want a purty, flirty, dirty man
 > 보기 좋고, 천박하고, 추잡한 남자를
 Please hear me, God, I want a man
