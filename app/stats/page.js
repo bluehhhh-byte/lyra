@@ -6,6 +6,7 @@ import DrillSection from "./drilldown";
 import EmotionTimeline from "../emotion-timeline";
 import { getDiary } from "../../lib/diary";
 import { COUNTRY_TAGS } from "../../lib/genre";
+import { releaseRecordGaps } from "../../lib/archive-stats";
 
 export const metadata = {
   title: "컬렉션 통계 | Lyra",
@@ -71,6 +72,7 @@ export default async function StatsPage() {
   const translated = lines.filter((l) => l.ko).length;
   const readings = lines.filter((l) => l.reading).length;
   const stanzas = songs.flatMap((s) => s.stanzas).length;
+  const releaseGaps = releaseRecordGaps(songs);
 
   // country follows the artist-nationality tag; lyric language is only a
   // fallback for songs saved before country tags existed
@@ -187,6 +189,12 @@ export default async function StatsPage() {
 
         <Section title="월별 기록">
           <Bars data={byMonth} total={stamps.length} />
+        </Section>
+
+        <Section title="발매와 기록 사이">
+          <Bars data={releaseGaps.buckets.filter(([, count]) => count)} total={releaseGaps.known} />
+          <p className="mt-3 text-xs text-muted">연도 확인 {releaseGaps.known}곡 · 누락 {releaseGaps.missing}곡</p>
+          {releaseGaps.oldest.length > 0 && <p className="mt-2 text-xs leading-relaxed text-muted">오래된 곡을 뒤늦게 기록한 사례: {releaseGaps.oldest.map((row) => `${row.title} ${row.gap}년`).join(" · ")}</p>}
         </Section>
 
         {withTime.length ? (
