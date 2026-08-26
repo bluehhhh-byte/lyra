@@ -5,6 +5,7 @@ import { valenceColor } from "../../lib/keywords";
 import CoverImage from "../cover-image";
 import ArchiveCalendar from "./calendar";
 import { EmotionOrbit, EmotionTrend, BioTimeline, EmotionComposition } from "./orbit";
+import YearCompare from "./year-compare";
 
 const monthLabel = (month) => {
   const [year, value] = month.split("-");
@@ -154,6 +155,14 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
               <p className="mt-2 max-w-3xl font-serif text-base leading-7">{yearBio}</p>
             </div>
           )}
+        </section>
+      )}
+
+      {!theme && years.length > 1 && (
+        <section className="mb-10 min-w-0" aria-labelledby="year-compare-heading">
+          <h2 id="year-compare-heading" className="text-lg font-bold">연도 간 정서 비교</h2>
+          <p className="mb-4 mt-1 text-xs text-muted">두 해의 같은 달을 동일한 고정 척도 위에 겹쳐 본다.</p>
+          <YearCompare stats={stats} years={years} />
         </section>
       )}
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { valenceColor, emotionValence } from "../../lib/keywords";
 import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
 import { placeLabels, clampLabel } from "../../lib/orbit-layout";
-import { workLabel } from "../../lib/archive-stats";
+import { compareYearStats, workLabel } from "../../lib/archive-stats";
 
 // 감정 궤도 — 선택 연도의 월들을 valence(가로)·arousal(세로) 평면에 놓고 시간
 // 순서를 화살표로 잇는다. 전부 서버 렌더링 SVG + 링크라 JS 없이도 키보드로
@@ -29,6 +29,75 @@ const VARIANTS = {
 };
 
 const DOMAIN = [-3, 3];
+
+const COMPARE = { W: 760, H: 440, PAD: 54 };
+
+export function YearComparison({ stats, firstYear, secondYear }) {
+  const rows = compareYearStats(stats, firstYear, secondYear);
+  const points = rows.flatMap((row) => [
+    row.first?.center ? { ...row.first, year: firstYear, monthNum: row.monthNum, series: "first" } : null,
+    row.second?.center ? { ...row.second, year: secondYear, monthNum: row.monthNum, series: "second" } : null,
+  ]).filter(Boolean);
+  if (!points.length) return <p className="text-sm text-muted">선택한 연도에는 비교할 감정 기록이 없다.</p>;
+
+  const { W, H, PAD } = COMPARE;
+  const [lo, hi] = DOMAIN;
+  const sx = (value) => PAD + ((value - lo) / (hi - lo)) * (W - PAD * 2);
+  const sy = (value) => H - PAD - ((value - lo) / (hi - lo)) * (H - PAD * 2);
+  const colors = { first: "oklch(0.7 0.16 295)", second: "oklch(0.72 0.15 145)" };
+  const chartId = `year-compare-${firstYear}-${secondYear}`;
+
+  return (
+    <figure className="min-w-0 max-w-full">
+      <div className="mb-3 flex flex-wrap gap-4 text-xs text-muted" aria-hidden>
+        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 rounded-full" style={{ background: colors.first }} />{firstYear}년</span>
+        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 rounded-sm" style={{ background: colors.second }} />{secondYear}년</span>
+      </div>
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${chartId}-title`} className="h-auto w-full rounded-2xl border border-line bg-surface">
+        <title id={`${chartId}-title`}>{`${firstYear}년과 ${secondYear}년의 월별 정서 좌표 비교. 가로는 밝기, 세로는 각성이며 두 축 모두 마이너스 3에서 플러스 3이다.`}</title>
+        {[-2, -1, 0, 1, 2].map((tick) => (
+          <g key={tick} aria-hidden>
+            <line x1={sx(tick)} y1={PAD} x2={sx(tick)} y2={H - PAD} stroke="var(--color-line)" opacity={tick === 0 ? 0.8 : 0.35} />
+            <line x1={PAD} y1={sy(tick)} x2={W - PAD} y2={sy(tick)} stroke="var(--color-line)" opacity={tick === 0 ? 0.8 : 0.35} />
+          </g>
+        ))}
+        <text x={W - PAD} y={H - 14} textAnchor="end" fontSize="11" fill="var(--color-muted)">밝기 →</text>
+        <text x={16} y={PAD} fontSize="11" fill="var(--color-muted)">각성 ↑</text>
+        {points.map((point) => {
+          const x = sx(point.center.v);
+          const y = sy(point.center.a);
+          const key = `${point.year}-${point.monthNum}`;
+          return (
+            <g key={key} aria-hidden>
+              {point.series === "first" ? (
+                <circle cx={x} cy={y} r="5" fill={colors.first} />
+              ) : (
+                <rect x={x - 5} y={y - 5} width="10" height="10" rx="2" fill={colors.second} />
+              )}
+              <text x={x + 8} y={y - 7} fontSize="10" fill="var(--color-ink)">{point.monthNum}</text>
+            </g>
+          );
+        })}
+      </svg>
+      <figcaption className="mt-2 text-[11px] leading-5 text-muted">
+        원은 {firstYear}년, 사각형은 {secondYear}년이다. 숫자는 월이며 모든 연도에 같은 −3~+3 척도를 적용한다.
+      </figcaption>
+      <div className="sr-only">
+        <table>
+          <caption>{firstYear}년과 {secondYear}년 월별 정서 좌표</caption>
+          <thead><tr><th>월</th><th>{firstYear}년</th><th>{secondYear}년</th></tr></thead>
+          <tbody>{rows.map((row) => (
+            <tr key={row.monthNum}>
+              <td>{row.monthNum}월</td>
+              <td>{row.first?.center ? `밝기 ${fmt1(row.first.center.v)}, 각성 ${fmt1(row.first.center.a)}` : "기록 없음"}</td>
+              <td>{row.second?.center ? `밝기 ${fmt1(row.second.center.v)}, 각성 ${fmt1(row.second.center.a)}` : "기록 없음"}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+    </figure>
+  );
+}
 
 // 점 색은 valence가 아니라 시간 순서다.
 //
