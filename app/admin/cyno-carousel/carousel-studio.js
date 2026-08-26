@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import AdminErrorMessage from "../error-message";
+import { carouselDownloadEntries } from "../../../lib/carousel";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords } from "../../../lib/movie-carousel";
 import {
@@ -420,7 +421,8 @@ async function renderCarousel(carousel) {
 }
 
 async function downloadAll(blobs, carousel) {
-  const files = blobs.map((blob, index) => new File([blob], `cyno-${carousel.id}-${String(index + 1).padStart(2, "0")}.png`, { type: "image/png" }));
+  const files = carouselDownloadEntries(blobs, carousel.id)
+    .map(({ blob, name }) => new File([blob], name, { type: "image/png" }));
   if (navigator.canShare?.({ files })) {
     try {
       await navigator.share({ files, title: carousel.headline });
