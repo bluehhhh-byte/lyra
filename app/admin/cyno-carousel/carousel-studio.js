@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import AdminErrorMessage from "../error-message";
 import InstagramCaptionPreview from "../../caption-preview";
-import { carouselDownloadEntries, carouselSizeReport, formatCarouselBytes, waitForCarouselFonts } from "../../../lib/carousel";
+import { CAROUSEL_THEME, carouselDownloadEntries, carouselSizeReport, formatCarouselBytes, waitForCarouselFonts } from "../../../lib/carousel";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords, MOVIE_CAROUSEL_FONT_FACES } from "../../../lib/movie-carousel";
 import {
@@ -16,13 +16,13 @@ import {
   wrap,
 } from "../../songs/[slug]/lyric-card";
 
-const W = 1080;
-const H = 1350;
-const PAD = 84;
+const W = CAROUSEL_THEME.width;
+const H = CAROUSEL_THEME.height;
+const PAD = CAROUSEL_THEME.padding;
 const TOTAL_SLIDES = 5;
 const POSTER_CONCURRENCY = 5;
-const SANS = '"Pretendard Variable", Pretendard, "Apple SD Gothic Neo", sans-serif';
-const SERIF = 'Georgia, "Noto Serif KR", serif';
+const SANS = CAROUSEL_THEME.sans;
+const SERIF = CAROUSEL_THEME.serif;
 const BG = "#0d0d0f";
 const INK = "#f7f7f8";
 const DIM = "rgba(247,247,248,0.7)";

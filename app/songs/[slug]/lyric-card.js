@@ -5,6 +5,7 @@ import InstagramCaptionPreview from "../../caption-preview";
 import {
   buildCarousel,
   autoSelect,
+  CAROUSEL_THEME,
   CAROUSEL_SLIDES,
   MAX_SELECTED_LINES,
   waitForCarouselFonts,
@@ -23,14 +24,14 @@ import {
 // lib/carousel.js가 정한다. 다 그리면 인스타 업로드 순서대로 번호를 붙여
 // 공유 시트에 넘긴다(안 되면 순서대로 내려받기). All client-side, no deps.
 
-const W = 1080;
-const H = 1350;
+const W = CAROUSEL_THEME.width;
+const H = CAROUSEL_THEME.height;
 const MAX_PAIRS = MAX_SELECTED_LINES;
-const SANS = '"Pretendard Variable", Pretendard, "Apple SD Gothic Neo", sans-serif';
-const SERIF = 'Georgia, "Noto Serif KR", serif';
+const SANS = CAROUSEL_THEME.sans;
+const SERIF = CAROUSEL_THEME.serif;
 const INK = "#f7f7f8";
 const INK_DIM = "rgba(247,247,248,0.84)";
-const PAD = 84;
+const PAD = CAROUSEL_THEME.padding;
 
 export function drawImageCover(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.width, height / image.height);
