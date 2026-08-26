@@ -8,6 +8,7 @@ import { getDiary } from "../../lib/diary";
 import { COUNTRY_TAGS } from "../../lib/genre";
 import { releaseRecordGaps } from "../../lib/archive-stats";
 import { artistEmotionProfiles } from "../../lib/people";
+import { emotionUsage } from "../../lib/emotion-model";
 
 export const metadata = {
   title: "컬렉션 통계 | Lyra",
@@ -77,6 +78,8 @@ export default async function StatsPage() {
   const artistEmotions = artistEmotionProfiles(songs);
   const readableArtistEmotions = artistEmotions.filter((profile) => !profile.deferred).slice(0, 10);
   const deferredArtistEmotions = artistEmotions.filter((profile) => profile.deferred).length;
+  const emotionCounts = emotionUsage(songs.map((song) => song.emotion));
+  const emotionTotal = emotionCounts.reduce((sum, [, count]) => sum + count, 0);
 
   // country follows the artist-nationality tag; lyric language is only a
   // fallback for songs saved before country tags existed
@@ -197,6 +200,11 @@ export default async function StatsPage() {
 
         <Section title="가수별" href="/?group=artist">
           <Bars data={byArtist} total={songs.length} />
+        </Section>
+
+        <Section title="감정 어휘 사용 빈도">
+          <Bars data={emotionCounts} total={emotionTotal} />
+          <p className="mt-3 text-xs text-muted">모델의 15개 감정을 모두 표시하며, 쓰이지 않은 감정도 0회로 남긴다.</p>
         </Section>
 
         <DrillSection
