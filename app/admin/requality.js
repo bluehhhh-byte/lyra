@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -154,9 +155,7 @@ export default function Requality() {
                       </a>
                     </>
                   )}
-                  {st?.err && (
-                    <span className="shrink-0 text-xs text-red-400 dark:text-red-400">{st.err}</span>
-                  )}
+                  <AdminErrorMessage message={st?.err} compact className="shrink-0" />
                 </li>
               );
             })}
@@ -168,7 +167,7 @@ export default function Requality() {
         </>
       )}
 
-      {error && <p className="mt-2 text-sm text-red-400">{error}</p>}
+      <AdminErrorMessage message={error} className="mt-2" />
     </div>
   );
 }

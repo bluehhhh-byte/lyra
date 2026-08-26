@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 // 대량 작업 — Gemini 무료 티어로는 768곡을 훑을 수 없다. 그래서 역할을 나눈다:
 //   여기서 '무엇이 부족한지' 목록(작업 꾸러미)만 만들고,
@@ -106,7 +107,7 @@ export default function BulkWork() {
         )}
       </div>
 
-      {err && <p className="text-sm text-red-400">{err}</p>}
+      <AdminErrorMessage message={err} />
 
       {plan && (
         <div className="rounded-lg border border-line p-3 text-sm">

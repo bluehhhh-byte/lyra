@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import AdminErrorMessage from "../error-message";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords } from "../../../lib/movie-carousel";
 import {
@@ -471,6 +472,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
   const [activeCard, setActiveCard] = useState(0);
   const [building, setBuilding] = useState(false);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const blobs = useRef([]);
   const cardsRef = useRef([]);
   const renderHint = useRef(null);
@@ -499,6 +501,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
     const timer = setTimeout(async () => {
       setBuilding(true);
       setMessage("");
+      setError("");
       const previous = cardsRef.current;
       const hintedIndex = renderHint.current;
       renderHint.current = null;
@@ -526,7 +529,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
           setActiveCard((current) => Math.min(current, made.length - 1));
         }
       } catch {
-        if (alive) setMessage("카드를 만들지 못했습니다. 포스터·장면 이미지 연결을 확인해 주세요.");
+        if (alive) setError("카드를 만들지 못했습니다. 포스터·장면 이미지 연결을 확인해 주세요.");
       } finally {
         if (alive) setBuilding(false);
       }
@@ -624,12 +627,13 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
   const buildConcept = async () => {
     setConceptBusy(true);
     setMessage("");
+    setError("");
     try {
       const { carousel: next } = await adminApi("movieCarouselCuration", { concept });
       setConceptCarousel(next);
     } catch (error) {
       setConceptCarousel(null);
-      setMessage(error.message);
+      setError(error.message);
     } finally {
       setConceptBusy(false);
     }
@@ -757,6 +761,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               </div>
             )}
             <button type="button" disabled={building || cards.length !== TOTAL_SLIDES} onClick={async () => {
+              setError("");
               const result = await downloadAll(blobs.current, carousel);
               if (result === "shared") setMessage("공유 시트로 5장을 전달했습니다.");
               if (result === "downloaded") setMessage("01부터 05까지 순서대로 저장했습니다.");
@@ -764,6 +769,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               {building ? "만드는 중…" : "PNG 5장 저장"}
             </button>
             <p className="mt-2 min-h-5 text-xs text-muted" aria-live="polite">{message}</p>
+            <AdminErrorMessage message={error} className="mt-2" />
             {carousel && <Caption carousel={carousel} />}
           </div>
         </section>

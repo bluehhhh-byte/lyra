@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -142,7 +143,7 @@ export default function MovieTools({ movies }) {
             )}
             <p className="mt-1 pl-11 text-xs text-muted">
               {st.err ? (
-                <span className="text-red-400">{st.err}</span>
+                <AdminErrorMessage message={st.err} compact />
               ) : st.msg ? (
                 <span className="text-accent">{st.msg}</span>
               ) : (

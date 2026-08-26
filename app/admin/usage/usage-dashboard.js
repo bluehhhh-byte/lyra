@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import AdminErrorMessage from "../error-message";
 
 const number = new Intl.NumberFormat("ko-KR", { maximumFractionDigits: 1 });
 const integer = new Intl.NumberFormat("ko-KR", { maximumFractionDigits: 0 });
@@ -127,7 +128,7 @@ export default function UsageDashboard() {
         </button>
       </div>
 
-      {error && <p className="mb-5 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-300">{error}</p>}
+      <AdminErrorMessage message={error} className="mb-5" />
 
       <section className={`rounded-3xl border p-5 sm:p-7 ${style.panel}`}>
         <div className="flex items-center gap-2">

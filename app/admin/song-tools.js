@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import { EMOTIONS } from "../../lib/keywords";
 import { filterAdminSongs } from "../../lib/admin/song-search";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -320,7 +321,7 @@ export default function SongTools({ songs }) {
             </div>
             <p className="mt-1 pl-12 text-xs text-muted">
               {st.err ? (
-                <span className="text-red-400">{st.err}</span>
+                <AdminErrorMessage message={st.err} compact />
               ) : st.msg ? (
                 <span className="text-accent">{st.msg}</span>
               ) : (

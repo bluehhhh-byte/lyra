@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -20,12 +21,12 @@ export default function ArtworkReview({ items }) {
 
   const save = async (slug, none) => {
     const url = state[slug]?.url || "";
-    set(slug, { msg: "저장 중…" });
+    set(slug, { msg: "저장 중…", error: "" });
     try {
       await api("setArtwork", none ? { slug, none: true } : { slug, artwork: url });
-      set(slug, { msg: none ? "커버 없음 확정" : "저장 완료", done: true });
+      set(slug, { msg: none ? "커버 없음 확정" : "저장 완료", error: "", done: true });
     } catch (e) {
-      set(slug, { msg: e.message });
+      set(slug, { msg: "", error: e.message });
     }
   };
 
@@ -77,6 +78,7 @@ export default function ArtworkReview({ items }) {
                   커버 없음 확정
                 </button>
                 {st.msg && <span className="text-xs text-muted">{st.msg}</span>}
+                <AdminErrorMessage message={st.error} compact />
               </div>
             </li>
           );

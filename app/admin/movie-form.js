@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 import { CULTURAL_THEMES } from "../../lib/themes";
 
 async function api(action, body) {
@@ -271,7 +272,7 @@ export default function MovieForm() {
         </section>
       )}
 
-      {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
+      <AdminErrorMessage message={error} />
     </div>
   );
 }

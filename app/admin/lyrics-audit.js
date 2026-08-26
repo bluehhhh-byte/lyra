@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 // 가사 정확성 검토 — 인스타 캡션이 원본이지만, 캡션에 처음부터 오타나 잘못 들은
 // 단어가 있었으면 무손실 검증으로는 잡히지 않는다. 여기서 공식 가사와 대조해
@@ -109,7 +110,7 @@ export default function LyricsAudit() {
           {busy ? "불러오는 중…" : "검토 대상 불러오기"}
         </button>
       )}
-      {err && <p className="text-sm text-red-400">{err}</p>}
+      <AdminErrorMessage message={err} />
 
       {queue && !open && (
         <div className="max-h-[26rem] overflow-y-auto rounded-lg border border-line">

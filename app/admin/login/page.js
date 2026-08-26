@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "../error-message";
 
 export default function Login() {
   const [pw, setPw] = useState("");
@@ -37,7 +38,7 @@ export default function Login() {
       >
         로그인
       </button>
-      {err && <p className="mt-3 text-sm text-red-600 dark:text-red-400">{err}</p>}
+      <AdminErrorMessage message={err} className="mt-3" />
     </div>
   );
 }

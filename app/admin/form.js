@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { usePlayer } from "../player";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -448,12 +449,7 @@ export default function AdminForm() {
         </section>
       )}
 
-      {/* red-400 only clears WCAG AA on the dark background */}
-      {error && (
-        <p className="text-sm text-red-600 dark:text-red-400" role="alert">
-          {error}
-        </p>
-      )}
+      <AdminErrorMessage message={error} />
     </div>
   );
 }

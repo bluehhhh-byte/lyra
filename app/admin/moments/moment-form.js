@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import AdminErrorMessage from "../error-message";
 
 const blank = (today) => ({
   title: "", body: "", startDate: today, endDate: "", emotions: [], keywords: [], published: true, links: [],
@@ -14,6 +15,7 @@ export default function MomentForm({ initialMoment, catalog, today }) {
   const [kind, setKind] = useState("song");
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const selectedKeys = useMemo(() => new Set(form.links.map((link) => `${link.targetKind}:${link.targetSlug}`)), [form.links]);
   const results = useMemo(() => {
     const q = query.trim().toLocaleLowerCase("ko");
@@ -33,7 +35,7 @@ export default function MomentForm({ initialMoment, catalog, today }) {
 
   async function submit(event) {
     event.preventDefault();
-    setBusy(true); setMessage("저장 중…");
+    setBusy(true); setMessage("저장 중…"); setError("");
     try {
       const response = await fetch("/api/admin", {
         method: "POST", headers: { "Content-Type": "application/json" },
@@ -44,13 +46,13 @@ export default function MomentForm({ initialMoment, catalog, today }) {
       setMessage("저장했습니다. 공개 화면에 즉시 반영됩니다.");
       router.push(`/admin/moments?edit=${encodeURIComponent(data.slug)}`);
       router.refresh();
-    } catch (error) { setMessage(error.message); }
+    } catch (caught) { setMessage(""); setError(caught.message); }
     finally { setBusy(false); }
   }
 
   async function remove() {
     if (!initialMoment || !confirm(`‘${initialMoment.title}’ 장면을 삭제할까요?`)) return;
-    setBusy(true); setMessage("삭제 중…");
+    setBusy(true); setMessage("삭제 중…"); setError("");
     try {
       const response = await fetch("/api/admin", {
         method: "POST", headers: { "Content-Type": "application/json" },
@@ -59,7 +61,7 @@ export default function MomentForm({ initialMoment, catalog, today }) {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "삭제하지 못했습니다");
       router.push("/admin/moments"); router.refresh();
-    } catch (error) { setMessage(error.message); setBusy(false); }
+    } catch (caught) { setMessage(""); setError(caught.message); setBusy(false); }
   }
 
   const input = "w-full rounded-lg border border-line bg-surface px-3 py-3 text-base outline-none focus:border-accent";
@@ -98,7 +100,7 @@ export default function MomentForm({ initialMoment, catalog, today }) {
       </fieldset>
 
       <label className="flex items-center gap-3 text-sm"><input type="checkbox" checked={form.published !== false} onChange={(e) => field("published", e.target.checked)} className="h-4 w-4 accent-[var(--color-accent)]" />공개하기</label>
-      <div className="flex flex-wrap items-center gap-3"><button disabled={busy} className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white disabled:opacity-50">{initialMoment ? "장면 수정" : "장면 저장"}</button>{initialMoment && <button type="button" disabled={busy} onClick={remove} className="rounded-lg border border-line px-4 py-3 text-sm text-muted hover:border-red-400 hover:text-red-400">삭제</button>}<span role="status" className="text-xs text-muted">{message}</span></div>
+      <div className="flex flex-wrap items-center gap-3"><button disabled={busy} className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white disabled:opacity-50">{initialMoment ? "장면 수정" : "장면 저장"}</button>{initialMoment && <button type="button" disabled={busy} onClick={remove} className="rounded-lg border border-line px-4 py-3 text-sm text-muted hover:border-red-400 hover:text-red-400">삭제</button>}<span role="status" className="text-xs text-muted">{message}</span><AdminErrorMessage message={error} compact /></div>
     </form>
   );
 }

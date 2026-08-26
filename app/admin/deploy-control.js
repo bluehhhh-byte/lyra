@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { delayAt, MAX_POLLS, MAX_ELAPSED_MS, trackPlan } from "../../lib/deploy-poll";
+import AdminErrorMessage from "./error-message";
 
 const terminal = new Set(["READY", "ERROR", "CANCELED"]);
 const label = {
@@ -129,10 +130,9 @@ export default function DeployControl({ contentInDatabase = false }) {
       >
         {busy ? "배포 중…" : contentInDatabase ? "코드 변경 배포" : "변경사항 배포"}
       </button>
-      {(state || error || note) && (
-        <span className={`max-w-64 text-xs ${state === "ERROR" ? "text-red-500" : "text-muted"}`} role="status" aria-live="polite">
-          {error || note || label[state] || state}
-        </span>
+      <AdminErrorMessage message={error} compact className="max-w-64" />
+      {!error && (state || note) && (
+        <span className="max-w-64 text-xs text-muted" role="status" aria-live="polite">{note || label[state] || state}</span>
       )}
       {!state && !error && setup && (
         <span className={`text-xs ${setup.tone}`}>{setup.text}</span>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -86,7 +87,7 @@ export default function Lint() {
           </button>
         )}
       </div>
-      {error && <p className="mt-3 text-sm text-red-600 dark:text-red-400">{error}</p>}
+      <AdminErrorMessage message={error} className="mt-3" />
       {report && report.length === 0 && (
         <p className="mt-3 text-sm text-muted">전 {total}곡 형식 이상 없음 ✓</p>
       )}

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -135,7 +136,7 @@ export default function Backfill() {
           작업 결과는 곡마다 바로 저장됩니다.
         </p>
       )}
-      {error && <p className="mt-3 text-sm text-red-400">{error}</p>}
+      <AdminErrorMessage message={error} className="mt-3" />
     </div>
   );
 }

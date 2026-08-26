@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import AdminErrorMessage from "./error-message";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -121,7 +122,7 @@ export default function WatchaImport() {
         </div>
       )}
 
-      {error && <p className="mt-3 text-sm text-red-400 dark:text-red-400">{error}</p>}
+      <AdminErrorMessage message={error} className="mt-3" />
 
       {result && (
         <div className="mt-4 rounded-lg border border-line px-4 py-3 text-sm">
