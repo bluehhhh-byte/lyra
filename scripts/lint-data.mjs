@@ -3,7 +3,7 @@
 //   pnpm lint:data
 // 오류(error)만 exit 1. 경고(warn)는 알려만 준다.
 // 네트워크 검사 없음(이미지 URL은 형식만) — 빠르고 결정적이어야 게이트로 쓴다.
-import { getAllSongs } from "../lib/songs.js";
+import { getAllSongs, parseFrontmatter } from "../lib/songs.js";
 import { getAllMovies } from "../lib/movies.js";
 import { getWatched } from "../lib/watched.js";
 import { EMOTIONS } from "../lib/keywords.js";
@@ -13,6 +13,7 @@ import { needsKo, isNonLyricLine } from "../lib/admin/needs.js";
 import { translationVariants } from "../lib/translation-variants.js";
 import fs from "node:fs";
 import { specialWhitespaceAt, summarizeSpecialWhitespace } from "../lib/special-whitespace.js";
+import { validateFrontmatter } from "../lib/admin/frontmatter.js";
 
 const errors = [];
 const warns = [];
@@ -28,6 +29,8 @@ const songs = getAllSongs();
 const songKey = new Map(); // title|artist 중복(같은 곡 두 번 저장) 감지
 for (const s of songs) {
   const f = `songs/${s.slug}.md`;
+  const rawMeta = parseFrontmatter(fs.readFileSync(f, "utf8").replace(/\r\n/g, "\n")).meta;
+  for (const issue of validateFrontmatter(rawMeta, "song")) err(f, `frontmatter: ${issue}`);
   if (!s.title) err(f, "title 없음");
   if (!s.artist) err(f, "artist 없음");
   if (!["en", "ja", "ko"].includes(s.lang)) err(f, `lang이 en/ja/ko가 아님: "${s.lang}"`);
@@ -107,6 +110,8 @@ const movies = getAllMovies();
 const movieTmdb = new Map();
 for (const m of movies) {
   const f = `movies/${m.slug}.md`;
+  const rawMeta = parseFrontmatter(fs.readFileSync(f, "utf8").replace(/\r\n/g, "\n")).meta;
+  for (const issue of validateFrontmatter(rawMeta, "movie")) err(f, `frontmatter: ${issue}`);
   if (!m.title) err(f, "title 없음");
   if (m.media && !["movie", "tv"].includes(m.media)) err(f, `media가 movie/tv가 아님: "${m.media}"`);
   if (m.rating != null && !validRating(m.rating)) err(f, `rating이 0.5~5(0.5 단위)가 아님: ${m.rating}`);
