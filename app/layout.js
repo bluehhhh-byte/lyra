@@ -37,12 +37,18 @@ export default function RootLayout({ children }) {
     // the no-flash script mutates <html> before hydration — that mismatch is intended
     <html lang="ko" suppressHydrationWarning>
       <body className="font-sans min-h-screen">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-3 focus:font-semibold focus:text-bg"
+        >
+          본문으로 건너뛰기
+        </a>
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <PlayerProvider>
         {/* 계측은 기본 off — 켜지 않으면 방문자 브라우저가 비콘을 보내지 않는다 */}
         {usageMetricsEnabled() && <UsageReporter />}
         <Header />
-        <main className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
+        <main id="main-content" tabIndex={-1} className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
           가사의 저작권은 원저작자에게 있습니다. 번역과 코멘트는 개인 감상입니다.
           <br />
