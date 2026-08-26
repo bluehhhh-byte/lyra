@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllSongsRuntime } from "../../../lib/songs";
 import { readRuntimeData } from "../../../lib/store";
 import CoverImage from "../../cover-image";
+import { lyricVocabulary } from "../../../lib/lyric-vocabulary";
 
 export const metadata = {
   title: "가사 모티프 | Lyra",
@@ -19,6 +20,7 @@ export default async function MotifsPage() {
   const motifs = (data?.motifs || [])
     .map((m) => ({ ...m, songs: m.songs.filter((x) => songs.has(x.slug)) }))
     .filter((m) => m.songs.length >= 2);
+  const vocabulary = lyricVocabulary(allSongs);
 
   return (
     <>
@@ -35,6 +37,27 @@ export default async function MotifsPage() {
           음악 취향 →
         </Link>
       </div>
+
+      <section className="mb-12" aria-labelledby="vocabulary-title">
+        <h2 id="vocabulary-title" className="text-lg font-bold">자주 등장하는 번역 가사 어휘</h2>
+        <p className="mt-1 text-xs text-muted">AI 없이 현재 번역문을 같은 규칙으로 계산한 상위 {vocabulary.length}개 어휘입니다.</p>
+        <div className="mt-4 overflow-x-auto rounded-xl border border-line">
+          <table className="w-full min-w-[560px] text-left text-xs">
+            <thead className="bg-surface/70 text-muted"><tr><th className="px-3 py-2">어휘</th><th className="px-3 py-2 text-right">횟수</th><th className="px-3 py-2 text-right">곡</th><th className="px-3 py-2">주요 연도</th><th className="px-3 py-2">근거 곡</th></tr></thead>
+            <tbody className="divide-y divide-line/60">
+              {vocabulary.map((row) => (
+                <tr key={row.word}>
+                  <th className="px-3 py-2.5 font-semibold">{row.word}</th>
+                  <td className="px-3 py-2.5 text-right tabular-nums">{row.count}</td>
+                  <td className="px-3 py-2.5 text-right tabular-nums">{row.songCount}</td>
+                  <td className="px-3 py-2.5 text-muted">{row.years.slice(0, 3).map((year) => `${year.year} ${year.count}`).join(" · ")}</td>
+                  <td className="px-3 py-2.5">{row.songs.slice(0, 3).map((song, index) => <span key={song.slug}>{index > 0 && " · "}<Link href={`/songs/${song.slug}`} className="text-accent hover:underline">{song.title}</Link></span>)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       {motifs.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">

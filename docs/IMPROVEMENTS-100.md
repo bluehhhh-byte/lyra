@@ -122,7 +122,7 @@
   - 파일: `lib/translation-variants.js` 확장
   - 완료: 관리자에서만 보인다. **자동으로 고치지 마라** — 보여주기만
 
-- [ ] **B-07 · 가사 어휘 통계**
+- [x] **B-07 · 가사 어휘 통계**
   자주 나오는 어휘를 곡·연도별로 집계한다.
   - 근거: `data/motifs.json`과 `scripts/build-motifs.mjs`가 이미 있다. 화면을 붙인다
   - 파일: `app/songs/motifs/`
