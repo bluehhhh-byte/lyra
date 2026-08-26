@@ -31,6 +31,30 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
-      # 원본 대조는 내보내기 폴더가 있어야 돌아가므로 CI에서는 생략한다.
-      # 대신 진단은 돌려서 데이터 품질 대기열이 갑자기 늘었는지 로그로 남긴다.
       - run: node scripts/needs-work.mjs
+      - name: Restore private Instagram source export
+        env:
+          INSTAGRAM_EXPORT_URL: ${{ secrets.INSTAGRAM_EXPORT_URL }}
+        run: |
+          test -n "$INSTAGRAM_EXPORT_URL" || { echo "::error::INSTAGRAM_EXPORT_URL secret is required"; exit 1; }
+          mkdir -p "$RUNNER_TEMP/instagram-export"
+          curl --fail --location --silent --show-error "$INSTAGRAM_EXPORT_URL" -o "$RUNNER_TEMP/instagram-export.zip"
+          unzip -q "$RUNNER_TEMP/instagram-export.zip" -d "$RUNNER_TEMP/instagram-export"
+          posts_file="$(find "$RUNNER_TEMP/instagram-export" -path '*/your_instagram_activity/media/posts_1.json' -print -quit)"
+          test -n "$posts_file" || { echo "::error::posts_1.json not found in export"; exit 1; }
+          export_root="$(dirname "$(dirname "$(dirname "$posts_file")")")"
+          echo "INSTAGRAM_EXPORT_DIR=$export_root" >> "$GITHUB_ENV"
+      - name: Verify Instagram originals
+        run: pnpm verify:instagram -- "$INSTAGRAM_EXPORT_DIR"
+      - name: Install layout-check browser
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Verify narrow and wide layouts
+        run: |
+          pnpm exec next start -p 3401 > "$RUNNER_TEMP/lyra-next.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            curl --fail --silent http://localhost:3401/ > /dev/null && break
+            sleep 0.5
+          done
+          node scripts/verify-layout.mjs http://localhost:3401
