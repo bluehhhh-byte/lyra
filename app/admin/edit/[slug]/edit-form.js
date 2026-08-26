@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { clearSongDraft, readSongDraft, writeSongDraft } from "../../../../lib/admin/draft";
 import { hasUnsavedChanges, warnBeforeUnload } from "../../../../lib/admin/unsaved-warning";
+import { isSaveShortcut } from "../../../../lib/admin/save-shortcut";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -66,7 +67,7 @@ export default function EditForm({ slug }) {
     return () => window.removeEventListener("beforeunload", beforeUnload);
   }, [raw]);
 
-  const save = async () => {
+  const save = useCallback(async () => {
     setStatus("저장 중…");
     try {
       const result = await api("update", { slug, raw });
@@ -77,7 +78,17 @@ export default function EditForm({ slug }) {
     } catch (e) {
       setStatus(e.message);
     }
-  };
+  }, [raw, slug]);
+
+  useEffect(() => {
+    const keydown = (event) => {
+      if (!isSaveShortcut(event) || raw === null) return;
+      event.preventDefault();
+      void save();
+    };
+    window.addEventListener("keydown", keydown);
+    return () => window.removeEventListener("keydown", keydown);
+  }, [raw, save]);
 
   const remove = async () => {
     if (!confirm(`"${slug}" 곡을 삭제할까요? 되돌릴 수 없습니다.`)) return;
@@ -112,9 +123,10 @@ export default function EditForm({ slug }) {
       <div className="mt-3 flex items-center gap-3">
         <button
           onClick={save}
+          aria-keyshortcuts="Control+S Meta+S"
           className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg"
         >
-          저장
+          저장 <span className="text-xs opacity-70">⌘/Ctrl+S</span>
         </button>
         <button
           onClick={remove}
