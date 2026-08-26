@@ -155,6 +155,13 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   const hiddenCount = (allLoaded ? filtered.length : totalSongs) - visible.length;
 
   const groups = useMemo(() => groupSongs(visible, group), [visible, group]);
+  const clearFilters = () => {
+    setQ("");
+    setTag("");
+    setEmotion("");
+    setDecade("");
+    setGroup("none");
+  };
 
   return (
     <>
@@ -216,13 +223,19 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
       )}
 
       {filtered.length === 0 && (
-        <p className="py-20 text-center text-sm text-muted">
-          {totalSongs === 0
+        <div className="py-20 text-center text-sm text-muted">
+          <p>{totalSongs === 0
             ? "아직 곡이 없습니다."
             : q
               ? `"${q}" 검색 결과 없음`
-              : `'${tag || emotion || decade}' 곡 없음`}
-        </p>
+              : `'${tag || emotion || decade}' 곡 없음`}</p>
+          {totalSongs > 0 && (
+            <>
+              <p className="mt-1 text-xs">검색어를 줄이거나 현재 필터를 지우고 다시 찾아보세요.</p>
+              <button onClick={clearFilters} className="mt-4 rounded-full border border-line px-4 py-1.5 text-xs hover:border-accent hover:text-accent">검색·필터 초기화</button>
+            </>
+          )}
+        </div>
       )}
 
       {group === "random" && filtered.length > 0 ? (

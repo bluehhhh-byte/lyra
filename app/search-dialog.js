@@ -98,7 +98,14 @@ export default function SearchDialog({ open, onClose }) {
           )}
           {loading && <p className="py-12 text-center text-sm text-muted">검색 중…</p>}
           {!loading && query && groups.length === 0 && (
-            <p className="py-12 text-center text-sm text-muted">검색 결과가 없습니다.</p>
+            <div className="py-12 text-center text-sm text-muted">
+              <p>검색 결과가 없습니다.</p>
+              <p className="mt-1 text-xs">검색어를 줄이거나 띄어쓰기를 바꿔 보세요.</p>
+              <div className="mt-4 flex flex-wrap justify-center gap-2">
+                <button onClick={() => setQuery("")} className="rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">검색어 지우기</button>
+                <Link href={`/?q=${encodeURIComponent(query.trim())}`} onClick={remember} className="rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">전체 곡에서 찾아보기</Link>
+              </div>
+            </div>
           )}
           {!loading && groups.map(([label, items]) => (
             <section key={label} className="mb-3">
