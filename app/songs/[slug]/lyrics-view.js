@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import CardModal from "./lyric-card";
 import { hasReadings, savedReadingVisibility } from "../../../lib/reading-preference";
+import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
 
 const MODES = [
   { key: "both", label: "둘 다" },
@@ -31,6 +32,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
   const [card, setCard] = useState(null); // { lines, initial } for the carousel modal
+  const [expandedRepeats, setExpandedRepeats] = useState(() => new Set());
 
   // the card picker offers every line in the song (section labels included for
   // orientation); the clicked stanza's first lines are just the starting selection
@@ -117,6 +119,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
 
   const s = SIZES[size];
   const canToggleReadings = hasReadings(stanzas);
+  const displayStanzas = repeatedStanzaDisplay(stanzas);
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -182,7 +185,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
       </div>
 
       <div className="space-y-10">
-        {stanzas.map((stanza, i) => (
+        {displayStanzas.map(({ stanza, collapsed, occurrence, repeatCount }, i) => (
           <section
             key={i}
             id={`v${i}`}
@@ -207,6 +210,15 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                 {stanza.section}
               </p>
             )}
+            {collapsed && !expandedRepeats.has(i) ? (
+              <button
+                type="button"
+                onClick={() => setExpandedRepeats((current) => new Set(current).add(i))}
+                className="w-full rounded-lg border border-dashed border-line px-4 py-5 text-left text-sm text-muted hover:border-accent hover:text-accent"
+              >
+                반복 후렴 {occurrence}/{repeatCount} · 펼쳐서 읽기
+              </button>
+            ) : (
             <div className={s.gap}>
               {stanza.lines.map((line, j) => (
                 // `>^N`으로 덮인 줄은 번역이 비어 있다 — 번역만 보기에서는 빈 칸만
@@ -244,6 +256,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                 )
               ))}
             </div>
+            )}
             {editing === i ? (
               <NoteEditor
                 initial={notes[i] ?? stanza.note ?? ""}
