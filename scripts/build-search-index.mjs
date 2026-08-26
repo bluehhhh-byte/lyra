@@ -15,6 +15,7 @@ import { getWatched } from "../lib/watched.js";
 import { tmdbUrl } from "../lib/tmdb-link.js";
 import { appleUrl } from "../lib/apple.js";
 import { searchableLyricLines } from "../lib/lyric-search.js";
+import { searchIndexSizeWarning } from "../lib/search-index-size.js";
 
 const low = (v) => String(v || "").toLowerCase();
 const join = (...v) => v.flat().filter(Boolean).map(low).join("  ");
@@ -58,8 +59,11 @@ const people = getAllPeople().map((p) => ({
 const out = { songs, movies: movieItems, watched, people, at: new Date().toISOString() };
 fs.mkdirSync("data", { recursive: true });
 fs.writeFileSync("data/search-index.json", JSON.stringify(out));
-const kb = Math.round(fs.statSync("data/search-index.json").size / 1024);
+const indexBytes = fs.statSync("data/search-index.json").size;
+const kb = Math.round(indexBytes / 1024);
 console.log(`검색 인덱스: 곡 ${songs.length} · 영화 ${movieItems.length} · 왓챠 ${watched.length} · 인물 ${people.length} — ${kb}KB`);
+const sizeWarning = searchIndexSizeWarning(indexBytes);
+if (sizeWarning) console.warn(sizeWarning);
 
 // 플레이어 목록도 같이 — /api/playlist가 첫 재생 때 한 번 가져간다
 const items = getAllSongs()
