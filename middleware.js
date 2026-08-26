@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
-import { verifyToken } from "./lib/auth-token";
+import {
+  ADMIN_SESSION_EXPIRED_CODE,
+  ADMIN_SESSION_EXPIRED_MESSAGE,
+  verifyToken,
+} from "./lib/auth-token";
 
 // Password-gate the admin UI and its API online. Local dev is always open.
 // 쿠키는 HMAC 서명 토큰(lib/auth-token.js) — 비밀번호 원문을 담지 않는다.
@@ -14,7 +18,11 @@ export async function middleware(req) {
   if (authed) return NextResponse.next();
 
   if (pathname.startsWith("/api/")) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+    return NextResponse.json({
+      error: ADMIN_SESSION_EXPIRED_MESSAGE,
+      code: ADMIN_SESSION_EXPIRED_CODE,
+      loginUrl: "/admin/login",
+    }, { status: 401 });
   }
   const url = req.nextUrl.clone();
   url.pathname = "/admin/login";

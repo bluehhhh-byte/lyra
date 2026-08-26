@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import AdminErrorMessage from "../error-message";
+import { safeAdminNext } from "../../../lib/auth-token";
 
 export default function Login() {
   const [pw, setPw] = useState("");
@@ -14,7 +15,7 @@ export default function Login() {
       body: JSON.stringify({ password: pw }),
     });
     if (res.ok) {
-      location.href = new URLSearchParams(location.search).get("next") || "/admin";
+      location.href = safeAdminNext(new URLSearchParams(location.search).get("next"));
     } else {
       setErr("비밀번호가 틀렸습니다");
     }

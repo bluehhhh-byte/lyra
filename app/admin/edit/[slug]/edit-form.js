@@ -3,8 +3,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { clearSongDraft, readSongDraft, writeSongDraft } from "../../../../lib/admin/draft";
 import { hasUnsavedChanges, warnBeforeUnload } from "../../../../lib/admin/unsaved-warning";
 import { isSaveShortcut } from "../../../../lib/admin/save-shortcut";
+import { adminSessionExpiry } from "../../../../lib/auth-token";
+import AdminErrorMessage from "../../error-message";
 
-async function api(action, body) {
+async function api(action, body, nextPath) {
   const res = await fetch("/api/admin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -17,7 +19,12 @@ async function api(action, body) {
   } catch {
     data = { error: text.slice(0, 200) }; // HTML error page etc.
   }
-  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+  if (!res.ok) {
+    const expiry = adminSessionExpiry(res.status, data, nextPath);
+    const error = new Error(expiry?.message || data.error || `HTTP ${res.status}`);
+    if (expiry) Object.assign(error, { sessionExpired: true, loginUrl: expiry.loginUrl });
+    throw error;
+  }
   return data;
 }
 
@@ -25,12 +32,16 @@ export default function EditForm({ slug }) {
   const [raw, setRaw] = useState(null);
   const [translationVariants, setTranslationVariants] = useState([]);
   const [status, setStatus] = useState("");
+  const [error, setError] = useState(null);
   const savedRaw = useRef(null);
+
+  const nextPath = `/admin/edit/${encodeURIComponent(slug)}`;
 
   useEffect(() => {
     const draft = readSongDraft(window.localStorage, slug);
-    api("load", { slug })
+    api("load", { slug }, nextPath)
       .then((d) => {
+        setError(null);
         savedRaw.current = d.raw;
         if (draft?.raw && draft.raw !== d.raw) {
           setRaw(draft.raw);
@@ -42,14 +53,15 @@ export default function EditForm({ slug }) {
         setTranslationVariants(d.translationVariants || []);
       })
       .catch((e) => {
+        setError({ message: e.message, loginUrl: e.loginUrl || "" });
         if (draft?.raw) {
           setRaw(draft.raw);
-          setStatus(`${e.message} · 로컬 초안을 복원했습니다`);
+          setStatus("로컬 초안을 복원했습니다");
         } else {
-          setStatus(e.message);
+          setStatus("");
         }
       });
-  }, [slug]);
+  }, [slug, nextPath]);
 
   useEffect(() => {
     if (raw === null) return;
@@ -69,16 +81,19 @@ export default function EditForm({ slug }) {
 
   const save = useCallback(async () => {
     setStatus("저장 중…");
+    setError(null);
     try {
-      const result = await api("update", { slug, raw });
+      const result = await api("update", { slug, raw }, nextPath);
       savedRaw.current = raw;
       clearSongDraft(window.localStorage, slug);
       setTranslationVariants(result.translationVariants || []);
       setStatus("저장됨 ✓");
     } catch (e) {
-      setStatus(e.message);
+      if (e.sessionExpired) writeSongDraft(window.localStorage, slug, raw);
+      setStatus("");
+      setError({ message: e.message, loginUrl: e.loginUrl || "" });
     }
-  }, [raw, slug]);
+  }, [nextPath, raw, slug]);
 
   useEffect(() => {
     const keydown = (event) => {
@@ -93,14 +108,21 @@ export default function EditForm({ slug }) {
   const remove = async () => {
     if (!confirm(`"${slug}" 곡을 삭제할까요? 되돌릴 수 없습니다.`)) return;
     try {
-      await api("delete", { slug });
+      setError(null);
+      await api("delete", { slug }, nextPath);
       location.href = "/admin";
     } catch (e) {
-      setStatus(e.message);
+      setStatus("");
+      setError({ message: e.message, loginUrl: e.loginUrl || "" });
     }
   };
 
-  if (raw === null) return <p className="text-sm text-muted">{status || "불러오는 중…"}</p>;
+  if (raw === null) return (
+    <div>
+      <p className="text-sm text-muted">{status || (!error && "불러오는 중…")}</p>
+      <AdminErrorMessage message={error?.message} actionHref={error?.loginUrl} className="mt-3" />
+    </div>
+  );
 
   return (
     <div className="max-w-2xl">
@@ -136,6 +158,7 @@ export default function EditForm({ slug }) {
         </button>
         <span className="text-sm text-muted">{status}</span>
       </div>
+      <AdminErrorMessage message={error?.message} actionHref={error?.loginUrl} className="mt-3" />
     </div>
   );
 }
