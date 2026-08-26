@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import CardModal from "./lyric-card";
-import { hasReadings, savedReadingVisibility } from "../../../lib/reading-preference";
+import { hasReadings, savedReadingSize, savedReadingVisibility } from "../../../lib/reading-preference";
 import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
 import { formatLyricQuote } from "../../../lib/lyric-quote";
 
@@ -59,7 +59,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
     try {
       const saved = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
       if (MODES.some((m) => m.key === saved.mode)) setMode(saved.mode);
-      if (SIZES[saved.size]) setSize(saved.size);
+      setSize(savedReadingSize(saved.size));
       setShowReadings(savedReadingVisibility(saved.readings));
     } catch {} // corrupt value — fall back to defaults
   }, []);
