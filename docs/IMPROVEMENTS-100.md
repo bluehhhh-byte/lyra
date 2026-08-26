@@ -294,7 +294,7 @@
   - 파일: `app/admin/edit/[slug]/edit-form.js`
   - 완료: 변경이 없으면 경고하지 않는다
 
-- [ ] **E-03 · 관리자 홈 현황판**
+- [x] **E-03 · 관리자 홈 현황판**
   곡 수·영화 수·결손 건수·마지막 배포·DB 모드를 한 화면에 모은다.
   - 근거: `/api/version`이 `contentStore`와 `contentFallback`을 이미 준다
   - 파일: `app/admin/page.js`
