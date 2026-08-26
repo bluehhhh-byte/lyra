@@ -10,6 +10,7 @@ const url = process.env.DATABASE_URL;
 if (!url) throw new Error("DATABASE_URL이 없습니다. Neon Free 연결 문자열을 .env.local에 넣으세요.");
 const sql = neon(url);
 const root = process.cwd();
+const apply = process.argv.includes("--apply");
 const verifyOnly = process.argv.includes("--verify");
 
 const readCollection = (kind, dir) =>
@@ -62,26 +63,28 @@ const data = allJson
 if (skippedData.length)
   console.log(`업로드 제외(생성 산출물·비런타임) ${skippedData.length}개: ${skippedData.join(", ")}`);
 
-await sql`
-  create table if not exists lyra_contents (
-    kind text not null check (kind in ('song', 'movie')),
-    slug text not null,
-    raw text not null,
-    revision bigint not null default 1,
-    updated_at timestamptz not null default now(),
-    primary key (kind, slug)
-  )
-`;
-await sql`
-  create table if not exists lyra_data (
-    name text primary key,
-    raw text not null,
-    revision bigint not null default 1,
-    updated_at timestamptz not null default now()
-  )
-`;
+if (apply) {
+  await sql`
+    create table if not exists lyra_contents (
+      kind text not null check (kind in ('song', 'movie')),
+      slug text not null,
+      raw text not null,
+      revision bigint not null default 1,
+      updated_at timestamptz not null default now(),
+      primary key (kind, slug)
+    )
+  `;
+  await sql`
+    create table if not exists lyra_data (
+      name text primary key,
+      raw text not null,
+      revision bigint not null default 1,
+      updated_at timestamptz not null default now()
+    )
+  `;
+}
 
-if (!verifyOnly) {
+if (apply) {
   const chunks = (rows, size = 20) => Array.from({ length: Math.ceil(rows.length / size) }, (_, i) => rows.slice(i * size, (i + 1) * size));
   // 내용이 같으면 건드리지 않는다 — `where ... is distinct from`이 그 역할을 한다.
   //
@@ -157,9 +160,11 @@ const digest = (raw) => crypto.createHash("sha256").update(raw).digest("hex");
 const expectedContent = new Map(contents.map((x) => [`${x.kind}:${x.slug}`, digest(x.raw)]));
 const expectedData = new Map(data.map((x) => [x.name, digest(x.raw)]));
 const mismatches = [];
+const changes = [];
 for (const row of dbContents) {
   const key = `${row.kind}:${row.slug}`;
-  if (expectedContent.get(key) !== digest(row.raw)) mismatches.push(key);
+  if (!expectedContent.has(key)) changes.push(`DB에만 있음 ${key}`);
+  else if (expectedContent.get(key) !== digest(row.raw)) changes.push(`수정 ${key}`);
   expectedContent.delete(key);
 }
 // allowlist 밖의 행은 "틀린 것"이 아니라 "정리 대상"이다. 예전 migration이
@@ -170,7 +175,8 @@ for (const row of dbData) {
     prunable.push(row.name);
     continue;
   }
-  if (expectedData.get(row.name) !== digest(row.raw)) mismatches.push(`data:${row.name}`);
+  if (!expectedData.has(row.name)) changes.push(`DB에만 있음 data:${row.name}`);
+  else if (expectedData.get(row.name) !== digest(row.raw)) changes.push(`수정 data:${row.name}`);
   expectedData.delete(row.name);
 }
 if (prunable.length)
@@ -178,10 +184,17 @@ if (prunable.length)
     `DB에만 남은 비allowlist 행 ${prunable.length}개: ${prunable.join(", ")}\n` +
       `  정리하려면: node scripts/prune-data-rows.mjs (기본 dry-run)`
   );
-mismatches.push(...expectedContent.keys(), ...[...expectedData.keys()].map((x) => `data:${x}`));
+mismatches.push(...changes, ...[...expectedContent.keys()].map((x) => `추가 ${x}`), ...[...expectedData.keys()].map((x) => `추가 data:${x}`));
 if (mismatches.length) {
-  console.error(`검증 실패 ${mismatches.length}건: ${mismatches.slice(0, 10).join(", ")}`);
-  process.exitCode = 1;
+  if (!apply && !verifyOnly) {
+    console.log(`(dry-run) 변경 예정 ${mismatches.length}건:`);
+    for (const item of mismatches.slice(0, 20)) console.log(`  ${item}`);
+    if (mismatches.length > 20) console.log(`  … 그리고 ${mismatches.length - 20}건 더`);
+    console.log("실제로 반영하려면 --apply를 붙이세요.");
+  } else {
+    console.error(`검증 실패 ${mismatches.length}건: ${mismatches.slice(0, 10).join(", ")}`);
+    process.exitCode = 1;
+  }
 } else {
-  console.log(`검증 완료: ${contents.length + data.length}개 파일의 SHA-256이 모두 일치합니다.`);
+  console.log(`${apply || verifyOnly ? "검증 완료" : "(dry-run) 변경 없음"}: ${contents.length + data.length}개 파일의 SHA-256이 모두 일치합니다.`);
 }
