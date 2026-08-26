@@ -11,6 +11,9 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # 매주 화요일 03:23 KST. 기존 원본 검증기를 그대로 실행하며 콘텐츠는 쓰지 않는다.
+  schedule:
+    - cron: "23 18 * * 1"
 
 # 같은 브랜치에 커밋이 연달아 오면 이전 실행은 취소한다 — 무료 Actions 분을
 # 이미 낡은 커밋 검증에 쓰지 않는다.
