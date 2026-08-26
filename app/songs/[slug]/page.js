@@ -19,6 +19,7 @@ import {
   recentStaticParams,
 } from "../../../lib/static-details";
 import { translationStatus } from "../../../lib/admin/needs";
+import { sameDayRecords } from "../../../lib/archive";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
@@ -82,14 +83,16 @@ export default async function SongPage({ params }) {
   const { slug } = await params;
   // 이 곡은 단건 조회로 가져온다 — 목록(all)은 가사를 뺀 메타라 여기서 꺼내면
   // stanzas가 비어 가사가 통째로 사라진다. 목록은 연관곡과 개수 세기에만 쓴다.
-  const [song, all] = await Promise.all([
+  const [song, all, movies] = await Promise.all([
     getSongRuntime(decodeURIComponent(slug)),
     getAllSongsMeta(),
+    getAllMoviesMeta(),
   ]);
   if (!song) notFound();
   const related = relatedSongs(song, all);
   const albumSongs = albumCompanions(song, all);
   const translation = translationStatus(song);
+  const sameDay = sameDayRecords(song, all, movies);
   const moments = await getMomentsForTarget("song", song.slug);
 
   // 컬렉션 안에서 이 곡의 자리 — 같은 장르·감정·시대·권역·아티스트가 몇 곡인지
@@ -109,7 +112,7 @@ export default async function SongPage({ params }) {
   // Lyra×Cyno 교차 — 같은 시대 안에서 권역·감정·주제가 가까운 기록을 우선한다.
   const songDecadeNum = song.year ? Math.floor(+song.year / 10) * 10 : null;
   const eraMovies = songDecadeNum
-    ? crossMatches(song, await getAllMoviesMeta(), { countries: COUNTRY_TAGS, limit: 3 })
+    ? crossMatches(song, movies, { countries: COUNTRY_TAGS, limit: 3 })
     : [];
 
   return (
@@ -278,6 +281,13 @@ export default async function SongPage({ params }) {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {albumSongs.map((item) => <Link key={item.slug} href={`/songs/${item.slug}`} className="group"><CoverImage src={item.artwork} alt="" label={item.title} className="aspect-square w-full rounded-lg border border-line object-cover" /><p className="mt-2 truncate text-xs font-medium group-hover:text-accent">{item.title}</p></Link>)}
           </div>
+        </section>
+      )}
+
+      {sameDay.length > 0 && (
+        <section className="mx-auto mt-8 max-w-2xl rounded-xl border border-line bg-surface/50 px-5 py-4">
+          <h2 className="text-sm font-semibold">같은 날의 다른 기록</h2>
+          <ul className="mt-2 space-y-1 text-sm">{sameDay.map((item) => <li key={`${item.type}:${item.slug}`}><Link href={`/${item.type === "song" ? "songs" : "movies"}/${item.slug}`} className="hover:text-accent">{item.subtitle} — {item.title}</Link></li>)}</ul>
         </section>
       )}
 
