@@ -4,13 +4,13 @@
 // through our own origin sidesteps CORS entirely. Locked to TMDB hosts.
 // Dynamic: it reads a query param (force-static would prerender it empty). The
 // immutable Cache-Control below lets the CDN serve repeats without re-fetching.
-export const dynamic = "force-dynamic";
+import { isAllowedImageProxyUrl } from "../../../lib/image-hosts";
 
-const ALLOWED = /^https:\/\/image\.tmdb\.org\/t\/p\//;
+export const dynamic = "force-dynamic";
 
 export async function GET(req) {
   const url = new URL(req.url).searchParams.get("url") || "";
-  if (!ALLOWED.test(url)) return new Response("bad url", { status: 400 });
+  if (!isAllowedImageProxyUrl(url)) return new Response("bad url", { status: 400 });
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
     if (!res.ok) return new Response("upstream", { status: 502 });
