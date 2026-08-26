@@ -11,6 +11,7 @@
 //   node scripts/prune-data-rows.mjs --apply   # 실제 삭제
 import dotenv from "dotenv";
 import { neon } from "@neondatabase/serverless";
+import { CONTENT_DATA_FILES } from "../lib/content-data-files.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -21,22 +22,7 @@ const apply = process.argv.includes("--apply");
 
 // migrate-content.mjs의 DATA_ALLOWLIST와 같은 목록이어야 한다.
 // 한쪽만 고치면 지운 행이 다음 migration에서 되살아나거나, 살려 둔 행이 영영 남는다.
-const KEEP = new Set([
-  "artwork-backfill-audit.json",
-  "lyrics-corrections.json",
-  "motifs.json",
-  "music-report.json",
-  "song-recs.json",
-  "taste-recs.json",
-  "taste-report.json",
-  "watcha-movies.json",
-  "watcha-ratings.json",
-  "instagram-pending.json",
-  "instagram-pending-triage.json",
-  "instagram-playlists.json",
-  "instagram-source-manifest.json",
-  "moments.json",
-]);
+const KEEP = new Set(CONTENT_DATA_FILES);
 
 const rows = await sql`select name, octet_length(raw) as bytes, updated_at from lyra_data order by octet_length(raw) desc`;
 const doomed = rows.filter((row) => !KEEP.has(row.name));

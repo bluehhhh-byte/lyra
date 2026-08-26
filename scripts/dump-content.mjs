@@ -17,6 +17,7 @@ import path from "path";
 import crypto from "crypto";
 import dotenv from "dotenv";
 import { neon } from "@neondatabase/serverless";
+import { CONTENT_DATA_FILES } from "../lib/content-data-files.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -51,7 +52,7 @@ for (const row of rows) {
   const before = fs.existsSync(file) ? norm(fs.readFileSync(file, "utf8")) : null;
   const after = norm(row.raw);
   if (before === after) continue;
-  planned.push({ kind: before === null ? "추가" : "수정", file: `${dir}/${row.slug}.md`, write: () => fs.writeFileSync(file, after) });
+  planned.push({ kind: before === null ? "추가" : "수정", difference: before === null ? "DB에만 있음" : "내용 다름", file: `${dir}/${row.slug}.md`, write: () => fs.writeFileSync(file, after) });
 }
 
 for (const row of dataRows) {
@@ -59,7 +60,7 @@ for (const row of dataRows) {
   const before = fs.existsSync(file) ? norm(fs.readFileSync(file, "utf8")) : null;
   const after = norm(row.raw);
   if (before === after) continue;
-  planned.push({ kind: before === null ? "추가" : "수정", file: `data/${row.name}`, write: () => fs.writeFileSync(file, after) });
+  planned.push({ kind: before === null ? "추가" : "수정", difference: before === null ? "DB에만 있음" : "내용 다름", file: `data/${row.name}`, write: () => fs.writeFileSync(file, after) });
 }
 
 // DB에서 지워진 글은 파일에서도 지운다. 안 그러면 삭제가 영원히 저장소에 남는다.
@@ -70,8 +71,16 @@ for (const [kind, dir] of Object.entries(DIRS)) {
     if (!name.endsWith(".md")) continue;
     const slug = name.slice(0, -3);
     if (seen[kind].has(slug)) continue;
-    planned.push({ kind: "삭제", file: `${dir}/${name}`, write: () => fs.unlinkSync(path.join(dirPath, name)) });
+    planned.push({ kind: "삭제", difference: "파일에만 있음", file: `${dir}/${name}`, write: () => fs.unlinkSync(path.join(dirPath, name)) });
   }
+}
+
+const seenData = new Set(dataRows.map((row) => row.name));
+for (const name of CONTENT_DATA_FILES) {
+  const file = path.join(root, "data", name);
+  if (fs.existsSync(file) && !seenData.has(name))
+    // 어느 쪽이 옳은지 판단 전에는 data 파일을 지우지 않는다. --check 보고 전용이다.
+    planned.push({ kind: "검토", difference: "파일에만 있음", file: `data/${name}`, write: null });
 }
 
 const byKind = planned.reduce((acc, p) => ({ ...acc, [p.kind]: (acc[p.kind] || 0) + 1 }), {});
@@ -80,11 +89,10 @@ const summary = Object.entries(byKind).map(([k, n]) => `${k} ${n}`).join(" · ")
 if (checkOnly) {
   console.log(`DB 곡 ${seen.song.size} · 영화 ${seen.movie.size} · 데이터 ${dataRows.length}`);
   console.log(summary);
-  for (const p of planned.slice(0, 20)) console.log(`  ${p.kind} ${p.file}`);
-  if (planned.length > 20) console.log(`  … 그리고 ${planned.length - 20}건 더`);
+  for (const p of planned) console.log(`  ${p.difference} ${p.file}`);
   process.exitCode = planned.length ? 1 : 0;
 } else {
-  for (const p of planned) p.write();
+  for (const p of planned) p.write?.();
   console.log(`DB 곡 ${seen.song.size} · 영화 ${seen.movie.size} · 데이터 ${dataRows.length}`);
   console.log(`파일에 반영: ${summary}`);
 

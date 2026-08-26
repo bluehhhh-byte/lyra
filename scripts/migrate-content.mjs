@@ -3,6 +3,7 @@ import path from "path";
 import crypto from "crypto";
 import dotenv from "dotenv";
 import { neon } from "@neondatabase/serverless";
+import { CONTENT_DATA_FILES } from "../lib/content-data-files.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -35,24 +36,7 @@ const contents = [
 //
 // 목록의 근거: 런타임이 readRuntimeData로 읽거나 관리자가 writeData로 쓰는 이름.
 // 새 파일을 추가할 때 여기에 같이 적는다 — 조용히 늘지 않게 하려는 것이 목적이다.
-const DATA_ALLOWLIST = new Set([
-  // 런타임이 읽는다
-  "artwork-backfill-audit.json",
-  "lyrics-corrections.json",
-  "motifs.json",
-  "music-report.json",
-  "song-recs.json",
-  "taste-recs.json",
-  "taste-report.json",
-  "watcha-movies.json",
-  "watcha-ratings.json",
-  // 관리자 화면이 상태로 쓴다
-  "instagram-pending.json",
-  "instagram-pending-triage.json",
-  "instagram-playlists.json",
-  "instagram-source-manifest.json",
-  "moments.json",
-]);
+const DATA_ALLOWLIST = new Set(CONTENT_DATA_FILES);
 
 const dataDir = path.join(root, "data");
 const allJson = fs.readdirSync(dataDir).filter((name) => name.endsWith(".json")).sort();
