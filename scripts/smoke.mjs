@@ -22,11 +22,14 @@ const CHECKS = [
   { url: "/songs/taste", expect: "음악 취향" },
   { url: "/songs/motifs", expect: "자주 등장하는 번역 가사 어휘" },
   { url: "/recommendations/music", expect: "추천 곡" },
+  { url: "/recommendations", expect: null },
   { url: "/watched", expect: "평가한 영화" },
   { url: "/watched/taste", expect: null },
   { url: "/stats", expect: null },
   { url: "/diary", expect: null },
   { url: "/archive", expect: null },
+  { url: "/tags", expect: null },
+  { url: "/recap", expect: null },
   { url: "/moments", expect: "문화 장면" },
   { url: "/people", expect: null },
   { url: "/translations", expect: "번역만 읽기" },
@@ -36,6 +39,7 @@ const CHECKS = [
   { url: `/api/search/lyrics?q=${encodeURIComponent("세상이")}`, expect: "yuuri-the-world-has-ended" },
   // 배포 완료 판정이 이 값에 걸려 있다 — 사라지면 관리자 배포가 영원히 "빌드 중"이 된다
   { url: "/api/version", expect: '"sha"' },
+  { url: "/api/songs/meta", expect: '"songs"' },
 ];
 
 if (!fs.existsSync(path.join(".next", "BUILD_ID"))) {
@@ -86,7 +90,11 @@ for (const { url, expect } of CHECKS) {
 // 인증 경계 — next start는 production이라 middleware가 살아 있다.
 // admin이 잠겨 있지 않으면 그게 최악의 회귀라 smoke에서 같이 잡는다.
 const AUTH_CHECKS = [
-  { url: "/admin", ok: (r) => r.status >= 300 && r.status < 400 && r.headers.get("location")?.includes("/admin/login"), desc: "비로그인 /admin → 로그인으로 redirect" },
+  ...["/admin", "/admin/tools", "/admin/movie", "/admin/moments", "/admin/usage", "/admin/publish-queue", "/admin/cyno-carousel"].map((url) => ({
+    url,
+    ok: (response) => response.status === 307 && response.headers.get("location")?.includes("/admin/login"),
+    desc: `비로그인 ${url} → 307 로그인 이동`,
+  })),
   { url: "/api/admin", ok: (r) => r.status === 401, desc: "비로그인 /api/admin → 401" },
   { url: "/api/admin/deploy", ok: (r) => r.status === 401, desc: "비로그인 배포 요청 → 401" },
   { url: "/admin/login", ok: (r) => r.status === 200, desc: "/admin/login 열림" },
