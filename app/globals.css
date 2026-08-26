@@ -169,6 +169,22 @@ html {
   animation: ambient-drift 24s ease-in-out infinite;
 }
 
+/* 아카이브 궤도는 월 순서대로 짧게 이어진다. SVG pathLength=1을 써서 실제 선
+   길이와 관계없이 같은 시간에 그려지고, JS가 없어도 CSS만으로 동작한다. */
+@keyframes orbit-draw {
+  from {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+}
+.orbit-segment {
+  animation: orbit-draw 0.65s var(--ease-out-strong) both;
+}
+
 /* theme switch: the toggle animates ::view-transition-new(root) as an
    expanding circle from the click point — kill the UA cross-fade so the
    two snapshots don't blend mid-reveal */
@@ -181,7 +197,12 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .card-in,
   .reveal,
-  .hero-ambient {
+  .hero-ambient,
+  .orbit-segment {
     animation: none;
+  }
+  .orbit-segment {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
   }
 }

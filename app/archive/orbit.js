@@ -263,11 +263,14 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
         return (
           <line
             key={s.month}
+            className="orbit-segment"
+            pathLength="1"
             x1={sx(p.center.v) + a.tx} y1={sy(p.center.a) + a.ty}
             x2={sx(s.center.v) - b.tx} y2={sy(s.center.a) - b.ty}
             stroke={timeColor(i + 1, points.length)} strokeWidth={aw}
-            strokeDasharray={s.prev?.gap > 0 ? "5 4" : "none"}
+            strokeDasharray={s.prev?.gap > 0 ? "0.08 0.05" : "1"}
             markerEnd={`url(#${chartId}-arrow)`} opacity="0.6"
+            style={{ animationDelay: `${i * 110}ms` }}
           />
         );
       })}
