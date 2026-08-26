@@ -14,6 +14,7 @@ import { getAllPeople } from "../lib/people.js";
 import { getWatched } from "../lib/watched.js";
 import { tmdbUrl } from "../lib/tmdb-link.js";
 import { appleUrl } from "../lib/apple.js";
+import { searchableLyricLines } from "../lib/lyric-search.js";
 
 const low = (v) => String(v || "").toLowerCase();
 const join = (...v) => v.flat().filter(Boolean).map(low).join("  ");
@@ -24,7 +25,7 @@ const songs = getAllSongs().map((s) => ({
   subtitle: s.artist,
   image: s.artwork || "",
   meta: join(s.title, s.title_ko, s.artist, s.artist_ko, s.album, s.tags || []),
-  lines: s.stanzas.flatMap((st) => st.lines.flatMap((l) => [l.en, l.ko])).filter((l) => l && l.trim()),
+  lines: searchableLyricLines(s),
 }));
 
 const movies = getAllMovies();
