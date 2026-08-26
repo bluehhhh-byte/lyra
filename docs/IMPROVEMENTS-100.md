@@ -488,19 +488,19 @@ Neon Free는 전송 5GB/월, Vercel Hobby는 대역폭 100GB/월이다. **먼저
   - 근거: PROJECT.md 5.4-2. 복구되면 바로 돌 수 있게 준비만
   - 완료: `verify:instagram`과 레이아웃 폭 검사를 워크플로에 넣는다. **돌려볼 수는 없다**
 
-- [ ] **H-08 · 마이그레이션 dry-run**
+- [x] **H-08 · 마이그레이션 dry-run**
   `db:migrate`가 전량 덮어쓰기다. 무엇이 바뀌는지 먼저 보여준다.
   - 근거: PROJECT.md 5.1-2에 명시
   - 파일: `scripts/migrate-content.mjs`
   - 완료: **dry-run이 기본**, `--apply`가 있어야 쓴다. `prune-data-rows.mjs`와 같은 형태
 
-- [ ] **H-09 · DB 백업 자동화**
+- [x] **H-09 · DB 백업 자동화**
   하루 한 번 md로 내보내 저장소에 남긴다.
   - 근거: PROJECT.md 5.1-3. 예전에는 저장소가 곧 백업이었으나 지금은 Neon Free 하나뿐이다
   - 파일: `scripts/dump-content.mjs`는 이미 있다. 실행 경로만
   - 완료: **한 커밋으로 묶는다.** 파일당 커밋은 절대 규칙 위반
 
-- [ ] **H-10 · 프로덕션 헬스체크**
+- [x] **H-10 · 프로덕션 헬스체크**
   `/api/version`을 주기적으로 확인해 `contentFallback: true`를 알아챈다.
   - 완료: 스크립트 1개. 외부 감시 서비스를 붙이지 마라
 
@@ -510,12 +510,12 @@ Neon Free는 전송 5GB/월, Vercel Hobby는 대역폭 100GB/월이다. **먼저
 
 `lang="ko"`, `aria-label` 31곳, `prefers-reduced-motion` 3곳이 이미 있다.
 
-- [ ] **I-01 · 포커스 링**
+- [x] **I-01 · 포커스 링**
   키보드로 이동할 때 어디에 있는지 보이는지 확인한다.
   - 파일: `app/globals.css`
   - 완료: 모든 대화형 요소에 포커스 표시가 있다
 
-- [ ] **I-02 · 본문 건너뛰기 링크**
+- [x] **I-02 · 본문 건너뛰기 링크**
   탭 첫 번째에 본문으로 건너뛰는 링크를 둔다.
   - 파일: `app/layout.js`
   - 완료: 포커스 전에는 숨어 있다
