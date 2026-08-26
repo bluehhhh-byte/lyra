@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import CardModal from "./lyric-card";
+import { hasReadings, savedReadingVisibility } from "../../../lib/reading-preference";
 
 const MODES = [
   { key: "both", label: "둘 다" },
@@ -23,6 +24,7 @@ const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between
 export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
   const [mode, setMode] = useState("both");
   const [size, setSize] = useState("m");
+  const [showReadings, setShowReadings] = useState(true);
   const [notes, setNotes] = useState({}); // stanza index -> note, overriding the file
   const [editing, setEditing] = useState(-1);
   const [owner, setOwner] = useState(false); // see lyra_admin in app/api/login
@@ -54,12 +56,15 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
       const saved = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
       if (MODES.some((m) => m.key === saved.mode)) setMode(saved.mode);
       if (SIZES[saved.size]) setSize(saved.size);
+      setShowReadings(savedReadingVisibility(saved.readings));
     } catch {} // corrupt value — fall back to defaults
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(STORE_KEY, JSON.stringify({ mode, size }));
-  }, [mode, size]);
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify({ mode, size, readings: showReadings }));
+    } catch {} // 사생활 보호 모드·용량 제한에서도 기본 읽기 화면은 유지
+  }, [mode, size, showReadings]);
 
   useEffect(() => {
     setOwner(allowNotes && document.cookie.split("; ").includes("lyra_admin=1"));
@@ -111,6 +116,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
   }, []);
 
   const s = SIZES[size];
+  const canToggleReadings = hasReadings(stanzas);
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -139,6 +145,19 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                 {m.label}
               </button>
             ))}
+            {canToggleReadings && (
+              <button
+                onClick={() => setShowReadings((value) => !value)}
+                aria-pressed={showReadings}
+                className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                  showReadings
+                    ? "border-accent bg-accent font-semibold text-bg"
+                    : "border-line text-muted hover:text-ink"
+                }`}
+              >
+                독음
+              </button>
+            )}
           </div>
           <div className="flex items-center gap-1.5">
             {SIZE_KEYS.map((k) => (
@@ -199,7 +218,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                       {line.en}
                     </p>
                   )}
-                  {mode !== "trans" && line.reading && (
+                  {mode !== "trans" && showReadings && line.reading && (
                     <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
                   )}
                   {mode !== "orig" &&
