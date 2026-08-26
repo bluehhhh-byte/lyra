@@ -174,7 +174,7 @@
   - 파일: `lib/people.js`, `lib/emotion-model.js`
   - 완료: 표본 3곡 미만이면 판단 유보. **사람을 판정하는 문장을 쓰지 마라**
 
-- [ ] **C-03 · 모티프 × 감정**
+- [x] **C-03 · 모티프 × 감정**
   반복 어휘와 감정 좌표를 겹쳐 "어떤 말이 어떤 정서와 함께 오는가"를 낸다.
   - 근거: PROJECT.md §5.3-3에 명시. `data/motifs.json` 존재
   - 파일: `app/songs/motifs/`, `lib/emotion-model.js`

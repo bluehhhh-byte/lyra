@@ -3,6 +3,7 @@ import { getAllSongsRuntime } from "../../../lib/songs";
 import { readRuntimeData } from "../../../lib/store";
 import CoverImage from "../../cover-image";
 import { lyricVocabulary } from "../../../lib/lyric-vocabulary";
+import { motifEmotionProfiles } from "../../../lib/motif-emotions";
 
 export const metadata = {
   title: "가사 모티프 | Lyra",
@@ -21,6 +22,7 @@ export default async function MotifsPage() {
     .map((m) => ({ ...m, songs: m.songs.filter((x) => songs.has(x.slug)) }))
     .filter((m) => m.songs.length >= 2);
   const vocabulary = lyricVocabulary(allSongs);
+  const motifEmotions = motifEmotionProfiles(data?.motifs || [], allSongs);
 
   return (
     <>
@@ -58,6 +60,28 @@ export default async function MotifsPage() {
           </table>
         </div>
       </section>
+
+      {data && (
+        <section className="mb-12" aria-labelledby="motif-emotion-title">
+          <h2 id="motif-emotion-title" className="text-lg font-bold">모티프 어휘와 함께 남은 정서</h2>
+          <p className="mt-1 text-xs text-muted">현재 번역문에서 어휘를 다시 찾아 계산한다. 감정 기록 {motifEmotions.minSample}곡 이상인 어휘만 해석한다.</p>
+          {motifEmotions.included.length > 0 ? (
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {motifEmotions.included.map((row) => (
+                <div key={row.word} className="rounded-xl border border-line bg-surface px-4 py-3">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <strong className="text-sm">{row.word}</strong>
+                    <span className="text-xs tabular-nums text-muted">{row.sample}곡</span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted">이 말과 함께 남은 기록 · {row.type}</p>
+                  <p className="mt-1 text-[11px] tabular-nums text-muted/80">밝기 {row.center.v.toFixed(1)} · 각성 {row.center.a.toFixed(1)}</p>
+                </div>
+              ))}
+            </div>
+          ) : <p className="mt-4 text-sm text-muted">해석할 만큼 표본이 모인 어휘가 아직 없다.</p>}
+          <p className="mt-3 text-xs text-muted">표본 부족으로 제외한 어휘 {motifEmotions.excluded.length}개</p>
+        </section>
+      )}
 
       {motifs.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
