@@ -155,6 +155,17 @@ export default function PlayerProvider({ children }) {
           <div
             ref={barRef}
             onClick={(e) => seek(e.clientX)}
+            onKeyDown={(event) => {
+              if (!audio || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+              event.preventDefault();
+              audio.currentTime = Math.min(audio.duration || 30, Math.max(0, audio.currentTime + (event.key === "ArrowRight" ? 5 : -5)));
+            }}
+            role="slider"
+            tabIndex={0}
+            aria-label="미리듣기 재생 위치"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={Math.round(progress * 100)}
             className="absolute inset-x-0 top-0 h-3 -translate-y-1/2 cursor-pointer"
           >
             <div className="mt-1 h-[3px] overflow-hidden bg-line">

@@ -187,10 +187,12 @@ export default function MovieCardButton({ movie }) {
           onClick={() => setOpen(false)}
           className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4 opacity-100 transition-opacity duration-200 ease-out starting:opacity-0 motion-reduce:transition-none"
           role="dialog"
+          aria-modal="true"
           aria-label="영화 카드 공유"
         >
           <div
             onClick={(e) => e.stopPropagation()}
+            role="document"
             className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
           >
             {url ? (

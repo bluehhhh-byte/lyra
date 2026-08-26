@@ -556,11 +556,13 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
       onClick={onClose}
       className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-2 opacity-100 transition-opacity duration-200 ease-out sm:p-4 starting:opacity-0 motion-reduce:transition-none"
       role="dialog"
+      aria-modal="true"
       aria-label="캐러셀 만들기"
     >
       {/* modal: transform-origin stays centered (not trigger-anchored) by design */}
       <div
         onClick={(e) => e.stopPropagation()}
+        role="document"
         className="flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full min-w-0 max-w-[calc(100vw-1rem)] scale-100 flex-col overflow-hidden rounded-2xl border border-line bg-bg p-3 opacity-100 transition duration-200 ease-out-strong sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:max-w-5xl sm:p-6 starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
         <div className="mb-3 flex shrink-0 items-center justify-between gap-3 sm:mb-4 sm:gap-4">
