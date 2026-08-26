@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllMoviesRuntime } from "../../../lib/movies";
-import { publishCandidates, unwrittenHighRatedCandidates } from "../../../lib/publish-candidates";
+import { publicationHistory, publishCandidates, unwrittenHighRatedCandidates } from "../../../lib/publish-candidates";
 import { readRuntimeData } from "../../../lib/store";
 import { getWatchedRuntime } from "../../../lib/watched";
 import { tmdbUrl } from "../../../lib/tmdb-link";
@@ -30,6 +30,7 @@ export default async function PublishQueuePage() {
   ]);
   const candidates = publishCandidates(movies, { published });
   const unwritten = unwrittenHighRatedCandidates(watched, movies);
+  const history = publicationHistory(published);
   return (
     <>
       <header className="mb-8 flex flex-wrap items-end gap-4">
@@ -91,6 +92,23 @@ export default async function PublishQueuePage() {
           </ul>
         </section>
       )}
+
+      <section className="mt-10 border-t border-line pt-8">
+        <h2 className="text-lg font-bold">최근 발행 이력</h2>
+        <p className="mt-1 text-sm text-muted">기존 발행 완료 기록에서 최근 20건을 보여준다.</p>
+        {history.length ? (
+          <ol className="mt-4 divide-y divide-line rounded-2xl border border-line bg-surface px-4">
+            {history.map((item) => (
+              <li key={`${item.slug}-${item.publishedAt}`} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-3 text-sm">
+                <span className="font-semibold">{item.title}</span>
+                <time dateTime={item.publishedAt} className="text-xs text-muted sm:ml-auto">
+                  {new Intl.DateTimeFormat("ko-KR", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Seoul" }).format(new Date(item.publishedAt))}
+                </time>
+              </li>
+            ))}
+          </ol>
+        ) : <p className="mt-4 rounded-xl border border-dashed border-line p-6 text-center text-sm text-muted">아직 발행 완료 기록이 없습니다.</p>}
+      </section>
     </>
   );
 }
