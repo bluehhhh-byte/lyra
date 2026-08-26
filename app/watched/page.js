@@ -4,6 +4,7 @@ import { getAllMoviesMeta } from "../../lib/movies";
 import { attachCuratedLinks } from "../../lib/watched-filter";
 import WatchedGrid from "./grid";
 import CynoNav from "../cyno-nav";
+import WatchedTimeline from "./timeline";
 
 export const metadata = {
   title: "평가한 영화 | Cyno.",
@@ -44,6 +45,8 @@ export default async function WatchedPage({ searchParams }) {
           취향 분석 →
         </Link>
       </div>
+
+      <WatchedTimeline movies={all} />
 
       {rated.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
