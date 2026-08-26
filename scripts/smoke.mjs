@@ -123,7 +123,6 @@ try {
   const body = await admin.text();
   if (!admin.ok) throw new Error(`HTTP ${admin.status}`);
   if (!body.includes("곡 추가")) throw new Error("관리자 본문 없음");
-  if (body.includes("번역 검토 후보")) throw new Error("곡 관리 화면에 번역 검토 도구가 노출됨");
   if (body.includes("An error occurred in the Server Components render")) {
     throw new Error("Server Component 렌더링 오류");
   }
@@ -136,11 +135,11 @@ try {
   });
   const toolsBody = await adminTools.text();
   if (!adminTools.ok) throw new Error(`관리 도구 HTTP ${adminTools.status}`);
-  if (!toolsBody.includes("번역 검토 후보")) throw new Error("관리 도구에 번역 검토 후보 없음");
+  if (!toolsBody.includes("관리 도구")) throw new Error("관리 도구 본문 없음");
   if (toolsBody.includes("An error occurred in the Server Components render")) {
     throw new Error("관리 도구 Server Component 렌더링 오류");
   }
-  console.log("  ✓ /admin/tools (번역 검토 후보 렌더링)");
+  console.log("  ✓ /admin/tools (Server Component 렌더링)");
 
   const deployHealth = await fetch(BASE + "/api/admin/deploy", {
     headers: { cookie: authCookie },

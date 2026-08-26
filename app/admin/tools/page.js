@@ -7,8 +7,6 @@ import BulkWork from "../bulk-work";
 import Lint from "../lint";
 import LyricsAudit from "../lyrics-audit";
 import Requality from "../requality";
-import TranslationConsistency from "../translation-consistency";
-import { artistTranslationVariants } from "../../../lib/translation-variants";
 
 export const metadata = { title: "관리 도구 | Lyra" };
 export const dynamic = "force-dynamic";
@@ -28,11 +26,6 @@ const tools = [
     title: "번역 형식 검사",
     description: "번역·독음 누락, 잘못 붙은 형식 마커, 비표준 장르를 전 곡에서 찾아 필요한 부분만 보정합니다.",
     content: <Lint />,
-  },
-  {
-    title: "번역 검토 후보",
-    description: "같은 아티스트의 여러 곡에서 같은 원문을 다르게 옮긴 사례를 모아 보여줍니다. 문맥에 따른 차이는 그대로 둘 수 있습니다.",
-    content: null,
   },
   {
     title: "가사 정확성 검토",
@@ -67,18 +60,10 @@ export default async function AdminToolsPage() {
       year: song.year || "",
       status: auditStatus.get(song.slug) || "",
     }));
-  const translationCandidates = artistTranslationVariants(songs);
 
   const entries = tools.map((tool) => {
     if (tool.title === "커버 검토") {
       return { ...tool, title: `커버 검토 (${artworkless.length})`, content: <ArtworkReview items={artworkless} /> };
-    }
-    if (tool.title === "번역 검토 후보") {
-      return {
-        ...tool,
-        title: `번역 검토 후보 (${translationCandidates.length})`,
-        content: <TranslationConsistency items={translationCandidates} />,
-      };
     }
     return tool;
   });
