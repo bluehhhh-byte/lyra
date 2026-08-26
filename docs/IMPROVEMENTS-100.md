@@ -300,7 +300,7 @@
   - 파일: `app/admin/page.js`
   - 완료: **`contentFallback: true`(DB 실패 중)가 눈에 띄게 표시된다**
 
-- [ ] **E-04 · 일괄 작업 미리보기**
+- [x] **E-04 · 일괄 작업 미리보기**
   일괄 편집 전에 무엇이 어떻게 바뀌는지 먼저 보여준다.
   - 근거: `scripts/prune-data-rows.mjs`가 dry-run 기본을 이미 쓴다. 같은 원칙을 화면에도
   - 파일: `app/admin/tools/`

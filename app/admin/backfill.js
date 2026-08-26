@@ -61,6 +61,8 @@ export default function Backfill() {
 
   // sequential on purpose — parallel Gemini calls trip the free-tier rate limit
   const fillAll = async () => {
+    const fields = [...new Set(list.filter((s) => !done[s.slug]).flatMap((s) => s.missing).map((field) => LABEL[field] || field))];
+    if (!confirm(`${pending}곡의 누락 항목을 차례로 생성해 곡마다 바로 저장합니다.\n대상: ${fields.join(", ")}\n진행할까요?`)) return;
     for (const s of list) {
       if (done[s.slug]) continue;
       await fill(s.slug);

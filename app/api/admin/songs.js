@@ -805,6 +805,7 @@ ${listed}`,
   // 잘못된 값 하나가 조용히 768곡에 섞인다.
   if (action === "bulkApply") {
     const items = Array.isArray(body.items) ? body.items : [];
+    const shouldApply = body.apply === true;
     if (!items.length) return Response.json({ error: "items가 비어 있습니다" }, { status: 422 });
     const bySlug = new Map((await getAllSongsRuntime()).map((s) => [s.slug, s]));
     const applied = [], rejected = [], pending = [];
@@ -867,12 +868,19 @@ ${listed}`,
       applied.push({ slug: it.slug, changed });
     }
     const fields = [...new Set(applied.flatMap((a) => a.changed))];
-    if (pending.length)
+    if (shouldApply && pending.length)
       await commitFiles(
         pending,
         `chore(song): bulk ${fields.join(",")} — ${applied.length}곡`
       );
-    return Response.json({ applied: applied.length, rejected, fields });
+    return Response.json({
+      applied: shouldApply ? applied.length : 0,
+      changeCount: applied.length,
+      changes: applied,
+      rejected,
+      fields,
+      preview: !shouldApply,
+    });
   }
 
   if (action === "load") {

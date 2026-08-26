@@ -38,6 +38,8 @@ export default function Lint() {
   };
 
   const fixAll = async () => {
+    const issueCount = report.reduce((sum, song) => sum + song.issues.length, 0);
+    if (!confirm(`${report.length}곡의 형식 문제 ${issueCount}건을 차례로 수정하고 즉시 저장합니다.\n목록에 표시된 변경 내용을 확인했나요?`)) return;
     setBusy("fix");
     setError("");
     const log = (slug, msg) => setFixLog((o) => ({ ...o, [slug]: msg }));

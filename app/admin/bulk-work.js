@@ -34,6 +34,7 @@ export default function BulkWork() {
   const [field, setField] = useState("");
   const [plan, setPlan] = useState(null);
   const [paste, setPaste] = useState("");
+  const [preview, setPreview] = useState(null);
   const [result, setResult] = useState(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
@@ -54,14 +55,29 @@ export default function BulkWork() {
     URL.revokeObjectURL(a.href);
   };
 
-  const apply = async () => {
+  const parseItems = () => {
+    const parsed = JSON.parse(paste);
+    const items = Array.isArray(parsed) ? parsed : parsed.items;
+    if (!Array.isArray(items)) throw new Error("items 배열이 필요합니다");
+    return items;
+  };
+
+  const makePreview = async () => {
     setBusy(true); setErr(""); setResult(null);
     try {
-      const parsed = JSON.parse(paste);
-      const items = Array.isArray(parsed) ? parsed : parsed.items;
-      if (!Array.isArray(items)) throw new Error("items 배열이 필요합니다");
-      setResult(await api("bulkApply", { items }));
+      const data = await api("bulkApply", { items: parseItems(), apply: false });
+      setPreview({ ...data, source: paste });
+    } catch (e) { setErr(e.message); setPreview(null); }
+    setBusy(false);
+  };
+
+  const apply = async () => {
+    if (!preview || preview.source !== paste) return setErr("내용이 바뀌었습니다. 미리보기를 다시 확인하세요.");
+    setBusy(true); setErr(""); setResult(null);
+    try {
+      setResult(await api("bulkApply", { items: parseItems(), apply: true }));
       setPaste("");
+      setPreview(null);
     } catch (e) { setErr(e.message); }
     setBusy(false);
   };
@@ -112,14 +128,32 @@ export default function BulkWork() {
         <p className="mb-1 text-xs text-muted">
           채워 온 결과 붙여넣기 — {`{"items":[{"slug":"...","keywords":["..."],"emotion":"..."}]}`}
         </p>
-        <textarea value={paste} onChange={(e) => setPaste(e.target.value)} rows={6} spellCheck={false}
+        <textarea value={paste} onChange={(e) => { setPaste(e.target.value); setPreview(null); setResult(null); }} rows={6} spellCheck={false}
           placeholder="Claude·ChatGPT가 만든 JSON"
           className="w-full resize-y rounded border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
-        <button onClick={apply} disabled={busy || !paste.trim()}
+        <button onClick={makePreview} disabled={busy || !paste.trim()}
           className="mt-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
-          {busy ? "반영 중…" : "검증하고 반영"}
+          {busy ? "검증 중…" : "변경 미리보기"}
         </button>
       </div>
+
+      {preview && (
+        <div className="rounded-lg border border-amber-500/50 bg-amber-500/10 p-3 text-sm">
+          <p className="font-semibold">반영 예정 {preview.changeCount}곡 · 항목 {(preview.fields || []).join(", ") || "—"}</p>
+          <div className="mt-2 max-h-40 space-y-1 overflow-y-auto text-xs text-muted">
+            {(preview.changes || []).map((change) => (
+              <p key={change.slug}><b className="text-ink">{change.slug}</b> · {change.changed.join(", ")}</p>
+            ))}
+            {!!preview.rejected?.length && preview.rejected.map((item, index) => (
+              <p key={`${item.slug}-${index}`} className="text-red-600 dark:text-red-400">제외: {item.slug} · {item.why}</p>
+            ))}
+          </div>
+          <button onClick={apply} disabled={busy || preview.changeCount === 0}
+            className="mt-3 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
+            {busy ? "반영 중…" : `미리보기대로 ${preview.changeCount}곡 반영`}
+          </button>
+        </div>
+      )}
 
       {result && (
         <div className="rounded-lg border border-line p-3 text-sm">
