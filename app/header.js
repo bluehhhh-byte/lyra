@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./theme-toggle";
 import SearchDialog from "./search-dialog";
+import { shouldOpenSearchShortcut } from "../lib/search-shortcut";
 
 const PRIMARY = [
   ["/", "음악"],
@@ -54,7 +55,7 @@ export default function Header() {
 
   useEffect(() => {
     const shortcut = (event) => {
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+      if (shouldOpenSearchShortcut(event)) {
         event.preventDefault();
         setSearchOpen(true);
       }
