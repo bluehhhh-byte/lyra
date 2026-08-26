@@ -67,6 +67,25 @@ export default async function RecapPage({ searchParams }) {
         <Metric value={recap.emotions[0]?.[0] || "—"} label="대표 감정" />
       </section>
 
+      {recap.annual && (
+        <section className="my-14" aria-labelledby="annual-insights-title">
+          <h2 id="annual-insights-title" className="mb-4 text-sm font-semibold">한 해의 흐름</h2>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <AnnualInsight title="최다 아티스트" value={recap.annual.topArtist?.name || "—"} detail={recap.annual.topArtist ? `${recap.annual.topArtist.count}곡` : "음악 기록 없음"} />
+            <AnnualInsight
+              title="연간 정서 이동"
+              value={recap.annual.emotionMovement?.label || "—"}
+              detail={recap.annual.emotionMovement ? `${Number(recap.annual.emotionMovement.from.slice(5))}월 → ${Number(recap.annual.emotionMovement.to.slice(5))}월 · 밝기 ${recap.annual.emotionMovement.dv.toFixed(1)} · 각성 ${recap.annual.emotionMovement.da.toFixed(1)}` : "비교할 감정 기록 없음"}
+            />
+            <AnnualInsight
+              title="가장 큰 정서 전환점"
+              value={recap.annual.turningPoint ? `${Number(recap.annual.turningPoint.month.slice(5))}월` : "—"}
+              detail={recap.annual.turningPoint ? `${recap.annual.turningPoint.move} · 거리 ${recap.annual.turningPoint.distance.toFixed(1)}` : "기준을 넘은 연속 월 이동 없음"}
+            />
+          </div>
+        </section>
+      )}
+
       <section className="my-14 grid gap-12 sm:grid-cols-2">
         <Rank title="많이 들은 가수" rows={recap.artists.slice(0, 5)} suffix="곡" />
         <Rank title="자주 등장한 키워드" rows={recap.keywords.slice(0, 8)} prefix="#" />
@@ -142,6 +161,16 @@ export default async function RecapPage({ searchParams }) {
 
 function Metric({ value, label }) {
   return <div className="bg-bg px-4 py-5"><p className="truncate text-2xl font-bold">{value}</p><p className="text-xs text-muted">{label}</p></div>;
+}
+
+function AnnualInsight({ title, value, detail }) {
+  return (
+    <div className="rounded-xl border border-line bg-surface px-4 py-4">
+      <p className="text-xs text-muted">{title}</p>
+      <p className="mt-1 font-semibold">{value}</p>
+      <p className="mt-2 text-xs leading-5 text-muted">{detail}</p>
+    </div>
+  );
 }
 
 function Rank({ title, rows, prefix = "", suffix = "" }) {
