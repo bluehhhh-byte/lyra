@@ -125,6 +125,11 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
           <p className="mb-4 mt-1 text-xs text-muted">
             가로는 밝기, 세로는 각성도다. 월을 고르면 그달 기록으로 이동한다.
           </p>
+          {monthStat?.character && (
+            <p className="mb-4 inline-flex rounded-full border border-line bg-surface px-3 py-1 text-xs text-muted">
+              기록의 성격 · {monthStat.character}
+            </p>
+          )}
           {/* 감정 구성은 이름·막대·수치가 한 행인 목록이라 좁은 칸이면 충분하다.
               궤도 그래프에 남는 폭을 주는 편이 점과 라벨을 읽기 쉽다 */}
           <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
