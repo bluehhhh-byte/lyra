@@ -5,6 +5,8 @@ import SongTools from "./song-tools";
 import DeployControl from "./deploy-control";
 import { databaseContentEnabled } from "../../lib/content-db";
 import { toAdminSong } from "../../lib/admin/admin-song";
+import { artistTranslationVariants } from "../../lib/translation-variants";
+import TranslationConsistency from "./translation-consistency";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
@@ -24,6 +26,7 @@ export default async function AdminPage() {
     throw error;
   }
   const adminSongs = songs.map(toAdminSong);
+  const translationConsistency = artistTranslationVariants(songs);
   return (
     <>
       <div className="mb-8 flex flex-wrap items-center gap-4">
@@ -41,6 +44,8 @@ export default async function AdminPage() {
         </p>
       )}
       <AdminForm />
+
+      <TranslationConsistency items={translationConsistency} />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({adminSongs.length})</h2>
       <SongTools songs={adminSongs} />
