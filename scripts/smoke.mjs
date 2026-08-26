@@ -20,6 +20,7 @@ const CHECKS = [
   { url: "/movies", expect: null },
   { url: `/movies/${firstMovie}`, expect: null },
   { url: "/songs/taste", expect: "음악 취향" },
+  { url: "/songs/motifs", expect: "자주 등장하는 번역 가사 어휘" },
   { url: "/recommendations/music", expect: "추천 곡" },
   { url: "/watched", expect: "평가한 영화" },
   { url: "/watched/taste", expect: null },
@@ -122,6 +123,7 @@ try {
   const body = await admin.text();
   if (!admin.ok) throw new Error(`HTTP ${admin.status}`);
   if (!body.includes("곡 추가")) throw new Error("관리자 본문 없음");
+  if (!body.includes("아티스트별 번역 일관성")) throw new Error("번역 일관성 진단 없음");
   if (body.includes("An error occurred in the Server Components render")) {
     throw new Error("Server Component 렌더링 오류");
   }
