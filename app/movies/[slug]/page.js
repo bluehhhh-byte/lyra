@@ -111,16 +111,19 @@ export default async function MoviePage({ params }) {
     <article>
       {/* hero — 16:9 backdrop wash behind a 2:3 poster */}
       <div className="relative mb-12 overflow-hidden rounded-2xl border border-line">
-        <img
-          src={movie.backdrop || movie.poster}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 h-full w-full object-cover opacity-30 blur-2xl"
-        />
-        <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
+        {(movie.backdrop || movie.poster) && (
           <img
+            src={movie.backdrop || movie.poster}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 h-full w-full object-cover opacity-30 blur-2xl"
+          />
+        )}
+        <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
+          <CoverImage
             src={movie.poster}
             alt={`${movie.title_ko || movie.title} 포스터`}
+            label={movie.title_ko || movie.title}
             className="w-40 rounded-xl shadow-2xl sm:w-48"
           />
           <div className="text-center sm:text-left">
@@ -259,9 +262,10 @@ export default async function MoviePage({ params }) {
             {related.map((m) => (
               <Link key={m.slug} href={`/movies/${m.slug}`} className="group block active:scale-[0.98] transition">
                 <div className="overflow-hidden rounded-lg border border-line bg-surface">
-                  <img
+                  <CoverImage
                     src={m.poster}
                     alt=""
+                    label={m.title_ko || m.title}
                     loading="lazy"
                     decoding="async"
                     className="aspect-[2/3] w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
@@ -287,7 +291,7 @@ export default async function MoviePage({ params }) {
             {directorWorks.map((work) => {
               const Card = (
                 <>
-                  {work.poster ? <img src={work.poster} alt="" loading="lazy" className="aspect-[2/3] w-full rounded-lg border border-line object-cover" /> : <div className="aspect-[2/3] rounded-lg border border-line bg-surface" />}
+                  <CoverImage src={work.poster} alt="" label={work.title} loading="lazy" className="aspect-[2/3] w-full rounded-lg border border-line object-cover" />
                   <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{work.title}</h3>
                   <p className="truncate text-xs text-muted">{work.year}{work.rating == null ? " · 별점 없음" : ` · ★${work.rating}`}</p>
                 </>
