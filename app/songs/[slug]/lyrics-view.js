@@ -265,8 +265,8 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
               />
             ) : (
               (notes[i] ?? stanza.note) && (
-                <p className="mt-4 rounded-lg bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
-                  <span className="mr-1.5 font-semibold text-accent">노트</span>
+                <aside role="note" aria-label="이 연에 대한 해설" className="mt-8 border-l-2 border-accent/60 bg-accent/5 px-4 py-3 text-sm leading-relaxed text-muted">
+                  <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">연 해설</span>
                   {notes[i] ?? stanza.note}
                   {owner && (
                     <button
@@ -276,7 +276,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                       수정
                     </button>
                   )}
-                </p>
+                </aside>
               )
             )}
             {owner && editing !== i && !(notes[i] ?? stanza.note) && (
