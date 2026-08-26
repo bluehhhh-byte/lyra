@@ -10,6 +10,8 @@ import {
   attachDeployment,
   finishDeploy,
   currentDeployJob,
+  deployStatusSnapshot,
+  deploymentStatusSummary,
   renewDeployLease,
 } from "../../../../lib/deploy-jobs";
 import { sameOrigin, forbiddenOrigin } from "../../../../lib/admin/same-origin";
@@ -70,7 +72,23 @@ export async function GET(req) {
     const id = new URL(req.url).searchParams.get("id");
     // id 없이 부르면 설정 진단 + 진행 중 작업 — 화면을 다시 열어도 이어서 보인다.
     // currentDeployJob이 만료 BUILDING을 정리하므로 여기 상태는 언제나 현재형이다.
-    if (!id) return Response.json({ status: deployStatus(), job: await currentDeployJob() });
+    if (!id) {
+      const status = deployStatus();
+      const snapshot = await deployStatusSnapshot();
+      let sourceSha = "";
+      let version = null;
+      if (status.mode === "source") {
+        [sourceSha, version] = await Promise.all([
+          resolveHeadSha().catch(() => ""),
+          liveVersion(req),
+        ]);
+      }
+      return Response.json({
+        status,
+        job: snapshot.current,
+        deploymentStatus: deploymentStatusSummary({ sourceSha, liveVersion: version, lastReady: snapshot.lastReady }),
+      });
+    }
 
     const deployment = await readDeployment(id);
     const job = await currentDeployJob();
