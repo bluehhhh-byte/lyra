@@ -7,6 +7,7 @@ import EmotionTimeline from "../emotion-timeline";
 import { getDiary } from "../../lib/diary";
 import { COUNTRY_TAGS } from "../../lib/genre";
 import { releaseRecordGaps } from "../../lib/archive-stats";
+import { artistEmotionProfiles } from "../../lib/people";
 
 export const metadata = {
   title: "컬렉션 통계 | Lyra",
@@ -73,6 +74,9 @@ export default async function StatsPage() {
   const readings = lines.filter((l) => l.reading).length;
   const stanzas = songs.flatMap((s) => s.stanzas).length;
   const releaseGaps = releaseRecordGaps(songs);
+  const artistEmotions = artistEmotionProfiles(songs);
+  const readableArtistEmotions = artistEmotions.filter((profile) => !profile.deferred).slice(0, 10);
+  const deferredArtistEmotions = artistEmotions.filter((profile) => profile.deferred).length;
 
   // country follows the artist-nationality tag; lyric language is only a
   // fallback for songs saved before country tags existed
@@ -159,6 +163,23 @@ export default async function StatsPage() {
           </Link>
         </div>
         <EmotionTimeline days={diary} />
+      </section>
+
+      <section className="mb-12" aria-labelledby="artist-emotion-title">
+        <h2 id="artist-emotion-title" className="text-sm font-semibold text-muted">아티스트와 함께 남긴 기록의 정서</h2>
+        <p className="mt-1 text-xs text-muted/70">감정이 기록된 곡 3곡 이상만 해석한다. 아티스트의 성격이 아니라 기록의 분포다.</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {readableArtistEmotions.map((profile) => (
+            <div key={profile.artist} className="rounded-xl border border-line bg-surface px-4 py-3">
+              <div className="flex items-baseline justify-between gap-3">
+                <strong className="text-sm">{profile.artist}</strong>
+                <span className="text-xs tabular-nums text-muted">감정 기록 {profile.sample}곡</span>
+              </div>
+              <p className="mt-1 text-xs leading-5 text-muted">{profile.summary}</p>
+            </div>
+          ))}
+        </div>
+        {deferredArtistEmotions > 0 && <p className="mt-3 text-xs text-muted">표본 3곡 미만으로 판단을 유보한 아티스트 {deferredArtistEmotions}명</p>}
       </section>
 
       <div className="grid gap-12 sm:grid-cols-2">

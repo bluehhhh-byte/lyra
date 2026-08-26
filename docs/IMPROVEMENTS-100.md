@@ -168,7 +168,7 @@
   - 파일: `app/archive/`, `lib/archive-stats.js`, `app/archive/orbit.js`
   - 완료: 두 연도를 고르면 같은 척도 위에 겹쳐 보인다. **축 척도 `DOMAIN = [-3, 3]` 고정을 유지**
 
-- [ ] **C-02 · 사람 축 × 감정**
+- [x] **C-02 · 사람 축 × 감정**
   "이 아티스트를 들을 때 기록은 어떤 상태였나"를 계산한다.
   - 근거: PROJECT.md §5.3-2에 명시
   - 파일: `lib/people.js`, `lib/emotion-model.js`
