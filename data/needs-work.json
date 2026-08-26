@@ -1,41 +1,11 @@
 {
- "at": "2026-08-18T05:02:26.026Z",
+ "at": "2026-08-26T06:35:28.409Z",
  "total": {
-  "songs": 919,
-  "songsNeedingWork": 1,
+  "songs": 937,
+  "songsNeedingWork": 0,
   "moviesNeedingWork": 0
  },
- "byNeed": {
-  "가사 없음": 1
- },
- "songBatches": [
-  [
-   {
-    "id": "지드래곤-power",
-    "kind": "song",
-    "title": "POWER",
-    "artist": "지드래곤",
-    "lang": "ko",
-    "year": "2024",
-    "needs": [
-     "가사 없음"
-    ],
-    "counts": {
-     "translation": 0,
-     "reading": 0,
-     "enTranslation": 0,
-     "inline": 0,
-     "genre": "",
-     "keywords": 0,
-     "emotion": 0,
-     "comment": 0,
-     "titleKo": 0,
-     "artwork": 0,
-     "year": 0,
-     "lyrics": 1
-    }
-   }
-  ]
- ],
+ "byNeed": {},
+ "songBatches": [],
  "movieBatches": []
 }
