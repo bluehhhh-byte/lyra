@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { clearSongDraft, readSongDraft, writeSongDraft } from "../../../../lib/admin/draft";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -22,20 +23,47 @@ export default function EditForm({ slug }) {
   const [raw, setRaw] = useState(null);
   const [translationVariants, setTranslationVariants] = useState([]);
   const [status, setStatus] = useState("");
+  const savedRaw = useRef(null);
 
   useEffect(() => {
+    const draft = readSongDraft(window.localStorage, slug);
     api("load", { slug })
       .then((d) => {
-        setRaw(d.raw);
+        savedRaw.current = d.raw;
+        if (draft?.raw && draft.raw !== d.raw) {
+          setRaw(draft.raw);
+          setStatus("저장하지 않은 로컬 초안을 복원했습니다");
+        } else {
+          clearSongDraft(window.localStorage, slug);
+          setRaw(d.raw);
+        }
         setTranslationVariants(d.translationVariants || []);
       })
-      .catch((e) => setStatus(e.message));
+      .catch((e) => {
+        if (draft?.raw) {
+          setRaw(draft.raw);
+          setStatus(`${e.message} · 로컬 초안을 복원했습니다`);
+        } else {
+          setStatus(e.message);
+        }
+      });
   }, [slug]);
+
+  useEffect(() => {
+    if (raw === null) return;
+    const timer = setTimeout(() => {
+      if (raw === savedRaw.current) clearSongDraft(window.localStorage, slug);
+      else writeSongDraft(window.localStorage, slug, raw);
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [raw, slug]);
 
   const save = async () => {
     setStatus("저장 중…");
     try {
       const result = await api("update", { slug, raw });
+      savedRaw.current = raw;
+      clearSongDraft(window.localStorage, slug);
       setTranslationVariants(result.translationVariants || []);
       setStatus("저장됨 ✓");
     } catch (e) {
