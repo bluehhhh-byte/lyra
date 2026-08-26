@@ -28,8 +28,11 @@ const CHECKS = [
   { url: "/archive", expect: null },
   { url: "/moments", expect: "문화 장면" },
   { url: "/people", expect: null },
+  { url: "/translations", expect: "번역만 읽기" },
+  { url: "/translations/2", expect: "번역만 읽기" },
   { url: `/api/search?q=${encodeURIComponent("a")}`, expect: '"groups"' },
   { url: "/api/search/lyrics?q=%EC%82%AC%EB%9E%91", expect: '"hits"' },
+  { url: `/api/search/lyrics?q=${encodeURIComponent("세상이")}`, expect: "yuuri-the-world-has-ended" },
   // 배포 완료 판정이 이 값에 걸려 있다 — 사라지면 관리자 배포가 영원히 "빌드 중"이 된다
   { url: "/api/version", expect: '"sha"' },
 ];
