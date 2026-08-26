@@ -245,9 +245,10 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 // `>^N`으로 덮인 줄은 번역이 비어 있다 — 번역만 보기에서는 빈 칸만
                 // 남으므로 건너뛴다 (원문 보기·둘 다 보기에서는 그대로 나온다)
                 mode === "trans" && !line.ko ? null : (
-                <div key={j} className="lyric-line">
+                <div key={j} className="lyric-line" role="group" aria-label="원문과 번역">
                   {mode !== "trans" && (
-                    <p lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
+                    <p id={`lyric-${i}-${j}-original`} lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
+                      <span className="sr-only">원문: </span>
                       {line.en}
                     </p>
                   )}
@@ -260,16 +261,20 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                       // Korean translation (EN/JA songs) → batang
                       <p
                         lang="ko"
+                        aria-describedby={mode === "both" ? `lyric-${i}-${j}-original` : undefined}
                         className={`font-batang text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
                       >
+                        <span className="sr-only">한국어 번역: </span>
                         {line.ko}
                       </p>
                     ) : (
                       // English translation (Korean songs) → latin serif, italic to set it apart
                       <p
                         lang="en"
+                        aria-describedby={mode === "both" ? `lyric-${i}-${j}-original` : undefined}
                         className={`font-serif italic text-muted/80 ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
                       >
+                        <span className="sr-only">영어 번역: </span>
                         {line.ko}
                       </p>
                     ))}
