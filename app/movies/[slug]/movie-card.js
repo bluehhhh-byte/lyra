@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { buildMovieCaption } from "../../../lib/caption";
+import { waitForCarouselFonts } from "../../../lib/carousel";
+import { MOVIE_CAROUSEL_FONT_FACES } from "../../../lib/movie-carousel";
 import InstagramCaptionPreview from "../../caption-preview";
 import { loadImage, wrap } from "../../songs/[slug]/lyric-card";
 
@@ -10,6 +12,7 @@ const W = 1080;
 const H = 1350;
 
 async function drawCard({ movie }) {
+  await waitForCarouselFonts(undefined, MOVIE_CAROUSEL_FONT_FACES);
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;

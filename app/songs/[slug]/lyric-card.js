@@ -7,6 +7,7 @@ import {
   autoSelect,
   CAROUSEL_SLIDES,
   MAX_SELECTED_LINES,
+  waitForCarouselFonts,
 } from "../../../lib/carousel";
 import {
   carouselArtistLine,
@@ -30,15 +31,6 @@ const SERIF = 'Georgia, "Noto Serif KR", serif';
 const INK = "#f7f7f8";
 const INK_DIM = "rgba(247,247,248,0.84)";
 const PAD = 84;
-
-export async function ensureCarouselFonts() {
-  if (!document.fonts) return;
-  await document.fonts.ready;
-  await Promise.all([
-    document.fonts.load('700 52px "Pretendard Variable"'),
-    document.fonts.load('500 36px "Pretendard Variable"'),
-  ]);
-}
 
 export function drawImageCover(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.width, height / image.height);
@@ -516,7 +508,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     setBuilding(true);
     (async () => {
       const [, art] = await Promise.all([
-        ensureCarouselFonts(),
+        waitForCarouselFonts(),
         loadImage(song.artwork).catch(() => null),
       ]);
       const made = [];

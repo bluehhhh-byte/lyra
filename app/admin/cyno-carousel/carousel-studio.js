@@ -3,15 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import AdminErrorMessage from "../error-message";
 import InstagramCaptionPreview from "../../caption-preview";
-import { carouselDownloadEntries } from "../../../lib/carousel";
+import { carouselDownloadEntries, waitForCarouselFonts } from "../../../lib/carousel";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
-import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords } from "../../../lib/movie-carousel";
+import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords, MOVIE_CAROUSEL_FONT_FACES } from "../../../lib/movie-carousel";
 import {
   drawArtWash,
   drawImageCover,
   drawPageNumber,
   drawProgress,
-  ensureCarouselFonts,
   fitText,
   loadImage,
   wrap,
@@ -394,7 +393,10 @@ const carouselMovies = (carousel) =>
   carousel.slides.flatMap((slide) => slide.movies || (slide.movie ? [slide.movie] : []));
 
 async function loadCarouselImages(carousel) {
-  const [, images] = await Promise.all([ensureCarouselFonts(), loadMovieImages(carouselMovies(carousel))]);
+  const [, images] = await Promise.all([
+    waitForCarouselFonts(undefined, MOVIE_CAROUSEL_FONT_FACES),
+    loadMovieImages(carouselMovies(carousel)),
+  ]);
   return images;
 }
 
