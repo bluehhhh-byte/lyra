@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import CoverImage from "./cover-image";
 import { groupSongs } from "../lib/browse-group";
-import { parseEmotion } from "../lib/keywords";
+import { parseBrowseFilters, serializeBrowseFilters } from "../lib/browse-query";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -20,12 +20,7 @@ const RENDER_STEP = 240;
 
 export default function Browse({ songs: initialSongs, totalSongs = initialSongs.length }) {
   const searchParams = useSearchParams();
-  const initialTag = searchParams.get("tag") || "";
-  const initialQ = searchParams.get("q") || "";
-  const initialGroup = searchParams.get("group") || "none";
-  const initialEmotion = parseEmotion(searchParams.get("emotion"));
-  const requestedDecade = searchParams.get("decade") || "";
-  const initialDecade = /^\d{4}s$/.test(requestedDecade) ? requestedDecade : "";
+  const initialFilters = parseBrowseFilters(searchParams);
   const [rawSongs, setRawSongs] = useState(initialSongs);
   const [loadState, setLoadState] = useState("idle");
   const loadPromise = useRef(null);
@@ -65,11 +60,11 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
       })),
     [rawSongs]
   );
-  const [q, setQ] = useState(initialQ);
-  const [tag, setTag] = useState(initialTag);
-  const [emotion, setEmotion] = useState(initialEmotion); // 취향 페이지 감정 막대에서 온다
-  const [decade, setDecade] = useState(initialDecade); // 취향·곡 페이지 연대 링크에서 온다 (예: 2010s)
-  const [group, setGroup] = useState(GROUPS.some((g) => g.key === initialGroup) ? initialGroup : "none");
+  const [q, setQ] = useState(initialFilters.q);
+  const [tag, setTag] = useState(initialFilters.tag);
+  const [emotion, setEmotion] = useState(initialFilters.emotion); // 취향 페이지 감정 막대에서 온다
+  const [decade, setDecade] = useState(initialFilters.decade); // 취향·곡 페이지 연대 링크에서 온다 (예: 2010s)
+  const [group, setGroup] = useState(initialFilters.group);
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
   // 가사 검색은 서버에 맡긴다 — 예전에는 첫 검색 때 전곡 가사(gzip 757KB)를
   // 통째로 내려받았다. lyricHits는 {q, map: slug → 맞은 줄}이고, 응답의 q가
@@ -92,13 +87,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   // ponytail: back/forward doesn't step through filter states. Switch to
   // router.push + a debounce if that ever matters.
   useEffect(() => {
-    const p = new URLSearchParams();
-    if (q) p.set("q", q);
-    if (tag) p.set("tag", tag);
-    if (emotion) p.set("emotion", emotion);
-    if (decade) p.set("decade", decade);
-    if (group !== "none") p.set("group", group);
-    const qs = p.toString();
+    const qs = serializeBrowseFilters({ q, tag, emotion, decade, group });
     history.replaceState(null, "", qs ? `/?${qs}` : "/");
   }, [q, tag, group, emotion, decade]);
 
