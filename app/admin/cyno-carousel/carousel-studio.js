@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import AdminErrorMessage from "../error-message";
 import InstagramCaptionPreview from "../../caption-preview";
-import { carouselDownloadEntries, waitForCarouselFonts } from "../../../lib/carousel";
+import { carouselDownloadEntries, carouselSizeReport, formatCarouselBytes, waitForCarouselFonts } from "../../../lib/carousel";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords, MOVIE_CAROUSEL_FONT_FACES } from "../../../lib/movie-carousel";
 import {
@@ -489,6 +489,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
   );
   const carousel = mode === "single" ? singleCarousel : conceptCarousel;
   const overflowCount = cards.filter((card) => card.overflow).length;
+  const sizeReport = carouselSizeReport(cards.map((card) => card.blob));
   const filteredMovies = useMemo(() => {
     const term = query.trim().toLocaleLowerCase("ko");
     if (!term) return movies.slice(0, 8);
@@ -759,6 +760,10 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
                     </li>
                   ))}
                 </ol>
+                <p className="mt-3 text-xs leading-relaxed text-muted" aria-label="PNG 파일 용량">
+                  장당 {sizeReport.perCard.map(formatCarouselBytes).join(" · ")}<br />
+                  전체 {formatCarouselBytes(sizeReport.total)} · 평균 {formatCarouselBytes(sizeReport.average)} · 최대 {formatCarouselBytes(sizeReport.largest)}
+                </p>
               </>
             ) : (
               <div className="flex aspect-[4/5] max-h-[58dvh] items-center justify-center rounded-xl border border-dashed border-line px-6 text-center text-sm text-muted">
