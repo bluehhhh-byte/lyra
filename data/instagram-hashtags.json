@@ -1,0 +1,29 @@
+{
+ "sets": [
+  {
+   "id": "movie-basic",
+   "kind": "movie",
+   "label": "영화 기본",
+   "tags": []
+  },
+  {
+   "id": "movie-recommendation",
+   "kind": "movie",
+   "label": "영화 추천",
+   "tags": ["영화추천", "오늘의영화"]
+  },
+  {
+   "id": "lyric-basic",
+   "kind": "lyric",
+   "label": "가사 기본",
+   "tags": []
+  },
+  {
+   "id": "lyric-discovery",
+   "kind": "lyric",
+   "label": "음악 발견",
+   "tags": ["노래추천", "음악추천"]
+  }
+ ],
+ "at": "2026-08-27T00:00:00.000Z"
+}

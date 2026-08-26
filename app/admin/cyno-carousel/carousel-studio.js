@@ -457,7 +457,7 @@ async function adminApi(action, body) {
 const inputClass = "w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-base outline-none transition focus:border-accent sm:text-sm";
 const enhancedCopyCache = new Map();
 
-export default function CarouselStudio({ movies, initialMovieId = "", initialConcept = "" }) {
+export default function CarouselStudio({ movies, initialMovieId = "", initialConcept = "", hashtagSets = [] }) {
   const initialMovie = movies.find((movie) => movie.id === initialMovieId) || movies[0] || null;
   const [mode, setMode] = useState(initialConcept ? "concept" : "single");
   const [query, setQuery] = useState(initialMovieId ? initialMovie?.title || "" : "");
@@ -772,7 +772,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
             </button>
             <p className="mt-2 min-h-5 text-xs text-muted" aria-live="polite">{message}</p>
             <AdminErrorMessage message={error} className="mt-2" />
-            {carousel && <Caption carousel={carousel} />}
+            {carousel && <Caption carousel={carousel} hashtagSets={hashtagSets} />}
           </div>
         </section>
       </div>
@@ -789,8 +789,10 @@ function Editor({ label, value, onChange, rows = 3 }) {
   );
 }
 
-function Caption({ carousel }) {
-  const text = buildMovieCarouselCaption(carousel);
+function Caption({ carousel, hashtagSets }) {
+  const [setId, setSetId] = useState(hashtagSets[0]?.id || "");
+  const selectedSet = hashtagSets.find((set) => set.id === setId);
+  const text = buildMovieCarouselCaption(carousel, new Date(), selectedSet?.tags || []);
   const [copied, setCopied] = useState(false);
   return (
     <div className="mt-3 border-t border-line pt-3">
@@ -800,6 +802,14 @@ function Caption({ carousel }) {
           try { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch {}
         }} className="text-xs text-accent hover:underline">{copied ? "복사됨 ✓" : "복사"}</button>
       </div>
+      {hashtagSets.length > 0 && (
+        <label className="mb-2 block text-xs text-muted">
+          해시태그 세트
+          <select value={setId} onChange={(event) => setSetId(event.target.value)} className="ml-2 rounded-md border border-line bg-bg px-2 py-1 text-xs text-ink">
+            {hashtagSets.map((set) => <option key={set.id} value={set.id}>{set.label}</option>)}
+          </select>
+        </label>
+      )}
       <pre className="max-w-full whitespace-pre-wrap break-words rounded-lg border border-line bg-bg px-3 py-2 font-sans text-xs leading-relaxed">{text}</pre>
     </div>
   );

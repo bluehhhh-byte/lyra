@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { getAllMoviesRuntime } from "../../../lib/movies";
 import { carouselMovie } from "../../../lib/movie-carousel";
+import { hashtagSetsFor } from "../../../lib/caption";
+import { readRuntimeData } from "../../../lib/store";
 import CarouselStudio from "./carousel-studio";
 
 export const metadata = { title: "Cyno 캐러셀 제작실 | Cyno" };
 export const dynamic = "force-dynamic";
 
 export default async function CynoCarouselAdminPage({ searchParams }) {
-  const movies = (await getAllMoviesRuntime()).map(carouselMovie);
+  const [rawMovies, hashtagData] = await Promise.all([
+    getAllMoviesRuntime(),
+    readRuntimeData("instagram-hashtags.json", { sets: [] }),
+  ]);
+  const movies = rawMovies.map(carouselMovie);
   const params = (await searchParams) || {};
   const initialMovieId = movies.some((movie) => movie.id === params.movie) ? params.movie : "";
   const initialConcept = typeof params.concept === "string" ? params.concept.trim() : "";
@@ -26,7 +32,12 @@ export default async function CynoCarouselAdminPage({ searchParams }) {
         한 편을 깊게 소개하는 5장 캐러셀이 기본입니다. 여러 작품을 묶을 때만 주제별 큐레이션을 사용하고,
         자동으로 고른 결과를 확인한 뒤 저장하세요.
       </p>
-      <CarouselStudio movies={movies} initialMovieId={initialMovieId} initialConcept={initialConcept} />
+      <CarouselStudio
+        movies={movies}
+        initialMovieId={initialMovieId}
+        initialConcept={initialConcept}
+        hashtagSets={hashtagSetsFor(hashtagData, "movie")}
+      />
     </>
   );
 }
