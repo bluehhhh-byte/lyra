@@ -91,6 +91,15 @@ const AUTH_CHECKS = [
   { url: "/api/admin/deploy", ok: (r) => r.status === 401, desc: "비로그인 배포 요청 → 401" },
   { url: "/admin/login", ok: (r) => r.status === 200, desc: "/admin/login 열림" },
 ];
+const AUTHENTICATED_PAGES = [
+  { url: "/admin", expect: "곡 추가" },
+  { url: "/admin/tools", expect: "관리 도구" },
+  { url: "/admin/movie", expect: "영화 관리" },
+  { url: "/admin/moments", expect: "장면" },
+  { url: "/admin/usage", expect: "무료 사용량" },
+  { url: "/admin/publish-queue", expect: "오늘의 발행 후보" },
+  { url: "/admin/cyno-carousel", expect: "Cyno 캐러셀 제작실" },
+];
 for (const { url, ok, desc } of AUTH_CHECKS) {
   try {
     const res = await fetch(BASE + url, { redirect: "manual", signal: AbortSignal.timeout(10000) });
@@ -115,31 +124,20 @@ try {
   const authCookie = login.headers.get("set-cookie")?.match(/lyra_auth=[^;]+/)?.[0];
   if (!authCookie) throw new Error("인증 쿠키 없음");
 
-  const admin = await fetch(BASE + "/admin", {
-    headers: { cookie: authCookie },
-    redirect: "manual",
-    signal: AbortSignal.timeout(15000),
-  });
-  const body = await admin.text();
-  if (!admin.ok) throw new Error(`HTTP ${admin.status}`);
-  if (!body.includes("곡 추가")) throw new Error("관리자 본문 없음");
-  if (body.includes("An error occurred in the Server Components render")) {
-    throw new Error("Server Component 렌더링 오류");
+  for (const page of AUTHENTICATED_PAGES) {
+    const response = await fetch(BASE + page.url, {
+      headers: { cookie: authCookie },
+      redirect: "manual",
+      signal: AbortSignal.timeout(15000),
+    });
+    const body = await response.text();
+    if (!response.ok) throw new Error(`${page.url} HTTP ${response.status}`);
+    if (!body.includes(page.expect)) throw new Error(`${page.url} 본문에 "${page.expect}" 없음`);
+    if (body.includes("An error occurred in the Server Components render")) {
+      throw new Error(`${page.url} Server Component 렌더링 오류`);
+    }
+    console.log(`  ✓ ${page.url} (로그인 후 Server Component 렌더링)`);
   }
-  console.log("  ✓ /admin (로그인 후 Server Component 렌더링)");
-
-  const adminTools = await fetch(BASE + "/admin/tools", {
-    headers: { cookie: authCookie },
-    redirect: "manual",
-    signal: AbortSignal.timeout(15000),
-  });
-  const toolsBody = await adminTools.text();
-  if (!adminTools.ok) throw new Error(`관리 도구 HTTP ${adminTools.status}`);
-  if (!toolsBody.includes("관리 도구")) throw new Error("관리 도구 본문 없음");
-  if (toolsBody.includes("An error occurred in the Server Components render")) {
-    throw new Error("관리 도구 Server Component 렌더링 오류");
-  }
-  console.log("  ✓ /admin/tools (Server Component 렌더링)");
 
   const deployHealth = await fetch(BASE + "/api/admin/deploy", {
     headers: { cookie: authCookie },
@@ -155,5 +153,5 @@ try {
 }
 
 kill();
-console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length + 2}개 통과`);
+console.log(failed ? `\n${failed}개 실패` : `\n전체 ${CHECKS.length + AUTH_CHECKS.length + AUTHENTICATED_PAGES.length + 1}개 통과`);
 process.exit(failed ? 1 : 0);
