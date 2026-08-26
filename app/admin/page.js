@@ -4,7 +4,7 @@ import { getAllMoviesRuntime } from "../../lib/movies";
 import AdminForm from "./form";
 import SongTools from "./song-tools";
 import DeployControl from "./deploy-control";
-import { contentFallbackActive, databaseContentEnabled } from "../../lib/content-db";
+import { contentFallbackActive, databaseContentEnabled, listRecentContentChanges } from "../../lib/content-db";
 import { toAdminSong } from "../../lib/admin/admin-song";
 import { currentDeployJob } from "../../lib/deploy-jobs";
 import { buildAdminOverview } from "../../lib/admin/dashboard";
@@ -15,12 +15,13 @@ export const dynamic = "force-dynamic"; // auth-gated, never prerender
 
 export default async function AdminPage() {
   const contentInDatabase = databaseContentEnabled();
-  let songs, movies, deployment;
+  let songs, movies, deployment, history;
   try {
-    [songs, movies, deployment] = await Promise.all([
+    [songs, movies, deployment, history] = await Promise.all([
       getAllSongsRuntime(),
       getAllMoviesRuntime(),
       currentDeployJob().catch(() => null),
+      contentInDatabase ? listRecentContentChanges(12).catch(() => []) : Promise.resolve([]),
     ]);
   } catch (error) {
     console.error(JSON.stringify({
@@ -38,6 +39,7 @@ export default async function AdminPage() {
     contentStore: contentInDatabase ? "neon" : "files",
     contentFallback: contentFallbackActive(),
     deployment,
+    history,
   });
   return (
     <>
