@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import CoverImage from "./cover-image";
 import { groupSongs } from "../lib/browse-group";
 import { parseBrowseFilters, serializeBrowseFilters } from "../lib/browse-query";
+import { sortSearchResults } from "../lib/search-rank";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -65,6 +66,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   const [emotion, setEmotion] = useState(initialFilters.emotion); // 취향 페이지 감정 막대에서 온다
   const [decade, setDecade] = useState(initialFilters.decade); // 취향·곡 페이지 연대 링크에서 온다 (예: 2010s)
   const [group, setGroup] = useState(initialFilters.group);
+  const [sort, setSort] = useState(initialFilters.sort);
   const [seed, setSeed] = useState(0); // bump to reshuffle random picks
   // 가사 검색은 서버에 맡긴다 — 예전에는 첫 검색 때 전곡 가사(gzip 757KB)를
   // 통째로 내려받았다. lyricHits는 {q, map: slug → 맞은 줄}이고, 응답의 q가
@@ -78,8 +80,8 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   // 초기 응답은 첫 72곡만 담는다. 전체 목록이 필요한 순간에만 나머지 메타를
   // 가져와 홈 HTML/RSC의 크기와 첫 응답 시간을 줄인다.
   useEffect(() => {
-    if (q.trim() || tag || emotion || decade || group !== "none") void loadAllSongs();
-  }, [q, tag, emotion, decade, group, loadAllSongs]);
+    if (q.trim() || tag || emotion || decade || group !== "none" || sort !== "relevance") void loadAllSongs();
+  }, [q, tag, emotion, decade, group, sort, loadAllSongs]);
 
   // Mirror the filters into the URL so a refresh or a shared link lands on the
   // same view. replaceState, not pushState — one history entry per keystroke
@@ -87,9 +89,9 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   // ponytail: back/forward doesn't step through filter states. Switch to
   // router.push + a debounce if that ever matters.
   useEffect(() => {
-    const qs = serializeBrowseFilters({ q, tag, emotion, decade, group });
+    const qs = serializeBrowseFilters({ q, tag, emotion, decade, group, sort });
     history.replaceState(null, "", qs ? `/?${qs}` : "/");
-  }, [q, tag, group, emotion, decade]);
+  }, [q, tag, group, emotion, decade, sort]);
 
   const needle = q.trim().toLowerCase();
 
@@ -125,23 +127,24 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
         (!needle || s.metaSearch.includes(needle) || Boolean(lyricMap?.[s.slug]))
     );
   }, [needle, tag, emotion, decade, songs, lyricMap]);
+  const sorted = useMemo(() => sortSearchResults(filtered, needle, sort), [filtered, needle, sort]);
 
   // random picks — computed client-side (post-hydration, so no SSR mismatch)
   const randomList = useMemo(() => {
-    const a = [...filtered];
+    const a = [...sorted];
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a.slice(0, RANDOM_PICKS);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filtered, seed]);
+  }, [sorted, seed]);
 
   // 필터·검색이 바뀌면 캡을 처음으로 되돌린다 — 이전 화면에서 늘려 둔 상한이
   // 새 결과에 그대로 남으면 화면마다 초기 크기가 달라진다.
   useEffect(() => {
     setVisibleCount(INITIAL_RENDER);
-  }, [needle, tag, emotion, decade, group]);
+  }, [needle, tag, emotion, decade, group, sort]);
 
   // 렌더 캡은 "전체" 보기에만 적용한다. 초기 SSR이 그리는 것이 바로 이 보기라
   // 페이로드가 걸린 곳이고, 그룹 보기는 클릭 후 클라이언트 렌더라 비용이 다르다.
@@ -149,8 +152,8 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   // 통째로 사라진다 — 그룹 나누기는 언제나 필터된 전체로 한다.
   const capped = group === "none";
   const visible = useMemo(
-    () => (capped ? filtered.slice(0, visibleCount) : filtered),
-    [capped, filtered, visibleCount]
+    () => (capped ? sorted.slice(0, visibleCount) : sorted),
+    [capped, sorted, visibleCount]
   );
   const hiddenCount = (allLoaded ? filtered.length : totalSongs) - visible.length;
 
@@ -161,6 +164,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
     setEmotion("");
     setDecade("");
     setGroup("none");
+    setSort("relevance");
   };
 
   return (
@@ -189,6 +193,12 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           <span className="rounded-full border border-line px-3 py-1 text-xs text-muted">
             총 {totalSongs}곡
           </span>
+          <label className="sr-only" htmlFor="song-sort">결과 정렬</label>
+          <select id="song-sort" value={sort} onChange={(event) => setSort(event.target.value)} className="rounded-full border border-line bg-bg px-3 py-1 text-xs text-muted">
+            <option value="relevance">관련도순</option>
+            <option value="recent">최신 기록순</option>
+            <option value="year">발매 연도순</option>
+          </select>
         </div>
       </div>
 
