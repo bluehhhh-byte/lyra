@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import CardModal from "./lyric-card";
 import { hasReadings, savedReadingVisibility } from "../../../lib/reading-preference";
 import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
+import { formatLyricQuote } from "../../../lib/lyric-quote";
 
 const MODES = [
   { key: "both", label: "둘 다" },
@@ -33,6 +34,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   const [progress, setProgress] = useState(0);
   const [card, setCard] = useState(null); // { lines, initial } for the carousel modal
   const [expandedRepeats, setExpandedRepeats] = useState(() => new Set());
+  const [copiedStanza, setCopiedStanza] = useState(-1);
 
   // the card picker offers every line in the song (section labels included for
   // orientation); the clicked stanza's first lines are just the starting selection
@@ -120,6 +122,13 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   const s = SIZES[size];
   const canToggleReadings = hasReadings(stanzas);
   const displayStanzas = repeatedStanzaDisplay(stanzas);
+  const copyStanza = async (stanza, index) => {
+    try {
+      await navigator.clipboard.writeText(formatLyricQuote(stanza.lines, song, `${location.origin}${location.pathname}#v${index}`));
+      setCopiedStanza(index);
+      setTimeout(() => setCopiedStanza(-1), 1500);
+    } catch {}
+  };
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -196,6 +205,15 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               active === i ? "bg-accent/10" : ""
             }`}
           >
+            {song && stanza.lines.length > 0 && (
+              <button
+                onClick={() => copyStanza(stanza, i)}
+                aria-label="이 구절을 출처와 함께 복사"
+                className="absolute -top-1 right-7 rounded p-1 text-[11px] text-muted/50 transition hover:text-accent"
+              >
+                {copiedStanza === i ? "복사됨" : "복사"}
+              </button>
+            )}
             {song && stanza.lines.length > 0 && (
               <button
                 onClick={() => openCard(i)}
