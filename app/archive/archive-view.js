@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { statYears, monthNarrative, yearNarrative, workLabel } from "../../lib/archive-stats";
+import { statYears, monthSeasonality, monthNarrative, yearNarrative, workLabel } from "../../lib/archive-stats";
 import { archivePath } from "../../lib/archive-paths";
 import { valenceColor } from "../../lib/keywords";
 import CoverImage from "../cover-image";
@@ -66,6 +66,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
   const year = month?.slice(0, 4);
   const yearStats = stats.filter((s) => s.month.startsWith(`${year}-`));
   const yearBio = yearNarrative(stats, year);
+  const seasonal = monthSeasonality(stats);
 
   if (!month) return <p className="py-20 text-center text-sm text-muted">아직 기록이 없습니다.</p>;
 
@@ -163,6 +164,24 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
           <h2 id="year-compare-heading" className="text-lg font-bold">연도 간 정서 비교</h2>
           <p className="mb-4 mt-1 text-xs text-muted">두 해의 같은 달을 동일한 고정 척도 위에 겹쳐 본다.</p>
           <YearCompare stats={stats} years={years} />
+        </section>
+      )}
+
+      {!theme && (
+        <section className="mb-10" aria-labelledby="seasonality-heading">
+          <h2 id="seasonality-heading" className="text-lg font-bold">여러 해의 같은 달</h2>
+          <p className="mb-4 mt-1 text-xs text-muted">같은 달이 3개 연도 이상 기록됐을 때만 계절적 경향을 읽는다.</p>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+            {seasonal.map((row) => (
+              <div key={row.monthNum} className="rounded-xl border border-line bg-surface px-3 py-3">
+                <div className="flex items-baseline justify-between gap-2">
+                  <strong className="text-sm">{row.monthNum}월</strong>
+                  <span className="text-[11px] text-muted">{row.years.length}개 연도</span>
+                </div>
+                <p className="mt-1 text-xs leading-5 text-muted">{row.deferred ? "판단 유보" : row.type}</p>
+              </div>
+            ))}
+          </div>
         </section>
       )}
 
