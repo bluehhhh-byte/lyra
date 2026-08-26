@@ -11,11 +11,14 @@ import { genreTagOf, genreIssue } from "../lib/genre.js";
 import { readData } from "../lib/store.js";
 import { needsKo, isNonLyricLine } from "../lib/admin/needs.js";
 import { translationVariants } from "../lib/translation-variants.js";
+import fs from "node:fs";
+import { specialWhitespaceAt, summarizeSpecialWhitespace } from "../lib/special-whitespace.js";
 
 const errors = [];
 const warns = [];
 const err = (f, msg) => errors.push(`${f}: ${msg}`);
 const warn = (f, msg) => warns.push({ f, msg });
+const whitespaceWarns = [];
 
 const isHttps = (u) => /^https:\/\/\S+$/.test(u || "");
 const validRating = (r) => Number.isFinite(r) && r >= 0.5 && r <= 5 && r * 2 === Math.round(r * 2);
@@ -119,6 +122,17 @@ for (const m of movies) {
   }
 }
 
+// 특수 공백은 원문일 수 있으므로 고치거나 오류로 막지 않는다. 대신 사람이 정확한
+// 파일·줄·열·코드포인트를 보고 판단할 수 있게 한다.
+for (const f of [
+  ...songs.map((song) => `songs/${song.slug}.md`),
+  ...movies.map((movie) => `movies/${movie.slug}.md`),
+  ...fs.readdirSync("data").filter((name) => name.endsWith(".json")).map((name) => `data/${name}`),
+]) {
+  const hits = specialWhitespaceAt(fs.readFileSync(f, "utf8"));
+  if (hits.length) whitespaceWarns.push({ f, hits });
+}
+
 // ── data/watcha-movies.json ─────────────────────────────────────────────────
 // TMDB 원본에도 포스터가 없는 작품 — 채울 소스가 없어 의도된 예외 (2026-08 확인).
 // CoverImage가 제목 블록으로 표시한다. 새 무포스터 항목은 여기 없으면 경고된다.
@@ -182,8 +196,10 @@ if (warns.length > 30) {
   for (const w of warns) console.log(`  ⚠ ${w.f}: ${w.msg}`);
 }
 for (const e of errors) console.log(`  ✗ ${e}`);
+for (const { f, hits } of whitespaceWarns)
+  console.log(`  ⚠ ${f}: 특수 공백 ${summarizeSpecialWhitespace(hits)}`);
 console.log(
   `\n곡 ${songs.length} · 영화 ${movies.length} · 왓챠 ${watched.length}` +
-  ` — 오류 ${errors.length} · 경고 ${warns.length}`
+  ` — 오류 ${errors.length} · 경고 ${warns.length + whitespaceWarns.length}`
 );
 if (errors.length) process.exit(1);
