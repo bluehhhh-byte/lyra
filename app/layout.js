@@ -19,6 +19,11 @@ export const metadata = {
     siteName: "Lyra",
     title: "Lyra — The Words that Shaped the World",
     description: "가사와 번역, 영화와 별점을 시간의 순서로 모은 기록 — 한 줄의 문장이 세계를 이해하는 방식에 남긴 흔적",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Lyra — 가사와 번역, 영화의 기록" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/opengraph-image.png"],
   },
   // iOS ignores the manifest — it needs its own meta tags to install standalone
   appleWebApp: { capable: true, title: "Lyra", statusBarStyle: "black" },
