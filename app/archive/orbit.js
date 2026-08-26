@@ -136,7 +136,7 @@ const mm = (month) => `${Number(month.slice(5))}월`;
 const fmt1 = (n) => (Math.round(n * 10) / 10).toFixed(1);
 
 const pointTitle = (s) =>
-  `${mm(s.month)} · ${s.type}${s.dominant ? ` · 대표 감정 ${s.dominant}` : ""} · 밝기 ${fmt1(s.center.v)} · 각성 ${fmt1(s.center.a)} · ${s.count}개 기록${s.move ? ` · ${s.move}` : ""}`;
+  `${mm(s.month)} · ${s.type}${s.turningPoint ? " · 정서 전환점" : ""}${s.dominant ? ` · 대표 감정 ${s.dominant}` : ""} · 밝기 ${fmt1(s.center.v)} · 각성 ${fmt1(s.center.a)} · ${s.count}개 기록${s.move ? ` · ${s.move}` : ""}`;
 
 // 한글 폭 추정 — 정확한 측정은 브라우저만 할 수 있으니 넉넉하게 잡는다.
 // 좁게 잡으면 clamp가 덜 밀어 글자가 잘린다.
@@ -280,6 +280,7 @@ function OrbitChart({ points, month, monthHref, v, chartId }) {
         return (
           <a key={s.month} href={monthHref(s.month)} aria-label={pointTitle(s)} aria-current={active ? "page" : undefined}>
             <title>{pointTitle(s)}</title>
+            {s.turningPoint && <circle cx={cx} cy={cy} r={r(s) + 8} fill="none" stroke="oklch(0.75 0.16 55)" strokeWidth="2" />}
             {active && <circle cx={cx} cy={cy} r={r(s) + 7} fill="var(--color-accent)" opacity="0.12" />}
             {active && <circle cx={cx} cy={cy} r={r(s) + 4} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
             <circle
@@ -453,6 +454,7 @@ export function EmotionOrbit({ stats, month, monthHref }) {
           점 색은 시간 순서다 — 연초 보라에서 연말 연두로 색이 돈다. 가로 위치가 밝기, 세로가 각성이라
           색까지 밝기에 쓰면 같은 값을 두 번 그리는 셈이라 시간에 내줬다. 모든 해가 같은 −3~+3 척도를 쓴다.
           점 크기는 기록량, 점선 테두리는 감정 기록 3곡 미만, 점선 이동은 빈 달을 건너뛴 구간이다.
+          주황색 바깥 링은 직전 달과의 좌표 거리가 기준을 넘은 정서 전환점이다.
         </p>
       </figcaption>
 
@@ -463,14 +465,14 @@ export function EmotionOrbit({ stats, month, monthHref }) {
         <table>
           <caption>월별 정서 좌표</caption>
           <thead>
-            <tr><th>월</th><th>정서 유형</th><th>대표 감정</th><th>밝기</th><th>각성</th><th>이동</th><th>기록</th></tr>
+            <tr><th>월</th><th>정서 유형</th><th>대표 감정</th><th>밝기</th><th>각성</th><th>이동</th><th>전환점</th><th>기록</th></tr>
           </thead>
           <tbody>
             {points.map((s) => (
               <tr key={s.month}>
                 <td>{mm(s.month)}</td><td>{s.type}</td><td>{s.dominant || "—"}</td>
                 <td>{fmt1(s.center.v)}</td><td>{fmt1(s.center.a)}</td>
-                <td>{s.move || "—"}</td><td>{s.count}개</td>
+                <td>{s.move || "—"}</td><td>{s.turningPoint ? "예" : "아니요"}</td><td>{s.count}개</td>
               </tr>
             ))}
           </tbody>
