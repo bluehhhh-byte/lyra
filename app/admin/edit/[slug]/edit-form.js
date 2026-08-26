@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { clearSongDraft, readSongDraft, writeSongDraft } from "../../../../lib/admin/draft";
+import { hasUnsavedChanges, warnBeforeUnload } from "../../../../lib/admin/unsaved-warning";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -57,6 +58,13 @@ export default function EditForm({ slug }) {
     }, 250);
     return () => clearTimeout(timer);
   }, [raw, slug]);
+
+  useEffect(() => {
+    const beforeUnload = (event) =>
+      warnBeforeUnload(event, hasUnsavedChanges(raw, savedRaw.current));
+    window.addEventListener("beforeunload", beforeUnload);
+    return () => window.removeEventListener("beforeunload", beforeUnload);
+  }, [raw]);
 
   const save = async () => {
     setStatus("저장 중…");
