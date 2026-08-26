@@ -19,7 +19,7 @@ const RANDOM_PICKS = 6;
 const INITIAL_RENDER = 72; // 첫 화면 + 두어 스크롤 분량
 const RENDER_STEP = 240;
 
-export default function Browse({ songs: initialSongs, totalSongs = initialSongs.length }) {
+export default function Browse({ songs: initialSongs, totalSongs = initialSongs.length, availableTags = [] }) {
   const searchParams = useSearchParams();
   const initialFilters = parseBrowseFilters(searchParams);
   const [rawSongs, setRawSongs] = useState(initialSongs);
@@ -63,6 +63,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   );
   const [q, setQ] = useState(initialFilters.q);
   const [tag, setTag] = useState(initialFilters.tag);
+  const [tagDraft, setTagDraft] = useState(initialFilters.tag);
   const [emotion, setEmotion] = useState(initialFilters.emotion); // 취향 페이지 감정 막대에서 온다
   const [decade, setDecade] = useState(initialFilters.decade); // 취향·곡 페이지 연대 링크에서 온다 (예: 2010s)
   const [group, setGroup] = useState(initialFilters.group);
@@ -161,6 +162,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
   const clearFilters = () => {
     setQ("");
     setTag("");
+    setTagDraft("");
     setEmotion("");
     setDecade("");
     setGroup("none");
@@ -177,6 +179,22 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
         <div className="flex flex-wrap gap-1.5">
+          <label className="sr-only" htmlFor="song-tag-filter">태그 필터</label>
+          <input
+            id="song-tag-filter"
+            list="song-tag-options"
+            value={tagDraft}
+            onChange={(event) => {
+              const value = event.target.value;
+              setTagDraft(value);
+              if (!value || availableTags.includes(value)) setTag(value);
+            }}
+            placeholder="태그 필터"
+            className="w-28 rounded-full border border-line bg-bg px-3 py-1 text-xs text-ink outline-none focus:border-accent"
+          />
+          <datalist id="song-tag-options">
+            {availableTags.map((value) => <option key={value} value={value} />)}
+          </datalist>
           {GROUPS.map((g) => (
             <button
               key={g.key}
@@ -207,7 +225,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           <span className="text-muted">{tag ? "태그" : emotion ? "감정" : "연대"}</span>
           {tag && (
             <button
-              onClick={() => setTag("")}
+              onClick={() => { setTag(""); setTagDraft(""); }}
               className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
             >
               {tag} ✕
