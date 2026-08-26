@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllSongsMeta, getSongRuntime } from "../../../lib/songs";
+import { albumCompanions, getAllSongsMeta, getSongRuntime } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
 import { getAllMoviesMeta } from "../../../lib/movies";
@@ -88,6 +88,7 @@ export default async function SongPage({ params }) {
   ]);
   if (!song) notFound();
   const related = relatedSongs(song, all);
+  const albumSongs = albumCompanions(song, all);
   const translation = translationStatus(song);
   const moments = await getMomentsForTarget("song", song.slug);
 
@@ -270,6 +271,15 @@ export default async function SongPage({ params }) {
       )}
 
       <MomentConnections moments={moments} targetKind="song" targetSlug={song.slug} />
+
+      {albumSongs.length > 0 && (
+        <section className="mx-auto mt-16 max-w-2xl" aria-labelledby="album-songs-title">
+          <h2 id="album-songs-title" className="mb-4 text-sm font-semibold text-muted">같은 앨범 · {song.album}</h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {albumSongs.map((item) => <Link key={item.slug} href={`/songs/${item.slug}`} className="group"><CoverImage src={item.artwork} alt="" label={item.title} className="aspect-square w-full rounded-lg border border-line object-cover" /><p className="mt-2 truncate text-xs font-medium group-hover:text-accent">{item.title}</p></Link>)}
+          </div>
+        </section>
+      )}
 
       {/* related */}
       {related.length > 0 && (
