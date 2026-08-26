@@ -56,7 +56,7 @@ export default function ThemeToggle() {
       onClick={next}
       aria-label={`테마: ${TEXT[theme]}. 클릭하면 전환`}
       title="다크 ↔ 라이트"
-      className="flex h-8 items-center gap-1 rounded-md px-2 hover:bg-surface hover:text-accent"
+      className="flex min-h-11 min-w-11 items-center justify-center gap-1 rounded-md px-2 hover:bg-surface hover:text-accent"
     >
       <span aria-hidden>{mounted ? ICON[theme] : "☾"}</span>
       {/* 모바일은 아이콘만 — 헤더 오른쪽이 좁다 */}

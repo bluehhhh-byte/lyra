@@ -81,7 +81,7 @@ export default function SearchDialog({ open, onClose }) {
             placeholder="음악·가사·영화·인물 검색"
             className="min-w-0 flex-1 bg-transparent py-4 text-base outline-none"
           />
-          <button onClick={onClose} className="text-xs text-muted hover:text-accent">닫기</button>
+          <button onClick={onClose} className="min-h-11 px-2 text-xs text-muted hover:text-accent">닫기</button>
         </div>
         <div className="max-h-[calc(80vh-58px)] overflow-y-auto p-3">
           {!query && recent.length > 0 && (
@@ -89,7 +89,7 @@ export default function SearchDialog({ open, onClose }) {
               <h2 className="px-2 py-2 text-[10px] font-semibold uppercase text-muted">최근 검색</h2>
               <div className="flex flex-wrap gap-2 px-2 pb-3">
                 {recent.map((item) => (
-                  <button key={item} onClick={() => setQuery(item)} className="rounded-full border border-line px-3 py-1 text-xs text-muted hover:text-accent">
+                  <button key={item} onClick={() => setQuery(item)} className="min-h-11 rounded-full border border-line px-3 py-1 text-xs text-muted hover:text-accent">
                     {item}
                   </button>
                 ))}
@@ -102,8 +102,8 @@ export default function SearchDialog({ open, onClose }) {
               <p>검색 결과가 없습니다.</p>
               <p className="mt-1 text-xs">검색어를 줄이거나 띄어쓰기를 바꿔 보세요.</p>
               <div className="mt-4 flex flex-wrap justify-center gap-2">
-                <button onClick={() => setQuery("")} className="rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">검색어 지우기</button>
-                <Link href={`/?q=${encodeURIComponent(query.trim())}`} onClick={remember} className="rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">전체 곡에서 찾아보기</Link>
+                <button onClick={() => setQuery("")} className="min-h-11 rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">검색어 지우기</button>
+                <Link href={`/?q=${encodeURIComponent(query.trim())}`} onClick={remember} className="flex min-h-11 items-center rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">전체 곡에서 찾아보기</Link>
               </div>
             </div>
           )}

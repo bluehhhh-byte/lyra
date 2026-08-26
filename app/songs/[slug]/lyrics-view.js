@@ -151,7 +151,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 key={m.key}
                 onClick={() => setMode(m.key)}
-                className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                className={`min-h-11 rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
                   mode === m.key
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -164,7 +164,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => setShowReadings((value) => !value)}
                 aria-pressed={showReadings}
-                className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                className={`min-h-11 rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
                   showReadings
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -181,7 +181,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 onClick={() => setSize(k)}
                 aria-label={`글자 크기 ${k}`}
                 aria-pressed={size === k}
-                className={`rounded-full border px-2 py-1 leading-none transition ${
+                className={`h-11 w-11 rounded-full border px-2 py-1 leading-none transition ${
                   k === "s" ? "text-[10px]" : k === "m" ? "text-xs" : "text-sm"
                 } ${
                   size === k
@@ -209,7 +209,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => copyStanza(stanza, i)}
                 aria-label="이 구절을 출처와 함께 복사"
-                className="absolute -top-1 right-7 rounded p-1 text-[11px] text-muted/50 transition hover:text-accent"
+                className="absolute -top-3 right-11 flex h-11 min-w-11 items-center justify-center rounded px-1 text-[11px] text-muted/50 transition hover:text-accent"
               >
                 {copiedStanza === i ? "복사됨" : "복사"}
               </button>
@@ -219,7 +219,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 onClick={() => openCard(i)}
                 aria-label="이 구절로 인스타그램 캐러셀 만들기"
                 title="캐러셀 만들기"
-                className="absolute -top-1 right-0 rounded p-1 text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
+                className="absolute -top-3 right-0 flex h-11 w-11 items-center justify-center rounded text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                   <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />

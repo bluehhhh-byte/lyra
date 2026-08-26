@@ -46,8 +46,8 @@ function CircleButton({ icon, label, onClick, primary, active, size = 16 }) {
       aria-pressed={active}
       className={
         primary
-          ? "flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-bg transition hover:opacity-90 active:scale-95"
-          : `flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition active:scale-95 ${
+          ? "flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-bg transition hover:opacity-90 active:scale-95"
+          : `flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition active:scale-95 ${
               active
                 ? "border-accent text-accent"
                 : "border-line text-muted hover:border-accent hover:text-accent"

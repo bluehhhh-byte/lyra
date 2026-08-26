@@ -89,7 +89,7 @@ export default function Header() {
           <button
             onClick={() => setSearchOpen(true)}
             aria-label="통합 검색"
-            className="flex h-8 items-center gap-1.5 rounded-full border border-line px-3 hover:border-accent hover:text-accent"
+            className="flex min-h-11 items-center gap-1.5 rounded-full border border-line px-3 hover:border-accent hover:text-accent"
           >
             <span aria-hidden>⌕</span>
             <span className="hidden sm:inline">검색</span>
@@ -101,7 +101,7 @@ export default function Header() {
             href={inMovies ? "/admin/movie" : "/admin"}
             aria-label="관리자"
             title="관리자"
-            className="flex h-8 w-8 items-center justify-center rounded-md hover:bg-surface hover:text-accent"
+            className="flex h-11 w-11 items-center justify-center rounded-md hover:bg-surface hover:text-accent"
           >
             ⚙
           </Link>
@@ -109,7 +109,7 @@ export default function Header() {
             onClick={() => setMenuOpen((value) => !value)}
             aria-expanded={menuOpen}
             aria-label="전체 메뉴"
-            className={`h-8 w-8 rounded-md text-lg hover:bg-surface hover:text-accent ${menuOpen ? "bg-surface text-ink" : ""}`}
+            className={`h-11 w-11 rounded-md text-lg hover:bg-surface hover:text-accent ${menuOpen ? "bg-surface text-ink" : ""}`}
           >
             {menuOpen ? "×" : "☰"}
           </button>
@@ -119,7 +119,7 @@ export default function Header() {
           <div className="absolute right-5 top-16 w-52 rounded-lg border border-line bg-bg p-2 shadow-2xl">
             <div className="border-b border-line pb-2 md:hidden">
               {PRIMARY.map(([href, label]) => (
-                <Link key={href} href={href} className="block rounded px-3 py-2 text-sm hover:bg-surface hover:text-accent">
+                <Link key={href} href={href} className="flex min-h-11 items-center rounded px-3 py-2 text-sm hover:bg-surface hover:text-accent">
                   {label}
                 </Link>
               ))}
@@ -131,7 +131,7 @@ export default function Header() {
                     {groupLabel}
                   </p>
                   {links.map(([href, label]) => (
-                    <Link key={href} href={href} className="flex items-center justify-between rounded px-3 py-2 text-sm hover:bg-surface hover:text-accent">
+                    <Link key={href} href={href} className="flex min-h-11 items-center justify-between rounded px-3 py-2 text-sm hover:bg-surface hover:text-accent">
                       {label}<span className="text-muted">→</span>
                     </Link>
                   ))}
