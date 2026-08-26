@@ -214,3 +214,43 @@ html {
     opacity: 0.6;
   }
 }
+
+@media print {
+  header,
+  footer,
+  nav,
+  button,
+  audio,
+  [role="dialog"],
+  [data-reader-toolbar],
+  .fixed {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  [data-lyric-view] {
+    max-width: none !important;
+    color: #000 !important;
+  }
+
+  [data-lyric-view] .reveal {
+    break-inside: avoid;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-lyric-view] .text-muted,
+  [data-lyric-view] [class*="text-muted/"] {
+    color: #333 !important;
+  }
+}

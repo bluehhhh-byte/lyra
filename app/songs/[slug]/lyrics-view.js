@@ -131,12 +131,12 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   };
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div data-lyric-view className="mx-auto max-w-2xl">
       <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted/60"}`}>
         {missingTranslationCount ? `번역 필요 ${missingTranslationCount}줄` : "번역 상태 · 완료"}
       </p>
       {/* toolbar sticks so mode/size stay reachable deep into a long song */}
-      <div className="sticky top-0 z-20 mb-8 border-b border-line bg-bg/85 py-3 backdrop-blur">
+      <div data-reader-toolbar className="sticky top-0 z-20 mb-8 border-b border-line bg-bg/85 py-3 backdrop-blur">
         <div className="mb-2.5 h-0.5 w-full overflow-hidden rounded-full bg-line">
           {/* scroll-driven: transform tracks the scroll directly — a transition here
               would just lag the input, and width would re-layout on every frame */}
