@@ -35,3 +35,9 @@
 | 가장 큰 상세(하정우) | 17편 | 9.8 KiB | 약 0.5% |
 
 `getAllPeopleRuntime`은 작품 배열을 뺀 요약만 6시간 캐시하고, `getPersonRuntime`은 2,544명 전체 그래프를 만들지 않고 요청한 이름 한 건만 별도 캐시한다. 전량 `generateStaticParams`는 추가하지 않았다. 현재 빌드도 `/people/[name]`을 동적 경로 하나로 보고하며, 2,544개 상세 페이지 정적 생성은 0건이다. 즉 전량 정적화 없이 목록 페이로드를 2 MiB의 3분의 1 아래로 유지한다.
+
+## G-07 · Neon 전송량
+
+관리자 사용량 화면은 Neon `GET /projects/{project_id}`가 돌려주는 현재 결제 주기의 `data_transfer_bytes`를 표시한다. 이 값이 결제 주기 시작에 초기화되는 누적 전송량이라는 점은 [Neon 네트워크 전송 문서](https://neon.com/docs/introduction/network-transfer)의 프로젝트 상세 API 설명을 따른다.
+
+요금제 한도는 바뀔 수 있으므로 코드의 5 GB/500 MB 상수를 제거했다. 배포 환경에서 현재 계약값을 `NEON_TRANSFER_LIMIT_BYTES`, `NEON_STORAGE_LIMIT_BYTES`로 제공한 경우에만 사용률·남은 등록 횟수를 계산한다. 설정하지 않으면 공급자 사용량 자체는 계속 보이되 한도와 안전 상태를 추정하지 않는다. 따라서 오래된 무료 요금제 숫자를 현재 한도처럼 표시하지 않는다.

@@ -45,8 +45,8 @@ function ResourceCard({ label, used, limit, note }) {
   return (
     <section className="rounded-2xl border border-line bg-surface/70 p-5">
       <p className="text-xs text-muted">{label}</p>
-      <p className="mt-2 text-xl font-semibold tabular-nums">{formatBytes(used)} <span className="text-sm font-normal text-muted">/ {formatBytes(limit)}</span></p>
-      <Progress value={used} limit={limit} />
+      <p className="mt-2 text-xl font-semibold tabular-nums">{formatBytes(used)} {limit ? <span className="text-sm font-normal text-muted">/ {formatBytes(limit)}</span> : null}</p>
+      {limit ? <Progress value={used} limit={limit} /> : <p className="mt-3 text-[11px] text-muted">환경변수에 현재 요금제 한도를 설정하면 비율을 계산합니다.</p>}
       {note && <p className="mt-2 text-xs text-muted">{note}</p>}
     </section>
   );
@@ -112,8 +112,8 @@ export default function UsageDashboard() {
 
   const neonMonthly = Number(data?.neonProvider?.dataTransferBytes || 0);
   const style = statusStyle[data?.status?.level] || statusStyle.safe;
-  const remaining = data?.capacity?.remainingUploads || 0;
-  const total = data?.capacity?.totalUploads || 0;
+  const remaining = data?.capacity?.remainingUploads;
+  const total = data?.capacity?.totalUploads;
   const capacityUsed = total ? Math.max(0, Math.min(100, ((total - remaining) / total) * 100)) : 0;
 
   return (
@@ -137,15 +137,15 @@ export default function UsageDashboard() {
         </div>
         <p className="mt-3 text-sm text-muted">가사나 영화 콘텐츠를 지금과 같은 크기로 등록할 경우</p>
         <div className="mt-2 flex flex-wrap items-end gap-x-3 gap-y-1">
-          <p className="text-4xl font-bold tabular-nums sm:text-5xl">약 {integer.format(remaining)}회</p>
+          <p className="text-4xl font-bold tabular-nums sm:text-5xl">{remaining == null ? "한도 설정 필요" : `약 ${integer.format(remaining)}회`}</p>
           <p className="pb-1 text-sm text-muted">더 등록 가능</p>
         </div>
         <div className="mt-6 h-3 overflow-hidden rounded-full bg-line/70">
           <div className={`h-full rounded-full ${style.dot}`} style={{ width: `${capacityUsed}%` }} />
         </div>
         <div className="mt-2 flex justify-between gap-3 text-xs text-muted">
-          <span>남음 {integer.format(remaining)}회</span>
-          <span>전체 안전 기준 {integer.format(total)}회</span>
+          <span>{remaining == null ? "NEON_TRANSFER_LIMIT_BYTES 미설정" : `남음 ${integer.format(remaining)}회`}</span>
+          <span>{total == null ? "공급자 사용량만 표시 중" : `전체 안전 기준 ${integer.format(total)}회`}</span>
         </div>
         <div className="mt-5 grid gap-2 border-t border-line/70 pt-4 text-xs text-muted sm:grid-cols-2">
           <p>1회 등록 후 갱신량 약 <strong className="text-ink">{formatBytes(data?.capacity?.uploadBytes)}</strong></p>
