@@ -10,14 +10,15 @@
 //
 //   node scripts/dump-content.mjs           파일로 쓴다
 //   node scripts/dump-content.mjs --check   무엇이 다른지만 보고 쓰지 않는다
+//   node scripts/dump-content.mjs --verify  SHA-256만 대조하고 쓰지 않는다
 //
 // 다루지 않는 것: lyra_moments(문화적 장면)는 md 대응물이 없어 DB에만 있다.
 import fs from "fs";
 import path from "path";
-import crypto from "crypto";
 import dotenv from "dotenv";
 import { neon } from "@neondatabase/serverless";
 import { CONTENT_DATA_FILES } from "../lib/content-data-files.js";
+import { contentDigest, normalizeStoredContent } from "../lib/content-digest.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -26,11 +27,11 @@ if (!url) throw new Error("DATABASE_URL이 없습니다. .env.local을 확인하
 const sql = neon(url);
 const root = process.cwd();
 const checkOnly = process.argv.includes("--check");
+const verifyOnly = process.argv.includes("--verify");
 
-const digest = (raw) => crypto.createHash("sha256").update(raw).digest("hex");
 // 저장소 파일은 CRLF로 체크아웃될 수 있다. 줄바꿈 차이만으로 "달라졌다"고 하면
 // 윈도우에서는 매번 전량이 바뀐 것처럼 보인다.
-const norm = (raw) => raw.replace(/\r\n/g, "\n");
+const norm = normalizeStoredContent;
 
 const DIRS = { song: "songs", movie: "movies" };
 
@@ -86,7 +87,27 @@ for (const name of CONTENT_DATA_FILES) {
 const byKind = planned.reduce((acc, p) => ({ ...acc, [p.kind]: (acc[p.kind] || 0) + 1 }), {});
 const summary = Object.entries(byKind).map(([k, n]) => `${k} ${n}`).join(" · ") || "변경 없음";
 
-if (checkOnly) {
+const hashMismatches = [];
+for (const row of rows) {
+  const dir = DIRS[row.kind];
+  if (!dir) continue;
+  const file = path.join(root, dir, `${row.slug}.md`);
+  if (!fs.existsSync(file)) hashMismatches.push(`파일 없음 ${dir}/${row.slug}.md`);
+  else if (contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
+    hashMismatches.push(`해시 불일치 ${dir}/${row.slug}.md`);
+}
+for (const row of dataRows) {
+  const file = path.join(root, "data", row.name);
+  if (!fs.existsSync(file)) hashMismatches.push(`파일 없음 data/${row.name}`);
+  else if (contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
+    hashMismatches.push(`해시 불일치 data/${row.name}`);
+}
+
+if (verifyOnly) {
+  console.log(`DB ${rows.length + dataRows.length}행 SHA-256 대조 · 일치 ${rows.length + dataRows.length - hashMismatches.length} · 불일치 ${hashMismatches.length}`);
+  for (const item of hashMismatches) console.log(`  ${item}`);
+  process.exitCode = hashMismatches.length ? 1 : 0;
+} else if (checkOnly) {
   console.log(`DB 곡 ${seen.song.size} · 영화 ${seen.movie.size} · 데이터 ${dataRows.length}`);
   console.log(summary);
   for (const p of planned) console.log(`  ${p.difference} ${p.file}`);
@@ -103,12 +124,12 @@ if (checkOnly) {
     const dir = DIRS[row.kind];
     if (!dir) continue;
     const file = path.join(root, dir, `${row.slug}.md`);
-    if (!fs.existsSync(file) || digest(norm(fs.readFileSync(file, "utf8"))) !== digest(norm(row.raw)))
+    if (!fs.existsSync(file) || contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
       bad.push(`${row.kind}:${row.slug}`);
   }
   for (const row of dataRows) {
     const file = path.join(root, "data", row.name);
-    if (!fs.existsSync(file) || digest(norm(fs.readFileSync(file, "utf8"))) !== digest(norm(row.raw)))
+    if (!fs.existsSync(file) || contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
       bad.push(`data:${row.name}`);
   }
   if (bad.length) {
