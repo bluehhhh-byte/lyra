@@ -434,18 +434,18 @@ Neon Free는 전송 5GB/월, Vercel Hobby는 대역폭 100GB/월이다. **먼저
   - 파일: `app/admin/usage/`
   - 완료: 한도 숫자를 코드에 하드코딩하지 마라
 
-- [ ] **G-08 · 캐시 페이로드 크기 경보**
+- [x] **G-08 · 캐시 페이로드 크기 경보**
   gzip 압축본이 2MB 한도의 90%를 넘으면 경고가 뜨는지 확인하고 없으면 만든다.
   - 근거: 한도 초과 시 **조용히 저장을 건너뛴다.** 캐시가 도는 것처럼 보인다
   - 파일: `lib/content-db.js`의 `packRows`
   - 완료: 경고 로그. 빌드를 실패시키지 마라
 
-- [ ] **G-09 · Vercel Deployment Protection 검토**
+- [x] **G-09 · Vercel Deployment Protection 검토**
   robots.txt는 규약일 뿐이라 함수 도달 자체를 막지 못한다. Hobby에서 쓸 수 있는지 확인한다.
   - 근거: `app/robots.js` 주석과 README에 언급됨. **아직 검증되지 않았다**
   - 완료: 가능·불가능을 근거와 함께 보고. **설정을 바꾸지 마라** — 보고까지만
 
-- [ ] **G-10 · 미사용 CSS**
+- [x] **G-10 · 미사용 CSS**
   `app/globals.css` 187줄에서 안 쓰는 규칙을 찾는다.
   - 완료: 지운 규칙이 어디서도 안 쓰였음을 확인한 근거를 보고에 적는다
 
@@ -453,12 +453,12 @@ Neon Free는 전송 5GB/월, Vercel Hobby는 대역폭 100GB/월이다. **먼저
 
 ### H. 신뢰성과 검증 (10건)
 
-- [ ] **H-01 · 테스트 없는 모듈 12개**
+- [x] **H-01 · 테스트 없는 모듈 12개**
   `diary` `home-song-list` `moments` `music-taste-core` `search-index` `site`
   `static-details` `taste-core` `tmdb-link` `tmdb` `usage-metrics-core` `usage-metrics-db`
   - 완료: 12개 전부가 아니라 **로직이 있는 것부터.** 단순 상수 모듈은 건너뛰고 사유를 적는다
 
-- [ ] **H-02 · global-error 경계**
+- [x] **H-02 · global-error 경계**
   루트 레이아웃에서 터지는 오류를 받을 곳이 없다. `error.js`와 `not-found.js`는 있다.
   - 파일: `app/global-error.js`
   - 완료: 최소한의 화면. 스택을 사용자에게 노출하지 마라
