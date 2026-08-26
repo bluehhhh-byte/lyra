@@ -18,7 +18,7 @@ function sampledSession() {
   }
 }
 
-function observedBytes(after) {
+function observedTransfer(after) {
   let bytes = 0;
   if (after === 0) {
     const navigation = performance.getEntriesByType("navigation")[0];
@@ -31,7 +31,7 @@ function observedBytes(after) {
         bytes += Number(entry.transferSize || 0);
     } catch {}
   }
-  return bytes;
+  return { bytes, cacheStatus: bytes === 0 ? "HIT" : "MISS" };
 }
 
 export default function UsageReporter() {
@@ -42,9 +42,9 @@ export default function UsageReporter() {
     if (!sampledSession()) return;
     const timer = setTimeout(() => {
       const startedAfter = lastMark.current;
-      const bytes = observedBytes(startedAfter);
+      const { bytes, cacheStatus } = observedTransfer(startedAfter);
       lastMark.current = performance.now();
-      const body = JSON.stringify({ bytes });
+      const body = JSON.stringify({ bytes, path: pathname, cacheStatus });
       const blob = new Blob([body], { type: "application/json" });
       if (!navigator.sendBeacon?.("/api/usage", blob))
         fetch("/api/usage", { method: "POST", body, headers: { "Content-Type": "application/json" }, keepalive: true }).catch(() => {});

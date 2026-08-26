@@ -164,6 +164,22 @@ export default function UsageDashboard() {
         <LineChart title="DB 사용 흐름" points={recent} valueKey="neonTransferBytes" color="oklch(0.72 0.13 180)" />
       </div>
 
+      {data?.metricsEnabled && (
+        <section className="mt-5 rounded-2xl border border-line bg-surface/50 p-4 sm:p-5">
+          <h2 className="text-sm font-semibold">경로별 캐시 관측</h2>
+          <p className="mt-1 text-xs text-muted">최근 7일 표본 · 전송 0 byte는 브라우저 HIT, 네트워크 전송은 MISS로 분류</p>
+          <ol className="mt-3 divide-y divide-line text-xs">
+            {(data.cachePaths || []).map((item) => (
+              <li key={item.path} className="flex items-center gap-3 py-2">
+                <code className="min-w-0 flex-1 truncate">{item.path}</code>
+                <span className="text-emerald-600 dark:text-emerald-300">HIT {integer.format(item.hit)}</span>
+                <span className="text-amber-600 dark:text-amber-300">MISS {integer.format(item.miss)}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       <p className="mt-4 text-center text-[11px] leading-5 text-muted">등록 가능 횟수는 현재 콘텐츠 크기를 기준으로 한 예상치이며 30초마다 갱신됩니다.</p>
     </div>
   );
