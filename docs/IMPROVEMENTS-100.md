@@ -221,7 +221,7 @@
 `app/search-dialog.js`와 `app/browse.js`가 이미 있다. 인덱스는
 `data/search-index.json`(2.9MB, gitignore 대상 · 빌드 산출물)다.
 
-- [ ] **D-01 · 검색 결과 하이라이트**
+- [x] **D-01 · 검색 결과 하이라이트**
   일치한 부분을 결과 안에서 강조한다.
   - 파일: `app/search-dialog.js`
   - 완료: 강조가 원문을 변형하지 않는다(표시 레이어만)

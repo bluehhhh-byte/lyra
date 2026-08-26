@@ -4,8 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import CoverImage from "./cover-image";
+import { highlightSegments } from "../lib/search-highlight";
 
 const RECENT_KEY = "lyra_recent_searches";
+
+function Highlight({ value, query }) {
+  return highlightSegments(value, query).map((part, index) =>
+    part.match ? <mark key={index} className="bg-transparent font-semibold text-accent">{part.text}</mark> : part.text
+  );
+}
 
 export default function SearchDialog({ open, onClose }) {
   const pathname = usePathname();
@@ -113,9 +120,9 @@ export default function SearchDialog({ open, onClose }) {
                         </span>
                       )}
                       <span className="min-w-0">
-                        <span className="block truncate text-sm font-medium">{item.title}</span>
-                        <span className="block truncate text-xs text-muted">{item.subtitle}</span>
-                        {item.snippet && <span className="mt-0.5 block truncate text-xs text-muted/70">{item.snippet}</span>}
+                        <span className="block truncate text-sm font-medium"><Highlight value={item.title} query={query} /></span>
+                        <span className="block truncate text-xs text-muted"><Highlight value={item.subtitle} query={query} /></span>
+                        {item.snippet && <span className="mt-0.5 block truncate text-xs text-muted/70"><Highlight value={item.snippet} query={query} /></span>}
                       </span>
                     </>
                   );
