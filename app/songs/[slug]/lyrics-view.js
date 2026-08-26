@@ -22,7 +22,7 @@ const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between
 
 // allowNotes=false on the movie page: inline notes write to the songs store, so
 // a movie slug there would create a bogus song file — movies use `comment` only.
-export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
+export default function LyricsView({ stanzas, lang, song, allowNotes = true, missingTranslationCount = 0 }) {
   const [mode, setMode] = useState("both");
   const [size, setSize] = useState("m");
   const [showReadings, setShowReadings] = useState(true);
@@ -123,6 +123,9 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
 
   return (
     <div className="mx-auto max-w-2xl">
+      <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted/60"}`}>
+        {missingTranslationCount ? `번역 필요 ${missingTranslationCount}줄` : "번역 상태 · 완료"}
+      </p>
       {/* toolbar sticks so mode/size stay reachable deep into a long song */}
       <div className="sticky top-0 z-20 mb-8 border-b border-line bg-bg/85 py-3 backdrop-blur">
         <div className="mb-2.5 h-0.5 w-full overflow-hidden rounded-full bg-line">
@@ -252,6 +255,9 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true }) {
                         {line.ko}
                       </p>
                     ))}
+                  {line.translationMissing && mode !== "trans" && (
+                    <span className="mt-1 inline-block rounded border border-amber-400/40 px-1.5 py-0.5 text-[10px] text-amber-400">번역 필요</span>
+                  )}
                 </div>
                 )
               ))}

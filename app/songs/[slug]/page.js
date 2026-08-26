@@ -18,6 +18,7 @@ import {
   STATIC_SONG_LIMIT,
   recentStaticParams,
 } from "../../../lib/static-details";
+import { translationStatus } from "../../../lib/admin/needs";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
@@ -87,6 +88,7 @@ export default async function SongPage({ params }) {
   ]);
   if (!song) notFound();
   const related = relatedSongs(song, all);
+  const translation = translationStatus(song);
   const moments = await getMomentsForTarget("song", song.slug);
 
   // 컬렉션 안에서 이 곡의 자리 — 같은 장르·감정·시대·권역·아티스트가 몇 곡인지
@@ -211,7 +213,8 @@ export default async function SongPage({ params }) {
 
       {/* lyrics */}
       <LyricsView
-        stanzas={song.stanzas}
+        stanzas={translation.stanzas}
+        missingTranslationCount={translation.count}
         lang={song.lang}
         song={{
           slug: song.slug,
