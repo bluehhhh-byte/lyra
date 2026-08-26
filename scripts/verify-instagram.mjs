@@ -13,7 +13,7 @@ import path from "path";
 import { getAllSongs } from "../lib/songs.js";
 import { adaptPosts, dedupePosts, extractBody, sourceHash, bodyHash } from "../lib/admin/instagram.js";
 import { parseFrontmatter } from "../lib/songs.js";
-import { load as loadCorrections, lineHash } from "../lib/admin/corrections.js";
+import { externalBodyApproval, load as loadCorrections, lineHash } from "../lib/admin/corrections.js";
 
 const exportDir = process.argv[2];
 if (!exportDir) {
@@ -84,6 +84,23 @@ for (const s of songs) {
   const originalAll = extractBody(post.caption).lines; // 대조표는 캡션 원본 그대로를 기록한다
   const original = originalAll.filter((l) => !(commentMerged && /댓글/.test(l)));
   const body = parseFrontmatter(fs.readFileSync(f, "utf8").replace(/\r\n/g, "\n")).body.replace(/\n$/, "").split("\n");
+
+  // 캡션 발췌문을 외부의 전체 가사로 확장한 경우에는 승인 장부의 출처와 양쪽
+  // 본문 해시가 현재 값과 모두 맞아야만 줄 대조를 건너뛴다. 장부만 추가하거나
+  // 이후 본문을 몰래 바꾸면 해시 불일치로 즉시 실패한다.
+  const externalApproval = externalBodyApproval(corrections, s.slug);
+  if (externalApproval) {
+    const sourceDigest = bodyHash(originalAll);
+    const externalLines = body.filter((line) => !/^[>+]/.test(line));
+    const externalDigest = bodyHash(externalLines);
+    if (externalApproval.beforeHash !== sourceDigest || externalApproval.afterHash !== externalDigest) {
+      errors.push(`${f}: 외부 전체 가사 승인 해시 불일치 — 출처 또는 곡 본문을 다시 검토해야 함`);
+    } else {
+      external++;
+      warns.push(`${f}: 승인된 외부 전체 가사 (출처·본문 해시 대조 완료)`);
+    }
+    continue;
+  }
 
   // 원본 줄을 순서대로 따라간다. 파일 쪽 줄은 원본 줄과 같거나, 임포터가 앞에
   // 붙인 `> `/`>^N `를 벗기면 같아야 한다. 그 외 줄은 나중에 붙인 번역만 허용.
