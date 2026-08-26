@@ -13,6 +13,7 @@ import MomentConnections from "../../moment-connections";
 import { crossMatches } from "../../../lib/cross-match";
 import { recentStaticParams } from "../../../lib/static-details";
 import { directorOtherWorks, getWatchedRuntime } from "../../../lib/watched";
+import CoverImage from "../../cover-image";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
