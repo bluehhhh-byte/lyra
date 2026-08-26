@@ -231,7 +231,7 @@
   - 파일: `app/search-dialog.js`
   - 완료: 입력 중에는 단축키가 가로채지 않는다
 
-- [ ] **D-03 · 최근 검색어**
+- [x] **D-03 · 최근 검색어**
   최근 5개를 `localStorage`에 남긴다.
   - 파일: `app/search-dialog.js`
   - 완료: 저장 실패(사생활 보호 모드 등)에도 화면이 정상 동작한다. try/catch

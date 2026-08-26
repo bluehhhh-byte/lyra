@@ -5,8 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import CoverImage from "./cover-image";
 import { highlightSegments } from "../lib/search-highlight";
-
-const RECENT_KEY = "lyra_recent_searches";
+import { readRecentSearches, rememberRecentSearch } from "../lib/search-history";
 
 function Highlight({ value, query }) {
   return highlightSegments(value, query).map((part, index) =>
@@ -24,9 +23,7 @@ export default function SearchDialog({ open, onClose }) {
 
   useEffect(() => {
     if (!open) return;
-    try {
-      setRecent(JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"));
-    } catch {}
+    setRecent(readRecentSearches(localStorage));
     const timer = setTimeout(() => inputRef.current?.focus(), 30);
     return () => clearTimeout(timer);
   }, [open]);
@@ -59,9 +56,8 @@ export default function SearchDialog({ open, onClose }) {
   const remember = () => {
     const value = query.trim();
     if (!value) return;
-    const next = [value, ...recent.filter((item) => item !== value)].slice(0, 5);
+    const next = rememberRecentSearch(localStorage, recent, value);
     setRecent(next);
-    localStorage.setItem(RECENT_KEY, JSON.stringify(next));
   };
 
   if (!open) return null;
