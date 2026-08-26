@@ -352,7 +352,7 @@ Cyno(영화) 양쪽에 있다.
   - 파일: `app/admin/cyno-carousel/carousel-studio.js`
   - 완료: 파일명이 순서대로 붙는다(01~05)
 
-- [ ] **F-02 · 발행 완료 표시**
+- [x] **F-02 · 발행 완료 표시**
   올린 것을 표시해 대기열에서 뺀다.
   - 파일: `app/admin/publish-queue/`, `lib/publish-candidates.js`
   - 완료: 완료 표시가 남아 다음에 다시 안 뜬다

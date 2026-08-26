@@ -1,32 +1,13 @@
 import Link from "next/link";
 import { getAllMoviesRuntime } from "../../../lib/movies";
 import { publishCandidates, unwrittenHighRatedCandidates } from "../../../lib/publish-candidates";
+import { readRuntimeData } from "../../../lib/store";
 import { getWatchedRuntime } from "../../../lib/watched";
 import { tmdbUrl } from "../../../lib/tmdb-link";
+import PublishCandidateCard from "./publish-candidate-card";
 
 export const metadata = { title: "발행 후보 | Cyno" };
 export const dynamic = "force-dynamic";
-
-function CandidateCard({ item }) {
-  return (
-    <li>
-      <Link
-        href={`/admin/cyno-carousel?movie=${encodeURIComponent(item.slug)}`}
-        className="group grid h-full grid-cols-[64px_minmax(0,1fr)] gap-3 rounded-2xl border border-line bg-surface p-3 transition hover:border-accent/60"
-      >
-        <img src={item.poster} alt="" className="aspect-[2/3] w-16 rounded-lg border border-line object-cover" />
-        <span className="min-w-0 self-center">
-          <span className="block truncate font-semibold group-hover:text-accent">{item.title}</span>
-          <span className="mt-0.5 block truncate text-xs text-muted">
-            {[item.director, item.rating == null ? "" : `★${item.rating.toFixed(1)}`].filter(Boolean).join(" · ")}
-          </span>
-          <span className="mt-2 block text-xs leading-relaxed text-muted">{item.reason}</span>
-          <span className="mt-2 block text-xs font-semibold text-accent">이 작품으로 만들기 →</span>
-        </span>
-      </Link>
-    </li>
-  );
-}
 
 function CandidateSection({ title, description, items }) {
   if (!items.length) return null;
@@ -35,15 +16,19 @@ function CandidateSection({ title, description, items }) {
       <h2 className="text-lg font-bold">{title}</h2>
       <p className="mt-1 text-sm text-muted">{description}</p>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((item) => <CandidateCard key={item.slug} item={item} />)}
+        {items.map((item) => <PublishCandidateCard key={item.slug} item={item} />)}
       </ul>
     </section>
   );
 }
 
 export default async function PublishQueuePage() {
-  const [movies, watched] = await Promise.all([getAllMoviesRuntime(), getWatchedRuntime()]);
-  const candidates = publishCandidates(movies);
+  const [movies, watched, published] = await Promise.all([
+    getAllMoviesRuntime(),
+    getWatchedRuntime(),
+    readRuntimeData("instagram-published.json", { items: [], at: "" }),
+  ]);
+  const candidates = publishCandidates(movies, { published });
   const unwritten = unwrittenHighRatedCandidates(watched, movies);
   return (
     <>
@@ -55,7 +40,7 @@ export default async function PublishQueuePage() {
         <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent sm:ml-auto">← 영화 관리로</Link>
       </header>
       <p className="max-w-3xl rounded-xl border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
-        최근 기록과 높은 별점, 반복되는 테마만으로 고른다. 발행 이력은 따로 저장하지 않으므로 이미 올린 작품인지 마지막 판단은 사람이 한다.
+        최근 기록과 높은 별점, 반복되는 테마만으로 고른다. 올린 작품은 발행 완료로 표시하면 다음 대기열부터 제외된다.
       </p>
 
       <section className="mt-10">
