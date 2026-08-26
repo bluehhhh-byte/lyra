@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import AdminErrorMessage from "../error-message";
+import InstagramCaptionPreview from "../../caption-preview";
 import { carouselDownloadEntries } from "../../../lib/carousel";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords } from "../../../lib/movie-carousel";
@@ -810,7 +811,7 @@ function Caption({ carousel, hashtagSets }) {
           </select>
         </label>
       )}
-      <pre className="max-w-full whitespace-pre-wrap break-words rounded-lg border border-line bg-bg px-3 py-2 font-sans text-xs leading-relaxed">{text}</pre>
+      <InstagramCaptionPreview text={text} className="bg-bg" />
     </div>
   );
 }

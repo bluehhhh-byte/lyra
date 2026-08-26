@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { buildMovieCaption } from "../../../lib/caption";
+import InstagramCaptionPreview from "../../caption-preview";
 import { loadImage, wrap } from "../../songs/[slug]/lyric-card";
 
 // Movie share card — 1080×1350. Blurred poster background, the poster itself,
@@ -241,9 +242,7 @@ function Caption({ movie }) {
           {copied ? "복사됨 ✓" : "복사"}
         </button>
       </div>
-      <pre className="whitespace-pre-wrap rounded-lg border border-line bg-surface px-3 py-2 font-sans text-xs leading-relaxed text-ink">
-        {text}
-      </pre>
+      <InstagramCaptionPreview text={text} />
     </div>
   );
 }

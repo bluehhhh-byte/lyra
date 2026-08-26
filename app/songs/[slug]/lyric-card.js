@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { buildCaption } from "../../../lib/caption";
+import InstagramCaptionPreview from "../../caption-preview";
 import {
   buildCarousel,
   autoSelect,
@@ -703,9 +704,7 @@ function Caption({ song }) {
           {copied ? "복사됨 ✓" : "복사"}
         </button>
       </div>
-      <pre className="whitespace-pre-wrap rounded-lg border border-line bg-surface px-3 py-2 font-sans text-xs leading-relaxed text-ink">
-        {text}
-      </pre>
+      <InstagramCaptionPreview text={text} />
     </div>
   );
 }
