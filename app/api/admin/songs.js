@@ -16,6 +16,11 @@ import { kstToday } from "../../../lib/kst";
 import { summarizeMusicTaste } from "../../../lib/music-taste-core";
 import { makeBasedOnCleaner } from "../../../lib/admin/based-on";
 import { TYPES as CORRECTION_TYPES, lineHash } from "../../../lib/admin/corrections";
+import {
+  correctionEvidenceRows,
+  correctionEvidenceState,
+  correctionEvidenceSummary,
+} from "../../../lib/admin/correction-evidence";
 import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
@@ -921,15 +926,44 @@ ${listed}`,
       (r.includes("댓글에서 복원") ? 6 : 0) + (r.includes("병합 번역") ? 5 : 0) +
       (r.includes("긴 캡션") ? 4 : 0) + (r.includes("Claude 영어 번역") ? 3 : 0) + (r.includes("일본어") ? 2 : 0);
     risky.sort((a, b) => rank(b.reasons) - rank(a.reasons) || b.lines - a.lines);
-    return Response.json({ items: risky.filter((r) => r.reasons.length && !r.verifiedAt).slice(0, 200), total: songs.length });
+    const songNames = new Map(songs.map((song) => [song.slug, { title: song.title, artist: song.artist }]));
+    const evidenceItems = correctionEvidenceRows(items)
+      .filter((item) => item.evidenceState !== "documented")
+      .map((item) => ({ ...item, ...(songNames.get(item.slug) || {}) }));
+    return Response.json({
+      items: risky.filter((r) => r.reasons.length && !r.verifiedAt).slice(0, 200),
+      total: songs.length,
+      evidence: { summary: correctionEvidenceSummary(items), items: evidenceItems },
+    });
   }
 
   if (action === "auditSong") {
     const song = await readSong(body.slug);
     if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
-    const items = ((await readRuntimeData(CORRECTIONS_FILE, { items: [] })).items || []).filter((c) => c.slug === body.slug);
+    const items = correctionEvidenceRows((await readRuntimeData(CORRECTIONS_FILE, { items: [] })).items || [])
+      .filter((c) => c.slug === body.slug);
     const raw = song.raw.replace(/\r\n/g, "\n");
     return Response.json({ raw, corrections: items });
+  }
+
+  // 기존 교정 기록의 근거 URL만 보완한다. 본문과 해시는 건드리지 않으며,
+  // append-only 장부에서 계산한 식별자로 정확한 한 항목만 갱신한다.
+  if (action === "auditEvidenceSave") {
+    const evidenceId = String(body.evidenceId || "");
+    const sourceUrl = String(body.sourceUrl || "").trim();
+    if (correctionEvidenceState({ sourceUrl }) !== "documented")
+      return Response.json({ error: "http 또는 https 근거 URL이 필요합니다" }, { status: 422 });
+    const store = await readRuntimeData(CORRECTIONS_FILE, { items: [] });
+    const list = store.items || [];
+    const rows = correctionEvidenceRows(list);
+    const index = rows.findIndex((item) => item.evidenceId === evidenceId);
+    if (index < 0) return Response.json({ error: "교정 기록을 찾을 수 없습니다" }, { status: 404 });
+    list[index] = { ...list[index], sourceUrl, evidenceReviewedAt: new Date().toISOString() };
+    await commitFiles([{
+      path: `data/${CORRECTIONS_FILE}`,
+      content: `${JSON.stringify({ items: list, at: new Date().toISOString() }, null, 1)}\n`,
+    }], `docs(lyrics): add correction evidence — ${list[index].slug}`);
+    return Response.json({ ok: true, evidenceId, sourceUrl, evidenceState: "documented" });
   }
 
   // 한 곡의 검토 결과 저장 — 본문을 바꿨으면 바뀐 줄마다 근거가 있어야 한다
@@ -947,6 +981,8 @@ ${listed}`,
         return Response.json({ error: `교정 종류가 목록 밖: ${c.type}` }, { status: 422 });
       if (!String(c.reason || "").trim())
         return Response.json({ error: "교정 사유(reason)가 비어 있습니다" }, { status: 422 });
+      if (correctionEvidenceState({ sourceUrl: c.sourceUrl }) !== "documented")
+        return Response.json({ error: "교정 근거 URL이 필요합니다" }, { status: 422 });
     }
     let out = after;
     if (verifiedAt) {

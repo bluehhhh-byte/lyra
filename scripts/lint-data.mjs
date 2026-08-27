@@ -11,6 +11,12 @@ import { genreTagOf, genreIssue } from "../lib/genre.js";
 import { readData } from "../lib/store.js";
 import { needsKo, isNonLyricLine } from "../lib/admin/needs.js";
 import { translationVariants } from "../lib/translation-variants.js";
+import {
+  buildTranslationReviewIndex,
+  needsLyricMetadata,
+  unresolvedTranslationVariants,
+  unreviewedEchoLines,
+} from "../lib/data-quality-review.js";
 import fs from "node:fs";
 import { specialWhitespaceAt, summarizeSpecialWhitespace } from "../lib/special-whitespace.js";
 import { validateFrontmatter } from "../lib/admin/frontmatter.js";
@@ -20,6 +26,12 @@ const warns = [];
 const err = (f, msg) => errors.push(`${f}: ${msg}`);
 const warn = (f, msg) => warns.push({ f, msg });
 const whitespaceWarns = [];
+let translationReview = buildTranslationReviewIndex();
+try {
+  translationReview = buildTranslationReviewIndex(JSON.parse(fs.readFileSync("data/translation-consistency-audit.json", "utf8")));
+} catch {
+  warn("data/translation-consistency-audit.json", "번역 감사 기록을 읽지 못해 검토 완료 경고를 제외하지 못함");
+}
 
 const isHttps = (u) => /^https:\/\/\S+$/.test(u || "");
 const validRating = (r) => Number.isFinite(r) && r >= 0.5 && r <= 5 && r * 2 === Math.round(r * 2);
@@ -50,8 +62,8 @@ for (const s of songs) {
   }
   // emotion은 닫힌 목록 — 파서(parseEmotion)가 조용히 버리는 값을 여기서 드러낸다
   if (s.emotion && !EMOTIONS.includes(s.emotion)) err(f, `emotion이 목록 밖: "${s.emotion}"`);
-  if (!s.emotion) warn(f, "emotion 없음 (admin 키워드·감정 일괄 추출로 채움)");
-  if (!s.keywords?.length) warn(f, "keywords 없음");
+  if (needsLyricMetadata(s) && !s.emotion) warn(f, "emotion 없음 (admin 키워드·감정 일괄 추출로 채움)");
+  if (needsLyricMetadata(s) && !s.keywords?.length) warn(f, "keywords 없음");
 
   // 번역 누락 — en/ja 곡의 가사 줄에는 `>` 번역이 붙어야 한다 (ko는 원문만).
   // `>^N`으로 아래 줄 번역이 덮는 줄(koMerged)은 누락이 아니다.
@@ -79,12 +91,12 @@ for (const s of songs) {
   if (orphan) err(f, `원문 없이 번역만 있는 줄 ${orphan}개 (붙일 원문을 못 찾음)`);
 
   // 번역이 원문과 글자까지 같으면 번역이 아니라 복사다
-  const echo = lines.filter((l) => l.en?.trim() && l.ko?.trim() && l.en.trim() === l.ko.trim()).length;
+  const echo = unreviewedEchoLines(s.slug, lines, translationReview).length;
   if (echo) warn(f, `번역이 원문과 동일한 줄 ${echo}개`);
 
   // 같은 원문 줄에 서로 다른 번역이 붙어 있으면 후렴 하나가 두 가지로 읽힌다.
   // (의도한 변주일 수 있어 경고 — 감사 화면에서 확인한다)
-  const split = translationVariants(lines).length;
+  const split = unresolvedTranslationVariants(s.slug, translationVariants(lines), translationReview).length;
   if (split) warn(f, `같은 원문에 다른 번역이 붙은 구절 ${split}개`);
 
   // 캡션 흔적이 가사에 남은 경우 — 해시태그, 날짜 태그, 연도만 있는 줄

@@ -587,13 +587,6 @@
 - **원슈타인 — Single** · `Single again (again, single again)` (2회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
 - **VMC — 티키타카** · `뒷좌석에 탑승 VMC에 들려` (1회): 유지 — 고유명사·제목 훅·감탄사·보컬라이즈·한국어 원문이라 그대로 둔다.
 
-## emotion·keywords 누락(범위 밖)
+## 가사 감정·핵심어 누락
 
-- lionclad-uloveuwaitingu: emotion, keywords
-- kirara-vc19111: emotion, keywords
-- hiromi-tomoaki-bada-shun-ishiwaka-n-e-w: emotion, keywords
-- steve-vai-the-crying-machine: emotion, keywords
-- kirara-wish: emotion, keywords
-- siam-shade-triptych: emotion, keywords
-- 봄여름가을겨울-못다한-내-마음을: emotion, keywords
-- bimini-can-t-hold-me-back: emotion, keywords
+없음. 연주곡과 가사 없음 확인 곡은 가사 기반 메타데이터 대상에서 제외한다.

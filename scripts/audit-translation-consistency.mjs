@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { getAllSongs } from "../lib/songs.js";
+import { needsLyricMetadata } from "../lib/data-quality-review.js";
 
 const SNAPSHOT_PATH = "data/translation-consistency-audit.json";
 const REPORT_PATH = "docs/TRANSLATION-CONSISTENCY-AUDIT.md";
@@ -198,7 +199,7 @@ function echoReview(songs) {
 
 function missingMetadata(songs) {
   return songs
-    .filter((song) => !song.emotion || !song.keywords?.length)
+    .filter((song) => needsLyricMetadata(song) && (!song.emotion || !song.keywords?.length))
     .map((song) => ({
       slug: song.slug,
       title: song.title,
@@ -246,9 +247,11 @@ function markdown(snapshot) {
     const action = item.decision === "fill_missing" ? `누락 보완 → \`${item.replacement}\`` : "유지";
     lines.push(`- **${item.artist} — ${item.title}** · \`${item.original}\` (${item.occurrences}회): ${action} — ${item.reason}`);
   }
-  lines.push("", "## emotion·keywords 누락(범위 밖)", "");
-  for (const item of snapshot.missingMetadata) {
-    lines.push(`- ${item.slug}: ${item.missing.join(", ")}`);
+  lines.push("", "## 가사 감정·핵심어 누락", "");
+  if (!snapshot.missingMetadata.length) {
+    lines.push("없음. 연주곡과 가사 없음 확인 곡은 가사 기반 메타데이터 대상에서 제외한다.");
+  } else {
+    for (const item of snapshot.missingMetadata) lines.push(`- ${item.slug}: ${item.missing.join(", ")}`);
   }
   lines.push("");
   return lines.join("\n");
@@ -279,6 +282,7 @@ if (process.argv.includes("--capture")) {
   const snapshot = JSON.parse(fs.readFileSync(SNAPSHOT_PATH, "utf8"));
   snapshot.records = snapshot.records.map((record) => ({ ...record, ...classify(record) }));
   snapshot.counts = counts(snapshot.records);
+  snapshot.missingMetadata = missingMetadata(songs);
   fs.writeFileSync(SNAPSHOT_PATH, `${JSON.stringify(snapshot, null, 2)}\n`);
   fs.writeFileSync(REPORT_PATH, markdown(snapshot));
   console.log(JSON.stringify({ records: snapshot.records.length, counts: snapshot.counts }));
