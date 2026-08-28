@@ -3,6 +3,7 @@ import { valenceColor, emotionValence } from "../../lib/keywords";
 import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
 import { axisRange, placeLabels, clampLabel } from "../../lib/orbit-layout";
 import { compareYearStats, workLabel } from "../../lib/archive-stats";
+import { OrbitReplayButton } from "./orbit-replay-button";
 
 // 감정 궤도 — 선택 연도의 월들을 valence(가로)·arousal(세로) 평면에 놓고 시간
 // 순서를 화살표로 잇는다. 전부 서버 렌더링 SVG + 링크라 JS 없이도 키보드로
@@ -26,7 +27,8 @@ const VARIANTS = {
 const DOMAIN = [-3, 3];
 const GRID_TICKS = [-2, -1, -0.5, 0.5, 1, 2];
 const ORBIT_MIN_SPAN = 1.8;
-const ORBIT_POINT_STEP_MS = 360;
+// 한 달의 점과 이동선을 충분히 읽은 뒤 다음 달로 넘어간다. 12개월이면 약 14초다.
+const ORBIT_POINT_STEP_MS = 1200;
 
 const COMPARE = { W: 760, H: 440, PAD: 54 };
 
@@ -273,7 +275,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
             stroke={timeColor(i + 1, points.length)} strokeWidth={moveWidth}
             strokeDasharray={s.prev?.gap > 0 ? "0.08 0.05" : "1"}
             markerEnd={`url(#${chartId}-arrow)`} opacity={opacity}
-            style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS + 80}ms`, "--orbit-opacity": opacity }}
+            style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS + 240}ms`, "--orbit-opacity": opacity }}
           />
         );
       })}
@@ -467,11 +469,12 @@ export function EmotionOrbit({ stats, month, monthHref }) {
           />
           <span className="shrink-0">{mm(points.at(-1).month)}</span>
         </div>
-        <div className="mt-2 flex flex-wrap gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-line px-2 py-1">점·선 · 1월부터 순차 재생</span>
+        <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
+          <span className="rounded-full border border-line px-2 py-1">점·선 · 약 1.2초 간격 순차 재생</span>
+          <OrbitReplayButton />
           <span className="rounded-full border border-line px-2 py-1">크기 · 기록량</span>
           <span className="rounded-full border border-line px-2 py-1">점선 · 기록 부족 또는 빈 달</span>
-          <span className="rounded-full border border-line px-2 py-1">주황 링 · 정서 전환점</span>
+          <span className="rounded-full border border-line px-2 py-1">주황 링 · 직전 연속 월 대비 좌표 1.25 이상 이동</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
           한 해의 좌표 범위를 넓게 사용해 월별 이동 차이를 강조했다. 연도 간 절대 좌표는 아래 비교 그래프에서 확인한다.

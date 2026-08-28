@@ -192,13 +192,13 @@ html {
   }
 }
 .orbit-segment {
-  animation: orbit-draw 0.28s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
+  animation: orbit-draw 0.86s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
 }
 .orbit-point {
   opacity: 0;
   transform-box: fill-box;
   transform-origin: center;
-  animation: orbit-point-reveal 0.32s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
+  animation: orbit-point-reveal 0.56s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
 }
 
 /* theme switch: the toggle animates ::view-transition-new(root) as an
