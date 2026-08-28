@@ -131,6 +131,11 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
               기록의 성격 · {monthStat.character}
             </p>
           )}
+          <div className="mb-6 min-w-0 sm:hidden">
+            <h3 className="mb-1 text-sm font-semibold">월별 추이</h3>
+            <p className="mb-3 text-xs text-muted">먼저 시간 순서로 변화를 보고, 아래 지도에서 위치를 확인한다.</p>
+            <EmotionTrend stats={yearStats} year={year} />
+          </div>
           {/* 감정 구성은 이름·막대·수치가 한 행인 목록이라 좁은 칸이면 충분하다.
               궤도 그래프에 남는 폭을 주는 편이 점과 라벨을 읽기 쉽다 */}
           <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
@@ -146,7 +151,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
           {/* 같은 좌표를 시간축으로 편 그림. 지도는 "어디에 있었나"를, 이쪽은
               "언제 어떻게 움직였나"를 답한다 — 척도가 고정이라 지도에서는
               이동 폭이 작아 보이는데 여기서는 열두 칸으로 벌어진다 */}
-          <div className="mt-8 min-w-0">
+          <div className="mt-8 hidden min-w-0 sm:block">
             <h3 className="mb-1 text-sm font-semibold">월별 추이</h3>
             <p className="mb-3 text-xs text-muted">지도의 점을 시간 순서로 편 것이다.</p>
             <EmotionTrend stats={yearStats} year={year} />

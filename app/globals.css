@@ -178,7 +178,7 @@ html {
   }
   to {
     stroke-dashoffset: 0;
-    opacity: 0.6;
+    opacity: var(--orbit-opacity, 0.6);
   }
 }
 .orbit-segment {
@@ -211,7 +211,7 @@ html {
   }
   .orbit-segment {
     stroke-dashoffset: 0;
-    opacity: 0.6;
+    opacity: var(--orbit-opacity, 0.6);
   }
 }
 
