@@ -3,7 +3,6 @@ import { valenceColor, emotionValence } from "../../lib/keywords";
 import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
 import { axisRange, placeLabels, clampLabel } from "../../lib/orbit-layout";
 import { compareYearStats, workLabel } from "../../lib/archive-stats";
-import OrbitScaleToggle from "./orbit-scale-toggle";
 
 // 감정 궤도 — 선택 연도의 월들을 valence(가로)·arousal(세로) 평면에 놓고 시간
 // 순서를 화살표로 잇는다. 전부 서버 렌더링 SVG + 링크라 JS 없이도 키보드로
@@ -16,21 +15,18 @@ import OrbitScaleToggle from "./orbit-scale-toggle";
 // 이동했는가"다. 마크가 크면 점끼리 뭉치고 화살표가 겹쳐, 판이 아니라 마크를 읽게 된다.
 // rBase/rMax/rK가 점 반지름(rBase + min(rMax, √count × rK)), aw가 화살표 굵기다.
 //
-// 2026-08: 점을 더 줄였다. 모든 해가 같은 −3~+3 척도를 쓰는데 실제 월 좌표는
-// 40개월 중 37개가 ±1.5 안에 있다. 점들이 판 가운데 뭉치는 그림이라, 마크가 크면
-// 서로 겹쳐 어느 달이 어디인지 읽히지 않았다. 척도는 연도 비교를 위해 그대로 두고
-// 마크만 줄인다.
-//
-// 2026-08(2): 판을 더 키우고 점을 더 줄였다. 판이 넓어야 라벨이 놓일 자리가 생기고,
-// 점이 작아야 라벨이 점을 피해 갈 여지가 남는다. 둘은 같은 문제의 양면이다 —
-// 이 그림에서 읽어야 하는 것은 마크의 크기가 아니라 마크가 놓인 자리다.
+// 선택한 해의 좌표 범위를 최소 폭 안에서 확대해 월 사이 이동을 읽기 쉽게 만든다.
+// 연도 사이 절대 위치 비교는 아래의 고정 척도 비교 그래프가 담당한다. 판이 넓어야
+// 라벨이 놓일 자리가 생기고, 점이 작아야 라벨이 점을 피해 갈 여지가 남는다.
 const VARIANTS = {
-  mobile: { key: "m", W: 360, H: 480, PAD: 44, fs: 12, axisFs: 11, quadFs: 10, labelW: 30, labelH: 14, rBase: 2.2, rMax: 2.2, rK: 0.55, aw: 1.1 },
-  desktop: { key: "d", W: 760, H: 560, PAD: 54, fs: 12, axisFs: 11, quadFs: 11, labelW: 30, labelH: 14, rBase: 1.8, rMax: 2.2, rK: 0.5, aw: 1 },
+  mobile: { key: "m", W: 380, H: 430, PAD: 44, fs: 12, axisFs: 11, quadFs: 10, labelW: 30, labelH: 14, rBase: 2.2, rMax: 2.2, rK: 0.55, aw: 1.1 },
+  desktop: { key: "d", W: 960, H: 520, PAD: 58, fs: 12, axisFs: 11, quadFs: 11, labelW: 30, labelH: 14, rBase: 1.8, rMax: 2.2, rK: 0.5, aw: 1.1 },
 };
 
 const DOMAIN = [-3, 3];
 const GRID_TICKS = [-2, -1, -0.5, 0.5, 1, 2];
+const ORBIT_MIN_SPAN = 1.8;
+const ORBIT_POINT_STEP_MS = 360;
 
 const COMPARE = { W: 760, H: 440, PAD: 54 };
 
@@ -148,13 +144,14 @@ const textWidth = (text, fs) => {
   return units * fs;
 };
 
-function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAIN, a: DOMAIN }, focused = false }) {
+function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
   const { W, H, PAD, fs, axisFs, quadFs, labelW, labelH, rBase, rMax, rK, aw } = v;
   const r = (s) => rBase + Math.min(rMax, Math.sqrt(s.count) * rK);
   const T = MOOD_NEUTRAL_BAND;
 
-  // 전체 보기는 모든 연도에 같은 -3..3 척도를 쓰고, 확대 보기는 명시적으로 전환했을
-  // 때만 해당 연도의 범위를 쓴다. 확대 상태는 그래프 위 안내로 비교 용도가 아님을 밝힌다.
+  // 이 지도는 한 해 안의 움직임을 읽는 그림이므로 그해 데이터 범위를 쓴다. 최소 폭을
+  // 보장해 작은 흔들림이 판 전체를 가르는 것처럼 과장되지는 않게 한다. 연도 간 절대
+  // 좌표 비교는 아래의 고정 척도 비교 그래프가 담당한다.
   const [vLo, vHi] = domains.v;
   const [aLo, aHi] = domains.a;
   const sx = (val) => PAD + ((val - vLo) / (vHi - vLo)) * (W - PAD * 2);
@@ -162,8 +159,6 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
   const clampX = (x) => Math.max(PAD, Math.min(W - PAD, x));
   const clampY = (y) => Math.max(PAD, Math.min(H - PAD, y));
   const box = { width: W, height: H, pad: 5 };
-  const activeIndex = Math.max(0, points.findIndex((s) => s.month === month));
-
   // 월 라벨이 서로/점과 겹치지 않게 자리를 먼저 잡고, viewBox 밖으로 나가면 안으로 민다
   const px = points.map((s) => ({ x: sx(s.center.v), y: sy(s.center.a) }));
   const labelPos = placeLabels(
@@ -201,8 +196,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
     { text: "→ 밝음", x: W - PAD, y: H - PAD + 32, anchor: "end" },
   ].map((a) => ({ ...a, ...clampLabel({ x: a.x, y: a.y, anchor: a.anchor, w: textWidth(a.text, axisFs), h: axisFs }, box) }));
 
-  // 뷰포트를 채우도록 늘리지 않는다 — 점 열두 개짜리 그림이 화면 폭만큼 커지면
-  // 여백만 넓어지고 글자 대비 그림이 성겨져 오히려 읽기 어렵다
+  // 가로로 넓은 단일 판을 사용해 월별 이동과 라벨 사이 간격을 충분히 확보한다.
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
@@ -225,7 +219,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
       <rect x={sx(0)} y={PAD} width={W - PAD - sx(0)} height={sy(0) - PAD} fill={valenceColor(2)} opacity="0.07" />
       <rect x={PAD} y={sy(0)} width={sx(0) - PAD} height={H - PAD - sy(0)} fill={valenceColor(-2)} opacity="0.035" />
       <rect x={sx(0)} y={sy(0)} width={W - PAD - sx(0)} height={H - PAD - sy(0)} fill={valenceColor(2)} opacity="0.035" />
-      {/* 고정 눈금은 해가 달라도 좌표의 거리감을 동일하게 유지한다. */}
+      {/* 현재 연도의 확대 범위 안에서 좌표 거리감을 읽을 수 있는 보조 눈금이다. */}
       {GRID_TICKS.filter((tick) => tick > vLo && tick < vHi).map((tick) => (
         <g key={`v-${tick}`} opacity="0.35">
           <line x1={sx(tick)} y1={PAD} x2={sx(tick)} y2={H - PAD} stroke="var(--color-line)" strokeDasharray="2 5" />
@@ -267,8 +261,8 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
         const len = Math.hypot(dx, dy) || 1;
         const trim = (rr) => ({ tx: (dx / len) * rr, ty: (dy / len) * rr });
         const a = trim(r(p) + 2), b = trim(r(s) + 5);
-        const nearActive = i === activeIndex || i + 1 === activeIndex;
-        const opacity = focused ? (nearActive ? 0.88 : 0.14) : (nearActive ? 0.76 : 0.38);
+        const opacity = 0.72;
+        const moveWidth = aw + Math.min(1.3, (s.prev?.distance || 0) * 0.55);
         return (
           <line
             key={s.month}
@@ -276,10 +270,10 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
             pathLength="1"
             x1={sx(p.center.v) + a.tx} y1={sy(p.center.a) + a.ty}
             x2={sx(s.center.v) - b.tx} y2={sy(s.center.a) - b.ty}
-            stroke={timeColor(i + 1, points.length)} strokeWidth={aw}
+            stroke={timeColor(i + 1, points.length)} strokeWidth={moveWidth}
             strokeDasharray={s.prev?.gap > 0 ? "0.08 0.05" : "1"}
             markerEnd={`url(#${chartId}-arrow)`} opacity={opacity}
-            style={{ animationDelay: `${i * 110}ms`, "--orbit-opacity": opacity }}
+            style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS + 80}ms`, "--orbit-opacity": opacity }}
           />
         );
       })}
@@ -289,27 +283,24 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
         const active = s.month === month;
         const cx = sx(s.center.v), cy = sy(s.center.a);
         const label = labelPos[i];
-        const nearActive = Math.abs(i - activeIndex) <= 1;
-        const showLabel = nearActive || s.turningPoint || i === 0 || i === points.length - 1;
         return (
           <a key={s.month} href={monthHref(s.month)} aria-label={pointTitle(s)} aria-current={active ? "page" : undefined} className="group outline-none">
             <title>{pointTitle(s)}</title>
-            <circle cx={cx} cy={cy} r={Math.max(12, r(s) + 7)} fill="transparent" />
-            <circle cx={cx} cy={cy} r={r(s) + 10} fill="none" stroke="var(--color-accent)" strokeWidth="2" className="opacity-0 group-focus:opacity-100" />
-            {s.turningPoint && <circle cx={cx} cy={cy} r={r(s) + 8} fill="none" stroke="oklch(0.75 0.16 55)" strokeWidth="2" />}
-            {active && <circle cx={cx} cy={cy} r={r(s) + 7} fill="var(--color-accent)" opacity="0.12" />}
-            {active && <circle cx={cx} cy={cy} r={r(s) + 4} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
-            <circle
-              cx={cx} cy={cy} r={r(s)}
-              fill={timeColor(i, points.length)}
-              opacity={active || nearActive ? 1 : s.sparse ? 0.38 : 0.68}
-              stroke={s.sparse ? "var(--color-muted)" : "var(--color-bg)"}
-              strokeWidth="0.8"
-              strokeDasharray={s.sparse ? "2 2" : "none"}
-            />
-            {/* 라벨 뒤에 배경을 깔아 선·점 위에서도 읽히게 한다. stroke는 글자 바깥으로
-                번지므로 clampLabel의 여백이 그만큼을 이미 비워 뒀다 */}
-            {showLabel && (
+            <g className="orbit-point" style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS}ms` }}>
+              <circle cx={cx} cy={cy} r={Math.max(12, r(s) + 7)} fill="transparent" />
+              <circle cx={cx} cy={cy} r={r(s) + 10} fill="none" stroke="var(--color-accent)" strokeWidth="2" className="opacity-0 group-focus:opacity-100" />
+              {s.turningPoint && <circle cx={cx} cy={cy} r={r(s) + 8} fill="none" stroke="oklch(0.75 0.16 55)" strokeWidth="2" />}
+              {active && <circle cx={cx} cy={cy} r={r(s) + 7} fill="var(--color-accent)" opacity="0.12" />}
+              {active && <circle cx={cx} cy={cy} r={r(s) + 4} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
+              <circle
+                cx={cx} cy={cy} r={r(s)}
+                fill={timeColor(i, points.length)}
+                opacity={s.sparse ? 0.5 : 1}
+                stroke={s.sparse ? "var(--color-muted)" : "var(--color-bg)"}
+                strokeWidth="0.8"
+                strokeDasharray={s.sparse ? "2 2" : "none"}
+              />
+              {/* 점과 월 라벨을 같은 그룹으로 묶어 시간 순서대로 함께 나타나게 한다. */}
               <text
                 x={label.x} y={label.y}
                 textAnchor={label.anchor} fontSize={fs} fontWeight={active ? 700 : 400}
@@ -318,7 +309,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains = { v: DOMAI
               >
                 {mm(s.month)}
               </text>
-            )}
+            </g>
           </a>
         );
       })}
@@ -430,31 +421,21 @@ export function EmotionOrbit({ stats, month, monthHref }) {
     return <p className="text-sm text-muted">감정이 기록된 달이 아직 없어 궤도를 그릴 수 없다.</p>;
 
   const active = points.find((s) => s.month === month) || points.at(-1);
-  const focusDomains = {
-    v: axisRange(points.map((s) => s.center.v)),
-    a: axisRange(points.map((s) => s.center.a)),
-  };
-
-  const charts = (focused) => {
-    const domains = focused ? focusDomains : { v: DOMAIN, a: DOMAIN };
-    const suffix = focused ? "focus" : "full";
-    return (
-      <>
-        <div className="sm:hidden">
-          <OrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.mobile} chartId={`orbit-m-${suffix}`} domains={domains} focused={focused} />
-        </div>
-        <div className="hidden sm:block">
-          <OrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.desktop} chartId={`orbit-d-${suffix}`} domains={domains} focused={focused} />
-        </div>
-      </>
-    );
+  const domains = {
+    v: axisRange(points.map((s) => s.center.v), { minSpan: ORBIT_MIN_SPAN, pad: 0.28 }),
+    a: axisRange(points.map((s) => s.center.a), { minSpan: ORBIT_MIN_SPAN, pad: 0.28 }),
   };
 
   return (
     <figure className="min-w-0 max-w-full">
       {/* 좌표계가 다르므로 화면 크기별로 다른 SVG를 낸다. 숨겨진 쪽은 display:none이라
           링크가 탭 순서에 끼어들지 않는다 */}
-      <OrbitScaleToggle focus={charts(true)} full={charts(false)} />
+      <div className="sm:hidden">
+        <OrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.mobile} chartId="orbit-m" domains={domains} />
+      </div>
+      <div className="hidden sm:block">
+        <OrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.desktop} chartId="orbit-d" domains={domains} />
+      </div>
       <figcaption className="mt-3">
         <div className="grid grid-cols-2 gap-y-3 divide-x divide-line rounded-xl border border-line bg-surface px-2 py-3 text-center sm:grid-cols-4 sm:gap-y-0">
           <div className="min-w-0 px-2">
@@ -487,14 +468,13 @@ export function EmotionOrbit({ stats, month, monthHref }) {
           <span className="shrink-0">{mm(points.at(-1).month)}</span>
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-line px-2 py-1">색 · 시간 순서</span>
+          <span className="rounded-full border border-line px-2 py-1">점·선 · 1월부터 순차 재생</span>
           <span className="rounded-full border border-line px-2 py-1">크기 · 기록량</span>
           <span className="rounded-full border border-line px-2 py-1">점선 · 기록 부족 또는 빈 달</span>
           <span className="rounded-full border border-line px-2 py-1">주황 링 · 정서 전환점</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          선택한 달과 앞뒤 달의 이동을 진하게 표시한다. 확대 보기는 같은 해 안의 미세한 움직임을 읽는 용도이며,
-          연도 간 좌표 거리를 비교할 때는 전체 척도를 사용한다.
+          한 해의 좌표 범위를 넓게 사용해 월별 이동 차이를 강조했다. 연도 간 절대 좌표는 아래 비교 그래프에서 확인한다.
         </p>
       </figcaption>
 

@@ -181,8 +181,24 @@ html {
     opacity: var(--orbit-opacity, 0.6);
   }
 }
+@keyframes orbit-point-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .orbit-segment {
-  animation: orbit-draw 0.65s var(--ease-out-strong) both;
+  animation: orbit-draw 0.28s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
+}
+.orbit-point {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: orbit-point-reveal 0.32s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
 }
 
 /* theme switch: the toggle animates ::view-transition-new(root) as an
@@ -206,12 +222,17 @@ html {
   .card-in,
   .reveal,
   .hero-ambient,
-  .orbit-segment {
+  .orbit-segment,
+  .orbit-point {
     animation: none;
   }
   .orbit-segment {
     stroke-dashoffset: 0;
     opacity: var(--orbit-opacity, 0.6);
+  }
+  .orbit-point {
+    opacity: 1;
+    transform: none;
   }
 }
 

@@ -136,12 +136,12 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
             <p className="mb-3 text-xs text-muted">먼저 시간 순서로 변화를 보고, 아래 지도에서 위치를 확인한다.</p>
             <EmotionTrend stats={yearStats} year={year} />
           </div>
-          {/* 감정 구성은 이름·막대·수치가 한 행인 목록이라 좁은 칸이면 충분하다.
-              궤도 그래프에 남는 폭을 주는 편이 점과 라벨을 읽기 쉽다 */}
-          <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
+          {/* 정서 지도는 페이지 전체 폭을 사용한다. 월 좌표 사이 거리를 넓히고
+              1월부터 이어지는 애니메이션을 한 흐름으로 읽기 위해 옆 칸을 두지 않는다. */}
+          <div className="min-w-0">
             <EmotionOrbit stats={yearStats} month={month} monthHref={monthHref} />
             {monthStat?.emotions.length > 0 && (
-              <div className="min-w-0 max-w-full rounded-2xl border border-line bg-surface px-4 py-4">
+              <div className="mt-6 min-w-0 max-w-xl rounded-2xl border border-line bg-surface px-4 py-4 sm:px-5">
                 <h3 className="text-sm font-semibold">{Number(month.slice(5))}월의 감정 구성</h3>
                 <p className="mb-3 mt-0.5 text-xs text-muted">막대는 그달 기록 전체에서 차지하는 비율이다.</p>
                 <EmotionComposition stat={monthStat} />
