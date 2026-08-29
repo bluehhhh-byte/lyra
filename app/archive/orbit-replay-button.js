@@ -5,7 +5,7 @@ export function OrbitReplayButton() {
     const figure = event.currentTarget.closest("figure");
     if (!figure) return;
 
-    const animations = [...figure.querySelectorAll(".orbit-point, .orbit-segment, .orbit-start-halo, .orbit-turning-ring")]
+    const animations = [...figure.querySelectorAll(".orbit-month-shape, .orbit-turning-shape")]
       .flatMap((element) => element.getAnimations());
 
     for (const animation of animations) {

@@ -371,6 +371,114 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
   );
 }
 
+// 별 궤도 — 월을 별 모양의 점으로 흩어 놓는 것이 아니라, 하나의 큰 다섯 축 별이
+// 월마다 다른 실루엣으로 겹쳐지는 그래프다. 이전 달은 잔상으로 남아 변화의 폭을
+// 보여 주고, 선택 월은 가장 진한 면으로 남는다.
+function StarOrbitChart({ points, month, monthHref, v, chartId }) {
+  const { W, H, PAD, fs } = v;
+  const cx = W / 2;
+  const cy = H / 2 + 8;
+  const radius = Math.min(H / 2 - PAD - 8, W / 2 - PAD - 8);
+  const profiles = starProfiles(points);
+  const gridLevels = [0.25, 0.5, 0.75, 1];
+  const axisTip = (axis, extra = 0) => {
+    const angle = -Math.PI / 2 + (axis * Math.PI * 2) / 5;
+    return {
+      x: cx + Math.cos(angle) * (radius + extra),
+      y: cy + Math.sin(angle) * (radius + extra),
+      angle,
+    };
+  };
+
+  return (
+    <svg
+      viewBox={`0 0 ${W} ${H}`}
+      role="img"
+      aria-labelledby={`${chartId}-title ${chartId}-desc`}
+      className="h-auto w-full"
+    >
+      <title id={`${chartId}-title`}>월별 정서 별 그래프</title>
+      <desc id={`${chartId}-desc`}>
+        하나의 다섯 축 별 그래프가 월마다 다른 모양으로 겹쳐진다. 위에서 시계방향으로 각성, 밝기, 다양성, 기록 밀도, 전월 이동이며 1월부터 순서대로 나타난다.
+      </desc>
+
+      <text x={PAD} y={PAD - 12} fontSize={fs} fontWeight="700" fill={timeColor(0, points.length)}>
+        {mm(points[0].month)} · 시작
+      </text>
+      <text x={W - PAD} y={PAD - 12} textAnchor="end" fontSize={fs} fontWeight="700" fill="var(--color-accent)">
+        {mm(month)} · 현재
+      </text>
+
+      {/* 별 형태의 눈금과 다섯 축. 그래프 자체가 별이며 월별 선이 같은 축에서 변한다. */}
+      {gridLevels.map((level) => (
+        <polygon
+          key={level}
+          className="orbit-radar-grid"
+          points={starPoints(cx, cy, Array(5).fill(level), radius)}
+          fill={level === 1 ? "var(--color-surface)" : "none"}
+          fillOpacity={level === 1 ? 0.45 : 0}
+          stroke="var(--color-line)"
+          strokeWidth={level === 1 ? 1.2 : 0.8}
+          strokeDasharray={level === 1 ? "none" : "3 5"}
+        />
+      ))}
+      {STAR_AXIS_LABELS.map((label, axis) => {
+        const end = axisTip(axis);
+        const text = axisTip(axis, 24);
+        const cos = Math.cos(text.angle);
+        const anchor = cos > 0.25 ? "start" : cos < -0.25 ? "end" : "middle";
+        return (
+          <g key={label}>
+            <line x1={cx} y1={cy} x2={end.x} y2={end.y} stroke="var(--color-line)" strokeWidth="0.8" opacity="0.65" />
+            <text x={text.x} y={text.y + (axis === 0 ? -2 : 4)} textAnchor={anchor} fontSize={fs} fill="var(--color-muted)">
+              {label}
+            </text>
+          </g>
+        );
+      })}
+
+      {points.map((s, i) => {
+        const active = s.month === month;
+        const color = timeColor(i, points.length);
+        const shape = starPoints(cx, cy, profiles[i], radius);
+        return (
+          <a key={s.month} href={monthHref(s.month)} aria-label={pointTitle(s)} aria-current={active ? "page" : undefined} className="group outline-none">
+            <title>{pointTitle(s)}</title>
+            <g
+              className="orbit-month-shape"
+              style={{
+                "--orbit-delay": `${i * ORBIT_POINT_STEP_MS}ms`,
+                "--orbit-shape-opacity": active ? 0.95 : 0.2,
+              }}
+            >
+              {s.turningPoint && (
+                <polygon
+                  points={shape} fill="none" stroke="oklch(0.75 0.16 55)" strokeWidth="7"
+                  strokeLinejoin="round" className="orbit-turning-shape"
+                  style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS}ms` }}
+                />
+              )}
+              <polygon
+                points={shape}
+                fill={color} fillOpacity={active ? 0.22 : 0.08}
+                stroke={color} strokeWidth={active ? 3.2 : 2}
+                strokeLinejoin="round"
+                className="orbit-radar-shape"
+              />
+              {profiles[i].map((value, axis) => {
+                const tip = axisTip(axis, -radius * (1 - value));
+                return <circle key={axis} cx={tip.x} cy={tip.y} r={active ? 4 : 2.8} fill={color} />;
+              })}
+            </g>
+          </a>
+        );
+      })}
+
+      <circle cx={cx} cy={cy} r="3" fill="var(--color-ink)" opacity="0.8" />
+    </svg>
+  );
+}
+
 // 정서 추이 — 같은 값을 시간축으로 펴서 본다.
 //
 // 궤도 그림은 "평면 어디에 있었나"를 보여주지만 "언제 어떻게 움직였나"는 화살표를
@@ -475,20 +583,15 @@ export function EmotionOrbit({ stats, month, monthHref }) {
     return <p className="text-sm text-muted">감정이 기록된 달이 아직 없어 궤도를 그릴 수 없다.</p>;
 
   const active = points.find((s) => s.month === month) || points.at(-1);
-  const domains = {
-    v: axisRange(points.map((s) => s.center.v), { minSpan: ORBIT_MIN_SPAN, pad: 0.28 }),
-    a: axisRange(points.map((s) => s.center.a), { minSpan: ORBIT_MIN_SPAN, pad: 0.28 }),
-  };
-
   return (
     <figure className="min-w-0 max-w-full">
       {/* 좌표계가 다르므로 화면 크기별로 다른 SVG를 낸다. 숨겨진 쪽은 display:none이라
           링크가 탭 순서에 끼어들지 않는다 */}
       <div className="sm:hidden">
-        <OrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.mobile} chartId="orbit-m" domains={domains} />
+        <StarOrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.mobile} chartId="star-orbit-m" />
       </div>
       <div className="hidden sm:block">
-        <OrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.desktop} chartId="orbit-d" domains={domains} />
+        <StarOrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.desktop} chartId="star-orbit-d" />
       </div>
       <figcaption className="mt-3">
         <div className="grid grid-cols-2 gap-y-3 divide-x divide-line rounded-xl border border-line bg-surface px-2 py-3 text-center sm:grid-cols-4 sm:gap-y-0">
@@ -522,14 +625,14 @@ export function EmotionOrbit({ stats, month, monthHref }) {
           <span className="shrink-0">{mm(points.at(-1).month)}</span>
         </div>
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-line px-2 py-1">별·선 · 약 1.2초 간격 순차 재생</span>
+          <span className="rounded-full border border-line px-2 py-1">큰 별 그래프 · 약 1.2초 간격 월별 변화</span>
           <OrbitReplayButton />
           <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 각성→밝기→다양성→기록 밀도→전월 이동</span>
-          <span className="rounded-full border border-line px-2 py-1">점선 · 기록 부족 또는 빈 달</span>
-          <span className="rounded-full border border-line px-2 py-1">주황 링 · 직전 연속 월 대비 좌표 1.25 이상 이동</span>
+          <span className="rounded-full border border-line px-2 py-1">옅은 별 · 이전 달의 모양 잔상</span>
+          <span className="rounded-full border border-line px-2 py-1">주황 테두리 · 직전 연속 월 대비 좌표 1.25 이상 이동</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          별의 다섯 꼭짓점은 그해 최솟값~최댓값을 25~100% 길이로 펼쳐 월별 모양 차이를 강조한다. 실제 좌표와 연도 간 절대 위치는 요약과 아래 비교 그래프에서 확인한다.
+          하나의 큰 별이 월마다 다른 실루엣으로 겹쳐진다. 다섯 축은 그해 최솟값~최댓값을 25~100% 길이로 펼치며, 실제 좌표와 연도 간 절대 위치는 요약과 아래 비교 그래프에서 확인한다.
         </p>
       </figcaption>
 
