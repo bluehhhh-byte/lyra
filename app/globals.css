@@ -227,34 +227,6 @@ html {
   animation: orbit-turning-pulse 1.8s ease-in-out calc(var(--orbit-delay, 0ms) + 0.4s) 3 both;
 }
 
-@keyframes orbit-month-shape-reveal {
-  0% {
-    opacity: 0;
-    transform: scale(0.38) rotate(-18deg);
-  }
-  55% {
-    opacity: 1;
-    transform: scale(1.07) rotate(2deg);
-  }
-  100% {
-    opacity: var(--orbit-shape-opacity, 0.2);
-    transform: scale(1) rotate(0);
-  }
-}
-.orbit-month-shape {
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: orbit-month-shape-reveal 1.05s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
-}
-.orbit-radar-shape {
-  filter: drop-shadow(0 0 9px color-mix(in oklab, currentColor 42%, transparent));
-}
-.orbit-turning-shape {
-  opacity: 0.36;
-  filter: blur(1.5px);
-}
-
 /* theme switch: the toggle animates ::view-transition-new(root) as an
    expanding circle from the click point — kill the UA cross-fade so the
    two snapshots don't blend mid-reveal */
@@ -279,9 +251,7 @@ html {
   .orbit-segment,
   .orbit-point,
   .orbit-start-halo,
-  .orbit-turning-ring,
-  .orbit-month-shape,
-  .orbit-turning-shape {
+  .orbit-turning-ring {
     animation: none;
   }
   .orbit-segment {
@@ -295,10 +265,6 @@ html {
   .orbit-start-halo,
   .orbit-turning-ring {
     opacity: 1;
-    transform: none;
-  }
-  .orbit-month-shape {
-    opacity: var(--orbit-shape-opacity, 0.2);
     transform: none;
   }
 }

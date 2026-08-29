@@ -3,7 +3,7 @@ import { valenceColor, emotionValence } from "../../lib/keywords";
 import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
 import { axisRange, placeLabels, clampLabel } from "../../lib/orbit-layout";
 import { compareYearStats, workLabel } from "../../lib/archive-stats";
-import { OrbitReplayButton } from "./orbit-replay-button";
+import { OrbitMonthComparison } from "./orbit-month-comparison";
 
 // 감정 궤도 — 선택 연도의 월들을 valence(가로)·arousal(세로) 평면에 놓고 시간
 // 순서를 화살표로 잇는다. 전부 서버 렌더링 SVG + 링크라 JS 없이도 키보드로
@@ -585,54 +585,15 @@ export function EmotionOrbit({ stats, month, monthHref }) {
   const active = points.find((s) => s.month === month) || points.at(-1);
   return (
     <figure className="min-w-0 max-w-full">
-      {/* 좌표계가 다르므로 화면 크기별로 다른 SVG를 낸다. 숨겨진 쪽은 display:none이라
-          링크가 탭 순서에 끼어들지 않는다 */}
-      <div className="sm:hidden">
-        <StarOrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.mobile} chartId="star-orbit-m" />
-      </div>
-      <div className="hidden sm:block">
-        <StarOrbitChart points={points} month={active.month} monthHref={monthHref} v={VARIANTS.desktop} chartId="star-orbit-d" />
-      </div>
+      <OrbitMonthComparison points={points} initialMonth={active.month} />
       <figcaption className="mt-3">
-        <div className="grid grid-cols-2 gap-y-3 divide-x divide-line rounded-xl border border-line bg-surface px-2 py-3 text-center sm:grid-cols-4 sm:gap-y-0">
-          <div className="min-w-0 px-2">
-            <span className="block truncate text-sm font-semibold text-ink">{active.dominant || "—"}</span>
-            <span className="mt-0.5 block text-[10px] text-muted">{mm(active.month)} 대표 감정</span>
-          </div>
-          <div className="min-w-0 px-2">
-            <span className="block text-sm font-semibold tabular-nums text-ink">{fmt1(active.center.v)} · {fmt1(active.center.a)}</span>
-            <span className="mt-0.5 block text-[10px] text-muted">밝기 · 각성</span>
-          </div>
-          <div className="min-w-0 px-2">
-            <span className="block text-sm font-semibold tabular-nums text-ink">{active.count}개</span>
-            <span className="mt-0.5 block text-[10px] text-muted">기록량</span>
-          </div>
-          <div className="min-w-0 px-2">
-            <span className="block truncate text-sm font-semibold text-ink">{active.move || "첫 기록"}</span>
-            <span className="mt-0.5 block text-[10px] text-muted">이전 달과 비교</span>
-          </div>
-        </div>
-        {/* 색이 시간을 뜻한다는 것을 그림으로 말한다 — 글로만 적으면 아무도 안 읽는다 */}
-        <div className="mt-2 flex items-center gap-2 text-[11px] text-muted">
-          <span className="shrink-0">{mm(points[0].month)}</span>
-          <span
-            aria-hidden
-            className="h-1.5 min-w-0 flex-1 rounded-full"
-            style={{
-              background: `linear-gradient(to right, ${timeStops(points.length).join(", ")})`,
-            }}
-          />
-          <span className="shrink-0">{mm(points.at(-1).month)}</span>
-        </div>
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-line px-2 py-1">큰 별 그래프 · 약 1.2초 간격 월별 변화</span>
-          <OrbitReplayButton />
+          <span className="rounded-full border border-violet-400/50 px-2 py-1">보라색 점선 · 기준 월</span>
+          <span className="rounded-full border border-accent/50 px-2 py-1">강조색 실선 · 비교 월</span>
           <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 각성→밝기→다양성→기록 밀도→전월 이동</span>
-          <span className="rounded-full border border-line px-2 py-1">옅은 별 · 이전 달의 모양 잔상</span>
-          <span className="rounded-full border border-line px-2 py-1">주황 테두리 · 직전 연속 월 대비 좌표 1.25 이상 이동</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          하나의 큰 별이 월마다 다른 실루엣으로 겹쳐진다. 다섯 축은 그해 최솟값~최댓값을 25~100% 길이로 펼치며, 실제 좌표와 연도 간 절대 위치는 요약과 아래 비교 그래프에서 확인한다.
+          기준 월과 비교 월을 각각 누르면 두 별이 같은 축에 겹쳐진다. 다섯 축은 그해 최솟값~최댓값을 25~100% 길이로 펼치며, 실제 밝기와 각성은 선택 영역 아래에서 함께 확인할 수 있다.
         </p>
       </figcaption>
 
