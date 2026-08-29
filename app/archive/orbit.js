@@ -588,8 +588,9 @@ export function EmotionOrbit({ stats, month, monthHref }) {
       <OrbitMonthComparison points={points} initialMonth={active.month} />
       <figcaption className="mt-3">
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-violet-400/50 px-2 py-1">보라색 점선 · 기준 월</span>
-          <span className="rounded-full border border-accent/50 px-2 py-1">강조색 실선 · 비교 월</span>
+          <span className="rounded-full border border-line px-2 py-1">점선 · 기준 월</span>
+          <span className="rounded-full border border-line px-2 py-1">실선 · 비교 월</span>
+          <span className="rounded-full border border-line px-2 py-1">별 색상 · 대표 감정 + 밝기 + 각성</span>
           <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 각성→밝기→다양성→기록 밀도→전월 이동</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">

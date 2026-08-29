@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { emotionColor } from "../../lib/emotion-color";
 
 const AXES = ["각성", "밝기", "다양성", "기록 밀도", "전월 이동"];
 const FLOOR = 0.25;
@@ -40,6 +41,8 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
   const { width, height, cx, cy, radius, fontSize } = variant;
   const base = points[baseIndex];
   const compare = points[compareIndex];
+  const baseColor = emotionColor(base);
+  const compareColor = emotionColor(compare);
   const axisTip = (axis, distance = radius) => {
     const angle = -Math.PI / 2 + (axis * Math.PI * 2) / 5;
     return { x: cx + Math.cos(angle) * distance, y: cy + Math.sin(angle) * distance, angle };
@@ -49,7 +52,7 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
     <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby={`${chartId}-title ${chartId}-desc`} className="h-auto w-full overflow-visible">
       <title id={`${chartId}-title`}>{`${monthLabel(base.month)}과 ${monthLabel(compare.month)} 정서 별 그래프 비교`}</title>
       <desc id={`${chartId}-desc`}>
-        보라색 점선은 기준 월, 강조색 실선은 비교 월이다. 위에서 시계방향으로 각성, 밝기, 다양성, 기록 밀도, 전월 이동을 비교한다.
+        점선은 기준 월, 실선은 비교 월이다. 각 별의 색은 그 달의 대표 감정과 밝기, 각성에 따라 달라진다. 위에서 시계방향으로 각성, 밝기, 다양성, 기록 밀도, 전월 이동을 비교한다.
       </desc>
 
       {[0.25, 0.5, 0.75, 1].map((level) => (
@@ -82,42 +85,48 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
 
       <polygon
         data-series="base"
+        data-emotion-color={baseColor}
         points={starPoints(cx, cy, shapeProfiles[baseIndex], radius)}
-        fill="oklch(0.65 0.15 295)" fillOpacity="0.08"
-        stroke="oklch(0.7 0.15 295)" strokeWidth="3"
+        fill={baseColor} fillOpacity="0.1"
+        stroke={baseColor} strokeWidth="3"
         strokeDasharray="9 6" strokeLinejoin="round"
       />
       <polygon
         data-series="compare"
+        data-emotion-color={compareColor}
         points={starPoints(cx, cy, shapeProfiles[compareIndex], radius)}
-        fill="var(--color-accent)" fillOpacity="0.16"
-        stroke="var(--color-accent)" strokeWidth="4"
+        fill={compareColor} fillOpacity="0.18"
+        stroke={compareColor} strokeWidth="4"
         strokeLinejoin="round"
       />
       {shapeProfiles[compareIndex].map((value, axis) => {
         const tip = axisTip(axis, radius * value);
-        return <circle key={axis} cx={tip.x} cy={tip.y} r="4" fill="var(--color-accent)" />;
+        return <circle key={axis} cx={tip.x} cy={tip.y} r="4" fill={compareColor} />;
       })}
       <circle cx={cx} cy={cy} r="3" fill="var(--color-ink)" />
     </svg>
   );
 }
 
-function MonthPicker({ label, points, value, onChange, tone }) {
+function MonthPicker({ label, points, value, onChange, role }) {
   return (
     <fieldset className="min-w-0">
       <legend className="mb-2 text-xs font-semibold text-ink">{label}</legend>
       <div className="flex flex-wrap gap-1.5">
         {points.map((point) => {
           const selected = point.month === value;
+          const color = emotionColor(point);
           return (
             <button
               key={point.month}
               type="button"
               onClick={() => onChange(point.month)}
               aria-pressed={selected}
-              className={`min-h-9 min-w-11 rounded-full border px-3 py-1.5 text-xs font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected ? tone : "border-line bg-surface text-muted hover:border-accent/50 hover:text-ink"}`}
+              data-selection-role={role}
+              style={selected ? { borderColor: color, backgroundColor: `color-mix(in oklab, ${color} 16%, transparent)` } : undefined}
+              className={`inline-flex min-h-9 min-w-11 items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected ? "font-semibold" : "border-line bg-surface text-muted hover:text-ink"}`}
             >
+              <span aria-hidden className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: color }} />
               {monthLabel(point.month)}
             </button>
           );
@@ -127,11 +136,15 @@ function MonthPicker({ label, points, value, onChange, tone }) {
   );
 }
 
-function MonthSummary({ title, point, className }) {
+function MonthSummary({ title, point }) {
+  const color = emotionColor(point);
   return (
-    <div className={`min-w-0 rounded-xl border p-3 ${className}`}>
+    <div className="min-w-0 rounded-xl border p-3" style={{ borderColor: `color-mix(in oklab, ${color} 55%, transparent)`, backgroundColor: `color-mix(in oklab, ${color} 7%, transparent)` }}>
       <div className="flex items-center justify-between gap-2">
-        <strong className="text-sm text-ink">{title} · {monthLabel(point.month)}</strong>
+        <strong className="inline-flex items-center gap-2 text-sm text-ink">
+          <span aria-hidden className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: color }} />
+          {title} · {monthLabel(point.month)}
+        </strong>
         <span className="truncate text-xs text-muted">{point.dominant || "대표 감정 없음"}</span>
       </div>
       <p className="mt-1 text-xs tabular-nums text-muted">
@@ -162,13 +175,13 @@ export function OrbitMonthComparison({ points, initialMonth }) {
       </div>
 
       <div className="mt-2 grid gap-4 rounded-2xl border border-line bg-surface/50 p-3 sm:grid-cols-2 sm:p-4">
-        <MonthPicker label="기준 월 선택" points={points} value={baseMonth} onChange={setBaseMonth} tone="border-violet-400 bg-violet-500/15 text-violet-300" />
-        <MonthPicker label="비교 월 선택" points={points} value={compareMonth} onChange={setCompareMonth} tone="border-accent bg-accent/15 text-accent" />
+        <MonthPicker label="기준 월 선택" points={points} value={baseMonth} onChange={setBaseMonth} role="base" />
+        <MonthPicker label="비교 월 선택" points={points} value={compareMonth} onChange={setCompareMonth} role="compare" />
       </div>
 
       <div className="mt-3 grid gap-2 sm:grid-cols-2" aria-live="polite">
-        <MonthSummary title="기준" point={base} className="border-violet-400/45 bg-violet-500/5" />
-        <MonthSummary title="비교" point={compare} className="border-accent/45 bg-accent/5" />
+        <MonthSummary title="기준" point={base} />
+        <MonthSummary title="비교" point={compare} />
       </div>
     </div>
   );
