@@ -184,12 +184,24 @@ html {
 @keyframes orbit-point-reveal {
   from {
     opacity: 0;
-    transform: scale(0.35);
+    transform: scale(0.12) rotate(-32deg);
+  }
+  68% {
+    opacity: 1;
+    transform: scale(1.16) rotate(5deg);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) rotate(0);
   }
+}
+@keyframes orbit-start-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.22); }
+}
+@keyframes orbit-turning-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.94); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 .orbit-segment {
   animation: orbit-draw 0.86s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
@@ -199,6 +211,20 @@ html {
   transform-box: fill-box;
   transform-origin: center;
   animation: orbit-point-reveal 0.56s var(--ease-out-strong) var(--orbit-delay, 0ms) both;
+}
+.orbit-star {
+  filter: drop-shadow(0 0 6px color-mix(in oklab, currentColor 38%, transparent));
+}
+.orbit-start-halo,
+.orbit-turning-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.orbit-start-halo {
+  animation: orbit-start-pulse 2.4s ease-in-out calc(var(--orbit-delay, 0ms) + 0.5s) infinite;
+}
+.orbit-turning-ring {
+  animation: orbit-turning-pulse 1.8s ease-in-out calc(var(--orbit-delay, 0ms) + 0.4s) 3 both;
 }
 
 /* theme switch: the toggle animates ::view-transition-new(root) as an
@@ -223,7 +249,9 @@ html {
   .reveal,
   .hero-ambient,
   .orbit-segment,
-  .orbit-point {
+  .orbit-point,
+  .orbit-start-halo,
+  .orbit-turning-ring {
     animation: none;
   }
   .orbit-segment {
@@ -231,6 +259,11 @@ html {
     opacity: var(--orbit-opacity, 0.6);
   }
   .orbit-point {
+    opacity: 1;
+    transform: none;
+  }
+  .orbit-start-halo,
+  .orbit-turning-ring {
     opacity: 1;
     transform: none;
   }

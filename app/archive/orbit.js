@@ -12,16 +12,15 @@ import { OrbitReplayButton } from "./orbit-replay-button";
 // 좌표계를 화면 크기별로 따로 둔다. 640×480 하나를 320px 폭에 밀어 넣으면 11px 글자가
 // 5.5px가 되어 한글을 읽을 수 없다. 모바일은 viewBox를 좁게 잡아 같은 물리 크기에서
 // 글자가 더 크게 나오도록 하고, 여백(PAD)도 라벨이 들어갈 만큼 넉넉히 준다.
-// 점과 선은 작게, 판은 넓게 — 이 그림의 정보는 "점들이 평면 어디에 있고 어떻게
-// 이동했는가"다. 마크가 크면 점끼리 뭉치고 화살표가 겹쳐, 판이 아니라 마크를 읽게 된다.
-// rBase/rMax/rK가 점 반지름(rBase + min(rMax, √count × rK)), aw가 화살표 굵기다.
+// 월은 점이 아니라 다섯 축의 별이다. 위치는 밝기·각성의 절대 방향, 별의 실루엣은
+// 그해 안에서 각성·밝기·다양성·기록 밀도·전월 이동의 상대 차이를 보여 준다.
 //
 // 선택한 해의 좌표 범위를 최소 폭 안에서 확대해 월 사이 이동을 읽기 쉽게 만든다.
 // 연도 사이 절대 위치 비교는 아래의 고정 척도 비교 그래프가 담당한다. 판이 넓어야
 // 라벨이 놓일 자리가 생기고, 점이 작아야 라벨이 점을 피해 갈 여지가 남는다.
 const VARIANTS = {
-  mobile: { key: "m", W: 380, H: 430, PAD: 44, fs: 12, axisFs: 11, quadFs: 10, labelW: 30, labelH: 14, rBase: 2.2, rMax: 2.2, rK: 0.55, aw: 1.1 },
-  desktop: { key: "d", W: 960, H: 520, PAD: 58, fs: 12, axisFs: 11, quadFs: 11, labelW: 30, labelH: 14, rBase: 1.8, rMax: 2.2, rK: 0.5, aw: 1.1 },
+  mobile: { key: "m", W: 380, H: 430, PAD: 44, fs: 12, axisFs: 11, quadFs: 10, labelW: 30, labelH: 14, starSize: 16, aw: 1.1 },
+  desktop: { key: "d", W: 960, H: 520, PAD: 58, fs: 12, axisFs: 11, quadFs: 11, labelW: 30, labelH: 14, starSize: 20, aw: 1.1 },
 };
 
 const DOMAIN = [-3, 3];
@@ -132,6 +131,43 @@ function timeColor(index, total) {
 const timeStops = (total, steps = 6) =>
   Array.from({ length: steps }, (_, i) => timeColor((i / (steps - 1)) * (total - 1), total));
 
+const STAR_RADIUS_FLOOR = 0.25;
+const STAR_AXIS_LABELS = ["각성", "밝기", "다양성", "기록 밀도", "전월 이동"];
+
+// 월별 모양은 그해 안의 상대 차이를 읽는 장치다. 각 축의 실제 값은 바꾸지 않고,
+// 최솟값~최댓값만 별 꼭짓점의 25~100% 길이에 대응시킨다. 변화가 없는 축은 62%다.
+function normalizeStarAxis(values) {
+  const lo = Math.min(...values);
+  const hi = Math.max(...values);
+  if (Math.abs(hi - lo) < 0.0001) return values.map(() => 0.62);
+  return values.map((value) => {
+    const t = (value - lo) / (hi - lo);
+    return STAR_RADIUS_FLOOR + (1 - STAR_RADIUS_FLOOR) * Math.pow(t, 0.82);
+  });
+}
+
+function starProfiles(points) {
+  const rawAxes = [
+    points.map((s) => s.center.a),
+    points.map((s) => s.center.v),
+    points.map((s) => s.entropy || 0),
+    points.map((s) => Math.log1p(s.count)),
+    points.map((s) => s.prev?.distance || 0),
+  ];
+  const axes = rawAxes.map(normalizeStarAxis);
+  return points.map((_, pointIndex) => axes.map((axis) => axis[pointIndex]));
+}
+
+function starPoints(cx, cy, profile, size) {
+  return Array.from({ length: 10 }, (_, vertex) => {
+    const outer = vertex % 2 === 0;
+    const tip = Math.floor(vertex / 2);
+    const radius = outer ? size * profile[tip] : size * 0.22;
+    const angle = -Math.PI / 2 + (vertex * Math.PI) / 5;
+    return `${(cx + Math.cos(angle) * radius).toFixed(2)},${(cy + Math.sin(angle) * radius).toFixed(2)}`;
+  }).join(" ");
+}
+
 const mm = (month) => `${Number(month.slice(5))}월`;
 const fmt1 = (n) => (Math.round(n * 10) / 10).toFixed(1);
 
@@ -147,8 +183,8 @@ const textWidth = (text, fs) => {
 };
 
 function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
-  const { W, H, PAD, fs, axisFs, quadFs, labelW, labelH, rBase, rMax, rK, aw } = v;
-  const r = (s) => rBase + Math.min(rMax, Math.sqrt(s.count) * rK);
+  const { W, H, PAD, fs, axisFs, quadFs, labelW, labelH, starSize, aw } = v;
+  const profiles = starProfiles(points);
   const T = MOOD_NEUTRAL_BAND;
 
   // 이 지도는 한 해 안의 움직임을 읽는 그림이므로 그해 데이터 범위를 쓴다. 최소 폭을
@@ -176,7 +212,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
             return { x: dx / len, y: dy / len };
           })()
         : null;
-      return { x: px[i].x, y: px[i].y, r: r(s), w: labelW, h: labelH, away };
+      return { x: px[i].x, y: px[i].y, r: starSize, w: labelW, h: labelH, away };
     })
   ).map((pos) => clampLabel({ ...pos, w: labelW, h: labelH }, box));
 
@@ -208,7 +244,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
     >
       <title id={`${chartId}-title`}>정서 지도 — 월별 밝기와 각성도</title>
       <desc id={`${chartId}-desc`}>
-        가로축은 어두움에서 밝음, 세로축은 고요함에서 고조됨이다. 각 점은 한 달의 기록이고 화살표가 시간 순서를 잇는다.
+        가로축은 어두움에서 밝음, 세로축은 고요함에서 고조됨이다. 각 별은 한 달의 기록이며 다섯 꼭짓점은 각성, 밝기, 다양성, 기록 밀도, 전월 이동을 나타낸다.
       </desc>
       <defs>
         <marker id={`${chartId}-arrow`} viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
@@ -262,7 +298,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
         const dy = sy(s.center.a) - sy(p.center.a);
         const len = Math.hypot(dx, dy) || 1;
         const trim = (rr) => ({ tx: (dx / len) * rr, ty: (dy / len) * rr });
-        const a = trim(r(p) + 2), b = trim(r(s) + 5);
+        const a = trim(starSize + 3), b = trim(starSize + 7);
         const opacity = 0.72;
         const moveWidth = aw + Math.min(1.3, (s.prev?.distance || 0) * 0.55);
         return (
@@ -280,7 +316,7 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
         );
       })}
 
-      {/* 월 점 — 클릭·키보드로 그 달 아카이브로 이동 */}
+      {/* 월별 별 — 위치뿐 아니라 다섯 축의 실루엣으로 달의 차이를 드러낸다. */}
       {points.map((s, i) => {
         const active = s.month === month;
         const cx = sx(s.center.v), cy = sy(s.center.a);
@@ -289,20 +325,36 @@ function OrbitChart({ points, month, monthHref, v, chartId, domains }) {
           <a key={s.month} href={monthHref(s.month)} aria-label={pointTitle(s)} aria-current={active ? "page" : undefined} className="group outline-none">
             <title>{pointTitle(s)}</title>
             <g className="orbit-point" style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS}ms` }}>
-              <circle cx={cx} cy={cy} r={Math.max(12, r(s) + 7)} fill="transparent" />
-              <circle cx={cx} cy={cy} r={r(s) + 10} fill="none" stroke="var(--color-accent)" strokeWidth="2" className="opacity-0 group-focus:opacity-100" />
-              {s.turningPoint && <circle cx={cx} cy={cy} r={r(s) + 8} fill="none" stroke="oklch(0.75 0.16 55)" strokeWidth="2" />}
-              {active && <circle cx={cx} cy={cy} r={r(s) + 7} fill="var(--color-accent)" opacity="0.12" />}
-              {active && <circle cx={cx} cy={cy} r={r(s) + 4} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
-              <circle
-                cx={cx} cy={cy} r={r(s)}
-                fill={timeColor(i, points.length)}
-                opacity={s.sparse ? 0.5 : 1}
-                stroke={s.sparse ? "var(--color-muted)" : "var(--color-bg)"}
-                strokeWidth="0.8"
-                strokeDasharray={s.sparse ? "2 2" : "none"}
+              <circle cx={cx} cy={cy} r={starSize + 8} fill="transparent" />
+              <circle cx={cx} cy={cy} r={starSize + 7} fill="none" stroke="var(--color-accent)" strokeWidth="2" className="opacity-0 group-focus:opacity-100" />
+              {i === 0 && (
+                <circle
+                  cx={cx} cy={cy} r={starSize + 7} fill="none" stroke="var(--color-accent)" strokeWidth="1.5"
+                  className="orbit-start-halo" style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS}ms` }}
+                />
+              )}
+              {s.turningPoint && (
+                <circle
+                  cx={cx} cy={cy} r={starSize + 4} fill="none" stroke="oklch(0.75 0.16 55)" strokeWidth="2"
+                  className="orbit-turning-ring" style={{ "--orbit-delay": `${i * ORBIT_POINT_STEP_MS}ms` }}
+                />
+              )}
+              {active && <circle cx={cx} cy={cy} r={starSize + 6} fill="var(--color-accent)" opacity="0.1" />}
+              {active && <circle cx={cx} cy={cy} r={starSize + 3} fill="none" stroke="var(--color-accent)" strokeWidth="1.5" />}
+              <polygon
+                className="orbit-star"
+                points={starPoints(cx, cy, profiles[i], starSize)}
+                fill={timeColor(i, points.length)} fillOpacity={s.sparse ? 0.16 : 0.28}
+                stroke={timeColor(i, points.length)} strokeWidth={active ? 2.4 : 1.8}
+                strokeLinejoin="round" strokeDasharray={s.sparse ? "3 2" : "none"}
               />
-              {/* 점과 월 라벨을 같은 그룹으로 묶어 시간 순서대로 함께 나타나게 한다. */}
+              <circle cx={cx} cy={cy} r="2.2" fill={timeColor(i, points.length)} />
+              {i === 0 && (
+                <text x={cx} y={cy - starSize - 12} textAnchor="middle" fontSize={fs - 1} fontWeight="700" fill="var(--color-accent)" stroke="var(--color-bg)" strokeWidth="3" paintOrder="stroke">
+                  시작
+                </text>
+              )}
+              {/* 별과 월 라벨을 같은 그룹으로 묶어 시간 순서대로 함께 나타나게 한다. */}
               <text
                 x={label.x} y={label.y}
                 textAnchor={label.anchor} fontSize={fs} fontWeight={active ? 700 : 400}
@@ -470,14 +522,14 @@ export function EmotionOrbit({ stats, month, monthHref }) {
           <span className="shrink-0">{mm(points.at(-1).month)}</span>
         </div>
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-line px-2 py-1">점·선 · 약 1.2초 간격 순차 재생</span>
+          <span className="rounded-full border border-line px-2 py-1">별·선 · 약 1.2초 간격 순차 재생</span>
           <OrbitReplayButton />
-          <span className="rounded-full border border-line px-2 py-1">크기 · 기록량</span>
+          <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 각성→밝기→다양성→기록 밀도→전월 이동</span>
           <span className="rounded-full border border-line px-2 py-1">점선 · 기록 부족 또는 빈 달</span>
           <span className="rounded-full border border-line px-2 py-1">주황 링 · 직전 연속 월 대비 좌표 1.25 이상 이동</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          한 해의 좌표 범위를 넓게 사용해 월별 이동 차이를 강조했다. 연도 간 절대 좌표는 아래 비교 그래프에서 확인한다.
+          별의 다섯 꼭짓점은 그해 최솟값~최댓값을 25~100% 길이로 펼쳐 월별 모양 차이를 강조한다. 실제 좌표와 연도 간 절대 위치는 요약과 아래 비교 그래프에서 확인한다.
         </p>
       </figcaption>
 
