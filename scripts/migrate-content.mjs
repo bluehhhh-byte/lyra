@@ -113,7 +113,7 @@ if (apply) {
   // 캐시 무효화뿐이다.
   //
   // 바뀐 행이 없으면 무효화도 필요 없다.
-  const site = process.env.LYRA_SITE_URL || "https://lyra-one-zeta.vercel.app";
+  const site = process.env.LYRA_SITE_URL || "https://lyracyno.vercel.app";
   const secret = process.env.REVALIDATE_SECRET;
   if (changedContent + changedData === 0) {
     console.log("변경이 없어 캐시 무효화를 건너뜁니다.");

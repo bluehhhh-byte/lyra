@@ -1,7 +1,7 @@
 # Lyra — Claude 작업 콘텍스트
 
 개인 음악·영화 기록 아카이브. 사용자 1명(소유자 본인), 계정·광고·수익 없음.
-운영: https://lyra-one-zeta.vercel.app · 저장소: github.com/bluehhhh-byte/lyra
+운영: https://lyracyno.vercel.app · 저장소: github.com/bluehhhh-byte/lyra
 
 ## 무엇이 어디에 있는가 (2026-08-22 기준)
 

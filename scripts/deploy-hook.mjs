@@ -42,4 +42,4 @@ if (!res.ok) {
 let job;
 try { job = JSON.parse(body).job; } catch { /* 응답 형식이 바뀌어도 성공은 성공이다 */ }
 console.log(`배포를 걸었다${job?.id ? ` (job ${job.id})` : ""}. Vercel 대시보드에서 진행 상황을 볼 수 있다.`);
-console.log("반영 확인: node scripts/verify-layout.mjs https://lyra-one-zeta.vercel.app");
+console.log("반영 확인: node scripts/verify-layout.mjs https://lyracyno.vercel.app");

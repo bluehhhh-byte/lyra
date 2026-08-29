@@ -5,7 +5,7 @@ $tempRoot = [System.IO.Path]::GetTempPath()
 $deployDir = Join-Path $tempRoot ("lyra-deploy-" + [guid]::NewGuid().ToString("N"))
 $teamId = "team_vk8fZtA1YueBPh3dnFXZNj0H"
 $projectId = "prj_NMnJerZFyg3lxOiHc3uOPHnT6xug"
-$site = "https://lyra-one-zeta.vercel.app"
+$site = "https://lyracyno.vercel.app"
 $beforeDeployment = $null
 try {
   $beforeDeployment = (Invoke-RestMethod -Uri "$site/api/version" -Headers @{ "Cache-Control" = "no-cache" }).deploymentId

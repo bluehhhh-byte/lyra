@@ -16,7 +16,7 @@ export async function checkHealth(base, fetcher = fetch) {
 }
 
 async function main() {
-  const base = process.argv.find((arg) => /^https?:\/\//.test(arg)) || process.env.LYRA_SITE_URL || "https://lyra-one-zeta.vercel.app";
+  const base = process.argv.find((arg) => /^https?:\/\//.test(arg)) || process.env.LYRA_SITE_URL || "https://lyracyno.vercel.app";
   const watch = process.argv.includes("--watch");
   const intervalArg = process.argv.find((arg) => arg.startsWith("--interval="));
   const intervalSeconds = Math.max(30, Number(intervalArg?.split("=")[1]) || 300);
