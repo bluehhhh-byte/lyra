@@ -3,6 +3,7 @@ import { valenceColor, emotionValence } from "../../lib/keywords";
 import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
 import { axisRange, placeLabels, clampLabel } from "../../lib/orbit-layout";
 import { compareYearStats, workLabel } from "../../lib/archive-stats";
+import { emotionProfile } from "../../lib/emotion-profile";
 import { OrbitMonthComparison } from "./orbit-month-comparison";
 
 // 감정 궤도 — 선택 연도의 월들을 valence(가로)·arousal(세로) 평면에 놓고 시간
@@ -131,32 +132,8 @@ function timeColor(index, total) {
 const timeStops = (total, steps = 6) =>
   Array.from({ length: steps }, (_, i) => timeColor((i / (steps - 1)) * (total - 1), total));
 
-const STAR_RADIUS_FLOOR = 0.25;
-const STAR_AXIS_LABELS = ["각성", "밝기", "다양성", "기록 밀도", "전월 이동"];
-
-// 월별 모양은 그해 안의 상대 차이를 읽는 장치다. 각 축의 실제 값은 바꾸지 않고,
-// 최솟값~최댓값만 별 꼭짓점의 25~100% 길이에 대응시킨다. 변화가 없는 축은 62%다.
-function normalizeStarAxis(values) {
-  const lo = Math.min(...values);
-  const hi = Math.max(...values);
-  if (Math.abs(hi - lo) < 0.0001) return values.map(() => 0.62);
-  return values.map((value) => {
-    const t = (value - lo) / (hi - lo);
-    return STAR_RADIUS_FLOOR + (1 - STAR_RADIUS_FLOOR) * Math.pow(t, 0.82);
-  });
-}
-
-function starProfiles(points) {
-  const rawAxes = [
-    points.map((s) => s.center.a),
-    points.map((s) => s.center.v),
-    points.map((s) => s.entropy || 0),
-    points.map((s) => Math.log1p(s.count)),
-    points.map((s) => s.prev?.distance || 0),
-  ];
-  const axes = rawAxes.map(normalizeStarAxis);
-  return points.map((_, pointIndex) => axes.map((axis) => axis[pointIndex]));
-}
+const STAR_AXIS_LABELS = ["밝은 기운", "강한 에너지", "감정의 폭", "어두운 깊이", "잔잔한 여운"];
+const starProfiles = (points) => points.map((point) => emotionProfile(point));
 
 function starPoints(cx, cy, profile, size) {
   return Array.from({ length: 10 }, (_, vertex) => {
@@ -399,7 +376,7 @@ function StarOrbitChart({ points, month, monthHref, v, chartId }) {
     >
       <title id={`${chartId}-title`}>월별 정서 별 그래프</title>
       <desc id={`${chartId}-desc`}>
-        하나의 다섯 축 별 그래프가 월마다 다른 모양으로 겹쳐진다. 위에서 시계방향으로 각성, 밝기, 다양성, 기록 밀도, 전월 이동이며 1월부터 순서대로 나타난다.
+        하나의 다섯 축 별 그래프가 월마다 다른 모양으로 겹쳐진다. 위에서 시계방향으로 밝은 기운, 강한 에너지, 감정의 폭, 어두운 깊이, 잔잔한 여운이다.
       </desc>
 
       <text x={PAD} y={PAD - 12} fontSize={fs} fontWeight="700" fill={timeColor(0, points.length)}>
@@ -590,11 +567,11 @@ export function EmotionOrbit({ stats, month, monthHref }) {
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
           <span className="rounded-full border border-line px-2 py-1">점선 · 기준 월</span>
           <span className="rounded-full border border-line px-2 py-1">실선 · 비교 월</span>
-          <span className="rounded-full border border-line px-2 py-1">별 색상 · 대표 감정 + 밝기 + 각성</span>
-          <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 각성→밝기→다양성→기록 밀도→전월 이동</span>
+          <span className="rounded-full border border-line px-2 py-1">별 색상 · 대표 감정 + 밝고 어두운 기운 + 에너지</span>
+          <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 밝은 기운→강한 에너지→감정의 폭→어두운 깊이→잔잔한 여운</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          기준 월과 비교 월을 각각 누르면 두 별이 같은 축에 겹쳐진다. 다섯 축은 그해 최솟값~최댓값을 25~100% 길이로 펼치며, 실제 밝기와 각성은 선택 영역 아래에서 함께 확인할 수 있다.
+          기준 월과 비교 월을 각각 누르면 두 별이 같은 축에 겹쳐진다. 다섯 축은 모든 달에 동일한 0~100 기준을 적용하며, 점수가 높을수록 해당 감성의 꼭짓점이 길어진다.
         </p>
       </figcaption>
 

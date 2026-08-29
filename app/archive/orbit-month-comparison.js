@@ -2,30 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { emotionColor } from "../../lib/emotion-color";
-
-const AXES = ["각성", "밝기", "다양성", "기록 밀도", "전월 이동"];
-const FLOOR = 0.25;
+import { EMOTION_PROFILE_AXES, emotionProfile, emotionProfileScores } from "../../lib/emotion-profile";
 
 const monthLabel = (month) => `${Number(month.slice(5))}월`;
-const fmt = (value) => (Math.round(value * 10) / 10).toFixed(1);
-
-function normalize(values) {
-  const low = Math.min(...values);
-  const high = Math.max(...values);
-  if (Math.abs(high - low) < 0.0001) return values.map(() => 0.62);
-  return values.map((value) => FLOOR + (1 - FLOOR) * Math.pow((value - low) / (high - low), 0.82));
-}
-
-function profiles(points) {
-  const axes = [
-    points.map((point) => point.center.a),
-    points.map((point) => point.center.v),
-    points.map((point) => point.entropy || 0),
-    points.map((point) => Math.log1p(point.count)),
-    points.map((point) => point.prev?.distance || 0),
-  ].map(normalize);
-  return points.map((_, index) => axes.map((axis) => axis[index]));
-}
 
 function starPoints(cx, cy, profile, radius) {
   return Array.from({ length: 10 }, (_, vertex) => {
@@ -52,7 +31,7 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
     <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby={`${chartId}-title ${chartId}-desc`} className="h-auto w-full overflow-visible">
       <title id={`${chartId}-title`}>{`${monthLabel(base.month)}과 ${monthLabel(compare.month)} 정서 별 그래프 비교`}</title>
       <desc id={`${chartId}-desc`}>
-        점선은 기준 월, 실선은 비교 월이다. 각 별의 색은 그 달의 대표 감정과 밝기, 각성에 따라 달라진다. 위에서 시계방향으로 각성, 밝기, 다양성, 기록 밀도, 전월 이동을 비교한다.
+        점선은 기준 월, 실선은 비교 월이다. 각 별의 색은 그 달의 대표 감정과 밝기, 에너지에 따라 달라진다. 위에서 시계방향으로 밝은 기운, 강한 에너지, 감정의 폭, 어두운 깊이, 잔잔한 여운을 비교한다.
       </desc>
 
       {[0.25, 0.5, 0.75, 1].map((level) => (
@@ -67,9 +46,10 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
         />
       ))}
 
-      {AXES.map((label, axis) => {
+      {EMOTION_PROFILE_AXES.map(({ label }, axis) => {
         const end = axisTip(axis);
-        const text = axisTip(axis, radius + (axis === 0 ? 25 : 30));
+        const mobileGap = [24, 15, 22, 22, 15][axis];
+        const text = axisTip(axis, radius + (width < 500 ? mobileGap : 30));
         const cos = Math.cos(text.angle);
         const anchor = cos > 0.25 ? "start" : cos < -0.25 ? "end" : "middle";
         const dy = axis === 0 ? -4 : axis === 2 || axis === 3 ? 9 : 5;
@@ -138,6 +118,7 @@ function MonthPicker({ label, points, value, onChange, role }) {
 
 function MonthSummary({ title, point }) {
   const color = emotionColor(point);
+  const scores = emotionProfileScores(point);
   return (
     <div className="min-w-0 rounded-xl border p-3" style={{ borderColor: `color-mix(in oklab, ${color} 55%, transparent)`, backgroundColor: `color-mix(in oklab, ${color} 7%, transparent)` }}>
       <div className="flex items-center justify-between gap-2">
@@ -148,8 +129,29 @@ function MonthSummary({ title, point }) {
         <span className="truncate text-xs text-muted">{point.dominant || "대표 감정 없음"}</span>
       </div>
       <p className="mt-1 text-xs tabular-nums text-muted">
-        밝기 {fmt(point.center.v)} · 각성 {fmt(point.center.a)} · 기록 {point.count}개
+        다섯 지표는 모두 0~100 · 기록 {point.count}개
       </p>
+      <dl className="mt-3 grid grid-cols-3 gap-1.5 sm:grid-cols-5">
+        {EMOTION_PROFILE_AXES.map((axis, index) => (
+          <div key={axis.key} className="rounded-lg bg-surface/70 px-2 py-1.5 text-center">
+            <dt className="text-[9px] text-muted">{axis.short}</dt>
+            <dd className="mt-0.5 text-xs font-semibold tabular-nums text-ink">{Math.round(scores[index] * 100)}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
+function AxisGuide() {
+  return (
+    <div className="mt-3 grid gap-1.5 sm:grid-cols-5" aria-label="별 그래프 다섯 축 설명">
+      {EMOTION_PROFILE_AXES.map((axis, index) => (
+        <div key={axis.key} className="rounded-xl border border-line bg-surface px-3 py-2.5">
+          <p className="text-xs font-semibold text-ink">{index + 1}. {axis.label}</p>
+          <p className="mt-1 text-[10px] leading-4 text-muted">{axis.description}</p>
+        </div>
+      ))}
     </div>
   );
 }
@@ -158,7 +160,7 @@ export function OrbitMonthComparison({ points, initialMonth }) {
   const initialIndex = Math.max(0, points.findIndex((point) => point.month === initialMonth));
   const [baseMonth, setBaseMonth] = useState(points[Math.max(0, initialIndex - 1)].month);
   const [compareMonth, setCompareMonth] = useState(points[initialIndex].month);
-  const shapeProfiles = useMemo(() => profiles(points), [points]);
+  const shapeProfiles = useMemo(() => points.map((point) => emotionProfile(point)), [points]);
   const baseIndex = points.findIndex((point) => point.month === baseMonth);
   const compareIndex = points.findIndex((point) => point.month === compareMonth);
   const base = points[baseIndex];
@@ -183,6 +185,7 @@ export function OrbitMonthComparison({ points, initialMonth }) {
         <MonthSummary title="기준" point={base} />
         <MonthSummary title="비교" point={compare} />
       </div>
+      <AxisGuide />
     </div>
   );
 }

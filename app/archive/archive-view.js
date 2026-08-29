@@ -124,7 +124,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
         <section className="mb-10 min-w-0" aria-labelledby="orbit-heading">
           <h2 id="orbit-heading" className="text-lg font-bold">{year}년의 정서 지도</h2>
           <p className="mb-4 mt-1 text-xs text-muted">
-            가로는 밝기, 세로는 각성도다. 월을 고르면 그달 기록으로 이동한다.
+            두 달을 골라 밝은 기운·에너지·감정의 폭·어두운 깊이·잔잔한 여운을 비교한다.
           </p>
           {monthStat?.character && (
             <p className="mb-4 inline-flex rounded-full border border-line bg-surface px-3 py-1 text-xs text-muted">
