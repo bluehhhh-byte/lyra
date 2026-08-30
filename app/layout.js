@@ -6,6 +6,7 @@ import { usageMetricsEnabled } from "../lib/usage-metrics-core";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
 import FableEnvironment from "./fable-environment";
+import { FableCaption } from "./fable-scenes";
 
 
 // Runs before the first paint, so a reader who picked light never sees dark flash.
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main-content" tabIndex={-1} className="fable-paper relative z-10 mx-auto max-w-5xl px-5 pb-24">{children}</main>
         <footer className="fable-paper relative z-10 mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
+          <FableCaption text="lyra - cyno" seed="footer" className="mb-3 h-7 w-32" />
           가사의 저작권은 원저작자에게 있습니다. 번역과 코멘트는 개인 감상입니다.
           <br />
           앨범 커버와 30초 미리듣기는 Apple(iTunes Search API)·Deezer가 제공하며, 각 곡 페이지의

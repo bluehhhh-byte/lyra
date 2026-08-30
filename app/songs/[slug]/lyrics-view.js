@@ -4,6 +4,7 @@ import CardModal from "./lyric-card";
 import { hasReadings, savedReadingSize, savedReadingVisibility } from "../../../lib/reading-preference";
 import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
 import { formatLyricQuote } from "../../../lib/lyric-quote";
+import { LyricThread } from "../../fable-scenes";
 
 const MODES = [
   { key: "both", label: "둘 다" },
@@ -131,7 +132,8 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   };
 
   return (
-    <div data-lyric-view className="mx-auto max-w-2xl">
+    <div data-lyric-view className="relative isolate mx-auto max-w-2xl">
+      <LyricThread seed={song?.slug || "lyrics"} />
       <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted/60"}`}>
         {missingTranslationCount ? `번역 필요 ${missingTranslationCount}줄` : "번역 상태 · 완료"}
       </p>
@@ -201,6 +203,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
           <section
             key={i}
             id={`v${i}`}
+            data-fable-stanza
             className={`group/stanza reveal relative scroll-mt-24  transition-colors duration-1000 ${
               active === i ? "bg-accent/10" : ""
             }`}

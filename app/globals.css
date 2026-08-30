@@ -190,25 +190,6 @@ textarea {
   }
 }
 
-/* song hero: the blurred artwork slowly breathes. The base transform is the
-   resting state when the animation is off (reduced motion). */
-@keyframes ambient-drift {
-  0%,
-  100% {
-    transform: scale(1.25) rotate(0deg);
-  }
-  33% {
-    transform: scale(1.45) rotate(4deg) translateY(-2%);
-  }
-  66% {
-    transform: scale(1.35) rotate(-3deg) translateY(2%);
-  }
-}
-.hero-ambient {
-  transform: scale(1.25);
-  animation: ambient-drift 24s ease-in-out infinite;
-}
-
 /* 아카이브 궤도는 월 순서대로 짧게 이어진다. SVG pathLength=1을 써서 실제 선
    길이와 관계없이 같은 시간에 그려지고, JS가 없어도 CSS만으로 동작한다. */
 @keyframes orbit-draw {
@@ -287,7 +268,6 @@ textarea {
   }
   .card-in,
   .reveal,
-  .hero-ambient,
   .orbit-segment,
   .orbit-point,
   .orbit-start-halo,

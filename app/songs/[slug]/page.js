@@ -7,6 +7,7 @@ import { getAllMoviesMeta } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 import { InkDivider } from "../../ink-details";
 import InkArtwork from "../../ink-artwork";
+import { FableMark, FableSongScene } from "../../fable-scenes";
 import LyricsView from "./lyrics-view";
 import { appleUrl, isExactApple } from "../../../lib/apple";
 import PlayButton from "./play-button";
@@ -119,27 +120,25 @@ export default async function SongPage({ params }) {
 
   return (
     <article>
-      {/* hero — 커버 없는 곡(artwork_none 등)은 배경 없이 텍스트 히어로 */}
-      <div className="relative mb-12 overflow-hidden  border border-line">
-        {song.artwork && (
-          <img
-            src={song.artwork}
-            alt=""
-            aria-hidden
-            className="hero-ambient absolute inset-0 h-full w-full object-cover opacity-40 blur-3xl"
-          />
-        )}
-        <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
+      {/* P1의 글자로 된 침묵을 앨범아트 사각형으로 번안한다. 실제 제목과
+          메타데이터는 선택 가능한 HTML로 남고, 무의미한 글줄만 캔버스다. */}
+      <div className="relative mb-12 overflow-hidden border border-line bg-surface">
+        <FableSongScene slug={song.slug} className="absolute inset-0 z-0 h-full w-full opacity-70" />
+        <div className="relative z-10 flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
           {song.artwork ? (
-            <CoverImage
-              src={song.artwork}
-              alt={`${song.title} album art`}
-              label={song.title}
-              className="w-40  shadow-2xl sm:w-48"
-              fallback={<InkArtwork slug={song.slug} label={song.title} className="aspect-square w-40 border border-line sm:w-48" />}
-            />
+            <div data-song-artwork className="w-40 shrink-0 bg-surface shadow-2xl sm:w-48">
+              <CoverImage
+                src={song.artwork}
+                alt={`${song.title} album art`}
+                label={song.title}
+                className="aspect-square w-full object-cover"
+                fallback={<FableMark seed={song.slug} className="aspect-square w-full border border-line bg-surface" />}
+              />
+            </div>
           ) : (
-            <InkArtwork slug={song.slug} label={song.title} className="aspect-square w-40 border border-line sm:w-48" />
+            <div data-song-artwork className="w-40 shrink-0 bg-surface sm:w-48">
+              <FableMark seed={song.slug} className="aspect-square w-full border border-line" />
+            </div>
           )}
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{song.title}</h1>
