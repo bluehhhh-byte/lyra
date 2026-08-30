@@ -1,11 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-
-// One AudioContext for the page — browsers cap how many you can open, and a new
-// one per track would leak. Each <audio> may be tapped exactly once, so the node
-// pair is cached against the element itself.
-let audioCtx;
-const taps = new WeakMap(); // <audio> → { src, analyser }
+import { tapAudio } from "./audio-tap";
 
 function accentColor() {
   return (
@@ -25,6 +20,7 @@ export default function Scope({ audioRef }) {
     const ctx2d = canvas.getContext("2d");
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     let analyser = null;
+    let releaseTap = null;
     let raf = 0;
     let color = accentColor();
     let dead = false;
@@ -79,22 +75,13 @@ export default function Scope({ audioRef }) {
     const tap = async () => {
       if (dead || analyser) return;
       try {
-        audioCtx ||= new (window.AudioContext || window.webkitAudioContext)();
-        await audioCtx.resume();
-        if (dead || audioCtx.state !== "running") return;
-
-        let t = taps.get(audio);
-        if (!t) {
-          const src = audioCtx.createMediaElementSource(audio);
-          const a = audioCtx.createAnalyser();
-          a.fftSize = 1024;
-          a.smoothingTimeConstant = 0.6;
-          src.connect(a);
-          a.connect(audioCtx.destination);
-          t = { src, analyser: a };
-          taps.set(audio, t);
+        const tapped = await tapAudio(audio, { fftSize: 1024, smoothing: 0.6 });
+        if (dead || !tapped) {
+          tapped?.release();
+          return;
         }
-        analyser = t.analyser;
+        analyser = tapped.analyser;
+        releaseTap = tapped.release;
         if (!reduce) draw();
       } catch {
         // no Web Audio (or element already tapped) → plain playback, no scope
@@ -111,6 +98,7 @@ export default function Scope({ audioRef }) {
       themeWatch.disconnect();
       window.removeEventListener("resize", fit);
       audio.removeEventListener("play", tap);
+      releaseTap?.();
     };
   }, [audioRef]);
 
