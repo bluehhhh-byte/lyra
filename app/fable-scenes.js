@@ -55,19 +55,23 @@ export function FableHomeScene({ insights, className = "" }) {
   const ref = useRef(null);
   const seed = reportArtworkPlan(insights).seed;
   useCanvasScene(ref, (canvas) => {
-    const surface = createCanvasSurface(canvas, { widthUnits: 600, heightUnits: 780 });
+    const rect = canvas.getBoundingClientRect();
+    const heightUnits = 780;
+    const widthUnits = heightUnits * (rect.width / Math.max(1, rect.height));
+    const centerX = widthUnits / 2;
+    const surface = createCanvasSurface(canvas, { widthUnits, heightUnits });
     const hand = createHand(surface);
     const random = stream(seed);
     const tasks = [
-      () => hand.enso(random, 300, 210, 138, 0.88, PALETTE.INK, { w: 9, a: 0.78 }),
-      () => hand.spark(random, 300, 218, 27, { col: PALETTE.CLAY, a: 0.96, w: 2.2, nR: 7 }),
+      () => hand.enso(random, centerX, 210, 138, 0.88, PALETTE.INK, { w: 9, a: 0.78 }),
+      () => hand.spark(random, centerX, 218, 27, { col: PALETTE.CLAY, a: 0.96, w: 2.2, nR: 7 }),
     ];
     for (let y = 390; y < 650; y += rd(random, 31, 47)) {
       const yy = y;
-      tasks.push(() => hand.dotF(random, 304 + Math.sin(yy * 0.012) * 8 + rd(random, -3, 3), yy, rd(random, 1.8, 3), rd(random, 0.45, 0.7), PALETTE.INK));
+      tasks.push(() => hand.dotF(random, centerX + 4 + Math.sin(yy * 0.012) * 8 + rd(random, -3, 3), yy, rd(random, 1.8, 3), rd(random, 0.45, 0.7), PALETTE.INK));
     }
     tasks.push(
-      () => hand.arrowHead(random, 306, 682, Math.PI / 2, 18, 0.62, PALETTE.INK, 1.7),
+      () => hand.arrowHead(random, centerX + 6, 682, Math.PI / 2, 18, 0.62, PALETTE.INK, 1.7),
       () => hand.write(random, "songs i keep", 22, 750, 24, { col: PALETTE.INK, a: 0.76 }),
     );
     return { tasks, reducedMotion: surface.reducedMotion };
@@ -81,8 +85,8 @@ export function FableSongScene({ slug, className = "" }) {
     const parent = canvas.parentElement;
     const parentRect = parent.getBoundingClientRect();
     const artworkRect = parent.querySelector("[data-song-artwork]")?.getBoundingClientRect();
-    const widthUnits = 1600;
     const heightUnits = 620;
+    const widthUnits = heightUnits * (parentRect.width / Math.max(1, parentRect.height));
     const scaleX = widthUnits / Math.max(1, parentRect.width);
     const scaleY = heightUnits / Math.max(1, parentRect.height);
     const silence = artworkRect ? {
@@ -99,10 +103,10 @@ export function FableSongScene({ slug, className = "" }) {
       const yy = y;
       const color = Math.round(y) % 7 === 0 ? PALETTE.SLATE : Math.round(y) % 11 === 0 ? PALETTE.CLAY : PALETTE.INK;
       if (yy < silence.top || yy > silence.bottom) {
-        tasks.push(() => hand.atext(random, 24, 1576, yy, 13, { col: color, a: rd(random, 0.2, 0.4), w: 1.1 }));
+        tasks.push(() => hand.atext(random, 24, widthUnits - 24, yy, 15, { col: color, a: rd(random, 0.2, 0.4), w: 1.1 }));
       } else {
-        if (silence.left > 48) tasks.push(() => hand.atext(random, 24, silence.left, yy, 13, { col: color, a: rd(random, 0.24, 0.46), w: 1.1 }));
-        if (silence.right < 1552) tasks.push(() => hand.atext(random, silence.right, 1576, yy, 13, { col: color, a: rd(random, 0.24, 0.46), w: 1.1 }));
+        if (silence.left > 48) tasks.push(() => hand.atext(random, 24, silence.left, yy, 15, { col: color, a: rd(random, 0.24, 0.46), w: 1.1 }));
+        if (silence.right < widthUnits - 48) tasks.push(() => hand.atext(random, silence.right, widthUnits - 24, yy, 15, { col: color, a: rd(random, 0.24, 0.46), w: 1.1 }));
       }
     }
     tasks.push(() => hand.spark(random, (silence.left + silence.right) / 2, (silence.top + silence.bottom) / 2, 28, { col: PALETTE.CLAY, a: 0.8, w: 2.1, nR: 8 }));
