@@ -31,11 +31,11 @@ export default function Login() {
         onChange={(e) => setPw(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && submit()}
         placeholder="비밀번호"
-        className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent"
+        className="w-full  border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent"
       />
       <button
         onClick={submit}
-        className="mt-3 w-full rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg"
+        className="mt-3 w-full  ink-action px-4 py-2 text-sm font-semibold text-bg"
       >
         로그인
       </button>

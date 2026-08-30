@@ -104,9 +104,9 @@ function MonthPicker({ label, points, value, onChange, role }) {
               aria-pressed={selected}
               data-selection-role={role}
               style={selected ? { borderColor: color, backgroundColor: `color-mix(in oklab, ${color} 16%, transparent)` } : undefined}
-              className={`inline-flex min-h-9 min-w-11 items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected ? "font-semibold" : "border-line bg-surface text-muted hover:text-ink"}`}
+              className={`inline-flex min-h-9 min-w-11 items-center justify-center gap-1.5  border px-3 py-1.5 text-xs font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected ? "font-semibold" : "border-line bg-surface text-muted hover:text-ink"}`}
             >
-              <span aria-hidden className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: color }} />
+              <span aria-hidden className="h-2 w-2 shrink-0 " style={{ backgroundColor: color }} />
               {monthLabel(point.month)}
             </button>
           );
@@ -120,10 +120,10 @@ function MonthSummary({ title, point }) {
   const color = emotionColor(point);
   const scores = emotionProfileScores(point);
   return (
-    <div className="min-w-0 rounded-xl border p-3" style={{ borderColor: `color-mix(in oklab, ${color} 55%, transparent)`, backgroundColor: `color-mix(in oklab, ${color} 7%, transparent)` }}>
+    <div className="min-w-0  border p-3" style={{ borderColor: `color-mix(in oklab, ${color} 55%, transparent)`, backgroundColor: `color-mix(in oklab, ${color} 7%, transparent)` }}>
       <div className="flex items-center justify-between gap-2">
         <strong className="inline-flex items-center gap-2 text-sm text-ink">
-          <span aria-hidden className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: color }} />
+          <span aria-hidden className="h-2.5 w-2.5 " style={{ backgroundColor: color }} />
           {title} · {monthLabel(point.month)}
         </strong>
         <span className="truncate text-xs text-muted">{point.dominant || "대표 감정 없음"}</span>
@@ -133,7 +133,7 @@ function MonthSummary({ title, point }) {
       </p>
       <dl className="mt-3 grid grid-cols-3 gap-1.5 sm:grid-cols-5">
         {EMOTION_PROFILE_AXES.map((axis, index) => (
-          <div key={axis.key} className="rounded-lg bg-surface/70 px-2 py-1.5 text-center">
+          <div key={axis.key} className=" bg-surface/70 px-2 py-1.5 text-center">
             <dt className="text-[9px] text-muted">{axis.short}</dt>
             <dd className="mt-0.5 text-xs font-semibold tabular-nums text-ink">{Math.round(scores[index] * 100)}</dd>
           </div>
@@ -147,7 +147,7 @@ function AxisGuide() {
   return (
     <div className="mt-3 grid gap-1.5 sm:grid-cols-5" aria-label="별 그래프 다섯 축 설명">
       {EMOTION_PROFILE_AXES.map((axis, index) => (
-        <div key={axis.key} className="rounded-xl border border-line bg-surface px-3 py-2.5">
+        <div key={axis.key} className=" border border-line bg-surface px-3 py-2.5">
           <p className="text-xs font-semibold text-ink">{index + 1}. {axis.label}</p>
           <p className="mt-1 text-[10px] leading-4 text-muted">{axis.description}</p>
         </div>
@@ -176,7 +176,7 @@ export function OrbitMonthComparison({ points, initialMonth }) {
         <ComparisonChart {...chartProps} variant={{ width: 900, height: 510, cx: 450, cy: 250, radius: 184, fontSize: 14 }} chartId="month-compare-desktop" />
       </div>
 
-      <div className="mt-2 grid gap-4 rounded-2xl border border-line bg-surface/50 p-3 sm:grid-cols-2 sm:p-4">
+      <div className="mt-2 grid gap-4  border border-line bg-surface/50 p-3 sm:grid-cols-2 sm:p-4">
         <MonthPicker label="기준 월 선택" points={points} value={baseMonth} onChange={setBaseMonth} role="base" />
         <MonthPicker label="비교 월 선택" points={points} value={compareMonth} onChange={setCompareMonth} role="compare" />
       </div>

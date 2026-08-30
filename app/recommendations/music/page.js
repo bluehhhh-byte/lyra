@@ -64,7 +64,7 @@ export default async function MusicRecommendationsPage() {
       </div>
 
       {!latest ? (
-        <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
+        <div className=" border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
           아직 추천 곡이 없습니다.
           <br />
           관리자 → 등록된 곡에서 “추천 곡 생성”을 누르면 여기에 쌓입니다.
@@ -97,7 +97,7 @@ export default async function MusicRecommendationsPage() {
           <h2 className="mb-3 text-sm font-semibold text-muted">이전 추천</h2>
           <div className="space-y-2">
             {older.map(([at, list]) => (
-              <details key={at} className="rounded-xl border border-line px-4 py-3">
+              <details key={at} className=" border border-line px-4 py-3">
                 <summary className="cursor-pointer text-sm text-muted hover:text-accent">
                   {kstDate(at)}
                   {runLabel(at) ? ` · ${runLabel(at)}` : ""} · {list.length}곡

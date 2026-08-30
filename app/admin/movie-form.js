@@ -21,9 +21,9 @@ async function api(action, body) {
 }
 
 const input =
-  "w-full rounded-lg border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent";
+  "w-full  border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent";
 const btn =
-  "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40";
+  " ink-action px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40";
 
 // half-star picker, 0.5–5.0 — click the left/right half of a star
 function StarInput({ value, onChange }) {
@@ -160,7 +160,7 @@ export default function MovieForm() {
           </button>
         </div>
         {results.length > 0 && (
-          <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto rounded-lg border border-line">
+          <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto  border border-line">
             {results.map((r) => (
               <li key={r.tmdbId}>
                 <button
@@ -170,15 +170,15 @@ export default function MovieForm() {
                   }`}
                 >
                   {r.thumb ? (
-                    <img src={r.thumb} alt="" loading="lazy" className="h-14 w-10 shrink-0 rounded object-cover" />
+                    <img src={r.thumb} alt="" loading="lazy" className="h-14 w-10 shrink-0  object-cover" />
                   ) : (
-                    <span className="flex h-14 w-10 shrink-0 items-center justify-center rounded bg-line text-xs text-muted">
+                    <span className="flex h-14 w-10 shrink-0 items-center justify-center  bg-line text-xs text-muted">
                       ?
                     </span>
                   )}
                   <span className="min-w-0">
                     <span className="font-medium">{r.title}</span>
-                    <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 text-[10px] text-muted">
+                    <span className="ml-2  border border-line px-1.5 py-0.5 text-[10px] text-muted">
                       {r.kind}
                     </span>
                     <span className="text-muted"> · {r.year}</span>
@@ -197,8 +197,8 @@ export default function MovieForm() {
       {movie && (
         <section>
           <Step n="2" label="시놉시스 자동 로딩 → Gemini 정돈" />
-          <div className="mb-3 flex items-center gap-3 rounded-lg border border-line bg-surface px-3 py-2">
-            <img src={movie.poster} alt="" className="h-16 w-11 shrink-0 rounded object-cover" />
+          <div className="mb-3 flex items-center gap-3  border border-line bg-surface px-3 py-2">
+            <img src={movie.poster} alt="" className="h-16 w-11 shrink-0  object-cover" />
             <div className="min-w-0 text-xs text-muted">
               <p className="text-sm font-medium text-ink">{movie.title}</p>
               <p className="truncate">
@@ -247,7 +247,7 @@ export default function MovieForm() {
                       key={theme}
                       aria-pressed={active}
                       onClick={() => setThemes((current) => active ? current.filter((item) => item !== theme) : current.length < 3 ? [...current, theme] : current)}
-                      className={`rounded-full border px-3 py-1 text-xs ${active ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}
+                      className={` border px-3 py-1 text-xs ${active ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}
                     >
                       {theme}
                     </button>
@@ -280,7 +280,7 @@ export default function MovieForm() {
 function Step({ n, label }) {
   return (
     <h2 className="mb-3 text-sm font-semibold">
-      <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-bg">
+      <span className="mr-2 inline-flex h-5 w-5 items-center justify-center  bg-accent text-xs font-bold text-bg">
         {n}
       </span>
       {label}

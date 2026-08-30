@@ -29,8 +29,8 @@ const H = CAROUSEL_THEME.height;
 const MAX_PAIRS = MAX_SELECTED_LINES;
 const SANS = CAROUSEL_THEME.sans;
 const SERIF = CAROUSEL_THEME.serif;
-const INK = "#f7f7f8";
-const INK_DIM = "rgba(247,247,248,0.84)";
+const INK = "#f6f1e4";
+const INK_DIM = "rgba(246,241,228,0.84)";
 const PAD = CAROUSEL_THEME.padding;
 
 export function drawImageCover(ctx, image, x, y, width, height) {
@@ -53,14 +53,14 @@ export function drawImageCover(ctx, image, x, y, width, height) {
 export function drawRoundedArt(ctx, image, x, y, size, radius = 18) {
   ctx.save();
   ctx.beginPath();
-  ctx.roundRect(x, y, size, size, radius);
+  ctx.rect(x, y, size, size, radius);
   ctx.clip();
   drawImageCover(ctx, image, x, y, size, size);
   ctx.restore();
 }
 
 export function drawArtWash(ctx, art, scrim = 0.66) {
-  ctx.fillStyle = "#0d0d0f";
+  ctx.fillStyle = "#181410";
   ctx.fillRect(0, 0, W, H);
   if (art) {
     const tiny = document.createElement("canvas");
@@ -78,12 +78,12 @@ export function drawArtWash(ctx, art, scrim = 0.66) {
 
 export function drawPageNumber(ctx, position, total) {
   ctx.save();
-  ctx.fillStyle = "rgba(13,13,15,0.58)";
+  ctx.fillStyle = "rgba(24,20,16,0.58)";
   ctx.beginPath();
-  ctx.roundRect(W - PAD - 132, 66, 132, 58, 29);
+  ctx.rect(W - PAD - 132, 66, 132, 58, 29);
   ctx.fill();
   ctx.textAlign = "right";
-  ctx.fillStyle = "rgba(247,247,248,0.88)";
+  ctx.fillStyle = "rgba(246,241,228,0.88)";
   ctx.font = `600 25px ${SANS}`;
   ctx.fillText(`${String(position).padStart(2, "0")} / ${String(total).padStart(2, "0")}`, W - PAD - 20, 104);
   ctx.restore();
@@ -138,7 +138,7 @@ export function drawProgress(ctx, position, total) {
   for (let i = 0; i < total; i++) {
     ctx.beginPath();
     ctx.arc(start + i * gap, H - 66, i + 1 === position ? dot : 4, 0, Math.PI * 2);
-    ctx.fillStyle = i + 1 === position ? INK : "rgba(247,247,248,0.35)";
+    ctx.fillStyle = i + 1 === position ? INK : "rgba(246,241,228,0.35)";
     ctx.fill();
   }
 }
@@ -250,7 +250,7 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
   }
 
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(247,247,248,0.7)";
+  ctx.fillStyle = "rgba(246,241,228,0.7)";
   ctx.font = `600 27px ${SERIF}`;
   ctx.fillText("Lyra.", PAD, H - 56);
   drawProgress(ctx, position, total);
@@ -267,7 +267,7 @@ async function drawCoverCard({ song, art }) {
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  ctx.fillStyle = "#0d0d0f";
+  ctx.fillStyle = "#181410";
   ctx.fillRect(0, 0, W, H);
 
   // 텍스트 블록에 충분한 숨 쉴 공간을 남기면서 커버의 존재감은 유지한다.
@@ -281,11 +281,11 @@ async function drawCoverCard({ song, art }) {
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다
   const fade = ctx.createLinearGradient(0, coverArtHeight - 120, 0, coverArtHeight);
-  fade.addColorStop(0, "rgba(13,13,15,0)");
-  fade.addColorStop(1, "rgba(13,13,15,1)");
+  fade.addColorStop(0, "rgba(24,20,16,0)");
+  fade.addColorStop(1, "rgba(24,20,16,1)");
   ctx.fillStyle = fade;
   ctx.fillRect(0, coverArtHeight - 120, W, 120);
-  ctx.fillStyle = "#0d0d0f";
+  ctx.fillStyle = "#181410";
   ctx.fillRect(0, coverArtHeight, W, H - coverArtHeight);
 
   const ink = INK;
@@ -336,7 +336,7 @@ async function drawCoverCard({ song, art }) {
     ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
     detailY += artistSize + 14;
     if (meta && detailY <= H - 88) {
-      ctx.fillStyle = "rgba(244,244,246,0.4)";
+      ctx.fillStyle = "rgba(246,241,228,0.4)";
       ctx.font = `500 23px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
@@ -361,7 +361,7 @@ async function drawCoverCard({ song, art }) {
     tagLine = next;
   }
   if (tagLine) {
-    ctx.fillStyle = "rgba(244,244,246,0.45)";
+    ctx.fillStyle = "rgba(246,241,228,0.45)";
     ctx.fillText(tagLine, pad, H - 52);
   }
   ctx.textAlign = "right";
@@ -381,7 +381,7 @@ async function drawAboutCard({ song, note, art, position, total }) {
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  ctx.fillStyle = "#0d0d0f";
+  ctx.fillStyle = "#181410";
   ctx.fillRect(0, 0, W, H);
   const artHeight = 570;
   if (art) drawImageCover(ctx, art, 0, 0, W, artHeight);
@@ -390,15 +390,15 @@ async function drawAboutCard({ song, note, art, position, total }) {
     ctx.fillRect(0, 0, W, artHeight);
   }
   const fade = ctx.createLinearGradient(0, 330, 0, 690);
-  fade.addColorStop(0, "rgba(13,13,15,0)");
-  fade.addColorStop(0.68, "rgba(13,13,15,0.92)");
-  fade.addColorStop(1, "#0d0d0f");
+  fade.addColorStop(0, "rgba(24,20,16,0)");
+  fade.addColorStop(0.68, "rgba(24,20,16,0.92)");
+  fade.addColorStop(1, "#181410");
   ctx.fillStyle = fade;
   ctx.fillRect(0, 330, W, 360);
 
   drawPageNumber(ctx, position, total);
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(247,247,248,0.72)";
+  ctx.fillStyle = "rgba(246,241,228,0.72)";
   ctx.font = `700 24px ${SANS}`;
   ctx.fillText("SONG NOTE", PAD, 630);
 
@@ -563,27 +563,27 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
       <div
         onClick={(e) => e.stopPropagation()}
         role="document"
-        className="flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full min-w-0 max-w-[calc(100vw-1rem)] scale-100 flex-col overflow-hidden rounded-2xl border border-line bg-bg p-3 opacity-100 transition duration-200 ease-out-strong sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:max-w-5xl sm:p-6 starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
+        className="flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full min-w-0 max-w-[calc(100vw-1rem)] scale-100 flex-col overflow-hidden  border border-line bg-bg p-3 opacity-100 transition duration-200 ease-out-strong sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:max-w-5xl sm:p-6 starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
       >
         <div className="mb-3 flex shrink-0 items-center justify-between gap-3 sm:mb-4 sm:gap-4">
           <div className="min-w-0">
             <p className="text-sm font-semibold text-ink">인스타그램 캐러셀 {CAROUSEL_SLIDES}장</p>
             <p className="mt-0.5 text-xs text-muted">커버 · 곡 설명 · 가사 3장</p>
           </div>
-          <button onClick={onClose} aria-label="캐러셀 닫기" className="rounded-full border border-line px-3 py-1.5 text-xs text-muted hover:text-accent">닫기</button>
+          <button onClick={onClose} aria-label="캐러셀 닫기" className=" border border-line px-3 py-1.5 text-xs text-muted hover:text-accent">닫기</button>
         </div>
 
         <div className="grid min-h-0 min-w-0 flex-1 gap-4 overflow-y-auto overscroll-contain pr-1 sm:gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)]">
           <section aria-label="카드 미리보기" className="min-w-0">
             {carousel.error ? (
-              <p className="rounded-xl border border-line px-3 py-12 text-center text-sm text-muted">{carousel.error}</p>
+              <p className=" border border-line px-3 py-12 text-center text-sm text-muted">{carousel.error}</p>
             ) : cards.length ? (
               <>
                 <img
                   src={cards[activeCard]?.url}
                   alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`}
                   draggable={false}
-                  className="mx-auto max-h-[42dvh] w-auto max-w-full select-none rounded-xl border border-line shadow-2xl sm:max-h-[56dvh] lg:max-h-[62vh]"
+                  className="mx-auto max-h-[42dvh] w-auto max-w-full select-none  border border-line shadow-2xl sm:max-h-[56dvh] lg:max-h-[62vh]"
                 />
                 <ol className="mt-2 grid min-w-0 grid-cols-5 gap-1.5 sm:mt-3 sm:gap-2">
                   {cards.map((card, index) => (
@@ -593,9 +593,9 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                         onClick={() => setActiveCard(index)}
                         aria-label={`${index + 1}번째 카드 보기 — ${card.label}`}
                         aria-pressed={activeCard === index}
-                        className={`w-full min-w-0 rounded-lg border p-1 transition ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65 hover:opacity-100"}`}
+                        className={`w-full min-w-0  border p-1 transition ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65 hover:opacity-100"}`}
                       >
-                        <img src={card.url} alt="" draggable={false} className="aspect-[4/5] w-full rounded object-cover" />
+                        <img src={card.url} alt="" draggable={false} className="aspect-[4/5] w-full  object-cover" />
                         <span className="mt-1 block truncate text-[10px] text-muted">{index + 1}. {card.label}</span>
                       </button>
                     </li>
@@ -603,7 +603,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 </ol>
               </>
             ) : (
-              <div className="flex h-[42dvh] max-h-[420px] items-center justify-center rounded-xl border border-line text-sm text-muted sm:h-auto sm:aspect-[4/5] sm:max-h-[56dvh] lg:max-h-[62vh]">카드 생성 중…</div>
+              <div className="flex h-[42dvh] max-h-[420px] items-center justify-center  border border-line text-sm text-muted sm:h-auto sm:aspect-[4/5] sm:max-h-[56dvh] lg:max-h-[62vh]">카드 생성 중…</div>
             )}
           </section>
 
@@ -620,7 +620,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                     onClick={() => setAlign(k)}
                     aria-label={`${name} 정렬`}
                     aria-pressed={align === k}
-                    className={`rounded-full border px-2.5 py-0.5 text-xs transition ${
+                    className={` border px-2.5 py-0.5 text-xs transition ${
                       align === k
                         ? "border-accent bg-accent font-semibold text-bg"
                         : "border-line text-muted hover:text-accent"
@@ -632,7 +632,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
               </div>
             </div>
           <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 15줄까지 선택할 수 있습니다.</p>
-          <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain rounded-xl border border-line p-2 lg:max-h-[44vh]">
+          <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain  border border-line p-2 lg:max-h-[44vh]">
           {allLines.map((l, i) => (
             <li key={i}>
               {l.section && (
@@ -660,7 +660,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           <button
             onClick={() => cardBlobs.current.length && downloadAll(cardBlobs.current, song)}
             disabled={building || !cards.length}
-            className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
+            className="flex-1  ink-action px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
           >
             {building ? "만드는 중…" : `${cards.length}장 저장`}
           </button>

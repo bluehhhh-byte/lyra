@@ -111,7 +111,7 @@ export default async function MoviePage({ params }) {
   return (
     <article>
       {/* hero — 16:9 backdrop wash behind a 2:3 poster */}
-      <div className="relative mb-12 overflow-hidden rounded-2xl border border-line">
+      <div className="relative mb-12 overflow-hidden  border border-line">
         {(movie.backdrop || movie.poster) && (
           <img
             src={movie.backdrop || movie.poster}
@@ -125,7 +125,7 @@ export default async function MoviePage({ params }) {
             src={movie.poster}
             alt={`${movie.title_ko || movie.title} 포스터`}
             label={movie.title_ko || movie.title}
-            className="w-40 rounded-xl shadow-2xl sm:w-48"
+            className="w-40  shadow-2xl sm:w-48"
           />
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{movie.title_ko || movie.title}</h1>
@@ -157,7 +157,7 @@ export default async function MoviePage({ params }) {
                 <Link
                   key={t}
                   href={`/tags/${encodeURIComponent(t)}`}
-                  className="rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
+                  className=" border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
                 >
                   {t}
                 </Link>
@@ -169,7 +169,7 @@ export default async function MoviePage({ params }) {
                   <Link
                     key={theme}
                     href={`/archive?theme=${encodeURIComponent(theme)}`}
-                    className="rounded-full bg-accent/10 px-2.5 py-1 text-xs text-accent hover:bg-accent/20"
+                    className=" bg-accent/10 px-2.5 py-1 text-xs text-accent hover:bg-accent/20"
                   >
                     {theme}
                   </Link>
@@ -197,7 +197,7 @@ export default async function MoviePage({ params }) {
                   href={tmdbUrl(movie.tmdbId, movie.media)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted transition active:scale-[0.97] hover:text-accent"
+                  className=" border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted transition active:scale-[0.97] hover:text-accent"
                 >
                   TMDB
                 </a>
@@ -262,7 +262,7 @@ export default async function MoviePage({ params }) {
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
             {related.map((m) => (
               <Link key={m.slug} href={`/movies/${m.slug}`} className="group block active:scale-[0.98] transition">
-                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                <div className="overflow-hidden  border border-line bg-surface">
                   <CoverImage
                     src={m.poster}
                     alt=""
@@ -292,7 +292,7 @@ export default async function MoviePage({ params }) {
             {directorWorks.map((work) => {
               const Card = (
                 <>
-                  <CoverImage src={work.poster} alt="" label={work.title} loading="lazy" className="aspect-[2/3] w-full rounded-lg border border-line object-cover" />
+                  <CoverImage src={work.poster} alt="" label={work.title} loading="lazy" className="aspect-[2/3] w-full  border border-line object-cover" />
                   <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{work.title}</h3>
                   <p className="truncate text-xs text-muted">{work.year}{work.rating == null ? " · 별점 없음" : ` · ★${work.rating}`}</p>
                 </>
@@ -312,7 +312,7 @@ export default async function MoviePage({ params }) {
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
             {eraSongs.map((s) => (
               <Link key={s.slug} href={`/songs/${s.slug}`} className="group block transition active:scale-[0.98]">
-                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                <div className="overflow-hidden  border border-line bg-surface">
                   <img
                     src={s.artwork}
                     alt=""

@@ -9,9 +9,9 @@ export default function Loading() {
     >
       {Array.from({ length: 8 }).map((_, i) => (
         <div key={i}>
-          <div className="aspect-square w-full animate-pulse rounded-xl bg-surface" />
-          <div className="mt-3 h-3.5 w-3/4 animate-pulse rounded bg-surface" />
-          <div className="mt-2 h-3 w-1/2 animate-pulse rounded bg-surface" />
+          <div className="aspect-square w-full animate-pulse  bg-surface" />
+          <div className="mt-3 h-3.5 w-3/4 animate-pulse  bg-surface" />
+          <div className="mt-2 h-3 w-1/2 animate-pulse  bg-surface" />
         </div>
       ))}
     </div>

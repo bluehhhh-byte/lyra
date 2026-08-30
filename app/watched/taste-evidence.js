@@ -3,8 +3,8 @@ import { INSUFFICIENT_SAMPLE_LABEL } from "../../lib/emotion-model";
 
 function Meter({ value, max, tone = "bg-accent/70" }) {
   return (
-    <div className="h-2.5 min-w-24 overflow-hidden rounded-full bg-surface" aria-hidden="true">
-      <div className={`h-full rounded-full ${tone}`} style={{ width: `${Math.max(0, Math.min(100, (value / max) * 100))}%` }} />
+    <div className="h-2.5 min-w-24 overflow-hidden  bg-surface" aria-hidden="true">
+      <div className={`h-full  ${tone}`} style={{ width: `${Math.max(0, Math.min(100, (value / max) * 100))}%` }} />
     </div>
   );
 }
@@ -20,7 +20,7 @@ export function GenreRatingCross({ movies }) {
         </div>
         {result.deferred > 0 && <p className="text-xs text-muted">표본 부족 장르 {result.deferred}개는 {INSUFFICIENT_SAMPLE_LABEL}</p>}
       </div>
-      <div className="overflow-x-auto rounded-xl border border-line">
+      <div className="overflow-x-auto  border border-line">
         <table className="w-full min-w-[620px] text-left text-xs">
           <thead className="bg-surface/70 text-muted">
             <tr>
@@ -69,7 +69,7 @@ export function CountryDistribution({ movies }) {
         </div>
         <p className="text-xs text-muted">미분류 {result.unclassified.toLocaleString("ko-KR")}편</p>
       </div>
-      <div className="overflow-hidden rounded-xl border border-line">
+      <div className="overflow-hidden  border border-line">
         <table className="w-full text-left text-sm">
           <thead className="bg-surface/70 text-xs text-muted">
             <tr>
@@ -98,7 +98,7 @@ export function RuntimeEvidence({ movies }) {
   const maxBucket = Math.max(...result.buckets.map((row) => row.count), 1);
   const maxPeriod = Math.max(...result.periods.map((row) => row.known), 1);
   return (
-    <section className="mb-12 rounded-2xl border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="runtime-evidence-title">
+    <section className="mb-12  border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="runtime-evidence-title">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
           <h2 id="runtime-evidence-title" className="text-lg font-bold">러닝타임과 장편의 시기</h2>
@@ -126,9 +126,9 @@ export function RuntimeEvidence({ movies }) {
             {result.periods.map((row) => (
               <div key={row.start} className="grid grid-cols-[5.5rem_1fr_4.5rem] items-center gap-2 text-xs">
                 <span className="tabular-nums text-muted">{row.start}–{row.end}</span>
-                <div className="relative h-3 overflow-hidden rounded-full bg-surface">
-                  <div className="absolute inset-y-0 left-0 rounded-full bg-accent/30" style={{ width: `${(row.known / maxPeriod) * 100}%` }} />
-                  <div className="absolute inset-y-0 left-0 rounded-full bg-green-500/75" style={{ width: `${(row.long / maxPeriod) * 100}%` }} />
+                <div className="relative h-3 overflow-hidden  bg-surface">
+                  <div className="absolute inset-y-0 left-0  bg-accent/30" style={{ width: `${(row.known / maxPeriod) * 100}%` }} />
+                  <div className="absolute inset-y-0 left-0  bg-green-500/75" style={{ width: `${(row.long / maxPeriod) * 100}%` }} />
                 </div>
                 <span className="text-right tabular-nums text-muted">{row.long}/{row.known}편</span>
               </div>
@@ -147,7 +147,7 @@ export function RewatchEvidence({ movies }) {
       <h2 id="rewatch-title" className="text-lg font-bold">재관람 기록</h2>
       <p className="mt-1 text-xs text-muted">TMDB ID를 우선하고, 없으면 제목과 작품 연도로 같은 작품을 찾습니다.</p>
       {rows.length ? (
-        <ul className="mt-4 divide-y divide-line rounded-xl border border-line">
+        <ul className="mt-4 divide-y divide-line  border border-line">
           {rows.map((row) => (
             <li key={row.key} className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 text-sm">
               <span className="font-medium">{row.title} {row.year && <span className="text-muted">({row.year})</span>}</span>
@@ -156,7 +156,7 @@ export function RewatchEvidence({ movies }) {
           ))}
         </ul>
       ) : (
-        <p className="mt-4 rounded-xl border border-dashed border-line px-4 py-8 text-center text-sm text-muted">현재 데이터에는 재관람 기록이 없습니다.</p>
+        <p className="mt-4  border border-dashed border-line px-4 py-8 text-center text-sm text-muted">현재 데이터에는 재관람 기록이 없습니다.</p>
       )}
     </section>
   );

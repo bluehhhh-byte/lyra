@@ -26,7 +26,7 @@ export default async function MomentsPage() {
           </section>)}
         </div>
       ) : (
-        <div className="rounded-xl border border-dashed border-line px-6 py-20 text-center">
+        <div className=" border border-dashed border-line px-6 py-20 text-center">
           <p className="text-sm text-muted">아직 공개된 문화 장면이 없습니다.</p>
           <Link href="/archive" className="mt-4 inline-block text-sm text-accent">기존 아카이브 보기 →</Link>
         </div>

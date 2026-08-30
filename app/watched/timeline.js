@@ -10,7 +10,7 @@ function Density({ rows, label }) {
         {rows.map((row) => (
           <div key={row.period} className="group flex min-w-2 flex-1 flex-col items-center justify-end" title={`${row.period} · ${row.count}편`}>
             <span className="sr-only">{row.period} {row.count}편</span>
-            <span className="w-full min-w-2 rounded-t bg-accent/55 group-hover:bg-accent" style={{ height: `${Math.max(3, (row.count / max) * 80)}px` }} aria-hidden="true" />
+            <span className="w-full min-w-2  bg-accent/55 group-hover:bg-accent" style={{ height: `${Math.max(3, (row.count / max) * 80)}px` }} aria-hidden="true" />
           </div>
         ))}
       </div>
@@ -22,7 +22,7 @@ function Density({ rows, label }) {
 export default function WatchedTimeline({ movies }) {
   const timeline = watchedTimeline(movies);
   return (
-    <section className="mb-10 rounded-2xl border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="watched-timeline-title">
+    <section className="mb-10  border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="watched-timeline-title">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
           <h2 id="watched-timeline-title" className="text-lg font-bold">관람 연대기</h2>
@@ -35,7 +35,7 @@ export default function WatchedTimeline({ movies }) {
         {timeline.viewingMonths.length ? (
           <Density rows={timeline.viewingMonths} label="실제 관람 월별 밀도" />
         ) : (
-          <div className="rounded-xl border border-dashed border-line px-4 py-8 text-center text-sm text-muted">
+          <div className=" border border-dashed border-line px-4 py-8 text-center text-sm text-muted">
             원본에 관람 날짜가 없어 연·월별 관람 밀도를 계산할 수 없습니다.
           </div>
         )}

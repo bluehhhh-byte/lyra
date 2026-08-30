@@ -69,7 +69,7 @@ export default function MovieBrowse({ movies }) {
           onChange={(event) => setQ(event.target.value)}
           placeholder="영화·감독·배우·줄거리 검색"
           aria-label="작품 검색"
-          className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
+          className="w-full  border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
         <div className="flex flex-wrap items-center gap-1.5">
           {[
@@ -80,7 +80,7 @@ export default function MovieBrowse({ movies }) {
             <button
               key={key}
               onClick={() => setMedia(key)}
-              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+              className={` border px-3 py-1 text-xs transition active:scale-[0.97] ${
                 media === key
                   ? "border-accent bg-accent font-semibold text-bg"
                   : "border-line text-muted hover:text-ink"
@@ -96,7 +96,7 @@ export default function MovieBrowse({ movies }) {
             <button
               key={key}
               onClick={() => setSort(sort === key ? "recorded" : key)}
-              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+              className={` border px-3 py-1 text-xs transition active:scale-[0.97] ${
                 sort === key
                   ? "border-accent bg-accent font-semibold text-bg"
                   : "border-line text-muted hover:text-ink"
@@ -110,7 +110,7 @@ export default function MovieBrowse({ movies }) {
               onClick={() => setSeed((value) => value + 1)}
               title="다시 섞기"
               aria-label="작품 다시 섞기"
-              className="rounded-full border border-line px-2.5 py-1 text-xs text-muted hover:text-accent"
+              className=" border border-line px-2.5 py-1 text-xs text-muted hover:text-accent"
             >
               ↻
             </button>
@@ -118,7 +118,7 @@ export default function MovieBrowse({ movies }) {
           {hasFilters && (
             <button onClick={reset} className="text-xs text-muted hover:text-accent">초기화</button>
           )}
-          <span className="rounded-full border border-line px-3 py-1 text-xs tabular-nums text-muted">
+          <span className=" border border-line px-3 py-1 text-xs tabular-nums text-muted">
             총 {movies.length}편{filtered.length !== movies.length && ` · ${filtered.length}편 표시`}
           </span>
         </div>
@@ -164,7 +164,7 @@ function Grid({ list, needle }) {
     <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
       {list.map((movie) => (
         <Link key={movie.slug} href={`/movies/${movie.slug}`} className="group block transition active:scale-[0.98]">
-          <div className="overflow-hidden rounded-xl border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
+          <div className="overflow-hidden  border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
             <CoverImage
               src={movie.poster}
               alt={`${movie.title} 포스터`}

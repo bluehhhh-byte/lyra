@@ -90,7 +90,7 @@ export default function Requality() {
         <button
           onClick={scan}
           disabled={busy}
-          className="min-w-32 rounded-lg border border-line px-4 py-2 text-center text-sm leading-tight tabular-nums text-muted hover:text-accent disabled:opacity-40"
+          className="min-w-32  border border-line px-4 py-2 text-center text-sm leading-tight tabular-nums text-muted hover:text-accent disabled:opacity-40"
         >
           {/* two lines in both states so the button keeps its size while scanning */}
           가사 품질
@@ -114,13 +114,13 @@ export default function Requality() {
             <button
               onClick={replaceAll}
               disabled={busy}
-              className="rounded-lg border border-accent px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+              className=" border border-accent px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
             >
               전체 교체 ({list.length}곡)
             </button>
             <span className="text-xs text-muted">번역을 다시 생성합니다</span>
           </div>
-          <ul className="divide-y divide-line rounded-lg border border-line">
+          <ul className="divide-y divide-line  border border-line">
             {list.map((s) => {
               const st = state[s.slug];
               return (
@@ -143,7 +143,7 @@ export default function Requality() {
                       <button
                         onClick={() => replaceOne(s)}
                         disabled={busy || st === "working"}
-                        className="shrink-0 rounded border border-line px-2 py-0.5 text-xs text-muted hover:border-accent hover:text-accent disabled:opacity-40"
+                        className="shrink-0  border border-line px-2 py-0.5 text-xs text-muted hover:border-accent hover:text-accent disabled:opacity-40"
                       >
                         {st === "working" ? "교체 중…" : "교체"}
                       </button>

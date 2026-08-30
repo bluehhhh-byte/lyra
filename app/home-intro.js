@@ -8,7 +8,7 @@ function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
   return (
     <Link href={href} className="group min-w-0">
-      <div className="aspect-square overflow-hidden rounded-xl border border-line bg-surface">
+      <div className="aspect-square overflow-hidden  border border-line bg-surface">
         <CoverImage
           src={item.image}
           alt=""
@@ -37,7 +37,7 @@ function LatestDay({ latest }) {
     );
   const links = [link(latest.repSong), link(latest.repMovie)].filter(Boolean);
   return (
-    <section className="mb-14 min-w-0 rounded-2xl border border-line bg-surface px-5 py-5 sm:px-7">
+    <section className="mb-14 min-w-0  border border-line bg-surface px-5 py-5 sm:px-7">
       <p className="text-xs font-semibold text-accent">
         <RelativeDay day={latest.day} />
       </p>
@@ -93,7 +93,7 @@ export default function HomeIntro({ insights }) {
         </section>
       )}
 
-      <section className="mb-14 grid gap-5 rounded-2xl border border-line bg-surface px-5 py-5 sm:grid-cols-[1fr_auto] sm:items-center sm:px-7">
+      <section className="mb-14 grid gap-5  border border-line bg-surface px-5 py-5 sm:grid-cols-[1fr_auto] sm:items-center sm:px-7">
         <div>
           <p className="text-xs font-semibold text-accent">요즘의 변화</p>
           <p className="mt-2 max-w-2xl text-sm leading-6">{shiftSentence(shift)}</p>

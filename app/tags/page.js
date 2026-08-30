@@ -29,7 +29,7 @@ export default async function TagsPage() {
             key={tag}
             href={`/tags/${encodeURIComponent(tag)}`}
             // scale the type with usage — a tag on 8 songs should read bigger than one on 1
-            className={`rounded-full border border-line bg-surface px-3.5 py-1.5 transition hover:border-accent hover:text-accent ${
+            className={` border border-line bg-surface px-3.5 py-1.5 transition hover:border-accent hover:text-accent ${
               n / max > 0.66 ? "text-base" : n / max > 0.33 ? "text-sm" : "text-xs"
             }`}
           >

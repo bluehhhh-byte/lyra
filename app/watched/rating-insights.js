@@ -14,7 +14,7 @@ function RatingHistogram({ rows }) {
         {rows.map((row) => (
           <div key={row.rating} className="flex h-full min-w-0 flex-col justify-end gap-1 text-center">
             <span className="text-[10px] tabular-nums text-muted">{row.count}</span>
-            <div className="mx-auto w-full max-w-9 rounded-t bg-accent/75" style={{ height: `${Math.max((row.count / max) * 100, row.count ? 3 : 0)}%` }} />
+            <div className="mx-auto w-full max-w-9  bg-accent/75" style={{ height: `${Math.max((row.count / max) * 100, row.count ? 3 : 0)}%` }} />
             <span className="text-[10px] tabular-nums text-muted">{row.rating}</span>
           </div>
         ))}
@@ -59,7 +59,7 @@ export default function RatingInsights({ movies }) {
   const distribution = ratingDistribution(movies);
   const trend = yearlyRatingTrend(movies);
   return (
-    <section className="mb-12 rounded-2xl border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="rating-insights-title">
+    <section className="mb-12  border border-line bg-surface/40 p-5 sm:p-7" aria-labelledby="rating-insights-title">
       <h2 id="rating-insights-title" className="text-lg font-bold">별점의 모양</h2>
       <p className="mt-1 text-xs text-muted">{movies.length.toLocaleString("ko-KR")}편의 평가를 같은 고정 축으로 계산했습니다.</p>
       <div className="mt-7 grid gap-10 lg:grid-cols-2">

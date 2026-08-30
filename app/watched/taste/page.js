@@ -25,8 +25,8 @@ function Bar({ label, n, avg, max, mean, link }) {
   return (
     <div className="flex items-center gap-3 py-1 text-sm">
       {labelEl}
-      <div className="relative h-4 flex-1 overflow-hidden rounded bg-surface">
-        <div className="h-full rounded bg-accent/70" style={{ width: `${(n / max) * 100}%` }} />
+      <div className="relative h-4 flex-1 overflow-hidden  bg-surface">
+        <div className="h-full  bg-accent/70" style={{ width: `${(n / max) * 100}%` }} />
       </div>
       <span className="w-10 shrink-0 text-right text-xs tabular-nums text-muted">{n}편</span>
       <span
@@ -59,7 +59,7 @@ function CountSection({ title, rows, mean, link }) {
 function PrefSection({ title, high, low, mean, link, note = "3편 이상만" }) {
   if (!high.length && !low.length) return null;
   const chip = (r, tone) => {
-    const cls = `inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${
+    const cls = `inline-flex items-center gap-1.5  border px-3 py-1 text-xs ${
       tone === "up"
         ? "border-green-500/40 text-green-400"
         : "border-red-500/40 text-red-400 dark:text-red-400"
@@ -100,7 +100,7 @@ function CuratedThemeEvidence({ movies }) {
   const themes = themeCounts(movies).slice(0, 5);
   if (!themes.length) return null;
   return (
-    <section className="mb-12 rounded-2xl border border-line bg-surface/50 p-5 sm:p-7">
+    <section className="mb-12  border border-line bg-surface/50 p-5 sm:p-7">
       <h2 className="text-sm font-semibold">주제로 다시 읽는 큐레이션 영화</h2>
       <p className="mt-1 text-xs text-muted">전체 별점 이력이 아니라 직접 감상을 남긴 {movies.length}편의 검수 주제입니다.</p>
       <div className="mt-5 space-y-5">
@@ -115,7 +115,7 @@ function CuratedThemeEvidence({ movies }) {
               <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {examples.map((movie) => (
                   <Link key={movie.slug} href={`/movies/${movie.slug}`} className="group/movie min-w-0">
-                    <CoverImage src={movie.poster} alt="" label={movie.title} loading="lazy" className="aspect-[2/3] w-full rounded-lg object-cover" />
+                    <CoverImage src={movie.poster} alt="" label={movie.title} loading="lazy" className="aspect-[2/3] w-full  object-cover" />
                     <p className="mt-2 truncate text-xs font-semibold group-hover/movie:text-accent">{movie.title_ko || movie.title}</p>
                     {movie.comment && <p className="mt-1 line-clamp-2 text-[11px] leading-4 text-muted">{movie.comment}</p>}
                   </Link>
@@ -143,7 +143,7 @@ export default async function TastePage() {
     return (
       <>
         <h1 className="mb-2 text-2xl font-bold">취향 분석</h1>
-        <div className="mt-8 rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
+        <div className="mt-8  border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
           별점 데이터가 있어야 분석할 수 있습니다.
           <br />
           관리자 → 영화 관리 → 왓챠피디아 가져오기에서 별점을 채워주세요.
@@ -175,9 +175,9 @@ export default async function TastePage() {
       {/* Gemini 리포트 — 관리자에서 생성해 data/taste-report.json에 저장한 것.
           별점이 바뀌면 다시 생성해야 최신이 된다(count로 신선도 힌트만 준다). */}
       {report?.text && (
-        <div className="mb-10 rounded-2xl border border-line bg-surface/40 p-6">
+        <div className="mb-10  border border-line bg-surface/40 p-6">
           <div className="mb-3 flex items-center gap-2">
-            <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">
+            <span className=" bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">
               AI 리포트
             </span>
             {report.count && report.count !== rated.length && (

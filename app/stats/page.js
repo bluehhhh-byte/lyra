@@ -173,7 +173,7 @@ export default async function StatsPage() {
         <p className="mt-1 text-xs text-muted/70">감정이 기록된 곡 3곡 이상만 해석한다. 아티스트의 성격이 아니라 기록의 분포다.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {readableArtistEmotions.map((profile) => (
-            <div key={profile.artist} className="rounded-xl border border-line bg-surface px-4 py-3">
+            <div key={profile.artist} className=" border border-line bg-surface px-4 py-3">
               <div className="flex items-baseline justify-between gap-3">
                 <strong className="text-sm">{profile.artist}</strong>
                 <span className="text-xs tabular-nums text-muted">감정 기록 {profile.sample}곡</span>
@@ -339,7 +339,7 @@ export default async function StatsPage() {
 
 function Stat({ label, value, sub }) {
   return (
-    <div className="rounded-xl border border-line bg-surface px-4 py-3">
+    <div className=" border border-line bg-surface px-4 py-3">
       <p className="text-2xl font-bold tabular-nums">
         {typeof value === "number" ? value.toLocaleString() : value}
       </p>

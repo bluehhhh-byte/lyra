@@ -6,15 +6,15 @@ export default function RecapShare({ recap, label }) {
     canvas.width = 1080;
     canvas.height = 1350;
     const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "#0d0d0f";
+    ctx.fillStyle = "#181410";
     ctx.fillRect(0, 0, 1080, 1350);
-    ctx.fillStyle = "#c8b6ff";
+    ctx.fillStyle = "#c96b4a";
     ctx.fillRect(72, 72, 8, 1206);
-    ctx.fillStyle = "#ededf0";
+    ctx.fillStyle = "#f6f1e4";
     ctx.font = "700 72px Pretendard, sans-serif";
     ctx.fillText(label, 130, 190);
     ctx.font = "600 34px Pretendard, sans-serif";
-    ctx.fillStyle = "#8a8a94";
+    ctx.fillStyle = "#a89f8d";
     ctx.fillText("CULTURE RECAP", 132, 245);
 
     const metrics = [
@@ -26,29 +26,29 @@ export default function RecapShare({ recap, label }) {
     metrics.forEach(([name, value], index) => {
       const x = 132 + (index % 2) * 430;
       const y = 410 + Math.floor(index / 2) * 180;
-      ctx.fillStyle = "#ededf0";
+      ctx.fillStyle = "#f6f1e4";
       ctx.font = "700 54px Pretendard, sans-serif";
       ctx.fillText(value, x, y);
-      ctx.fillStyle = "#8a8a94";
+      ctx.fillStyle = "#a89f8d";
       ctx.font = "26px Pretendard, sans-serif";
       ctx.fillText(name, x, y + 42);
     });
 
-    ctx.fillStyle = "#ededf0";
+    ctx.fillStyle = "#f6f1e4";
     ctx.font = "600 30px Pretendard, sans-serif";
     ctx.fillText("많이 들은 가수", 132, 820);
-    ctx.fillStyle = "#8a8a94";
+    ctx.fillStyle = "#a89f8d";
     ctx.font = "30px Pretendard, sans-serif";
     recap.artists.forEach(([artist, count], index) => ctx.fillText(`${index + 1}. ${artist}  ${count}곡`, 132, 880 + index * 52));
 
-    ctx.fillStyle = "#ededf0";
+    ctx.fillStyle = "#f6f1e4";
     ctx.font = "600 30px Pretendard, sans-serif";
     ctx.fillText("키워드", 600, 820);
-    ctx.fillStyle = "#8a8a94";
+    ctx.fillStyle = "#a89f8d";
     ctx.font = "28px Pretendard, sans-serif";
     recap.keywords.forEach(([keyword], index) => ctx.fillText(`#${keyword}`, 600, 880 + index * 44));
 
-    ctx.fillStyle = "#ededf0";
+    ctx.fillStyle = "#f6f1e4";
     ctx.font = "600 34px Georgia, serif";
     ctx.fillText("Lyra. / Cyno.", 132, 1220);
 
@@ -68,7 +68,7 @@ export default function RecapShare({ recap, label }) {
   };
 
   return (
-    <button onClick={share} className="rounded-lg border border-line px-3 py-2 text-xs text-muted hover:text-accent">
+    <button onClick={share} className=" border border-line px-3 py-2 text-xs text-muted hover:text-accent">
       결산 카드 공유
     </button>
   );

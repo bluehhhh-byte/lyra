@@ -27,7 +27,7 @@ export default async function MovieAdminPage() {
         </div>
       </div>
       {!contentInDatabase && (
-        <p className="mb-5 rounded-lg border border-line px-3 py-2 text-xs text-muted">
+        <p className="mb-5  border border-line px-3 py-2 text-xs text-muted">
           현재 GitHub 파일 저장 모드입니다. 저장한 콘텐츠는 배포 후 사이트에 반영됩니다.
         </p>
       )}
@@ -35,7 +35,7 @@ export default async function MovieAdminPage() {
         <Link
           href="/admin/movie"
           aria-current="page"
-          className="rounded-2xl border border-accent/40 bg-accent/10 p-4"
+          className=" border border-accent/40 bg-accent/10 p-4"
         >
           <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-accent">Cyno data</span>
           <span className="mt-2 block text-base font-bold">영화 관리</span>
@@ -43,7 +43,7 @@ export default async function MovieAdminPage() {
         </Link>
         <Link
           href="/admin/cyno-carousel"
-          className="group rounded-2xl border border-line bg-surface p-4 transition hover:border-accent/50"
+          className="group  border border-line bg-surface p-4 transition hover:border-accent/50"
         >
           <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-muted">Cyno studio</span>
           <span className="mt-2 block text-base font-bold">영화 캐러셀 제작실</span>
@@ -52,7 +52,7 @@ export default async function MovieAdminPage() {
         </Link>
         <Link
           href="/admin/publish-queue"
-          className="group rounded-2xl border border-line bg-surface p-4 transition hover:border-accent/50"
+          className="group  border border-line bg-surface p-4 transition hover:border-accent/50"
         >
           <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-muted">Cyno queue</span>
           <span className="mt-2 block text-base font-bold">오늘의 발행 후보</span>
@@ -61,7 +61,7 @@ export default async function MovieAdminPage() {
         </Link>
         <Link
           href="/admin/moments"
-          className="rounded-2xl border border-line bg-surface p-4 transition hover:border-accent/50"
+          className=" border border-line bg-surface p-4 transition hover:border-accent/50"
         >
           <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-muted">Cyno archive</span>
           <span className="mt-2 block text-base font-bold">장면 관리</span>

@@ -22,9 +22,9 @@ async function api(action, body) {
 
 // text-base(16px) on mobile stops iOS focus-zoom; text-sm on ≥sm keeps the compact look
 const input =
-  "w-full rounded-lg border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent";
+  "w-full  border border-line bg-surface px-3 py-2 text-base sm:text-sm outline-none focus:border-accent";
 const btn =
-  "rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40";
+  " ink-action px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40";
 
 // Dominant script wins — one Japanese bridge in a Korean song must not flip the
 // whole song to `ja`. This only drives the country tag and the hero display;
@@ -210,13 +210,13 @@ export default function AdminForm() {
         </p>
         {/* skeleton rows while the first page of a search is in flight */}
         {busy === "search" && candidates.length === 0 && (
-          <ul className="mt-3 divide-y divide-line overflow-hidden rounded-lg border border-line" aria-hidden>
+          <ul className="mt-3 divide-y divide-line overflow-hidden  border border-line" aria-hidden>
             {Array.from({ length: 5 }).map((_, i) => (
               <li key={i} className="flex items-center gap-3 px-3 py-2">
-                <div className="h-10 w-10 shrink-0 animate-pulse rounded bg-surface" />
+                <div className="h-10 w-10 shrink-0 animate-pulse  bg-surface" />
                 <div className="min-w-0 flex-1 space-y-1.5">
-                  <div className="h-3.5 w-2/5 animate-pulse rounded bg-surface" />
-                  <div className="h-3 w-3/5 animate-pulse rounded bg-surface" />
+                  <div className="h-3.5 w-2/5 animate-pulse  bg-surface" />
+                  <div className="h-3 w-3/5 animate-pulse  bg-surface" />
                 </div>
               </li>
             ))}
@@ -232,7 +232,7 @@ export default function AdminForm() {
           </p>
         )}
         {candidates.length > 0 && (
-          <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto rounded-lg border border-line">
+          <ul className="mt-3 max-h-80 divide-y divide-line overflow-y-auto  border border-line">
             {candidates.map((c, i) => {
               // candidates have no slug yet — the playing row is matched by preview URL
               const playing = !!c.preview && track?.preview === c.preview;
@@ -244,7 +244,7 @@ export default function AdminForm() {
                       song === c ? "text-accent" : ""
                     }`}
                   >
-                    <img src={c.thumb} alt="" className="h-10 w-10 rounded" />
+                    <img src={c.thumb} alt="" className="h-10 w-10 " />
                     <span className="min-w-0">
                       <span className="font-medium">{c.title}</span>
                       <span className="text-muted"> — {c.artist} · {c.album}</span>
@@ -260,7 +260,7 @@ export default function AdminForm() {
                         )
                       }
                       aria-label={playing ? "정지" : "미리듣기"}
-                      className={`mx-2 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs transition ${
+                      className={`mx-2 flex h-8 w-8 shrink-0 items-center justify-center  border text-xs transition ${
                         playing
                           ? "border-accent bg-accent text-bg"
                           : "border-line text-muted hover:border-accent hover:text-accent"
@@ -296,7 +296,7 @@ export default function AdminForm() {
             <select
               value={lang}
               onChange={(e) => setLang(e.target.value)}
-              className="rounded-lg border border-line bg-surface px-2 py-1 text-xs outline-none focus:border-accent"
+              className=" border border-line bg-surface px-2 py-1 text-xs outline-none focus:border-accent"
             >
               <option value="en">영어</option>
               <option value="ja">일본어</option>
@@ -304,7 +304,7 @@ export default function AdminForm() {
             </select>
           </div>
           {searchLinks && (
-            <div className="mb-2 rounded-lg border border-line bg-surface px-3 py-2 text-xs">
+            <div className="mb-2  border border-line bg-surface px-3 py-2 text-xs">
               <span className="text-muted">가사 DB에 없는 곡입니다. 원문을 찾아 아래에 붙여넣으세요:</span>{" "}
               {searchLinks.map((l, i) => (
                 <a
@@ -333,7 +333,7 @@ export default function AdminForm() {
             </button>
             {lang === "ko" && (
               <button
-                className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+                className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
                 disabled={!lyrics.trim() || busy}
                 onClick={() => {
                   setTranslated(lyrics);
@@ -344,7 +344,7 @@ export default function AdminForm() {
               </button>
             )}
             <button
-              className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+              className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
               disabled={!lyrics.trim() || busy}
               onClick={() => run("autotag", () => autotag(song, lyrics))()}
             >
@@ -355,14 +355,14 @@ export default function AdminForm() {
               3단계는 그 버튼들이 채우는 값이 있어야 나타난다. 그래서 원문이 없는 곡은
               등록 자체가 불가능했다. 이 버튼만 가사를 요구하지 않는다. */}
           {!lyrics.trim() && !lyricsNone && !instrumental && (
-            <div className="mt-3 rounded-lg border border-line px-3 py-3">
+            <div className="mt-3  border border-line px-3 py-3">
               <p className="text-xs text-muted">
                 연주곡은 음악적 특징을 바탕으로 코멘트와 한글 제목을 자동 생성합니다. 가사가
                 공개되지 않은 보컬곡도 원문 없이 등록할 수 있습니다.
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <button
-                  className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+                  className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
                   disabled={busy}
                   onClick={run("autotag", async () => {
                     setInstrumental(true);
@@ -373,7 +373,7 @@ export default function AdminForm() {
                   {busy === "autotag" ? "메타 생성 중…" : "연주곡으로 등록"}
                 </button>
                 <button
-                  className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+                  className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
                   disabled={busy}
                   onClick={run("autotag", async () => {
                     setLyricsNone(true);
@@ -394,7 +394,7 @@ export default function AdminForm() {
         <section>
           <Step label="검수 · 노트 추가 · 저장" />
           {lyricsNone || instrumental ? (
-            <div className="mb-2 rounded-lg border border-accent/30 bg-accent/5 px-3 py-3">
+            <div className="mb-2  border border-accent/30 bg-accent/5 px-3 py-3">
               <p className="text-xs">
                 <b>{instrumental ? "연주곡" : "가사 원문 없이 등록"}</b> — 원문 자리는 비워
                 두며, 자동 생성된 코멘트와 한글 제목은 아래에서 수정할 수 있습니다.

@@ -83,13 +83,13 @@ export default function WatchaImport() {
         onChange={(e) => setRaw(e.target.value)}
         rows={5}
         placeholder='왓챠 별점 목록에서 뽑은 JSON을 붙여넣으세요 — [{"code":"mW9pL6K","rating":4.5}, …]'
-        className="w-full rounded-lg border border-line bg-surface px-3 py-2 font-mono text-xs outline-none focus:border-accent"
+        className="w-full  border border-line bg-surface px-3 py-2 font-mono text-xs outline-none focus:border-accent"
       />
       <div className="mt-2 flex items-center gap-3">
         <button
           onClick={run}
           disabled={busy || !raw.trim()}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
         >
           {busy ? "병합 중…" : "별점 병합"}
         </button>
@@ -102,21 +102,21 @@ export default function WatchaImport() {
         <button
           onClick={genReport}
           disabled={reportBusy}
-          className="rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+          className=" border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
         >
           {reportBusy ? "분석 중…" : "취향 리포트 생성"}
         </button>
         <button
           onClick={genRecs}
           disabled={reportBusy}
-          className="rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+          className=" border border-accent px-4 py-2 text-sm font-semibold text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
         >
           {reportBusy ? "…" : "추천 20편 생성"}
         </button>
         <span className="text-xs text-muted">Gemini가 별점을 분석해 리포트·추천을 답니다</span>
       </div>
       {report?.text && (
-        <div className="mt-3 rounded-lg border border-line bg-surface/40 px-4 py-3 text-sm leading-relaxed">
+        <div className="mt-3  border border-line bg-surface/40 px-4 py-3 text-sm leading-relaxed">
           <p className="mb-2 text-xs text-green-400">✓ {report.count}편 기준 리포트 생성됨</p>
           <p className="whitespace-pre-wrap text-muted">{report.text.slice(0, 200)}…</p>
         </div>
@@ -125,7 +125,7 @@ export default function WatchaImport() {
       <AdminErrorMessage message={error} className="mt-3" />
 
       {result && (
-        <div className="mt-4 rounded-lg border border-line px-4 py-3 text-sm">
+        <div className="mt-4  border border-line px-4 py-3 text-sm">
           <p>
             <span className="font-semibold text-green-400">{result.changed}편</span> 별점 갱신
             <span className="text-muted"> · 매칭 {result.matched} / 입력 {result.total}</span>

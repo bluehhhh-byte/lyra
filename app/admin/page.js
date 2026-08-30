@@ -54,7 +54,7 @@ export default async function AdminPage() {
       </div>
       <AdminOverview overview={overview} />
       {!contentInDatabase && (
-        <p className="mb-5 rounded-lg border border-line px-3 py-2 text-xs text-muted">
+        <p className="mb-5  border border-line px-3 py-2 text-xs text-muted">
           현재 GitHub 파일 저장 모드입니다. 저장한 콘텐츠는 배포 후 사이트에 반영됩니다.
         </p>
       )}

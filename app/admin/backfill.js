@@ -84,7 +84,7 @@ export default function Backfill() {
         <button
           onClick={fillAll}
           disabled={!!busy || pending === 0}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
         >
           {busy ? "채우는 중…" : `전체 자동 채우기 (${pending})`}
         </button>
@@ -93,10 +93,10 @@ export default function Backfill() {
         </button>
       </div>
 
-      <ul className="divide-y divide-line rounded-lg border border-line">
+      <ul className="divide-y divide-line  border border-line">
         {list.map((s) => (
           <li key={s.slug} className="flex items-center gap-3 px-3 py-2 text-sm">
-            <img src={s.artwork} alt="" className="h-9 w-9 shrink-0 rounded" />
+            <img src={s.artwork} alt="" className="h-9 w-9 shrink-0 " />
             <span className="min-w-0 flex-1">
               <span className="font-medium">{s.title}</span>
               <span className="text-muted"> — {s.artist}</span>
@@ -111,7 +111,7 @@ export default function Backfill() {
                   )
                 ) : (
                   s.missing.map((f) => (
-                    <span key={f} className="rounded-full border border-line px-1.5 text-xs text-muted">
+                    <span key={f} className=" border border-line px-1.5 text-xs text-muted">
                       {LABEL[f] || f}
                     </span>
                   ))

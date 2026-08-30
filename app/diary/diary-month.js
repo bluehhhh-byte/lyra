@@ -88,7 +88,7 @@ export default function DiaryMonth({ month, days, initialDay, previousMonth, nex
               <Link
                 key={keyword}
                 href={`/?q=${encodeURIComponent(keyword)}`}
-                className="rounded-full border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
+                className=" border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
               >
                 #{keyword}{count > 1 && <span className="ml-1 opacity-60">{count}</span>}
               </Link>
@@ -119,7 +119,7 @@ export default function DiaryMonth({ month, days, initialDay, previousMonth, nex
                     disabled={!diaryDay}
                     aria-pressed={active}
                     aria-label={diaryDay ? `${value}일, ${diaryDay.dominant || "감정 없음"}, ${diaryDay.count}곡` : `${value}일, 기록 없음`}
-                    className={`flex h-full w-full flex-col items-center justify-center rounded transition ${
+                    className={`flex h-full w-full flex-col items-center justify-center  transition ${
                       active ? "bg-surface ring-1 ring-accent" : diaryDay ? "hover:bg-surface" : "cursor-default"
                     }`}
                   >
@@ -127,7 +127,7 @@ export default function DiaryMonth({ month, days, initialDay, previousMonth, nex
                     {diaryDay && (
                       <>
                         <span
-                          className="mt-1 h-2.5 w-2.5 rounded-full"
+                          className="mt-1 h-2.5 w-2.5 "
                           style={{ background: diaryDay.valence !== null ? valenceColor(diaryDay.valence) : "var(--color-line)" }}
                         />
                         <span className="mt-1 hidden max-w-full truncate px-1 text-[10px] text-muted sm:block">
@@ -153,7 +153,7 @@ export default function DiaryMonth({ month, days, initialDay, previousMonth, nex
             <details key={day.day} className="group">
               <summary className="flex cursor-pointer list-none items-center gap-3 py-3 text-sm">
                 <span
-                  className="h-2.5 w-2.5 shrink-0 rounded-full"
+                  className="h-2.5 w-2.5 shrink-0 "
                   style={{ background: day.valence !== null ? valenceColor(day.valence) : "var(--color-line)" }}
                 />
                 <span className="font-medium">{dayLabel(day.day)}</span>
@@ -186,10 +186,10 @@ function DayDetail({ day }) {
       <div className="mb-4 flex flex-wrap items-baseline gap-2">
         <h2 className="mr-1 text-xl font-bold">{dayLabel(day.day)}</h2>
         {day.dominant && (
-          <span className="rounded-full bg-accent px-2.5 py-0.5 text-xs font-semibold text-bg">{day.dominant}</span>
+          <span className=" bg-accent px-2.5 py-0.5 text-xs font-semibold text-bg">{day.dominant}</span>
         )}
         {day.emotions.slice(1).map(([emotion, count]) => (
-          <span key={emotion} className="rounded-full border border-line px-2 py-0.5 text-xs text-muted">
+          <span key={emotion} className=" border border-line px-2 py-0.5 text-xs text-muted">
             {emotion}{count > 1 && <span className="ml-1 opacity-60">{count}</span>}
           </span>
         ))}
@@ -201,7 +201,7 @@ function DayDetail({ day }) {
             <Link
               key={keyword}
               href={`/?q=${encodeURIComponent(keyword)}`}
-              className="rounded-full border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
+              className=" border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
             >
               #{keyword}{count > 1 && <span className="ml-1 opacity-60">{count}</span>}
             </Link>
@@ -222,7 +222,7 @@ function SongList({ songs }) {
             src={song.artwork.replace("600x600bb", "100x100bb")}
             alt=""
             loading="lazy"
-            className="h-12 w-12 shrink-0 rounded"
+            className="h-12 w-12 shrink-0 "
           />
           <span className="min-w-0">
             <span className="block truncate text-sm font-medium group-hover:text-accent">{song.title}</span>

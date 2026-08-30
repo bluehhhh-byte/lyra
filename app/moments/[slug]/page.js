@@ -29,7 +29,7 @@ export default async function MomentPage({ params }) {
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">Cultural moment</p>
         <h1 className="text-3xl font-bold leading-tight sm:text-5xl">{moment.title}</h1>
         <time className="mt-5 block text-sm text-muted">{momentDateLabel(moment)}</time>
-        {(moment.emotions.length > 0 || moment.keywords.length > 0) && <div className="mt-5 flex flex-wrap justify-center gap-2">{[...moment.emotions, ...moment.keywords].map((value) => <span key={value} className="rounded-full border border-line px-2.5 py-1 text-xs text-muted">{value}</span>)}</div>}
+        {(moment.emotions.length > 0 || moment.keywords.length > 0) && <div className="mt-5 flex flex-wrap justify-center gap-2">{[...moment.emotions, ...moment.keywords].map((value) => <span key={value} className=" border border-line px-2.5 py-1 text-xs text-muted">{value}</span>)}</div>}
       </header>
 
       <div className="mx-auto max-w-2xl space-y-5 font-serif text-lg leading-[1.9]">
@@ -46,9 +46,9 @@ export default async function MomentPage({ params }) {
             const image = link.targetKind === "song" ? item.artwork : item.poster;
             const title = link.targetKind === "song" ? item.title : item.title_ko || item.title;
             const subtitle = link.targetKind === "song" ? item.artist : item.director_ko || item.director;
-            return <Link key={`${link.targetKind}:${link.targetSlug}`} href={href} className="group overflow-hidden rounded-xl border border-line bg-surface/50 transition hover:border-accent/60">
+            return <Link key={`${link.targetKind}:${link.targetSlug}`} href={href} className="group overflow-hidden  border border-line bg-surface/50 transition hover:border-accent/60">
               <div className="flex gap-4 p-4">
-                <div className={`h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-bg ${link.targetKind === "movie" ? "w-16" : ""}`}>
+                <div className={`h-24 w-24 shrink-0 overflow-hidden  bg-bg ${link.targetKind === "movie" ? "w-16" : ""}`}>
                   {link.targetKind === "song" ? <CoverImage src={image} alt="" className="h-full w-full object-cover" /> : image ? <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" /> : null}
                 </div>
                 <div className="min-w-0 py-1"><p className="text-[10px] uppercase tracking-wider text-accent">{link.targetKind === "song" ? "Lyra" : "Cyno"}</p><h3 className="mt-1 truncate font-semibold group-hover:text-accent">{title}</h3><p className="truncate text-xs text-muted">{subtitle}</p>{link.note && <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-muted">{link.note}</p>}</div>

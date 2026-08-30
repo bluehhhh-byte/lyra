@@ -17,7 +17,7 @@ export default function SongRecs({ items }) {
 
         const cover = (
           <div
-            className={`relative overflow-hidden rounded-xl border bg-surface transition ${
+            className={`relative overflow-hidden  border bg-surface transition ${
               playing ? "border-accent ring-2 ring-accent/40" : "border-line"
             }`}
           >
@@ -30,19 +30,19 @@ export default function SongRecs({ items }) {
             />
             {s.preview ? (
               playing ? (
-                <span className="absolute bottom-2 right-2 rounded-full bg-accent px-2.5 py-1 text-[10px] font-semibold text-bg backdrop-blur">
+                <span className="absolute bottom-2 right-2  bg-accent px-2.5 py-1 text-[10px] font-semibold text-bg backdrop-blur">
                   재생 중
                 </span>
               ) : (
                 <span
-                  className="absolute bottom-2 right-2 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-sm text-white opacity-100 backdrop-blur transition sm:opacity-0 sm:group-hover:opacity-100"
+                  className="absolute bottom-2 right-2 flex h-9 w-9 items-center justify-center  bg-black/60 text-sm text-white opacity-100 backdrop-blur transition sm:opacity-0 sm:group-hover:opacity-100"
                   aria-hidden
                 >
                   ▶
                 </span>
               )
             ) : (
-              <span className="absolute bottom-2 right-2 rounded bg-black/60 px-1.5 py-0.5 text-[10px] text-white/80 backdrop-blur">
+              <span className="absolute bottom-2 right-2  bg-black/60 px-1.5 py-0.5 text-[10px] text-white/80 backdrop-blur">
                 미리듣기 없음 · YouTube ↗
               </span>
             )}

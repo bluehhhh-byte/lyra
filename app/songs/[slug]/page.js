@@ -118,7 +118,7 @@ export default async function SongPage({ params }) {
   return (
     <article>
       {/* hero — 커버 없는 곡(artwork_none 등)은 배경 없이 텍스트 히어로 */}
-      <div className="relative mb-12 overflow-hidden rounded-2xl border border-line">
+      <div className="relative mb-12 overflow-hidden  border border-line">
         {song.artwork && (
           <img
             src={song.artwork}
@@ -132,10 +132,10 @@ export default async function SongPage({ params }) {
             <img
               src={song.artwork}
               alt={`${song.title} album art`}
-              className="w-40 rounded-xl shadow-2xl sm:w-48"
+              className="w-40  shadow-2xl sm:w-48"
             />
           ) : (
-            <div className="flex aspect-square w-40 items-center justify-center rounded-xl border border-line bg-surface p-4 text-center text-sm text-muted sm:w-48">
+            <div className="flex aspect-square w-40 items-center justify-center  border border-line bg-surface p-4 text-center text-sm text-muted sm:w-48">
               {song.title}
             </div>
           )}
@@ -160,7 +160,7 @@ export default async function SongPage({ params }) {
                 <Link
                   key={t}
                   href={`/tags/${encodeURIComponent(t)}`}
-                  className="rounded-full border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
+                  className=" border border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:text-accent"
                 >
                   {t}
                 </Link>
@@ -171,7 +171,7 @@ export default async function SongPage({ params }) {
                 <Link
                   key={w}
                   href={`/?q=${encodeURIComponent(w)}`}
-                  className="rounded-full border border-dashed border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
+                  className=" border border-dashed border-line bg-bg/50 px-2.5 py-0.5 text-xs text-muted hover:border-accent hover:text-accent"
                 >
                   #{w}
                 </Link>
@@ -198,7 +198,7 @@ export default async function SongPage({ params }) {
                 href={appleUrl(song)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
+                className=" border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
               >
                 ♪ Apple Music{isExactApple(song) ? "" : " 검색"}
               </a>
@@ -256,7 +256,7 @@ export default async function SongPage({ params }) {
       {/* 이 컬렉션에서의 위치 — 곡 하나를 전체 아카이브와 잇는다.
           별점이 없는 아카이브라 '몇 곡 중 하나'라는 자리가 곧 맥락이다. */}
       {position.length > 0 && (
-        <div className="mx-auto mt-16 max-w-2xl rounded-xl border border-line bg-surface px-5 py-4">
+        <div className="mx-auto mt-16 max-w-2xl  border border-line bg-surface px-5 py-4">
           <h2 className="mb-2 text-sm font-semibold text-muted">이 컬렉션에서</h2>
           <ul className="space-y-1 text-sm text-muted">
             {position.map(({ key, label, href, count }) => (
@@ -279,13 +279,13 @@ export default async function SongPage({ params }) {
         <section className="mx-auto mt-16 max-w-2xl" aria-labelledby="album-songs-title">
           <h2 id="album-songs-title" className="mb-4 text-sm font-semibold text-muted">같은 앨범 · {song.album}</h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {albumSongs.map((item) => <Link key={item.slug} href={`/songs/${item.slug}`} className="group"><CoverImage src={item.artwork} alt="" label={item.title} className="aspect-square w-full rounded-lg border border-line object-cover" /><p className="mt-2 truncate text-xs font-medium group-hover:text-accent">{item.title}</p></Link>)}
+            {albumSongs.map((item) => <Link key={item.slug} href={`/songs/${item.slug}`} className="group"><CoverImage src={item.artwork} alt="" label={item.title} className="aspect-square w-full  border border-line object-cover" /><p className="mt-2 truncate text-xs font-medium group-hover:text-accent">{item.title}</p></Link>)}
           </div>
         </section>
       )}
 
       {sameDay.length > 0 && (
-        <section className="mx-auto mt-8 max-w-2xl rounded-xl border border-line bg-surface/50 px-5 py-4">
+        <section className="mx-auto mt-8 max-w-2xl  border border-line bg-surface/50 px-5 py-4">
           <h2 className="text-sm font-semibold">같은 날의 다른 기록</h2>
           <ul className="mt-2 space-y-1 text-sm">{sameDay.map((item) => <li key={`${item.type}:${item.slug}`}><Link href={`/${item.type === "song" ? "songs" : "movies"}/${item.slug}`} className="hover:text-accent">{item.subtitle} — {item.title}</Link></li>)}</ul>
         </section>
@@ -298,7 +298,7 @@ export default async function SongPage({ params }) {
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
             {related.map((s) => (
               <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
-                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                <div className="overflow-hidden  border border-line bg-surface">
                   <CoverImage
                     src={s.artwork}
                     alt=""
@@ -327,7 +327,7 @@ export default async function SongPage({ params }) {
           <div className="grid grid-cols-3 gap-x-4 gap-y-6">
             {eraMovies.map((m) => (
               <Link key={m.slug} href={`/movies/${m.slug}`} className="group">
-                <div className="overflow-hidden rounded-lg border border-line bg-surface">
+                <div className="overflow-hidden  border border-line bg-surface">
                   <img
                     src={m.poster}
                     alt=""

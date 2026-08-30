@@ -43,7 +43,7 @@ export default async function MotifsPage() {
       <section className="mb-12" aria-labelledby="vocabulary-title">
         <h2 id="vocabulary-title" className="text-lg font-bold">자주 등장하는 번역 가사 어휘</h2>
         <p className="mt-1 text-xs text-muted">AI 없이 현재 번역문을 같은 규칙으로 계산한 상위 {vocabulary.length}개 어휘입니다.</p>
-        <div className="mt-4 overflow-x-auto rounded-xl border border-line">
+        <div className="mt-4 overflow-x-auto  border border-line">
           <table className="w-full min-w-[560px] text-left text-xs">
             <thead className="bg-surface/70 text-muted"><tr><th className="px-3 py-2">어휘</th><th className="px-3 py-2 text-right">횟수</th><th className="px-3 py-2 text-right">곡</th><th className="px-3 py-2">주요 연도</th><th className="px-3 py-2">근거 곡</th></tr></thead>
             <tbody className="divide-y divide-line/60">
@@ -68,7 +68,7 @@ export default async function MotifsPage() {
           {motifEmotions.included.length > 0 ? (
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {motifEmotions.included.map((row) => (
-                <div key={row.word} className="rounded-xl border border-line bg-surface px-4 py-3">
+                <div key={row.word} className=" border border-line bg-surface px-4 py-3">
                   <div className="flex items-baseline justify-between gap-3">
                     <strong className="text-sm">{row.word}</strong>
                     <span className="text-xs tabular-nums text-muted">{row.sample}곡</span>
@@ -84,7 +84,7 @@ export default async function MotifsPage() {
       )}
 
       {motifs.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
+        <div className=" border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
           아직 모티프가 없습니다.
           <br />
           관리자 → 등록된 곡에서 “모티프 생성”을 누르면 가사 전체를 분석해 여기에 그립니다.
@@ -92,7 +92,7 @@ export default async function MotifsPage() {
       ) : (
         <div className="space-y-10">
           {motifs.map((m) => (
-            <section key={m.name} className="rounded-xl border border-line bg-surface/50 px-5 py-5">
+            <section key={m.name} className=" border border-line bg-surface/50 px-5 py-5">
               <h2 className="text-lg font-bold">{m.name}</h2>
               {m.description && <p className="mt-1 text-sm text-muted">{m.description}</p>}
               {m.keywords?.length > 0 && (
@@ -101,7 +101,7 @@ export default async function MotifsPage() {
                     <Link
                       key={k}
                       href={`/?q=${encodeURIComponent(k)}`}
-                      className="rounded-full border border-dashed border-line px-2 py-0.5 text-[11px] text-muted hover:border-accent hover:text-accent"
+                      className=" border border-dashed border-line px-2 py-0.5 text-[11px] text-muted hover:border-accent hover:text-accent"
                     >
                       #{k}
                     </Link>
@@ -120,7 +120,7 @@ export default async function MotifsPage() {
                           alt=""
                           label={s.title}
                           loading="lazy"
-                          className="h-12 w-12 rounded-lg border border-line object-cover transition group-hover:opacity-80 group-hover:ring-2 group-hover:ring-accent/40"
+                          className="h-12 w-12  border border-line object-cover transition group-hover:opacity-80 group-hover:ring-2 group-hover:ring-accent/40"
                         />
                       </Link>
                       <div className="min-w-0 flex-1">

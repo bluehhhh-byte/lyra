@@ -23,10 +23,10 @@ const TOTAL_SLIDES = 5;
 const POSTER_CONCURRENCY = 5;
 const SANS = CAROUSEL_THEME.sans;
 const SERIF = CAROUSEL_THEME.serif;
-const BG = "#0d0d0f";
-const INK = "#f7f7f8";
-const DIM = "rgba(247,247,248,0.7)";
-const ACCENT = "#c8b6ff";
+const BG = "#181410";
+const INK = "#f6f1e4";
+const DIM = "rgba(246,241,228,0.7)";
+const ACCENT = "#c96b4a";
 
 const proxiedImage = (url) =>
   /^https:\/\/image\.tmdb\.org\/t\/p\//.test(url || "") ? `/api/img?url=${encodeURIComponent(url)}` : url;
@@ -78,7 +78,7 @@ const toBlob = (canvas) =>
 function roundedPoster(ctx, image, x, y, width, height, radius = 18) {
   ctx.save();
   ctx.beginPath();
-  ctx.roundRect(x, y, width, height, radius);
+  ctx.rect(x, y, width, height, radius);
   ctx.clip();
   drawImageCover(ctx, image, x, y, width, height);
   ctx.restore();
@@ -91,7 +91,7 @@ function roundedScene(ctx, image, x, y, width, height, focalX = 0.5, radius = 18
   const sourceX = Math.max(0, Math.min(image.width - sourceWidth, (image.width - sourceWidth) * focalX));
   ctx.save();
   ctx.beginPath();
-  ctx.roundRect(x, y, width, height, radius);
+  ctx.rect(x, y, width, height, radius);
   ctx.clip();
   ctx.drawImage(image, sourceX, (image.height - sourceHeight) / 2, sourceWidth, sourceHeight, x, y, width, height);
   ctx.restore();
@@ -100,9 +100,9 @@ function roundedScene(ctx, image, x, y, width, height, focalX = 0.5, radius = 18
 function posterFallback(ctx, movie, x, y, width, height, radius = 18) {
   ctx.fillStyle = "#29292e";
   ctx.beginPath();
-  ctx.roundRect(x, y, width, height, radius);
+  ctx.rect(x, y, width, height, radius);
   ctx.fill();
-  ctx.fillStyle = "rgba(247,247,248,0.55)";
+  ctx.fillStyle = "rgba(246,241,228,0.55)";
   ctx.textAlign = "center";
   ctx.font = `700 ${Math.max(30, Math.round(width * 0.18))}px ${SANS}`;
   ctx.fillText(String(movie?.title || "?").slice(0, 1), x + width / 2, y + height / 2 + 14);
@@ -120,8 +120,8 @@ function base(ctx, image, opacity = 0.82) {
   if (image) drawArtWash(ctx, image, opacity);
   const shade = ctx.createLinearGradient(0, 0, W, H);
   shade.addColorStop(0, "rgba(200,182,255,0.08)");
-  shade.addColorStop(0.55, "rgba(13,13,15,0.35)");
-  shade.addColorStop(1, "rgba(13,13,15,0.86)");
+  shade.addColorStop(0.55, "rgba(24,20,16,0.35)");
+  shade.addColorStop(1, "rgba(24,20,16,0.86)");
   ctx.fillStyle = shade;
   ctx.fillRect(0, 0, W, H);
 }
@@ -170,8 +170,8 @@ async function drawSingle(slide, images, position, carousel) {
   if (slide.role === "cover") {
     drawPoster(ctx, movie, images, 520, 130, 430, 645, 28);
     const fade = ctx.createLinearGradient(0, 640, 0, 1010);
-    fade.addColorStop(0, "rgba(13,13,15,0)");
-    fade.addColorStop(0.7, "rgba(13,13,15,0.94)");
+    fade.addColorStop(0, "rgba(24,20,16,0)");
+    fade.addColorStop(0.7, "rgba(24,20,16,0.94)");
     fade.addColorStop(1, BG);
     ctx.fillStyle = fade;
     ctx.fillRect(0, 580, W, 500);
@@ -218,7 +218,7 @@ async function drawSingle(slide, images, position, carousel) {
       tagLine = next;
     }
     if (tagLine) {
-      ctx.fillStyle = "rgba(247,247,248,0.55)";
+      ctx.fillStyle = "rgba(246,241,228,0.55)";
       ctx.fillText(tagLine, PAD, H - 74);
     }
     ctx.textAlign = "right";
@@ -245,22 +245,22 @@ async function drawSingle(slide, images, position, carousel) {
       ctx.font = `600 30px ${SANS}`;
       wrap(ctx, value, 520).slice(0, 2).forEach((line, lineIndex) => ctx.fillText(line, 458, y + 38 + lineIndex * 34));
     });
-    ctx.fillStyle = "rgba(13,13,15,0.78)";
-    ctx.beginPath(); ctx.roundRect(PAD, 770, W - PAD * 2, 420, 26); ctx.fill();
+    ctx.fillStyle = "rgba(24,20,16,0.78)";
+    ctx.beginPath(); ctx.rect(PAD, 770, W - PAD * 2, 420, 26); ctx.fill();
     overflow = drawFittedParagraph(ctx, slide.text, PAD + 44, 840, W - PAD * 2 - 88, 300, 45, 30) || overflow;
   } else if (slide.role === "synopsis") {
     header(ctx, "STORY · 줄거리 요약", position);
     if (backdrop) roundedPoster(ctx, backdrop, PAD, 190, W - PAD * 2, 430, 28);
     const sceneFade = ctx.createLinearGradient(0, 370, 0, 640);
-    sceneFade.addColorStop(0, "rgba(13,13,15,0)");
+    sceneFade.addColorStop(0, "rgba(24,20,16,0)");
     sceneFade.addColorStop(1, BG);
     ctx.fillStyle = sceneFade;
     ctx.fillRect(PAD, 360, W - PAD * 2, 290);
     ctx.fillStyle = ACCENT;
     ctx.font = `800 30px ${SANS}`;
     ctx.fillText(movie.title, PAD + 42, 570);
-    ctx.fillStyle = "rgba(13,13,15,0.84)";
-    ctx.beginPath(); ctx.roundRect(PAD, 610, W - PAD * 2, 575, 28); ctx.fill();
+    ctx.fillStyle = "rgba(24,20,16,0.84)";
+    ctx.beginPath(); ctx.rect(PAD, 610, W - PAD * 2, 575, 28); ctx.fill();
     overflow = drawFittedParagraph(ctx, slide.text, PAD + 48, 680, W - PAD * 2 - 96, 430, 47, 30) || overflow;
   } else if (slide.role === "key-points") {
     header(ctx, "STORY AXIS · 핵심 내용", position);
@@ -275,8 +275,8 @@ async function drawSingle(slide, images, position, carousel) {
       const y = 355 + index * 230;
       ctx.fillStyle = ACCENT;
       ctx.beginPath(); ctx.arc(PAD + 34, y, 18, 0, Math.PI * 2); ctx.fill();
-      ctx.fillStyle = "rgba(13,13,15,0.76)";
-      ctx.beginPath(); ctx.roundRect(PAD + 78, y - 62, W - PAD * 2 - 78, 190, 24); ctx.fill();
+      ctx.fillStyle = "rgba(24,20,16,0.76)";
+      ctx.beginPath(); ctx.rect(PAD + 78, y - 62, W - PAD * 2 - 78, 190, 24); ctx.fill();
       ctx.fillStyle = ACCENT;
       ctx.font = `800 25px ${SANS}`;
       ctx.fillText(`SCENE ${String(index + 1).padStart(2, "0")}`, PAD + 112, y - 18);
@@ -297,8 +297,8 @@ async function drawSingle(slide, images, position, carousel) {
     const points = slide.points?.length ? slide.points : ["장면의 분위기와 이야기의 리듬을 살펴보세요."];
     points.slice(0, 3).forEach((point, index) => {
       const y = 305 + index * 255;
-      ctx.fillStyle = "rgba(13,13,15,0.82)";
-      ctx.beginPath(); ctx.roundRect(PAD, y, W - PAD * 2, 220, 24); ctx.fill();
+      ctx.fillStyle = "rgba(24,20,16,0.82)";
+      ctx.beginPath(); ctx.rect(PAD, y, W - PAD * 2, 220, 24); ctx.fill();
       if (backdrop) roundedScene(ctx, backdrop, PAD + 12, y + 12, 260, 196, [0.18, 0.5, 0.82][index], 16);
       ctx.fillStyle = ACCENT;
       ctx.font = `800 22px ${SANS}`;
@@ -382,8 +382,8 @@ async function drawCurationNote(slide, images, position, carousel) {
   ctx.fillStyle = INK;
   ctx.font = `800 48px ${SANS}`;
   wrap(ctx, movie?.title || carousel.label, 560).slice(0, 2).forEach((line, index) => ctx.fillText(line, 450, 305 + index * 58));
-  ctx.fillStyle = "rgba(13,13,15,0.82)";
-  ctx.beginPath(); ctx.roundRect(PAD, 760, W - PAD * 2, 400, 28); ctx.fill();
+  ctx.fillStyle = "rgba(24,20,16,0.82)";
+  ctx.beginPath(); ctx.rect(PAD, 760, W - PAD * 2, 400, 28); ctx.fill();
   drawFittedParagraph(ctx, slide.comment, PAD + 48, 840, W - PAD * 2 - 96, 260, 46, 29);
   drawProgress(ctx, position, TOTAL_SLIDES);
   return toBlob(canvas);
@@ -457,7 +457,7 @@ async function adminApi(action, body) {
   return data;
 }
 
-const inputClass = "w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-base outline-none transition focus:border-accent sm:text-sm";
+const inputClass = "w-full  border border-line bg-surface px-3 py-2.5 text-base outline-none transition focus:border-accent sm:text-sm";
 const enhancedCopyCache = new Map();
 
 export default function CarouselStudio({ movies, initialMovieId = "", initialConcept = "", hashtagSets = [] }) {
@@ -647,12 +647,12 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
 
   return (
     <div className="min-w-0 max-w-6xl">
-      <div className="mb-6 grid grid-cols-2 gap-2 rounded-2xl border border-line bg-surface p-1.5" aria-label="캐러셀 제작 방식">
+      <div className="mb-6 grid grid-cols-2 gap-2  border border-line bg-surface p-1.5" aria-label="캐러셀 제작 방식">
         {[
           ["single", "한 편 깊이 보기", "기본 · 영화 한 편을 5장으로"],
           ["concept", "주제별 큐레이션", "보조 · 콘셉트로 여러 편 자동 선정"],
         ].map(([id, label, description]) => (
-          <button key={id} type="button" onClick={() => { renderHint.current = null; setActiveCard(0); setMode(id); }} aria-label={label} aria-pressed={mode === id} className={`min-w-0 rounded-xl px-2 py-3 text-left transition sm:px-4 ${mode === id ? "bg-bg shadow-sm ring-1 ring-accent/40" : "text-muted hover:text-ink"}`}>
+          <button key={id} type="button" onClick={() => { renderHint.current = null; setActiveCard(0); setMode(id); }} aria-label={label} aria-pressed={mode === id} className={`min-w-0  px-2 py-3 text-left transition sm:px-4 ${mode === id ? "bg-bg shadow-sm ring-1 ring-accent/40" : "text-muted hover:text-ink"}`}>
             <span className="block truncate text-sm font-semibold">{label}</span>
             <span className="mt-0.5 hidden text-xs text-muted sm:block">{description}</span>
           </button>
@@ -666,9 +666,9 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               <div>
                 <label className="mb-2 block text-sm font-semibold">1. 영화 한 편 선택</label>
                 <input className={inputClass} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="제목·감독·연도로 검색" />
-                <div className="mt-2 grid max-h-56 gap-1 overflow-y-auto rounded-xl border border-line p-1">
+                <div className="mt-2 grid max-h-56 gap-1 overflow-y-auto  border border-line p-1">
                   {filteredMovies.map((movie) => (
-                    <button key={movie.id} type="button" onClick={() => pickMovie(movie)} className={`flex min-w-0 items-center gap-3 rounded-lg px-2 py-2 text-left ${movie.id === selectedMovie?.id ? "bg-accent/10 text-accent" : "hover:bg-surface"}`}>
+                    <button key={movie.id} type="button" onClick={() => pickMovie(movie)} className={`flex min-w-0 items-center gap-3  px-2 py-2 text-left ${movie.id === selectedMovie?.id ? "bg-accent/10 text-accent" : "hover:bg-surface"}`}>
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-sm font-semibold">{movie.title}</span>
                         <span className="block truncate text-xs text-muted">{[movie.director, movie.year].filter(Boolean).join(" · ")}</span>
@@ -680,7 +680,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               {draft && (
                 <div className="space-y-4">
                   <h2 className="text-sm font-semibold">2. 자동 작성 문구 검수</h2>
-                  <div className={`rounded-xl border px-3 py-3 text-xs leading-relaxed ${copyState === "enhanced" ? "border-accent/40 bg-accent/10" : "border-line bg-surface"}`} aria-live="polite">
+                  <div className={` border px-3 py-3 text-xs leading-relaxed ${copyState === "enhanced" ? "border-accent/40 bg-accent/10" : "border-line bg-surface"}`} aria-live="polite">
                     <p className="font-semibold text-ink">
                       {copyBusy ? "작품별 문구를 깊게 작성하는 중…" : copyState === "enhanced" ? "작품별 AI 문구 고도화 완료" : "수정 가능한 기본 초안 사용 중"}
                     </p>
@@ -691,7 +691,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
                           ? "구체적인 서사·갈등·감상 근거를 반영했습니다. 아래에서 자유롭게 수정할 수 있습니다."
                           : copyNotice || "AI를 사용할 수 없을 때도 저장된 기록으로 만든 초안을 편집할 수 있습니다."}
                     </p>
-                    <button type="button" onClick={regenerateCopy} disabled={copyBusy} className="mt-2 rounded-lg border border-accent/40 px-3 py-1.5 font-semibold text-accent transition hover:bg-accent/10 disabled:opacity-40">
+                    <button type="button" onClick={regenerateCopy} disabled={copyBusy} className="mt-2  border border-accent/40 px-3 py-1.5 font-semibold text-accent transition hover:bg-accent/10 disabled:opacity-40">
                       {copyBusy ? "고도화 중…" : "AI 문구 다시 생성"}
                     </button>
                   </div>
@@ -710,12 +710,12 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               <div>
                 <label className="mb-2 block text-sm font-semibold">키워드 또는 발행 콘셉트</label>
                 <textarea className={`${inputClass} min-h-24`} value={concept} onChange={(event) => setConcept(event.target.value)} placeholder="예: 기억과 사랑 / 2000년대 한국 스릴러 / 비 오는 날 다시 보고 싶은 영화" />
-                <button type="button" onClick={buildConcept} disabled={!concept.trim() || conceptBusy} className="mt-2 w-full rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-bg disabled:opacity-40">
+                <button type="button" onClick={buildConcept} disabled={!concept.trim() || conceptBusy} className="mt-2 w-full  ink-action px-4 py-2.5 text-sm font-semibold text-bg disabled:opacity-40">
                   {conceptBusy ? "영화 고르는 중…" : "콘셉트에 맞는 영화 자동 선택"}
                 </button>
               </div>
               {conceptCarousel && (
-                <div className="rounded-xl border border-line bg-surface p-4">
+                <div className=" border border-line bg-surface p-4">
                   <p className="text-sm font-semibold">{conceptCarousel.headline}</p>
                   <p className="mt-1 text-xs text-muted">후보 {conceptCarousel.total}편 중 {conceptCarousel.selectedCount}편 선정{conceptCarousel.omittedCount ? ` · 외 ${conceptCarousel.omittedCount}편` : ""}</p>
                   <ol className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-muted sm:grid-cols-3">
@@ -723,7 +723,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
                   </ol>
                 </div>
               )}
-              <p className="rounded-xl border border-line px-3 py-3 text-xs leading-relaxed text-muted">
+              <p className=" border border-line px-3 py-3 text-xs leading-relaxed text-muted">
                 제목·감독·국가·장르·연도·태그·정서 주제·기존 감상문을 함께 비교합니다. 자동 선정 결과가 주제와 맞는지 확인한 뒤 저장하세요.
               </p>
             </div>
@@ -731,7 +731,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
         </section>
 
         <section className="min-w-0 lg:sticky lg:top-4 lg:self-start" aria-label="캐러셀 미리보기와 저장">
-          <div className="min-w-0 rounded-2xl border border-line bg-surface p-3 sm:p-4">
+          <div className="min-w-0  border border-line bg-surface p-3 sm:p-4">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div className="min-w-0">
                 <h2 className="truncate text-sm font-semibold">{carousel?.headline || "캐러셀 미리보기"}</h2>
@@ -740,21 +740,21 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               {building && <span className="shrink-0 text-xs text-accent">다시 그리는 중…</span>}
             </div>
             {overflowCount > 0 && (
-              <p className="mb-3 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs text-amber-200" role="status">
+              <p className="mb-3  border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs text-amber-200" role="status">
                 {overflowCount}개 카드의 긴 문장을 말줄임표로 축약했습니다. 해당 카드의 문구를 조금 줄여 주세요.
               </p>
             )}
             {cards.length ? (
               <>
                 <div className="relative mx-auto w-fit max-w-full">
-                  <img src={cards[activeCard]?.url} alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`} draggable={false} className="max-h-[58dvh] w-auto max-w-full rounded-xl border border-line shadow-xl lg:max-h-[68vh]" />
-                  {cards[activeCard]?.overflow && <span className="absolute right-2 top-2 rounded-full bg-amber-300 px-2 py-1 text-[10px] font-bold text-black">문구 축약됨</span>}
+                  <img src={cards[activeCard]?.url} alt={`${activeCard + 1}번째 카드 — ${cards[activeCard]?.label}`} draggable={false} className="max-h-[58dvh] w-auto max-w-full  border border-line shadow-xl lg:max-h-[68vh]" />
+                  {cards[activeCard]?.overflow && <span className="absolute right-2 top-2  bg-amber-300 px-2 py-1 text-[10px] font-bold text-black">문구 축약됨</span>}
                 </div>
                 <ol className="mt-3 grid min-w-0 grid-cols-5 gap-1.5 sm:gap-2">
                   {cards.map((card, index) => (
                     <li key={`${card.role}-${index}`} className="min-w-0">
-                      <button type="button" onClick={() => setActiveCard(index)} aria-label={`${index + 1}번째 카드 보기`} aria-pressed={activeCard === index} className={`w-full min-w-0 rounded-lg border p-1 ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65"}`}>
-                        <img src={card.url} alt="" className="aspect-[4/5] w-full rounded object-cover" />
+                      <button type="button" onClick={() => setActiveCard(index)} aria-label={`${index + 1}번째 카드 보기`} aria-pressed={activeCard === index} className={`w-full min-w-0  border p-1 ${activeCard === index ? "border-accent bg-accent/10" : "border-line opacity-65"}`}>
+                        <img src={card.url} alt="" className="aspect-[4/5] w-full  object-cover" />
                         <span className={`mt-1 block truncate text-[10px] ${card.overflow ? "text-amber-300" : "text-muted"}`}>{index + 1}. {card.label}{card.overflow ? " · 축약" : ""}</span>
                       </button>
                     </li>
@@ -766,7 +766,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
                 </p>
               </>
             ) : (
-              <div className="flex aspect-[4/5] max-h-[58dvh] items-center justify-center rounded-xl border border-dashed border-line px-6 text-center text-sm text-muted">
+              <div className="flex aspect-[4/5] max-h-[58dvh] items-center justify-center  border border-dashed border-line px-6 text-center text-sm text-muted">
                 {building ? "포스터·장면 이미지와 카드 생성 중…" : mode === "concept" ? "콘셉트를 입력해 영화를 자동 선택하세요." : "영화를 선택해 주세요."}
               </div>
             )}
@@ -775,7 +775,7 @@ export default function CarouselStudio({ movies, initialMovieId = "", initialCon
               const result = await downloadAll(blobs.current, carousel);
               if (result === "shared") setMessage("공유 시트로 5장을 전달했습니다.");
               if (result === "downloaded") setMessage("01부터 05까지 순서대로 저장했습니다.");
-            }} className="mt-4 w-full rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-bg disabled:opacity-40">
+            }} className="mt-4 w-full  ink-action px-4 py-2.5 text-sm font-semibold text-bg disabled:opacity-40">
               {building ? "만드는 중…" : "PNG 5장 저장"}
             </button>
             <p className="mt-2 min-h-5 text-xs text-muted" aria-live="polite">{message}</p>
@@ -813,7 +813,7 @@ function Caption({ carousel, hashtagSets }) {
       {hashtagSets.length > 0 && (
         <label className="mb-2 block text-xs text-muted">
           해시태그 세트
-          <select value={setId} onChange={(event) => setSetId(event.target.value)} className="ml-2 rounded-md border border-line bg-bg px-2 py-1 text-xs text-ink">
+          <select value={setId} onChange={(event) => setSetId(event.target.value)} className="ml-2  border border-line bg-bg px-2 py-1 text-xs text-ink">
             {hashtagSets.map((set) => <option key={set.id} value={set.id}>{set.label}</option>)}
           </select>
         </label>

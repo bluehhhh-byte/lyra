@@ -10,7 +10,7 @@ const taps = new WeakMap(); // <audio> → { src, analyser }
 function accentColor() {
   return (
     getComputedStyle(document.documentElement).getPropertyValue("--color-accent").trim() ||
-    "#c8b6ff"
+    "#ce7250"
   );
 }
 

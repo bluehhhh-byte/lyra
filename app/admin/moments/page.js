@@ -54,7 +54,7 @@ export default async function MomentAdminPage({ searchParams }) {
               </Link>
             ))}
           </div>
-        ) : <p className="rounded-lg border border-dashed border-line p-8 text-center text-sm text-muted">아직 기록된 장면이 없습니다.</p>}
+        ) : <p className=" border border-dashed border-line p-8 text-center text-sm text-muted">아직 기록된 장면이 없습니다.</p>}
       </section>
     </>
   );

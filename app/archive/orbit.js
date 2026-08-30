@@ -50,10 +50,10 @@ export function YearComparison({ stats, firstYear, secondYear }) {
   return (
     <figure className="min-w-0 max-w-full">
       <div className="mb-3 flex flex-wrap gap-4 text-xs text-muted" aria-hidden>
-        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 rounded-full" style={{ background: colors.first }} />{firstYear}년</span>
-        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 rounded-sm" style={{ background: colors.second }} />{secondYear}년</span>
+        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 " style={{ background: colors.first }} />{firstYear}년</span>
+        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 " style={{ background: colors.second }} />{secondYear}년</span>
       </div>
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${chartId}-title`} className="h-auto w-full rounded-2xl border border-line bg-surface">
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${chartId}-title`} className="h-auto w-full  border border-line bg-surface">
         <title id={`${chartId}-title`}>{`${firstYear}년과 ${secondYear}년의 월별 정서 좌표 비교. 가로는 밝기, 세로는 각성이며 두 축 모두 마이너스 3에서 플러스 3이다.`}</title>
         {[-2, -1, 0, 1, 2].map((tick) => (
           <g key={tick} aria-hidden>
@@ -108,8 +108,8 @@ export function YearComparison({ stats, firstYear, secondYear }) {
 // 색을 시간에 내주면 화살표를 따라가지 않아도 궤적이 읽힌다.
 //
 // 처음에는 한 색상 안에서 흐림→또렷함으로 갔는데 이웃한 달끼리 구분이 되지 않았다.
-// 명도로 차이를 벌리는 것도 답이 아니다 — 이 사이트는 다크(#0d0d0f)와
-// 라이트(#fdfdfc)를 모두 쓰므로, 어두운 끝은 다크 배경에서 묻히고 밝은 끝은
+// 명도로 차이를 벌리는 것도 답이 아니다 — 이 사이트는 다크(#181410)와
+// 라이트(#f6f1e4)를 모두 쓰므로, 어두운 끝은 다크 배경에서 묻히고 밝은 끝은
 // 라이트 배경에서 묻힌다. 두 배경 모두에서 살아남으려면 명도는 중간 띠에
 // 머물러야 한다.
 //
@@ -565,10 +565,10 @@ export function EmotionOrbit({ stats, month, monthHref }) {
       <OrbitMonthComparison points={points} initialMonth={active.month} />
       <figcaption className="mt-3">
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className="rounded-full border border-line px-2 py-1">점선 · 기준 월</span>
-          <span className="rounded-full border border-line px-2 py-1">실선 · 비교 월</span>
-          <span className="rounded-full border border-line px-2 py-1">별 색상 · 대표 감정 + 밝고 어두운 기운 + 에너지</span>
-          <span className="rounded-full border border-line px-2 py-1">별 꼭짓점 · 밝은 기운→강한 에너지→감정의 폭→어두운 깊이→잔잔한 여운</span>
+          <span className=" border border-line px-2 py-1">점선 · 기준 월</span>
+          <span className=" border border-line px-2 py-1">실선 · 비교 월</span>
+          <span className=" border border-line px-2 py-1">별 색상 · 대표 감정 + 밝고 어두운 기운 + 에너지</span>
+          <span className=" border border-line px-2 py-1">별 꼭짓점 · 밝은 기운→강한 에너지→감정의 폭→어두운 깊이→잔잔한 여운</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
           기준 월과 비교 월을 각각 누르면 두 별이 같은 축에 겹쳐진다. 다섯 축은 모든 달에 동일한 0~100 기준을 적용하며, 점수가 높을수록 해당 감성의 꼭짓점이 길어진다.
@@ -617,7 +617,7 @@ export function BioTimeline({ stats, month, monthHref }) {
             <Link
               href={monthHref(s.month)}
               aria-current={active ? "page" : undefined}
-              className={`block min-w-0 max-w-full rounded-xl border px-3 py-2 text-xs leading-5 transition ${
+              className={`block min-w-0 max-w-full  border px-3 py-2 text-xs leading-5 transition ${
                 active ? "border-accent bg-accent/10" : "border-line hover:border-accent/60"
               }`}
             >
@@ -671,9 +671,9 @@ export function EmotionComposition({ stat }) {
                 {n}곡 · {pct}%
               </span>
             </div>
-            <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-line/50">
+            <div className="mt-1 h-1.5 w-full overflow-hidden  bg-line/50">
               <div
-                className="h-full rounded-full"
+                className="h-full "
                 style={{ width: `${pct}%`, background: valenceColor(emotionValence(emotion)) }}
               />
             </div>

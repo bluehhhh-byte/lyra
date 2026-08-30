@@ -137,11 +137,11 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
       </p>
       {/* toolbar sticks so mode/size stay reachable deep into a long song */}
       <div data-reader-toolbar className="sticky top-0 z-20 mb-8 border-b border-line bg-bg/85 py-3 backdrop-blur">
-        <div className="mb-2.5 h-0.5 w-full overflow-hidden rounded-full bg-line">
+        <div className="mb-2.5 h-0.5 w-full overflow-hidden  bg-line">
           {/* scroll-driven: transform tracks the scroll directly — a transition here
               would just lag the input, and width would re-layout on every frame */}
           <div
-            className="h-full w-full origin-left rounded-full bg-accent"
+            className="h-full w-full origin-left  bg-accent"
             style={{ transform: `scaleX(${progress})` }}
           />
         </div>
@@ -151,7 +151,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 key={m.key}
                 onClick={() => setMode(m.key)}
-                className={`min-h-11 rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                className={`min-h-11  border px-3 py-1 text-xs transition active:scale-[0.97] ${
                   mode === m.key
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -164,7 +164,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => setShowReadings((value) => !value)}
                 aria-pressed={showReadings}
-                className={`min-h-11 rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                className={`min-h-11  border px-3 py-1 text-xs transition active:scale-[0.97] ${
                   showReadings
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -181,7 +181,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 onClick={() => setSize(k)}
                 aria-label={`글자 크기 ${k}`}
                 aria-pressed={size === k}
-                className={`h-11 w-11 rounded-full border px-2 py-1 leading-none transition ${
+                className={`h-11 w-11  border px-2 py-1 leading-none transition ${
                   k === "s" ? "text-[10px]" : k === "m" ? "text-xs" : "text-sm"
                 } ${
                   size === k
@@ -201,7 +201,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
           <section
             key={i}
             id={`v${i}`}
-            className={`group/stanza reveal relative scroll-mt-24 rounded-lg transition-colors duration-1000 ${
+            className={`group/stanza reveal relative scroll-mt-24  transition-colors duration-1000 ${
               active === i ? "bg-accent/10" : ""
             }`}
           >
@@ -209,7 +209,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => copyStanza(stanza, i)}
                 aria-label="이 구절을 출처와 함께 복사"
-                className="absolute -top-3 right-11 flex h-11 min-w-11 items-center justify-center rounded px-1 text-[11px] text-muted/50 transition hover:text-accent"
+                className="absolute -top-3 right-11 flex h-11 min-w-11 items-center justify-center  px-1 text-[11px] text-muted/50 transition hover:text-accent"
               >
                 {copiedStanza === i ? "복사됨" : "복사"}
               </button>
@@ -219,7 +219,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 onClick={() => openCard(i)}
                 aria-label="이 구절로 인스타그램 캐러셀 만들기"
                 title="캐러셀 만들기"
-                className="absolute -top-3 right-0 flex h-11 w-11 items-center justify-center rounded text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
+                className="absolute -top-3 right-0 flex h-11 w-11 items-center justify-center  text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                   <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
@@ -235,7 +235,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 type="button"
                 onClick={() => setExpandedRepeats((current) => new Set(current).add(i))}
-                className="w-full rounded-lg border border-dashed border-line px-4 py-5 text-left text-sm text-muted hover:border-accent hover:text-accent"
+                className="w-full  border border-dashed border-line px-4 py-5 text-left text-sm text-muted hover:border-accent hover:text-accent"
               >
                 반복 후렴 {occurrence}/{repeatCount} · 펼쳐서 읽기
               </button>
@@ -279,7 +279,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                       </p>
                     ))}
                   {line.translationMissing && mode !== "trans" && (
-                    <span className="mt-1 inline-block rounded border border-amber-400/40 px-1.5 py-0.5 text-[10px] text-amber-400">번역 필요</span>
+                    <span className="mt-1 inline-block  border border-amber-400/40 px-1.5 py-0.5 text-[10px] text-amber-400">번역 필요</span>
                   )}
                 </div>
                 )
@@ -337,20 +337,20 @@ function NoteEditor({ initial, onSave, onCancel }) {
     setBusy(false);
   };
   return (
-    <div className="mt-4 rounded-lg bg-surface px-4 py-3">
+    <div className="mt-4  bg-surface px-4 py-3">
       <textarea
         autoFocus
         rows={3}
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="이 구절에 대한 해설·감상"
-        className="w-full resize-none rounded border border-line bg-bg px-3 py-2 text-sm outline-none focus:border-accent"
+        className="w-full resize-none  border border-line bg-bg px-3 py-2 text-sm outline-none focus:border-accent"
       />
       <div className="mt-2 flex items-center gap-2">
         <button
           onClick={() => save(text.trim())}
           disabled={busy}
-          className="rounded-lg bg-accent px-3 py-1 text-xs font-semibold text-bg disabled:opacity-40"
+          className=" bg-accent px-3 py-1 text-xs font-semibold text-bg disabled:opacity-40"
         >
           {busy ? "저장 중…" : "저장"}
         </button>

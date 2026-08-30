@@ -21,7 +21,7 @@ async function drawCard({ movie }) {
   // background — poster blurred (tiny-upscale, Safari-safe) + dark scrim.
   // TMDB images lack CORS headers, so load through our same-origin proxy or the
   // canvas taints and toBlob throws.
-  ctx.fillStyle = "#0d0d0f";
+  ctx.fillStyle = "#181410";
   ctx.fillRect(0, 0, W, H);
   let poster = null;
   try {
@@ -40,8 +40,8 @@ async function drawCard({ movie }) {
   ctx.fillRect(0, 0, W, H);
 
   const ink = "#f4f4f6";
-  const inkDim = "rgba(244,244,246,0.62)";
-  const inkFaint = "rgba(244,244,246,0.42)";
+  const inkDim = "rgba(246,241,228,0.62)";
+  const inkFaint = "rgba(246,241,228,0.42)";
   const pad = 96;
 
   // wordmark — top-right
@@ -58,7 +58,7 @@ async function drawCard({ movie }) {
   if (poster) {
     ctx.save();
     ctx.beginPath();
-    ctx.roundRect(px, py, pw, ph, 20);
+    ctx.rect(px, py, pw, ph, 20);
     ctx.clip();
     // cover-crop into the 2:3 box
     const sr = pw / ph;
@@ -86,13 +86,13 @@ async function drawCard({ movie }) {
     const sw = ctx.measureText(stars).width;
     const sx = (W - sw) / 2;
     ctx.textAlign = "left";
-    ctx.fillStyle = "rgba(244,244,246,0.25)";
+    ctx.fillStyle = "rgba(246,241,228,0.25)";
     ctx.fillText(stars, sx, y + 34);
     ctx.save();
     ctx.beginPath();
     ctx.rect(sx, y, sw * (movie.rating / 5), 60);
     ctx.clip();
-    ctx.fillStyle = "#c8b6ff";
+    ctx.fillStyle = "#c96b4a";
     ctx.fillText(stars, sx, y + 34);
     ctx.restore();
     ctx.textAlign = "center";
@@ -178,7 +178,7 @@ export default function MovieCardButton({ movie }) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted transition active:scale-[0.97] hover:text-accent"
+        className=" border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted transition active:scale-[0.97] hover:text-accent"
       >
         카드 공유
       </button>
@@ -193,10 +193,10 @@ export default function MovieCardButton({ movie }) {
           <div
             onClick={(e) => e.stopPropagation()}
             role="document"
-            className="max-h-full w-full max-w-sm scale-100 overflow-y-auto rounded-2xl border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
+            className="max-h-full w-full max-w-sm scale-100 overflow-y-auto  border border-line bg-bg p-4 opacity-100 transition duration-200 ease-out starting:scale-[0.97] starting:opacity-0 motion-reduce:transition-none"
           >
             {url ? (
-              <img src={url} alt="영화 카드 미리보기" className="w-full rounded-xl border border-line" />
+              <img src={url} alt="영화 카드 미리보기" className="w-full  border border-line" />
             ) : (
               <div className="flex aspect-[4/5] items-center justify-center text-sm text-muted">카드 생성 중…</div>
             )}
@@ -204,13 +204,13 @@ export default function MovieCardButton({ movie }) {
               <button
                 onClick={() => blobRef.current && shareBlob(blobRef.current, movie)}
                 disabled={!url}
-                className="flex-1 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
+                className="flex-1  ink-action px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98] disabled:opacity-40"
               >
                 공유
               </button>
               <button
                 onClick={() => setOpen(false)}
-                className="rounded-lg border border-line px-4 py-2 text-sm text-muted transition hover:text-accent"
+                className=" border border-line px-4 py-2 text-sm text-muted transition hover:text-accent"
               >
                 닫기
               </button>

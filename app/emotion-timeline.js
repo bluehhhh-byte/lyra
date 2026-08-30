@@ -11,7 +11,7 @@ export default function EmotionTimeline({ days, height = 150 }) {
   const pts = days.filter((d) => d.valence !== null);
   if (pts.length < 2) {
     return (
-      <p className="rounded-lg border border-dashed border-line px-4 py-8 text-center text-xs text-muted">
+      <p className=" border border-dashed border-line px-4 py-8 text-center text-xs text-muted">
         감정 데이터가 이틀 이상 쌓이면 변화 곡선이 그려집니다.
       </p>
     );
@@ -36,11 +36,11 @@ export default function EmotionTimeline({ days, height = 150 }) {
           the first day's label */}
       <figcaption className="mb-1.5 flex items-center gap-3 font-mono text-[10px] text-muted">
         <span className="flex items-center gap-1">
-          <i className="inline-block h-2 w-2 rounded-full" style={{ background: valenceColor(3) }} />
+          <i className="inline-block h-2 w-2 " style={{ background: valenceColor(3) }} />
           밝은 감정
         </span>
         <span className="flex items-center gap-1">
-          <i className="inline-block h-2 w-2 rounded-full" style={{ background: valenceColor(-3) }} />
+          <i className="inline-block h-2 w-2 " style={{ background: valenceColor(-3) }} />
           어두운 감정
         </span>
       </figcaption>

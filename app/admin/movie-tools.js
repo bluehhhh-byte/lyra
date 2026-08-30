@@ -74,14 +74,14 @@ export default function MovieTools({ movies }) {
   };
 
   return (
-    <ul className="max-w-2xl divide-y divide-line rounded-lg border border-line">
+    <ul className="max-w-2xl divide-y divide-line  border border-line">
       {movies.map((m) => {
         const st = state[m.slug] || {};
         const rating = st.rating ?? m.rating;
         return (
           <li key={m.slug} className={`px-3 py-2 text-sm ${st.gone ? "opacity-40" : ""}`}>
             <div className="flex items-center gap-3">
-              <img src={m.poster} alt="" loading="lazy" className="h-12 w-8 shrink-0 rounded object-cover" />
+              <img src={m.poster} alt="" loading="lazy" className="h-12 w-8 shrink-0  object-cover" />
               <span className="min-w-0 flex-1">
                 <span className="font-medium">{m.title}</span>
                 <span className="text-muted"> — {m.director}</span>
@@ -170,19 +170,19 @@ function StarInput({ value, onChange, disabled }) {
         type="button"
         disabled={disabled || value <= 0.5}
         onClick={() => step(-0.5)}
-        className="h-7 w-7 rounded-full border border-line text-sm text-muted hover:text-accent disabled:opacity-30"
+        className="h-7 w-7  border border-line text-sm text-muted hover:text-accent disabled:opacity-30"
         aria-label="별점 0.5점 낮추기"
       >
         -
       </button>
-      <span className="min-w-12 rounded-full border border-line px-2 py-1 text-center text-xs font-semibold text-accent">
+      <span className="min-w-12  border border-line px-2 py-1 text-center text-xs font-semibold text-accent">
         ★ {value ? value.toFixed(1) : "—"}
       </span>
       <button
         type="button"
         disabled={disabled || value >= 5}
         onClick={() => step(0.5)}
-        className="h-7 w-7 rounded-full border border-line text-sm text-muted hover:text-accent disabled:opacity-30"
+        className="h-7 w-7  border border-line text-sm text-muted hover:text-accent disabled:opacity-30"
         aria-label="별점 0.5점 높이기"
       >
         +

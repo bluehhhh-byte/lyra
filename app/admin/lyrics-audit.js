@@ -127,7 +127,7 @@ export default function LyricsAudit() {
     <div className="space-y-4">
       {!queue && (
         <button onClick={loadQueue} disabled={busy}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
           {busy ? "불러오는 중…" : "검토 대상 불러오기"}
         </button>
       )}
@@ -136,21 +136,21 @@ export default function LyricsAudit() {
       {queue && !open && (
         <div className="space-y-3">
           <div className="grid grid-cols-3 gap-2 text-center text-xs">
-            <div className="rounded-lg border border-line p-2"><b className="block text-base">{queue.evidence.summary.total}</b>전체 교정</div>
-            <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/5 p-2"><b className="block text-base">{queue.evidence.summary.documented}</b>근거 완료</div>
-            <div className="rounded-lg border border-amber-500/50 bg-amber-500/10 p-2"><b className="block text-base">{queue.evidence.summary.missing + queue.evidence.summary.invalid}</b>근거 누락</div>
+            <div className=" border border-line p-2"><b className="block text-base">{queue.evidence.summary.total}</b>전체 교정</div>
+            <div className=" border border-emerald-500/40 bg-emerald-500/5 p-2"><b className="block text-base">{queue.evidence.summary.documented}</b>근거 완료</div>
+            <div className=" border border-amber-500/50 bg-amber-500/10 p-2"><b className="block text-base">{queue.evidence.summary.missing + queue.evidence.summary.invalid}</b>근거 누락</div>
           </div>
           <div className="flex gap-2" role="tablist" aria-label="가사 감사 목록">
             <button onClick={() => setView("audit")} role="tab" aria-selected={view === "audit"}
-              className={`rounded-lg px-3 py-1.5 text-xs ${view === "audit" ? "bg-accent font-semibold text-bg" : "border border-line text-muted"}`}>
+              className={` px-3 py-1.5 text-xs ${view === "audit" ? "bg-accent font-semibold text-bg" : "border border-line text-muted"}`}>
               가사 검토 {queue.items.length}
             </button>
             <button onClick={() => setView("evidence")} role="tab" aria-selected={view === "evidence"}
-              className={`rounded-lg px-3 py-1.5 text-xs ${view === "evidence" ? "bg-accent font-semibold text-bg" : "border border-line text-muted"}`}>
+              className={` px-3 py-1.5 text-xs ${view === "evidence" ? "bg-accent font-semibold text-bg" : "border border-line text-muted"}`}>
               근거 누락 {queue.evidence.items.length}
             </button>
           </div>
-          <div className="max-h-[26rem] overflow-y-auto rounded-lg border border-line">
+          <div className="max-h-[26rem] overflow-y-auto  border border-line">
           {view === "audit" && queue.items.map((q) => (
             <button key={q.slug} onClick={() => openSong(q.slug)}
               className="flex w-full items-center justify-between gap-3 border-b border-line px-3 py-2 text-left text-sm last:border-0 hover:bg-surface">
@@ -191,22 +191,22 @@ export default function LyricsAudit() {
               <p className="mb-1 text-xs text-muted">현재 가사 (수정 가능)</p>
               <textarea value={open.text} onChange={(e) => setOpen({ ...open, text: e.target.value })}
                 rows={18} spellCheck={false}
-                className="w-full resize-y rounded border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
+                className="w-full resize-y  border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
             </div>
             <div>
               <p className="mb-1 text-xs text-muted">참고 가사 — 대조용, 저장하지 않음</p>
               <textarea value={ref} onChange={(e) => setRef(e.target.value)} rows={18} spellCheck={false}
                 placeholder="공식 가사·앨범 북클릿·공식 영상 자막을 붙여넣고 왼쪽과 비교"
-                className="w-full resize-y rounded border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
+                className="w-full resize-y  border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
             </div>
           </div>
 
           {open.corrections.length > 0 && (
-            <div className="rounded-lg border border-line p-3">
+            <div className=" border border-line p-3">
               <p className="mb-2 text-xs font-semibold">기존 교정 이력과 근거</p>
               <div className="max-h-64 space-y-3 overflow-y-auto">
                 {open.corrections.map((item) => (
-                  <div key={item.evidenceId} className="rounded border border-line p-2 text-xs">
+                  <div key={item.evidenceId} className="border border-line p-2 text-xs">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className={item.evidenceState === "documented" ? "text-emerald-500" : "text-amber-500"}>
                         {item.evidenceState === "documented" ? "근거 완료" : item.evidenceState === "invalid" ? "URL 오류" : "근거 누락"}
@@ -219,9 +219,9 @@ export default function LyricsAudit() {
                       <input value={evidenceDrafts[item.evidenceId] || ""}
                         onChange={(e) => setEvidenceDrafts({ ...evidenceDrafts, [item.evidenceId]: e.target.value })}
                         placeholder="https:// 공식 가사·앨범·공식 영상 근거"
-                        className="min-w-0 flex-1 rounded border border-line bg-bg px-2 py-1.5 outline-none focus:border-accent" />
+                        className="min-w-0 flex-1  border border-line bg-bg px-2 py-1.5 outline-none focus:border-accent" />
                       <button onClick={() => saveEvidence(item)} disabled={busy || !(evidenceDrafts[item.evidenceId] || "").trim()}
-                        className="rounded border border-line px-2 py-1.5 font-semibold disabled:opacity-40">
+                        className="border border-line px-2 py-1.5 font-semibold disabled:opacity-40">
                         근거 저장
                       </button>
                     </div>
@@ -232,7 +232,7 @@ export default function LyricsAudit() {
           )}
 
           {rows.length > 0 && (
-            <div className="rounded-lg border border-line p-3">
+            <div className=" border border-line p-3">
               <p className="mb-2 text-xs text-muted">바뀐 줄 {rows.length}개</p>
               <div className="max-h-40 space-y-1 overflow-y-auto font-mono text-xs">
                 {rows.map((r) => (
@@ -247,13 +247,13 @@ export default function LyricsAudit() {
 
           <div className="flex flex-wrap items-center gap-2">
             <select value={type} onChange={(e) => setType(e.target.value)}
-              className="rounded border border-line bg-bg px-2 py-1.5 text-xs outline-none focus:border-accent">
+              className="border border-line bg-bg px-2 py-1.5 text-xs outline-none focus:border-accent">
               {TYPES.map(([v, label]) => <option key={v} value={v}>{label}</option>)}
             </select>
             <input value={reason} onChange={(e) => setReason(e.target.value)} placeholder="교정 사유 (예: 공식 가사와 대조)"
-              className="min-w-[14rem] flex-1 rounded border border-line bg-bg px-2 py-1.5 text-xs outline-none focus:border-accent" />
+              className="min-w-[14rem] flex-1  border border-line bg-bg px-2 py-1.5 text-xs outline-none focus:border-accent" />
             <input value={source} onChange={(e) => setSource(e.target.value)} placeholder="근거 URL (새 교정 필수)"
-              className="min-w-[14rem] flex-1 rounded border border-line bg-bg px-2 py-1.5 text-xs outline-none focus:border-accent" />
+              className="min-w-[14rem] flex-1  border border-line bg-bg px-2 py-1.5 text-xs outline-none focus:border-accent" />
             <label className="flex items-center gap-1.5 text-xs text-muted">
               <input type="checkbox" checked={verify} onChange={(e) => setVerify(e.target.checked)} />
               확인 완료로 표시
@@ -262,11 +262,11 @@ export default function LyricsAudit() {
 
           <div className="flex gap-2">
             <button onClick={save} disabled={busy}
-              className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
+              className=" ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
               {busy ? "저장 중…" : rows.length ? "수정 승인" : "현재 유지"}
             </button>
             <button onClick={() => setOpen({ ...open, text: open.before })} disabled={busy || !rows.length}
-              className="rounded-lg border border-line px-4 py-2 text-sm text-muted disabled:opacity-40">
+              className=" border border-line px-4 py-2 text-sm text-muted disabled:opacity-40">
               되돌리기
             </button>
           </div>

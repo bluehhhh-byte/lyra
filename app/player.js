@@ -46,8 +46,8 @@ function CircleButton({ icon, label, onClick, primary, active, size = 16 }) {
       aria-pressed={active}
       className={
         primary
-          ? "flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-bg transition hover:opacity-90 active:scale-95"
-          : `flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition active:scale-95 ${
+          ? "flex h-11 w-11 shrink-0 items-center justify-center  bg-accent text-bg transition hover:opacity-90 active:scale-95"
+          : `flex h-11 w-11 shrink-0 items-center justify-center  border transition active:scale-95 ${
               active
                 ? "border-accent text-accent"
                 : "border-line text-muted hover:border-accent hover:text-accent"
@@ -178,7 +178,7 @@ export default function PlayerProvider({ children }) {
           </div>
 
           <div className="mx-auto flex max-w-5xl items-center gap-2 px-5 py-3 sm:gap-3">
-            <img src={track.artwork} alt="" className="h-11 w-11 shrink-0 rounded" />
+            <img src={track.artwork} alt="" className="h-11 w-11 shrink-0 " />
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{track.title}</p>
               {/* 미리듣기·커버는 스토어가 홍보용으로 제공하는 것이다 — 어디서 왔는지

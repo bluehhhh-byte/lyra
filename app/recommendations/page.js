@@ -54,7 +54,7 @@ export default async function RecommendationsPage() {
       </div>
 
       {items.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
+        <div className=" border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
           아직 추천이 없습니다.
           <br />
           관리자 → 영화 관리 → 왓챠피디아 가져오기에서 “추천 생성”을 누르면 여기에 쌓입니다.
@@ -81,7 +81,7 @@ export default async function RecommendationsPage() {
           <h2 className="mb-3 text-sm font-semibold text-muted">이전 추천</h2>
           <div className="space-y-2">
             {older.map(([at, list]) => (
-              <details key={at} className="rounded-xl border border-line px-4 py-3">
+              <details key={at} className=" border border-line px-4 py-3">
                 <summary className="cursor-pointer text-sm text-muted hover:text-accent">{at.slice(0, 10)} · {list.length}편</summary>
                 <div className="pt-4"><MovieRecs items={list} /></div>
               </details>

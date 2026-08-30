@@ -176,7 +176,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="곡·가수·가사 검색"
-          className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
+          className="w-full  border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
         <div className="flex flex-wrap gap-1.5">
           <label className="sr-only" htmlFor="song-tag-filter">태그 필터</label>
@@ -190,7 +190,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
               if (!value || availableTags.includes(value)) setTag(value);
             }}
             placeholder="태그 필터"
-            className="w-28 rounded-full border border-line bg-bg px-3 py-1 text-xs text-ink outline-none focus:border-accent"
+            className="w-28  border border-line bg-bg px-3 py-1 text-xs text-ink outline-none focus:border-accent"
           />
           <datalist id="song-tag-options">
             {availableTags.map((value) => <option key={value} value={value} />)}
@@ -199,7 +199,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
             <button
               key={g.key}
               onClick={() => setGroup(g.key)}
-              className={`rounded-full border px-3 py-1 text-xs transition active:scale-[0.97] ${
+              className={` border px-3 py-1 text-xs transition active:scale-[0.97] ${
                 group === g.key
                   ? "border-accent bg-accent font-semibold text-bg"
                   : "border-line text-muted hover:text-ink"
@@ -208,11 +208,11 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
               {g.label}
             </button>
           ))}
-          <span className="rounded-full border border-line px-3 py-1 text-xs text-muted">
+          <span className=" border border-line px-3 py-1 text-xs text-muted">
             총 {totalSongs}곡
           </span>
           <label className="sr-only" htmlFor="song-sort">결과 정렬</label>
-          <select id="song-sort" value={sort} onChange={(event) => setSort(event.target.value)} className="rounded-full border border-line bg-bg px-3 py-1 text-xs text-muted">
+          <select id="song-sort" value={sort} onChange={(event) => setSort(event.target.value)} className=" border border-line bg-bg px-3 py-1 text-xs text-muted">
             <option value="relevance">관련도순</option>
             <option value="recent">최신 기록순</option>
             <option value="year">발매 연도순</option>
@@ -226,7 +226,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           {tag && (
             <button
               onClick={() => { setTag(""); setTagDraft(""); }}
-              className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+              className=" border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
             >
               {tag} ✕
             </button>
@@ -234,7 +234,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           {emotion && (
             <button
               onClick={() => setEmotion("")}
-              className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+              className=" border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
             >
               {emotion} ✕
             </button>
@@ -242,7 +242,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           {decade && (
             <button
               onClick={() => setDecade("")}
-              className="rounded-full border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
+              className=" border border-accent bg-accent px-3 py-1 text-xs font-semibold text-bg"
             >
               {decade} ✕
             </button>
@@ -260,7 +260,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           {totalSongs > 0 && (
             <>
               <p className="mt-1 text-xs">검색어를 줄이거나 현재 필터를 지우고 다시 찾아보세요.</p>
-              <button onClick={clearFilters} className="mt-4 rounded-full border border-line px-4 py-1.5 text-xs hover:border-accent hover:text-accent">검색·필터 초기화</button>
+              <button onClick={clearFilters} className="mt-4  border border-line px-4 py-1.5 text-xs hover:border-accent hover:text-accent">검색·필터 초기화</button>
             </>
           )}
         </div>
@@ -272,7 +272,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
             <h2 className="text-sm font-semibold text-muted">랜덤 추천</h2>
             <button
               onClick={() => setSeed((n) => n + 1)}
-              className="rounded-full border border-line px-3 py-1 text-xs text-muted hover:text-accent"
+              className=" border border-line px-3 py-1 text-xs text-muted hover:text-accent"
             >
               다시 섞기 ↻
             </button>
@@ -310,7 +310,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
               await loadAllSongs();
               setVisibleCount((n) => n + RENDER_STEP);
             }}
-            className="rounded-full border border-line px-5 py-2 text-sm text-muted transition hover:border-accent hover:text-accent disabled:opacity-50"
+            className=" border border-line px-5 py-2 text-sm text-muted transition hover:border-accent hover:text-accent disabled:opacity-50"
           >
             나머지 {hiddenCount}곡 더 보기
           </button>
@@ -360,7 +360,7 @@ function Grid({ list, needle, lyrics }) {
           style={{ "--i": i }}
           className="group card-in transition-transform duration-300 ease-out hover:-translate-y-1"
         >
-          <div className="spot overflow-hidden rounded-xl border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
+          <div className="spot overflow-hidden  border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
             <CoverImage
               // grid cells render ≤ ~300px — 300px for 1x, the 600px original for retina
               src={s.artwork.replace("600x600bb", "300x300bb")}

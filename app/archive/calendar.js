@@ -16,16 +16,16 @@ export default function ArchiveCalendar({ stats, years, month, monthHref }) {
   const nextYear = yearIndex >= 0 && yearIndex < years.length - 1 ? years[yearIndex + 1] : null;
 
   return (
-    <nav aria-label="기록 연도와 월 탐색" className="mb-8 rounded-2xl border border-line bg-surface p-4 sm:p-5">
+    <nav aria-label="기록 연도와 월 탐색" className="mb-8  border border-line bg-surface p-4 sm:p-5">
       <div className="mb-3 flex items-center justify-between">
         {prevYear ? (
-          <Link href={monthHref(yearTarget(prevYear))} className="rounded px-2 py-1 text-sm text-muted hover:text-accent" aria-label={`${prevYear}년으로 이동`}>
+          <Link href={monthHref(yearTarget(prevYear))} className="px-2 py-1 text-sm text-muted hover:text-accent" aria-label={`${prevYear}년으로 이동`}>
             ← {prevYear}
           </Link>
         ) : <span className="px-2 py-1 text-sm text-line" aria-hidden>←</span>}
         <span className="text-base font-semibold" aria-current="true">{year}년</span>
         {nextYear ? (
-          <Link href={monthHref(yearTarget(nextYear))} className="rounded px-2 py-1 text-sm text-muted hover:text-accent" aria-label={`${nextYear}년으로 이동`}>
+          <Link href={monthHref(yearTarget(nextYear))} className="px-2 py-1 text-sm text-muted hover:text-accent" aria-label={`${nextYear}년으로 이동`}>
             {nextYear} →
           </Link>
         ) : <span className="px-2 py-1 text-sm text-line" aria-hidden>→</span>}
@@ -39,7 +39,7 @@ export default function ArchiveCalendar({ stats, years, month, monthHref }) {
                 <Link
                   href={monthHref(m)}
                   aria-current={active ? "page" : undefined}
-                  className={`flex min-h-14 flex-col items-center justify-center rounded-lg border px-1 py-2 text-sm transition ${
+                  className={`flex min-h-14 flex-col items-center justify-center  border px-1 py-2 text-sm transition ${
                     active
                       ? "border-accent bg-accent/10 font-semibold text-accent"
                       : "border-line hover:border-accent/60 hover:text-accent"
@@ -53,7 +53,7 @@ export default function ArchiveCalendar({ stats, years, month, monthHref }) {
               ) : (
                 <span
                   aria-disabled="true"
-                  className="flex min-h-14 flex-col items-center justify-center rounded-lg border border-dashed border-line/60 px-1 py-2 text-sm text-line"
+                  className="flex min-h-14 flex-col items-center justify-center  border border-dashed border-line/60 px-1 py-2 text-sm text-line"
                 >
                   <span>{num}월</span>
                 </span>

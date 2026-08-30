@@ -30,7 +30,7 @@ export default function YouTubeEmbed({ artist, title, query, id }) {
     <>
       <button
         onClick={toggle}
-        className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
+        className=" border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
       >
         {open ? "✕ YouTube 닫기" : "▶ YouTube"}
       </button>
@@ -42,10 +42,10 @@ export default function YouTubeEmbed({ artist, title, query, id }) {
               title={`YouTube: ${q}`}
               allow="autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
-              className="aspect-video w-full rounded-xl border border-line"
+              className="aspect-video w-full  border border-line"
             />
           ) : (
-            <div className="flex aspect-video w-full items-center justify-center rounded-xl border border-line text-xs text-muted">
+            <div className="flex aspect-video w-full items-center justify-center  border border-line text-xs text-muted">
               {videoId === undefined ? "영상 찾는 중…" : "영상을 찾지 못했습니다"}
             </div>
           )}

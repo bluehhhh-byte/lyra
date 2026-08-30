@@ -71,7 +71,7 @@ export default function SearchDialog({ open, onClose }) {
       onMouseDown={(event) => event.target === event.currentTarget && onClose()}
       onKeyDown={(event) => event.key === "Escape" && onClose()}
     >
-      <div className="mx-auto max-h-[80vh] w-full max-w-2xl overflow-hidden rounded-lg border border-line bg-bg shadow-2xl">
+      <div className="mx-auto max-h-[80vh] w-full max-w-2xl overflow-hidden  border border-line bg-bg shadow-2xl">
         <div className="flex items-center gap-3 border-b border-line px-4">
           <span aria-hidden className="text-muted">⌕</span>
           <input
@@ -89,7 +89,7 @@ export default function SearchDialog({ open, onClose }) {
               <h2 className="px-2 py-2 text-[10px] font-semibold uppercase text-muted">최근 검색</h2>
               <div className="flex flex-wrap gap-2 px-2 pb-3">
                 {recent.map((item) => (
-                  <button key={item} onClick={() => setQuery(item)} className="min-h-11 rounded-full border border-line px-3 py-1 text-xs text-muted hover:text-accent">
+                  <button key={item} onClick={() => setQuery(item)} className="min-h-11  border border-line px-3 py-1 text-xs text-muted hover:text-accent">
                     {item}
                   </button>
                 ))}
@@ -102,8 +102,8 @@ export default function SearchDialog({ open, onClose }) {
               <p>검색 결과가 없습니다.</p>
               <p className="mt-1 text-xs">검색어를 줄이거나 띄어쓰기를 바꿔 보세요.</p>
               <div className="mt-4 flex flex-wrap justify-center gap-2">
-                <button onClick={() => setQuery("")} className="min-h-11 rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">검색어 지우기</button>
-                <Link href={`/?q=${encodeURIComponent(query.trim())}`} onClick={remember} className="flex min-h-11 items-center rounded-full border border-line px-3 py-1.5 text-xs hover:text-accent">전체 곡에서 찾아보기</Link>
+                <button onClick={() => setQuery("")} className="min-h-11  border border-line px-3 py-1.5 text-xs hover:text-accent">검색어 지우기</button>
+                <Link href={`/?q=${encodeURIComponent(query.trim())}`} onClick={remember} className="flex min-h-11 items-center  border border-line px-3 py-1.5 text-xs hover:text-accent">전체 곡에서 찾아보기</Link>
               </div>
             </div>
           )}
@@ -116,9 +116,9 @@ export default function SearchDialog({ open, onClose }) {
                   const inner = (
                     <>
                       {item.image ? (
-                        <CoverImage src={item.image} alt="" label={label.slice(0, 1)} className="h-11 w-11 shrink-0 rounded object-cover" />
+                        <CoverImage src={item.image} alt="" label={label.slice(0, 1)} className="h-11 w-11 shrink-0  object-cover" />
                       ) : (
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-surface text-xs text-muted">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center  bg-surface text-xs text-muted">
                           {label.slice(0, 1)}
                         </span>
                       )}
@@ -129,7 +129,7 @@ export default function SearchDialog({ open, onClose }) {
                       </span>
                     </>
                   );
-                  const cls = "flex items-center gap-3 rounded px-2 py-2 hover:bg-surface";
+                  const cls = "flex items-center gap-3  px-2 py-2 hover:bg-surface";
                   return (
                     <li key={item.href}>
                       {external ? (

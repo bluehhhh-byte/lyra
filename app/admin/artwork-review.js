@@ -38,7 +38,7 @@ export default function ArtworkReview({ items }) {
         {items.length}곡 — iTunes·Deezer·Cover Art Archive에서 검증된 커버를 찾지 못했다. 직접 URL을
         붙이거나 커버 없음으로 확정 (확정 시 검사에서 제외).
       </p>
-      <ul className="divide-y divide-line rounded-lg border border-line">
+      <ul className="divide-y divide-line  border border-line">
         {items.map((s) => {
           const st = state[s.slug] || {};
           return (
@@ -46,7 +46,7 @@ export default function ArtworkReview({ items }) {
               <div className="flex flex-wrap items-center gap-2">
                 <span className="min-w-0 flex-1 truncate">
                   {s.title} <span className="text-muted">· {s.artist}{s.year ? ` · ${s.year}` : ""}</span>
-                  {s.status && <span className="ml-2 rounded bg-surface px-1.5 py-0.5 text-[10px] text-muted">{s.status}</span>}
+                  {s.status && <span className="ml-2  bg-surface px-1.5 py-0.5 text-[10px] text-muted">{s.status}</span>}
                 </span>
                 <a
                   href={`https://www.google.com/search?q=${encodeURIComponent(`${s.artist} ${s.title} album cover`)}&tbm=isch`}
@@ -61,19 +61,19 @@ export default function ArtworkReview({ items }) {
                   value={st.url || ""}
                   onChange={(e) => set(s.slug, { url: e.target.value })}
                   placeholder="https:// 커버 이미지 URL"
-                  className="min-w-56 flex-1 rounded border border-line bg-surface px-2 py-1 text-xs outline-none focus:border-accent"
+                  className="min-w-56 flex-1  border border-line bg-surface px-2 py-1 text-xs outline-none focus:border-accent"
                 />
                 <button
                   onClick={() => save(s.slug)}
                   disabled={!st.url || st.done}
-                  className="rounded border border-accent px-2.5 py-1 text-xs text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+                  className="border border-accent px-2.5 py-1 text-xs text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
                 >
                   저장
                 </button>
                 <button
                   onClick={() => save(s.slug, true)}
                   disabled={st.done}
-                  className="rounded border border-line px-2.5 py-1 text-xs text-muted hover:text-accent disabled:opacity-40"
+                  className="border border-line px-2.5 py-1 text-xs text-muted hover:text-accent disabled:opacity-40"
                 >
                   커버 없음 확정
                 </button>

@@ -164,7 +164,7 @@ export default function SongTools({ songs }) {
         <button
           onClick={keywordsAll}
           disabled={!!bulk}
-          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+          className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           키워드·감정
           <br />
@@ -176,7 +176,7 @@ export default function SongTools({ songs }) {
               value={recMode}
               onChange={(e) => setRecMode(e.target.value)}
               aria-label="추천 방향"
-              className="w-full rounded-lg border border-line bg-surface px-1.5 py-1 text-xs outline-none focus:border-accent"
+              className="w-full  border border-line bg-surface px-1.5 py-1 text-xs outline-none focus:border-accent"
             >
               <option value="balance">균형</option>
               <option value="deep">깊게</option>
@@ -188,7 +188,7 @@ export default function SongTools({ songs }) {
                 value={recEmotion}
                 onChange={(e) => setRecEmotion(e.target.value)}
                 aria-label="감정"
-                className="w-full rounded-lg border border-line bg-surface px-1.5 py-1 text-xs outline-none focus:border-accent"
+                className="w-full  border border-line bg-surface px-1.5 py-1 text-xs outline-none focus:border-accent"
               >
                 {EMOTIONS.map((e) => <option key={e} value={e}>{e}</option>)}
               </select>
@@ -197,7 +197,7 @@ export default function SongTools({ songs }) {
           <button
             onClick={songRecs}
             disabled={recsBusy.endsWith("중…")}
-            className="rounded-lg border border-accent px-4 py-1.5 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
+            className=" border border-accent px-4 py-1.5 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40"
           >
             추천 곡 생성
           </button>
@@ -205,7 +205,7 @@ export default function SongTools({ songs }) {
         <button
           onClick={musicReport}
           disabled={recsBusy.endsWith("중…")}
-          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+          className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           취향 리포트
           <br />
@@ -214,7 +214,7 @@ export default function SongTools({ songs }) {
         <button
           onClick={motifs}
           disabled={recsBusy.endsWith("중…")}
-          className="rounded-lg border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+          className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
           모티프
           <br />
@@ -224,7 +224,7 @@ export default function SongTools({ songs }) {
           {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움"}
         </span>
       </div>
-      <div className="mb-3 rounded-lg border border-line bg-surface p-3">
+      <div className="mb-3  border border-line bg-surface p-3">
         <label htmlFor="registered-song-search" className="mb-1.5 block text-xs font-semibold text-muted">
           등록된 곡 검색
         </label>
@@ -236,13 +236,13 @@ export default function SongTools({ songs }) {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="곡 제목 또는 아티스트"
             autoComplete="off"
-            className="min-w-0 flex-1 rounded-lg border border-line bg-bg px-3 py-2 text-sm outline-none placeholder:text-muted/70 focus:border-accent"
+            className="min-w-0 flex-1  border border-line bg-bg px-3 py-2 text-sm outline-none placeholder:text-muted/70 focus:border-accent"
           />
           {query && (
             <button
               type="button"
               onClick={() => setQuery("")}
-              className="shrink-0 rounded-lg border border-line px-3 py-2 text-xs text-muted transition hover:border-accent hover:text-accent"
+              className="shrink-0  border border-line px-3 py-2 text-xs text-muted transition hover:border-accent hover:text-accent"
             >
               초기화
             </button>
@@ -252,7 +252,7 @@ export default function SongTools({ songs }) {
           {query ? `검색 결과 ${filteredSongs.length}곡 / 전체 ${songs.length}곡` : `전체 ${songs.length}곡`}
         </p>
       </div>
-      <ul className="divide-y divide-line rounded-lg border border-line">
+      <ul className="divide-y divide-line  border border-line">
       {filteredSongs.map((s) => {
         const st = state[s.slug] || {};
         return (
@@ -265,10 +265,10 @@ export default function SongTools({ songs }) {
                   src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
                   alt=""
                   loading="lazy"
-                  className="h-9 w-9 shrink-0 rounded"
+                  className="h-9 w-9 shrink-0 "
                 />
               ) : (
-                <span aria-hidden="true" className="h-9 w-9 shrink-0 rounded bg-line" />
+                <span aria-hidden="true" className="h-9 w-9 shrink-0  bg-line" />
               )}
               <div className="min-w-0 flex-1">
               <p className="truncate">

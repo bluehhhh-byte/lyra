@@ -36,7 +36,7 @@ export default async function ArchiveDayPage({ params }) {
         <p className="mb-2 text-xs text-muted">하루의 문화 기록</p>
         <div className="flex items-center gap-3">
           <span
-            className="h-3 w-3 rounded-full"
+            className="h-3 w-3 "
             style={{ background: entry.valence === null ? "var(--color-line)" : valenceColor(entry.valence) }}
           />
           <h1 className="text-3xl font-bold">{entry.day.replaceAll("-", ".")}</h1>
@@ -52,7 +52,7 @@ export default async function ArchiveDayPage({ params }) {
               <Link
                 key={keyword}
                 href={`/?q=${encodeURIComponent(keyword)}`}
-                className="rounded-full border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:text-accent"
+                className=" border border-dashed border-line px-2.5 py-0.5 text-xs text-muted hover:text-accent"
               >
                 #{keyword}{count > 1 && <span className="ml-1 opacity-60">{count}</span>}
               </Link>
@@ -72,7 +72,7 @@ export default async function ArchiveDayPage({ params }) {
               src={item.image}
               alt=""
               className={`w-full border border-line object-cover ${
-                item.type === "song" ? "aspect-square rounded" : "aspect-[2/3] rounded"
+                item.type === "song" ? "aspect-square " : "aspect-[2/3] "
               }`}
             />
             <div className="min-w-0 self-center">

@@ -141,7 +141,7 @@ export default function DeployControl({ contentInDatabase = false }) {
           type="button"
           onClick={deploy}
           disabled={busy}
-          className="rounded-lg border border-line px-3 py-2 text-sm font-semibold transition hover:border-accent hover:text-accent disabled:opacity-40"
+          className=" border border-line px-3 py-2 text-sm font-semibold transition hover:border-accent hover:text-accent disabled:opacity-40"
         >
           {busy ? "배포 중…" : contentInDatabase ? "코드 변경 배포" : "변경사항 배포"}
         </button>

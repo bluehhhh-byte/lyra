@@ -9,13 +9,13 @@ export default function Error({ error, reset }) {
       <div className="mt-6 flex justify-center gap-2">
         <button
           onClick={reset}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98]"
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg transition active:scale-[0.98]"
         >
           다시 시도
         </button>
         <a
           href="/"
-          className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent"
+          className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent"
         >
           홈으로
         </a>

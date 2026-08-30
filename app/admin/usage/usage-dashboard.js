@@ -33,8 +33,8 @@ function Progress({ value, limit }) {
   const color = used >= 85 ? "bg-red-500" : used >= 70 ? "bg-amber-500" : "bg-emerald-500";
   return (
     <div className="mt-4">
-      <div className="h-2 overflow-hidden rounded-full bg-line/70">
-        <div className={`h-full rounded-full transition-all ${color}`} style={{ width: `${used}%` }} />
+      <div className="h-2 overflow-hidden  bg-line/70">
+        <div className={`h-full  transition-all ${color}`} style={{ width: `${used}%` }} />
       </div>
       <p className="mt-2 text-right text-[11px] tabular-nums text-muted">{number.format(used)}% 사용</p>
     </div>
@@ -43,7 +43,7 @@ function Progress({ value, limit }) {
 
 function ResourceCard({ label, used, limit, note }) {
   return (
-    <section className="rounded-2xl border border-line bg-surface/70 p-5">
+    <section className=" border border-line bg-surface/70 p-5">
       <p className="text-xs text-muted">{label}</p>
       <p className="mt-2 text-xl font-semibold tabular-nums">{formatBytes(used)} {limit ? <span className="text-sm font-normal text-muted">/ {formatBytes(limit)}</span> : null}</p>
       {limit ? <Progress value={used} limit={limit} /> : <p className="mt-3 text-[11px] text-muted">환경변수에 현재 요금제 한도를 설정하면 비율을 계산합니다.</p>}
@@ -65,12 +65,12 @@ function LineChart({ title, points, valueKey, color = "var(--color-accent)" }) {
   }).join(" ");
 
   return (
-    <section className="rounded-2xl border border-line bg-surface/50 p-4 sm:p-5">
+    <section className=" border border-line bg-surface/50 p-4 sm:p-5">
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-sm font-semibold">{title}</h2>
         <span className="text-[11px] text-muted">최근 24시간</span>
       </div>
-      <div className="overflow-hidden rounded-xl bg-bg/60">
+      <div className="overflow-hidden  bg-bg/60">
         <svg viewBox={`0 0 ${width} ${height}`} className="h-36 w-full" role="img" aria-label={`${title} 최근 24시간 그래프`}>
           {[0.25, 0.5, 0.75].map((ratio) => <line key={ratio} x1={pad} x2={width - pad} y1={height * ratio} y2={height * ratio} stroke="var(--color-line)" strokeWidth="1" />)}
           {path && <polyline points={path} fill="none" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />}
@@ -123,16 +123,16 @@ export default function UsageDashboard() {
           <Link href="/admin" className="text-xs text-muted hover:text-accent">← 관리자</Link>
           <h1 className="mt-3 text-2xl font-bold">무료 사용량</h1>
         </div>
-        <button onClick={refresh} disabled={loading} className="rounded-full border border-line px-4 py-2 text-xs hover:border-accent hover:text-accent disabled:opacity-50">
+        <button onClick={refresh} disabled={loading} className=" border border-line px-4 py-2 text-xs hover:border-accent hover:text-accent disabled:opacity-50">
           {loading ? "확인 중…" : "새로고침"}
         </button>
       </div>
 
       <AdminErrorMessage message={error} className="mb-5" />
 
-      <section className={`rounded-3xl border p-5 sm:p-7 ${style.panel}`}>
+      <section className={` border p-5 sm:p-7 ${style.panel}`}>
         <div className="flex items-center gap-2">
-          <span className={`h-2.5 w-2.5 rounded-full ${style.dot}`} />
+          <span className={`h-2.5 w-2.5  ${style.dot}`} />
           <p className={`text-sm font-semibold ${style.text}`}>{data?.status?.label || "확인 중"}</p>
         </div>
         <p className="mt-3 text-sm text-muted">가사나 영화 콘텐츠를 지금과 같은 크기로 등록할 경우</p>
@@ -140,8 +140,8 @@ export default function UsageDashboard() {
           <p className="text-4xl font-bold tabular-nums sm:text-5xl">{remaining == null ? "한도 설정 필요" : `약 ${integer.format(remaining)}회`}</p>
           <p className="pb-1 text-sm text-muted">더 등록 가능</p>
         </div>
-        <div className="mt-6 h-3 overflow-hidden rounded-full bg-line/70">
-          <div className={`h-full rounded-full ${style.dot}`} style={{ width: `${capacityUsed}%` }} />
+        <div className="mt-6 h-3 overflow-hidden  bg-line/70">
+          <div className={`h-full  ${style.dot}`} style={{ width: `${capacityUsed}%` }} />
         </div>
         <div className="mt-2 flex justify-between gap-3 text-xs text-muted">
           <span>{remaining == null ? "NEON_TRANSFER_LIMIT_BYTES 미설정" : `남음 ${integer.format(remaining)}회`}</span>
@@ -165,7 +165,7 @@ export default function UsageDashboard() {
       </div>
 
       {data?.metricsEnabled && (
-        <section className="mt-5 rounded-2xl border border-line bg-surface/50 p-4 sm:p-5">
+        <section className="mt-5  border border-line bg-surface/50 p-4 sm:p-5">
           <h2 className="text-sm font-semibold">경로별 캐시 관측</h2>
           <p className="mt-1 text-xs text-muted">최근 7일 표본 · 전송 0 byte는 브라우저 HIT, 네트워크 전송은 MISS로 분류</p>
           <ol className="mt-3 divide-y divide-line text-xs">

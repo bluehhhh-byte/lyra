@@ -16,7 +16,7 @@ function FilmGrid({ films }) {
         const inner = movie.href?.startsWith("/");
         const Card = (
           <>
-            <CoverImage src={movie.poster} alt="" label={movie.title_ko || movie.title} className="aspect-[2/3] w-full rounded border border-line object-cover" />
+            <CoverImage src={movie.poster} alt="" label={movie.title_ko || movie.title} className="aspect-[2/3] w-full  border border-line object-cover" />
             <h3 className="mt-2 truncate text-sm font-semibold group-hover:text-accent">{movie.title_ko || movie.title}</h3>
             <p className="mt-0.5 truncate text-xs text-muted">
               {movie.year}{movie.rating != null ? ` · ★ ${movie.rating}` : " · 별점 없음"}

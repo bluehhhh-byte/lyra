@@ -18,8 +18,8 @@ export function Bars({ data, total, link }) {
               </span>
             </div>
             {/* width is the only dynamic bit — inline style beats 100 arbitrary classes */}
-            <div className="h-1.5 overflow-hidden rounded-full bg-line">
-              <div className="h-full rounded-full bg-accent" style={{ width: `${(n / max) * 100}%` }} />
+            <div className="h-1.5 overflow-hidden  bg-line">
+              <div className="h-full  bg-accent" style={{ width: `${(n / max) * 100}%` }} />
             </div>
           </>
         );

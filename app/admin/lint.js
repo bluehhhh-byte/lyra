@@ -73,7 +73,7 @@ export default function Lint() {
         <button
           onClick={scan}
           disabled={!!busy}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40"
         >
           {busy === "scan" ? "검사 중…" : "형식 검사 실행"}
         </button>
@@ -81,7 +81,7 @@ export default function Lint() {
           <button
             onClick={fixAll}
             disabled={!!busy}
-            className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
+            className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent disabled:opacity-40"
           >
             {busy === "fix" ? "수정 중…" : `발견된 ${report.length}곡 자동 수정`}
           </button>
@@ -93,7 +93,7 @@ export default function Lint() {
       )}
       {report?.length > 0 && (
         <>
-          <ul className="mt-3 divide-y divide-line rounded-lg border border-line">
+          <ul className="mt-3 divide-y divide-line  border border-line">
             {report.map((s) => (
               <li key={s.slug} className="flex items-center justify-between gap-3 px-3 py-2 text-sm">
                 <span className="min-w-0">

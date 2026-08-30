@@ -48,13 +48,13 @@ export default async function RecapPage({ searchParams }) {
 
       <nav className="mb-10 flex flex-wrap gap-2 border-y border-line py-3">
         {years.map((value) => (
-          <Link key={value} href={`/recap?period=${value}`} className={`rounded-full border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
+          <Link key={value} href={`/recap?period=${value}`} className={` border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
             {value}년
           </Link>
         ))}
         <span className="mx-1 w-px bg-line" />
         {months.map((value) => (
-          <Link key={value} href={`/recap?period=${value}`} className={`rounded-full border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
+          <Link key={value} href={`/recap?period=${value}`} className={` border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
             {Number(value.slice(5))}월
           </Link>
         ))}
@@ -94,7 +94,7 @@ export default async function RecapPage({ searchParams }) {
           <h2 className="mb-4 text-sm font-semibold">이 기간의 온도</h2>
           <div className="flex items-center gap-3">
             <span
-              className="h-4 w-4 rounded-full"
+              className="h-4 w-4 "
               style={{ background: recap.averageValence === null ? "var(--color-line)" : valenceColor(recap.averageValence) }}
             />
             <p className="text-sm text-muted">
@@ -103,7 +103,7 @@ export default async function RecapPage({ searchParams }) {
           </div>
           {recap.topMovie && (
             <Link href={`/movies/${recap.topMovie.slug}`} className="mt-6 flex items-center gap-3 border-t border-line pt-4 group">
-              <img src={recap.topMovie.image} alt="" className="h-20 w-14 rounded object-cover" />
+              <img src={recap.topMovie.image} alt="" className="h-20 w-14  object-cover" />
               <span>
                 <span className="block text-xs text-muted">가장 높은 별점</span>
                 <span className="block font-semibold group-hover:text-accent">{recap.topMovie.title}</span>
@@ -116,7 +116,7 @@ export default async function RecapPage({ searchParams }) {
 
       {/* 월간 편집본 — 지난 기간과 무엇이 달라졌는지, 다음엔 어디로 가는지 */}
       {(prevRecap || newArtists.length > 0) && (
-        <section className="mb-14 rounded-xl border border-line bg-surface/50 px-5 py-5">
+        <section className="mb-14  border border-line bg-surface/50 px-5 py-5">
           <h2 className="mb-3 text-sm font-semibold">이번 기간의 변화</h2>
           <div className="space-y-2 text-sm text-muted">
             {prevRecap && prevRecap.emotions[0] && recap.emotions[0] && (
@@ -149,7 +149,7 @@ export default async function RecapPage({ searchParams }) {
         <div className="flex gap-3 overflow-x-auto pb-3">
           {recap.items.slice(0, 14).map((item) => (
             <Link key={`${item.type}-${item.slug}`} href={item.type === "song" ? `/songs/${item.slug}` : `/movies/${item.slug}`} className="w-24 shrink-0 group">
-              <img src={item.image} alt="" className={`w-full border border-line object-cover ${item.type === "song" ? "aspect-square rounded" : "aspect-[2/3] rounded"}`} />
+              <img src={item.image} alt="" className={`w-full border border-line object-cover ${item.type === "song" ? "aspect-square " : "aspect-[2/3] "}`} />
               <p className="mt-1 truncate text-xs text-muted group-hover:text-accent">{item.title}</p>
             </Link>
           ))}
@@ -165,7 +165,7 @@ function Metric({ value, label }) {
 
 function AnnualInsight({ title, value, detail }) {
   return (
-    <div className="rounded-xl border border-line bg-surface px-4 py-4">
+    <div className=" border border-line bg-surface px-4 py-4">
       <p className="text-xs text-muted">{title}</p>
       <p className="mt-1 font-semibold">{value}</p>
       <p className="mt-2 text-xs leading-5 text-muted">{detail}</p>

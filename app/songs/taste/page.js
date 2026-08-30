@@ -22,10 +22,10 @@ function Bar({ label, n, max, total, color, href }) {
       ) : (
         <span className="w-32 shrink-0 truncate sm:w-40">{label}</span>
       )}
-      <span className="h-4 flex-1 overflow-hidden rounded bg-line/50">
+      <span className="h-4 flex-1 overflow-hidden  bg-line/50">
         <span
           aria-hidden
-          className="h-full rounded"
+          className="h-full "
           style={{ display: "block", width: `${Math.max(2, (n / max) * 100)}%`, background: color || "var(--color-accent)" }}
         />
       </span>
@@ -71,7 +71,7 @@ function Evidence({ songs, taste }) {
   const examples = representativeSongs(songs, taste);
   if (!examples.length) return null;
   return (
-    <section className="mb-12 rounded-2xl border border-line bg-surface/60 p-5 sm:p-7">
+    <section className="mb-12  border border-line bg-surface/60 p-5 sm:p-7">
       <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
         <div>
           <h2 className="text-sm font-semibold">이 취향을 만든 기록</h2>
@@ -84,7 +84,7 @@ function Evidence({ songs, taste }) {
       <div className="grid gap-3 sm:grid-cols-5">
         {examples.map((song) => (
           <Link key={song.slug} href={`/songs/${song.slug}`} className="group min-w-0">
-            <CoverImage src={song.artwork} alt="" label={song.title} loading="lazy" className="aspect-square w-full rounded-lg object-cover" />
+            <CoverImage src={song.artwork} alt="" label={song.title} loading="lazy" className="aspect-square w-full  object-cover" />
             <p className="mt-2 truncate text-xs font-semibold group-hover:text-accent">{song.title}</p>
             {song.quote && <p className="mt-1 line-clamp-2 font-serif text-[11px] leading-4 text-muted">“{song.quote}”</p>}
           </Link>
@@ -105,7 +105,7 @@ function EmotionEvidence({ emotion, n, songs, taste }) {
   const keywords = counts(matched.flatMap((song) => song.keywords || []));
   const examples = matched.slice(0, 5);
   return (
-    <details className="group rounded-lg border border-transparent open:border-line open:bg-surface/50 open:p-4">
+    <details className="group  border border-transparent open:border-line open:bg-surface/50 open:p-4">
       <summary className="cursor-pointer list-none">
         <Bar emotionPanel label={emotion} n={n} max={taste.emotion[0]?.[1] || 1} total={taste.count} color={valenceColor(emotionValence(emotion))} />
       </summary>
@@ -117,7 +117,7 @@ function EmotionEvidence({ emotion, n, songs, taste }) {
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-5">
           {examples.map((song) => (
             <Link key={song.slug} href={`/songs/${song.slug}`} className="group/song min-w-0">
-              <CoverImage src={song.artwork} alt="" label={song.title} loading="lazy" className="aspect-square w-full rounded-lg object-cover" />
+              <CoverImage src={song.artwork} alt="" label={song.title} loading="lazy" className="aspect-square w-full  object-cover" />
               <p className="mt-1.5 truncate text-xs group-hover/song:text-accent">{song.title}</p>
             </Link>
           ))}
@@ -141,7 +141,7 @@ export default async function MusicTastePage() {
     return (
       <>
         <h1 className="mb-8 text-2xl font-bold">음악 취향</h1>
-        <div className="rounded-xl border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
+        <div className=" border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
           아직 분석할 곡이 없습니다. 곡을 담으면 취향이 여기에 나타납니다.
         </div>
       </>
@@ -177,7 +177,7 @@ export default async function MusicTastePage() {
       </div>
 
       {text && (
-        <div className="mb-6 rounded-xl border border-accent/30 bg-accent/5 px-5 py-4 text-sm leading-relaxed">
+        <div className="mb-6  border border-accent/30 bg-accent/5 px-5 py-4 text-sm leading-relaxed">
           {text}
         </div>
       )}
@@ -187,7 +187,7 @@ export default async function MusicTastePage() {
       {/* Gemini 리포트 — admin의 '취향 리포트 생성'이 저장한 교차 해석.
           위 한 줄 요약은 코드 계산(항상 최신), 이건 생성 시점 스냅샷. */}
       {report?.text && (
-        <div className="mb-10 rounded-xl border border-line bg-surface px-5 py-4">
+        <div className="mb-10  border border-line bg-surface px-5 py-4">
           <div className="mb-2 flex items-baseline justify-between gap-3">
             <h2 className="text-sm font-semibold text-muted">AI 리포트</h2>
             <span className="text-xs text-muted/60">
@@ -204,7 +204,7 @@ export default async function MusicTastePage() {
 
       <div className="mb-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {tiles.map(([k, v]) => (
-          <div key={k} className="rounded-xl border border-line bg-surface px-4 py-3">
+          <div key={k} className=" border border-line bg-surface px-4 py-3">
             <p className="text-xs text-muted">{k}</p>
             <p className="mt-1 truncate text-sm font-semibold">{v}</p>
           </div>
@@ -226,9 +226,9 @@ export default async function MusicTastePage() {
         ))}
         {t.emotion.length > 0 && (
           <div className="pt-4">
-            <div className="relative h-2 rounded-full" style={{ background: "linear-gradient(to right, oklch(0.72 0.13 250), oklch(0.72 0.13 40))" }}>
+            <div className="relative h-2 " style={{ background: "linear-gradient(to right, oklch(0.72 0.13 250), oklch(0.72 0.13 40))" }}>
               <span
-                className="absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-bg bg-ink"
+                className="absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2  border-2 border-bg bg-ink"
                 style={{ left: `${valencePct}%` }}
                 title={`기울기 ${t.valenceMean.toFixed(1)}`}
               />
@@ -252,7 +252,7 @@ export default async function MusicTastePage() {
             ]
               .filter(Boolean)
               .map(([label, d]) => (
-                <div key={label} className="rounded-xl border border-line bg-surface px-4 py-3 text-sm">
+                <div key={label} className=" border border-line bg-surface px-4 py-3 text-sm">
                   <p className="text-xs text-muted">{label}</p>
                   <p className="mt-1 font-semibold">
                     {d.name} <span className="text-xs font-normal text-muted">{d.n}/{shift.n}곡</span>
@@ -264,7 +264,7 @@ export default async function MusicTastePage() {
                   </p>
                 </div>
               ))}
-            <div className="rounded-xl border border-line bg-surface px-4 py-3 text-sm">
+            <div className=" border border-line bg-surface px-4 py-3 text-sm">
               <p className="text-xs text-muted">정서 기울기</p>
               <p className="mt-1 font-semibold tabular-nums">
                 {shift.valenceRecent > 0 ? "+" : ""}{shift.valenceRecent.toFixed(1)}
@@ -329,7 +329,7 @@ export default async function MusicTastePage() {
             <Link
               key={w}
               href={`/?q=${encodeURIComponent(w)}`}
-              className="rounded-full border border-line px-3 py-1 text-xs text-muted transition hover:border-accent hover:text-accent"
+              className=" border border-line px-3 py-1 text-xs text-muted transition hover:border-accent hover:text-accent"
             >
               #{w} <span className="tabular-nums text-muted/60">{n}</span>
             </Link>

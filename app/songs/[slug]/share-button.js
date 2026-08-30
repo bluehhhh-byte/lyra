@@ -22,7 +22,7 @@ export default function ShareButton({ title, artist }) {
   return (
     <button
       onClick={share}
-      className="rounded-full border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
+      className=" border border-line bg-bg/50 px-3 py-1.5 text-xs text-muted hover:text-accent"
     >
       {copied ? "링크 복사됨 ✓" : "↗ 공유"}
     </button>

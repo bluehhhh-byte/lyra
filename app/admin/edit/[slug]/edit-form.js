@@ -138,7 +138,7 @@ export default function EditForm({ slug }) {
       </p>
       <TranslationVariantNotice items={translationVariants} />
       <textarea
-        className="h-[32rem] w-full rounded-lg border border-line bg-surface px-3 py-2 font-mono text-xs outline-none focus:border-accent"
+        className="h-[32rem] w-full  border border-line bg-surface px-3 py-2 font-mono text-xs outline-none focus:border-accent"
         value={raw}
         onChange={(e) => setRaw(e.target.value)}
       />
@@ -146,13 +146,13 @@ export default function EditForm({ slug }) {
         <button
           onClick={save}
           aria-keyshortcuts="Control+S Meta+S"
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg"
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg"
         >
           저장 <span className="text-xs opacity-70">⌘/Ctrl+S</span>
         </button>
         <button
           onClick={remove}
-          className="rounded-lg border border-red-600/40 px-4 py-2 text-sm text-red-600 hover:bg-red-600/10 dark:border-red-400/40 dark:text-red-400 dark:hover:bg-red-400/10"
+          className=" border border-red-600/40 px-4 py-2 text-sm text-red-600 hover:bg-red-600/10 dark:border-red-400/40 dark:text-red-400 dark:hover:bg-red-400/10"
         >
           삭제
         </button>
@@ -166,7 +166,7 @@ export default function EditForm({ slug }) {
 function TranslationVariantNotice({ items }) {
   if (!items.length) return null;
   return (
-    <aside data-testid="translation-variant-notice" className="mb-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4">
+    <aside data-testid="translation-variant-notice" className="mb-4  border border-amber-500/40 bg-amber-500/10 p-4">
       <h2 className="text-sm font-semibold text-ink">반복 구절의 번역이 다릅니다</h2>
       <p className="mt-1 text-xs text-muted">문맥에 따른 차이일 수 있습니다. 원문과 번역을 보고 직접 판단해 주세요.</p>
       <ul className="mt-3 space-y-3">

@@ -43,7 +43,7 @@ export default async function TagPage({ params }) {
           <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
             {songs.map((s) => (
               <Link key={s.slug} href={`/songs/${s.slug}`} className="group">
-                <div className="overflow-hidden rounded-xl border border-line bg-surface">
+                <div className="overflow-hidden  border border-line bg-surface">
                   <CoverImage
                     src={s.artwork.replace("600x600bb", "300x300bb")}
                     srcSet={`${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x`}
@@ -73,7 +73,7 @@ export default async function TagPage({ params }) {
           <div className="grid grid-cols-3 gap-x-5 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
             {movies.map((m) => (
               <Link key={m.slug} href={`/movies/${m.slug}`} className="group">
-                <div className="overflow-hidden rounded-xl border border-line bg-surface">
+                <div className="overflow-hidden  border border-line bg-surface">
                   {/* poster is 2:3, not square — don't force the album ratio */}
                   <CoverImage
                     src={m.poster}

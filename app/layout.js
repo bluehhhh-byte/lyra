@@ -9,7 +9,8 @@ import { THEME_KEY } from "../lib/theme";
 
 // Runs before the first paint, so a reader who picked light never sees dark flash.
 // Dark is the default — anything but a stored "light" resolves to it.
-const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)})==="light"?"light":"dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}`;
+const THEME_COLORS = { dark: "#181410", light: "#f6f1e4" };
+const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)})==="light"?"light":"dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=${JSON.stringify(THEME_COLORS)}[t]}catch(e){}`;
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -26,7 +27,7 @@ export const metadata = {
     images: ["/opengraph-image.png"],
   },
   // iOS ignores the manifest — it needs its own meta tags to install standalone
-  appleWebApp: { capable: true, title: "Lyra", statusBarStyle: "black" },
+  appleWebApp: { capable: true, title: "Lyra", statusBarStyle: "black-translucent" },
   // 개인 기록이다. 색인도 링크 추적도 원하지 않는다 — app/robots.js와 한 쌍이고,
   // next.config.mjs의 X-Robots-Tag 헤더가 같은 말을 한 번 더 한다. 메타 태그는
   // HTML을 파싱한 봇에게만 닿고, 헤더는 이미지·JSON 응답에도 붙는다.
@@ -35,7 +36,7 @@ export const metadata = {
 
 // lets the UA theme native widgets too — the player's <audio> controls,
 // scrollbars, and the admin form inputs. Dark first: it is the default.
-export const viewport = { colorScheme: "dark light" };
+export const viewport = { colorScheme: "dark light", themeColor: THEME_COLORS.dark };
 
 export default function RootLayout({ children }) {
   return (
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans min-h-screen">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-3 focus:font-semibold focus:text-bg"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus: focus:bg-accent focus:px-4 focus:py-3 focus:font-semibold focus:text-bg"
         >
           본문으로 건너뛰기
         </a>

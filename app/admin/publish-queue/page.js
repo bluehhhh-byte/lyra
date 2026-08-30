@@ -40,7 +40,7 @@ export default async function PublishQueuePage() {
         </div>
         <Link href="/admin/movie" className="text-sm text-muted transition hover:text-accent sm:ml-auto">← 영화 관리로</Link>
       </header>
-      <p className="max-w-3xl rounded-xl border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
+      <p className="max-w-3xl  border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
         최근 기록과 높은 별점, 반복되는 테마만으로 고른다. 올린 작품은 발행 완료로 표시하면 다음 대기열부터 제외된다.
       </p>
 
@@ -50,8 +50,8 @@ export default async function PublishQueuePage() {
         {unwritten.length ? (
           <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {unwritten.map((item) => (
-              <li key={item.key} className="grid grid-cols-[64px_minmax(0,1fr)] gap-3 rounded-2xl border border-line bg-surface p-3">
-                {item.poster ? <img src={item.poster} alt="" className="aspect-[2/3] w-16 rounded-lg border border-line object-cover" /> : <span className="aspect-[2/3] w-16 rounded-lg border border-line bg-bg" />}
+              <li key={item.key} className="grid grid-cols-[64px_minmax(0,1fr)] gap-3  border border-line bg-surface p-3">
+                {item.poster ? <img src={item.poster} alt="" className="aspect-[2/3] w-16  border border-line object-cover" /> : <span className="aspect-[2/3] w-16  border border-line bg-bg" />}
                 <span className="min-w-0 self-center">
                   <span className="block truncate font-semibold">{item.title}</span>
                   <span className="mt-0.5 block truncate text-xs text-muted">{[item.year, item.director, `★${item.rating.toFixed(1)}`].filter(Boolean).join(" · ")}</span>
@@ -60,7 +60,7 @@ export default async function PublishQueuePage() {
               </li>
             ))}
           </ul>
-        ) : <p className="mt-4 rounded-xl border border-dashed border-line p-6 text-center text-sm text-muted">조건에 맞는 미작성 영화가 없습니다.</p>}
+        ) : <p className="mt-4  border border-dashed border-line p-6 text-center text-sm text-muted">조건에 맞는 미작성 영화가 없습니다.</p>}
       </section>
 
       <CandidateSection
@@ -81,7 +81,7 @@ export default async function PublishQueuePage() {
           <ul className="mt-4 grid gap-3 sm:grid-cols-3">
             {candidates.themes.map((item) => (
               <li key={item.theme}>
-                <Link href={`/admin/cyno-carousel?concept=${encodeURIComponent(item.theme)}`} className="group block h-full rounded-2xl border border-line bg-surface p-4 transition hover:border-accent/60">
+                <Link href={`/admin/cyno-carousel?concept=${encodeURIComponent(item.theme)}`} className="group block h-full  border border-line bg-surface p-4 transition hover:border-accent/60">
                   <span className="text-lg font-bold group-hover:text-accent">#{item.theme}</span>
                   <span className="mt-1 block text-xs text-muted">{item.reason}</span>
                   <span className="mt-3 block text-sm leading-relaxed">{item.examples.join(" · ")}</span>
@@ -97,7 +97,7 @@ export default async function PublishQueuePage() {
         <h2 className="text-lg font-bold">최근 발행 이력</h2>
         <p className="mt-1 text-sm text-muted">기존 발행 완료 기록에서 최근 20건을 보여준다.</p>
         {history.length ? (
-          <ol className="mt-4 divide-y divide-line rounded-2xl border border-line bg-surface px-4">
+          <ol className="mt-4 divide-y divide-line  border border-line bg-surface px-4">
             {history.map((item) => (
               <li key={`${item.slug}-${item.publishedAt}`} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-3 text-sm">
                 <span className="font-semibold">{item.title}</span>
@@ -107,7 +107,7 @@ export default async function PublishQueuePage() {
               </li>
             ))}
           </ol>
-        ) : <p className="mt-4 rounded-xl border border-dashed border-line p-6 text-center text-sm text-muted">아직 발행 완료 기록이 없습니다.</p>}
+        ) : <p className="mt-4  border border-dashed border-line p-6 text-center text-sm text-muted">아직 발행 완료 기록이 없습니다.</p>}
       </section>
     </>
   );

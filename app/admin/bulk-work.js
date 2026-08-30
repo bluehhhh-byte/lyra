@@ -92,16 +92,16 @@ export default function BulkWork() {
 
       <div className="flex flex-wrap items-center gap-2">
         <select value={field} onChange={(e) => setField(e.target.value)}
-          className="rounded border border-line bg-bg px-2 py-1.5 text-sm outline-none focus:border-accent">
+          className="border border-line bg-bg px-2 py-1.5 text-sm outline-none focus:border-accent">
           {FIELDS.map(([v, label]) => <option key={v} value={v}>{label}</option>)}
         </select>
         <button onClick={makePlan} disabled={busy}
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
+          className=" ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
           {busy ? "세는 중…" : "부족한 곡 세기"}
         </button>
         {plan && (
           <button onClick={download}
-            className="rounded-lg border border-line px-4 py-2 text-sm text-muted hover:text-accent">
+            className=" border border-line px-4 py-2 text-sm text-muted hover:text-accent">
             작업 꾸러미 내려받기 ({plan.count}곡)
           </button>
         )}
@@ -110,7 +110,7 @@ export default function BulkWork() {
       <AdminErrorMessage message={err} />
 
       {plan && (
-        <div className="rounded-lg border border-line p-3 text-sm">
+        <div className=" border border-line p-3 text-sm">
           <p className="mb-2">
             <b>{plan.field}</b> — 전체 {plan.total}곡 중 <b>{plan.count}곡</b>에 부족한 항목이 있다.
           </p>
@@ -131,15 +131,15 @@ export default function BulkWork() {
         </p>
         <textarea value={paste} onChange={(e) => { setPaste(e.target.value); setPreview(null); setResult(null); }} rows={6} spellCheck={false}
           placeholder="Claude·ChatGPT가 만든 JSON"
-          className="w-full resize-y rounded border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
+          className="w-full resize-y  border border-line bg-bg px-3 py-2 font-mono text-xs outline-none focus:border-accent" />
         <button onClick={makePreview} disabled={busy || !paste.trim()}
-          className="mt-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
+          className="mt-2  ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
           {busy ? "검증 중…" : "변경 미리보기"}
         </button>
       </div>
 
       {preview && (
-        <div className="rounded-lg border border-amber-500/50 bg-amber-500/10 p-3 text-sm">
+        <div className=" border border-amber-500/50 bg-amber-500/10 p-3 text-sm">
           <p className="font-semibold">반영 예정 {preview.changeCount}곡 · 항목 {(preview.fields || []).join(", ") || "—"}</p>
           <div className="mt-2 max-h-40 space-y-1 overflow-y-auto text-xs text-muted">
             {(preview.changes || []).map((change) => (
@@ -150,14 +150,14 @@ export default function BulkWork() {
             ))}
           </div>
           <button onClick={apply} disabled={busy || preview.changeCount === 0}
-            className="mt-3 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
+            className="mt-3  ink-action px-4 py-2 text-sm font-semibold text-bg disabled:opacity-40">
             {busy ? "반영 중…" : `미리보기대로 ${preview.changeCount}곡 반영`}
           </button>
         </div>
       )}
 
       {result && (
-        <div className="rounded-lg border border-line p-3 text-sm">
+        <div className=" border border-line p-3 text-sm">
           <p>반영 {result.applied}곡 · 항목 {(result.fields || []).join(", ") || "—"}</p>
           {!!result.rejected?.length && (
             <div className="mt-2 max-h-32 space-y-0.5 overflow-y-auto text-xs text-red-400/90">

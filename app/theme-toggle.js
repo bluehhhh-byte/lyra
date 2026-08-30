@@ -5,11 +5,14 @@ import { THEME_KEY } from "../lib/theme";
 // Dark is the default; the OS preference is deliberately ignored.
 const ICON = { dark: "☾", light: "☀" };
 const TEXT = { dark: "다크", light: "라이트" };
+const THEME_COLOR = { dark: "#181410", light: "#f6f1e4" };
 
 export function applyTheme(theme) {
   const el = document.documentElement;
   el.dataset.theme = theme;
   el.style.colorScheme = theme; // narrow the UA hint so native widgets follow
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = THEME_COLOR[theme];
   localStorage.setItem(THEME_KEY, theme);
 }
 
@@ -56,7 +59,7 @@ export default function ThemeToggle() {
       onClick={next}
       aria-label={`테마: ${TEXT[theme]}. 클릭하면 전환`}
       title="다크 ↔ 라이트"
-      className="flex min-h-11 min-w-11 items-center justify-center gap-1 rounded-md px-2 hover:bg-surface hover:text-accent"
+      className="flex min-h-11 min-w-11 items-center justify-center gap-1  px-2 hover:bg-surface hover:text-accent"
     >
       <span aria-hidden>{mounted ? ICON[theme] : "☾"}</span>
       {/* 모바일은 아이콘만 — 헤더 오른쪽이 좁다 */}

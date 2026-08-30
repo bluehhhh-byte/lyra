@@ -10,7 +10,7 @@ export default function AdminErrorMessage({
     return <span role="alert" className={`text-xs text-red-600 dark:text-red-400 ${className}`}>{message}</span>;
   }
   return (
-    <div role="alert" className={`rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-700 dark:text-red-300 ${className}`}>
+    <div role="alert" className={` border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-700 dark:text-red-300 ${className}`}>
       <p>{message}</p>
       {actionHref && <a href={actionHref} className="mt-2 inline-block font-semibold underline">{actionLabel}</a>}
     </div>

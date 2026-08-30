@@ -34,10 +34,10 @@ function DayItem({ item }) {
           alt=""
           label={item.type === "song" ? "♪" : "▤"}
           loading="lazy"
-          className={`w-9 shrink-0 rounded border border-line object-cover ${item.type === "song" ? "aspect-square" : "aspect-[2/3]"}`}
+          className={`w-9 shrink-0  border border-line object-cover ${item.type === "song" ? "aspect-square" : "aspect-[2/3]"}`}
         />
         <span className="min-w-0 flex-1 text-sm leading-5">
-          <span className="mr-1.5 rounded border border-line px-1 text-[10px] text-muted align-[2px]">
+          <span className="mr-1.5  border border-line px-1 text-[10px] text-muted align-[2px]">
             {item.type === "song" ? "음악" : item.media === "tv" ? "TV" : "영화"}
           </span>
           {/* 긴 영문 아티스트명이 줄바꿈되지 않아 폭을 밀어내지 않게 — 자르지는 않는다 */}
@@ -98,13 +98,13 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
       </nav>
 
       {narrative && !theme && (
-        <section className="mb-8 rounded-2xl border border-line bg-surface px-5 py-5 sm:px-7">
+        <section className="mb-8  border border-line bg-surface px-5 py-5 sm:px-7">
           <p className="text-xs font-semibold text-accent">그때의 기록 · {monthLabel(month)}</p>
           <p className="mt-2 max-w-3xl font-serif text-lg leading-8">{narrative}</p>
           {monthStat?.themes.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-1.5">
               {monthStat.themes.slice(0, 4).map(([name, count]) => (
-                <Link key={name} href={archivePath(month, name)} className="rounded-full border border-line px-2.5 py-1 text-xs text-muted hover:text-accent">
+                <Link key={name} href={archivePath(month, name)} className=" border border-line px-2.5 py-1 text-xs text-muted hover:text-accent">
                   {name} · {count}편
                 </Link>
               ))}
@@ -114,7 +114,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
       )}
 
       {theme && (
-        <div className="mb-8 flex items-center gap-3 rounded-xl border border-accent/30 bg-accent/5 px-4 py-3 text-sm">
+        <div className="mb-8 flex items-center gap-3  border border-accent/30 bg-accent/5 px-4 py-3 text-sm">
           <span><b>{theme}</b>을 다룬 영화 기록</span>
           <Link href={archivePath(month)} className="ml-auto text-xs text-accent hover:underline">전체 기록 보기</Link>
         </div>
@@ -127,7 +127,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
             두 달을 골라 밝은 기운·에너지·감정의 폭·어두운 깊이·잔잔한 여운을 비교한다.
           </p>
           {monthStat?.character && (
-            <p className="mb-4 inline-flex rounded-full border border-line bg-surface px-3 py-1 text-xs text-muted">
+            <p className="mb-4 inline-flex  border border-line bg-surface px-3 py-1 text-xs text-muted">
               기록의 성격 · {monthStat.character}
             </p>
           )}
@@ -141,7 +141,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
           <div className="min-w-0">
             <EmotionOrbit stats={yearStats} month={month} monthHref={monthHref} />
             {monthStat?.emotions.length > 0 && (
-              <div className="mt-6 min-w-0 max-w-xl rounded-2xl border border-line bg-surface px-4 py-4 sm:px-5">
+              <div className="mt-6 min-w-0 max-w-xl  border border-line bg-surface px-4 py-4 sm:px-5">
                 <h3 className="text-sm font-semibold">{Number(month.slice(5))}월의 감정 구성</h3>
                 <p className="mb-3 mt-0.5 text-xs text-muted">막대는 그달 기록 전체에서 차지하는 비율이다.</p>
                 <EmotionComposition stat={monthStat} />
@@ -162,7 +162,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
             <BioTimeline stats={yearStats} month={month} monthHref={monthHref} />
           </div>
           {yearBio && (
-            <div className="mt-6 rounded-2xl border border-line bg-surface px-5 py-5 sm:px-7">
+            <div className="mt-6  border border-line bg-surface px-5 py-5 sm:px-7">
               <p className="text-xs font-semibold text-accent">{year}년의 일대기</p>
               <p className="mt-2 max-w-3xl font-serif text-base leading-7">{yearBio}</p>
             </div>
@@ -184,7 +184,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
           <p className="mb-4 mt-1 text-xs text-muted">같은 달이 3개 연도 이상 기록됐을 때만 계절적 경향을 읽는다.</p>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {seasonal.map((row) => (
-              <div key={row.monthNum} className="rounded-xl border border-line bg-surface px-3 py-3">
+              <div key={row.monthNum} className=" border border-line bg-surface px-3 py-3">
                 <div className="flex items-baseline justify-between gap-2">
                   <strong className="text-sm">{row.monthNum}월</strong>
                   <span className="text-[11px] text-muted">{row.years.length}개 연도</span>
@@ -197,7 +197,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
       )}
 
       {entries.length === 0 && theme && (
-        <p className="mb-10 rounded-xl border border-line px-4 py-6 text-center text-sm text-muted">
+        <p className="mb-10  border border-line px-4 py-6 text-center text-sm text-muted">
           {monthLabel(month)}에는 {theme}을 다룬 영화 기록이 없다.{" "}
           <Link href={archivePath(month)} className="text-accent hover:underline">이 달의 전체 기록 보기</Link>
         </p>
@@ -209,7 +209,7 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
             <div>
               <div className="flex items-center gap-2">
                 <span
-                  className="h-2.5 w-2.5 rounded-full"
+                  className="h-2.5 w-2.5 "
                   style={{
                     background: entry.valence === null
                       ? "var(--color-line)"
