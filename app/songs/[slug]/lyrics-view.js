@@ -7,9 +7,9 @@ import { formatLyricQuote } from "../../../lib/lyric-quote";
 import { LyricThread } from "../../fable-scenes";
 
 const MODES = [
-  { key: "both", label: "둘 다" },
-  { key: "orig", label: "원문만" },
-  { key: "trans", label: "번역만" },
+  { key: "both", label: "전체" },
+  { key: "orig", label: "원문" },
+  { key: "trans", label: "번역" },
 ];
 
 // one scale step per size — original stays a notch above the translation
