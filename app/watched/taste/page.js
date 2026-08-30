@@ -7,6 +7,7 @@ import { themeCounts } from "../../../lib/themes";
 import CoverImage from "../../cover-image";
 import RatingInsights from "../rating-insights";
 import { CountryDistribution, GenreRatingCross, RewatchEvidence, RuntimeEvidence } from "../taste-evidence";
+import ReportHistory from "../../report-history";
 
 export const metadata = {
   title: "취향 분석 | Cyno.",
@@ -191,6 +192,7 @@ export default async function TastePage() {
               <p key={i}>{p}</p>
             ))}
           </div>
+          <ReportHistory report={report} unit="편" />
         </div>
       )}
 

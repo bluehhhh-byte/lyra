@@ -5,6 +5,7 @@ import { archiveMonths } from "../../../lib/archive-paths";
 import { monthlyStats } from "../../../lib/archive-stats";
 import { valenceColor } from "../../../lib/keywords";
 import ArchiveView from "../archive-view";
+import DayReportCard from "../../day-report-card";
 
 export const revalidate = 21600;
 
@@ -60,6 +61,8 @@ export default async function ArchiveDayPage({ params }) {
           </div>
         )}
       </header>
+
+      <DayReportCard insight={entry.insight} />
 
       <div className="divide-y divide-line border-y border-line">
         {entry.items.map((item) => (

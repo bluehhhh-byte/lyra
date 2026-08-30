@@ -232,6 +232,17 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
               {entry.dominant && <p className="mt-2 pl-[18px] text-xs text-muted">{entry.dominant}</p>}
             </div>
             <div className="min-w-0">
+              {!theme && entry.insight?.text && (
+                <Link
+                  href={`/archive/${entry.day}`}
+                  className="mb-3 block border-l border-accent/50 pl-3 hover:border-accent"
+                >
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">이날의 리포트</span>
+                  <span className="mt-1 line-clamp-2 font-serif text-sm leading-6 text-muted hover:text-ink">
+                    {entry.insight.text}
+                  </span>
+                </Link>
+              )}
               <ul className="grid min-w-0 gap-x-6 sm:grid-cols-2">
                 {entry.items.slice(0, VISIBLE_ITEMS).map((item) => (
                   <DayItem key={`${item.type}-${item.slug}`} item={item} />

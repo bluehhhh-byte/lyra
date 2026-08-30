@@ -16,6 +16,7 @@ import { summarizeTaste } from "../../../lib/taste-core";
 import { geminiText } from "../../../lib/admin/gemini";
 import { setField } from "../../../lib/admin/frontmatter";
 import { kstToday } from "../../../lib/kst";
+import { appendReportVersion } from "../../../lib/report-history";
 
 export async function handleWatcha(action, body) {
   if (action === "tasteReport") {
@@ -42,8 +43,10 @@ ${s.lines}`
     if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
 
     const report = { text: text.trim(), count: s.count, mean: s.mean, at: new Date().toISOString() };
-    await writeData("taste-report.json", JSON.stringify(report, null, 1), `data: 취향 리포트 (${s.count}편)`);
-    return Response.json(report);
+    const previous = await readRuntimeData("taste-report.json", null);
+    const stored = appendReportVersion(previous, report);
+    await writeData("taste-report.json", JSON.stringify(stored, null, 1), `data: 취향 리포트 (${s.count}편)`);
+    return Response.json(stored);
   }
 
   // 추천 20편 — 취향 요약을 Gemini에 주고 '안 본' 영화를 추천받은 뒤,

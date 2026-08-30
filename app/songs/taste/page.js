@@ -4,6 +4,7 @@ import { readRuntimeData } from "../../../lib/store";
 import { summarizeMusicTaste, interpretMusicTaste, recentShift } from "../../../lib/music-taste-core";
 import { emotionValence, valenceColor, parseEmotion } from "../../../lib/keywords";
 import CoverImage from "../../cover-image";
+import ReportHistory from "../../report-history";
 
 export const metadata = {
   title: "음악 취향 | Lyra",
@@ -199,6 +200,7 @@ export default async function MusicTastePage() {
               <p key={i}>{p}</p>
             ))}
           </div>
+          <ReportHistory report={report} unit="곡" />
         </div>
       )}
 

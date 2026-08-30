@@ -22,6 +22,7 @@ import {
   correctionEvidenceSummary,
 } from "../../../lib/admin/correction-evidence";
 import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
+import { appendReportVersion } from "../../../lib/report-history";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 
@@ -1118,8 +1119,10 @@ ${lines}`
     if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
 
     const report = { text: text.trim(), count: t.count, at: new Date().toISOString() };
-    await writeData("music-report.json", JSON.stringify(report, null, 1), `data: 음악 취향 리포트 (${t.count}곡)`);
-    return Response.json(report);
+    const previous = await readRuntimeData("music-report.json", null);
+    const stored = appendReportVersion(previous, report);
+    await writeData("music-report.json", JSON.stringify(stored, null, 1), `data: 음악 취향 리포트 (${t.count}곡)`);
+    return Response.json(stored);
   }
 
   // 커버 수동 지정 — /admin의 커버 검토 화면에서 URL을 직접 입력하거나

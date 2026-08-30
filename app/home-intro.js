@@ -50,6 +50,9 @@ function LatestDay({ latest }) {
         {links.length > 0 && (
           <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
             {links.map((l, i) => <span key={i} className="min-w-0">{l}</span>)}
+            <Link href={`/archive/${latest.day}`} className="text-muted hover:text-accent hover:underline">
+              지난 리포트 보기 →
+            </Link>
           </p>
         )}
       </div>
