@@ -11,7 +11,7 @@ import { FableCaption } from "./fable-scenes";
 
 // Runs before the first paint, so a reader who picked light never sees dark flash.
 // Dark is the default — anything but a stored "light" resolves to it.
-const THEME_COLORS = { dark: "#181410", light: "#f6f1e4" };
+const THEME_COLORS = { dark: "#12100e", light: "#f6f1e4" };
 const NO_FLASH = `try{var t=localStorage.getItem(${JSON.stringify(THEME_KEY)})==="light"?"light":"dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=${JSON.stringify(THEME_COLORS)}[t]}catch(e){}`;
 
 export const metadata = {

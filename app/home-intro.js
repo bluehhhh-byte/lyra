@@ -5,7 +5,7 @@ import { workLabel } from "../lib/latest-day";
 import RelativeDay from "./relative-day";
 import { InkUnderline } from "./ink-details";
 import InkArtwork from "./ink-artwork";
-import { FableHomeScene } from "./fable-scenes";
+import { LatestDayScene } from "./fable-scenes";
 
 function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
@@ -41,16 +41,22 @@ function LatestDay({ latest }) {
     );
   const links = [link(latest.repSong), link(latest.repMovie)].filter(Boolean);
   return (
-    <section className="mb-14 min-w-0  border border-line bg-surface px-5 py-5 sm:px-7">
-      <p className="text-xs font-semibold text-accent">
-        <RelativeDay day={latest.day} />
-      </p>
-      <p className="mt-2 max-w-3xl font-serif text-base leading-7 sm:text-lg sm:leading-8">{latest.text}</p>
-      {links.length > 0 && (
-        <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
-          {links.map((l, i) => <span key={i} className="min-w-0">{l}</span>)}
+    <section className="mb-14 grid min-w-0 overflow-hidden border border-line bg-surface sm:grid-cols-[minmax(0,1fr)_16rem]">
+      <div className="px-5 py-5 sm:px-7 sm:py-7">
+        <p className="text-xs font-semibold text-accent">
+          <RelativeDay day={latest.day} />
         </p>
-      )}
+        <p className="mt-2 max-w-3xl font-serif text-base leading-7 sm:text-lg sm:leading-8">{latest.text}</p>
+        {links.length > 0 && (
+          <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+            {links.map((l, i) => <span key={i} className="min-w-0">{l}</span>)}
+          </p>
+        )}
+      </div>
+      <div className="relative min-h-52 overflow-hidden border-t border-line bg-bg/[0.28] sm:min-h-0 sm:border-l sm:border-t-0">
+        <LatestDayScene latest={latest} className="absolute inset-0 h-full w-full" />
+        <span className="absolute bottom-4 right-5 text-[9px] uppercase tracking-[0.14em] text-muted">day constellation</span>
+      </div>
     </section>
   );
 }
@@ -59,7 +65,7 @@ export default function HomeIntro({ insights }) {
   const { taste, shift, recent, latest } = insights;
   return (
     <div className="relative isolate mb-16 overflow-hidden pt-4">
-      <section className="mb-14 grid overflow-hidden border-y border-line bg-bg/[0.88] sm:grid-cols-[minmax(0,1fr)_15rem]">
+      <section className="mb-14 border-y border-line bg-bg/[0.88]">
         <div className="py-10 sm:pr-12">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">A cultural biography</p>
           {/* 영어 제목 — 단어 중간이 잘리지 않게 balance로 줄을 나눈다 */}
@@ -69,9 +75,8 @@ export default function HomeIntro({ insights }) {
           <InkUnderline className="mt-3 h-2 w-48 sm:w-72" />
           {/* 고정 소개문. 여기에 취향 통계 문장을 이어 붙이지 않는다 — 통계는 아래 줄과
               /songs/taste에 따로 있다 */}
-          <p className="mt-6 max-w-3xl text-sm leading-7 text-muted sm:text-base">
-            한 줄의 가사와 한 편의 영화가 세계를 이해하는 방식에 남긴 흔적.
-            좋아했던 문장, 번역하고 되새긴 노래, 오래 남은 장면을 시간의 순서로 모은 기록이다.
+          <p className="mt-6 text-sm leading-7 text-muted sm:whitespace-nowrap sm:text-base">
+            좋아했던 가사와 번역한 노래, 오래 남은 영화 장면이 세계를 이해하는 방식에 남긴 흔적을 시간순으로 모은 기록이다.
           </p>
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
             <span>{taste.count}곡</span>
@@ -80,11 +85,6 @@ export default function HomeIntro({ insights }) {
             {taste.decade[0] && <span>중심 시대 {taste.decade[0][0]}</span>}
             <Link href="/songs/taste" className="text-accent hover:underline">취향의 근거 보기 →</Link>
           </div>
-        </div>
-        <div className="relative flex min-h-60 items-center justify-center overflow-hidden border-t border-line bg-surface sm:min-h-0 sm:border-l sm:border-t-0">
-          <FableHomeScene insights={insights} className="absolute inset-0 h-full w-full" />
-          <span className="absolute left-5 top-4 text-[10px] uppercase tracking-[0.16em] text-muted">AI report</span>
-          <span className="absolute bottom-4 right-5 font-serif text-xs italic text-muted">Lyra · Cyno</span>
         </div>
       </section>
 

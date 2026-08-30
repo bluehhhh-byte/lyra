@@ -7,10 +7,12 @@ import { createHand } from "../lib/fable/primitives";
 import { hashSeed, PALETTE, rd, shade, stream } from "../lib/fable/core";
 
 const WIDTH_UNITS = 1600;
+const SCRATCH_COLORS = [PALETTE.OCHRE, PALETTE.ROSE, PALETTE.TEAL, PALETTE.SLATE, PALETTE.SAGE];
 
 function drawGround(wall, pathname) {
   const hand = createHand(wall);
   const random = stream(hashSeed(`wall:${pathname}`));
+  const dark = document.documentElement.dataset.theme !== "light";
   const cssScale = wall.cssScale();
   const main = document.querySelector("main");
   const rect = main?.getBoundingClientRect();
@@ -19,13 +21,21 @@ function drawGround(wall, pathname) {
   const top = rect ? Math.max(70, (rect.top + scrollY - 18) / cssScale) : 90;
   const bottom = wall.heightUnits + 28;
 
+  if (!dark) {
+    wall.generate([
+      () => hand.sheet(random, left, top, right, bottom, PALETTE.CREAM, { rough: 14 }),
+      () => hand.drip(random, left * 0.55, top - 10, rd(random, 45, 90), shade(PALETTE.CREAM, 0.3), 0.62, 2.2),
+      () => hand.drip(random, right + (WIDTH_UNITS - right) * 0.55, top - 10, rd(random, 30, 65), PALETTE.CINK, 0.28, 1.6),
+      () => hand.spatter(random, Math.max(35, left * 0.45), top + 420, 72, 18, PALETTE.CLAY, 0.3),
+      () => hand.spatter(random, Math.min(WIDTH_UNITS - 35, right + (WIDTH_UNITS - right) * 0.48), top + 980, 58, 14, PALETTE.GOLD, 0.26),
+      () => hand.whispers(random, top + 60, Math.max(top + 120, bottom - 80), true, Math.min(12, Math.max(3, Math.round(wall.heightUnits / 1500)))),
+    ]);
+    return;
+  }
+
   wall.generate([
-    () => hand.sheet(random, left, top, right, bottom, PALETTE.CREAM, { rough: 14 }),
-    () => hand.drip(random, left * 0.55, top - 10, rd(random, 45, 90), shade(PALETTE.CREAM, 0.3), 0.62, 2.2),
-    () => hand.drip(random, right + (WIDTH_UNITS - right) * 0.55, top - 10, rd(random, 30, 65), PALETTE.CINK, 0.28, 1.6),
-    () => hand.spatter(random, Math.max(35, left * 0.45), top + 420, 72, 18, PALETTE.CLAY, 0.3),
-    () => hand.spatter(random, Math.min(WIDTH_UNITS - 35, right + (WIDTH_UNITS - right) * 0.48), top + 980, 58, 14, PALETTE.GOLD, 0.26),
-    () => hand.whispers(random, top + 60, Math.max(top + 120, bottom - 80), true, Math.min(12, Math.max(3, Math.round(wall.heightUnits / 1500)))),
+    () => hand.sheet(random, left, top, right, bottom, PALETTE.VOID, { rough: 14, noCore: true }),
+    () => hand.whispers(random, top + 60, Math.max(top + 120, bottom - 80), true, Math.min(10, Math.max(3, Math.round(wall.heightUnits / 1700)))),
   ]);
 }
 
@@ -36,6 +46,7 @@ function mountTrail(canvas) {
   let points = [];
   let frame = 0;
   let dead = false;
+  let traveled = 0;
 
   const resize = () => {
     const ratio = Math.min(2, devicePixelRatio || 1);
@@ -65,15 +76,25 @@ function mountTrail(canvas) {
       const strength = 1 - age;
       if (strength <= 0) continue;
       const onPaper = mainRect && point.x >= mainRect.left - 14 && point.x <= mainRect.right + 14;
-      const color = onPaper ? PALETTE.INK : PALETTE.CINK;
+      const dark = document.documentElement.dataset.theme !== "light";
+      const color = dark ? SCRATCH_COLORS[point.colorIndex % SCRATCH_COLORS.length] : (onPaper ? PALETTE.INK : PALETTE.CINK);
       const wobbleX = Math.sin(now * 0.0011 + index * 0.7) * 1.3 * age;
       const wobbleY = Math.cos(now * 0.0009 + index * 1.1) * 1.3 * age;
-      context.strokeStyle = `rgba(${color.join(",")},${0.2 * strength * strength})`;
-      context.lineWidth = 0.8 + 1.6 * strength;
-      context.beginPath();
-      context.moveTo(before.x + wobbleX, before.y + wobbleY);
-      context.lineTo(point.x + wobbleX, point.y + wobbleY);
-      context.stroke();
+      const dx = point.x - before.x;
+      const dy = point.y - before.y;
+      const length = Math.hypot(dx, dy) || 1;
+      const nx = -dy / length;
+      const ny = dx / length;
+      const passes = dark ? [-1.35, 0, 1.15] : [0];
+      for (const offset of passes) {
+        const passStrength = offset ? 0.5 : 1;
+        context.strokeStyle = `rgba(${color.join(",")},${0.28 * passStrength * strength * strength})`;
+        context.lineWidth = (offset ? 0.72 : 1.05) + 1.35 * strength;
+        context.beginPath();
+        context.moveTo(before.x + wobbleX + nx * offset, before.y + wobbleY + ny * offset);
+        context.lineTo(point.x + wobbleX + nx * offset, point.y + wobbleY + ny * offset);
+        context.stroke();
+      }
     }
     if (points.length) frame = requestAnimationFrame(draw);
   };
@@ -81,14 +102,17 @@ function mountTrail(canvas) {
   const move = (event) => {
     if (reduce.matches || !finePointer.matches) return;
     const last = points.at(-1);
-    if (last && Math.hypot(event.clientX - last.x, event.clientY - last.y) < 3) return;
-    points.push({ x: event.clientX, y: event.clientY, time: performance.now() });
+    const distance = last ? Math.hypot(event.clientX - last.x, event.clientY - last.y) : 0;
+    if (last && distance < 3) return;
+    traveled += distance;
+    points.push({ x: event.clientX, y: event.clientY, time: performance.now(), colorIndex: Math.floor(traveled / 42) });
     if (points.length > 400) points.shift();
     if (!frame) frame = requestAnimationFrame(draw);
   };
 
   const clear = () => {
     points = [];
+    traveled = 0;
     context.clearRect(0, 0, innerWidth, innerHeight);
   };
   resize();
@@ -136,11 +160,14 @@ export default function FableEnvironment() {
     document.fonts?.ready.then(schedule);
     const observer = new ResizeObserver(schedule);
     observer.observe(document.body);
+    const themeObserver = new MutationObserver(schedule);
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
     addEventListener("resize", schedule);
     return () => {
       dead = true;
       clearTimeout(resizeTimer);
       observer.disconnect();
+      themeObserver.disconnect();
       removeEventListener("resize", schedule);
       wall?.destroy();
     };

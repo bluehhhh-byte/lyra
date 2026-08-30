@@ -5,7 +5,7 @@ import { tapAudio } from "./audio-tap";
 function accentColor() {
   return (
     getComputedStyle(document.documentElement).getPropertyValue("--color-accent").trim() ||
-    "#ce7250"
+    "#c8b6ff"
   );
 }
 

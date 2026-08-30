@@ -5,12 +5,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #181410;
-  --color-surface: #2f2a24;
-  --color-line: #3a342c;
+  --color-bg: #12100e;
+  --color-surface: #211d19;
+  --color-line: #40382f;
   --color-ink: #eee7d2;
   --color-muted: #a89f8d;
-  --color-accent: #ac5036;
+  --color-accent: #c8b6ff;
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo",
     "Noto Sans KR", system-ui, sans-serif;
   --font-serif: "Charter", "Iowan Old Style", Georgia, "Hiragino Mincho ProN",
@@ -73,22 +73,22 @@ html {
   --color-line: #d8cfba;
   --color-ink: #2a251f;
   --color-muted: #70685a;
-  --color-accent: #aa4c33;
+  --color-accent: #6244cc;
   -webkit-font-smoothing: auto; /* antialiased renders dark-on-light too thin */
 }
 
-/* Dark mode keeps the surrounding wall void-dark while the reading column sits
-   on the cream sheet painted by FableEnvironment. Descendant utilities inherit
-   these tokens, so existing HTML stays selectable and readable over the canvas. */
+/* Dark mode is the scratchboard itself: black wax above a coloured crayon bed.
+   The canvas reveals those colours only in sparse scraped marks. Light mode keeps
+   the original cream paper untouched. */
 :root:not([data-theme="light"]) .fable-paper {
-  --color-bg: #f6f1e4;
-  --color-surface: #efe8d6;
-  --color-line: #d8cfba;
-  --color-ink: #2a251f;
-  --color-muted: #70685a;
-  --color-accent: #ac5036;
+  --color-bg: #12100e;
+  --color-surface: #211d19;
+  --color-line: #40382f;
+  --color-ink: #eee7d2;
+  --color-muted: #a89f8d;
+  --color-accent: #c8b6ff;
   color: var(--color-ink);
-  -webkit-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,

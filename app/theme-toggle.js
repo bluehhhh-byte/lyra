@@ -5,7 +5,7 @@ import { THEME_KEY } from "../lib/theme";
 // Dark is the default; the OS preference is deliberately ignored.
 const ICON = { dark: "☾", light: "☀" };
 const TEXT = { dark: "다크", light: "라이트" };
-const THEME_COLOR = { dark: "#181410", light: "#f6f1e4" };
+const THEME_COLOR = { dark: "#12100e", light: "#f6f1e4" };
 
 export function applyTheme(theme) {
   const el = document.documentElement;

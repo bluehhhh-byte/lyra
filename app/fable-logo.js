@@ -17,7 +17,7 @@ export default function FableLogo({ section = "lyra", className = "h-7 w-7" }) {
       const random = stream(hashSeed(`logo:${section}`));
       const dark = document.documentElement.dataset.theme !== "light";
       hand.enso(random, 50, 50, 34, 0.88, dark ? PALETTE.CINK : PALETTE.INK, { w: 5.6, a: 0.9 });
-      hand.spark(random, 50, 50, 9, { col: PALETTE.CLAY, a: 0.98, w: 1.8, nR: 7 });
+      hand.spark(random, 50, 50, 9, { col: PALETTE.VIOLET, a: 0.98, w: 1.8, nR: 7 });
     };
     draw();
     const observer = new MutationObserver(draw);

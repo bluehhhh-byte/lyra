@@ -7,8 +7,8 @@ export default function manifest() {
     description: "가사와 번역, 영화와 별점을 시간의 순서로 모은 기록",
     start_url: "/",
     display: "standalone",
-    background_color: "#181410",
-    theme_color: "#181410",
+    background_color: "#12100e",
+    theme_color: "#12100e",
     icons: [
       { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
