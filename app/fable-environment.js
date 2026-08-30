@@ -1,0 +1,162 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import { createWall } from "../lib/fable/wall";
+import { createHand } from "../lib/fable/primitives";
+import { hashSeed, PALETTE, rd, shade, stream } from "../lib/fable/core";
+
+const WIDTH_UNITS = 1600;
+
+function drawGround(wall, pathname) {
+  const hand = createHand(wall);
+  const random = stream(hashSeed(`wall:${pathname}`));
+  const cssScale = wall.cssScale();
+  const main = document.querySelector("main");
+  const rect = main?.getBoundingClientRect();
+  const left = rect ? Math.max(20, (rect.left - 14) / cssScale) : 140;
+  const right = rect ? Math.min(WIDTH_UNITS - 20, (rect.right + 14) / cssScale) : 1460;
+  const top = rect ? Math.max(70, (rect.top + scrollY - 18) / cssScale) : 90;
+  const bottom = wall.heightUnits + 28;
+
+  wall.generate([
+    () => hand.sheet(random, left, top, right, bottom, PALETTE.CREAM, { rough: 14 }),
+    () => hand.drip(random, left * 0.55, top - 10, rd(random, 45, 90), shade(PALETTE.CREAM, 0.3), 0.62, 2.2),
+    () => hand.drip(random, right + (WIDTH_UNITS - right) * 0.55, top - 10, rd(random, 30, 65), PALETTE.CINK, 0.28, 1.6),
+    () => hand.spatter(random, Math.max(35, left * 0.45), top + 420, 72, 18, PALETTE.CLAY, 0.3),
+    () => hand.spatter(random, Math.min(WIDTH_UNITS - 35, right + (WIDTH_UNITS - right) * 0.48), top + 980, 58, 14, PALETTE.GOLD, 0.26),
+    () => hand.whispers(random, top + 60, Math.max(top + 120, bottom - 80), true, Math.min(12, Math.max(3, Math.round(wall.heightUnits / 1500)))),
+  ]);
+}
+
+function mountTrail(canvas) {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
+  const context = canvas.getContext("2d");
+  let points = [];
+  let frame = 0;
+  let dead = false;
+
+  const resize = () => {
+    const ratio = Math.min(2, devicePixelRatio || 1);
+    canvas.width = Math.round(innerWidth * ratio);
+    canvas.height = Math.round(innerHeight * ratio);
+    canvas.style.width = `${innerWidth}px`;
+    canvas.style.height = `${innerHeight}px`;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    context.lineCap = "round";
+  };
+
+  const draw = (now) => {
+    frame = 0;
+    context.clearRect(0, 0, innerWidth, innerHeight);
+    if (dead || reduce.matches || !finePointer.matches) {
+      points = [];
+      return;
+    }
+    const mainRect = document.querySelector("main")?.getBoundingClientRect();
+    const life = 3200;
+    while (points.length && now - points[0].time > life) points.shift();
+    for (let index = 1; index < points.length; index++) {
+      const before = points[index - 1];
+      const point = points[index];
+      if (point.time - before.time > 110) continue;
+      const age = (now - point.time) / life;
+      const strength = 1 - age;
+      if (strength <= 0) continue;
+      const onPaper = mainRect && point.x >= mainRect.left - 14 && point.x <= mainRect.right + 14;
+      const color = onPaper ? PALETTE.INK : PALETTE.CINK;
+      const wobbleX = Math.sin(now * 0.0011 + index * 0.7) * 1.3 * age;
+      const wobbleY = Math.cos(now * 0.0009 + index * 1.1) * 1.3 * age;
+      context.strokeStyle = `rgba(${color.join(",")},${0.2 * strength * strength})`;
+      context.lineWidth = 0.8 + 1.6 * strength;
+      context.beginPath();
+      context.moveTo(before.x + wobbleX, before.y + wobbleY);
+      context.lineTo(point.x + wobbleX, point.y + wobbleY);
+      context.stroke();
+    }
+    if (points.length) frame = requestAnimationFrame(draw);
+  };
+
+  const move = (event) => {
+    if (reduce.matches || !finePointer.matches) return;
+    const last = points.at(-1);
+    if (last && Math.hypot(event.clientX - last.x, event.clientY - last.y) < 3) return;
+    points.push({ x: event.clientX, y: event.clientY, time: performance.now() });
+    if (points.length > 400) points.shift();
+    if (!frame) frame = requestAnimationFrame(draw);
+  };
+
+  const clear = () => {
+    points = [];
+    context.clearRect(0, 0, innerWidth, innerHeight);
+  };
+  resize();
+  addEventListener("resize", resize);
+  addEventListener("pointermove", move, { passive: true });
+  reduce.addEventListener("change", clear);
+  finePointer.addEventListener("change", clear);
+  return () => {
+    dead = true;
+    cancelAnimationFrame(frame);
+    removeEventListener("resize", resize);
+    removeEventListener("pointermove", move);
+    reduce.removeEventListener("change", clear);
+    finePointer.removeEventListener("change", clear);
+    clear();
+  };
+}
+
+export default function FableEnvironment() {
+  const pathname = usePathname();
+  const wallRef = useRef(null);
+  const trailRef = useRef(null);
+
+  useEffect(() => {
+    const container = wallRef.current;
+    if (!container) return;
+    let wall = null;
+    let resizeTimer = 0;
+    let dead = false;
+
+    const build = () => {
+      if (dead) return;
+      wall?.destroy();
+      const cssScale = innerWidth / WIDTH_UNITS;
+      const heightUnits = Math.max(1600, Math.ceil(document.documentElement.scrollHeight / cssScale) + 80);
+      wall = createWall(container, { widthUnits: WIDTH_UNITS, heightUnits, onError: (error) => console.error("fable mark", error) });
+      drawGround(wall, pathname);
+    };
+    const schedule = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(build, 180);
+    };
+
+    build();
+    document.fonts?.ready.then(schedule);
+    const observer = new ResizeObserver(schedule);
+    observer.observe(document.body);
+    addEventListener("resize", schedule);
+    return () => {
+      dead = true;
+      clearTimeout(resizeTimer);
+      observer.disconnect();
+      removeEventListener("resize", schedule);
+      wall?.destroy();
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!trailRef.current) return;
+    return mountTrail(trailRef.current);
+  }, []);
+
+  return (
+    <>
+      <div data-fable-wall className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
+        <div ref={wallRef} className="absolute left-0 top-0" />
+      </div>
+      <canvas ref={trailRef} data-fable-trail className="pointer-events-none fixed inset-0 z-20" aria-hidden />
+    </>
+  );
+}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./theme-toggle";
 import SearchDialog from "./search-dialog";
-import { InkMark } from "./ink-details";
+import FableLogo from "./fable-logo";
 import { shouldOpenSearchShortcut } from "../lib/search-shortcut";
 
 const PRIMARY = [
@@ -75,7 +75,7 @@ export default function Header() {
           title={inMovies ? "Lyra. — 음악으로" : "Cyno. — 영화로"}
           className="flex shrink-0 items-center gap-2 font-serif text-lg font-bold"
         >
-          <InkMark className="h-7 w-7" />
+          <FableLogo section={inMovies ? "cyno" : "lyra"} className="h-7 w-7" />
           <span>{inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span></span>
         </Link>
 

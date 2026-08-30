@@ -5,6 +5,7 @@ import UsageReporter from "./usage-reporter";
 import { usageMetricsEnabled } from "../lib/usage-metrics-core";
 import { SITE_URL } from "../lib/site";
 import { THEME_KEY } from "../lib/theme";
+import FableEnvironment from "./fable-environment";
 
 
 // Runs before the first paint, so a reader who picked light never sees dark flash.
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     // the no-flash script mutates <html> before hydration — that mismatch is intended
     <html lang="ko" suppressHydrationWarning>
-      <body className="font-sans min-h-screen">
+      <body className="isolate min-h-screen font-sans">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus: focus:bg-accent focus:px-4 focus:py-3 focus:font-semibold focus:text-bg"
@@ -51,11 +52,12 @@ export default function RootLayout({ children }) {
         </a>
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <PlayerProvider>
+        <FableEnvironment />
         {/* 계측은 기본 off — 켜지 않으면 방문자 브라우저가 비콘을 보내지 않는다 */}
         {usageMetricsEnabled() && <UsageReporter />}
         <Header />
-        <main id="main-content" tabIndex={-1} className="mx-auto max-w-5xl px-5 pb-24">{children}</main>
-        <footer className="mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
+        <main id="main-content" tabIndex={-1} className="fable-paper relative z-10 mx-auto max-w-5xl px-5 pb-24">{children}</main>
+        <footer className="fable-paper relative z-10 mx-auto max-w-5xl px-5 pb-10 text-xs text-muted">
           가사의 저작권은 원저작자에게 있습니다. 번역과 코멘트는 개인 감상입니다.
           <br />
           앨범 커버와 30초 미리듣기는 Apple(iTunes Search API)·Deezer가 제공하며, 각 곡 페이지의

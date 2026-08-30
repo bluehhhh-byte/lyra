@@ -6,11 +6,11 @@
 
 @theme {
   --color-bg: #181410;
-  --color-surface: #221e19;
+  --color-surface: #2f2a24;
   --color-line: #3a342c;
-  --color-ink: #f6f1e4;
+  --color-ink: #eee7d2;
   --color-muted: #a89f8d;
-  --color-accent: #ce7250;
+  --color-accent: #ac5036;
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo",
     "Noto Sans KR", system-ui, sans-serif;
   --font-serif: "Charter", "Iowan Old Style", Georgia, "Hiragino Mincho ProN",
@@ -75,6 +75,20 @@ html {
   --color-muted: #70685a;
   --color-accent: #aa4c33;
   -webkit-font-smoothing: auto; /* antialiased renders dark-on-light too thin */
+}
+
+/* Dark mode keeps the surrounding wall void-dark while the reading column sits
+   on the cream sheet painted by FableEnvironment. Descendant utilities inherit
+   these tokens, so existing HTML stays selectable and readable over the canvas. */
+:root:not([data-theme="light"]) .fable-paper {
+  --color-bg: #f6f1e4;
+  --color-surface: #efe8d6;
+  --color-line: #d8cfba;
+  --color-ink: #2a251f;
+  --color-muted: #70685a;
+  --color-accent: #ac5036;
+  color: var(--color-ink);
+  -webkit-font-smoothing: auto;
 }
 
 h1,
@@ -304,6 +318,11 @@ textarea {
   [role="dialog"],
   [data-reader-toolbar],
   .fixed {
+    display: none !important;
+  }
+
+  [data-fable-wall],
+  [data-fable-trail] {
     display: none !important;
   }
 
