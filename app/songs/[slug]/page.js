@@ -6,6 +6,7 @@ import { parseEmotion } from "../../../lib/keywords";
 import { getAllMoviesMeta } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 import { InkDivider } from "../../ink-details";
+import InkArtwork from "../../ink-artwork";
 import LyricsView from "./lyrics-view";
 import { appleUrl, isExactApple } from "../../../lib/apple";
 import PlayButton from "./play-button";
@@ -130,15 +131,15 @@ export default async function SongPage({ params }) {
         )}
         <div className="relative flex flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:items-end sm:px-10">
           {song.artwork ? (
-            <img
+            <CoverImage
               src={song.artwork}
               alt={`${song.title} album art`}
+              label={song.title}
               className="w-40  shadow-2xl sm:w-48"
+              fallback={<InkArtwork slug={song.slug} label={song.title} className="aspect-square w-40 border border-line sm:w-48" />}
             />
           ) : (
-            <div className="flex aspect-square w-40 items-center justify-center  border border-line bg-surface p-4 text-center text-sm text-muted sm:w-48">
-              {song.title}
-            </div>
+            <InkArtwork slug={song.slug} label={song.title} className="aspect-square w-40 border border-line sm:w-48" />
           )}
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{song.title}</h1>
@@ -282,7 +283,7 @@ export default async function SongPage({ params }) {
         <section className="mx-auto mt-16 max-w-2xl" aria-labelledby="album-songs-title">
           <h2 id="album-songs-title" className="mb-4 text-sm font-semibold text-muted">같은 앨범 · {song.album}</h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {albumSongs.map((item) => <Link key={item.slug} href={`/songs/${item.slug}`} className="group"><CoverImage src={item.artwork} alt="" label={item.title} className="aspect-square w-full  border border-line object-cover" /><p className="mt-2 truncate text-xs font-medium group-hover:text-accent">{item.title}</p></Link>)}
+            {albumSongs.map((item) => <Link key={item.slug} href={`/songs/${item.slug}`} className="group"><CoverImage src={item.artwork} alt="" label={item.title} className="aspect-square w-full border border-line object-cover" fallback={<InkArtwork slug={item.slug} label={item.title} className="aspect-square w-full border border-line" />} /><p className="mt-2 truncate text-xs font-medium group-hover:text-accent">{item.title}</p></Link>)}
           </div>
         </section>
       )}
@@ -309,6 +310,7 @@ export default async function SongPage({ params }) {
                     loading="lazy"
                     decoding="async"
                     className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
+                    fallback={<InkArtwork slug={s.slug} label={s.title} className="aspect-square w-full" />}
                   />
                 </div>
                 <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">

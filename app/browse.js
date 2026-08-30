@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import CoverImage from "./cover-image";
+import InkArtwork from "./ink-artwork";
 import { groupSongs } from "../lib/browse-group";
 import { parseBrowseFilters, serializeBrowseFilters } from "../lib/browse-query";
 import { sortSearchResults } from "../lib/search-rank";
@@ -351,13 +352,14 @@ function Grid({ list, needle, lyrics }) {
           <div className="spot overflow-hidden  border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
             <CoverImage
               // grid cells render ≤ ~300px — 300px for 1x, the 600px original for retina
-              src={s.artwork.replace("600x600bb", "300x300bb")}
-              srcSet={`${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x`}
+              src={s.artwork ? s.artwork.replace("600x600bb", "300x300bb") : ""}
+              srcSet={s.artwork ? `${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x` : undefined}
               alt={`${s.title} album art`}
               label={s.title}
               loading="lazy"
               decoding="async"
               className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
+              fallback={<InkArtwork slug={s.slug} label={s.title} className="aspect-square w-full" />}
             />
           </div>
           <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">

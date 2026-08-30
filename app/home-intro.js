@@ -4,6 +4,7 @@ import { shiftSentence } from "../lib/home-insights";
 import { workLabel } from "../lib/latest-day";
 import RelativeDay from "./relative-day";
 import { InkMark, InkUnderline } from "./ink-details";
+import InkArtwork from "./ink-artwork";
 
 function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
@@ -15,6 +16,7 @@ function RecordCard({ item }) {
           alt=""
           label={item.title}
           className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+          fallback={item.kind === "music" ? <InkArtwork slug={item.slug} label={item.title} className="h-full w-full" /> : null}
         />
       </div>
       <p className="mt-2 truncate text-sm font-semibold group-hover:text-accent">{item.title}</p>
