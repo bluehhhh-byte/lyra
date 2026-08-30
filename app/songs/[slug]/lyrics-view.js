@@ -132,7 +132,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   };
 
   return (
-    <div data-lyric-view className="relative isolate mx-auto max-w-2xl pr-7 sm:pr-10">
+    <div data-lyric-view className="relative isolate mx-auto max-w-2xl pb-3 pr-7 sm:pr-10">
       <LyricThread seed={song?.slug || "lyrics"} />
       <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted/60"}`}>
         {missingTranslationCount ? `번역 필요 ${missingTranslationCount}줄` : "번역 상태 · 완료"}

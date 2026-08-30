@@ -197,17 +197,16 @@ export function LyricThread({ seed }) {
     const surface = createCanvasSurface(canvas, { widthUnits, heightUnits, maxPixelRatio: 1 });
     const hand = createHand(surface);
     const random = stream(hashSeed(`lyrics:${seed}`));
-    const anchors = [...parent.querySelectorAll("[data-fable-stanza]")].map((element) => {
-      const rect = element.getBoundingClientRect();
-      return rect.top - parentRect.top + 12;
-    });
+    const stanzaRects = [...parent.querySelectorAll("[data-fable-stanza]")].map((element) => element.getBoundingClientRect());
+    const anchors = stanzaRects.map((rect) => rect.top - parentRect.top + 12);
     // 가사 왼쪽에 두면 세로로 긴 원문·독음과 겹친다. LyricsView가 비워 둔
     // 오른쪽 padding 안에 실을 놓아 본문 옆 여백만 따라 내려가게 한다.
     const gutter = widthUnits < 480 ? 10 : 15;
     const x = Math.max(5, widthUnits - gutter);
     const tasks = [];
     if (anchors.length) {
-      tasks.push(() => hand.threadSeg(random, Math.max(0, anchors[0] - 22), Math.min(heightUnits, anchors.at(-1) + 36), PALETTE.GOLD, 0.72, { x: (y) => x + Math.sin(y * 0.009) * 4, w: 1.35 }));
+      const threadEnd = Math.min(heightUnits - 1, stanzaRects.at(-1).bottom - parentRect.top + 10);
+      tasks.push(() => hand.threadSeg(random, Math.max(0, anchors[0] - 22), threadEnd, PALETTE.GOLD, 0.72, { x: (y) => x + Math.sin(y * 0.009) * 4, w: 1.35 }));
       for (const y of anchors) tasks.push(() => hand.dotF(random, x + Math.sin(y * 0.009) * 4, y, 3.2, 0.88, PALETTE.VIOLET));
     }
     return { tasks, reducedMotion: surface.reducedMotion };
