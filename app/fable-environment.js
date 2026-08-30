@@ -47,6 +47,7 @@ function mountTrail(canvas) {
   let frame = 0;
   let dead = false;
   let traveled = 0;
+  let touchStroke = 0;
 
   const resize = () => {
     const ratio = Math.min(2, devicePixelRatio || 1);
@@ -61,7 +62,7 @@ function mountTrail(canvas) {
   const draw = (now) => {
     frame = 0;
     context.clearRect(0, 0, innerWidth, innerHeight);
-    if (dead || reduce.matches || !finePointer.matches) {
+    if (dead || reduce.matches) {
       points = [];
       return;
     }
@@ -71,7 +72,7 @@ function mountTrail(canvas) {
     for (let index = 1; index < points.length; index++) {
       const before = points[index - 1];
       const point = points[index];
-      if (point.time - before.time > 110) continue;
+      if (point.stroke !== before.stroke || point.time - before.time > 110) continue;
       const age = (now - point.time) / life;
       const strength = 1 - age;
       if (strength <= 0) continue;
@@ -99,15 +100,38 @@ function mountTrail(canvas) {
     if (points.length) frame = requestAnimationFrame(draw);
   };
 
-  const move = (event) => {
-    if (reduce.matches || !finePointer.matches) return;
+  const appendPoint = (x, y, stroke) => {
+    if (reduce.matches) return;
     const last = points.at(-1);
-    const distance = last ? Math.hypot(event.clientX - last.x, event.clientY - last.y) : 0;
-    if (last && distance < 3) return;
+    const sameStroke = last?.stroke === stroke;
+    const distance = sameStroke ? Math.hypot(x - last.x, y - last.y) : 0;
+    if (sameStroke && distance < 3) return;
     traveled += distance;
-    points.push({ x: event.clientX, y: event.clientY, time: performance.now(), colorIndex: Math.floor(traveled / 42) });
+    points.push({ x, y, time: performance.now(), colorIndex: Math.floor(traveled / 42), stroke });
     if (points.length > 400) points.shift();
     if (!frame) frame = requestAnimationFrame(draw);
+  };
+
+  const move = (event) => {
+    // 터치는 아래 touchmove에서 받는다. pointermove까지 함께 받으면 같은 좌표가
+    // 두 번 들어오고, 모바일 스크롤이 pointercancel을 보낼 때 선이 끊어진다.
+    if (event.pointerType === "touch") return;
+    if (event.pointerType !== "pen" && !finePointer.matches) return;
+    appendPoint(event.clientX, event.clientY, event.pointerType === "pen" ? `pen:${event.pointerId}` : "mouse");
+  };
+
+  // passive touchmove라 손가락을 따라 그리면서도 페이지의 세로 스크롤을 막지 않는다.
+  // 한 번 뗐다 다시 누르면 stroke가 달라져 두 손동작 사이에 직선이 생기지 않는다.
+  const touchStart = (event) => {
+    const touch = event.touches[0];
+    if (!touch) return;
+    touchStroke += 1;
+    appendPoint(touch.clientX, touch.clientY, `touch:${touch.identifier}:${touchStroke}`);
+  };
+  const touchMove = (event) => {
+    const touch = event.touches[0];
+    if (!touch) return;
+    appendPoint(touch.clientX, touch.clientY, `touch:${touch.identifier}:${touchStroke}`);
   };
 
   const clear = () => {
@@ -118,6 +142,8 @@ function mountTrail(canvas) {
   resize();
   addEventListener("resize", resize);
   addEventListener("pointermove", move, { passive: true });
+  addEventListener("touchstart", touchStart, { passive: true });
+  addEventListener("touchmove", touchMove, { passive: true });
   reduce.addEventListener("change", clear);
   finePointer.addEventListener("change", clear);
   return () => {
@@ -125,6 +151,8 @@ function mountTrail(canvas) {
     cancelAnimationFrame(frame);
     removeEventListener("resize", resize);
     removeEventListener("pointermove", move);
+    removeEventListener("touchstart", touchStart);
+    removeEventListener("touchmove", touchMove);
     reduce.removeEventListener("change", clear);
     finePointer.removeEventListener("change", clear);
     clear();

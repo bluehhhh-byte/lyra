@@ -201,7 +201,10 @@ export function LyricThread({ seed }) {
       const rect = element.getBoundingClientRect();
       return rect.top - parentRect.top + 12;
     });
-    const x = Math.max(5, Math.min(16, widthUnits * 0.025));
+    // 가사 왼쪽에 두면 세로로 긴 원문·독음과 겹친다. LyricsView가 비워 둔
+    // 오른쪽 padding 안에 실을 놓아 본문 옆 여백만 따라 내려가게 한다.
+    const gutter = widthUnits < 480 ? 10 : 15;
+    const x = Math.max(5, widthUnits - gutter);
     const tasks = [];
     if (anchors.length) {
       tasks.push(() => hand.threadSeg(random, Math.max(0, anchors[0] - 22), Math.min(heightUnits, anchors.at(-1) + 36), PALETTE.GOLD, 0.72, { x: (y) => x + Math.sin(y * 0.009) * 4, w: 1.35 }));
