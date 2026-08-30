@@ -190,6 +190,9 @@ export default async function SongPage({ params }) {
                     preview: song.preview,
                     provider: song.preview_provider || "",
                     externalUrl: appleUrl(song),
+                    genre: genreTagOf(song.tags),
+                    tags: song.tags,
+                    emotion: song.emotion || "",
                   }}
                 />
               )}
