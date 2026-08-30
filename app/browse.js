@@ -338,21 +338,9 @@ function Snippet({ song, needle, lyrics }) {
   );
 }
 
-// one delegated handler feeds every card's spotlight position via CSS vars
-function trackSpot(e) {
-  const card = e.target.closest?.(".spot");
-  if (!card) return;
-  const r = card.getBoundingClientRect();
-  card.style.setProperty("--mx", `${e.clientX - r.left}px`);
-  card.style.setProperty("--my", `${e.clientY - r.top}px`);
-}
-
 function Grid({ list, needle, lyrics }) {
   return (
-    <div
-      onPointerMove={trackSpot}
-      className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4"
-    >
+    <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
       {list.map((s, i) => (
         <Link
           key={s.slug}

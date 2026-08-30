@@ -5,6 +5,7 @@ import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
 import { getAllMoviesMeta } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
+import { InkDivider } from "../../ink-details";
 import LyricsView from "./lyrics-view";
 import { appleUrl, isExactApple } from "../../../lib/apple";
 import PlayButton from "./play-button";
@@ -207,6 +208,8 @@ export default async function SongPage({ params }) {
           </div>
         </div>
       </div>
+
+      <InkDivider className="mx-auto mb-12 h-3 w-full max-w-2xl text-muted" />
 
       {/* comment */}
       {song.comment && (

@@ -14,6 +14,7 @@ import { crossMatches } from "../../../lib/cross-match";
 import { recentStaticParams } from "../../../lib/static-details";
 import { directorOtherWorks, getWatchedRuntime } from "../../../lib/watched";
 import CoverImage from "../../cover-image";
+import { InkDivider } from "../../ink-details";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
@@ -206,6 +207,8 @@ export default async function MoviePage({ params }) {
           </div>
         </div>
       </div>
+
+      <InkDivider className="mx-auto mb-12 h-3 w-full max-w-2xl text-muted" />
 
       {/* comment — personal take */}
       {/* 감상문이 본문에 통째로 있으면 comment는 그 앞부분을 자른 요약일 뿐이라

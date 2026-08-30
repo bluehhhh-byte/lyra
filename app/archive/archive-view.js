@@ -4,6 +4,7 @@ import { archivePath } from "../../lib/archive-paths";
 import { valenceColor } from "../../lib/keywords";
 import CoverImage from "../cover-image";
 import ArchiveCalendar from "./calendar";
+import { InkUnderline } from "../ink-details";
 import { EmotionOrbit, EmotionTrend, BioTimeline, EmotionComposition } from "./orbit";
 import YearCompare from "./year-compare";
 import { INSUFFICIENT_SAMPLE_LABEL } from "../../lib/emotion-model";
@@ -75,7 +76,10 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
     <>
       <header className="mb-8">
         <p className="mb-1 text-xs text-muted">시간에 따른 감정의 이동으로 읽는 음악·영화 기록</p>
-        <h1 className="text-2xl font-bold">문화 아카이브</h1>
+        <div>
+          <h1 className="text-2xl font-bold">문화 아카이브</h1>
+          <InkUnderline className="mt-1 h-1.5 w-28" />
+        </div>
       </header>
 
       <ArchiveCalendar stats={stats} years={years} month={month} monthHref={monthHref} />

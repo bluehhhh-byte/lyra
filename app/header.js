@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./theme-toggle";
 import SearchDialog from "./search-dialog";
+import { InkMark } from "./ink-details";
 import { shouldOpenSearchShortcut } from "../lib/search-shortcut";
 
 const PRIMARY = [
@@ -72,9 +73,10 @@ export default function Header() {
         <Link
           href={inMovies ? "/" : "/movies"}
           title={inMovies ? "Lyra. — 음악으로" : "Cyno. — 영화로"}
-          className="shrink-0 text-lg font-bold"
+          className="flex shrink-0 items-center gap-2 font-serif text-lg font-bold"
         >
-          {inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span>
+          <InkMark className="h-7 w-7" />
+          <span>{inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span></span>
         </Link>
 
         <nav className="hidden items-center gap-5 text-xs text-muted md:flex">

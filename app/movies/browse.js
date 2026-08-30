@@ -164,7 +164,7 @@ function Grid({ list, needle }) {
     <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
       {list.map((movie) => (
         <Link key={movie.slug} href={`/movies/${movie.slug}`} className="group block transition active:scale-[0.98]">
-          <div className="overflow-hidden  border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
+          <div className="spot overflow-hidden border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
             <CoverImage
               src={movie.poster}
               alt={`${movie.title} 포스터`}

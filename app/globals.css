@@ -127,26 +127,25 @@ textarea {
   animation-delay: min(calc(var(--i, 0) * 45ms), 500ms);
 }
 
-/* pointer spotlight — --mx/--my fed by ONE delegated handler on the grid,
-   not a listener per card */
+/* A quiet clay wash replaces the cursor-following spotlight. The card remains
+   still, like ink settling into paper, and no pointer coordinates are needed. */
 .spot {
   position: relative;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 .spot::after {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(
-    200px circle at var(--mx, 50%) var(--my, 50%),
-    color-mix(in oklab, var(--color-accent) 22%, transparent),
-    transparent 70%
-  );
+  background: color-mix(in oklab, var(--color-accent) 10%, transparent);
   opacity: 0;
   transition: opacity 0.35s;
   pointer-events: none;
 }
 @media (hover: hover) {
+  .spot:hover {
+    border-color: color-mix(in oklab, var(--color-accent) 68%, var(--color-line));
+  }
   .spot:hover::after {
     opacity: 1;
   }

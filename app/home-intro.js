@@ -3,6 +3,7 @@ import CoverImage from "./cover-image";
 import { shiftSentence } from "../lib/home-insights";
 import { workLabel } from "../lib/latest-day";
 import RelativeDay from "./relative-day";
+import { InkMark, InkUnderline } from "./ink-details";
 
 function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
@@ -55,24 +56,31 @@ export default function HomeIntro({ insights }) {
   const { taste, shift, recent, latest } = insights;
   return (
     <div className="mb-16 pt-4">
-      <section className="mb-14 border-b border-line pb-12">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">A cultural biography</p>
-        {/* 영어 제목 — 단어 중간이 잘리지 않게 balance로 줄을 나눈다 */}
-        <h1 className="max-w-4xl text-balance font-serif text-3xl leading-tight sm:text-5xl sm:leading-tight">
-          The Words that Shaped the World
-        </h1>
-        {/* 고정 소개문. 여기에 취향 통계 문장을 이어 붙이지 않는다 — 통계는 아래 줄과
-            /songs/taste에 따로 있다 */}
-        <p className="mt-6 max-w-3xl text-sm leading-7 text-muted sm:text-base">
-          한 줄의 가사와 한 편의 영화가 세계를 이해하는 방식에 남긴 흔적.
-          좋아했던 문장, 번역하고 되새긴 노래, 오래 남은 장면을 시간의 순서로 모은 기록이다.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
-          <span>{taste.count}곡</span>
-          <span>{taste.artist.length}팀</span>
-          {taste.emotion[0] && <span>대표 감정 {taste.emotion[0][0]}</span>}
-          {taste.decade[0] && <span>중심 시대 {taste.decade[0][0]}</span>}
-          <Link href="/songs/taste" className="text-accent hover:underline">취향의 근거 보기 →</Link>
+      <section className="mb-14 grid overflow-hidden border-y border-line sm:grid-cols-[minmax(0,1fr)_15rem]">
+        <div className="py-10 sm:pr-12">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">A cultural biography</p>
+          {/* 영어 제목 — 단어 중간이 잘리지 않게 balance로 줄을 나눈다 */}
+          <h1 className="max-w-4xl text-balance font-serif text-3xl leading-tight sm:text-5xl sm:leading-tight">
+            The Words that Shaped the World
+          </h1>
+          <InkUnderline className="mt-3 h-2 w-48 sm:w-72" />
+          {/* 고정 소개문. 여기에 취향 통계 문장을 이어 붙이지 않는다 — 통계는 아래 줄과
+              /songs/taste에 따로 있다 */}
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-muted sm:text-base">
+            한 줄의 가사와 한 편의 영화가 세계를 이해하는 방식에 남긴 흔적.
+            좋아했던 문장, 번역하고 되새긴 노래, 오래 남은 장면을 시간의 순서로 모은 기록이다.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
+            <span>{taste.count}곡</span>
+            <span>{taste.artist.length}팀</span>
+            {taste.emotion[0] && <span>대표 감정 {taste.emotion[0][0]}</span>}
+            {taste.decade[0] && <span>중심 시대 {taste.decade[0][0]}</span>}
+            <Link href="/songs/taste" className="text-accent hover:underline">취향의 근거 보기 →</Link>
+          </div>
+        </div>
+        <div className="relative flex min-h-44 items-center justify-center border-t border-line bg-surface sm:min-h-0 sm:border-l sm:border-t-0">
+          <InkMark className="h-36 w-36 text-ink sm:h-44 sm:w-44" />
+          <span className="absolute bottom-4 right-5 font-serif text-xs italic text-muted">Lyra · Cyno</span>
         </div>
       </section>
 
@@ -83,6 +91,7 @@ export default function HomeIntro({ insights }) {
           <div className="mb-5 flex items-baseline justify-between gap-3">
             <div>
               <h2 className="text-lg font-bold">최근의 문화 기록</h2>
+              <InkUnderline className="mt-1 h-1.5 w-28" />
               <p className="mt-1 text-xs text-muted">음악과 영화를 하나의 시간 위에서 봅니다.</p>
             </div>
             <Link href="/archive" className="text-xs text-accent hover:underline">아카이브 →</Link>
