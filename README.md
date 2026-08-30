@@ -101,3 +101,8 @@ Free 프로젝트를 만들면 무료 한도 초과 시 자동 과금되지 않�
 전환 전에는 `LYRA_CONTENT_STORE`를 설정하지 않는다. 명시적인 opt-in이라 `DATABASE_URL`만
 주입된 상태에서는 기존 파일/GitHub 경로가 계속 사용된다. 문제가 생기면 환경변수를 제거하고
 이전 빌드를 다시 배포할 수 있으며, Neon 데이터는 삭제되지 않는다.
+
+## 디자인 크레딧
+
+캔버스 드로잉 엔진은 Kevin Ngo의 [Fable](https://www.kengoworks.com/fable)에서 영감을 받아
+Lyra의 콘텐츠 구조와 React 수명주기에 맞게 재구성했다.
