@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
   return (
     // the no-flash script mutates <html> before hydration — that mismatch is intended
     <html lang="ko" suppressHydrationWarning>
-      <body className="isolate font-sans min-h-screen">
+      <body className="font-sans min-h-screen">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus: focus:bg-accent focus:px-4 focus:py-3 focus:font-semibold focus:text-bg"

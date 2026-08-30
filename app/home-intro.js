@@ -3,8 +3,9 @@ import CoverImage from "./cover-image";
 import { shiftSentence } from "../lib/home-insights";
 import { workLabel } from "../lib/latest-day";
 import RelativeDay from "./relative-day";
-import { InkMark, InkUnderline } from "./ink-details";
+import { InkUnderline } from "./ink-details";
 import InkArtwork from "./ink-artwork";
+import ReportArtwork from "./report-artwork";
 
 function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
@@ -57,8 +58,12 @@ function LatestDay({ latest }) {
 export default function HomeIntro({ insights }) {
   const { taste, shift, recent, latest } = insights;
   return (
-    <div className="mb-16 pt-4">
-      <section className="mb-14 grid overflow-hidden border-y border-line sm:grid-cols-[minmax(0,1fr)_15rem]">
+    <div className="relative isolate mb-16 overflow-hidden pt-4">
+      <ReportArtwork
+        insights={insights}
+        className="pointer-events-none absolute -right-28 top-28 -z-10 h-[46rem] w-[46rem] max-w-none opacity-[0.055] sm:-right-44 sm:top-14 sm:h-[58rem] sm:w-[58rem]"
+      />
+      <section className="mb-14 grid overflow-hidden border-y border-line bg-bg/[0.88] sm:grid-cols-[minmax(0,1fr)_15rem]">
         <div className="py-10 sm:pr-12">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-accent">A cultural biography</p>
           {/* 영어 제목 — 단어 중간이 잘리지 않게 balance로 줄을 나눈다 */}
@@ -80,8 +85,13 @@ export default function HomeIntro({ insights }) {
             <Link href="/songs/taste" className="text-accent hover:underline">취향의 근거 보기 →</Link>
           </div>
         </div>
-        <div className="relative flex min-h-44 items-center justify-center border-t border-line bg-surface sm:min-h-0 sm:border-l sm:border-t-0">
-          <InkMark className="h-36 w-36 text-ink sm:h-44 sm:w-44" />
+        <div className="relative flex min-h-52 items-center justify-center overflow-hidden border-t border-line bg-surface sm:min-h-0 sm:border-l sm:border-t-0">
+          <ReportArtwork
+            insights={insights}
+            label="AI 음악 취향 리포트로 생성한 추상 아트워크"
+            className="absolute inset-0 h-full w-full"
+          />
+          <span className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.16em] text-muted">AI report</span>
           <span className="absolute bottom-4 right-5 font-serif text-xs italic text-muted">Lyra · Cyno</span>
         </div>
       </section>

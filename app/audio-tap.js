@@ -1,6 +1,6 @@
 // Web Audio lets one MediaElementSource feed several analysers, but creating a
 // second source for the same <audio> throws. Store the in-flight promise first:
-// Scope and InkWall can receive the same `play` event without racing each other.
+// A shared source node lets visual meters subscribe without racing the audio element.
 let audioContext;
 const sources = new WeakMap(); // <audio> → Promise<{ context, source }>
 

@@ -2,7 +2,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Scope from "./scope";
-import InkWall from "./ink-wall";
 
 // The <audio> element lives here, in the layout — a client-side route change
 // re-renders the page but not this provider, so a preview keeps playing while
@@ -150,7 +149,6 @@ export default function PlayerProvider({ children }) {
   return (
     <PlayerCtx.Provider value={{ track, setTrack, playlist, shuffle, setShuffle }}>
       {children}
-      <InkWall audioRef={audioRef} track={track} playing={playing} />
       {track && (
         <div className="fixed inset-x-0 bottom-0 z-30 translate-y-0 border-t border-line bg-surface/95 backdrop-blur transition-transform duration-300 ease-drawer starting:translate-y-full motion-reduce:transition-none">
           {/* thin, clickable progress line spanning the whole bar — doubles as a seek control */}

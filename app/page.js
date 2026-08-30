@@ -6,13 +6,18 @@ import { toHomeSong } from "../lib/home-song-list";
 import Browse from "./browse";
 import HomeIntro from "./home-intro";
 import { tagSuggestions } from "../lib/keywords";
+import { readRuntimeData } from "../lib/store";
 
 export const revalidate = 21600;
 const INITIAL_SONGS = 72;
 
 export default async function Home() {
-  const [allSongs, allMovies] = await Promise.all([getAllSongsMeta(), getAllMoviesMeta()]);
-  const insights = buildHomeInsights(allSongs, allMovies);
+  const [allSongs, allMovies, report] = await Promise.all([
+    getAllSongsMeta(),
+    getAllMoviesMeta(),
+    readRuntimeData("music-report.json", null),
+  ]);
+  const insights = buildHomeInsights(allSongs, allMovies, report);
   // 초기 HTML/RSC에는 실제로 그리는 카드만 싣는다. 전체 메타는 검색·그룹화·더 보기
   // 같은 상호작용이 시작될 때 캐시된 API에서 한 번 가져온다.
   const songs = allSongs.slice(0, INITIAL_SONGS).map(toHomeSong);
