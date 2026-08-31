@@ -23,6 +23,19 @@ const nextConfig = {
   // 개인 사이트라 어떤 응답도 색인되지 않게 한다. app/layout.js의 metadata.robots는
   // HTML을 파싱한 봇에게만 닿지만 이 헤더는 모든 응답에 붙는다 — 이미지, JSON,
   // 라우트 핸들러 결과까지. robots.txt를 읽지 않는 크롤러에도 걸린다.
+  // 운영 도메인을 lyracyno.vercel.app으로 옮겼다(2026-08-30). 옛 별칭 lyra-one-zeta는
+  // 같은 배포를 그대로 서빙해 주소가 둘로 갈린다 — 공유된 링크와 캐시가 둘로 쪼개지지
+  // 않게 옛 호스트로 온 요청을 영구 이동시킨다. 별칭 자체는 지우지 않는다(링크가 죽는다).
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "lyra-one-zeta.vercel.app" }],
+        destination: "https://lyracyno.vercel.app/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
