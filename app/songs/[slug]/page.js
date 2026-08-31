@@ -229,39 +229,31 @@ export default async function SongPage({ params }) {
 
       <InkDivider className="mx-auto mb-12 h-3 w-full max-w-2xl text-muted" />
 
-      {/* comment */}
-      {song.comment && (
-        <p className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
-          {song.comment}
-        </p>
-      )}
-
-      {appearances.length > 0 && (
-        <section className="mx-auto mb-14 max-w-2xl" aria-labelledby="song-appearances-title">
-          <h2 id="song-appearances-title" className="mb-3 text-sm font-semibold text-muted">이 곡이 쓰인 작품</h2>
-          <ul className="space-y-2">
-            {appearances.map((item) => (
-              <li key={item.id} className="flex gap-3 rounded-xl border border-line bg-surface/60 p-3">
-                {item.poster && (
-                  <CoverImage src={item.poster} alt="" label={item.workTitle} className="h-20 w-14 shrink-0 rounded object-cover" />
-                )}
-                <div className="min-w-0 flex-1 py-0.5">
-                  <h3 className="truncate text-sm font-semibold">
-                    {item.localMovieSlug ? (
-                      <Link href={`/movies/${item.localMovieSlug}`} className="hover:text-accent">{item.workTitle}</Link>
-                    ) : item.workTitle}
-                  </h3>
-                  <p className="mt-1 text-xs text-muted">{appearanceContext(item)}{item.year ? ` · ${item.year}` : ""}</p>
+      {/* comment — 곡이 쓰인 작품은 별도 구역이 아니라 코멘트의 마지막 줄로 붙는다 */}
+      {(song.comment || appearances.length > 0) && (
+        <div className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
+          {song.comment && <p>{song.comment}</p>}
+          {appearances.length > 0 && (
+            <p className={`text-xs ${song.comment ? "mt-3" : ""}`} data-song-appearances>
+              {appearances.map((item) => (
+                <span key={item.id} className="block">
+                  {item.localMovieSlug ? (
+                    <Link href={`/movies/${item.localMovieSlug}`} className="hover:text-accent">〈{item.workTitle}〉</Link>
+                  ) : `〈${item.workTitle}〉`}
+                  {item.year ? ` (${item.year})` : ""} · {appearanceContext(item)}
                   {item.evidenceUrl && (
-                    <a href={item.evidenceUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-[11px] text-accent hover:underline">
-                      근거: {item.evidenceLabel || "자료 보기"} ↗
-                    </a>
+                    <>
+                      {" · "}
+                      <a href={item.evidenceUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        근거 ↗
+                      </a>
+                    </>
                   )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
+                </span>
+              ))}
+            </p>
+          )}
+        </div>
       )}
 
       {/* lyrics */}
