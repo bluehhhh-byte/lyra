@@ -4,7 +4,8 @@ import { readRuntimeData } from "../../../lib/store";
 import CoverImage from "../../cover-image";
 import { lyricVocabulary } from "../../../lib/lyric-vocabulary";
 import { motifEmotionProfiles } from "../../../lib/motif-emotions";
-import { motifCategoryTone, motifYearTone } from "../../../lib/motif-vocabulary-colors";
+import { motifCategoryTextTone, motifCategoryTone, motifYearTone } from "../../../lib/motif-vocabulary-colors";
+import { motifWordCloud } from "../../../lib/motif-word-cloud";
 
 export const metadata = {
   title: "가사 모티프 | Lyra",
@@ -22,7 +23,8 @@ export default async function MotifsPage() {
   const motifs = (data?.motifs || [])
     .map((m) => ({ ...m, songs: m.songs.filter((x) => songs.has(x.slug)) }))
     .filter((m) => m.songs.length >= 2);
-  const vocabulary = lyricVocabulary(allSongs, { limit: 50 });
+  const vocabulary = lyricVocabulary(allSongs, { limit: 100 });
+  const wordCloud = motifWordCloud(vocabulary);
   const motifEmotions = motifEmotionProfiles(data?.motifs || [], allSongs);
 
   return (
@@ -44,6 +46,27 @@ export default async function MotifsPage() {
       <section className="mb-12" aria-labelledby="vocabulary-title">
         <h2 id="vocabulary-title" className="text-lg font-bold">번역 가사에 반복된 이미지 어휘</h2>
         <p className="mt-1 max-w-3xl text-xs leading-relaxed text-muted">대명사·수식어·보조용언은 빼고, 장면·감각·감정·움직임이 떠오르는 말만 현재 번역 가사 전체에서 다시 센 상위 {vocabulary.length}개입니다. 조사와 활용형은 하나의 대표 어휘로 묶었습니다.</p>
+        <figure className="mt-5 border-y border-line bg-surface/35 px-4 py-6 sm:px-8" aria-labelledby="word-cloud-title">
+          <figcaption id="word-cloud-title" className="mb-5 flex flex-wrap items-end justify-between gap-2">
+            <span className="text-sm font-semibold">이미지 어휘 구름</span>
+            <span className="text-[11px] text-muted">글자가 클수록 더 자주 등장 · 색은 이미지의 결</span>
+          </figcaption>
+          <div className="flex min-h-[300px] flex-wrap content-center items-baseline justify-center gap-x-3 gap-y-2.5 text-center">
+            {wordCloud.map((row) => (
+              <Link
+                key={row.word}
+                href={`/?q=${encodeURIComponent(row.word)}`}
+                className={`font-serif font-semibold leading-none transition-opacity hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${motifCategoryTextTone(row.category)}`}
+                style={{ fontSize: `${row.fontSize}px` }}
+                title={`${row.rank}위 · ${row.word} · ${row.count}회 · ${row.songCount}곡 · ${row.category}`}
+                aria-label={`${row.rank}위 ${row.word}, ${row.count}회, ${row.songCount}곡, ${row.category}`}
+              >
+                {row.word}
+              </Link>
+            ))}
+          </div>
+        </figure>
+        <p className="mt-3 text-[11px] leading-relaxed text-muted">관리자에서 곡을 등록하거나 번역 가사를 수정하면 캐시를 비우고, 다음 열람 때 전체 번역문을 다시 집계합니다. 이미지 어휘 규칙에 해당하는 말이 누적 빈도 상위 100위 안에 들면 이 구름과 표에 새로 반영됩니다.</p>
         <div className="mt-4 overflow-x-auto  border border-line">
           <table className="w-full min-w-[860px] text-left text-xs">
             <thead className="bg-surface/70 text-muted"><tr><th className="px-3 py-2">순위</th><th className="px-3 py-2">어휘</th><th className="px-3 py-2">이미지의 결</th><th className="px-3 py-2 text-right">횟수</th><th className="px-3 py-2 text-right">곡</th><th className="px-3 py-2">주요 연도</th><th className="px-3 py-2">근거 곡</th></tr></thead>
