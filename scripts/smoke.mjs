@@ -32,8 +32,6 @@ const CHECKS = [
   { url: "/recap", expect: null },
   { url: "/moments", expect: "문화 장면" },
   { url: "/people", expect: null },
-  { url: "/translations", expect: "번역만 읽기" },
-  { url: "/translations/2", expect: "번역만 읽기" },
   { url: `/api/search?q=${encodeURIComponent("a")}`, expect: '"groups"' },
   { url: "/api/search/lyrics?q=%EC%82%AC%EB%9E%91", expect: '"hits"' },
   { url: `/api/search/lyrics?q=${encodeURIComponent("세상이")}`, expect: "yuuri-the-world-has-ended" },

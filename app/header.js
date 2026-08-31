@@ -19,7 +19,6 @@ const MORE = [
   ["LYRA", [
     ["/songs/taste", "음악 취향"],
     ["/songs/motifs", "가사 모티프"],
-    ["/translations", "번역만 읽기"],
     ["/recommendations/music", "추천 곡"],
   ]],
   ["CYNO", [
