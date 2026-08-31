@@ -21,7 +21,7 @@ export default async function MotifsPage() {
   const motifs = (data?.motifs || [])
     .map((m) => ({ ...m, songs: m.songs.filter((x) => songs.has(x.slug)) }))
     .filter((m) => m.songs.length >= 2);
-  const vocabulary = lyricVocabulary(allSongs);
+  const vocabulary = lyricVocabulary(allSongs, { limit: 50 });
   const motifEmotions = motifEmotionProfiles(data?.motifs || [], allSongs);
 
   return (
@@ -41,15 +41,17 @@ export default async function MotifsPage() {
       </div>
 
       <section className="mb-12" aria-labelledby="vocabulary-title">
-        <h2 id="vocabulary-title" className="text-lg font-bold">자주 등장하는 번역 가사 어휘</h2>
-        <p className="mt-1 text-xs text-muted">AI 없이 현재 번역문을 같은 규칙으로 계산한 상위 {vocabulary.length}개 어휘입니다.</p>
+        <h2 id="vocabulary-title" className="text-lg font-bold">번역 가사에 반복된 이미지 어휘</h2>
+        <p className="mt-1 max-w-3xl text-xs leading-relaxed text-muted">대명사·수식어·보조용언은 빼고, 장면·감각·감정·움직임이 떠오르는 말만 현재 번역 가사 전체에서 다시 센 상위 {vocabulary.length}개입니다. 조사와 활용형은 하나의 대표 어휘로 묶었습니다.</p>
         <div className="mt-4 overflow-x-auto  border border-line">
-          <table className="w-full min-w-[560px] text-left text-xs">
-            <thead className="bg-surface/70 text-muted"><tr><th className="px-3 py-2">어휘</th><th className="px-3 py-2 text-right">횟수</th><th className="px-3 py-2 text-right">곡</th><th className="px-3 py-2">주요 연도</th><th className="px-3 py-2">근거 곡</th></tr></thead>
+          <table className="w-full min-w-[860px] text-left text-xs">
+            <thead className="bg-surface/70 text-muted"><tr><th className="px-3 py-2">순위</th><th className="px-3 py-2">어휘</th><th className="px-3 py-2">이미지의 결</th><th className="px-3 py-2 text-right">횟수</th><th className="px-3 py-2 text-right">곡</th><th className="px-3 py-2">주요 연도</th><th className="px-3 py-2">근거 곡</th></tr></thead>
             <tbody className="divide-y divide-line/60">
-              {vocabulary.map((row) => (
+              {vocabulary.map((row, index) => (
                 <tr key={row.word}>
+                  <td className="px-3 py-2.5 tabular-nums text-muted">{index + 1}</td>
                   <th className="px-3 py-2.5 font-semibold">{row.word}</th>
+                  <td className="px-3 py-2.5 text-muted">{row.category}</td>
                   <td className="px-3 py-2.5 text-right tabular-nums">{row.count}</td>
                   <td className="px-3 py-2.5 text-right tabular-nums">{row.songCount}</td>
                   <td className="px-3 py-2.5 text-muted">{row.years.slice(0, 3).map((year) => `${year.year} ${year.count}`).join(" · ")}</td>
