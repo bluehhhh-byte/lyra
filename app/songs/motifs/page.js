@@ -4,6 +4,7 @@ import { readRuntimeData } from "../../../lib/store";
 import CoverImage from "../../cover-image";
 import { lyricVocabulary } from "../../../lib/lyric-vocabulary";
 import { motifEmotionProfiles } from "../../../lib/motif-emotions";
+import { motifCategoryTone, motifYearTone } from "../../../lib/motif-vocabulary-colors";
 
 export const metadata = {
   title: "가사 모티프 | Lyra",
@@ -51,10 +52,26 @@ export default async function MotifsPage() {
                 <tr key={row.word}>
                   <td className="px-3 py-2.5 tabular-nums text-muted">{index + 1}</td>
                   <th className="px-3 py-2.5 font-semibold">{row.word}</th>
-                  <td className="px-3 py-2.5 text-muted">{row.category}</td>
+                  <td className="px-3 py-2.5">
+                    <span className={`inline-flex whitespace-nowrap border px-2 py-1 text-[11px] font-semibold ${motifCategoryTone(row.category)}`}>
+                      {row.category}
+                    </span>
+                  </td>
                   <td className="px-3 py-2.5 text-right tabular-nums">{row.count}</td>
                   <td className="px-3 py-2.5 text-right tabular-nums">{row.songCount}</td>
-                  <td className="px-3 py-2.5 text-muted">{row.years.slice(0, 3).map((year) => `${year.year} ${year.count}`).join(" · ")}</td>
+                  <td className="px-3 py-2.5">
+                    <div className="flex flex-wrap gap-1.5">
+                      {row.years.slice(0, 3).map((year) => (
+                        <span
+                          key={year.year}
+                          className={`inline-flex whitespace-nowrap border px-2 py-1 text-[11px] tabular-nums ${motifYearTone(year.year)}`}
+                          title={`${year.year} · ${year.count}회`}
+                        >
+                          {year.year} · {year.count}회
+                        </span>
+                      ))}
+                    </div>
+                  </td>
                   <td className="px-3 py-2.5">{row.songs.slice(0, 3).map((song, index) => <span key={song.slug}>{index > 0 && " · "}<Link href={`/songs/${song.slug}`} className="text-accent hover:underline">{song.title}</Link></span>)}</td>
                 </tr>
               ))}
