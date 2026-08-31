@@ -1070,13 +1070,13 @@ artist: ${artist}
 artist_ko: ${artistKo || ""}
 album: ${album || ""}
 year: ${year || ""}
-genre: ${genre || ""}
+genre: ${capGenre(genre) || ""}
 artwork: ${artwork || ""}
 preview: ${preview || ""}
 trackId: ${trackId || ""}
 duration: ${duration || ""}
 lang: ${lang}
-tags: [${(tags || "").split(",").map((t) => t.trim()).filter(Boolean).join(", ")}]
+tags: [${(tags || "").split(",").map((t) => capGenre(t.trim())).filter(Boolean).join(", ")}]
 keywords: [${parseKeywords(keywords).join(", ")}]
 emotion: ${parseEmotion(emotion)}
 date: ${kstToday()}
