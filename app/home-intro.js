@@ -6,6 +6,7 @@ import RelativeDay from "./relative-day";
 import { InkUnderline } from "./ink-details";
 import InkArtwork from "./ink-artwork";
 import { LatestDayScene } from "./fable-scenes";
+import DayArtworkCaption from "./day-artwork-caption";
 
 function RecordCard({ item }) {
   const href = item.kind === "music" ? `/songs/${item.slug}` : `/movies/${item.slug}`;
@@ -56,10 +57,12 @@ function LatestDay({ latest }) {
           </p>
         )}
       </div>
-      <div className="relative min-h-52 overflow-hidden border-t border-line bg-bg/[0.28] sm:min-h-0 sm:border-l sm:border-t-0">
-        <LatestDayScene latest={latest} className="absolute inset-0 h-full w-full" />
-        <span className="absolute bottom-4 right-5 text-[9px] uppercase tracking-[0.14em] text-muted">day constellation</span>
-      </div>
+      <figure className="flex min-w-0 flex-col border-t border-line bg-bg/[0.28] sm:border-l sm:border-t-0">
+        <div className="relative min-h-52 flex-1 overflow-hidden">
+          <LatestDayScene latest={latest} className="absolute inset-0 h-full w-full" />
+        </div>
+        <DayArtworkCaption latest={latest} />
+      </figure>
     </section>
   );
 }

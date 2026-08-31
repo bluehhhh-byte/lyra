@@ -59,61 +59,92 @@ export function LatestDayScene({ latest, className = "" }) {
   const plan = latestArtworkPlan(latest);
   useCanvasScene(ref, (canvas) => {
     const rect = canvas.getBoundingClientRect();
-    const heightUnits = 360;
-    const widthUnits = heightUnits * (rect.width / Math.max(1, rect.height));
-    const surface = createCanvasSurface(canvas, { widthUnits, heightUnits });
+    const H = 360;
+    const W = H * (rect.width / Math.max(1, rect.height));
+    const surface = createCanvasSurface(canvas, { widthUnits: W, heightUnits: H });
     const hand = createHand(surface);
     const random = stream(plan.seed);
     const dark = document.documentElement.dataset.theme !== "light";
-    const inkColor = dark ? PALETTE.CINK : PALETTE.INK;
-    const mapNode = (node) => ({
-      ...node,
-      px: 28 + (node.x / 100) * (widthUnits - 56),
-      py: 26 + (node.y / 100) * (heightUnits - 92),
-    });
-    const nodes = plan.nodes.map(mapNode);
-    const center = {
-      x: 28 + (plan.center.x / 100) * (widthUnits - 56),
-      y: 26 + (plan.center.y / 100) * (heightUnits - 92),
-    };
+    const ink = dark ? PALETTE.CINK : PALETTE.INK;
+    const paint = (name) => PALETTE[name] || PALETTE.SLATE;
+    const M = 20;
+    const sheet = [[M, M], [W - M, M], [W - M, H - M], [M, H - M]];
+    const at = (node) => ({ x: M + 8 + (node.x / 100) * (W - 2 * M - 16), y: M + 6 + (node.y / 100) * (H - 2 * M - 12) });
     const tasks = [];
 
-    if (nodes.length > 1) {
-      const path = nodes.map((node) => [node.px, node.py]);
-      tasks.push(() => hand.sk(random, path, { col: inkColor, w: 1.2, a: 0.28, amp: 1.4, gap: 0.12 }));
-      tasks.push(() => hand.sk(random, [...path].reverse(), { col: PALETTE.PLUM, w: 0.8, a: 0.22, amp: 2.1, gap: 0.22 }));
-    }
-
-    nodes.forEach((node, index) => {
-      const color = PALETTE[node.color] || PALETTE.SLATE;
-      tasks.push(() => hand.ellipse(random, node.px, node.py, node.radius * 1.5, node.radius, { col: color, w: 1.4 + node.count * 0.14, a: 0.72, amp: 0.8 }));
-      if (node.energy >= 0.55) {
-        tasks.push(() => hand.spark(random, node.px, node.py, node.radius * 2.2, { col: color, a: 0.76, w: 1.3, nR: 4 + Math.min(5, node.count), noCenter: true }));
-      } else {
-        tasks.push(() => hand.dotF(random, node.px, node.py, Math.max(2.2, node.radius * 0.34), 0.84, color));
+    // 지시문마다 다른 그림. 어느 지시문인지는 lib/latest-artwork.js가 그날 기록으로 정한다.
+    if (plan.score === "constellation") {
+      const nodes = plan.nodes.map((node) => ({ ...node, ...at(node) }));
+      const middle = at(plan.center);
+      tasks.push(() => hand.hatchFill(random, sheet, 18, plan.angle, 0.07, { col: ink }));
+      const path = nodes.map((node) => [node.x, node.y]);
+      if (nodes.length > 1) {
+        tasks.push(() => hand.sk(random, path, { col: ink, w: 2, a: 0.5, amp: 1.2 }));
+        tasks.push(() => hand.sk(random, [...path].reverse(), { col: PALETTE.PLUM, w: 1, a: 0.3, amp: 2, gap: 0.2 }));
       }
-      if (index) tasks.push(() => hand.dotF(random, node.px + rd(random, -5, 5), node.py + rd(random, -5, 5), 1.2, 0.48, inkColor));
-    });
-
-    tasks.push(
-      () => hand.ellipse(random, center.x, center.y, 13 + plan.entropy * 10, 8 + plan.entropy * 6, { col: inkColor, w: 1.1, a: 0.46, amp: 0.8, gap: 0.16 }),
-      () => hand.dotF(random, center.x, center.y, 2.4, 0.72, PALETTE.VIOLET),
-    );
-
-    const tallyGap = Math.min(18, (widthUnits - 64) / Math.max(1, plan.tallyCount));
-    for (let index = 0; index < plan.tallyCount; index++) {
-      const x = 32 + index * tallyGap;
-      const color = PALETTE[nodes[index % nodes.length].color] || PALETTE.SLATE;
-      tasks.push(() => hand.sk(random, [[x, heightUnits - 28], [x + rd(random, 3, 8), heightUnits - 40 - rd(random, 0, 12)]], { col: color, w: 1.8, a: 0.62, taper: "out", amp: 0.4 }));
+      nodes.forEach((node) => {
+        const color = paint(node.color);
+        const radius = node.radius * 1.4;
+        tasks.push(() => hand.ellipse(random, node.x, node.y, radius * 1.5, radius, { col: color, w: 1.8 + node.count * 0.2, a: 0.8, amp: 0.8 }));
+        if (node.energy >= 0.55) tasks.push(() => hand.spark(random, node.x, node.y, radius * 2.4, { col: color, a: 0.8, w: 1.4, nR: 5 + Math.min(5, node.count), noCenter: true }));
+        else tasks.push(() => hand.dotF(random, node.x, node.y, Math.max(2.6, radius * 0.36), 0.86, color));
+      });
+      tasks.push(
+        () => hand.ellipse(random, middle.x, middle.y, 14 + plan.entropy * 12, 9 + plan.entropy * 7, { col: ink, w: 1.2, a: 0.5, amp: 0.8, gap: 0.16 }),
+        () => hand.dotF(random, middle.x, middle.y, 2.6, 0.8, PALETTE.VIOLET),
+      );
+    } else if (plan.score === "solo") {
+      const lead = plan.nodes[0];
+      const color = lead?.emotion ? paint(lead.color) : ink;
+      const radius = Math.min(W, H) * 0.3;
+      tasks.push(() => hand.hatchFill(random, sheet, 16, plan.angle, 0.06, { col: ink }));
+      tasks.push(() => hand.enso(random, W / 2, H / 2, radius, plan.params.fraction, color, { w: 7 + Math.min(3, plan.keywordCount), a: 0.82 }));
+      if (plan.params.energy >= 0.55) tasks.push(() => hand.spark(random, W / 2, H / 2, radius * 0.35, { col: color, a: 0.7, w: 1.4, nR: 6, noCenter: true }));
+      else tasks.push(() => hand.dotF(random, W / 2, H / 2, 4, 0.8, color));
+      for (let index = 0; index < plan.keywordCount; index++) {
+        tasks.push(() => hand.dotF(random, W / 2 + rd(random, -radius * 0.5, radius * 0.5), H / 2 + rd(random, -radius * 0.4, radius * 0.4), 1.8, 0.6, PALETTE.VIOLET));
+      }
+    } else if (plan.score === "repeat") {
+      const color = paint(plan.nodes[0].color);
+      const rows = plan.params.rows;
+      const gapY = (H - 2 * M - 20) / Math.max(1, rows - 1);
+      const step = 20 + plan.variant * 5;
+      for (let row = 0; row < rows; row++) {
+        const y = M + 10 + (rows === 1 ? (H - 2 * M - 20) / 2 : row * gapY);
+        tasks.push(() => hand.sk(random, [[M, y + 9], [W - M, y + 9]], { col: ink, w: 0.9, a: 0.2, amp: 0.8, gap: 0.1 }));
+        for (let x = M + 12; x < W - M - 6; x += step) {
+          const px = x;
+          if (plan.params.markKind === "spark") tasks.push(() => hand.spark(random, px + rd(random, -2, 2), y + rd(random, -2, 2), 8, { col: color, a: 0.75, w: 1.2, nR: 5, noCenter: true }));
+          else if (plan.params.markKind === "ring") tasks.push(() => hand.ellipse(random, px, y, 7, 5, { col: color, w: 1.5, a: 0.75, amp: 0.7 }));
+          else tasks.push(() => hand.sk(random, [[px, y - 7], [px + rd(random, -2, 2), y + 7]], { col: color, w: 2.2, a: 0.7, taper: "out", amp: 0.5 }));
+        }
+      }
+    } else {
+      const { left, right, seam } = plan.params;
+      const seamX = M + seam * (W - 2 * M);
+      const seamPoints = [];
+      for (let y = M; y <= H - M; y += 12) seamPoints.push([seamX + Math.sin(y * 0.05 + plan.variant) * 6 + rd(random, -3, 3), y]);
+      const leftPolygon = [[M, M], ...seamPoints, [M, H - M]];
+      const rightPolygon = [[W - M, M], ...seamPoints, [W - M, H - M]];
+      tasks.push(() => hand.hatchFill(random, leftPolygon, left.spacing, left.angle, 0.55, { col: paint(left.color) }));
+      tasks.push(() => hand.hatchFill(random, rightPolygon, right.spacing, right.angle, 0.55, { col: paint(right.color) }));
+      tasks.push(() => hand.sk(random, seamPoints, { col: ink, w: 1.8, a: 0.7, amp: 1.5 }));
+      tasks.push(() => hand.spatter(random, seamX, H / 2, 26, 40, ink, 0.35));
     }
-    for (let index = 0; index < plan.keywordCount; index++) {
-      const color = PALETTE[nodes[(index + 1) % nodes.length].color] || PALETTE.PLUM;
-      tasks.push(() => hand.aword(random, Math.max(28, widthUnits - 122), heightUnits - 26 - index * 17, 10, 2 + index, { col: color, a: 0.5, w: 0.9 }));
+
+    // 날씨 — 그날 감정 중심이 마지막에 덧입히는 층
+    if (plan.weather === "rain") {
+      for (let index = 0; index < plan.weatherCount; index++) tasks.push(() => hand.drip(random, rd(random, M + 6, W - M - 6), M + rd(random, 0, 20), rd(random, 50, H * 0.6), ink, 0.38, 2));
+    } else if (plan.weather === "spatter") {
+      const color = paint(plan.nodes[0]?.color);
+      for (let index = 0; index < 3; index++) tasks.push(() => hand.spatter(random, rd(random, W * 0.25, W * 0.75), rd(random, H * 0.25, H * 0.75), 40, 70, color, 0.5));
+    } else if (plan.weather === "growth") {
+      for (let index = 0; index < plan.weatherCount; index++) tasks.push(() => hand.fern(random, rd(random, M + 10, W - M - 10), H - M - 2, rd(random, 40, 85), PALETTE.SAGE));
     }
 
     return { tasks, reducedMotion: surface.reducedMotion };
   }, [plan.seed]);
-  return <canvas ref={ref} data-latest-day-scene data-latest-day-seed={plan.seed} className={className} aria-hidden />;
+  return <canvas ref={ref} data-latest-day-scene data-latest-day-seed={plan.seed} data-latest-day-score={plan.score} className={className} aria-hidden />;
 }
 
 export function FableSongScene({ slug, className = "" }) {
