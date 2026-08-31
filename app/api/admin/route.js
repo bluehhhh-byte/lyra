@@ -3,6 +3,7 @@ import { handleMovies } from "./movies";
 import { handleWatcha } from "./watcha";
 import { handleMoments } from "./moments";
 import { handlePublish } from "./publish";
+import { handleAppearances } from "./appearances";
 import { lastGeminiError, withReason } from "../../../lib/admin/gemini";
 import { sameOrigin, forbiddenOrigin } from "../../../lib/admin/same-origin";
 
@@ -48,6 +49,7 @@ async function handle(req) {
   return (
     (await handleMoments(action, body)) ??
     (await handlePublish(action, body)) ??
+    (await handleAppearances(action, body)) ??
     (await handleMovies(action, body)) ??
     (await handleWatcha(action, body)) ??
     (await handleSongs(action, body)) ??

@@ -23,6 +23,11 @@ import {
 } from "../../../lib/static-details";
 import { translationStatus } from "../../../lib/admin/needs";
 import { sameDayRecords } from "../../../lib/archive";
+import {
+  appearanceContext,
+  appearancesForSong,
+  getSongAppearancesRuntime,
+} from "../../../lib/song-appearances";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
@@ -86,10 +91,11 @@ export default async function SongPage({ params }) {
   const { slug } = await params;
   // 이 곡은 단건 조회로 가져온다 — 목록(all)은 가사를 뺀 메타라 여기서 꺼내면
   // stanzas가 비어 가사가 통째로 사라진다. 목록은 연관곡과 개수 세기에만 쓴다.
-  const [song, all, movies] = await Promise.all([
+  const [song, all, movies, appearanceData] = await Promise.all([
     getSongRuntime(decodeURIComponent(slug)),
     getAllSongsMeta(),
     getAllMoviesMeta(),
+    getSongAppearancesRuntime(),
   ]);
   if (!song) notFound();
   const related = relatedSongs(song, all);
@@ -97,6 +103,18 @@ export default async function SongPage({ params }) {
   const translation = translationStatus(song);
   const sameDay = sameDayRecords(song, all, movies);
   const moments = await getMomentsForTarget("song", song.slug);
+  const appearances = appearancesForSong(appearanceData, song.slug).map((item) => {
+    const localMovie = movies.find((movie) =>
+      item.localMovieSlug === movie.slug ||
+      (item.tmdbId && movie.tmdbId && Number(item.tmdbId) === Number(movie.tmdbId))
+    );
+    return {
+      ...item,
+      localMovieSlug: localMovie?.slug || item.localMovieSlug,
+      poster: localMovie?.poster || item.poster,
+      workTitle: localMovie?.title_ko || localMovie?.title || item.workTitle,
+    };
+  });
 
   // 컬렉션 안에서 이 곡의 자리 — 같은 장르·감정·시대·권역·아티스트가 몇 곡인지
   const genre = genreTagOf(song.tags);
@@ -216,6 +234,34 @@ export default async function SongPage({ params }) {
         <p className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
           {song.comment}
         </p>
+      )}
+
+      {appearances.length > 0 && (
+        <section className="mx-auto mb-14 max-w-2xl" aria-labelledby="song-appearances-title">
+          <h2 id="song-appearances-title" className="mb-3 text-sm font-semibold text-muted">이 곡이 쓰인 작품</h2>
+          <ul className="space-y-2">
+            {appearances.map((item) => (
+              <li key={item.id} className="flex gap-3 rounded-xl border border-line bg-surface/60 p-3">
+                {item.poster && (
+                  <CoverImage src={item.poster} alt="" label={item.workTitle} className="h-20 w-14 shrink-0 rounded object-cover" />
+                )}
+                <div className="min-w-0 flex-1 py-0.5">
+                  <h3 className="truncate text-sm font-semibold">
+                    {item.localMovieSlug ? (
+                      <Link href={`/movies/${item.localMovieSlug}`} className="hover:text-accent">{item.workTitle}</Link>
+                    ) : item.workTitle}
+                  </h3>
+                  <p className="mt-1 text-xs text-muted">{appearanceContext(item)}{item.year ? ` · ${item.year}` : ""}</p>
+                  {item.evidenceUrl && (
+                    <a href={item.evidenceUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-[11px] text-accent hover:underline">
+                      근거: {item.evidenceLabel || "자료 보기"} ↗
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {/* lyrics */}

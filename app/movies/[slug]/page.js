@@ -15,6 +15,11 @@ import { recentStaticParams } from "../../../lib/static-details";
 import { directorOtherWorks, getWatchedRuntime } from "../../../lib/watched";
 import CoverImage from "../../cover-image";
 import { InkDivider } from "../../ink-details";
+import {
+  appearanceContext,
+  appearancesForMovie,
+  getSongAppearancesRuntime,
+} from "../../../lib/song-appearances";
 
 export const revalidate = 21600;
 export const dynamicParams = true;
@@ -85,21 +90,29 @@ export default async function MoviePage({ params }) {
   const { slug } = await params;
   // 이 영화는 단건 조회로 가져온다 — 목록(all)은 줄거리를 뺀 메타라 여기서 꺼내면
   // synopsis가 비어 본문이 사라진다. 목록은 연관 영화에만 쓴다.
-  const [movie, all, watched] = await Promise.all([
+  const [movie, all, watched, songs, appearanceData] = await Promise.all([
     getMovieRuntime(decodeURIComponent(slug)),
     getAllMoviesMeta(),
     getWatchedRuntime(),
+    getAllSongsMeta(),
+    getSongAppearancesRuntime(),
   ]);
   if (!movie) notFound();
   const related = relatedMovies(movie, all);
   const directorWorks = directorOtherWorks(watched, movie);
   const moments = await getMomentsForTarget("movie", movie.slug);
+  const soundtrack = appearancesForMovie(appearanceData, movie)
+    .map((appearance) => ({
+      appearance,
+      song: songs.find((item) => item.slug === appearance.songSlug),
+    }))
+    .filter((item) => item.song);
 
   // Lyra×Cyno 교차 — 같은 시대 안에서 권역·감정·주제가 가까운 곡을 우선한다.
   // 같은 사이트에 음악·영화가 함께 사는 것의 배당금.
   const movieDecade = movie.year ? Math.floor(+movie.year / 10) * 10 : null;
   const eraSongs = movieDecade
-    ? crossMatches(movie, await getAllSongsMeta(), { countries: COUNTRY_TAGS, limit: 4 })
+    ? crossMatches(movie, songs, { countries: COUNTRY_TAGS, limit: 4 })
     : [];
 
   const meta = [
@@ -243,6 +256,26 @@ export default async function MoviePage({ params }) {
             ))}
           </div>
         </div>
+      )}
+
+      {soundtrack.length > 0 && (
+        <section className="mx-auto mt-14 max-w-2xl" aria-labelledby="movie-soundtrack-title">
+          <h2 id="movie-soundtrack-title" className="mb-4 text-sm font-semibold text-muted">이 작품에 쓰인 음악</h2>
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {soundtrack.map(({ appearance, song }) => (
+              <li key={appearance.id}>
+                <Link href={`/songs/${song.slug}`} className="group flex gap-3 rounded-xl border border-line bg-surface/60 p-3 transition active:scale-[0.99]">
+                  <CoverImage src={song.artwork} alt="" label={song.title} className="h-16 w-16 shrink-0 rounded-lg object-cover" />
+                  <span className="min-w-0 py-0.5">
+                    <span className="block truncate text-sm font-semibold group-hover:text-accent">{song.title}</span>
+                    <span className="block truncate text-xs text-muted">{song.artist}</span>
+                    <span className="mt-1 block text-[11px] text-muted/80">{appearanceContext(appearance)}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {/* when this entry went up — full datetime if recorded, else the date */}

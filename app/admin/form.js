@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { usePlayer } from "../player";
 import AdminErrorMessage from "./error-message";
+import SongAppearanceEditor from "./song-appearance-editor";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -137,6 +138,7 @@ export default function AdminForm() {
   const pick = (c) =>
     run("lyrics", async () => {
       setSong(c);
+      setSavedSlug("");
       setLyrics("");
       setTitleKo("");
       setArtistKo("");
@@ -448,6 +450,8 @@ export default function AdminForm() {
           )}
         </section>
       )}
+
+      {savedSlug && <SongAppearanceEditor songSlug={savedSlug} />}
 
       <AdminErrorMessage message={error} />
     </div>

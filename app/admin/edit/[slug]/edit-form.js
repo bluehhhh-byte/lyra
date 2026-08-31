@@ -5,6 +5,7 @@ import { hasUnsavedChanges, warnBeforeUnload } from "../../../../lib/admin/unsav
 import { isSaveShortcut } from "../../../../lib/admin/save-shortcut";
 import { adminSessionExpiry } from "../../../../lib/auth-token";
 import AdminErrorMessage from "../../error-message";
+import SongAppearanceEditor from "../../song-appearance-editor";
 
 async function api(action, body, nextPath) {
   const res = await fetch("/api/admin", {
@@ -159,6 +160,9 @@ export default function EditForm({ slug }) {
         <span className="text-sm text-muted">{status}</span>
       </div>
       <AdminErrorMessage message={error?.message} actionHref={error?.loginUrl} className="mt-3" />
+      <div className="mt-8">
+        <SongAppearanceEditor songSlug={slug} />
+      </div>
     </div>
   );
 }
