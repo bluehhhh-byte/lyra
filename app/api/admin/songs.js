@@ -1050,10 +1050,19 @@ ${listed}`,
     // catches the paths that skip translation: a hand-typed body, and the
     // "이대로 사용" bypass that copies Korean lyrics over verbatim
     let lyricBody = capitalizeLyricLines(String(lyrics || "").trim());
-    // 번역 단계가 이미 원문의 섹션·빈 줄을 보존한다. 저장 때 Gemini로 연 구분을
-    // 다시 만들면 정상 등록 한 번에 번역·메타·레이아웃 호출이 연달아 발생한다.
-    // 구조가 좋지 않은 예외만 등록 후 관리 목록의 "연 다시 나누기"를 명시적으로
-    // 실행한다. 저장은 입력한 검수본을 그대로 보존해야 하기도 한다.
+    // 등록 시 섹션 자동 부여. 예전에는 "예외만 수동으로 연 다시 나누기"였지만,
+    // 소스 가사에 섹션이 없는 곡이 반복해서 그대로 등록됐다(浸食 ~lose control~ 등
+    // 850곡을 사후 일괄 처리해야 했다). 이제 [헤더]가 하나도 없는 가사는 저장 때
+    // Gemini lite로 구조를 판정해 붙인다. restanzaBody는 원문 줄을 재배열만 하므로
+    // 내용은 바이트 단위로 보존되고, 실패하면 입력 그대로 저장한다 — 레이아웃은
+    // 장식이라 등록을 막지 않는다(requalityApply와 같은 원칙).
+    const geminiKey = process.env.GEMINI_API_KEY;
+    if (geminiKey && !noLyrics && lyricBody && !/^\[[^\]]+\]\s*$/m.test(lyricBody)) {
+      try {
+        const restanza = await restanzaBody({ title, artist, bodyText: lyricBody, key: geminiKey });
+        if (restanza) lyricBody = restanza;
+      } catch {}
+    }
     const md = `---
 title: ${title}
 title_ko: ${titleKo || (lang === "ko" ? title : "")}

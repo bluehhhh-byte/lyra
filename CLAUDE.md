@@ -73,7 +73,7 @@ Lyra 런타임은 익명 GitHub 접근에 의존하지 않는다 — 사이트�
 |---|---|---|---|
 | Neon Free | 저장 0.5GB, **전송 5GB/월**, 컴퓨트 ~190h/월 | 16MB (3%) | gzip 캐시 + 6시간 TTL + 파일 폴백, autosuspend |
 | Vercel Hobby | 대역폭 100GB/월, maxDuration 60s(Fluid 300s) | 홈 HTML 1.4MB | 태그 무효화 캐시, `/api/admin` maxDuration 180 |
-| Gemini Free | 모델별 RPM/RPD 버킷 분리 | 곡 등록 시 1~2회 | 대체 사슬 + 12s/48s 시한, 대량 작업은 lite 모델 |
+| Gemini Free | 모델별 RPM/RPD 버킷 분리 | 곡 등록 시 1~3회 | 대체 사슬 + 12s/48s 시한, 대량 작업은 lite 모델 |
 | GitHub | abuse 감지(버스트 커밋) | 콘텐츠 커밋 0 | 저장이 커밋을 안 만듦, 백업은 단일 커밋 |
 
 **원칙: 버스트를 만들지 않는다.** 무료 티어는 총량보다 순간 속도에 먼저 걸린다.
