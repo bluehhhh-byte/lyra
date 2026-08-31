@@ -565,13 +565,13 @@ export function EmotionOrbit({ stats, month, monthHref }) {
       <OrbitMonthComparison points={points} initialMonth={active.month} />
       <figcaption className="mt-3">
         <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px] text-muted" aria-label="정서 지도 범례">
-          <span className=" border border-line px-2 py-1">점선 · 기준 월</span>
-          <span className=" border border-line px-2 py-1">실선 · 비교 월</span>
+          <span className=" border border-line px-2 py-1">빈 원 꼭짓점·가는 선 · 기준 월</span>
+          <span className=" border border-line px-2 py-1">찬 원 꼭짓점·굵은 선 · 비교 월</span>
           <span className=" border border-line px-2 py-1">별 색상 · 대표 감정 + 밝고 어두운 기운 + 에너지</span>
           <span className=" border border-line px-2 py-1">별 꼭짓점 · 밝은 기운→강한 에너지→감정의 폭→어두운 깊이→잔잔한 여운</span>
         </div>
         <p className="mt-2 text-[11px] leading-5 text-muted">
-          기준 월과 비교 월을 각각 누르면 두 별이 같은 축에 겹쳐진다. 다섯 축은 모든 달에 동일한 0~100 기준을 적용하며, 점수가 높을수록 해당 감성의 꼭짓점이 길어진다.
+          기준 월과 비교 월을 각각 누르면 두 별이 같은 축에 겹쳐진다. 다섯 축은 모든 달에 동일한 0~1000 기준(밝기·각성 ±2 범위)을 적용하며, 점수가 높을수록 해당 감성의 꼭짓점이 길어진다.
         </p>
       </figcaption>
 

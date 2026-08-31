@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { emotionColor } from "../../lib/emotion-color";
-import { EMOTION_PROFILE_AXES, emotionProfile, emotionProfileScores } from "../../lib/emotion-profile";
+import { EMOTION_PROFILE_AXES, EMOTION_PROFILE_MAX, emotionProfile, emotionProfileScores } from "../../lib/emotion-profile";
 
 const monthLabel = (month) => `${Number(month.slice(5))}월`;
 
@@ -31,7 +31,7 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
     <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby={`${chartId}-title ${chartId}-desc`} className="h-auto w-full overflow-visible">
       <title id={`${chartId}-title`}>{`${monthLabel(base.month)}과 ${monthLabel(compare.month)} 정서 별 그래프 비교`}</title>
       <desc id={`${chartId}-desc`}>
-        점선은 기준 월, 실선은 비교 월이다. 각 별의 색은 그 달의 대표 감정과 밝기, 에너지에 따라 달라진다. 위에서 시계방향으로 밝은 기운, 강한 에너지, 감정의 폭, 어두운 깊이, 잔잔한 여운을 비교한다.
+        꼭짓점이 빈 원인 별이 기준 월, 채워진 원인 별이 비교 월이다. 각 별의 색은 그 달의 대표 감정과 밝기, 에너지에 따라 달라진다. 위에서 시계방향으로 밝은 기운, 강한 에너지, 감정의 폭, 어두운 깊이, 잔잔한 여운을 비교한다.
       </desc>
 
       {[0.25, 0.5, 0.75, 1].map((level) => (
@@ -63,25 +63,33 @@ function ComparisonChart({ points, shapeProfiles, baseIndex, compareIndex, varia
         );
       })}
 
+      {/* 두 별 모두 실선이다. 예전에는 기준 월만 점선이었는데, 비교 월의 면
+          채움과 굵은 실선이 그 점선을 덮어 겹치는 구간에서 기준 월이 사라졌다.
+          채움을 얇게 하고, 계열 구분은 선 굵기와 꼭짓점 마커(기준=빈 원,
+          비교=찬 원)가 담당한다 — 두 달의 색이 비슷해도 구분이 남는다. */}
       <polygon
         data-series="base"
         data-emotion-color={baseColor}
         points={starPoints(cx, cy, shapeProfiles[baseIndex], radius)}
-        fill={baseColor} fillOpacity="0.1"
-        stroke={baseColor} strokeWidth="3"
-        strokeDasharray="9 6" strokeLinejoin="round"
+        fill="none"
+        stroke={baseColor} strokeWidth="2.5"
+        strokeLinejoin="round" opacity="0.9"
       />
       <polygon
         data-series="compare"
         data-emotion-color={compareColor}
         points={starPoints(cx, cy, shapeProfiles[compareIndex], radius)}
-        fill={compareColor} fillOpacity="0.18"
-        stroke={compareColor} strokeWidth="4"
+        fill={compareColor} fillOpacity="0.07"
+        stroke={compareColor} strokeWidth="3.5"
         strokeLinejoin="round"
       />
+      {shapeProfiles[baseIndex].map((value, axis) => {
+        const tip = axisTip(axis, radius * value);
+        return <circle key={axis} cx={tip.x} cy={tip.y} r="4" fill="var(--color-surface)" stroke={baseColor} strokeWidth="2" />;
+      })}
       {shapeProfiles[compareIndex].map((value, axis) => {
         const tip = axisTip(axis, radius * value);
-        return <circle key={axis} cx={tip.x} cy={tip.y} r="4" fill={compareColor} />;
+        return <circle key={axis} cx={tip.x} cy={tip.y} r="4.5" fill={compareColor} />;
       })}
       <circle cx={cx} cy={cy} r="3" fill="var(--color-ink)" />
     </svg>
@@ -129,13 +137,13 @@ function MonthSummary({ title, point }) {
         <span className="truncate text-xs text-muted">{point.dominant || "대표 감정 없음"}</span>
       </div>
       <p className="mt-1 text-xs tabular-nums text-muted">
-        다섯 지표는 모두 0~100 · 기록 {point.count}개
+        다섯 지표는 모두 0~{EMOTION_PROFILE_MAX} · 기록 {point.count}개
       </p>
       <dl className="mt-3 grid grid-cols-3 gap-1.5 sm:grid-cols-5">
         {EMOTION_PROFILE_AXES.map((axis, index) => (
           <div key={axis.key} className=" bg-surface/70 px-2 py-1.5 text-center">
             <dt className="text-[9px] text-muted">{axis.short}</dt>
-            <dd className="mt-0.5 text-xs font-semibold tabular-nums text-ink">{Math.round(scores[index] * 100)}</dd>
+            <dd className="mt-0.5 text-xs font-semibold tabular-nums text-ink">{Math.round(scores[index] * EMOTION_PROFILE_MAX)}</dd>
           </div>
         ))}
       </dl>
