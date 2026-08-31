@@ -107,16 +107,18 @@ export function LatestDayScene({ latest, className = "" }) {
     } else if (plan.score === "repeat") {
       const color = paint(plan.nodes[0].color);
       const rows = plan.params.rows;
-      const gapY = (H - 2 * M - 20) / Math.max(1, rows - 1);
-      const step = 20 + plan.variant * 5;
+      // 줄이 적으면 위아래 끝에 붙지 않고 가운데로 모인다 — 간격 상한 64
+      const gapY = Math.min(64, (H - 2 * M - 20) / Math.max(1, rows - 1));
+      const top = H / 2 - ((rows - 1) * gapY) / 2;
+      const step = 22 + plan.variant * 5;
       for (let row = 0; row < rows; row++) {
-        const y = M + 10 + (rows === 1 ? (H - 2 * M - 20) / 2 : row * gapY);
-        tasks.push(() => hand.sk(random, [[M, y + 9], [W - M, y + 9]], { col: ink, w: 0.9, a: 0.2, amp: 0.8, gap: 0.1 }));
+        const y = top + row * gapY;
+        tasks.push(() => hand.sk(random, [[M, y + 11], [W - M, y + 11]], { col: ink, w: 0.9, a: 0.2, amp: 0.8, gap: 0.1 }));
         for (let x = M + 12; x < W - M - 6; x += step) {
           const px = x;
-          if (plan.params.markKind === "spark") tasks.push(() => hand.spark(random, px + rd(random, -2, 2), y + rd(random, -2, 2), 8, { col: color, a: 0.75, w: 1.2, nR: 5, noCenter: true }));
-          else if (plan.params.markKind === "ring") tasks.push(() => hand.ellipse(random, px, y, 7, 5, { col: color, w: 1.5, a: 0.75, amp: 0.7 }));
-          else tasks.push(() => hand.sk(random, [[px, y - 7], [px + rd(random, -2, 2), y + 7]], { col: color, w: 2.2, a: 0.7, taper: "out", amp: 0.5 }));
+          if (plan.params.markKind === "spark") tasks.push(() => hand.spark(random, px + rd(random, -2, 2), y + rd(random, -2, 2), 10, { col: color, a: 0.85, w: 1.5, nR: 5, noCenter: true }));
+          else if (plan.params.markKind === "ring") tasks.push(() => hand.ellipse(random, px, y, 9, 6, { col: color, w: 1.6, a: 0.8, amp: 0.7 }));
+          else tasks.push(() => hand.sk(random, [[px, y - 9], [px + rd(random, -2, 2), y + 9]], { col: color, w: 2.4, a: 0.75, taper: "out", amp: 0.5 }));
         }
       }
     } else {
