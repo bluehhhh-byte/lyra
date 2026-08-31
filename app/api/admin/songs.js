@@ -4,12 +4,13 @@ import { getAllSongsRuntime, capitalizeLyricLines, parseFrontmatter, parseLyrics
 import { translationVariants } from "../../../lib/translation-variants";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
-import { geminiText, GEMINI_LITE_MODEL } from "../../../lib/admin/gemini";
+import { geminiText, GEMINI_LITE_MODEL, withReason } from "../../../lib/admin/gemini";
+import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
 import { normText, fetchArtistCatalog, withTimeout, itunesToResult } from "../../../lib/admin/itunes";
 import {
-  needsReading, commentPrompt, translateLyrics, normalizeInterleaved, restanzaBody,
+  needsReading, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
 } from "../../../lib/admin/song-meta";
 import { kstToday } from "../../../lib/kst";
@@ -612,7 +613,9 @@ ${koText.slice(0, 2000)}`,
     return Response.json({ genre: newGenre, changed: newGenre !== old });
   }
 
-  // Regenerate ONLY the comment ('~다'체), leaving lyrics and other fields intact.
+  // Regenerate the comment from grounded web research. The same result carries
+  // an appearance suggestion so the client can persist prose and structured
+  // data together instead of letting them disagree again.
   if (action === "regenComment") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
@@ -622,15 +625,23 @@ ${koText.slice(0, 2000)}`,
     const m = raw.match(FM);
     if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
     const [, fm, bodyText] = m;
-    const comment = (
-      await geminiText(key, commentPrompt(fmValue(fm, "title"), fmValue(fm, "artist"), originalLyrics(bodyText)))
-    )
-      .replace(/\s*\n+\s*/g, " ")
-      .replace(/^["']|["']$/g, "")
-      .trim();
-    if (!comment) return Response.json({ error: "코멘트 생성 실패" }, { status: 502 });
+    const research = await researchSongContext({
+      key,
+      title: fmValue(fm, "title"),
+      artist: fmValue(fm, "artist"),
+      album: fmValue(fm, "album"),
+      year: fmValue(fm, "year"),
+      genre: fmValue(fm, "genre"),
+      lyrics: originalLyrics(bodyText),
+      commentHint: fmValue(fm, "comment"),
+    });
+    if (!research)
+      return Response.json({ error: withReason("코멘트 웹 리서치를 완료하지 못했습니다") }, { status: 503 });
+    const comment = research.comment;
+    if (!comment)
+      return Response.json({ error: "웹 근거를 연결한 코멘트를 만들지 못했습니다. 잠시 후 다시 시도해 주세요" }, { status: 422 });
     await writeSong(body.slug, setField(raw, "comment", comment, "date"), `chore(song): regen comment — ${body.slug}`);
-    return Response.json({ comment });
+    return Response.json({ comment, appearanceSuggestion: research.appearance });
   }
 
   // Add the "> " translation line to each lyric line — used to give a Korean song

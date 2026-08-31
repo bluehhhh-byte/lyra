@@ -2,7 +2,8 @@ import { randomUUID } from "crypto";
 import { revalidatePath } from "next/cache";
 import { getAllMoviesMeta } from "../../../lib/movies";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
-import { suggestSongAppearance } from "../../../lib/admin/song-appearance-suggest";
+import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
+import { withReason } from "../../../lib/admin/gemini";
 import {
   appearanceIdentity,
   getSongAppearancesRuntime,
@@ -38,8 +39,14 @@ export async function handleAppearances(action, body) {
   if (action === "appearanceSuggest") {
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
-    let suggestion = await suggestSongAppearance({ key, ...body });
-    if (!suggestion) return Response.json({ suggestion: null });
+    const research = await researchSongContext({ key, ...body });
+    // Quota/timeout/model failures used to become `suggestion: null`, which the
+    // form described as "no appearance exists". Keep a genuine researched
+    // negative distinct from a lookup that never completed.
+    if (!research)
+      return Response.json({ error: withReason("작품 정보 웹 검색을 완료하지 못했습니다") }, { status: 503 });
+    let suggestion = research.appearance;
+    if (!suggestion) return Response.json({ suggestion: null, researchComment: research.comment, sources: research.sources });
 
     // AI가 확인한 작품명을 기존 TMDB 검색으로 정규화한다. 실패해도 근거가 있는
     // 수동 작품 정보는 그대로 남겨 사용자가 검수할 수 있다.
@@ -64,7 +71,7 @@ export async function handleAppearances(action, body) {
         };
       }
     } catch {}
-    return Response.json({ suggestion });
+    return Response.json({ suggestion, researchComment: research.comment, sources: research.sources });
   }
 
   if (action === "appearanceList") {
@@ -93,8 +100,11 @@ export async function handleAppearances(action, body) {
       updatedAt: new Date().toISOString(),
     };
     const data = await getSongAppearancesRuntime();
-    if (data.items.some((current) => appearanceIdentity(current) === appearanceIdentity(item)))
-      return Response.json({ error: "같은 작품·사용 방식·회차 연결이 이미 있습니다" }, { status: 409 });
+    const existing = data.items.find((current) => appearanceIdentity(current) === appearanceIdentity(item));
+    // Grounded comment regeneration may rediscover an already saved tie-in.
+    // Make that path idempotent instead of turning successful research into a
+    // duplicate error.
+    if (existing) return Response.json({ item: existing, unchanged: true });
     data.items.push(item);
     await persist(data, item);
     return Response.json({ item });

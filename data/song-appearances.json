@@ -1,4 +1,27 @@
 {
  "version": 1,
- "items": []
+ "updatedAt": "2026-08-31T21:40:00.000Z",
+ "items": [
+  {
+   "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
+   "songSlug": "l-arc-en-ciel-浸食-lose-control",
+   "workTitle": "고질라",
+   "originalTitle": "Godzilla",
+   "workType": "movie",
+   "mediaType": "movie",
+   "tmdbId": 929,
+   "localMovieSlug": "",
+   "year": 1998,
+   "poster": "https://image.tmdb.org/t/p/w500/2njIa8u7gORxAtkSxlfS8Pt4Kwy.jpg",
+   "role": "insert_song",
+   "season": null,
+   "episode": null,
+   "evidenceUrl": "https://www.oricon.co.jp/prof/14296/products/147445/2/",
+   "evidenceLabel": "오리콘 — 영화 GODZILLA 타이업(삽입곡)",
+   "status": "verified",
+   "note": "L'Arc-en-Ciel 공식 디스코그래피도 일본판 사운드트랙 ‘ゴジラ THE ALBUM’ 수록을 명시한다.",
+   "createdAt": "2026-08-31T21:40:00.000Z",
+   "updatedAt": "2026-08-31T21:40:00.000Z"
+  }
+ ]
 }

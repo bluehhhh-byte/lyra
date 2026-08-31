@@ -75,8 +75,13 @@ export default function SongTools({ songs }) {
   const regen = async (slug) => {
     set(slug, { busy: "comment", err: "", msg: "" });
     try {
-      const { comment } = await api("regenComment", { slug });
-      set(slug, { comment });
+      const { comment, appearanceSuggestion } = await api("regenComment", { slug });
+      if (appearanceSuggestion) {
+        const { unchanged } = await api("appearanceSave", { songSlug: slug, ...appearanceSuggestion });
+        set(slug, { comment, msg: unchanged ? "코멘트 갱신 · 작품 정보 확인됨" : "코멘트·작품 정보 갱신" });
+      } else {
+        set(slug, { comment, msg: "근거 기반 코멘트 갱신" });
+      }
     } catch (e) {
       set(slug, { err: e.message });
     } finally {

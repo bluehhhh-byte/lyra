@@ -49,7 +49,7 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
         <div>
           <h3 id="appearance-draft-title" className="text-sm font-semibold">영화·드라마·애니메이션 수록 정보</h3>
           <p className="mt-1 text-xs leading-relaxed text-muted">
-            선택 사항입니다. AI가 웹 근거를 확인한 경우에만 자동으로 채우며, 찾지 못하면 빈칸으로 둡니다.
+            선택 사항입니다. 코멘트와 같은 웹 리서치에서 작품 사용 근거를 확인한 경우에만 자동으로 채웁니다.
           </p>
         </div>
         <button
@@ -65,8 +65,14 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
       {searchState === "found" && (
         <p className="mt-3 text-xs text-accent" role="status">웹 근거가 있는 작품 정보를 찾았습니다. 저장 전에 확인해 주세요.</p>
       )}
+      {searchState === "searching" && (
+        <p className="mt-3 text-xs text-muted" role="status">곡의 배경과 작품 사용 정보를 웹에서 함께 확인하고 있습니다.</p>
+      )}
       {searchState === "empty" && (
         <p className="mt-3 text-xs text-muted" role="status">확인할 수 있는 작품 수록 정보를 찾지 못해 빈칸으로 두었습니다.</p>
+      )}
+      {searchState === "error" && (
+        <p className="mt-3 text-xs text-red-400" role="alert">웹 검색을 완료하지 못했습니다. 빈칸은 ‘수록 정보 없음’ 판정이 아니므로 다시 시도해 주세요.</p>
       )}
 
       <div className="mt-3 grid gap-3 sm:grid-cols-2">

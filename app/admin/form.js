@@ -132,34 +132,46 @@ export default function AdminForm() {
     return t;
   };
 
-  // set country/year tags immediately, then let Gemini append moods + title + comment
+  // Set the deterministic tags first. Metadata classification runs before the
+  // grounded research so its provisional comment can be passed as a *search
+  // hint*, never as evidence. This closes the old race where the comment knew a
+  // film name but the parallel appearance lookup never saw it.
   const autotag = async (c, lyricsText, lg = lang) => {
     setTags(baseTags(c, lg).join(", ")); // guaranteed baseline
-    const [metaResult, appearanceResult] = await Promise.allSettled([
-      api("autotag", { ...c, lang: lg, lyrics: lyricsText }, { timeoutMs: 60_000 }),
-      api("appearanceSuggest", c, { timeoutMs: 60_000 }),
-    ]);
-    if (metaResult.status === "fulfilled") {
-      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em } = metaResult.value;
+    let commentHint = "";
+    try {
+      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em } =
+        await api("autotag", { ...c, lang: lg, lyrics: lyricsText }, { timeoutMs: 60_000 });
       if (auto?.length) setTags(auto.join(", ")); // server merges base + genre + moods
       if (tko) setTitleKo(tko);
       if (ako) setArtistKo(ako);
       if (cm) setComment(cm);
+      commentHint = cm || "";
       // ride along invisibly — the save posts them; no review UI, the regen
       // tool can always redo them later
       if (kw?.length) setKeywords(kw);
       if (em) setEmotion(em);
+    } catch {
+      // Country/year and store genre remain usable when metadata generation is
+      // rate-limited. The grounded research below can still produce a comment.
     }
-    if (appearanceResult.status === "fulfilled") {
-      const suggestion = appearanceResult.value.suggestion;
+
+    setAppearanceSearchState("searching");
+    try {
+      const { suggestion, researchComment } = await api(
+        "appearanceSuggest",
+        { ...c, lang: lg, lyrics: lyricsText, commentHint },
+        { timeoutMs: 60_000 }
+      );
+      if (researchComment) setComment(researchComment);
       setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
       setAppearanceSearchState(suggestion ? "found" : "empty");
-    } else {
-      setAppearance(emptyAppearanceDraft());
-      setAppearanceSearchState("empty");
+    } catch (reason) {
+      setAppearanceSearchState("error");
+      setError(`작품 정보 자동 검색 실패: ${reason.message}`);
     }
-    // 메타 생성 실패는 기존처럼 국가·연도 태그를 남기고 진행한다. 작품 검색 실패도
-    // 등록을 막지 않는다 — 둘 중 하나가 살아 있으면 그 결과를 검수할 수 있다.
+    // Research failure does not block registration, but it is no longer lied
+    // about as a confirmed "not found" result.
   };
 
   const pick = (c) =>
@@ -232,9 +244,20 @@ export default function AdminForm() {
   });
 
   const searchAppearance = run("appearance", async () => {
-    const { suggestion } = await api("appearanceSuggest", song || {}, { timeoutMs: 60_000 });
-    setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
-    setAppearanceSearchState(suggestion ? "found" : "empty");
+    setAppearanceSearchState("searching");
+    try {
+      const { suggestion, researchComment } = await api(
+        "appearanceSuggest",
+        { ...(song || {}), lyrics, commentHint: comment },
+        { timeoutMs: 60_000 }
+      );
+      if (researchComment) setComment(researchComment);
+      setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
+      setAppearanceSearchState(suggestion ? "found" : "empty");
+    } catch (reason) {
+      setAppearanceSearchState("error");
+      throw reason;
+    }
   });
 
   return (
