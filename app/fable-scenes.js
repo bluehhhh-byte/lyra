@@ -68,8 +68,8 @@ export function LatestDayScene({ latest, className = "" }) {
     // 붓질 목록은 lib/latest-artwork-draw.js에 있다 — 테스트가 같은 함수를 캔버스 없이 돌린다
     const tasks = latestArtworkTasks({ hand, plan, W, H, random });
     return { tasks, reducedMotion: surface.reducedMotion };
-  }, [plan.seed]);
-  return <canvas ref={ref} data-latest-day-scene data-latest-day-seed={plan.seed} data-latest-day-score={plan.score} className={className} aria-hidden />;
+  }, [plan.seed, plan.patternId]);
+  return <canvas ref={ref} data-latest-day-scene data-latest-day-seed={plan.seed} data-latest-day-score={plan.score} data-latest-day-pattern={plan.patternId} data-latest-day-composition={plan.composition.id} className={className} aria-hidden />;
 }
 
 export function FableSongScene({ slug, className = "" }) {
