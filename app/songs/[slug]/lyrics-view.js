@@ -147,13 +147,15 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
             style={{ transform: `scaleX(${progress})` }}
           />
         </div>
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex gap-1.5">
+        {/* 좁은 화면에서 버튼 여덟 개가 한 줄에 못 들어가면 글자가 세로로 쪼개졌다.
+            모드 묶음은 남는 폭을 나눠 갖고, 크기 묶음은 줄을 바꿔 내려간다. */}
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex min-w-0 flex-1 gap-1.5">
             {MODES.map((m) => (
               <button
                 key={m.key}
                 onClick={() => setMode(m.key)}
-                className={`min-h-11  border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                className={`min-h-11 flex-1 whitespace-nowrap border px-2 py-1 text-xs transition active:scale-[0.97] sm:flex-none sm:px-3 ${
                   mode === m.key
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -166,7 +168,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => setShowReadings((value) => !value)}
                 aria-pressed={showReadings}
-                className={`min-h-11  border px-3 py-1 text-xs transition active:scale-[0.97] ${
+                className={`min-h-11 flex-1 whitespace-nowrap border px-2 py-1 text-xs transition active:scale-[0.97] sm:flex-none sm:px-3 ${
                   showReadings
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -176,7 +178,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               </button>
             )}
           </div>
-          <div className="flex items-center gap-1.5">
+          <div className="flex shrink-0 items-center gap-1.5">
             {SIZE_KEYS.map((k) => (
               <button
                 key={k}
