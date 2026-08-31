@@ -19,7 +19,7 @@ Scope: Every song has a reachable official release cover matched to its title, a
   EXPECT: 전체 155개 통과
   EVIDENCE: exit=0; shell=C:\WINDOWS\system32\cmd.exe; cwd=C:\Users\박준성\.antigravity\.Test\lyra; path=24d7b6671bf5/38 entries; output=전체 155개 통과 | $ node scripts/run-tests.mjs
 
-- [ ] G4: production serves the corrected artwork fields without browser or image request errors
+- [x] G4: production serves the corrected artwork fields without browser or image request errors
   CHECK: node scripts/audit-song-artwork.mjs --production
   EXPECT: production artwork audit passed
-  EVIDENCE: pending
+  EVIDENCE: exit=0; shell=C:\WINDOWS\system32\cmd.exe; cwd=C:\Users\박준성\.antigravity\.Test\lyra; path=24d7b6671bf5/38 entries; output=11 corrected production pages and images verified | production artwork audit passed
