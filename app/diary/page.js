@@ -17,7 +17,7 @@ export default async function DiaryPage({ searchParams }) {
         <p className="py-20 text-center text-sm text-muted">
           아직 감정·키워드가 기록된 곡이 없습니다.
           <br />
-          관리자에서 “키워드·감정 일괄 추출”을 실행하면 채워집니다.
+          곡을 등록하면 키워드·감정이 자동으로 채워지고, 개별 곡은 관리자의 “메타 재생성”으로 채울 수 있습니다.
         </p>
       </>
     );

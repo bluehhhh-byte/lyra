@@ -21,18 +21,10 @@ async function api(action, body) {
   return data;
 }
 
-// Space bulk Gemini calls out — the free tier's per-minute limit (~10 RPM) is
-// the usual cause of empty responses: back-to-back calls burst past it.
-// 4s/song proved too tight in practice (15/min → 429 storms mid-run); 7s keeps
-// a whole-collection run at ~8.5/min, under the limit with headroom.
-const BULK_GAP_MS = 7000;
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
 // Per-song maintenance: regenerate the comment (음슴체), or add a translation to a
 // song that has none (used to give Korean songs the bilingual two-line layout).
 export default function SongTools({ songs }) {
   const [state, setState] = useState({}); // slug -> { busy, comment, msg, err }
-  const [bulk, setBulk] = useState(null); // {done, total} while extracting all keywords
   const [query, setQuery] = useState("");
   const filteredSongs = useMemo(() => filterAdminSongs(songs, query), [songs, query]);
 
@@ -48,28 +40,6 @@ export default function SongTools({ songs }) {
     } finally {
       set(slug, { busy: "" });
     }
-  };
-
-  // keywords+emotion only — comments and tags stay untouched.
-  // Sequential: parallel calls trip the Gemini free-tier rate limit.
-  const keywordsAll = async () => {
-    if (!confirm(`전체 ${songs.length}곡 = Gemini ${songs.length}회 호출 (약 ${Math.ceil((songs.length * 7) / 60)}분).\nkeywords·emotion만 채웁니다(코멘트·태그 보존). 계속할까요?`)) return;
-    for (let i = 0; i < songs.length; i++) {
-      setBulk({ done: i, total: songs.length });
-      const slug = songs[i].slug;
-      set(slug, { busy: "keywords", err: "", msg: "" });
-      try {
-        const { keywords, emotion } = await api("regenKeywords", { slug });
-        set(slug, { msg: `#${keywords.join(" #")}${emotion ? ` · ${emotion}` : ""}` });
-      } catch (e) {
-        set(slug, { err: e.message });
-      } finally {
-        set(slug, { busy: "" });
-      }
-      if (i < songs.length - 1) await sleep(BULK_GAP_MS); // stay under the RPM limit
-    }
-    setBulk({ done: songs.length, total: songs.length });
-    setTimeout(() => setBulk(null), 4000);
   };
 
   const regen = async (slug) => {
@@ -166,14 +136,17 @@ export default function SongTools({ songs }) {
       {/* 모바일: 2열 그리드, 데스크톱: 한 줄 — 고정 폭 버튼이 좁은 화면을
           뚫고 나가지 않게 한다. */}
       <div className="mb-3 grid grid-cols-2 items-center gap-2 sm:flex sm:gap-3">
+        {/* 키워드·감정 일괄 추출 버튼이 있던 자리 — 전곡 소급은 CLAUDE.md의 대량
+            작업 원칙대로 로컬 스크립트·bulkApply 경로가 맡고, 여기서는 Gemini 1회로
+            끝나는 AI 취향 리포트를 생성한다. /songs/taste 상단에 게시된다. */}
         <button
-          onClick={keywordsAll}
-          disabled={!!bulk}
-          className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight tabular-nums text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
+          onClick={musicReport}
+          disabled={recsBusy.endsWith("중…")}
+          className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
         >
-          키워드·감정
+          AI 리포트
           <br />
-          {bulk ? `추출 중… ${bulk.done}/${bulk.total}` : "일괄 추출"}
+          생성
         </button>
         <div className="flex flex-col gap-1 sm:min-w-32">
           <div className="flex gap-1">
@@ -208,15 +181,6 @@ export default function SongTools({ songs }) {
           </button>
         </div>
         <button
-          onClick={musicReport}
-          disabled={recsBusy.endsWith("중…")}
-          className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
-        >
-          취향 리포트
-          <br />
-          생성
-        </button>
-        <button
           onClick={motifs}
           disabled={recsBusy.endsWith("중…")}
           className=" border border-accent px-4 py-2 text-center text-sm font-semibold leading-tight text-accent hover:bg-accent hover:text-bg disabled:opacity-40 sm:min-w-32"
@@ -226,7 +190,7 @@ export default function SongTools({ songs }) {
           생성
         </button>
         <span className="col-span-2 text-xs text-muted sm:col-span-1">
-          {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · 키워드 추출은 keywords/emotion만 채움"}
+          {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · AI 리포트는 /songs/taste 상단에 게시"}
         </span>
       </div>
       <div className="mb-3  border border-line bg-surface p-3">
