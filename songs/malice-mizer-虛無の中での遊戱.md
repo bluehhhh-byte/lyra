@@ -5,7 +5,7 @@ artist: Malice Mizer
 artist_ko:
 album: 虚無の中での遊戯
 year: 2000
-artwork: https://upload.wikimedia.org/wikipedia/en/e/ea/Malice_Mizer_-_Kyomu_no_Naka_de_no_Y%C5%ABgi.jpg
+artwork: https://coverartarchive.org/release-group/6059578c-6dcf-36f0-bda3-9f7d9f65b305/front-500
 preview:
 trackId:
 duration:

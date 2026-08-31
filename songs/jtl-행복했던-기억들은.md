@@ -5,7 +5,7 @@ artist: JTL
 artist_ko:
 album: Love Story
 year: 2002
-artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/19/c2/e4/19c2e47c-2038-d711-5bed-9509ff28fa1d/25921_cover.png/600x600bb.jpg
 preview: 
 preview_provider: 
 external_url: https://music.apple.com/kr/album/%ED%96%89%EB%B3%B5%ED%96%88%EB%8D%98-%EA%B8%B0%EC%96%B5%EB%93%A4%EC%9D%80/1454460171?i=1454460172&uo=4

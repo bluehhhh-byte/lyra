@@ -5,7 +5,7 @@ artist: JTL
 artist_ko:
 album: Enter the Dragon
 year: 2001
-artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/35/f9/5c/35f95c50-6546-7239-631e-cf506a5c63c9/14900.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7e/65/53/7e655313-0c16-349d-733e-08401318dcf4/mzaf_6310594968924771826.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/a-better-day/1454459528?i=1454459529&uo=4

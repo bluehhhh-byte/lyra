@@ -5,7 +5,7 @@ artist: Spitz
 artist_ko:
 album: Cycle Hit 1991-1997 Spitz Complete Single Collection
 year: 1994
-artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/9a/26/3b/9a263bc6-cebd-04df-c362-2a0868d277dd/00602557728743.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1c/f0/47/1cf047d9-7d40-fbf5-1523-bdf219f86ccf/mzaf_1972404035157784962.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/spider/1440863443?i=1440863564&uo=4

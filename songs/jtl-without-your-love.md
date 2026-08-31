@@ -5,7 +5,7 @@ artist: JTL
 artist_ko:
 album: Run Away
 year: 2003
-artwork: https://cdn-images.dzcdn.net/images/cover/a23a518615a887a96ecd0c3c2f02f6d1/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/68/53/5a/68535ac7-0e87-4517-bd1c-1da361c17434/32416_cover.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e7/66/1d/e7661dae-44fe-de4f-653e-630d6bc141ff/mzaf_624443883415879264.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/without-your-love/1454460914?i=1454460917&uo=4

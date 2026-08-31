@@ -5,7 +5,7 @@ artist: Spitz
 artist_ko:
 album: Hachimitsu
 year: 1995
-artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/b2/da/d2b2dadb-068a-6641-ee96-9a3150906cbe/00600406212184.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/65/24/89/6524894a-da13-05f4-3cd9-a8345f00ab6f/mzaf_3322177088803759152.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/robinson/1440745865?i=1440746483&uo=4

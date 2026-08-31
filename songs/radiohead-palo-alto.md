@@ -5,7 +5,7 @@ artist: Radiohead
 artist_ko:
 album: No Surprises - Single
 year: 1998
-artwork: https://cdn-images.dzcdn.net/images/cover/7a378976d3ff1b1fd7b21ee0c7f95fa5/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/33/16/c9/3316c9c7-aa51-f101-c06d-502ab58bdd20/634904080563.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/20/ce/ac/20ceac91-854e-e7e3-efe8-002247c8ebc8/mzaf_12687341985963656476.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/palo-alto/1112407306?i=1112408326&uo=4

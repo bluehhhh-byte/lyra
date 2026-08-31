@@ -3,12 +3,13 @@ title: 내 모든 것
 title_ko: 내 모든 것
 artist: hu57la
 artist_ko:
-album:
+album: 내 모든 것 - Single
 year: 2025
-artwork:
+artwork: https://i.ytimg.com/vi/GJcmMbvY3jo/maxresdefault.jpg
+artwork_note: 아티스트 공식 YouTube MV 아트워크
 preview:
 trackId:
-duration: 
+duration:
 genre: R&B/Soul
 lang: ko
 tags: [R&B/Soul, 2025]
@@ -21,7 +22,6 @@ source: instagram
 source_tag: 260330_0846
 source_note: 
 source_hash: a8f146372d2906783b33afacb1cc809b0640fa20
-artwork_none: true
 lyrics_external: true
 lyrics_source: https://www.youtube.com/watch?v=GJcmMbvY3jo
 ---

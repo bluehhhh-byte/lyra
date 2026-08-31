@@ -5,7 +5,7 @@ artist: Spitz
 artist_ko:
 album: Indigo Chiheisen
 year: 1996
-artwork: https://cdn-images.dzcdn.net/images/cover/771e09f1e9c2845e4fc4c753a63797e4/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/29/c0/30/29c030c7-ae9c-a201-ef47-bf9a8b2ed31a/00600406212191.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/f4/10/19/f41019d3-99a2-6f22-877d-48138d6e1daf/mzaf_5259176001658338360.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/cherry/1440746376?i=1440747285&uo=4
