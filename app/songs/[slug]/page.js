@@ -115,6 +115,13 @@ export default async function SongPage({ params }) {
       workTitle: localMovie?.title_ko || localMovie?.title || item.workTitle,
     };
   });
+  const commentSources = (Array.isArray(song.comment_sources) ? song.comment_sources : []).flatMap((value) => {
+    try {
+      const url = new URL(value);
+      if (!/^https?:$/.test(url.protocol)) return [];
+      return [{ uri: url.href, label: url.hostname.replace(/^www\./, "") }];
+    } catch { return []; }
+  });
 
   // 컬렉션 안에서 이 곡의 자리 — 같은 장르·감정·시대·권역·아티스트가 몇 곡인지
   const genre = genreTagOf(song.tags);
@@ -233,6 +240,18 @@ export default async function SongPage({ params }) {
       {(song.comment || appearances.length > 0) && (
         <div className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
           {song.comment && <p>{song.comment}</p>}
+          {commentSources.length > 0 && (
+            <p className="mt-2 text-[11px] text-muted/80" data-comment-sources>
+              코멘트 근거 · {commentSources.map((source, index) => (
+                <span key={source.uri}>
+                  {index > 0 && " · "}
+                  <a href={source.uri} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                    {source.label} ↗
+                  </a>
+                </span>
+              ))}
+            </p>
+          )}
           {appearances.length > 0 && (
             <p className={`text-xs ${song.comment ? "mt-3" : ""}`} data-song-appearances>
               {appearances.map((item) => (

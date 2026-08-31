@@ -28,8 +28,11 @@ if (process.argv.includes("--production")) {
   assert.match(html, /삽입곡/);
   assert.match(html, /일본판 사운드트랙/);
   assert.match(html, /data-song-appearances/);
+  assert.match(html, /data-comment-sources/);
+  assert.match(html, /코멘트 근거/);
+  assert.ok(html.includes("larc-en-ciel.com/s/n137/discography/KSC2-234"), "production must expose the official comment source");
   assert.ok(html.includes("oricon.co.jp/prof/14296/products/147445/2"), "production must expose the evidence link");
-  console.log("production Lose Control appearance verification passed");
+  console.log("production Lose Control appearance provenance verification passed");
 } else {
   const songRaw = fs.readFileSync(new URL(`../songs/${slug}.md`, import.meta.url), "utf8");
   const song = parseFrontmatter(songRaw).meta;
@@ -48,10 +51,12 @@ if (process.argv.includes("--production")) {
   assert.match(song.comment, /삽입곡/);
   assert.match(song.comment, /일본판 사운드트랙/);
   assert.doesNotMatch(song.comment, /주제가/);
+  assert.equal(song.comment_basis, "web_enriched");
+  assert.ok(song.comment_sources.includes(officialDiscography));
 
   const [oricon, official] = await Promise.all([fetchText(evidenceUrl), fetchText(officialDiscography)]);
   assert.match(oricon, /GODZILLA/i);
   assert.match(oricon, /挿入歌/);
   assert.match(official, /ゴジラTHE ALBUM/);
-  console.log("Lose Control appearance verification passed");
+  console.log("Lose Control appearance provenance verification passed");
 }

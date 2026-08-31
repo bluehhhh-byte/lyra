@@ -64,6 +64,8 @@ export default function AdminForm() {
   const [translated, setTranslated] = useState("");
   const [tags, setTags] = useState("");
   const [comment, setComment] = useState("");
+  const [commentBasis, setCommentBasis] = useState("manual");
+  const [commentSources, setCommentSources] = useState([]);
   const [keywords, setKeywords] = useState([]); // 번역 가사 핵심 단어 — autotag가 채움
   const [emotion, setEmotion] = useState(""); // 감정 한 단어 — autotag가 채움
   const [busy, setBusy] = useState("");
@@ -77,6 +79,7 @@ export default function AdminForm() {
   const [lyricsNote, setLyricsNote] = useState("");
   const [appearance, setAppearance] = useState(emptyAppearanceDraft);
   const [appearanceSearchState, setAppearanceSearchState] = useState("idle");
+  const [researchWarning, setResearchWarning] = useState("");
 
   const run = (label, fn) => async () => {
     setBusy(label);
@@ -146,6 +149,8 @@ export default function AdminForm() {
       if (tko) setTitleKo(tko);
       if (ako) setArtistKo(ako);
       if (cm) setComment(cm);
+      if (cm) setCommentBasis("lyrics_only");
+      setCommentSources([]);
       commentHint = cm || "";
       // ride along invisibly — the save posts them; no review UI, the regen
       // tool can always redo them later
@@ -158,14 +163,19 @@ export default function AdminForm() {
 
     setAppearanceSearchState("searching");
     try {
-      const { suggestion, researchComment } = await api(
+      const { suggestion, researchComment, commentBasis: basis, commentSources: sources, appearanceState, researchWarning: warning } = await api(
         "appearanceSuggest",
         { ...c, lang: lg, lyrics: lyricsText, commentHint },
         { timeoutMs: 60_000 }
       );
-      if (researchComment) setComment(researchComment);
+      if (researchComment) {
+        setComment(researchComment);
+        setCommentBasis(basis || "lyrics_only");
+        setCommentSources(sources || []);
+      }
+      setResearchWarning(warning || "");
       setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
-      setAppearanceSearchState(suggestion ? "found" : "empty");
+      setAppearanceSearchState(suggestion ? "found" : appearanceState === "needs_review" ? "needs_review" : "empty");
     } catch (reason) {
       setAppearanceSearchState("error");
       setError(`작품 정보 자동 검색 실패: ${reason.message}`);
@@ -182,11 +192,14 @@ export default function AdminForm() {
       setTitleKo("");
       setArtistKo("");
       setComment("");
+      setCommentBasis("manual");
+      setCommentSources([]);
       setTranslated("");
       setLyricsNone(false);
       setInstrumental(false);
       setAppearance(emptyAppearanceDraft());
       setAppearanceSearchState("idle");
+      setResearchWarning("");
       setSearchLinks(null);
       setTags(baseTags(c, lang).join(", ")); // country/year show up the moment a song is picked
       const { lyrics: found, searchLinks: links } = await api("lyrics", c);
@@ -224,6 +237,8 @@ export default function AdminForm() {
       lang,
       tags,
       comment,
+      commentBasis,
+      commentSources: commentSources.map((source) => source.uri),
       keywords,
       emotion,
       lyrics: translated,
@@ -246,14 +261,19 @@ export default function AdminForm() {
   const searchAppearance = run("appearance", async () => {
     setAppearanceSearchState("searching");
     try {
-      const { suggestion, researchComment } = await api(
+      const { suggestion, researchComment, commentBasis: basis, commentSources: sources, appearanceState, researchWarning: warning } = await api(
         "appearanceSuggest",
         { ...(song || {}), lyrics, commentHint: comment },
         { timeoutMs: 60_000 }
       );
-      if (researchComment) setComment(researchComment);
+      if (researchComment) {
+        setComment(researchComment);
+        setCommentBasis(basis || "lyrics_only");
+        setCommentSources(sources || []);
+      }
+      setResearchWarning(warning || "");
       setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
-      setAppearanceSearchState(suggestion ? "found" : "empty");
+      setAppearanceSearchState(suggestion ? "found" : appearanceState === "needs_review" ? "needs_review" : "empty");
     } catch (reason) {
       setAppearanceSearchState("error");
       throw reason;
@@ -510,10 +530,28 @@ export default function AdminForm() {
               onAiSearch={searchAppearance}
               busy={busy === "appearance" || busy === "autotag" || busy === "translate"}
               searchState={appearanceSearchState}
+              warning={researchWarning}
             />
             <input className={input} placeholder="가수 한글 독음 (일본 아티스트만, 예: 요네즈 켄시)" value={artistKo} onChange={(e) => setArtistKo(e.target.value)} />
             <input className={input} placeholder="태그 (국적·장르·년도, 예: 영미, Rock, 2018)" value={tags} onChange={(e) => setTags(e.target.value)} />
-            <textarea className={input + " h-20"} placeholder="곡 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />
+            <textarea className={input + " h-20"} placeholder="곡 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => {
+              setComment(e.target.value);
+              setCommentBasis("manual");
+              setCommentSources([]);
+            }} />
+            {commentSources.length > 0 && (
+              <p className="text-[11px] leading-relaxed text-muted" data-comment-source-preview>
+                웹 근거: {commentSources.map((source, index) => (
+                  <span key={source.uri}>
+                    {index > 0 && " · "}
+                    <a href={source.uri} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                      {source.title || new URL(source.uri).hostname} ↗
+                    </a>
+                  </span>
+                ))}
+                <span className="ml-2">코멘트를 직접 수정하면 근거 연결은 해제됩니다.</span>
+              </p>
+            )}
           </div>
           <button className={btn + " mt-3"} disabled={busy} onClick={save}>
             {busy === "save" ? "저장 중…" : "저장"}
