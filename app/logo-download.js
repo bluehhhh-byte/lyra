@@ -38,8 +38,12 @@ export default function LogoDownload({ section = "lyra" }) {
       const anchor = document.createElement("a");
       anchor.href = url;
       anchor.download = `${section}-instagram-profile-1080.png`;
+      document.body.appendChild(anchor);
       anchor.click();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      anchor.remove();
+      // 다운로드 관리자가 Blob을 읽을 시간을 준다. 즉시 해제하면 일부 Chromium·Safari에서
+      // 큰 PNG가 시작된 직후 취소될 수 있다.
+      setTimeout(() => URL.revokeObjectURL(url), 60_000);
     }, "image/png");
   };
 
