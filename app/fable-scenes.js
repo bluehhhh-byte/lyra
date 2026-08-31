@@ -5,6 +5,7 @@ import { createCanvasSurface } from "../lib/fable/wall";
 import { createHand } from "../lib/fable/primitives";
 import { hashSeed, PALETTE, rd, stream } from "../lib/fable/core";
 import { latestArtworkPlan } from "../lib/latest-artwork";
+import { latestArtworkTasks } from "../lib/latest-artwork-draw";
 
 function runScene(tasks, reducedMotion) {
   let index = 0;
@@ -64,86 +65,8 @@ export function LatestDayScene({ latest, className = "" }) {
     const surface = createCanvasSurface(canvas, { widthUnits: W, heightUnits: H });
     const hand = createHand(surface);
     const random = stream(plan.seed);
-    const dark = document.documentElement.dataset.theme !== "light";
-    const ink = dark ? PALETTE.CINK : PALETTE.INK;
-    const paint = (name) => PALETTE[name] || PALETTE.SLATE;
-    const M = 20;
-    const sheet = [[M, M], [W - M, M], [W - M, H - M], [M, H - M]];
-    const at = (node) => ({ x: M + 8 + (node.x / 100) * (W - 2 * M - 16), y: M + 6 + (node.y / 100) * (H - 2 * M - 12) });
-    const tasks = [];
-
-    // 지시문마다 다른 그림. 어느 지시문인지는 lib/latest-artwork.js가 그날 기록으로 정한다.
-    if (plan.score === "constellation") {
-      const nodes = plan.nodes.map((node) => ({ ...node, ...at(node) }));
-      const middle = at(plan.center);
-      tasks.push(() => hand.hatchFill(random, sheet, 18, plan.angle, 0.07, { col: ink }));
-      const path = nodes.map((node) => [node.x, node.y]);
-      if (nodes.length > 1) {
-        tasks.push(() => hand.sk(random, path, { col: ink, w: 2, a: 0.5, amp: 1.2 }));
-        tasks.push(() => hand.sk(random, [...path].reverse(), { col: PALETTE.PLUM, w: 1, a: 0.3, amp: 2, gap: 0.2 }));
-      }
-      nodes.forEach((node) => {
-        const color = paint(node.color);
-        const radius = node.radius * 1.4;
-        tasks.push(() => hand.ellipse(random, node.x, node.y, radius * 1.5, radius, { col: color, w: 1.8 + node.count * 0.2, a: 0.8, amp: 0.8 }));
-        if (node.energy >= 0.55) tasks.push(() => hand.spark(random, node.x, node.y, radius * 2.4, { col: color, a: 0.8, w: 1.4, nR: 5 + Math.min(5, node.count), noCenter: true }));
-        else tasks.push(() => hand.dotF(random, node.x, node.y, Math.max(2.6, radius * 0.36), 0.86, color));
-      });
-      tasks.push(
-        () => hand.ellipse(random, middle.x, middle.y, 14 + plan.entropy * 12, 9 + plan.entropy * 7, { col: ink, w: 1.2, a: 0.5, amp: 0.8, gap: 0.16 }),
-        () => hand.dotF(random, middle.x, middle.y, 2.6, 0.8, PALETTE.VIOLET),
-      );
-    } else if (plan.score === "solo") {
-      const lead = plan.nodes[0];
-      const color = lead?.emotion ? paint(lead.color) : ink;
-      const radius = Math.min(W, H) * 0.3;
-      tasks.push(() => hand.hatchFill(random, sheet, 16, plan.angle, 0.06, { col: ink }));
-      tasks.push(() => hand.enso(random, W / 2, H / 2, radius, plan.params.fraction, color, { w: 7 + Math.min(3, plan.keywordCount), a: 0.82 }));
-      if (plan.params.energy >= 0.55) tasks.push(() => hand.spark(random, W / 2, H / 2, radius * 0.35, { col: color, a: 0.7, w: 1.4, nR: 6, noCenter: true }));
-      else tasks.push(() => hand.dotF(random, W / 2, H / 2, 4, 0.8, color));
-      for (let index = 0; index < plan.keywordCount; index++) {
-        tasks.push(() => hand.dotF(random, W / 2 + rd(random, -radius * 0.5, radius * 0.5), H / 2 + rd(random, -radius * 0.4, radius * 0.4), 1.8, 0.6, PALETTE.VIOLET));
-      }
-    } else if (plan.score === "repeat") {
-      const color = paint(plan.nodes[0].color);
-      const rows = plan.params.rows;
-      // 줄이 적으면 위아래 끝에 붙지 않고 가운데로 모인다 — 간격 상한 64
-      const gapY = Math.min(64, (H - 2 * M - 20) / Math.max(1, rows - 1));
-      const top = H / 2 - ((rows - 1) * gapY) / 2;
-      const step = 22 + plan.variant * 5;
-      for (let row = 0; row < rows; row++) {
-        const y = top + row * gapY;
-        tasks.push(() => hand.sk(random, [[M, y + 11], [W - M, y + 11]], { col: ink, w: 0.9, a: 0.2, amp: 0.8, gap: 0.1 }));
-        for (let x = M + 12; x < W - M - 6; x += step) {
-          const px = x;
-          if (plan.params.markKind === "spark") tasks.push(() => hand.spark(random, px + rd(random, -2, 2), y + rd(random, -2, 2), 10, { col: color, a: 0.85, w: 1.5, nR: 5, noCenter: true }));
-          else if (plan.params.markKind === "ring") tasks.push(() => hand.ellipse(random, px, y, 9, 6, { col: color, w: 1.6, a: 0.8, amp: 0.7 }));
-          else tasks.push(() => hand.sk(random, [[px, y - 9], [px + rd(random, -2, 2), y + 9]], { col: color, w: 2.4, a: 0.75, taper: "out", amp: 0.5 }));
-        }
-      }
-    } else {
-      const { left, right, seam } = plan.params;
-      const seamX = M + seam * (W - 2 * M);
-      const seamPoints = [];
-      for (let y = M; y <= H - M; y += 12) seamPoints.push([seamX + Math.sin(y * 0.05 + plan.variant) * 6 + rd(random, -3, 3), y]);
-      const leftPolygon = [[M, M], ...seamPoints, [M, H - M]];
-      const rightPolygon = [[W - M, M], ...seamPoints, [W - M, H - M]];
-      tasks.push(() => hand.hatchFill(random, leftPolygon, left.spacing, left.angle, 0.55, { col: paint(left.color) }));
-      tasks.push(() => hand.hatchFill(random, rightPolygon, right.spacing, right.angle, 0.55, { col: paint(right.color) }));
-      tasks.push(() => hand.sk(random, seamPoints, { col: ink, w: 1.8, a: 0.7, amp: 1.5 }));
-      tasks.push(() => hand.spatter(random, seamX, H / 2, 26, 40, ink, 0.35));
-    }
-
-    // 날씨 — 그날 감정 중심이 마지막에 덧입히는 층
-    if (plan.weather === "rain") {
-      for (let index = 0; index < plan.weatherCount; index++) tasks.push(() => hand.drip(random, rd(random, M + 6, W - M - 6), M + rd(random, 0, 20), rd(random, 50, H * 0.6), ink, 0.38, 2));
-    } else if (plan.weather === "spatter") {
-      const color = paint(plan.nodes[0]?.color);
-      for (let index = 0; index < 3; index++) tasks.push(() => hand.spatter(random, rd(random, W * 0.25, W * 0.75), rd(random, H * 0.25, H * 0.75), 40, 70, color, 0.5));
-    } else if (plan.weather === "growth") {
-      for (let index = 0; index < plan.weatherCount; index++) tasks.push(() => hand.fern(random, rd(random, M + 10, W - M - 10), H - M - 2, rd(random, 40, 85), PALETTE.SAGE));
-    }
-
+    // 붓질 목록은 lib/latest-artwork-draw.js에 있다 — 테스트가 같은 함수를 캔버스 없이 돌린다
+    const tasks = latestArtworkTasks({ hand, plan, W, H, random });
     return { tasks, reducedMotion: surface.reducedMotion };
   }, [plan.seed]);
   return <canvas ref={ref} data-latest-day-scene data-latest-day-seed={plan.seed} data-latest-day-score={plan.score} className={className} aria-hidden />;
