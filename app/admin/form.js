@@ -3,13 +3,25 @@ import { useState } from "react";
 import { usePlayer } from "../player";
 import AdminErrorMessage from "./error-message";
 import SongAppearanceEditor from "./song-appearance-editor";
+import SongAppearanceDraft, { emptyAppearanceDraft } from "./song-appearance-draft";
 
-async function api(action, body) {
-  const res = await fetch("/api/admin", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ action, ...body }),
-  });
+async function api(action, body, { timeoutMs = 0 } = {}) {
+  const controller = timeoutMs ? new AbortController() : null;
+  const timer = controller ? setTimeout(() => controller.abort(), timeoutMs) : null;
+  let res;
+  try {
+    res = await fetch("/api/admin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action, ...body }),
+      ...(controller ? { signal: controller.signal } : {}),
+    });
+  } catch (error) {
+    if (error?.name === "AbortError") throw new Error("AI 요청이 60초를 넘어 중단됐습니다. 잠시 후 다시 시도해 주세요");
+    throw error;
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
   const text = await res.text();
   let data = {};
   try {
@@ -63,6 +75,8 @@ export default function AdminForm() {
   const [lyricsNone, setLyricsNone] = useState(false);
   const [instrumental, setInstrumental] = useState(false);
   const [lyricsNote, setLyricsNote] = useState("");
+  const [appearance, setAppearance] = useState(emptyAppearanceDraft);
+  const [appearanceSearchState, setAppearanceSearchState] = useState("idle");
 
   const run = (label, fn) => async () => {
     setBusy(label);
@@ -121,9 +135,12 @@ export default function AdminForm() {
   // set country/year tags immediately, then let Gemini append moods + title + comment
   const autotag = async (c, lyricsText, lg = lang) => {
     setTags(baseTags(c, lg).join(", ")); // guaranteed baseline
-    try {
-      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em } =
-        await api("autotag", { ...c, lang: lg, lyrics: lyricsText });
+    const [metaResult, appearanceResult] = await Promise.allSettled([
+      api("autotag", { ...c, lang: lg, lyrics: lyricsText }, { timeoutMs: 60_000 }),
+      api("appearanceSuggest", c, { timeoutMs: 60_000 }),
+    ]);
+    if (metaResult.status === "fulfilled") {
+      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em } = metaResult.value;
       if (auto?.length) setTags(auto.join(", ")); // server merges base + genre + moods
       if (tko) setTitleKo(tko);
       if (ako) setArtistKo(ako);
@@ -132,7 +149,17 @@ export default function AdminForm() {
       // tool can always redo them later
       if (kw?.length) setKeywords(kw);
       if (em) setEmotion(em);
-    } catch {} // Gemini 실패해도 국가·연도 태그는 이미 세팅됨
+    }
+    if (appearanceResult.status === "fulfilled") {
+      const suggestion = appearanceResult.value.suggestion;
+      setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
+      setAppearanceSearchState(suggestion ? "found" : "empty");
+    } else {
+      setAppearance(emptyAppearanceDraft());
+      setAppearanceSearchState("empty");
+    }
+    // 메타 생성 실패는 기존처럼 국가·연도 태그를 남기고 진행한다. 작품 검색 실패도
+    // 등록을 막지 않는다 — 둘 중 하나가 살아 있으면 그 결과를 검수할 수 있다.
   };
 
   const pick = (c) =>
@@ -146,6 +173,8 @@ export default function AdminForm() {
       setTranslated("");
       setLyricsNone(false);
       setInstrumental(false);
+      setAppearance(emptyAppearanceDraft());
+      setAppearanceSearchState("idle");
       setSearchLinks(null);
       setTags(baseTags(c, lang).join(", ")); // country/year show up the moment a song is picked
       const { lyrics: found, searchLinks: links } = await api("lyrics", c);
@@ -167,12 +196,15 @@ export default function AdminForm() {
       artist: song.artist,
       lang,
       lyrics,
-    });
+    }, { timeoutMs: 60_000 });
     setTranslated(text);
     await autotag(song, lyrics);
   });
 
   const save = run("save", async () => {
+    if (appearance.workTitle.trim() && (!appearance.workType || !appearance.role)) {
+      throw new Error("작품 정보를 저장하려면 작품 종류와 사용 방식을 선택해 주세요");
+    }
     const { slug } = await api("save", {
       ...song,
       titleKo,
@@ -187,7 +219,22 @@ export default function AdminForm() {
       instrumental,
       lyricsNote,
     });
+    let appearanceError = "";
+    if (appearance.workTitle.trim()) {
+      try {
+        await api("appearanceSave", { songSlug: slug, ...appearance });
+      } catch (reason) {
+        appearanceError = reason.message;
+      }
+    }
     setSavedSlug(slug);
+    if (appearanceError) setError(`곡은 저장됐지만 작품 정보는 저장하지 못했습니다: ${appearanceError}`);
+  });
+
+  const searchAppearance = run("appearance", async () => {
+    const { suggestion } = await api("appearanceSuggest", song || {}, { timeoutMs: 60_000 });
+    setAppearance(suggestion ? { ...emptyAppearanceDraft(), ...suggestion } : emptyAppearanceDraft());
+    setAppearanceSearchState(suggestion ? "found" : "empty");
   });
 
   return (
@@ -429,7 +476,18 @@ export default function AdminForm() {
             onChange={(e) => setTranslated(e.target.value)}
           />
           <div className="mt-2 space-y-2">
-            <input className={input} placeholder="한글 제목 (예: 예스터데이)" value={titleKo} onChange={(e) => setTitleKo(e.target.value)} />
+            <label className="block text-xs text-muted">
+              한글 번역 제목
+              <input className={input + " mt-1"} placeholder="뜻을 번역해 입력 (예: Yesterday → 어제)" value={titleKo} onChange={(e) => setTitleKo(e.target.value)} />
+              <span className="mt-1 block text-[11px] text-muted/70">영어·일본어 제목의 발음 표기가 아니라 의미를 자연스럽게 번역한 제목입니다.</span>
+            </label>
+            <SongAppearanceDraft
+              value={appearance}
+              onChange={setAppearance}
+              onAiSearch={searchAppearance}
+              busy={busy === "appearance" || busy === "autotag" || busy === "translate"}
+              searchState={appearanceSearchState}
+            />
             <input className={input} placeholder="가수 한글 독음 (일본 아티스트만, 예: 요네즈 켄시)" value={artistKo} onChange={(e) => setArtistKo(e.target.value)} />
             <input className={input} placeholder="태그 (국적·장르·년도, 예: 영미, Rock, 2018)" value={tags} onChange={(e) => setTags(e.target.value)} />
             <textarea className={input + " h-20"} placeholder="곡 코멘트 (자동생성됨, 수정 가능)" value={comment} onChange={(e) => setComment(e.target.value)} />

@@ -1,6 +1,8 @@
 import { randomUUID } from "crypto";
 import { revalidatePath } from "next/cache";
 import { getAllMoviesMeta } from "../../../lib/movies";
+import { searchMovies, movieDetail } from "../../../lib/tmdb";
+import { suggestSongAppearance } from "../../../lib/admin/song-appearance-suggest";
 import {
   appearanceIdentity,
   getSongAppearancesRuntime,
@@ -33,6 +35,38 @@ async function persist(data, item) {
 }
 
 export async function handleAppearances(action, body) {
+  if (action === "appearanceSuggest") {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+    let suggestion = await suggestSongAppearance({ key, ...body });
+    if (!suggestion) return Response.json({ suggestion: null });
+
+    // AI가 확인한 작품명을 기존 TMDB 검색으로 정규화한다. 실패해도 근거가 있는
+    // 수동 작품 정보는 그대로 남겨 사용자가 검수할 수 있다.
+    try {
+      const results = await searchMovies(suggestion.workTitle);
+      const sameYear = results.find((item) => suggestion.year && Number(item.year) === Number(suggestion.year));
+      const candidate = sameYear || results[0];
+      if (candidate) {
+        const detail = await movieDetail(candidate.tmdbId, candidate.mediaType);
+        const workType = detail.isAnimation
+          ? detail.mediaType === "tv" ? "anime_series" : "anime_movie"
+          : detail.mediaType === "tv" ? "drama" : "movie";
+        suggestion = {
+          ...suggestion,
+          workTitle: detail.title || suggestion.workTitle,
+          originalTitle: detail.originalTitle || suggestion.originalTitle,
+          workType,
+          mediaType: detail.mediaType,
+          tmdbId: detail.tmdbId,
+          year: detail.year || suggestion.year,
+          poster: detail.poster || "",
+        };
+      }
+    } catch {}
+    return Response.json({ suggestion });
+  }
+
   if (action === "appearanceList") {
     const songSlug = String(body.songSlug || "").trim();
     const data = await getSongAppearancesRuntime();
