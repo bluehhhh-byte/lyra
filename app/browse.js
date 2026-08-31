@@ -18,7 +18,7 @@ const GROUPS = [
 
 const RANDOM_PICKS = 6;
 const INITIAL_RENDER = 72; // 첫 화면 + 두어 스크롤 분량
-const RENDER_STEP = 240;
+const RENDER_STEP = 80; // "더 보기" 한 번 = 페이지 API 한 페이지(HOME_PAGE_SIZE)와 같은 크기
 
 export default function Browse({ songs: initialSongs, totalSongs = initialSongs.length, availableTags = [] }) {
   const searchParams = useSearchParams();
@@ -48,6 +48,32 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
       });
     return loadPromise.current;
   }, [allLoaded]);
+
+  // "더 보기"는 다음 80곡만 가져온다 — 전곡 한 방(400KB+)은 콜드 경로에서
+  // 간헐 실패해 에러가 반복됐다. 검색·필터·그룹은 여전히 loadAllSongs가 담당.
+  const loadMoreSongs = useCallback(() => {
+    if (allLoaded) return Promise.resolve();
+    if (loadPromise.current) return loadPromise.current;
+    setLoadState("loading");
+    loadPromise.current = fetch(`/api/songs/meta/${rawSongs.length}`)
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(({ songs: page }) => {
+        if (!Array.isArray(page)) throw new Error("곡 목록 응답 형식이 올바르지 않습니다");
+        setRawSongs((prev) => {
+          const seen = new Set(prev.map((s) => s.slug));
+          return [...prev, ...page.filter((s) => !seen.has(s.slug))];
+        });
+        setLoadState("ready");
+      })
+      .catch(() => setLoadState("error"))
+      .finally(() => {
+        loadPromise.current = null;
+      });
+    return loadPromise.current;
+  }, [allLoaded, rawSongs.length]);
 
   // 검색용 소문자 문자열은 여기서 만든다 — 서버가 만들어 보내면 같은 내용이
   // 919곡 × 두 번(HTML + RSC 페이로드) 실려 초기 응답만 커진다.
@@ -308,7 +334,7 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
           <button
             disabled={loadState === "loading"}
             onClick={async () => {
-              await loadAllSongs();
+              await loadMoreSongs();
               setVisibleCount((n) => n + RENDER_STEP);
             }}
             className=" border border-line px-5 py-2 text-sm text-muted transition hover:border-accent hover:text-accent disabled:opacity-50"
