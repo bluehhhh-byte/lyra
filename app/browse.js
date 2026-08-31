@@ -365,6 +365,11 @@ function Snippet({ song, needle, lyrics }) {
   );
 }
 
+// 커버 URL을 원하는 한 변 길이로 — Apple(…/600x600bb.jpg)과 Deezer(…/1000x1000-…)
+// 둘 다 경로의 크기 토큰만 바꾸면 서버가 그 크기로 내준다. 모르는 호스트는 그대로.
+const sizedCover = (url, w) =>
+  url.replace("600x600bb", `${w}x${w}bb`).replace(/\/1000x1000-/, `/${w}x${w}-`);
+
 function Grid({ list, needle, lyrics }) {
   return (
     <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
@@ -372,14 +377,20 @@ function Grid({ list, needle, lyrics }) {
         <Link
           key={s.slug}
           href={`/songs/${s.slug}`}
-          style={{ "--i": i }}
+          // content-visibility: 화면 밖 카드는 레이아웃·페인트를 건너뛰고 디코드된
+          // 비트맵을 붙들지 않는다. "더 보기"로 카드가 수백 장 쌓이면 모바일
+          // Safari가 "문제가 반복적으로 발생"하며 탭을 재로드했다 — 메모리 크래시.
+          style={{ "--i": i, contentVisibility: "auto", containIntrinsicSize: "auto 260px" }}
           className="group card-in transition-transform duration-300 ease-out hover:-translate-y-1"
         >
           <div className="spot overflow-hidden  border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
             <CoverImage
-              // grid cells render ≤ ~300px — 300px for 1x, the 600px original for retina
-              src={s.artwork ? s.artwork.replace("600x600bb", "300x300bb") : ""}
-              srcSet={s.artwork ? `${s.artwork.replace("600x600bb", "300x300bb")} 1x, ${s.artwork} 2x` : undefined}
+              // 폭 디스크립터 + sizes: 모바일 2열(≈45vw≈170px)이 2x에서도 450px면 충분하다.
+              // 예전 "1x/2x" 방식은 모든 레티나 폰에 600px 원본을 내려 카드당 ~1.4MB의
+              // 디코드 비트맵을 쌓았다(위 크래시의 주범). 3x 폰도 450에서 멈춘다.
+              src={s.artwork ? sizedCover(s.artwork, 300) : ""}
+              srcSet={s.artwork ? [200, 300, 450].map((w) => `${sizedCover(s.artwork, w)} ${w}w`).join(", ") : undefined}
+              sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw"
               alt={`${s.title} album art`}
               label={s.title}
               loading="lazy"
