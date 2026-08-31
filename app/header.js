@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./theme-toggle";
 import SearchDialog from "./search-dialog";
-import FableLogo from "./fable-logo";
+import LogoDownload from "./logo-download";
 import { shouldOpenSearchShortcut } from "../lib/search-shortcut";
 
 const PRIMARY = [
@@ -70,14 +70,16 @@ export default function Header() {
       <header className="relative z-30 mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-6">
         {/* 로고는 두 세계의 스위치 — Lyra.를 누르면 Cyno.(영화)로, Cyno.를
             누르면 Lyra.(음악)로 넘어간다. 현재 섹션 홈은 내비의 음악/영화가 담당. */}
-        <Link
-          href={inMovies ? "/" : "/movies"}
-          title={inMovies ? "Lyra. — 음악으로" : "Cyno. — 영화로"}
-          className="flex shrink-0 items-center gap-2 font-serif text-lg font-bold"
-        >
-          <FableLogo section={inMovies ? "cyno" : "lyra"} className="h-7 w-7" />
-          <span>{inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span></span>
-        </Link>
+        <div className="flex shrink-0 items-center gap-1">
+          <LogoDownload section={inMovies ? "cyno" : "lyra"} />
+          <Link
+            href={inMovies ? "/" : "/movies"}
+            title={inMovies ? "Lyra. — 음악으로" : "Cyno. — 영화로"}
+            className="flex min-h-11 items-center font-serif text-lg font-bold"
+          >
+            <span>{inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span></span>
+          </Link>
+        </div>
 
         <nav className="hidden items-center gap-5 text-xs text-muted md:flex">
           {PRIMARY.map(([href, label]) => (
