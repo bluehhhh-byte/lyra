@@ -20,7 +20,7 @@ const CHECKS = [
   { url: "/movies", expect: null },
   { url: `/movies/${firstMovie}`, expect: null },
   { url: "/songs/taste", expect: "음악 취향" },
-  { url: "/songs/motifs", expect: "자주 등장하는 번역 가사 어휘" },
+  { url: "/songs/motifs", expect: "번역 가사에 반복된 이미지 어휘" },
   { url: "/recommendations/music", expect: "추천 곡" },
   { url: "/recommendations", expect: null },
   { url: "/watched", expect: "평가한 영화" },

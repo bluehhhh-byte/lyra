@@ -1,7 +1,7 @@
 ---
-title: FEET - 第ゼロ感
+title: 第ゼロ感
 title_ko: 0번째 감각
-artist: 10
+artist: 10-FEET
 artist_ko:
 album: 第ゼロ感 - Single
 year: 2022

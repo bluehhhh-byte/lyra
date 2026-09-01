@@ -17,6 +17,8 @@ emotion: 불안
 date: 2026-09-01
 published: 2026-08-31T21:33:37.866Z
 comment: 영화 《고질라》(1998)의 삽입곡이자 일본판 사운드트랙 수록곡이다. 끊어진 마음과 검게 물드는 그림자, 죽은 뒤 태어난 본능이라는 가사가 날카롭게 뒤틀리는 밴드 사운드와 맞물려 통제가 무너지는 순간을 괴수의 각성처럼 밀어붙인다.
+comment_basis: web_enriched
+comment_sources: [https://larc-en-ciel.com/s/n137/discography/KSC2-234?ima=0000&link=ROBO004, https://www.oricon.co.jp/prof/14296/products/147445/2/]
 ---
 [Verse 1]
 I lose control
