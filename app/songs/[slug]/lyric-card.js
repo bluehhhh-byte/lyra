@@ -398,11 +398,9 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
 
   drawPageNumber(ctx, position, total);
   ctx.textAlign = "left";
-  if (!appearance) {
-    ctx.fillStyle = "rgba(246,241,228,0.72)";
-    ctx.font = `700 24px ${SANS}`;
-    ctx.fillText("SONG NOTE", PAD, 630);
-  }
+  ctx.fillStyle = "rgba(246,241,228,0.72)";
+  ctx.font = `700 24px ${SANS}`;
+  ctx.fillText("SONG NOTE", PAD, 630);
 
   const maxW = W - PAD * 2;
   const text = note || `${song.artist}의 ${song.year || ""}년 곡.`.replace("의 년", "의");
@@ -416,7 +414,7 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
     if (lines.length * (fs + 22) <= maximumNoteHeight) break;
   }
   const lineH = fs + 22;
-  let y = appearance ? 590 : 680;
+  let y = 680;
   ctx.fillStyle = INK;
   ctx.font = `500 ${fs}px ${SANS}`;
   const noteBottom = appearance ? 900 : H - 230;
@@ -427,28 +425,25 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
   }
 
   if (appearance) {
-    // 설명의 끝을 알리는 캡션을 우측 서명처럼 두고, 수록 정보는 별도 단락으로 분리한다.
-    ctx.textAlign = "right";
-    ctx.fillStyle = "rgba(246,241,228,0.56)";
-    ctx.font = `700 18px ${SANS}`;
-    ctx.fillText("SONG NOTE", W - PAD, 950);
-    ctx.textAlign = "left";
-
-    const appearanceY = H - 292;
+    // SONG NOTE의 원래 위치는 유지하고, 수록 정보만 본문의 우측 하단 캡션으로 둔다.
+    const appearanceY = 964;
+    const appearanceMaxW = Math.floor(maxW * 0.72);
     ctx.strokeStyle = "rgba(246,241,228,0.2)";
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(PAD, appearanceY - 46);
-    ctx.lineTo(W - PAD, appearanceY - 46);
+    ctx.moveTo(W - PAD - 260, appearanceY - 34);
+    ctx.lineTo(W - PAD, appearanceY - 34);
     ctx.stroke();
+    ctx.textAlign = "right";
     ctx.fillStyle = "rgba(192,167,255,0.92)";
     ctx.font = `700 20px ${SANS}`;
-    ctx.fillText("수록 정보", PAD, appearanceY);
+    ctx.fillText("수록 정보", W - PAD, appearanceY);
     ctx.fillStyle = INK_DIM;
     ctx.font = `500 23px ${SANS}`;
-    wrap(ctx, appearance, maxW).slice(0, 2).forEach((line, index) => {
-      ctx.fillText(line, PAD, appearanceY + 38 + index * 32);
+    wrap(ctx, appearance, appearanceMaxW).slice(0, 2).forEach((line, index) => {
+      ctx.fillText(line, W - PAD, appearanceY + 38 + index * 32);
     });
+    ctx.textAlign = "left";
   }
 
   // 설명 카드도 같은 표기 규칙을 쓴다: `원문 (한글 번역)` / `아티스트 (Feat. …)`.
