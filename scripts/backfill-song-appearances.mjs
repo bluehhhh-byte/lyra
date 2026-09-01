@@ -26,7 +26,7 @@ import { geminiGrounded, GEMINI_LITE_MODEL, lastGeminiError } from "../lib/admin
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
 const root = process.cwd();
-const auditFile = path.join(root, "data", "song-appearance-backfill.json");
+const legacyAuditFile = path.join(root, "data", "song-appearance-backfill.json");
 const curatedFile = path.join(root, "data", "song-appearance-curated.json");
 const datasetFile = path.join(root, "data", "song-appearances.json");
 const args = process.argv.slice(2);
@@ -36,21 +36,25 @@ const numberArg = (name, fallback) => {
   const value = raw ? Number(raw.slice(name.length + 3)) : fallback;
   return Number.isFinite(value) && value >= 0 ? value : fallback;
 };
+const EXHAUSTIVE_SCREEN = flag("exhaustive-screen");
+const EXHAUSTIVE = flag("exhaustive") || EXHAUSTIVE_SCREEN;
+const auditFile = path.join(root, "data", EXHAUSTIVE ? "song-appearance-exhaustive.json" : "song-appearance-backfill.json");
 const SCREEN = flag("all") || flag("screen");
-const VERIFY = flag("all") || flag("verify");
+const VERIFY = flag("all") || flag("verify") || EXHAUSTIVE;
 const MERGE = flag("all") || flag("merge");
 const IMPORT_CURATED = flag("all") || flag("import-curated");
 const RESCORE = flag("rescore");
 const RESET = flag("reset");
 const LIMIT = numberArg("limit", Infinity);
+const SLUG = String((args.find((arg) => arg.startsWith("--slug=")) || "--slug=").slice(7));
 const BATCH_SIZE = Math.max(1, Math.min(10, numberArg("batch-size", 6)));
 const DELAY_MS = numberArg("delay-ms", 4200);
 const MAX_ATTEMPTS = Math.max(1, Math.min(5, numberArg("attempts", 3)));
 const PROVIDER = String((args.find((arg) => arg.startsWith("--provider=")) || "--provider=gemini").slice(11));
 const key = process.env.GEMINI_API_KEY;
 
-if (!SCREEN && !VERIFY && !MERGE && !RESCORE && !IMPORT_CURATED) {
-  console.error("usage: node scripts/backfill-song-appearances.mjs --all|--screen|--verify|--import-curated|--merge|--rescore [--limit=N]");
+if (!SCREEN && !VERIFY && !MERGE && !RESCORE && !IMPORT_CURATED && !EXHAUSTIVE_SCREEN) {
+  console.error("usage: node scripts/backfill-song-appearances.mjs --all|--exhaustive|--exhaustive-screen|--screen|--verify|--import-curated|--merge|--rescore [--limit=N] [--slug=SLUG]");
   process.exit(2);
 }
 if ((SCREEN || VERIFY) && !key) throw new Error("GEMINI_API_KEY가 없습니다.");
@@ -80,6 +84,7 @@ const corpusDigest = digest(songs.map(({ slug, title, artist, album, year }) => 
 const itemDigest = (item) => digest(JSON.stringify(item));
 const now = () => new Date().toISOString();
 const sleep = (ms) => ms > 0 ? new Promise((resolve) => setTimeout(resolve, ms)) : Promise.resolve();
+const sourceShape = (source) => ({ uri: String(source?.uri || ""), title: String(source?.title || "웹 검색 결과") });
 const jsonObject = (value) => {
   const text = String(value || "").replace(/^```(?:json)?\s*|\s*```$/g, "").trim();
   const start = text.indexOf("{");
@@ -96,17 +101,41 @@ const saveAudit = () => {
   writeJsonAtomic(auditFile, audit);
 };
 
+const legacyAudit = EXHAUSTIVE && fs.existsSync(legacyAuditFile)
+  ? JSON.parse(fs.readFileSync(legacyAuditFile, "utf8"))
+  : null;
+const legacyBatchBySlug = new Map();
+for (const batch of legacyAudit?.screeningBatches || []) {
+  for (const slug of batch.slugs || []) legacyBatchBySlug.set(String(slug), batch);
+}
+const exhaustiveResults = () => Object.fromEntries(songs.map((song) => {
+  const legacy = legacyAudit?.results?.[song.slug];
+  const batch = legacyBatchBySlug.get(song.slug);
+  return [song.slug, {
+    status: "pending",
+    phase: "exhaustive",
+    passes: [{
+      provider: "legacy-bing-untrusted",
+      status: legacy?.status || "unknown",
+      queries: (batch?.queries || legacy?.queries || []).map(String),
+      sources: (batch?.sources || legacy?.sources || []).map(sourceShape),
+      researchedAt: batch?.researchedAt || legacy?.updatedAt || null,
+    }],
+    updatedAt: now(),
+  }];
+}));
+
 let audit = !RESET && fs.existsSync(auditFile)
   ? JSON.parse(fs.readFileSync(auditFile, "utf8"))
   : {
-      version: 1,
+      version: EXHAUSTIVE ? 2 : 1,
       createdAt: now(),
       updatedAt: now(),
       corpusDigest,
       totalSongs: songs.length,
       baseline: dataset.items.map((item) => ({ id: item.id, identity: appearanceIdentity(item), digest: itemDigest(item) })),
       screeningBatches: [],
-      results: {},
+      results: EXHAUSTIVE ? exhaustiveResults() : {},
     };
 
 if (audit.corpusDigest !== corpusDigest || audit.totalSongs !== songs.length) {
@@ -117,7 +146,6 @@ audit.screeningBatches ||= [];
 
 const cluePattern = /(영화|드라마|애니메이션|애니|삽입곡|주제가|오프닝|엔딩|사운드트랙|\bOST\b|soundtrack|theme song|opening|ending|insert song)/i;
 const forcedCandidate = (song) => cluePattern.test(`${song.comment} ${song.genre} ${song.tags.join(" ")}`);
-const sourceShape = (source) => ({ uri: String(source?.uri || ""), title: String(source?.title || "웹 검색 결과") });
 
 async function grounded(prompt) {
   const result = await geminiGrounded(key, prompt, GEMINI_LITE_MODEL);
@@ -161,7 +189,7 @@ const isCandidateSource = (source, song) => {
 };
 
 async function duckSearch(song) {
-  const query = `"${song.artist}" "${song.title}" soundtrack OST theme song insert song movie drama anime 主題歌 挿入歌`;
+  const query = `"${song.artist}" "${song.title}" soundtrack OST theme song insert song movie drama anime 主題歌 挿入歌 映画 ドラマ アニメ 주제가 삽입곡 영화 드라마 애니`;
   const response = await fetch("https://html.duckduckgo.com/html/", {
     method: "POST",
     headers: {
@@ -190,6 +218,47 @@ async function duckSearch(song) {
   if (!sources.length) return null;
   const candidateSources = sources.filter((source) => isCandidateSource(source, song));
   return { query, sources, candidateSources };
+}
+
+async function runExhaustiveScreening() {
+  const pending = songs.filter((song) => {
+    if (SLUG && song.slug !== SLUG) return false;
+    return !(audit.results[song.slug]?.passes || []).some((pass) => pass.provider === "duckduckgo");
+  }).slice(0, LIMIT);
+  console.log(`exhaustive DuckDuckGo screening ${pending.length} songs`);
+  for (let index = 0; index < pending.length; index++) {
+    const song = pending[index];
+    let screened = null;
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS && !screened; attempt++) {
+      try { screened = await duckSearch(song); } catch {}
+      if (!screened && attempt < MAX_ATTEMPTS) await sleep(DELAY_MS);
+    }
+    const previous = audit.results[song.slug] || { passes: [] };
+    if (!screened) {
+      audit.results[song.slug] = {
+        ...previous, status: "retryable", phase: "screen", attempts: MAX_ATTEMPTS,
+        reason: "DuckDuckGo screening returned no parseable results", updatedAt: now(),
+      };
+      console.log(`  retryable ${song.artist} — ${song.title}`);
+    } else {
+      const sources = screened.sources.map((source) => ({ uri: source.uri, title: source.title, snippet: source.snippet }));
+      audit.results[song.slug] = {
+        ...previous,
+        status: "pending",
+        phase: "exhaustive",
+        screeningCandidate: screened.candidateSources.length > 0 || forcedCandidate(song),
+        screeningSources: screened.candidateSources.map((source) => source.uri),
+        passes: [
+          ...(previous.passes || []).filter((pass) => pass.provider !== "duckduckgo"),
+          { provider: "duckduckgo", status: "complete", queries: [screened.query], sources, researchedAt: now() },
+        ],
+        updatedAt: now(),
+      };
+      console.log(`  ${index + 1}/${pending.length} · ${audit.results[song.slug].screeningCandidate ? "candidate" : "no clue"} · ${song.artist} — ${song.title}`);
+    }
+    saveAudit();
+    if (index + 1 < pending.length) await sleep(DELAY_MS);
+  }
 }
 
 async function bingSearch(song) {
@@ -371,6 +440,7 @@ async function enrichTmdb(value) {
 async function runVerification() {
   const pending = songs.filter((song) => {
     const result = audit.results[song.slug];
+    if (EXHAUSTIVE) return result?.status === "pending" || result?.status === "retryable";
     return result?.status === "screened_candidate" || result?.status === "retryable";
   }).slice(0, LIMIT);
   console.log(`individual verification ${pending.length} songs`);
@@ -384,13 +454,19 @@ async function runVerification() {
     if (!researched) {
       audit.results[song.slug] = {
         ...audit.results[song.slug], status: "retryable", phase: "verify", attempts: MAX_ATTEMPTS,
+        researchIdentity: { title: song.title, artist: song.artist },
         reason: lastGeminiError || "individual grounded verification returned no usable result", updatedAt: now(),
       };
       console.log(`  retryable ${song.artist} — ${song.title}`);
     } else if (!researched.found) {
       audit.results[song.slug] = {
         status: existingBySong.has(song.slug) ? "existing_verified" : "no_match", phase: "complete",
+        researchIdentity: { title: song.title, artist: song.artist },
         queries: researched.queries, sources: researched.sources,
+        passes: EXHAUSTIVE ? [
+          ...(audit.results[song.slug]?.passes || []).filter((pass) => pass.provider !== "gemini-google-search"),
+          { provider: "gemini-google-search", status: "no_match", queries: researched.queries.map(String), sources: researched.sources.map(sourceShape), researchedAt: now() },
+        ] : undefined,
         existingIds: (existingBySong.get(song.slug) || []).map((item) => item.id), updatedAt: now(),
       };
       console.log(`  no match ${song.artist} — ${song.title}`);
@@ -399,6 +475,11 @@ async function runVerification() {
       for (const item of researched.appearances) enriched.push(await enrichTmdb(item));
       audit.results[song.slug] = {
         status: "verified", phase: "complete", queries: researched.queries, sources: researched.sources,
+        researchIdentity: { title: song.title, artist: song.artist },
+        passes: EXHAUSTIVE ? [
+          ...(audit.results[song.slug]?.passes || []).filter((pass) => pass.provider !== "gemini-google-search"),
+          { provider: "gemini-google-search", status: "verified", queries: researched.queries.map(String), sources: researched.sources.map(sourceShape), researchedAt: now() },
+        ] : undefined,
         appearances: enriched, updatedAt: now(),
       };
       console.log(`  verified ${song.artist} — ${song.title}: ${enriched.map((item) => item.workTitle).join(", ")}`);
@@ -501,8 +582,9 @@ function rescoreAudit() {
 }
 
 if (RESCORE) rescoreAudit();
+if (EXHAUSTIVE_SCREEN) await runExhaustiveScreening();
 if (SCREEN) await runScreening();
-if (VERIFY) await runVerification();
+if (VERIFY && !EXHAUSTIVE_SCREEN) await runVerification();
 if (IMPORT_CURATED) await importCuratedFindings();
 if (MERGE) mergeDataset();
 

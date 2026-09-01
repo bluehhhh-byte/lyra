@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-09-01T02:13:32.088Z",
-  "updatedAt": "2026-09-01T02:28:03.119Z",
+  "updatedAt": "2026-09-01T08:45:54.841Z",
   "corpusDigest": "d4a1e2dc47d031a3d030b22a9feeabd45e9eaa8f85ae3d443ff3eef65fb4e7f2",
   "totalSongs": 955,
   "baseline": [
@@ -58454,7 +58454,7 @@
           "note": "작품의 엔딩 주제가로 공식 발표됐다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:37.134Z"
+      "updatedAt": "2026-09-01T08:45:30.505Z"
     },
     "10cm-스토커": {
       "status": "no_match",
@@ -58526,7 +58526,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "강타-북극성": {
       "status": "no_match",
@@ -58586,7 +58586,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "검정치마-jeff-and-alana": {
       "status": "no_match",
@@ -58595,16 +58595,43 @@
       "updatedAt": "2026-09-01T02:20:16.802Z"
     },
     "게스노키와미오토메-ロマンスがありあまる": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-25",
-      "updatedAt": "2026-09-01T02:20:16.802Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://gesuotome.com/discography/detail/32/",
+          "title": "게스노키와미오토메 공식 디스코그래피"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "스트레이어스 크로니클",
+          "originalTitle": "ストレイヤーズ・クロニクル",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2015,
+          "poster": "",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://gesuotome.com/discography/detail/32/",
+          "evidenceLabel": "게스노키와미오토메 공식 디스코그래피",
+          "status": "verified",
+          "note": "영화의 공식 주제가로 발표된 곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:41.651Z"
     },
     "고상지-출격": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "공공구-산책": {
       "status": "no_match",
@@ -58622,7 +58649,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "그냥노창-행": {
       "status": "no_match",
@@ -58646,7 +58673,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "기리보이-이때다": {
       "status": "no_match",
@@ -58685,7 +58712,7 @@
           "note": "드라마 OST Part.8로 발표된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:48.421Z"
+      "updatedAt": "2026-09-01T08:45:39.666Z"
     },
     "김건모-빨간-우산": {
       "status": "no_match",
@@ -58730,10 +58757,37 @@
       "updatedAt": "2026-09-01T02:20:16.804Z"
     },
     "김다니엘-1of1-bonvoyage": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-43",
-      "updatedAt": "2026-09-01T02:20:16.804Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://music.apple.com/pt/song/1816687886",
+          "title": "Apple Music 공식 영화 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "이 별에 필요한",
+          "originalTitle": "Lost in Starlight",
+          "workType": "anime_movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2025,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://music.apple.com/pt/song/1816687886",
+          "evidenceLabel": "Apple Music 공식 영화 사운드트랙",
+          "status": "verified",
+          "note": "넷플릭스 애니메이션 영화의 공식 사운드트랙 수록곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:45.683Z"
     },
     "김대홍-중앙선에서": {
       "status": "verified",
@@ -58766,7 +58820,7 @@
           "note": "영화 사운드트랙에 수록된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:48.639Z"
+      "updatedAt": "2026-09-01T08:45:39.890Z"
     },
     "김동률-산책": {
       "status": "no_match",
@@ -58814,7 +58868,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "김민성-접점": {
       "status": "no_match",
@@ -58850,7 +58904,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "김사랑-dream": {
       "status": "no_match",
@@ -58886,7 +58940,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "김정민-마지막-사랑": {
       "status": "no_match",
@@ -58970,7 +59024,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "넋업샨-나찰-피타입-mc메타-불한당가": {
       "status": "no_match",
@@ -59048,7 +59102,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "달빛요정역전만루홈런-절룩거리네": {
       "status": "no_match",
@@ -59126,7 +59180,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "레이지-본-시작되는-연인들을-위하여": {
       "status": "no_match",
@@ -59135,10 +59189,37 @@
       "updatedAt": "2026-09-01T02:20:16.812Z"
     },
     "레이지본-사랑하고-싶어": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-106",
-      "updatedAt": "2026-09-01T02:20:16.812Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://music.bugs.co.kr/album/8000963",
+          "title": "벅스 공식 영화 OST"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "후아유",
+          "originalTitle": "Who Are U?",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2002,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://music.bugs.co.kr/album/8000963",
+          "evidenceLabel": "벅스 공식 영화 OST",
+          "status": "verified",
+          "note": "영화 오리지널 사운드트랙 수록곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:46.348Z"
     },
     "로우하이로우-풍속계": {
       "status": "no_match",
@@ -59150,7 +59231,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "鹿の一族-사슴의-일족-清く-ただしく": {
       "status": "no_match",
@@ -59219,10 +59300,37 @@
       "updatedAt": "2026-09-01T02:20:16.814Z"
     },
     "미고-hero": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-120",
-      "updatedAt": "2026-09-01T02:20:16.814Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://music.apple.com/us/song/1656198254",
+          "title": "Apple Music 공식 OST 트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "약한영웅 Class 1",
+          "originalTitle": "Weak Hero Class 1",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2022,
+          "poster": "",
+          "role": "background",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://music.apple.com/us/song/1656198254",
+          "evidenceLabel": "Apple Music 공식 OST 트랙",
+          "status": "verified",
+          "note": "드라마 오리지널 사운드트랙 수록곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:46.112Z"
     },
     "미선이-진달래타이머": {
       "status": "no_match",
@@ -59252,7 +59360,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "백두산-주연배우": {
       "status": "no_match",
@@ -59282,7 +59390,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "버스커-버스커-소나기": {
       "status": "no_match",
@@ -59339,7 +59447,7 @@
           "note": "공식 방송사가 또 오해영 OST로 명시한 벤의 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:48.873Z"
+      "updatedAt": "2026-09-01T08:45:40.076Z"
     },
     "벤자민-homesick": {
       "status": "verified",
@@ -59372,7 +59480,7 @@
           "note": "약한영웅 Class 1 오리지널 사운드트랙 수록곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:49.114Z"
+      "updatedAt": "2026-09-01T08:45:40.293Z"
     },
     "변진섭-너무-늦었잖아요": {
       "status": "no_match",
@@ -59411,7 +59519,7 @@
           "note": "약한영웅 Class 1 오리지널 사운드트랙 수록곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:49.300Z"
+      "updatedAt": "2026-09-01T08:45:40.526Z"
     },
     "봄여름가을겨울-못다한-내-마음을": {
       "status": "no_match",
@@ -59447,7 +59555,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "블랑세븐-fire": {
       "status": "no_match",
@@ -59579,7 +59687,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "서울전자음악단-서로-다른": {
       "status": "no_match",
@@ -59798,7 +59906,7 @@
           "note": "영화의 대표 주제가로 발표된 신승훈의 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:49.526Z"
+      "updatedAt": "2026-09-01T08:45:40.767Z"
     },
     "신용재-사랑하는-그대여": {
       "status": "no_match",
@@ -59816,7 +59924,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "실리카겔-manphasickzuck": {
       "status": "no_match",
@@ -59840,13 +59948,13 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "싸이-마지막-장면-feat-이성경": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "쏜애플-시퍼런-봄": {
       "status": "no_match",
@@ -59858,25 +59966,25 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "아이유-밤편지": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "아이유-분홍신": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "아일릿-빌려온-고양이": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "아침-불꽃놀이": {
       "status": "no_match",
@@ -59912,7 +60020,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "앰프-허수아비": {
       "status": "no_match",
@@ -60029,10 +60137,37 @@
       "updatedAt": "2026-09-01T02:20:16.827Z"
     },
     "원슈타인-k-mars": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-237",
-      "updatedAt": "2026-09-01T02:20:16.827Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.genie.co.kr/detail/albumInfo?axnm=83711955",
+          "title": "지니뮤직 공식 OST 앨범"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "방과 후 전쟁활동",
+          "originalTitle": "Duty After School",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2023,
+          "poster": "",
+          "role": "background",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.genie.co.kr/detail/albumInfo?axnm=83711955",
+          "evidenceLabel": "지니뮤직 공식 OST 앨범",
+          "status": "verified",
+          "note": "드라마 OST Part.2로 발표된 곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:45.915Z"
     },
     "원슈타인-single": {
       "status": "no_match",
@@ -60074,7 +60209,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "윤하-바람": {
       "status": "no_match",
@@ -60110,7 +60245,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "이영지-hug": {
       "status": "no_match",
@@ -60155,7 +60290,7 @@
           "note": "SBS 드라마 스토브리그 OST로 발표된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:49.740Z"
+      "updatedAt": "2026-09-01T08:45:41.038Z"
     },
     "이적-고독의-의미": {
       "status": "no_match",
@@ -60206,7 +60341,7 @@
           "note": "일타 스캔들 OST로 발표된 이적의 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:49.967Z"
+      "updatedAt": "2026-09-01T08:45:41.283Z"
     },
     "이적-빨래": {
       "status": "no_match",
@@ -60278,13 +60413,13 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "자우림-영원히-영원히": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "자우림-you-and-me": {
       "status": "no_match",
@@ -60296,19 +60431,19 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "자이언티-강승원-무중력": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "자이언티-이문세-눈": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "잔나비-그-밤-그-밤": {
       "status": "no_match",
@@ -60392,7 +60527,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "저스디스-gone": {
       "status": "no_match",
@@ -60485,7 +60620,7 @@
           "note": "나의 아저씨 오리지널 사운드트랙 수록곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:41.432Z"
     },
     "젝스키스-연정": {
       "status": "no_match",
@@ -60515,7 +60650,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "조원선-아무도-아무것도": {
       "status": "no_match",
@@ -60527,7 +60662,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "지호지방시-da-di-da": {
       "status": "no_match",
@@ -60584,7 +60719,7 @@
           "note": "기무라 유미의 곡으로 영화의 엔딩 주제가다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:48.209Z"
+      "updatedAt": "2026-09-01T08:45:39.436Z"
     },
     "최백호-변화": {
       "status": "no_match",
@@ -60686,13 +60821,13 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "크라잉넛-좋지-아니한가": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "크래쉬-psychedelic-storm": {
       "status": "no_match",
@@ -60746,7 +60881,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "팀-자장가": {
       "status": "no_match",
@@ -60788,7 +60923,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "피터팬-컴플렉스-feliz-navidad": {
       "status": "no_match",
@@ -60812,7 +60947,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "핑클-너의-마음을-내게-준다면": {
       "status": "no_match",
@@ -60872,7 +61007,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "a-beacon-school-it-s-late": {
       "status": "no_match",
@@ -61007,7 +61142,7 @@
           "note": "극장판의 오프닝 테마로 사용된 아라이 유미의 원 녹음이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:37.624Z"
+      "updatedAt": "2026-09-01T08:45:30.957Z"
     },
     "arco-happy-new-year": {
       "status": "no_match",
@@ -61058,7 +61193,7 @@
           "note": "영화의 클라이맥스에 사용된 Komm, süsser Tod의 등록 번역 제목이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:37.854Z"
+      "updatedAt": "2026-09-01T08:45:31.105Z"
     },
     "arti-noxibalkeepgoing": {
       "status": "no_match",
@@ -61133,10 +61268,37 @@
       "updatedAt": "2026-09-01T02:20:16.848Z"
     },
     "barry-manilow-copacabana-at-the-copa-long-version": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt0088951/soundtrack/",
+          "title": "IMDb TV 영화 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "코파카바나",
+          "originalTitle": "Copacabana",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 1985,
+          "poster": "",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt0088951/soundtrack/",
+          "evidenceLabel": "IMDb TV 영화 사운드트랙",
+          "status": "verified",
+          "note": "동명 TV 영화에서 새 버전으로 불린 주제곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:54.789Z"
     },
     "beck-everybody-s-gotta-learn-sometime": {
       "status": "verified",
@@ -61169,7 +61331,7 @@
           "note": "영화 사운드트랙에 수록되고 본편에 사용된 벡의 녹음이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:38.328Z"
+      "updatedAt": "2026-09-01T08:45:31.484Z"
     },
     "beck-loser": {
       "status": "no_match",
@@ -61208,10 +61370,37 @@
       "updatedAt": "2026-09-01T02:20:16.849Z"
     },
     "bimini-can-t-hold-me-back": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-402",
-      "updatedAt": "2026-09-01T02:20:16.849Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt21276958/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "베이브스",
+          "originalTitle": "Babes",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": 999582,
+          "localMovieSlug": "",
+          "year": 2024,
+          "poster": "https://image.tmdb.org/t/p/w500/1Cg4G1iQpisGXmWqns5uo4I6fPk.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt21276958/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "영화 본편 사운드트랙에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:53.163Z"
     },
     "bj-rk-all-is-full-of-love": {
       "status": "no_match",
@@ -61295,13 +61484,40 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "brett-dennen-so-far-from-me": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-417",
-      "updatedAt": "2026-09-01T02:20:16.851Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt1263292/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "그레이 아나토미",
+          "originalTitle": "Grey's Anatomy",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2009,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1263292/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘No Good at Saying Sorry’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:52.671Z"
     },
     "bruno-major-regent-s-park": {
       "status": "no_match",
@@ -61424,10 +61640,37 @@
       "updatedAt": "2026-09-01T02:20:16.853Z"
     },
     "cigarettes-after-sex-sunsetz": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-438",
-      "updatedAt": "2026-09-01T02:20:16.853Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt35052141/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "Bara Sex",
+          "originalTitle": "Bara Sex",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 281352,
+          "localMovieSlug": "",
+          "year": 2024,
+          "poster": "https://image.tmdb.org/t/p/w500/4DRePALGuNgjc7ZPmOD0LS9umkv.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt35052141/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘Take me back to the night we met’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:52.405Z"
     },
     "claire-rosinkranz-don-t-miss-me": {
       "status": "no_match",
@@ -61448,10 +61691,37 @@
       "updatedAt": "2026-09-01T02:20:16.854Z"
     },
     "coldplay-the-scientist": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-442",
-      "updatedAt": "2026-09-01T02:20:16.854Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt0703001/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "스몰빌",
+          "originalTitle": "Smallville",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2003,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt0703001/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘Rosetta’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:50.561Z"
     },
     "coldplay-what-if": {
       "status": "no_match",
@@ -61469,7 +61739,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "cyrille-aimee-diego-figueiredo-just-the-two-of-us": {
       "status": "no_match",
@@ -61532,7 +61802,7 @@
           "note": "영화 Closer에 사용된 곡으로 공식 영상이 작품을 명시한다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:38.781Z"
+      "updatedAt": "2026-09-01T08:45:31.876Z"
     },
     "damien-rice-elephant": {
       "status": "no_match",
@@ -61565,10 +61835,37 @@
       "updatedAt": "2026-09-01T02:20:16.855Z"
     },
     "danny-chung-happy-togherther": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-457",
-      "updatedAt": "2026-09-01T02:20:16.855Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt0118845/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "해피 투게더",
+          "originalTitle": "春光乍洩 / Happy Together",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 1997,
+          "poster": "",
+          "role": "ending",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt0118845/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "대니 정의 커버가 영화 마지막에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:44.974Z"
     },
     "david-choi-love": {
       "status": "no_match",
@@ -61586,7 +61883,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "dean-die-4-you": {
       "status": "no_match",
@@ -61691,10 +61988,37 @@
       "updatedAt": "2026-09-01T02:20:16.858Z"
     },
     "dreams-come-true-朝がまた来る": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-478",
-      "updatedAt": "2026-09-01T02:20:16.858Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.fujitv.co.jp/b_hp/kyumei24_1st/",
+          "title": "후지TV 공식 작품 페이지"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "구명병동 24시",
+          "originalTitle": "救命病棟24時",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 36409,
+          "localMovieSlug": "",
+          "year": 1999,
+          "poster": "https://image.tmdb.org/t/p/w500/ndJNopwRr3YAswtSUpcBk2inHhy.jpg",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.fujitv.co.jp/b_hp/kyumei24_1st/",
+          "evidenceLabel": "후지TV 공식 작품 페이지",
+          "status": "verified",
+          "note": "드라마 첫 번째 시리즈의 공식 테마곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:43.534Z"
     },
     "dumbfoundead-loppy-nafla-미장원": {
       "status": "no_match",
@@ -61853,10 +62177,37 @@
       "updatedAt": "2026-09-01T02:20:16.862Z"
     },
     "frank-ocean-pink-white": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-505",
-      "updatedAt": "2026-09-01T02:20:16.862Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt8245466/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "셰임리스",
+          "originalTitle": "Shameless",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2018,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt8245466/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘Face It, You're Gorgeous’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:53.414Z"
     },
     "full-flower-moon-band-new-rocket": {
       "status": "no_match",
@@ -61937,7 +62288,7 @@
           "note": "진 켈리가 본편에서 부른 대표적인 극중곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:39.249Z"
+      "updatedAt": "2026-09-01T08:45:32.270Z"
     },
     "gener8ion-yung-lean-storm-i": {
       "status": "no_match",
@@ -62000,7 +62351,7 @@
           "note": "TV 애니메이션의 오프닝 주제가로 공식 발표됐다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:39.475Z"
+      "updatedAt": "2026-09-01T08:45:32.420Z"
     },
     "glay-missing-you": {
       "status": "no_match",
@@ -62015,10 +62366,37 @@
       "updatedAt": "2026-09-01T02:20:16.865Z"
     },
     "glay-ここではない-どこかへ-2": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-523",
-      "updatedAt": "2026-09-01T02:20:16.865Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.glay.co.jp/news/list/4/55/?page=3",
+          "title": "GLAY 공식 사이트"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "not so 퍼펙트 러브",
+          "originalTitle": "パーフェクトラブ！",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 37901,
+          "localMovieSlug": "",
+          "year": 1999,
+          "poster": "https://image.tmdb.org/t/p/w500/fnmcQsiTITRLMh3AiV7Whk5mpqv.jpg",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.glay.co.jp/news/list/4/55/?page=3",
+          "evidenceLabel": "GLAY 공식 사이트",
+          "status": "verified",
+          "note": "후지TV 드라마의 공식 주제가다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:43.057Z"
     },
     "glen-hansard-say-it-to-me-now": {
       "status": "verified",
@@ -62051,7 +62429,7 @@
           "note": "영화 초반 더블린 거리 공연 장면에서 사용된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:39.983Z"
+      "updatedAt": "2026-09-01T08:45:32.793Z"
     },
     "go-shiina-竈門炭治郎のうた": {
       "status": "verified",
@@ -62084,7 +62462,7 @@
           "note": "19화의 삽입곡으로 공식 음악 페이지에 수록돼 있다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:40.217Z"
+      "updatedAt": "2026-09-01T08:45:32.942Z"
     },
     "god-0": {
       "status": "no_match",
@@ -62144,7 +62522,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "h1-key-건물-사이에-피어난-장미": {
       "status": "no_match",
@@ -62363,7 +62741,7 @@
           "note": "주인공의 무대 춤 장면에 사용된 녹음이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:40.680Z"
+      "updatedAt": "2026-09-01T08:45:33.313Z"
     },
     "jamiroquai-supersonic": {
       "status": "no_match",
@@ -62438,10 +62816,37 @@
       "updatedAt": "2026-09-01T02:20:16.871Z"
     },
     "jos-phine-baker-besame-mucho": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-580",
-      "updatedAt": "2026-09-01T02:20:16.871Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt9548458/soundtrack/",
+          "title": "IMDb 7화 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "러브크래프트 컨트리",
+          "originalTitle": "Lovecraft Country",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 82816,
+          "localMovieSlug": "",
+          "year": 2020,
+          "poster": "https://image.tmdb.org/t/p/w500/fz7bdjxPColvEWCGr5Kiclzc86d.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt9548458/soundtrack/",
+          "evidenceLabel": "IMDb 7화 사운드트랙",
+          "status": "verified",
+          "note": "7화 ‘I Am.’에 조세핀 베이커의 녹음이 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:47.266Z"
     },
     "jtl-행복했던-기억들은": {
       "status": "no_match",
@@ -62570,10 +62975,37 @@
       "updatedAt": "2026-09-01T02:20:16.873Z"
     },
     "kenshi-yonezu-地球儀": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-602",
-      "updatedAt": "2026-09-01T02:20:16.873Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://reissuerecords.net/chikyugi/",
+          "title": "요네즈 켄시 공식 사이트"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "그대들은 어떻게 살 것인가",
+          "originalTitle": "君たちはどう生きるか",
+          "workType": "anime_movie",
+          "mediaType": "movie",
+          "tmdbId": 508883,
+          "localMovieSlug": "",
+          "year": 2023,
+          "poster": "https://image.tmdb.org/t/p/w500/bzEpxah8vLNzPDrvswwgJ9rZQGX.jpg",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://reissuerecords.net/chikyugi/",
+          "evidenceLabel": "요네즈 켄시 공식 사이트",
+          "status": "verified",
+          "note": "미야자키 하야오 감독의 영화를 위해 쓴 공식 주제가다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:42.574Z"
     },
     "kenshi-yonezu-garakuta-junk": {
       "status": "verified",
@@ -62606,7 +63038,7 @@
           "note": "영화를 위해 쓴 공식 주제가다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:41.114Z"
+      "updatedAt": "2026-09-01T08:45:33.751Z"
     },
     "kenshi-yonezu-kick-back": {
       "status": "no_match",
@@ -62687,7 +63119,7 @@
         "12926346-bfe5-4f13-8957-80ebaaf492e8"
       ],
       "reason": "manual review found no additional appearance",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "l-arc-en-ciel-new-world": {
       "status": "no_match",
@@ -62744,13 +63176,13 @@
           "note": "영화 음악 공식 목록에 포함된 Lady Gaga의 녹음이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:41.645Z"
+      "updatedAt": "2026-09-01T08:45:34.180Z"
     },
     "lamp-恋人へ-연인에게": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "lance-savali-devotion": {
       "status": "no_match",
@@ -62768,7 +63200,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "lareine-grand-pain": {
       "status": "no_match",
@@ -62903,7 +63335,7 @@
           "note": "영화와 공식 사운드트랙에 사용된 루 리드의 원 녹음이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:42.116Z"
+      "updatedAt": "2026-09-01T08:45:34.523Z"
     },
     "loveholic-그대만-있다면": {
       "status": "no_match",
@@ -63002,10 +63434,37 @@
       "updatedAt": "2026-09-01T02:20:16.880Z"
     },
     "mandi-yuki-kanesaka-an-ending-unknown": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-660",
-      "updatedAt": "2026-09-01T02:20:16.880Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://ototoy.jp/_/default/p/3813232",
+          "title": "TV 애니메이션 공식 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "일본삼국",
+          "originalTitle": "日本三國",
+          "workType": "anime_series",
+          "mediaType": "tv",
+          "tmdbId": 312474,
+          "localMovieSlug": "",
+          "year": 2026,
+          "poster": "https://image.tmdb.org/t/p/w500/4TE1dbMHZiC03G0GbEIYltANBEn.jpg",
+          "role": "background",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://ototoy.jp/_/default/p/3813232",
+          "evidenceLabel": "TV 애니메이션 공식 사운드트랙",
+          "status": "verified",
+          "note": "TV 애니메이션 오리지널 사운드트랙에 수록되고 12화에 사용된 곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:46.810Z"
     },
     "mansun-dark-mavis": {
       "status": "no_match",
@@ -63194,10 +63653,37 @@
       "updatedAt": "2026-09-01T02:20:16.884Z"
     },
     "miles-caton-travelin": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-692",
-      "updatedAt": "2026-09-01T02:20:16.884Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.youtube.com/watch?v=suxyBQr1TQw",
+          "title": "SonySoundtracksVEVO 공식 OST"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "씨너스: 죄인들",
+          "originalTitle": "Sinners",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": 1233413,
+          "localMovieSlug": "",
+          "year": 2025,
+          "poster": "https://image.tmdb.org/t/p/w500/qEipksU5SzHxbeZbE0cZQzEt6bD.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.youtube.com/watch?v=suxyBQr1TQw",
+          "evidenceLabel": "SonySoundtracksVEVO 공식 OST",
+          "status": "verified",
+          "note": "영화 공식 사운드트랙에 수록되고 본편에서 불린 곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:45.448Z"
     },
     "mina-okabe-maybe-one-day": {
       "status": "no_match",
@@ -63248,7 +63734,7 @@
           "note": "후지TV 드라마의 주제가로 공식 표기돼 있다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:42.600Z"
+      "updatedAt": "2026-09-01T08:45:34.894Z"
     },
     "miyavi-holy-nights": {
       "status": "no_match",
@@ -63290,7 +63776,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "nafla-adrenaline": {
       "status": "no_match",
@@ -63302,13 +63788,13 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "nell-백야": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "nell-crash": {
       "status": "no_match",
@@ -63320,7 +63806,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "newjeans-ditto": {
       "status": "no_match",
@@ -63329,10 +63815,37 @@
       "updatedAt": "2026-09-01T02:20:16.886Z"
     },
     "nick-drake-day-is-done": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-710",
-      "updatedAt": "2026-09-01T02:20:16.886Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt0691061/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "The Royal",
+          "originalTitle": "The Royal",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 2054,
+          "localMovieSlug": "",
+          "year": 2003,
+          "poster": "https://image.tmdb.org/t/p/w500/x4YxZeQ7pGmaJVLzIQ784nzqDgX.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt0691061/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘For Those in Peril’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:54.082Z"
     },
     "nirvana-dumb": {
       "status": "no_match",
@@ -63395,22 +63908,103 @@
       "updatedAt": "2026-09-01T02:20:16.887Z"
     },
     "official髭男dism-らしさ": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-721",
-      "updatedAt": "2026-09-01T02:20:16.887Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://hyakuemu-anime.com/info/91/",
+          "title": "극장 애니메이션 공식 발표"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "100미터.",
+          "originalTitle": "ひゃくえむ。",
+          "workType": "anime_movie",
+          "mediaType": "movie",
+          "tmdbId": 1295026,
+          "localMovieSlug": "",
+          "year": 2025,
+          "poster": "https://image.tmdb.org/t/p/w500/itooVuz3gka7ykr3TpOvwXYqESM.jpg",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://hyakuemu-anime.com/info/91/",
+          "evidenceLabel": "극장 애니메이션 공식 발표",
+          "status": "verified",
+          "note": "극장 애니메이션을 위해 쓴 공식 주제가다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:42.109Z"
     },
     "ok-go-this-too-shall-pass": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-722",
-      "updatedAt": "2026-09-01T02:20:16.887Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt1606389/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "서약",
+          "originalTitle": "The Vow",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": 72570,
+          "localMovieSlug": "",
+          "year": 2012,
+          "poster": "https://image.tmdb.org/t/p/w500/rjHc33xVVEgpbPg6vDjGcZfQSNv.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1606389/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "영화 본편 사운드트랙에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:48.925Z"
     },
     "oku-hanako-變わらないもの-변하지-않는-것": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-723",
-      "updatedAt": "2026-09-01T02:20:16.887Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.youtube.com/watch?v=pTRrr3XtQwU",
+          "title": "오쿠 하나코 공식 채널"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "시간을 달리는 소녀",
+          "originalTitle": "時をかける少女",
+          "workType": "anime_movie",
+          "mediaType": "movie",
+          "tmdbId": 14069,
+          "localMovieSlug": "",
+          "year": 2006,
+          "poster": "https://image.tmdb.org/t/p/w500/zhvpSzYKUMdAfId2VSU1qLFeW5x.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.youtube.com/watch?v=pTRrr3XtQwU",
+          "evidenceLabel": "오쿠 하나코 공식 채널",
+          "status": "verified",
+          "note": "극장판 애니메이션의 공식 삽입곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:44.502Z"
     },
     "olivia-dean-dive": {
       "status": "no_match",
@@ -63581,7 +64175,7 @@
           "note": "영화를 위해 제작되고 작품 음악으로 사용된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:43.076Z"
+      "updatedAt": "2026-09-01T08:45:35.277Z"
     },
     "phoenix-j-boy": {
       "status": "no_match",
@@ -63623,13 +64217,13 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "pierrot-psychedelic-lover": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "placebo-every-you-every-me": {
       "status": "verified",
@@ -63662,13 +64256,40 @@
           "note": "영화 오리지널 사운드트랙에 수록된 Placebo의 녹음이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:43.588Z"
+      "updatedAt": "2026-09-01T08:45:35.669Z"
     },
     "plain-white-t-s-hey-there-delilah": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-757",
-      "updatedAt": "2026-09-01T02:20:16.891Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt1016097/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "Greek",
+          "originalTitle": "Greek",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 1242,
+          "localMovieSlug": "",
+          "year": 2007,
+          "poster": "https://image.tmdb.org/t/p/w500/rACiWmSFI4Js0ZGI4Q0P5LJ895R.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1016097/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘The Rusty Nail’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:51.027Z"
     },
     "plastic-tree-月世界-달세계": {
       "status": "no_match",
@@ -63755,7 +64376,7 @@
           "note": "동명 영화의 주제가로 수록된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:44.573Z"
+      "updatedAt": "2026-09-01T08:45:36.402Z"
     },
     "quruli-highway": {
       "status": "verified",
@@ -63788,7 +64409,7 @@
           "note": "구루리가 맡은 영화 주제가다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:44.108Z"
+      "updatedAt": "2026-09-01T08:45:36.034Z"
     },
     "rachael-yamagata-be-be-your-love": {
       "status": "no_match",
@@ -63827,10 +64448,37 @@
       "updatedAt": "2026-09-01T02:20:16.892Z"
     },
     "radiohead-how-to-disappear-completely": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-775",
-      "updatedAt": "2026-09-01T02:20:16.892Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt33356337/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "Invisible",
+          "originalTitle": "Invisible",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 220513,
+          "localMovieSlug": "",
+          "year": 2024,
+          "poster": "https://image.tmdb.org/t/p/w500/lFZP4MGrihct1lUV54T2n7HrrnA.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt33356337/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘La chica del dragón en la espalda’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:54.562Z"
     },
     "radiohead-killer-car": {
       "status": "no_match",
@@ -64037,7 +64685,7 @@
           "note": "Rumi와 Jinu가 본편에서 부르는 듀엣 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:45.018Z"
+      "updatedAt": "2026-09-01T08:45:36.812Z"
     },
     "ryuichi-kawamura-ne": {
       "status": "no_match",
@@ -64076,7 +64724,7 @@
           "note": "메인 테마를 David Sylvian의 보컬곡으로 확장한 영화 음악이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:45.245Z"
+      "updatedAt": "2026-09-01T08:45:36.982Z"
     },
     "s-e-s-twilight-zone": {
       "status": "no_match",
@@ -64115,10 +64763,58 @@
       "updatedAt": "2026-09-01T02:20:16.899Z"
     },
     "scissor-sisters-i-don-t-feel-like-dancin": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-814",
-      "updatedAt": "2026-09-01T02:20:16.899Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt13405810/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        },
+        {
+          "uri": "https://www.imdb.com/title/tt1039368/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "퀴즈 레이디",
+          "originalTitle": "Quiz Lady",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": 787781,
+          "localMovieSlug": "",
+          "year": 2023,
+          "poster": "https://image.tmdb.org/t/p/w500/rFAAWVcg2uGEwE33kI17ORr3pYr.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt13405810/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "영화 본편 사운드트랙에 사용됐다."
+        },
+        {
+          "workTitle": "프라이빗 프랙티스",
+          "originalTitle": "Private Practice",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 3172,
+          "localMovieSlug": "",
+          "year": 2007,
+          "poster": "https://image.tmdb.org/t/p/w500/pW20ANAGdrgreYJExduUVaWos6H.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1039368/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "첫 번째 에피소드에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:51.938Z"
     },
     "seiko-matsuda-sweet-memories": {
       "status": "no_match",
@@ -64145,10 +64841,37 @@
       "updatedAt": "2026-09-01T02:20:16.899Z"
     },
     "sheena-ringo-人間として": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-819",
-      "updatedAt": "2026-09-01T02:20:16.899Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.universal-music.co.jp/sheena-ringo/news/2024-03-13/",
+          "title": "유니버설 뮤직 재팬 공식 발표"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "데스티니",
+          "originalTitle": "Destiny",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 248345,
+          "localMovieSlug": "",
+          "year": 2024,
+          "poster": "https://image.tmdb.org/t/p/w500/ch8clXcxFAMqvvBw18J6BpPJ3XU.jpg",
+          "role": "main_theme",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.universal-music.co.jp/sheena-ringo/news/2024-03-13/",
+          "evidenceLabel": "유니버설 뮤직 재팬 공식 발표",
+          "status": "verified",
+          "note": "TV아사히 드라마를 위해 쓴 공식 주제가다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:44.029Z"
     },
     "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark": {
       "status": "no_match",
@@ -64193,10 +64916,37 @@
       "updatedAt": "2026-09-01T02:20:16.900Z"
     },
     "sigur-ros-hoppipolla": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-827",
-      "updatedAt": "2026-09-01T02:20:16.900Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt1259520/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "보나페티",
+          "originalTitle": "Bon appétit",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2010,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1259520/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "영화 본편 사운드트랙에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:49.389Z"
     },
     "silica-gel-ph-1004": {
       "status": "no_match",
@@ -64325,7 +65075,7 @@
           "note": "TBS 금요 드라마의 공식 주제가다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:45.699Z"
+      "updatedAt": "2026-09-01T08:45:37.397Z"
     },
     "starsailor-in-the-crossfire": {
       "status": "no_match",
@@ -64400,10 +65150,37 @@
       "updatedAt": "2026-09-01T02:20:16.903Z"
     },
     "stratovarius-forever": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://music.bugs.co.kr/album/25415",
+          "title": "벅스 공식 앨범 정보"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "첫사랑",
+          "originalTitle": "First Love",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 1996,
+          "poster": "",
+          "role": "ending",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://music.bugs.co.kr/album/25415",
+          "evidenceLabel": "벅스 공식 앨범 정보",
+          "status": "verified",
+          "note": "KBS 드라마에 삽입되어 엔딩을 장식한 곡이다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:44.739Z"
     },
     "stryper-always-there-for-you": {
       "status": "no_match",
@@ -64490,13 +65267,40 @@
           "note": "극장판의 주제가로 공식 발표됐다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:45.941Z"
+      "updatedAt": "2026-09-01T08:45:37.544Z"
     },
     "tame-impala-dracula": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-868",
-      "updatedAt": "2026-09-01T02:20:16.905Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt35115567/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "더 뷰티",
+          "originalTitle": "The Beauty",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 273160,
+          "localMovieSlug": "",
+          "year": 2026,
+          "poster": "https://image.tmdb.org/t/p/w500/1vyJFAvQczIahJzepNQQSkxLYqB.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt35115567/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘Beautiful Patient Zero’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:47.743Z"
     },
     "tame-impala-wings-of-time": {
       "status": "verified",
@@ -64529,13 +65333,13 @@
           "note": "영화를 위해 발표된 공식 영화 음악이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:46.410Z"
+      "updatedAt": "2026-09-01T08:45:37.928Z"
     },
     "tbny-투루먼쇼": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "tears-for-fears-head-over-heels": {
       "status": "no_match",
@@ -64565,7 +65369,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "the-beach-boys-wouldn-t-it-be-nice": {
       "status": "no_match",
@@ -64622,10 +65426,37 @@
       "updatedAt": "2026-09-01T02:20:16.907Z"
     },
     "the-hives-tick-tick-boom": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-885",
-      "updatedAt": "2026-09-01T02:20:16.907Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt4161962/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "아오라 오 눈카",
+          "originalTitle": "Ahora o nunca",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2015,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt4161962/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "영화 본편 사운드트랙에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:47.977Z"
     },
     "the-hives-won-t-be-long": {
       "status": "no_match",
@@ -64634,10 +65465,37 @@
       "updatedAt": "2026-09-01T02:20:16.907Z"
     },
     "the-kooks-ooh-la": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-887",
-      "updatedAt": "2026-09-01T02:20:16.907Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt0663915/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "The O.C.",
+          "originalTitle": "The O.C.",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2005,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt0663915/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘The Shape of Things to Come’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:49.631Z"
     },
     "the-koxx-12-00": {
       "status": "no_match",
@@ -64670,10 +65528,37 @@
       "updatedAt": "2026-09-01T02:20:16.908Z"
     },
     "the-rare-occasions-notion": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-893",
-      "updatedAt": "2026-09-01T02:20:16.908Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt3220900/soundtrack/",
+          "title": "IMDb 작품 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "애덜레선스",
+          "originalTitle": "Adolescence",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2018,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt3220900/soundtrack/",
+          "evidenceLabel": "IMDb 작품 사운드트랙",
+          "status": "verified",
+          "note": "영화 본편 사운드트랙에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:49.165Z"
     },
     "the-restless-age-don-t-forget-about-me": {
       "status": "verified",
@@ -64706,25 +65591,127 @@
           "note": "드라마 오리지널 사운드트랙에 수록된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:46.641Z"
+      "updatedAt": "2026-09-01T08:45:38.083Z"
     },
     "the-smashing-pumpkins-1979": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-895",
-      "updatedAt": "2026-09-01T02:20:16.908Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt1001710/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "Cold Case",
+          "originalTitle": "Cold Case",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2007,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1001710/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘The Good Death’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:53.568Z"
     },
     "the-smashing-pumpkins-bullet-with-butterfly-wings": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-896",
-      "updatedAt": "2026-09-01T02:20:16.908Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt1963577/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        },
+        {
+          "uri": "https://www.imdb.com/title/tt0829658/soundtrack/",
+          "title": "IMDb 에피소드 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "Psych.",
+          "originalTitle": "Psych.",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": 1688977,
+          "localMovieSlug": "",
+          "year": 2011,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt1963577/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘This Episode Sucks’에 사용됐다."
+        },
+        {
+          "workTitle": "Cold Case",
+          "originalTitle": "Cold Case",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 2006,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt0829658/soundtrack/",
+          "evidenceLabel": "IMDb 에피소드 사운드트랙",
+          "status": "verified",
+          "note": "에피소드 ‘Rampage’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:50.332Z"
     },
     "the-smashing-pumpkins-mayonaise": {
-      "status": "no_match",
+      "status": "verified",
       "phase": "complete",
-      "batchId": "bing-897",
-      "updatedAt": "2026-09-01T02:20:16.908Z"
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.imdb.com/title/tt16265716/soundtrack/",
+          "title": "IMDb 3화 사운드트랙"
+        }
+      ],
+      "appearances": [
+        {
+          "workTitle": "성난 사람들",
+          "originalTitle": "BEEF",
+          "workType": "drama",
+          "mediaType": "tv",
+          "tmdbId": 154385,
+          "localMovieSlug": "",
+          "year": 2023,
+          "poster": "https://image.tmdb.org/t/p/w500/hsTjJyTBAxY5LwGBki2tzkv0dd9.jpg",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://www.imdb.com/title/tt16265716/soundtrack/",
+          "evidenceLabel": "IMDb 3화 사운드트랙",
+          "status": "verified",
+          "note": "3화 ‘Figures of Light’에 사용됐다."
+        }
+      ],
+      "updatedAt": "2026-09-01T08:45:48.455Z"
     },
     "the-smashing-pumpkins-stand-inside-your-love": {
       "status": "no_match",
@@ -64796,7 +65783,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "the-walters-i-love-you-so": {
       "status": "no_match",
@@ -64874,7 +65861,7 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "tyler-the-creater-i-ll-take-care-of-you": {
       "status": "no_match",
@@ -64988,19 +65975,19 @@
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "xxx-수작": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "xxx-승무원": {
       "status": "no_match",
       "phase": "complete",
       "reason": "manual review rejected the screening false positive",
-      "updatedAt": "2026-09-01T02:27:50.209Z"
+      "updatedAt": "2026-09-01T08:45:54.790Z"
     },
     "yama-飛ぼうよ": {
       "status": "verified",
@@ -65033,7 +66020,7 @@
           "note": "TV 애니메이션의 엔딩 테마로 공식 발표됐다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:47.086Z"
+      "updatedAt": "2026-09-01T08:45:38.527Z"
     },
     "yoko-kanno-blue": {
       "status": "verified",
@@ -65066,7 +66053,7 @@
           "note": "최종 26화의 엔딩에 사용된 곡이다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:47.292Z"
+      "updatedAt": "2026-09-01T08:45:38.682Z"
     },
     "young-posse-xxl": {
       "status": "no_match",
@@ -65153,9 +66140,9 @@
           "note": "TV 애니메이션 LIAR GAME의 오프닝 테마다."
         }
       ],
-      "updatedAt": "2026-09-01T02:27:47.723Z"
+      "updatedAt": "2026-09-01T08:45:39.049Z"
     }
   },
-  "mergedAt": "2026-09-01T02:28:03.109Z",
-  "mergedItems": 38
+  "mergedAt": "2026-09-01T08:45:54.836Z",
+  "mergedItems": 75
 }
