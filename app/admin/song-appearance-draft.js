@@ -39,7 +39,7 @@ export const emptyAppearanceDraft = () => ({
   searchEntryPoint: "",
 });
 
-export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy, searchState }) {
+export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy, searchState, warning }) {
   const set = (key, next) => onChange({ ...value, [key]: next });
   const hasValue = Boolean(value.workTitle);
 
@@ -73,6 +73,12 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
       )}
       {searchState === "error" && (
         <p className="mt-3 text-xs text-red-400" role="alert">웹 검색을 완료하지 못했습니다. 빈칸은 ‘수록 정보 없음’ 판정이 아니므로 다시 시도해 주세요.</p>
+      )}
+      {searchState === "needs_review" && (
+        <p className="mt-3 text-xs text-amber-300" role="alert">{warning || "출처가 충돌하거나 충분히 신뢰할 수 없어 자동 입력하지 않았습니다. 근거를 직접 검토해 주세요."}</p>
+      )}
+      {warning && searchState !== "needs_review" && (
+        <p className="mt-3 text-xs text-amber-300" role="status">웹 조사 참고: {warning}</p>
       )}
 
       <div className="mt-3 grid gap-3 sm:grid-cols-2">

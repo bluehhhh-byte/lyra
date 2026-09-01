@@ -22,10 +22,27 @@ import {
   correctionEvidenceState,
   correctionEvidenceSummary,
 } from "../../../lib/admin/correction-evidence";
+
 import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
 import { appendReportVersion } from "../../../lib/report-history";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
+const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
+  .map((value) => {
+    try {
+      const url = new URL(String(value || "").trim());
+      return /^https?:$/.test(url.protocol) && !url.href.includes(",") ? url.href : "";
+    } catch { return ""; }
+  })
+  .filter(Boolean)
+  .filter((value, index, all) => all.indexOf(value) === index)
+  .slice(0, 3);
+const setCommentWithProvenance = (raw, comment, basis = "manual", sources = []) => {
+  const urls = commentSourceUrls(sources);
+  let next = setField(raw, "comment", comment, "date");
+  next = setField(next, "comment_basis", basis, "comment");
+  return setField(next, "comment_sources", `[${urls.join(", ")}]`, "comment_basis");
+};
 
 const variantsFromRaw = (raw) => {
   const { body } = parseFrontmatter((raw || "").replace(/\r\n/g, "\n"));
@@ -452,7 +469,7 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
       filled.push("tags");
     }
     if (isBlank(fmValue(fm, "comment")) && auto.comment) {
-      out = setField(out, "comment", auto.comment, "date");
+      out = setCommentWithProvenance(out, auto.comment, "lyrics_only");
       filled.push("comment");
     }
     if (isBlank(fmValue(fm, "title_ko")) && auto.titleKo) {
@@ -553,7 +570,7 @@ ${koText.slice(0, 2000)}`,
       updated.push("tags");
     }
     if (auto.comment) {
-      out = setField(out, "comment", auto.comment, "date");
+      out = setCommentWithProvenance(out, auto.comment, "lyrics_only");
       updated.push("comment");
     }
     // title_ko: for ko songs computeAuto returns the title itself — skip that no-op
@@ -639,9 +656,17 @@ ${koText.slice(0, 2000)}`,
       return Response.json({ error: withReason("코멘트 웹 리서치를 완료하지 못했습니다") }, { status: 503 });
     const comment = research.comment;
     if (!comment)
-      return Response.json({ error: "웹 근거를 연결한 코멘트를 만들지 못했습니다. 잠시 후 다시 시도해 주세요" }, { status: 422 });
-    await writeSong(body.slug, setField(raw, "comment", comment, "date"), `chore(song): regen comment — ${body.slug}`);
-    return Response.json({ comment, appearanceSuggestion: research.appearance });
+      return Response.json({ error: research.warning || "검증 가능한 코멘트를 만들지 못했습니다. 잠시 후 다시 시도해 주세요" }, { status: 422 });
+    const sourceUrls = research.commentSources.map((source) => source.uri);
+    const next = setCommentWithProvenance(raw, comment, research.commentBasis || "lyrics_only", sourceUrls);
+    await writeSong(body.slug, next, `chore(song): regen comment — ${body.slug}`);
+    return Response.json({
+      comment,
+      commentBasis: research.commentBasis,
+      commentSources: research.commentSources,
+      researchWarning: research.warning,
+      appearanceSuggestion: research.appearance,
+    });
   }
 
   // Add the "> " translation line to each lyric line — used to give a Korean song
@@ -851,7 +876,7 @@ ${listed}`,
       if (it.comment !== undefined && String(it.comment).trim()) {
         const c = String(it.comment).trim().replace(/\s+/g, " ");
         if (/(습니다|합니다|해요)\.?$/.test(c)) rejected.push({ slug: it.slug, why: "코멘트 문체(~다체 아님)" });
-        else if (!fmValue(fm, "comment") || body.overwrite) { raw = setField(raw, "comment", c, "date"); changed.push("comment"); }
+        else if (!fmValue(fm, "comment") || body.overwrite) { raw = setCommentWithProvenance(raw, c, "manual"); changed.push("comment"); }
       }
       if (it.title_ko !== undefined && String(it.title_ko).trim() && (!fmValue(fm, "title_ko") || body.overwrite)) {
         raw = setField(raw, "title_ko", String(it.title_ko).trim(), "title");
@@ -1047,6 +1072,8 @@ ${listed}`,
 
   if (action === "save") {
     const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, keywords, emotion } = body;
+    const sourceUrls = commentSourceUrls(body.commentSources);
+    const commentBasis = ["lyrics_only", "web_enriched", "manual"].includes(body.commentBasis) ? body.commentBasis : "manual";
     const slug = `${artist} ${title}`
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
@@ -1093,6 +1120,8 @@ emotion: ${parseEmotion(emotion)}
 date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
+comment_basis: ${commentBasis}
+comment_sources: [${sourceUrls.join(", ")}]
 ${isInstrumental ? "instrumental: true\n" : ""}${lyricsUnavailable ? `lyrics_none: true\nlyrics_note: ${String(body.lyricsNote || "").replace(/\s*\n+\s*/g, " ")}\n` : ""}---
 ${lyricBody}
 `;

@@ -46,7 +46,15 @@ export async function handleAppearances(action, body) {
     if (!research)
       return Response.json({ error: withReason("작품 정보 웹 검색을 완료하지 못했습니다") }, { status: 503 });
     let suggestion = research.appearance;
-    if (!suggestion) return Response.json({ suggestion: null, researchComment: research.comment, sources: research.sources });
+    const researchMeta = {
+      researchComment: research.comment,
+      commentBasis: research.commentBasis,
+      commentSources: research.commentSources,
+      appearanceState: research.appearanceState,
+      researchWarning: research.warning,
+      sources: research.sources,
+    };
+    if (!suggestion) return Response.json({ suggestion: null, ...researchMeta });
 
     // AI가 확인한 작품명을 기존 TMDB 검색으로 정규화한다. 실패해도 근거가 있는
     // 수동 작품 정보는 그대로 남겨 사용자가 검수할 수 있다.
@@ -71,7 +79,7 @@ export async function handleAppearances(action, body) {
         };
       }
     } catch {}
-    return Response.json({ suggestion, researchComment: research.comment, sources: research.sources });
+    return Response.json({ suggestion, ...researchMeta });
   }
 
   if (action === "appearanceList") {

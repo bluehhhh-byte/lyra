@@ -45,12 +45,12 @@ export default function SongTools({ songs }) {
   const regen = async (slug) => {
     set(slug, { busy: "comment", err: "", msg: "" });
     try {
-      const { comment, appearanceSuggestion } = await api("regenComment", { slug });
+      const { comment, appearanceSuggestion, commentSources = [] } = await api("regenComment", { slug });
       if (appearanceSuggestion) {
         const { unchanged } = await api("appearanceSave", { songSlug: slug, ...appearanceSuggestion });
-        set(slug, { comment, msg: unchanged ? "코멘트 갱신 · 작품 정보 확인됨" : "코멘트·작품 정보 갱신" });
+        set(slug, { comment, msg: unchanged ? `코멘트 갱신 · 작품 정보 확인됨 · 근거 ${commentSources.length}개` : `코멘트·작품 정보 갱신 · 근거 ${commentSources.length}개` });
       } else {
-        set(slug, { comment, msg: "근거 기반 코멘트 갱신" });
+        set(slug, { comment, msg: commentSources.length ? `근거 기반 코멘트 갱신 · 출처 ${commentSources.length}개` : "가사 중심 코멘트 갱신" });
       }
     } catch (e) {
       set(slug, { err: e.message });
