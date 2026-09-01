@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { valenceColor, emotionValence } from "../../lib/keywords";
-import { MOOD_NEUTRAL_BAND } from "../../lib/emotion-model";
+import { MOOD_NEUTRAL_BAND, moveLabel } from "../../lib/emotion-model";
 import { axisRange, placeLabels, clampLabel } from "../../lib/orbit-layout";
 import { compareYearStats, workLabel } from "../../lib/archive-stats";
 import { emotionProfile } from "../../lib/emotion-profile";
@@ -32,29 +32,77 @@ const ORBIT_POINT_STEP_MS = 1200;
 
 const COMPARE = { W: 760, H: 440, PAD: 54 };
 
+// 두 연도가 원·사각형으로 흩어져 있으면 "무엇이 어떻게 변했는지"를 읽으려면
+// 같은 달의 원과 사각형을 눈으로 찾아 짝짓는 수고가 매번 든다. 그 짝짓기 자체를
+// 그림이 대신 한다 — 같은 달의 첫 해 좌표에서 둘째 해 좌표로 화살표를 긋는다.
+// 화살표 하나 = 그 달의 이동(방향과 거리)이라, 시선이 화살촉을 따라가기만 하면
+// "밝아졌다/어두워졌다·격앙됐다/가라앉았다"가 그대로 읽힌다. 화살촉 색은
+// 도착지의 밝기(valenceColor) — 사이트 전체가 이미 쓰는 밝기 색 언어라 새로
+// 배울 게 없다. 12개 잔가지 밑에는 두 해 전체의 평균 이동을 굵은 점선 화살표로
+// 깔아, 달 단위를 안 읽어도 "그 해 전체가 어느 쪽으로 갔는지"부터 눈에 들어오게 한다.
+function arrowHead(x1, y1, x2, y2, size) {
+  const angle = Math.atan2(y2 - y1, x2 - x1);
+  const left = angle + Math.PI * 0.82;
+  const right = angle - Math.PI * 0.82;
+  return `${x2},${y2} ${(x2 + Math.cos(left) * size).toFixed(1)},${(y2 + Math.sin(left) * size).toFixed(1)} ${(x2 + Math.cos(right) * size).toFixed(1)},${(y2 + Math.sin(right) * size).toFixed(1)}`;
+}
+
+// n(표본 수)으로 가중한 그 해의 무게중심. 기록 없는 해는 null.
+function yearCentroid(rows, side) {
+  const list = rows.map((row) => row[side]).filter((s) => s?.center);
+  const weight = list.reduce((sum, s) => sum + (s.center.n || 1), 0);
+  if (!weight) return null;
+  return {
+    v: list.reduce((sum, s) => sum + s.center.v * (s.center.n || 1), 0) / weight,
+    a: list.reduce((sum, s) => sum + s.center.a * (s.center.n || 1), 0) / weight,
+    n: weight,
+  };
+}
+
 export function YearComparison({ stats, firstYear, secondYear }) {
   const rows = compareYearStats(stats, firstYear, secondYear);
-  const points = rows.flatMap((row) => [
-    row.first?.center ? { ...row.first, year: firstYear, monthNum: row.monthNum, series: "first" } : null,
-    row.second?.center ? { ...row.second, year: secondYear, monthNum: row.monthNum, series: "second" } : null,
-  ]).filter(Boolean);
-  if (!points.length) return <p className="text-sm text-muted">선택한 연도에는 비교할 감정 기록이 없다.</p>;
+  const paired = rows.filter((row) => row.first?.center && row.second?.center);
+  const solo = rows.filter((row) => Boolean(row.first?.center) !== Boolean(row.second?.center));
+  if (!paired.length && !solo.length) return <p className="text-sm text-muted">선택한 연도에는 비교할 감정 기록이 없다.</p>;
 
   const { W, H, PAD } = COMPARE;
   const [lo, hi] = DOMAIN;
   const sx = (value) => PAD + ((value - lo) / (hi - lo)) * (W - PAD * 2);
   const sy = (value) => H - PAD - ((value - lo) / (hi - lo)) * (H - PAD * 2);
-  const colors = { first: "oklch(0.7 0.16 295)", second: "oklch(0.72 0.15 145)" };
   const chartId = `year-compare-${firstYear}-${secondYear}`;
+  const c1 = yearCentroid(rows, "first");
+  const c2 = yearCentroid(rows, "second");
+  const summary = c1 && c2 ? moveLabel(c1, c2) : "";
 
   return (
     <figure className="min-w-0 max-w-full">
-      <div className="mb-3 flex flex-wrap gap-4 text-xs text-muted" aria-hidden>
-        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 " style={{ background: colors.first }} />{firstYear}년</span>
-        <span className="flex items-center gap-1.5"><i className="h-2.5 w-2.5 " style={{ background: colors.second }} />{secondYear}년</span>
+      <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-muted" aria-hidden>
+        <span className="flex items-center gap-1.5">
+          <svg width="28" height="12" aria-hidden>
+            <line x1="2" y1="6" x2="20" y2="6" stroke="var(--color-muted)" strokeWidth="1.6" />
+            <polygon points={arrowHead(2, 6, 22, 6, 6)} fill="var(--color-muted)" />
+          </svg>
+          같은 달이 {firstYear}년 → {secondYear}년으로 옮겨간 방향
+        </span>
+        <span className="flex items-center gap-1.5">
+          <svg width="36" height="10" aria-hidden>
+            <defs>
+              <linearGradient id={`${chartId}-grad`} x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stopColor={valenceColor(-2.6)} />
+                <stop offset="1" stopColor={valenceColor(2.6)} />
+              </linearGradient>
+            </defs>
+            <rect width="36" height="10" fill={`url(#${chartId}-grad)`} />
+          </svg>
+          화살촉 색 = 도착 달의 밝기
+        </span>
+        {solo.length > 0 && (
+          <span className="flex items-center gap-1.5"><i className="h-2 w-2 rounded-full border border-muted" />한 해에만 기록된 달</span>
+        )}
       </div>
+
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${chartId}-title`} className="h-auto w-full  border border-line bg-surface">
-        <title id={`${chartId}-title`}>{`${firstYear}년과 ${secondYear}년의 월별 정서 좌표 비교. 가로는 밝기, 세로는 각성이며 두 축 모두 마이너스 3에서 플러스 3이다.`}</title>
+        <title id={`${chartId}-title`}>{`${firstYear}년에서 ${secondYear}년으로 같은 달의 정서가 옮겨간 방향과 거리를 화살표로 나타낸 그림. 가로는 밝기, 세로는 각성이며 두 축 모두 마이너스 3에서 플러스 3이다.`}</title>
         {[-2, -1, 0, 1, 2].map((tick) => (
           <g key={tick} aria-hidden>
             <line x1={sx(tick)} y1={PAD} x2={sx(tick)} y2={H - PAD} stroke="var(--color-line)" opacity={tick === 0 ? 0.8 : 0.35} />
@@ -63,34 +111,70 @@ export function YearComparison({ stats, firstYear, secondYear }) {
         ))}
         <text x={W - PAD} y={H - 14} textAnchor="end" fontSize="11" fill="var(--color-muted)">밝기 →</text>
         <text x={16} y={PAD} fontSize="11" fill="var(--color-muted)">각성 ↑</text>
-        {points.map((point) => {
-          const x = sx(point.center.v);
-          const y = sy(point.center.a);
-          const key = `${point.year}-${point.monthNum}`;
+
+        {/* 전체 흐름 — 두 해 무게중심을 잇는 굵은 점선 화살표. 달 단위 잔가지 아래 깔아
+            먼저 눈에 들어오게 한다(그린 순서 = 아래층부터). */}
+        {c1 && c2 && (
+          <g aria-hidden>
+            <line
+              x1={sx(c1.v)} y1={sy(c1.a)} x2={sx(c2.v)} y2={sy(c2.a)}
+              stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" strokeDasharray="1.5 8" opacity="0.85"
+            />
+            <polygon points={arrowHead(sx(c1.v), sy(c1.a), sx(c2.v), sy(c2.a), 11)} fill="var(--color-accent)" opacity="0.85" />
+            <circle cx={sx(c1.v)} cy={sy(c1.a)} r="7" fill="none" stroke="var(--color-accent)" strokeWidth="2" opacity="0.85" />
+          </g>
+        )}
+
+        {/* 달마다의 이동 */}
+        {paired.map((row) => {
+          const x1 = sx(row.first.center.v);
+          const y1 = sy(row.first.center.a);
+          const x2 = sx(row.second.center.v);
+          const y2 = sy(row.second.center.a);
+          const color = valenceColor(row.second.center.v);
+          const mx = (x1 + x2) / 2;
+          const my = (y1 + y2) / 2;
           return (
-            <g key={key} aria-hidden>
-              {point.series === "first" ? (
-                <circle cx={x} cy={y} r="5" fill={colors.first} />
-              ) : (
-                <rect x={x - 5} y={y - 5} width="10" height="10" rx="2" fill={colors.second} />
-              )}
-              <text x={x + 8} y={y - 7} fontSize="10" fill="var(--color-ink)">{point.monthNum}</text>
+            <g key={row.monthNum} aria-hidden>
+              <line x1={x1} y1={y1} x2={x2} y2={y2} stroke={color} strokeWidth="2" strokeLinecap="round" opacity="0.85" />
+              <circle cx={x1} cy={y1} r="3" fill="var(--color-surface)" stroke={color} strokeWidth="1.6" />
+              <polygon points={arrowHead(x1, y1, x2, y2, 6)} fill={color} />
+              <text x={mx} y={my - 6} fontSize="10" fontWeight="600" fill="var(--color-ink)" textAnchor="middle">{row.monthNum}</text>
+            </g>
+          );
+        })}
+        {/* 짝이 없는 달 — 한쪽 해에만 기록이 있어 이동을 그릴 수 없다. 옅은 빈 점으로만. */}
+        {solo.map((row) => {
+          const s = row.first?.center ? row.first : row.second;
+          const x = sx(s.center.v);
+          const y = sy(s.center.a);
+          return (
+            <g key={`solo-${row.monthNum}`} aria-hidden opacity="0.55">
+              <circle cx={x} cy={y} r="3.5" fill="none" stroke="var(--color-muted)" strokeWidth="1.4" />
+              <text x={x + 6} y={y - 6} fontSize="9" fill="var(--color-muted)">{row.monthNum}</text>
             </g>
           );
         })}
       </svg>
+
+      {summary && (
+        <p className="mt-2  border border-accent/40 bg-accent/10 px-3 py-2 text-xs text-ink">
+          <strong className="text-accent">{firstYear}년 → {secondYear}년 전체 흐름</strong> — {summary}
+        </p>
+      )}
       <figcaption className="mt-2 text-[11px] leading-5 text-muted">
-        원은 {firstYear}년, 사각형은 {secondYear}년이다. 숫자는 월이며 모든 연도에 같은 −3~+3 척도를 적용한다.
+        화살표 하나가 그 달이 {firstYear}년에서 {secondYear}년으로 옮겨간 방향과 거리다. 화살표가 길수록 그 달의 변화가 크고, 짧으면 두 해가 비슷했다는 뜻이다. 굵은 점선 화살표는 두 해 전체의 평균 이동, 빈 점은 한 해에만 기록이 있어 비교할 짝이 없는 달이다.
       </figcaption>
       <div className="sr-only">
         <table>
           <caption>{firstYear}년과 {secondYear}년 월별 정서 좌표</caption>
-          <thead><tr><th>월</th><th>{firstYear}년</th><th>{secondYear}년</th></tr></thead>
+          <thead><tr><th>월</th><th>{firstYear}년</th><th>{secondYear}년</th><th>이동</th></tr></thead>
           <tbody>{rows.map((row) => (
             <tr key={row.monthNum}>
               <td>{row.monthNum}월</td>
               <td>{row.first?.center ? `밝기 ${fmt1(row.first.center.v)}, 각성 ${fmt1(row.first.center.a)}` : "기록 없음"}</td>
               <td>{row.second?.center ? `밝기 ${fmt1(row.second.center.v)}, 각성 ${fmt1(row.second.center.a)}` : "기록 없음"}</td>
+              <td>{row.first?.center && row.second?.center ? moveLabel(row.first.center, row.second.center) : "비교 불가"}</td>
             </tr>
           ))}</tbody>
         </table>
