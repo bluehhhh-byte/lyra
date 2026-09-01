@@ -370,6 +370,48 @@ function Snippet({ song, needle, lyrics }) {
 const sizedCover = (url, w) =>
   url.replace("600x600bb", `${w}x${w}bb`).replace(/\/1000x1000-/, `/${w}x${w}-`);
 
+// 뷰포트 ±1.5화면 밖에서는 <img>를 아예 내린다(자리는 aspect-square 상자가 유지).
+// loading="lazy"는 "언제 받나"만 정하고 한 번 디코드된 비트맵은 DOM에 남는 한
+// 놓아주지 않는다 — iOS Safari에서 더 보기로 카드가 수백 장 쌓이면 그 비트맵만
+// 수백 MB라 탭이 "문제가 반복적으로 발생"하며 재로드됐다. content-visibility는
+// iOS 18 미만이 무시하므로 그물이 못 된다. 관찰자가 없는 환경은 항상 표시.
+function useNearScreen(ref) {
+  const [near, setNear] = useState(typeof IntersectionObserver === "undefined");
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setNear(entry.isIntersecting),
+      { rootMargin: "150% 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+  return near;
+}
+
+function CardCover({ song }) {
+  const boxRef = useRef(null);
+  const near = useNearScreen(boxRef);
+  return (
+    <div ref={boxRef} className="aspect-square w-full">
+      {near && (
+        <CoverImage
+          src={song.artwork ? sizedCover(song.artwork, 300) : ""}
+          srcSet={song.artwork ? [200, 300, 450].map((w) => `${sizedCover(song.artwork, w)} ${w}w`).join(", ") : undefined}
+          sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw"
+          alt={`${song.title} album art`}
+          label={song.title}
+          loading="lazy"
+          decoding="async"
+          className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
+          fallback={<InkArtwork slug={song.slug} label={song.title} className="aspect-square w-full" />}
+        />
+      )}
+    </div>
+  );
+}
+
 function Grid({ list, needle, lyrics }) {
   return (
     <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
@@ -384,20 +426,7 @@ function Grid({ list, needle, lyrics }) {
           className="group card-in transition-transform duration-300 ease-out hover:-translate-y-1"
         >
           <div className="spot overflow-hidden  border border-line bg-surface transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-accent/15">
-            <CoverImage
-              // 폭 디스크립터 + sizes: 모바일 2열(≈45vw≈170px)이 2x에서도 450px면 충분하다.
-              // 예전 "1x/2x" 방식은 모든 레티나 폰에 600px 원본을 내려 카드당 ~1.4MB의
-              // 디코드 비트맵을 쌓았다(위 크래시의 주범). 3x 폰도 450에서 멈춘다.
-              src={s.artwork ? sizedCover(s.artwork, 300) : ""}
-              srcSet={s.artwork ? [200, 300, 450].map((w) => `${sizedCover(s.artwork, w)} ${w}w`).join(", ") : undefined}
-              sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw"
-              alt={`${s.title} album art`}
-              label={s.title}
-              loading="lazy"
-              decoding="async"
-              className="aspect-square w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
-              fallback={<InkArtwork slug={s.slug} label={s.title} className="aspect-square w-full" />}
-            />
+            <CardCover song={s} />
           </div>
           <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">
             {s.title}
