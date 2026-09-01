@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
 import InstagramCaptionPreview from "../../caption-preview";
 import {
@@ -574,7 +575,14 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
       return next;
     });
 
-  return (
+  // body에 포탈로 그린다 — 안 그러면 곡 페이지 히어로(제목 블록이 명시적
+  // z-10)의 그릴 순서를 이 모달을 감싸는 조상(.relative.isolate인 가사 뷰)이
+  // 가로챈다. isolate는 새 스태킹 컨텍스트를 만들어 모달의 z-40을 그 안에
+  // 가둬버리고, 바깥에서는 조상 자체가 z-index:auto로 취급된다. CSS 규칙상
+  // auto는 명시적 양수 z-index보다 항상 아래라, 히어로 텍스트가 모달(특히
+  // "곡 설명" 슬라이드 이미지) 위에 겹쳐 그려졌다. body 포탈은 그 조상
+  // 스태킹 컨텍스트 자체를 벗어나므로 z-40이 그대로 최상위에서 적용된다.
+  return createPortal(
     <div
       onClick={onClose}
       className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-2 opacity-100 transition-opacity duration-200 ease-out sm:p-4 starting:opacity-0 motion-reduce:transition-none"
@@ -693,7 +701,8 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           </section>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
