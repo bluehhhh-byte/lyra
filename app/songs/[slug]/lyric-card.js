@@ -398,24 +398,28 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
 
   drawPageNumber(ctx, position, total);
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(246,241,228,0.72)";
-  ctx.font = `700 24px ${SANS}`;
-  ctx.fillText("SONG NOTE", PAD, 630);
+  if (!appearance) {
+    ctx.fillStyle = "rgba(246,241,228,0.72)";
+    ctx.font = `700 24px ${SANS}`;
+    ctx.fillText("SONG NOTE", PAD, 630);
+  }
 
   const maxW = W - PAD * 2;
   const text = note || `${song.artist}의 ${song.year || ""}년 곡.`.replace("의 년", "의");
   let fs = 42;
   let lines = [];
-  for (; fs >= 32; fs -= 2) {
+  const minimumNoteSize = appearance ? 28 : 32;
+  const maximumNoteHeight = appearance ? 300 : 470;
+  for (; fs >= minimumNoteSize; fs -= 2) {
     ctx.font = `500 ${fs}px ${SANS}`;
     lines = wrap(ctx, text, maxW);
-    if (lines.length * (fs + 22) <= 470) break;
+    if (lines.length * (fs + 22) <= maximumNoteHeight) break;
   }
   const lineH = fs + 22;
-  let y = 680;
+  let y = appearance ? 590 : 680;
   ctx.fillStyle = INK;
   ctx.font = `500 ${fs}px ${SANS}`;
-  const noteBottom = appearance ? H - 350 : H - 230;
+  const noteBottom = appearance ? 900 : H - 230;
   for (const line of lines) {
     y += lineH;
     if (y > noteBottom) break;
@@ -423,12 +427,19 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
   }
 
   if (appearance) {
-    const appearanceY = H - 300;
+    // 설명의 끝을 알리는 캡션을 우측 서명처럼 두고, 수록 정보는 별도 단락으로 분리한다.
+    ctx.textAlign = "right";
+    ctx.fillStyle = "rgba(246,241,228,0.56)";
+    ctx.font = `700 18px ${SANS}`;
+    ctx.fillText("SONG NOTE", W - PAD, 950);
+    ctx.textAlign = "left";
+
+    const appearanceY = H - 292;
     ctx.strokeStyle = "rgba(246,241,228,0.2)";
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(PAD, appearanceY - 34);
-    ctx.lineTo(W - PAD, appearanceY - 34);
+    ctx.moveTo(PAD, appearanceY - 46);
+    ctx.lineTo(W - PAD, appearanceY - 46);
     ctx.stroke();
     ctx.fillStyle = "rgba(192,167,255,0.92)";
     ctx.font = `700 20px ${SANS}`;
