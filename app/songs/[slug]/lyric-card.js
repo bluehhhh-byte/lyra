@@ -375,7 +375,7 @@ async function drawCoverCard({ song, art }) {
 // 2장 전용 — 곡 설명 카드. 해설은 923곡 전부에 있는 자산이자 다른 가사 계정이
 // 갖지 못한 차별점이라 제 장을 준다. 배경은 가사 카드와 같은 문법(흐린 커버 + 어두운
 // 막)이라 묶음이 한 벌로 읽히고, 글은 해설 하나뿐이라 천천히 읽힌다.
-async function drawAboutCard({ song, note, art, position, total }) {
+async function drawAboutCard({ song, note, appearance, art, position, total }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -415,10 +415,29 @@ async function drawAboutCard({ song, note, art, position, total }) {
   let y = 680;
   ctx.fillStyle = INK;
   ctx.font = `500 ${fs}px ${SANS}`;
+  const noteBottom = appearance ? H - 350 : H - 230;
   for (const line of lines) {
     y += lineH;
-    if (y > H - 230) break;
+    if (y > noteBottom) break;
     ctx.fillText(line, PAD, y);
+  }
+
+  if (appearance) {
+    const appearanceY = H - 300;
+    ctx.strokeStyle = "rgba(246,241,228,0.2)";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(PAD, appearanceY - 34);
+    ctx.lineTo(W - PAD, appearanceY - 34);
+    ctx.stroke();
+    ctx.fillStyle = "rgba(192,167,255,0.92)";
+    ctx.font = `700 20px ${SANS}`;
+    ctx.fillText("수록 정보", PAD, appearanceY);
+    ctx.fillStyle = INK_DIM;
+    ctx.font = `500 23px ${SANS}`;
+    wrap(ctx, appearance, maxW).slice(0, 2).forEach((line, index) => {
+      ctx.fillText(line, PAD, appearanceY + 38 + index * 32);
+    });
   }
 
   // 설명 카드도 같은 표기 규칙을 쓴다: `원문 (한글 번역)` / `아티스트 (Feat. …)`.
@@ -497,8 +516,8 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     [allLines, sel]
   );
   const carousel = useMemo(
-    () => buildCarousel({ selected: selectedLines, note: song.comment || "" }),
-    [selectedLines, song.comment]
+    () => buildCarousel({ selected: selectedLines, note: song.comment || "", appearance: song.appearance || "" }),
+    [selectedLines, song.comment, song.appearance]
   );
 
   // 다섯 장을 한꺼번에 그린다. 가사 장은 전부 같은 drawCard를 지나므로
@@ -519,7 +538,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           slide.role === "cover"
             ? await drawCoverCard({ song, art })
             : slide.role === "about"
-              ? await drawAboutCard({ song, note: slide.note, art, ...page })
+              ? await drawAboutCard({ song, note: slide.note, appearance: slide.appearance, art, ...page })
               : await drawCard({ song, lines: slide.lines, art, align, ...page });
         if (!alive) return;
         if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });

@@ -26,6 +26,7 @@ import { sameDayRecords } from "../../../lib/archive";
 import {
   appearanceContext,
   appearancesForSong,
+  carouselAppearanceSummary,
   getSongAppearancesRuntime,
 } from "../../../lib/song-appearances";
 
@@ -115,6 +116,7 @@ export default async function SongPage({ params }) {
       workTitle: localMovie?.title_ko || localMovie?.title || item.workTitle,
     };
   });
+  const carouselAppearance = carouselAppearanceSummary(appearances);
   const commentSources = (Array.isArray(song.comment_sources) ? song.comment_sources : []).flatMap((value) => {
     try {
       const url = new URL(value);
@@ -295,6 +297,8 @@ export default async function SongPage({ params }) {
           country: song.tags.find((t) => COUNTRY_TAGS.includes(t)) || "",
           // 캐러셀 2장(곡 설명)이 그대로 싣는다 — 위 인용문과 같은 글이다
           comment: song.comment || "",
+          // 곡 설명 카드 하단에 검증된 작품명·연도·유형·사용 역할을 함께 싣는다.
+          appearance: carouselAppearance,
           // 커버 카드 하단의 해시태그 — 곡의 소재(keywords)와 감정 한 낱말
           keywords: song.keywords || [],
           emotion: song.emotion || "",
