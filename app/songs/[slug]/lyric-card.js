@@ -8,6 +8,7 @@ import {
   CAROUSEL_THEME,
   CAROUSEL_SLIDES,
   MAX_SELECTED_LINES,
+  fitCarouselNoteLayout,
   waitForCarouselFonts,
 } from "../../../lib/carousel";
 import {
@@ -404,29 +405,26 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
 
   const maxW = W - PAD * 2;
   const text = note || `${song.artist}의 ${song.year || ""}년 곡.`.replace("의 년", "의");
-  let fs = 42;
-  let lines = [];
-  const minimumNoteSize = appearance ? 28 : 32;
-  const maximumNoteHeight = appearance ? 300 : 470;
-  for (; fs >= minimumNoteSize; fs -= 2) {
-    ctx.font = `500 ${fs}px ${SANS}`;
-    lines = wrap(ctx, text, maxW);
-    if (lines.length * (fs + 22) <= maximumNoteHeight) break;
-  }
-  const lineH = fs + 22;
-  let y = 680;
+  const noteTop = 680;
+  const noteBottom = appearance ? 920 : H - 230;
+  const noteLayout = fitCarouselNoteLayout({
+    maxHeight: noteBottom - noteTop,
+    wrapAtSize: (fontSize) => {
+      ctx.font = `500 ${fontSize}px ${SANS}`;
+      return wrap(ctx, text, maxW);
+    },
+  });
+  let y = noteTop;
   ctx.fillStyle = INK;
-  ctx.font = `500 ${fs}px ${SANS}`;
-  const noteBottom = appearance ? 900 : H - 230;
-  for (const line of lines) {
-    y += lineH;
-    if (y > noteBottom) break;
+  ctx.font = `500 ${noteLayout.fontSize}px ${SANS}`;
+  for (const line of noteLayout.lines) {
+    y += noteLayout.lineHeight;
     ctx.fillText(line, PAD, y);
   }
 
   if (appearance) {
     // SONG NOTE의 원래 위치는 유지하고, 수록 정보만 본문의 우측 하단 캡션으로 둔다.
-    const appearanceY = 964;
+    const appearanceY = 990;
     const appearanceMaxW = Math.floor(maxW * 0.72);
     ctx.strokeStyle = "rgba(246,241,228,0.2)";
     ctx.lineWidth = 1;
