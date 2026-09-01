@@ -3,8 +3,10 @@
 //   node scripts/audit-song-artwork.mjs --remote-all  verify every unique image response
 //   node scripts/audit-song-artwork.mjs --production  verify corrected production pages/images
 //   node scripts/audit-song-artwork.mjs --self-test   prove negative controls are rejected
+import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { getAllSongs } from "../lib/songs.js";
+import { artistMatches, titleMatch } from "../lib/admin/match.js";
 
 const TRUSTED_HOSTS = new Set([
   "is1-ssl.mzstatic.com",
@@ -101,6 +103,112 @@ async function remoteAllAudit() {
   console.log("remote artwork audit passed");
 }
 
+const LOOKUP_CHUNK = 150; // iTunes lookup은 최대 200개 id를 한 번에 받는다 — 여유를 둔다
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// country 없이 조회하면 US 스토어가 기본이라 한국 아티스트도 로마자 표기("Kim Jong Seo")로
+// 돌아온다. 우리 기록은 KR/JP 스토어에서 원어 표기로 채워졌으므로(meta-backfill의
+// storeOrder), 같은 트랙이어도 스토어가 다르면 문자열이 안 맞아 대량 오탐이 났다.
+// 세 스토어를 순서대로 물어 그중 하나라도 맞으면 통과 — 실제로 다른 트랙일 때만 셋 다 실패한다.
+const STORES = ["KR", "JP", "US"];
+
+async function lookupBatch(ids, country) {
+  const out = new Map();
+  for (let i = 0; i < ids.length; i += LOOKUP_CHUNK) {
+    const chunk = ids.slice(i, i + LOOKUP_CHUNK);
+    const res = await fetch(`https://itunes.apple.com/lookup?id=${chunk.join(",")}&country=${country}`, {
+      headers: { "User-Agent": "LyraArtworkAudit/1.0" },
+      signal: AbortSignal.timeout(30000),
+    });
+    const text = await res.text();
+    if (!res.ok || !/^\s*\{/.test(text)) throw new Error(`lookup batch failed (${res.status}, ${country}): ${text.slice(0, 120)}`);
+    const json = JSON.parse(text);
+    for (const r of json.results || []) {
+      if (r.trackId && (r.wrapperType === "track" || r.kind === "song")) out.set(String(r.trackId), r);
+    }
+    if (i + LOOKUP_CHUNK < ids.length) await sleep(1200);
+  }
+  return out;
+}
+
+const matchesSong = (track, song) => artistMatches(track.artistName, song.artist) && titleMatch(track.trackName, song.title) !== "reject";
+
+// 구조 검사(untrusted-source·cross-release-duplicate)는 "신뢰 호스트에 고유 URL인가"만
+// 묻는다 — 그 URL이 진짜 이 곡 것인지는 안 묻는다. 여기서는 저장된 trackId를 iTunes에
+// 되물어, 돌아온 곡명·아티스트가 우리 기록과 맞는지 직접 대조한다. 안 맞으면 애초에
+// 다른 곡의 트랙을 붙인 것 — "잘못된 커버"의 결정적 증거다. lookup은 최대 200개 id를
+// 한 번에 받으므로 767곡도 몇 번의 요청으로 끝난다(요청 사이 1.2초 페이싱).
+export async function matchAudit(songs = getAllSongs()) {
+  const withId = songs.filter((s) => /^\d+$/.test(String(s.trackId || "").trim()));
+  let pending = [...new Set(withId.map((s) => String(s.trackId).trim()))];
+  const byStore = new Map(); // trackId -> { KR: track|undefined, JP: ..., US: ... }
+  for (const country of STORES) {
+    if (!pending.length) break;
+    const found = await lookupBatch(pending, country);
+    for (const id of pending) {
+      if (!byStore.has(id)) byStore.set(id, {});
+      byStore.get(id)[country] = found.get(id) || null;
+    }
+    // 이번 스토어에서 이미 맞은 곡의 trackId는 다음 스토어에서 다시 안 묻는다
+    const solvedIds = new Set(
+      withId.filter((s) => { const t = found.get(String(s.trackId).trim()); return t && matchesSong(t, s); })
+        .map((s) => String(s.trackId).trim())
+    );
+    pending = pending.filter((id) => !solvedIds.has(id));
+  }
+
+  const issues = [];
+  for (const song of withId) {
+    const id = String(song.trackId).trim();
+    const attempts = byStore.get(id) || {};
+    const tracks = STORES.map((c) => attempts[c]).filter(Boolean);
+    if (tracks.some((t) => matchesSong(t, song))) continue; // 세 스토어 중 하나라도 맞으면 통과
+    if (!tracks.length) { issues.push({ code: "trackid-delisted", slug: song.slug, trackId: id }); continue; }
+    const best = tracks[0];
+    issues.push({
+      code: "trackid-mismatch", slug: song.slug, trackId: id,
+      expected: `${song.artist} - ${song.title}`, found: `${best.artistName} - ${best.trackName}`,
+    });
+  }
+
+  // 같은 trackId가 서로 다른 곡 두 개에 붙어 있으면 적어도 하나는 잘못 배정된 것이다 —
+  // API 응답과 무관하게 판단할 수 있는 값이라 항상 함께 확인한다.
+  const byId = new Map();
+  for (const song of withId) {
+    const id = String(song.trackId).trim();
+    if (!byId.has(id)) byId.set(id, []);
+    byId.get(id).push(song.slug);
+  }
+  for (const [id, slugs] of byId) if (slugs.length > 1) issues.push({ code: "trackid-shared", trackId: id, slugs });
+
+  return { checked: withId.length, withoutTrackId: songs.length - withId.length, issues };
+}
+
+async function matchAuditRun() {
+  const songs = getAllSongs();
+  const { checked, withoutTrackId, issues } = await matchAudit(songs);
+  const bySlug = new Map();
+  for (const issue of issues) for (const slug of issue.slugs || [issue.slug]) {
+    if (!bySlug.has(slug)) bySlug.set(slug, []);
+    bySlug.get(slug).push(issue);
+  }
+  fs.mkdirSync(".backfill", { recursive: true });
+  fs.writeFileSync(
+    ".backfill/artwork-mismatch-report.json",
+    JSON.stringify({ at: new Date().toISOString(), checked, withoutTrackId, issues }, null, 1)
+  );
+  console.log(`trackId 보유 ${checked}곡 확인 · trackId 없음 ${withoutTrackId}곡(별도 검토 대상)`);
+  console.log(`불일치 의심 ${bySlug.size}곡`);
+  for (const [slug, list] of bySlug) {
+    for (const issue of list) {
+      if (issue.code === "trackid-mismatch") console.log(`  ✗ ${slug}: 기대 "${issue.expected}" ↔ 실제 "${issue.found}" (trackId ${issue.trackId})`);
+      else if (issue.code === "trackid-delisted") console.log(`  ? ${slug}: trackId ${issue.trackId} 조회 안 됨(내려간 트랙)`);
+      else if (issue.code === "trackid-shared") console.log(`  ⚠ ${slug}: trackId ${issue.trackId}를 ${issue.slugs.length}곡이 공유 (${issue.slugs.join(", ")})`);
+    }
+  }
+  console.log(`\n리포트: .backfill/artwork-mismatch-report.json`);
+}
+
 async function productionAudit() {
   await localAudit();
   const base = "https://lyracyno.vercel.app";
@@ -137,6 +245,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL(
   if (mode === "--local") await localAudit();
   else if (mode === "--remote-all") await remoteAllAudit();
   else if (mode === "--production") await productionAudit();
+  else if (mode === "--match-audit") await matchAuditRun();
   else if (mode === "--self-test") selfTest();
   else throw new Error(`unknown mode: ${mode}`);
 }
