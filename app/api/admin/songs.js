@@ -82,7 +82,7 @@ export async function handleSongs(action, body) {
     const [storePages, catalog, musicBrainz] = await Promise.all([
       appleOffset === null
         ? Promise.resolve([])
-        : Promise.all(["US", "KR", "JP"].map((country) => searchItunesStorePage(externalQuery, country, { limit: PAGE, offset: appleOffset }))),
+        : Promise.all(["US", "KR", "JP"].map((country) => searchItunesStorePage(country === "JP" ? externalQuery : query, country, { limit: PAGE, offset: appleOffset }))),
       appleOffset === 0 ? withTimeout(fetchArtistCatalog(externalQuery), 3500) : Promise.resolve([]),
       musicBrainzOffset === null
         ? Promise.resolve({ results: [], hasMore: false, ok: true, error: "", nextOffset: null })
@@ -113,7 +113,7 @@ export async function handleSongs(action, body) {
     for (const r of catalog)
       if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
     const appleResults = pool.map(itunesToResult);
-    const results = mergeExternalSongResults([appleResults, musicBrainz.results], externalQuery);
+    const results = mergeExternalSongResults([appleResults, musicBrainz.results], searchQueries);
     const failedStores = storePages.filter((page) => !page.ok);
     const appleOk = appleOffset === null || storePages.some((page) => page.ok);
     const appleHasMore = storePages.some((page) => page.hasMore);

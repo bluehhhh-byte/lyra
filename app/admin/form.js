@@ -57,8 +57,10 @@ export default function AdminForm() {
   const { track, setTrack } = usePlayer(); // 검색 결과 미리듣기 — 전역 플레이어 재사용
   const [query, setQuery] = useState("");
   const [candidates, setCandidates] = useState([]);
-  const [more, setMore] = useState(null); // {hasMore, nextOffset}
+  const [more, setMore] = useState(null); // {hasMore, nextCursor}
   const [searchSources, setSearchSources] = useState([]);
+  const [searchSourceStatus, setSearchSourceStatus] = useState([]);
+  const [searchQueries, setSearchQueries] = useState([]);
   const [song, setSong] = useState(null); // picked candidate
   const [lang, setLang] = useState("en");
   const [lyrics, setLyrics] = useState("");
@@ -94,17 +96,20 @@ export default function AdminForm() {
     }
   };
 
-  const search = (offset = 0) =>
+  const search = (cursor = null, { append = false } = {}) =>
     run("search", async () => {
-      const { results, hasMore, nextOffset, sources = [] } = await api("search", { query, offset });
+      const { results, hasMore, nextCursor, sources = [], sourceStatus = [], searchQueries: usedQueries = [] } =
+        await api("search", { query, cursor });
       setCandidates((prev) => {
-        const base = offset === 0 ? [] : prev;
+        const base = append ? prev : [];
         const seen = new Set(base.map((c) => `${c.title}|${c.artist}`.toLowerCase()));
         return [...base, ...results.filter((c) => !seen.has(`${c.title}|${c.artist}`.toLowerCase()))];
       });
-      setMore({ hasMore, nextOffset });
-      setSearchSources((previous) => offset === 0 ? sources : [...new Set([...previous, ...sources])]);
-      if (offset === 0) setSong(null);
+      setMore({ hasMore, nextCursor });
+      setSearchSources((previous) => append ? [...new Set([...previous, ...sources])] : sources);
+      setSearchSourceStatus(sourceStatus);
+      setSearchQueries(usedQueries);
+      if (!append) setSong(null);
     })();
 
   const [titleKo, setTitleKo] = useState("");
@@ -302,6 +307,22 @@ export default function AdminForm() {
         <p className="mt-1.5 text-xs text-muted">
           Apple Music 3개 스토어와 MusicBrainz를 함께 검색합니다. 19금·독립·구작 음원도 포함합니다.
         </p>
+        {searchQueries.length > 1 && (
+          <p className="mt-1 text-xs text-muted" role="status">
+            등록된 번역·표기 정보를 적용해 <span className="text-accent">{searchQueries.at(-1)}</span>로도 찾았습니다.
+          </p>
+        )}
+        {searchSourceStatus.some((source) => !source.ok || source.partial) && (
+          <div className="mt-3 flex items-center justify-between gap-3 border border-line bg-surface px-3 py-2 text-xs">
+            <span className="text-muted">
+              {searchSourceStatus.filter((source) => !source.ok || source.partial).map((source) => `${source.label}: ${source.error || "응답 실패"}`).join(" · ")}
+              {candidates.length ? " — 다른 검색 결과는 정상 표시했습니다." : ""}
+            </span>
+            <button type="button" className="shrink-0 text-accent hover:underline" disabled={!!busy} onClick={() => search()}>
+              전체 재시도
+            </button>
+          </div>
+        )}
         {/* skeleton rows while the first page of a search is in flight */}
         {busy === "search" && candidates.length === 0 && (
           <ul className="mt-3 divide-y divide-line overflow-hidden  border border-line" aria-hidden>
@@ -316,7 +337,7 @@ export default function AdminForm() {
             ))}
           </ul>
         )}
-        {busy !== "search" && more && candidates.length === 0 && (
+        {busy !== "search" && more && candidates.length === 0 && !searchSourceStatus.some((source) => !source.ok || source.partial) && (
           <p className="mt-3 text-sm text-muted" role="status">결과 없음 — 검색어를 바꿔보세요</p>
         )}
         {/* announce the result count to screen readers without a visual change */}
@@ -374,7 +395,7 @@ export default function AdminForm() {
             {more?.hasMore && (
               <li>
                 <button
-                  onClick={() => search(more.nextOffset)}
+                  onClick={() => search(more.nextCursor, { append: true })}
                   disabled={!!busy}
                   className="w-full px-3 py-2.5 text-center text-sm text-accent hover:bg-surface disabled:opacity-40"
                 >
