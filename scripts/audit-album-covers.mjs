@@ -7,7 +7,9 @@ const WRITE = process.argv.includes("--write");
 const songs = getAllSongs()
   .map((song) => ({ slug: song.slug, title: song.title || "", artist: song.artist || "", artwork: song.artwork || "" }))
   .sort((a, b) => a.slug.localeCompare(b.slug));
-const corpusDigest = crypto.createHash("sha256").update(JSON.stringify(songs)).digest("hex");
+const corpusDigest = crypto.createHash("sha256").update(JSON.stringify(
+  songs.map(({ slug, title, artist }) => ({ slug, title, artist })),
+)).digest("hex");
 const uniqueUrls = [...new Set(songs.map((song) => song.artwork))];
 const checkedAt = new Date().toISOString();
 

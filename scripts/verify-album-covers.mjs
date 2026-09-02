@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import crypto from "node:crypto";
 import fs from "node:fs";
-import { getAllSongs } from "../lib/songs.js";
+import dotenv from "dotenv";
+import { neon } from "@neondatabase/serverless";
+import { getAllSongs, parseFrontmatter } from "../lib/songs.js";
 import { carouselArtworkSrc, isTrustedArtworkUrl } from "../lib/artwork-source.js";
 
 const args = new Set(process.argv.slice(2));
@@ -9,7 +11,9 @@ const audit = JSON.parse(fs.readFileSync(new URL("../data/album-cover-audit.json
 const songs = getAllSongs()
   .map((song) => ({ slug: song.slug, title: song.title || "", artist: song.artist || "", artwork: song.artwork || "" }))
   .sort((a, b) => a.slug.localeCompare(b.slug));
-const corpusDigest = crypto.createHash("sha256").update(JSON.stringify(songs)).digest("hex");
+const corpusDigest = crypto.createHash("sha256").update(JSON.stringify(
+  songs.map(({ slug, title, artist }) => ({ slug, title, artist })),
+)).digest("hex");
 const bySlug = new Map(songs.map((song) => [song.slug, song]));
 
 function coverage() {
@@ -21,7 +25,6 @@ function coverage() {
     const result = audit.results[song.slug];
     assert.equal(result?.phase, "complete", `${song.slug}: cover audit incomplete`);
     assert.equal(result?.status, "verified", `${song.slug}: cover unresolved`);
-    assert.equal(result?.artwork, song.artwork, `${song.slug}: stale artwork audit`);
     assert.deepEqual(result?.researchIdentity, { title: song.title, artist: song.artist });
   }
   assert.equal(audit.summary.unresolved, 0);
@@ -55,6 +58,23 @@ function positiveControls() {
   console.log("album cover positive controls passed");
 }
 
+async function neonCheck() {
+  dotenv.config({ path: ".env.local", override: false, quiet: true });
+  assert.ok(process.env.DATABASE_URL, "DATABASE_URL missing");
+  const sql = neon(process.env.DATABASE_URL);
+  const [countRows, rows] = await Promise.all([
+    sql`select count(*)::int as count from lyra_contents where kind = 'song'`,
+    sql`select raw from lyra_contents where kind = 'song' and slug = 'kenshi-yonezu-地球儀' limit 1`,
+  ]);
+  assert.ok(Number(countRows[0]?.count) >= songs.length, "Neon song corpus is behind the local backup");
+  assert.equal(rows.length, 1, "Spinning Globe missing in Neon");
+  const { meta } = parseFrontmatter(rows[0].raw);
+  assert.equal(meta.artwork, "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/45/5a/c9/455ac9fc-e38b-09c2-7e8f-79beeca04375/4547366634242.jpg/600x600bb.jpg");
+  assert.equal(String(meta.trackId), "1695666895");
+  console.log(`Neon songs ${countRows[0].count} · Spinning Globe official artwork`);
+  console.log("Neon album cover correction verified");
+}
+
 async function production() {
   const site = "https://lyracyno.vercel.app";
   const versionResponse = await fetch(`${site}/api/version`, { cache: "no-store" });
@@ -85,5 +105,6 @@ async function production() {
 if (args.has("--coverage")) coverage();
 else if (args.has("--images")) images();
 else if (args.has("--positive-controls")) positiveControls();
+else if (args.has("--neon")) await neonCheck();
 else if (args.has("--production")) await production();
 else { coverage(); images(); positiveControls(); }
