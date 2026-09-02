@@ -2,7 +2,7 @@
 title: The World Has Ended
 title_ko: 세계가 끝났어
 artist: Yuuri
-artist_ko: 유리
+artist_ko: 유우리
 album: The World Has Ended - Single
 year: 2026
 genre: Rock
