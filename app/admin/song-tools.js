@@ -203,7 +203,7 @@ export default function SongTools({ songs }) {
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="곡 제목 또는 아티스트"
+            placeholder="원문·한글 제목, 아티스트, 앨범 또는 별칭"
             autoComplete="off"
             className="min-w-0 flex-1  border border-line bg-bg px-3 py-2 text-sm outline-none placeholder:text-muted/70 focus:border-accent"
           />
@@ -242,7 +242,13 @@ export default function SongTools({ songs }) {
               <div className="min-w-0 flex-1">
               <p className="truncate">
                 <span className="font-medium">{s.title}</span>
+                {s.title_ko && s.title_ko !== s.title && (
+                  <span className="text-muted"> ({s.title_ko})</span>
+                )}
                 <span className="text-muted"> — {s.artist}</span>
+                {s.artist_ko && s.artist_ko !== s.artist && (
+                  <span className="text-muted"> ({s.artist_ko})</span>
+                )}
               </p>
               <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
               <button
