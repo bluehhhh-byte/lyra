@@ -1,7 +1,28 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-02T05:48:26.958Z",
+  "updatedAt": "2026-09-02T06:02:48.710Z",
   "items": [
+    {
+      "id": "verified-65eb2a2ea336d651b33c6f31",
+      "songSlug": "忘れらんねえよ-なんもねえ",
+      "workTitle": "담배 고양이",
+      "originalTitle": "ヤニねこ",
+      "workType": "anime_series",
+      "mediaType": "tv",
+      "tmdbId": null,
+      "localMovieSlug": "",
+      "year": 2026,
+      "poster": "",
+      "role": "opening",
+      "season": null,
+      "episode": null,
+      "evidenceUrl": "https://yanineko-anime.com/111/",
+      "evidenceLabel": "TV 애니메이션 공식 사이트",
+      "status": "verified",
+      "note": "원작 팬인 시바타 타카히로가 작품을 위해 쓴 공식 오프닝 주제가다.",
+      "createdAt": "2026-09-02T06:02:48.710Z",
+      "updatedAt": "2026-09-02T06:02:48.710Z"
+    },
     {
       "id": "verified-8a89af9f948e3e6a557e7622",
       "songSlug": "yuuri-the-world-has-ended",
