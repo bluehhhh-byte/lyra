@@ -6,6 +6,7 @@ $deployDir = Join-Path $tempRoot ("lyra-deploy-" + [guid]::NewGuid().ToString("N
 $teamId = "team_vk8fZtA1YueBPh3dnFXZNj0H"
 $projectId = "prj_NMnJerZFyg3lxOiHc3uOPHnT6xug"
 $site = "https://lyracyno.vercel.app"
+$workspaceBefore = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
 $beforeDeployment = $null
 try {
   $beforeDeployment = (Invoke-RestMethod -Uri "$site/api/version" -Headers @{ "Cache-Control" = "no-cache" }).deploymentId
@@ -27,6 +28,7 @@ function Run([string]$command, [string[]]$arguments, [string]$cwd = $repo) {
 
 Write-Host "Lyra production deployment"
 Write-Host "1/5 Checking the file backup against the database..."
+$backupCheckBefore = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
 Push-Location $repo
 try {
   # songs/*.md is a backup, but lib/cache-size.test.mjs measures those files as a
@@ -38,6 +40,10 @@ try {
     Write-Warning "songs/*.md is behind the database. Refresh it with: node scripts/dump-content.mjs"
   }
 } finally { Pop-Location }
+$backupCheckAfter = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
+if ($backupCheckAfter -ne $backupCheckBefore) {
+  throw "dump-content --check changed the working tree; refusing to deploy an impure check"
+}
 
 Write-Host "2/5 Fetching the latest GitHub main branch..."
 Run "git" @("fetch", "origin", "main")
@@ -78,5 +84,9 @@ try {
     if (-not $removed) {
       Write-Warning "Deployment succeeded, but the temporary folder could not be removed: $resolved"
     }
+  }
+  $workspaceAfter = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
+  if ($workspaceAfter -ne $workspaceBefore) {
+    Write-Warning "The local working tree changed while deployment was running. The deployment used isolated origin/main; local changes were not uploaded."
   }
 }

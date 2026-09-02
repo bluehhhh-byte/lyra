@@ -98,6 +98,13 @@ export default function AdminForm() {
 
   const search = (cursor = null, { append = false } = {}) =>
     run("search", async () => {
+      if (!append) {
+        setCandidates([]);
+        setMore(null);
+        setSearchSources([]);
+        setSearchSourceStatus([]);
+        setSearchQueries([]);
+      }
       const { results, hasMore, nextCursor, sources = [], sourceStatus = [], searchQueries: usedQueries = [] } =
         await api("search", { query, cursor });
       setCandidates((prev) => {
@@ -298,7 +305,7 @@ export default function AdminForm() {
             placeholder="곡명·가수 무엇이든 (예: lemon 米津玄師)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && search()}
+            onKeyDown={(e) => e.key === "Enter" && !busy && search()}
           />
           <button className={btn} disabled={!query || busy} onClick={() => search()}>
             {busy === "search" ? "…" : "검색"}
@@ -337,7 +344,7 @@ export default function AdminForm() {
             ))}
           </ul>
         )}
-        {busy !== "search" && more && candidates.length === 0 && !searchSourceStatus.some((source) => !source.ok || source.partial) && (
+        {busy !== "search" && more && candidates.length === 0 && (
           <p className="mt-3 text-sm text-muted" role="status">결과 없음 — 검색어를 바꿔보세요</p>
         )}
         {/* announce the result count to screen readers without a visual change */}

@@ -1,5 +1,5 @@
 // 1단계 — 데이터 상태 진단 (코드가 한다, 모델은 부르지 않는다).
-//   node scripts/needs-work.mjs [--batch=30] [--field=keywords]
+//   node scripts/needs-work.mjs [--batch=30] [--field=keywords] [--check]
 //
 // 무엇이 비었는지·중복인지·근거가 약한지를 세어 data/needs-work.json에 적는다.
 // 이 파일이 이후 단계(Gemini 선별 → Claude 생성 → 로컬 검증)의 입력이다.
@@ -13,6 +13,7 @@ const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || `--$
 const BATCH_SONG = Number(arg("batch", 30));   // 음악 30곡씩
 const BATCH_MOVIE = 20;                        // 영화 20편씩
 const FIELD = arg("field", "");
+const CHECK_ONLY = process.argv.includes("--check");
 
 const songs = getAllSongs();
 const rows = [];
@@ -49,7 +50,7 @@ const out = {
   songBatches: chunk(rows, BATCH_SONG),
   movieBatches: chunk(movieRows, BATCH_MOVIE),
 };
-fs.writeFileSync("data/needs-work.json", JSON.stringify(out, null, 1));
-console.log(`곡 ${rows.length}건 · 영화 ${movieRows.length}건 → data/needs-work.json`);
+if (!CHECK_ONLY) fs.writeFileSync("data/needs-work.json", JSON.stringify(out, null, 1));
+console.log(`곡 ${rows.length}건 · 영화 ${movieRows.length}건${CHECK_ONLY ? " · 진단 전용(파일 변경 없음)" : " → data/needs-work.json"}`);
 console.log(`배치: 곡 ${out.songBatches.length}개(${BATCH_SONG}곡씩) · 영화 ${out.movieBatches.length}개(${BATCH_MOVIE}편씩)`);
 for (const [k, v] of Object.entries(out.byNeed).sort((a, b) => b[1] - a[1])) console.log(`  ${k} ${v}`);
