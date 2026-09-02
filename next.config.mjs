@@ -10,6 +10,10 @@ const nextConfig = {
   // 디렉터리에 내려받아 Vercel로 전달한다. 동적 fs 호출 때문에 NFT가 저장소
   // 전체와 빌드 중 삭제되는 export-detail.json까지 잘못 추적하지 않게 한다.
   outputFileTracingExcludes: {
+    // Vercel의 pnpm 저장소에는 설치 중 잠깐 생겼다가 사라지는 SQLite
+    // index.db-shm이 있다. NFT가 그 파일을 추적하면 패키징 시점의 lstat가
+    // ENOENT로 끝나므로 런타임에 전혀 필요 없는 저장소 전체를 제외한다.
+    "/*": [".pnpm-store/**/*"],
     "/api/admin/deploy": [
       ".git/**/*",
       ".next/**/*",
