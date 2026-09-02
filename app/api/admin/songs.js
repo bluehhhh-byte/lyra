@@ -8,7 +8,8 @@ import { geminiText, GEMINI_LITE_MODEL, LONG_FORM_TIMEOUT_MS, withReason } from 
 import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
-import { normText, fetchArtistCatalog, withTimeout, itunesToResult } from "../../../lib/admin/itunes";
+import { normText, fetchArtistCatalog, withTimeout, itunesToResult, searchItunesStore } from "../../../lib/admin/itunes";
+import { mergeExternalSongResults, searchMusicBrainz } from "../../../lib/admin/music-search";
 import {
   needsReading, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
@@ -64,82 +65,31 @@ export async function handleSongs(action, body) {
 
   if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
-    const offset = body.offset || 0;
+    const offset = Math.max(0, Number(body.offset) || 0);
+    const query = String(body.query || "").trim().slice(0, 200);
+    if (!query) return Response.json({ results: [], hasMore: false, nextOffset: 0, sources: [] });
     // free-text search across title and artist — iTunes matches both by default
     // search US/KR/JP stores together — each store has a different catalog
     // Normal /search across stores + the artist catalog (for hidden 19금 tracks),
     // in parallel. Catalog runs only on the first page — its tracks are folded in
     // once, filtered to title matches below, so paging stays search-only.
-    const [stores, catalog] = await Promise.all([
+    const [stores, catalog, musicBrainz] = await Promise.all([
       Promise.all(
-        ["US", "KR", "JP"].map((c) =>
-          fetch(
-            `https://itunes.apple.com/search?term=${encodeURIComponent(body.query)}&entity=song&limit=${PAGE}&offset=${offset}&country=${c}`
-          )
-            .then((r) => r.json())
-            .then((r) => r.results || [])
-            .catch(() => [])
-        )
+        ["US", "KR", "JP"].map((country) => searchItunesStore(query, country, { limit: PAGE, offset }))
       ),
-      offset === 0 ? withTimeout(fetchArtistCatalog(body.query), 3500) : Promise.resolve([]),
+      offset === 0 ? withTimeout(fetchArtistCatalog(query), 3500) : Promise.resolve([]),
+      searchMusicBrainz(query, { limit: PAGE, offset }),
     ]);
-    // Normalize before matching — iTunes decorates names with (feat. …), curly
-    // quotes, brackets and hyphens that make honest matches miss.
-    const norm = (s) =>
-      (s || "")
-        .toLowerCase()
-        .normalize("NFKC")
-        .replace(/[’'ʻ´`"]/g, "")
-        .replace(/[()\[\]\-_.,!?~×&/]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-    // relevance: query matches in title and artist float to the top
-    const q = norm(body.query);
+    const q = normText(query);
     const words = q.split(" ").filter(Boolean);
-    const score = (r) => {
-      const t = norm(r.trackName);
-      const a = norm(r.artistName);
-      let s = 0;
-      // tiers are exclusive — an exact title must not also collect startsWith+includes,
-      // or a song *named* "radiohead" outranks the band Radiohead.
-      if (a === q) s += 120; // a bare band name is almost always an artist search
-      else if (a.startsWith(q)) s += 50;
-      else if (a.includes(q)) s += 25;
-      if (t === q) s += 100;
-      else if (t.startsWith(q)) s += 40;
-      else if (t.includes(q)) s += 30;
-      let hits = 0;
-      for (const w of words) {
-        const inT = t.includes(w);
-        const inA = a.includes(w);
-        if (inT) s += 10;
-        if (inA) s += 12;
-        if (inT || inA) hits++;
-      }
-      // "artist + part of the title" is the common query — every word landing
-      // somewhere (artist or title) is the strongest relevance signal there is
-      if (words.length > 1 && hits === words.length) s += 80;
-      // demote covers/karaoke — the original should win
-      if (
-        /cover|karaoke|instrumental|tribute|music box|orgel|オルゴール|カラオケ|原曲|歌ってみた|acapella/.test(
-          `${t} ${a}`
-        )
-      )
-        s -= 60;
-      // gentle recency tiebreaker (≤3 pts) — never overrides a relevance tier,
-      // but among equally-matched tracks (e.g. an artist-only search's whole
-      // catalog) the newest float up, so a recent hidden release isn't buried.
-      const yr = +(r.releaseDate || "").slice(0, 4) || 0;
-      if (yr) s += Math.min(3, Math.max(0, (yr - 2000) / 9));
-      return s;
-    };
     // One scoring pool: store tracks + catalog tracks the /search dropped
     // (19금/explicit). Query words already covered by the catalog's artist names
     // are the "artist" part; whatever's left is the "title" part. Artist-only
     // search ("Master Muzik") has no leftover title words → include the whole
     // catalog (its hidden tracks too). "Master Muzik 도련님" leaves 도련님 → keep
     // only catalog tracks whose title matches, so the discography doesn't flood.
-    // Scoring both pools together ranks the all-words match (artist AND title) top.
+    // 두 소스를 합친 뒤 같은 점수 함수로 정렬해야 Apple과 MusicBrainz 후보의
+    // 제목·가수 일치도를 직접 비교할 수 있다.
     const catalogArtists = normText([...new Set(catalog.map((r) => r.artistName))].join(" "));
     const titleWords = words.filter((w) => w.length > 1 && !catalogArtists.includes(normText(w)));
     const seen = new Set();
@@ -153,11 +103,16 @@ export async function handleSongs(action, body) {
     for (let i = 0; i < PAGE; i++) for (const s of stores) if (s[i]) add(s[i]);
     for (const r of catalog)
       if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
-    const results = pool.sort((x, y) => score(y) - score(x)).map(itunesToResult);
+    const appleResults = pool.map(itunesToResult);
+    const results = mergeExternalSongResults([appleResults, musicBrainz.results], query);
     return Response.json({
       results,
-      hasMore: stores.some((s) => s.length === PAGE),
+      hasMore: stores.some((s) => s.length === PAGE) || musicBrainz.hasMore,
       nextOffset: offset + PAGE,
+      sources: [
+        ...(results.some((result) => result.source === "apple") ? ["Apple Music"] : []),
+        ...(results.some((result) => result.source === "musicbrainz") ? ["MusicBrainz"] : []),
+      ],
     });
   }
 
@@ -1071,7 +1026,7 @@ ${listed}`,
   }
 
   if (action === "save") {
-    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, keywords, emotion } = body;
+    const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, keywords, emotion, external_url } = body;
     const sourceUrls = commentSourceUrls(body.commentSources);
     const commentBasis = ["lyrics_only", "web_enriched", "manual"].includes(body.commentBasis) ? body.commentBasis : "manual";
     const slug = `${artist} ${title}`
@@ -1112,6 +1067,7 @@ genre: ${capGenre(genre) || ""}
 artwork: ${artwork || ""}
 preview: ${preview || ""}
 trackId: ${trackId || ""}
+external_url: ${external_url || ""}
 duration: ${duration || ""}
 lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => capGenre(t.trim())).filter(Boolean).join(", ")}]

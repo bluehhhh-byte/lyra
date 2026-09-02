@@ -58,6 +58,7 @@ export default function AdminForm() {
   const [query, setQuery] = useState("");
   const [candidates, setCandidates] = useState([]);
   const [more, setMore] = useState(null); // {hasMore, nextOffset}
+  const [searchSources, setSearchSources] = useState([]);
   const [song, setSong] = useState(null); // picked candidate
   const [lang, setLang] = useState("en");
   const [lyrics, setLyrics] = useState("");
@@ -95,13 +96,14 @@ export default function AdminForm() {
 
   const search = (offset = 0) =>
     run("search", async () => {
-      const { results, hasMore, nextOffset } = await api("search", { query, offset });
+      const { results, hasMore, nextOffset, sources = [] } = await api("search", { query, offset });
       setCandidates((prev) => {
         const base = offset === 0 ? [] : prev;
         const seen = new Set(base.map((c) => `${c.title}|${c.artist}`.toLowerCase()));
         return [...base, ...results.filter((c) => !seen.has(`${c.title}|${c.artist}`.toLowerCase()))];
       });
       setMore({ hasMore, nextOffset });
+      setSearchSources((previous) => offset === 0 ? sources : [...new Set([...previous, ...sources])]);
       if (offset === 0) setSong(null);
     })();
 
@@ -298,7 +300,7 @@ export default function AdminForm() {
           </button>
         </div>
         <p className="mt-1.5 text-xs text-muted/70">
-          19금·일부 explicit 곡도 가수+곡명으로 검색하면 함께 찾습니다.
+          Apple Music 3개 스토어와 MusicBrainz를 함께 검색합니다. 19금·독립·구작 음원도 포함합니다.
         </p>
         {/* skeleton rows while the first page of a search is in flight */}
         {busy === "search" && candidates.length === 0 && (
@@ -319,8 +321,8 @@ export default function AdminForm() {
         )}
         {/* announce the result count to screen readers without a visual change */}
         {candidates.length > 0 && (
-          <p className="sr-only" role="status" aria-live="polite">
-            검색 결과 {candidates.length}곡
+          <p className="mt-2 text-xs text-muted" role="status" aria-live="polite">
+            검색 결과 {candidates.length}곡{searchSources.length ? ` · ${searchSources.join(" + ")}` : ""}
           </p>
         )}
         {candidates.length > 0 && (
@@ -336,10 +338,15 @@ export default function AdminForm() {
                       song === c ? "text-accent" : ""
                     }`}
                   >
-                    <img src={c.thumb} alt="" className="h-10 w-10 " />
+                    {c.thumb ? (
+                      <img src={c.thumb} alt="" className="h-10 w-10 " />
+                    ) : (
+                      <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center bg-line text-[9px] text-muted">NO ART</span>
+                    )}
                     <span className="min-w-0">
                       <span className="font-medium">{c.title}</span>
-                      <span className="text-muted"> — {c.artist} · {c.album}</span>
+                      <span className="text-muted"> — {c.artist}{c.album ? ` · ${c.album}` : ""}</span>
+                      <span className="ml-2 text-[10px] text-muted/70">{c.sourceLabel || "Apple Music"}</span>
                     </span>
                   </button>
                   {c.preview && (
