@@ -4,7 +4,7 @@ import { getAllSongsRuntime, capitalizeLyricLines, parseFrontmatter, parseLyrics
 import { translationVariants } from "../../../lib/translation-variants";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
-import { geminiText, GEMINI_LITE_MODEL, withReason } from "../../../lib/admin/gemini";
+import { geminiText, GEMINI_LITE_MODEL, LONG_FORM_TIMEOUT_MS, withReason } from "../../../lib/admin/gemini";
 import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
@@ -1163,7 +1163,12 @@ ${lyricBody}
 - 단정적 분석 톤, 평서문 '~다'체. "~습니다/~해요" 금지. 과장·아부 금지
 - 마지막 문단은 이 취향이 다음에 파고들 만한 방향을 한 문장으로 제안
 집계:
-${lines}`
+${lines}`,
+      false,
+      undefined,
+      // 3~4문단 산문은 기본 12초 안에 안 끝난다 — 좋은 모델부터 차례로 잘려
+      // 나가고 lite 모델만 남거나, 그마저 늦으면 리포트 자체가 실패한다.
+      { timeoutMs: LONG_FORM_TIMEOUT_MS }
     );
     if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
 

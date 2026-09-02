@@ -13,7 +13,7 @@ import { readMovie, writeMovie, readRuntimeData, writeData } from "../../../lib/
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 import { getAllMoviesRuntime } from "../../../lib/movies";
 import { summarizeTaste } from "../../../lib/taste-core";
-import { geminiText } from "../../../lib/admin/gemini";
+import { geminiText, LONG_FORM_TIMEOUT_MS } from "../../../lib/admin/gemini";
 import { setField } from "../../../lib/admin/frontmatter";
 import { kstToday } from "../../../lib/kst";
 import { appendReportVersion } from "../../../lib/report-history";
@@ -38,7 +38,11 @@ export async function handleWatcha(action, body) {
 - 단정적 분석 톤, 평서문 '~다'체. "~습니다/~해요" 금지. 과장·아부 금지
 - 마지막 문단은 이 사람이 좋아할 만한 방향을 한 문장으로 제안
 집계:
-${s.lines}`
+${s.lines}`,
+      false,
+      undefined,
+      // 음악 리포트와 같은 이유 — 장문 산문은 기본 12초로는 매번 잘린다.
+      { timeoutMs: LONG_FORM_TIMEOUT_MS }
     );
     if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
 
