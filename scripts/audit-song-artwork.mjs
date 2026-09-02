@@ -20,6 +20,7 @@ const TRUSTED_HOSTS = new Set([
 ]);
 
 export const CORRECTED_ARTWORK = Object.freeze([
+  ["kenshi-yonezu-地球儀", "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/45/5a/c9/455ac9fc-e38b-09c2-7e8f-79beeca04375/4547366634242.jpg/600x600bb.jpg"],
   ["hu57la-내-모든-것", "https://i.ytimg.com/vi/GJcmMbvY3jo/maxresdefault.jpg"],
   ["스카이민혁-촛불", "https://i1.sndcdn.com/artworks-LE1txAv9Q3yYwJLT-5aJ88g-t500x500.jpg"],
   ["프리즘-모험아이", "https://image.bugsm.co.kr/album/images/1200/77/7776.jpg"],

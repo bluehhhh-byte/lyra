@@ -12,6 +12,7 @@ import {
   fitCarouselNoteLayout,
   waitForCarouselFonts,
 } from "../../../lib/carousel";
+import { carouselArtworkSrc } from "../../../lib/artwork-source";
 import {
   carouselArtistLine,
   carouselDisplayTitle,
@@ -534,7 +535,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     (async () => {
       const [, art] = await Promise.all([
         waitForCarouselFonts(),
-        loadImage(song.artwork).catch(() => null),
+        loadImage(carouselArtworkSrc(song.artwork)).catch(() => null),
       ]);
       const made = [];
       for (const [index, slide] of carousel.slides.entries()) {

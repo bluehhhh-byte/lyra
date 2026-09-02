@@ -3,11 +3,11 @@ title: 地球儀
 title_ko: 지구본
 artist: Kenshi Yonezu
 artist_ko:
-album:
+album: Chikyugi - Spinning Globe - Single
 year: 2023
-artwork: https://image.bugsm.co.kr/album/images/1200/355738/35573873.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/45/5a/c9/455ac9fc-e38b-09c2-7e8f-79beeca04375/4547366634242.jpg/600x600bb.jpg
 preview:
-trackId:
+trackId: 1695666895
 duration: 273
 genre: J-Pop
 lang: ja
