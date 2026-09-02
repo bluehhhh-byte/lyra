@@ -1,7 +1,28 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01T08:45:54.836Z",
+  "updatedAt": "2026-09-02T05:48:26.958Z",
   "items": [
+    {
+      "id": "verified-8a89af9f948e3e6a557e7622",
+      "songSlug": "yuuri-the-world-has-ended",
+      "workTitle": "재회 ~Silent Truth~",
+      "originalTitle": "再会〜Silent Truth〜",
+      "workType": "drama",
+      "mediaType": "tv",
+      "tmdbId": null,
+      "localMovieSlug": "",
+      "year": 2026,
+      "poster": "",
+      "role": "main_theme",
+      "season": null,
+      "episode": null,
+      "evidenceUrl": "https://ssl.sme.co.jp/artist/yuri/info/579982",
+      "evidenceLabel": "Sony Music 공식 발표",
+      "status": "verified",
+      "note": "TV아사히 드라마의 주제가로 공식 발표됐으며, 방송 후 Netflix에서 전 세계 스트리밍된다.",
+      "createdAt": "2026-09-02T05:48:26.958Z",
+      "updatedAt": "2026-09-02T05:48:26.958Z"
+    },
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
       "songSlug": "l-arc-en-ciel-浸食-lose-control",
