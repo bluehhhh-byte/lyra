@@ -26,21 +26,34 @@ function Run([string]$command, [string[]]$arguments, [string]$cwd = $repo) {
 }
 
 Write-Host "Lyra production deployment"
-Write-Host "1/4 Fetching the latest GitHub main branch..."
+Write-Host "1/5 Checking the file backup against the database..."
+Push-Location $repo
+try {
+  # songs/*.md is a backup, but lib/cache-size.test.mjs measures those files as a
+  # stand-in for database rows when it checks the 2MiB Data Cache ceiling. A stale
+  # backup means that gate is sizing yesterday's catalog. The site itself reads the
+  # database, so this never blocks a deploy - it only says the estimate went stale.
+  & node scripts/dump-content.mjs --check
+  if ($LASTEXITCODE -ne 0) {
+    Write-Warning "songs/*.md is behind the database. Refresh it with: node scripts/dump-content.mjs"
+  }
+} finally { Pop-Location }
+
+Write-Host "2/5 Fetching the latest GitHub main branch..."
 Run "git" @("fetch", "origin", "main")
 
 try {
-  Write-Host "2/4 Creating an isolated deployment copy..."
+  Write-Host "3/5 Creating an isolated deployment copy..."
   Run "git" @("worktree", "add", "--detach", $deployDir, "origin/main")
 
-  Write-Host "3/4 Uploading origin/main to Vercel..."
+  Write-Host "4/5 Uploading origin/main to Vercel..."
   $env:VERCEL_ORG_ID = $teamId
   $env:VERCEL_PROJECT_ID = $projectId
   # Restored build cache has previously produced a READY deployment with a missing
   # server chunk. Production deploys favor a complete artifact over a short build.
   Run "pnpm" @("dlx", "vercel@59.1.3", "deploy", "--prod", "--force", "--yes", "--cwd", $deployDir)
 
-  Write-Host "4/4 Verifying production..."
+  Write-Host "5/5 Verifying production..."
   Run "node" @("scripts/verify-production.mjs", $site, [string]$beforeDeployment)
   Write-Host "READY: $site"
 } finally {
