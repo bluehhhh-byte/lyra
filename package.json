@@ -18,6 +18,7 @@
     "build:index": "node scripts/build-search-index.mjs",
     "status": "node scripts/project-status.mjs --write",
     "needs": "node scripts/needs-work.mjs",
+    "quality:search": "node scripts/evaluate-admin-search.mjs",
     "worktree": "node scripts/worktree.mjs",
     "deploy:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-production.ps1",
     "db:migrate": "node scripts/migrate-content.mjs",

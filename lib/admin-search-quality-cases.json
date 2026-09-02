@@ -1,0 +1,10 @@
+[
+  { "query": "세계가 끝났어 유우리", "expectedTitles": ["The World Has Ended", "世界が終わりました"], "expectedArtists": ["Yuuri", "優里"], "country": "JP" },
+  { "query": "아무것도 없어 와스레란네에요", "expectedTitle": "なんもねえ", "expectedArtist": "忘れらんねえよ", "country": "JP" },
+  { "query": "지구본 요네즈 켄시", "expectedTitle": "地球儀", "expectedArtists": ["Kenshi Yonezu", "米津玄師"], "country": "JP" },
+  { "query": "0번째 감각 10-FEET", "expectedTitle": "第ゼロ感", "expectedArtist": "10-FEET", "country": "JP" },
+  { "query": "망각의 하늘 SADS", "expectedTitle": "忘却の空", "expectedArtist": "SADS", "country": "JP" },
+  { "query": "Lemon Kenshi Yonezu", "expectedTitle": "Lemon", "expectedArtists": ["Kenshi Yonezu", "米津玄師"], "country": "US" },
+  { "query": "Lose Control MEDUZA", "expectedTitle": "Lose Control", "expectedArtist": "MEDUZA", "country": "US" },
+  { "query": "The World Has Ended Yuuri", "expectedTitles": ["The World Has Ended", "世界が終わりました"], "expectedArtists": ["Yuuri", "優里"], "country": "US" }
+]
