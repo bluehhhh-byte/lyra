@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-02T06:02:48.710Z",
+  "updatedAt": "2026-09-02T13:40:16.186Z",
   "items": [
     {
       "id": "verified-65eb2a2ea336d651b33c6f31",
@@ -1618,6 +1618,27 @@
       "note": "3화 ‘Figures of Light’에 사용됐다.",
       "createdAt": "2026-09-01T08:45:54.836Z",
       "updatedAt": "2026-09-01T08:45:54.836Z"
+    },
+    {
+      "id": "69eae84b-95f8-46fe-b549-06952d87c3f6",
+      "songSlug": "kiyoharu-boukyaku-no-sora-25th-anniversary-ver",
+      "workTitle": "이케부쿠로 웨스트 게이트 파크",
+      "originalTitle": "池袋ウエストゲートパーク",
+      "workType": "drama",
+      "mediaType": "tv",
+      "tmdbId": 4939,
+      "localMovieSlug": "",
+      "year": 2000,
+      "poster": "https://image.tmdb.org/t/p/w500/cw61IB776FMFuj0wkASiSJeX3bW.jpg",
+      "role": "main_theme",
+      "season": null,
+      "episode": null,
+      "evidenceUrl": "https://www.oricon.co.jp/prof/21494/products/266846/1/",
+      "evidenceLabel": "오리콘 — 싱글 「忘却の空」 타이업 표기",
+      "status": "verified",
+      "note": "오리콘 상품 정보에 「TBS テレビドラマ『池袋ウエストゲートパーク』主題歌」로 명기돼 있다. 2000년 4월 12일 발매, 드라마는 이틀 뒤인 4월 14일 방영을 시작했다.",
+      "createdAt": "2026-09-02T13:40:16.186Z",
+      "updatedAt": "2026-09-02T13:40:16.186Z"
     }
   ]
 }
