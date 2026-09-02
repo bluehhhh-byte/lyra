@@ -205,7 +205,7 @@ export default function SongTools({ songs }) {
             onChange={(event) => setQuery(event.target.value)}
             placeholder="원문·한글 제목, 아티스트, 앨범 또는 별칭"
             autoComplete="off"
-            className="min-w-0 flex-1  border border-line bg-bg px-3 py-2 text-sm outline-none placeholder:text-muted/70 focus:border-accent"
+            className="min-w-0 flex-1  border border-line bg-bg px-3 py-2 text-sm outline-none placeholder:text-muted focus:border-accent"
           />
           {query && (
             <button

@@ -159,7 +159,7 @@ export default async function StatsPage() {
         <div className="mb-4 flex items-baseline justify-between gap-3">
           <div>
             <h2 className="text-sm font-semibold text-muted">감정 변화</h2>
-            <p className="mt-0.5 text-xs text-muted/70">기록한 날짜별 감정의 흐름</p>
+            <p className="mt-0.5 text-xs text-muted">기록한 날짜별 감정의 흐름</p>
           </div>
           <Link href="/diary" className="shrink-0 text-xs text-accent hover:underline">
             키워드 일기 자세히 →
@@ -170,7 +170,7 @@ export default async function StatsPage() {
 
       <section className="mb-12" aria-labelledby="artist-emotion-title">
         <h2 id="artist-emotion-title" className="text-sm font-semibold text-muted">아티스트와 함께 남긴 기록의 정서</h2>
-        <p className="mt-1 text-xs text-muted/70">감정이 기록된 곡 3곡 이상만 해석한다. 아티스트의 성격이 아니라 기록의 분포다.</p>
+        <p className="mt-1 text-xs text-muted">감정이 기록된 곡 3곡 이상만 해석한다. 아티스트의 성격이 아니라 기록의 분포다.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {readableArtistEmotions.map((profile) => (
             <div key={profile.artist} className=" border border-line bg-surface px-4 py-3">

@@ -355,7 +355,7 @@ function Snippet({ song, needle, lyrics }) {
   if (!line.toLowerCase().includes(needle)) return null;
   const i = line.toLowerCase().indexOf(needle);
   return (
-    <p className="mt-1 line-clamp-2 text-xs italic text-muted/80">
+    <p className="mt-1 line-clamp-2 text-xs italic text-muted">
       “{line.slice(0, i)}
       <span className="not-italic font-semibold text-accent">
         {line.slice(i, i + needle.length)}

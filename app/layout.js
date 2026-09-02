@@ -45,6 +45,16 @@ export default function RootLayout({ children }) {
   return (
     // the no-flash script mutates <html> before hydration — that mismatch is intended
     <html lang="ko" suppressHydrationWarning>
+      <head>
+        {/* globals.css의 @import로 두면 CSS를 받아 파싱한 뒤에야 폰트를 요청한다.
+            그동안 대체 폰트로 그려지다 나중에 바뀌며 줄바꿈이 달라진다. head의
+            link는 문서를 읽는 즉시 발견되므로 그 간격이 사라진다. */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
       <body className="isolate min-h-screen font-sans">
         <a
           href="#main-content"

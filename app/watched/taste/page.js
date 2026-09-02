@@ -80,7 +80,7 @@ function PrefSection({ title, high, low, mean, link, note = "3편 이상만" }) 
   return (
     <section className="mb-10">
       <h2 className="mb-1 text-sm font-semibold text-muted">{title}</h2>
-      <p className="mb-3 text-xs text-muted/60">전체 평균 ★{mean.toFixed(2)} 대비 · {note}</p>
+      <p className="mb-3 text-xs text-muted">전체 평균 ★{mean.toFixed(2)} 대비 · {note}</p>
       {high.length > 0 && (
         <div className="mb-2">
           <p className="mb-1.5 text-xs text-green-400">편애 ↑</p>
@@ -182,7 +182,7 @@ export default async function TastePage() {
               AI 리포트
             </span>
             {report.count && report.count !== rated.length && (
-              <span className="text-xs text-muted/60">
+              <span className="text-xs text-muted">
                 {report.count}편 기준 · 지금 {rated.length}편 (재생성 권장)
               </span>
             )}
@@ -196,7 +196,7 @@ export default async function TastePage() {
         </div>
       )}
 
-      <p className="mb-10 max-w-2xl text-xs leading-relaxed text-muted/70">
+      <p className="mb-10 max-w-2xl text-xs leading-relaxed text-muted">
         막대는 <b className="text-muted">관람 편수</b>, 오른쪽 별점은 그 그룹의 <b className="text-muted">평균 평점</b>.
         전체 평균보다 <span className="text-green-400">높으면 초록</span>,
         <span className="text-red-400"> 낮으면 빨강</span> — 많이 본 것과 좋아하는 것은 다르다.

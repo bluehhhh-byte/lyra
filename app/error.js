@@ -5,7 +5,7 @@ export default function Error({ error, reset }) {
   return (
     <div className="py-24 text-center">
       <p className="text-sm text-muted">문제가 생겼어요.</p>
-      <p className="mt-1 text-xs text-muted/60">{error?.message || "알 수 없는 오류"}</p>
+      <p className="mt-1 text-xs text-muted">{error?.message || "알 수 없는 오류"}</p>
       <div className="mt-6 flex justify-center gap-2">
         <button
           onClick={reset}

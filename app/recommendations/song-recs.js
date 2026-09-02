@@ -75,7 +75,7 @@ export default function SongRecs({ items }) {
               {s.artist}
               {s.year ? ` · ${s.year}` : ""}
             </p>
-            {s.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{s.why}</p>}
+            {s.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted">{s.why}</p>}
           </div>
         );
       })}

@@ -116,7 +116,7 @@ export default async function MotifsPage() {
                     <span className="text-xs tabular-nums text-muted">{row.sample}곡</span>
                   </div>
                   <p className="mt-1 text-xs text-muted">이 말과 함께 남은 기록 · {row.type}</p>
-                  <p className="mt-1 text-[11px] tabular-nums text-muted/80">밝기 {row.center.v.toFixed(1)} · 각성 {row.center.a.toFixed(1)}</p>
+                  <p className="mt-1 text-[11px] tabular-nums text-muted">밝기 {row.center.v.toFixed(1)} · 각성 {row.center.a.toFixed(1)}</p>
                 </div>
               ))}
             </div>
@@ -170,7 +170,7 @@ export default async function MotifsPage() {
                           {s.title} <span className="font-normal text-muted">· {s.artist}</span>
                         </p>
                         {quote && (
-                          <p className="mt-0.5 break-words text-xs italic leading-snug text-muted/80">“{quote}”</p>
+                          <p className="mt-0.5 break-words text-xs italic leading-snug text-muted">“{quote}”</p>
                         )}
                       </div>
                     </div>

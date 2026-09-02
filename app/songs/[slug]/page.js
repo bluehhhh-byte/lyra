@@ -243,7 +243,7 @@ export default async function SongPage({ params }) {
         <div className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
           {song.comment && <p>{song.comment}</p>}
           {commentSources.length > 0 && (
-            <p className="mt-2 text-[11px] text-muted/80" data-comment-sources>
+            <p className="mt-2 text-[11px] text-muted" data-comment-sources>
               코멘트 근거 · {commentSources.map((source, index) => (
                 <span key={source.uri}>
                   {index > 0 && " · "}
@@ -307,7 +307,7 @@ export default async function SongPage({ params }) {
 
       {/* when this entry went up — full datetime if recorded, else the date */}
       {(song.published || song.date) && (
-        <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
+        <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted">
           <Link
             href={`/archive/${kstDay(song.published || song.date)}`}
             className="hover:text-accent"
@@ -326,7 +326,14 @@ export default async function SongPage({ params }) {
             {position.map(({ key, label, href, count }) => (
               <li key={key}>
                 {href ? (
-                  <Link href={href} className="text-ink hover:text-accent hover:underline">{label}</Link>
+                  <Link
+                    href={href}
+                    // 문장 안에 섞인 링크라 색만으로는 구분되지 않는다(axe link-in-text-block).
+                    // 밑줄을 상시로 두되 지면 톤을 해치지 않게 옅은 색으로 띄운다.
+                    className="text-ink underline decoration-muted underline-offset-4 hover:text-accent hover:decoration-accent"
+                  >
+                    {label}
+                  </Link>
                 ) : (
                   <span className="text-ink">{label}</span>
                 )}
@@ -387,7 +394,7 @@ export default async function SongPage({ params }) {
       {eraMovies.length > 0 && (
         <div className="mx-auto mt-14 max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold text-muted">
-            이 시대의 영화 <span className="text-xs font-normal text-muted/60">{songDecadeNum}년대의 기록</span>
+            이 시대의 영화 <span className="text-xs font-normal text-muted">{songDecadeNum}년대의 기록</span>
           </h2>
           <div className="grid grid-cols-3 gap-x-4 gap-y-6">
             {eraMovies.map((m) => (
@@ -402,7 +409,7 @@ export default async function SongPage({ params }) {
                   />
                 </div>
                 <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{m.title_ko || m.title}</h3>
-                <p className="mt-0.5 truncate text-[10px] text-muted/70">{m.crossReason}</p>
+                <p className="mt-0.5 truncate text-[10px] text-muted">{m.crossReason}</p>
               </Link>
             ))}
           </div>

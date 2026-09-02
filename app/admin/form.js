@@ -299,7 +299,7 @@ export default function AdminForm() {
             {busy === "search" ? "…" : "검색"}
           </button>
         </div>
-        <p className="mt-1.5 text-xs text-muted/70">
+        <p className="mt-1.5 text-xs text-muted">
           Apple Music 3개 스토어와 MusicBrainz를 함께 검색합니다. 19금·독립·구작 음원도 포함합니다.
         </p>
         {/* skeleton rows while the first page of a search is in flight */}
@@ -346,7 +346,7 @@ export default function AdminForm() {
                     <span className="min-w-0">
                       <span className="font-medium">{c.title}</span>
                       <span className="text-muted"> — {c.artist}{c.album ? ` · ${c.album}` : ""}</span>
-                      <span className="ml-2 text-[10px] text-muted/70">{c.sourceLabel || "Apple Music"}</span>
+                      <span className="ml-2 text-[10px] text-muted">{c.sourceLabel || "Apple Music"}</span>
                     </span>
                   </button>
                   {c.preview && (
@@ -529,7 +529,7 @@ export default function AdminForm() {
             <label className="block text-xs text-muted">
               한글 번역 제목
               <input className={input + " mt-1"} placeholder="뜻을 번역해 입력 (예: Yesterday → 어제)" value={titleKo} onChange={(e) => setTitleKo(e.target.value)} />
-              <span className="mt-1 block text-[11px] text-muted/70">영어·일본어 제목의 발음 표기가 아니라 의미를 자연스럽게 번역한 제목입니다.</span>
+              <span className="mt-1 block text-[11px] text-muted">영어·일본어 제목의 발음 표기가 아니라 의미를 자연스럽게 번역한 제목입니다.</span>
             </label>
             <SongAppearanceDraft
               value={appearance}

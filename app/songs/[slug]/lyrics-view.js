@@ -134,7 +134,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   return (
     <div data-lyric-view className="relative isolate mx-auto max-w-2xl pb-3 pr-7 sm:pr-10">
       <LyricThread seed={song?.slug || "lyrics"} />
-      <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted/60"}`}>
+      <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted"}`}>
         {missingTranslationCount ? `번역 필요 ${missingTranslationCount}줄` : "번역 상태 · 완료"}
       </p>
       {/* toolbar sticks so mode/size stay reachable deep into a long song */}
@@ -214,7 +214,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => copyStanza(stanza, i)}
                 aria-label="이 구절을 출처와 함께 복사"
-                className="absolute -top-3 right-11 flex h-11 min-w-11 items-center justify-center  px-1 text-[11px] text-muted/50 transition hover:text-accent"
+                className="absolute -top-3 right-11 flex h-11 min-w-11 items-center justify-center  px-1 text-[11px] text-muted transition hover:text-accent"
               >
                 {copiedStanza === i ? "복사됨" : "복사"}
               </button>
@@ -224,7 +224,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 onClick={() => openCard(i)}
                 aria-label="이 구절로 인스타그램 캐러셀 만들기"
                 title="캐러셀 만들기"
-                className="absolute -top-3 right-0 flex h-11 w-11 items-center justify-center  text-muted/40 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
+                className="absolute -top-3 right-0 flex h-11 w-11 items-center justify-center  text-muted transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                   <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
@@ -258,7 +258,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                     </p>
                   )}
                   {mode !== "trans" && showReadings && line.reading && (
-                    <p className={`mt-0.5 text-muted/70 ${s.reading}`}>{line.reading}</p>
+                    <p className={`mt-0.5 text-muted ${s.reading}`}>{line.reading}</p>
                   )}
                   {mode !== "orig" &&
                     line.ko &&
@@ -277,7 +277,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                       <p
                         lang="en"
                         aria-describedby={mode === "both" ? `lyric-${i}-${j}-original` : undefined}
-                        className={`font-serif italic text-muted/80 ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
+                        className={`font-serif italic text-muted ${s.trans} ${mode === "both" ? "mt-0.5" : ""}`}
                       >
                         <span className="sr-only">영어 번역: </span>
                         {line.ko}
@@ -305,7 +305,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                   {owner && (
                     <button
                       onClick={() => setEditing(i)}
-                      className="ml-2 text-xs text-muted/60 hover:text-accent"
+                      className="ml-2 text-xs text-muted hover:text-accent"
                     >
                       수정
                     </button>
@@ -316,7 +316,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
             {owner && editing !== i && !(notes[i] ?? stanza.note) && (
               <button
                 onClick={() => setEditing(i)}
-                className="mt-3 text-xs text-muted/50 transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
+                className="mt-3 text-xs text-muted transition hover:text-accent sm:opacity-0 sm:group-hover/stanza:opacity-100"
               >
                 ✎ 노트 추가
               </button>
@@ -366,7 +366,7 @@ function NoteEditor({ initial, onSave, onCancel }) {
           <button
             onClick={() => save("")}
             disabled={busy}
-            className="ml-auto text-xs text-muted/60 hover:text-red-400 disabled:opacity-40"
+            className="ml-auto text-xs text-muted hover:text-red-400 disabled:opacity-40"
           >
             삭제
           </button>

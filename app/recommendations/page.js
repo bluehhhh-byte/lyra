@@ -63,12 +63,12 @@ export default async function RecommendationsPage() {
         <>
           <section className="mb-12">
             <h2 className="mb-1 text-sm font-semibold text-muted">취향의 연장선</h2>
-            <p className="mb-4 text-xs text-muted/60">높은 별점을 준 국가·장르·감독을 더 깊게</p>
+            <p className="mb-4 text-xs text-muted">높은 별점을 준 국가·장르·감독을 더 깊게</p>
             <MovieRecs items={extend} />
           </section>
           <section className="mb-12">
             <h2 className="mb-1 text-sm font-semibold text-muted">새로운 방향</h2>
-            <p className="mb-4 text-xs text-muted/60">연결점은 남기되 덜 본 국가·시대·형식으로</p>
+            <p className="mb-4 text-xs text-muted">연결점은 남기되 덜 본 국가·시대·형식으로</p>
             <MovieRecs items={discover} />
           </section>
         </>

@@ -1,6 +1,6 @@
 ﻿// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
 import { readSong, writeSong, deleteSong, readRuntimeData, writeData, commitFiles } from "../../../lib/store";
-import { getAllSongsRuntime, capitalizeLyricLines, parseFrontmatter, parseLyrics } from "../../../lib/songs";
+import { getAllSongsRuntime, getAllSongsMeta, capitalizeLyricLines, parseFrontmatter, parseLyrics } from "../../../lib/songs";
 import { translationVariants } from "../../../lib/translation-variants";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
@@ -8,8 +8,8 @@ import { geminiText, GEMINI_LITE_MODEL, LONG_FORM_TIMEOUT_MS, withReason } from 
 import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
-import { normText, fetchArtistCatalog, withTimeout, itunesToResult, searchItunesStore } from "../../../lib/admin/itunes";
-import { mergeExternalSongResults, searchMusicBrainz } from "../../../lib/admin/music-search";
+import { normText, fetchArtistCatalog, withTimeout, itunesToResult, searchItunesStorePage } from "../../../lib/admin/itunes";
+import { buildSearchQueries, mergeExternalSongResults, searchMusicBrainz } from "../../../lib/admin/music-search";
 import {
   needsReading, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
@@ -65,22 +65,31 @@ export async function handleSongs(action, body) {
 
   if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
-    const offset = Math.max(0, Number(body.offset) || 0);
     const query = String(body.query || "").trim().slice(0, 200);
-    if (!query) return Response.json({ results: [], hasMore: false, nextOffset: 0, sources: [] });
+    if (!query) return Response.json({ results: [], hasMore: false, nextCursor: { apple: null, musicbrainz: null }, sources: [], sourceStatus: [] });
+    const legacyOffset = Math.max(0, Number(body.offset) || 0);
+    const suppliedCursor = body.cursor && typeof body.cursor === "object" ? body.cursor : null;
+    const cursor = suppliedCursor || { apple: legacyOffset, musicbrainz: legacyOffset };
+    const appleOffset = cursor.apple === null ? null : Math.max(0, Number(cursor.apple) || 0);
+    const musicBrainzOffset = cursor.musicbrainz === null ? null : Math.max(0, Number(cursor.musicbrainz) || 0);
+    const searchQueries = buildSearchQueries(query, await getAllSongsMeta());
+    const externalQuery = searchQueries.at(-1) || query;
     // free-text search across title and artist — iTunes matches both by default
     // search US/KR/JP stores together — each store has a different catalog
     // Normal /search across stores + the artist catalog (for hidden 19금 tracks),
     // in parallel. Catalog runs only on the first page — its tracks are folded in
     // once, filtered to title matches below, so paging stays search-only.
-    const [stores, catalog, musicBrainz] = await Promise.all([
-      Promise.all(
-        ["US", "KR", "JP"].map((country) => searchItunesStore(query, country, { limit: PAGE, offset }))
-      ),
-      offset === 0 ? withTimeout(fetchArtistCatalog(query), 3500) : Promise.resolve([]),
-      searchMusicBrainz(query, { limit: PAGE, offset }),
+    const [storePages, catalog, musicBrainz] = await Promise.all([
+      appleOffset === null
+        ? Promise.resolve([])
+        : Promise.all(["US", "KR", "JP"].map((country) => searchItunesStorePage(externalQuery, country, { limit: PAGE, offset: appleOffset }))),
+      appleOffset === 0 ? withTimeout(fetchArtistCatalog(externalQuery), 3500) : Promise.resolve([]),
+      musicBrainzOffset === null
+        ? Promise.resolve({ results: [], hasMore: false, ok: true, error: "", nextOffset: null })
+        : searchMusicBrainz(externalQuery, { limit: PAGE, offset: musicBrainzOffset }),
     ]);
-    const q = normText(query);
+    const stores = storePages.map((page) => page.results);
+    const q = normText(externalQuery);
     const words = q.split(" ").filter(Boolean);
     // One scoring pool: store tracks + catalog tracks the /search dropped
     // (19금/explicit). Query words already covered by the catalog's artist names
@@ -104,15 +113,42 @@ export async function handleSongs(action, body) {
     for (const r of catalog)
       if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
     const appleResults = pool.map(itunesToResult);
-    const results = mergeExternalSongResults([appleResults, musicBrainz.results], query);
+    const results = mergeExternalSongResults([appleResults, musicBrainz.results], externalQuery);
+    const failedStores = storePages.filter((page) => !page.ok);
+    const appleOk = appleOffset === null || storePages.some((page) => page.ok);
+    const appleHasMore = storePages.some((page) => page.hasMore);
+    const appleNext = appleOffset === null
+      ? null
+      : failedStores.length
+        ? appleOffset
+        : appleHasMore ? appleOffset + PAGE : null;
+    const musicBrainzNext = musicBrainzOffset === null ? null : musicBrainz.nextOffset;
+    const sourceStatus = [
+      {
+        id: "apple",
+        label: "Apple Music",
+        ok: appleOk,
+        partial: failedStores.length > 0 && appleOk,
+        error: failedStores.length ? `${failedStores.length}/3개 스토어 응답 실패` : "",
+      },
+      {
+        id: "musicbrainz",
+        label: "MusicBrainz",
+        ok: musicBrainz.ok,
+        partial: false,
+        error: musicBrainz.error || "",
+      },
+    ];
     return Response.json({
       results,
-      hasMore: stores.some((s) => s.length === PAGE) || musicBrainz.hasMore,
-      nextOffset: offset + PAGE,
+      hasMore: appleNext !== null || musicBrainzNext !== null,
+      nextCursor: { apple: appleNext, musicbrainz: musicBrainzNext },
       sources: [
         ...(results.some((result) => result.source === "apple") ? ["Apple Music"] : []),
         ...(results.some((result) => result.source === "musicbrainz") ? ["MusicBrainz"] : []),
       ],
+      sourceStatus,
+      searchQueries,
     });
   }
 

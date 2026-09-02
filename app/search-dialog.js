@@ -125,7 +125,7 @@ export default function SearchDialog({ open, onClose }) {
                       <span className="min-w-0">
                         <span className="block truncate text-sm font-medium"><Highlight value={item.title} query={query} /></span>
                         <span className="block truncate text-xs text-muted"><Highlight value={item.subtitle} query={query} /></span>
-                        {item.snippet && <span className="mt-0.5 block truncate text-xs text-muted/70"><Highlight value={item.snippet} query={query} /></span>}
+                        {item.snippet && <span className="mt-0.5 block truncate text-xs text-muted"><Highlight value={item.snippet} query={query} /></span>}
                       </span>
                     </>
                   );

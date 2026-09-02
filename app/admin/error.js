@@ -19,7 +19,7 @@ export default function AdminError({ error, reset }) {
         입력하거나 저장한 데이터가 삭제된 것은 아닙니다. 잠시 후 다시 시도해 주세요.
       </p>
       {error?.digest && (
-        <p className="mt-2 text-xs text-muted/70">오류 코드: {error.digest}</p>
+        <p className="mt-2 text-xs text-muted">오류 코드: {error.digest}</p>
       )}
       <div className="mt-6 flex flex-wrap justify-center gap-2">
         <button

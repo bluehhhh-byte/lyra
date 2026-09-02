@@ -97,7 +97,7 @@ export default function Header() {
             <span aria-hidden>⌕</span>
             <span className="hidden sm:inline">검색</span>
             {/* 단축키는 header의 keydown 리스너가 처리한다 — 여긴 힌트만 */}
-            <kbd className="hidden font-sans text-[10px] text-muted/70 md:inline">⌘K</kbd>
+            <kbd className="hidden font-sans text-[10px] text-muted md:inline">⌘K</kbd>
           </button>
           <ThemeToggle />
           <Link
@@ -130,7 +130,7 @@ export default function Header() {
             <div className="pt-2">
               {MORE.map(([groupLabel, links]) => (
                 <div key={groupLabel} className="mb-1">
-                  <p className="px-3 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-wider text-muted/60">
+                  <p className="px-3 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-wider text-muted">
                     {groupLabel}
                   </p>
                   {links.map(([href, label]) => (

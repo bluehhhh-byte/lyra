@@ -269,7 +269,7 @@ export default async function MoviePage({ params }) {
                   <span className="min-w-0 py-0.5">
                     <span className="block truncate text-sm font-semibold group-hover:text-accent">{song.title}</span>
                     <span className="block truncate text-xs text-muted">{song.artist}</span>
-                    <span className="mt-1 block text-[11px] text-muted/80">{appearanceContext(appearance)}</span>
+                    <span className="mt-1 block text-[11px] text-muted">{appearanceContext(appearance)}</span>
                   </span>
                 </Link>
               </li>
@@ -280,7 +280,7 @@ export default async function MoviePage({ params }) {
 
       {/* when this entry went up — full datetime if recorded, else the date */}
       {(movie.published || movie.date) && (
-        <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted/60">
+        <p className="mx-auto mt-12 max-w-2xl text-right text-xs text-muted">
           <Link
             href={`/archive/${kstDay(movie.published || movie.date)}`}
             className="hover:text-accent"
@@ -343,7 +343,7 @@ export default async function MoviePage({ params }) {
       {eraSongs.length > 0 && (
         <div className="mx-auto mt-14 max-w-2xl">
           <h2 className="mb-4 text-sm font-semibold text-muted">
-            이 시대의 음악 <span className="text-xs font-normal text-muted/60">{movieDecade}년대의 컬렉션 곡</span>
+            이 시대의 음악 <span className="text-xs font-normal text-muted">{movieDecade}년대의 컬렉션 곡</span>
           </h2>
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4">
             {eraSongs.map((s) => (
@@ -359,7 +359,7 @@ export default async function MoviePage({ params }) {
                 </div>
                 <h3 className="mt-2 truncate text-xs font-medium group-hover:text-accent">{s.title}</h3>
                 <p className="truncate text-xs text-muted">{s.artist}</p>
-                <p className="mt-0.5 truncate text-[10px] text-muted/70">{s.crossReason}</p>
+                <p className="mt-0.5 truncate text-[10px] text-muted">{s.crossReason}</p>
               </Link>
             ))}
           </div>

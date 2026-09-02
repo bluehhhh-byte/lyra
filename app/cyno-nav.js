@@ -14,7 +14,7 @@ export default async function CynoNav({ active }) {
     <nav aria-label="Cyno 기록 종류" className="mb-6 flex flex-wrap items-center gap-1.5">
       {tabs.map(([key, href, label]) => (
         <Link key={key} href={href} className={` border px-3 py-1 text-xs ${active === key ? "border-accent bg-accent font-semibold text-bg" : "border-line text-muted hover:text-accent"}`}>
-          {label} <span className={active === key ? "opacity-70" : "text-muted/60"}>{counts[key]}</span>
+          {label} <span className={active === key ? "opacity-70" : "text-muted"}>{counts[key]}</span>
         </Link>
       ))}
     </nav>

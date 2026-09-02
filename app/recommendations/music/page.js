@@ -74,14 +74,14 @@ export default async function MusicRecommendationsPage() {
           {latestExtend.length > 0 && (
             <section className="mb-12">
               <h2 className="mb-1 text-sm font-semibold text-muted">취향의 연장선</h2>
-              <p className="mb-4 text-xs text-muted/60">지금 많이 담는 장르·감정·시대와 가까운 곡</p>
+              <p className="mb-4 text-xs text-muted">지금 많이 담는 장르·감정·시대와 가까운 곡</p>
               <SongRecs items={latestExtend} />
             </section>
           )}
           {latestDiscover.length > 0 && (
             <section className="mb-12">
               <h2 className="mb-1 text-sm font-semibold text-muted">새로운 방향</h2>
-              <p className="mb-4 text-xs text-muted/60">연결점은 있지만 다른 국가·시대·아티스트의 곡</p>
+              <p className="mb-4 text-xs text-muted">연결점은 있지만 다른 국가·시대·아티스트의 곡</p>
               <SongRecs items={latestDiscover} />
             </section>
           )}

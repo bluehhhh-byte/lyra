@@ -53,6 +53,12 @@ export default async function MoviesPage() {
   return (
     <>
       <CynoNav active="movies" />
+      {/* 감사한 8쪽 중 이 페이지만 h1이 없어 화면 낭독기가 "무엇을 보는 중인지"를
+          읽어줄 대상이 없었다. /watched와 같은 형태로 맞춘다. */}
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold">기록한 영화</h1>
+        <p className="mt-1 text-sm text-muted">{movies.length.toLocaleString("ko-KR")}편 기록</p>
+      </div>
       {movies.length === 0 ? (
         <p className="py-20 text-center text-sm text-muted">아직 영화가 없습니다.</p>
       ) : (

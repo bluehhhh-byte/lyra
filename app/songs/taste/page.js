@@ -41,7 +41,7 @@ function Section({ title, hint, children }) {
   return (
     <section className="mb-12">
       <h2 className="text-sm font-semibold text-muted">{title}</h2>
-      {hint && <p className="mt-0.5 text-xs text-muted/60">{hint}</p>}
+      {hint && <p className="mt-0.5 text-xs text-muted">{hint}</p>}
       <div className="mt-4 space-y-2">{children}</div>
     </section>
   );
@@ -191,7 +191,7 @@ export default async function MusicTastePage() {
         <div className="mb-10  border border-line bg-surface px-5 py-4">
           <div className="mb-2 flex items-baseline justify-between gap-3">
             <h2 className="text-sm font-semibold text-muted">AI 리포트</h2>
-            <span className="text-xs text-muted/60">
+            <span className="text-xs text-muted">
               {report.count}곡 기준 · {new Date(report.at).toLocaleDateString("ko-KR", { timeZone: "Asia/Seoul" })}
             </span>
           </div>
@@ -333,7 +333,7 @@ export default async function MusicTastePage() {
               href={`/?q=${encodeURIComponent(w)}`}
               className=" border border-line px-3 py-1 text-xs text-muted transition hover:border-accent hover:text-accent"
             >
-              #{w} <span className="tabular-nums text-muted/60">{n}</span>
+              #{w} <span className="tabular-nums text-muted">{n}</span>
             </Link>
           ))}
         </div>

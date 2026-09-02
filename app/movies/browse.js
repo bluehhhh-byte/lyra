@@ -151,7 +151,7 @@ function Snippet({ movie, needle }) {
   if (!text) return null;
   const index = text.toLowerCase().indexOf(needle);
   return (
-    <p className="mt-1 line-clamp-2 text-xs text-muted/80">
+    <p className="mt-1 line-clamp-2 text-xs text-muted">
       “{text.slice(0, index)}
       <span className="font-semibold text-accent">{text.slice(index, index + needle.length)}</span>
       {text.slice(index + needle.length)}”

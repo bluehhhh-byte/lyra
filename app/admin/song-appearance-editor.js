@@ -246,7 +246,7 @@ export default function SongAppearanceEditor({ songSlug }) {
           </select>
         </label>
         <label className="text-xs text-muted">
-          공개 연도 <span className="text-muted/60">(선택)</span>
+          공개 연도 <span className="text-muted">(선택)</span>
           <input type="number" min="1800" max="2200" className={input + " mt-1"} value={form.year} onChange={(event) => set("year", event.target.value)} />
         </label>
         <label className="text-xs text-muted">
@@ -256,11 +256,11 @@ export default function SongAppearanceEditor({ songSlug }) {
           </select>
         </label>
         <label className="text-xs text-muted">
-          시즌 <span className="text-muted/60">(선택)</span>
+          시즌 <span className="text-muted">(선택)</span>
           <input type="number" min="0" className={input + " mt-1"} value={form.season} onChange={(event) => set("season", event.target.value)} />
         </label>
         <label className="text-xs text-muted">
-          회차 <span className="text-muted/60">(선택)</span>
+          회차 <span className="text-muted">(선택)</span>
           <input type="number" min="0" className={input + " mt-1"} value={form.episode} onChange={(event) => set("episode", event.target.value)} />
         </label>
         <label className="text-xs text-muted sm:col-span-2">
@@ -279,7 +279,7 @@ export default function SongAppearanceEditor({ songSlug }) {
           </select>
         </label>
         <label className="text-xs text-muted sm:col-span-2">
-          관리자 메모 <span className="text-muted/60">(공개되지 않음)</span>
+          관리자 메모 <span className="text-muted">(공개되지 않음)</span>
           <textarea className={input + " mt-1 h-20"} value={form.note} onChange={(event) => set("note", event.target.value)} placeholder="예고편에만 사용됨 등 구분이 필요한 내용" />
         </label>
       </div>

@@ -123,7 +123,7 @@ export default function DiaryMonth({ month, days, initialDay, previousMonth, nex
                       active ? "bg-surface ring-1 ring-accent" : diaryDay ? "hover:bg-surface" : "cursor-default"
                     }`}
                   >
-                    <span className={`text-xs tabular-nums ${diaryDay ? "text-ink" : "text-muted/50"}`}>{value}</span>
+                    <span className={`text-xs tabular-nums ${diaryDay ? "text-ink" : "text-muted"}`}>{value}</span>
                     {diaryDay && (
                       <>
                         <span

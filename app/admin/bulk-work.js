@@ -117,7 +117,7 @@ export default function BulkWork() {
           <div className="max-h-40 space-y-0.5 overflow-y-auto text-xs text-muted">
             {plan.items.slice(0, 40).map((it) => (
               <div key={it.slug} className="truncate">
-                {it.artist} — {it.title} <span className="text-muted/60">· {it.needs.join(" · ")}</span>
+                {it.artist} — {it.title} <span className="text-muted">· {it.needs.join(" · ")}</span>
               </div>
             ))}
             {plan.count > 40 && <div>… 외 {plan.count - 40}곡 (내려받은 파일에 전부 있다)</div>}

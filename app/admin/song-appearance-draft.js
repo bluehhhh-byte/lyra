@@ -87,7 +87,7 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
           <input className={input + " mt-1"} value={value.workTitle} onChange={(event) => set("workTitle", event.target.value)} placeholder="예: 더 퍼스트 슬램덩크" />
         </label>
         <label className="text-xs text-muted sm:col-span-2">
-          작품 원제 <span className="text-muted/60">(선택)</span>
+          작품 원제 <span className="text-muted">(선택)</span>
           <input className={input + " mt-1"} value={value.originalTitle} onChange={(event) => set("originalTitle", event.target.value)} placeholder="예: THE FIRST SLAM DUNK" />
         </label>
         <label className="text-xs text-muted">
@@ -108,7 +108,7 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
           </select>
         </label>
         <label className="text-xs text-muted">
-          공개 연도 <span className="text-muted/60">(선택)</span>
+          공개 연도 <span className="text-muted">(선택)</span>
           <input type="number" min="1800" max="2200" className={input + " mt-1"} value={value.year ?? ""} onChange={(event) => set("year", event.target.value)} />
         </label>
         <label className="text-xs text-muted">
@@ -119,11 +119,11 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
           </select>
         </label>
         <label className="text-xs text-muted">
-          시즌 <span className="text-muted/60">(선택)</span>
+          시즌 <span className="text-muted">(선택)</span>
           <input type="number" min="0" className={input + " mt-1"} value={value.season ?? ""} onChange={(event) => set("season", event.target.value)} />
         </label>
         <label className="text-xs text-muted">
-          회차 <span className="text-muted/60">(선택)</span>
+          회차 <span className="text-muted">(선택)</span>
           <input type="number" min="0" className={input + " mt-1"} value={value.episode ?? ""} onChange={(event) => set("episode", event.target.value)} />
         </label>
         <label className="text-xs text-muted sm:col-span-2">

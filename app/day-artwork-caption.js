@@ -11,7 +11,7 @@ export default function DayArtworkCaption({ latest }) {
         {plan.title}
         {plan.year && <span className="ml-1.5 text-xs text-muted">{plan.year}</span>}
       </p>
-      <p className="mt-0.5 text-[10px] tracking-wide text-muted/80">{plan.medium}</p>
+      <p className="mt-0.5 text-[10px] tracking-wide text-muted">{plan.medium}</p>
       <p className="mt-2 text-muted">{plan.body}</p>
     </figcaption>
   );

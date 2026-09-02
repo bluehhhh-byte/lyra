@@ -53,7 +53,7 @@ export default function MovieRecs({ items }) {
                     <CoverImage src={movie.poster} alt={movie.title} label={movie.title} loading="lazy" className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90" />
                   </div>
                   <p className="mt-1.5 truncate text-xs font-medium group-hover:text-accent">{movie.title}{movie.year ? <span className="text-muted"> · {movie.year}</span> : null}</p>
-                  {movie.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted/80">{movie.why}</p>}
+                  {movie.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted">{movie.why}</p>}
                 </a>
                 <div className="mt-2 flex flex-wrap gap-1">
                   <button onClick={() => update(id, "saved")} aria-pressed={isSaved} className={` border px-2 py-1 text-[10px] ${isSaved ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>보고 싶음</button>

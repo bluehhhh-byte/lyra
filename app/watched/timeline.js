@@ -14,7 +14,7 @@ function Density({ rows, label }) {
           </div>
         ))}
       </div>
-      <div className="flex justify-between text-[10px] tabular-nums text-muted/70"><span>{rows[0].period}</span><span>{rows.at(-1).period}</span></div>
+      <div className="flex justify-between text-[10px] tabular-nums text-muted"><span>{rows[0].period}</span><span>{rows.at(-1).period}</span></div>
     </div>
   );
 }
