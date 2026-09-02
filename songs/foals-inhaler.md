@@ -5,7 +5,7 @@ artist: Foals
 artist_ko:
 album: Holy Fire
 year: 2012
-artwork: https://dn710909.ca.archive.org/0/items/mbid-e5656e38-a4a8-4ee1-9ea4-4273a2275497/mbid-e5656e38-a4a8-4ee1-9ea4-4273a2275497-25391187859_thumb500.jpg
+artwork: https://coverartarchive.org/release/e5656e38-a4a8-4ee1-9ea4-4273a2275497/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ad/a0/a4/ada0a4c7-a42b-d3c2-83dd-5d68ef39bddc/mzaf_3420191840849788412.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/inhaler/1551377311?i=1551377313&uo=4

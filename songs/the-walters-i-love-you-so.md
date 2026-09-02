@@ -5,7 +5,7 @@ artist: The Walters
 artist_ko:
 album: I Love You So - Single
 year: 2014
-artwork: https://dn721806.ca.archive.org/0/items/mbid-c77cb8fa-f141-4e02-9aa6-bec180e203e0/mbid-c77cb8fa-f141-4e02-9aa6-bec180e203e0-36889126904_thumb500.jpg
+artwork: https://coverartarchive.org/release/c77cb8fa-f141-4e02-9aa6-bec180e203e0/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0f/76/df/0f76df2d-c1a9-0d94-c323-a613f39dd329/mzaf_5346596372242255521.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/i-love-you-so/1591338974?i=1591338975&uo=4

@@ -5,7 +5,7 @@ artist: Brett Dennen
 artist_ko:
 album: Hope For The Hopeless
 year: 2008
-artwork: https://dn710707.ca.archive.org/0/items/mbid-1c8877a4-9308-499d-92b1-6e3aa9fda5f5/mbid-1c8877a4-9308-499d-92b1-6e3aa9fda5f5-1602419189_thumb500.jpg
+artwork: https://coverartarchive.org/release/1c8877a4-9308-499d-92b1-6e3aa9fda5f5/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/29/bc/0629bc46-5ed7-7f99-8157-c42cb549af22/mzaf_434218851427462718.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/so-far-from-me/1758105412?i=1758106260&uo=4

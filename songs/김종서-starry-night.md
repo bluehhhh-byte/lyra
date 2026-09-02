@@ -5,7 +5,7 @@ artist: 김종서
 artist_ko:
 album: Odyssey
 year: 2001
-artwork: https://dn721606.ca.archive.org/0/items/mbid-a7eedd06-e934-42e8-8eb3-665d4f141241/mbid-a7eedd06-e934-42e8-8eb3-665d4f141241-33023911692_thumb500.jpg
+artwork: https://coverartarchive.org/release/a7eedd06-e934-42e8-8eb3-665d4f141241/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c6/68/ce/c668ce6f-9b37-267e-ac6b-f166421dbffd/mzaf_3666703756187927798.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/kr/album/starry-night/771603116?i=771603131&uo=4

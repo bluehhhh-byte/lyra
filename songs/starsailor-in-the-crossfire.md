@@ -5,7 +5,7 @@ artist: Starsailor
 artist_ko:
 album: On the Outside (Bonus Track Version)
 year: 2005
-artwork: https://dn710009.ca.archive.org/0/items/mbid-20af560f-45c2-416e-9abb-0f0db24518ca/mbid-20af560f-45c2-416e-9abb-0f0db24518ca-36152974653_thumb500.jpg
+artwork: https://coverartarchive.org/release/20af560f-45c2-416e-9abb-0f0db24518ca/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/Music3/v4/ed/be/d1/edbed19c-17a0-6622-1af8-687ea871c4ad/mzaf_7334888717293837200.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/in-the-crossfire/690807784?i=690808178&uo=4

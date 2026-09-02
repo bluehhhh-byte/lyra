@@ -5,7 +5,7 @@ artist: 성시경
 artist_ko:
 album: And We Go - Single
 year: 2020
-artwork: https://dn721604.ca.archive.org/0/items/mbid-95987162-073e-4cdf-97b2-c76cfbd50bb3/mbid-95987162-073e-4cdf-97b2-c76cfbd50bb3-39102594993_thumb500.jpg
+artwork: https://coverartarchive.org/release/95987162-073e-4cdf-97b2-c76cfbd50bb3/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d3/12/70/d3127005-21af-7813-5152-3eb24b8c9d70/mzaf_1679184588474865782.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/kr/album/and-we-go/1511446365?i=1511446375&uo=4

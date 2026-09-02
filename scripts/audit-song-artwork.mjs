@@ -36,6 +36,9 @@ export const CORRECTED_ARTWORK = Object.freeze([
 
 const normalizedAlbum = (value) => String(value || "").normalize("NFKC").toLowerCase().replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]/g, "");
 const trustedHost = (hostname) => TRUSTED_HOSTS.has(hostname) || hostname.endsWith(".archive.org") || /^ia\d+\.us\.archive\.org$/.test(hostname);
+// coverartarchive.org가 리다이렉트하는 실제 저장 노드. 아카이브가 아이템을 다른
+// 노드로 옮기면 이 주소는 죽는다 — 리다이렉트 결과가 아니라 안정 주소를 저장해야 한다.
+const UNSTABLE_ARCHIVE_NODE = /^(?:dn\d+\.ca|ia\d+\.us)\.archive\.org$/;
 
 export function validateSongs(songs) {
   const issues = [];
@@ -46,6 +49,7 @@ export function validateSongs(songs) {
     try { url = new URL(song.artwork); } catch { issues.push({ code: "missing-or-invalid", slug: song.slug }); continue; }
     if (url.protocol !== "https:") issues.push({ code: "not-https", slug: song.slug });
     if (!trustedHost(url.hostname)) issues.push({ code: "untrusted-source", slug: song.slug, host: url.hostname });
+    if (UNSTABLE_ARCHIVE_NODE.test(url.hostname)) issues.push({ code: "unstable-archive-node", slug: song.slug, host: url.hostname });
     if (!byArtwork.has(song.artwork)) byArtwork.set(song.artwork, []);
     byArtwork.get(song.artwork).push(song);
   }

@@ -5,7 +5,7 @@ artist: Stereophonics
 artist_ko:
 album: Word Gets Around
 year: 1997
-artwork: https://dn710808.ca.archive.org/0/items/mbid-ff32390c-9590-44f7-b39d-372f010673a1/mbid-ff32390c-9590-44f7-b39d-372f010673a1-1757783489_thumb500.jpg
+artwork: https://coverartarchive.org/release/ff32390c-9590-44f7-b39d-372f010673a1/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/88/0e/ad/880ead18-0ece-3446-d022-8971bbf68c22/mzaf_1686983643405460911.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/billy-daveys-daughter/1440949724?i=1440950426&uo=4

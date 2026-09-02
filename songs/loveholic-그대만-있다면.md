@@ -5,7 +5,7 @@ artist: Loveholic
 artist_ko:
 album: 
 year: 2006
-artwork: https://dn710603.ca.archive.org/0/items/mbid-e209bc41-5650-41ae-b143-681b57b0ef56/mbid-e209bc41-5650-41ae-b143-681b57b0ef56-18408285793_thumb500.jpg
+artwork: https://coverartarchive.org/release/e209bc41-5650-41ae-b143-681b57b0ef56/front-500
 preview: 
 trackId: 
 duration: 

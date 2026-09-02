@@ -5,7 +5,7 @@ artist: Cafuné
 artist_ko:
 album: Love Songs for the End
 year: 2023
-artwork: https://dn710208.ca.archive.org/0/items/mbid-305c4915-a319-455f-99af-559b6a1a63d5/mbid-305c4915-a319-455f-99af-559b6a1a63d5-36967828677_thumb500.jpg
+artwork: https://coverartarchive.org/release/305c4915-a319-455f-99af-559b6a1a63d5/front-500
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/c3/2b/c0c32bf3-efd5-cfb0-ae63-29eb4a7fa0eb/mzaf_3465724873912400742.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/perspective/1805292428?i=1805292438&uo=4
