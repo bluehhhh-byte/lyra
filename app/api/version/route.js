@@ -6,7 +6,7 @@
 //
 // 배포가 끝나면 새 빌드가 뜨고 이 값이 바뀐다. 그걸 지켜보면 토큰 없이도 완료를
 // 정확히 알 수 있다. 공개 저장소의 커밋 해시라 숨길 것이 없다.
-import { databaseContentEnabled, contentFallbackActive } from "../../../lib/content-db";
+import { databaseContentEnabled, contentFallbackActive, cachePayloadPeak } from "../../../lib/content-db";
 
 export const dynamic = "force-dynamic";
 
@@ -25,6 +25,12 @@ export function GET() {
       // DB가 대답하지 못해 파일 백업으로 내려앉았는가(최근 10분 내). 폴백은 사이트를
       // 살리지만 옛 데이터를 서빙한다 — 조용히 두면 "왜 새 곡이 안 보이지"로 헤맨다.
       contentFallback: contentFallbackActive(),
+      // Data Cache 항목은 2MiB를 넘으면 예외 없이 조용히 저장되지 않는다. 그러면
+      // 캐시가 도는 것처럼 보이면서 매 요청 Neon을 다시 읽고, 청구서는 전송량으로
+      // 온다. 넘었는지 아닌지가 어디에도 안 보였으므로 여기서 내놓는다.
+      // measured=false는 "안전"이 아니라 이 인스턴스가 아직 아무것도 캐시하지
+      // 않았다는 뜻이다 — 곡 목록을 한 번 부른 뒤 다시 보라.
+      cachePayload: cachePayloadPeak(),
     },
     { headers: { "Cache-Control": "no-store" } }
   );
