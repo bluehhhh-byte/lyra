@@ -26,6 +26,8 @@ import {
 
 import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
 import { appendReportVersion } from "../../../lib/report-history";
+import { findDuplicateSong } from "../../../lib/admin/song-duplicate";
+import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
@@ -1069,6 +1071,13 @@ ${listed}`,
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
       .replace(/^-|-$/g, "");
+    const duplicate = findDuplicateSong({ title, artist, trackId }, await getAllSongsMeta());
+    if (duplicate && body.allowDuplicate !== true) {
+      return Response.json({
+        error: `이미 등록된 곡입니다: ${duplicate.artist} — ${duplicate.title}`,
+        duplicate,
+      }, { status: 409 });
+    }
     // 가사가 어디에도 없는 곡. 데이터 모델은 처음부터 lyrics_none을 읽고 있었지만
     // (needs.js가 이 표시를 보고 번역·독음·키워드 대기열에서 빼 준다) 관리자 화면에
     // 그 표시를 세울 길이 없어서, 가사를 못 구한 곡은 아예 등록조차 되지 않았다.
@@ -1117,7 +1126,15 @@ comment_sources: [${sourceUrls.join(", ")}]
 ${isInstrumental ? "instrumental: true\n" : ""}${lyricsUnavailable ? `lyrics_none: true\nlyrics_note: ${String(body.lyricsNote || "").replace(/\s*\n+\s*/g, " ")}\n` : ""}---
 ${lyricBody}
 `;
-    await writeSong(slug, md, `add(song): ${slug}`);
+    const appearanceAudit = await readRuntimeData("song-appearance-exhaustive.json", {});
+    const enrollment = enrollAppearanceCheckpoint(appearanceAudit, { slug, title, artist });
+    await commitFiles([
+      { path: `songs/${slug}.md`, content: md },
+      ...(enrollment.added ? [{
+        path: "data/song-appearance-exhaustive.json",
+        content: `${JSON.stringify(enrollment.audit, null, 1)}\n`,
+      }] : []),
+    ], `add(song): ${slug}`);
     return Response.json({ slug });
   }
 

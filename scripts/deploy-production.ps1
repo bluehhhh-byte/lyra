@@ -1,18 +1,8 @@
 $ErrorActionPreference = "Stop"
 
 $repo = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
-$tempRoot = [System.IO.Path]::GetTempPath()
-$deployDir = Join-Path $tempRoot ("lyra-deploy-" + [guid]::NewGuid().ToString("N"))
-$teamId = "team_vk8fZtA1YueBPh3dnFXZNj0H"
-$projectId = "prj_NMnJerZFyg3lxOiHc3uOPHnT6xug"
 $site = "https://lyracyno.vercel.app"
 $workspaceBefore = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
-$beforeDeployment = $null
-try {
-  $beforeDeployment = (Invoke-RestMethod -Uri "$site/api/version" -Headers @{ "Cache-Control" = "no-cache" }).deploymentId
-} catch {
-  Write-Warning "Could not read the current production deployment ID; post-deploy verification will still run."
-}
 
 function Run([string]$command, [string[]]$arguments, [string]$cwd = $repo) {
   Push-Location $cwd
@@ -26,8 +16,8 @@ function Run([string]$command, [string[]]$arguments, [string]$cwd = $repo) {
   }
 }
 
-Write-Host "Lyra production deployment"
-Write-Host "1/5 Checking the file backup against the database..."
+Write-Host "Lyra production deployment verification"
+Write-Host "1/4 Checking the file backup against the database..."
 $backupCheckBefore = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
 Push-Location $repo
 try {
@@ -45,48 +35,23 @@ if ($backupCheckAfter -ne $backupCheckBefore) {
   throw "dump-content --check changed the working tree; refusing to deploy an impure check"
 }
 
-Write-Host "2/5 Fetching the latest GitHub main branch..."
+Write-Host "2/4 Fetching the latest GitHub main branch..."
 Run "git" @("fetch", "origin", "main")
+$targetSha = (& git -C $repo rev-parse "origin/main").Trim()
+if ($LASTEXITCODE -ne 0 -or $targetSha -notmatch '^[0-9a-f]{40}$') {
+  throw "Could not resolve origin/main commit SHA"
+}
 
-try {
-  Write-Host "3/5 Creating an isolated deployment copy..."
-  Run "git" @("worktree", "add", "--detach", $deployDir, "origin/main")
+Write-Host "3/4 Waiting for the Vercel Git integration..."
+# A push already starts one production build. Uploading the same tree with
+# `vercel deploy --prod` created a second deployment for every release.
+Run "node" @("scripts/wait-for-production.mjs", $site, $targetSha)
 
-  Write-Host "4/5 Uploading origin/main to Vercel..."
-  $env:VERCEL_ORG_ID = $teamId
-  $env:VERCEL_PROJECT_ID = $projectId
-  # Restored build cache has previously produced a READY deployment with a missing
-  # server chunk. Production deploys favor a complete artifact over a short build.
-  Run "pnpm" @("dlx", "vercel@59.1.3", "deploy", "--prod", "--force", "--yes", "--cwd", $deployDir)
+Write-Host "4/4 Verifying production..."
+Run "node" @("scripts/verify-production.mjs", $site)
+Write-Host "READY: $site @ $($targetSha.Substring(0, 7))"
 
-  Write-Host "5/5 Verifying production..."
-  Run "node" @("scripts/verify-production.mjs", $site, [string]$beforeDeployment)
-  Write-Host "READY: $site"
-} finally {
-  # Windows may keep a freshly built file open for a moment. Cleanup must not
-  # turn an already verified production deployment into a failed command.
-  try { & git -C $repo worktree remove $deployDir --force 2>$null } catch {}
-  try { & git -C $repo worktree prune 2>$null } catch {}
-  if (Test-Path -LiteralPath $deployDir) {
-    $resolved = (Resolve-Path -LiteralPath $deployDir).Path
-    if (-not $resolved.StartsWith($tempRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
-      throw "Refusing to remove an unexpected path: $resolved"
-    }
-    $removed = $false
-    for ($attempt = 0; $attempt -lt 5 -and -not $removed; $attempt++) {
-      try {
-        Remove-Item -LiteralPath $resolved -Recurse -Force
-        $removed = -not (Test-Path -LiteralPath $resolved)
-      } catch {
-        Start-Sleep -Milliseconds 500
-      }
-    }
-    if (-not $removed) {
-      Write-Warning "Deployment succeeded, but the temporary folder could not be removed: $resolved"
-    }
-  }
-  $workspaceAfter = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
-  if ($workspaceAfter -ne $workspaceBefore) {
-    Write-Warning "The local working tree changed while deployment was running. The deployment used isolated origin/main; local changes were not uploaded."
-  }
+$workspaceAfter = (& git -C $repo status --porcelain=v1 --untracked-files=all) -join "`n"
+if ($workspaceAfter -ne $workspaceBefore) {
+  Write-Warning "The local working tree changed while deployment was running. Only pushed origin/main was deployed."
 }

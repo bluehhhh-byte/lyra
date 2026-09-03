@@ -26,7 +26,7 @@ import {
   normalizeAppearance,
   normalizeAppearanceData,
 } from "../lib/song-appearances.js";
-import { geminiGrounded, GEMINI_LITE_MODEL, lastGeminiError } from "../lib/admin/gemini.js";
+import { geminiGrounded, GEMINI_LITE_MODEL, lastGeminiError, lastGeminiRetryAfterMs } from "../lib/admin/gemini.js";
 import {
   DEFAULT_APPEARANCE_AI_DAILY_LIMIT,
   reconcileResearchCheckpoint,
@@ -35,6 +35,7 @@ import {
 } from "../lib/admin/research-budget.js";
 import {
   markResearchBudgetBlocked,
+  clearResearchProviderBlock,
   readResearchBudget,
   reserveResearchBudget,
   writeResearchCheckpoint,
@@ -269,11 +270,13 @@ async function grounded(prompt, context = {}) {
       currentBudgetStatus = await markResearchBudgetBlocked(researchSql, {
         limit: DAILY_LIMIT,
         reason: lastGeminiError,
+        retryAfterMs: lastGeminiRetryAfterMs,
       });
     }
     throw new ProviderRateLimitReached(currentBudgetStatus, lastGeminiError);
   }
   if (!result?.text) return null;
+  if (sharedBudgetEnabled) await clearResearchProviderBlock(researchSql);
   return { ...result, sources: (result.sources || []).map(sourceShape) };
 }
 
