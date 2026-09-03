@@ -147,10 +147,13 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
             style={{ transform: `scaleX(${progress})` }}
           />
         </div>
-        {/* 좁은 화면에서 버튼 여덟 개가 한 줄에 못 들어가면 글자가 세로로 쪼개졌다.
-            모드 묶음은 남는 폭을 나눠 갖고, 크기 묶음은 줄을 바꿔 내려간다. */}
+        {/* 버튼 일곱 개에 터치 타깃 44px면 320px 화면에는 한 줄로 들어가지 않는다.
+            flex-1만으로는 줄이 바뀌지 않고 — 글자 폭 아래로 못 줄어든 모드 버튼이
+            제 상자를 넘어 크기 버튼 위로 올라탔다(320px에서 '번역'과 '가'가 포개짐).
+            좁을 때는 모드 묶음이 한 줄을 통째로 차지하게 해 크기 묶음을 아래로 내린다.
+            sm부터는 폭이 남으므로 예전처럼 한 줄이다. */}
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex min-w-0 flex-1 gap-1.5">
+          <div className="flex min-w-0 basis-full gap-1.5 sm:flex-1 sm:basis-auto">
             {MODES.map((m) => (
               <button
                 key={m.key}
@@ -178,7 +181,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               </button>
             )}
           </div>
-          <div className="flex shrink-0 items-center gap-1.5">
+          <div className="ml-auto flex shrink-0 items-center gap-1.5">
             {SIZE_KEYS.map((k) => (
               <button
                 key={k}
