@@ -5,14 +5,14 @@ artist: Pink Floyd
 artist_ko: 
 album: Meddle (2016 Remaster)
 year: 1971
-genre: Rock
+genre: Progressive Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/18/a8/b7/18a8b7ed-365d-ef37-d724-88ce764c3ee7/886445635911.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/d2/30/b5d230cf-fe44-8525-de17-db35cf5c225f/mzaf_13012816007168601452.plus.aac.p.m4a
 trackId: 1065973623
 external_url: https://music.apple.com/us/album/echoes/1065973614?i=1065973623&uo=4
 duration: 1413
 lang: en
-tags: [영미, Rock, 1971]
+tags: [영미, Progressive Rock, 1971]
 keywords: [알바트로스, 메아리, 모래, 바다, 아침]
 emotion: 몽환
 date: 2026-09-03

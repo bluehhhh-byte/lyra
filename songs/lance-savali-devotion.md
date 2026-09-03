@@ -12,7 +12,7 @@ trackId: 1786253713
 duration: 136
 lang: en
 tags: [영미, Dance, 2025]
-keywords: [헌신, 열정, 사랑]
+keywords: [헌신, 자리, 느낌]
 emotion: 설렘
 date: 2026-08-29
 published: 2026-08-29T08:02:06.794Z

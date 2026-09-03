@@ -12,7 +12,7 @@ trackId: 6765464626
 duration: 206
 lang: en
 tags: [영미, Indie Rock, 2026]
-keywords: [자신, 마음, 거리, 기억]
+keywords: [벼랑, 품, 거리, 숨, 시간]
 emotion: 불안
 date: 2026-08-31
 published: 2026-08-31T03:34:22.612Z
