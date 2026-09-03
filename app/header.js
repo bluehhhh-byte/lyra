@@ -88,7 +88,10 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 text-xs text-muted">
+        {/* 320px에서는 브랜드(96px) + 액션(189px)이 가용 폭 280px을 넘어 문서가
+            1px 가로로 흘렀다. 버튼은 터치 타깃이라 줄일 수 없으므로 간격만 좁힌다 —
+            사이 간격 셋에서 12px을 돌려받으면 들어간다. sm부터는 원래 간격. */}
+        <div className="flex items-center gap-1 text-xs text-muted sm:gap-2">
           <button
             onClick={() => setSearchOpen(true)}
             aria-label="통합 검색"
