@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { albumCompanions, getAllSongsMeta, getSongRuntime } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
@@ -99,6 +99,7 @@ export default async function SongPage({ params }) {
     getSongAppearancesRuntime(),
   ]);
   if (!song) notFound();
+  if (song.duplicate_of) permanentRedirect(`/songs/${encodeURIComponent(song.duplicate_of)}`);
   const related = relatedSongs(song, all);
   const albumSongs = albumCompanions(song, all);
   const translation = translationStatus(song);

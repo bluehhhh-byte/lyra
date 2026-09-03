@@ -26,6 +26,7 @@ async function api(action, body) {
 export default function SongTools({ songs, duplicateGroups = [] }) {
   const [state, setState] = useState({}); // slug -> { busy, comment, msg, err }
   const [query, setQuery] = useState("");
+  const [duplicates, setDuplicates] = useState(duplicateGroups);
   const filteredSongs = useMemo(() => filterAdminSongs(songs, query), [songs, query]);
 
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
@@ -131,16 +132,30 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
     }
   };
 
+  const mergeDuplicate = async (canonicalSlug, duplicateSlug) => {
+    if (!window.confirm("대표 곡의 기존 값은 유지하고, 중복 기록은 삭제하지 않은 채 대표 곡으로 연결합니다. 계속할까요?")) return;
+    set(canonicalSlug, { busy: "merge", err: "", msg: "" });
+    try {
+      const result = await api("mergeDuplicate", { canonicalSlug, duplicateSlug });
+      setDuplicates((groups) => groups.filter((group) => !group.songs.some((song) => song.slug === duplicateSlug)));
+      set(canonicalSlug, { msg: `중복 병합 완료 · 보완 ${result.copied.length}개 · 수록정보 이전 ${result.movedAppearances}개` });
+    } catch (error) {
+      set(canonicalSlug, { err: error.message });
+    } finally {
+      set(canonicalSlug, { busy: "" });
+    }
+  };
+
   return (
     <div className="max-w-2xl">
-      {duplicateGroups.length > 0 && (
+      {duplicates.length > 0 && (
         <details className="mb-4 border border-line bg-surface p-3">
           <summary className="cursor-pointer text-sm font-semibold">
-            중복 후보 {duplicateGroups.length}쌍 검토
+            중복 후보 {duplicates.length}쌍 검토
           </summary>
           <p className="mt-2 text-xs text-muted">같은 Apple 곡 ID 또는 같은 아티스트·제목입니다. 자동 삭제하지 않으며 두 기록을 확인한 뒤 정리합니다.</p>
           <ul className="mt-2 space-y-2 text-xs">
-            {duplicateGroups.map((group, index) => (
+            {duplicates.map((group, index) => (
               <li key={`${group.reason}-${index}`} className="border-t border-line pt-2">
                 <span className="mr-2 text-muted">{group.reason === "trackId" ? "Apple 곡 ID 일치" : "표기 정규화 일치"}</span>
                 {group.songs.map((item, itemIndex) => (
@@ -148,6 +163,16 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
                     {itemIndex > 0 && <span className="mx-1 text-muted">↔</span>}
                     <a href={`/songs/${item.slug}`} className="text-accent hover:underline">{item.artist} — {item.title}</a>
                     {item.date && <span className="ml-1 text-muted">({item.date})</span>}
+                    {group.songs.length === 2 && (
+                      <button
+                        type="button"
+                        disabled={!!state[item.slug]?.busy}
+                        onClick={() => mergeDuplicate(item.slug, group.songs.find((song) => song.slug !== item.slug).slug)}
+                        className="ml-2 border border-line px-1.5 py-0.5 text-[11px] text-muted hover:border-accent hover:text-accent disabled:opacity-40"
+                      >
+                        이 기록을 대표로
+                      </button>
+                    )}
                   </span>
                 ))}
               </li>

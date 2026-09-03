@@ -26,8 +26,9 @@ import {
 
 import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
 import { appendReportVersion } from "../../../lib/report-history";
-import { findDuplicateSong } from "../../../lib/admin/song-duplicate";
+import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/admin/song-duplicate";
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
+import { appearanceIdentity } from "../../../lib/song-appearances";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
@@ -1063,6 +1064,49 @@ ${listed}`,
   if (action === "delete") {
     await deleteSong(body.slug);
     return Response.json({ ok: true });
+  }
+
+  if (action === "mergeDuplicate") {
+    const canonicalSlug = String(body.canonicalSlug || "").trim();
+    const duplicateSlug = String(body.duplicateSlug || "").trim();
+    const [canonical, duplicate] = await Promise.all([readSong(canonicalSlug), readSong(duplicateSlug)]);
+    if (!canonical?.raw || !duplicate?.raw)
+      return Response.json({ error: "병합할 곡을 찾을 수 없습니다" }, { status: 404 });
+    const canonicalMeta = parseFrontmatter(canonical.raw).meta;
+    const duplicateMeta = parseFrontmatter(duplicate.raw).meta;
+    const match = findDuplicateSong(
+      { ...duplicateMeta, slug: duplicateSlug },
+      [{ ...canonicalMeta, slug: canonicalSlug }],
+      { excludeSlug: duplicateSlug }
+    );
+    if (!match) return Response.json({ error: "두 기록이 같은 곡이라는 근거가 없습니다" }, { status: 422 });
+
+    const merged = mergeDuplicateSongDocuments(canonical.raw, duplicate.raw, { canonicalSlug, duplicateSlug });
+    const appearances = await readRuntimeData("song-appearances.json", { version: 1, items: [] });
+    let movedAppearances = 0;
+    const mappedAppearances = (appearances.items || []).map((item) => {
+      if (item.songSlug !== duplicateSlug) return item;
+      movedAppearances += 1;
+      return { ...item, songSlug: canonicalSlug, updatedAt: new Date().toISOString() };
+    });
+    const seenAppearances = new Set();
+    let dedupedAppearances = 0;
+    const nextAppearances = {
+      ...appearances,
+      updatedAt: new Date().toISOString(),
+      items: mappedAppearances.filter((item) => {
+        const identity = appearanceIdentity(item);
+        if (seenAppearances.has(identity)) { dedupedAppearances += 1; return false; }
+        seenAppearances.add(identity);
+        return true;
+      }),
+    };
+    await commitFiles([
+      { path: `songs/${canonicalSlug}.md`, content: merged.canonicalRaw },
+      { path: `songs/${duplicateSlug}.md`, content: merged.duplicateRaw },
+      ...(movedAppearances ? [{ path: "data/song-appearances.json", content: `${JSON.stringify(nextAppearances, null, 1)}\n` }] : []),
+    ], `fix(song): merge duplicate ${duplicateSlug} into ${canonicalSlug}`);
+    return Response.json({ ok: true, canonicalSlug, duplicateSlug, copied: merged.copied, movedAppearances, dedupedAppearances });
   }
 
   if (action === "save") {
