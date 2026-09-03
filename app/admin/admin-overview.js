@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NeedsList from "./needs-list";
 
 const formatDate = (value) =>
   value
@@ -40,6 +41,9 @@ export default function AdminOverview({ overview }) {
           note={deploy ? formatDate(deploy.updatedAt) : "관리자 배포 장부 기준"}
         />
       </div>
+      {/* 카드가 개수만 보여주면 "결손 3건"을 보고도 어느 곡인지 알 수 없어
+          로컬에서 스크립트를 돌려야 했다. 여기서 바로 펼쳐 곡으로 건너간다. */}
+      <NeedsList items={overview.needsList || []} truncated={overview.needsListTruncated || 0} />
       <div className="mt-3  border border-line bg-surface px-4 py-3">
         <h3 className="text-sm font-semibold">최근 콘텐츠 변경</h3>
         {overview.contentStore !== "neon" ? (
