@@ -1,9 +1,9 @@
 {
   "version": 2,
   "createdAt": "2026-09-01T08:00:46.329Z",
-  "updatedAt": "2026-09-01T08:49:04.981Z",
-  "corpusDigest": "d4a1e2dc47d031a3d030b22a9feeabd45e9eaa8f85ae3d443ff3eef65fb4e7f2",
-  "totalSongs": 955,
+  "updatedAt": "2026-09-03T08:34:20.247Z",
+  "corpusDigest": "2b08eed238377ac57f36b99b8881e26e6579512e404603dcbac02122ad64635e",
+  "totalSongs": 954,
   "baseline": [
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
@@ -8068,50 +8068,6 @@
       ],
       "updatedAt": "2026-09-01T08:49:04.972Z"
     },
-    "삐삐밴드-zion-t-over-over": {
-      "status": "no_match",
-      "phase": "complete",
-      "screeningCandidate": false,
-      "reviewOutcome": "screened_no_match",
-      "researchIdentity": {
-        "title": "Over & Over",
-        "artist": "삐삐밴드, Zion.T"
-      },
-      "queries": [
-        "\"삐삐밴드, Zion.T\" \"Over & Over\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-      ],
-      "sources": [
-        {
-          "uri": "https://music.bugs.co.kr/album/510094",
-          "title": "pppb/삐삐밴드 - 벅스"
-        },
-        {
-          "uri": "https://music.bugs.co.kr/track/264114",
-          "title": "Rat Race/Impellitteri(임펠리테리) - 벅스"
-        }
-      ],
-      "passes": [
-        {
-          "provider": "codex-web-search-screen",
-          "status": "no_match",
-          "queries": [
-            "\"삐삐밴드, Zion.T\" \"Over & Over\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-          ],
-          "sources": [
-            {
-              "uri": "https://music.bugs.co.kr/album/510094",
-              "title": "pppb/삐삐밴드 - 벅스"
-            },
-            {
-              "uri": "https://music.bugs.co.kr/track/264114",
-              "title": "Rat Race/Impellitteri(임펠리테리) - 벅스"
-            }
-          ],
-          "researchedAt": "2026-09-01T08:26:45.033Z"
-        }
-      ],
-      "updatedAt": "2026-09-01T08:49:04.972Z"
-    },
     "사비나-앤-드론즈-귀머거리-인생": {
       "status": "no_match",
       "phase": "complete",
@@ -9288,50 +9244,6 @@
           ],
           "sources": [],
           "researchedAt": "2026-09-01T03:00:00.000Z"
-        }
-      ],
-      "updatedAt": "2026-09-01T08:49:04.972Z"
-    },
-    "스월비-trapped-in-the-drum": {
-      "status": "no_match",
-      "phase": "complete",
-      "screeningCandidate": false,
-      "reviewOutcome": "screened_no_match",
-      "researchIdentity": {
-        "title": "Trapped in the Drum",
-        "artist": "스월비"
-      },
-      "queries": [
-        "\"스월비\" \"Trapped in the Drum\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-      ],
-      "sources": [
-        {
-          "uri": "https://namu.moe/w/%EB%8B%A4%EB%AF%BC%EC%9D%B4",
-          "title": "다민이"
-        },
-        {
-          "uri": "https://www.joox.com/th/single/UUMtUimWThX2KfZN49Lvig%3D%3D",
-          "title": "JOOX"
-        }
-      ],
-      "passes": [
-        {
-          "provider": "codex-web-search-screen",
-          "status": "no_match",
-          "queries": [
-            "\"스월비\" \"Trapped in the Drum\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-          ],
-          "sources": [
-            {
-              "uri": "https://namu.moe/w/%EB%8B%A4%EB%AF%BC%EC%9D%B4",
-              "title": "다민이"
-            },
-            {
-              "uri": "https://www.joox.com/th/single/UUMtUimWThX2KfZN49Lvig%3D%3D",
-              "title": "JOOX"
-            }
-          ],
-          "researchedAt": "2026-09-01T08:26:45.033Z"
         }
       ],
       "updatedAt": "2026-09-01T08:49:04.972Z"
@@ -42846,32 +42758,6 @@
       ],
       "updatedAt": "2026-09-01T08:49:04.979Z"
     },
-    "panic-snowmelt": {
-      "status": "no_match",
-      "phase": "complete",
-      "screeningCandidate": false,
-      "reviewOutcome": "screened_no_match",
-      "researchIdentity": {
-        "title": "눈 녹듯",
-        "artist": "Panic"
-      },
-      "queries": [
-        "\"Panic\" \"눈 녹듯\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-      ],
-      "sources": [],
-      "passes": [
-        {
-          "provider": "codex-web-search-screen",
-          "status": "no_match",
-          "queries": [
-            "\"Panic\" \"눈 녹듯\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-          ],
-          "sources": [],
-          "researchedAt": "2026-09-01T08:26:45.033Z"
-        }
-      ],
-      "updatedAt": "2026-09-01T08:49:04.979Z"
-    },
     "paprika-synthesizer-luv": {
       "status": "no_match",
       "phase": "complete",
@@ -48795,50 +48681,6 @@
           "note": "TV아사히 드라마를 위해 쓴 공식 주제가다.",
           "createdAt": "2026-09-01T08:45:54.836Z",
           "updatedAt": "2026-09-01T08:45:54.836Z"
-        }
-      ],
-      "updatedAt": "2026-09-01T08:49:04.979Z"
-    },
-    "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark": {
-      "status": "no_match",
-      "phase": "complete",
-      "screeningCandidate": false,
-      "reviewOutcome": "screened_no_match",
-      "researchIdentity": {
-        "title": "茜さす 帰路照らされど",
-        "artist": "Sheena Ringo"
-      },
-      "queries": [
-        "\"Sheena Ringo\" \"茜さす 帰路照らされど\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-      ],
-      "sources": [
-        {
-          "uri": "https://www.qobuz.com/jp-ja/album/muzai-moratorium-innocence-moratorium-sheena-ringo/gog81ou112aab",
-          "title": "無罪モラトリアム, 椎名林檎 - Qobuz"
-        },
-        {
-          "uri": "https://www.yesasia.com/global/adam-to-eve-no-ringo-japan-version/1065142786-0-0-0-en/info.html",
-          "title": "YESASIA: Adam to Eve no Ringo (Japan Version) Music - Japan Various Artists - Japanese Music - Free Shipping"
-        }
-      ],
-      "passes": [
-        {
-          "provider": "codex-web-search-screen",
-          "status": "no_match",
-          "queries": [
-            "\"Sheena Ringo\" \"茜さす 帰路照らされど\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-          ],
-          "sources": [
-            {
-              "uri": "https://www.qobuz.com/jp-ja/album/muzai-moratorium-innocence-moratorium-sheena-ringo/gog81ou112aab",
-              "title": "無罪モラトリアム, 椎名林檎 - Qobuz"
-            },
-            {
-              "uri": "https://www.yesasia.com/global/adam-to-eve-no-ringo-japan-version/1065142786-0-0-0-en/info.html",
-              "title": "YESASIA: Adam to Eve no Ringo (Japan Version) Music - Japan Various Artists - Japanese Music - Free Shipping"
-            }
-          ],
-          "researchedAt": "2026-09-01T08:26:45.033Z"
         }
       ],
       "updatedAt": "2026-09-01T08:49:04.979Z"
@@ -56632,50 +56474,6 @@
       ],
       "updatedAt": "2026-09-01T08:49:04.980Z"
     },
-    "wasureranneyo-nannmonee": {
-      "status": "no_match",
-      "phase": "complete",
-      "screeningCandidate": false,
-      "reviewOutcome": "screened_no_match",
-      "researchIdentity": {
-        "title": "Nannmonee",
-        "artist": "Wasureranneyo"
-      },
-      "queries": [
-        "\"Wasureranneyo\" \"Nannmonee\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-      ],
-      "sources": [
-        {
-          "uri": "https://www.easysong.com/search/songs/song-copyright-holder-information.aspx?s=2961947",
-          "title": "\"Nannmonee\" | By Takahiro Shibata and Vap | Copyright Takahiro Shibata and Vap | Song Copyright Information | Easy Song"
-        },
-        {
-          "uri": "https://www.reddit.com/r/okbuddybaka/comments/1uq8s53/depressed_japanese_salarymen_when_they_discover/",
-          "title": "Depressed Japanese salarymen when they discover nicotine"
-        }
-      ],
-      "passes": [
-        {
-          "provider": "codex-web-search-screen",
-          "status": "no_match",
-          "queries": [
-            "\"Wasureranneyo\" \"Nannmonee\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
-          ],
-          "sources": [
-            {
-              "uri": "https://www.easysong.com/search/songs/song-copyright-holder-information.aspx?s=2961947",
-              "title": "\"Nannmonee\" | By Takahiro Shibata and Vap | Copyright Takahiro Shibata and Vap | Song Copyright Information | Easy Song"
-            },
-            {
-              "uri": "https://www.reddit.com/r/okbuddybaka/comments/1uq8s53/depressed_japanese_salarymen_when_they_discover/",
-              "title": "Depressed Japanese salarymen when they discover nicotine"
-            }
-          ],
-          "researchedAt": "2026-09-01T08:26:45.033Z"
-        }
-      ],
-      "updatedAt": "2026-09-01T08:49:04.980Z"
-    },
     "wave-to-earth-annie": {
       "status": "no_match",
       "phase": "complete",
@@ -58532,6 +58330,276 @@
         "backfill-b5766db82e907d0c9808b941"
       ],
       "updatedAt": "2026-09-01T08:49:04.981Z"
+    },
+    "kiyoharu-boukyaku-no-sora-25th-anniversary-ver": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "researchIdentity": {
+        "title": "忘却の空",
+        "artist": "SADS"
+      }
+    },
+    "the-strokes-is-this-it": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "researchIdentity": {
+        "title": "Is This It",
+        "artist": "The Strokes"
+      }
+    },
+    "릴보이-david": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "researchIdentity": {
+        "title": "David",
+        "artist": "릴보이"
+      }
+    },
+    "에픽하이-map-the-soul-feat-myk": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "researchIdentity": {
+        "title": "Map the Soul (feat. MYK)",
+        "artist": "에픽하이"
+      }
     }
-  }
+  },
+  "screeningBatches": [],
+  "retiredResults": {
+    "panic-snowmelt": {
+      "status": "no_match",
+      "phase": "complete",
+      "screeningCandidate": false,
+      "reviewOutcome": "screened_no_match",
+      "researchIdentity": {
+        "title": "눈 녹듯",
+        "artist": "Panic"
+      },
+      "queries": [
+        "\"Panic\" \"눈 녹듯\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+      ],
+      "sources": [],
+      "passes": [
+        {
+          "provider": "codex-web-search-screen",
+          "status": "no_match",
+          "queries": [
+            "\"Panic\" \"눈 녹듯\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+          ],
+          "sources": [],
+          "researchedAt": "2026-09-01T08:26:45.033Z"
+        }
+      ],
+      "updatedAt": "2026-09-01T08:49:04.979Z",
+      "retiredAt": "2026-09-03T08:34:20.191Z"
+    },
+    "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark": {
+      "status": "no_match",
+      "phase": "complete",
+      "screeningCandidate": false,
+      "reviewOutcome": "screened_no_match",
+      "researchIdentity": {
+        "title": "茜さす 帰路照らされど",
+        "artist": "Sheena Ringo"
+      },
+      "queries": [
+        "\"Sheena Ringo\" \"茜さす 帰路照らされど\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.qobuz.com/jp-ja/album/muzai-moratorium-innocence-moratorium-sheena-ringo/gog81ou112aab",
+          "title": "無罪モラトリアム, 椎名林檎 - Qobuz"
+        },
+        {
+          "uri": "https://www.yesasia.com/global/adam-to-eve-no-ringo-japan-version/1065142786-0-0-0-en/info.html",
+          "title": "YESASIA: Adam to Eve no Ringo (Japan Version) Music - Japan Various Artists - Japanese Music - Free Shipping"
+        }
+      ],
+      "passes": [
+        {
+          "provider": "codex-web-search-screen",
+          "status": "no_match",
+          "queries": [
+            "\"Sheena Ringo\" \"茜さす 帰路照らされど\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+          ],
+          "sources": [
+            {
+              "uri": "https://www.qobuz.com/jp-ja/album/muzai-moratorium-innocence-moratorium-sheena-ringo/gog81ou112aab",
+              "title": "無罪モラトリアム, 椎名林檎 - Qobuz"
+            },
+            {
+              "uri": "https://www.yesasia.com/global/adam-to-eve-no-ringo-japan-version/1065142786-0-0-0-en/info.html",
+              "title": "YESASIA: Adam to Eve no Ringo (Japan Version) Music - Japan Various Artists - Japanese Music - Free Shipping"
+            }
+          ],
+          "researchedAt": "2026-09-01T08:26:45.033Z"
+        }
+      ],
+      "updatedAt": "2026-09-01T08:49:04.979Z",
+      "retiredAt": "2026-09-03T08:34:20.191Z"
+    },
+    "wasureranneyo-nannmonee": {
+      "status": "no_match",
+      "phase": "complete",
+      "screeningCandidate": false,
+      "reviewOutcome": "screened_no_match",
+      "researchIdentity": {
+        "title": "Nannmonee",
+        "artist": "Wasureranneyo"
+      },
+      "queries": [
+        "\"Wasureranneyo\" \"Nannmonee\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+      ],
+      "sources": [
+        {
+          "uri": "https://www.easysong.com/search/songs/song-copyright-holder-information.aspx?s=2961947",
+          "title": "\"Nannmonee\" | By Takahiro Shibata and Vap | Copyright Takahiro Shibata and Vap | Song Copyright Information | Easy Song"
+        },
+        {
+          "uri": "https://www.reddit.com/r/okbuddybaka/comments/1uq8s53/depressed_japanese_salarymen_when_they_discover/",
+          "title": "Depressed Japanese salarymen when they discover nicotine"
+        }
+      ],
+      "passes": [
+        {
+          "provider": "codex-web-search-screen",
+          "status": "no_match",
+          "queries": [
+            "\"Wasureranneyo\" \"Nannmonee\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+          ],
+          "sources": [
+            {
+              "uri": "https://www.easysong.com/search/songs/song-copyright-holder-information.aspx?s=2961947",
+              "title": "\"Nannmonee\" | By Takahiro Shibata and Vap | Copyright Takahiro Shibata and Vap | Song Copyright Information | Easy Song"
+            },
+            {
+              "uri": "https://www.reddit.com/r/okbuddybaka/comments/1uq8s53/depressed_japanese_salarymen_when_they_discover/",
+              "title": "Depressed Japanese salarymen when they discover nicotine"
+            }
+          ],
+          "researchedAt": "2026-09-01T08:26:45.033Z"
+        }
+      ],
+      "updatedAt": "2026-09-01T08:49:04.980Z",
+      "retiredAt": "2026-09-03T08:34:20.191Z"
+    },
+    "삐삐밴드-zion-t-over-over": {
+      "status": "no_match",
+      "phase": "complete",
+      "screeningCandidate": false,
+      "reviewOutcome": "screened_no_match",
+      "researchIdentity": {
+        "title": "Over & Over",
+        "artist": "삐삐밴드, Zion.T"
+      },
+      "queries": [
+        "\"삐삐밴드, Zion.T\" \"Over & Over\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+      ],
+      "sources": [
+        {
+          "uri": "https://music.bugs.co.kr/album/510094",
+          "title": "pppb/삐삐밴드 - 벅스"
+        },
+        {
+          "uri": "https://music.bugs.co.kr/track/264114",
+          "title": "Rat Race/Impellitteri(임펠리테리) - 벅스"
+        }
+      ],
+      "passes": [
+        {
+          "provider": "codex-web-search-screen",
+          "status": "no_match",
+          "queries": [
+            "\"삐삐밴드, Zion.T\" \"Over & Over\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+          ],
+          "sources": [
+            {
+              "uri": "https://music.bugs.co.kr/album/510094",
+              "title": "pppb/삐삐밴드 - 벅스"
+            },
+            {
+              "uri": "https://music.bugs.co.kr/track/264114",
+              "title": "Rat Race/Impellitteri(임펠리테리) - 벅스"
+            }
+          ],
+          "researchedAt": "2026-09-01T08:26:45.033Z"
+        }
+      ],
+      "updatedAt": "2026-09-01T08:49:04.972Z",
+      "retiredAt": "2026-09-03T08:34:20.191Z"
+    },
+    "스월비-trapped-in-the-drum": {
+      "status": "no_match",
+      "phase": "complete",
+      "screeningCandidate": false,
+      "reviewOutcome": "screened_no_match",
+      "researchIdentity": {
+        "title": "Trapped in the Drum",
+        "artist": "스월비"
+      },
+      "queries": [
+        "\"스월비\" \"Trapped in the Drum\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+      ],
+      "sources": [
+        {
+          "uri": "https://namu.moe/w/%EB%8B%A4%EB%AF%BC%EC%9D%B4",
+          "title": "다민이"
+        },
+        {
+          "uri": "https://www.joox.com/th/single/UUMtUimWThX2KfZN49Lvig%3D%3D",
+          "title": "JOOX"
+        }
+      ],
+      "passes": [
+        {
+          "provider": "codex-web-search-screen",
+          "status": "no_match",
+          "queries": [
+            "\"스월비\" \"Trapped in the Drum\" 영화 드라마 애니메이션 OST 삽입곡 주제가 soundtrack movie drama anime 主題歌 挿入歌"
+          ],
+          "sources": [
+            {
+              "uri": "https://namu.moe/w/%EB%8B%A4%EB%AF%BC%EC%9D%B4",
+              "title": "다민이"
+            },
+            {
+              "uri": "https://www.joox.com/th/single/UUMtUimWThX2KfZN49Lvig%3D%3D",
+              "title": "JOOX"
+            }
+          ],
+          "researchedAt": "2026-09-01T08:26:45.033Z"
+        }
+      ],
+      "updatedAt": "2026-09-01T08:49:04.972Z",
+      "retiredAt": "2026-09-03T08:34:20.191Z"
+    }
+  },
+  "corpusChanges": [
+    {
+      "at": "2026-09-03T08:34:20.191Z",
+      "from": 955,
+      "to": 954,
+      "added": [
+        "kiyoharu-boukyaku-no-sora-25th-anniversary-ver",
+        "the-strokes-is-this-it",
+        "릴보이-david",
+        "에픽하이-map-the-soul-feat-myk"
+      ],
+      "removed": [
+        "panic-snowmelt",
+        "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark",
+        "wasureranneyo-nannmonee",
+        "삐삐밴드-zion-t-over-over",
+        "스월비-trapped-in-the-drum"
+      ]
+    }
+  ]
 }

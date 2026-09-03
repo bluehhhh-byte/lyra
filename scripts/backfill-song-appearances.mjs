@@ -5,6 +5,11 @@
 //   node scripts/backfill-song-appearances.mjs --verify --limit=10
 //   node scripts/backfill-song-appearances.mjs --import-curated
 //   node scripts/backfill-song-appearances.mjs --merge
+//   node scripts/backfill-song-appearances.mjs --status
+//
+// Gemini requests default to 25 per Asia/Seoul day across all modes. Override
+// with APPEARANCE_AI_DAILY_LIMIT or --daily-limit=N; run the same command later
+// to resume from the item-level audit checkpoint.
 //
 // Screening is deliberately high-recall and batched. Every candidate is then
 // researched alone, so one song's source can never silently prove another
@@ -22,6 +27,12 @@ import {
   normalizeAppearanceData,
 } from "../lib/song-appearances.js";
 import { geminiGrounded, GEMINI_LITE_MODEL, lastGeminiError } from "../lib/admin/gemini.js";
+import {
+  DEFAULT_APPEARANCE_AI_DAILY_LIMIT,
+  reconcileResearchCheckpoint,
+  researchBudgetStatus,
+  reserveResearchCall,
+} from "../lib/admin/research-budget.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -29,6 +40,7 @@ const root = process.cwd();
 const legacyAuditFile = path.join(root, "data", "song-appearance-backfill.json");
 const curatedFile = path.join(root, "data", "song-appearance-curated.json");
 const datasetFile = path.join(root, "data", "song-appearances.json");
+const budgetFile = path.join(root, ".backfill", "song-appearance-ai-budget.json");
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(`--${name}`);
 const numberArg = (name, fallback) => {
@@ -36,14 +48,16 @@ const numberArg = (name, fallback) => {
   const value = raw ? Number(raw.slice(name.length + 3)) : fallback;
   return Number.isFinite(value) && value >= 0 ? value : fallback;
 };
-const EXHAUSTIVE_SCREEN = flag("exhaustive-screen");
-const EXHAUSTIVE = flag("exhaustive") || EXHAUSTIVE_SCREEN;
+const STATUS = flag("status");
+const EXHAUSTIVE = flag("exhaustive") || flag("exhaustive-screen");
+const EXHAUSTIVE_SCREEN = !STATUS && flag("exhaustive-screen");
 const auditFile = path.join(root, "data", EXHAUSTIVE ? "song-appearance-exhaustive.json" : "song-appearance-backfill.json");
-const SCREEN = flag("all") || flag("screen");
-const VERIFY = flag("all") || flag("verify") || EXHAUSTIVE;
-const MERGE = flag("all") || flag("merge");
-const IMPORT_CURATED = flag("all") || flag("import-curated");
-const RESCORE = flag("rescore");
+// --status is always read-only, even when --exhaustive selects the v2 audit.
+const SCREEN = !STATUS && (flag("all") || flag("screen"));
+const VERIFY = !STATUS && (flag("all") || flag("verify") || EXHAUSTIVE);
+const MERGE = !STATUS && (flag("all") || flag("merge"));
+const IMPORT_CURATED = !STATUS && (flag("all") || flag("import-curated"));
+const RESCORE = !STATUS && flag("rescore");
 const RESET = flag("reset");
 const LIMIT = numberArg("limit", Infinity);
 const SLUG = String((args.find((arg) => arg.startsWith("--slug=")) || "--slug=").slice(7));
@@ -51,13 +65,20 @@ const BATCH_SIZE = Math.max(1, Math.min(10, numberArg("batch-size", 6)));
 const DELAY_MS = numberArg("delay-ms", 4200);
 const MAX_ATTEMPTS = Math.max(1, Math.min(5, numberArg("attempts", 3)));
 const PROVIDER = String((args.find((arg) => arg.startsWith("--provider=")) || "--provider=gemini").slice(11));
+const configuredDailyLimit = Number(process.env.APPEARANCE_AI_DAILY_LIMIT);
+const DAILY_LIMIT = Math.max(0, Math.min(500, numberArg(
+  "daily-limit",
+  Number.isFinite(configuredDailyLimit) ? configuredDailyLimit : DEFAULT_APPEARANCE_AI_DAILY_LIMIT,
+)));
 const key = process.env.GEMINI_API_KEY;
 
-if (!SCREEN && !VERIFY && !MERGE && !RESCORE && !IMPORT_CURATED && !EXHAUSTIVE_SCREEN) {
-  console.error("usage: node scripts/backfill-song-appearances.mjs --all|--exhaustive|--exhaustive-screen|--screen|--verify|--import-curated|--merge|--rescore [--limit=N] [--slug=SLUG]");
+if (!SCREEN && !VERIFY && !MERGE && !RESCORE && !IMPORT_CURATED && !EXHAUSTIVE_SCREEN && !STATUS) {
+  console.error("usage: node scripts/backfill-song-appearances.mjs --all|--exhaustive|--exhaustive-screen|--screen|--verify|--import-curated|--merge|--rescore|--status [--exhaustive] [--limit=N] [--daily-limit=N] [--slug=SLUG]");
   process.exit(2);
 }
-if ((SCREEN || VERIFY) && !key) throw new Error("GEMINI_API_KEY가 없습니다.");
+const screenUsesAi = SCREEN && PROVIDER !== "duckduckgo" && PROVIDER !== "bing";
+const verificationUsesAi = VERIFY && !EXHAUSTIVE_SCREEN;
+if ((screenUsesAi || verificationUsesAi) && DAILY_LIMIT > 0 && !key) throw new Error("GEMINI_API_KEY가 없습니다.");
 
 const songs = getAllSongs().map((song) => ({
   slug: String(song.slug),
@@ -92,6 +113,7 @@ const jsonObject = (value) => {
   return start >= 0 && end > start ? JSON.parse(text.slice(start, end + 1)) : null;
 };
 const writeJsonAtomic = (file, value) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
   const temp = `${file}.tmp`;
   fs.writeFileSync(temp, `${JSON.stringify(value, null, 2)}\n`, "utf8");
   fs.renameSync(temp, file);
@@ -100,6 +122,10 @@ const saveAudit = () => {
   audit.updatedAt = now();
   writeJsonAtomic(auditFile, audit);
 };
+const loadBudget = () => fs.existsSync(budgetFile)
+  ? JSON.parse(fs.readFileSync(budgetFile, "utf8"))
+  : {};
+let dailyBudget = loadBudget();
 
 const legacyAudit = EXHAUSTIVE && fs.existsSync(legacyAuditFile)
   ? JSON.parse(fs.readFileSync(legacyAuditFile, "utf8"))
@@ -138,16 +164,79 @@ let audit = !RESET && fs.existsSync(auditFile)
       results: EXHAUSTIVE ? exhaustiveResults() : {},
     };
 
-if (audit.corpusDigest !== corpusDigest || audit.totalSongs !== songs.length) {
-  throw new Error(`곡 목록이 감사 시작 이후 바뀌었습니다. 기존 ${audit.totalSongs}곡, 현재 ${songs.length}곡. 검토 후 --reset을 사용하세요.`);
-}
 audit.results ||= {};
 audit.screeningBatches ||= [];
+const corpusChange = reconcileResearchCheckpoint(audit, songs.map((song) => song.slug), {
+  corpusDigest,
+  makePending: (slug) => EXHAUSTIVE ? {
+    status: "pending", phase: "exhaustive", passes: [], updatedAt: now(),
+    researchIdentity: { title: songBySlug.get(slug)?.title || "", artist: songBySlug.get(slug)?.artist || "" },
+  } : undefined,
+});
+if (corpusChange.changed) {
+  if (!STATUS) saveAudit();
+  console.log(`checkpoint ${STATUS ? "preview" : "reconciled"} · added ${corpusChange.added.length} · retired ${corpusChange.removed.length}`);
+}
 
 const cluePattern = /(영화|드라마|애니메이션|애니|삽입곡|주제가|오프닝|엔딩|사운드트랙|\bOST\b|soundtrack|theme song|opening|ending|insert song)/i;
 const forcedCandidate = (song) => cluePattern.test(`${song.comment} ${song.genre} ${song.tags.join(" ")}`);
 
-async function grounded(prompt) {
+class DailyAiLimitReached extends Error {
+  constructor(status) {
+    super(`AI daily limit reached (${status.used}/${status.limit}, ${status.day} ${status.timezone})`);
+    this.name = "DailyAiLimitReached";
+    this.status = status;
+  }
+}
+
+const reserveBudgetSlot = (context = {}, retried = false) => {
+  const lockFile = `${budgetFile}.lock`;
+  fs.mkdirSync(path.dirname(budgetFile), { recursive: true });
+  let lock;
+  try {
+    lock = fs.openSync(lockFile, "wx");
+  } catch (error) {
+    if (error?.code === "EEXIST") {
+      try {
+        const age = Date.now() - fs.statSync(lockFile).mtimeMs;
+        if (!retried && age > 5 * 60 * 1000) {
+          fs.unlinkSync(lockFile);
+          return reserveBudgetSlot(context, true);
+        }
+      } catch (statError) {
+        // The other process may have released the millisecond-long lock between
+        // open and stat. Retry once instead of turning that healthy race into a
+        // failed research run.
+        if (!retried && statError?.code === "ENOENT") return reserveBudgetSlot(context, true);
+        throw statError;
+      }
+      throw new Error(`다른 AI 조사가 예산을 갱신 중입니다. 잠시 후 다시 실행하세요: ${lockFile}`);
+    }
+    throw error;
+  }
+  try {
+    // Reload while holding the lock so two concurrently started scripts cannot
+    // reserve the same last slot from stale in-memory state.
+    const latest = loadBudget();
+    const reservation = reserveResearchCall(latest, {
+      limit: DAILY_LIMIT,
+      at: new Date(),
+      phase: context.phase,
+      songSlug: context.songSlug,
+    });
+    if (reservation.allowed) writeJsonAtomic(budgetFile, reservation.budget);
+    dailyBudget = reservation.budget;
+    return reservation;
+  } finally {
+    fs.closeSync(lock);
+    fs.unlinkSync(lockFile);
+  }
+};
+
+async function grounded(prompt, context = {}) {
+  const reservation = reserveBudgetSlot(context);
+  if (!reservation.allowed) throw new DailyAiLimitReached(reservation.status);
+  // Save before calling Gemini so a timeout/crash cannot erase consumed quota.
   const result = await geminiGrounded(key, prompt, GEMINI_LITE_MODEL);
   if (!result?.text) return null;
   return { ...result, sources: (result.sources || []).map(sourceShape) };
@@ -161,7 +250,7 @@ High recall matters: search title + artist with soundtrack, OST, theme song, ins
 Return JSON only: {"candidates":[{"slug":"exact supplied slug","reason":"short factual clue"}]}. Include only songs with a plausible documented screen connection; an empty array is valid.
 Songs:
 ${JSON.stringify(payload)}`;
-  const result = await grounded(prompt);
+  const result = await grounded(prompt, { phase: "screen", songSlug: batch.map((song) => song.slug).join(",") });
   if (!result || !(result.queries || []).length) return null;
   let parsed;
   try { parsed = jsonObject(result.text); } catch { return null; }
@@ -384,7 +473,7 @@ Return JSON only:
 If no supported screen use is found after searching, return {"found":false,"appearances":[]}.
 
 Song metadata: ${JSON.stringify(song)}`;
-  const result = await grounded(prompt);
+  const result = await grounded(prompt, { phase: "verify", songSlug: song.slug });
   if (!result || !(result.queries || []).length) return null;
   let parsed;
   try { parsed = jsonObject(result.text); } catch { return null; }
@@ -581,12 +670,43 @@ function rescoreAudit() {
   console.log(`rescored ${songs.length} songs · candidates ${candidates}`);
 }
 
+let paused = null;
+const runAiPhase = async (work) => {
+  if (paused) return;
+  try {
+    await work();
+  } catch (error) {
+    if (!(error instanceof DailyAiLimitReached)) throw error;
+    paused = error.status;
+    saveAudit();
+    console.log(`paused · ${error.message}`);
+    console.log("Run the same command after the next Asia/Seoul midnight to resume from this checkpoint.");
+  }
+};
+
 if (RESCORE) rescoreAudit();
 if (EXHAUSTIVE_SCREEN) await runExhaustiveScreening();
-if (SCREEN) await runScreening();
-if (VERIFY && !EXHAUSTIVE_SCREEN) await runVerification();
+if (SCREEN) await runAiPhase(runScreening);
+if (VERIFY && !EXHAUSTIVE_SCREEN) await runAiPhase(runVerification);
 if (IMPORT_CURATED) await importCuratedFindings();
 if (MERGE) mergeDataset();
 
 const counts = Object.values(audit.results).reduce((map, item) => ({ ...map, [item.status]: (map[item.status] || 0) + 1 }), {});
-console.log(JSON.stringify({ songs: songs.length, researched: Object.keys(audit.results).length, statuses: counts }, null, 2));
+const checkpoint = {
+  pendingScreen: songs.filter((song) => !audit.results[song.slug] || audit.results[song.slug]?.status === "retryable" && audit.results[song.slug]?.phase === "screen").length,
+  pendingVerification: songs.filter((song) => {
+    const result = audit.results[song.slug];
+    return EXHAUSTIVE
+      ? result?.status === "pending" || result?.status === "retryable"
+      : result?.status === "screened_candidate" || result?.status === "retryable" && result?.phase === "verify";
+  }).length,
+  retired: Object.keys(audit.retiredResults || {}).length,
+};
+console.log(JSON.stringify({
+  songs: songs.length,
+  researched: Object.keys(audit.results).length,
+  statuses: counts,
+  checkpoint,
+  aiDailyBudget: researchBudgetStatus(dailyBudget, { limit: DAILY_LIMIT }),
+  paused: Boolean(paused),
+}, null, 2));

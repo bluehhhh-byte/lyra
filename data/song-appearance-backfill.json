@@ -1,9 +1,9 @@
 {
   "version": 1,
   "createdAt": "2026-09-01T02:13:32.088Z",
-  "updatedAt": "2026-09-01T08:45:54.841Z",
-  "corpusDigest": "d4a1e2dc47d031a3d030b22a9feeabd45e9eaa8f85ae3d443ff3eef65fb4e7f2",
-  "totalSongs": 955,
+  "updatedAt": "2026-09-03T08:25:09.419Z",
+  "corpusDigest": "2b08eed238377ac57f36b99b8881e26e6579512e404603dcbac02122ad64635e",
+  "totalSongs": 954,
   "baseline": [
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
@@ -59641,12 +59641,6 @@
       "batchId": "bing-158",
       "updatedAt": "2026-09-01T02:20:16.819Z"
     },
-    "삐삐밴드-zion-t-over-over": {
-      "status": "no_match",
-      "phase": "complete",
-      "batchId": "bing-159",
-      "updatedAt": "2026-09-01T02:20:16.819Z"
-    },
     "사비나-앤-드론즈-귀머거리-인생": {
       "status": "no_match",
       "phase": "complete",
@@ -59796,12 +59790,6 @@
       "phase": "complete",
       "batchId": "bing-184",
       "updatedAt": "2026-09-01T02:20:16.821Z"
-    },
-    "스월비-trapped-in-the-drum": {
-      "status": "no_match",
-      "phase": "complete",
-      "batchId": "bing-185",
-      "updatedAt": "2026-09-01T02:20:16.822Z"
     },
     "스카이민혁-알트-날개": {
       "status": "no_match",
@@ -64060,12 +64048,6 @@
       "batchId": "bing-732",
       "updatedAt": "2026-09-01T02:20:16.888Z"
     },
-    "panic-snowmelt": {
-      "status": "no_match",
-      "phase": "complete",
-      "batchId": "bing-733",
-      "updatedAt": "2026-09-01T02:20:16.888Z"
-    },
     "paprika-synthesizer-luv": {
       "status": "no_match",
       "phase": "complete",
@@ -64872,12 +64854,6 @@
         }
       ],
       "updatedAt": "2026-09-01T08:45:44.029Z"
-    },
-    "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark": {
-      "status": "no_match",
-      "phase": "complete",
-      "batchId": "bing-820",
-      "updatedAt": "2026-09-01T02:20:16.900Z"
     },
     "sheena-ringo-あかねさす歸路照らされど": {
       "status": "no_match",
@@ -65899,12 +65875,6 @@
       "batchId": "bing-928",
       "updatedAt": "2026-09-01T02:20:16.914Z"
     },
-    "wasureranneyo-nannmonee": {
-      "status": "no_match",
-      "phase": "complete",
-      "batchId": "bing-929",
-      "updatedAt": "2026-09-01T02:20:16.914Z"
-    },
     "wave-to-earth-annie": {
       "status": "no_match",
       "phase": "complete",
@@ -66144,5 +66114,74 @@
     }
   },
   "mergedAt": "2026-09-01T08:45:54.836Z",
-  "mergedItems": 75
+  "mergedItems": 75,
+  "retiredResults": {
+    "panic-snowmelt": {
+      "status": "no_match",
+      "phase": "complete",
+      "batchId": "bing-733",
+      "updatedAt": "2026-09-01T02:20:16.888Z",
+      "retiredAt": "2026-09-03T08:23:26.978Z"
+    },
+    "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark": {
+      "status": "no_match",
+      "phase": "complete",
+      "batchId": "bing-820",
+      "updatedAt": "2026-09-01T02:20:16.900Z",
+      "retiredAt": "2026-09-03T08:23:26.978Z"
+    },
+    "wasureranneyo-nannmonee": {
+      "status": "no_match",
+      "phase": "complete",
+      "batchId": "bing-929",
+      "updatedAt": "2026-09-01T02:20:16.914Z",
+      "retiredAt": "2026-09-03T08:23:26.978Z"
+    },
+    "삐삐밴드-zion-t-over-over": {
+      "status": "no_match",
+      "phase": "complete",
+      "batchId": "bing-159",
+      "updatedAt": "2026-09-01T02:20:16.819Z",
+      "retiredAt": "2026-09-03T08:23:26.978Z"
+    },
+    "스월비-trapped-in-the-drum": {
+      "status": "no_match",
+      "phase": "complete",
+      "batchId": "bing-185",
+      "updatedAt": "2026-09-01T02:20:16.822Z",
+      "retiredAt": "2026-09-03T08:23:26.978Z"
+    }
+  },
+  "corpusChanges": [
+    {
+      "at": "2026-09-03T08:23:26.978Z",
+      "from": 955,
+      "to": 954,
+      "added": [
+        "kiyoharu-boukyaku-no-sora-25th-anniversary-ver",
+        "the-strokes-is-this-it",
+        "릴보이-david",
+        "에픽하이-map-the-soul-feat-myk"
+      ],
+      "removed": [
+        "panic-snowmelt",
+        "sheena-ringo-akane-sasu-kiro-terasaredo-when-it-begins-to-get-dark",
+        "wasureranneyo-nannmonee",
+        "삐삐밴드-zion-t-over-over",
+        "스월비-trapped-in-the-drum"
+      ]
+    },
+    {
+      "at": "2026-09-03T08:24:37.061Z",
+      "from": 954,
+      "to": 954,
+      "added": [
+        "kiyoharu-boukyaku-no-sora-25th-anniversary-ver",
+        "the-strokes-is-this-it",
+        "릴보이-david",
+        "에픽하이-map-the-soul-feat-myk"
+      ],
+      "removed": []
+    }
+  ]
 }

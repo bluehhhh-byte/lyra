@@ -19,6 +19,8 @@
     "status": "node scripts/project-status.mjs --write",
     "needs": "node scripts/needs-work.mjs",
     "quality:search": "node scripts/evaluate-admin-search.mjs",
+    "appearances:status": "node scripts/backfill-song-appearances.mjs --status --exhaustive",
+    "appearances:resume": "node scripts/backfill-song-appearances.mjs --exhaustive --merge",
     "worktree": "node scripts/worktree.mjs",
     "deploy:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-production.ps1",
     "db:migrate": "node scripts/migrate-content.mjs",
