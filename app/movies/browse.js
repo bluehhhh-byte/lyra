@@ -175,9 +175,9 @@ function Grid({ list, needle }) {
             />
           </div>
           <div className="mt-3 flex items-start gap-2">
-            <h3 className="min-w-0 flex-1 truncate text-sm font-semibold leading-snug group-hover:text-accent">
+            <h2 className="min-w-0 flex-1 truncate text-sm font-semibold leading-snug group-hover:text-accent">
               {movie.title}
-            </h3>
+            </h2>
             {movie.media === "tv" && <span className="shrink-0 text-[10px] text-muted">DRAMA</span>}
           </div>
           <p className="mt-0.5 truncate text-xs text-muted">

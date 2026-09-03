@@ -13,8 +13,10 @@ export function Bars({ data, total, link }) {
           <>
             <div className="mb-1 flex items-baseline justify-between gap-2 text-xs">
               <span className="truncate">{label}</span>
-              <span className="shrink-0 tabular-nums text-muted">
-                {n} <span className="opacity-60">{pct(n, total)}</span>
+              {/* 퍼센트를 opacity-60으로 눌렀더니 muted 위에 겹쳐 3.33:1이 됐다(AA 4.5:1).
+                  위계를 지우지 않으려면 낮추는 대신 올린다 — 수치는 ink, 퍼센트는 muted. */}
+              <span className="shrink-0 tabular-nums text-ink">
+                {n} <span className="text-muted">{pct(n, total)}</span>
               </span>
             </div>
             {/* width is the only dynamic bit — inline style beats 100 arbitrary classes */}
