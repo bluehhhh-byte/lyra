@@ -5,13 +5,13 @@ artist: Lareine
 artist_ko: 라렌느
 album: Scream
 year: 2000
-genre: Rock
+genre: Visual Kei
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d0/35/c1/d035c1ca-7119-6610-d7f7-458b440ffe00/006303_4517331154877.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/79/96/d0/7996d013-ba5e-b1fa-9853-5a9bc55af406/mzaf_3065049382445778053.plus.aac.p.m4a
 trackId: 588640809
 external_url: https://music.apple.com/kr/album/grand-pain/588640763?i=588640809&uo=4
 duration: 425
-lang: en
+lang: ja
 tags: [일본, Visual Kei, 2000]
 keywords: [사랑, 빛, 달, 고통, 꽃잎]
 emotion: 슬픔
