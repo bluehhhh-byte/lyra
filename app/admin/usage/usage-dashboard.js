@@ -52,6 +52,49 @@ function ResourceCard({ label, used, limit, note }) {
   );
 }
 
+function AiResearchCard({ value }) {
+  if (!value?.enabled) return null;
+  const budget = value.budget || {};
+  const checkpoint = value.checkpoint;
+  const used = Number(budget.used || 0);
+  const limit = Number(budget.limit || 0);
+  const pending = Number(checkpoint?.pending || 0);
+  const tone = budget.exhausted ? "text-amber-600 dark:text-amber-300" : "text-emerald-600 dark:text-emerald-300";
+  const budgetMessage = budget.providerBlocked
+    ? "AI 공급자 할당량이 막혀 오늘 조사를 중단했습니다. 자정 이후 재개합니다."
+    : budget.exhausted
+      ? "오늘 상한에 도달했습니다. 자정 이후 이어집니다."
+      : `${integer.format(budget.remaining || 0)}회 남음`;
+  return (
+    <section className="mt-5 border border-line bg-surface/70 p-5 sm:p-6">
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <p className="text-xs text-muted">AI 전곡 수록 정보 조사 · 한국 시간</p>
+          <p className="mt-2 text-2xl font-semibold tabular-nums">
+            오늘 {integer.format(used)}회 <span className="text-sm font-normal text-muted">/ {integer.format(limit)}회</span>
+          </p>
+          <p className={`mt-1 text-xs ${tone}`}>
+            {budgetMessage}
+          </p>
+        </div>
+        <div className="text-right">
+          <p className="text-xs text-muted">재개 대기</p>
+          <p className="mt-1 text-3xl font-bold tabular-nums">{checkpoint ? integer.format(pending) : "—"}<span className="ml-1 text-sm font-normal text-muted">곡</span></p>
+        </div>
+      </div>
+      <Progress value={used} limit={limit} />
+      <div className="mt-4 grid gap-2 border-t border-line/70 pt-4 text-xs text-muted sm:grid-cols-3">
+        <p>전체 <strong className="text-ink">{checkpoint ? integer.format(checkpoint.totalSongs) : "—"}곡</strong></p>
+        <p>검토 기록 <strong className="text-ink">{checkpoint ? integer.format(checkpoint.researched) : "—"}곡</strong></p>
+        <p className="sm:text-right">최근 호출 <strong className="text-ink">{budget.lastSongSlug || "없음"}</strong></p>
+      </div>
+      <p className="mt-3 break-all text-[11px] text-muted">
+        {checkpoint?.updatedAt ? `체크포인트 ${new Date(checkpoint.updatedAt).toLocaleString("ko-KR")}` : "첫 조사 실행 후 체크포인트가 표시됩니다."}
+      </p>
+    </section>
+  );
+}
+
 function LineChart({ title, points, valueKey, color = "var(--color-accent)" }) {
   const values = points.map((item) => Number(item[valueKey] || 0));
   const max = Math.max(...values, 1);
@@ -152,6 +195,8 @@ export default function UsageDashboard() {
           <p className="sm:text-right">무료 한도의 80%까지를 안전 범위로 계산</p>
         </div>
       </section>
+
+      <AiResearchCard value={data?.aiResearch} />
 
       <div className="mt-5 grid gap-3 md:grid-cols-3">
         <ResourceCard label="DB 전송" used={neonMonthly} limit={data?.limits?.neonTransferBytes} note="이번 달" />

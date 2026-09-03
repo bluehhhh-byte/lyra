@@ -1,9 +1,9 @@
 {
   "version": 2,
   "createdAt": "2026-09-01T08:00:46.329Z",
-  "updatedAt": "2026-09-03T08:34:20.247Z",
-  "corpusDigest": "2b08eed238377ac57f36b99b8881e26e6579512e404603dcbac02122ad64635e",
-  "totalSongs": 954,
+  "updatedAt": "2026-09-03T13:53:03.084Z",
+  "corpusDigest": "34e7eb6a5580939f9eba32b20afa2069cb0774ec6c8496c89bfed558c67a525a",
+  "totalSongs": 955,
   "baseline": [
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
@@ -58332,44 +58332,64 @@
       "updatedAt": "2026-09-01T08:49:04.981Z"
     },
     "kiyoharu-boukyaku-no-sora-25th-anniversary-ver": {
-      "status": "pending",
-      "phase": "exhaustive",
+      "status": "retryable",
+      "phase": "verify",
       "passes": [],
-      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "updatedAt": "2026-09-03T13:51:15.534Z",
       "researchIdentity": {
         "title": "忘却の空",
         "artist": "SADS"
-      }
+      },
+      "attempts": 3,
+      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
     },
     "the-strokes-is-this-it": {
-      "status": "pending",
-      "phase": "exhaustive",
+      "status": "retryable",
+      "phase": "verify",
       "passes": [],
-      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "updatedAt": "2026-09-03T13:53:03.036Z",
       "researchIdentity": {
         "title": "Is This It",
         "artist": "The Strokes"
-      }
+      },
+      "attempts": 3,
+      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
     },
     "릴보이-david": {
-      "status": "pending",
-      "phase": "exhaustive",
+      "status": "retryable",
+      "phase": "verify",
       "passes": [],
-      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "updatedAt": "2026-09-03T13:49:27.469Z",
       "researchIdentity": {
         "title": "David",
         "artist": "릴보이"
-      }
+      },
+      "attempts": 3,
+      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
     },
     "에픽하이-map-the-soul-feat-myk": {
-      "status": "pending",
-      "phase": "exhaustive",
+      "status": "retryable",
+      "phase": "verify",
       "passes": [],
-      "updatedAt": "2026-09-03T08:34:20.194Z",
+      "updatedAt": "2026-09-03T13:50:21.485Z",
       "researchIdentity": {
         "title": "Map the Soul (feat. MYK)",
         "artist": "에픽하이"
-      }
+      },
+      "attempts": 3,
+      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
+    },
+    "pink-floyd-echoes": {
+      "status": "retryable",
+      "phase": "verify",
+      "passes": [],
+      "updatedAt": "2026-09-03T13:52:09.266Z",
+      "researchIdentity": {
+        "title": "Echoes",
+        "artist": "Pink Floyd"
+      },
+      "attempts": 3,
+      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
     }
   },
   "screeningBatches": [],
@@ -58600,6 +58620,17 @@
         "삐삐밴드-zion-t-over-over",
         "스월비-trapped-in-the-drum"
       ]
+    },
+    {
+      "at": "2026-09-03T13:48:37.815Z",
+      "from": 954,
+      "to": 955,
+      "added": [
+        "pink-floyd-echoes"
+      ],
+      "removed": []
     }
-  ]
+  ],
+  "mergedAt": "2026-09-03T13:53:03.079Z",
+  "mergedItems": 78
 }

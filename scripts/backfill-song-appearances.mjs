@@ -33,6 +33,13 @@ import {
   researchBudgetStatus,
   reserveResearchCall,
 } from "../lib/admin/research-budget.js";
+import {
+  markResearchBudgetBlocked,
+  readResearchBudget,
+  reserveResearchBudget,
+  writeResearchCheckpoint,
+} from "../lib/admin/research-budget-db.js";
+import { databaseContentEnabled, getContentDb } from "../lib/content-db.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -126,6 +133,11 @@ const loadBudget = () => fs.existsSync(budgetFile)
   ? JSON.parse(fs.readFileSync(budgetFile, "utf8"))
   : {};
 let dailyBudget = loadBudget();
+const sharedBudgetEnabled = databaseContentEnabled();
+const researchSql = sharedBudgetEnabled ? getContentDb() : null;
+let currentBudgetStatus = sharedBudgetEnabled
+  ? await readResearchBudget(researchSql, { limit: DAILY_LIMIT })
+  : researchBudgetStatus(dailyBudget, { limit: DAILY_LIMIT });
 
 const legacyAudit = EXHAUSTIVE && fs.existsSync(legacyAuditFile)
   ? JSON.parse(fs.readFileSync(legacyAuditFile, "utf8"))
@@ -189,7 +201,15 @@ class DailyAiLimitReached extends Error {
   }
 }
 
-const reserveBudgetSlot = (context = {}, retried = false) => {
+class ProviderRateLimitReached extends Error {
+  constructor(status, reason) {
+    super(reason || "AI 공급자 할당량 제한");
+    this.name = "ProviderRateLimitReached";
+    this.status = status;
+  }
+}
+
+const reserveLocalBudgetSlot = (context = {}, retried = false) => {
   const lockFile = `${budgetFile}.lock`;
   fs.mkdirSync(path.dirname(budgetFile), { recursive: true });
   let lock;
@@ -201,13 +221,13 @@ const reserveBudgetSlot = (context = {}, retried = false) => {
         const age = Date.now() - fs.statSync(lockFile).mtimeMs;
         if (!retried && age > 5 * 60 * 1000) {
           fs.unlinkSync(lockFile);
-          return reserveBudgetSlot(context, true);
+          return reserveLocalBudgetSlot(context, true);
         }
       } catch (statError) {
         // The other process may have released the millisecond-long lock between
         // open and stat. Retry once instead of turning that healthy race into a
         // failed research run.
-        if (!retried && statError?.code === "ENOENT") return reserveBudgetSlot(context, true);
+        if (!retried && statError?.code === "ENOENT") return reserveLocalBudgetSlot(context, true);
         throw statError;
       }
       throw new Error(`다른 AI 조사가 예산을 갱신 중입니다. 잠시 후 다시 실행하세요: ${lockFile}`);
@@ -234,10 +254,25 @@ const reserveBudgetSlot = (context = {}, retried = false) => {
 };
 
 async function grounded(prompt, context = {}) {
-  const reservation = reserveBudgetSlot(context);
-  if (!reservation.allowed) throw new DailyAiLimitReached(reservation.status);
-  // Save before calling Gemini so a timeout/crash cannot erase consumed quota.
-  const result = await geminiGrounded(key, prompt, GEMINI_LITE_MODEL);
+  const result = await geminiGrounded(key, prompt, GEMINI_LITE_MODEL, {
+    stopOnRateLimit: true,
+    beforeAttempt: async () => {
+      const reservation = sharedBudgetEnabled
+        ? await reserveResearchBudget(researchSql, { limit: DAILY_LIMIT, ...context })
+        : reserveLocalBudgetSlot(context);
+      currentBudgetStatus = reservation.status;
+      if (!reservation.allowed) throw new DailyAiLimitReached(reservation.status);
+    },
+  });
+  if (!result?.text && /\b429\b/.test(lastGeminiError)) {
+    if (sharedBudgetEnabled) {
+      currentBudgetStatus = await markResearchBudgetBlocked(researchSql, {
+        limit: DAILY_LIMIT,
+        reason: lastGeminiError,
+      });
+    }
+    throw new ProviderRateLimitReached(currentBudgetStatus, lastGeminiError);
+  }
   if (!result?.text) return null;
   return { ...result, sources: (result.sources || []).map(sourceShape) };
 }
@@ -676,11 +711,13 @@ const runAiPhase = async (work) => {
   try {
     await work();
   } catch (error) {
-    if (!(error instanceof DailyAiLimitReached)) throw error;
+    if (!(error instanceof DailyAiLimitReached) && !(error instanceof ProviderRateLimitReached)) throw error;
     paused = error.status;
     saveAudit();
     console.log(`paused · ${error.message}`);
-    console.log("Run the same command after the next Asia/Seoul midnight to resume from this checkpoint.");
+    console.log(error instanceof ProviderRateLimitReached
+      ? "Gemini provider quota is blocked. Run the same command after the next Asia/Seoul midnight."
+      : "Run the same command after the next Asia/Seoul midnight to resume from this checkpoint.");
   }
 };
 
@@ -702,11 +739,22 @@ const checkpoint = {
   }).length,
   retired: Object.keys(audit.retiredResults || {}).length,
 };
+if (sharedBudgetEnabled && !STATUS) {
+  await writeResearchCheckpoint(researchSql, {
+    audit: EXHAUSTIVE ? "exhaustive" : "screened",
+    totalSongs: songs.length,
+    researched: Math.max(0, songs.length - checkpoint.pendingScreen - checkpoint.pendingVerification),
+    pending: checkpoint.pendingScreen + checkpoint.pendingVerification,
+    retired: checkpoint.retired,
+    statuses: counts,
+  });
+}
+if (sharedBudgetEnabled) currentBudgetStatus = await readResearchBudget(researchSql, { limit: DAILY_LIMIT });
 console.log(JSON.stringify({
   songs: songs.length,
-  researched: Object.keys(audit.results).length,
+  researched: Math.max(0, songs.length - checkpoint.pendingScreen - checkpoint.pendingVerification),
   statuses: counts,
   checkpoint,
-  aiDailyBudget: researchBudgetStatus(dailyBudget, { limit: DAILY_LIMIT }),
+  aiDailyBudget: currentBudgetStatus,
   paused: Boolean(paused),
 }, null, 2));
