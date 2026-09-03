@@ -71,7 +71,12 @@ export default function MovieBrowse({ movies }) {
           aria-label="작품 검색"
           className="w-full  border border-line bg-surface px-3 py-2 text-base outline-none focus:border-accent sm:max-w-xs sm:text-sm"
         />
-        <div className="flex flex-wrap items-center gap-1.5">
+        {/* 좁은 화면에서 이 줄이 접히느냐 마느냐가 목록 전체의 위치를 결정한다.
+            대체 폰트로 그리는 동안에는 두 줄, Pretendard가 도착하면 한 줄이 되어
+            그 순간 그리드가 32px 올라갔다 — /movies의 CLS 0.219가 전부 이것이었다.
+            폰트를 먼저 요청하게 바꿔도 0.187까지밖에 안 내려갔다. 줄 수가 바뀌지
+            않게 하는 편이 확실하다: 좁은 화면에서는 한 줄로 두고 넘치면 가로로 민다. */}
+        <div className="flex flex-nowrap items-center gap-1.5 overflow-x-auto pb-1 [&>*]:shrink-0 sm:flex-wrap sm:overflow-visible sm:pb-0">
           {[
             ["all", "전체"],
             ["movie", "영화"],
