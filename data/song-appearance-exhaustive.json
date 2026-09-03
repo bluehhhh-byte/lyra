@@ -1,7 +1,7 @@
 {
   "version": 2,
   "createdAt": "2026-09-01T08:00:46.329Z",
-  "updatedAt": "2026-09-03T13:53:03.084Z",
+  "updatedAt": "2026-09-03T19:35:00.000Z",
   "corpusDigest": "34e7eb6a5580939f9eba32b20afa2069cb0774ec6c8496c89bfed558c67a525a",
   "totalSongs": 955,
   "baseline": [
@@ -58332,64 +58332,84 @@
       "updatedAt": "2026-09-01T08:49:04.981Z"
     },
     "kiyoharu-boukyaku-no-sora-25th-anniversary-ver": {
-      "status": "retryable",
-      "phase": "verify",
-      "passes": [],
-      "updatedAt": "2026-09-03T13:51:15.534Z",
+      "status": "existing_verified",
+      "phase": "complete",
+      "updatedAt": "2026-09-03T19:35:00.000Z",
       "researchIdentity": {
         "title": "忘却の空",
         "artist": "SADS"
       },
-      "attempts": 3,
-      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
+      "existingIds": [
+        "69eae84b-95f8-46fe-b549-06952d87c3f6"
+      ],
+      "reason": "기존 검증 자료에 이케부쿠로 웨스트 게이트 파크 주제가 정보가 등록되어 있음"
     },
     "the-strokes-is-this-it": {
-      "status": "retryable",
-      "phase": "verify",
-      "passes": [],
-      "updatedAt": "2026-09-03T13:53:03.036Z",
+      "status": "no_match",
+      "phase": "complete",
+      "updatedAt": "2026-09-03T19:35:00.000Z",
       "researchIdentity": {
         "title": "Is This It",
         "artist": "The Strokes"
       },
-      "attempts": 3,
-      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
+      "reason": "수동 웹 검토에서 영화·드라마·애니메이션의 정확 일치 수록 근거를 찾지 못함"
     },
     "릴보이-david": {
-      "status": "retryable",
-      "phase": "verify",
-      "passes": [],
-      "updatedAt": "2026-09-03T13:49:27.469Z",
+      "status": "no_match",
+      "phase": "complete",
+      "updatedAt": "2026-09-03T19:35:00.000Z",
       "researchIdentity": {
         "title": "David",
         "artist": "릴보이"
       },
-      "attempts": 3,
-      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
+      "reason": "수동 웹 검토에서 영화·드라마·애니메이션의 정확 일치 수록 근거를 찾지 못함"
     },
     "에픽하이-map-the-soul-feat-myk": {
-      "status": "retryable",
-      "phase": "verify",
-      "passes": [],
-      "updatedAt": "2026-09-03T13:50:21.485Z",
+      "status": "no_match",
+      "phase": "complete",
+      "updatedAt": "2026-09-03T19:35:00.000Z",
       "researchIdentity": {
         "title": "Map the Soul (feat. MYK)",
         "artist": "에픽하이"
       },
-      "attempts": 3,
-      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
+      "reason": "수동 웹 검토에서 영화·드라마·애니메이션의 정확 일치 수록 근거를 찾지 못함"
     },
     "pink-floyd-echoes": {
-      "status": "retryable",
-      "phase": "verify",
-      "passes": [],
-      "updatedAt": "2026-09-03T13:52:09.266Z",
+      "status": "verified",
+      "phase": "complete",
+      "queries": [
+        "manual authoritative-source review"
+      ],
+      "sources": [
+        {
+          "uri": "https://aso.gov.au/titles/documentaries/crystal-voyager/notes/",
+          "title": "Australian Screen 영상유산 해설"
+        }
+      ],
+      "updatedAt": "2026-09-03T19:35:00.000Z",
       "researchIdentity": {
         "title": "Echoes",
         "artist": "Pink Floyd"
       },
-      "attempts": 3,
-      "reason": "gemini-3.5-flash-lite: 429 할당량 초과"
+      "appearances": [
+        {
+          "workTitle": "크리스털 보이저",
+          "originalTitle": "Crystal Voyager",
+          "workType": "movie",
+          "mediaType": "movie",
+          "tmdbId": null,
+          "localMovieSlug": "",
+          "year": 1973,
+          "poster": "",
+          "role": "insert_song",
+          "season": null,
+          "episode": null,
+          "evidenceUrl": "https://aso.gov.au/titles/documentaries/crystal-voyager/notes/",
+          "evidenceLabel": "Australian Screen 영상유산 해설",
+          "status": "verified",
+          "note": "영화의 마지막 23분을 이루는 파도 속 슬로모션 시퀀스 전체에 Pink Floyd의 스튜디오 녹음이 사용됐다."
+        }
+      ]
     }
   },
   "screeningBatches": [],
@@ -58631,6 +58651,6 @@
       "removed": []
     }
   ],
-  "mergedAt": "2026-09-03T13:53:03.079Z",
-  "mergedItems": 78
+  "mergedAt": "2026-09-03T19:35:00.000Z",
+  "mergedItems": 79
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-02T13:40:16.186Z",
+  "updatedAt": "2026-09-03T19:35:00.000Z",
   "items": [
     {
       "id": "verified-65eb2a2ea336d651b33c6f31",
@@ -1639,6 +1639,27 @@
       "note": "오리콘 상품 정보에 「TBS テレビドラマ『池袋ウエストゲートパーク』主題歌」로 명기돼 있다. 2000년 4월 12일 발매, 드라마는 이틀 뒤인 4월 14일 방영을 시작했다.",
       "createdAt": "2026-09-02T13:40:16.186Z",
       "updatedAt": "2026-09-02T13:40:16.186Z"
+    },
+    {
+      "id": "backfill-62e75f021258d4d9ccbc2bba",
+      "songSlug": "pink-floyd-echoes",
+      "workTitle": "크리스털 보이저",
+      "originalTitle": "Crystal Voyager",
+      "workType": "movie",
+      "mediaType": "movie",
+      "tmdbId": null,
+      "localMovieSlug": "",
+      "year": 1973,
+      "poster": "",
+      "role": "insert_song",
+      "season": null,
+      "episode": null,
+      "evidenceUrl": "https://aso.gov.au/titles/documentaries/crystal-voyager/notes/",
+      "evidenceLabel": "Australian Screen 영상유산 해설",
+      "status": "verified",
+      "note": "영화의 마지막 23분을 이루는 파도 속 슬로모션 시퀀스 전체에 Pink Floyd의 스튜디오 녹음이 사용됐다.",
+      "createdAt": "2026-09-03T19:35:00.000Z",
+      "updatedAt": "2026-09-03T19:35:00.000Z"
     }
   ]
 }
