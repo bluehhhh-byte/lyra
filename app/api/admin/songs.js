@@ -74,7 +74,8 @@ export async function handleSongs(action, body) {
     const cursor = suppliedCursor || { apple: legacyOffset, musicbrainz: legacyOffset };
     const appleOffset = cursor.apple === null ? null : Math.max(0, Number(cursor.apple) || 0);
     const musicBrainzOffset = cursor.musicbrainz === null ? null : Math.max(0, Number(cursor.musicbrainz) || 0);
-    const searchQueries = buildSearchQueries(query, await getAllSongsMeta());
+    const registeredSongs = await getAllSongsMeta();
+    const searchQueries = buildSearchQueries(query, registeredSongs);
     const externalQuery = searchQueries.at(-1) || query;
     // free-text search across title and artist — iTunes matches both by default
     // search US/KR/JP stores together — each store has a different catalog
@@ -115,7 +116,8 @@ export async function handleSongs(action, body) {
     for (const r of catalog)
       if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
     const appleResults = pool.map(itunesToResult);
-    const results = mergeExternalSongResults([appleResults, musicBrainz.results], searchQueries);
+    const results = mergeExternalSongResults([appleResults, musicBrainz.results], searchQueries)
+      .map((result) => ({ ...result, registered: findDuplicateSong(result, registeredSongs) }));
     const failedStores = storePages.filter((page) => !page.ok);
     const appleOk = appleOffset === null || storePages.some((page) => page.ok);
     const appleHasMore = storePages.some((page) => page.hasMore);

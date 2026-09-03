@@ -23,7 +23,7 @@ async function api(action, body) {
 
 // Per-song maintenance: regenerate the comment (음슴체), or add a translation to a
 // song that has none (used to give Korean songs the bilingual two-line layout).
-export default function SongTools({ songs }) {
+export default function SongTools({ songs, duplicateGroups = [] }) {
   const [state, setState] = useState({}); // slug -> { busy, comment, msg, err }
   const [query, setQuery] = useState("");
   const filteredSongs = useMemo(() => filterAdminSongs(songs, query), [songs, query]);
@@ -133,6 +133,28 @@ export default function SongTools({ songs }) {
 
   return (
     <div className="max-w-2xl">
+      {duplicateGroups.length > 0 && (
+        <details className="mb-4 border border-line bg-surface p-3">
+          <summary className="cursor-pointer text-sm font-semibold">
+            중복 후보 {duplicateGroups.length}쌍 검토
+          </summary>
+          <p className="mt-2 text-xs text-muted">같은 Apple 곡 ID 또는 같은 아티스트·제목입니다. 자동 삭제하지 않으며 두 기록을 확인한 뒤 정리합니다.</p>
+          <ul className="mt-2 space-y-2 text-xs">
+            {duplicateGroups.map((group, index) => (
+              <li key={`${group.reason}-${index}`} className="border-t border-line pt-2">
+                <span className="mr-2 text-muted">{group.reason === "trackId" ? "Apple 곡 ID 일치" : "표기 정규화 일치"}</span>
+                {group.songs.map((item, itemIndex) => (
+                  <span key={item.slug}>
+                    {itemIndex > 0 && <span className="mx-1 text-muted">↔</span>}
+                    <a href={`/songs/${item.slug}`} className="text-accent hover:underline">{item.artist} — {item.title}</a>
+                    {item.date && <span className="ml-1 text-muted">({item.date})</span>}
+                  </span>
+                ))}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       {/* 모바일: 2열 그리드, 데스크톱: 한 줄 — 고정 폭 버튼이 좁은 화면을
           뚫고 나가지 않게 한다. */}
       <div className="mb-3 grid grid-cols-2 items-center gap-2 sm:flex sm:gap-3">

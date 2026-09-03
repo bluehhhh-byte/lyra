@@ -29,7 +29,12 @@ async function api(action, body, { timeoutMs = 0 } = {}) {
   } catch {
     data = { error: text.slice(0, 200) };
   }
-  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+  if (!res.ok) {
+    const error = new Error(data.error || `HTTP ${res.status}`);
+    error.status = res.status;
+    error.details = data;
+    throw error;
+  }
   return data;
 }
 
@@ -74,6 +79,7 @@ export default function AdminForm() {
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [savedSlug, setSavedSlug] = useState("");
+  const [duplicateMatch, setDuplicateMatch] = useState(null);
   const [searchLinks, setSearchLinks] = useState(null); // shown when lyrics aren't found
   // 어디에도 원문이 공개돼 있지 않은 곡. 이 표시가 있으면 needs.js가 번역·독음·
   // 키워드 대기열에서 빼 준다 — 채울 수 없는 항목으로 영원히 남지 않게.
@@ -202,6 +208,7 @@ export default function AdminForm() {
     run("lyrics", async () => {
       setSong(c);
       setSavedSlug("");
+      setDuplicateMatch(null);
       setLyrics("");
       setTitleKo("");
       setArtistKo("");
@@ -244,22 +251,29 @@ export default function AdminForm() {
     if (appearance.workTitle.trim() && (!appearance.workType || !appearance.role)) {
       throw new Error("작품 정보를 저장하려면 작품 종류와 사용 방식을 선택해 주세요");
     }
-    const { slug } = await api("save", {
-      ...song,
-      titleKo,
-      artistKo,
-      lang,
-      tags,
-      comment,
-      commentBasis,
-      commentSources: commentSources.map((source) => source.uri),
-      keywords,
-      emotion,
-      lyrics: translated,
-      lyricsNone,
-      instrumental,
-      lyricsNote,
-    });
+    setDuplicateMatch(null);
+    let slug;
+    try {
+      ({ slug } = await api("save", {
+        ...song,
+        titleKo,
+        artistKo,
+        lang,
+        tags,
+        comment,
+        commentBasis,
+        commentSources: commentSources.map((source) => source.uri),
+        keywords,
+        emotion,
+        lyrics: translated,
+        lyricsNone,
+        instrumental,
+        lyricsNote,
+      }));
+    } catch (reason) {
+      if (reason.details?.duplicate) setDuplicateMatch(reason.details.duplicate);
+      throw reason;
+    }
     let appearanceError = "";
     if (appearance.workTitle.trim()) {
       try {
@@ -362,6 +376,7 @@ export default function AdminForm() {
                 <li key={i} className={`flex items-center ${song === c ? "bg-surface" : ""}`}>
                   <button
                     onClick={() => pick(c)}
+                    disabled={!!c.registered}
                     className={`flex min-w-0 flex-1 items-center gap-3 px-3 py-2 text-left text-sm hover:bg-surface ${
                       song === c ? "text-accent" : ""
                     }`}
@@ -375,8 +390,14 @@ export default function AdminForm() {
                       <span className="font-medium">{c.title}</span>
                       <span className="text-muted"> — {c.artist}{c.album ? ` · ${c.album}` : ""}</span>
                       <span className="ml-2 text-[10px] text-muted">{c.sourceLabel || "Apple Music"}</span>
+                      {c.registered && <span className="ml-2 text-[10px] font-semibold text-accent">등록됨</span>}
                     </span>
                   </button>
+                  {c.registered && (
+                    <a href={`/songs/${c.registered.slug}`} className="mr-3 shrink-0 text-xs text-accent hover:underline">
+                      페이지 보기
+                    </a>
+                  )}
                   {c.preview && (
                     <button
                       onClick={() =>
@@ -591,6 +612,14 @@ export default function AdminForm() {
           <button className={btn + " mt-3"} disabled={busy} onClick={save}>
             {busy === "save" ? "저장 중…" : "저장"}
           </button>
+          {duplicateMatch && (
+            <div className="mt-3 border border-accent/50 bg-surface px-3 py-2 text-sm" role="alert">
+              <span className="font-semibold">이미 등록된 곡입니다.</span>{" "}
+              <a href={`/songs/${duplicateMatch.slug}`} className="text-accent underline">기존 곡 페이지 보기</a>
+              <span className="mx-2 text-muted">·</span>
+              <a href={`/admin/edit/${duplicateMatch.slug}`} className="text-accent underline">기존 기록 수정</a>
+            </div>
+          )}
           {savedSlug && (
             <span className="ml-3 text-sm text-muted">
               저장됨 ✓{" "}

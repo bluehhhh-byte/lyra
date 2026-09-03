@@ -9,6 +9,7 @@ import { toAdminSong } from "../../lib/admin/admin-song";
 import { currentDeployJob } from "../../lib/deploy-jobs";
 import { buildAdminOverview } from "../../lib/admin/dashboard";
 import AdminOverview from "./admin-overview";
+import { findDuplicateSongGroups } from "../../lib/admin/song-duplicate";
 
 export const metadata = { title: "곡 추가 | Lyra" };
 export const dynamic = "force-dynamic"; // auth-gated, never prerender
@@ -33,6 +34,7 @@ export default async function AdminPage() {
     throw error;
   }
   const adminSongs = songs.map(toAdminSong);
+  const duplicateGroups = findDuplicateSongGroups(songs);
   const overview = buildAdminOverview({
     songs,
     movies,
@@ -61,7 +63,7 @@ export default async function AdminPage() {
       <AdminForm />
 
       <h2 className="mb-3 mt-16 text-lg font-bold">등록된 곡 ({adminSongs.length})</h2>
-      <SongTools songs={adminSongs} />
+      <SongTools songs={adminSongs} duplicateGroups={duplicateGroups} />
     </>
   );
 }
