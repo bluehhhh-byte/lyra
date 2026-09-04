@@ -19,6 +19,14 @@ const SIZES = {
   l: { orig: "text-2xl", reading: "text-sm", trans: "text-base", gap: "space-y-5" },
 };
 const SIZE_KEYS = ["s", "m", "l"];
+const SIZE_LABEL = { s: "작게", m: "보통", l: "크게" };
+// 받침 유무로 조사가 갈린다 — "크게로"지만 "보통으로"다.
+const SIZE_TO = { s: "작게로", m: "보통으로", l: "크게로" };
+// 글자 크기를 버튼 세 개로 두면 320px에서 일곱 개가 한 줄에 들어가지 않는다
+// (44px 터치 타깃 × 7 = 308px, 가용 폭 288px). 세 단계뿐이라 순환 버튼
+// 하나로 충분하다 — 현재 단계는 글자 크기 자체로 보이고, 최대 두 번이면 원하는
+// 단계에 닿는다.
+const nextSize = (key) => SIZE_KEYS[(SIZE_KEYS.indexOf(key) + 1) % SIZE_KEYS.length];
 
 const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between songs
 
@@ -180,24 +188,17 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               </button>
             )}
           </div>
-          <div className="flex shrink-0 items-center gap-0.5 sm:gap-1.5">
-            {SIZE_KEYS.map((k) => (
-              <button
-                key={k}
-                onClick={() => setSize(k)}
-                aria-label={`글자 크기 ${k}`}
-                aria-pressed={size === k}
-                className={`h-11 w-11  border px-2 py-1 leading-none transition ${
-                  k === "s" ? "text-[10px]" : k === "m" ? "text-xs" : "text-sm"
-                } ${
-                  size === k
-                    ? "border-accent bg-accent font-semibold text-bg"
-                    : "border-line text-muted hover:text-ink"
-                }`}
-              >
-                가
-              </button>
-            ))}
+          <div className="flex shrink-0 items-center">
+            <button
+              onClick={() => setSize(nextSize(size))}
+              aria-label={`글자 크기 ${SIZE_LABEL[size]}, 눌러서 ${SIZE_TO[nextSize(size)]}`}
+              title={`글자 크기 ${SIZE_LABEL[size]}`}
+              className={`h-11 w-11  border border-line px-2 py-1 leading-none text-ink transition hover:border-accent hover:text-accent ${
+                size === "s" ? "text-[10px]" : size === "m" ? "text-xs" : "text-sm"
+              }`}
+            >
+              가
+            </button>
           </div>
         </div>
       </div>
