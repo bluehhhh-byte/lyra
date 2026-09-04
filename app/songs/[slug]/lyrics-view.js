@@ -147,18 +147,17 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
             style={{ transform: `scaleX(${progress})` }}
           />
         </div>
-        {/* 버튼 일곱 개에 터치 타깃 44px면 320px 화면에는 한 줄로 들어가지 않는다.
-            flex-1만으로는 줄이 바뀌지 않고 — 글자 폭 아래로 못 줄어든 모드 버튼이
-            제 상자를 넘어 크기 버튼 위로 올라탔다(320px에서 '번역'과 '가'가 포개짐).
-            좁을 때는 모드 묶음이 한 줄을 통째로 차지하게 해 크기 묶음을 아래로 내린다.
-            sm부터는 폭이 남으므로 예전처럼 한 줄이다. */}
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex min-w-0 basis-full gap-1.5 sm:flex-1 sm:basis-auto">
+        {/* 한 줄에 다 들어가야 한다. 버튼은 터치 타깃이라 44px 아래로 못 줄이므로
+            남는 여지는 여백뿐이다 — 좁은 화면에서 묶음 간격과 버튼 좌우 여백을 조여
+            360px부터 일곱 개가 한 줄에 들어간다. 320px은 버튼만 308px이라 산술적으로
+            불가능해, 그때만 이 줄이 가로로 밀린다(페이지 전체는 밀리지 않는다). */}
+        <div className="-mx-1 flex items-center justify-between gap-0.5 overflow-x-auto px-1 sm:mx-0 sm:gap-2 sm:overflow-x-visible sm:px-0">
+          <div className="flex min-w-fit flex-1 gap-0.5 sm:gap-1.5">
             {MODES.map((m) => (
               <button
                 key={m.key}
                 onClick={() => setMode(m.key)}
-                className={`min-h-11 flex-1 whitespace-nowrap border px-2 py-1 text-xs transition active:scale-[0.97] sm:flex-none sm:px-3 ${
+                className={`min-h-11 min-w-fit flex-1 whitespace-nowrap border px-1.5 py-1 text-xs transition active:scale-[0.97] sm:flex-none sm:px-3 ${
                   mode === m.key
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -171,7 +170,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => setShowReadings((value) => !value)}
                 aria-pressed={showReadings}
-                className={`min-h-11 flex-1 whitespace-nowrap border px-2 py-1 text-xs transition active:scale-[0.97] sm:flex-none sm:px-3 ${
+                className={`min-h-11 min-w-fit flex-1 whitespace-nowrap border px-1.5 py-1 text-xs transition active:scale-[0.97] sm:flex-none sm:px-3 ${
                   showReadings
                     ? "border-accent bg-accent font-semibold text-bg"
                     : "border-line text-muted hover:text-ink"
@@ -181,7 +180,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               </button>
             )}
           </div>
-          <div className="ml-auto flex shrink-0 items-center gap-1.5">
+          <div className="flex shrink-0 items-center gap-0.5 sm:gap-1.5">
             {SIZE_KEYS.map((k) => (
               <button
                 key={k}
