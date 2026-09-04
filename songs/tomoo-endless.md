@@ -26,6 +26,7 @@ source_hash: 516bd893909baf1ef284d3d1d3de242f041bc8f6
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 ---
+[Verse 1]
 たとえるなら 二つのリボン
 + 타토에루나라 후타츠노 리본
 > 굳이 비유하자면 두 개의 리본
@@ -38,6 +39,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 それぞれ螺旋を描いて
 + 소레조레 라센오 에가이테
 > 각자 나선을 그리며
+
+[Pre-Chorus]
 あのね 夢見てるのは
 + 아노네 유메미테루노와
 > 있잖아, 내가 꿈꾸는 건
@@ -53,6 +56,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 叶うでしょうか
 + 카나우데쇼-카
 > 이루어질까요
+
+[Chorus]
 愛しさの陰に隠れた痛みと我儘を
 + 이토시사노 카게니 카쿠레타 이타미토 와가마마오
 > 사랑스러움의 그늘에 숨은 아픔과 제멋대로인 마음을
@@ -74,6 +79,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 雨上がりのあとさき
 + 아메아가리노 아토사키
 > 비 갠 뒤의 앞과 뒤에서
+
+[Verse 2]
 たとえるなら描きかけの絵
 + 타토에루나라 에가키카케노 에
 > 굳이 비유하자면 그리다 만 그림
@@ -95,6 +102,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 忘れたくないことばかりです
 + 와스레타쿠나이 코토바카리데스
 > 잊고 싶지 않은 것들뿐이에요
+
+[Pre-Chorus]
 あのね 夢見てるのは
 + 아노네 유메미테루노와
 > 있잖아, 내가 꿈꾸는 건
@@ -107,6 +116,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 あなたの幸せになること
 + 아나타노 시아와세니 나루 코토
 > 너의 행복이 되는 것
+
+[Chorus]
 愛しさの陰に隠れた痛みと我儘を
 + 이토시사노 카게니 카쿠레타 이타미토 와가마마오
 > 사랑스러움의 그늘에 숨은 아픔과 제멋대로인 마음을
@@ -128,6 +139,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=TOMOO&track_name=Endless
 雨上がりのあとさき
 + 아메아가리노 아토사키
 > 비 갠 뒤의 앞과 뒤에서
+
+[Outro]
 たとえるなら 二つのリボン
 + 타토에루나라 후타츠노 리본
 > 굳이 비유하자면 두 개의 리본

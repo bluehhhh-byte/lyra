@@ -26,6 +26,7 @@ source_hash: 746fe050382e3cc8862db84750eac7e05cd560d7
 lyrics_external: true
 lyrics_source: https://music.bugs.co.kr/track/32968963
 ---
+[Verse 1]
 수백만 원 때문에 친구를 버리고
 > For a few million won people throw away friends
 수천만 원 때문에 가족을 버린다
@@ -50,6 +51,8 @@ lyrics_source: https://music.bugs.co.kr/track/32968963
 > Seeing reality properly is far too hard
 여긴 어느 쪽이던 탐욕스러운 어른들뿐인걸
 > here it's greedy adults on every side
+
+[Pre-Chorus]
 모두가 자신만을 생각하지만
 > Everyone thinks only of themselves
 진짜로 내가 누군지는 몰라
@@ -58,6 +61,8 @@ lyrics_source: https://music.bugs.co.kr/track/32968963
 > I try to learn more and more
 조금은 모르는 게 살아가기엔 쉬워
 > but not knowing makes living a little easier
+
+[Chorus]
 다시 처음부터
 > From the very beginning again
 시작하고 싶어
@@ -66,6 +71,8 @@ lyrics_source: https://music.bugs.co.kr/track/32968963
 > I want to go back
 자유롭고 싶어
 > I want to be free
+
+[Verse 2]
 내가 보지 못한다고 일어나지 않는 건 아니고
 > Just because I can't see it doesn't mean it isn't happening
 살아남지 못한다고 행복하지 말란 법 없고
@@ -94,6 +101,8 @@ lyrics_source: https://music.bugs.co.kr/track/32968963
 > I drift through the open sea
 꽃을 피워 가득 찬 머릴 비워
 > let a flower bloom, empty my crowded head
+
+[Chorus]
 다시 처음부터
 > From the very beginning again
 시작하고 싶어

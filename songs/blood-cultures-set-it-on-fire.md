@@ -28,6 +28,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=Blood%20Cultures&track_nam
 ---
 🗨 혈액배양검사라는 뜻을 가진 미국 뉴저지 출신의 싸이키델릭락 인디 밴드 블러드 컬처스의 곡. 제목은 '불에 태워버려라'. 
 🗨 아침부터 태울 걸 찾느라 장작을 패고 마른 낙엽을 찾고 작은 불씨에 바람을 새겨 넣으며 간신히 불을 지피고는 겨우 출근합니다. 오늘도 마음이 다 타버려 아무것도 남기지 않기를.
+
+[Verse 1]
 Take all of my dreams
 > 내 꿈을 전부 가져가
 Take off both your wings
@@ -44,6 +46,8 @@ And set them on fire
 > 그리고 불을 붙여
 You set them on fire
 > 넌 거기에 불을 붙였지
+
+[Verse 2]
 You gave me everything
 > 넌 내게 전부를 줬어
 Everything I feel
@@ -60,6 +64,8 @@ You set me on fire
 > 넌 나에게 불을 붙였어
 You set me on fire
 > 넌 나에게 불을 붙였어
+
+[Pre-Chorus]
 It's not that I don't care, I do
 > 내가 신경 안 쓰는 게 아니야, 쓰지
 But I don't see the use
@@ -68,6 +74,8 @@ You had my neck in a noose
 > 넌 내 목에 올가미를 걸어뒀잖아
 And that's just not that cool
 > 그건 좀 아니지
+
+[Chorus]
 Well, I let it all
 > 그래, 난 전부 내버려 뒀어
 I let it all happen
@@ -86,6 +94,8 @@ And I let it all
 > 그리고 난 전부
 I let it all burn
 > 전부 타버리게 뒀어
+
+[Verse 3]
 Take all of my dreams
 > 내 꿈을 전부 가져가
 Take off both your wings
@@ -102,6 +112,8 @@ And set them on fire
 > 그리고 불을 붙여
 Set them on fire
 > 거기에 불을 붙여
+
+[Pre-Chorus]
 It's not that I don't care, I do
 > 내가 신경 안 쓰는 게 아니야, 쓰지
 But I don't see the use
@@ -110,6 +122,8 @@ You had my neck in a noose
 > 넌 내 목에 올가미를 걸어뒀잖아
 And that's just not that cool
 > 그건 좀 아니지
+
+[Chorus]
 Well, I let it all
 > 그래, 난 전부 내버려 뒀어
 I let it all happen

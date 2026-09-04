@@ -26,6 +26,7 @@ source_hash: 6b4532d9a55e4243c49fa9a35f936e6ec933ea79
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=ELLEGARDEN&track_name=Missing
 ---
+[Verse 1]
 朱く染まる空 夜の合図が
 + 아카쿠 소마루 소라 요루노 아이즈가
 > 붉게 물드는 하늘, 밤이 보내는 신호가
@@ -35,6 +36,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=ELLEGARDEN&track_name=Miss
 壁にもたれた 僕らの唄 口ずさめば
 + 카베니 모타레타 보쿠라노 우타 쿠치즈사메바
 > 벽에 기댄 채 우리의 노래를 흥얼거리면
+
+[Chorus]
 重なって 少し楽になって
 + 카사낫테 스코시 라쿠니 낫테
 > 목소리가 겹쳐서 조금 편해지고
@@ -48,6 +51,8 @@ We're missing, we're missing
 > 우린 사라져 있어, 우린 사라져 있어
 We're missing
 > 우린 사라져 있어
+
+[Verse 2]
 あの火花みたいに 誠実なら
 + 아노 히바나 미타이니 세-지츠나라
 > 그 불꽃처럼 성실할 수만 있다면
@@ -57,6 +62,8 @@ We're missing
 足りない記憶 僕らの唄 口ずさめば
 + 타리나이 키오쿠 보쿠라노 우타 쿠치즈사메바
 > 모자란 기억 속에서 우리의 노래를 흥얼거리면
+
+[Chorus]
 重なって 少し楽になって
 + 카사낫테 스코시 라쿠니 낫테
 > 목소리가 겹쳐서 조금 편해지고
@@ -70,6 +77,8 @@ We're missing, we're missing
 > 우린 사라져 있어, 우린 사라져 있어
 We're missing
 > 우린 사라져 있어
+
+[Chorus]
 間違って 少し失って
 + 마치갓테 스코시 우시낫테
 > 틀리고 조금 잃어버리고
@@ -83,6 +92,8 @@ We're missing, we're missing
 > 우린 사라져 있어, 우린 사라져 있어
 We're missing
 > 우린 사라져 있어
+
+[Bridge]
 ソーダの中の宝石 入っていなかった金貨
 + 소-다노 나카노 호-세키 하잇테 이나캇타 킨카
 > 소다 속의 보석, 들어 있지 않던 금화
@@ -95,6 +106,8 @@ We're missing
 あたたかい毛布も 大切なんだ
 + 아타타카이 모-후모 타이세츠난다
 > 따뜻한 담요도 소중한 거야
+
+[Chorus]
 重なって 少し楽になって
 + 카사낫테 스코시 라쿠니 낫테
 > 목소리가 겹쳐서 조금 편해지고
@@ -123,6 +136,8 @@ We're missing, we're missing
 > 우린 사라져 있어, 우린 사라져 있어
 We're missing
 > 우린 사라져 있어
+
+[Outro]
 You
 > 너
 Since you left, we still can't sleep at night

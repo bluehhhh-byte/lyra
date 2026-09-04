@@ -26,6 +26,7 @@ source_hash: f740cca27ddf90b50df113f77f720ef8e7594a3a
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Robbie%20Williams&track_name=The%20Road%20To%20Mandalay
 ---
+[Verse 1]
 There's a thousand words that I could say
 > 널 집으로 돌아오게 할 말이라면
 To make you come home, yeah
@@ -42,6 +43,8 @@ And maybe I was too blind to see
 > 어쩌면 내가 너무 눈이 멀어서
 That you needed a change
 > 네게 변화가 필요하다는 걸 못 봤겠지
+
+[Pre-Chorus]
 Was it something I said
 > 내가 한 말 때문이었을까
 To make you turn away?
@@ -54,6 +57,8 @@ To make it so that you were right here
 > 네가 바로 여기 있게 만들 방법을
 Right now
 > 바로 지금
+
+[Chorus]
 I've been sitting here
 > 난 여기 앉아 있었어
 Can't get you off my mind (can't get you off my mind)
@@ -66,6 +71,8 @@ Wishing I could touch your face (touch your face)
 > 네 얼굴을 만질 수 있기를 바라면서 (네 얼굴을)
 But the truth remains, you're
 > 하지만 진실은 그대로야, 넌
+
+[Post-Chorus]
 Gone
 > 떠났어
 You're gone
@@ -80,6 +87,8 @@ You're gone
 > 넌 떠났어
 You're
 > 넌
+
+[Verse 2]
 Now I don't wanna make excuses, baby
 > 변명하고 싶진 않아, 자기야
 Won't change the fact that you're gone
@@ -96,6 +105,8 @@ Guess that's my life without you, mm-mm
 > 그게 너 없는 내 삶이겠지, 음-음
 (Guess that's my life without you)
 > (그게 너 없는 내 삶이겠지)
+
+[Pre-Chorus]
 And maybe I could change my every day, yeah
 > 어쩌면 매일을 바꿀 수도 있겠지, 그래
 But, baby, I don't want to
@@ -116,6 +127,8 @@ Please say you do
 > 제발 사랑한다고 말해줘
 Yeah, hey, hey, yeah, yeah
 > 그래, 헤이, 헤이, 그래, 그래
+
+[Chorus]
 I've been sitting here (sitting here)
 > 난 여기 앉아 있었어 (여기 앉아서)
 Can't get you off my mind (get you off my mind)
@@ -132,6 +145,8 @@ But the truth remains, you're
 > 하지만 진실은 그대로야, 넌
 (Truth remains, you're)
 > (진실은 그대로야, 넌)
+
+[Post-Chorus]
 Gone
 > 떠났어
 You're gone
@@ -146,6 +161,8 @@ You're gone
 > 넌 떠났어
 Oh, oh
 > 오, 오
+
+[Bridge]
 What will I do
 > 난 어떻게 하지
 If I can't be with you?
@@ -164,6 +181,8 @@ That I need you here with me
 > 내가 네가 여기 함께 있어야 한다는 걸
 Oh, oh
 > 오, 오
+
+[Chorus]
 I've been sitting here (sitting here)
 > 난 여기 앉아 있었어 (여기 앉아서)
 Can't get you off my mind (can't get you off my mind)
@@ -180,6 +199,8 @@ But the truth remains, you're
 > 하지만 진실은 그대로야, 넌
 (The truth remains, you're gone)
 > (진실은 그대로야, 넌 떠났어)
+
+[Chorus]
 I've been sitting here (sitting here)
 > 난 여기 앉아 있었어 (여기 앉아서)
 Can't get you off my mind (can't get you off my mind)
@@ -196,6 +217,8 @@ But the truth remains, you're (oh, oh)
 > 하지만 진실은 그대로야, 넌 (오, 오)
 (Baby, the truth is, you're)
 > (자기야, 진실은, 넌)
+
+[Outro]
 Gone
 > 떠났어
 You're gone

@@ -26,6 +26,7 @@ source_hash: 8d8a5704d68e7956083d645a0cf5e658a4367a89
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=The%20Koxx&track_name=zeitgeist
 ---
+[Verse 1]
 see that broken throne of a ruined world
 > 무너진 세계의 부서진 왕좌를 봐
 common people carry on
@@ -38,6 +39,8 @@ there's no direction and soon
 > 방향은 없고, 머지않아
 it will all turned to dust
 > 모든 게 먼지가 될 거야
+
+[Chorus]
 blind king without a crown
 > 왕관 없는 눈먼 왕
 grand march without a drum
@@ -54,10 +57,14 @@ blind king without a crown
 > 왕관 없는 눈먼 왕
 grand march without a drum
 > 북 없는 대행진
+
+[Bridge]
 it will be there's no doubt
 > 그렇게 될 거야, 의심할 여지 없이
 it will be there's no doubt
 > 그렇게 될 거야, 의심할 여지 없이
+
+[Chorus]
 blind king without a crown
 > 왕관 없는 눈먼 왕
 grand march without a drum
@@ -74,8 +81,12 @@ blind king without a crown
 > 왕관 없는 눈먼 왕
 grand march without a drum
 > 북 없는 대행진
+
+[Bridge]
 it will be there's no doubt
 > 그렇게 될 거야, 의심할 여지 없이
+
+[Outro]
 blind king without a crown
 > 왕관 없는 눈먼 왕
 grand march without a drum

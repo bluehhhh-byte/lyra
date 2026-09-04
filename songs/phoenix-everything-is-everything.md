@@ -26,6 +26,7 @@ source_hash: ad5af94a0015a0454d329f1cbe84ed6d70395207
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Phoenix&track_name=Everything%20Is%20Everything
 ---
+[Verse 1]
 Things are gonna change
 > 상황은 변할 거야
 And not for better
@@ -42,6 +43,8 @@ Think of what I've done, uh
 > 내가 뭘 했는지 생각해봐, 어
 You know it all
 > 넌 전부 알잖아
+
+[Chorus]
 Everything is everything
 > 모든 게 다 그런 거야
 Everything is everything
@@ -56,6 +59,8 @@ Can't understand a word
 > 한마디도 이해할 수 없어
 Half of the stuff I'm sayin'
 > 내가 하는 말의 절반은
+
+[Verse 2]
 The things I do possess
 > 내가 가진 것들이
 Sometimes they own me too
@@ -72,6 +77,8 @@ Since I always wanted
 > 난 언제나 원했으니까
 I always wanted you
 > 언제나 너를 원했으니까
+
+[Chorus]
 Everything is everything
 > 모든 게 다 그런 거야
 The more I talk about it
@@ -84,6 +91,8 @@ Can't understand a word
 > 한마디도 이해할 수 없어
 Half of the stuff I'm sayin'
 > 내가 하는 말의 절반은
+
+[Bridge]
 Riding low, riding low, riding faster
 > 낮게 달려, 낮게 달려, 더 빨리 달려
 If this is what I want
@@ -96,6 +105,8 @@ If this is what you want
 > 이게 네가 원하는 거라면
 This is what you get instead
 > 네가 대신 얻는 건 이거야
+
+[Chorus]
 Everything is everything
 > 모든 게 다 그런 거야
 The more I talk about it
@@ -108,6 +119,8 @@ Can't understand a word
 > 한마디도 이해할 수 없어
 Half of the stuff I'm sayin'
 > 내가 하는 말의 절반은
+
+[Outro]
 Riding low, riding low, riding faster
 > 낮게 달려, 낮게 달려, 더 빨리 달려
 The more I talk about it

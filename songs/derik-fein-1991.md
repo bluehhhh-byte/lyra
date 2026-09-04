@@ -26,6 +26,7 @@ source_hash: 83c1dc422ef7dda9096c04c4717784e43304f321
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Derik%20Fein&track_name=1991
 ---
+[Verse 1]
 We were free
 > 우린 자유로웠어
 We were careless
@@ -46,10 +47,14 @@ For the grave
 > 무덤까지 가져갈
 I won't forget
 > 잊지 않을 거야
+
+[Pre-Chorus]
 Summer
 > 여름
 Recess
 > 쉬는 시간
+
+[Chorus]
 I don't wanna grow up
 > 어른이 되고 싶지 않아
 I wanna stay forever young
@@ -66,6 +71,8 @@ Mom and dad would dance
 > 엄마 아빠는 춤을 췄지
 Their little heart's out with joy
 > 작은 심장이 터져라 기쁘게
+
+[Verse 2]
 All the things we get lost in and the
 > 우리가 빠져 헤매는 온갖 것들과
 Dreams that we forfeit to sacrifice
@@ -78,10 +85,14 @@ Say the world should be kinder
 > 세상이 더 다정해야 한다고 말하면서
 To serve ourselves
 > 우리 편하자고
+
+[Pre-Chorus]
 I won't forget
 > 잊지 않을 거야
 Summer recess
 > 여름 쉬는 시간
+
+[Chorus]
 I don't wanna grow up
 > 어른이 되고 싶지 않아
 I wanna stay forever young

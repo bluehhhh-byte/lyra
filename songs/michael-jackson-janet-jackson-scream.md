@@ -26,6 +26,7 @@ source_hash: ed77141d98eabf28f5afc8cd69128107b76a6df3
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Michael%20Jackson%2C%20Janet%20Jackson&track_name=Scream
 ---
+[Verse 1]
 Michael):
 Tired of injustice
 > 불의에 지쳤어
@@ -43,6 +44,8 @@ As jacked as it sounds
 > 말도 안 되게 들리겠지만
 The whole system sucks
 > 이 시스템 전체가 엉망이야
+
+[Verse 2]
 (Janet):
 Peek in the shadow
 > 그림자를 들여다봐
@@ -60,6 +63,8 @@ I've got to get stronger
 > 난 더 강해져야 해
 And I won't give up the fight
 > 그리고 이 싸움을 포기하지 않을 거야
+
+[Pre-Chorus]
 (Michael):
 With such confusion don't itmake you wanna scream
 > 이런 혼란 속에서 소리치고 싶지 않아?
@@ -69,6 +74,8 @@ You bash abusing victimize within the scheme
 You try to cope with every lie they scrutinize
 > 그들이 파헤치는 온갖 거짓말을 견뎌내려 애쓰지
 (Both):
+
+[Chorus]
 Somebody please have mercy cause I just can't take it
 > 누가 제발 자비를 베풀어줘, 더는 못 견디겠어
 Stop pressurin' me
@@ -87,6 +94,8 @@ Stop pressurin' me
 > 날 그만 압박해
 Make you just wanna scream
 > 그냥 소리치고 싶게 만들어
+
+[Verse 3]
 (Michael):
 Tired of you tellin' the story your way
 > 네 멋대로 이야기를 지어내는 데 지쳤어
@@ -103,6 +112,8 @@ I can't take it much longer
 > 더는 못 견디겠어
 I think I might go insane
 > 미쳐버릴 것 같아
+
+[Pre-Chorus]
 (Michael):
 With such confusion don't it make you wanna scream
 > 이런 혼란 속에서 소리치고 싶지 않아?
@@ -112,6 +123,8 @@ Your bash abusing vicitimize within the scheme
 You find your pleasure scandalizin' every lie
 > 넌 온갖 거짓말로 추문을 만들며 즐거워하지
 (Both):
+
+[Chorus]
 Oh Father, please have mercy cause I just can't take it
 > 오 아버지, 제발 자비를 베푸소서, 더는 못 견디겠습니다
 Stop pressurin' me
@@ -130,6 +143,8 @@ Stop fuckin' with me
 > 날 그만 건드려
 Make me wanna scream
 > 소리치고 싶게 만들어
+
+[Bridge]
 (Janet):
 Oh my God, can't believe what I saw
 > 맙소사, 내가 본 걸 믿을 수가 없어
@@ -145,6 +160,8 @@ All the injustice
 (News Man):
 ("A man has been brutally beaten to death by Police after being wrongly identified as a robbery suspect. The man was an 18 year old black man.")
 > ("강도 용의자로 잘못 지목된 한 남성이 경찰에게 무참히 구타당해 사망했습니다. 그는 열여덟 살 흑인 남성이었습니다.")
+
+[Outro]
 (Michael):
 With such collusions don't it make you wanna scream
 > 이런 결탁을 보면 소리치고 싶지 않아?

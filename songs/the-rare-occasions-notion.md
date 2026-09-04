@@ -26,6 +26,7 @@ source_hash: 34bf8f9cd08b06956b0e896aa08d5571d3aa80c6
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=The%20Rare%20Occasions&track_name=Notion
 ---
+[Verse 1]
 Sure it's a calming notion, perpetual in motion
 > 그래, 마음이 놓이는 생각이지, 영원히 움직인다는 건
 But I don't need the comfort of any lies
@@ -34,6 +35,8 @@ For I have seen the ending and there is no ascending
 > 끝을 봤으니까, 그리고 승천 같은 건 없어
 ♪Ri-i-i-i-i-ise♪
 > ♪올-라-가-는 건♪
+
+[Verse 2]
 Oh, back when I was younger, was told by other youngsters
 > 오, 더 어렸을 때 다른 아이들에게 들었어
 That my end will be torture beneath the earth
@@ -44,6 +47,8 @@ I see a window, a limit, to live it, or not at all
 > 난 창문 하나를, 한계를 봐, 그걸 살아내거나 아예 살지 않거나
 ♫♬♫
 > ♫♬♫
+
+[Pre-Chorus]
 If you could pull the lever to carry on forever
 > 영원히 이어지게 하는 레버를 당길 수 있다면
 Would your life even matter anymore?
@@ -54,6 +59,8 @@ But it's not what you signed up ♪for♪
 > 하지만 그건 네가 신청한 게 ♪아니잖아♪
 ♫♬♫
 > ♫♬♫
+
+[Chorus]
 I'm sure there won't always be ♪Sunshine♪
 > 언제나 ♪햇빛♪이 있진 않겠지
 But there's this momentary ♪Beam of Light♪
@@ -68,6 +75,8 @@ I'm sure there won't always be ♪Sunshine♪
 > 언제나 ♪햇빛♪이 있진 않겠지
 But there's this momentary ♪Beam of Light♪
 > 하지만 이 순간적인 ♪한 줄기 빛♪이 있어
+
+[Bridge]
 I could c-cross the ocean in a fit of devotion
 > 헌신에 사로잡혀 바다를 건널 수도 있어
 (I'm sure there won't always be ♪Sunshine♪)

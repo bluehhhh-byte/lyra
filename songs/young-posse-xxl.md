@@ -26,9 +26,12 @@ source_hash: b865844e5e213789ec16f4b32d73ecbef9e8272c
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=YOUNG%20POSSE&track_name=XXL
 ---
+[Intro]
 2. Dvwn - 마지막 (2020)
 Let's hear that order
 > 주문을 들어보자
+
+[Chorus]
 아직 모자라 I'ma get it one, two, three, four, five (six)
 > Still not enough, I'ma get it one, two, three, four, five (six)
 Six feet off the ground 판을 더 크게 키워볼까
@@ -41,6 +44,8 @@ X-X-L 우린 X-X-L
 > X-X-L, we're X-X-L
 제로백 슝 세게 밟아 엑셀
 > Zero to sixty, whoosh, floor the accelerator
+
+[Verse 1]
 Big t-shirts, not billie, just posse
 > 큰 티셔츠, 빌리가 아니라 그냥 포세
 아빠 t-shirt 입고 하이터치 watch me
@@ -57,6 +62,8 @@ We don't drip, just pour it
 > Clean it out—big cheese, big cookie, big orange
 Pa-pa-party goalie없이 입으로 goal in
 > Pa-pa-party, no goalie, score with my mouth
+
+[Chorus]
 아직 모자라 I'ma get it one, two, three, four, five (six)
 > Still not enough, I'ma get it one, two, three, four, five (six)
 Sneakers off the ground 판을 더 크게 키워볼까
@@ -69,6 +76,8 @@ X-X-L 우린 X-X-L
 > X-X-L, we're X-X-L
 제로백 슝 세게 밟아 엑셀
 > Zero to sixty, whoosh, floor the accelerator
+
+[Post-Chorus]
 Extra, extra, double extra large
 > 엑스트라, 엑스트라, 더블 엑스라지
 Extra, extra, we got extra, right?
@@ -77,6 +86,8 @@ Extra, extra, double extra large
 > 엑스트라, 엑스트라, 더블 엑스라지
 X-X-L, doin' X-X-L
 > 엑스엑스라지, 엑스엑스라지로
+
+[Verse 2]
 160 언저리 키로 giant step
 > At around 160 centimeters, a giant step
 Maybe, maybe, baby version, Wu-Tang Clan
@@ -93,6 +104,8 @@ Cut that, cross that 우린 좀 안 뻔해
 > Cut that, cross that, we're not the obvious type
 리구개청 는없 수 할 상예 swe-swervin'
 > An unpredictable contrarian (written backwards), swe-swervin'
+
+[Verse 3]
 (Yeah) 남들이 하는 거 따라 할 거라면 뭐 하러 예술을 하냐고
 > (Yeah) If you're just copying what others do, why bother making art
 (T) 마음속 미니미 나한테 T라고 딴지를 걸지 좀 말라고
@@ -111,12 +124,16 @@ Supercharged, super large, super hand carry
 > 과충전, 초대형, 초대형 기내 수하물
 멱살 잡고 raise the bar, yeah
 > Grab it by the collar and raise the bar, yeah
+
+[Chorus]
 I'm about to do it
 > 이제 시작한다
 X-X-L, doin' X-X-L
 > 엑스엑스라지, 엑스엑스라지로
 X-X-L, 우린 X-X-L
 > X-X-L, we're X-X-L
+
+[Outro]
 Extra, extra, double extra large
 > 엑스트라, 엑스트라, 더블 엑스라지
 Extra, extra, we got extra, right?

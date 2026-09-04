@@ -28,6 +28,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=Astor%20Piazzolla&track_na
 ---
 2. Astor Piazzolla - Oblivion (perf. Mario Stefano)
 3. Astro Piazzolla - Oblivion (perf. 조윤경)
+
+[Verse 1]
 Él es Oblivion, fe del jamás y el no
 > 그는 망각, 결코와 아니오의 신앙
 Fe brutal
@@ -44,6 +46,8 @@ Matón de la desmemoria
 > 기억상실의 폭력배
 Y el sin recuerdos es Oblivion rey
 > 기억 없는 자, 그가 망각의 왕
+
+[Verse 2]
 Es como un pozo en pasión de enterrar
 > 묻어버리려는 열정으로 파인 우물 같아
 Que florece al sangrar
@@ -54,6 +58,8 @@ Luz degollada de un tiempo tan feliz
 > 그토록 행복했던 시절의 목 잘린 빛
 Hoy Oblivion vas a borrarme a mí
 > 오늘 망각이여, 너는 나를 지우려는구나
+
+[Verse 3]
 Él, reto agotador, vuelve a cero igual
 > 그는 진 빠지는 도전, 언제나 다시 영으로 돌아가지
 Lo real, lo mejor, lo fatal

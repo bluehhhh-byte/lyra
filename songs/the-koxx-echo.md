@@ -26,6 +26,7 @@ source_hash: 425c40723148aa73cdf903a5ac60b21b0c1893e2
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=The%20KOXX&track_name=echo
 ---
+[Intro]
 so i look in your smile
 > 그래서 난 네 미소를 들여다봐
 and see the days
@@ -34,6 +35,8 @@ we gave nothing but love
 > 우리가 사랑만을 주고받던
 워어어워어워어
 > Whoa-oh-oh whoa-oh-oh
+
+[Verse 1]
 난 아직
 > I'm still
 그 자리에
@@ -60,12 +63,16 @@ we gave nothing but love
 > Ooh ooh ooh, ooh ooh ooh, ooh
 우우우 우우우 우
 > Ooh ooh ooh, ooh ooh ooh, ooh
+
+[Pre-Chorus]
 i'm alone with your voice
 > 네 목소리와 함께 혼자 있어
 with a scent of your lips
 > 네 입술의 향기와 함께
 i'm still into you to you
 > 난 아직도 너에게, 너에게 빠져 있어
+
+[Chorus]
 so i look in your smile
 > 그래서 난 네 미소를 들여다봐
 and see the days
@@ -74,6 +81,8 @@ we gave nothing but love
 > 우리가 사랑만을 주고받던
 워어어워어워어
 > Whoa-oh-oh whoa-oh-oh
+
+[Verse 2]
 끊어진 우리
 > The two of us, cut off
 진한 그리움에
@@ -88,6 +97,8 @@ we gave nothing but love
 > Ooh ooh ooh, ooh ooh ooh, ooh
 우우우 우우우 우
 > Ooh ooh ooh, ooh ooh ooh, ooh
+
+[Pre-Chorus]
 i'm alone with your voice
 > 네 목소리와 함께 혼자 있어
 with a scent of your kiss
@@ -96,6 +107,8 @@ i'm still into you
 > 난 아직도 너에게 빠져 있어
 to you
 > 너에게
+
+[Chorus]
 so i look in your smile
 > 그래서 난 네 미소를 들여다봐
 and see the days
@@ -112,6 +125,8 @@ we gave nothing but love
 > Whoa-oh-oh whoa-oh-oh
 워어어워어워어
 > Whoa-oh-oh whoa-oh-oh
+
+[Outro]
 so i look in your smile
 > 그래서 난 네 미소를 들여다봐
 and see the days

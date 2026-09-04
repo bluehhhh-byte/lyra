@@ -26,6 +26,7 @@ source_hash: 54219125181aee712211d7511e802f0934569f98
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%EB%A0%88%EB%A5%BC%20%EB%82%B4%EA%B3%A0
 ---
+[Verse 1]
 두 마리의 벌레를 내고 버스를 탔지
 > I paid two bugs and got on the bus
 아주 멋진 저녁 식사였어
@@ -34,6 +35,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%
 > Even if I spend all my hard-earned money here
 아깝지 아니하겠네
 > I won't feel it was wasted
+
+[Pre-Chorus]
 내일은 어디로 갈까
 > Where should I go tomorrow?
 잔뜩 부풀었지
@@ -42,12 +45,16 @@ lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%
 > Should I sleep a while tonight?
 또 한참을 걸어야 할 테니까
 > Because I'll have to walk a long way again
+
+[Chorus]
 감기는 눈꺼풀이 아쉬워
 > My closing eyelids feel like a waste
 잘그락대는 나의 영혼
 > My soul rattles like loose change
 시간은 짧고 누릴 것은 많구나
 > Time is short and there's so much to enjoy
+
+[Verse 2]
 열두 마리의 벌레를 내고 기차를 탔지
 > I paid twelve bugs and got on the train
 굉장히 멋진 모험이었어
@@ -56,6 +63,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%
 > The smell of grass soaked into my coat
 간밤에 꿈을 꾸겠네
 > I'll be dreaming of it tonight
+
+[Pre-Chorus]
 내일은 어디로 갈까
 > Where should I go tomorrow?
 잔뜩 부풀었지
@@ -64,12 +73,16 @@ lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%
 > That the earth is round
 두 눈으로 다 확인해 볼 거야
 > I'll see it all for myself, with my own two eyes
+
+[Chorus]
 감기는 눈꺼풀이 아쉬워
 > My closing eyelids feel like a waste
 잘그락대는 나의 영혼
 > My soul rattles like loose change
 시간은 짧고 누릴 것은 많구나
 > Time is short and there's so much to enjoy
+
+[Interlude]
 야야야야야야 야야야
 > Ya ya ya ya ya ya, ya ya ya
 야야야 야야야 야야야야
@@ -78,6 +91,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=AKMU&track_name=%EB%B2%8C%
 > Ya ya ya ya ya ya, ya ya ya
 야야야 야야야 야야야야
 > Ya ya ya, ya ya ya, ya ya ya ya
+
+[Outro]
 반짝이는 불빛이 간지러
 > The glittering lights tickle me
 어물쩍대는 나의 영혼

@@ -26,12 +26,15 @@ source_hash: d7b0ff4251bf7a1e57843d6877c1572340eb7f93
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Jamiroquai&track_name=Supersonic
 ---
+[Intro]
 Supersonic, supersonic, supersonic
 > 초음속, 초음속, 초음속
 Supersonic, supersonic, supersonic
 > 초음속, 초음속, 초음속
 Supersonic, supersonic, supersonic
 > 초음속, 초음속, 초음속
+
+[Verse 1]
 In the whites of his eyes
 > 그의 흰자위 속엔
 There's a supersonic vibe
@@ -40,6 +43,8 @@ You can tell by the tears
 > 눈물만 봐도 알 수 있지
 He's a warrior who cries
 > 그는 우는 전사야
+
+[Chorus]
 He's supersonic
 > 그는 초음속이야
 I think he's supersonic
@@ -48,6 +53,8 @@ Supersonic
 > 초음속
 Supersonic
 > 초음속
+
+[Verse 2]
 In the whites of his eyes
 > 그의 흰자위 속엔
 There's a supersonic vibe
@@ -56,6 +63,8 @@ You can tell by the tears
 > 눈물만 봐도 알 수 있지
 He's a warrior who cries
 > 그는 우는 전사야
+
+[Chorus]
 He's supersonic
 > 그는 초음속이야
 I think he's supersonic
@@ -64,6 +73,8 @@ Supersonic
 > 초음속
 Supersonic
 > 초음속
+
+[Verse 3]
 In the whites of his eyes
 > 그의 흰자위 속엔
 There's a supersonic vibe
@@ -72,6 +83,8 @@ You can tell by the tears
 > 눈물만 봐도 알 수 있지
 He's a warrior who cries
 > 그는 우는 전사야
+
+[Outro]
 He's supersonic
 > 그는 초음속이야
 I think he's supersonic

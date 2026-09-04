@@ -26,6 +26,7 @@ source_hash: 36483949f5aa0538bf9d3213f44109512525a035
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=The%20Dead%20Weather&track_name=Treat%20Me%20Like%20Your%20Mother
 ---
+[Verse 1]
 Don't act like you can't act
 > 연기 못 하는 척하지 마
 I always think you do it
@@ -42,6 +43,8 @@ You better learn to shake hands
 > 악수하는 법을 배우는 게 좋을 거야
 And treat me like your mother
 > 날 네 엄마처럼 대해
+
+[Pre-Chorus]
 You came up, too late
 > 넌 너무 늦게 나타났어
 You came up, too late now
@@ -50,6 +53,8 @@ You came up, too late
 > 넌 너무 늦게 나타났어
 To do a thing
 > 뭔가를 하기엔
+
+[Chorus]
 Come on look me in the eye
 > 자, 내 눈을 똑바로 봐
 You wanna try to tell a lie
@@ -66,12 +71,16 @@ You can't and you know why?
 > 못 하겠지, 왜인지 알아?
 I'm just like your mother
 > 내가 딱 네 엄마 같으니까
+
+[Pre-Chorus]
 You came up, too late
 > 넌 너무 늦게 나타났어
 You came up, too late now
 > 이제 너무 늦게 나타났다고
 You came up, too late
 > 넌 너무 늦게 나타났어
+
+[Bridge]
 Play dumb, play dead, play straight
 > 바보인 척, 죽은 척, 정직한 척
 Who's got it figured out?
@@ -90,6 +99,8 @@ M-a-n-i-p-u-late
 > 조-종-할-시-간
 M-a-n-i-p-u-late
 > 조-종-할-시-간
+
+[Interlude]
 Am I too,
 > 나도 그런가,
 Am I late
@@ -110,6 +121,8 @@ Left right, left right got it figured out
 > 왼쪽 오른쪽, 왼쪽 오른쪽, 다 알아냈어
 Who's got it figured out play straight
 > 누가 그걸 다 알아냈지, 정직한 척
+
+[Chorus]
 Stand up like a man
 > 남자답게 똑바로 서서
 You better learn to shake hands
@@ -126,6 +139,8 @@ You can't and you know why?
 > 못 하겠지, 왜인지 알아?
 I'm just like your mother
 > 내가 딱 네 엄마 같으니까
+
+[Bridge]
 Play dumb, play dead
 > 바보인 척, 죽은 척
 Tryin' to manipulate
@@ -142,6 +157,8 @@ You blink when you breathe and you breathe when you lie
 > 넌 숨 쉴 때 눈을 깜빡이고, 거짓말할 때 숨을 쉬지
 You blink when you lie
 > 넌 거짓말할 때 눈을 깜빡여
+
+[Outro]
 Who's got it figured out
 > 누가 그걸 다 알아냈지
 Left right, left right got it figured out

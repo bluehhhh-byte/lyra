@@ -26,6 +26,7 @@ source_hash: 5335e6cbe3be7756f51de74d94c5b3e5bb40f805
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=BoA&track_name=Better
 ---
+[Verse 1]
 그만 거기서
 > Stop right there
 한 걸음만 뒤를 돌아보지 말고 걸어와
@@ -44,6 +45,8 @@ Tell you how to do it oh
 > Have you tried? Shall we?
 With the thought from my paradigm
 > 내 방식대로 생각해보면
+
+[Pre-Chorus]
 깊은 정적 속에 너는 나랑 단둘이
 > In deep silence, it's you and me alone
 우린 끝도 없이 재고 재고 또 쟀고
@@ -54,6 +57,8 @@ With the thought from my paradigm
 > Those answers that are never serious
 그러지 마 상처받게 돼
 > Don't do that, someone gets hurt
+
+[Chorus]
 You know what I want
 > 넌 내가 뭘 원하는지 알잖아
 이젠 가져 준비됐어
@@ -74,6 +79,8 @@ You better than this
 > 넌 이것보다 나은 사람이야
 You better than this
 > 넌 이것보다 나은 사람이야
+
+[Verse 2]
 또 내게 맞춘 너의 눈에
 > In your eyes fixed on me again
 초점이 더 희미하게 풀려 가
@@ -90,6 +97,8 @@ You better than this
 > The one who fights and wins takes it all
 이건 불꽃 같은 멋진 게임
 > This is a brilliant game, like fire
+
+[Pre-Chorus]
 깊은 밤을 흔들어줘
 > Shake the deep night awake
 잠든 나를 깨워줘
@@ -104,6 +113,8 @@ Give little touches handless
 > even if that's you, I'm in love (give me little kisses tenderness)
 I know
 > 알아
+
+[Chorus]
 이젠 가져 준비됐어
 > Take it now, I'm ready
 우리만의 시간
@@ -122,6 +133,8 @@ You better than this
 > 넌 이것보다 나은 사람이야
 You better than this
 > 넌 이것보다 나은 사람이야
+
+[Bridge]
 You are the one 내가 택한 건
 > You are the one, the one I chose
 네 상상이 뭐든 실현해 줄게
@@ -132,6 +145,8 @@ I'm the only one 너의 이상형
 > Because it's a truth only you should know
 그게 나니까
 > Because that's me
+
+[Verse 3]
 망설이지 말아 good to go
 > Don't hesitate, good to go
 다 큰 어른들이 나눈 대화일 뿐 baby
@@ -150,6 +165,8 @@ Can't nobody tell you how to do it oh
 > I'm satisfied
 Just a little little little piece
 > 아주 조금, 조금, 조각 하나면 돼
+
+[Chorus]
 이젠 가져 준비됐어
 > Take it now, I'm ready
 우리만의 시간

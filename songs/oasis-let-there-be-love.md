@@ -28,20 +28,30 @@ lyrics_source: https://lrclib.net/api/get?artist_name=Oasis&track_name=Let%20The
 ---
 🗨 오늘은 내 생일이다. 그리고 누군가에겐 마지막 날이었지. 삶은 언제나 양가적이라고 느끼는 날이기도 하다. 축하받아야 하는 날인 동시에 애도해야 되는 날이기도 하고, 난 그와의 인연이 따로 있어 그 일화를 떠올려보는 날이기도 하다. 얄궃게도 나는 그의 고향에서 참 가까운 곳에서 일하고 있지.
 🗨 오늘 네 생일 선물로 이번 여름 일본 여행 준비했다가 업무 일정이 생겨서 어제 티켓 취소했잖아. 아쉽겠지만 더 좋은 일 생기겠지. 그래서 오로지 너만을 위한 선곡을 했어. 오아시스의 '사랑이 있기를' 들려줄게. 힘내라.
+
+[Intro]
 One, two, three, four
 > 하나, 둘, 셋, 넷
+
+[Verse 1]
 Who kicked a hole in the sky so the heavens would cry over me?
 > 누가 하늘에 구멍을 뚫어 천국이 내 위로 울게 만들었지?
 Who stole the soul from the sun in a world come undone at the seams?
 > 솔기가 다 터져버린 세상에서 누가 태양의 영혼을 훔쳐 갔지?
+
+[Chorus]
 Let there be love
 > 사랑이 있으라
 Let there be love
 > 사랑이 있으라
+
+[Verse 2]
 I hope the weather is calm as you sail up your heavenly stream
 > 네가 천국의 물길을 거슬러 오를 때 날씨가 잔잔하길 바라
 Suspended clear in the sky are the words that we sing in our dreams
 > 하늘에 또렷이 걸려 있는 건 우리가 꿈속에서 부르는 말들이야
+
+[Chorus]
 Let there be love
 > 사랑이 있으라
 Let there be love
@@ -50,6 +60,8 @@ Let there be love
 > 사랑이 있으라
 Let there be love
 > 사랑이 있으라
+
+[Bridge]
 Come on baby blue
 > 이리 와, 우울한 아이야
 Shake up your tired eyes
@@ -66,10 +78,14 @@ Just remember I'll be by your side
 > 내가 네 곁에 있을 거라는 것만 기억해
 And if you don't let go, it's gonna pass you by
 > 그리고 놓아주지 않으면, 그건 널 스쳐 지나가버릴 거야
+
+[Verse 3]
 Who kicked a hole in the sky so the heavens would cry over me?
 > 누가 하늘에 구멍을 뚫어 천국이 내 위로 울게 만들었지?
 Who stole the soul from the sun in a world come undone at the seams?
 > 솔기가 다 터져버린 세상에서 누가 태양의 영혼을 훔쳐 갔지?
+
+[Outro]
 Let there be love
 > 사랑이 있으라
 Let there be love

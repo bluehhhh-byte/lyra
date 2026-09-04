@@ -25,6 +25,7 @@ source_note:
 source_hash: e9e674f76e0332f69227963e3125e7cb3dfc4b5d
 source_body_hash: f71f174d2ba33619005be6692f7780e49183df3f
 ---
+[Verse 1]
 Something in the middle of the side of the store
 Got your attention you would ask for more
 >^2 번화가 중심에서 많은 관심을 끌어달라고 부탁할 거야
@@ -40,6 +41,8 @@ But you talked them into letting me go
 > 넌 그들을 설득해서 나를 놓아주었어
 It's no Picasso Michelangelo
 > 피카소 미켈란젤로가 아니야
+
+[Pre-Chorus]
 Something 'bout the jewels you wear
 Shiny shiny bangles on your wrists
 >^2 네가 차고 있는 보석들이 반짝반짝 빛나는 팔찌를 손목에 차고
@@ -53,6 +56,8 @@ Then inside of an alley you're out of words
 > 골목 안에서는 할 말이 없어져
 Well I thought it was radium at first
 > 골목 안이 라듐인 줄 알았는데
+
+[Chorus]
 Just because of you
 > 너 때문에
 These things I have to go through
@@ -70,6 +75,8 @@ It's more than that we're chained
 And there's no else to blame
 For us two
 >^2 우리 둘을 탓할 건 없어
+
+[Verse 2]
 Some things they don't matter till they matter to you
 > 당신에게 중요하기 전까진 중요하지 않은 것들이 있어요
 They stole that money from a homeless girl
@@ -83,6 +90,8 @@ To end up giving up to a couple who cares?
 When you talked me into letting you go
 No more coral on the atoll
 >^2 환초에서 산호초 그만 보내라고 설득했을 때
+
+[Pre-Chorus]
 Something 'bout how hard you learned
 Kamikaze in a hopeless world
 >^2 절망적인 세상에서 가미카제를 얼마나 열심히 배웠는지 기억하니?
@@ -96,6 +105,8 @@ Put two and two together
 >^2 알파벳도 없이 남자 둘만 있으면
 We'll make it last forever
 > 우린 평생 갈 수 있어
+
+[Chorus]
 Just because of you
 > 너 때문에
 These things I have to go through

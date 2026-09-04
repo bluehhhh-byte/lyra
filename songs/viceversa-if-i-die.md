@@ -26,6 +26,7 @@ source_hash: df163fa16bda33a250b5cf4aa6b475787f7b8a58
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=viceversa&track_name=IF%20I%20DIE
 ---
+[Chorus]
 If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 > If I die throw my body in the ocean—only then will I see it, everything in slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
@@ -36,6 +37,8 @@ Couldn’t even laugh like I ain’t gon’ lie
 > 웃지도 못했어, 솔직히 말해서
 Couldn’t even pray like I ain’t gon’ lie
 > 기도조차 못 했어, 솔직히 말해서
+
+[Verse 1]
 장례식장에서 나올때의 나의 눈을
 > Take my eyes as I walked out of that funeral hall
 뽑아놓고 야수 눈이랑 비교를 해봐 어떻게 여기까지 와버린건지 내가
@@ -46,6 +49,8 @@ Couldn’t even pray like I ain’t gon’ lie
 > How long will I cry and laugh, how long will I rot in here
 무조건 승리만을 쫓아가야겠어 뇌가 그래, 너 변했어
 > I have to chase nothing but victory—my brain says so, you've changed
+
+[Verse 2]
 Born as an animal Goin’ through all the fuckery on fuckery
 > 짐승으로 태어나 온갖 개판을 지나오는 중
 생존을 위해서 야생을 누비며 살자고 trip on trip 여기저기
@@ -66,6 +71,8 @@ Mother fucker my way highway I ain’t goin’ nowhere
 > If not, what's a competition? You've got to win even if you trample
 니가 뭔데 내가 너를 생각해야 하냐 전쟁 중이야
 > Who are you that I should think of you? We're at war
+
+[Chorus]
 If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 > If I die throw my body in the ocean—only then will I see it, everything in slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
@@ -78,6 +85,8 @@ Couldn’t even pray like I ain’t gon’ lie
 > 기도조차 못 했어, 솔직히 말해서
 그 곳에선 평온함을 선물 해주소서
 > In that place, grant him peace
+
+[Verse 3]
 선물 해주소서 응답 해주소서 제발 제게 손이라도 내밀어 주소서
 > Grant it, answer me, please at least reach out a hand to me
 Father God 들으셨습니까 저의 고성 시험대에 놓였을때 낙제 했던 본성
@@ -102,6 +111,8 @@ Father God 들으셨습니까 저의 고성 시험대에 놓였을때 낙제 했
 > Heading home thinking I'd come again, a nurse greets me and comes over
 말을 안한거 였다고 알고 난 나 그게 마지막 일줄은 이제 알은 나
 > He just wasn't speaking, I learned—and only now do I know that was the last time
+
+[Chorus]
 If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 > If I die throw my body in the ocean—only then will I see it, everything in slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써
@@ -114,6 +125,8 @@ Couldn’t even pray like I ain’t gon’ lie
 > 기도조차 못 했어, 솔직히 말해서
 그 곳에선 평온함을 선물 해주소서
 > In that place, grant him peace
+
+[Outro]
 If I die throw my body in the ocean 그제서 보이겠지 모든게 slow motion
 > If I die throw my body in the ocean—only then will I see it, everything in slow motion
 Father God 제발 용서 해주소서 보셨잖습니까 저의 1인칭으로써

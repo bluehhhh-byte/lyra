@@ -24,6 +24,7 @@ source_hash: d6fb6431270ce4b6c35ea0de2f62c33f9acb0cbb
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Epik%20High&track_name=Don't%20Hate%20Me
 ---
+[Chorus]
 Everybody hates me, but you love me and I love you,
 > 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해,
 오오오 (워오오) 난 너만 손뼉치면 돼, baby,
@@ -32,6 +33,8 @@ Everybody hates me, but you love me and I love you,
 > the whole world's an anti, and here's why I still smile,
 오오오 (워오오) 난 너만 내 편이면 돼
 > Oh oh oh (whoa oh oh) I just need you on my side
+
+[Verse 1]
 1, 2, 3, 4!
 > 1, 2, 3, 4!
 나만 달달달 볶아, 실수도 잘못처럼, 세상 모두가 입에 망치 때려, 날 못처럼
@@ -42,6 +45,8 @@ Everybody hates me, but you love me and I love you,
 > They say you don't need a reason to hate someone—so why are there thousands when it's me?
 전부 내 탓이라고 소리치네, 내 입을 막는 goalkeepers, 꼴보기 싫대!
 > They shout it's all my fault, goalkeepers blocking my mouth, they say they can't stand the sight of me!
+
+[Pre-Chorus]
 다 나만 싫어해
 > Everyone hates only me
 다 나만 미워해
@@ -50,6 +55,8 @@ Everybody hates me, but you love me and I love you,
 > everyone points a finger
 네가 없으면 나 미칠 것 같애
 > without you I think I'd lose my mind
+
+[Chorus]
 Everybody hates me, but you love me and I love you
 > 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해
 오오오 (워오오) 난 너만 손뼉치면 돼, baby
@@ -58,6 +65,8 @@ Everybody hates me, but you love me and I love you
 > the whole world's an anti, and here's why I still smile
 오오오 (워오오) 난 너만 내 편이면, 내 팬이면 돼
 > Oh oh oh (whoa oh oh) I just need you on my side, as my fan
+
+[Verse 2]
 나란 쥐구멍에 비친 단 하나의 볕, 슬픔 나누고는 싶지만, 다 나의 것
 > The one ray of sun in the mousehole that is me—I'd share the sorrow, but it's all mine
 넌 그냥 웃어주기만 하고 숨어, 세상 가장 큰 방패 뒤에 머물러 행복만 품어
@@ -66,6 +75,8 @@ Everybody hates me, but you love me and I love you
 > With me, the unlikable one, public enemy—with me, a scandal for merely breathing, the public's chewing gum
 도마 위에서 춤을 추며 즐기는 너, 취향 하나 참 죽이는 너
 > you who dance on the chopping board and enjoy it, you with such killer taste
+
+[Pre-Chorus]
 다 나만 뭐라 해
 > Everyone scolds only me
 화살로 겨냥해
@@ -74,6 +85,8 @@ Everybody hates me, but you love me and I love you
 > wishes I'd disappear
 네가 없으면 나 죽을 것 같애
 > without you I think I'd die
+
+[Chorus]
 Everybody hates me, but you love me and I love you
 > 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해
 오오오 (워오오) 난 너만 손뼉치면 돼, baby
@@ -82,6 +95,8 @@ Everybody hates me, but you love me and I love you
 > the whole world's an anti, and here's why I still smile
 오오오 (워오오) 난 너만 내 편이면, 내 팬이면 돼
 > Oh oh oh (whoa oh oh) I just need you on my side, as my fan
+
+[Bridge]
 제가 그렇게 미워요?
 > Do you hate me that much?
 저를 사랑해줘요
@@ -94,6 +109,8 @@ Everybody hates me, but you love me and I love you
 > They love me, they hate me
 Love and hate, 둘 다 고맙지, 뭐
 > Love and hate—I'm grateful for both, I guess
+
+[Chorus]
 Everybody hates me, but you love me and I love you
 > 모두가 날 미워해, 하지만 넌 날 사랑하고 나도 널 사랑해
 오오오 (워오오) 난 너만 손뼉치면 돼, baby
@@ -102,6 +119,8 @@ Everybody hates me, but you love me and I love you
 > the whole world's an anti, and here's why I still smile
 오오오 (워오오) 난 너만 내 편이면, 내 팬이면 돼
 > Oh oh oh (whoa oh oh) I just need you on my side, as my fan
+
+[Outro]
 Hate me, hate me, hate me
 > 날 미워해, 날 미워해, 날 미워해
 Hate me, hey hey hey hey

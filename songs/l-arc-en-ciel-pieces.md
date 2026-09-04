@@ -26,6 +26,7 @@ source_hash: 2642a4015d12fbdff23afefd2f8ae88887452fd8
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=L'Arc-en-Ciel&track_name=Pieces
 ---
+[Verse 1]
 泣かないで 泣かないで 大切な瞳よ
 + 나카나이데 나카나이데 타이세츠나 히토미요
 > 울지 마, 울지 마, 소중한 눈동자여
@@ -38,6 +39,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=L'Arc-en-Ciel&track_name=P
 大好きなその笑顔 くもらせてごめんね
 + 다이스키나 소노 에가오 쿠모라세테 고멘네
 > 너무 좋아하는 그 웃는 얼굴을 흐리게 해서 미안해
+
+[Pre-Chorus]
 祈っても 時の流れ速すぎて
 + 이놋테모 토키노 나가레 하야스기테
 > 기도해도 시간은 너무 빨리 흘러
@@ -50,6 +53,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=L'Arc-en-Ciel&track_name=P
 歳月は夜を夢に変えるみたいだから 目をこらして さぁ!
 + 사이게츠와 요루오 유메니 카에루 미타이다카라 메오 코라시테 사아!
 > 세월은 밤을 꿈으로 바꾸는 것 같으니, 눈을 크게 뜨고, 자!
+
+[Chorus]
 あなたのすぐそばに また新しい花が生まれて
 + 아나타노 스구 소바니 마타 아타라시이 하나가 우마레테
 > 네 바로 곁에 또 새로운 꽃이 피어나
@@ -62,12 +67,16 @@ lyrics_source: https://lrclib.net/api/get?artist_name=L'Arc-en-Ciel&track_name=P
 優しいその手を待ってる人がいるから 顔を上げて
 + 야사시이 소노 테오 맛테루 히토가 이루카라 카오오 아게테
 > 그 다정한 손을 기다리는 사람이 있으니, 고개를 들어
+
+[Verse 2]
 ねぇ 遠い日に恋をしたあの人も
 + 네에 토-이 히니 코이오 시타 아노 히토모
 > 저기, 먼 날에 사랑에 빠졌던 그 사람도
 うららかなこの季節 愛する人と今 感じてるかな?
 + 우라라카나 코노 키세츠 아이스루 히토토 이마 칸지테루카나?
 > 화창한 이 계절을 사랑하는 사람과 지금 느끼고 있을까?
+
+[Chorus]
 あぁ 私のかけらよ 力強くはばたいてゆけ
 + 아아 와타시노 카케라요 치카라즈요쿠 하바타이테 유케
 > 아아, 나의 조각이여, 힘차게 날아올라라
@@ -77,6 +86,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=L'Arc-en-Ciel&track_name=P
 たくさんの光がいつの日にもありますように
 + 타쿠산노 히카리가 이츠노 히니모 아리마스 요-니
 > 어느 날에도 많은 빛이 함께하기를
+
+[Bridge]
 あなたがいるから この命は永遠に続いてゆく
 + 아나타가 이루카라 코노 이노치와 에이엔니 츠즈이테 유쿠
 > 네가 있기에 이 목숨은 영원히 이어져 간다
@@ -86,6 +97,8 @@ lyrics_source: https://lrclib.net/api/get?artist_name=L'Arc-en-Ciel&track_name=P
 ゆっくり明日をたずねてゆくから
 + 윳쿠리 아시타오 타즈네테 유쿠카라
 > 천천히 내일을 찾아갈 테니까
+
+[Chorus]
 私のかけらよ 力強くはばたいてゆけ
 + 와타시노 카케라요 치카라즈요쿠 하바타이테 유케
 > 나의 조각이여, 힘차게 날아올라라

@@ -26,6 +26,7 @@ source_hash: a82e6362f19b8a3413b00dc01ce44181f340e491
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Rosal%C3%ADa%20%2C%20Bj%C3%B6rk%20%26%20Yves%20Tumor&track_name=Berghain
 ---
+[Chorus]
 Seine Angst ist meine Angst
 > 그의 두려움은 나의 두려움
 Seine Wut ist meine Wut
@@ -34,6 +35,8 @@ Seine Liebe ist meine Liebe
 > 그의 사랑은 나의 사랑
 Sein Blut ist mein Blut
 > 그의 피는 나의 피
+
+[Verse 1]
 Die Flamme dringt in mein Gehirn ein
 > 불꽃이 내 뇌 속으로 파고든다
 Wie ein Blei-Teddybär
@@ -42,6 +45,8 @@ Ich bewahre viele Dinge in meinem Herzen auf
 > 나는 많은 것을 마음속에 간직해
 Deshalb ist mein Herz so schwer
 > 그래서 내 마음이 이토록 무거워
+
+[Chorus]
 Seine Angst ist meine Angst
 > 그의 두려움은 나의 두려움
 Seine Wut ist meine Wut
@@ -50,6 +55,8 @@ Seine Liebe ist meine Liebe
 > 그의 사랑은 나의 사랑
 Sein Blut ist mein Blut
 > 그의 피는 나의 피
+
+[Verse 2]
 Yo se muy bien lo que soy
 > 나는 내가 무엇인지 아주 잘 알아
 Ternura pa'l café
@@ -62,6 +69,8 @@ Sé desaparecer
 > 사라지는 법을 알아
 Cuando tú vienes es cuando me voy
 > 네가 올 때가 내가 떠나는 때야
+
+[Chorus]
 Seine Angst ist meine Angst
 > 그의 두려움은 나의 두려움
 Seine Wut ist meine Wut
@@ -70,6 +79,8 @@ Seine Liebe ist meine Liebe (this is divine intervention)
 > 그의 사랑은 나의 사랑 (이건 신의 개입이야)
 Sein Blut ist mein Blut
 > 그의 피는 나의 피
+
+[Bridge]
 The only way to save us is through divine
 > 우릴 구할 유일한 길은 신의
 Intervention
@@ -78,6 +89,8 @@ The only way I will be saved is through divine
 > 내가 구원받을 유일한 길은 신의 개입뿐
 Intervention
 > 개입뿐이야
+
+[Outro]
 I'll fuck you till you love me
 > 네가 날 사랑할 때까지 널 안을 거야
 I'll fuck you till you love me

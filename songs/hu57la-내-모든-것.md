@@ -25,6 +25,7 @@ source_hash: a8f146372d2906783b33afacb1cc809b0640fa20
 lyrics_external: true
 lyrics_source: https://www.youtube.com/watch?v=GJcmMbvY3jo
 ---
+[Intro]
 For real?
 > 진짜야?
 Okay, yeah
@@ -37,6 +38,8 @@ Ugh, what
 > 어, 뭐야
 Yeah, yeah, whoa
 > 그래, 그래, 워
+
+[Chorus]
 내가 없으니까 너는 행복하니
 > Are you happy now that I'm gone?
 너가 없으니까 나는 행복하지
@@ -45,6 +48,8 @@ Yeah, yeah, whoa
 > Yeah, I remember the good days
 너와 나의 인연은 여기까지만
 > but you and I end right here
+
+[Verse 1]
 오랜만에 불러보는 사랑 노래야
 > It's been a while since I sang a love song
 네가 내 곁에 없던 날도 오래야
@@ -55,6 +60,8 @@ Yeah, yeah, whoa
 > only that you're not here is a fact
 Whoa
 > 워
+
+[Verse 2]
 그래서 오늘 난 또 혼자 가지
 > So today I go alone again
 널 그리워하는 생각도 거기까지
@@ -71,6 +78,8 @@ Whoa
 > Won't you not forget our memories
 이게 나의 마지막 바램 yeah
 > that's my last wish, yeah
+
+[Interlude]
 Uh huh, yeah
 > 어 허, 그래
 For real? Whoa
@@ -79,6 +88,8 @@ Hell yeah, hell yeah
 > 당연하지, 당연하지
 Yo, yeah, ah, whoa
 > 요, 그래, 아, 워
+
+[Chorus]
 내가 없으니까 너는 행복하니
 > Are you happy now that I'm gone?
 너가 없으니까 난 또 허무하지
@@ -87,6 +98,8 @@ Yo, yeah, ah, whoa
 > you who threw me away so coldly, that's too much
 갈대 같은 그녀, 넘어가지
 > a reed of a girl, she just bends away
+
+[Outro]
 가지 마라 가지 마라 제발
 > Don't go, don't go, please
 잘못했다 잘못했다 내가

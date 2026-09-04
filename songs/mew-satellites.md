@@ -26,6 +26,7 @@ source_hash: 6adda2159b693d6aeedd2faee5cd9bfa8c9fa360
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=MEW&track_name=Satellites
 ---
+[Verse 1]
 Swimming fast
 > 빠르게 헤엄쳐
 Hone in on the buzz in ways you could not
@@ -40,6 +41,8 @@ I wanna breathe in a sunlight beam
 > 햇살 한 줄기를 들이마시고 싶어
 I wanna be with a girl like she
 > 그녀 같은 사람과 함께이고 싶어
+
+[Verse 2]
 I'm swimming fast (swimming fast enough)
 > 난 빠르게 헤엄치고 있어 (충분히 빠르게)
 Hone in on the buzz in ways you could not
@@ -54,10 +57,14 @@ Oh Ill-advised, your desire
 > 오, 어리석은 너의 욕망
 Tulip bell
 > 튤립 종
+
+[Chorus]
 And I'd rather be a satellite
 > 차라리 위성이 되고 싶어
 And I'm picking up the phone
 > 그리고 난 전화를 받아
+
+[Verse 3]
 Remember when?
 > 그때 기억나?
 It was then we sealed to unlock never again
@@ -78,6 +85,8 @@ It's only right on movie night
 > 영화 보는 밤에만 그게 맞아
 Solemn summer
 > 엄숙한 여름
+
+[Chorus]
 And I'd rather be a satellite
 > 차라리 위성이 되고 싶어
 And I'm picking up the phone
@@ -88,6 +97,8 @@ Picking up the phone
 > (깨어 있어, 위성아)
 (You were always shy)
 > (넌 늘 수줍어했지)
+
+[Verse 4]
 Eleven past (eleven past of us)
 > 열한 시가 지나 (우리의 열한 시가 지나)
 I love all the things that are wrong with you
@@ -102,6 +113,8 @@ Oh see them fast, take off at last
 > 오, 저들을 빨리 봐, 드디어 날아오르잖아
 And we get better
 > 그리고 우린 나아져
+
+[Chorus]
 And I'd rather be a satellite
 > 차라리 위성이 되고 싶어
 And I'm picking up the phone
@@ -112,6 +125,8 @@ And I'm picking up the phone
 > (깨어 있어 위성아)
 Picking up the phone
 > 전화를 받아
+
+[Outro]
 My life is my own
 > 내 삶은 내 것이야
 And now I'm always home

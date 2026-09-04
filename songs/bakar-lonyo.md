@@ -26,6 +26,7 @@ source_hash: dfade50ca06cf61465b2692148fab6da2e4afefa
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Bakar&track_name=Lonyo!
 ---
+[Intro]
 Mi unico anhelo es
 > 내 유일한 바람은
 No volver a pensar en ti
@@ -34,6 +35,8 @@ Mi unico anhelo es
 > 내 유일한 바람은
 No volver a pensar en ti
 > 다시는 너를 생각하지 않는 것
+
+[Verse 1]
 I want you to know
 > 네가 알아줬으면 해
 That my heart and soul's for you
@@ -42,6 +45,8 @@ And you should know
 > 그리고 알아둬
 I'll do anything you want me to, oh
 > 네가 원하는 건 뭐든 할 거야, 오
+
+[Pre-Chorus]
 Move your body 'round me
 > 내 곁에서 몸을 움직여
 Come on and get on down
@@ -54,6 +59,8 @@ Get up and spread the sound
 > 일어나서 이 소리를 퍼뜨려
 It's the summer of love, oh
 > 사랑의 여름이야, 오
+
+[Chorus]
 (Mi unico anhelo es)
 > (내 유일한 바람은)
 Sending out an SOS (no volver a pensar en ti)
@@ -76,6 +83,8 @@ It's the summer of love
 > (내 유일한 바람은)
 Baby girl, it's time to impress, yeah (no volver a pensar, volver a pensar)
 > 자기야, 이제 반하게 만들 시간이야 (다시는 생각하지 않는 것, 생각하지 않는 것)
+
+[Verse 2]
 All the North West girls
 > 북서쪽 여자애들 전부
 Should bring their cellphones with them too
@@ -84,6 +93,8 @@ I know the East ones as well
 > 동쪽 애들도 알지
 They just wanna feel some summer love
 > 걔넨 그냥 여름 사랑을 느끼고 싶을 뿐이야
+
+[Pre-Chorus]
 Move your body 'round me
 > 내 곁에서 몸을 움직여
 Come on and get on down
@@ -96,6 +107,8 @@ Get up and spread the sound
 > 일어나서 이 소리를 퍼뜨려
 It's the summer of love
 > 사랑의 여름이야
+
+[Chorus]
 (Mi unico anhelo es)
 > (내 유일한 바람은)
 Sending out an SOS (no volver a pensar en ti)
@@ -118,6 +131,8 @@ It's the summer of love
 > (내 유일한 바람은)
 Baby girl, it's time to impress (no volver a pensar, no volver a pensar)
 > 자기야, 이제 반하게 만들 시간이야 (다시는 생각하지 않기, 다시는 생각하지 않기)
+
+[Bridge]
 Yeah, uh-huh
 > 그래, 어허
 Tell me why you dyin' to be old school?
@@ -136,6 +151,8 @@ Yeah
 > 그래
 Just like that
 > 바로 그렇게
+
+[Outro]
 Summer of love, it's the summer of love, summer of love, yeah
 > 사랑의 여름, 사랑의 여름이야, 사랑의 여름, 그래
 You and your friends, me and my friends
