@@ -18,6 +18,16 @@ function Run([string]$command, [string[]]$arguments, [string]$cwd = $repo) {
   } finally { Pop-Location }
 }
 
+function RunVercelDeploy([string[]]$arguments, [string]$cwd = $repo) {
+  Push-Location $cwd
+  try {
+    & pnpm @arguments
+    if ($LASTEXITCODE -ne 0) {
+      Write-Warning "Vercel CLI exited with $LASTEXITCODE; continuing to production verification."
+    }
+  } finally { Pop-Location }
+}
+
 try {
   $locked = $mutex.WaitOne(0)
   if (-not $locked) { throw "Another Lyra production deployment is already running; refusing to create a duplicate." }
@@ -48,7 +58,7 @@ try {
     Write-Host "4/5 Uploading origin/main to Vercel exactly once..."
     $env:VERCEL_ORG_ID = $teamId
     $env:VERCEL_PROJECT_ID = $projectId
-    Run "pnpm" @("dlx", "vercel@59.1.3", "deploy", "--prod", "--force", "--yes", "--env", "LYRA_COMMIT_SHA=$targetSha", "--build-env", "LYRA_COMMIT_SHA=$targetSha", "--cwd", $deployDir)
+    RunVercelDeploy @("dlx", "vercel@59.1.3", "deploy", "--prod", "--force", "--yes", "--env", "LYRA_COMMIT_SHA=$targetSha", "--build-env", "LYRA_COMMIT_SHA=$targetSha", "--cwd", $deployDir)
   }
 
   Write-Host "5/5 Waiting for the exact commit and verifying production..."
