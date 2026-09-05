@@ -9,7 +9,7 @@ import { researchSongContext } from "../../../lib/admin/song-appearance-suggest"
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
 import { normText, fetchArtistCatalog, withTimeout, itunesToResult, searchItunesStorePage } from "../../../lib/admin/itunes";
-import { buildSearchQueries, mergeExternalSongResults, searchMusicBrainz } from "../../../lib/admin/music-search";
+import { buildSearchQueries, mergeExternalSongResults } from "../../../lib/admin/music-search";
 import {
   needsReading, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
@@ -71,12 +71,11 @@ export async function handleSongs(action, body) {
   if (action === "search") {
     const PAGE = 50; // per store — Apple caps at 200; 50 keeps latency sane and triples visible depth vs 25
     const query = String(body.query || "").trim().slice(0, 200);
-    if (!query) return Response.json({ results: [], hasMore: false, nextCursor: { apple: null, musicbrainz: null }, sources: [], sourceStatus: [] });
+    if (!query) return Response.json({ results: [], hasMore: false, nextCursor: { apple: null }, sources: [], sourceStatus: [] });
     const legacyOffset = Math.max(0, Number(body.offset) || 0);
     const suppliedCursor = body.cursor && typeof body.cursor === "object" ? body.cursor : null;
-    const cursor = suppliedCursor || { apple: legacyOffset, musicbrainz: legacyOffset };
+    const cursor = suppliedCursor || { apple: legacyOffset };
     const appleOffset = cursor.apple === null ? null : Math.max(0, Number(cursor.apple) || 0);
-    const musicBrainzOffset = cursor.musicbrainz === null ? null : Math.max(0, Number(cursor.musicbrainz) || 0);
     const registeredSongs = await getAllSongsMeta();
     const searchQueries = buildSearchQueries(query, registeredSongs);
     const externalQuery = searchQueries.at(-1) || query;
@@ -85,14 +84,11 @@ export async function handleSongs(action, body) {
     // Normal /search across stores + the artist catalog (for hidden 19금 tracks),
     // in parallel. Catalog runs only on the first page — its tracks are folded in
     // once, filtered to title matches below, so paging stays search-only.
-    const [storePages, catalog, musicBrainz] = await Promise.all([
+    const [storePages, catalog] = await Promise.all([
       appleOffset === null
         ? Promise.resolve([])
         : Promise.all(["US", "KR", "JP"].map((country) => searchItunesStorePage(country === "JP" ? externalQuery : query, country, { limit: PAGE, offset: appleOffset }))),
       appleOffset === 0 ? withTimeout(fetchArtistCatalog(externalQuery), 3500) : Promise.resolve([]),
-      musicBrainzOffset === null
-        ? Promise.resolve({ results: [], hasMore: false, ok: true, error: "", nextOffset: null })
-        : searchMusicBrainz(externalQuery, { limit: PAGE, offset: musicBrainzOffset }),
     ]);
     const stores = storePages.map((page) => page.results);
     const q = normText(externalQuery);
@@ -103,8 +99,6 @@ export async function handleSongs(action, body) {
     // search ("Master Muzik") has no leftover title words → include the whole
     // catalog (its hidden tracks too). "Master Muzik 도련님" leaves 도련님 → keep
     // only catalog tracks whose title matches, so the discography doesn't flood.
-    // 두 소스를 합친 뒤 같은 점수 함수로 정렬해야 Apple과 MusicBrainz 후보의
-    // 제목·가수 일치도를 직접 비교할 수 있다.
     const catalogArtists = normText([...new Set(catalog.map((r) => r.artistName))].join(" "));
     const titleWords = words.filter((w) => w.length > 1 && !catalogArtists.includes(normText(w)));
     const seen = new Set();
@@ -119,7 +113,7 @@ export async function handleSongs(action, body) {
     for (const r of catalog)
       if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
     const appleResults = pool.map(itunesToResult);
-    const results = mergeExternalSongResults([appleResults, musicBrainz.results], searchQueries)
+    const results = mergeExternalSongResults([appleResults], searchQueries)
       .map((result) => ({ ...result, registered: findDuplicateSong(result, registeredSongs) }));
     const failedStores = storePages.filter((page) => !page.ok);
     const appleOk = appleOffset === null || storePages.some((page) => page.ok);
@@ -129,7 +123,6 @@ export async function handleSongs(action, body) {
       : failedStores.length
         ? appleOffset
         : appleHasMore ? appleOffset + PAGE : null;
-    const musicBrainzNext = musicBrainzOffset === null ? null : musicBrainz.nextOffset;
     const sourceStatus = [
       {
         id: "apple",
@@ -138,22 +131,12 @@ export async function handleSongs(action, body) {
         partial: failedStores.length > 0 && appleOk,
         error: failedStores.length ? `${failedStores.length}/3개 스토어 응답 실패` : "",
       },
-      {
-        id: "musicbrainz",
-        label: "MusicBrainz",
-        ok: musicBrainz.ok,
-        partial: false,
-        error: musicBrainz.error || "",
-      },
     ];
     return Response.json({
       results,
-      hasMore: appleNext !== null || musicBrainzNext !== null,
-      nextCursor: { apple: appleNext, musicbrainz: musicBrainzNext },
-      sources: [
-        ...(results.some((result) => result.source === "apple") ? ["Apple Music"] : []),
-        ...(results.some((result) => result.source === "musicbrainz") ? ["MusicBrainz"] : []),
-      ],
+      hasMore: appleNext !== null,
+      nextCursor: { apple: appleNext },
+      sources: results.some((result) => result.source === "apple") ? ["Apple Music"] : [],
       sourceStatus,
       searchQueries,
     });

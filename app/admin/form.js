@@ -326,7 +326,7 @@ export default function AdminForm() {
           </button>
         </div>
         <p className="mt-1.5 text-xs text-muted">
-          Apple Music 3개 스토어와 MusicBrainz를 함께 검색합니다. 19금·독립·구작 음원도 포함합니다.
+          Apple Music 3개 스토어를 함께 검색합니다. 19금·독립·구작 음원도 포함합니다.
         </p>
         {searchQueries.length > 1 && (
           <p className="mt-1 text-xs text-muted" role="status">
