@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllSongsRuntime } from "../../../lib/songs";
 import { needsLyricSections } from "../../../lib/admin/needs";
+import { genreIssue, genreTagOf, GENRES } from "../../../lib/genre";
 import { readRuntimeData } from "../../../lib/store";
 import ArtworkReview from "../artwork-review";
 import Backfill from "../backfill";
@@ -9,6 +10,7 @@ import Lint from "../lint";
 import LyricsAudit from "../lyrics-audit";
 import Requality from "../requality";
 import SectionEditor from "../section-editor";
+import GenreEditor from "../genre-editor";
 
 export const metadata = { title: "관리 도구 | Lyra" };
 export const dynamic = "force-dynamic";
@@ -41,6 +43,13 @@ const tools = [
     caution: true,
   },
   {
+    // genre: 필드와 tags 안의 장르는 서로 다른 곳을 보는 두 값이라 갈라지기 쉽다.
+    // 스토어가 돌려준 '록'·'ロック'·'K-Pop'이 화면 문구에 그대로 나오던 사고가 반복됐다.
+    title: "장르 손보기",
+    description: "태그 장르가 없거나 뭉뚱그려졌거나 genre: 필드와 어긋난 곡을 모아, 고른 장르를 두 곳에 함께 씁니다.",
+    content: null,
+  },
+  {
     // 20줄 넘는 가사가 한 덩어리로 들어오는 일이 계속 생긴다. 그때마다 md를 직접
     // 고치면 줄을 지우거나 순서를 흐트러뜨릴 수 있어, 좌표만 찍어 넣게 한다.
     title: "가사 구간 넣기",
@@ -70,6 +79,20 @@ export default async function AdminToolsPage() {
       status: auditStatus.get(song.slug) || "",
     }));
 
+  const valid = new Set(GENRES);
+  const genreCandidates = songs
+    .map((song) => {
+      const tagGenre = genreTagOf(song.tags);
+      const issue = genreIssue(tagGenre);
+      const field = song.genre || "";
+      const drift = !!(tagGenre && field && tagGenre !== field);
+      if (!issue && !drift) return null;
+      // 이미 온전한 쪽을 기본 선택으로 둔다 — 대개 태그가 손질돼 있다.
+      const suggested = !issue && valid.has(tagGenre) ? tagGenre : valid.has(field) ? field : "";
+      return { slug: song.slug, title: song.title, artist: song.artist || "", field, tagGenre, issue, suggested };
+    })
+    .filter(Boolean);
+
   const sectionCandidates = songs
     .filter(needsLyricSections)
     .map((song) => ({ slug: song.slug, title: song.title, artist: song.artist || "" }));
@@ -77,6 +100,13 @@ export default async function AdminToolsPage() {
   const entries = tools.map((tool) => {
     if (tool.title === "커버 검토") {
       return { ...tool, title: `커버 검토 (${artworkless.length})`, content: <ArtworkReview items={artworkless} /> };
+    }
+    if (tool.title === "장르 손보기") {
+      return {
+        ...tool,
+        title: `장르 손보기 (${genreCandidates.length})`,
+        content: <GenreEditor candidates={genreCandidates} />,
+      };
     }
     if (tool.title === "가사 구간 넣기") {
       return {
