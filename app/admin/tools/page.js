@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllSongsRuntime } from "../../../lib/songs";
+import { needsLyricSections } from "../../../lib/admin/needs";
 import { readRuntimeData } from "../../../lib/store";
 import ArtworkReview from "../artwork-review";
 import Backfill from "../backfill";
@@ -7,6 +8,7 @@ import BulkWork from "../bulk-work";
 import Lint from "../lint";
 import LyricsAudit from "../lyrics-audit";
 import Requality from "../requality";
+import SectionEditor from "../section-editor";
 
 export const metadata = { title: "관리 도구 | Lyra" };
 export const dynamic = "force-dynamic";
@@ -39,6 +41,13 @@ const tools = [
     caution: true,
   },
   {
+    // 20줄 넘는 가사가 한 덩어리로 들어오는 일이 계속 생긴다. 그때마다 md를 직접
+    // 고치면 줄을 지우거나 순서를 흐트러뜨릴 수 있어, 좌표만 찍어 넣게 한다.
+    title: "가사 구간 넣기",
+    description: "구간이 나뉘지 않은 가사에 후렴·절 표시를 붙입니다. 원문·번역·독음은 서버가 대조해 지킵니다.",
+    content: null,
+  },
+  {
     title: "대량 작업",
     description: "여러 곡의 누락 데이터를 외부 AI로 한꺼번에 보완할 때 작업 JSON을 내보내고 결과를 검증해 반영합니다.",
     content: <BulkWork />,
@@ -61,9 +70,20 @@ export default async function AdminToolsPage() {
       status: auditStatus.get(song.slug) || "",
     }));
 
+  const sectionCandidates = songs
+    .filter(needsLyricSections)
+    .map((song) => ({ slug: song.slug, title: song.title, artist: song.artist || "" }));
+
   const entries = tools.map((tool) => {
     if (tool.title === "커버 검토") {
       return { ...tool, title: `커버 검토 (${artworkless.length})`, content: <ArtworkReview items={artworkless} /> };
+    }
+    if (tool.title === "가사 구간 넣기") {
+      return {
+        ...tool,
+        title: `가사 구간 넣기 (${sectionCandidates.length})`,
+        content: <SectionEditor candidates={sectionCandidates} />,
+      };
     }
     return tool;
   });

@@ -29,6 +29,7 @@ import { appendReportVersion } from "../../../lib/report-history";
 import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/admin/song-duplicate";
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 import { appearanceIdentity } from "../../../lib/song-appearances";
+import { applySections, originalLines } from "../../../lib/admin/lyric-sections";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
@@ -1232,6 +1233,40 @@ ${lines}`,
     const stored = appendReportVersion(previous, report);
     await writeData("music-report.json", JSON.stringify(stored, null, 1), `data: 음악 취향 리포트 (${t.count}곡)`);
     return Response.json(stored);
+  }
+
+  // 가사 구간 — 20줄 넘는 가사가 한 덩어리로 들어오는 일이 반복돼, 그때마다
+  // 사람이 md를 직접 고치다 줄을 지우거나 순서를 흐트러뜨릴 여지가 있었다.
+  // 여기서는 좌표(원문 몇 번째 줄)만 받고, 삽입 결과를 원문과 대조해 다르면 거절한다.
+  if (action === "sectionPlan") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const m = song.raw.replace(/\r\n/g, "\n").match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    return Response.json({ slug: body.slug, lines: originalLines(m[2]) });
+  }
+
+  if (action === "sectionApply") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const m = raw.match(FM);
+    if (!m) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const marks = Array.isArray(body.marks) ? body.marks : [];
+    let next;
+    try {
+      next = applySections(m[2], marks);
+    } catch (error) {
+      return Response.json({ error: error.message }, { status: 422 });
+    }
+    if (next === m[2]) return Response.json({ slug: body.slug, sections: 0, changed: false });
+    // 프론트매터는 손대지 않는다 — source_hash가 여기 있다.
+    const out = `---
+${m[1]}
+---
+${next}`;
+    await writeSong(body.slug, out, `chore(song): sections — ${body.slug}`);
+    return Response.json({ slug: body.slug, sections: marks.filter((mark) => mark.section).length, changed: true });
   }
 
   // 커버 수동 지정 — /admin의 커버 검토 화면에서 URL을 직접 입력하거나
