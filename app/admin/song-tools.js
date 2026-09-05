@@ -34,11 +34,16 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   const regenMeta = async (slug) => {
     set(slug, { busy: "meta", err: "", msg: "", previousComment: "" });
     try {
-      const { updated, comment, previousComment } = await api("regenMeta", { slug });
+      const data = await api("regenMeta", { slug });
+      const { updated, comment, previousComment } = data;
       // 메타 재생성은 코멘트를 덮어쓴다. 필드 이름만 알려주면 무엇으로 바뀌었는지,
       // 무엇이 사라졌는지 확인할 길이 없어 되돌릴지 판단할 수 없다.
+      const { keptWebComment } = data;
       set(slug, {
-        msg: updated?.length ? `갱신: ${updated.join(", ")}` : "변경 없음",
+        msg: [
+          updated?.length ? `갱신: ${updated.join(", ")}` : "변경 없음",
+          keptWebComment ? "웹 근거 코멘트는 그대로 둠" : "",
+        ].filter(Boolean).join(" · "),
         comment: comment ?? undefined,
         previousComment: comment && previousComment && comment !== previousComment ? previousComment : "",
       });
@@ -52,12 +57,17 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   const regen = async (slug) => {
     set(slug, { busy: "comment", err: "", msg: "", previousComment: "" });
     try {
-      const { comment, appearanceSuggestion, commentSources = [] } = await api("regenComment", { slug });
-      if (appearanceSuggestion) {
+      const { comment, previousComment, appearanceSuggestion, commentSources = [], degraded } = await api("regenComment", { slug });
+      const prev = comment && previousComment && comment !== previousComment ? previousComment : "";
+      if (degraded) {
+        // 웹 조사가 막혀 가사만으로 썼다는 사실을 결과에 남긴다 — 출처가 왜 없는지
+        // 나중에 다시 물어보게 되는 것이 이 화면의 반복된 문제였다.
+        set(slug, { comment, previousComment: prev, msg: `가사 기반으로 갱신 (웹 조사 못 함) · ${degraded}` });
+      } else if (appearanceSuggestion) {
         const { unchanged } = await api("appearanceSave", { songSlug: slug, ...appearanceSuggestion });
-        set(slug, { comment, msg: unchanged ? `코멘트 갱신 · 작품 정보 확인됨 · 근거 ${commentSources.length}개` : `코멘트·작품 정보 갱신 · 근거 ${commentSources.length}개` });
+        set(slug, { comment, previousComment: prev, msg: unchanged ? `코멘트 갱신 · 작품 정보 확인됨 · 근거 ${commentSources.length}개` : `코멘트·작품 정보 갱신 · 근거 ${commentSources.length}개` });
       } else {
-        set(slug, { comment, msg: commentSources.length ? `근거 기반 코멘트 갱신 · 출처 ${commentSources.length}개` : "가사 중심 코멘트 갱신" });
+        set(slug, { comment, previousComment: prev, msg: commentSources.length ? `근거 기반 코멘트 갱신 · 출처 ${commentSources.length}개` : "가사 중심 코멘트 갱신" });
       }
     } catch (e) {
       set(slug, { err: e.message });
@@ -243,7 +253,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
           생성
         </button>
         <span className="col-span-2 text-xs text-muted sm:col-span-1">
-          {recsBusy || "메타 재생성은 태그·코멘트까지 덮어씀 · AI 리포트는 /songs/taste 상단에 게시"}
+          {recsBusy || "메타 재생성은 가사만 보고 태그·코멘트를 덮어씀 · 코멘트는 웹에서 근거를 찾아 출처까지 남김 · AI 리포트는 /songs/taste 상단에 게시"}
         </span>
       </div>
       <div className="mb-3  border border-line bg-surface p-3">
@@ -309,14 +319,14 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
                 disabled={!!st.busy}
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
-                {st.busy === "meta" ? "생성 중…" : "메타 재생성"}
+                {st.busy === "meta" ? "생성 중…" : "메타 재생성 (가사만)"}
               </button>
               <button
                 onClick={() => regen(s.slug)}
                 disabled={!!st.busy}
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
-                {st.busy === "comment" ? "생성 중…" : "코멘트"}
+                {st.busy === "comment" ? "조사 중…" : "코멘트 (웹 조사)"}
               </button>
               <button
                 onClick={() => notes(s.slug)}

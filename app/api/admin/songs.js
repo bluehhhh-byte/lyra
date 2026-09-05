@@ -550,7 +550,10 @@ ${koText.slice(0, 2000)}`,
       out = setField(out, "tags", `[${auto.tags.join(", ")}]`, "year");
       updated.push("tags");
     }
-    if (auto.comment) {
+    // 이 경로의 코멘트는 가사만 보고 쓴 것이다. 웹 조사로 출처까지 붙여 둔 코멘트를
+    // 덮으면 근거가 사라지고 basis가 lyrics_only로 강등된다 — 되돌릴 수 없으므로 두고 간다.
+    const keptWebComment = fmValue(fm, "comment_basis") === "web_enriched";
+    if (auto.comment && !keptWebComment) {
       out = setCommentWithProvenance(out, auto.comment, "lyrics_only");
       updated.push("comment");
     }
@@ -583,6 +586,7 @@ ${koText.slice(0, 2000)}`,
       updated,
       comment: fmValue(out.match(FM)?.[1] || "", "comment"),
       previousComment: fmValue(fm, "comment"),
+      keptWebComment,
     });
   }
 
@@ -639,8 +643,32 @@ ${koText.slice(0, 2000)}`,
       lyrics: originalLyrics(bodyText),
       commentHint: fmValue(fm, "comment"),
     });
-    if (!research)
-      return Response.json({ error: withReason("코멘트 웹 리서치를 완료하지 못했습니다") }, { status: 503 });
+    // 그라운딩 한도가 소진돼도 일반 생성은 살아 있다 — 메타 재생성이 그 경로로 코멘트를
+    // 만들어 내는데 이 버튼만 죽어 있으면 앞뒤가 맞지 않는다. 가사만 보고 쓴 코멘트로
+    // 내려앉되, 이미 웹 근거가 붙은 코멘트는 덮지 않는다. 그건 되돌릴 수 없다.
+    if (!research) {
+      const reason = withReason("코멘트 웹 리서치를 완료하지 못했습니다");
+      if (fmValue(fm, "comment_basis") === "web_enriched")
+        return Response.json({ error: `${reason} 기존 웹 근거 코멘트를 지키기 위해 덮어쓰지 않았습니다.` }, { status: 503 });
+      const auto = await computeAuto({
+        title: fmValue(fm, "title"),
+        artist: fmValue(fm, "artist"),
+        lyrics: originalLyrics(bodyText),
+        lang: fmValue(fm, "lang") || "en",
+        year: fmValue(fm, "year"),
+        genre: fmValue(fm, "genre"),
+      });
+      if (!auto.comment) return Response.json({ error: reason }, { status: 503 });
+      const fallback = setCommentWithProvenance(raw, auto.comment, "lyrics_only");
+      await writeSong(body.slug, fallback, `chore(song): regen comment (lyrics only) — ${body.slug}`);
+      return Response.json({
+        comment: auto.comment,
+        previousComment: fmValue(fm, "comment"),
+        commentSources: [],
+        commentBasis: "lyrics_only",
+        degraded: reason,
+      });
+    }
     const comment = research.comment;
     if (!comment)
       return Response.json({ error: research.warning || "검증 가능한 코멘트를 만들지 못했습니다. 잠시 후 다시 시도해 주세요" }, { status: 422 });
@@ -648,6 +676,7 @@ ${koText.slice(0, 2000)}`,
     const next = setCommentWithProvenance(raw, comment, research.commentBasis || "lyrics_only", sourceUrls);
     await writeSong(body.slug, next, `chore(song): regen comment — ${body.slug}`);
     return Response.json({
+      previousComment: fmValue(fm, "comment"),
       comment,
       commentBasis: research.commentBasis,
       commentSources: research.commentSources,
