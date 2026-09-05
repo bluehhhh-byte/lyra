@@ -5,7 +5,7 @@ artist: The Strokes
 artist_ko: 
 album: Is This It
 year: 2001
-genre: Alternative Rock
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/ea/04/d4/ea04d45d-6f5d-ede6-fb64-71f3e6a6e62f/dj.ojkzzidd.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/28/99/e8289924-40e8-ecc8-be64-ea848fe2bab3/mzaf_5469741281529137741.plus.aac.p.m4a
 trackId: 266376961

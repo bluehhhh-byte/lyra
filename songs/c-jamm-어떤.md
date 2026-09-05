@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/97/c2/f5/97c2f548-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/3b/ff/70/3bff704a-226c-b92b-b353-4928c7f76a65/mzaf_3474313265786431532.plus.aac.p.m4a
 trackId: 1612758102
 duration: 153
-genre: K-Pop
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
 keywords: [생각, 비밀, 선물]

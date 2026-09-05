@@ -5,7 +5,7 @@ artist: Lance Savali
 artist_ko: 
 album: Devotion - Single
 year: 2025
-genre: Electronic
+genre: Dance
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/24/11/3c2411f7-3744-df75-2217-ecec79fa163c/24UM1IM35725.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/90/68/f890687e-b00b-67ac-248e-a84f2ee65a49/mzaf_11628123733013645574.plus.aac.p.m4a
 trackId: 1786253713

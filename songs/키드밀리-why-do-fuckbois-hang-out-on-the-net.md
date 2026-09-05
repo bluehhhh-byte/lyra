@@ -5,7 +5,7 @@ artist: 키드밀리
 artist_ko: 
 album: AI, the Playlist
 year: 2018
-genre: K-Pop
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/3d/e5/d5/3de5d572-706d-fc98-8667-81b742c91d5e/cover-.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/73/0f/5e/730f5eca-2643-8fa9-c8f2-654b077066e7/mzaf_2538223948840187322.plus.aac.p.m4a
 trackId: 1358618064

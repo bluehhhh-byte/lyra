@@ -5,7 +5,7 @@ artist: 삐삐밴드
 artist_ko: 
 album: pppb - EP
 year: 2015
-genre: K-Pop
+genre: Post-Punk
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b6/cd/07/b6cd07e4-f79d-f037-600a-649145c5951c/cover_KM0022198_1.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/ce/48/6fce48d8-379f-3f31-de2b-0ab836e93121/mzaf_16314117217390275388.plus.aac.p.m4a
 trackId: 1817428241

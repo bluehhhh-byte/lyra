@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/92/06/bd/9206bdb3-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7a/81/d1/7a81d12e-3ecc-47bb-c0bb-3a8066382f26/mzaf_3983422307692904907.plus.aac.p.m4a
 trackId: 1531535287
 duration: 293
-genre: Metal
+genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1980]
 keywords: [세상, 적, 증오]

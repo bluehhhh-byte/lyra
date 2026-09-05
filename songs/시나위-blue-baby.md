@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6e/14/2b/6e142b7c-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/a4/35/f2a43529-d717-4243-6790-790f777e9826/mzaf_15031228162887990011.plus.aac.p.m4a
 trackId: 1852827933
 duration: 297
-genre: K-Pop
+genre: Heavy Metal
 lang: ko
 tags: [한국, Heavy Metal, 1997]
 keywords: [술, 멍자욱, 하늘]

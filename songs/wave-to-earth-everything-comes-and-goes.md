@@ -5,7 +5,7 @@ artist: wave to earth
 artist_ko: 
 album: bad pieces
 year: 2026
-genre: Alternative Rock
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a4/d4/a2/a4d4a2fe-9f63-d0bb-9b98-ce5bb1fe9dd1/820233766517.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/f3/f3/a4f3f381-92fd-cec4-503c-83f1df694b44/mzaf_6765113823445045362.plus.aac.p.m4a
 trackId: 6795233512

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/34/2e/cb/342ecb17-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4d/46/3c/4d463c17-f551-e2e0-3749-4506d57abed9/mzaf_10393415485291566307.plus.aac.p.m4a
 trackId: 1525934928
 duration: 293
-genre: Indie Rock
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
 keywords: [파도, 희망, 해안가]

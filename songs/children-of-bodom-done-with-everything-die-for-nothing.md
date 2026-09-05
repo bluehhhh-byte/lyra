@@ -5,7 +5,7 @@ artist: Children of Bodom
 artist_ko: 
 album: Blooddrunk
 year: 1997
-genre: Metal
+genre: Heavy Metal
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/22/4a/52/224a52d2-163e-d0f0-c918-4c9fbcb23514/00602517688032_Cover.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/72/9a/08/729a085a-8955-db8a-114a-52e2c905f914/mzaf_8203057104248066908.plus.aac.p.m4a
 trackId: 735672386

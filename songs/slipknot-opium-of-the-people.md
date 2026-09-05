@@ -5,7 +5,7 @@ artist: Slipknot
 artist_ko: 
 album: Vol. 3 The Subliminal Verses
 year: 2004
-genre: Metal
+genre: Heavy Metal
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/43/3b/a9/433ba92d-79ed-6ddc-3436-0ba06a8c9fab/016861752309.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fd/d1/f7/fdd1f773-1b23-6b7a-f491-0edc35fda19c/mzaf_3322397373449599826.plus.aac.p.m4a
 trackId: 926184069

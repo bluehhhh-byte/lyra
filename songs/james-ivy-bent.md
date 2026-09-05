@@ -5,7 +5,7 @@ artist: James Ivy
 artist_ko: 
 album: Bent - Single
 year: 2026
-genre: Alternative Rock
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/28/d7/1028d781-96a2-c7c0-448d-debbcbdafffa/829299290035.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/56/8b/52/568b52e6-de6b-9a4b-6de8-c20b3181626b/mzaf_17621631786330596676.plus.aac.p.m4a
 trackId: 6765464626

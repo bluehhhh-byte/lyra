@@ -5,7 +5,7 @@ artist: PAPRIKA
 artist_ko: 파프리카
 album: TOMORROW WAS A GOOD DAY - EP
 year: 2025
-genre: Indie Rock
+genre: Synth-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b5/44/c6/b544c65c-390f-d65e-6ac5-07f4eab6136a/cover.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/07/18/fd0718f3-2b28-09c3-f5b3-e20b427d8590/mzaf_15854820491129969738.plus.aac.p.m4a
 trackId: 1853971706

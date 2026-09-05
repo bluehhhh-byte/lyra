@@ -5,7 +5,7 @@ artist: 뉴진스
 artist_ko: 
 album: Supernatural - Single
 year: 2024
-genre: J-Pop
+genre: K-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ab/ce/d6/abced6f6-2b90-c230-eb4b-e146734a3a22/196922907821_Cover.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/ce/f9/41cef96a-6b48-2ddd-72a8-f479e7a1c752/mzaf_5570335600994446876.plus.aac.p.m4a
 trackId: 1750576834

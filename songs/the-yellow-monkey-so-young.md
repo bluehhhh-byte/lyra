@@ -5,7 +5,7 @@ artist: THE YELLOW MONKEY
 artist_ko: 
 album: SO YOUNG - EP
 year: 1999
-genre: J-Pop
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a5/f5/df/a5f5dfac-89e7-6f68-5bc7-94e19fb95a76/mzi.zuoykbwf.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/bc/96/83/bc9683da-1ff5-e60d-4ee6-e8117bc4dc8d/mzaf_8048064287043714552.plus.aac.p.m4a
 trackId: 269762305

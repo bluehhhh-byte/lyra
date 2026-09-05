@@ -5,7 +5,7 @@ artist: 릴보이
 artist_ko: 
 album: David - Single
 year: 2018
-genre: K-Pop
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fe/08/0d/fe080df6-17fd-6f3c-a38d-09facd0b9149/cover_KM0007786_1.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ba/a1/cc/baa1ccbd-14c4-b957-59f6-9c850a0a5131/mzaf_17110985275136407696.plus.aac.p.m4a
 trackId: 1445990883

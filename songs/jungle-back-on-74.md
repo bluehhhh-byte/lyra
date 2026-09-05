@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d4/7d/e5/d47de508-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/c2/0b/c8c20b23-8945-3454-d960-6c9909668d1f/mzaf_1164942196076927208.plus.aac.p.m4a
 trackId: 1676152328
 duration: 209
-genre: Dance
+genre: Funk
 lang: en
 tags: [영미, Funk, 2023]
 keywords: [고향, 휴식, 비]

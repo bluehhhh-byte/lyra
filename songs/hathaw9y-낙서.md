@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/eb/92/fe/eb92fee6-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/87/27/be8727da-f035-e8b1-3823-7fe09e757ef9/mzaf_3446203632016687447.plus.aac.p.m4a
 trackId: 1848863778
 duration: 255
-genre: K-Pop
+genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2021]
 keywords: [미소, 눈빛, 목소리]

@@ -5,7 +5,7 @@ artist: GACKT
 artist_ko: 각트
 album: MARS
 year: 2000
-genre: J-Pop
+genre: Visual Kei
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/44/02/f9/mzi.sguvwavv.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d7/54/77/d75477cd-308e-750f-95c2-3c8c31eb5178/mzaf_16609245294139699222.plus.aac.p.m4a
 trackId: 265755683

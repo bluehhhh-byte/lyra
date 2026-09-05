@@ -5,7 +5,7 @@ artist: BIGBANG
 artist_ko: 
 album: BiiiG - Single
 year: 2026
-genre: K-Pop
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c5/d9/3a/c5d93ab5-12ac-3800-c13d-e57b819b6d89/8809519881443_cover.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/43/7a/c6437aca-0aaa-516f-ce28-e588cb0c5c45/mzaf_1050702449403311044.plus.aac.p.m4a
 trackId: 6801365250

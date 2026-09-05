@@ -5,7 +5,7 @@ artist: Green Day
 artist_ko: 
 album: American Idiot
 year: 2004
-genre: Alternative Rock
+genre: Punk Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0e/17/f0/0e17f011-aadf-d4d1-1c7e-b61ce39f968b/093624947301.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/86/f1/d0/86f1d039-f2d6-2f5b-b34b-2b63504fa6d0/mzaf_3363059623415356317.plus.aac.p.m4a
 trackId: 1161539473

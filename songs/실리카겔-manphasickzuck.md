@@ -5,7 +5,7 @@ artist: 실리카겔
 artist_ko: 
 album: Ballad of You
 year: 2026
-genre: Alternative Rock
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9b/5d/9a/9b5d9a83-7854-9793-4087-72ef6fd10cdf/8721555509535.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/42/89/9142893d-e531-b2a1-a069-d26b6bd1a18a/mzaf_8960101309694620838.plus.aac.p.m4a
 trackId: 6790844001

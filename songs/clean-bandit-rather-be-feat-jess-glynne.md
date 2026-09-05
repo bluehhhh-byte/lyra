@@ -5,7 +5,7 @@ artist: Clean Bandit
 artist_ko:
 album: I Cry When I Laugh
 year: 2014
-genre: Dance
+genre: House
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/19/e0/1b/19e01b5f-0fd5-85f1-f347-461d4130309a/825646029594.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/0e/79/7f/0e797ff4-0094-4053-39af-2255898e804c/mzaf_8292168751841826927.plus.aac.p.m4a
 trackId: 1027563268

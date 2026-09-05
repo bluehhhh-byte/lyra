@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/04/92/e0/0492e08b-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/20/29/8820297d-5b6d-286f-c88d-3927fd1ae22f/mzaf_4846050215701792883.plus.aac.p.m4a
 trackId: 1517447778
 duration: 221
-genre: Indie Rock
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
 keywords: [전기, 가족, 여동생]
