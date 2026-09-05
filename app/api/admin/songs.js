@@ -30,6 +30,7 @@ import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/adm
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 import { appearanceIdentity } from "../../../lib/song-appearances";
 import { applySections, originalLines } from "../../../lib/admin/lyric-sections";
+import { applyGenre, genreStatus } from "../../../lib/admin/genre-fix";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
@@ -1267,6 +1268,23 @@ ${m[1]}
 ${next}`;
     await writeSong(body.slug, out, `chore(song): sections — ${body.slug}`);
     return Response.json({ slug: body.slug, sections: marks.filter((mark) => mark.section).length, changed: true });
+  }
+
+  // 장르 — genre: 필드와 tags 안의 장르는 서로 다른 곳을 보는 두 값이라,
+  // 한쪽만 고치면 화면 문구와 결손 판정이 어긋난 채 남는다. 함께 쓴다.
+  if (action === "genreApply") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    let out;
+    try {
+      out = applyGenre(song.raw, body.genre);
+    } catch (error) {
+      return Response.json({ error: error.message }, { status: 422 });
+    }
+    const before = song.raw.replace(/\r\n/g, "\n");
+    if (out === before) return Response.json({ slug: body.slug, genre: body.genre, changed: false });
+    await writeSong(body.slug, out, `chore(song): genre ${body.genre} — ${body.slug}`);
+    return Response.json({ slug: body.slug, genre: body.genre, changed: true, status: genreStatus(out) });
   }
 
   // 커버 수동 지정 — /admin의 커버 검토 화면에서 URL을 직접 입력하거나
