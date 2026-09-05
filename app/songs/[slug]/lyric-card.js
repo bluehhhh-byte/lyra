@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { wrap, wrapTight } from "../../../lib/carousel-wrap";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
 import InstagramCaptionPreview from "../../caption-preview";
@@ -156,32 +157,7 @@ export function loadImage(src) {
   });
 }
 
-// word-wrap that falls back to per-character breaks for spaceless CJK runs
-export function wrap(ctx, text, maxW) {
-  const out = [];
-  let line = "";
-  for (const word of text.split(" ")) {
-    const tryLine = line ? `${line} ${word}` : word;
-    if (ctx.measureText(tryLine).width <= maxW) {
-      line = tryLine;
-      continue;
-    }
-    if (line) out.push(line);
-    if (ctx.measureText(word).width <= maxW) {
-      line = word;
-      continue;
-    }
-    line = "";
-    for (const ch of word) {
-      if (ctx.measureText(line + ch).width > maxW) {
-        out.push(line);
-        line = ch;
-      } else line += ch;
-    }
-  }
-  if (line) out.push(line);
-  return out;
-}
+export { wrap, wrapTight };
 
 async function drawCard({ song, lines, art, align = "left", position, total }) {
   const canvas = document.createElement("canvas");
@@ -216,13 +192,17 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
   const build = () => {
     const blocks = [];
     for (const l of pairs) {
-      ctx.font = `600 ${oSize}px ${SERIF}`;
-      for (const t of wrap(ctx, l.en, maxW))
-        blocks.push({ t, size: oSize, gap: oSize + 14, dim: false });
+      const serif = (s) => `600 ${s}px ${SERIF}`;
+      ctx.font = serif(oSize);
+      const orig = wrapTight(ctx, l.en, maxW, { font: serif, size: oSize });
+      for (const t of orig.lines)
+        blocks.push({ t, size: orig.size, gap: orig.size + 14, dim: false });
       if (l.ko) {
-        ctx.font = `500 ${tSize}px ${SANS}`;
-        for (const t of wrap(ctx, l.ko, maxW))
-          blocks.push({ t, size: tSize, gap: tSize + 14, dim: true });
+        const sans = (s) => `500 ${s}px ${SANS}`;
+        ctx.font = sans(tSize);
+        const trans = wrapTight(ctx, l.ko, maxW, { font: sans, size: tSize });
+        for (const t of trans.lines)
+          blocks.push({ t, size: trans.size, gap: trans.size + 14, dim: true });
       }
       blocks.push({ t: "", size: 0, gap: Math.round(oSize * 0.55) });
     }
