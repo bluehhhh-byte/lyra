@@ -301,9 +301,12 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 onCancel={() => setEditing(-1)}
               />
             ) : (
+              // 이 상자에 담기는 것은 대개 가사 분석이 아니라 소유자가 남긴
+              // 기록이다 — 곡을 고른 날의 이야기, 인물·배경 설명. '연 해설'은
+              // 그것을 가사 풀이처럼 읽히게 해 오해를 부른다.
               (notes[i] ?? stanza.note) && (
-                <aside role="note" aria-label="이 연에 대한 해설" className="mt-8 border-l-2 border-accent/60 bg-accent/5 px-4 py-3 text-sm leading-relaxed text-muted">
-                  <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">연 해설</span>
+                <aside role="note" aria-label="이 연에 남긴 노트" className="mt-8 border-l-2 border-accent/60 bg-accent/5 px-4 py-3 text-sm leading-relaxed text-muted">
+                  <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">노트</span>
                   {notes[i] ?? stanza.note}
                   {owner && (
                     <button
@@ -351,7 +354,7 @@ function NoteEditor({ initial, onSave, onCancel }) {
         rows={3}
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="이 구절에 대한 해설·감상"
+        placeholder="이 연에 남길 기록·감상"
         className="w-full resize-none  border border-line bg-bg px-3 py-2 text-sm outline-none focus:border-accent"
       />
       <div className="mt-2 flex items-center gap-2">
