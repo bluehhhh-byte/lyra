@@ -28,6 +28,20 @@ function RunVercelDeploy([string[]]$arguments, [string]$cwd = $repo) {
   } finally { Pop-Location }
 }
 
+function RunNodeVerification([string[]]$arguments, [string]$cwd = $repo) {
+  $lastExit = 0
+  for ($attempt = 1; $attempt -le 2; $attempt++) {
+    Push-Location $cwd
+    try {
+      & node @arguments
+      $lastExit = $LASTEXITCODE
+    } finally { Pop-Location }
+    if ($lastExit -eq 0) { return }
+    if ($attempt -lt 2) { Write-Warning "node verification exited with $lastExit; retrying once." }
+  }
+  throw "node failed with exit code $lastExit"
+}
+
 try {
   $locked = $mutex.WaitOne(0)
   if (-not $locked) { throw "Another Lyra production deployment is already running; refusing to create a duplicate." }
@@ -62,8 +76,8 @@ try {
   }
 
   Write-Host "5/5 Waiting for the exact commit and verifying production..."
-  Run "node" @("scripts/wait-for-production.mjs", $site, $targetSha)
-  Run "node" @("scripts/verify-production.mjs", $site)
+  RunNodeVerification @("scripts/wait-for-production.mjs", $site, $targetSha)
+  RunNodeVerification @("scripts/verify-production.mjs", $site)
   Write-Host "READY: $site @ $($targetSha.Substring(0, 7))"
 } finally {
   if (Test-Path -LiteralPath $deployDir) {
