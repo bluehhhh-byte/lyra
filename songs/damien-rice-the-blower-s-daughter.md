@@ -25,6 +25,8 @@ source_note:
 source_hash: 10023ef5114e8dbbd1965e5268f326c8f79b5460
 lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Damien%20Rice&track_name=The%20Blower's%20Daughter
+duplicate_of: damien-rice-blower-s-daughter
+duplicate_merged_at: 2026-09-05T01:01:30.154Z
 ---
 And so it is
 > 그래서 이렇게 됐어

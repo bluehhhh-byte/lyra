@@ -1,6 +1,6 @@
 ---
 title: 浸食 〜lose control〜
-title_ko: 침식 ~통제 상실~
+title_ko: 침식 ~lose control~
 artist: L'Arc-en-Ciel
 artist_ko: 라르크 앙 시엘
 album: 浸食 〜lose control〜 - Single
@@ -11,8 +11,8 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4f/
 trackId: 1536367740
 duration: 288
 lang: en
-tags: [일본, Visual Kei, 1998]
-keywords: [마음, 상처, 태양, 그림자, 본능]
+tags: [일본, J-Rock, 1998]
+keywords: [마음, 바람, 상처, 태양, 그림자]
 emotion: 불안
 date: 2026-09-01
 published: 2026-08-31T21:33:37.866Z

@@ -14,11 +14,13 @@ duration: 235
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2011]
-keywords: [눈, 마음, 자리, 첫날]
-emotion: 사랑
+keywords: [마음, 사랑, 눈, 날]
+emotion: 설렘
 date: 2023-04-29
 published: 2023-04-28T22:00:06.000Z
-comment: 기쁠 때나 슬플 때나 부를 수 있게 변치 말고 그 자리에 있어 달라는 말이 전부인 곡이다. 첫눈 내리던 날을 처음 본 날과 겹쳐 놓는다.
+comment: 기쁠 때나 슬플 때나 항상 마음속에 있는 너를 부르고 싶다는 마음을 담아 변치 말고 그 자리에 있어 달라고 고백한다. 처음 본 날과 눈이 내렸던 날의 추억을 떠올리며 사랑하는 감정을 전한다.
+comment_basis: lyrics_only
+comment_sources: []
 source: instagram
 source_tag: 230429_0659
 source_note: 

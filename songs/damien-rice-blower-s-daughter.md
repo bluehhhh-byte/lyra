@@ -9,10 +9,10 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/7f/b2/df/mzi.tadwdynv.jp
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/75/c1/1775c1c9-e3d7-e178-9bee-9f641de8543e/mzaf_7962275660222794854.plus.aac.p.m4a
 trackId: 2249495
 duration: 287
-genre: Singer/Songwriter
+genre: Folk
 lang: en
 tags: [유럽, Folk, 2002]
-keywords: [삶, 이야기]
+keywords: [삶, 이야기, 사랑, 영웅, 눈, 바람]
 emotion: 그리움
 date: 2024-08-16
 published: 2024-08-15T19:13:43.000Z
@@ -21,6 +21,8 @@ source: instagram
 source_tag: 240816_0412
 source_note: 
 source_hash: f3741a3848069e2ccac40b0fd1357e73632b6a83
+external_url: https://music.apple.com/us/album/the-blowers-daughter/2249511?i=2249495&uo=4
+search_aliases: [The Blower’s Daughter, 유리 부는 사람의 딸, Damien Rice, damien-rice-the-blower-s-daughter]
 ---
 And so it is
 > 그게 그렇지

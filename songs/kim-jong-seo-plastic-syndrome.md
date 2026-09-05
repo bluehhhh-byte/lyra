@@ -13,11 +13,11 @@ external_url: https://music.apple.com/us/album/plastic-syndrome/1531421616?i=153
 duration: 260
 lang: en
 tags: [한국, Hard Rock, 1995]
-keywords: [세상, 꿈, 사람, 행복, 향기]
+keywords: [꿈, 세상, 얼굴, 행복, 향기]
 emotion: 저항
 date: 2026-09-05
 published: 2026-09-05T09:37:51.836Z
-comment: 외적인 모습과 물질적인 성공만을 좇는 사회의 풍조를 꼬집으며, 남과 비교하지 말고 있는 그대로의 자신을 사랑하라고 외친다. 겉치레로 꾸며진 삶보다 내면에 숨겨진 본연의 향기와 꿈의 소중함을 강조하는 곡이다.
+comment: 외적인 기준과 획일화된 삶을 좇는 세상을 향해 겉모습보다 내면의 향기를 지키며 살아가라고 말한다. 타인과의 비교를 멈추고 고유한 자신 그대로의 삶을 긍정하라는 메시지를 담고 있다.
 comment_basis: lyrics_only
 comment_sources: []
 ---

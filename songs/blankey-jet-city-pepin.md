@@ -13,11 +13,11 @@ external_url: https://music.apple.com/jp/album/pepin/1445023848?i=1445023854&uo=
 duration: 291
 lang: ja
 tags: [일본, J-Rock, 1999]
-keywords: [사랑, 노을, 인파, 인생, 사막]
+keywords: [사랑, 저녁놀, 인파, 인생, 그리움]
 emotion: 그리움
 date: 2026-09-05
 published: 2026-09-05T04:40:32.907Z
-comment: 지나간 사랑을 회상하며 물색 노을 속에서 외로움을 느끼는 심경을 그린다. 일상 속에서 문득 떠오르는 그리움과 방황하는 감정이 쓸쓸하게 다가온다.
+comment: 지나간 사랑을 회상하며 바라보는 물빛 저녁놀과 쓸쓸한 거리의 풍경이 담겨 있다. 덧없어 보이는 삶 속에서도 진심으로 사랑했던 상대를 향한 그리움과 갈망이 짙게 배어난다.
 comment_basis: lyrics_only
 comment_sources: []
 ---
