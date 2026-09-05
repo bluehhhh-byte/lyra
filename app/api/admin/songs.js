@@ -1255,7 +1255,7 @@ ${lines}`,
     const marks = Array.isArray(body.marks) ? body.marks : [];
     let next;
     try {
-      next = applySections(m[2], marks);
+      next = applySections(m[2], marks, { tighten: body.tighten === true });
     } catch (error) {
       return Response.json({ error: error.message }, { status: 422 });
     }

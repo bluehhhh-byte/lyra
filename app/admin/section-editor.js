@@ -27,6 +27,7 @@ export default function SectionEditor({ candidates = [] }) {
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [saved, setSaved] = useState("");
+  const [tighten, setTighten] = useState(false);
 
   const load = async (next) => {
     setSlug(next);
@@ -53,7 +54,7 @@ export default function SectionEditor({ candidates = [] }) {
     setError("");
     try {
       const payload = Object.entries(marks).map(([at, section]) => ({ at: Number(at), section }));
-      const { sections, changed } = await api("sectionApply", { slug, marks: payload });
+      const { sections, changed } = await api("sectionApply", { slug, marks: payload, tighten });
       setSaved(changed ? `구간 ${sections}개 저장됨` : "바뀐 것이 없습니다");
     } catch (e) {
       setError(e.message);
@@ -86,6 +87,19 @@ export default function SectionEditor({ candidates = [] }) {
             <option key={c.slug} value={c.slug}>{c.title} — {c.artist}</option>
           ))}
         </select>
+        {lines && (
+          <label className="flex shrink-0 items-center gap-1.5 text-xs text-muted">
+            <input
+              type="checkbox"
+              checked={tighten}
+              onChange={(e) => setTighten(e.target.checked)}
+              className="h-4 w-4 accent-accent"
+            />
+            {/* 줄마다 빈 줄이 끼어 한 줄이 곧 한 연이 된 가사를 되돌린다.
+                빈 줄로만 연을 나눈 곡을 뭉갤 수 있어 기본값은 꺼 둔다. */}
+            줄 사이 빈 줄 정리
+          </label>
+        )}
         {lines && (
           <button
             onClick={save}
