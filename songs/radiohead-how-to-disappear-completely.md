@@ -5,7 +5,7 @@ artist: Radiohead
 artist_ko: 
 album: Kid A
 year: 2000
-genre: Alternative
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/8e/13/bd8e1358-b367-a689-cb84-cebd0b067dc4/634904078263.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ba/c2/10/bac210fb-77c0-43c5-22fc-16c4c071f55d/mzaf_13607765750791747786.plus.aac.p.m4a
 trackId: 1097863247

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8b/f9/68/8bf96830-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/01/17/a7011758-5c42-ed17-19ba-2df494d5e043/mzaf_1781458712884557174.plus.aac.p.m4a
 trackId: 1763779227
 duration: 287
-genre: Rock
+genre: J-Rock
 lang: en
 tags: [일본, J-Rock, 2024]
 keywords: [음식, 부적응자, 무감각]

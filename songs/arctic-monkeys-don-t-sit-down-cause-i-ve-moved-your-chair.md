@@ -5,7 +5,7 @@ artist: Arctic Monkeys
 artist_ko: 
 album: Suck It and See
 year: 2011
-genre: Alternative
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Features/62/5b/66/dj.wlpuxxqn.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/64/64/24/6464248c-ec9c-87bf-c230-4641c130c1ce/mzaf_10030982941717681781.plus.aac.p.m4a
 trackId: 429803453

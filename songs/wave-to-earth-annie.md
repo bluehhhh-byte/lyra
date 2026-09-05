@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/c9/ca/0cc9ca8e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/5f/95/325f9591-9f54-ecb0-5064-09f3ff569ccf/mzaf_11440927581850616775.plus.aac.p.m4a
 trackId: 1771834504
 duration: 201
-genre: 얼터너티브
+genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2024]
 keywords: [유명인, 보석, 파티]

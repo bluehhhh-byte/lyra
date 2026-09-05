@@ -5,7 +5,7 @@ artist: 술탄 오브 더 디스코
 artist_ko: 
 album: 웨ㅔㅔㅔㅔ (feat. 블랙넛) - Single
 year: 2014
-genre: 록
+genre: Disco
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3d/9b/80/3d9b80c9-bf9c-088c-b724-6e4bcbba9de2/8809380632649.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/aa/a2/3c/aaa23cd5-5699-60cd-7df6-5415f2ec6159/mzaf_108830429429194749.plus.aac.p.m4a
 trackId: 1614184500

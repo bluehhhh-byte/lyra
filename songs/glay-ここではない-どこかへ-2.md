@@ -9,10 +9,10 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/04/92/4d0492a2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/25/3b/35253bed-202a-3af8-14ec-58d96abc934e/mzaf_12919756588202327135.plus.aac.p.m4a
 trackId: 989835113
 duration: 349
-genre: ロック
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1999]
-keywords: [소원, 세상, 꿈]
+keywords: [소원, 세상, 꿈, 항해, 영혼]
 emotion: 회상
 date: 2025-05-28
 published: 2025-05-28T10:47:07.000Z
@@ -21,6 +21,7 @@ source: instagram
 source_tag: 250528_1947
 source_note: 
 source_hash: 64cb518a87b728a12fc7d9782b964e8ddd4ed38e
+search_aliases: [ここではない、どこかへ, 여기가 아닌 어딘가로, GLAY, glay-ここではない-どこかへ]
 ---
 どんな願いならば
 + 돈나 네가이나라바

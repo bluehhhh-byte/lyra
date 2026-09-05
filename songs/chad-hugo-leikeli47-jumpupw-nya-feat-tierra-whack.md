@@ -5,7 +5,7 @@ artist: Chad Hugo & Leikeli47
 artist_ko: 
 album: Jumpupw!nya (feat. Tierra Whack) - Single
 year: 2026
-genre: Hip-Hop/Rap
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1e/d9/1b/1ed91bc9-86d3-f670-d53d-6680590ccaa6/193436478878_JUWYArtwork.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/16/f7/4516f72c-1cd2-0e50-5cc4-0eba27c61705/mzaf_6821437056575875245.plus.aac.p.m4a
 trackId: 6789189828

@@ -5,7 +5,7 @@ artist: 놀이도감
 artist_ko: 놀이도감
 album: Truthbuster - Single
 year: 2025
-genre: 록
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/77/27/7e7727cf-f29a-e6c2-9211-4d36dd66a51f/8721416367274.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/d9/eb/6ed9ebfd-dc06-5ac6-33ee-004a2f8c8684/mzaf_12652820163838195454.plus.aac.p.m4a
 trackId: 1842929304

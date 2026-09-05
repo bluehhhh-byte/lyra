@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0d/32/eb/0d32eb6a-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/ad/84/8fad843b-cf1e-9445-6f2b-4b633cda3c9a/mzaf_13711662202156831846.plus.aac.p.m4a
 trackId: 1816613280
 duration: 201
-genre: 팝
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
 keywords: [헤드라이트, 이유, 시작]

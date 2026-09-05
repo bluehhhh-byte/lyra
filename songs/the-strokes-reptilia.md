@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f7/e9/2a/f7e92a48-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/dc/fd/e4/dcfde43f-2c21-0778-f32a-f4380293f74f/mzaf_10139901306940368873.plus.aac.p.m4a
 trackId: 302987569
 duration: 220
-genre: Alternative
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2003]
 keywords: [이야기, 동네, 구역]

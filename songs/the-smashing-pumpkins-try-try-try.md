@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/92/d6/97/92d69784-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/88/be/d588bebd-5972-d0b9-d6b1-038835a5b420/mzaf_8555735506791498481.plus.aac.p.m4a
 trackId: 712756047
 duration: 309
-genre: 얼터너티브
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2000]
 keywords: [기차, 여름, 비]

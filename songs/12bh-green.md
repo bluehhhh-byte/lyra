@@ -5,7 +5,7 @@ artist: 12BH
 artist_ko: 
 album: Green - Single
 year: 2023
-genre: Rock
+genre: Indie Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fe/51/12/fe511298-42b1-8d9f-1c2e-50a53ba6a99a/8809912896594.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/eb/33/5eeb331b-d631-0eac-4c1b-5976b77a8bb7/mzaf_13181979581127382254.plus.aac.p.m4a
 trackId: 1877700396

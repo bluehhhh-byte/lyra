@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f1/3e/67/f13e6706-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/4b/ef/b6/4befb6d2-9e45-3235-f166-a7ffec2c4ea4/mzaf_11958888067406922349.plus.aac.p.m4a
 trackId: 731972327
 duration: 359
-genre: 얼터너티브
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]
 keywords: [마트, 사람들, 마음]

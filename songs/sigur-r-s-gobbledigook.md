@@ -5,7 +5,7 @@ artist: Sigur Rós
 artist_ko: 
 album: Með Suð Í Eyrum Við Spilum Endalaust
 year: 2008
-genre: Pop
+genre: Post-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4d/47/e9/4d47e9c1-09bd-7187-25cf-eee8e43f5e58/190296919732.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e8/5f/76/e85f763c-4ec6-a81c-2371-d6ebca4cd02e/mzaf_17777173662061318505.plus.aac.p.m4a
 trackId: 1447499968

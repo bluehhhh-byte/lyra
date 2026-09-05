@@ -5,7 +5,7 @@ artist: MIYAVI
 artist_ko: 미야비
 album: Holy Nights
 year: 2020
-genre: ロック
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/bb/0f/47/bb0f47ef-89c7-5ef6-2527-62d56550cca5/20UMGIM19391.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/12/ed/3e/12ed3eec-dfda-f9f4-b921-ad6ecf08fd33/mzaf_11657137150300317584.plus.aac.p.m4a
 trackId: 1503146370

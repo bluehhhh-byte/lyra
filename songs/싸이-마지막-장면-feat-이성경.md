@@ -10,12 +10,15 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e4/0e/d4/e40ed47b-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/81/0a/27810aa7-f444-778a-3716-76ac8c680494/mzaf_13911372632841396809.plus.aac.p.m4a
 trackId: 1234834112
 lang: ko
-tags: [한국, K-Pop, 2017]
+tags: [한국, K-Pop, 2017, Ballad]
 emotion: 이별
-keywords: [마지막, 장면, 이별, 추억, 기억]
+keywords: [마지막, 장면, 이별, 추억, 기억, 영화, 하늘, 노래, 눈물]
 date: 2026-07-08
 published: 2026-07-08T09:26:34.000Z
 comment: 이별을 마지막 장면이라는 메타포로 표현하며 지나온 사랑의 순간들을 아름다운 영화처럼 회고한다. 고통 속에서도 과거를 낭만적으로 받아들이고 담담하게 이별을 준비하는 모습이 인상적이다.
+external_url: https://music.apple.com/kr/album/%EB%A7%88%EC%A7%80%EB%A7%89-%EC%9E%A5%EB%A9%B4-feat-%EC%9D%B4%EC%84%B1%EA%B2%BD/1234833725?i=1234834112&uo=4
+duration: 251
+search_aliases: [마지막 장면, 싸이, 싸이-마지막-장면]
 ---
 [Chorus]
 너를 위해 부르는 내 마지막 노래

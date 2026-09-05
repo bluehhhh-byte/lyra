@@ -5,7 +5,7 @@ artist: Beck
 artist_ko: 
 album: Mellow Gold
 year: 1993
-genre: Pop
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/a5/a8/35a5a83a-7a68-2390-c069-6bee759f047a/00075021017924.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ab/95/d1/ab95d11b-9c9d-4653-8acb-24818f4fb3c3/mzaf_18407472333512369789.plus.aac.p.m4a
 trackId: 1440636710

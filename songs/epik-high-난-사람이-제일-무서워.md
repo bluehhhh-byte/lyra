@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/19/00/dd/1900dd2f-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ca/79/28/ca7928f1-108f-a068-d2a0-70dd1744daf3/mzaf_4714627960461954199.plus.aac.p.m4a
 trackId: 1299101335
 duration: 189
-genre: Hip-Hop/Rap
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2017]
 keywords: [사람, 시대, 벼]

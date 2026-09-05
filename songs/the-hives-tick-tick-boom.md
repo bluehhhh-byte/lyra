@@ -5,7 +5,7 @@ artist: The Hives
 artist_ko: 
 album: The Black and White Album
 year: 2007
-genre: Rock
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/19/b8/50/19b85064-cefd-86ca-0f48-ab264b51c801/00602517535800.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3a/bb/a8/3abba847-65c8-fd85-7abf-57e2b5187afb/mzaf_16059118029288679839.plus.aac.p.m4a
 trackId: 1443094618

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/78/66/af/mzi.tqsfweau.jp
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6b/b0/4f/6bb04f1c-2bd9-cbce-5360-999b22f394eb/mzaf_17303345930474756125.plus.aac.p.m4a
 trackId: 386566500
 duration: 229
-genre: ロック
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2000]
 keywords: [베란다, 구름, 꽃]

@@ -5,7 +5,7 @@ artist: Master Muzik
 artist_ko: 
 album: MASTER MUZIK, VOL.1
 year: 2026
-genre: 힙합/랩
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/aa/9f/e2/aa9fe2b1-9b29-5d96-8c2c-81382033126b/824296947449_cover.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/5e/3a/a85e3a3f-90a4-5779-6472-6dec2ca23125/mzaf_9558504234830704691.plus.aac.p.m4a
 trackId: 6781354993

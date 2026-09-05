@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4a/73/ab/4a73abdf-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/29/7a/80297a3e-7deb-f848-657c-b442d57f3ceb/mzaf_14384699331498293976.plus.aac.p.m4a
 trackId: 1716097101
 duration: 209
-genre: Rock
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]
 keywords: [탐욕, 기억, 마음]

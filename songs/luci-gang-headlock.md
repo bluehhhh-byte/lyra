@@ -5,7 +5,7 @@ artist: Luci Gang
 artist_ko: 
 album: Rolling Stone
 year: 2026
-genre: Korean Hip-Hop
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/74/76/98/747698de-0fbb-f3c3-710e-bf56fb632205/8800388555046_cover.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/44/b4/4f44b4d7-7d31-1932-524b-b412607f2e84/mzaf_2846457602607249535.plus.aac.p.m4a
 trackId: 6783698079

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a0/df/fc/a0dffc08-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/ad/ba/d2/adbad223-72eb-7cb7-6c51-faeb53f7138b/mzaf_623541918798098413.plus.aac.p.m4a
 trackId: 1536503917
 duration: 426
-genre: Rock
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2004]
 keywords: [세월, 지도, 손끝]

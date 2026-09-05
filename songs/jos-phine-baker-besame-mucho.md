@@ -5,7 +5,7 @@ artist: Joséphine Baker
 artist_ko: 
 album: C'est vous
 year: 1944
-genre: Pop
+genre: Jazz
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/v4/42/17/fc/4217fc3d-e600-c6b8-39c3-24fcdb8b4343/0724385524059_1500x1500_762dpi.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/47/d4/c6/47d4c681-5172-b7b2-11ed-19f276d4f3e8/mzaf_10334226027584176939.plus.aac.p.m4a
 trackId: 690623185

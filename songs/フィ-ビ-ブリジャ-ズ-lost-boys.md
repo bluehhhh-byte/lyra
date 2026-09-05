@@ -5,7 +5,7 @@ artist: Phoebe Bridgers
 artist_ko: 피비 브리저스
 album: Lost Weekend
 year: 2026
-genre: オルタナティブ
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/aa/9e/a6/aa9ea64a-bbf2-470e-b447-fa407b4645fa/66852.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/72/f8/b772f88d-f225-e486-72ba-49dc5df0a5d3/mzaf_10986784875511861707.plus.aac.p.m4a
 trackId: 6781051275

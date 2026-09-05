@@ -5,7 +5,7 @@ artist: The Dead Science
 artist_ko: 
 album: Frost Giant
 year: 2005
-genre: Alternative
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/07/57/25/075725f3-8811-448b-7f14-3594b50dd885/653225005024.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c8/2a/62/c82a621c-b716-5216-6a19-a9c80bf028c1/mzaf_622108283061765582.plus.aac.p.m4a
 trackId: 1716059495

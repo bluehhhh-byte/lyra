@@ -5,7 +5,7 @@ artist: XXX
 artist_ko: 
 album: LANGUAGE
 year: 2018
-genre: 얼터너티브 랩
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ea/b7/e1/eab7e116-fbcc-9721-4baf-561bdf7ce4f3/196006767235.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4a/57/50/4a575035-e110-b7bd-135d-a2f8556a9f1f/mzaf_2668119931507046213.plus.aac.p.m4a
 trackId: 1569396522

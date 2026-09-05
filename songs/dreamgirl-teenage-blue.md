@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f8/95/73/f89573a9-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/78/ac/94/78ac9450-6494-67dc-e6fd-7bb21f352e43/mzaf_2273289216700875999.plus.aac.p.m4a
 trackId: 1644213706
 duration: 235
-genre: Pop
+genre: Dream Pop
 lang: en
 tags: [영미, Dream Pop, 2015]
 keywords: [손, 시간, 방식]

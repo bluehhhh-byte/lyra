@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/82/48/0c8248a8-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/72/58/8f/72588fb9-5d47-8ab0-a911-b7f28a4278ce/mzaf_16984112233449798886.plus.aac.p.m4a
 trackId: 1123076821
 duration: 297
-genre: Alternative
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2005]
 keywords: [거짓말, 시간, 결정]

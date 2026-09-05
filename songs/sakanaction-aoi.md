@@ -5,7 +5,7 @@ artist: sakanaction
 artist_ko: 사카나쿠션
 album: Sakanaction
 year: 2013
-genre: Rock
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/60/9b/bb/609bbb5d-96eb-ae16-f08a-81a3223deb24/VICL-63999.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/92/40/b6/9240b6fb-33b8-d2fc-f871-c4533b315c13/mzaf_17459527279190172495.plus.aac.p.m4a
 trackId: 604748207

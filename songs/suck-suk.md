@@ -5,7 +5,7 @@ artist: Suck
 artist_ko: 
 album: Frog - EP
 year: 2019
-genre: Rock
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/6c/ce/06/6cce06aa-4401-94e2-5d5f-b8de85b5d996/193483667751.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c6/38/42/c6384223-87f5-2bd0-f7ad-c1a4ee9cf43b/mzaf_13594530329614713819.plus.aac.p.m4a
 trackId: 1458910726

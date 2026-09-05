@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/19/14/c2/1914c229-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/29/16/1d/29161d7f-d82d-a5ec-9e96-07504134a9dc/mzaf_17073301919307926525.plus.aac.p.m4a
 trackId: 1716886967
 duration: 194
-genre: R&B/소울
+genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2024]
 keywords: [한사람]

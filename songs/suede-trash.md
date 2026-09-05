@@ -5,7 +5,7 @@ artist: Suede
 artist_ko: 
 album: Coming Up (Remastered) [Deluxe Edition]
 year: 1996
-genre: 얼터너티브
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/e8/da/95e8da90-c547-2edc-9f3a-a2d329c73da4/mzi.pjogadiw.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/60/e8/bf/60e8bfab-6816-dcb2-b86e-3a1df2fde305/mzaf_8718331926636388619.plus.aac.p.m4a
 trackId: 437633401

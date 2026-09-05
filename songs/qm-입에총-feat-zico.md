@@ -5,7 +5,7 @@ artist: QM
 artist_ko: 
 album: 개미
 year: 2024
-genre: 한국 힙합
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ba/e7/17/bae7170f-d0ea-1efd-0b80-26f1900634d8/8800250624153_cover.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/8d/c9/e98dc9d3-9cf1-c076-00a9-8e9b66727ce7/mzaf_14282528730996174770.plus.aac.p.m4a
 trackId: 1742129537

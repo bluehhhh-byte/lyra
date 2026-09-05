@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/15/b3/ee/15b3ee17-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ca/dd/cf/caddcf8f-79ee-a41b-a673-19eb012fb518/mzaf_9257816281951618990.plus.aac.p.m4a
 trackId: 1814770852
 duration: 228
-genre: Rock
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
 keywords: [짐, 생각, 마음]

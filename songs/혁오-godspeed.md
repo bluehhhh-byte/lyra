@@ -5,7 +5,7 @@ artist: 혁오
 artist_ko:
 album: Godspeed! - Single
 year: 2026
-genre: 얼터너티브
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f5/b2/b6/f5b2b609-1f01-4047-81e0-011d1551ebc4/885288225587.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/b0/89/46b0893b-55dd-7a40-3056-c40dd585ee2c/mzaf_18338329598288997236.plus.aac.p.m4a
 trackId: 6800201205

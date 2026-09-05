@@ -5,7 +5,7 @@ artist: nafla
 artist_ko: 
 album: adrenaline - Single
 year: 2026
-genre: 힙합/랩
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/22/8f/95/228f951b-d5be-9f3d-1f94-1d2e80aeec3f/1200214804046.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/a9/5a/1fa95a35-137c-b52e-cee8-9a96ffc4e1f1/mzaf_4266863208498816381.plus.aac.p.m4a
 trackId: 6799875396

@@ -5,7 +5,7 @@ artist: Feist
 artist_ko: 
 album: The Reminder (Deluxe Version)
 year: 2007
-genre: Pop
+genre: Folk
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/cc/f4/46/ccf44641-40d8-018d-1bb2-e86ed8b7beeb/00602547820976.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ad/6a/14/ad6a14a9-c430-299a-3610-9101b26a64a3/mzaf_5467307022347590687.plus.aac.p.m4a
 trackId: 1440837520

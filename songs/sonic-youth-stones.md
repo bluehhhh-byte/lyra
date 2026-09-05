@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d0/7e/9e/d07e9e8d-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/63/1d/af/631daf58-0046-3372-12f1-40a2af76ac38/mzaf_14205793139722949343.plus.aac.p.m4a
 trackId: 1443147815
 duration: 430
-genre: Alternative
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
 keywords: [돌멩이, 별, 심장]

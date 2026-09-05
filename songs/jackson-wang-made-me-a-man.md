@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/01/dd/df/01dddf29-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/e3/03/15e303e6-ff84-b5d8-8758-f7e8bb0b1559/mzaf_9545263500413777717.plus.aac.p.m4a
 trackId: 1809248585
 duration: 196
-genre: Pop
+genre: K-Pop
 lang: en
 tags: [아시아, K-Pop, 2025]
 keywords: [목소리, 빛, 어둠]

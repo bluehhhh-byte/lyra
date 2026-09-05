@@ -5,7 +5,7 @@ artist: Incubus
 artist_ko: 
 album: Light Grenades
 year: 2006
-genre: Rock
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/39/d6/b9/39d6b928-3782-0463-3108-5ba555039995/828768385227.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b0/c1/b9/b0c1b91b-d92f-c097-61dd-151b0012fd4e/mzaf_12624950399998015187.plus.aac.p.m4a
 trackId: 204285262

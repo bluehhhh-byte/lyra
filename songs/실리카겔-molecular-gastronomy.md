@@ -5,7 +5,7 @@ artist: 실리카겔
 artist_ko: 
 album: Molecular Gastronomy - Single
 year: 2026
-genre: 록
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/13/91/41/1391414e-34ec-2b60-5949-7a1d72c490fc/8721555121249.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/98/44/fd/9844fdec-c48f-b299-117d-6f56b7ae3eb1/mzaf_11712165986432484971.plus.aac.p.m4a
 trackId: 6780341201

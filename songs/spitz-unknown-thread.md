@@ -5,7 +5,7 @@ artist: Spitz
 artist_ko: 스피츠
 album: Unknown Thread - Single
 year: 2026
-genre: 록
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ab/0d/29/ab0d292f-3675-729e-4a8f-eb79a4c88367/26UMGIM87104.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/60/b9/6860b926-1805-bf5f-32b5-4e494957e410/mzaf_17124243015734375483.plus.aac.p.m4a
 trackId: 6793888335

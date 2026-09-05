@@ -5,7 +5,7 @@ artist: Yuuri
 artist_ko: 유우리
 album: The World Has Ended - Single
 year: 2026
-genre: Rock
+genre: J-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/9f/61/64/9f6164eb-b267-ea92-ccdf-83c98b166dde/4547366798104.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/5f/d2/195fd287-b663-8d9f-dccf-fda16f001e26/mzaf_3524181223807548707.plus.aac.p.m4a
 trackId: 1863475244

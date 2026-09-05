@@ -5,7 +5,7 @@ artist: Jasmin Tabatabai
 artist_ko: 
 album: Only Live
 year: 2002
-genre: 팝
+genre: Indie Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/07/66/d5/0766d58e-d3da-ca7e-fe3d-a3a2402a2bc5/mzi.nxgpxyqd.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/e2/fa/c7e2fa64-af2c-5e0b-23f1-5f3331ca913a/mzaf_6342198889463124269.plus.aac.p.m4a
 trackId: 403067963

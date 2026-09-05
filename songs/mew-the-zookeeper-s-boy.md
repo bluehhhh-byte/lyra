@@ -5,7 +5,7 @@ artist: Mew
 artist_ko: 
 album: and the Glass Handed Kites
 year: 2001
-genre: Pop
+genre: Dream Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/2a/4f/6b/mzi.iklxblrf.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b2/26/0f/b2260fa4-a3c4-df4b-36a0-30bcf557e625/mzaf_4172255073848765737.plus.aac.p.m4a
 trackId: 316009265

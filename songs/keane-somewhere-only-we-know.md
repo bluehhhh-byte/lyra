@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/a6/f7/89a6f7be-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/93/fe/fa93fec8-adc4-1398-447a-69aca2622c25/mzaf_13909236668081502666.plus.aac.p.m4a
 trackId: 1445287036
 duration: 239
-genre: Pop
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
 keywords: [거리, 강가, 땅]

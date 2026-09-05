@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/91/7c/2b/917c2ba3-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/bb/fb/78/bbfb78e5-ce8c-934a-4426-a1b6a2b21fbb/mzaf_2131467345876644712.plus.aac.p.m4a
 trackId: 1724881509
 duration: 167
-genre: Alternative
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2020]
 keywords: [악마, 연기, 웃음]

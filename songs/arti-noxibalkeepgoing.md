@@ -5,7 +5,7 @@ artist: Arti
 artist_ko: 
 album: NoXibalKeepGoing - Single
 year: 2026
-genre: 일렉트로니카
+genre: Electronic
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/97/31/c1/9731c1ba-5dd0-3835-d84c-3f12d9d0460b/8800366518933.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/30/d6/d430d690-a7fb-efda-ba77-b8c7b41342a8/mzaf_18320079329295056029.plus.aac.p.m4a
 trackId: 6786602688

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/0f/35/dd/0f35dda2-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/00/2a/27/002a27c0-cdca-836a-46a0-1a44ab051886/mzaf_11631914888247771486.plus.aac.p.m4a
 trackId: 1510740254
 duration: 276
-genre: Alternative
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2020]
 keywords: [눈, 숨, 거리]

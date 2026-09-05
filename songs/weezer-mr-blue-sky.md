@@ -5,7 +5,7 @@ artist: Weezer
 artist_ko: 
 album: Weezer (Teal Album)
 year: 2019
-genre: Alternative
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/e6/70/97e670f6-361b-a23d-617a-52bafcd631cd/075679854247.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/1b/45/3b/1b453b39-0dfb-8128-f171-f3960a1ad21b/mzaf_107687258400386577.plus.aac.p.m4a
 trackId: 1450271331

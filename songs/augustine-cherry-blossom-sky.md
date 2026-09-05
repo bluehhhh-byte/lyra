@@ -5,7 +5,7 @@ artist: Augustine
 artist_ko: 
 album: In the Margins, In Shades of Pale Blue - EP
 year: 2026
-genre: Pop
+genre: Indie Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/13/af/5c/13af5c48-0f78-f300-1b91-bee9b5ac2b73/7333591574630.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/56/03/32/560332a0-d3e7-5c87-f919-f29afa341168/mzaf_1864502996969577816.plus.aac.p.m4a
 trackId: 6778416956

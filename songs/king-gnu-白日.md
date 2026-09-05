@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/06/58/ed/0658ed8e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/b7/58/2ab758f7-3091-6189-13b3-1233f28f2023/mzaf_1011488686063791738.plus.aac.p.m4a
 trackId: 1770456862
 duration: 292
-genre: Alternative
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2019]
 keywords: [죄, 내일, 예전]

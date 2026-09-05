@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/79/9e/cc/799ecc27-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/76/a8/15/76a81567-4913-c12b-11f2-85f5965f4c40/mzaf_4620336519692513665.plus.aac.p.m4a
 trackId: 915106304
 duration: 326
-genre: 팝
+genre: Folk
 lang: en
 tags: [유럽, Folk, 2014]
 keywords: [거리, 도움, 사람]

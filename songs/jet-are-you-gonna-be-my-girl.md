@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b8/ec/96/b8ec96fd-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/02/2a/73022a7c-ad2d-e498-821d-5ecbc8f76dbf/mzaf_3418002418452155467.plus.aac.p.m4a
 trackId: 1778048261
 duration: 214
-genre: 록
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2003]
 keywords: [손, 사람]

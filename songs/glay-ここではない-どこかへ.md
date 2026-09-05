@@ -4,7 +4,7 @@ title_ko: 여기가 아닌 어딘가로
 artist: GLAY
 album: HEAVY GAUGE
 year: 1999
-genre: Rock
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/04/92/4d0492a2-11e1-e64a-181b-7118e0bc4f6b/6.HEAVY_GAUGE_itunes.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/25/3b/35253bed-202a-3af8-14ec-58d96abc934e/mzaf_12919756588202327135.plus.aac.p.m4a
 trackId: 989835113
@@ -15,6 +15,8 @@ keywords: [소원, 세상, 항해, 영혼]
 date: 2026-07-07
 published: 2026-07-07T19:56:45.000Z
 comment: 이 곡은 순수했던 시절을 뒤로하고 미지의 어딘가로 나아가는 청춘의 고뇌와 희망을 담고 있다. 슬픔 가득한 세상에서 흔들림 없는 영혼으로 새로운 항해를 떠나는 다짐이 느껴지는 곡이다.
+duplicate_of: glay-ここではない-どこかへ-2
+duplicate_merged_at: 2026-09-05T01:01:54.511Z
 ---
 [Verse 1]
 どんな願いならばかなえられないと言うのか?

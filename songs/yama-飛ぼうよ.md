@@ -5,7 +5,7 @@ artist: yama
 artist_ko: 야마
 album: 飛ぶ時 / 飛ぼうよ - Single
 year: 2026
-genre: Rock
+genre: J-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/40/6f/fe/406ffe67-b650-6f46-5aa6-c6dc947e23b5/4547366818246.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/85/73/7685739f-e3b6-5eee-b92a-8e167d3bdcbc/mzaf_4931745318369213744.plus.aac.p.m4a
 trackId: 1890060969

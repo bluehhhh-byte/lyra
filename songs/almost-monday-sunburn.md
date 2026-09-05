@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/67/8d/89678d2e-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/85/14/76851416-517e-2232-18ed-074ce7476e25/mzaf_4424314287152803226.plus.aac.p.m4a
 trackId: 1746137278
 duration: 176
-genre: Alternative
+genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
 keywords: [화상, 캘리포니아, 폭염]

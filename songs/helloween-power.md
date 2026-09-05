@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/58/ec/c658ec77-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/39/13/0d/39130d4a-9379-92e7-b370-e5c522c5d3c2/mzaf_16934042998981825467.plus.aac.p.m4a
 trackId: 1725517907
 duration: 208
-genre: 록
+genre: Heavy Metal
 lang: en
 tags: [유럽, Heavy Metal, 1996]
 keywords: [사람, 기회, 인생]

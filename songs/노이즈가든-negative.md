@@ -5,7 +5,7 @@ artist: 노이즈가든
 artist_ko: 
 album: '26 demo - EP
 year: 2026
-genre: Rock
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/7b/70/0b7b70e5-8151-0fd4-dd01-22149bd0fe6a/8800366513778.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/3b/0e/0c3b0ed4-9a83-f5d4-a1d9-299f469399c3/mzaf_4111128555573059280.plus.aac.p.m4a
 trackId: 6782785474

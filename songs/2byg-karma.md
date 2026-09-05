@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/cc/29/b9/cc29b9ce-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/64/15/8c6415d0-d8a2-e8c3-0153-8ae900304812/mzaf_17339461757579956988.plus.aac.p.m4a
 trackId: 1807680604
 duration: 161
-genre: R&B/소울
+genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2025]
 keywords: [업보, 세상, 눈물]

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e6/e5/6d/e6e56d12-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7e/88/3f/7e883f80-81a4-e0e9-693e-f3b8f640d07b/mzaf_18061642981993555818.plus.aac.p.m4a
 trackId: 1572947688
 duration: 244
-genre: Hip-Hop/Rap
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
 keywords: [비, 음악, 노래]

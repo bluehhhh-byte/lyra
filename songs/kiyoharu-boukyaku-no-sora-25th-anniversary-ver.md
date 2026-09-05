@@ -5,7 +5,7 @@ artist: SADS
 artist_ko: 사즈
 album: BABYLON
 year: 2000
-genre: Rock
+genre: Visual Kei
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/26/bb/4c/26bb4ce8-8b74-1809-2d1f-36c4d8e4e52c/PCCA_04904.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/32/67/6e326709-1a87-e2e1-7826-d252ea14a8ab/mzaf_14330255608585935786.plus.aac.p.m4a
 trackId: 1501324610

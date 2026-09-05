@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8b/8b/20/8b8b2083-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/8c/e1/b08ce131-3860-fdbd-43a9-dc4bf1ec78f8/mzaf_18185086236351287888.plus.aac.p.m4a
 trackId: 1682357121
 duration: 170
-genre: 재즈
+genre: Jazz
 lang: en
 tags: [유럽, Jazz, 2023]
 keywords: [침묵, 눈빛, 아픔]

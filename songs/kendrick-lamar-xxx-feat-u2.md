@@ -5,7 +5,7 @@ artist: Kendrick Lamar
 artist_ko:
 album: DAMN.
 year: 2017
-genre: Hip-Hop/Rap
+genre: Hip-Hop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ab/16/ef/ab16efe9-e7f1-66ec-021c-5592a23f0f9e/17UMGIM88793.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ff/81/54/ff8154db-f3fc-1380-3fd9-f60469a99842/mzaf_14694166519868125401.plus.aac.p.m4a
 trackId: 1440882173

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music/76/d2/96/mzi.jbibgbul.jp
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a7/5a/39/a75a39d2-26b9-bea7-b9d3-783049cb6884/mzaf_2378556792784439557.plus.aac.p.m4a
 trackId: 386566257
 duration: 211
-genre: ロック
+genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1997]
 keywords: [여름, 희망, 바람]

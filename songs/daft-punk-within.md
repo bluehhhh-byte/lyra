@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/43/5f/e8435ffa-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/56/90/11/56901128-5f5e-67ff-f760-2cf14e00b04c/mzaf_4629559715078327006.plus.aac.p.m4a
 trackId: 617154361
 duration: 229
-genre: 팝
+genre: Electronic
 lang: en
 tags: [유럽, Electronic, 2013]
 keywords: [세계, 방, 문]

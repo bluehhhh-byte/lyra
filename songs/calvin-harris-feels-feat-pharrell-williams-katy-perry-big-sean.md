@@ -5,7 +5,7 @@ artist: Calvin Harris
 artist_ko:
 album: Funk Wav Bounces Vol. 1
 year: 2017
-genre: 댄스
+genre: Disco
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/92/c3/ba/92c3badd-5a48-9ae0-80cf-07d0c5f4d3f4/886446469621.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8a/ce/f1/8acef1df-1726-27b5-f50d-b6a816612351/mzaf_2607011616134418517.plus.aac.p.m4a
 trackId: 1248833201

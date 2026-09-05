@@ -5,7 +5,7 @@ artist: Tame Impala
 artist_ko: 
 album: Dracula - Single
 year: 2025
-genre: Alternative
+genre: Indie Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/36/be/b4/36beb41f-c644-55cb-9fbb-bf0622a66653/196873644783.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/5d/31/715d3169-5fba-a0b7-da24-2aefc83796cf/mzaf_8089500935177582820.plus.aac.p.m4a
 trackId: 1842444457

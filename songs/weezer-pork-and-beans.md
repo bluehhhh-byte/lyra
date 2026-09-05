@@ -5,7 +5,7 @@ artist: Weezer
 artist_ko: 
 album: Weezer (Red Album) [Deluxe Edition]
 year: 2008
-genre: Alternative
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5c/40/7d/5c407dc1-d14d-51cd-1a03-6857e9deaf37/16UMGIM53164.rgb.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/45/ed/4845ed2c-ea6c-a7d8-b91e-bce1615edda6/mzaf_16181841565472395520.plus.aac.p.m4a
 trackId: 1440865978

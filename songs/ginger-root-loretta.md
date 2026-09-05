@@ -5,7 +5,7 @@ artist: Ginger Root
 artist_ko:
 album: City Slicker - EP
 year: 2021
-genre: Alternative
+genre: Indie Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/82/2b/e6/822be6ea-be0e-4367-77ba-f8d38cd06fbc/60303.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/0c/ca/a40ccaa5-8b72-0fd7-ca92-04b7e6d500ca/mzaf_17723303126226117153.plus.aac.p.m4a
 trackId: 1859681961

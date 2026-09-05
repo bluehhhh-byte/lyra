@@ -5,7 +5,7 @@ artist: The Smile
 artist_ko: 
 album: Wall of Eyes
 year: 2024
-genre: オルタナティブ
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/df/28/09/df2809ad-cedd-d09d-6360-bcfbff610828/191404139479.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/55/2a/37/552a3731-6177-059c-4016-743d41f6239c/mzaf_11968578488374893648.plus.aac.p.m4a
 trackId: 1711359473

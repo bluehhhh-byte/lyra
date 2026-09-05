@@ -5,7 +5,7 @@ artist: Radiohead
 artist_ko: 
 album: In Rainbows
 year: 2007
-genre: Alternative
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/dd/50/c7/dd50c790-99ac-d3d0-5ab8-e3891fb8fd52/634904032463.png/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/49/c8/67/49c8676d-ee26-77b6-a0e5-1134e91af4a1/mzaf_10511908633822741203.plus.aac.p.m4a
 trackId: 1109715467

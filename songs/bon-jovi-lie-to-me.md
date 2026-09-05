@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/42/c7/95/42c7950c-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/df/c4/25/dfc4250e-7d20-2887-f496-d31b0ae8f9c5/mzaf_15701536531572308763.plus.aac.p.m4a
 trackId: 1440854578
 duration: 334
-genre: Rock
+genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1995]
 keywords: [집세, 꿈, 고생]

@@ -5,7 +5,7 @@ artist: PIA
 artist_ko: 피아
 album: PIA
 year: 2015
-genre: Rock
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/77/90/77/779077f8-29b7-d089-efcd-0b9153858db5/8809445291682.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/ce/da/e7/cedae7a9-6a5e-9eb9-f8e1-df812fb83a02/mzaf_8170083480325467975.plus.aac.p.m4a
 trackId: 1561361719

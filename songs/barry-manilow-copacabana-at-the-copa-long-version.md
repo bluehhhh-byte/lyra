@@ -5,7 +5,7 @@ artist: Barry Manilow
 artist_ko: 
 album: Ultimate Manilow
 year: 1978
-genre: Easy Listening
+genre: Disco
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4f/1e/49/4f1e498c-bfd1-9a74-bfb9-e4945e3ce851/mzi.nbijprbi.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/74/d1/01/74d1019d-cafa-a411-bed0-8ad14c55f8f8/mzaf_14776519290556573737.plus.aac.p.m4a
 trackId: 268160021

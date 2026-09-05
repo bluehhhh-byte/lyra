@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/9d/f5/0c9df53b-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/58/75/7f/58757f6f-33d8-9a77-eeff-efd6233c5983/mzaf_3859808073076934107.plus.aac.p.m4a
 trackId: 714597958
 duration: 209
-genre: Alternative
+genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
 keywords: [세상, 섬, 치맛자락]

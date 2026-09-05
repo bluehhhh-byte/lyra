@@ -5,7 +5,7 @@ artist: GLAY
 artist_ko: 글레이
 album: G4・Ⅳ - EP
 year: 2015
-genre: Rock
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bb/9a/43/bb9a4354-8eed-ac46-24aa-2874a7e50c12/G4_JKT_RGB.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/17/c2/f2/17c2f293-23f5-6bd3-222b-74bd1e8ac7e5/mzaf_12507648925774604950.plus.aac.p.m4a
 trackId: 1102709192

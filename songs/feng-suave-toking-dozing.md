@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ca/9d/30/ca9d3000-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/b9/81/18b98119-ed0a-49b0-7dd1-4da4c515980e/mzaf_14357443549978838405.plus.aac.p.m4a
 trackId: 1882351609
 duration: 227
-genre: Alternative
+genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2020]
 keywords: [돌고래, 고래, 담배]

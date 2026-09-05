@@ -5,7 +5,7 @@ artist: The Strokes
 artist_ko: 
 album: Reality Awaits
 year: 2026
-genre: 얼터너티브
+genre: Alternative Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/b5/73/8cb573b1-f77f-6962-a5fd-6d714440498a/196874161005.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/36/b9/e836b9e3-1ead-7e07-d568-13b3f65f1d93/mzaf_4894394463823184747.plus.aac.p.m4a
 trackId: 1891161447

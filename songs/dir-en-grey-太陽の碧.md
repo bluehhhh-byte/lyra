@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/7e/af/25/7eaf25ef-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/5c/c5/12/5cc512d7-ce7d-5a8c-3722-f8ed21c15931/mzaf_13442242822175313748.plus.aac.p.m4a
 trackId: 1624685458
 duration: 366
-genre: メタル
+genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2000]
 keywords: [한여름, 태양, 전화]

@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/af/35/8b/af358b06-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/48/47/81484725-99a9-867a-a094-25a390e82a31/mzaf_2642985205707173460.plus.aac.p.m4a
 trackId: 1796484133
 duration: 190
-genre: 얼터너티브
+genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2024]
 keywords: [칼날, 관점]

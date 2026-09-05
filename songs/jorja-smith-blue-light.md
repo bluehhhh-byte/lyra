@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/9f/da/5d/9fda5dfb-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/00/d2/2f00d250-a1ec-cc9f-08c9-e595baffc29c/mzaf_4036460359052677984.plus.aac.p.m4a
 trackId: 1373567936
 duration: 250
-genre: R&B/소울
+genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2018]
 keywords: [불빛, 사이렌, 경찰차]

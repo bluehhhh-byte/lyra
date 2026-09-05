@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a8/3d/5b/a83d5b97-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/ff/b2/bfffb2b1-1413-3914-0621-c2175dfc0c9d/mzaf_6401893930641122969.plus.aac.p.m4a
 trackId: 1824139960
 duration: 202
-genre: Hip-Hop/Rap
+genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2025]
 keywords: [미소, 향기, 심장]

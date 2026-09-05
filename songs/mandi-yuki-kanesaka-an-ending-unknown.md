@@ -5,7 +5,7 @@ artist: MANDI & Yuki Kanesaka
 artist_ko: MANDI & 카네사카 유키
 album: TVアニメ『日本三國』Original Soundtrack
 year: 2026
-genre: アニメ
+genre: J-Pop
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/ad/72/e9ad72e3-3a91-b1c6-cf90-33e35c7b8d42/nihon.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fe/2d/f7/fe2df703-b94e-7a27-74e3-087018eaa382/mzaf_18430923528731029116.plus.aac.p.m4a
 trackId: 6773595996
