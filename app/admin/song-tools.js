@@ -32,10 +32,16 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
 
   const regenMeta = async (slug) => {
-    set(slug, { busy: "meta", err: "", msg: "" });
+    set(slug, { busy: "meta", err: "", msg: "", previousComment: "" });
     try {
-      const { updated } = await api("regenMeta", { slug });
-      set(slug, { msg: updated?.length ? `갱신: ${updated.join(", ")}` : "변경 없음" });
+      const { updated, comment, previousComment } = await api("regenMeta", { slug });
+      // 메타 재생성은 코멘트를 덮어쓴다. 필드 이름만 알려주면 무엇으로 바뀌었는지,
+      // 무엇이 사라졌는지 확인할 길이 없어 되돌릴지 판단할 수 없다.
+      set(slug, {
+        msg: updated?.length ? `갱신: ${updated.join(", ")}` : "변경 없음",
+        comment: comment ?? undefined,
+        previousComment: comment && previousComment && comment !== previousComment ? previousComment : "",
+      });
     } catch (e) {
       set(slug, { err: e.message });
     } finally {
@@ -44,7 +50,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const regen = async (slug) => {
-    set(slug, { busy: "comment", err: "", msg: "" });
+    set(slug, { busy: "comment", err: "", msg: "", previousComment: "" });
     try {
       const { comment, appearanceSuggestion, commentSources = [] } = await api("regenComment", { slug });
       if (appearanceSuggestion) {
@@ -61,7 +67,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const notes = async (slug) => {
-    set(slug, { busy: "notes", err: "", msg: "" });
+    set(slug, { busy: "notes", err: "", msg: "", previousComment: "" });
     try {
       const { notes: n } = await api("regenNotes", { slug });
       set(slug, { msg: `해설 ${n}개 생성·저장 완료` });
@@ -73,7 +79,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const restanza = async (slug) => {
-    set(slug, { busy: "stanza", err: "", msg: "" });
+    set(slug, { busy: "stanza", err: "", msg: "", previousComment: "" });
     try {
       const { stanzas } = await api("restanza", { slug });
       set(slug, { msg: `연 ${stanzas}개로 재구성·저장 완료` });
@@ -121,7 +127,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const addTrans = async (slug) => {
-    set(slug, { busy: "trans", err: "", msg: "" });
+    set(slug, { busy: "trans", err: "", msg: "", previousComment: "" });
     try {
       await api("addTranslation", { slug });
       set(slug, { msg: "번역 추가·저장 완료" });
@@ -134,7 +140,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
 
   const mergeDuplicate = async (canonicalSlug, duplicateSlug) => {
     if (!window.confirm("대표 곡의 기존 값은 유지하고, 중복 기록은 삭제하지 않은 채 대표 곡으로 연결합니다. 계속할까요?")) return;
-    set(canonicalSlug, { busy: "merge", err: "", msg: "" });
+    set(canonicalSlug, { busy: "merge", err: "", msg: "", previousComment: "" });
     try {
       const result = await api("mergeDuplicate", { canonicalSlug, duplicateSlug });
       setDuplicates((groups) => groups.filter((group) => !group.songs.some((song) => song.slug === duplicateSlug)));
@@ -341,15 +347,24 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
               </div>
               </div>
             </div>
-            <p className="mt-1 pl-12 text-xs text-muted">
+            {/* 결과 문구가 코멘트를 가리면, 덮어쓴 내용을 확인하지 못한 채 넘어가게 된다.
+                문구는 위에, 바뀐 코멘트는 그 아래에 둔다. */}
+            <div className="mt-1 pl-12 text-xs text-muted">
               {st.err ? (
                 <AdminErrorMessage message={st.err} compact />
-              ) : st.msg ? (
-                <span className="text-accent">{st.msg}</span>
               ) : (
-                st.comment ?? s.comment ?? "(코멘트 없음)"
+                <>
+                  {st.msg && <p className="text-accent">{st.msg}</p>}
+                  <p className={st.msg ? "mt-1" : ""}>{st.comment ?? s.comment ?? "(코멘트 없음)"}</p>
+                  {st.previousComment && (
+                    <p className="mt-1 border-l-2 border-line pl-2">
+                      <span className="mr-1.5 text-[10px] font-semibold uppercase tracking-wider text-accent">이전</span>
+                      {st.previousComment}
+                    </p>
+                  )}
+                </>
               )}
-            </p>
+            </div>
           </li>
         );
       })}

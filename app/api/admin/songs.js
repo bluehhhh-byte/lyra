@@ -577,7 +577,13 @@ ${koText.slice(0, 2000)}`,
     }
     if (!updated.length) return Response.json({ updated: [] });
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
-    return Response.json({ updated });
+    // 필드 이름만 돌려주면 코멘트가 무엇으로 바뀌었는지 화면에서 확인할 길이 없다.
+    // 덮어쓰기라 되돌리려면 무엇이 사라졌는지도 보여야 한다.
+    return Response.json({
+      updated,
+      comment: fmValue(out.match(FM)?.[1] || "", "comment"),
+      previousComment: fmValue(fm, "comment"),
+    });
   }
 
   // Reclassify ONLY the genre (frontmatter `genre:` + the genre tag), leaving
