@@ -62,7 +62,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
       if (degraded) {
         // 웹 조사가 막혀 가사만으로 썼다는 사실을 결과에 남긴다 — 출처가 왜 없는지
         // 나중에 다시 물어보게 되는 것이 이 화면의 반복된 문제였다.
-        set(slug, { comment, previousComment: prev, msg: `가사 기반으로 갱신 (웹 조사 못 함) · ${degraded}` });
+        set(slug, { comment, previousComment: prev, msg: `웹 조사 못 함 · 가사만으로 갱신 · ${degraded}` });
       } else if (appearanceSuggestion) {
         const { unchanged } = await api("appearanceSave", { songSlug: slug, ...appearanceSuggestion });
         set(slug, { comment, previousComment: prev, msg: unchanged ? `코멘트 갱신 · 작품 정보 확인됨 · 근거 ${commentSources.length}개` : `코멘트·작품 정보 갱신 · 근거 ${commentSources.length}개` });
@@ -253,7 +253,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
           생성
         </button>
         <span className="col-span-2 text-xs text-muted sm:col-span-1">
-          {recsBusy || "메타 재생성은 가사만 보고 태그·코멘트를 덮어씀 · 코멘트는 웹에서 근거를 찾아 출처까지 남김 · AI 리포트는 /songs/taste 상단에 게시"}
+          {recsBusy || "가사 분석은 가사만 보고 태그·코멘트를 덮어씀 · 웹 조사는 근거를 찾아 출처까지 남김 · AI 리포트는 /songs/taste 상단에 게시"}
         </span>
       </div>
       <div className="mb-3  border border-line bg-surface p-3">
@@ -319,14 +319,14 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
                 disabled={!!st.busy}
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
-                {st.busy === "meta" ? "생성 중…" : "메타 재생성 (가사만)"}
+                {st.busy === "meta" ? "분석 중…" : "가사 분석"}
               </button>
               <button
                 onClick={() => regen(s.slug)}
                 disabled={!!st.busy}
                 className="shrink-0 text-xs text-accent hover:underline disabled:opacity-40"
               >
-                {st.busy === "comment" ? "조사 중…" : "코멘트 (웹 조사)"}
+                {st.busy === "comment" ? "조사 중…" : "웹 조사"}
               </button>
               <button
                 onClick={() => notes(s.slug)}
