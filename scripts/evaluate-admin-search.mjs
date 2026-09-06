@@ -5,6 +5,7 @@ import { getAllSongs } from "../lib/songs.js";
 import { itunesToResult, searchItunesStorePage } from "../lib/admin/itunes.js";
 import {
   buildSearchQueries,
+  knownArtistSet,
   mergeExternalSongResults,
   searchQualityMetrics,
 } from "../lib/admin/music-search.js";
@@ -13,13 +14,14 @@ const cases = JSON.parse(fs.readFileSync(new URL("../lib/admin-search-quality-ca
 const limitArg = process.argv.find((value) => value.startsWith("--limit="));
 const selected = limitArg ? cases.slice(0, Math.max(1, Number(limitArg.split("=")[1]) || 1)) : cases;
 const songs = getAllSongs();
+const knownArtists = knownArtistSet(songs);
 const resultsByQuery = {};
 
 for (const item of selected) {
   const variants = buildSearchQueries(item.query, songs);
   const externalQuery = variants.at(-1) || item.query;
   const apple = await searchItunesStorePage(externalQuery, item.country || "US", { limit: 50, offset: 0 });
-  resultsByQuery[item.query] = mergeExternalSongResults([apple.results.map(itunesToResult)], variants);
+  resultsByQuery[item.query] = mergeExternalSongResults([apple.results.map(itunesToResult)], variants, knownArtists);
 }
 
 const report = searchQualityMetrics(selected, resultsByQuery);

@@ -9,7 +9,7 @@ import { researchSongContext } from "../../../lib/admin/song-appearance-suggest"
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
 import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
 import { normText, fetchArtistCatalog, withTimeout, itunesToResult, searchItunesStorePage } from "../../../lib/admin/itunes";
-import { buildSearchQueries, mergeExternalSongResults } from "../../../lib/admin/music-search";
+import { buildSearchQueries, knownArtistSet, mergeExternalSongResults } from "../../../lib/admin/music-search";
 import {
   needsReading, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
@@ -113,7 +113,7 @@ export async function handleSongs(action, body) {
     for (const r of catalog)
       if (!titleWords.length || titleWords.some((w) => normText(r.trackName).includes(w))) add(r);
     const appleResults = pool.map(itunesToResult);
-    const results = mergeExternalSongResults([appleResults], searchQueries)
+    const results = mergeExternalSongResults([appleResults], searchQueries, knownArtistSet(registeredSongs))
       .map((result) => ({ ...result, registered: findDuplicateSong(result, registeredSongs) }));
     const failedStores = storePages.filter((page) => !page.ok);
     const appleOk = appleOffset === null || storePages.some((page) => page.ok);
