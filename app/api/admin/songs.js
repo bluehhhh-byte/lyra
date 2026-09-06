@@ -7,7 +7,7 @@ import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
 import { geminiText, GEMINI_LITE_MODEL, LONG_FORM_TIMEOUT_MS, withReason } from "../../../lib/admin/gemini";
 import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
 import { FM, fmValue, isBlank, parseTags, setField } from "../../../lib/admin/frontmatter";
-import { hasCJK, nativeMeta, findLyrics } from "../../../lib/admin/lrclib";
+import { hasCJK, nativeMeta, romanizedTitle, findLyrics } from "../../../lib/admin/lrclib";
 import { normText, fetchArtistCatalog, withTimeout, itunesToResult, searchItunesStorePage } from "../../../lib/admin/itunes";
 import { buildSearchQueries, knownArtistSet, mergeExternalSongResults } from "../../../lib/admin/music-search";
 import {
@@ -1167,10 +1167,15 @@ ${listed}`,
         if (restanza) lyricBody = restanza;
       } catch {}
     }
+    // 제목이 일본어면 로마자 표기를 검색 별칭으로 함께 넣는다. 없으면 관리자
+    // 등록곡 검색에서 "myaku"로는 脈을 찾을 수 없다 — 저장된 어느 칸에도
+    // 로마자가 없기 때문이다. 실패해도 등록을 막지 않는다.
+    const romaji = hasCJK(title) ? await romanizedTitle(trackId).catch(() => "") : "";
+    const searchAliases = romaji && normText(romaji) !== normText(title) ? [romaji] : [];
     const md = `---
 title: ${title}
 title_ko: ${titleKo || (lang === "ko" ? title : "")}
-artist: ${artist}
+${searchAliases.length ? `search_aliases: [${searchAliases.join(", ")}]\n` : ""}artist: ${artist}
 artist_ko: ${artistKo || ""}
 album: ${album || ""}
 year: ${year || ""}
