@@ -1,12 +1,11 @@
 // 관리자 외부 곡 검색의 실제 품질을 같은 기준으로 반복 측정한다.
-// Apple 호출은 사례당 한 국가·한 번으로 제한하고 MusicBrainz는 자체 1초 제한을 따른다.
+// Apple 호출은 사례당 한 국가·한 번으로 제한한다. 검색원은 Apple 하나뿐이다.
 import fs from "node:fs";
 import { getAllSongs } from "../lib/songs.js";
 import { itunesToResult, searchItunesStorePage } from "../lib/admin/itunes.js";
 import {
   buildSearchQueries,
   mergeExternalSongResults,
-  searchMusicBrainz,
   searchQualityMetrics,
 } from "../lib/admin/music-search.js";
 
@@ -19,14 +18,8 @@ const resultsByQuery = {};
 for (const item of selected) {
   const variants = buildSearchQueries(item.query, songs);
   const externalQuery = variants.at(-1) || item.query;
-  const [apple, musicBrainz] = await Promise.all([
-    searchItunesStorePage(externalQuery, item.country || "US", { limit: 50, offset: 0 }),
-    searchMusicBrainz(externalQuery, { limit: 30, offset: 0 }),
-  ]);
-  resultsByQuery[item.query] = mergeExternalSongResults(
-    [apple.results.map(itunesToResult), musicBrainz.results],
-    variants,
-  );
+  const apple = await searchItunesStorePage(externalQuery, item.country || "US", { limit: 50, offset: 0 });
+  resultsByQuery[item.query] = mergeExternalSongResults([apple.results.map(itunesToResult)], variants);
 }
 
 const report = searchQualityMetrics(selected, resultsByQuery);
