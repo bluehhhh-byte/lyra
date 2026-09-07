@@ -37,6 +37,9 @@ const SERIF = CAROUSEL_THEME.serif;
 const INK = "#f6f1e4";
 const INK_DIM = "rgba(246,241,228,0.84)";
 const PAD = CAROUSEL_THEME.padding;
+// 1장과 2장이 같은 상자로 사진을 자른다. 상자가 다르면 drawImageCover의
+// 잘라내기 기준이 달라져, 카드를 넘길 때 사진이 확대·이동한 것처럼 보인다.
+const COVER_ART_HEIGHT = 1000;
 
 export function drawImageCover(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.width, height / image.height);
@@ -255,26 +258,25 @@ async function drawCoverCard({ song, art }) {
   ctx.fillRect(0, 0, W, H);
 
   // 텍스트 블록에 충분한 숨 쉴 공간을 남기면서 커버의 존재감은 유지한다.
-  const coverArtHeight = 1000;
   if (art) {
-    drawImageCover(ctx, art, 0, 0, W, coverArtHeight);
+    drawImageCover(ctx, art, 0, 0, W, COVER_ART_HEIGHT);
   } else {
     ctx.fillStyle = "#1a1a1e";
-    ctx.fillRect(0, 0, W, coverArtHeight);
+    ctx.fillRect(0, 0, W, COVER_ART_HEIGHT);
   }
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다.
   // 머리글을 아트 위에 얹는 카드는 그 글이 앉을 만큼 어둠막을 길게 끌어올린다.
   const hook = cleanListenWhen(song.listen_when);
   const scrimHeight = hook ? 360 : 120;
-  const fade = ctx.createLinearGradient(0, coverArtHeight - scrimHeight, 0, coverArtHeight);
+  const fade = ctx.createLinearGradient(0, COVER_ART_HEIGHT - scrimHeight, 0, COVER_ART_HEIGHT);
   fade.addColorStop(0, "rgba(24,20,16,0)");
   if (hook) fade.addColorStop(0.5, "rgba(24,20,16,0.72)");
   fade.addColorStop(1, "rgba(24,20,16,1)");
   ctx.fillStyle = fade;
-  ctx.fillRect(0, coverArtHeight - scrimHeight, W, scrimHeight);
+  ctx.fillRect(0, COVER_ART_HEIGHT - scrimHeight, W, scrimHeight);
   ctx.fillStyle = "#181410";
-  ctx.fillRect(0, coverArtHeight, W, H - coverArtHeight);
+  ctx.fillRect(0, COVER_ART_HEIGHT, W, H - COVER_ART_HEIGHT);
 
   const ink = INK;
   const inkDim = INK_DIM;
@@ -290,9 +292,9 @@ async function drawCoverCard({ song, art }) {
     // 두 줄 안에 들어가는 가장 큰 크기를 고른다. 세 줄이 되면 머리글이 아니라
     // 문단이 된다 — 마지막 크기까지 안 되면 거기서 접는다. wrapTight는 "…싶은 /
     // 밤"처럼 한두 글자만 넘친 줄을 조금 줄여 한 줄로 당긴다.
-    let headlineSize = 38;
+    let headlineSize = 42;
     let headlineLines = [];
-    for (const size of [58, 54, 50, 46, 42, 38]) {
+    for (const size of [72, 66, 60, 54, 48, 42]) {
       ctx.font = headlineFont(size);
       const tight = wrapTight(ctx, hook, headlineMax, { font: headlineFont, size, minRatio: 0.86 });
       headlineSize = tight.size;
@@ -300,7 +302,7 @@ async function drawCoverCard({ song, art }) {
       if (headlineLines.length <= 2) break;
     }
     const lineHeight = Math.round(headlineSize * 1.32);
-    const lastBaseline = coverArtHeight - 52;
+    const lastBaseline = COVER_ART_HEIGHT - 52;
     const firstBaseline = lastBaseline - (headlineLines.length - 1) * lineHeight;
 
     ctx.strokeStyle = "#c8b6ff"; // globals.css의 --color-accent
@@ -339,7 +341,7 @@ async function drawCoverCard({ song, art }) {
     titleMaxWidth,
     2,
   );
-  const titleTop = coverArtHeight + 24;
+  const titleTop = COVER_ART_HEIGHT + 24;
   ctx.font = `600 ${titleLayout.fontSize}px ${SERIF}`;
   titleLayout.lines.forEach((line, index) => {
     drawBilingualTitleLine(ctx, {
@@ -414,8 +416,10 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
 
   ctx.fillStyle = "#181410";
   ctx.fillRect(0, 0, W, H);
+  // 1장과 똑같은 상자에 그린다. 보이는 높이는 검은 막이 정한다 — 사진이 그대로
+  // 있고 아래에서 막이 올라온 것처럼 넘어가야 한다.
   const artHeight = 570;
-  if (art) drawImageCover(ctx, art, 0, 0, W, artHeight);
+  if (art) drawImageCover(ctx, art, 0, 0, W, COVER_ART_HEIGHT);
   else {
     ctx.fillStyle = "#242428";
     ctx.fillRect(0, 0, W, artHeight);
@@ -426,6 +430,9 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
   fade.addColorStop(1, "#181410");
   ctx.fillStyle = fade;
   ctx.fillRect(0, 330, W, 360);
+  // 막이 끝나는 자리부터는 사진이 아니라 지면이다
+  ctx.fillStyle = "#181410";
+  ctx.fillRect(0, 690, W, H - 690);
 
   drawPageNumber(ctx, position, total);
   ctx.textAlign = "left";
