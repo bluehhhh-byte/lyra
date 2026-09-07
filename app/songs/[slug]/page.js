@@ -303,6 +303,8 @@ export default async function SongPage({ params }) {
           // 커버 카드 하단의 해시태그 — 곡의 소재(keywords)와 감정 한 낱말
           keywords: song.keywords || [],
           emotion: song.emotion || "",
+          // 커버 카드의 "이런 순간에" 장면 한 줄
+          listen_when: song.listen_when || "",
         }}
       />
 
