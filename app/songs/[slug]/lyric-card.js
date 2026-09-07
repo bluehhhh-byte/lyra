@@ -187,8 +187,13 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
 
   // lyric lines — original (serif, bright) over translation (sans, dimmed).
   // Size steps down with the pair count, then a shrink-to-fit loop handles
-  // what the tiers can't (wrapped lines, dense pairs) — the fixed +14 line
-  // paddings don't scale linearly with the font, so one pass can land short.
+  // what the tiers can't (wrapped lines, dense pairs).
+  //
+  // 줄 간격은 글자 크기에 비례한다. 예전에는 크기와 무관하게 +14였는데, 그러면
+  // 글자를 줄여도 간격은 그대로라 축소가 먹히지 않는다. 조판으로도 틀린 값이고,
+  // 축소 루프가 제자리걸음하는 원인이기도 했다. 큰 글자에서는 거의 같은 값이라
+  // (42px → 55 vs 56) 보통 카드의 모습은 그대로다.
+  const LEADING = 1.32;
   const pairs = lines.slice(0, MAX_PAIRS);
   const tiers = [[3, 54, 38], [4, 48, 34], [5, 42, 30]];
   let [, oSize, tSize] = tiers.find(([n]) => pairs.length <= n) || tiers.at(-1);
@@ -200,13 +205,13 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
       ctx.font = serif(oSize);
       const orig = wrapTight(ctx, l.en, maxW, { font: serif, size: oSize });
       for (const t of orig.lines)
-        blocks.push({ t, size: orig.size, gap: orig.size + 14, dim: false });
+        blocks.push({ t, size: orig.size, gap: Math.round(orig.size * LEADING), dim: false });
       if (l.ko) {
         const sans = (s) => `500 ${s}px ${SANS}`;
         ctx.font = sans(tSize);
         const trans = wrapTight(ctx, l.ko, maxW, { font: sans, size: tSize });
         for (const t of trans.lines)
-          blocks.push({ t, size: trans.size, gap: trans.size + 14, dim: true });
+          blocks.push({ t, size: trans.size, gap: Math.round(trans.size * LEADING), dim: true });
       }
       blocks.push({ t: "", size: 0, gap: Math.round(oSize * 0.55) });
     }
@@ -216,11 +221,9 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
   const top = 250;
   const budget = H - 360;
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
-  // 비례 축소만으로는 수렴하지 않는다. 줄마다 붙는 +14는 글자를 줄여도 그대로라,
-  // 작아질수록 비율이 1에 붙어 제자리걸음을 한다 — 줄바꿈이 많은 카드는 여섯 번을
-  // 돌고도 예산을 넘긴 채 끝나 아래 워드마크 위로 글이 흘러넘쳤다. 그래서 매번
-  // 최소 1px은 반드시 줄이고, 바닥에 닿을 만큼 횟수를 준다. 바닥값은 한 장에 여섯
-  // 쌍(18줄 ÷ 3장)이 전부 두 줄로 접힌 최악의 경우가 들어가는 크기다.
+  // 비율만으로는 수렴이 느려 매번 최소 1px은 반드시 줄이고, 바닥에 닿을 만큼
+  // 횟수를 준다. 바닥값은 한 장에 일곱 쌍(21줄 ÷ 3장)이 전부 두 줄로 접힌 최악의
+  // 경우가 예산에 들어가는 크기다.
   for (let guard = 24; totalH > budget && guard > 0; guard--) {
     const f = budget / totalH;
     const nextO = Math.round(oSize * f);
@@ -705,7 +708,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 ))}
               </div>
             </div>
-          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 18줄까지 선택할 수 있습니다.</p>
+          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 21줄까지 선택할 수 있습니다.</p>
           <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain  border border-line p-2 lg:max-h-[44vh]">
           {allLines.map((l, i) => (
             <li key={i}>
