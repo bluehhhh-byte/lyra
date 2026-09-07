@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { wrap, wrapTight } from "../../../lib/carousel-wrap";
+import { cleanListenWhen } from "../../../lib/listen-when";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
 import InstagramCaptionPreview from "../../caption-preview";
@@ -323,6 +324,18 @@ async function drawCoverCard({ song, art }) {
       ctx.font = `500 23px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
+  }
+
+  // "이런 순간에" 장면 한 줄 — 메타와 해시태그 사이의 빈 띠에 싣는다. 곡을
+  // 걸어 둘 갈고리라서 메타(0.4)보다 밝게, 본문 잉크보다는 낮게 놓는다.
+  // 제목이 길어 메타가 이 높이까지 내려온 카드에서는 겹치느니 뺀다.
+  const hook = cleanListenWhen(song.listen_when);
+  if (hook && detailY <= H - 168) {
+    const hookLine = `「${hook}」`;
+    const hookSize = fitFontSize(ctx, hookLine, titleMaxWidth, [27, 25, 23, 21], (size) => `500 ${size}px ${SERIF}`);
+    ctx.fillStyle = "rgba(246,241,228,0.66)";
+    ctx.font = `500 ${hookSize}px ${SERIF}`;
+    ctx.fillText(fitText(ctx, hookLine, titleMaxWidth), pad, H - 118);
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다

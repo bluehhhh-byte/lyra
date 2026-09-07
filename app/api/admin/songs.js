@@ -30,6 +30,7 @@ import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/adm
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 import { appearanceIdentity } from "../../../lib/song-appearances";
 import { applySections, originalLines } from "../../../lib/admin/lyric-sections";
+import { cleanListenWhen } from "../../../lib/listen-when";
 import { applyGenre, genreStatus } from "../../../lib/admin/genre-fix";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
@@ -577,6 +578,10 @@ ${koText.slice(0, 2000)}`,
       // silently drops the insert when its anchor is missing
       out = setField(out, "emotion", auto.emotion, "tags");
       updated.push("emotion");
+    }
+    if (auto.listenWhen) {
+      out = setField(out, "listen_when", auto.listenWhen, "tags");
+      updated.push("listen_when");
     }
     if (!updated.length) return Response.json({ updated: [] });
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
@@ -1131,6 +1136,7 @@ ${listed}`,
 
   if (action === "save") {
     const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, keywords, emotion, external_url } = body;
+    const listenWhen = cleanListenWhen(body.listenWhen);
     const sourceUrls = commentSourceUrls(body.commentSources);
     const commentBasis = ["lyrics_only", "web_enriched", "manual"].includes(body.commentBasis) ? body.commentBasis : "manual";
     const slug = `${artist} ${title}`
@@ -1189,7 +1195,7 @@ lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => capGenre(t.trim())).filter(Boolean).join(", ")}]
 keywords: [${parseKeywords(keywords).join(", ")}]
 emotion: ${parseEmotion(emotion)}
-date: ${kstToday()}
+${listenWhen ? `listen_when: ${listenWhen}\n` : ""}date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 comment_basis: ${commentBasis}
