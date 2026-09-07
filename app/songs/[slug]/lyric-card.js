@@ -216,10 +216,17 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
   const top = 250;
   const budget = H - 360;
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
-  for (let guard = 6; totalH > budget && guard > 0; guard--) {
+  // 비례 축소만으로는 수렴하지 않는다. 줄마다 붙는 +14는 글자를 줄여도 그대로라,
+  // 작아질수록 비율이 1에 붙어 제자리걸음을 한다 — 줄바꿈이 많은 카드는 여섯 번을
+  // 돌고도 예산을 넘긴 채 끝나 아래 워드마크 위로 글이 흘러넘쳤다. 그래서 매번
+  // 최소 1px은 반드시 줄이고, 바닥에 닿을 만큼 횟수를 준다. 바닥값은 한 장에 여섯
+  // 쌍(18줄 ÷ 3장)이 전부 두 줄로 접힌 최악의 경우가 들어가는 크기다.
+  for (let guard = 24; totalH > budget && guard > 0; guard--) {
     const f = budget / totalH;
-    oSize = Math.max(30, Math.round(oSize * f));
-    tSize = Math.max(24, Math.round(tSize * f));
+    const nextO = Math.round(oSize * f);
+    const nextT = Math.round(tSize * f);
+    oSize = Math.max(26, nextO < oSize ? nextO : oSize - 1);
+    tSize = Math.max(20, nextT < tSize ? nextT : tSize - 1);
     blocks = build();
     totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   }
@@ -698,7 +705,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 ))}
               </div>
             </div>
-          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 15줄까지 선택할 수 있습니다.</p>
+          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 18줄까지 선택할 수 있습니다.</p>
           <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain  border border-line p-2 lg:max-h-[44vh]">
           {allLines.map((l, i) => (
             <li key={i}>
