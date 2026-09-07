@@ -240,8 +240,12 @@ export default async function SongPage({ params }) {
       <InkDivider className="mx-auto mb-12 h-3 w-full max-w-2xl text-muted" />
 
       {/* comment — 곡이 쓰인 작품은 별도 구역이 아니라 코멘트의 마지막 줄로 붙는다 */}
-      {(song.comment || appearances.length > 0) && (
+      {(song.comment || song.listen_when || appearances.length > 0) && (
         <div className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
+          {/* 이 곡을 듣기 좋은 순간 — 캐러셀 커버 카드와 같은 문구다 */}
+          {song.listen_when && (
+            <p className="mb-2 font-semibold text-ink" data-listen-when>{song.listen_when}</p>
+          )}
           {song.comment && <p>{song.comment}</p>}
           {commentSources.length > 0 && (
             <p className="mt-2 text-[11px] text-muted" data-comment-sources>

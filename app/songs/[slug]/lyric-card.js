@@ -327,15 +327,26 @@ async function drawCoverCard({ song, art }) {
   }
 
   // "이런 순간에" 장면 한 줄 — 메타와 해시태그 사이의 빈 띠에 싣는다. 곡을
-  // 걸어 둘 갈고리라서 메타(0.4)보다 밝게, 본문 잉크보다는 낮게 놓는다.
+  // 걸어 둘 갈고리라서 사이트의 강조색 세로 바를 세우고 본문 잉크로 진하게
+  // 적는다 — 카드에서 유일한 유채색이라 시선이 여기부터 닿는다.
   // 제목이 길어 메타가 이 높이까지 내려온 카드에서는 겹치느니 뺀다.
   const hook = cleanListenWhen(song.listen_when);
   if (hook && detailY <= H - 168) {
-    const hookLine = `「${hook}」`;
-    const hookSize = fitFontSize(ctx, hookLine, titleMaxWidth, [27, 25, 23, 21], (size) => `500 ${size}px ${SERIF}`);
-    ctx.fillStyle = "rgba(246,241,228,0.66)";
-    ctx.font = `500 ${hookSize}px ${SERIF}`;
-    ctx.fillText(fitText(ctx, hookLine, titleMaxWidth), pad, H - 118);
+    const hookY = H - 118;
+    const barW = 7;
+    const hookGap = 22;
+    const hookMaxWidth = titleMaxWidth - barW - hookGap;
+    const hookSize = fitFontSize(ctx, hook, hookMaxWidth, [30, 28, 26, 24], (size) => `600 ${size}px ${SERIF}`);
+    ctx.strokeStyle = "#c8b6ff"; // globals.css의 --color-accent
+    ctx.lineWidth = barW;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(pad + barW / 2, hookY - hookSize * 0.74);
+    ctx.lineTo(pad + barW / 2, hookY + hookSize * 0.08);
+    ctx.stroke();
+    ctx.fillStyle = ink;
+    ctx.font = `600 ${hookSize}px ${SERIF}`;
+    ctx.fillText(fitText(ctx, hook, hookMaxWidth), pad + barW + hookGap, hookY);
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
