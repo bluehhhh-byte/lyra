@@ -587,10 +587,14 @@ ${koText.slice(0, 2000)}`,
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
     // 필드 이름만 돌려주면 코멘트가 무엇으로 바뀌었는지 화면에서 확인할 길이 없다.
     // 덮어쓰기라 되돌리려면 무엇이 사라졌는지도 보여야 한다.
+    // 문구도 같은 이유로 전후를 함께 돌려준다 — 목록은 서버가 그린 값을 들고
+    // 있어서, 여기서 안 알려주면 새로고침 전까지 옛 문구가 남아 있다.
     return Response.json({
       updated,
       comment: fmValue(out.match(FM)?.[1] || "", "comment"),
       previousComment: fmValue(fm, "comment"),
+      listenWhen: fmValue(out.match(FM)?.[1] || "", "listen_when"),
+      previousListenWhen: fmValue(fm, "listen_when"),
       keptWebComment,
     });
   }
