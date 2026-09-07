@@ -14,5 +14,7 @@ try {
   for (const warning of result.warnings ?? []) console.warn(`⚠ ${warning}`);
 } catch (error) {
   console.error(error instanceof Error ? error.message : String(error));
-  process.exit(1);
+  // exit()이 아니라 exitCode다 — fetch 뒤에 루프를 강제로 끊으면 Windows에서
+  // libuv가 죽는다. wait-for-production.mjs 머리말에 자세히 적어 두었다.
+  process.exitCode = 1;
 }
