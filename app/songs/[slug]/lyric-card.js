@@ -281,7 +281,7 @@ async function drawCoverCard({ song, art }) {
   ctx.fillStyle = ink;
   const titleMaxWidth = W - pad * 2;
   const titleParts = carouselTitleParts(song.title, song.artist);
-  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
+  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier, song.artist_ko);
   const titleLayout = layoutBilingualCarouselTitle(
     titleParts.main,
     song.title_ko,
@@ -457,7 +457,7 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
   // 설명 카드도 같은 표기 규칙을 쓴다: `원문 (한글 번역)` / `아티스트 (Feat. …)`.
   const titleParts = carouselTitleParts(song.title, song.artist);
   const displayTitle = carouselDisplayTitle(song.title, song.title_ko, song.artist);
-  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier);
+  const artistLine = carouselArtistLine(song.artist, titleParts.qualifier, song.artist_ko);
   const displaySize = fitFontSize(
     ctx,
     displayTitle,

@@ -292,6 +292,8 @@ export default async function SongPage({ params }) {
           title: song.title,
           title_ko: song.title_ko && song.title_ko !== song.title ? song.title_ko : "",
           artist: song.artist,
+          // 일본어·한자 아티스트명 뒤에 한글 독음을 괄호로 붙인다
+          artist_ko: song.artist_ko || "",
           artwork: song.artwork,
           year: song.year || "",
           album: song.album || "",
