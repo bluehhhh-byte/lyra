@@ -263,18 +263,65 @@ async function drawCoverCard({ song, art }) {
     ctx.fillRect(0, 0, W, coverArtHeight);
   }
 
-  // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다
-  const fade = ctx.createLinearGradient(0, coverArtHeight - 120, 0, coverArtHeight);
+  // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다.
+  // 머리글을 아트 위에 얹는 카드는 그 글이 앉을 만큼 어둠막을 길게 끌어올린다.
+  const hook = cleanListenWhen(song.listen_when);
+  const scrimHeight = hook ? 360 : 120;
+  const fade = ctx.createLinearGradient(0, coverArtHeight - scrimHeight, 0, coverArtHeight);
   fade.addColorStop(0, "rgba(24,20,16,0)");
+  if (hook) fade.addColorStop(0.5, "rgba(24,20,16,0.72)");
   fade.addColorStop(1, "rgba(24,20,16,1)");
   ctx.fillStyle = fade;
-  ctx.fillRect(0, coverArtHeight - 120, W, 120);
+  ctx.fillRect(0, coverArtHeight - scrimHeight, W, scrimHeight);
   ctx.fillStyle = "#181410";
   ctx.fillRect(0, coverArtHeight, W, H - coverArtHeight);
 
   const ink = INK;
   const inkDim = INK_DIM;
   const pad = 96;
+
+  // 1장의 머리글 — 이 곡을 언제 들으면 좋은지. 제목보다 먼저 읽히라고 아트 안에
+  // 크게 앉힌다. 카드 아래 텍스트 구역은 곡 정보(제목·아티스트·태그)의 자리다.
+  if (hook) {
+    const barW = 8;
+    const barGap = 26;
+    const headlineMax = W - pad * 2 - barW - barGap;
+    const headlineFont = (size) => `800 ${size}px ${SANS}`;
+    // 두 줄 안에 들어가는 가장 큰 크기를 고른다. 세 줄이 되면 머리글이 아니라
+    // 문단이 된다 — 마지막 크기까지 안 되면 거기서 접는다. wrapTight는 "…싶은 /
+    // 밤"처럼 한두 글자만 넘친 줄을 조금 줄여 한 줄로 당긴다.
+    let headlineSize = 38;
+    let headlineLines = [];
+    for (const size of [58, 54, 50, 46, 42, 38]) {
+      ctx.font = headlineFont(size);
+      const tight = wrapTight(ctx, hook, headlineMax, { font: headlineFont, size, minRatio: 0.86 });
+      headlineSize = tight.size;
+      headlineLines = tight.lines;
+      if (headlineLines.length <= 2) break;
+    }
+    const lineHeight = Math.round(headlineSize * 1.32);
+    const lastBaseline = coverArtHeight - 52;
+    const firstBaseline = lastBaseline - (headlineLines.length - 1) * lineHeight;
+
+    ctx.strokeStyle = "#c8b6ff"; // globals.css의 --color-accent
+    ctx.lineWidth = barW;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(pad + barW / 2, firstBaseline - headlineSize * 0.78);
+    ctx.lineTo(pad + barW / 2, lastBaseline + headlineSize * 0.14);
+    ctx.stroke();
+
+    // 밝은 앨범 아트 위에서도 흰 글자가 뭉개지지 않게 한 겹 그림자를 깐다
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,0.55)";
+    ctx.shadowBlur = 18;
+    ctx.fillStyle = ink;
+    ctx.font = headlineFont(headlineSize);
+    headlineLines.forEach((line, index) => {
+      ctx.fillText(line, pad + barW + barGap, firstBaseline + index * lineHeight);
+    });
+    ctx.restore();
+  }
   // 제목은 `원문 (한글 번역)`으로 묶고, 긴 feat. 크레딧은 제목이 아니라
   // 아티스트 정보에 붙인다. 데이터의 `아티스트 - 제목` 중복도 함께 제거한다.
   ctx.textAlign = "left";
@@ -305,14 +352,6 @@ async function drawCoverCard({ song, art }) {
     });
   });
 
-  // "이런 순간에" 장면 한 줄. 해시태그 바로 위에 고정된 띠라서 위쪽 글이
-  // 길어져도 자리가 움직이지 않는다 — 카드마다 같은 높이에 있어야 눈이 찾는다.
-  const hook = cleanListenWhen(song.listen_when);
-  const hookY = H - 118;
-  // 제목이 두 줄이 되면 메타가 이 띠까지 내려온다. 그때 지우는 쪽은 훅이 아니라
-  // 메타다 — 국가·장르·연도는 없어도 되지만 훅은 이 카드의 머리글이다.
-  const metaFloor = hook ? hookY - 44 : H - 88;
-
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
   let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 54;
   const artistSize = fitFontSize(
@@ -327,30 +366,11 @@ async function drawCoverCard({ song, art }) {
     ctx.font = `500 ${artistSize}px ${SANS}`;
     ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
     detailY += artistSize + 14;
-    if (meta && detailY <= metaFloor) {
+    if (meta && detailY <= H - 88) {
       ctx.fillStyle = "rgba(246,241,228,0.4)";
       ctx.font = `500 23px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
-  }
-
-  // 사이트의 강조색 세로 바를 세우고 본문 잉크로 진하게 적는다 — 카드에서
-  // 유일한 유채색이라 시선이 여기부터 닿는다.
-  if (hook) {
-    const barW = 7;
-    const hookGap = 22;
-    const hookMaxWidth = titleMaxWidth - barW - hookGap;
-    const hookSize = fitFontSize(ctx, hook, hookMaxWidth, [30, 28, 26, 24], (size) => `600 ${size}px ${SERIF}`);
-    ctx.strokeStyle = "#c8b6ff"; // globals.css의 --color-accent
-    ctx.lineWidth = barW;
-    ctx.lineCap = "round";
-    ctx.beginPath();
-    ctx.moveTo(pad + barW / 2, hookY - hookSize * 0.74);
-    ctx.lineTo(pad + barW / 2, hookY + hookSize * 0.08);
-    ctx.stroke();
-    ctx.fillStyle = ink;
-    ctx.font = `600 ${hookSize}px ${SERIF}`;
-    ctx.fillText(fitText(ctx, hook, hookMaxWidth), pad + barW + hookGap, hookY);
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
