@@ -305,6 +305,14 @@ async function drawCoverCard({ song, art }) {
     });
   });
 
+  // "이런 순간에" 장면 한 줄. 해시태그 바로 위에 고정된 띠라서 위쪽 글이
+  // 길어져도 자리가 움직이지 않는다 — 카드마다 같은 높이에 있어야 눈이 찾는다.
+  const hook = cleanListenWhen(song.listen_when);
+  const hookY = H - 118;
+  // 제목이 두 줄이 되면 메타가 이 띠까지 내려온다. 그때 지우는 쪽은 훅이 아니라
+  // 메타다 — 국가·장르·연도는 없어도 되지만 훅은 이 카드의 머리글이다.
+  const metaFloor = hook ? hookY - 44 : H - 88;
+
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
   let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 54;
   const artistSize = fitFontSize(
@@ -319,20 +327,16 @@ async function drawCoverCard({ song, art }) {
     ctx.font = `500 ${artistSize}px ${SANS}`;
     ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
     detailY += artistSize + 14;
-    if (meta && detailY <= H - 88) {
+    if (meta && detailY <= metaFloor) {
       ctx.fillStyle = "rgba(246,241,228,0.4)";
       ctx.font = `500 23px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
   }
 
-  // "이런 순간에" 장면 한 줄 — 메타와 해시태그 사이의 빈 띠에 싣는다. 곡을
-  // 걸어 둘 갈고리라서 사이트의 강조색 세로 바를 세우고 본문 잉크로 진하게
-  // 적는다 — 카드에서 유일한 유채색이라 시선이 여기부터 닿는다.
-  // 제목이 길어 메타가 이 높이까지 내려온 카드에서는 겹치느니 뺀다.
-  const hook = cleanListenWhen(song.listen_when);
-  if (hook && detailY <= H - 168) {
-    const hookY = H - 118;
+  // 사이트의 강조색 세로 바를 세우고 본문 잉크로 진하게 적는다 — 카드에서
+  // 유일한 유채색이라 시선이 여기부터 닿는다.
+  if (hook) {
     const barW = 7;
     const hookGap = 22;
     const hookMaxWidth = titleMaxWidth - barW - hookGap;
