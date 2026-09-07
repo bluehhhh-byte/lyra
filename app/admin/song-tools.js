@@ -292,16 +292,26 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
             {/* title on its own line, actions underneath — the row ran out of
                 width once there were five of them */}
             <div className="flex items-start gap-3">
-              {s.artwork ? (
-                <img
-                  src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
-                  alt=""
-                  loading="lazy"
-                  className="h-9 w-9 shrink-0 "
-                />
-              ) : (
-                <span aria-hidden="true" className="h-9 w-9 shrink-0  bg-line" />
-              )}
+              {/* 표지를 누르면 그 곡의 글로 간다 — 목록에서 눈에 걸린 곡을
+                  바로 열어 보게. 표지가 없는 곡도 같은 자리를 누를 수 있어야
+                  한다(빈 칸만 안 열리면 그게 더 헷갈린다). */}
+              <a
+                href={`/songs/${s.slug}`}
+                title={`${s.title} 페이지 열기`}
+                aria-label={`${s.title} 페이지 열기`}
+                className="shrink-0 transition hover:opacity-70"
+              >
+                {s.artwork ? (
+                  <img
+                    src={s.artwork.replace("600x600bb", "100x100bb")} // 36px slot needs no 600px source
+                    alt=""
+                    loading="lazy"
+                    className="h-9 w-9 "
+                  />
+                ) : (
+                  <span aria-hidden="true" className="block h-9 w-9  bg-line" />
+                )}
+              </a>
               <div className="min-w-0 flex-1">
               <p className="truncate">
                 <span className="font-medium">{s.title}</span>
@@ -313,6 +323,10 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
                   <span className="text-muted"> ({s.artist_ko})</span>
                 )}
               </p>
+              {/* 커버 카드에 실리는 "이런 순간에" 한 줄 — 없는 곡은 조용히 비운다 */}
+              {s.listenWhen && (
+                <p className="truncate text-xs text-muted" data-listen-when>「{s.listenWhen}」</p>
+              )}
               <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
               <button
                 onClick={() => regenMeta(s.slug)}
