@@ -364,30 +364,38 @@ async function drawCoverCard({ song, art }) {
     });
   });
 
+  // 아래 세 줄(아티스트·국가/장르/연도·해시태그)은 피드에서 크게 축소돼 보인다.
+  // 작으면 아예 안 읽히므로 제목 다음으로 큰 활자를 준다. 태그 줄은 카드 맨 아래에
+  // 고정이라, 그 글자 윗단을 기준선이 내려갈 수 있는 바닥으로 삼는다 — 크기를
+  // 키울 때마다 H - 82 같은 상수를 손으로 다시 맞추지 않아도 된다.
+  const TAG_SIZE = 29;
+  const TAG_BASELINE = H - 52;
+  const detailFloor = TAG_BASELINE - TAG_SIZE - 6;
+
   const meta = [song.country, song.genre, song.year].filter(Boolean).join(" · ");
-  let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 54;
+  let detailY = titleTop + titleLayout.fontSize + (titleLayout.lines.length - 1) * titleLayout.lineHeight + 58;
   const artistSize = fitFontSize(
     ctx,
     artistLine,
     titleMaxWidth,
-    [29, 27, 25, 23, 21, 19, 17],
+    [36, 34, 32, 30, 28, 26, 24],
     (size) => `500 ${size}px ${SANS}`,
   );
-  if (detailY <= H - 82) {
+  if (detailY <= detailFloor) {
     ctx.fillStyle = inkDim;
     ctx.font = `500 ${artistSize}px ${SANS}`;
     ctx.fillText(fitText(ctx, artistLine, titleMaxWidth), pad, detailY);
-    detailY += artistSize + 14;
-    if (meta && detailY <= H - 88) {
-      ctx.fillStyle = "rgba(246,241,228,0.4)";
-      ctx.font = `500 23px ${SANS}`;
+    detailY += artistSize + 16;
+    if (meta && detailY <= detailFloor) {
+      ctx.fillStyle = "rgba(246,241,228,0.52)";
+      ctx.font = `500 28px ${SANS}`;
       ctx.fillText(fitText(ctx, meta, titleMaxWidth), pad, detailY);
     }
   }
 
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
   // (keywords는 곡의 소재, emotion은 감정 한 낱말). 워드마크 폭만큼은 비워 둔다.
-  ctx.font = `500 24px ${SANS}`;
+  ctx.font = `500 ${TAG_SIZE}px ${SANS}`;
   const markW = (() => {
     ctx.save();
     ctx.font = "600 30px Georgia, serif";
@@ -404,13 +412,13 @@ async function drawCoverCard({ song, art }) {
     tagLine = next;
   }
   if (tagLine) {
-    ctx.fillStyle = "rgba(246,241,228,0.45)";
-    ctx.fillText(tagLine, pad, H - 52);
+    ctx.fillStyle = "rgba(246,241,228,0.6)";
+    ctx.fillText(tagLine, pad, TAG_BASELINE);
   }
   ctx.textAlign = "right";
   ctx.fillStyle = ink;
   ctx.font = "600 30px Georgia, serif";
-  ctx.fillText("Lyra.", W - pad, H - 52);
+  ctx.fillText("Lyra.", W - pad, TAG_BASELINE);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
