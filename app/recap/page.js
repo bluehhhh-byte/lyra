@@ -41,7 +41,7 @@ export default async function RecapPage({ searchParams }) {
       <header className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="mb-1 text-xs text-muted">음악과 영화로 돌아보는 시간</p>
-          <h1 className="text-3xl font-bold">{periodLabel(period)} 결산</h1>
+          <h1 className="text-2xl font-bold">{periodLabel(period)} 결산</h1>
         </div>
         <RecapShare recap={serializeRecap(recap)} label={periodLabel(period)} />
       </header>

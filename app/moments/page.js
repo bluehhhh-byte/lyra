@@ -15,13 +15,13 @@ export default async function MomentsPage() {
     <div className="pb-12 pt-8">
       <header className="mb-14 max-w-2xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">Lyra × Cyno</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">문화 장면</h1>
+        <h1 className="text-2xl font-bold">문화 장면</h1>
         <p className="mt-4 leading-relaxed text-muted">노래와 영화가 같은 시기에 남긴 흔적. 작품의 목록이 아니라, 그 작품을 통해 다시 읽는 시간의 기록이다.</p>
       </header>
       {moments.length ? (
         <div className="space-y-14">
           {years.map((year) => <section key={year} className="grid gap-5 md:grid-cols-[100px_1fr]">
-            <h2 className="pt-1 text-2xl font-light text-muted">{year}</h2>
+            <h2 className="pt-1 text-lg font-light text-muted">{year}</h2>
             <div className="grid gap-4 sm:grid-cols-2">{moments.filter((moment) => moment.startDate.startsWith(year)).map((moment) => <MomentCard key={moment.slug} moment={moment} />)}</div>
           </section>)}
         </div>

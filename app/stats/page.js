@@ -250,7 +250,7 @@ export default async function StatsPage() {
 
       {movies.length > 0 && (
         <div className="mt-20 border-t border-line pt-12">
-          <h2 className="mb-2 flex items-center gap-2 text-2xl font-bold">
+          <h2 className="mb-2 flex items-center gap-2 text-lg font-bold">
             영화
             <Link href="/movies" className="text-xs font-normal text-muted hover:text-accent">
               보기 →

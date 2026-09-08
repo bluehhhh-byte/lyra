@@ -40,7 +40,7 @@ export default async function ArchiveDayPage({ params }) {
             className="h-3 w-3 "
             style={{ background: entry.valence === null ? "var(--color-line)" : valenceColor(entry.valence) }}
           />
-          <h1 className="text-3xl font-bold">{entry.day.replaceAll("-", ".")}</h1>
+          <h1 className="text-3xl font-bold sm:text-4xl">{entry.day.replaceAll("-", ".")}</h1>
         </div>
         <p className="mt-3 text-sm text-muted">
           {[entry.dominant, entry.songs && `음악 ${entry.songs}곡`, entry.movies && `영화 ${entry.movies}편`]

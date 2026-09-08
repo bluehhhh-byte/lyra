@@ -14,7 +14,7 @@ export default function AdminError({ error, reset }) {
   return (
     <section className="mx-auto max-w-xl  border border-line bg-surface p-6 text-center sm:p-8" role="alert">
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Lyra admin</p>
-      <h1 className="mt-3 text-xl font-bold">관리자 화면을 불러오지 못했습니다.</h1>
+      <h1 className="mt-3 text-2xl font-bold">관리자 화면을 불러오지 못했습니다.</h1>
       <p className="mt-3 text-sm leading-6 text-muted">
         입력하거나 저장한 데이터가 삭제된 것은 아닙니다. 잠시 후 다시 시도해 주세요.
       </p>

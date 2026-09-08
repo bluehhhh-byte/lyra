@@ -615,8 +615,9 @@ export default function AdminForm() {
           <button className={btn + " mt-3"} disabled={busy} onClick={save}>
             {busy === "save" ? "저장 중…" : "저장"}
           </button>
+          {/* 충돌은 상태(warn), 벗어나는 길은 행동(accent) — 색의 역할 분리 */}
           {duplicateMatch && (
-            <div className="mt-3 border border-accent/50 bg-surface px-3 py-2 text-sm" role="alert">
+            <div className="mt-3 border border-warn/60 bg-surface px-3 py-2 text-sm" role="alert">
               <span className="font-semibold">이미 등록된 곡입니다.</span>{" "}
               <a href={`/songs/${duplicateMatch.slug}`} className="text-accent underline">기존 곡 페이지 보기</a>
               <span className="mx-2 text-muted">·</span>

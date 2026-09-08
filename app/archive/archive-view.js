@@ -193,7 +193,8 @@ export default function ArchiveView({ archive, stats, month, theme = "" }) {
                   <strong className="text-sm">{row.monthNum}월</strong>
                   <span className="text-[11px] text-muted">{row.years.length}개 연도</span>
                 </div>
-                <p className="mt-1 text-xs leading-5 text-muted">{row.deferred ? INSUFFICIENT_SAMPLE_LABEL : row.type}</p>
+                {/* 유보는 숨길 상태가 아니라 알릴 상태 — muted에 묻히지 않게 warn */}
+                <p className={`mt-1 text-xs leading-5 ${row.deferred ? "text-warn" : "text-muted"}`}>{row.deferred ? INSUFFICIENT_SAMPLE_LABEL : row.type}</p>
               </div>
             ))}
           </div>

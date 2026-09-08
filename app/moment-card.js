@@ -7,7 +7,7 @@ export default function MomentCard({ moment, compact = false }) {
   return (
     <Link href={`/moments/${encodeURIComponent(moment.slug)}`} className="group block  border border-line bg-surface/40 p-5 transition hover:border-accent/60 hover:bg-surface">
       <time className="text-[11px] tracking-wide text-accent">{momentDateLabel(moment)}</time>
-      <h2 className={`${compact ? "mt-1 text-base" : "mt-2 text-xl"} font-semibold group-hover:text-accent`}>{moment.title}</h2>
+      <h2 className={`${compact ? "mt-1 text-base" : "mt-2 text-lg"} font-semibold group-hover:text-accent`}>{moment.title}</h2>
       {!compact && <p className="mt-3 line-clamp-3 whitespace-pre-line text-sm leading-relaxed text-muted">{moment.body}</p>}
       <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] text-muted">
         {songCount > 0 && <span>노래 {songCount}</span>}

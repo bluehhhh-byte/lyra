@@ -23,7 +23,7 @@ export default function Login() {
 
   return (
     <div className="mx-auto max-w-xs pt-24">
-      <h1 className="mb-6 text-xl font-bold">관리자 로그인</h1>
+      <h1 className="mb-6 text-2xl font-bold">관리자 로그인</h1>
       <input
         type="password"
         autoFocus

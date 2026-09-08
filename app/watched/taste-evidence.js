@@ -41,7 +41,7 @@ export function GenreRatingCross({ movies }) {
                 </td>
                 <td className="px-3 py-2.5">
                   {row.deferred ? (
-                    <span className="text-muted">{INSUFFICIENT_SAMPLE_LABEL} · {row.n}편</span>
+                    <span className="text-warn">{INSUFFICIENT_SAMPLE_LABEL} · {row.n}편</span>
                   ) : (
                     <div className="grid grid-cols-[1fr_3.5rem] items-center gap-2">
                       <Meter value={row.avg} max={5} tone="bg-green-500/70" />

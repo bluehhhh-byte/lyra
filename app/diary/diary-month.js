@@ -184,7 +184,7 @@ function DayDetail({ day }) {
   return (
     <section aria-live="polite">
       <div className="mb-4 flex flex-wrap items-baseline gap-2">
-        <h2 className="mr-1 text-xl font-bold">{dayLabel(day.day)}</h2>
+        <h2 className="mr-1 text-lg font-bold">{dayLabel(day.day)}</h2>
         {day.dominant && (
           <span className=" bg-accent px-2.5 py-0.5 text-xs font-semibold text-bg">{day.dominant}</span>
         )}

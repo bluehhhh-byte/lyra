@@ -47,7 +47,7 @@ export default async function PersonPage({ params }) {
     <>
       <header className="mb-10">
         <p className="mb-1 text-xs text-muted">{roles.join(" · ")}</p>
-        <h1 className="text-3xl font-bold">{person.name}</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">{person.name}</h1>
         {person.averageRating != null && (
           <p className="mt-2 text-sm text-muted">기록 작품 평균 <span className="text-accent">★ {person.averageRating.toFixed(1)}</span></p>
         )}

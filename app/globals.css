@@ -17,6 +17,14 @@
   --color-ink: #eee7d2;
   --color-muted: #a89f8d;
   --color-accent: #c8b6ff;
+  /* 상태색 — 액센트와 역할을 분리한다. 액센트는 행동(링크·포커스·선택),
+     상태색은 판정(성공·주의·실패). 크레용 세계관에 맞춘 저채도 흙빛.
+     규칙: 면 채움 금지 — 선·글자·10% 워시까지만. tailwind dark: 변형은
+     OS 설정을 따라가서 이 사이트의 data-theme 체계와 어긋난다. 상태색은
+     반드시 이 토큰으로만 쓴다. */
+  --color-ok: #9ec89a;
+  --color-warn: #d9a05b;
+  --color-danger: #e08a7a;
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo",
     "Noto Sans KR", system-ui, sans-serif;
   --font-serif: "Charter", "Iowan Old Style", Georgia, "Hiragino Mincho ProN",
@@ -80,6 +88,10 @@ html {
   --color-ink: #2a251f;
   --color-muted: #70685a;
   --color-accent: #6244cc;
+  /* 크림 종이 위에서는 파스텔 상태색의 대비가 무너진다 — 액센트처럼 심화한 값 */
+  --color-ok: #4a7a44;
+  --color-warn: #a06318;
+  --color-danger: #b4483a;
   -webkit-font-smoothing: auto; /* antialiased renders dark-on-light too thin */
 }
 
