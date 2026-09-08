@@ -8,6 +8,7 @@ year: 2004
 runtime: 108
 rating: 5
 genre: Sci-Fi
+emotion: 사랑
 poster: https://image.tmdb.org/t/p/w500/jULvvUymAqM18gIDHbMRfKHbCSB.jpg
 backdrop: https://image.tmdb.org/t/p/w1280/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg
 tmdbId: 38

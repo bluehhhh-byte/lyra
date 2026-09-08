@@ -1,6 +1,6 @@
 ---
 title: 다와가
-title_ko: 
+title_ko: 다 와가
 artist: 뱃사공
 artist_ko: 
 album: 기린
