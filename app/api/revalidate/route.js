@@ -15,6 +15,7 @@ import { timingSafeEqualString } from "../../../lib/admin/secret";
 export const dynamic = "force-dynamic";
 
 const CONTENT_TAGS = ["lyra-content", "lyra-songs", "lyra-movies", "lyra-data", "lyra-moments"];
+const DETAIL_ROUTES = ["/songs/[slug]", "/movies/[slug]"];
 
 const clean = (value) =>
   String(value ?? "").replace(/^﻿/, "").trim().replace(/^(["'])([\s\S]*)\1$/, "$2").trim();
@@ -42,6 +43,11 @@ export async function POST(request) {
 
   for (const tag of CONTENT_TAGS) revalidateTag(tag);
   revalidatePath("/");
+  // 태그는 데이터 캐시만 비운다. 상세 페이지는 그 위에 6시간짜리 라우트 캐시가
+  // 따로 있어서, 여기서 안 건드리면 스크립트로 DB를 고쳐도 메인만 새 값이 나오고
+  // 곡·영화 본문은 최대 6시간 옛 HTML 그대로다. 라우트 패턴 + "page"로 넘기면
+  // 그 세그먼트의 모든 slug가 한 번에 비워진다 — slug 목록을 들고 다닐 필요가 없다.
+  for (const route of DETAIL_ROUTES) revalidatePath(route, "page");
   return Response.json(
     { ok: true, tags: CONTENT_TAGS },
     { headers: { "Cache-Control": "no-store" } }
