@@ -15,6 +15,7 @@ import ShareButton from "./share-button";
 import SongBackButton from "./song-back-button";
 import YouTubeEmbed from "./youtube-embed";
 import { getMomentsForTarget } from "../../../lib/moments";
+import { readRuntimeData } from "../../../lib/store";
 import MomentConnections from "../../moment-connections";
 import { crossMatches } from "../../../lib/cross-match";
 import {
@@ -139,6 +140,20 @@ export default async function SongPage({ params }) {
     region && region !== "기타" && { key: "region", label: region, href: `/tags/${encodeURIComponent(region)}`, count: countBy((s) => s.tags.includes(region)) },
     countBy((s) => s.artist === song.artist) > 1 && { key: "artist", label: `${song.artist}의 곡`, href: `/?q=${encodeURIComponent(song.artist)}`, count: countBy((s) => s.artist === song.artist) },
   ].filter(Boolean);
+
+  // 역방향 연결(브리프 §9-2) — 기록에서 축으로 나가는 길. 이 곡을 인용한
+  // 모티프가 있으면 그 어휘 묶음으로 건너간다. 없으면 줄 자체가 없다.
+  const motifData = await readRuntimeData("motifs.json", null);
+  for (const motif of motifData?.motifs || []) {
+    if (motif.songs?.some((entry) => entry.slug === song.slug)) {
+      position.push({
+        key: `motif-${motif.name}`,
+        label: `모티프 '${motif.name}'`,
+        href: `/songs/motifs#motif-${encodeURIComponent(motif.name)}`,
+        count: motif.songs.length,
+      });
+    }
+  }
 
   // Lyra×Cyno 교차 — 같은 시대 안에서 권역·감정·주제가 가까운 기록을 우선한다.
   const songDecadeNum = song.year ? Math.floor(+song.year / 10) * 10 : null;

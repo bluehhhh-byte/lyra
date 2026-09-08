@@ -133,8 +133,9 @@ export default async function MotifsPage() {
         </div>
       ) : (
         <div className="space-y-10">
+          {/* 각 섹션의 id는 곡 상세의 모티프 링크가 도착하는 앵커 — scroll-mt로 헤더에 안 가리게 */}
           {motifs.map((m) => (
-            <section key={m.name} className=" border border-line bg-surface/50 px-5 py-5">
+            <section key={m.name} id={`motif-${m.name}`} className="scroll-mt-24 border border-line bg-surface/50 px-5 py-5">
               <h2 className="text-lg font-bold">{m.name}</h2>
               {m.description && <p className="mt-1 text-sm text-muted">{m.description}</p>}
               {m.keywords?.length > 0 && (

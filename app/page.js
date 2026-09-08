@@ -6,8 +6,9 @@ import { toHomeSong } from "../lib/home-song-list";
 import Browse from "./browse";
 import HomeIntro from "./home-intro";
 import { tagSuggestions } from "../lib/keywords";
+import Link from "next/link";
 import { kstDay } from "../lib/kst";
-import { latestRecordedDay } from "../lib/latest-day";
+import { anniversaryRecords, latestRecordedDay } from "../lib/latest-day";
 
 export const revalidate = 21600;
 const INITIAL_SONGS = 72;
@@ -35,8 +36,35 @@ export default async function Home() {
   const songs = allSongs.slice(0, INITIAL_SONGS).map(toHomeSong);
   const tags = tagSuggestions(allSongs);
 
+  // 재발견 — 해가 다른 같은 날짜의 기록. 제목에 "오늘"이 아니라 날짜를 박는다:
+  // ISR 6시간 동안 "오늘"은 자정을 넘기면 거짓이 되지만 날짜는 언제나 참이다.
+  const renderedDay = kstDay(new Date().toISOString());
+  const pastToday = anniversaryRecords(songMetas, allMovies, renderedDay);
+  const pastTodayLabel = `${Number(renderedDay.slice(5, 7))}월 ${Number(renderedDay.slice(8, 10))}일`;
+
   return <>
     <HomeIntro insights={insights} />
+    {pastToday.length > 0 && (
+      <section aria-labelledby="past-today-title" className="mb-14">
+        <h2 id="past-today-title" className="text-lg font-bold">{pastTodayLabel}의 과거 기록</h2>
+        <p className="mt-1 text-xs text-muted">해가 다른 같은 날짜에 남긴 기록.</p>
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {pastToday.map((record) => (
+            <Link
+              key={`${record.type}-${record.slug}`}
+              href={`/${record.type === "song" ? "songs" : "movies"}/${record.slug}`}
+              className="spot group flex items-center gap-3 border border-line bg-surface px-4 py-3"
+            >
+              <span className="shrink-0 text-sm font-bold tabular-nums text-accent">{record.year}</span>
+              <span className="min-w-0">
+                <span className="block truncate text-sm font-medium group-hover:text-accent">{record.title}</span>
+                <span className="block truncate text-xs text-muted">{record.subtitle}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+    )}
     <section aria-labelledby="music-collection-title">
       <div className="mb-5 flex items-baseline justify-between gap-3">
         <div>

@@ -115,6 +115,16 @@ export default async function MoviePage({ params }) {
     ? crossMatches(movie, songs, { countries: COUNTRY_TAGS, limit: 4 })
     : [];
 
+  // 곡 상세의 '이 컬렉션에서'와 같은 문법 — 영화에도 자리의 맥락을 준다
+  // (브리프 §9-2: 기록에서 축으로 나가는 역방향 연결).
+  const countMovies = (fn) => all.filter(fn).length;
+  const movieRegion = movie.tags?.find((t) => COUNTRY_TAGS.includes(t)) || "";
+  const position = [
+    movie.genre && { key: "genre", label: `${movie.genre} 관람작`, href: `/tags/${encodeURIComponent(movie.genre)}`, count: countMovies((m) => m.genre === movie.genre) },
+    movieRegion && movieRegion !== "기타" && { key: "region", label: `${movieRegion} 영화`, href: `/tags/${encodeURIComponent(movieRegion)}`, count: countMovies((m) => m.tags?.includes(movieRegion)) },
+    movieDecade && { key: "decade", label: `${movieDecade}년대 영화`, count: countMovies((m) => m.year && Math.floor(+m.year / 10) * 10 === movieDecade) },
+  ].filter(Boolean);
+
   const meta = [
     movie.year,
     movie.runtime ? `${movie.runtime}분` : "",
@@ -363,6 +373,29 @@ export default async function MoviePage({ params }) {
               </Link>
             ))}
           </div>
+        </div>
+      )}
+
+      {position.length > 0 && (
+        <div className="mx-auto mt-16 max-w-2xl  border border-line bg-surface px-5 py-4">
+          <h2 className="mb-2 text-sm font-semibold text-muted">이 컬렉션에서</h2>
+          <ul className="space-y-1 text-sm text-muted">
+            {position.map(({ key, label, href, count }) => (
+              <li key={key}>
+                {href ? (
+                  <Link
+                    href={href}
+                    className="text-ink underline decoration-muted underline-offset-4 hover:text-accent hover:decoration-accent"
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <span className="text-ink">{label}</span>
+                )}
+                {` ${count}편 중 하나`}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 
