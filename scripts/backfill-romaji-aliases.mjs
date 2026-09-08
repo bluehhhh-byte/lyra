@@ -66,6 +66,9 @@ const OVERRIDE = new Map([
   ["misia-忘れない日日-잊을-수-없는-날들", "Wasurenai Hibi"],
   ["oku-hanako-變わらないもの-변하지-않는-것", "Kawaranai Mono"], // Apple 표기
   ["plastic-tree-月世界-달세계", "Gessekai"],
+  // Apple은 어느 스토어에서도, MusicBrainz는 녹음·릴리스 어디에도 로마자를 갖고
+  // 있지 않다. 곡 정보(오리콘·우타넷)에 실린 ふめつのはな를 옮겼다.
+  ["raphael-滅花", "Fumetsu no Hana"],
   ["sheena-ringo-あかねさす歸路照らされど", "Akanesasu Kiro Terasaredo"],
   ["sheena-ringo-人間として", "Ningen Toshite"],
   ["the-yellow-monkey-聖なる海とサンシャイン", "Seinaru Umi to Sunshine"],
@@ -74,7 +77,6 @@ const OVERRIDE = new Map([
   ["空氣公團-공기공단-旅をしませんか", "Tabi wo Shimasenka"],   // Apple 표기
   ["陰陽座-甲賀忍法帖", "Kouga Ninpouchou"],                   // Apple 표기
   ["鹿の一族-사슴의-일족-清く-ただしく", "Kiyoku Tadashiku"],   // Apple 표기
-  // raphael-滅花(不滅花)는 읽는 법을 확인하지 못해 비워 둔다 — 틀린 별칭은 없느니만 못하다.
 ]);
 
 const lookup = async (trackId, country) =>

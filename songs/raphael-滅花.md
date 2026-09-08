@@ -1,6 +1,7 @@
 ---
 title: 不滅花
 title_ko: 불멸화
+search_aliases: [Fumetsu no Hana]
 artist: Raphael
 artist_ko:
 album: Love story -2000020220161101-
