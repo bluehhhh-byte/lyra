@@ -78,8 +78,13 @@ export default async function StatsPage() {
   const artistEmotions = artistEmotionProfiles(songs);
   const readableArtistEmotions = artistEmotions.filter((profile) => !profile.deferred).slice(0, 10);
   const deferredArtistEmotions = artistEmotions.filter((profile) => profile.deferred).length;
-  const emotionCounts = emotionUsage(songs.map((song) => song.emotion));
+  // 감정은 두 세계가 함께 쓰는 어휘다 — 곡과 영화를 한 판에 놓되 층을 갈라
+  // 어느 쪽이 얼마인지 읽히게 한다. 합쳐 세면 영화 38편이 사라지고, 따로 그리면
+  // 같은 어휘를 쓴다는 사실이 사라진다.
+  const emotionCounts = emotionUsage([...songs, ...movies].map((record) => record.emotion));
   const emotionTotal = emotionCounts.reduce((sum, [, count]) => sum + count, 0);
+  const movieEmotionCounts = new Map(emotionUsage(movies.map((movie) => movie.emotion)));
+  const moviesWithEmotion = [...movieEmotionCounts.values()].reduce((sum, count) => sum + count, 0);
 
   // country follows the artist-nationality tag; lyric language is only a
   // fallback for songs saved before country tags existed
@@ -203,8 +208,15 @@ export default async function StatsPage() {
         </Section>
 
         <Section title="감정 어휘 사용 빈도">
-          <Bars data={emotionCounts} total={emotionTotal} />
-          <p className="mt-3 text-xs text-muted">모델의 15개 감정을 모두 표시하며, 쓰이지 않은 감정도 0회로 남긴다.</p>
+          <Bars
+            data={emotionCounts}
+            total={emotionTotal}
+            split={{ counts: movieEmotionCounts, primaryUnit: "곡", secondaryUnit: "편" }}
+          />
+          <p className="mt-3 text-xs text-muted">
+            모델의 15개 감정을 모두 표시하며, 쓰이지 않은 감정도 0회로 남긴다. 곡과 영화가 같은 어휘를 쓰므로 한 막대에 함께 담고, 옅은 칸이 영화다.
+            {movies.length > moviesWithEmotion && ` 감정을 아직 고르지 않은 영화 ${movies.length - moviesWithEmotion}편은 세지 않는다.`}
+          </p>
         </Section>
 
         <DrillSection
