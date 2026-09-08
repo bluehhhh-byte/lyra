@@ -1,6 +1,6 @@
 ---
 title: Hero
-title_ko: Hero
+title_ko: 영웅
 artist: 미고
 artist_ko:
 album: 약한영웅 Class 1 (Original Soundtrack)
@@ -12,6 +12,7 @@ duration:
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2022]
+listen_when: 뒤늦은 후회를 정리하는 밤
 keywords: [후회, 한숨, 약속, 손, 말]
 emotion: 회상
 date: 2022-12-07

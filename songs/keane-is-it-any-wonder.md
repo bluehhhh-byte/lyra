@@ -12,6 +12,7 @@ trackId: 1517403268
 duration: 186
 lang: en
 tags: [영미, Alternative Rock, 2006]
+listen_when: 믿었던 것들에 배신당한 기분인 날
 keywords: [피로, 불안, 배신, 두려움]
 emotion: 저항
 date: 2026-08-09

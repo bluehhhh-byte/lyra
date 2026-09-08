@@ -12,6 +12,7 @@ duration:
 genre: Jazz
 lang: en
 tags: [영미, Jazz, 2002]
+listen_when: 밤 버스를 타고 함께 떠나고 싶은 때
 keywords: [밤, 노래, 버스]
 emotion: 사랑
 date: 2024-06-30

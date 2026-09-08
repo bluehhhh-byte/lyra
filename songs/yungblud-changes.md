@@ -14,6 +14,7 @@ duration: 208
 genre: Hard Rock
 lang: en
 tags: [Hard Rock, 2025]
+listen_when: 잃고 나서 변해 가는 중인 날들
 keywords: [친구, 세월, 사랑, 눈물, 손]
 emotion: 슬픔
 date: 2026-01-13

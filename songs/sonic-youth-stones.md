@@ -12,6 +12,7 @@ duration: 430
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 노이즈 속에서 온기를 찾는 밤
 keywords: [돌멩이, 별, 심장]
 emotion: 몽환
 date: 2025-07-29

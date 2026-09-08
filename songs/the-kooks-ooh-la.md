@@ -12,6 +12,7 @@ duration: 209
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
+listen_when: 순수가 다치는 걸 지켜보는 밤
 keywords: [세상, 섬, 치맛자락]
 emotion: 슬픔
 date: 2025-08-20

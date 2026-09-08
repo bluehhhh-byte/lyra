@@ -1,6 +1,6 @@
 ---
 title: My My
-title_ko: My My
+title_ko: 마이 마이
 artist: Apink
 artist_ko:
 album: Snow Pink - EP
@@ -14,6 +14,7 @@ duration: 235
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2011]
+listen_when: 첫눈 오던 날의 마음을 꺼내 보는 밤
 keywords: [마음, 사랑, 눈, 날]
 emotion: 설렘
 date: 2023-04-29

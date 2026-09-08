@@ -12,6 +12,7 @@ trackId: 1447499968
 duration: 187
 lang: en
 tags: [유럽, Post-Rock, 2008]
+listen_when: 바람에 모자가 날아가도 웃는 오후
 keywords: [바람, 하늘, 눈물, 머리칼]
 emotion: 몽환
 date: 2026-08-22

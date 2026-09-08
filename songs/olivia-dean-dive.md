@@ -14,6 +14,7 @@ duration: 201
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2023]
+listen_when: 물음표투성이인 채 뛰어드는 밤
 keywords: [파도, 서핑, 예술]
 emotion: 설렘
 date: 2024-06-24

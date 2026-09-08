@@ -14,6 +14,7 @@ duration: 189
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2019]
+listen_when: 왜 상했는지 나도 모르는 채 걷는 오후
 keywords: [햇살, 춤, 현실]
 emotion: 위로
 date: 2024-09-18

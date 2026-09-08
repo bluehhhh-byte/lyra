@@ -12,6 +12,7 @@ duration:
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2017]
+listen_when: 꿈에서라도 만나자고 비는 밤
 keywords: [꿈, 노래, 기억, 추억, 거짓말]
 emotion: 이별
 date: 2022-12-01

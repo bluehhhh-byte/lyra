@@ -14,6 +14,7 @@ duration: 262
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 1999]
+listen_when: 보내고 나서 고맙다고 말하는 밤
 keywords: [눈물, 추억, 가슴, 순간, 품]
 emotion: 이별
 date: 2022-12-11

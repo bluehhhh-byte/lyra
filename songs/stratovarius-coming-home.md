@@ -14,6 +14,7 @@ duration: 337
 genre: Heavy Metal
 lang: en
 tags: [유럽, Heavy Metal, 1997]
+listen_when: 폭풍을 다 지나 집으로 향하는 길
 keywords: [아침, 고향, 폭풍, 산, 길, 배]
 emotion: 그리움
 date: 2023-03-03

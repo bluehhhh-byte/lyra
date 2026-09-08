@@ -14,6 +14,7 @@ duration: 336
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1980]
+listen_when: 과거 전부에 작별을 고하는 아침
 keywords: [왕관, 광대, 날개, 태양, 날씨, 과거]
 emotion: 이별
 date: 2023-02-15

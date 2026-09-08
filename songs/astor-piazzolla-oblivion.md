@@ -14,6 +14,7 @@ duration: 214
 genre: Jazz
 lang: en
 tags: [Jazz, 1982]
+listen_when: 행복했던 기억이 지워져 가는 저녁
 keywords: [망각, 신앙, 우물, 심장, 빛]
 emotion: 체념
 date: 2024-03-20

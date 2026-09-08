@@ -14,6 +14,7 @@ duration: 224
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 바빠서 서로를 못 보는 도시의 하루
 keywords: [도시, 하늘, 상사, 아내, 직장]
 emotion: 고독
 date: 2023-03-04

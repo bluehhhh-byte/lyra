@@ -14,6 +14,7 @@ duration: 257
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 괜찮은 하루를 굳이 비관하고 싶은 밤
 keywords: [거짓말, 거리, 침대, 눈, 세상]
 emotion: 불안
 date: 2023-03-30

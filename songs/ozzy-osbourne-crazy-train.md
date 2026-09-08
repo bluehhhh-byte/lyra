@@ -12,6 +12,7 @@ duration: 293
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1980]
+listen_when: 세상이 미친 기차 같다고 느끼는 날
 keywords: [세상, 적, 증오]
 emotion: 저항
 date: 2025-07-25

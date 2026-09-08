@@ -14,6 +14,7 @@ duration: 278
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2017]
+listen_when: 빗소리에 지난날을 되감는 오후
 keywords: [비, 빛, 꿈, 기억, 말]
 emotion: 회상
 date: 2022-10-03

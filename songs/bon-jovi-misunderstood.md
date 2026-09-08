@@ -14,6 +14,7 @@ duration: 210
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2002]
+listen_when: 그 말만 되감고 싶어지는 새벽
 keywords: [시간, 소파, 밤, 친구, 말]
 emotion: 이별
 date: 2022-12-09

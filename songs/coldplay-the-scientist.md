@@ -14,6 +14,7 @@ duration: 309
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2002]
+listen_when: 처음으로 돌아가자고 말하고 싶은 밤
 keywords: [비밀, 처음, 말]
 emotion: 슬픔
 date: 2024-11-11

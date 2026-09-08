@@ -12,6 +12,7 @@ duration: 326
 genre: Folk
 lang: en
 tags: [유럽, Folk, 2014]
+listen_when: 바꾸려 들지 않고 기다려 주고 싶은 날
 keywords: [거리, 도움, 사람]
 emotion: 사랑
 date: 2024-07-23

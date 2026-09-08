@@ -14,6 +14,7 @@ duration: 246
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1994]
+listen_when: 라디오로만 남은 사람을 기다리는 밤
 keywords: [기타, 라디오, 공연, 약속, 기다림]
 emotion: 그리움
 date: 2023-05-03

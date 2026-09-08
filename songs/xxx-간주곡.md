@@ -12,6 +12,7 @@ trackId: 1569396522
 duration: 398
 lang: ko
 tags: [한국, Hip-Hop, 2018]
+listen_when: 판 전체가 시시해진 밤
 keywords: [시장, 차트, 음악, 꼰대]
 emotion: 분노
 date: 2026-08-05

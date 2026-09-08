@@ -1,6 +1,6 @@
 ---
 title: PROTO TYPE
-title_ko: PROTO TYPE
+title_ko: 시제품
 artist: 쿤타
 artist_ko:
 album: PROTO TYPE
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
+listen_when: 기대가 무너진 자리에서 10년을 비는 밤
 keywords: [계약서, 담배, 무덤, 그림, 목줄]
 emotion: 체념
 date: 2022-10-01

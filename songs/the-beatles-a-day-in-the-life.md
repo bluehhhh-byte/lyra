@@ -14,6 +14,7 @@ duration: 252
 genre: Alternative Rock
 lang: en
 tags: [Alternative Rock, 1967]
+listen_when: 신문 기사가 이상하게 남는 아침
 keywords: [뉴스, 사진, 영화, 침대, 버스]
 emotion: 몽환
 date: 2023-05-24

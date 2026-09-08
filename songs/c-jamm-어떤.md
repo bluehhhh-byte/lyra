@@ -12,6 +12,7 @@ duration: 153
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 가지고도 계속 떠올리게 되는 밤
 keywords: [생각, 비밀, 선물]
 emotion: 불안
 date: 2025-06-26

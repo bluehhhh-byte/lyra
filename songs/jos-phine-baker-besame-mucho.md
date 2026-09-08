@@ -12,6 +12,7 @@ trackId: 690623185
 duration: 202
 lang: en
 tags: [유럽, Jazz, 1944]
+listen_when: 오래된 목소리에 기대고 싶은 밤
 keywords: [입맞춰, 음악, 사랑, 달링, 꿈]
 emotion: 사랑
 date: 2026-08-28

@@ -14,6 +14,7 @@ duration: 229
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1997]
+listen_when: 놀랄 일 없는 조용한 삶이 소원인 밤
 keywords: [정원, 집, 정부, 일산화탄소, 매립장]
 emotion: 체념
 date: 2022-10-31

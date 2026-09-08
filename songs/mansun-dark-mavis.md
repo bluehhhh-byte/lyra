@@ -14,6 +14,7 @@ duration: 516
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1997]
+listen_when: 이상한 마을의 마지막 장을 덮는 밤
 keywords: [신부, 립스틱, 드레스, 하이힐, 파자마, 돌무더기]
 emotion: 몽환
 date: 2023-03-24

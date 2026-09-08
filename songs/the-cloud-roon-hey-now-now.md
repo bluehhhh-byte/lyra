@@ -12,6 +12,7 @@ duration:
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2006]
+listen_when: 작은 것들에 짓눌린 채 다시 꿈꾸는 밤
 keywords: [꿈, 손]
 emotion: 불안
 date: 2024-09-09

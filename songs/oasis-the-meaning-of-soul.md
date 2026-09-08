@@ -14,6 +14,7 @@ duration: 103
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2005]
+listen_when: 자신감이 하늘을 찌르는 2분
 keywords: [밤, 눈, 빛, 길]
 emotion: 기쁨
 date: 2023-05-30

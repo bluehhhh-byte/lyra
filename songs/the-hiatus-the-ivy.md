@@ -12,6 +12,7 @@ trackId: 647064803
 duration: 249
 lang: en
 tags: [일본, Alternative Rock, 2010]
+listen_when: 버티라는 말을 붙들고 견디는 밤
 emotion: 위로
 keywords: [고통, 진실, 담쟁이, 세상]
 date: 2026-07-09

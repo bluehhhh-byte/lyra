@@ -14,6 +14,7 @@ duration: 213
 genre: Indie Pop
 lang: en
 tags: [한국, Indie Pop, 2022]
+listen_when: 같이 보던 쇼를 혼자 트는 밤
 keywords: [코미디쇼, 사슴, 벽, 인형, 눈물]
 emotion: 이별
 date: 2022-09-17

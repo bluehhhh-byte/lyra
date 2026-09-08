@@ -14,6 +14,7 @@ duration: 354
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 마음을 바꿔 주위를 둘러보는 오후
 keywords: [마음, 햇살, 사랑, 시간]
 emotion: 위로
 date: 2022-11-29

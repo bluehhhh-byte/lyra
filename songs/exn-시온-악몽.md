@@ -14,6 +14,7 @@ duration: 186
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 만난 뒤로 잠자리가 사나워진 밤
 keywords: [악몽, 밤, 바늘, 실, 꼭두각시, 인형]
 emotion: 불안
 date: 2022-09-25

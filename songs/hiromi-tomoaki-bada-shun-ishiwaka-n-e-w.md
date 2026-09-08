@@ -12,6 +12,7 @@ duration:
 genre: Jazz
 lang: en
 tags: [Jazz, 2023]
+listen_when: 머리를 깨우고 싶은 작업의 초입
 keywords: []
 emotion:
 date: 2026-01-30

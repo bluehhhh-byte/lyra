@@ -14,6 +14,7 @@ duration: 213
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2015]
+listen_when: 연락이 뜸해진 친구가 생각나는 저녁
 keywords: [친구, 무대, 술, 노을, 빵, 우정]
 emotion: 회상
 date: 2022-12-16

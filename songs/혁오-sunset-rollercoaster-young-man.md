@@ -1,6 +1,6 @@
 ---
 title: Young Man
-title_ko: Young Man
+title_ko: 젊은이
 artist: 혁오, Sunset Rollercoaster
 artist_ko:
 album: Young Man - Single
@@ -12,6 +12,7 @@ duration: 257
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2024]
+listen_when: 살아남은 자로서 계속 걷는 날
 keywords: [불, 바다, 친구]
 emotion: 저항
 date: 2024-11-19

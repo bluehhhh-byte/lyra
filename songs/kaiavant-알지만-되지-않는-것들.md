@@ -14,6 +14,7 @@ duration: 140
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2022]
+listen_when: 아는 위로가 하나도 안 듣는 밤
 keywords: [하늘, 밤, 고통, 이유, 불]
 emotion: 그리움
 date: 2023-01-02

@@ -14,6 +14,7 @@ duration: 214
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 어떤 사랑이어도 같았을 거라 여기는 밤
 keywords: [팔, 이름, 열정, 몸, 안식]
 emotion: 체념
 date: 2023-04-12

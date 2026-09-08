@@ -14,6 +14,7 @@ duration: 186
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2020]
+listen_when: 몸보다 마음이 먼저 어른이 되던 때
 keywords: [입술, 거리, 시선, 꽃봉오리, 땀, 몸]
 emotion: 설렘
 date: 2023-03-14

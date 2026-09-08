@@ -14,6 +14,7 @@ duration: 317
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 나 자신과 있기 싫어진 방 구석
 keywords: [방, 차, 모래]
 emotion: 위로
 date: 2024-09-04

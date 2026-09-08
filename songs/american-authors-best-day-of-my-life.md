@@ -14,6 +14,7 @@ duration: 194
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2013]
+listen_when: 친구들과 달을 보며 소리치던 밤
 keywords: [꿈, 구름, 하늘, 달, 친구, 태양]
 emotion: 기쁨
 date: 2023-02-10

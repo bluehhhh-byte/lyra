@@ -12,6 +12,7 @@ duration: 334
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1995]
+listen_when: 거짓말이라도 곁에 있어 달라는 밤
 keywords: [집세, 꿈, 고생]
 emotion: 불안
 date: 2025-07-17

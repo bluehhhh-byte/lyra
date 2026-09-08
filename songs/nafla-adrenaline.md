@@ -12,6 +12,7 @@ trackId: 6799875396
 duration: 172
 lang: en
 tags: [한국, Hip-Hop, 2026]
+listen_when: 끓는 속을 랩으로 태우는 새벽
 keywords: [아드레날린, 음악, 성공, 책임]
 emotion: 분노
 date: 2026-08-20

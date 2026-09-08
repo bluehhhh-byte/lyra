@@ -1,6 +1,7 @@
 ---
 title: 夢を見る人
 title_ko: 꿈꾸는 사람
+search_aliases: [Yume wo Miru Hito]
 artist: Original Love
 artist_ko:
 album: 夢を見る人 - EP
@@ -14,6 +15,7 @@ duration: 318
 genre: City Pop
 lang: ja
 tags: [일본, City Pop, 1996]
+listen_when: 짐 없이 첫차를 타고 떠나는 아침
 keywords: [열차, 아침, 이슬, 지붕, 풀밭, 무지개]
 emotion: 희망
 date: 2024-08-26

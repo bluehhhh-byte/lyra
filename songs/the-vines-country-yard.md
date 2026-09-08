@@ -1,6 +1,6 @@
 ---
 title: Country Yard
-title_ko: Country Yard
+title_ko: 시골 마당
 artist: The Vines
 artist_ko:
 album: Highly Evolved
@@ -14,6 +14,7 @@ duration: 226
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2002]
+listen_when: 눈 감는 게 탈출구 같은 오후
 keywords: [도피, 눈]
 emotion: 체념
 date: 2025-01-21

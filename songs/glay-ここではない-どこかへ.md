@@ -1,6 +1,7 @@
 ---
 title: ここではない、どこかへ
 title_ko: 여기가 아닌 어딘가로
+search_aliases: [Kokodehanai Dokokahe]
 artist: GLAY
 album: HEAVY GAUGE
 year: 1999
@@ -10,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/35/
 trackId: 989835113
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 여기가 아닌 어딘가를 꿈꾸는 밤
 emotion: 희망
 keywords: [소원, 세상, 항해, 영혼]
 date: 2026-07-07

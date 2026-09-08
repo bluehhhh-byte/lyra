@@ -14,6 +14,7 @@ duration: 235
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2024]
+listen_when: 서랍 정리하다 옛 편지를 발견한 날
 keywords: [편지, 서랍, 약속, 기억, 얘기]
 emotion: 그리움
 date: 2023-02-20

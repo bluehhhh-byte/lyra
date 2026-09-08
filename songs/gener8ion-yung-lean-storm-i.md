@@ -14,6 +14,7 @@ duration: 209
 genre: Electronic
 lang: en
 tags: [Electronic, 2026]
+listen_when: 물러설 수 없는 대치의 한가운데
 keywords: [명단, 입술, 블랙리스트]
 emotion: 저항
 date: 2026-04-30

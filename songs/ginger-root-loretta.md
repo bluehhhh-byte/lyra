@@ -12,6 +12,7 @@ trackId: 1859681961
 duration: 190
 lang: en
 tags: [영미, Indie Pop, 2021]
+listen_when: 스쳐 가는 그 사람에게 말을 못 건 날
 keywords: [로레타, 아침, 낮, 밤, 싸움]
 emotion: 그리움
 date: 2026-08-24

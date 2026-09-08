@@ -14,6 +14,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2018]
+listen_when: 명작 취급 못 받는 수작을 트는 밤
 keywords: [빈곤, 취업난, 가사, 학생, 파산]
 emotion: 체념
 date: 2022-09-28

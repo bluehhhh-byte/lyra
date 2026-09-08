@@ -14,6 +14,7 @@ duration: 263
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2002]
+listen_when: 남을 사람 걱정이 앞서는 마지막 순간
 keywords: [숨소리, 눈, 후회]
 emotion: 슬픔
 date: 2024-11-10

@@ -12,6 +12,7 @@ duration: 201
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2001]
+listen_when: 아무도 안 믿기로 하니 후련한 밤
 keywords: [거짓말, 무덤, 세계]
 emotion: 분노
 date: 2024-10-14

@@ -12,6 +12,7 @@ duration: 190
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2024]
+listen_when: 나를 내주고 공허만 받은 걸 안 밤
 keywords: [칼날, 관점]
 emotion: 분노
 date: 2024-09-12

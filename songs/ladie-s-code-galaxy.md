@@ -1,6 +1,6 @@
 ---
 title: Galaxy
-title_ko: Galaxy
+title_ko: 은하
 artist: LADIE'S CODE
 artist_ko:
 album: MYST3RY - Single
@@ -14,6 +14,7 @@ duration: 212
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2016]
+listen_when: 구해 달라는 신호를 별에 보내는 밤
 keywords: [별, 달, 언덕, 어둠, 우주]
 emotion: 몽환
 date: 2023-01-06

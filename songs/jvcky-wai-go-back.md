@@ -1,6 +1,6 @@
 ---
 title: Go Back
-title_ko: Go Back
+title_ko: 돌아가
 artist: Jvcky Wai
 artist_ko:
 album: Go Back
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 정답대로 안 살기로 한 날
 keywords: [서울, 강남, 샴페인, 지폐, 집세]
 emotion: 저항
 date: 2022-11-19

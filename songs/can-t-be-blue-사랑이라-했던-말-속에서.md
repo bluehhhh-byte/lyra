@@ -14,6 +14,7 @@ duration: 200
 genre: Indie Rock
 lang: ko
 tags: [Indie Rock, 2024]
+listen_when: 늘 바뀌는 게 나였음을 인정하는 밤
 keywords: [표정, 눈물, 거짓말, 칼, 사랑]
 emotion: 이별
 date: 2025-10-15

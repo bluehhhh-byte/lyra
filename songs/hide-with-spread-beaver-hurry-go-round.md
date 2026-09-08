@@ -14,6 +14,7 @@ duration: 301
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1998]
+listen_when: 다시 봄에 만나자고 인사하는 끝자락
 keywords: [계절, 회전목마, 넝쿨, 열매, 풍경]
 emotion: 체념
 date: 2023-05-02

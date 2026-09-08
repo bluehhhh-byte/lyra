@@ -1,6 +1,6 @@
 ---
 title: Andrew
-title_ko: Andrew
+title_ko: 앤드류
 artist: 이찬혁
 artist_ko:
 album: EROS
@@ -14,6 +14,7 @@ duration: 228
 genre: Indie Rock
 lang: ko
 tags: [Indie Rock, 2025]
+listen_when: 괴물이 되어도 계속 가기로 한 길
 keywords: [도시, 가시덤불, 손, 돌, 괴물]
 emotion: 저항
 date: 2026-02-25

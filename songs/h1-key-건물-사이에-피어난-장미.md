@@ -12,6 +12,7 @@ duration:
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2023]
+listen_when: 삭막한 출근길에 핀 꽃을 발견한 아침
 keywords: [장미, 가시, 건물, 도시, 바람, 향기]
 emotion: 저항
 date: 2023-03-09

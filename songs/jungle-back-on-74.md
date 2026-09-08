@@ -12,6 +12,7 @@ duration: 209
 genre: Funk
 lang: en
 tags: [영미, Funk, 2023]
+listen_when: 돌아갈까 하다 나아가기로 한 밤
 keywords: [고향, 휴식, 비]
 emotion: 회상
 date: 2024-06-09

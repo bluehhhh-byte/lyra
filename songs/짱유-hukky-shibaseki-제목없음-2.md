@@ -14,6 +14,7 @@ duration: 196
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2023]
+listen_when: 취하지 않으면 살 수 없는 회색 도시
 keywords: [친구, 가족, 경찰서, 어른, 파도]
 emotion: 불안
 date: 2026-01-12

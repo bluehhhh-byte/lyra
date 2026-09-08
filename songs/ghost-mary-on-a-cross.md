@@ -12,6 +12,7 @@ duration: 245
 genre: Metal
 lang: en
 tags: [유럽, Metal, 2019]
+listen_when: 끝까지 놓지 않았다고 말하고 싶은 밤
 keywords: [거리, 유명세, 슬픔]
 emotion: 몽환
 date: 2025-06-13

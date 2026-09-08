@@ -1,6 +1,6 @@
 ---
 title: Rise
-title_ko: Rise
+title_ko: 떠오르다
 artist: 듀스
 artist_ko:
 album: Rise - Single
@@ -14,6 +14,7 @@ duration: 202
 genre: Dance
 lang: ko
 tags: [Dance, 2025]
+listen_when: 다시 떠오르겠다고 다짐하는 아침
 keywords: [태양, 어둠, 침묵, 빛, 시간]
 emotion: 희망
 date: 2025-12-14

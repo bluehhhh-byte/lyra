@@ -14,6 +14,7 @@ duration: 224
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 2024]
+listen_when: 집이라 부를 사람이 생긴 밤
 keywords: [물, 칼, 십자가]
 emotion: 사랑
 date: 2024-09-23

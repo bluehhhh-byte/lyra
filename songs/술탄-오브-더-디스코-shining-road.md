@@ -1,6 +1,6 @@
 ---
 title: Shining Road
-title_ko: Shining Road
+title_ko: 빛나는 길
 artist: 술탄 오브 더 디스코
 artist_ko:
 album: Easy Listening For Love
@@ -14,6 +14,7 @@ duration: 215
 genre: Funk
 lang: ko
 tags: [Funk, 2019]
+listen_when: 뚜껑 열린 차로 달리고 싶은 맑은 날
 keywords: [구름, 햇빛, 무지개, 바람, 고속도로]
 emotion: 기쁨
 date: 2026-06-27

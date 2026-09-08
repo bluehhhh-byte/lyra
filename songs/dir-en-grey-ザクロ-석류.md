@@ -1,6 +1,7 @@
 ---
-title: ザクロ 석류
+title: ザクロ
 title_ko: 석류
+search_aliases: [ZAKURO]
 artist: Dir en grey
 artist_ko:
 album: MACABRE
@@ -12,6 +13,7 @@ duration:
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 새벽 네 시 반에 눈이 떠지는 날들
 keywords: [편지, 꿈, 반지, 베개, 눈물, 밤]
 emotion: 슬픔
 date: 2022-11-16

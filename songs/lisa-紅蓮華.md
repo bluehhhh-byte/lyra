@@ -1,6 +1,7 @@
 ---
 title: 紅蓮華
 title_ko: 홍련화
+search_aliases: [Gurenge]
 artist: LiSA
 artist_ko:
 album: 紅蓮華 - EP
@@ -14,6 +15,7 @@ duration: 239
 genre: J-Pop
 lang: ja
 tags: [J-Pop, 2020]
+listen_when: 얻어맞고도 다시 일어서는 아침
 keywords: [주마등, 손, 꿈, 슬픔, 연꽃]
 emotion: 저항
 date: 2025-08-28

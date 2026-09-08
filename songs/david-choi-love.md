@@ -14,6 +14,7 @@ duration: 226
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2008]
+listen_when: 찡그린 얼굴을 펴 주고 싶은 오후
 keywords: [얼굴, 보물, 마음, 세상, 방향]
 emotion: 위로
 date: 2023-05-20

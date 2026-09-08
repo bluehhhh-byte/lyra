@@ -14,6 +14,7 @@ duration: 195
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2025]
+listen_when: 걱정 없던 시절 여름이 떠오른 오후
 keywords: [여름, 무덤, 첫사랑, 문, 꿈]
 emotion: 회상
 date: 2025-10-26

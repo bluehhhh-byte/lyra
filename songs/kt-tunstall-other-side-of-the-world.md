@@ -12,6 +12,7 @@ duration: 215
 genre: Folk
 lang: en
 tags: [영미, Folk, 2004]
+listen_when: 마음이 빙산처럼 차가워진 걸 느낀 날
 keywords: [바다, 빙산, 물]
 emotion: 슬픔
 date: 2025-07-01

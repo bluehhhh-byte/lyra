@@ -1,6 +1,6 @@
 ---
 title: It's Over
-title_ko: It's Over
+title_ko: 끝났어
 artist: 에디킴
 artist_ko:
 album: 너 사용법 (Deluxe Edition)
@@ -14,6 +14,7 @@ duration: 279
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2014]
+listen_when: 괜찮은 척이 더 슬퍼지는 아침
 keywords: [아침, 비, 하늘, 거울, 전화, 눈물]
 emotion: 이별
 date: 2023-02-21

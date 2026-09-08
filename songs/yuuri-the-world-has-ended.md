@@ -12,6 +12,7 @@ trackId: 1863475244
 duration: 255
 lang: ja
 tags: [일본, J-Pop, 2026]
+listen_when: 다 끝나도 네 부재만 아픈 종말의 밤
 keywords: [세계, 마음, 사람, 빛, 신]
 emotion: 그리움
 date: 2026-08-24

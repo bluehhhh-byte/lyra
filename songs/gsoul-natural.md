@@ -12,6 +12,7 @@ duration: 145
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2021]
+listen_when: 강물 흐르듯 자연스레 스며든 사랑
 keywords: [강, 물, 중력, 리본, 하늘, 바다]
 emotion: 사랑
 date: 2024-08-02

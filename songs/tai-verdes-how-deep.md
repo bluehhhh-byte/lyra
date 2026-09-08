@@ -14,6 +14,7 @@ duration: 155
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 안부가 열쇠가 되기까지의 속도를 느낀 밤
 keywords: [열쇠, 와인, 하루, 일주일, 집]
 emotion: 설렘
 date: 2023-04-11

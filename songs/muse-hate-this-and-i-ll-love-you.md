@@ -14,6 +14,7 @@ duration: 310
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]
+listen_when: 빼앗긴 자리에서 증오가 자라는 밤
 keywords: [증오, 영혼, 관계, 광경]
 emotion: 분노
 date: 2024-06-09

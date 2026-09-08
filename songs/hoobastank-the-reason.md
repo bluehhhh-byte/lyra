@@ -14,6 +14,7 @@ duration: 233
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]
+listen_when: 달라져야 할 이유가 생긴 날
 keywords: [눈물, 상처, 이유, 하루, 사람]
 emotion: 사랑
 date: 2023-04-08

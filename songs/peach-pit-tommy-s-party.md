@@ -12,6 +12,7 @@ duration:
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2020]
+listen_when: 내 자리에 앉은 사람을 본 파티 다음 날
 keywords: [신발, 맥주, 밤, 담배, 웃음]
 emotion: 그리움
 date: 2022-09-17

@@ -14,6 +14,7 @@ duration: 146
 genre: Folk
 lang: en
 tags: [영미, Folk, 1969]
+listen_when: 이미 늦었음을 확인하는 해 질 녘
 keywords: [태양, 밤, 새, 신문, 파티, 경기]
 emotion: 체념
 date: 2023-03-03

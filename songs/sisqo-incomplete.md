@@ -1,6 +1,6 @@
 ---
 title: Incomplete
-title_ko: Incomplete
+title_ko: 불완전
 artist: Sisqo
 artist_ko:
 album: Unleash The Dragon
@@ -12,6 +12,7 @@ duration: 274
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 1999]
+listen_when: 다 가져도 채워지지 않는 밤
 keywords: [불빛, 식당, 돈]
 emotion: 슬픔
 date: 2024-12-28

@@ -12,6 +12,7 @@ duration: 189
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2017]
+listen_when: 사람한테 데인 마음이 아무는 중인 밤
 keywords: [사람, 시대, 벼]
 emotion: 불안
 date: 2025-06-20

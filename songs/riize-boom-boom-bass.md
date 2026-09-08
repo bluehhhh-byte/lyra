@@ -14,6 +14,7 @@ duration: 152
 genre: K-Pop
 lang: en
 tags: [K-Pop, 2024]
+listen_when: 밀당이 리듬처럼 즐거운 요즘
 keywords: [리듬, 음악, 베이스, 박자, 손]
 emotion: 기쁨
 date: 2025-11-26

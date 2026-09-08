@@ -1,6 +1,6 @@
 ---
 title: Storm Is Coming
-title_ko: Storm Is Coming
+title_ko: 폭풍이 온다
 artist: PIA
 artist_ko:
 album: PIA
@@ -14,6 +14,7 @@ duration: 237
 genre: Metal
 lang: ko
 tags: [한국, Metal, 2015]
+listen_when: 폭풍 직전의 고요를 느끼는 밤
 keywords: [도시, 불빛, 꿈, 파도, 혼돈]
 emotion: 불안
 date: 2022-11-20

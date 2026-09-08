@@ -14,6 +14,7 @@ duration: 267
 genre: Dance
 lang: en
 tags: [영미, Dance, 1998]
+listen_when: 준 사랑이 돌아온다고 믿게 된 날
 keywords: [빛, 어둠, 폭풍, 피난처, 품]
 emotion: 위로
 date: 2023-04-14

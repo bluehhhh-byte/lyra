@@ -12,6 +12,7 @@ duration: 205
 genre: Dance
 lang: en
 tags: [영미, Dance, 1997]
+listen_when: 속도를 늦추라고 말해야 하는 썸
 keywords: [한걸음, 선택지]
 emotion: 설렘
 date: 2024-08-23

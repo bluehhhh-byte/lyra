@@ -12,6 +12,7 @@ duration: 228
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
+listen_when: 이불 속에서도 생각이 쫓아오는 밤
 keywords: [짐, 생각, 마음]
 emotion: 불안
 date: 2025-06-15

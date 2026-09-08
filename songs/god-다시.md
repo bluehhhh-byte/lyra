@@ -14,6 +14,7 @@ duration: 283
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2001]
+listen_when: 꽃다발이 갈 곳을 잃어버린 저녁
 keywords: [꽃, 촛불, 음식, 문, 바다, 고백]
 emotion: 그리움
 date: 2022-12-11

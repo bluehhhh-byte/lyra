@@ -14,6 +14,7 @@ duration: 226
 genre: K-Pop
 lang: en
 tags: [한국, K-Pop, 1999]
+listen_when: 아침이 오기 전까지만 붙잡는 새벽
 keywords: [새벽, 꿈, 향기, 눈물, 황혼]
 emotion: 사랑
 date: 2023-01-26

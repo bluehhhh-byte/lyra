@@ -14,6 +14,7 @@ duration: 192
 genre: Funk
 lang: en
 tags: [Funk, 2022]
+listen_when: 가라앉았던 기분이 드디어 떠오른 밤
 keywords: [음악, 감정, 건물, 잔, 밤]
 emotion: 기쁨
 date: 2025-09-07

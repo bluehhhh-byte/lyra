@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]
+listen_when: 네 생각을 하루 종일 하게 되는 날
 keywords: [상상, 전화, 동전]
 emotion: 기쁨
 date: 2024-11-11

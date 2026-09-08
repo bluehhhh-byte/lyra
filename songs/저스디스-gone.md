@@ -1,6 +1,6 @@
 ---
 title: Gone
-title_ko: Gone
+title_ko: 사라짐
 artist: 저스디스
 artist_ko:
 album: Re: Tired.
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
+listen_when: 지금 당장 사라지고 싶은 밤
 keywords: [물, 사진, 세상, 시간, 후회]
 emotion: 고독
 date: 2022-09-26

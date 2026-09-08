@@ -1,6 +1,6 @@
 ---
 title: DOG OR CHICK 2.0
-title_ko: DOG OR CHICK 2.0
+title_ko: 개냐 병아리냐 2.0
 artist: 다민이
 artist_ko:
 album: DOG OR CHICK 2.0
@@ -12,6 +12,7 @@ duration: 136
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 훈수 소리를 음악으로 덮는 밤
 keywords: [계층, 바닥, 도시, 음악, 현실]
 emotion: 분노
 date: 2022-09-25

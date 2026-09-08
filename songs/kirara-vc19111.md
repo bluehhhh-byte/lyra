@@ -14,6 +14,7 @@ duration: 323
 genre: Electronic
 lang: en
 tags: [Electronic, 2021]
+listen_when: 상처를 핑계 삼지 않기로 한 새벽
 keywords: []
 emotion:
 date: 2026-03-05

@@ -1,6 +1,6 @@
 ---
 title: Always Awake
-title_ko: Always Awake
+title_ko: 늘 깨어 있어
 artist: 빈지노
 artist_ko:
 album: 2 4 : 2 6
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2012]
+listen_when: 서울이 잠들어도 깨어 있는 새벽
 keywords: [서울, 밤, 심장]
 emotion: 저항
 date: 2025-05-13

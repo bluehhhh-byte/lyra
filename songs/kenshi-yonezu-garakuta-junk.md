@@ -12,6 +12,7 @@ duration: 238
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2024]
+listen_when: 고물인 채로도 곁에 있어 달라는 밤
 keywords: [공허, 밤, 알람]
 emotion: 위로
 date: 2024-09-04

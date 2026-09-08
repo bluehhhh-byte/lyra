@@ -13,6 +13,7 @@ external_url: https://music.apple.com/jp/album/ne/156875796?i=156875827&uo=4
 duration: 352
 lang: ja
 tags: [일본, J-Pop, 2006]
+listen_when: 아픔마저 놓기 싫은 사랑에 잠긴 밤
 keywords: [사랑, 고통, 자유, 마음, 영원]
 emotion: 그리움
 date: 2026-09-03

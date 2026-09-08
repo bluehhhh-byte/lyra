@@ -1,6 +1,7 @@
 ---
 title: 虛無の中での遊戱
 title_ko: 허무 속의 유희
+search_aliases: [Kyomu no Naka de no Yuugi]
 artist: Malice Mizer
 artist_ko:
 album: 虚無の中での遊戯
@@ -12,6 +13,7 @@ duration:
 genre: Visual Kei
 lang: en
 tags: [일본, Visual Kei, 2000]
+listen_when: 허무를 비웃으며 가라앉는 새벽
 keywords: [유리조각, 빛, 어둠, 그림자, 파편, 시간]
 emotion: 몽환
 date: 2023-01-10

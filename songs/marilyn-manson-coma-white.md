@@ -12,6 +12,7 @@ duration: 340
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 완벽해 보이는 미소가 공허한 밤
 keywords: [미소, 고가도로, 약, 사진, 세상]
 emotion: 체념
 date: 2023-03-22

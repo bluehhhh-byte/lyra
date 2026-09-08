@@ -1,6 +1,6 @@
 ---
 title: Bonvoyage
-title_ko: Bonvoyage
+title_ko: 잘 다녀와
 artist: 김다니엘, 1of1
 artist_ko:
 album: 이 별에 필요한 (Soundtrack from the Netflix Film)
@@ -12,6 +12,7 @@ duration: 295
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2025]
+listen_when: 낯선 도시에서 안녕을 건네는 밤
 keywords: [도시, 미래, 먼지]
 emotion: 불안
 date: 2025-06-14

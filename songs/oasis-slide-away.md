@@ -12,6 +12,7 @@ duration: 393
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1994]
+listen_when: 세상이 잠든 사이 붙잡고 싶은 사람
 keywords: [꿈, 하루, 세상]
 emotion: 그리움
 date: 2024-06-18

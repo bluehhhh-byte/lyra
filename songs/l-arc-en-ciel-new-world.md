@@ -14,6 +14,7 @@ duration: 247
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2005]
+listen_when: 과거는 시시하다고 자르고 나서는 아침
 keywords: [하늘, 빛, 어둠, 날개, 바람]
 emotion: 희망
 date: 2023-01-13

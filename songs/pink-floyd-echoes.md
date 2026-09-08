@@ -13,6 +13,7 @@ external_url: https://music.apple.com/us/album/echoes/1065973614?i=1065973623&uo
 duration: 1413
 lang: en
 tags: [영미, Progressive Rock, 1971]
+listen_when: 깊이 가라앉아 떠오르지 않고 싶은 밤
 keywords: [알바트로스, 메아리, 모래, 바다, 아침]
 emotion: 몽환
 date: 2026-09-03

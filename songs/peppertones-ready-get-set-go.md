@@ -1,6 +1,6 @@
 ---
 title: Ready, Get Set, Go!
-title_ko: Ready, Get Set, Go!
+title_ko: 제자리, 준비, 출발!
 artist: Peppertones
 artist_ko:
 album: Antenna music Warriors
@@ -14,6 +14,7 @@ duration: 325
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2008]
+listen_when: 출발 총성 직전의 숨 고르기
 keywords: [총성, 지평선, 태양, 바람, 함성]
 emotion: 희망
 date: 2023-01-09

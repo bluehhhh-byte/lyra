@@ -14,6 +14,7 @@ duration: 260
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 1999]
+listen_when: 못다 한 말을 안고 기다리는 거리
 keywords: [눈물, 눈빛, 거리, 추억, 입맞춤]
 emotion: 그리움
 date: 2023-01-25

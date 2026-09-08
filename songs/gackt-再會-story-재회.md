@@ -1,6 +1,7 @@
 ---
-title: 再會 ~Story~ 재회
+title: 再會 ~Story~
 title_ko: 재회
+search_aliases: [Saikai]
 artist: Gackt
 artist_ko:
 album: 再会~Story~
@@ -12,6 +13,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2000]
+listen_when: 희미해지기 전에 한 번 더 부르는 이름
 keywords: [빛, 꿈, 기억, 눈빛, 풍경, 이름]
 emotion: 그리움
 date: 2022-10-03

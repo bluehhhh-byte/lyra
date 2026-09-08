@@ -14,6 +14,7 @@ duration: 185
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2021]
+listen_when: 단순했던 시절이 그리운 스물의 밤
 keywords: [시절, 잔, 순간]
 emotion: 그리움
 date: 2024-10-27

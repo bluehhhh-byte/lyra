@@ -12,6 +12,7 @@ trackId: 6783698079
 duration: 118
 lang: ko
 tags: [한국, Hip-Hop, 2026]
+listen_when: 걱정을 털고 그냥 밀고 가는 날
 keywords: [걱정, 인생, 공기, 생각]
 emotion: 기쁨
 date: 2026-07-26

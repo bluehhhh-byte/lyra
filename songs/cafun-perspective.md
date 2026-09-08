@@ -14,6 +14,7 @@ duration: 163
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2023]
+listen_when: 걷다가 문득 여기가 어딘지 모를 때
 keywords: [대화, 길, 방향]
 emotion: 불안
 date: 2024-06-17

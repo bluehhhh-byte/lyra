@@ -12,6 +12,7 @@ trackId: 1443094618
 duration: 205
 lang: en
 tags: [유럽, Indie Rock, 2007]
+listen_when: 내가 옳았음을 증명해 낸 순간
 keywords: [증거, 점수, 기회, 모래]
 emotion: 저항
 date: 2026-07-22

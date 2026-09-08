@@ -12,6 +12,7 @@ duration: 263
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2013]
+listen_when: 판을 뒤집으러 나서는 서울의 밤
 keywords: [불한당, 서울, 한강]
 emotion: 저항
 date: 2024-12-06

@@ -12,6 +12,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1979]
+listen_when: 상처가 수업이었음을 알게 된 겨울 끝
 keywords: [민들레, 노을, 씨앗, 바람, 편지, 겨울]
 emotion: 위로
 date: 2023-02-13

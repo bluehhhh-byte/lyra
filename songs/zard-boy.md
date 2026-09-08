@@ -14,6 +14,7 @@ duration: 333
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1994]
+listen_when: 사랑한단 말을 아껴 두는 밤
 keywords: [키스, 밤, 미소, 도시, 친구]
 emotion: 사랑
 date: 2025-08-18

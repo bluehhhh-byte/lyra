@@ -14,6 +14,7 @@ duration: 155
 genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2020]
+listen_when: 문제투성이인 채로 그냥 사는 요즘
 keywords: [문제, 속옷, 신경]
 emotion: 체념
 date: 2025-06-12

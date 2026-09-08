@@ -1,6 +1,6 @@
 ---
 title: Unpretty Tattoo
-title_ko: Unpretty Tattoo
+title_ko: 예쁘지 않은 문신
 artist: 퓨어킴
 artist_ko:
 album: Bluetube 2020 - EP
@@ -14,6 +14,7 @@ duration: 195
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2020]
+listen_when: 문신처럼 지워지지 않을 마음을 새긴 밤
 keywords: [사랑, 생각, 끝]
 emotion: 사랑
 date: 2022-10-28

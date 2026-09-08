@@ -1,6 +1,6 @@
 ---
 title: Superfantastic
-title_ko: Superfantastic
+title_ko: 환상적
 artist: Mr.Big
 artist_ko:
 album: Greatest Hits
@@ -12,6 +12,7 @@ duration: 225
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1999]
+listen_when: 겉만 번지르르한 것들이 거슬리는 날
 keywords: [비눗방울, 흐름, 마음]
 emotion: 저항
 date: 2024-11-23

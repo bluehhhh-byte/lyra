@@ -12,6 +12,7 @@ trackId: 735672386
 duration: 209
 lang: en
 tags: [유럽, Heavy Metal, 1997]
+listen_when: 속에서 뭔가 터질 것 같은 날
 keywords: [신뢰, 하인, 수치, 죽음]
 emotion: 분노
 date: 2026-08-04

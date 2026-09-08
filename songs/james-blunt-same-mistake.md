@@ -12,6 +12,7 @@ duration: 298
 genre: Folk
 lang: en
 tags: [영미, Folk, 2007]
+listen_when: 같은 실수를 반복할까 무서운 새벽
 keywords: [침대, 거리, 별]
 emotion: 체념
 date: 2025-07-02

@@ -14,6 +14,7 @@ duration: 281
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1994]
+listen_when: 재난 속에서도 감싸 안고 싶은 사람
 keywords: [코트, 집, 자동차, 먼지, 소녀]
 emotion: 사랑
 date: 2022-10-31

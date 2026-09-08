@@ -14,6 +14,7 @@ duration: 208
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2018]
+listen_when: 사랑이 뭔지 궁금해 미칠 것 같은 밤
 keywords: [영화, 책, 드라마, 사탕, 하늘, 상상]
 emotion: 설렘
 date: 2023-03-10

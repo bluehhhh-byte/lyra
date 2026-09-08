@@ -12,6 +12,7 @@ duration:
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 든든한 품이 간절해지는 밤
 keywords: [부엌, 침실, 프라이팬, 손, 등]
 emotion: 사랑
 date: 2023-02-12

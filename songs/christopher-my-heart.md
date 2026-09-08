@@ -14,6 +14,7 @@ duration: 196
 genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2019]
+listen_when: 다 주고도 떠나보낸 게 억울한 밤
 keywords: [별, 마음, 이유, 밤]
 emotion: 이별
 date: 2022-12-19

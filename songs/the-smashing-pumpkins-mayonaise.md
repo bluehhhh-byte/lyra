@@ -11,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/99/
 trackId: 721207988
 lang: en
 tags: [영미, Hard Rock, 1993]
+listen_when: 그래도 할 수 있을 때 하겠다고 다짐하는 밤
 emotion: 고독
 keywords: [슬픔, 비밀, 꿈, 파멸, 약속]
 date: 2026-07-07

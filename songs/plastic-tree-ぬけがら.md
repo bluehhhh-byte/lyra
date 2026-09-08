@@ -1,6 +1,7 @@
 ---
 title: ぬけがら
 title_ko: 허물
+search_aliases: [Nukegara]
 artist: Plastic Tree
 artist_ko:
 album: Puppet Show (パペット ショウ)
@@ -12,6 +13,7 @@ duration: 211
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1997]
+listen_when: 허물만 남은 것 같은 여름 오후
 keywords: [여름, 희망, 바람]
 emotion: 고독
 date: 2025-07-05

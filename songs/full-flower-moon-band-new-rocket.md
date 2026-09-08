@@ -14,6 +14,7 @@ duration: 185
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2020]
+listen_when: 이 도시에 나 혼자인 것 같은 밤
 keywords: [로켓, 도시, 콘센트]
 emotion: 고독
 date: 2024-08-12

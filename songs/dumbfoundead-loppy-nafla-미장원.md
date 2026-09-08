@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2015]
+listen_when: 센 척이 필요한 날의 이어폰 속
 keywords: [미장원, 고래, 참치, 망치, 손가락]
 emotion: 저항
 date: 2026-02-06

@@ -1,6 +1,6 @@
 ---
 title: FAKE LOVE
-title_ko: FAKE LOVE
+title_ko: 거짓 사랑
 artist: BTS
 artist_ko:
 album: Love Yourself 結 'Answer'
@@ -14,6 +14,7 @@ duration: 242
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2018]
+listen_when: 기쁜 척이 버릇이 되어 버린 때
 keywords: [사랑, 약점, 척]
 emotion: 슬픔
 date: 2024-07-30

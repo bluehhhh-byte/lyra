@@ -14,6 +14,7 @@ duration: 286
 genre: Folk
 lang: en
 tags: [유럽, Folk, 2002]
+listen_when: 오래된 물건에서 세월을 만지는 오후
 keywords: [선반, 시간, 삶]
 emotion: 위로
 date: 2022-09-17

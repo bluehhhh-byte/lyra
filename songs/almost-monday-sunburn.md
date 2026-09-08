@@ -12,6 +12,7 @@ duration: 176
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 여름 끝에 남은 자국을 만져 보는 밤
 keywords: [화상, 캘리포니아, 폭염]
 emotion: 그리움
 date: 2024-06-14

@@ -14,6 +14,7 @@ duration: 333
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2024]
+listen_when: 말 걸 타이밍을 끝내 놓쳐 버린 날
 keywords: [타이밍, 시간선, 불]
 emotion: 그리움
 date: 2024-10-02

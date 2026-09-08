@@ -14,6 +14,7 @@ duration: 467
 genre: Alternative Rock
 lang: en
 tags: [유럽, Alternative Rock, 1997]
+listen_when: 숨이 쉬어지지 않는 날의 긴 연주
 keywords: [숨, 치유, 비행기]
 emotion: 고독
 date: 2022-10-06

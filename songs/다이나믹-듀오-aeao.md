@@ -14,6 +14,7 @@ duration: 317
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2014]
+listen_when: 이력서를 다시 고쳐 쓰는 밤
 keywords: [동전, 이력서, 휘파람, 비바람, 주름]
 emotion: 희망
 date: 2022-12-22

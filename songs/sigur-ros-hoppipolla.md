@@ -12,6 +12,7 @@ duration: 269
 genre: Post-Rock
 lang: en
 tags: [Post-Rock, 2005]
+listen_when: 장화 없이 웅덩이에 뛰어드는 날
 keywords: [세상, 장화, 껍질, 바람, 머리카락]
 emotion: 기쁨
 date: 2025-11-15

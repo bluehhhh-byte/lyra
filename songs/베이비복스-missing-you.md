@@ -1,6 +1,6 @@
 ---
 title: Missing You
-title_ko: Missing You
+title_ko: 네가 그리워
 artist: 베이비복스
 artist_ko:
 album: Baby V.O.X Special Album
@@ -14,6 +14,7 @@ duration: 236
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 1997]
+listen_when: 우는 모습을 보이기 싫어 참는 배웅
 keywords: [눈물, 고개, 발길, 숨, 기다림]
 emotion: 이별
 date: 2023-02-06

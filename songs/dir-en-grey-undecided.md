@@ -14,6 +14,7 @@ duration: 294
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2008]
+listen_when: 돌아서고도 발이 안 떨어지는 바닷가
 keywords: [비, 발자국, 파도, 바다, 계절, 눈물]
 emotion: 이별
 date: 2023-04-26

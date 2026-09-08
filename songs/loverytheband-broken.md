@@ -12,6 +12,7 @@ duration:
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2018]
+listen_when: 함께 외로울 사람을 만난 파티의 끝
 keywords: [바보, 외로움]
 emotion: 위로
 date: 2024-06-11

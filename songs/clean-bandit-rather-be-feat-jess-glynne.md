@@ -12,6 +12,7 @@ trackId: 1027563268
 duration: 228
 lang: en
 tags: [영미, House, 2014]
+listen_when: 함께라서 어디든 좋은 여행길
 keywords: [마음, 기회, 평화, 발걸음]
 emotion: 사랑
 date: 2026-08-24

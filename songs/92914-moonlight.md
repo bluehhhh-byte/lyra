@@ -14,6 +14,7 @@ duration: 338
 genre: Indie Pop
 lang: en
 tags: [한국, Indie Pop, 2017]
+listen_when: 내 길이 맞는지 별에게 묻고 싶은 밤
 keywords: [길, 별, 춤]
 emotion: 불안
 date: 2024-07-05

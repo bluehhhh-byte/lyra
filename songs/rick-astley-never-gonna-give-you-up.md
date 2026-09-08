@@ -14,6 +14,7 @@ duration: 214
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 1987]
+listen_when: 포기란 없다고 장담하고 싶은 날
 keywords: [규칙, 마음, 진심]
 emotion: 사랑
 date: 2025-06-09

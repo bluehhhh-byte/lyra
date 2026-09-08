@@ -14,6 +14,7 @@ duration: 138
 genre: Punk Rock
 lang: en
 tags: [일본, Punk Rock, 2004]
+listen_when: 끝났는데 아무도 안 일어나는 일요일 밤
 keywords: [일요일, 소원, 손, 집, 길]
 emotion: 위로
 date: 2023-02-08

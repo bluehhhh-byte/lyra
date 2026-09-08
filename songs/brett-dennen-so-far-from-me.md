@@ -14,6 +14,7 @@ duration: 246
 genre: Folk
 lang: en
 tags: [영미, Folk, 2008]
+listen_when: 편지로도 못 좁히는 거리를 느낀 날
 keywords: [까마귀, 허수아비, 빈병]
 emotion: 그리움
 date: 2024-06-21

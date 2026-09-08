@@ -14,6 +14,7 @@ duration: 208
 genre: Ballad
 lang: ko
 tags: [Ballad, 2002]
+listen_when: 지난 사랑에 다친 사람을 좋아하게 된 때
 keywords: [눈빛, 사랑, 시간, 마음, 눈물]
 emotion: 이별
 date: 2026-04-28

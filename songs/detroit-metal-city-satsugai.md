@@ -12,6 +12,7 @@ duration:
 genre: Heavy Metal
 lang: ja
 tags: [일본, Heavy Metal, 2008]
+listen_when: 속엣것을 괴성으로 뽑아내고 싶은 밤
 keywords: [지옥, 피, 부모, 형제, 미래, 추억]
 emotion: 분노
 date: 2023-03-07

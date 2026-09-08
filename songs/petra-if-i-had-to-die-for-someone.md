@@ -14,6 +14,7 @@ duration: 279
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1998]
+listen_when: 대신 죽어 준 사랑을 헤아려 보는 밤
 keywords: [안전벨트, 무릎, 스카프, 폭풍, 문]
 emotion: 사랑
 date: 2023-05-01

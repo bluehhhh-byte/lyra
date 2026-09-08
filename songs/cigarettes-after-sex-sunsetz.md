@@ -14,6 +14,7 @@ duration: 215
 genre: Dream Pop
 lang: en
 tags: [영미, Dream Pop, 2017]
+listen_when: 노을 속 옛 얼굴이 스쳐 가는 저녁
 keywords: [해, 마을, 그네]
 emotion: 몽환
 date: 2024-09-08

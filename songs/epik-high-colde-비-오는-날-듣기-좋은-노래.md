@@ -12,6 +12,7 @@ duration: 244
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
+listen_when: 비 오는 날 옛사람이 생각날 때
 keywords: [비, 음악, 노래]
 emotion: 그리움
 date: 2025-07-18

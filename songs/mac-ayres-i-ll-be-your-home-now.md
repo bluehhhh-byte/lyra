@@ -14,6 +14,7 @@ duration: 374
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2023]
+listen_when: 누군가의 집이 되어 주고 싶은 계절
 keywords: [집, 계절, 기회]
 emotion: 위로
 date: 2024-06-17

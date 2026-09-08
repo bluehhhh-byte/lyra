@@ -14,6 +14,7 @@ duration: 287
 genre: Folk
 lang: en
 tags: [Folk, 2002]
+listen_when: 시선을 거두는 법을 배우는 중인 밤
 keywords: [삶, 사랑, 영웅, 눈, 바람]
 emotion: 그리움
 date: 2026-02-20

@@ -14,6 +14,7 @@ duration: 218
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1997]
+listen_when: 홀린 줄 알면서 따라가는 밤
 keywords: [늑대, 입술, 이빨, 밤, 발톱, 사마귀]
 emotion: 불안
 date: 2023-01-13

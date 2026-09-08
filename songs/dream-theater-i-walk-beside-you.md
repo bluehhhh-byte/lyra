@@ -14,6 +14,7 @@ duration: 269
 genre: Metal
 lang: en
 tags: [Metal, 2005]
+listen_when: 곁을 지켜 주고 싶은 사람이 있는 날
 keywords: [눈, 미소, 상처, 손, 신전]
 emotion: 위로
 date: 2025-09-09

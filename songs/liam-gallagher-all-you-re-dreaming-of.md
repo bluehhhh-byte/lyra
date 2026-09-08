@@ -12,6 +12,7 @@ duration: 242
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2020]
+listen_when: 최악의 날 곁에 남는 사랑을 묻는 겨울밤
 keywords: [밤하늘, 별, 달빛]
 emotion: 위로
 date: 2024-09-28

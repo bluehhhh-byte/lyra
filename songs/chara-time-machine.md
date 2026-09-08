@@ -1,6 +1,6 @@
 ---
 title: Time Machine
-title_ko: Time Machine
+title_ko: 타임머신
 artist: Chara
 artist_ko:
 album: Hikari To Watashi
@@ -12,6 +12,7 @@ duration: 398
 genre: J-Pop
 lang: ko
 tags: [일본, J-Pop, 1997]
+listen_when: 돌아갈 수 없음을 받아들이는 밤
 keywords: [벽, 눈물, 바늘, 실, 파랑, 마음]
 emotion: 그리움
 date: 2022-09-21

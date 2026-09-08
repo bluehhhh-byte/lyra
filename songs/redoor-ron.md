@@ -1,6 +1,6 @@
 ---
 title: Ron
-title_ko: Ron
+title_ko: 론
 artist: Redoor
 artist_ko:
 album: Hospital
@@ -14,6 +14,7 @@ duration: 172
 genre: Indie Pop
 lang: ko
 tags: [Indie Pop, 2025]
+listen_when: 미안하단 말이 한없이 부족한 밤
 keywords: [날개, 어깨, 기억, 눈물, 손길]
 emotion: 고독
 date: 2026-04-09

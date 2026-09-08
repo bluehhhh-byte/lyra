@@ -1,6 +1,6 @@
 ---
 title: party
-title_ko: party
+title_ko: 파티
 artist: 식케이
 artist_ko:
 album: H.A.L.F (Have A Little Fun)
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2017]
+listen_when: 파티장을 빠져나와 택시를 잡는 새벽
 keywords: [담배연기, 술, 택시, 주말, 심장, 집]
 emotion: 그리움
 date: 2023-02-04

@@ -14,6 +14,7 @@ duration: 185
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1967]
+listen_when: 길 잃은 기분을 가만히 들여다보는 밤
 keywords: [소녀]
 emotion: 몽환
 date: 2024-06-25

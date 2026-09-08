@@ -12,6 +12,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2017]
+listen_when: 돌아가는 길에서만 피는 꽃을 만난 날
 keywords: [길, 날들, 얼굴]
 emotion: 희망
 date: 2025-04-15

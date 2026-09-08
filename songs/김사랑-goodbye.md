@@ -1,6 +1,6 @@
 ---
 title: Goodbye
-title_ko: Goodbye
+title_ko: 안녕
 artist: 김사랑
 artist_ko:
 album: [Human Complex] Integrated
@@ -14,6 +14,7 @@ duration: 222
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2010]
+listen_when: 그 한마디를 끝내 못 담은 이별
 keywords: [한마디, 말, 사랑, 사람, 마음]
 emotion: 이별
 date: 2022-12-30

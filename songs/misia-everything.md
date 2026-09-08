@@ -14,6 +14,7 @@ duration: 420
 genre: R&B/Soul
 lang: ja
 tags: [일본, R&B/Soul, 2000]
+listen_when: 만난 것 자체가 기적 같은 밤
 keywords: [시간, 기적, 문, 밤, 손, 미래]
 emotion: 사랑
 date: 2022-11-14

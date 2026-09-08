@@ -14,6 +14,7 @@ duration: 245
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2018]
+listen_when: 나쁘게 보는 시선에 어깨를 으쓱하는 날
 keywords: [옷, 눈웃음, 게임]
 emotion: 설렘
 date: 2025-05-03

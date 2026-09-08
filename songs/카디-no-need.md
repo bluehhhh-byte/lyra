@@ -1,6 +1,6 @@
 ---
 title: No Need
-title_ko: No Need
+title_ko: 필요 없어
 artist: 카디
 artist_ko:
 album: No Doubt - EP
@@ -12,6 +12,7 @@ duration: 215
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2024]
+listen_when: 타협 없이 시작하는 첫날
 keywords: [전율, 인내심, 시작]
 emotion: 희망
 date: 2025-05-19

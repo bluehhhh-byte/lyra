@@ -12,6 +12,7 @@ duration: 276
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2020]
+listen_when: 마지막일지 몰라 더 꼭 안아 주는 밤
 keywords: [눈, 숨, 거리]
 emotion: 위로
 date: 2024-06-11

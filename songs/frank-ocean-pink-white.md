@@ -14,6 +14,7 @@ duration: 185
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2016]
+listen_when: 네게 배운 것들을 곱씹는 여름 끝
 keywords: [하늘, 땅, 허리케인, 홍수, 수영장]
 emotion: 회상
 date: 2023-05-12

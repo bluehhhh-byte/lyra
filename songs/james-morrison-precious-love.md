@@ -14,6 +14,7 @@ duration: 217
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2011]
+listen_when: 일으켜 준 사람이 뒤늦게 고마운 날
 keywords: [사람, 인생, 도움, 속삭임, 의심]
 emotion: 사랑
 date: 2023-03-07

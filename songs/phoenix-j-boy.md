@@ -14,6 +14,7 @@ duration: 247
 genre: Synth-Pop
 lang: en
 tags: [유럽, Synth-Pop, 2017]
+listen_when: 남의 세계에 초대받은 이방인의 여름
 keywords: [보석, 팔찌, 무도회, 수족관, 골목, 숲]
 emotion: 몽환
 date: 2023-04-06

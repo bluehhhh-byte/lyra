@@ -12,6 +12,7 @@ trackId: 1746767391
 duration: 270
 lang: en
 tags: [영미, Folk, 2024]
+listen_when: 먹고살려 아등바등한 하루의 끝
 keywords: [인생, 돈, 길, 사람, 멜로디]
 emotion: 체념
 date: 2026-08-29

@@ -11,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/
 trackId: 1234834112
 lang: ko
 tags: [한국, K-Pop, 2017, Ballad]
+listen_when: 마지막 장면을 눈에 담는 이별
 emotion: 이별
 keywords: [마지막, 장면, 이별, 추억, 기억, 영화, 하늘, 노래, 눈물]
 date: 2026-07-08

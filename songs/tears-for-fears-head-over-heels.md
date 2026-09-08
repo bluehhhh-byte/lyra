@@ -14,6 +14,7 @@ duration: 257
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 1985]
+listen_when: 홀딱 반해 갈피를 못 잡는 요즘
 keywords: [날씨, 불, 총, 네잎클로버, 시간]
 emotion: 사랑
 date: 2022-11-28

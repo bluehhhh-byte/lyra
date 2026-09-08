@@ -12,6 +12,7 @@ duration: 291
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
+listen_when: 가짜 같은 것들에 지쳐 가는 저녁
 keywords: [플라스틱, 고무, 마을]
 emotion: 체념
 date: 2024-06-25

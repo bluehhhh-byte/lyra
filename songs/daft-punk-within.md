@@ -1,6 +1,6 @@
 ---
 title: Within
-title_ko: Within
+title_ko: 내 안에
 artist: Daft Punk
 artist_ko:
 album: Random Access Memories
@@ -12,6 +12,7 @@ duration: 229
 genre: Electronic
 lang: en
 tags: [유럽, Electronic, 2013]
+listen_when: 내가 누구인지 문득 낯설어진 새벽
 keywords: [세계, 방, 문]
 emotion: 고독
 date: 2024-12-27

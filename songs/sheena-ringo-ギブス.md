@@ -1,6 +1,7 @@
 ---
 title: ギブス
 title_ko: 깁스
+search_aliases: [Gips]
 artist: Sheena Ringo
 artist_ko:
 album: ギブス (Single)
@@ -12,6 +13,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2000]
+listen_when: 영원 같은 말 대신 안아 달라는 밤
 keywords: [사진, 덫, 사월, 거짓말, 내일]
 emotion: 사랑
 date: 2023-02-26

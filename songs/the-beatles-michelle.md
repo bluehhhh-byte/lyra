@@ -14,6 +14,7 @@ duration: 162
 genre: Folk
 lang: en
 tags: [영미, Folk, 1965]
+listen_when: 이름만 불러도 좋은 사람이 있는 밤
 keywords: [미셸, 단어]
 emotion: 사랑
 date: 2024-07-08

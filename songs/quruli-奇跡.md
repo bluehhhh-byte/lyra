@@ -1,6 +1,7 @@
 ---
 title: 奇跡
 title_ko: 기적
+search_aliases: [Kiseki (Miracles)]
 artist: Quruli
 artist_ko:
 album: 奇跡
@@ -12,6 +13,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2011]
+listen_when: 그림 같은 행복을 조금 나눠 달라 비는 날
 keywords: [하늘, 눈물, 단추, 꽃, 한숨]
 emotion: 희망
 date: 2023-01-08

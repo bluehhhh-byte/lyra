@@ -12,6 +12,7 @@ duration: 239
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2002]
+listen_when: 남의 말에 무너질 것 같은 날
 keywords: [아픔, 숨, 매일]
 emotion: 위로
 date: 2024-09-26

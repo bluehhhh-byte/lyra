@@ -14,6 +14,7 @@ duration: 195
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2024]
+listen_when: 물 위로 겨우 머리만 내밀고 버티는 요즘
 keywords: [사랑, 칼, 태양]
 emotion: 슬픔
 date: 2024-09-24

@@ -1,6 +1,6 @@
 ---
 title: K-Mars
-title_ko: K-Mars
+title_ko: K-화성
 artist: 원슈타인
 artist_ko:
 album: 방과 후 전쟁활동 (Original Television Soundtrack) Special
@@ -14,6 +14,7 @@ duration: 164
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2023]
+listen_when: 숨 막히는 서울에서 버티는 밤
 keywords: [악마, 태양, 서울, 얼굴, 본능]
 emotion: 불안
 date: 2026-03-21

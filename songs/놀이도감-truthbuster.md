@@ -12,6 +12,7 @@ trackId: 1842929304
 duration: 428
 lang: en
 tags: [한국, Indie Rock, 2025]
+listen_when: 위선에 입을 열기로 한 순간
 keywords: [진실, 거짓말, 변호사, 이야기, 기회]
 emotion: 분노
 date: 2026-08-22

@@ -14,6 +14,7 @@ duration: 158
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 문제를 인정하고 다시 시작하는 아침
 keywords: [문제, 상담, 펜, 바닥, 유리잔]
 emotion: 희망
 date: 2022-12-19

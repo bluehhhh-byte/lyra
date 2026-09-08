@@ -12,6 +12,7 @@ trackId: 6790844001
 duration: 253
 lang: en
 tags: [한국, Indie Rock, 2026]
+listen_when: 네가 나였을지도 모른다는 상상의 밤
 keywords: [이론, 토론, 혜성, 윤회, 불]
 emotion: 몽환
 date: 2026-08-27

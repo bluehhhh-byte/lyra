@@ -14,6 +14,7 @@ duration: 208
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1998]
+listen_when: 사랑이라는 증오가 넘쳐흐르는 밤
 keywords: [타르, 탱크, 증오]
 emotion: 저항
 date: 2025-06-16

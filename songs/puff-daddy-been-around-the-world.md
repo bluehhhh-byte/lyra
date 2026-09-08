@@ -14,6 +14,7 @@ duration: 315
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 1997]
+listen_when: 안티도 자랑거리가 되는 전성기
 keywords: [춤, 여자, 부자, 안티팬, 히트]
 emotion: 기쁨
 date: 2023-06-06

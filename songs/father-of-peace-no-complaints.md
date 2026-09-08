@@ -12,6 +12,7 @@ duration: 152
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2025]
+listen_when: 불평은 접고 머리를 식히는 밤
 keywords: [삶, 클럽, 재미]
 emotion: 체념
 date: 2025-06-29

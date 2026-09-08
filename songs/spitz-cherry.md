@@ -14,6 +14,7 @@ duration: 260
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1996]
+listen_when: 사랑한단 말만으로 강해지는 아침
 keywords: [태양, 모래, 미래]
 emotion: 희망
 date: 2024-08-15

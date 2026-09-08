@@ -14,6 +14,7 @@ duration: 285
 genre: Hard Rock
 lang: en
 tags: [Hard Rock, 1992]
+listen_when: 고백마다 꼬이는 서투른 연애 초입
 keywords: [꽃, 말, 춤, 시인, 와인]
 emotion: 설렘
 date: 2026-02-08

@@ -1,6 +1,6 @@
 ---
 title: Pinecone Rock
-title_ko: Pinecone Rock
+title_ko: 솔방울 록
 artist: 제이통
 artist_ko:
 album: Pinecone Rock (feat. Lowdown 30) - Single
@@ -14,6 +14,7 @@ duration: 222
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2018]
+listen_when: 채소를 씻으며 흥얼거리는 오후
 keywords: [당근, 토마토, 마늘, 솔방울, 햇빛, 나무]
 emotion: 기쁨
 date: 2022-10-07

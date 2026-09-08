@@ -14,6 +14,7 @@ duration: 229
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
+listen_when: 네 곁이 아니면 안 되는 상태의 밤
 keywords: [나방, 곤충, 동물, 자동차, 갈대, 빛]
 emotion: 사랑
 date: 2022-12-04

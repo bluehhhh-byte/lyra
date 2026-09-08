@@ -12,6 +12,7 @@ trackId: 1588874362
 duration: 234
 lang: en
 tags: [한국, Hip-Hop, 2009]
+listen_when: 영혼의 지도를 다시 그리는 밤
 keywords: [영혼, 감옥, 사랑, 세상, 빛]
 emotion: 희망
 date: 2026-09-01

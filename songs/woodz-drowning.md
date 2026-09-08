@@ -1,6 +1,6 @@
 ---
 title: Drowning
-title_ko: Drowning
+title_ko: 가라앉다
 artist: WOODZ
 artist_ko:
 album: OO-LI
@@ -14,6 +14,7 @@ duration: 245
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2023]
+listen_when: 숨이 턱까지 차오르는 이별의 장마
 keywords: [비, 숨]
 emotion: 이별
 date: 2025-05-29

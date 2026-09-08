@@ -14,6 +14,7 @@ duration: 252
 genre: Hard Rock
 lang: ko
 tags: [한국, Hard Rock, 2017]
+listen_when: 멀리서만 바라보던 사람이 웃어 준 날
 keywords: [창문, 꽃, 눈, 웃음, 모습]
 emotion: 그리움
 date: 2022-11-07

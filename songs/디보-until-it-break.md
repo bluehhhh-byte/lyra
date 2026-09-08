@@ -1,6 +1,6 @@
 ---
 title: Until It Break
-title_ko: Until It Break
+title_ko: 부서질 때까지
 artist: 디보
 artist_ko:
 album: Wonderful Disaster 3
@@ -12,6 +12,7 @@ duration:
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2021]
+listen_when: 혼란 속에서도 구하러 가는 밤
 keywords: [꽃, 달빛, 혼란, 거짓말, 삶]
 emotion: 사랑
 date: 2022-09-27

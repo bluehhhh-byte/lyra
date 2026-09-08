@@ -1,6 +1,6 @@
 ---
 title: Sella
-title_ko: Sella
+title_ko: 셀라
 artist: 예레미
 artist_ko:
 album: The Dawn of the Universe
@@ -14,6 +14,7 @@ duration: 325
 genre: Heavy Metal
 lang: ko
 tags: [한국, Heavy Metal, 2014]
+listen_when: 멍든 하늘 아래 이름을 부르는 새벽
 keywords: [새벽, 바다, 바람, 별빛, 하늘, 날개]
 emotion: 이별
 date: 2023-02-17

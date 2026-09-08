@@ -14,6 +14,7 @@ duration: 213
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2016]
+listen_when: 미련까지 몽땅 태워 버리고 싶은 밤
 keywords: [꿈, 날개, 믿음, 올가미, 불]
 emotion: 분노
 date: 2023-05-25

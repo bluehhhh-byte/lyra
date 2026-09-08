@@ -14,6 +14,7 @@ duration: 221
 genre: Folk
 lang: ko
 tags: [Folk, 2026]
+listen_when: 무작정 버스에 올라 떠나고 싶은 날
 keywords: [벌레, 버스, 기차, 영혼, 지구]
 emotion: 기쁨
 date: 2026-04-13

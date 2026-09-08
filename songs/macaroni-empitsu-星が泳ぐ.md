@@ -1,6 +1,7 @@
 ---
 title: 星が泳ぐ
 title_ko: 별이 헤엄치다
+search_aliases: [Hoshigaoyogu, 星が泳ぐ, 별이 헤엄치다, Macaroni Empitsu, macaroni-empitsu-星が泳ぐ-별이-헤엄치다]
 artist: Macaroni Empitsu
 artist_ko:
 album: 星が泳ぐ - Single
@@ -12,7 +13,8 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2022]
-keywords: [바다, 여름, 파도소리]
+listen_when: 돌아오지 않는 사람이 남긴 여름
+keywords: [바다, 여름, 파도소리, 고양이, 파도, 노래, 별]
 emotion: 슬픔
 date: 2024-06-24
 published: 2024-06-23T23:38:51.000Z

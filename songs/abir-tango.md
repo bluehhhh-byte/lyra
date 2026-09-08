@@ -14,6 +14,7 @@ duration: 186
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2018]
+listen_when: 혼자서도 잘 지낸다고 증명하고 싶은 밤
 keywords: [탱고, 춤, 열쇠, 침대, 기도]
 emotion: 이별
 date: 2023-03-29

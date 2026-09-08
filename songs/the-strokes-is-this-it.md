@@ -12,6 +12,7 @@ trackId: 266376961
 duration: 151
 lang: en
 tags: [영미, Indie Rock, 2001]
+listen_when: 이게 전부인가 싶어지는 새벽
 keywords: [거짓말, 아파트, 피곤해, 생각]
 emotion: 불안
 date: 2026-09-02

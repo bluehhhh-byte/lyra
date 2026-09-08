@@ -1,6 +1,6 @@
 ---
 title: Forever Love
-title_ko: Forever Love
+title_ko: 영원한 사랑
 artist: 버즈
 artist_ko:
 album: Forever Love - Single
@@ -14,6 +14,7 @@ duration: 229
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2015]
+listen_when: 이제 내가 지키겠다고 답하는 밤
 keywords: [삶, 말, 기다림, 눈물]
 emotion: 사랑
 date: 2023-02-24

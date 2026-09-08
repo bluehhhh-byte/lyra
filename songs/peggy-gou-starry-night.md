@@ -1,6 +1,6 @@
 ---
 title: Starry Night
-title_ko: Starry Night
+title_ko: 별이 빛나는 밤
 artist: Peggy Gou
 artist_ko:
 album: Starry Night - Single
@@ -14,6 +14,7 @@ duration: 399
 genre: House
 lang: ko
 tags: [한국, House, 2019]
+listen_when: 다 알 필요 없다고 놓아 버린 밤바다
 keywords: [바다, 별, 밤, 노래, 순간]
 emotion: 몽환
 date: 2023-05-08

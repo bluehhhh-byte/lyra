@@ -14,6 +14,7 @@ duration: 238
 genre: R&B/Soul
 lang: en
 tags: [R&B/Soul, 2025]
+listen_when: 가라고 해 놓고 문을 열어 둔 밤
 keywords: [옷, 문, 약속, 장미, 정원]
 emotion: 이별
 date: 2026-02-23

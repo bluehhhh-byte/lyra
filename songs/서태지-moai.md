@@ -1,6 +1,6 @@
 ---
 title: Moai
-title_ko: Moai
+title_ko: 모아이
 artist: 서태지
 artist_ko:
 album: Seotaiji 8th Atomos
@@ -14,6 +14,7 @@ duration: 226
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2008]
+listen_when: 어둠 속에 석상처럼 홀로 선 밤바다
 keywords: [바다, 별빛, 파도, 어둠, 바람, 물결]
 emotion: 고독
 date: 2022-09-30

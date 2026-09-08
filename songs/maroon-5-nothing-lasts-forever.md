@@ -14,6 +14,7 @@ duration: 188
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2007]
+listen_when: 서로를 해치기 전에 놓아주는 밤
 keywords: [침대, 벽, 추억, 영혼, 바닥]
 emotion: 이별
 date: 2023-04-14

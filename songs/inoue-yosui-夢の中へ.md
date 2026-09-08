@@ -1,6 +1,7 @@
 ---
 title: 夢の中へ
 title_ko: 꿈속으로
+search_aliases: [Yume no Naka e]
 artist: Inoue Yosui
 artist_ko:
 album: 夢の中へ (Single)
@@ -12,6 +13,7 @@ duration:
 genre: Folk
 lang: ja
 tags: [일본, Folk, 1973]
+listen_when: 찾기를 멈추자 보이기 시작한 오후
 keywords: [가방, 책상, 춤, 꿈, 물건]
 emotion: 몽환
 date: 2023-03-14

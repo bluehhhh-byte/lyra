@@ -1,6 +1,7 @@
 ---
 title: 白日
 title_ko: 백일
+search_aliases: [Hakujitsu]
 artist: King Gnu
 artist_ko:
 album: King Gnu Dome Tour THE GREATEST UNKNOWN at TOKYO DOME
@@ -12,6 +13,7 @@ duration: 292
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2019]
+listen_when: 돌이킬 수 없는 죄를 안고 걷는 아침
 keywords: [죄, 내일, 예전]
 emotion: 체념
 date: 2024-06-09

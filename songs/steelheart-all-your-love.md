@@ -14,6 +14,7 @@ duration: 413
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1992]
+listen_when: 받은 사랑을 하나씩 세어 보는 밤
 keywords: [심장, 눈물, 키스, 손, 웃음, 밤]
 emotion: 사랑
 date: 2023-03-21

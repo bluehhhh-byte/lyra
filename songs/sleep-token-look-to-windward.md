@@ -14,6 +14,7 @@ duration: 466
 genre: Metal
 lang: en
 tags: [영미, Metal, 2025]
+listen_when: 무너지는 나를 들어 달라고 외치는 밤
 keywords: [목소리, 어둠, 그림자]
 emotion: 불안
 date: 2025-05-14

@@ -12,6 +12,7 @@ trackId: 1450271331
 duration: 286
 lang: en
 tags: [영미, Alternative Rock, 2019]
+listen_when: 비 갠 아침 창을 활짝 여는 순간
 keywords: [태양, 도시, 사람, 미소]
 emotion: 희망
 date: 2026-08-23

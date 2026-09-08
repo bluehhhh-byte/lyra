@@ -12,6 +12,7 @@ trackId: 1445990883
 duration: 260
 lang: en
 tags: [한국, Hip-Hop, 2018]
+listen_when: 아름다운 이야기에 남고 싶은 밤
 keywords: [이야기, 사랑, 친구, 음악, 시간]
 emotion: 회상
 date: 2026-09-02

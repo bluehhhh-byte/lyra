@@ -1,6 +1,6 @@
 ---
 title: A Better Day
-title_ko: A Better Day
+title_ko: 더 나은 날
 artist: JTL
 artist_ko:
 album: Enter the Dragon
@@ -14,6 +14,7 @@ duration: 247
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2001]
+listen_when: 말없이 떠난 사람을 정리하는 겨울
 keywords: [추억, 겨울, 빈자리, 눈빛, 입맞춤]
 emotion: 이별
 date: 2022-12-18

@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 2023]
+listen_when: 미움받아도 우리끼리면 충분한 밤
 keywords: [친구, 패거리, 팬, 엄마, 아빠]
 emotion: 저항
 date: 2023-04-04

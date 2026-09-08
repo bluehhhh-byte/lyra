@@ -14,6 +14,7 @@ duration: 236
 genre: Metal
 lang: en
 tags: [Metal, 2009]
+listen_when: 속의 짐승이 끌려 나오는 밤
 keywords: [향기, 짐승, 여자, 남자, 피부]
 emotion: 분노
 date: 2026-02-05

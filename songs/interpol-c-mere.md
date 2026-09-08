@@ -14,6 +14,7 @@ duration: 192
 genre: Post-Punk
 lang: en
 tags: [영미, Post-Punk, 2004]
+listen_when: 그 자리가 나여야 한다고 되뇌는 밤
 keywords: [밤, 약속, 사랑, 문제, 누군가]
 emotion: 그리움
 date: 2022-11-12

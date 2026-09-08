@@ -14,6 +14,7 @@ duration: 161
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2015]
+listen_when: 의심이 시계처럼 멈추지 않는 밤
 keywords: [문, 시계, 내일, 소리]
 emotion: 불안
 date: 2022-09-17

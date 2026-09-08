@@ -12,6 +12,7 @@ trackId: 1169904743
 duration: 138
 lang: en
 tags: [영미, Folk, 2001]
+listen_when: 도망쳐 나온 첫날 밤의 낯선 천장
 keywords: [호텔, 아이들, 집, 꿈, 지옥]
 emotion: 불안
 date: 2026-08-24

@@ -12,6 +12,7 @@ duration: 259
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 붕 뜬 채 어디에도 못 내리는 새벽
 keywords: [백일몽, 유리, 하늘]
 emotion: 몽환
 date: 2024-09-30

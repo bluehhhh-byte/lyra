@@ -14,6 +14,7 @@ duration: 234
 genre: Electronic
 lang: en
 tags: [유럽, Electronic, 2022]
+listen_when: 가진 것보다 남의 것이 커 보이는 날
 keywords: [선물, 초록색, 마음]
 emotion: 체념
 date: 2024-06-14

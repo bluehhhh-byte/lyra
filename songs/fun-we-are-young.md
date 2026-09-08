@@ -14,6 +14,7 @@ duration: 251
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2011]
+listen_when: 불꽃처럼 타올라도 좋은 스무 살의 밤
 keywords: [술집, 밤, 친구, 흉터, 불, 태양]
 emotion: 기쁨
 date: 2023-04-10

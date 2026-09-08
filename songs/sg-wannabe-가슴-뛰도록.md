@@ -14,6 +14,7 @@ duration: 252
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2015]
+listen_when: 눈 뜨자마자 설레는 사람이 있는 아침
 keywords: [아침, 심장, 하루, 미소, 눈물, 어깨]
 emotion: 사랑
 date: 2023-03-17

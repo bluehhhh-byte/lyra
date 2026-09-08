@@ -1,6 +1,6 @@
 ---
 title: Maybe Tomorrow
-title_ko: Maybe Tomorrow
+title_ko: 어쩌면 내일은
 artist: Stereophonics
 artist_ko:
 album: You Gotta Go There to Come Back
@@ -14,6 +14,7 @@ duration: 273
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]
+listen_when: 내일이면 나아질 거라 되뇌는 밤
 keywords: [먹구름, 시간]
 emotion: 위로
 date: 2025-01-20

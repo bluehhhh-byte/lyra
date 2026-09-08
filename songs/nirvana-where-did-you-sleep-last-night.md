@@ -14,6 +14,7 @@ duration:
 genre: Grunge
 lang: en
 tags: [영미, Grunge, 1993]
+listen_when: 해 들지 않는 숲 같은 새벽
 keywords: [소나무, 태양, 거짓말]
 emotion: 불안
 date: 2024-09-25

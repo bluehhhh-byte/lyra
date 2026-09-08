@@ -12,6 +12,7 @@ trackId: 1742129537
 duration: 168
 lang: ko
 tags: [한국, Hip-Hop, 2024]
+listen_when: 훈수에 조용히 반기를 드는 밤
 keywords: [재능, 총, 방아쇠, 녹취록]
 emotion: 저항
 date: 2026-08-03

@@ -14,6 +14,7 @@ duration: 195
 genre: Indie Rock
 lang: en
 tags: [Indie Rock, 2016]
+listen_when: 끝이 있어 지금이 선명해지는 밤
 keywords: [거짓말, 죽음, 창문, 한계, 햇빛]
 emotion: 체념
 date: 2026-02-23

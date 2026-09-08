@@ -14,6 +14,7 @@ duration: 208
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2023]
+listen_when: 시간이 약이란 말이 지겨워진 밤
 keywords: [아침, 시계, 밤, 거리, 잠, 꿈]
 emotion: 그리움
 date: 2023-05-10

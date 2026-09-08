@@ -14,6 +14,7 @@ duration: 178
 genre: Funk
 lang: en
 tags: [영미, Funk, 2022]
+listen_when: 밤새 통화하고도 아쉬운 새벽
 keywords: [밤, 아침, 카메라, 이야기, 생각]
 emotion: 사랑
 date: 2022-09-17

@@ -12,6 +12,7 @@ trackId: 1503146370
 duration: 225
 lang: ja
 tags: [일본, J-Rock, 2020]
+listen_when: 얼어붙을 것 같아도 해를 기다리는 밤
 emotion: 희망
 keywords: [밤, 미래, 세상, 기도]
 date: 2026-07-16

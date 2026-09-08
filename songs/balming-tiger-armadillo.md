@@ -12,6 +12,7 @@ duration: 150
 genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2019]
+listen_when: 기죽지 않으려 갑옷을 챙겨 입는 아침
 keywords: [갑옷, 거울, 돈]
 emotion: 저항
 date: 2025-05-09

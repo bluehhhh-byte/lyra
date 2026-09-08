@@ -14,6 +14,7 @@ duration: 275
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1983]
+listen_when: 우연히 마주쳐 시간이 되감긴 저녁
 keywords: [아픔, 시간, 친구, 꿈, 거짓말]
 emotion: 그리움
 date: 2023-03-13

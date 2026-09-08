@@ -1,6 +1,6 @@
 ---
 title: Homesick
-title_ko: Homesick
+title_ko: 향수병
 artist: 벤자민
 artist_ko:
 album: 약한영웅 Class 1 (Original Soundtrack)
@@ -14,6 +14,7 @@ duration: 278
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 맞는 신발이 없는 것 같은 귀갓길
 keywords: [신발, 발자국, 초침, 걸음마, 물, 길]
 emotion: 고독
 date: 2022-12-06

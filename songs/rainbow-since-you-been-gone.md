@@ -14,6 +14,7 @@ duration: 197
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1979]
+listen_when: 같은 꿈에서 추락하며 깨는 새벽
 keywords: [꿈, 밤, 침대, 신발, 벽]
 emotion: 이별
 date: 2023-05-07

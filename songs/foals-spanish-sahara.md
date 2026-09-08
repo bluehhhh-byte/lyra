@@ -10,6 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c7/
 trackId: 1551376803
 lang: en
 tags: [영미, Indie Rock, 2010]
+listen_when: 묻어 둔 기억이 파도처럼 밀려온 밤
 emotion: 몽환
 keywords: [모래, 끔찍함, 격노, 유령]
 date: 2026-07-07

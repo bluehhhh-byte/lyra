@@ -14,6 +14,7 @@ duration: 234
 genre: Alternative Rock
 lang: ko
 tags: [Alternative Rock, 2014]
+listen_when: 남은 조각들과 또 사랑에 빠지는 밤
 keywords: [조각, 시간, 공간, 숨결, 약속]
 emotion: 그리움
 date: 2026-04-08

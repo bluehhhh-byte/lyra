@@ -14,6 +14,7 @@ duration: 195
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 꾸밀 필요 없는 사람이 생긴 요즘
 keywords: [피부, 말, 요즘]
 emotion: 설렘
 date: 2024-09-05

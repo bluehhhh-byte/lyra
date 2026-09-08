@@ -14,6 +14,7 @@ duration: 306
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1995]
+listen_when: 작별인 줄 뒤늦게 알아차린 밤
 keywords: [장미, 여름, 눈동자, 밤, 무릎, 작별]
 emotion: 이별
 date: 2022-12-09

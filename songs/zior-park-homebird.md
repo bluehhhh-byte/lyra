@@ -14,6 +14,7 @@ duration: 225
 genre: R&B/Soul
 lang: en
 tags: [R&B/Soul, 2021]
+listen_when: 엄마의 접힌 날개를 처음 본 날
 keywords: [노래, 돈, 새, 둥지, 깃털]
 emotion: 그리움
 date: 2026-01-05

@@ -14,6 +14,7 @@ duration: 220
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2023]
+listen_when: 아무 생각 없이 흔들리고 싶은 밤
 keywords: [컨트롤러, 부리부리, 정신]
 emotion: 몽환
 date: 2025-03-19

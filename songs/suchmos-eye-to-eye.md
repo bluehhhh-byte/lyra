@@ -14,6 +14,7 @@ duration: 328
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
+listen_when: 내 태도로 도시를 질주하는 밤
 keywords: [마음, 자존심, 스피드웨이]
 emotion: 저항
 date: 2025-07-04

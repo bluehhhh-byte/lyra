@@ -12,6 +12,7 @@ duration:
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2006]
+listen_when: 무너진 자리에서 조각을 줍는 오후
 keywords: [세상, 발톱, 사랑, 조각, 달빛]
 emotion: 체념
 date: 2026-07-07

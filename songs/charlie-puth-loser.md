@@ -14,6 +14,7 @@ duration: 204
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2022]
+listen_when: 놓친 사람 생각에 잠 못 드는 밤
 keywords: [술, 밤, 잠, 마음]
 emotion: 이별
 date: 2022-11-12

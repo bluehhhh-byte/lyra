@@ -14,6 +14,7 @@ duration: 209
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
+listen_when: 말에 뚫리지 않는 몸이 갖고 싶은 날
 keywords: [밀랍, 핀, 총알, 구멍, 거품, 이빨]
 emotion: 불안
 date: 2022-12-04

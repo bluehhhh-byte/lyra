@@ -12,6 +12,7 @@ duration: 196
 genre: K-Pop
 lang: en
 tags: [아시아, K-Pop, 2025]
+listen_when: 가면을 벗고 어른이 되어 가는 중
 keywords: [목소리, 빛, 어둠]
 emotion: 사랑
 date: 2025-07-20

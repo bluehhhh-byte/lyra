@@ -12,6 +12,7 @@ duration:
 genre: Dream Pop
 lang: en
 tags: [한국, Dream Pop, 2011]
+listen_when: 붙잡음과 놓아줌이 뒤엉킨 밤
 keywords: [동굴, 하루, 눈, 스테레오, 집착]
 emotion: 몽환
 date: 2023-02-23

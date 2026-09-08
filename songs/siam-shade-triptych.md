@@ -14,6 +14,7 @@ duration: 277
 genre: J-Rock
 lang: en
 tags: [J-Rock, 2000]
+listen_when: 오래 찾던 노래를 다시 트는 밤
 keywords: []
 emotion:
 date: 2025-12-31

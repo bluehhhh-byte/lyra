@@ -10,6 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/79/
 trackId: 1428782513
 lang: en
 tags: [영미, Alternative Rock, 2002]
+listen_when: 떠나는 공항에서 속삭인 안녕
 emotion: 이별
 keywords: [사랑, 마음, 작별, 불꽃]
 date: 2026-07-07

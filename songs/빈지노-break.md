@@ -1,6 +1,6 @@
 ---
 title: Break
-title_ko: Break
+title_ko: 부수다
 artist: Bernini
 artist_ko: 빈지노
 album: Break - Single
@@ -14,6 +14,7 @@ duration: 185
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2015]
+listen_when: 하고 싶은 대로 살고 싶은 날
 keywords: [사랑, 기계, 주제파악, 화약, 꿈]
 emotion: 저항
 date: 2022-09-27

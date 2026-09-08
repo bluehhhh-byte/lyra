@@ -1,7 +1,8 @@
 ---
 title: いつも何度でも
 title_ko: 언제나 몇 번이라도
-artist: 千と千尋の神隱し(센과 치히로의 행방불명) OST
+search_aliases: [Itsumo Nandodemo]
+artist: 千と千尋の神隱し OST
 artist_ko: 센과 치히로의 행방불명 OST
 album: 千と千尋の神隠し サウンドトラック
 year: 2002
@@ -12,6 +13,7 @@ duration:
 genre: Soundtrack
 lang: ja
 tags: [일본, Soundtrack, 2002]
+listen_when: 부서진 자리에도 새 풍경이 비치는 날
 keywords: [가슴, 꿈, 하늘]
 emotion: 희망
 date: 2024-09-18

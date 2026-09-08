@@ -14,6 +14,7 @@ duration: 340
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 1969]
+listen_when: 죄인 줄 알면서 떠올리는 눈동자
 keywords: [눈동자, 행복]
 emotion: 사랑
 date: 2024-06-27

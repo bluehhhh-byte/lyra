@@ -1,6 +1,6 @@
 ---
 title: Goodbye
-title_ko: Goodbye
+title_ko: 안녕
 artist: 박효신
 artist_ko:
 album: Goodbye - Single
@@ -14,6 +14,7 @@ duration: 288
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2019]
+listen_when: 멈춘 화면 속 웃는 얼굴에 건네는 작별
 keywords: [오후, 여름, 화면, 눈물, 숨바꼭질, 기억]
 emotion: 이별
 date: 2022-12-30

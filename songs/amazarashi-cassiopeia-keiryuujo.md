@@ -14,6 +14,7 @@ duration: 376
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2022]
+listen_when: 타 버릴 걸 알면서도 적어 내려가는 밤
 keywords: [선착장, 가로등, 우주]
 emotion: 희망
 date: 2024-12-09

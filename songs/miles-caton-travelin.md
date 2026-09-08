@@ -14,6 +14,7 @@ duration: 95
 genre: Blues
 lang: en
 tags: [영미, Blues, 2025]
+listen_when: 내가 왜 여기 있는지 모를 황야의 길
 keywords: [길, 황야, 여인]
 emotion: 고독
 date: 2025-06-05

@@ -14,6 +14,7 @@ duration: 271
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1996]
+listen_when: 아픔을 숨기는 게 나뿐인가 싶은 밤
 keywords: [세상, 빛, 햇빛, 비, 심장]
 emotion: 고독
 date: 2023-03-20

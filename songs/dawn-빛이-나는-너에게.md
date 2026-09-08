@@ -12,6 +12,7 @@ duration:
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2023]
+listen_when: 네 행복이면 됐다고 정리하는 밤
 keywords: [빛, 우리]
 emotion: 사랑
 date: 2025-06-22

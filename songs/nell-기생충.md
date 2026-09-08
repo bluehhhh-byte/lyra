@@ -12,6 +12,7 @@ duration:
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2003]
+listen_when: 고통이 나를 먹여 살리는 걸 본 밤
 keywords: [벌레, 피, 기도, 눈물, 거짓말]
 emotion: 불안
 date: 2023-05-08

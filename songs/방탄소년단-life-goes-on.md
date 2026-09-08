@@ -1,6 +1,6 @@
 ---
 title: Life Goes On
-title_ko: Life Goes On
+title_ko: 삶은 계속된다
 artist: 방탄소년단
 artist_ko:
 album: BE
@@ -14,6 +14,7 @@ duration: 207
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2020]
+listen_when: 세상이 멈춘 해에도 오는 봄
 keywords: [봄, 비, 먹구름, 거리, 발자국, 감기]
 emotion: 위로
 date: 2023-02-07

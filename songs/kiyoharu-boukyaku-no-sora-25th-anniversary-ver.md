@@ -1,6 +1,7 @@
 ---
 title: 忘却の空
 title_ko: 망각의 하늘
+search_aliases: [Boukyaku no Sora]
 artist: SADS
 artist_ko: 사즈
 album: BABYLON
@@ -12,6 +13,7 @@ trackId: 1501324610
 duration: 328
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 메마른 바람 속을 혼자 걷는 오후
 keywords: [바람, 하늘, 기억, 이야기, 목소리]
 emotion: 고독
 date: 2026-09-02

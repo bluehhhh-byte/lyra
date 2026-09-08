@@ -12,6 +12,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1979]
+listen_when: 겨울을 넘어 늦게 도착한 사랑 앞
 keywords: [민들레, 노을, 씨앗, 바람, 편지, 겨울]
 emotion: 위로
 date: 2022-09-19

@@ -14,6 +14,7 @@ duration: 209
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2024]
+listen_when: 사랑이 유서처럼 무거워지는 밤
 keywords: [꽃, 관, 그대]
 emotion: 불안
 date: 2024-10-22

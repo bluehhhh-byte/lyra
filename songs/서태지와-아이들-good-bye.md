@@ -1,6 +1,6 @@
 ---
 title: Good Bye
-title_ko: Good Bye
+title_ko: 안녕
 artist: 서태지와 아이들
 artist_ko:
 album: Goodbye Best Album
@@ -14,6 +14,7 @@ duration:
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 1995]
+listen_when: 약속된 헤어짐이 온 날
 keywords: [기억, 미소, 눈물, 시간, 곁]
 emotion: 이별
 date: 2022-12-30

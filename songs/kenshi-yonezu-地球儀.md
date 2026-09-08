@@ -1,6 +1,7 @@
 ---
 title: 地球儀
 title_ko: 지구본
+search_aliases: [Chikyugi - Spinning Globe]
 artist: Kenshi Yonezu
 artist_ko:
 album: Chikyugi - Spinning Globe - Single
@@ -12,6 +13,7 @@ duration: 273
 genre: J-Pop
 lang: ja
 tags: [J-Pop, 2023]
+listen_when: 다녀오라는 목소리를 안고 떠나는 길
 keywords: [하늘, 계절, 그림자, 바람, 문]
 emotion: 회상
 date: 2026-04-19

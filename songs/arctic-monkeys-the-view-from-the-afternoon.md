@@ -14,6 +14,7 @@ duration: 218
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
+listen_when: 보내 놓고 후회할 문자를 쥔 밤
 keywords: [밤, 술, 문자, 휴대폰, 저녁]
 emotion: 불안
 date: 2023-06-02

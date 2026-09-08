@@ -14,6 +14,7 @@ duration: 420
 genre: Metal
 lang: en
 tags: [영미, Metal, 2000]
+listen_when: 다시는 안 돌아간다고 끊어 낸 날
 keywords: [이유, 착취, 사람, 짓]
 emotion: 분노
 date: 2023-06-05

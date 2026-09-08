@@ -13,6 +13,7 @@ duration: 150
 youtube_id: HPFSNC-3TWA
 lang: en
 tags: [유럽, Indie Rock, 2019]
+listen_when: 내 안의 유령에게 쫓기는 밤
 keywords: [유령, 재, 바닥, 함정]
 emotion: 불안
 date: 2026-08-07

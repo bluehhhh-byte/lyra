@@ -12,6 +12,7 @@ trackId: 1109715467
 duration: 328
 lang: en
 tags: [영미, Alternative Rock, 2007]
+listen_when: 무너질 걸 알면서 쌓는 관계의 밤
 keywords: [연인, 부정, 남편, 카드, 붕괴]
 emotion: 몽환
 date: 2026-07-24

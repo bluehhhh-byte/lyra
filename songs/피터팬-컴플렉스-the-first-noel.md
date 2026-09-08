@@ -1,6 +1,6 @@
 ---
 title: The First Noel
-title_ko: The First Noel
+title_ko: 첫 번째 노엘
 artist: 피터팬 컴플렉스
 artist_ko:
 album: Happy Rock Christmas
@@ -12,6 +12,7 @@ duration:
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2006]
+listen_when: 별을 따라가는 성탄 전야
 keywords: [별, 목자, 천사, 아기, 예물, 동방]
 emotion: 기쁨
 date: 2022-12-24

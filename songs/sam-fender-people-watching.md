@@ -14,6 +14,7 @@ duration: 304
 genre: Indie Rock
 lang: en
 tags: [Indie Rock, 2025]
+listen_when: 집에 가는 길에 남들을 구경하는 저녁
 keywords: [사람, 희망, 젊음, 거리, 간호사]
 emotion: 회상
 date: 2025-12-25

@@ -1,6 +1,6 @@
 ---
 title: Citrus
-title_ko: Citrus
+title_ko: 시트러스
 artist: Kid Milli
 artist_ko:
 album: Cliché
@@ -14,6 +14,7 @@ duration: 214
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
+listen_when: 도시 불빛을 피해 달리고 싶은 밤
 keywords: [향기, 불빛, 꽃, 해변, 겨울]
 emotion: 사랑
 date: 2022-11-19

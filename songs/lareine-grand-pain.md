@@ -13,6 +13,7 @@ external_url: https://music.apple.com/kr/album/grand-pain/588640763?i=588640809&
 duration: 425
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 푸른 달 아래 고통을 견디는 밤
 keywords: [사랑, 빛, 달, 고통, 꽃잎]
 emotion: 슬픔
 date: 2026-09-03

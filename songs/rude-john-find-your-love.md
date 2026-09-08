@@ -14,6 +14,7 @@ duration: 177
 genre: R&B/Soul
 lang: ko
 tags: [R&B/Soul, 2025]
+listen_when: 그늘에서 꽃을 피우려 애쓰는 날들
 keywords: [손길, 품, 빈자리, 아픔, 그늘]
 emotion: 위로
 date: 2025-10-23

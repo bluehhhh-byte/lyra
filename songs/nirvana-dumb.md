@@ -14,6 +14,7 @@ duration: 152
 genre: Grunge
 lang: en
 tags: [영미, Grunge, 1993]
+listen_when: 그냥 행복한 걸지도 모르는 오후
 keywords: [멍청이, 해, 빛]
 emotion: 체념
 date: 2024-08-25

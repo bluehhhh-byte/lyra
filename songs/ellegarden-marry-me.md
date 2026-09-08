@@ -14,6 +14,7 @@ duration: 170
 genre: J-Rock
 lang: en
 tags: [일본, J-Rock, 2005]
+listen_when: 좋아하던 사람의 청첩장을 받은 날
 keywords: [결혼, 색종이, 소녀]
 emotion: 체념
 date: 2024-10-10

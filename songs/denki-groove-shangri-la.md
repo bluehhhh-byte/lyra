@@ -14,6 +14,7 @@ duration: 310
 genre: Electronic
 lang: ja
 tags: [일본, Electronic, 1997]
+listen_when: 몽롱하게 좋은 곳을 헤매고 싶은 새벽
 keywords: [꿈, 키스, 유토피아, 세상, 기억]
 emotion: 몽환
 date: 2023-04-02

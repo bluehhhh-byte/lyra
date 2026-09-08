@@ -12,6 +12,7 @@ duration: 255
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2021]
+listen_when: 적당히 식어 가는 사이를 느낀 저녁
 keywords: [미소, 눈빛, 목소리]
 emotion: 불안
 date: 2025-06-09

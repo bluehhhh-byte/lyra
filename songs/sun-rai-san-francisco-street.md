@@ -14,6 +14,7 @@ duration: 267
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2013]
+listen_when: 낯선 도시에서 미래를 의심하는 밤
 keywords: [고속도로, LA, 미래]
 emotion: 고독
 date: 2024-09-11

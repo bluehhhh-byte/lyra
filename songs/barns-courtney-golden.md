@@ -14,6 +14,7 @@ duration: 171
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2023]
+listen_when: 아름다움이 서늘하게 느껴지는 밤
 keywords: [입술, 피, 황금, 기도, 하늘]
 emotion: 사랑
 date: 2023-06-01

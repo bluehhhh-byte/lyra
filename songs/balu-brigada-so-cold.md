@@ -12,6 +12,7 @@ duration: 201
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 오지 않을 연락을 그래도 기다리는 밤
 keywords: [헤드라이트, 이유, 시작]
 emotion: 불안
 date: 2024-07-04

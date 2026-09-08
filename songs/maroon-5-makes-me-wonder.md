@@ -14,6 +14,7 @@ duration: 211
 genre: Funk
 lang: en
 tags: [영미, Funk, 2007]
+listen_when: 끝나고 나니 아무것도 안 남은 아침
 keywords: [쾌락, 기억, 가치]
 emotion: 체념
 date: 2025-07-09

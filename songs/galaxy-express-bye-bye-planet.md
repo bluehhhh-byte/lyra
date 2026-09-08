@@ -1,6 +1,6 @@
 ---
 title: Bye Bye Planet
-title_ko: Bye Bye Planet
+title_ko: 잘 가라 행성
 artist: Galaxy Express
 artist_ko:
 album: Noise On Fire (Remastered) [Deluxe Edition]
@@ -14,6 +14,7 @@ duration: 108
 genre: Punk Rock
 lang: ko
 tags: [한국, Punk Rock, 2008]
+listen_when: 다 부수고 새로 시작하고 싶은 밤
 keywords: [밤, 친구, 숨, 작별, 세상]
 emotion: 분노
 date: 2023-04-24

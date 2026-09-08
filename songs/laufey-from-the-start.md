@@ -12,6 +12,7 @@ duration: 170
 genre: Jazz
 lang: en
 tags: [유럽, Jazz, 2023]
+listen_when: 그 사람 연애담에 조용해지는 오후
 keywords: [침묵, 눈빛, 아픔]
 emotion: 설렘
 date: 2024-10-25

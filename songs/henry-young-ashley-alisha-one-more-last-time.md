@@ -1,6 +1,6 @@
 ---
 title: One More Last Time
-title_ko: One More Last Time
+title_ko: 마지막으로 한 번 더
 artist: Henry Young, Ashley Alisha
 artist_ko:
 album: One More Last Time
@@ -14,6 +14,7 @@ duration: 129
 genre: Ballad
 lang: ko
 tags: [Ballad, 2022]
+listen_when: 지운다면서 자꾸 찾게 되는 빗속
 keywords: [온기, 향기, 공간, 미소, 빗속]
 emotion: 그리움
 date: 2026-02-12

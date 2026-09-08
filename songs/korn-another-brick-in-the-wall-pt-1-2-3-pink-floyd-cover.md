@@ -13,6 +13,7 @@ external_url: https://music.apple.com/us/album/another-brick-in-the-wall-pt-1-2-
 duration: 428
 lang: en
 tags: [영미, Metal, 2004]
+listen_when: 억압에 벽돌 하나로 끼워진 기분인 날
 keywords: [기억, 벽, 교육, 교실, 세상]
 emotion: 저항
 date: 2026-09-04

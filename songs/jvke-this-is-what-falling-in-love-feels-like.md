@@ -12,6 +12,7 @@ duration: 120
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 하루의 끝이 기다려지기 시작한 요즘
 keywords: [햇살, 사랑, 감정]
 emotion: 설렘
 date: 2024-07-28

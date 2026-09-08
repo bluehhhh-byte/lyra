@@ -14,6 +14,7 @@ duration: 279
 genre: Metal
 lang: en
 tags: [영미, Metal, 2004]
+listen_when: 잊히기 전에 기억하겠다고 쓰는 밤
 keywords: [세상, 휘발유, 얼룩, 반란, 호흡]
 emotion: 분노
 date: 2023-04-20

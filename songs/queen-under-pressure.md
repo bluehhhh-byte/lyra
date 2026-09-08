@@ -14,6 +14,7 @@ duration: 246
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1981]
+listen_when: 압박에 눌린 채 거리로 나선 낮
 keywords: [거리, 울타리, 춤, 밤, 광기]
 emotion: 불안
 date: 2023-02-19

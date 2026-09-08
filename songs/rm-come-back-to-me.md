@@ -14,6 +14,7 @@ duration: 389
 genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2024]
+listen_when: 언젠가 돌아올 걸 알면서 기다리는 봄
 keywords: [봄, 눈]
 emotion: 그리움
 date: 2024-07-13

@@ -12,6 +12,7 @@ duration: 309
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2000]
+listen_when: 묶였던 것에서 벗어나는 중인 여름
 keywords: [기차, 여름, 비]
 emotion: 희망
 date: 2024-06-20

@@ -14,6 +14,7 @@ duration: 224
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2022]
+listen_when: 가깝지 않아 다행인 사람을 떠올린 오후
 keywords: [길, 대마초, 근처]
 emotion: 회상
 date: 2024-07-13

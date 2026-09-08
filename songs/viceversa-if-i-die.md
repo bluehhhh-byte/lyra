@@ -1,6 +1,6 @@
 ---
 title: IF I DIE
-title_ko: IF I DIE
+title_ko: 내가 죽는다면
 artist: viceversa
 artist_ko:
 album: ANIMAL FKRY
@@ -14,6 +14,7 @@ duration: 200
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2025]
+listen_when: 변해 버린 나를 마주 본 장례식장 앞
 keywords: [장례식, 눈, 야수, 전쟁, 병실]
 emotion: 분노
 date: 2026-03-07

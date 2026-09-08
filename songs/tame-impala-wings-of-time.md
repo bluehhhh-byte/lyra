@@ -14,6 +14,7 @@ duration: 169
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2023]
+listen_when: 제대로 해냈다고 자축하는 귀갓길
 keywords: [날개, 시간, 세상, 지평선, 하늘]
 emotion: 기쁨
 date: 2023-04-10

@@ -14,6 +14,7 @@ duration: 147
 genre: Country
 lang: en
 tags: [영미, Country, 1966]
+listen_when: 마음이 온통 파란색으로 칠해진 날
 keywords: [눈물, 무지개, 태양, 밤, 침대]
 emotion: 그리움
 date: 2023-05-06

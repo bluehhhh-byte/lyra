@@ -12,6 +12,7 @@ trackId: 1750576834
 duration: 191
 lang: en
 tags: [한국, K-Pop, 2024]
+listen_when: 운명 같은 이끌림을 믿어 보는 밤
 emotion: 사랑
 keywords: [인연, 기회, 심박수, 사랑]
 date: 2026-07-13

@@ -12,6 +12,7 @@ duration: 287
 genre: J-Rock
 lang: en
 tags: [일본, J-Rock, 2024]
+listen_when: 어디에도 안 어울리는 기분이 드는 밤
 keywords: [음식, 부적응자, 무감각]
 emotion: 고독
 date: 2024-10-11

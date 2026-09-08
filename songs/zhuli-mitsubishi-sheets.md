@@ -14,6 +14,7 @@ duration: 124
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2026]
+listen_when: 무기력마저 낭만이 되는 나른한 오후
 keywords: [눈, 입술, 혀, 무릎, 가죽]
 emotion: 설렘
 date: 2026-02-12

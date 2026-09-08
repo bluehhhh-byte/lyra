@@ -1,6 +1,6 @@
 ---
 title: I Believe
-title_ko: I Believe
+title_ko: 나는 믿어
 artist: 신승훈
 artist_ko:
 album: 8집
@@ -14,6 +14,7 @@ duration: 284
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2001]
+listen_when: 이별이 아니라고 믿어 보는 밤
 keywords: [눈물, 기억, 하늘, 길]
 emotion: 이별
 date: 2023-02-14

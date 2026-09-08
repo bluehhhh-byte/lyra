@@ -12,6 +12,7 @@ trackId: 6782785474
 duration: 301
 lang: en
 tags: [한국, Alternative Rock, 2026]
+listen_when: 대답이 정해진 대화 뒤의 어두운 방
 keywords: [질문, 대답, 의미, 후회]
 emotion: 고독
 date: 2026-08-26

@@ -12,6 +12,7 @@ trackId: 1561361719
 duration: 257
 lang: en
 tags: [한국, Alternative Rock, 2015]
+listen_when: 빌딩숲을 내달리고 싶은 밤
 keywords: [하늘, 빌딩숲, 자유, 사랑, 여행]
 emotion: 몽환
 date: 2026-08-17

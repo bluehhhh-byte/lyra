@@ -14,6 +14,7 @@ duration: 291
 genre: Hard Rock
 lang: en
 tags: [Hard Rock, 1998]
+listen_when: 기타가 대신 울어 주는 밤
 keywords: []
 emotion:
 date: 2026-01-29

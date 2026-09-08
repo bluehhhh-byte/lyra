@@ -14,6 +14,7 @@ duration: 355
 genre: Electronic
 lang: en
 tags: [Electronic, 2018]
+listen_when: 아무도 더 잃고 싶지 않은 밤
 keywords: []
 emotion:
 date: 2026-01-20

@@ -1,6 +1,6 @@
 ---
 title: Take Two
-title_ko: Take Two
+title_ko: 두 번째 테이크
 artist: 서태지
 artist_ko:
 album: Seotaiji V
@@ -14,6 +14,7 @@ duration: 240
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 1998]
+listen_when: 다 망쳤다고 소리치고 싶은 밤
 keywords: [가슴, 지옥, 힘]
 emotion: 분노
 date: 2024-10-01

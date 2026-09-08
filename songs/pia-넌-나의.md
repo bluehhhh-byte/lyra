@@ -14,6 +14,7 @@ duration: 185
 genre: Metal
 lang: ko
 tags: [한국, Metal, 2017]
+listen_when: 커진 그림자에 익숙해지고도 떨리는 밤
 keywords: [그림자, 노을, 태양, 소음, 입김]
 emotion: 불안
 date: 2022-11-20

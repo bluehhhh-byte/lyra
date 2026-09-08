@@ -12,6 +12,7 @@ trackId: 1440837520
 duration: 274
 lang: en
 tags: [영미, Folk, 2007]
+listen_when: 올 리 없는 사람을 공원에서 기다린 오후
 keywords: [공원, 바다, 도시, 과거, 진실]
 emotion: 그리움
 date: 2026-08-17

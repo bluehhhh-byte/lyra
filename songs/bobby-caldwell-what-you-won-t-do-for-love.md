@@ -14,6 +14,7 @@ duration: 286
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 1978]
+listen_when: 못 할 게 없어지는 사랑의 한가운데
 keywords: [사랑, 친구, 마음]
 emotion: 사랑
 date: 2024-10-24

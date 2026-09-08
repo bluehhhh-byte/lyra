@@ -14,6 +14,7 @@ duration: 194
 genre: Funk
 lang: en
 tags: [영미, Funk, 2022]
+listen_when: 좋아하는 사람과 마주 앉은 저녁 식탁
 keywords: [아이스크림, 풍선껌, 볶음밥]
 emotion: 기쁨
 date: 2024-06-11

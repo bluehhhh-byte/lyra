@@ -1,6 +1,6 @@
 ---
 title: Trapped In The Drum
-title_ko: Trapped In The Drum
+title_ko: 드럼에 갇혀
 artist: Swervy, JUSTHIS
 artist_ko:
 album: Undercover Angel
@@ -14,6 +14,7 @@ duration: 304
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2020]
+listen_when: 숨이 막히는 사랑에 갇힌 밤
 keywords: [사랑, 색깔, 손목]
 emotion: 불안
 date: 2025-05-04

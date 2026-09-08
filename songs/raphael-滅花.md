@@ -14,6 +14,7 @@ duration: 285
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2001]
+listen_when: 기억 속에서만 시들지 않는 꽃을 보는 밤
 keywords: [계절, 바람, 꽃]
 emotion: 그리움
 date: 2025-04-29

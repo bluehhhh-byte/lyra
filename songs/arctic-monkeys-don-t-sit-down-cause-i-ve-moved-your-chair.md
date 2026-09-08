@@ -12,6 +12,7 @@ trackId: 429803453
 duration: 184
 lang: en
 tags: [영미, Alternative Rock, 2011]
+listen_when: 짓궂은 장난이 치고 싶어지는 오후
 keywords: [거울, 주사위, 가위, 의자, 악마]
 emotion: 저항
 date: 2026-07-27

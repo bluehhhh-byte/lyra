@@ -14,6 +14,7 @@ duration: 197
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2014]
+listen_when: 웃어 줄 때마다 심장이 덜컹하는 요즘
 keywords: [손길, 어깨, 미소, 심장, 팔짱]
 emotion: 설렘
 date: 2023-03-16

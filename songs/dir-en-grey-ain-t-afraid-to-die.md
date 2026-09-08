@@ -14,6 +14,7 @@ duration: 436
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2001]
+listen_when: 첫눈이 소리 없이 쌓이는 창가
 keywords: [눈, 언덕, 꽃, 창가, 약속, 거리]
 emotion: 그리움
 date: 2023-01-18

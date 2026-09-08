@@ -12,6 +12,7 @@ trackId: 926184069
 duration: 193
 lang: en
 tags: [영미, Heavy Metal, 2004]
+listen_when: 내 영혼을 아무에게도 안 넘기기로 한 날
 keywords: [영혼, 삶, 희망, 심판]
 emotion: 저항
 date: 2026-08-04

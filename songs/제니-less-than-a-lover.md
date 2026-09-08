@@ -12,6 +12,7 @@ trackId: 6792226270
 duration: 146
 lang: en
 tags: [한국, K-Pop, 2026]
+listen_when: 연인보다 조금 덜한 사이의 여름
 keywords: [여름, 연인, 신뢰]
 emotion: 설렘
 date: 2026-09-01

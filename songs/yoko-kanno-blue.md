@@ -12,6 +12,7 @@ duration: 294
 genre: Soundtrack
 lang: en
 tags: [일본, Soundtrack, 2001]
+listen_when: 다 끝나고 자유로워지는 마지막 장면
 keywords: [하늘, 별, 꿈, 자유, 빛]
 emotion: 몽환
 date: 2024-05-11

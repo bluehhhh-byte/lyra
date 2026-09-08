@@ -14,6 +14,7 @@ duration: 226
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1994]
+listen_when: 멀리 데리고 도망치고 싶은 밤
 keywords: [거미, 피아노, 블라우스]
 emotion: 몽환
 date: 2025-05-21

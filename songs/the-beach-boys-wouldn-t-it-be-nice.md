@@ -12,6 +12,7 @@ duration: 154
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 1966]
+listen_when: 같이 눈 뜨는 아침을 상상해 보는 밤
 keywords: [나이, 세상]
 emotion: 설렘
 date: 2024-07-22

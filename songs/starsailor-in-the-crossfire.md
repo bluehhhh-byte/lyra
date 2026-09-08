@@ -14,6 +14,7 @@ duration: 199
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2005]
+listen_when: 거울 속에 내가 안 보이는 아침
 keywords: [거울, 눈, 강]
 emotion: 불안
 date: 2024-09-28

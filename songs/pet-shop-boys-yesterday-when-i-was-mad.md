@@ -14,6 +14,7 @@ duration: 236
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 1993]
+listen_when: 빈말 칭찬이 공허하게 울리는 뒤풀이
 keywords: [어제, 마음, 진실함, 생각, 포기]
 emotion: 분노
 date: 2022-11-28

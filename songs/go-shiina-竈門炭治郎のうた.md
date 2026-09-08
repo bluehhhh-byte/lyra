@@ -1,6 +1,7 @@
 ---
 title: 竈門炭治郎のうた
 title_ko: 카마도 탄지로의 노래
+search_aliases: [Kamado Tanjirou no Uta]
 artist: Go Shiina
 artist_ko:
 album: 竈門炭治郎のうた (feat. 中川奈美)
@@ -12,6 +13,7 @@ duration:
 genre: Soundtrack
 lang: ja
 tags: [일본, Soundtrack, 2019]
+listen_when: 지킬 것이 있어 다시 일어서는 아침
 keywords: [어둠, 진흙, 실, 운명, 상처, 소리]
 emotion: 희망
 date: 2023-05-31

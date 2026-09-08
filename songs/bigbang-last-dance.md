@@ -1,6 +1,6 @@
 ---
 title: Last Dance
-title_ko: Last Dance
+title_ko: 마지막 춤
 artist: BIGBANG
 artist_ko:
 album: MADE
@@ -14,6 +14,7 @@ duration: 280
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2016]
+listen_when: 영원한 줄 알았던 것들이 저무는 밤
 keywords: [별, 불빛, 눈물, 어른, 친구]
 emotion: 그리움
 date: 2022-12-01

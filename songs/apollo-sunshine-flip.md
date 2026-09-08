@@ -14,6 +14,7 @@ duration: 255
 genre: Indie Rock
 lang: en
 tags: [Indie Rock, 2008]
+listen_when: 세상이 통째로 뒤집힌 것 같은 아침
 keywords: [세상, 태양, 빙하, 땅, 별]
 emotion: 불안
 date: 2023-05-25

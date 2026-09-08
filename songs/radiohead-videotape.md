@@ -14,6 +14,7 @@ duration: 280
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
+listen_when: 가장 완벽했던 하루를 녹화해 두는 밤
 keywords: [천국, 비디오테이프, 악마, 문, 색깔]
 emotion: 체념
 date: 2022-10-03

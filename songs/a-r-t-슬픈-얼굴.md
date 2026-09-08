@@ -12,6 +12,7 @@ duration:
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 1997]
+listen_when: 슬픈 얼굴 대신 웃어 주어야 하는 배웅
 keywords: [눈물, 손, 바람, 먼지, 여행, 어둠]
 emotion: 이별
 date: 2023-01-27

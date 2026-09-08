@@ -1,6 +1,6 @@
 ---
 title: In Trinity
-title_ko: In Trinity
+title_ko: 삼위일체 안에서
 artist: 비와이
 artist_ko:
 album: In Trinity - Single
@@ -14,11 +14,14 @@ duration: 271
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2015]
-keywords: [조각가, 거울, 작품, 인생, 축복, 몸]
+listen_when: 거울을 보며 자존감을 회복할 때
+keywords: [모습, 걸작, 이유, 축복, 사랑]
 emotion: 위로
 date: 2022-09-24
 published: 2022-09-24T10:57:18.000Z
-comment: 자신을 조각가의 작품으로 두고 신앙에 기대 존재를 긍정하는 곡이다. 미움받을 만한 사람일지라도 사랑받을 사람인 건 확실하다는 말이 중심에 있다.
+comment: 자신과 타인이 모두 신의 걸작이자 사랑받기 위해 태어난 존재임을 깨닫고 미움 대신 축복을 전한다. 전지전능한 이의 뜻에 따라 새로운 인생을 피워가자는 메시지를 담고 있다.
+comment_basis: lyrics_only
+comment_sources: []
 source: instagram
 source_tag: 
 source_note: 

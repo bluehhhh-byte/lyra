@@ -1,6 +1,7 @@
 ---
-title: 星が泳ぐ 별이 헤엄치다
+title: 星が泳ぐ
 title_ko: 별이 헤엄치다
+search_aliases: [Hoshigaoyogu]
 artist: Macaroni Empitsu
 artist_ko:
 album: 星が泳ぐ - Single
@@ -12,6 +13,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2022]
+listen_when: 전하지 못한 말만 쌓인 바닷가
 keywords: [바다, 고양이, 파도, 여름, 노래, 별]
 emotion: 그리움
 date: 2022-10-03
@@ -22,6 +24,8 @@ source_tag:
 source_note: 
 source_hash: 59b107532c1d0069dfc394ac6a265763288de625
 source_body_hash: 3689ca9d655b2eaaab02b7192084b18aa1b5b864
+duplicate_of: macaroni-empitsu-星が泳ぐ
+duplicate_merged_at: 2026-09-07T19:56:38.738Z
 ---
 海へ行ったまま帰ってこないや
 + 우미에 잇타마마 카엣테 코나이야

@@ -14,6 +14,7 @@ duration: 148
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2022]
+listen_when: 끝나 가도 걱정 않기로 한 여름
 keywords: [시간, 꿈, 영웅, 구름, 금]
 emotion: 희망
 date: 2025-11-20

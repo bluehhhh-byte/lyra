@@ -14,6 +14,7 @@ duration:
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 1998]
+listen_when: 표정 없는 얼굴 뒤가 궁금해지는 밤
 keywords: [마이크, 담배, 노래, 인형, 기억]
 emotion: 슬픔
 date: 2023-04-22

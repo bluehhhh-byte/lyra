@@ -1,6 +1,6 @@
 ---
 title: Dear Moon
-title_ko: Dear Moon
+title_ko: 달에게
 artist: 제휘
 artist_ko:
 album: 나의 아저씨, Pt. 4 (Original Television Soundtrack) - Single
@@ -14,6 +14,7 @@ duration: 299
 genre: Indie Pop
 lang: ko
 tags: [한국, Indie Pop, 2018]
+listen_when: 따라가도 닿지 않는 달을 보는 밤
 keywords: [달, 밤, 얼굴, 목소리, 수화, 그늘]
 emotion: 그리움
 date: 2023-01-17

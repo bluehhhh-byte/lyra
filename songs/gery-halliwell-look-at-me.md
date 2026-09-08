@@ -12,6 +12,7 @@ duration:
 genre: Dance
 lang: en
 tags: [영미, Dance, 1999]
+listen_when: 보이는 게 다가 아니라고 외치고 싶은 날
 keywords: [얼굴, 화장, 거짓말, 눈, 가십]
 emotion: 저항
 date: 2023-04-19

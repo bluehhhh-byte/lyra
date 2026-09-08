@@ -14,6 +14,7 @@ duration: 195
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2017]
+listen_when: 우리끼리 주고받는 게 즐거운 밤
 keywords: [손바닥, 무대, 페스티벌, 땀, 마이크, 신발]
 emotion: 저항
 date: 2023-01-11

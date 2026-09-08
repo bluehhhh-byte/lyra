@@ -14,6 +14,7 @@ duration:
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2012]
+listen_when: 용기 내 전화를 걸어 보는 저녁
 keywords: [전화, 밤, 별, 잔디, 식사]
 emotion: 사랑
 date: 2023-02-10

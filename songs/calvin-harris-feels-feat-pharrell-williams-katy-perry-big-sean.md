@@ -12,6 +12,7 @@ trackId: 1248833201
 duration: 223
 lang: en
 tags: [영미, Disco, 2017]
+listen_when: 이 순간을 기념품처럼 챙기고 싶은 밤
 keywords: [순간, 기념품, 사랑, 기억]
 emotion: 설렘
 date: 2026-08-24

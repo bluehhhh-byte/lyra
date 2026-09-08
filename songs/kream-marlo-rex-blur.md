@@ -11,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d9/
 trackId: 1708367239
 lang: en
 tags: [한국, Dance, 2023]
+listen_when: 네가 어디까지고 내가 어딘지 흐려질 때
 emotion: 몽환
 keywords: [마음속, 피부, 색깔, 몸]
 date: 2026-07-08

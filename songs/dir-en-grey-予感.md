@@ -1,6 +1,7 @@
 ---
 title: 予感
 title_ko: 예감
+search_aliases: [Yokan]
 artist: DIR EN GREY
 artist_ko: 디르 앙 그레이
 album: VESTIGE OF SCRATCHES
@@ -12,6 +13,7 @@ trackId: 1483713075
 duration: 287
 lang: ja
 tags: [일본, Visual Kei, 1999]
+listen_when: 다정함이 문득 서늘하게 느껴질 때
 keywords: [사랑, 상처, 무구, 쾌감]
 emotion: 불안
 date: 2026-08-12

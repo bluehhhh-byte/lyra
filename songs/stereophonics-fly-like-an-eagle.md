@@ -14,6 +14,7 @@ duration: 273
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2019]
+listen_when: 그만둘까 하다가 다시 날기로 한 아침
 keywords: [독수리, 새벽, 심장, 키스, 마음]
 emotion: 희망
 date: 2023-02-21

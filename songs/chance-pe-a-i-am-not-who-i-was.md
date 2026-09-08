@@ -14,6 +14,7 @@ duration: 145
 genre: Folk
 lang: en
 tags: [영미, Folk, 2023]
+listen_when: 달라진 나를 들고 집으로 돌아가는 길
 keywords: [떠돌이, 영혼, 집]
 emotion: 회상
 date: 2024-06-22

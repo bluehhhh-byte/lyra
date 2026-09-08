@@ -14,6 +14,7 @@ duration: 294
 genre: Soundtrack
 lang: en
 tags: [영미, Soundtrack, 1952]
+listen_when: 우산 없이 비를 맞아도 웃음이 나는 날
 keywords: [비, 구름, 태양, 골목, 춤, 미소]
 emotion: 기쁨
 date: 2023-02-12

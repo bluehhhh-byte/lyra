@@ -1,6 +1,7 @@
 ---
 title: あかねさす歸路照らされど..
 title_ko: 황혼이 돌아가는 길에 비춰져도
+search_aliases: [Akanesasu Kiro Terasaredo]
 artist: Sheena Ringo
 artist_ko:
 album: 無罪モラトリアム
@@ -12,6 +13,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 헤어지는 교차로의 황혼이 시린 저녁
 keywords: [교차로, 헤드폰, 바다, 빌딩, 황혼, 눈물]
 emotion: 그리움
 date: 2024-04-25

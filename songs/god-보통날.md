@@ -12,6 +12,7 @@ duration:
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2004]
+listen_when: 어느새 잊고 잘 지내는 게 미안한 아침
 keywords: [아침, 커피, 버스, 라디오, 햇살]
 emotion: 체념
 date: 2022-12-11

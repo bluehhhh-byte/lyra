@@ -12,6 +12,7 @@ duration: 250
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2018]
+listen_when: 사이렌 소리에 괜히 움츠러드는 밤
 keywords: [불빛, 사이렌, 경찰차]
 emotion: 불안
 date: 2024-09-29

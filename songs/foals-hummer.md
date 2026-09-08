@@ -14,6 +14,7 @@ duration: 178
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2007]
+listen_when: 잠든 사람의 숨소리를 듣는 밤
 keywords: [심장, 별, 집, 잠, 달리기]
 emotion: 몽환
 date: 2023-01-04

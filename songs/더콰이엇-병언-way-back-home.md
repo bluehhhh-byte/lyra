@@ -1,6 +1,6 @@
 ---
 title: way back home
-title_ko: way back home
+title_ko: 집으로 가는 길
 artist: 더콰이엇, 병언
 artist_ko:
 album: glow forever
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2018]
+listen_when: 비 오는 서울에서 집으로 걷는 길
 keywords: [길, 집, 거짓말]
 emotion: 그리움
 date: 2025-05-17

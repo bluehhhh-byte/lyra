@@ -14,6 +14,7 @@ duration: 162
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 1990]
+listen_when: 머릿속을 떠나지 않는 사람이 있는 오후
 keywords: [이름, 혈관, 고통, 머리, 마음]
 emotion: 그리움
 date: 2023-02-10

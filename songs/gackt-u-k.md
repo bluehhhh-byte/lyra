@@ -12,6 +12,7 @@ trackId: 265755683
 duration: 261
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 무서워하는 사람의 손을 잡아 주는 밤
 keywords: [마법, 슬픔, 기억, 소원, 미소]
 emotion: 그리움
 date: 2026-08-13

@@ -12,6 +12,7 @@ duration: 359
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]
+listen_when: 사람에 지쳐 커피만 붙드는 아침
 keywords: [마트, 사람들, 마음]
 emotion: 고독
 date: 2024-08-27

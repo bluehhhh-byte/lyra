@@ -14,6 +14,7 @@ duration: 287
 genre: Electronic
 lang: en
 tags: [유럽, Electronic, 1997]
+listen_when: 사랑받고 있음을 잊어버린 날
 keywords: [사랑, 마음, 주위, 믿음]
 emotion: 위로
 date: 2022-11-29

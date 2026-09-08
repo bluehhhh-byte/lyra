@@ -1,6 +1,7 @@
 ---
-title: 君に逢いたくて 그대를 만나고 싶어서
+title: 君に逢いたくて
 title_ko: 그대를 만나고 싶어서
+search_aliases: [Kimi ni Aitakute]
 artist: Gackt
 artist_ko:
 album: 君に逢いたくて
@@ -14,6 +15,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2004]
+listen_when: 보고 싶다는 말만 쌓여 가는 밤
 keywords: [손, 별, 하늘, 온기, 마음]
 emotion: 그리움
 date: 2022-10-03

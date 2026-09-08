@@ -1,6 +1,6 @@
 ---
 title: Da Funk
-title_ko: Da Funk
+title_ko: 다 펑크
 artist: Daft Punk
 artist_ko:
 album: Homework
@@ -15,6 +15,7 @@ genre: House
 instrumental: true
 lang: ko
 tags: [유럽, House, 1995]
+listen_when: 기계음에 마음이 먼저 반응하는 밤
 keywords: [로봇, 기계, 거리, 밤, 춤]
 emotion: 기쁨
 date: 2023-05-24

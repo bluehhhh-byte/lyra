@@ -12,6 +12,7 @@ trackId: 1440636710
 duration: 235
 lang: en
 tags: [영미, Alternative Rock, 1993]
+listen_when: 아무것도 되기 싫은 일요일 오후
 keywords: [패배자, 엽총, 시간, 기타]
 emotion: 체념
 date: 2026-08-02

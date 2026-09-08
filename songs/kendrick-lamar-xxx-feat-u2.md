@@ -12,6 +12,7 @@ trackId: 1440882173
 duration: 254
 lang: en
 tags: [영미, Hip-Hop, 2017]
+listen_when: 분노를 어디에 둘지 모르겠는 밤
 keywords: [미국, 아들, 사랑, 죽음]
 emotion: 분노
 date: 2026-08-24

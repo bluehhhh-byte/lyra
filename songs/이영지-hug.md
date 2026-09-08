@@ -1,6 +1,6 @@
 ---
 title: HUG
-title_ko: HUG
+title_ko: 포옹
 artist: 이영지
 artist_ko:
 album: 쇼미더머니 11 Final
@@ -14,6 +14,7 @@ duration: 237
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 프리허그 팻말을 든 쪽이 안기고 싶은 밤
 keywords: [포옹, 팻말, 어깨, 부목, 아이, 목소리]
 emotion: 위로
 date: 2023-01-09

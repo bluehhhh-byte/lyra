@@ -12,6 +12,7 @@ trackId: 1097863247
 duration: 356
 lang: en
 tags: [영미, Alternative Rock, 2000]
+listen_when: 여기 없는 사람처럼 흘러가고 싶은 날
 emotion: 체념
 keywords: [현실, 순간, 조명, 불꽃놀이]
 date: 2026-07-13

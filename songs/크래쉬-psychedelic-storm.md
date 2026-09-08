@@ -1,6 +1,6 @@
 ---
 title: Psychedelic Storm
-title_ko: Psychedelic Storm
+title_ko: 환각의 폭풍
 artist: 크래쉬
 artist_ko:
 album: The Massive Crush
@@ -14,6 +14,7 @@ duration: 233
 genre: Metal
 lang: ko
 tags: [한국, Metal, 2003]
+listen_when: 유행에 휩쓸리기 싫은 날
 keywords: [티비, 잡지, 광고, 유행, 도구]
 emotion: 저항
 date: 2023-02-11

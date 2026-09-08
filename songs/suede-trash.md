@@ -12,6 +12,7 @@ trackId: 437633401
 duration: 246
 lang: en
 tags: [영미, Alternative Rock, 1996]
+listen_when: 변두리 인생끼리 어깨를 겯는 밤
 emotion: 사랑
 keywords: [쓰레기, 연인들, 부스러기들, 음악]
 date: 2026-07-14

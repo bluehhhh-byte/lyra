@@ -14,6 +14,7 @@ duration: 262
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2011]
+listen_when: 떠난 사람의 이름을 오래 붙드는 밤
 keywords: [눈물, 먼지, 빛, 숲, 나방, 이름]
 emotion: 슬픔
 date: 2023-01-06

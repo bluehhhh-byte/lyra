@@ -14,6 +14,7 @@ duration: 263
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2003]
+listen_when: 이유 백 가지를 대며 떠나는 고속도로
 keywords: [여행, 달, 자동차, 면허, 꽃]
 emotion: 희망
 date: 2023-03-11

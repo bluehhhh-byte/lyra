@@ -12,6 +12,7 @@ trackId: 269762305
 duration: 311
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 물거품 같던 오후를 안아 보는 봄
 emotion: 회상
 keywords: [청춘, 사랑, 미래, 기억, 환상]
 date: 2026-07-16

@@ -1,6 +1,6 @@
 ---
 title: Flying Bobs
-title_ko: Flying Bobs
+title_ko: 플라잉 밥스
 artist: 검정치마
 artist_ko:
 album: TEEN TROUBLES
@@ -14,6 +14,7 @@ duration: 243
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2022]
+listen_when: 매미 울던 열일곱의 여름밤
 keywords: [매미, 여름밤, 계절, 저주, 열일곱]
 emotion: 회상
 date: 2023-04-30

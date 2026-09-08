@@ -1,6 +1,6 @@
 ---
 title: DARLING
-title_ko: DARLING
+title_ko: 달링
 artist: 태양
 artist_ko:
 album: WHITE NIGHT
@@ -14,6 +14,7 @@ duration: 210
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2017]
+listen_when: 끝내자다 다시 붙드는 밤
 keywords: [술, 벽, 미로, 여정, 세상]
 emotion: 사랑
 date: 2022-12-01

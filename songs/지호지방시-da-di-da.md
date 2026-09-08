@@ -1,6 +1,6 @@
 ---
 title: Da Di Da
-title_ko: Da Di Da
+title_ko: 다 디 다
 artist: 지호지방시
 artist_ko:
 album: Miami - Single
@@ -14,6 +14,7 @@ duration: 186
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 필요하면 전화하라고 말해 두는 밤
 keywords: [전화, 카톡, 곁, 다짐]
 emotion: 사랑
 date: 2022-09-27

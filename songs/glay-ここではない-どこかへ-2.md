@@ -12,6 +12,7 @@ duration: 349
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 어른이 된 값을 세어 보는 귀갓길
 keywords: [소원, 세상, 꿈, 항해, 영혼]
 emotion: 회상
 date: 2025-05-28

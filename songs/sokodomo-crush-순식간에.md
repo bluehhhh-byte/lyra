@@ -12,6 +12,7 @@ duration: 202
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2025]
+listen_when: 평범한 하루가 순식간에 뒤집힌 날
 keywords: [미소, 향기, 심장]
 emotion: 설렘
 date: 2025-07-21

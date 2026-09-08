@@ -14,6 +14,7 @@ duration: 227
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2016]
+listen_when: 화려한 이동이 실은 피곤한 장거리 비행
 keywords: [비행, 미소, 자리, 시차, 집]
 emotion: 체념
 date: 2025-11-24

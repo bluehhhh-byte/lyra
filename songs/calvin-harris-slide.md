@@ -12,6 +12,7 @@ duration: 268
 genre: Dance
 lang: en
 tags: [영미, Dance, 2017]
+listen_when: 잔고 걱정은 내일로 미룬 밤
 keywords: [잔고, 피카소, 사랑]
 emotion: 설렘
 date: 2024-06-09

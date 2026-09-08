@@ -1,6 +1,7 @@
 ---
-title: 腐海 썩은 바다
+title: 腐海
 title_ko: 썩은 바다
+search_aliases: [Fukai]
 artist: Dir en grey
 artist_ko:
 album: かすみ
@@ -12,6 +13,7 @@ duration:
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2003]
+listen_when: 기도조차 차갑게 식어 버린 밤
 keywords: [눈물, 밤하늘, 기도, 노래, 꿈]
 emotion: 고독
 date: 2022-11-16

@@ -14,6 +14,7 @@ duration: 183
 genre: Jazz
 lang: en
 tags: [영미, Jazz, 2013]
+listen_when: 영원이 아니면 시작 않겠다고 다짐할 때
 keywords: [사랑, 마음, 햇볕, 세상]
 emotion: 사랑
 date: 2023-02-22

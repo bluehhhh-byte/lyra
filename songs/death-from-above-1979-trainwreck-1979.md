@@ -14,6 +14,7 @@ duration: 227
 genre: Punk Rock
 lang: en
 tags: [영미, Punk Rock, 2014]
+listen_when: 채워지지 않는 갈증으로 달리는 밤
 keywords: [기차, 고속도로, 심장]
 emotion: 저항
 date: 2025-06-16

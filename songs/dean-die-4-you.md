@@ -12,6 +12,7 @@ duration: 194
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2024]
+listen_when: 무너져도 떠나지 않겠다고 다짐한 밤
 keywords: [한사람]
 emotion: 사랑
 date: 2024-07-16

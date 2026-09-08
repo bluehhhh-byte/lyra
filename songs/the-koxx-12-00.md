@@ -1,6 +1,6 @@
 ---
 title: 12:00
-title_ko: 12:00
+title_ko: 열두 시
 artist: THE KOXX
 artist_ko:
 album: ACCESS OK
@@ -14,6 +14,7 @@ duration: 258
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2011]
+listen_when: 말 한마디 못 걸고 끝난 파티의 밤
 keywords: [파티, 문, 밤, 용기, 실패]
 emotion: 불안
 date: 2023-01-04

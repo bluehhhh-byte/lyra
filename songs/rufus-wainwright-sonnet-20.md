@@ -14,6 +14,7 @@ duration: 179
 genre: Classical
 lang: en
 tags: [영미, Classical, 2010]
+listen_when: 오래된 시로 사랑을 읽는 밤
 keywords: [여자, 자연, 사랑]
 emotion: 사랑
 date: 2022-09-17

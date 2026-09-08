@@ -1,6 +1,6 @@
 ---
 title: HAPPENING
-title_ko: HAPPENING
+title_ko: 해프닝
 artist: AKMU
 artist_ko:
 album: HAPPENING - Single
@@ -14,6 +14,7 @@ duration: 224
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2017]
+listen_when: 아무렇지 않은 척이 무너지는 순간
 keywords: [경고, 눈빛, 추억, 미련, 마지막]
 emotion: 이별
 date: 2023-03-15

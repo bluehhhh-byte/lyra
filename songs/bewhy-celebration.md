@@ -1,6 +1,6 @@
 ---
 title: Celebration
-title_ko: Celebration
+title_ko: 축제
 artist: BewhY
 artist_ko:
 album: 032 Funk - EP
@@ -14,6 +14,7 @@ duration: 196
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
+listen_when: 별일 없는 하루가 축제 같은 날
 keywords: [자몽, 하늘, 조합]
 emotion: 기쁨
 date: 2025-06-30

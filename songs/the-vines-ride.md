@@ -1,6 +1,6 @@
 ---
 title: Ride
-title_ko: Ride
+title_ko: 타고 가자
 artist: The Vines
 artist_ko: 
 album: Winning Days
@@ -12,6 +12,7 @@ trackId: 716154413
 duration: 156
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 같이 타자고 소리치고 싶은 밤
 keywords: [혼자, 세상, 시간, 마음]
 emotion: 저항
 date: 2026-07-21

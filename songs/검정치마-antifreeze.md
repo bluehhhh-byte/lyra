@@ -1,6 +1,6 @@
 ---
 title: Antifreeze
-title_ko: Antifreeze
+title_ko: 부동액
 artist: 검정치마
 artist_ko:
 album: 201 (Special Edition)
@@ -14,6 +14,7 @@ duration: 244
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2008]
+listen_when: 눈보라 속에서 그 눈동자를 만난 밤
 keywords: [우주, 태양, 눈보라]
 emotion: 사랑
 date: 2024-11-20

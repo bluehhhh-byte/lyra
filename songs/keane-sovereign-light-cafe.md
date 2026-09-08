@@ -12,6 +12,7 @@ duration:
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2012]
+listen_when: 유년의 여름 바닷가가 떠오른 오후
 keywords: [신호, 말, 사람, 그날]
 emotion: 회상
 date: 2023-01-17

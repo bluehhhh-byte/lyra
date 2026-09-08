@@ -14,6 +14,7 @@ duration: 233
 genre: Folk
 lang: en
 tags: [영미, Folk, 2006]
+listen_when: 먼 도시의 사람에게 노래를 보내는 밤
 keywords: [뉴욕, 타임스퀘어, 거리]
 emotion: 그리움
 date: 2024-11-09

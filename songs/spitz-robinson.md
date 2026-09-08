@@ -14,6 +14,7 @@ duration: 260
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1995]
+listen_when: 자전거를 쫓아가던 강가의 봄날
 keywords: [자전거, 강가, 레코드, 마법, 우주, 하늘]
 emotion: 몽환
 date: 2023-05-26

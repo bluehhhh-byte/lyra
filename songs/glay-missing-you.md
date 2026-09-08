@@ -14,6 +14,7 @@ duration: 350
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2000]
+listen_when: 겨울이 오기도 전에 그리워지는 방
 keywords: [겨울, 눈, 방, 국도, 봄, 꽃]
 emotion: 그리움
 date: 2023-01-31

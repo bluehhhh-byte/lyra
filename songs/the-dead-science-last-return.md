@@ -12,6 +12,7 @@ trackId: 1716059495
 duration: 169
 lang: en
 tags: [영미, Indie Rock, 2005]
+listen_when: 위태로운 구원을 붙드는 새벽
 keywords: [신경, 팔, 귀환]
 emotion: 불안
 date: 2026-08-19

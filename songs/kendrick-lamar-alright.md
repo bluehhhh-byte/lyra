@@ -14,6 +14,7 @@ duration: 219
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 2015]
+listen_when: 그래도 괜찮을 거라고 되뇌는 행진
 keywords: [분노, 우울감, 변화, 죽음, 권력]
 emotion: 희망
 date: 2022-09-26

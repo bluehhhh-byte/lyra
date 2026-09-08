@@ -14,6 +14,7 @@ duration: 215
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2023]
+listen_when: 위험한 줄 알면서 끌려가는 밤
 keywords: [달빛, 강풍, 날개, 천사, 지옥, 키스]
 emotion: 불안
 date: 2023-04-28

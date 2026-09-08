@@ -14,6 +14,7 @@ duration: 217
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]
+listen_when: 흉터를 담담히 만져 보는 오후
 keywords: [흉터, 새, 풍경]
 emotion: 고독
 date: 2025-06-24

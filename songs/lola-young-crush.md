@@ -12,6 +12,7 @@ duration: 227
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2024]
+listen_when: 스쳐 갈 사람인 걸 알면서 원하는 밤
 keywords: [삶, 직장, 눈빛]
 emotion: 설렘
 date: 2024-07-04

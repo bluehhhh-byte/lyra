@@ -14,6 +14,7 @@ duration: 205
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 맹목적인 애국이 섬뜩해 보이는 날
 keywords: [국기, 동상, 미소]
 emotion: 저항
 date: 2024-11-01

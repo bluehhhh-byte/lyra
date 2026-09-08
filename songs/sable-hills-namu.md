@@ -12,6 +12,7 @@ trackId: 1844611228
 duration: 221
 lang: en
 tags: [일본, Metal, 2025]
+listen_when: 번뇌를 소리로 부수고 싶은 밤
 keywords: [부동명왕, 분노, 미혹, 금강, 남무]
 emotion: 저항
 date: 2026-08-19

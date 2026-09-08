@@ -12,6 +12,7 @@ duration: 221
 genre: Folk
 lang: en
 tags: [영미, Folk, 2003]
+listen_when: 내 집 같은 곳이 없다고 느끼는 밤
 keywords: [집, 인생, 기회]
 emotion: 체념
 date: 2025-07-16

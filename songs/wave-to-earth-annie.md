@@ -12,6 +12,7 @@ duration: 201
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2024]
+listen_when: 타협하란 말에 고개를 젓는 밤
 keywords: [유명인, 보석, 파티]
 emotion: 사랑
 date: 2024-09-07

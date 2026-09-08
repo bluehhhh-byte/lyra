@@ -14,6 +14,7 @@ duration: 276
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1997]
+listen_when: 갈증이 집착으로 넘어가려는 밤
 keywords: [집, 주소, 키스]
 emotion: 불안
 date: 2025-07-03

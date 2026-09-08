@@ -12,6 +12,7 @@ trackId: 6781051275
 duration: 255
 lang: en
 tags: [영미, Indie Rock, 2026]
+listen_when: 자라지 않는 소년들이 그리운 밤
 keywords: [인생, 머리, 점심, 아침]
 emotion: 고독
 date: 2026-08-17

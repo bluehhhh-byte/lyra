@@ -1,6 +1,6 @@
 ---
 title: Airbag
-title_ko: Airbag
+title_ko: 에어백
 artist: 설
 artist_ko:
 album: Airbag - Single
@@ -14,6 +14,7 @@ duration: 353
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 웃음소리 속에서 혼자 섬 같은 밤
 keywords: [라디오, 주파수, 신청곡, 빗물, 전광판, 교통사고]
 emotion: 고독
 date: 2022-09-28

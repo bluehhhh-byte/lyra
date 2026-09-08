@@ -1,6 +1,6 @@
 ---
 title: Nobody
-title_ko: Nobody
+title_ko: 아무도
 artist: One Republic
 artist_ko:
 album: Nobody (from Kaiju No. 8)
@@ -12,6 +12,7 @@ duration:
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 악마와 싸우는 사람 곁을 지키는 밤
 keywords: [책임, 밤]
 emotion: 사랑
 date: 2024-12-12

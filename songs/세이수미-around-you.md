@@ -14,6 +14,7 @@ duration: 223
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2022]
+listen_when: 침대에서 나갈 이유를 찾는 아침
 keywords: [침대, 방, 아침, 젊음, 소식]
 emotion: 고독
 date: 2022-09-20

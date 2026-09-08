@@ -1,6 +1,6 @@
 ---
 title: November Rain
-title_ko: November Rain
+title_ko: 십일월의 비
 artist: 잔나비
 artist_ko:
 album: November Rain - Single
@@ -14,6 +14,7 @@ duration: 258
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2016]
+listen_when: 눈이 되지 못한 비가 내리는 11월
 keywords: [비, 눈, 빗소리, 낙엽, 겨울, 커튼]
 emotion: 그리움
 date: 2022-10-30

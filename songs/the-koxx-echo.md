@@ -1,6 +1,6 @@
 ---
 title: echo
-title_ko: echo
+title_ko: 메아리
 artist: THE KOXX
 artist_ko:
 album: the new normal
@@ -14,6 +14,7 @@ duration: 282
 genre: Indie Rock
 lang: ko
 tags: [Indie Rock, 2017]
+listen_when: 마지막 목소리가 안에서 울리는 밤
 keywords: [자리, 눈물, 한숨, 웃음, 목소리]
 emotion: 그리움
 date: 2025-10-27

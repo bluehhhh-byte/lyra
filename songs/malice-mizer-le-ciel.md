@@ -14,6 +14,7 @@ duration:
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1998]
+listen_when: 사라지기 전에 더 세게 안아 달라는 밤
 keywords: [눈물, 바람, 목소리, 손가락, 하늘, 입맞춤]
 emotion: 이별
 date: 2024-04-13

@@ -14,6 +14,7 @@ duration: 312
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2004]
+listen_when: 떠났던 사람이 빈손으로 돌아온 날
 keywords: [사람, 부, 특별함]
 emotion: 분노
 date: 2025-06-06

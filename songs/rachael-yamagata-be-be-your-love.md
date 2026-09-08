@@ -14,6 +14,7 @@ duration: 252
 genre: Folk
 lang: en
 tags: [영미, Folk, 2004]
+listen_when: 안 된다는 사랑을 그래도 원하는 밤
 keywords: [여왕, 생각, 사랑]
 emotion: 사랑
 date: 2024-07-27

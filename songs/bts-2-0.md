@@ -14,6 +14,7 @@ duration: 170
 genre: K-Pop
 lang: en
 tags: [K-Pop, 2026]
+listen_when: 새로 태어난 기분으로 나서는 아침
 keywords: [뜀틀, 불, 빚, 진실]
 emotion: 저항
 date: 2026-04-05

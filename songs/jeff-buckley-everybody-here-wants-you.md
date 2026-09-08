@@ -14,6 +14,7 @@ duration: 287
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 모두가 원하는 사람을 바라보는 밤
 keywords: [거리, 밤, 시선, 여름, 방]
 emotion: 사랑
 date: 2022-09-17

@@ -12,6 +12,7 @@ duration: 198
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2019]
+listen_when: 뭐든 되어 주고 싶은 사람이 생긴 날
 keywords: [행복, 미소, 와인]
 emotion: 사랑
 date: 2024-07-02

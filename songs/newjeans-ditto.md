@@ -1,6 +1,6 @@
 ---
 title: Ditto
-title_ko: Ditto
+title_ko: 나도 그래
 artist: NewJeans
 artist_ko:
 album: Ditto - Single
@@ -14,6 +14,7 @@ duration: 186
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2022]
+listen_when: 먼저 말하긴 싫고 듣고는 싶은 겨울
 keywords: [아침, 여름, 가을, 심장, 미로, 기억]
 emotion: 설렘
 date: 2023-01-02

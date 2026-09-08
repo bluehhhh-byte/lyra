@@ -14,6 +14,7 @@ duration: 287
 genre: Visual Kei
 lang: ja
 tags: [Visual Kei, 2024]
+listen_when: 지금 이 순간만 느끼기로 한 이별 뒤
 keywords: [아스팔트, 눈물, 빛, 마음, 한숨]
 emotion: 이별
 date: 2026-04-15

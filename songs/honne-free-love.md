@@ -12,6 +12,7 @@ duration: 209
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2020]
+listen_when: 가진 건 마음뿐이라 미안해지는 밤
 keywords: [집, 언덕, 강아지]
 emotion: 희망
 date: 2024-07-21

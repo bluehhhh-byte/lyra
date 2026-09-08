@@ -14,6 +14,7 @@ duration: 214
 genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2024]
+listen_when: 안 맞는다는 말을 먼저 꺼낸 날
 keywords: [실수, 마음, 처음]
 emotion: 이별
 date: 2024-08-21

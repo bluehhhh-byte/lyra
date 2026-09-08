@@ -14,6 +14,7 @@ duration: 307
 genre: Disco
 lang: en
 tags: [Disco, 1978]
+listen_when: 진심을 확인하고 춤이 나오는 밤
 keywords: [사랑, 진짜, 마음, 느낌]
 emotion: 기쁨
 date: 2026-05-09

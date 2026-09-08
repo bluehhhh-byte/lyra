@@ -14,6 +14,7 @@ duration: 180
 genre: R&B/Soul
 lang: en
 tags: [R&B/Soul, 2026]
+listen_when: 트라우마를 향해 정면으로 걷는 아침
 keywords: [기억, 트라우마, 게임, 고통, 사랑]
 emotion: 희망
 date: 2026-07-01

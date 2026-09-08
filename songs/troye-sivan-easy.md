@@ -14,6 +14,7 @@ duration: 213
 genre: Synth-Pop
 lang: en
 tags: [Synth-Pop, 2021]
+listen_when: 떠나지 말라는 말만 남은 집 앞
 keywords: [집, 눈물, 햇살, 머리카락, 낯선]
 emotion: 슬픔
 date: 2025-10-14

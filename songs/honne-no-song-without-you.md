@@ -14,6 +14,7 @@ duration: 160
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2020]
+listen_when: 네 덕분이라고 꼭 말해 주고 싶은 날
 keywords: [노래, 기분, 빈털털이]
 emotion: 사랑
 date: 2024-07-01

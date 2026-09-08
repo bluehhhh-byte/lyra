@@ -14,6 +14,7 @@ duration: 263
 genre: Indie Pop
 lang: ja
 tags: [일본, Indie Pop, 2000]
+listen_when: 볼륨을 끝까지 올린 심야 드라이브
 keywords: [미등, 담배, 별, 밤, 손목시계, 선글라스]
 emotion: 설렘
 date: 2023-01-09

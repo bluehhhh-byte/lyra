@@ -14,6 +14,7 @@ duration:
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1996]
+listen_when: 감정을 잠깐 꺼 두고 싶은 오후
 keywords: [마취제, 구멍, 영혼, 예수, 엄마]
 emotion: 체념
 date: 2022-10-06

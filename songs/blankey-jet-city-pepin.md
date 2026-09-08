@@ -13,6 +13,7 @@ external_url: https://music.apple.com/jp/album/pepin/1445023848?i=1445023854&uo=
 duration: 291
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 저녁놀이 유난히 눈에 시린 귀갓길
 keywords: [사랑, 저녁놀, 인파, 인생, 그리움]
 emotion: 그리움
 date: 2026-09-05

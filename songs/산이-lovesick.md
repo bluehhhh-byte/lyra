@@ -1,6 +1,6 @@
 ---
 title: LoveSick
-title_ko: LoveSick
+title_ko: 상사병
 artist: 산이
 artist_ko:
 album: LoveSick
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2010]
+listen_when: 짝사랑이 병처럼 도지는 밤
 keywords: [병, 의사, 심장, 미소, 꿈, 눈물]
 emotion: 사랑
 date: 2022-10-01

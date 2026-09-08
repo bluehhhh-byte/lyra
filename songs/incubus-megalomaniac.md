@@ -14,6 +14,7 @@ duration:
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 잘난 척하는 화면을 꺼 버리고 싶은 밤
 keywords: [라디오, 화면, 날개, 가위, 원칙]
 emotion: 저항
 date: 2023-03-21

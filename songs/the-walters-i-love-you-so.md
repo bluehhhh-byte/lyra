@@ -14,6 +14,7 @@ duration: 160
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2014]
+listen_when: 사랑하면서 떠나야 하는 짐 싸는 밤
 keywords: [삶, 시간, 연인들]
 emotion: 이별
 date: 2024-07-08

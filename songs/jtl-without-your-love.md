@@ -1,6 +1,6 @@
 ---
 title: Without Your Love
-title_ko: Without Your Love
+title_ko: 네 사랑 없이
 artist: JTL
 artist_ko:
 album: Run Away
@@ -14,6 +14,7 @@ duration: 254
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2003]
+listen_when: 감정을 끄고 앞만 보기로 한 아침
 keywords: [달, 별빛, 비, 무지개, 구름]
 emotion: 체념
 date: 2022-12-18

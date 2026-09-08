@@ -12,6 +12,7 @@ duration: 219
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2004]
+listen_when: 한 해의 첫 하늘을 올려다보는 아침
 keywords: [1월, 하늘, 공기]
 emotion: 희망
 date: 2024-01-01

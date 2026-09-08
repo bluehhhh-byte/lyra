@@ -1,6 +1,7 @@
 ---
 title: 瞳の住人
 title_ko: 눈동자의 주인
+search_aliases: [Hitomi No Jyunin]
 artist: L'Arc en Ciel
 artist_ko:
 album: 25th L'Anniversary LIVE
@@ -12,6 +13,7 @@ duration: 426
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2004]
+listen_when: 그 사람을 얼마나 아는지 자문하는 밤
 keywords: [세월, 지도, 손끝]
 emotion: 사랑
 date: 2024-08-14

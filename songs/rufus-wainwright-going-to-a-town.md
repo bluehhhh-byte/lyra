@@ -1,6 +1,6 @@
 ---
 title: Going To A Town
-title_ko: Going To A Town
+title_ko: 어느 마을로 간다
 artist: Rufus Wainwright
 artist_ko:
 album: Release the Stars
@@ -14,6 +14,7 @@ duration: 245
 genre: Folk
 lang: en
 tags: [영미, Folk, 2007]
+listen_when: 환멸을 조용한 목소리로 말하는 밤
 keywords: [마을, 사람들]
 emotion: 분노
 date: 2024-12-01

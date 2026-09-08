@@ -14,6 +14,7 @@ duration: 260
 genre: Dream Pop
 lang: ko
 tags: [한국, Dream Pop, 2018]
+listen_when: 잡을 수 없는 것을 손에 비춰 보는 밤
 keywords: [물, 손, 하늘, 파도, 빛]
 emotion: 몽환
 date: 2022-09-22

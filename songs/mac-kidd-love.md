@@ -1,6 +1,6 @@
 ---
 title: LOVE
-title_ko: LOVE
+title_ko: 사랑
 artist: Mac Kidd
 artist_ko:
 album: POPBOX
@@ -12,6 +12,7 @@ duration: 116
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2021]
+listen_when: 정적을 못 견디고 고백해 버린 밤
 keywords: [인사, 천사, 천국, 미래, 정적]
 emotion: 설렘
 date: 2022-11-19

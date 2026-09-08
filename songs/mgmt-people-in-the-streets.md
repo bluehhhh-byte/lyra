@@ -14,6 +14,7 @@ duration: 337
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 무리에 끼고 싶지만 두려운 저녁
 keywords: [삶, 태양, 빛]
 emotion: 불안
 date: 2024-07-12

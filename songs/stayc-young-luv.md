@@ -1,6 +1,6 @@
 ---
 title: YOUNG LUV
-title_ko: YOUNG LUV
+title_ko: 어린 사랑
 artist: STAYC
 artist_ko:
 album: YOUNG-LUV.COM - EP
@@ -14,6 +14,7 @@ duration: 206
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2022]
+listen_when: 상처받기 전에 먼저 식어 버린 밤
 keywords: [밤, 눈물, 상처, 거짓말, 마음]
 emotion: 이별
 date: 2023-01-02

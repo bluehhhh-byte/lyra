@@ -12,6 +12,7 @@ trackId: 1711359473
 duration: 275
 lang: en
 tags: [영미, Alternative Rock, 2024]
+listen_when: 아름다운 연주 뒤 서늘함을 읽는 밤
 keywords: [창문, 발코니, 친구, 돈, 주머니]
 emotion: 불안
 date: 2026-07-27

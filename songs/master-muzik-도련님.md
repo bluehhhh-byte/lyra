@@ -13,6 +13,7 @@ duration: 133
 youtube: master muzik silverspoon
 lang: ko
 tags: [한국, Hip-Hop, 2026]
+listen_when: 돌아보니 악몽이었던 관계를 정리한 밤
 keywords: [도련님, 악몽, 심연, 불안, 연민]
 emotion: 불안
 date: 2026-07-21

@@ -1,6 +1,6 @@
 ---
 title: In The Sky
-title_ko: In The Sky
+title_ko: 하늘에
 artist: 블랙비트
 artist_ko:
 album: Black Beat #2002 - The First Performance #001
@@ -12,6 +12,7 @@ duration:
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2002]
+listen_when: 사진 속 미소에 잘못만 떠오르는 밤
 keywords: [사진, 미소, 눈물, 시간, 용서]
 emotion: 이별
 date: 2022-10-08

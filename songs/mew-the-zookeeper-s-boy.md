@@ -12,6 +12,7 @@ trackId: 316009265
 duration: 283
 lang: en
 tags: [유럽, Dream Pop, 2001]
+listen_when: 폭풍 앞에서 동화로 도망치는 오후
 keywords: [도시, 폭풍, 비, 구름, 머리카락]
 emotion: 몽환
 date: 2026-08-11

@@ -14,6 +14,7 @@ duration: 257
 genre: Grunge
 lang: en
 tags: [영미, Grunge, 1991]
+listen_when: 혼잣말이 친구가 되는 일요일 아침
 keywords: [거울, 촛불, 신, 친구, 머리, 일요일]
 emotion: 고독
 date: 2023-05-21

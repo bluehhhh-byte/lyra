@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2018]
+listen_when: 주인공 아니면 안 된다고 다짐하는 밤
 keywords: [주인공, 카펫, 잡지]
 emotion: 저항
 date: 2024-10-17

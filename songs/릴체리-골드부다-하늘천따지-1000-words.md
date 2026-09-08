@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: en
 tags: [한국, Hip-Hop, 2020]
+listen_when: 엉뚱한 장난기가 필요한 오후
 keywords: [무대, 돈, 우등상]
 emotion: 기쁨
 date: 2025-05-15

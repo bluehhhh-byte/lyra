@@ -1,6 +1,7 @@
 ---
 title: ル―ジュの佺言
 title_ko: 루즈의 전언
+search_aliases: [Rouge no Dengon]
 artist: Arai Yumi
 artist_ko:
 album: ルージュの伝言 (Single)
@@ -12,6 +13,7 @@ duration:
 genre: City Pop
 lang: ja
 tags: [일본, City Pop, 1975]
+listen_when: 따질 게 있어 혼자 열차에 오른 오후
 keywords: [열차, 거리, 욕실, 황혼, 전화]
 emotion: 분노
 date: 2023-03-13

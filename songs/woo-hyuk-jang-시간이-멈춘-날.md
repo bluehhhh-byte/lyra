@@ -12,6 +12,7 @@ trackId: 1519359646
 duration: 225
 lang: ko
 tags: [한국, K-Pop, 2011]
+listen_when: 시간이 멈춘 것 같은 이별 뒤
 emotion: 이별
 keywords: [시간, 기억, 추억, 사진]
 date: 2026-07-20

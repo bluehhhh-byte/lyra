@@ -1,6 +1,7 @@
 ---
-title: 薔薇は美しく散る 장미는 아름답게 진다
+title: 薔薇は美しく散る
 title_ko: 장미는 아름답게 진다
+search_aliases: [Bara Ha Utsukushiku Chiru]
 artist: LAREINE
 artist_ko:
 album: Lillie Charlotte
@@ -14,6 +15,7 @@ duration:
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1998]
+listen_when: 질 때도 아름답기로 마음먹은 날
 keywords: [장미, 풀숲, 바람, 별, 꽃잎]
 emotion: 체념
 date: 2022-11-17

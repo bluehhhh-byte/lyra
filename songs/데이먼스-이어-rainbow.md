@@ -1,6 +1,6 @@
 ---
 title: Rainbow
-title_ko: Rainbow
+title_ko: 무지개
 artist: 데이먼스 이어
 artist_ko:
 album: HEADACHE.
@@ -14,6 +14,7 @@ duration: 246
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2021]
+listen_when: 노을처럼 저물어 간 관계의 끝
 keywords: [어둠, 비, 밤, 노을, 품]
 emotion: 체념
 date: 2022-10-04

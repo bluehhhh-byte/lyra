@@ -14,6 +14,7 @@ duration: 293
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2012]
+listen_when: 숨 쉴 공간이 필요하다고 외치고 싶은 날
 keywords: [환상, 총알, 길]
 emotion: 저항
 date: 2024-11-27

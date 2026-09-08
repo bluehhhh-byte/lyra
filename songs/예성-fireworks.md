@@ -1,6 +1,6 @@
 ---
 title: Fireworks
-title_ko: Fireworks
+title_ko: 불꽃놀이
 artist: 예성
 artist_ko:
 album: Beautiful Night - The 4th Mini Album
@@ -14,6 +14,7 @@ duration: 215
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2021]
+listen_when: 무덤덤하던 일상이 깨어난 밤
 keywords: [하늘, 불빛, 은하수, 구름, 밤, 향기]
 emotion: 설렘
 date: 2023-04-07

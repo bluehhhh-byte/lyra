@@ -1,6 +1,6 @@
 ---
 title: Winning Days
-title_ko: Winning Days
+title_ko: 이기던 날들
 artist: The Vines
 artist_ko:
 album: Winning Days
@@ -14,6 +14,7 @@ duration: 214
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
+listen_when: 이기던 날들이 지나갔음을 아는 밤
 keywords: [승리, 황금, 날들]
 emotion: 회상
 date: 2025-01-22

@@ -12,6 +12,7 @@ trackId: 1161539473
 duration: 233
 lang: en
 tags: [영미, Punk Rock, 2004]
+listen_when: 뉴스에 화가 치밀어 오르는 저녁
 keywords: [비명, 전쟁, 거짓말, 대통령]
 emotion: 저항
 date: 2026-08-25

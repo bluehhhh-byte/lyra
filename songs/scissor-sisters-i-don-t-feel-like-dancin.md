@@ -14,6 +14,7 @@ duration: 288
 genre: Disco
 lang: en
 tags: [영미, Disco, 2009]
+listen_when: 다들 신났는데 혼자 겉도는 파티
 keywords: [드레스, 노래, 아침]
 emotion: 체념
 date: 2024-10-20

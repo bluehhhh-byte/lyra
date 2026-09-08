@@ -1,6 +1,6 @@
 ---
 title: Moonage Dream
-title_ko: Moonage Dream
+title_ko: 달의 꿈
 artist: 김바다
 artist_ko:
 album: Moonage Dream
@@ -12,6 +12,7 @@ duration: 198
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2014]
+listen_when: 규칙 없이 달아오르는 무대 앞
 keywords: [태양, 함성, 순간]
 emotion: 저항
 date: 2025-05-11

@@ -14,6 +14,7 @@ duration: 170
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2015]
+listen_when: 버튼 하나에 달린 목숨들을 생각하는 밤
 keywords: [드론, 가족, 손가락, 목숨, 기도]
 emotion: 저항
 date: 2023-06-03

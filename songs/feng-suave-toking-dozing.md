@@ -12,6 +12,7 @@ duration: 227
 genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2020]
+listen_when: 아무 생각 없이 나른해지고 싶은 오후
 keywords: [돌고래, 고래, 담배]
 emotion: 몽환
 date: 2024-09-02

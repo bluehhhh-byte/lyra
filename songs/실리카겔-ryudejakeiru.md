@@ -1,6 +1,6 @@
 ---
 title: Ryudejakeiru
-title_ko: Ryudejakeiru
+title_ko: 류데자케이루
 artist: 실리카겔
 artist_ko:
 album: POWER ANDRE 99
@@ -12,6 +12,7 @@ duration: 249
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2023]
+listen_when: 재앙 속에서도 지킬 것만 지키는 날
 keywords: [꿈, 재앙, 날씨]
 emotion: 몽환
 date: 2024-10-22

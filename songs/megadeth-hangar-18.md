@@ -12,6 +12,7 @@ trackId: 724649293
 duration: 315
 lang: en
 tags: [영미, Metal, 1990]
+listen_when: 음모론이 그럴듯해지는 새벽
 emotion: 저항
 keywords: [격납고, 요새, 기억상실, 강철]
 date: 2026-07-16

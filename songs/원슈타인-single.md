@@ -1,6 +1,6 @@
 ---
 title: Single
-title_ko: Single
+title_ko: 혼자
 artist: 원슈타인
 artist_ko:
 album: Single - Single
@@ -14,6 +14,7 @@ duration: 165
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2023]
+listen_when: 혼자인 게 낫다고 우기는 비 오는 날
 keywords: [우산, 비, 음식, 메뉴, 친구]
 emotion: 고독
 date: 2023-05-28

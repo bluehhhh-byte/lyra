@@ -1,6 +1,7 @@
 ---
 title: 怪獣
 title_ko: 괴수
+search_aliases: [Kaiju]
 artist: Sakanaction
 artist_ko:
 album: 怪獣
@@ -12,6 +13,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
+listen_when: 비밀 하나쯤 남겨 두고 싶은 밤
 keywords: [괴수, 밤, 비밀]
 emotion: 몽환
 date: 2025-03-18

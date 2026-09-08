@@ -14,6 +14,7 @@ duration: 279
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1994]
+listen_when: 월요일 같은 인생을 버텨 내는 저녁
 keywords: [토요일, 월요일, 거리, 자동차, 꿈, 이름]
 emotion: 희망
 date: 2022-12-10

@@ -14,6 +14,7 @@ duration: 245
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1997]
+listen_when: 남의 비밀을 들어 버린 오후
 keywords: [편지, 신부, 의사, 추기경, 스타킹, 바지]
 emotion: 저항
 date: 2023-03-27

@@ -1,6 +1,7 @@
 ---
-title: 「月世界」달세계
+title: 「月世界」
 title_ko: 달세계
+search_aliases: [Gessekai]
 artist: Plastic Tree
 artist_ko:
 album: Single Collection
@@ -14,6 +15,7 @@ duration:
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2001]
+listen_when: 잠 대신 달나라로 올라가는 새벽
 keywords: [밤하늘, 별빛, 에스컬레이터, 개, 소원]
 emotion: 몽환
 date: 2022-09-18

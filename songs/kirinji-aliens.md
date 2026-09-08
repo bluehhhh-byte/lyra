@@ -14,6 +14,7 @@ duration: 364
 genre: City Pop
 lang: ja
 tags: [일본, City Pop, 2000]
+listen_when: 잠 안 오는 밤 도시를 건너는 두 사람
 keywords: [하늘, 달빛, 밤, 도시, 스포츠카]
 emotion: 몽환
 date: 2022-09-17

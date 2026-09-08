@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2017]
+listen_when: 남의 오지랖에 지친 하루 끝
 keywords: [축제, 악마, 손가락, 나무, 무대]
 emotion: 저항
 date: 2023-02-07

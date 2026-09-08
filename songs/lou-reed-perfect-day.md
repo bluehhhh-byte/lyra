@@ -14,6 +14,7 @@ duration: 223
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1972]
+listen_when: 평범해서 완벽했던 하루의 끝
 keywords: [공원, 동물원, 영화, 주말, 집]
 emotion: 기쁨
 date: 2022-11-29

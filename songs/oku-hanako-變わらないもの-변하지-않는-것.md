@@ -1,6 +1,7 @@
 ---
-title: 變わらないもの 변하지 않는 것
+title: 變わらないもの
 title_ko: 변하지 않는 것
+search_aliases: [Kawaranai Mono]
 artist: Oku Hanako
 artist_ko:
 album: ガーネット
@@ -12,6 +13,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2006]
+listen_when: 함께 걷던 길의 가로등이 그대로인 밤
 keywords: [가로등, 눈동자, 목소리, 길, 밤, 추억]
 emotion: 그리움
 date: 2022-10-03

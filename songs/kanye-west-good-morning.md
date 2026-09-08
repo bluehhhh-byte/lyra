@@ -14,6 +14,7 @@ duration: 195
 genre: Hip-Hop
 lang: en
 tags: [Hip-Hop, 2007]
+listen_when: 긴 과정을 끝내고 맞는 졸업식 아침
 keywords: [아침, 시험, 졸업식, 거리, 청바지]
 emotion: 희망
 date: 2025-11-18

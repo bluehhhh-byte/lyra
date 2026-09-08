@@ -14,6 +14,7 @@ duration: 178
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2021]
+listen_when: 찾아 헤매던 사람을 드디어 만난 날
 keywords: [조지아, 팔, 어둠, 품]
 emotion: 사랑
 date: 2023-05-31

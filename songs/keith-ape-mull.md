@@ -1,6 +1,6 @@
 ---
 title: Mull
-title_ko: Mull
+title_ko: 곱씹다
 artist: Keith Ape
 artist_ko:
 album: Ape Into Space - EP
@@ -14,6 +14,7 @@ duration: 179
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 차갑게 무장하고 나서는 겨울 거리
 keywords: [손목, 금, 얼음, 보석, 서울]
 emotion: 저항
 date: 2022-11-19

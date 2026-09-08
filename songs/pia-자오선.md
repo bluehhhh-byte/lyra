@@ -14,6 +14,7 @@ duration: 296
 genre: Metal
 lang: ko
 tags: [한국, Metal, 2016]
+listen_when: 채울수록 허전하던 오후의 끝
 keywords: [불꽃, 물결, 어둠, 빛, 숯]
 emotion: 체념
 date: 2022-11-20

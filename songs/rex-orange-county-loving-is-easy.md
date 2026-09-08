@@ -12,6 +12,7 @@ duration: 155
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2017]
+listen_when: 사랑이 어렵지 않다고 처음 느낀 날
 keywords: [사랑, 완벽]
 emotion: 기쁨
 date: 2024-07-15

@@ -1,6 +1,6 @@
 ---
 title: Slide To Me
-title_ko: Slide To Me
+title_ko: 내게로 다가와
 artist: ATEEZ
 artist_ko:
 album: GOLDEN HOUR : Part.3 'In Your Fantasy Edition'
@@ -12,6 +12,7 @@ duration: 168
 genre: K-Pop
 lang: en
 tags: [한국, K-Pop, 2025]
+listen_when: 말없이 눈빛만 오가는 밤
 keywords: [긴장감, 갈증, 향기]
 emotion: 설렘
 date: 2025-07-18

@@ -1,6 +1,7 @@
 ---
 title: 太陽の碧
 title_ko: 태양의 벽
+search_aliases: [Taiyou No Ao]
 artist: DIR EN GREY
 artist_ko:
 album: 太陽の碧 - Single
@@ -12,6 +13,7 @@ duration: 366
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 한여름 태양이 그 시절을 소환하는 낮
 keywords: [한여름, 태양, 전화]
 emotion: 그리움
 date: 2025-05-26

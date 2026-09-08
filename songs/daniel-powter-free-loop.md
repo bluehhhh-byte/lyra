@@ -14,6 +14,7 @@ duration: 233
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2005]
+listen_when: 정리 못 한 마음을 들고 맞는 아침
 keywords: [밤, 비, 이름, 태양, 살결, 하룻밤]
 emotion: 체념
 date: 2023-05-09

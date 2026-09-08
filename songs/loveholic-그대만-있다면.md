@@ -12,6 +12,7 @@ duration:
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2006]
+listen_when: 사랑해서 떠난단 말을 곱씹는 밤
 keywords: [눈물, 기억, 전부]
 emotion: 이별
 date: 2024-07-21

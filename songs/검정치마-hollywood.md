@@ -1,6 +1,6 @@
 ---
 title: Hollywood
-title_ko: Hollywood
+title_ko: 할리우드
 artist: 검정치마
 artist_ko:
 album: Hollywood - Single
@@ -14,6 +14,7 @@ duration: 331
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2015]
+listen_when: 타 버려도 안 돌아가기로 한 밤
 keywords: [영화, 조명, 땅]
 emotion: 불안
 date: 2024-08-18

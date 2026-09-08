@@ -1,6 +1,6 @@
 ---
 title: Hold Me Now
-title_ko: Hold Me Now
+title_ko: 지금 날 안아줘
 artist: 안신애
 artist_ko:
 album: Dear City - EP
@@ -12,6 +12,7 @@ duration: 192
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2024]
+listen_when: 잘 먹고 잘 자는 게 제일 어려운 요즘
 keywords: [속마음, 손, 세상]
 emotion: 슬픔
 date: 2024-07-13

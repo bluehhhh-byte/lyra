@@ -14,6 +14,7 @@ duration: 266
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
+listen_when: 무모했던 열아홉이 떠오르는 새벽 드라이브
 keywords: [거리, 전선, 헤드라이트, 새벽, 풍뎅이]
 emotion: 회상
 date: 2023-05-11

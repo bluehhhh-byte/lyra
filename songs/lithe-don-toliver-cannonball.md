@@ -14,6 +14,7 @@ duration: 122
 genre: Hip-Hop
 lang: en
 tags: [Hip-Hop, 2025]
+listen_when: 복잡한 건 미루고 뛰어드는 밤
 keywords: [대포알, 클럽, 손목, 주사위, 호텔]
 emotion: 몽환
 date: 2026-03-26

@@ -12,6 +12,7 @@ duration: 214
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2003]
+listen_when: 첫눈에 반해 직진하고 싶은 밤
 keywords: [손, 사람]
 emotion: 설렘
 date: 2025-06-29

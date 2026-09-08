@@ -1,6 +1,6 @@
 ---
 title: You Know I Love You
-title_ko: You Know I Love You
+title_ko: 내가 널 사랑하는 거 알잖아
 artist: 피터팬 컴플렉스
 artist_ko:
 album: Transistor
@@ -12,6 +12,7 @@ duration:
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2004]
+listen_when: 모른 척한 게 미안해지는 밤
 keywords: [모습, 말, 욕심, 마음]
 emotion: 사랑
 date: 2022-12-24

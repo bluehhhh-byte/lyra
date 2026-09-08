@@ -12,6 +12,7 @@ trackId: 6780341201
 duration: 193
 lang: en
 tags: [한국, Alternative Rock, 2026]
+listen_when: 새로운 감각이 열리는 순간
 keywords: [질감, 혼합, 새삶, 곤충, 사랑]
 emotion: 몽환
 date: 2026-08-22

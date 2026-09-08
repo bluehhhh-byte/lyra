@@ -11,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/
 trackId: 1539118282
 lang: ja
 tags: [일본, Visual Kei, 2013]
+listen_when: 받기만 했다는 걸 뒤늦게 안 밤
 emotion: 슬픔
 keywords: [사랑, 상처, 눈물, 만남]
 date: 2026-07-08

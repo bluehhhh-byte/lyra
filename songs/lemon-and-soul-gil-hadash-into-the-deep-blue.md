@@ -12,6 +12,7 @@ trackId: 1633283894
 duration: 515
 lang: en
 tags: [유럽, Electronic, 2021]
+listen_when: 달 말고 너면 된다는 말에 잠기는 밤
 keywords: [달, 빛, 아침, 어둠, 바다]
 emotion: 몽환
 date: 2026-08-27

@@ -1,6 +1,7 @@
 ---
 title: 聖なる海とサンシャイン
 title_ko: 성스러운 바다와 햇살
+search_aliases: [Seinaru Umi to Sunshine, 聖なる海とサンシャイン, 성스러운 바다와 선샤인, THE YELLOW MONKEY, the-yellow-monkey-聖なる海とサンシャイン-성스러운-바다와-선샤인]
 artist: THE YELLOW MONKEY
 artist_ko:
 album: 聖なる海とサンシャイン - EP
@@ -14,7 +15,8 @@ duration: 290
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1996]
-keywords: [바다, 사랑, 파도, 환상]
+listen_when: 박힌 가시를 뽑지 못한 채 선 바다
+keywords: [바다, 사랑, 파도, 환상, 욕망, 태양]
 emotion: 체념
 date: 2023-01-19
 published: 2023-01-18T23:11:07.000Z

@@ -1,6 +1,6 @@
 ---
 title: Jeff And Alana
-title_ko: Jeff And Alana
+title_ko: 제프와 알라나
 artist: 검정치마
 artist_ko:
 album: TEEN TROUBLES
@@ -14,6 +14,7 @@ duration: 148
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2022]
+listen_when: 오랜 친구의 소식에 말문이 막힌 밤
 keywords: [편두통, 기차, 쓰레기통, 맨발, 병원, 숲]
 emotion: 슬픔
 date: 2022-09-24

@@ -12,6 +12,7 @@ trackId: 6773595996
 duration: 259
 lang: en
 tags: [일본, J-Pop, 2026]
+listen_when: 끝을 모른 채 남겨진 사람의 밤
 keywords: [감정, 이유, 돌, 피]
 emotion: 이별
 date: 2026-07-20

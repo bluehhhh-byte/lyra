@@ -14,6 +14,7 @@ duration: 193
 genre: J-Pop
 lang: en
 tags: [J-Pop, 2024]
+listen_when: 노력이란 말이 코웃음 나는 퇴근길
 keywords: [빨래방, 목소리, 심장, 지옥, 나사]
 emotion: 분노
 date: 2025-11-27

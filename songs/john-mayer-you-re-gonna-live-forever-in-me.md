@@ -12,6 +12,7 @@ duration: 190
 genre: Folk
 lang: en
 tags: [영미, Folk, 2017]
+listen_when: 끝나도 남을 사람을 세어 보는 밤
 keywords: [우주, 공룡, 운석]
 emotion: 사랑
 date: 2024-07-23

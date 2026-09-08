@@ -14,6 +14,7 @@ duration: 97
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2017]
+listen_when: 그 눈빛이 너무 아파 얼어붙던 순간
 keywords: [눈빛, 푸른빛, 마음, 사랑, 아픔]
 emotion: 그리움
 date: 2022-09-17

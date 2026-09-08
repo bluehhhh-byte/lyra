@@ -12,6 +12,7 @@ duration:
 genre: Jazz
 lang: en
 tags: [영미, Jazz, 2021]
+listen_when: 애써도 안 되던 하루의 끝
 keywords: [눈물, 빛, 집, 뼈, 실수]
 emotion: 위로
 date: 2022-10-06

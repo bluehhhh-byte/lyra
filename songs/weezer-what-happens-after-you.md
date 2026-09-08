@@ -14,6 +14,7 @@ duration: 200
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2022]
+listen_when: 답 없는 신호를 계속 보내는 가을밤
 keywords: [신호, 메아리, 기억, 바위, 암호]
 emotion: 그리움
 date: 2023-02-21

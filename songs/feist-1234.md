@@ -1,6 +1,6 @@
 ---
 title: 1234
-title_ko: 1234
+title_ko: 하나 둘 셋 넷
 artist: Feist
 artist_ko:
 album: The Reminder (Deluxe Version)
@@ -14,6 +14,7 @@ duration: 184
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2007]
+listen_when: 더 사랑한다는 말이 듣고 싶은 저녁
 keywords: [숫자, 밤, 눈물, 문, 돈]
 emotion: 회상
 date: 2023-04-12

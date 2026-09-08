@@ -14,6 +14,7 @@ duration: 439
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 1991]
+listen_when: 피어오르는 기억을 지우고 싶은 밤
 keywords: [기억, 진실, 괴로움, 사랑]
 emotion: 슬픔
 date: 2023-05-29

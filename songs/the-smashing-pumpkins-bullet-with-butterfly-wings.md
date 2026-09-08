@@ -12,6 +12,7 @@ duration: 257
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
+listen_when: 세상에 다 뜯긴 기분으로 소리치는 밤
 keywords: [흡혈귀, 세상, 고통]
 emotion: 분노
 date: 2025-05-16

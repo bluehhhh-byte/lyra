@@ -1,6 +1,7 @@
 ---
 title: 空が青空であるために
 title_ko: 하늘이 푸른 하늘이기 위해
+search_aliases: [Sora ga Aozora de Aru Tame ni]
 artist: GLAY
 artist_ko: 글레이
 album: G4・Ⅳ - EP
@@ -12,6 +13,7 @@ trackId: 1102709192
 duration: 246
 lang: ja
 tags: [일본, J-Rock, 2015]
+listen_when: 비 그친 운동장을 다시 달리는 오후
 keywords: [하늘, 어둠, 구름, 땀, 꿈]
 emotion: 희망
 date: 2026-07-25

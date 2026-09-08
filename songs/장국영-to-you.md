@@ -14,6 +14,7 @@ duration: 216
 genre: Ballad
 lang: en
 tags: [아시아, Ballad, 1990]
+listen_when: 빗속에서 후회가 고백이 되는 밤
 keywords: [빗속, 인생, 사랑, 날들]
 emotion: 그리움
 date: 2023-04-01

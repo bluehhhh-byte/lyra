@@ -12,6 +12,7 @@ trackId: 403067963
 duration: 152
 lang: en
 tags: [유럽, Indie Pop, 2002]
+listen_when: 밝은 곡을 쓰려다 실패한 6월 밤
 keywords: [노래, 기타, 여름, 전화, 밤]
 emotion: 고독
 date: 2026-08-11

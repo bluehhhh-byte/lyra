@@ -14,6 +14,7 @@ duration: 245
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1994]
+listen_when: 취해서 뱉은 말이 후회되는 아침
 keywords: [술, 말, 햇살, 사랑, 끝]
 emotion: 이별
 date: 2024-06-09

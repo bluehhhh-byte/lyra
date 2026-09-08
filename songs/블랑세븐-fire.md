@@ -1,6 +1,6 @@
 ---
 title: Fire
-title_ko: Fire
+title_ko: 불
 artist: 블랑세븐
 artist_ko:
 album: Prism
@@ -12,6 +12,7 @@ duration:
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2017]
+listen_when: 별 보며 한 사람만 생각하는 밤
 keywords: [밤하늘, 별, 손, 순간, 가슴, 곁]
 emotion: 사랑
 date: 2022-10-08

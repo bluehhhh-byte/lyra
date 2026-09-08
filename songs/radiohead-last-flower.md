@@ -12,6 +12,7 @@ duration:
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
+listen_when: 사소한 것들이 전부 거슬리는 저녁
 keywords: [가전제품, 집, 저녁, 발, 빛]
 emotion: 불안
 date: 2022-10-31

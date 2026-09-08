@@ -14,6 +14,7 @@ duration: 487
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 순응해 온 삶이 부끄러워진 밤
 keywords: [타협, 권위, 기억, 신념, 고통]
 emotion: 체념
 date: 2023-03-22

@@ -1,6 +1,6 @@
 ---
 title: Life
-title_ko: Life
+title_ko: 인생
 artist: 제네 더 질라
 artist_ko:
 album: 94-24
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2024]
+listen_when: 10년 전 나에게 물어보는 밤
 keywords: [가사, 미련, 10년]
 emotion: 회상
 date: 2024-11-26

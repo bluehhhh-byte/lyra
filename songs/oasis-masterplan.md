@@ -12,6 +12,7 @@ duration: 293
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1998]
+listen_when: 어찌 될지 몰라도 춤추기로 한 밤
 keywords: [파도, 희망, 해안가]
 emotion: 위로
 date: 2024-08-29

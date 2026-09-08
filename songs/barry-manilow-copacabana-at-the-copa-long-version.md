@@ -12,6 +12,7 @@ trackId: 268160021
 duration: 341
 lang: en
 tags: [영미, Disco, 1978]
+listen_when: 옛 클럽의 불빛을 상상해 보는 저녁
 emotion: 회상
 keywords: [롤라, 코파카바나, 토니, 음악, 열정]
 date: 2026-07-14

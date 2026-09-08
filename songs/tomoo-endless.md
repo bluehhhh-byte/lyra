@@ -14,6 +14,7 @@ duration: 247
 genre: J-Pop
 lang: ja
 tags: [J-Pop, 2025]
+listen_when: 묶지 않아도 나란한 사이가 좋은 날
 keywords: [리본, 나선, 풍경, 목소리, 그림]
 emotion: 사랑
 date: 2026-05-25

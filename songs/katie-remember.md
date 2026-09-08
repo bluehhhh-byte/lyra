@@ -12,6 +12,7 @@ duration: 186
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2019]
+listen_when: 끝난 이유를 기억 속에서 찾는 밤
 keywords: [기억, 균열, 시간]
 emotion: 회상
 date: 2024-06-19

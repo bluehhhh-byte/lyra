@@ -12,6 +12,7 @@ duration: 244
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2025]
+listen_when: 어디든 상관없이 달리고 싶은 밤
 keywords: [저주, 여행, 장미꽃]
 emotion: 그리움
 date: 2025-05-19

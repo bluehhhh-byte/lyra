@@ -14,6 +14,7 @@ duration: 134
 genre: Electronic
 lang: en
 tags: [Electronic, 2024]
+listen_when: 겹겹이 쌓이는 소리에 잠기는 밤
 keywords: []
 emotion:
 date: 2026-03-23

@@ -1,6 +1,6 @@
 ---
 title: Crash
-title_ko: Crash
+title_ko: 충돌
 artist: NELL
 artist_ko:
 album: Crash - Single
@@ -14,6 +14,7 @@ duration: 235
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2021]
+listen_when: 그 앞에만 서면 말문이 막히는 날
 keywords: [바보, 말, 머릿속]
 emotion: 설렘
 date: 2025-07-01

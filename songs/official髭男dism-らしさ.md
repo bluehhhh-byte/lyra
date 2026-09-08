@@ -1,6 +1,7 @@
 ---
 title: らしさ
 title_ko: 나다움
+search_aliases: [Rashisa]
 artist: Official髭男dism
 artist_ko: 오피셜 히게단 디즘
 album: らしさ - Single
@@ -14,6 +15,7 @@ duration: 303
 genre: J-Pop
 lang: ja
 tags: [J-Pop, 2025]
+listen_when: 나다움이 성가셔도 끌어안는 밤
 keywords: [재능, 성격, 꿈, 안대, 속도]
 emotion: 저항
 date: 2026-04-20

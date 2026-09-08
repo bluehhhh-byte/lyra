@@ -12,6 +12,7 @@ trackId: 1842444457
 duration: 205
 lang: en
 tags: [영미, Indie Rock, 2025]
+listen_when: 아침 해가 부담스러운 밤샘 끝
 keywords: [아침, 어둠, 그림자, 사랑, 햇빛]
 emotion: 몽환
 date: 2026-08-22

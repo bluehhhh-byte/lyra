@@ -1,6 +1,7 @@
 ---
 title: 朝がまた来る
 title_ko: 아침이 또 찾아와
+search_aliases: [Asa ga Mata Kuru]
 artist: DREAMS COME TRUE
 artist_ko:
 album: 朝がまた来る - Single
@@ -14,6 +15,7 @@ duration: 243
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 1999]
+listen_when: 네가 없어도 어김없이 오는 아침
 keywords: [아침, 교차로, 우산]
 emotion: 위로
 date: 2025-05-23

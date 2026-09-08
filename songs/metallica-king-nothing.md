@@ -14,6 +14,7 @@ duration: 308
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1996]
+listen_when: 쫓던 왕관이 부질없어진 순간
 keywords: [왕관, 성, 손가락, 이름, 왕]
 emotion: 체념
 date: 2022-11-22

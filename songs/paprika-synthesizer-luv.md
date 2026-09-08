@@ -12,6 +12,7 @@ trackId: 1853971706
 duration: 226
 lang: en
 tags: [한국, Synth-Pop, 2025]
+listen_when: 희망이 아직 있는지 확인하고 싶은 밤
 keywords: [마음, 희망, 의미, 사랑]
 emotion: 불안
 date: 2026-08-31

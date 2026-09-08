@@ -14,6 +14,7 @@ duration: 176
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2021]
+listen_when: 침묵이 사람을 말려 죽이는 사이
 keywords: [침묵, 마음, 믿음, 눈, 거짓말]
 emotion: 불안
 date: 2023-05-23

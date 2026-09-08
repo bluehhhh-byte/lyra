@@ -14,6 +14,7 @@ duration: 180
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2004]
+listen_when: 다 그런 거라고 웃어넘기는 저녁
 keywords: [가망, 집, 말, 통제]
 emotion: 체념
 date: 2026-04-22

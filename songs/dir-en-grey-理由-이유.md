@@ -1,6 +1,7 @@
 ---
-title: 理由 이유
+title: 理由
 title_ko: 이유
+search_aliases: [WAKE]
 artist: Dir en grey
 artist_ko:
 album: MACABRE
@@ -12,6 +13,7 @@ duration:
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 믿지 못해 상처 줬음을 깨달은 밤
 keywords: [하늘, 구름, 상처, 지면, 눈물]
 emotion: 슬픔
 date: 2022-11-16

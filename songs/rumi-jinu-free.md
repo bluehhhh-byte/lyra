@@ -12,6 +12,7 @@ duration: 175
 genre: Soundtrack
 lang: en
 tags: [영미, Soundtrack, 2025]
+listen_when: 너랑 있으면 드디어 숨이 쉬어지는 때
 keywords: [숨, 노래, 말]
 emotion: 희망
 date: 2025-08-06

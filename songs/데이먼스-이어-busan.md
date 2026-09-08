@@ -1,6 +1,6 @@
 ---
 title: Busan
-title_ko: Busan
+title_ko: 부산
 artist: 데이먼스 이어
 artist_ko:
 album: Busan - Single
@@ -14,6 +14,7 @@ duration: 178
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2017]
+listen_when: 시간이 약이란 말이 거짓 같은 바닷가
 keywords: [바다, 향기, 기억, 시간, 손]
 emotion: 그리움
 date: 2022-09-20

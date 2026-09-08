@@ -12,6 +12,7 @@ trackId: 6786602688
 duration: 133
 lang: en
 tags: [한국, Electronic, 2026]
+listen_when: 욕먹어도 멈추지 않기로 한 새벽
 keywords: [밤, 빛, 눈, 생각]
 emotion: 저항
 date: 2026-07-22

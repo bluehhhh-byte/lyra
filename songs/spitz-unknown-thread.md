@@ -1,6 +1,7 @@
 ---
 title: 見知らぬ糸
 title_ko: 알 수 없는 실
+search_aliases: [Unknown Thread]
 artist: Spitz
 artist_ko: 스피츠
 album: Unknown Thread - Single
@@ -12,6 +13,7 @@ trackId: 6793888335
 duration: 251
 lang: en
 tags: [일본, J-Rock, 2026]
+listen_when: 낯선 인연이 얽히기 시작한 요즘
 keywords: [운명, 실, 색, 감동, 바다]
 emotion: 몽환
 date: 2026-08-24

@@ -12,6 +12,7 @@ trackId: 6800201205
 duration: 286
 lang: en
 tags: [한국, Indie Rock, 2026]
+listen_when: 다 엉망이어도 너만 선명한 하루 끝
 keywords: [시간, 뉴스, 사랑, 과거, 사람]
 emotion: 위로
 date: 2026-08-24

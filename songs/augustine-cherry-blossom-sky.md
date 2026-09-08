@@ -12,6 +12,7 @@ trackId: 6778416956
 duration: 153
 lang: en
 tags: [영미, Indie Pop, 2026]
+listen_when: 만개한 벚꽃 아래 마음만 복잡한 봄
 keywords: [하늘, 웃음, 시간, 마음, 나무]
 emotion: 위로
 date: 2026-08-31

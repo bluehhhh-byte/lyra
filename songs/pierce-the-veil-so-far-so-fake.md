@@ -14,6 +14,7 @@ duration: 236
 genre: Emo
 lang: en
 tags: [Emo, 2023]
+listen_when: 가식을 다 태워 버리고 싶은 밤
 keywords: [전화, 비, 혈관, 피부, 스피커]
 emotion: 분노
 date: 2026-03-21

@@ -12,6 +12,7 @@ trackId: 1877700396
 duration: 192
 lang: en
 tags: [한국, Indie Pop, 2023]
+listen_when: 누군가의 숲이 되어 주고 싶은 오후
 keywords: [마음, 사랑, 숲, 나무, 기대]
 emotion: 위로
 date: 2026-07-25

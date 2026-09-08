@@ -14,6 +14,7 @@ duration: 317
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
+listen_when: 파티에서 빠져나온 새벽 한 시
 keywords: [새벽, 클럽, 파티]
 emotion: 고독
 date: 2025-04-28

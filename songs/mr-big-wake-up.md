@@ -12,6 +12,7 @@ duration: 225
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 2001]
+listen_when: 짓밟혀도 일어서라고 말해 주고 싶은 날
 keywords: [학교, 분노, 사람들]
 emotion: 저항
 date: 2025-07-10

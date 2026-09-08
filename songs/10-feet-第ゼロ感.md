@@ -1,6 +1,7 @@
 ---
 title: 第ゼロ感
 title_ko: 0번째 감각
+search_aliases: [Dai Zero Kan]
 artist: 10-FEET
 artist_ko:
 album: 第ゼロ感 - Single
@@ -14,6 +15,7 @@ duration: 288
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2022]
+listen_when: 전부를 걸 마지막 승부를 앞둔 밤
 keywords: [꿈, 밤, 모래, 별, 약속, 짐승]
 emotion: 희망
 date: 2023-01-05

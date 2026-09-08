@@ -1,6 +1,6 @@
 ---
 title: I'm Good
-title_ko: I'm Good
+title_ko: 난 잘 지내
 artist: 이센스
 artist_ko:
 album: I'm Good
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2014]
+listen_when: 잘 지낸다고만 답하게 되는 안부 앞
 keywords: [도시, 휴식, 안부, 하루, 오늘]
 emotion: 체념
 date: 2023-02-01

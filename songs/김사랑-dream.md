@@ -1,6 +1,6 @@
 ---
 title: Dream
-title_ko: Dream
+title_ko: 꿈
 artist: 김사랑
 artist_ko:
 album: 나는 18살이다
@@ -12,6 +12,7 @@ duration: 194
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 1999]
+listen_when: 남의 그늘을 벗어나기로 한 날
 keywords: [눈물, 사랑, 기관차]
 emotion: 저항
 date: 2025-07-28

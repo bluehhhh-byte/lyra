@@ -12,6 +12,7 @@ duration: 169
 genre: Indie Pop
 lang: en
 tags: [Indie Pop, 2023]
+listen_when: 새해가 하나도 반갑지 않은 밤
 keywords: [밤, 집, 흉터, 손목, 기회]
 emotion: 불안
 date: 2026-01-03

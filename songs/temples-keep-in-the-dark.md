@@ -14,6 +14,7 @@ duration: 218
 genre: Dream Pop
 lang: en
 tags: [Dream Pop, 2014]
+listen_when: 불 끄고 어둠에 머무는 밤
 keywords: [어둠, 빛, 햇살, 밤, 꿈]
 emotion: 몽환
 date: 2026-05-14

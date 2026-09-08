@@ -1,6 +1,6 @@
 ---
 title: RUN RUN
-title_ko: RUN RUN
+title_ko: 달려 달려
 artist: 프라우드먼
 artist_ko:
 album: RUN RUN - Single
@@ -14,6 +14,7 @@ duration: 168
 genre: Dance
 lang: ko
 tags: [한국, Dance, 2022]
+listen_when: 앞으로 가려다 자꾸 뒤로 도는 밤
 keywords: [엔진, 밤, 추억, 집, 베이스]
 emotion: 그리움
 date: 2023-01-28

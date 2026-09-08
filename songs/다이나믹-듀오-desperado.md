@@ -1,6 +1,6 @@
 ---
 title: Desperado
-title_ko: Desperado
+title_ko: 무법자
 artist: 다이나믹 듀오
 artist_ko:
 album: OFF DUTY
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2019]
+listen_when: 불평등에 무법자를 상상해 보는 밤
 keywords: [무법자, 넥타이, 유리천장, 돈, 총]
 emotion: 분노
 date: 2022-12-22

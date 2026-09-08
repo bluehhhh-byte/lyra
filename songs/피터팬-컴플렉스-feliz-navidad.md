@@ -12,6 +12,7 @@ duration:
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2006]
+listen_when: 새해 인사를 건네고 싶은 연말
 keywords: [성탄절, 새해, 인사, 마음]
 emotion: 기쁨
 date: 2022-12-24

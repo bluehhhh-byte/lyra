@@ -14,6 +14,7 @@ duration: 209
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2018]
+listen_when: 친구로는 남기 싫다고 정한 밤
 keywords: [친구, 하룻밤, 곁]
 emotion: 그리움
 date: 2024-07-26

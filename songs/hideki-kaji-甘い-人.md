@@ -1,6 +1,7 @@
 ---
 title: 甘い戀人
 title_ko: 달콤한 연인
+search_aliases: [Amai Koibito]
 artist: Hideki Kaji
 artist_ko:
 album: ロリポップ
@@ -12,6 +13,7 @@ duration:
 genre: Indie Pop
 lang: ja
 tags: [일본, Indie Pop, 2008]
+listen_when: 달콤한 냄새로 시작하는 휴일 아침
 keywords: [아침, 타르트, 거리, 반지, 침대]
 emotion: 사랑
 date: 2023-03-08

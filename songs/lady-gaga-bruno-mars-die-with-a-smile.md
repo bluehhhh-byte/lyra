@@ -12,6 +12,7 @@ duration: 252
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2024]
+listen_when: 오늘이 마지막인 듯 사랑하는 밤
 keywords: [꿈, 작별인사, 내일]
 emotion: 사랑
 date: 2024-09-11

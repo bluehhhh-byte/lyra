@@ -14,6 +14,7 @@ duration: 258
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2026]
+listen_when: 비웃던 사람들을 뒤로하고 지새우는 밤
 keywords: [이불, 구름, 거울, 카페인, 노트]
 emotion: 희망
 date: 2026-04-01

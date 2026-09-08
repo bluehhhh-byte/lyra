@@ -1,6 +1,7 @@
 ---
 title: 桜
 title_ko: 벚꽃
+search_aliases: [Sakura]
 artist: Janne Da Arc
 artist_ko:
 album: D・N・A
@@ -14,6 +15,7 @@ duration: 348
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2000]
+listen_when: 흩날리는 벚꽃에 옛 약속이 떠오른 봄
 keywords: [벚꽃, 눈, 바람, 약속, 꽃잎]
 emotion: 그리움
 date: 2023-04-05

@@ -12,6 +12,7 @@ trackId: 1817428241
 duration: 260
 lang: ko
 tags: [한국, Post-Punk, 2015]
+listen_when: 매일이 복사본처럼 느껴지는 아침
 emotion: 불안
 keywords: [문, 누군가, 눈빛, 진실, 아침]
 date: 2026-07-14

@@ -12,6 +12,7 @@ duration: 229
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2000]
+listen_when: 베란다에서 올 사람을 기다리는 노을
 keywords: [베란다, 구름, 꽃]
 emotion: 그리움
 date: 2024-08-14

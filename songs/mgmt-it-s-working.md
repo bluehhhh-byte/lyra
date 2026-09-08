@@ -14,6 +14,7 @@ duration: 246
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2010]
+listen_when: 나이 드는 징후를 세어 보는 거울 앞
 keywords: [빛, 멍, 심장, 피, 성냥]
 emotion: 몽환
 date: 2023-05-01

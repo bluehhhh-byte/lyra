@@ -14,6 +14,7 @@ duration: 353
 genre: Soundtrack
 lang: en
 tags: [일본, Soundtrack, 1983]
+listen_when: 드러낼 수 없는 마음을 안고 견디는 밤
 keywords: [상처, 손, 피, 심장, 흙]
 emotion: 슬픔
 date: 2023-04-03

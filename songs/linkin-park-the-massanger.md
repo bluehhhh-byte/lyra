@@ -12,6 +12,7 @@ duration:
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2010]
+listen_when: 달아나라는 본능 대신 가슴에 귀 대는 밤
 keywords: [천사, 목소리, 노래, 집, 어둠]
 emotion: 위로
 date: 2022-10-25

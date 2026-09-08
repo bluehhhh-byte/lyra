@@ -12,6 +12,7 @@ duration: 221
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2019]
+listen_when: 끝이라면 차라리 홀가분한 밤
 keywords: [세상, 재미, 하늘]
 emotion: 체념
 date: 2025-06-25

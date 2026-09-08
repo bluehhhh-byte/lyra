@@ -1,6 +1,6 @@
 ---
 title: Little Baby
-title_ko: Little Baby
+title_ko: 아가야
 artist: 노브레인
 artist_ko:
 album: 안녕, Mary Poppins
@@ -12,6 +12,7 @@ duration:
 genre: Punk Rock
 lang: ko
 tags: [한국, Punk Rock, 2003]
+listen_when: 우는 사람에게 별빛을 가리키는 밤
 keywords: [하늘, 별빛, 눈물, 밤, 세상]
 emotion: 사랑
 date: 2022-10-02

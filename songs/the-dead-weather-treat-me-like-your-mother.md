@@ -14,6 +14,7 @@ duration: 250
 genre: Blues
 lang: en
 tags: [Blues, 2006]
+listen_when: 거짓말을 해부하고 싶은 밤
 keywords: [연기, 악수, 엄마, 눈, 거짓말]
 emotion: 분노
 date: 2026-04-22

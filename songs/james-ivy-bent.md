@@ -12,6 +12,7 @@ trackId: 6765464626
 duration: 206
 lang: en
 tags: [영미, Indie Rock, 2026]
+listen_when: 망가진 채로 안기고 싶은 밤
 keywords: [벼랑, 품, 거리, 숨, 시간]
 emotion: 불안
 date: 2026-08-31

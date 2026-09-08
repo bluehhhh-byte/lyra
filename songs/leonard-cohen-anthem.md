@@ -14,6 +14,7 @@ duration: 360
 genre: Folk
 lang: en
 tags: [영미, Folk, 1992]
+listen_when: 틈으로 드는 빛을 발견한 아침
 keywords: [새, 종, 비둘기, 틈, 빛, 전쟁]
 emotion: 희망
 date: 2025-01-03

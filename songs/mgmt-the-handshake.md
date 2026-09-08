@@ -14,6 +14,7 @@ duration: 220
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2007]
+listen_when: 되돌릴 수 없는 계약을 한 뒤의 밤
 keywords: [악수, 구름, 눈물, 신용카드, 대리석, 담배]
 emotion: 불안
 date: 2022-11-12

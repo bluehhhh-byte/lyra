@@ -1,6 +1,6 @@
 ---
 title: Wait They Don't Love You
-title_ko: Wait They Don't Love You
+title_ko: 잠깐, 그들은 널 사랑하지 않아
 artist: Trxndsetter, Try27
 artist_ko:
 album: Wait they don't love you - Single
@@ -14,6 +14,7 @@ duration: 125
 genre: Electronic
 lang: ko
 tags: [기타, Electronic, 2024]
+listen_when: 나만큼 사랑할 사람 없다고 외치는 밤
 keywords: [짐, 거리, 지도, 이메일, 마음]
 emotion: 그리움
 date: 2024-12-29

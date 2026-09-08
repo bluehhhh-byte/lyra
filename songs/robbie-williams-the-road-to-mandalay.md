@@ -14,6 +14,7 @@ duration: 237
 genre: Ballad
 lang: en
 tags: [Ballad, 2000]
+listen_when: 다 이루고도 텅 빈 채 떠나는 길
 keywords: [집, 말, 얼굴, 마음, 시간]
 emotion: 그리움
 date: 2026-01-02

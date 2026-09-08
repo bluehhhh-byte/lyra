@@ -14,6 +14,7 @@ duration: 236
 genre: Hip-Hop
 lang: en
 tags: [영미, Hip-Hop, 2000]
+listen_when: 목소리로 판을 휘어잡고 싶은 낮
 keywords: [재산, 비평가, 이력서, 목소리, 지붕]
 emotion: 기쁨
 date: 2023-06-07

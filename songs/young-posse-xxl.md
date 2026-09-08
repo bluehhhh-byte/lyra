@@ -14,6 +14,7 @@ duration: 153
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2024]
+listen_when: 판을 더 크게 키워 보고 싶은 날
 keywords: [티셔츠, 지진, 구름, 빌딩, 공룡]
 emotion: 기쁨
 date: 2024-05-16

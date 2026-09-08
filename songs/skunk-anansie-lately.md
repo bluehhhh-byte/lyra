@@ -14,6 +14,7 @@ duration: 234
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1999]
+listen_when: 그래도 노력해 보겠다고 말하는 아침
 keywords: [연인, 술, 담배, 지옥, 순간]
 emotion: 체념
 date: 2023-03-30

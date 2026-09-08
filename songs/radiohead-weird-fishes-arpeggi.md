@@ -14,6 +14,7 @@ duration: 318
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2007]
+listen_when: 바닥까지 따라 내려가 보는 밤바다
 keywords: [바다, 밑바닥, 눈]
 emotion: 몽환
 date: 2024-06-12

@@ -1,6 +1,6 @@
 ---
 title: Sea of Love
-title_ko: Sea of Love
+title_ko: 사랑의 바다
 artist: Fly to the Sky
 artist_ko:
 album: Sea of Love - The 3rd Album
@@ -14,6 +14,7 @@ duration: 263
 genre: R&B/Soul
 lang: ko
 tags: [R&B/Soul, 2002]
+listen_when: 기다림만 남은 사랑을 붙든 바닷가
 keywords: [눈물, 비, 바람, 바닷가, 기다림]
 emotion: 그리움
 date: 2025-08-31

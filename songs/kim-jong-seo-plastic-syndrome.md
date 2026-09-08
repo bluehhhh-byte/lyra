@@ -1,8 +1,8 @@
 ---
 title: Plastic Syndrome
 title_ko: 플라스틱 증후군
-artist: Kim Jong Seo
-artist_ko: 김종서
+artist: 김종서
+artist_ko:
 album: Kim Jong-seo's 4th Album (Thermal Island)
 year: 1995
 genre: Korean Rock
@@ -13,6 +13,7 @@ external_url: https://music.apple.com/us/album/plastic-syndrome/1531421616?i=153
 duration: 260
 lang: en
 tags: [한국, Hard Rock, 1995]
+listen_when: 남과 비교하기를 그만두기로 한 날
 keywords: [꿈, 세상, 얼굴, 행복, 향기]
 emotion: 저항
 date: 2026-09-05
@@ -49,6 +50,7 @@ comment_sources: []
 세상 모든 걸 다 가지려 하지 마
 > Don't try to have everything in the world
 꿈은 꿈대로 남겨둬
+> Leave dreams as dreams
 세상 모든 걸 꾸미려고 하지 마
 > Don't try to dress up everything in the world
 지금 이대로 살면 돼
@@ -74,6 +76,7 @@ comment_sources: []
 세상 모든 걸 다 가지려 하지 마
 > Don't try to have everything in the world
 꿈은 꿈대로 남겨둬
+> Leave dreams as dreams
 세상 모든 걸 꾸미려고 하지 마
 > Don't try to dress up everything in the world
 지금 이대로 살면 돼
@@ -93,6 +96,7 @@ comment_sources: []
 세상 모든 걸 다 가지려 하지 마
 > Don't try to have everything in the world
 꿈은 꿈대로 남겨둬
+> Leave dreams as dreams
 세상 모든 걸 꾸미려고 하지 마
 > Don't try to dress up everything in the world
 지금 이대로 살면 돼
@@ -100,6 +104,7 @@ comment_sources: []
 세상 모든 걸 다 가지려 하지 마
 > Don't try to have everything in the world
 꿈은 꿈대로 남겨둬
+> Leave dreams as dreams
 세상 모든 걸 꾸미려고 하지 마
 > Don't try to dress up everything in the world
 지금 이대로 살면 돼

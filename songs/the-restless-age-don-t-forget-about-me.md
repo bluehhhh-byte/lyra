@@ -14,6 +14,7 @@ duration: 233
 genre: Folk
 lang: en
 tags: [영미, Folk, 2024]
+listen_when: 언젠가 기억될 이름이라 믿어 주는 밤
 keywords: [책, 학교, 역사]
 emotion: 위로
 date: 2024-06-30

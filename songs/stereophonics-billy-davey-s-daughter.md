@@ -1,6 +1,6 @@
 ---
 title: Billy Davey's Daughter
-title_ko: Billy Davey's Daughter
+title_ko: 빌리 데이비의 딸
 artist: Stereophonics
 artist_ko:
 album: Word Gets Around
@@ -14,6 +14,7 @@ duration: 225
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1997]
+listen_when: 소문으로만 소비되는 죽음을 곱씹는 밤
 keywords: [이름, 명성, 다리]
 emotion: 슬픔
 date: 2025-01-20

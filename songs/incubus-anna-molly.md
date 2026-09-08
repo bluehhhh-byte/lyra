@@ -12,6 +12,7 @@ trackId: 204285262
 duration: 226
 lang: en
 tags: [영미, Alternative Rock, 2006]
+listen_when: 어딘가 있을 그 사람을 그려 보는 밤
 keywords: [외로움, 얼굴, 불, 이름, 운명]
 emotion: 그리움
 date: 2026-08-02

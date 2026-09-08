@@ -14,6 +14,7 @@ duration: 239
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2020]
+listen_when: 아지랑이처럼 네가 어른거리는 한밤
 keywords: [열기, 거울, 도로]
 emotion: 그리움
 date: 2024-06-23

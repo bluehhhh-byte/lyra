@@ -14,6 +14,7 @@ duration: 276
 genre: Visual Kei
 lang: en
 tags: [일본, Visual Kei, 1996]
+listen_when: 차라리 못 박아 달라는 사랑 앞
 keywords: [십자가, 바람, 강, 바다, 그림자]
 emotion: 이별
 date: 2023-05-06

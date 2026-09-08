@@ -12,6 +12,7 @@ duration: 161
 genre: R&B/Soul
 lang: en
 tags: [한국, R&B/Soul, 2025]
+listen_when: 더는 울지 않기로 결심한 아침
 keywords: [업보, 세상, 눈물]
 emotion: 체념
 date: 2025-05-21

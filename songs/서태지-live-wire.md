@@ -1,6 +1,6 @@
 ---
 title: Live Wire
-title_ko: Live Wire
+title_ko: 살아 있는 전선
 artist: 서태지
 artist_ko:
 album: Seotaiji 7th Issue
@@ -14,6 +14,7 @@ duration: 232
 genre: Alternative Rock
 lang: ko
 tags: [Alternative Rock, 2024]
+listen_when: 내 삶의 주권을 선포하는 날
 keywords: [자유, 마이크, 꿈, 기억, 경계선]
 emotion: 저항
 date: 2026-01-02

@@ -1,6 +1,6 @@
 ---
 title: Clouds
-title_ko: Clouds
+title_ko: 구름
 artist: 오존
 artist_ko:
 album: Clouds - Single
@@ -14,6 +14,7 @@ duration: 192
 genre: Indie Pop
 lang: ko
 tags: [Indie Pop, 2020]
+listen_when: 오해였나 되짚어 보는 흐린 오후
 keywords: [구름, 오해, 마음]
 emotion: 그리움
 date: 2025-11-11

@@ -12,6 +12,7 @@ duration:
 genre: Soundtrack
 lang: en
 tags: [영미, Soundtrack, 2020]
+listen_when: 전부 내려놓고 싶다는 생각이 드는 밤
 keywords: [상처, 고통, 존중]
 emotion: 체념
 date: 2024-10-28

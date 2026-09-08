@@ -1,6 +1,6 @@
 ---
 title: Summer
-title_ko: Summer
+title_ko: 여름
 artist: Paul Blanco, BE'O
 artist_ko:
 album: Summer
@@ -12,6 +12,7 @@ duration: 199
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 다 가졌는데도 허전한 여름밤
 keywords: [해, 이름, 어제]
 emotion: 체념
 date: 2025-06-23

@@ -12,6 +12,7 @@ trackId: 1891161447
 duration: 200
 lang: en
 tags: [영미, Alternative Rock, 2026]
+listen_when: 유행에 시큰둥해진 지 오래인 밤
 keywords: [어제, 미래, 고독, 유행, 예술]
 emotion: 고독
 date: 2026-08-05

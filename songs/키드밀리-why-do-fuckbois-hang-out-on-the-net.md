@@ -12,6 +12,7 @@ trackId: 1358618064
 duration: 147
 lang: en
 tags: [한국, Hip-Hop, 2018]
+listen_when: 허세들을 비웃으며 내 걸 하는 밤
 keywords: [바보, 돈, 음원, 생각]
 emotion: 분노
 date: 2026-08-20

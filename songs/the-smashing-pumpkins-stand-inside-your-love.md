@@ -14,6 +14,7 @@ duration: 254
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2000]
+listen_when: 운명이라 부를 수밖에 없는 사랑 앞
 keywords: [운명, 광기, 심장, 발자국, 꿈]
 emotion: 사랑
 date: 2023-02-19

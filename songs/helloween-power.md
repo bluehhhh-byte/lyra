@@ -12,6 +12,7 @@ duration: 208
 genre: Heavy Metal
 lang: en
 tags: [유럽, Heavy Metal, 1996]
+listen_when: 평생 기다린 기회를 잡은 순간
 keywords: [사람, 기회, 인생]
 emotion: 저항
 date: 2024-10-30

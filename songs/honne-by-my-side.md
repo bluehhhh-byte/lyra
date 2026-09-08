@@ -12,6 +12,7 @@ duration: 250
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2020]
+listen_when: 고마움과 서운함이 뒤섞이는 밤
 keywords: [어깨, 세상, 힘]
 emotion: 위로
 date: 2024-07-16

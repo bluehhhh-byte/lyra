@@ -1,6 +1,6 @@
 ---
 title: You And Me
-title_ko: You And Me
+title_ko: 너와 나
 artist: 자우림
 artist_ko:
 album: Ashes to Ashes
@@ -14,6 +14,7 @@ duration: 206
 genre: Alternative Rock
 lang: ko
 tags: [한국, Alternative Rock, 2006]
+listen_when: 언제부터 혼자였는지 되묻는 밤
 keywords: [거짓말, 습관, 타인, 상처, 미움]
 emotion: 이별
 date: 2024-04-27

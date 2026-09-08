@@ -12,6 +12,7 @@ trackId: 604748207
 duration: 256
 lang: ja
 tags: [일본, Alternative Rock, 2013]
+listen_when: 푸르던 시절이 다시 보이는 바닷가
 keywords: [청춘, 바다, 본능, 열등감, 젊음]
 emotion: 몽환
 date: 2026-08-16

@@ -12,6 +12,7 @@ duration: 239
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 우리만 알던 곳이 그리워진 저녁
 keywords: [거리, 강가, 땅]
 emotion: 그리움
 date: 2024-08-25

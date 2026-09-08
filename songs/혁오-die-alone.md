@@ -1,6 +1,6 @@
 ---
 title: Die Alone
-title_ko: Die Alone
+title_ko: 혼자 죽는다
 artist: 혁오
 artist_ko:
 album: 23
@@ -14,6 +14,7 @@ duration: 298
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 2017]
+listen_when: 일몰이 무서워 집으로 돌아오는 길
 keywords: [일몰, 눈물, 짐, 무덤, 영혼]
 emotion: 고독
 date: 2023-03-09

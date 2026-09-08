@@ -12,6 +12,7 @@ duration: 301
 genre: Jazz
 lang: en
 tags: [유럽, Jazz, 2016]
+listen_when: 비 갠 뒤 무지개를 같이 보는 오후
 keywords: [빗방울, 태양, 무지개]
 emotion: 사랑
 date: 2024-10-26

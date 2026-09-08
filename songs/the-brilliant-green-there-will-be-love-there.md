@@ -14,6 +14,7 @@ duration: 241
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 모퉁이를 돌아 달리기 시작하는 아침
 keywords: [모퉁이, 기다림, 불안함]
 emotion: 희망
 date: 2025-05-28

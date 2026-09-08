@@ -14,6 +14,7 @@ duration: 186
 genre: Heavy Metal
 lang: en
 tags: [유럽, Heavy Metal, 1996]
+listen_when: 너무 빨리 온 겨울에 옛날을 세는 밤
 keywords: [어둠, 겨울, 들판, 햇빛, 먼지, 별]
 emotion: 회상
 date: 2023-05-05

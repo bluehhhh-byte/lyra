@@ -14,6 +14,7 @@ duration: 251
 genre: Heavy Metal
 lang: en
 tags: [Heavy Metal, 1996]
+listen_when: 쳇바퀴 속에서 문득 멈춰 선 퇴근길
 keywords: [쳇바퀴, 경주, 결승선, 시간, 돈]
 emotion: 체념
 date: 2026-07-02

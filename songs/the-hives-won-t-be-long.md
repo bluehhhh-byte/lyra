@@ -10,6 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fb/
 trackId: 1443156446
 lang: en
 tags: [영미, Punk Rock, 2007]
+listen_when: 이 도시에 머물지 않기로 한 날
 emotion: 저항
 keywords: [도시, 표, 해독제, 수렁]
 date: 2026-07-07

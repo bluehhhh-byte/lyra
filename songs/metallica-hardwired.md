@@ -12,6 +12,7 @@ duration: 189
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 2016]
+listen_when: 다 망했다고 소리치고 싶은 날
 keywords: [행성, 불길, 공포, 경계, 파괴]
 emotion: 분노
 date: 2022-11-22

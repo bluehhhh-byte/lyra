@@ -14,6 +14,7 @@ duration: 192
 genre: R&B/Soul
 lang: en
 tags: [R&B/Soul, 2021]
+listen_when: 내 것이라고 말해 주길 바라는 밤
 keywords: [마음, 얼굴, 눈, 별]
 emotion: 사랑
 date: 2023-05-27

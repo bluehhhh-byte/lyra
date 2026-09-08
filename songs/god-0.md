@@ -1,6 +1,6 @@
 ---
 title: 0%
-title_ko: 0%
+title_ko: 0퍼센트
 artist: god
 artist_ko:
 album: Chapter 5 Letter
@@ -12,6 +12,7 @@ duration: 229
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2002]
+listen_when: 말리는 사랑을 그래도 해 보는 중
 keywords: [사랑, 상처, 눈빛]
 emotion: 사랑
 date: 2024-08-11

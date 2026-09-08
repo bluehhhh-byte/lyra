@@ -14,6 +14,7 @@ duration: 325
 genre: Heavy Metal
 lang: en
 tags: [영미, Heavy Metal, 1991]
+listen_when: 내 안의 다른 목소리와 마주한 밤
 keywords: [꿈, 눈, 고통, 거짓말, 대가]
 emotion: 분노
 date: 2022-11-21

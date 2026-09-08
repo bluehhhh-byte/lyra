@@ -13,6 +13,7 @@ external_url: https://music.apple.com/jp/album/sweet-days/1475715914?i=147571611
 duration: 230
 lang: ja
 tags: [일본, Alternative Rock, 2000]
+listen_when: 슬픔 위로 단 것을 얹어 걷는 오후
 keywords: [사막, 레몬, 딸기, 꽃잎, 날들]
 emotion: 회상
 date: 2026-09-04

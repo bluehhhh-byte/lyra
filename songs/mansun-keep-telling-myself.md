@@ -14,6 +14,7 @@ duration: 239
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2004]
+listen_when: 다 괜찮다고 스스로에게 되뇌는 아침
 keywords: [태양, 달, 행진, 영혼, 세상]
 emotion: 위로
 date: 2023-03-23

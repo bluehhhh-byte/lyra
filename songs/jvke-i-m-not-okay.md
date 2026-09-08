@@ -14,6 +14,7 @@ duration: 145
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 괜찮지 않다고 처음 인정한 밤
 keywords: [립스틱, 눈물, 거짓말, 비밀, 친구]
 emotion: 이별
 date: 2022-12-13

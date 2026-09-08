@@ -12,6 +12,7 @@ duration:
 genre: Heavy Metal
 lang: ja
 tags: [일본, Heavy Metal, 1999]
+listen_when: 쌓인 짜증을 웃으며 터뜨리는 밤
 keywords: [태도, 천벌, 분노]
 emotion: 분노
 date: 2025-06-17

@@ -14,6 +14,7 @@ duration: 201
 genre: Ballad
 lang: en
 tags: [한국, Ballad, 2020]
+listen_when: 어디로 가든 둘의 리듬대로 걷는 길
 keywords: [세상, 리듬, 영혼]
 emotion: 기쁨
 date: 2024-07-14

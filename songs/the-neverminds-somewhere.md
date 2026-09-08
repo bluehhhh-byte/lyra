@@ -14,6 +14,7 @@ duration: 240
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2023]
+listen_when: 오지 않는 기차를 기다리는 7월 끝
 keywords: [7월, 기차, 날짜]
 emotion: 그리움
 date: 2024-06-10

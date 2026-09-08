@@ -1,6 +1,6 @@
 ---
 title: Electric Shock
-title_ko: Electric Shock
+title_ko: 전기 충격
 artist: f(x)
 artist_ko:
 album: Electric Shock - EP
@@ -14,6 +14,7 @@ duration: 195
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2012]
+listen_when: 심장이 찌릿찌릿 감전된 순간
 keywords: [전류, 블랙홀, 눈빛, 심장, 숨]
 emotion: 설렘
 date: 2023-01-24

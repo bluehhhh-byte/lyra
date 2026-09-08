@@ -14,6 +14,7 @@ duration: 259
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2005]
+listen_when: 따라오라는 목소리가 위로가 되는 밤
 keywords: [안개, 달빛, 계곡, 창문, 여름, 도시]
 emotion: 위로
 date: 2023-01-03

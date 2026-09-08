@@ -12,6 +12,7 @@ trackId: 6789189828
 duration: 108
 lang: en
 tags: [영미, Hip-Hop, 2026]
+listen_when: 몸부터 튀어 오르는 리듬이 필요한 낮
 keywords: [점프, 돈, 춤, 기회]
 emotion: 기쁨
 date: 2026-07-25

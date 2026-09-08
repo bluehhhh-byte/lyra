@@ -14,6 +14,7 @@ duration: 209
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2022]
+listen_when: 해 질 녘 차 안의 분홍빛 하늘
 keywords: [자동차, 하늘, 밤, 빛, 전화]
 emotion: 사랑
 date: 2022-12-12

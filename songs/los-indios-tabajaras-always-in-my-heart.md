@@ -12,6 +12,7 @@ trackId: 922119352
 duration: 150
 lang: en
 tags: [중남미, Jazz, 1963]
+listen_when: 기타 선율에 옛 기억이 스미는 저녁
 keywords: [마음, 기억, 시간]
 emotion: 그리움
 date: 2026-08-17

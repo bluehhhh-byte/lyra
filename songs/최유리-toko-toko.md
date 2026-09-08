@@ -1,6 +1,7 @@
 ---
 title: とことこ
 title_ko: 터벅터벅
+search_aliases: [Toko Toko]
 artist: 최유리
 artist_ko: 최유리
 album: Toko Toko - Single
@@ -12,6 +13,7 @@ trackId: 6800642024
 duration: 183
 lang: en
 tags: [한국, Indie Pop, 2026]
+listen_when: 내 속도로 터벅터벅 걷는 길
 keywords: [사람들, 이유, 기분, 페이스, 걸음]
 emotion: 위로
 date: 2026-08-28

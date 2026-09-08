@@ -12,6 +12,7 @@ duration: 331
 genre: Soundtrack
 lang: en
 tags: [영미, Funk, 2001]
+listen_when: 근심을 털어 내려 몸부터 흔드는 밤
 keywords: [춤, 신앙, 미래]
 emotion: 기쁨
 date: 2025-06-10

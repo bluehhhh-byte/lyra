@@ -12,6 +12,7 @@ duration: 286
 genre: Trot
 lang: ko
 tags: [일본, Trot, 2012]
+listen_when: 님 실은 밤차가 멀어지는 플랫폼
 keywords: [기적, 기차, 소리, 님]
 emotion: 이별
 date: 2022-09-20

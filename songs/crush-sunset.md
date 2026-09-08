@@ -1,6 +1,6 @@
 ---
 title: Sunset
-title_ko: Sunset
+title_ko: 노을
 artist: Crush
 artist_ko:
 album: From Midnight To Sunrise
@@ -14,6 +14,7 @@ duration: 199
 genre: R&B/Soul
 lang: ko
 tags: [한국, R&B/Soul, 2019]
+listen_when: 붉은 노을이 마음까지 번지는 퇴근길
 keywords: [노을, 바람, 날개, 우주, 별, 하늘]
 emotion: 몽환
 date: 2023-01-31

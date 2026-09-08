@@ -1,6 +1,6 @@
 ---
 title: POWER
-title_ko: POWER
+title_ko: 권력
 artist: 지드래곤
 artist_ko:
 album: PO￦ER
@@ -12,6 +12,7 @@ duration:
 genre: K-Pop
 lang: ko
 tags: [한국, K-Pop, 2024]
+listen_when: 조롱에 시간을 안 쓰기로 한 날
 keywords: [권력, 영향력, 존재감]
 emotion: 저항
 date: 2024-11-01

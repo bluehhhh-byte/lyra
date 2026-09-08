@@ -12,6 +12,7 @@ duration: 215
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 몇 년이 걸려도 기다리기로 한 날
 keywords: [감정, 방법, 곁]
 emotion: 사랑
 date: 2024-09-18

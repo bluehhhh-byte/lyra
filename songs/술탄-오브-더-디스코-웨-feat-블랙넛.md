@@ -12,6 +12,7 @@ trackId: 1614184500
 duration: 221
 lang: ko
 tags: [한국, Disco, 2014]
+listen_when: 잘난 척에 야유가 나오는 밤
 keywords: [사람들, 세상, 손해, 신발]
 emotion: 분노
 date: 2026-08-05

@@ -14,6 +14,7 @@ duration: 256
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 1990]
+listen_when: 떨어져 있는 사람을 위해 비는 밤
 keywords: [그녀, 공허함, 외로움, 사랑]
 emotion: 고독
 date: 2023-01-11

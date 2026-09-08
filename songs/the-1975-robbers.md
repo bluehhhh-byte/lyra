@@ -14,6 +14,7 @@ duration: 255
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2013]
+listen_when: 위태로운 줄 알면서 함께 달리는 사랑
 keywords: [잡지, 가면, 총, 방아쇠, 얼굴]
 emotion: 사랑
 date: 2023-05-04

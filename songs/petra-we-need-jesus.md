@@ -1,6 +1,6 @@
 ---
 title: We Need Jesus
-title_ko: We Need Jesus
+title_ko: 우리에겐 예수가 필요해
 artist: Petra
 artist_ko:
 album: Petra Praise, Vol. 2 (We Need Jesus)
@@ -14,6 +14,7 @@ duration: 243
 genre: Hard Rock
 lang: en
 tags: [영미, Hard Rock, 1997]
+listen_when: 슬프지도 화나지도 않은 위로가 필요한 날
 keywords: [세상, 예수님, 눈]
 emotion: 희망
 date: 2024-11-24

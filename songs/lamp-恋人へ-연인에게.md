@@ -1,6 +1,7 @@
 ---
-title: 恋人へ 연인에게
+title: 恋人へ
 title_ko: 연인에게
+search_aliases: [For Lovers]
 artist: Lamp
 artist_ko:
 album: 恋人へ
@@ -12,6 +13,7 @@ duration:
 genre: Dream Pop
 lang: ja
 tags: [일본, Dream Pop, 2004]
+listen_when: 짧은 좋은 계절이 녹아 가는 길목
 keywords: [계절, 풍경, 당신, 생각]
 emotion: 그리움
 date: 2022-09-17

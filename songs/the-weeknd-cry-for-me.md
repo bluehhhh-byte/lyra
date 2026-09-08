@@ -12,6 +12,7 @@ trackId: 1793702597
 duration: 224
 lang: en
 tags: [영미, R&B/Soul, 2025]
+listen_when: 너도 나만큼 아프길 바라는 밤
 emotion: 슬픔
 keywords: [진실, 거짓, 눈물, 노래]
 date: 2026-07-12

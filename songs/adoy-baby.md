@@ -14,6 +14,7 @@ duration: 237
 genre: Synth-Pop
 lang: en
 tags: [한국, Synth-Pop, 2021]
+listen_when: 네 시선 안에 머물고 싶어지는 저녁
 keywords: [춤, 시선, 곁]
 emotion: 사랑
 date: 2024-07-17

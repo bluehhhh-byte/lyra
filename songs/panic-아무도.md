@@ -14,6 +14,7 @@ duration: 198
 genre: Indie Rock
 lang: ko
 tags: [한국, Indie Rock, 1995]
+listen_when: 너마저 없다는 걸 확인한 새벽
 keywords: [미소, 입술, 머리, 아침, 눈물, 꿈]
 emotion: 고독
 date: 2023-03-29

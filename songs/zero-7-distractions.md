@@ -14,6 +14,7 @@ duration: 316
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2001]
+listen_when: 농담인 척 진심을 던져 보는 저녁
 keywords: [저택, 자동차, 가방, 농담, 아이]
 emotion: 체념
 date: 2023-06-03

@@ -12,6 +12,7 @@ trackId: 1025258193
 duration: 276
 lang: en
 tags: [영미, Hip-Hop, 2015]
+listen_when: 촛불을 끄고 소원을 비는 생일 밤
 keywords: [어린시절, 부자, 소원, 위험, 꿈]
 emotion: 희망
 date: 2026-08-05

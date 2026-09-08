@@ -1,6 +1,7 @@
 ---
 title: 飛ぼうよ
 title_ko: 날자
+search_aliases: [way out]
 artist: yama
 artist_ko: 야마
 album: 飛ぶ時 / 飛ぼうよ - Single
@@ -12,6 +13,7 @@ trackId: 1890060969
 duration: 260
 lang: en
 tags: [일본, J-Pop, 2026]
+listen_when: 다시 날 수 있을 날개를 찾은 아침
 keywords: [날개, 둥지, 미래, 바람]
 emotion: 희망
 date: 2026-08-29

@@ -1,6 +1,6 @@
 ---
 title: Blue Baby
-title_ko: Blue Baby
+title_ko: 푸른 아이
 artist: 시나위
 artist_ko:
 album: 6집
@@ -12,6 +12,7 @@ duration: 297
 genre: Heavy Metal
 lang: ko
 tags: [한국, Heavy Metal, 1997]
+listen_when: 푸른 하늘이 사무치게 보고 싶은 날
 keywords: [술, 멍자욱, 하늘]
 emotion: 불안
 date: 2025-07-18

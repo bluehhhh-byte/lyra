@@ -12,6 +12,7 @@ duration: 167
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2020]
+listen_when: 보통 사람인 척이 힘겨워진 밤
 keywords: [악마, 연기, 웃음]
 emotion: 불안
 date: 2024-06-21

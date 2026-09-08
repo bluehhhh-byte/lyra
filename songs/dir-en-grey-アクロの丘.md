@@ -1,6 +1,7 @@
 ---
 title: アクロの丘
 title_ko: 아크로의 언덕
+search_aliases: [Akuro No Oka]
 artist: DIR EN GREY
 album: VESTIGE OF SCRATCHES
 year: 1999
@@ -10,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d8/
 trackId: 1483713068
 lang: ja
 tags: [일본, J-Rock, 1999]
+listen_when: 다시 만날 수 없는 사람을 부르는 언덕
 emotion: 그리움
 keywords: [언덕, 하늘, 꽃, 꿈]
 date: 2026-07-07

@@ -14,6 +14,7 @@ duration:
 genre: Alternative Rock
 lang: ko
 tags: [Alternative Rock, 2025]
+listen_when: 너무 예뻐서 눈물이 나는 밤하늘 아래
 keywords: [별, 눈, 밤하늘, 은하수, 입술]
 emotion: 사랑
 date: 2025-11-11

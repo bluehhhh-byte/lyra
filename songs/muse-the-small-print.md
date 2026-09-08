@@ -12,6 +12,7 @@ duration: 209
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2003]
+listen_when: 약관의 작은 글씨를 놓친 걸 안 순간
 keywords: [탐욕, 기억, 마음]
 emotion: 분노
 date: 2025-07-13

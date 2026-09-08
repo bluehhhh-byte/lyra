@@ -14,6 +14,7 @@ duration: 250
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2014]
+listen_when: 추억의 바다에서 나오기를 망설이는 밤
 keywords: [파도, 바다, 과거, 빛, 숨결]
 emotion: 회상
 date: 2022-09-30

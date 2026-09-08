@@ -14,6 +14,7 @@ duration: 253
 genre: Ballad
 lang: ko
 tags: [한국, Ballad, 2002]
+listen_when: 눈 내리면 떠오르는 사람이 있는 날
 keywords: [눈, 눈물, 술, 밤, 빈자리]
 emotion: 그리움
 date: 2022-12-18

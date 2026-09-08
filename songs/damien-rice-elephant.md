@@ -14,6 +14,7 @@ duration: 357
 genre: Folk
 lang: en
 tags: [유럽, Folk, 2006]
+listen_when: 이제 그만 내려놓아야 하는 때
 keywords: [코끼리, 방, 침묵, 무게, 거짓말]
 emotion: 체념
 date: 2022-09-22

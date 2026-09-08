@@ -1,6 +1,7 @@
 ---
-title: 忘れない日日 잊을 수 없는 날들
+title: 忘れない日日
 title_ko: 잊을 수 없는 날들
+search_aliases: [Wasurenai Hibi]
 artist: MISIA
 artist_ko:
 album: 忘れない日々
@@ -12,6 +13,7 @@ duration:
 genre: R&B/Soul
 lang: ja
 tags: [일본, R&B/Soul, 1999]
+listen_when: 연인으로 부르는 마지막 순간
 keywords: [손, 눈물, 구름, 연인, 친구, 꿈]
 emotion: 이별
 date: 2022-11-15

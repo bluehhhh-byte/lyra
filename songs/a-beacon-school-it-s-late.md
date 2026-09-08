@@ -14,6 +14,7 @@ duration: 366
 genre: Dream Pop
 lang: en
 tags: [영미, Dream Pop, 2018]
+listen_when: 버티던 마음이 조용히 접히는 새벽
 keywords: [빚, 안정감, 곳]
 emotion: 불안
 date: 2024-09-23

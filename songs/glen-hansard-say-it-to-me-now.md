@@ -12,6 +12,7 @@ trackId: 254349932
 duration: 155
 lang: en
 tags: [영미, Folk, 2007]
+listen_when: 할 말 있으면 지금 하라고 외치는 밤
 keywords: [오해, 기회, 그림자, 메시지]
 emotion: 저항
 date: 2026-07-30

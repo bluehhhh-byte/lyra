@@ -1,6 +1,6 @@
 ---
 title: Feel Special
-title_ko: Feel Special
+title_ko: 특별하게 느껴져
 artist: TWICE
 artist_ko: 트와이스
 album: Feel Special
@@ -12,6 +12,7 @@ trackId: 1556087008
 duration: 207
 lang: ko
 tags: [한국, K-Pop, 2019]
+listen_when: 혼자인 것 같은 날 걸려 온 전화
 keywords: [소중한, 사람, 목소리, 미소]
 emotion: 위로
 date: 2026-08-27

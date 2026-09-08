@@ -1,6 +1,6 @@
 ---
 title: Tonight
-title_ko: Tonight
+title_ko: 오늘 밤
 artist: 터보
 artist_ko:
 album: E-Mail My Heart
@@ -14,6 +14,7 @@ duration: 277
 genre: Dance
 lang: ko
 tags: [Dance, 2000]
+listen_when: 빈 고속도로에서 이름을 불러 보는 밤
 keywords: [향기, 숨결, 얼굴, 밤, 입술]
 emotion: 사랑
 date: 2024-01-29

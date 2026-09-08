@@ -12,6 +12,7 @@ duration: 224
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2012]
+listen_when: 온 세상이 안티 같아도 버티는 날
 keywords: [세상, 눈물, 손가락, 방패, 도마]
 emotion: 분노
 date: 2026-05-15

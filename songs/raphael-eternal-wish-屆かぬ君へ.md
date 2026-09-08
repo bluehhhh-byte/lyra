@@ -1,6 +1,7 @@
 ---
 title: Eternal Wish ~屆かぬ君へ
 title_ko: 닿을 수 없는 그대에게
+search_aliases: [Eternal Wish]
 artist: Raphael
 artist_ko:
 album: Never - 1997040719990429
@@ -14,6 +15,7 @@ duration: 321
 genre: Visual Kei
 lang: ja
 tags: [일본, Visual Kei, 2016]
+listen_when: 꿈에서만 꺼내 놓는 마음이 있는 밤
 keywords: [밤하늘, 꿈, 천사, 소원, 얼굴]
 emotion: 그리움
 date: 2023-05-14

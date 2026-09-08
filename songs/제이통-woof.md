@@ -1,6 +1,6 @@
 ---
 title: Woof
-title_ko: Woof
+title_ko: 멍멍
 artist: 제이통
 artist_ko:
 album:
@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [Hip-Hop, 2025]
+listen_when: 뒤돌아보지 않고 밀어붙이는 날
 keywords: [마이크, 부산, 정글, 동물, 거리]
 emotion: 저항
 date: 2025-09-23

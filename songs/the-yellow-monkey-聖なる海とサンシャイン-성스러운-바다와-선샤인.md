@@ -1,6 +1,7 @@
 ---
-title: 聖なる海とサンシャイン 성스러운 바다와 선샤인
+title: 聖なる海とサンシャイン
 title_ko: 성스러운 바다와 선샤인
+search_aliases: [Seinaru Umi to Sunshine]
 artist: THE YELLOW MONKEY
 artist_ko:
 album: 聖なる海とサンシャイン
@@ -14,6 +15,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 1996]
+listen_when: 파도에 부서져 환상이 되는 사랑 앞
 keywords: [바다, 파도, 욕망, 환상, 태양]
 emotion: 체념
 date: 2022-09-17
@@ -24,6 +26,8 @@ source_tag:
 source_note: 
 source_hash: d878d54450521718a7a187acd55c8fe5960cc08d
 source_body_hash: 86ad0b5506aa7f4d555f2d41cc95250926efacd8
+duplicate_of: the-yellow-monkey-聖なる海とサンシャイン
+duplicate_merged_at: 2026-09-07T19:57:02.585Z
 ---
 海の果ての果てで恋も欲望も
 + 우미노 하테노 하테데 코이모 요쿠보모

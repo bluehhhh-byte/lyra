@@ -12,6 +12,7 @@ duration: 287
 genre: Folk
 lang: en
 tags: [유럽, Folk, 2002]
+listen_when: 눈을 뗄 수 없는 사람이 있던 시절
 keywords: [삶, 이야기, 사랑, 영웅, 눈, 바람]
 emotion: 그리움
 date: 2024-08-16

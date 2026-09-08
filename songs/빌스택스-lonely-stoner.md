@@ -1,6 +1,6 @@
 ---
 title: Lonely Stoner
-title_ko: Lonely Stoner
+title_ko: 혼자 취한 사람
 artist: 빌스택스
 artist_ko:
 album: DETOX
@@ -14,6 +14,7 @@ duration: 235
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2020]
+listen_when: 비행기 모드로 틀어박힌 비 오는 날
 keywords: [비, 음악, 핸드폰, 천장, 영화, 밤]
 emotion: 고독
 date: 2023-02-05

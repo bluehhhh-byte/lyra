@@ -14,6 +14,7 @@ duration: 232
 genre: K-Pop
 lang: ko
 tags: [K-Pop, 2016]
+listen_when: 재다가 지쳐 에라 모르겠다 싶은 밤
 keywords: [바텐더, 눈빛, 입술, 떨림, 밤]
 emotion: 설렘
 date: 2026-04-07

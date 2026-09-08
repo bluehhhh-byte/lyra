@@ -12,6 +12,7 @@ trackId: 1440865978
 duration: 189
 lang: en
 tags: [영미, Alternative Rock, 2008]
+listen_when: 내 방식대로 살기로 한 날
 keywords: [사탕, 거울, 유행, 자신]
 emotion: 저항
 date: 2026-08-22

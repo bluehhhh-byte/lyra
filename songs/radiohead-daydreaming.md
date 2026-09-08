@@ -14,6 +14,7 @@ duration: 384
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2016]
+listen_when: 돌이킬 수 없는 지점을 지난 뒤의 산책
 keywords: [방, 창문, 햇살, 문, 상처]
 emotion: 몽환
 date: 2022-12-02

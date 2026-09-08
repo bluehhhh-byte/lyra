@@ -1,6 +1,6 @@
 ---
 title: Starry Night
-title_ko: Starry Night
+title_ko: 별이 빛나는 밤
 artist: 김종서
 artist_ko:
 album: Odyssey
@@ -14,6 +14,7 @@ duration: 246
 genre: Hard Rock
 lang: ko
 tags: [한국, Hard Rock, 2001]
+listen_when: 긴 이별 끝에 온 사람이 두려운 밤
 keywords: [외로움, 미소, 두려움]
 emotion: 설렘
 date: 2025-05-29

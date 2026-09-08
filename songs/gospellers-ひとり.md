@@ -1,6 +1,7 @@
 ---
 title: ひとり
 title_ko: 한 사람
+search_aliases: [Hitori]
 artist: Gospellers
 artist_ko:
 album: ひとり
@@ -12,6 +13,7 @@ duration:
 genre: R&B/Soul
 lang: ja
 tags: [일본, R&B/Soul, 2001]
+listen_when: 사랑한단 말이 줄어든 이유를 아는 밤
 keywords: [약속, 노래, 걸음, 꿈, 곁]
 emotion: 사랑
 date: 2023-02-09

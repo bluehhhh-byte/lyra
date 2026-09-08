@@ -14,6 +14,7 @@ duration: 247
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2019]
+listen_when: 밀어 올리던 바위를 그냥 놓아 버린 날
 keywords: [바위, 안개, 절벽, 집, 주먹, 운명]
 emotion: 저항
 date: 2023-01-03

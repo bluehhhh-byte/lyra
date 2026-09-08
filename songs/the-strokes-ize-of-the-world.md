@@ -14,6 +14,7 @@ duration: 266
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
+listen_when: 온 세상이 잠든 것 같은 낮
 keywords: [눈, 책상, 시장, 배우, 밤, 부두]
 emotion: 저항
 date: 2023-04-04

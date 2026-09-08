@@ -13,6 +13,7 @@ external_url: https://music.apple.com/us/album/white-lines/1888707282?i=18887072
 duration: 131
 lang: en
 tags: [영미, Hip-Hop, 2026]
+listen_when: 가까워질수록 세상이 신비로워지는 때
 keywords: [새, 진실, 꿈, 별빛, 천사]
 emotion: 설렘
 date: 2026-09-04

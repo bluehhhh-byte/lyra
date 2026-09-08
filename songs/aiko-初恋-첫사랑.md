@@ -1,6 +1,7 @@
 ---
-title: 初恋 첫사랑
+title: 初恋
 title_ko: 첫사랑
+search_aliases: [Hatsukoi]
 artist: Aiko
 artist_ko:
 album: 初恋
@@ -12,6 +13,7 @@ duration:
 genre: J-Pop
 lang: ja
 tags: [일본, J-Pop, 2001]
+listen_when: 깜박임도 아까울 만큼 바라보게 될 때
 keywords: [손가락, 눈물, 망상, 몸짓, 내일, 입술]
 emotion: 설렘
 date: 2022-11-14

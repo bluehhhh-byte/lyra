@@ -14,6 +14,7 @@ duration: 188
 genre: Indie Rock
 lang: en
 tags: [Indie Rock, 2010]
+listen_when: 이 또한 지나간다고 믿어 보는 아침
 keywords: [아침, 무릎, 아이, 짐]
 emotion: 위로
 date: 2026-06-16

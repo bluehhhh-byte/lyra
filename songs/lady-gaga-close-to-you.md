@@ -12,6 +12,7 @@ duration: 164
 genre: Synth-Pop
 lang: en
 tags: [영미, Synth-Pop, 2024]
+listen_when: 왜 자꾸 새가 나타나는지 알 것 같은 날
 keywords: [새, 별, 하늘]
 emotion: 사랑
 date: 2024-10-03

@@ -14,6 +14,7 @@ duration:
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2006]
+listen_when: 뭐든 한 번은 해 보자 싶은 날
 keywords: [선택지, 학교, 방법]
 emotion: 회상
 date: 2024-08-19

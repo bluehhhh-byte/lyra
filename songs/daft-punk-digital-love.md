@@ -14,6 +14,7 @@ duration: 301
 genre: House
 lang: en
 tags: [유럽, House, 2001]
+listen_when: 꿈이 현실이길 바라며 눈 뜬 아침
 keywords: [꿈, 밤, 춤, 리듬, 햇살]
 emotion: 설렘
 date: 2023-02-10

@@ -14,6 +14,7 @@ duration: 256
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2020]
+listen_when: 계절을 다 주고 싶은 사람이 생긴 날
 keywords: [사랑, 삶, 기도]
 emotion: 슬픔
 date: 2024-07-24

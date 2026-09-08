@@ -12,6 +12,7 @@ trackId: 1786253713
 duration: 136
 lang: en
 tags: [영미, Dance, 2025]
+listen_when: 몸이 먼저 뜨거워지는 플로어
 keywords: [헌신, 자리, 느낌]
 emotion: 설렘
 date: 2026-08-29

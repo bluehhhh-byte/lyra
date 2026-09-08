@@ -12,6 +12,7 @@ duration: 221
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2022]
+listen_when: 위선이 역겨워 태도를 바꾼 날
 keywords: [괴물, 위선자, 광경]
 emotion: 분노
 date: 2024-10-15

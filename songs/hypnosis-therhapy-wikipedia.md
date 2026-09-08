@@ -12,6 +12,7 @@ duration:
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2022]
+listen_when: 내 소개를 처음부터 다시 써 보는 밤
 keywords: [부산, 졸업, 앨범, 운동, 혈액형]
 emotion: 회상
 date: 2022-11-25

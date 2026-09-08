@@ -14,6 +14,7 @@ duration: 224
 genre: Hip-Hop
 lang: ko
 tags: [한국, Hip-Hop, 2006]
+listen_when: 각본 밖으로 노를 젓기로 한 새벽
 keywords: [카메라, 세트장, 파도, 달빛, 감옥, 등대]
 emotion: 불안
 date: 2022-12-15

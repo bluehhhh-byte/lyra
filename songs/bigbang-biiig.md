@@ -12,6 +12,7 @@ trackId: 6801365250
 duration: 164
 lang: ko
 tags: [한국, Hip-Hop, 2026]
+listen_when: 기세를 한껏 올리고 싶은 출근길
 keywords: [유행, 청춘, 세계, 도심, 노을]
 emotion: 기쁨
 date: 2026-08-20

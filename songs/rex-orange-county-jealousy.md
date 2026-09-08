@@ -1,6 +1,6 @@
 ---
 title: Jealousy
-title_ko: Jealousy
+title_ko: 질투
 artist: Rex Orange County
 artist_ko:
 album: The Alexander Technique
@@ -14,6 +14,7 @@ duration: 240
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 남과 견주다 밤을 다 써 버린 날
 keywords: [질투, 감정]
 emotion: 불안
 date: 2024-12-17

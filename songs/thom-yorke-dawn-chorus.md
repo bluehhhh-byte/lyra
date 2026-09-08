@@ -14,6 +14,7 @@ duration: 323
 genre: Electronic
 lang: en
 tags: [영미, Electronic, 2019]
+listen_when: 다시 한다면 어떻게 할까 묻는 새벽
 keywords: [골목, 생각]
 emotion: 체념
 date: 2024-08-09

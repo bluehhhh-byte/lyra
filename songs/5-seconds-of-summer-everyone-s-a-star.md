@@ -14,6 +14,7 @@ duration: 195
 genre: Synth-Pop
 lang: en
 tags: [Synth-Pop, 2025]
+listen_when: 반짝임 속에서 문득 공허해진 새벽
 keywords: [부스, 불빛, 어둠, 조명, 스피커]
 emotion: 몽환
 date: 2025-12-26

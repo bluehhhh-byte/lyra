@@ -14,6 +14,7 @@ duration: 178
 genre: Electronic
 lang: en
 tags: [Electronic, 2025]
+listen_when: 남의 감정이 내 것처럼 무거운 밤
 keywords: [두려움, 분노, 사랑, 피, 불꽃]
 emotion: 몽환
 date: 2026-03-07

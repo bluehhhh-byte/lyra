@@ -14,6 +14,7 @@ duration: 180
 genre: K-Pop
 lang: en
 tags: [K-Pop, 2025]
+listen_when: 누가 뭐라든 내 무대를 세우는 날
 keywords: [무대, 시선, 돈, 이름, 공기]
 emotion: 저항
 date: 2025-10-23

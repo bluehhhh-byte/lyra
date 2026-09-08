@@ -14,6 +14,7 @@ duration: 302
 genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2020]
+listen_when: 실수해도 된다고 말해 주는 친구 곁
 keywords: [내성적]
 emotion: 고독
 date: 2024-09-24

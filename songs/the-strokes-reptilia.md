@@ -12,6 +12,7 @@ duration: 220
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2003]
+listen_when: 속도를 늦추지 않기로 한 밤거리
 keywords: [이야기, 동네, 구역]
 emotion: 저항
 date: 2024-09-12

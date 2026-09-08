@@ -14,6 +14,7 @@ duration: 265
 genre: Indie Pop
 lang: en
 tags: [유럽, Indie Pop, 2013]
+listen_when: 당연하던 것이 사라지고 나서야 아는 밤
 keywords: [편지, 밤, 시간, 거짓말, 비밀, 선]
 emotion: 이별
 date: 2022-09-17

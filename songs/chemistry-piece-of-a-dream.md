@@ -12,6 +12,7 @@ duration:
 genre: R&B/Soul
 lang: ja
 tags: [일본, R&B/Soul, 2001]
+listen_when: 철없던 시절이 문득 그리운 저녁
 keywords: [꿈, 장난감, 주머니, 손끝, 내일, 상처]
 emotion: 그리움
 date: 2022-11-14

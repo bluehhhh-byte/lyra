@@ -1,6 +1,7 @@
 ---
 title: 人間として
 title_ko: 인간으로서
+search_aliases: [Ningen Toshite]
 artist: Sheena Ringo
 artist_ko:
 album: 人間として
@@ -12,6 +13,7 @@ duration:
 genre: J-Rock
 lang: ja
 tags: [일본, J-Rock, 2024]
+listen_when: 정의가 그리 간단하지 않다고 느낀 날
 keywords: [정의, 우주, 불꽃, 얼굴, 손, 자연]
 emotion: 저항
 date: 2024-04-21

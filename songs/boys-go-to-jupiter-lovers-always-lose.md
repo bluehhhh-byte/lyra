@@ -12,6 +12,7 @@ duration: 300
 genre: Indie Pop
 lang: en
 tags: [영미, Indie Pop, 2024]
+listen_when: 줄 선물을 고르다 네 생각이 난 오후
 keywords: [선물, 나무, 하늘]
 emotion: 설렘
 date: 2024-08-20

@@ -14,6 +14,7 @@ duration: 177
 genre: Jazz
 lang: en
 tags: [영미, Jazz, 2020]
+listen_when: 공원 꽃밭에서 옛사람이 떠오른 봄날
 keywords: [시, 미소, 노래]
 emotion: 슬픔
 date: 2024-09-17

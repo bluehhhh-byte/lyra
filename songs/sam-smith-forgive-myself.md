@@ -14,6 +14,7 @@ duration: 220
 genre: R&B/Soul
 lang: en
 tags: [영미, R&B/Soul, 2020]
+listen_when: 나부터 용서해야 함을 깨달은 밤
 keywords: [캘리포니아, 거짓말, 하늘]
 emotion: 슬픔
 date: 2024-07-19

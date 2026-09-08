@@ -12,6 +12,7 @@ duration: 221
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 1995]
+listen_when: 짜릿한 사람에게 홀딱 반한 날
 keywords: [전기, 가족, 여동생]
 emotion: 기쁨
 date: 2025-07-24

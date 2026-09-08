@@ -12,6 +12,7 @@ duration: 201
 genre: Hip-Hop
 lang: en
 tags: [Hip-Hop, 2025]
+listen_when: 돌봐 주겠다는 약속이 필요한 밤
 keywords: [사랑, 마음, 영혼, 몸]
 emotion: 사랑
 date: 2025-09-08

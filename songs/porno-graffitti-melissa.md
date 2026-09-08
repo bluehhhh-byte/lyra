@@ -14,6 +14,7 @@ duration: 274
 genre: J-Rock
 lang: ja
 tags: [J-Rock, 2003]
+listen_when: 슬픔의 숨통을 끊어 달라고 비는 밤
 keywords: [기억, 슬픔, 새, 날개, 자물쇠]
 emotion: 이별
 date: 2026-06-24

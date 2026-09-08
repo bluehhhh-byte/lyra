@@ -11,6 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/
 trackId: 1884244908
 lang: ja
 tags: [일본, Indie Rock, 2026]
+listen_when: 잘해내는 척이 들키지 않은 하루 끝
 emotion: 고독
 keywords: [불행, 개, 목숨, 미래, 정의]
 date: 2026-07-09
