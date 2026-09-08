@@ -119,5 +119,6 @@ node scripts/migrate-content.mjs && node scripts/migrate-content.mjs --verify
 
 - `DEVELOPMENT.md` — 아키텍처·환경변수·백업 절차·개발 히스토리
 - `docs/PROJECT.md` — 프로젝트 정의와 계획
+- `docs/DESIGN.md` — 디자인 브리프(플로우·화면·컴포넌트·토큰·상태·접근성)
 - `docs/TRANSLATION.md` — 번역 품질 규칙
 - `docs/EMOTION-MODEL.md` — 감정 모델(Russell circumplex)
