@@ -2,6 +2,7 @@
 import { useState } from "react";
 import AdminErrorMessage from "./error-message";
 import { CULTURAL_THEMES } from "../../lib/themes";
+import { EMOTIONS } from "../../lib/keywords";
 
 async function api(action, body) {
   const res = await fetch("/api/admin", {
@@ -67,6 +68,7 @@ export default function MovieForm() {
   const [comment, setComment] = useState("");
   const [tags, setTags] = useState("");
   const [themes, setThemes] = useState([]);
+  const [emotion, setEmotion] = useState(""); // 곡과 같은 15어휘 — 감정 궤도의 입력
   const [rating, setRating] = useState(0);
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
@@ -136,6 +138,7 @@ export default function MovieForm() {
       tmdbId: movie.tmdbId,
       tags,
       themes,
+      emotion,
       comment,
       synopsis: polished || synopsis,
     });
@@ -250,6 +253,25 @@ export default function MovieForm() {
                       className={` border px-3 py-1 text-xs ${active ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}
                     >
                       {theme}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-xs text-muted">감정 1개 · 곡과 같은 어휘로 감정 궤도에 들어간다</p>
+              <div className="flex flex-wrap gap-1.5">
+                {EMOTIONS.map((item) => {
+                  const active = emotion === item;
+                  return (
+                    <button
+                      type="button"
+                      key={item}
+                      aria-pressed={active}
+                      onClick={() => setEmotion(active ? "" : item)}
+                      className={` border px-3 py-1 text-xs ${active ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}
+                    >
+                      {item}
                     </button>
                   );
                 })}

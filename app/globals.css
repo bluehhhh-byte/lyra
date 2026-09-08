@@ -194,15 +194,19 @@ textarea {
   }
 }
 
-/* reading aid: hovering a line pair tints it so the eye can track
-   original ↔ translation. Hover devices only — touch gets no dead styles. */
+/* reading aid: a line pair tints so the eye can track original ↔ translation.
+   hover 기기는 hover로, 터치 기기는 탭으로 같은 일을 한다 — lyrics-view가
+   탭한 줄에 .tapped를 1.5초 붙인다 (브리프 §9-6: 터치의 읽기 보조). */
+.lyric-line {
+  margin-inline: -10px;
+  padding-inline: 10px;
+  border-radius: 0;
+  transition: background-color 0.3s;
+}
+.lyric-line.tapped {
+  background-color: color-mix(in oklab, var(--color-accent) 7%, transparent);
+}
 @media (hover: hover) {
-  .lyric-line {
-    margin-inline: -10px;
-    padding-inline: 10px;
-    border-radius: 0;
-    transition: background-color 0.3s;
-  }
   .lyric-line:hover {
     background-color: color-mix(in oklab, var(--color-accent) 7%, transparent);
   }

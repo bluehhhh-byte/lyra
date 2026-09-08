@@ -6,6 +6,7 @@ import { movieMetaGen } from "../../../lib/admin/movie-meta";
 import { FM, fmValue, setField, parseTags } from "../../../lib/admin/frontmatter";
 import { kstToday } from "../../../lib/kst";
 import { parseThemes } from "../../../lib/themes";
+import { parseEmotion } from "../../../lib/keywords";
 import { getAllMoviesRuntime, getMovieRuntime } from "../../../lib/movies";
 import { getWatchedRuntime } from "../../../lib/watched";
 import { buildConceptCarousel, buildSingleMovieDraft } from "../../../lib/movie-carousel";
@@ -77,6 +78,7 @@ export async function handleMovies(action, body) {
     const {
       title, titleKo, mediaType, director, directorKo, cast, year, runtime,
       rating, genre, poster, backdrop, tmdbId, tags, themes, comment, synopsis, bodyKind,
+      emotion,
     } = body;
     const slug = `${title} ${year}`
       .toLowerCase()
@@ -93,6 +95,7 @@ year: ${year || ""}
 runtime: ${runtime || ""}
 rating: ${rating || ""}
 genre: ${genre || ""}
+emotion: ${parseEmotion(emotion) || ""}
 poster: ${poster || ""}
 backdrop: ${backdrop || ""}
 tmdbId: ${tmdbId || ""}

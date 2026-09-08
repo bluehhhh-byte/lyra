@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CardModal from "./lyric-card";
 import { hasReadings, savedReadingSize, savedReadingVisibility } from "../../../lib/reading-preference";
 import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
@@ -34,6 +34,23 @@ const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between
 // a movie slug there would create a bogus song file — movies use `comment` only.
 export default function LyricsView({ stanzas, lang, song, allowNotes = true, missingTranslationCount = 0 }) {
   const [mode, setMode] = useState("both");
+  // 터치에는 hover가 없다 — 탭한 줄 쌍을 잠깐 틴트해 눈이 원문↔번역을 따라가게
+  // 한다 (브리프 §9-6). 스크롤 오발 방지: 8px 넘게 움직인 탭은 무시. 수백 줄에
+  // React 상태를 두지 않고 classList로 처리한다 — 장식일 뿐 상태가 아니다.
+  const tapStart = useRef(null);
+  const rememberTap = (event) => {
+    if (event.pointerType !== "mouse") tapStart.current = { x: event.clientX, y: event.clientY };
+  };
+  const flashTapTint = (event) => {
+    const start = tapStart.current;
+    tapStart.current = null;
+    if (!start || event.pointerType === "mouse") return;
+    if (Math.hypot(event.clientX - start.x, event.clientY - start.y) > 8) return;
+    const el = event.currentTarget;
+    el.classList.add("tapped");
+    clearTimeout(el._tapTimer);
+    el._tapTimer = setTimeout(() => el.classList.remove("tapped"), 1500);
+  };
   const [size, setSize] = useState("m");
   const [showReadings, setShowReadings] = useState(true);
   const [notes, setNotes] = useState({}); // stanza index -> note, overriding the file
@@ -253,7 +270,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 // `>^N`으로 덮인 줄은 번역이 비어 있다 — 번역만 보기에서는 빈 칸만
                 // 남으므로 건너뛴다 (원문 보기·둘 다 보기에서는 그대로 나온다)
                 mode === "trans" && !line.ko ? null : (
-                <div key={j} className="lyric-line" role="group" aria-label="원문과 번역">
+                <div key={j} className="lyric-line" role="group" aria-label="원문과 번역" onPointerDown={rememberTap} onPointerUp={flashTapTint}>
                   {mode !== "trans" && (
                     <p id={`lyric-${i}-${j}-original`} lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
                       <span className="sr-only">원문: </span>
