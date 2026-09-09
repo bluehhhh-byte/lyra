@@ -226,7 +226,10 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
             key={i}
             id={`v${i}`}
             data-fable-stanza
-            className={`group/stanza reveal relative scroll-mt-24  transition-colors duration-1000 ${
+            // 우측 상단 버튼들은 absolute라 글 흐름에서 빠져 있다 — 자리를 비워
+            // 두지 않으면 긴 줄이 그 밑으로 지나가 겹친다. 버튼이 44px이라 48px을
+            // 예약한다. 세로로 쌓은 덕에 예약 폭이 나란히 뒀을 때(96px)의 절반이다.
+            className={`group/stanza reveal relative scroll-mt-24 pr-12  transition-colors duration-1000 ${
               active === i ? "bg-accent/10" : ""
             }`}
           >
@@ -234,7 +237,10 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
               <button
                 onClick={() => copyStanza(stanza, i)}
                 aria-label="이 구절을 출처와 함께 복사"
-                className="absolute -top-3 right-11 flex h-11 min-w-11 items-center justify-center  px-1 text-[11px] text-muted transition hover:text-accent"
+                // 캐러셀 버튼 아래로 내려 세로로 쌓는다. 나란히 두면 연의 우측
+                // 상단 88px를 차지해 첫 줄이 긴 곡에서 가사와 겹쳤다 — 쌓으면
+                // 가로 폭이 절반(44px)이 되어 글자가 지나갈 자리가 생긴다.
+                className="absolute top-9 right-0 flex h-11 min-w-11 items-center justify-center  px-1 text-[11px] text-muted transition hover:text-accent"
               >
                 {copiedStanza === i ? "복사됨" : "복사"}
               </button>
