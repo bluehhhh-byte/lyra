@@ -9,10 +9,13 @@ export default function CoverImage({ label, className, fallback = null, ...img }
   if (failed || !img.src) {
     if (fallback) return fallback;
     return (
-      <div className={`flex items-center justify-center bg-surface p-2 text-center text-xs text-muted ${className || ""}`}>
+      <div className={`flex items-center justify-center border border-line bg-surface p-2 text-center text-xs text-muted ${className || ""}`}>
         {label || img.alt || ""}
       </div>
     );
   }
-  return <img {...img} className={className} onError={() => setFailed(true)} />;
+  // 표지가 어두우면(#12100e에 가까운 표지가 흔하다) 배경과 같은 검정으로 뭉개져
+  // 이미지가 깨진 것처럼 보였다. 아주 옅은 테두리 한 겹이 그 경계를 만든다 —
+  // 밝은 표지에서는 거의 보이지 않는다.
+  return <img {...img} className={`border border-line/40 ${className || ""}`} onError={() => setFailed(true)} />;
 }
