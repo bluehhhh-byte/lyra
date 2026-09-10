@@ -78,6 +78,10 @@ export default function Header() {
           >
             <span>{inMovies ? "Cyno" : "Lyra"}<span className="text-accent">.</span></span>
           </Link>
+          {/* 로고가 Lyra.↔Cyno.로 바뀌는 건 의도지만, 처음 온 사람에게는 사이트가
+              바뀐 것처럼 보인다. 지금 어느 세계인지 한 마디로 못박아 둔다.
+              좁은 화면은 브랜드+액션이 이미 꽉 차므로 생략한다. */}
+          <span className="hidden text-xs text-muted sm:inline">{inMovies ? "영화 기록" : "음악 기록"}</span>
         </div>
 
         <nav className="hidden items-center gap-5 text-xs text-muted md:flex">
@@ -92,10 +96,14 @@ export default function Header() {
             1px 가로로 흘렀다. 버튼은 터치 타깃이라 줄일 수 없으므로 간격만 좁힌다 —
             사이 간격 셋에서 12px을 돌려받으면 들어간다. sm부터는 원래 간격. */}
         <div className="flex items-center gap-1 text-xs text-muted sm:gap-2">
+          {/* 모바일에서는 아이콘 하나만 남는데 테두리 상자가 남아 있어 옆의 테마·
+              관리자 아이콘과 달리 입력창처럼 보였다. 글자가 붙는 sm부터만 상자를
+              두르고, 아이콘만 있을 때는 다른 아이콘 버튼과 같은 모양으로 둔다.
+              터치 타깃 44px은 어느 쪽이든 유지. */}
           <button
             onClick={() => setSearchOpen(true)}
             aria-label="통합 검색"
-            className="flex min-h-11 items-center gap-1.5  border border-line px-3 hover:border-accent hover:text-accent"
+            className="flex h-11 min-h-11 w-11 items-center justify-center hover:bg-surface hover:text-accent sm:w-auto sm:justify-start sm:gap-1.5 sm:border sm:border-line sm:px-3 sm:hover:border-accent sm:hover:bg-transparent"
           >
             <span aria-hidden>⌕</span>
             <span className="hidden sm:inline">검색</span>
