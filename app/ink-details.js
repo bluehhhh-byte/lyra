@@ -52,7 +52,10 @@ export function InkDivider({ className = "my-12 h-3 w-full" }) {
         strokeWidth="1"
         opacity="0.38"
       />
-      <path d="M632 8 C690 6 742 8 786 6" stroke="var(--color-accent)" strokeWidth="1.5" opacity="0.72" />
+      {/* 예전에는 오른쪽 20%(x 632~786)에만 액센트 획이 하나 더 겹쳐 있었다.
+          손으로 그은 결은 이 사이트의 성격이지만, 끝에만 떠 있는 두 번째 색
+          조각은 의미 없이 시선을 끌어 "긋다 만 선"으로 읽혔다. 구분선의 일은
+          가르는 것이므로 한 획으로 끝낸다. */}
     </svg>
   );
 }
