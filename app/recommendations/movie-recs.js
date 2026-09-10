@@ -50,7 +50,7 @@ export default function MovieRecs({ items }) {
               <article key={id} className="group">
                 <a href={tmdbUrl(movie.tmdbId, movie.media)} target="_blank" rel="noopener noreferrer">
                   <div className="overflow-hidden  border border-line bg-surface">
-                    <CoverImage src={movie.poster} alt={movie.title} label={movie.title} loading="lazy" className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90" />
+                    <CoverImage src={movie.poster} alt={movie.title} label={movie.title} sublabel={movie.year ? String(movie.year) : ""} loading="lazy" className="aspect-[2/3] w-full object-cover transition group-hover:opacity-90" />
                   </div>
                   <p className="mt-1.5 truncate text-xs font-medium group-hover:text-accent">{movie.title}{movie.year ? <span className="text-muted"> · {movie.year}</span> : null}</p>
                   {movie.why && <p className="mt-0.5 line-clamp-3 text-[11px] leading-snug text-muted">{movie.why}</p>}

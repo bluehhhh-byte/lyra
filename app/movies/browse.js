@@ -174,6 +174,7 @@ function Grid({ list, needle }) {
               src={movie.poster}
               alt={`${movie.title} 포스터`}
               label={movie.title}
+              sublabel={movie.year ? String(movie.year) : ""}
               loading="lazy"
               decoding="async"
               className="aspect-[2/3] w-full object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
