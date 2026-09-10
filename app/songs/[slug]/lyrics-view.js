@@ -13,6 +13,11 @@ const MODES = [
 ];
 
 // one scale step per size — original stays a notch above the translation
+// 독음이 실제로 그려지는 연에만 오른쪽 칸을 연다. 독음이 없는 연까지 칸을 나누면
+// 빈 여백을 만들자고 원문 폭만 줄이는 셈이 된다.
+const readingGutter = (stanza, showReadings, mode) =>
+  showReadings && mode !== "trans" && stanza.lines.some((line) => line.reading);
+
 const SIZES = {
   s: { orig: "text-base", reading: "text-[11px]", trans: "text-xs", gap: "space-y-3" },
   m: { orig: "text-lg", reading: "text-xs", trans: "text-sm", gap: "space-y-4" },
@@ -276,15 +281,25 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                 // `>^N`으로 덮인 줄은 번역이 비어 있다 — 번역만 보기에서는 빈 칸만
                 // 남으므로 건너뛴다 (원문 보기·둘 다 보기에서는 그대로 나온다)
                 mode === "trans" && !line.ko ? null : (
-                <div key={j} className="lyric-line" role="group" aria-label="원문과 번역" onPointerDown={rememberTap} onPointerUp={flashTapTint}>
+                <div
+                  key={j}
+                  // 독음이 있는 연은 오른쪽 여백을 연다. 가사는 운문이라 줄이
+                  // 짧고(이 곡의 가장 긴 줄이 358px, 열은 672px) 오른쪽 절반이
+                  // 늘 비어 있었는데, 독음은 그 빈 자리에 두면 원문과 같은
+                  // 높이에서 읽히고 세로 줄 수가 절반으로 준다. 좁은 화면에서는
+                  // 나눌 폭이 없으니 예전처럼 아래로 쌓인다.
+                  className={`lyric-line ${readingGutter(stanza, showReadings, mode) ? "sm:grid sm:grid-cols-[minmax(0,1fr)_11rem] sm:items-baseline sm:gap-x-5" : ""}`}
+                  role="group"
+                  aria-label="원문과 번역"
+                  onPointerDown={rememberTap}
+                  onPointerUp={flashTapTint}
+                >
+                  <div className={readingGutter(stanza, showReadings, mode) ? "min-w-0" : ""}>
                   {mode !== "trans" && (
                     <p id={`lyric-${i}-${j}-original`} lang={lang || "en"} className={`font-serif leading-snug ${s.orig}`}>
                       <span className="sr-only">원문: </span>
                       {line.en}
                     </p>
-                  )}
-                  {mode !== "trans" && showReadings && line.reading && (
-                    <p className={`mt-0.5 text-muted ${s.reading}`}>{line.reading}</p>
                   )}
                   {mode !== "orig" &&
                     line.ko &&
@@ -310,7 +325,12 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
                       </p>
                     ))}
                   {line.translationMissing && mode !== "trans" && (
-                    <span className="mt-1 inline-block  border border-amber-400/40 px-1.5 py-0.5 text-[10px] text-amber-400">번역 필요</span>
+                    <span className="mt-1 inline-block  border border-warn/50 px-1.5 py-0.5 text-[10px] text-warn">번역 필요</span>
+                  )}
+                  </div>
+                  {/* 독음 — 넓은 화면에서는 오른쪽 칸, 좁은 화면에서는 원문 아래 */}
+                  {mode !== "trans" && showReadings && line.reading && (
+                    <p className={`mt-0.5 text-muted sm:mt-0 ${s.reading}`}>{line.reading}</p>
                   )}
                 </div>
                 )
