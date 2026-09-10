@@ -7,6 +7,7 @@ import InkArtwork from "./ink-artwork";
 import { groupSongs } from "../lib/browse-group";
 import { parseBrowseFilters, serializeBrowseFilters } from "../lib/browse-query";
 import { sortSearchResults } from "../lib/search-rank";
+import { emotionValence, valenceColor } from "../lib/keywords";
 
 const GROUPS = [
   { key: "none", label: "전체" },
@@ -431,9 +432,22 @@ function Grid({ list, needle, lyrics }) {
           <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">
             {s.title}
           </h3>
-          <p className="mt-0.5 text-xs text-muted">
-            {s.artist}
-            {s.year ? ` · ${s.year}` : ""}
+          <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted">
+            {/* 감정은 아카이브 궤도·통계의 축인데 정작 목록에서는 훑을 수 없었다.
+                영화 카드가 별점으로 판단을 드러내는 자리에 곡은 아무것도 없었다.
+                점 색은 사이트가 이미 쓰는 밝기 언어(valenceColor)라 새로 배울 게 없다. */}
+            {s.emotion && (
+              <span
+                aria-hidden
+                className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                style={{ background: valenceColor(emotionValence(s.emotion)) }}
+              />
+            )}
+            <span className="truncate">
+              {s.artist}
+              {s.year ? ` · ${s.year}` : ""}
+            </span>
+            {s.emotion && <span className="shrink-0 text-muted/80">{s.emotion}</span>}
           </p>
           <Snippet song={s} needle={needle} lyrics={lyrics} />
         </Link>
