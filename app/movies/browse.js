@@ -138,18 +138,6 @@ export default function MovieBrowse({ movies }) {
   );
 }
 
-function Stars({ value }) {
-  if (value == null) return null;
-  return (
-    <span className="relative inline-block align-middle text-xs leading-none" aria-label={`별점 ${value}/5`}>
-      <span className="text-muted/30">★★★★★</span>
-      <span className="absolute inset-0 overflow-hidden text-accent" style={{ width: `${(value / 5) * 100}%` }}>
-        ★★★★★
-      </span>
-    </span>
-  );
-}
-
 function Snippet({ movie, needle }) {
   if (!needle || movie.metaSearch.includes(needle)) return null;
   const text = movie.synopsis.find((paragraph) => paragraph.toLowerCase().includes(needle)) || "";
@@ -190,7 +178,7 @@ function Grid({ list, needle }) {
             {movie.director}
             {movie.year ? ` · ${movie.year}` : ""}
           </p>
-          {movie.rating != null && <div className="mt-1"><Stars value={movie.rating} /></div>}
+          <div className="mt-1"><Stars value={movie.rating} /></div>
           <Snippet movie={movie} needle={needle} />
         </Link>
       ))}

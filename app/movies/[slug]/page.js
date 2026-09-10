@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Stars from "../../stars";
 import { notFound } from "next/navigation";
 import { getAllMoviesMeta, getMovieRuntime } from "../../../lib/movies";
 import YouTubeEmbed from "../../songs/[slug]/youtube-embed";
@@ -39,18 +40,6 @@ export async function generateMetadata({ params }) {
     description,
     openGraph: { title, description, images: m.backdrop ? [{ url: m.backdrop }] : [], type: "article" },
   };
-}
-
-function Stars({ value }) {
-  if (!value) return null;
-  return (
-    <span className="relative inline-block align-middle text-base leading-none" aria-label={`별점 ${value}/5`}>
-      <span className="text-muted/30">★★★★★</span>
-      <span className="absolute inset-0 overflow-hidden text-accent" style={{ width: `${(value / 5) * 100}%` }}>
-        ★★★★★
-      </span>
-    </span>
-  );
 }
 
 // "2026년 7월 14일 22:03" in KST; drops the time for a date-only value
@@ -169,11 +158,9 @@ export default async function MoviePage({ params }) {
                 </Link>
               ))}
             </div>
-            {movie.rating != null && (
-              <div className="mt-3">
-                <Stars value={movie.rating} />
-              </div>
-            )}
+            <div className="mt-3">
+              <Stars value={movie.rating} size="md" />
+            </div>
             <div className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
               {/* dead <span>s until the combined tag pages existed — now a year
                   tag walks to that year's songs AND films */}

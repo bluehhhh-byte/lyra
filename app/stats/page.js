@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Stars from "../stars";
 import { getAllSongsRuntime } from "../../lib/songs";
 import { getAllMoviesRuntime } from "../../lib/movies";
 import { pct, Bars } from "./charts";
@@ -29,17 +30,6 @@ function tally(values) {
 }
 
 // half-star aware ★ row clipped to the score
-function Stars({ value }) {
-  return (
-    <span className="relative inline-block align-middle text-sm leading-none" aria-label={`별점 ${value}/5`}>
-      <span className="text-muted/30">★★★★★</span>
-      <span className="absolute inset-0 overflow-hidden text-accent" style={{ width: `${(value / 5) * 100}%` }}>
-        ★★★★★
-      </span>
-    </span>
-  );
-}
-
 export default async function StatsPage() {
   const [songs, movies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
 
