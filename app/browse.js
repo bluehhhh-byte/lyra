@@ -321,7 +321,10 @@ export default function Browse({ songs: initialSongs, totalSongs = initialSongs.
       )}
 
       {loadState === "loading" && !allLoaded && (
-        <p className="mb-6 text-center text-xs text-muted">전체 곡 목록을 불러오는 중…</p>
+        <>
+          <p className="mb-6 text-center text-xs text-muted">전체 곡 목록을 불러오는 중…</p>
+          <SkeletonGrid />
+        </>
       )}
       {loadState === "error" && !allLoaded && (
         <p className="mb-6 text-center text-xs text-muted">
@@ -409,6 +412,23 @@ function CardCover({ song }) {
           fallback={<InkArtwork slug={song.slug} label={song.title} className="aspect-square w-full" />}
         />
       )}
+    </div>
+  );
+}
+
+// 다음 묶음이 도착하기 전 자리를 지키는 카드. 글자 한 줄만 두면 그 사이 화면이
+// 통째로 비어 "끝났다"처럼 읽힌다. 실제 카드와 같은 격자·같은 비율이라 도착해도
+// 레이아웃이 튀지 않는다. 장식이므로 스크린리더에서는 숨긴다.
+function SkeletonGrid({ count = 12 }) {
+  return (
+    <div aria-hidden className="mb-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+      {Array.from({ length: count }, (_, i) => (
+        <div key={i} className="animate-pulse">
+          <div className="aspect-square w-full border border-line bg-surface" />
+          <div className="mt-3 h-3.5 w-4/5 bg-surface" />
+          <div className="mt-2 h-3 w-3/5 bg-surface" />
+        </div>
+      ))}
     </div>
   );
 }
