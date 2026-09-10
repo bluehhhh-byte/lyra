@@ -86,7 +86,8 @@ html {
   --color-surface: #efe8d6;
   --color-line: #d8cfba;
   --color-ink: #2a251f;
-  --color-muted: #70685a;
+  /* 4.50:1은 AA 경계에 정확히 걸린 값이라 여유가 0이었다 — surface 위 4.92로 올린다 */
+  --color-muted: #6a6255;
   --color-accent: #6244cc;
   /* 크림 종이 위에서는 파스텔 상태색의 대비가 무너진다 — 액센트처럼 심화한 값 */
   --color-ok: #4a7a44;

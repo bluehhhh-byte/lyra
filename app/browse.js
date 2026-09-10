@@ -467,7 +467,7 @@ function Grid({ list, needle, lyrics }) {
               {s.artist}
               {s.year ? ` · ${s.year}` : ""}
             </span>
-            {s.emotion && <span className="shrink-0 text-muted/80">{s.emotion}</span>}
+            {s.emotion && <span className="shrink-0">{s.emotion}</span>}
           </p>
           <Snippet song={s} needle={needle} lyrics={lyrics} />
         </Link>
