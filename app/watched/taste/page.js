@@ -33,7 +33,7 @@ function Bar({ label, n, avg, max, mean, link }) {
       <span className="w-10 shrink-0 text-right text-xs tabular-nums text-muted">{n}편</span>
       <span
         className={`w-16 shrink-0 text-right text-xs tabular-nums ${
-          delta > 0.15 ? "text-green-400" : delta < -0.15 ? "text-red-400 dark:text-red-400" : "text-muted"
+          delta > 0.15 ? "text-ok" : delta < -0.15 ? "text-warn" : "text-muted"
         }`}
       >
         ★{avg.toFixed(2)}
@@ -63,8 +63,8 @@ function PrefSection({ title, high, low, mean, link, note = "3편 이상만" }) 
   const chip = (r, tone) => {
     const cls = `inline-flex items-center gap-1.5  border px-3 py-1 text-xs ${
       tone === "up"
-        ? "border-green-500/40 text-green-400"
-        : "border-red-500/40 text-red-400 dark:text-red-400"
+        ? "border-ok/50 text-ok"
+        : "border-warn/50 text-warn"
     }`;
     const inner = (
       <>
@@ -84,13 +84,13 @@ function PrefSection({ title, high, low, mean, link, note = "3편 이상만" }) 
       <p className="mb-3 text-xs text-muted">전체 평균 ★{mean.toFixed(2)} 대비 · {note}</p>
       {high.length > 0 && (
         <div className="mb-2">
-          <p className="mb-1.5 text-xs text-green-400">편애 ↑</p>
+          <p className="mb-1.5 text-xs text-ok">편애 ↑</p>
           <div className="flex flex-wrap gap-1.5">{high.map((r) => chip(r, "up"))}</div>
         </div>
       )}
       {low.length > 0 && (
         <div>
-          <p className="mb-1.5 text-xs text-red-400">박한 편 ↓</p>
+          <p className="mb-1.5 text-xs text-warn">박한 편 ↓</p>
           <div className="flex flex-wrap gap-1.5">{low.map((r) => chip(r, "down"))}</div>
         </div>
       )}
@@ -197,8 +197,8 @@ export default async function TastePage() {
 
       <p className="mb-10 max-w-2xl text-xs leading-relaxed text-muted">
         막대는 <b className="text-muted">관람 편수</b>, 오른쪽 별점은 그 그룹의 <b className="text-muted">평균 평점</b>.
-        전체 평균보다 <span className="text-green-400">높으면 초록</span>,
-        <span className="text-red-400"> 낮으면 빨강</span> — 많이 본 것과 좋아하는 것은 다르다.
+        전체 평균보다 <span className="text-ok">높으면 초록</span>,
+        <span className="text-warn"> 낮으면 주황</span> — 많이 본 것과 좋아하는 것은 다르다.
       </p>
 
       <RatingInsights movies={rated} />

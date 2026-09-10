@@ -8,7 +8,7 @@ export default function InstagramCaptionPreview({ text, className = "bg-surface"
       <p className="mt-1 text-[11px] text-muted" role="status">
         {preview.characters.toLocaleString("ko-KR")}/{INSTAGRAM_CAPTION_LIMIT.toLocaleString("ko-KR")}자 · {preview.lines}줄 · 해시태그 {preview.hashtags}개
       </p>
-      {preview.warnings.map((warning) => <p key={warning} role="alert" className="mt-1 text-xs font-semibold text-amber-600 dark:text-amber-400">{warning}</p>)}
+      {preview.warnings.map((warning) => <p key={warning} role="alert" className="mt-1 text-xs font-semibold text-warn">{warning}</p>)}
     </div>
   );
 }

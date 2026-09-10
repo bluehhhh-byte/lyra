@@ -44,7 +44,7 @@ export function GenreRatingCross({ movies }) {
                     <span className="text-warn">{INSUFFICIENT_SAMPLE_LABEL} · {row.n}편</span>
                   ) : (
                     <div className="grid grid-cols-[1fr_3.5rem] items-center gap-2">
-                      <Meter value={row.avg} max={5} tone="bg-green-500/70" />
+                      <Meter value={row.avg} max={5} tone="bg-ok/70" />
                       <span className="text-right tabular-nums">★{row.avg.toFixed(2)}</span>
                     </div>
                   )}
@@ -128,7 +128,7 @@ export function RuntimeEvidence({ movies }) {
                 <span className="tabular-nums text-muted">{row.start}–{row.end}</span>
                 <div className="relative h-3 overflow-hidden  bg-surface">
                   <div className="absolute inset-y-0 left-0  bg-accent/30" style={{ width: `${(row.known / maxPeriod) * 100}%` }} />
-                  <div className="absolute inset-y-0 left-0  bg-green-500/75" style={{ width: `${(row.long / maxPeriod) * 100}%` }} />
+                  <div className="absolute inset-y-0 left-0  bg-ok/75" style={{ width: `${(row.long / maxPeriod) * 100}%` }} />
                 </div>
                 <span className="text-right tabular-nums text-muted">{row.long}/{row.known}편</span>
               </div>

@@ -164,7 +164,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   return (
     <div data-lyric-view className="relative isolate mx-auto max-w-2xl pb-3 pr-7 sm:pr-10">
       <LyricThread seed={song?.slug || "lyrics"} />
-      <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-amber-400" : "text-muted"}`}>
+      <p className={`mb-4 text-right text-[11px] ${missingTranslationCount ? "text-warn" : "text-muted"}`}>
         {missingTranslationCount ? `번역 필요 ${missingTranslationCount}줄` : "번역 상태 · 완료"}
       </p>
       {/* toolbar sticks so mode/size stay reachable deep into a long song */}
@@ -415,7 +415,7 @@ function NoteEditor({ initial, onSave, onCancel }) {
           <button
             onClick={() => save("")}
             disabled={busy}
-            className="ml-auto text-xs text-muted hover:text-red-400 disabled:opacity-40"
+            className="ml-auto text-xs text-muted hover:text-danger disabled:opacity-40"
           >
             삭제
           </button>
