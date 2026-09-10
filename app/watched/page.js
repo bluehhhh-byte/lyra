@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmptyState from "../empty-state";
 import { getWatchedRuntime } from "../../lib/watched";
 import { getAllMoviesMeta } from "../../lib/movies";
 import { attachCuratedLinks } from "../../lib/watched-filter";
@@ -49,12 +50,9 @@ export default async function WatchedPage({ searchParams }) {
       <WatchedTimeline movies={all} />
 
       {rated.length === 0 ? (
-        <div className=" border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
-          아직 별점이 비어 있습니다.
-          <br />
-          관리자 → 영화 관리 → 왓챠피디아 가져오기에서 별점을 채우면 목록이 나옵니다.
-          {noRating > 0 && <p className="mt-2 text-xs text-muted">메타데이터는 {all.length}편 준비됨</p>}
-        </div>
+        <EmptyState note={noRating > 0 ? `메타데이터는 ${all.length}편 준비됨` : ""}>
+          아직 별점이 비어 있습니다. 관리자 → 영화 관리 → 왓챠피디아 가져오기에서 별점을 채우면 목록이 나옵니다.
+        </EmptyState>
       ) : (
         <WatchedGrid rated={rated} initial={initial} />
       )}

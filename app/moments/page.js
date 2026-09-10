@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmptyState from "../empty-state";
 import { getAllMomentsRuntime } from "../../lib/moments";
 import MomentCard from "../moment-card";
 
@@ -26,10 +27,9 @@ export default async function MomentsPage() {
           </section>)}
         </div>
       ) : (
-        <div className=" border border-dashed border-line px-6 py-20 text-center">
-          <p className="text-sm text-muted">아직 공개된 문화 장면이 없습니다.</p>
-          <Link href="/archive" className="mt-4 inline-block text-sm text-accent">기존 아카이브 보기 →</Link>
-        </div>
+        <EmptyState href="/archive" linkLabel="기존 아카이브 보기 →">
+          아직 공개된 문화 장면이 없습니다.
+        </EmptyState>
       )}
     </div>
   );

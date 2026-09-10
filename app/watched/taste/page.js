@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmptyState from "../../empty-state";
 import { directorPreferences, getWatchedRuntime } from "../../../lib/watched";
 import { aggregate, decadeOf } from "../../../lib/taste-core";
 import { readRuntimeData } from "../../../lib/store";
@@ -144,11 +145,9 @@ export default async function TastePage() {
     return (
       <>
         <h1 className="mb-2 text-2xl font-bold">취향 분석</h1>
-        <div className="mt-8  border border-dashed border-line px-6 py-16 text-center text-sm text-muted">
-          별점 데이터가 있어야 분석할 수 있습니다.
-          <br />
-          관리자 → 영화 관리 → 왓챠피디아 가져오기에서 별점을 채워주세요.
-        </div>
+        <EmptyState className="mt-8">
+          별점 데이터가 있어야 분석할 수 있습니다. 관리자 → 영화 관리 → 왓챠피디아 가져오기에서 별점을 채워주세요.
+        </EmptyState>
       </>
     );
   }
