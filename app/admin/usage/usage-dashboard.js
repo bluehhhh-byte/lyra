@@ -57,6 +57,48 @@ function ResourceCard({ label, used, limit, note }) {
   );
 }
 
+// Vercel Hobby 한도. 실측을 읽었는지 아닌지를 값 옆에 그대로 적는다 —
+// 추정치를 실측처럼 보여주면 "아직 여유 있다"는 잘못된 안심을 준다.
+function VercelCard({ value }) {
+  if (!value) return null;
+  const measured = value.measured === true;
+  const limits = value.limits || {};
+  const rows = [
+    { label: "Active CPU", used: value.activeCpuHours, limit: limits.activeCpuHours, unit: "시간", fmt: (n) => number.format(n) },
+    { label: "함수 호출", used: value.invocations, limit: limits.invocations, unit: "회", fmt: (n) => integer.format(n) },
+    { label: "Fast Data Transfer", used: value.fastDataTransferBytes, limit: limits.fastDataTransferBytes, unit: "", fmt: formatBytes },
+  ];
+  return (
+    <section className="mt-5 border border-line bg-surface/70 p-5 sm:p-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="text-sm font-semibold">Vercel Hobby · 이번 달</h2>
+        <p className={`text-[11px] ${measured ? "text-ok" : "text-warn"}`}>
+          {measured ? `출처: Vercel API${value.measuredAt ? `, ${new Date(value.measuredAt).toLocaleDateString("ko-KR")}` : ""}` : "출처: 자체 추정"}
+        </p>
+      </div>
+      <p className="mt-1 text-xs text-muted">{value.note}</p>
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {rows.map((row) => (
+          <div key={row.label}>
+            <p className="text-xs text-muted">{row.label}</p>
+            <p className="mt-1 text-lg font-semibold tabular-nums">
+              {row.used == null ? (
+                <span className="text-sm font-normal text-warn">실측 불가</span>
+              ) : (
+                <>
+                  {row.fmt(row.used)}{row.unit}
+                  <span className="text-sm font-normal text-muted"> / {row.fmt(row.limit)}{row.unit}</span>
+                </>
+              )}
+            </p>
+            {row.used != null && <Progress value={row.used} limit={row.limit} />}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function AiResearchCard({ value }) {
   if (!value?.enabled) return null;
   const budget = value.budget || {};
@@ -235,6 +277,8 @@ export default function UsageDashboard() {
         <ResourceCard label="DB 저장" used={data?.databaseBytes} limit={data?.limits?.neonStorageBytes} note={`${integer.format(data?.contentRows || 0)}개 콘텐츠`} />
         <ResourceCard label="웹 전송" used={data?.totals7d?.vercelTransferBytes} limit={data?.limits?.vercelTransferBytes} note="최근 7일 관측" />
       </div>
+
+      <VercelCard value={data?.vercelProvider} />
 
       <div className="mt-5 grid gap-4 lg:grid-cols-2">
         <LineChart title="웹 사용 흐름" points={recent} valueKey="vercelTransferBytes" />
