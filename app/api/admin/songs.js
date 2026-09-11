@@ -1170,8 +1170,12 @@ ${listed}`,
     // Gemini lite로 구조를 판정해 붙인다. restanzaBody는 원문 줄을 재배열만 하므로
     // 내용은 바이트 단위로 보존되고, 실패하면 입력 그대로 저장한다 — 레이아웃은
     // 장식이라 등록을 막지 않는다(requalityApply와 같은 원칙).
+    //
+    // skipAi: AI 예산이 소진된 날에도 등록 자체는 되어야 한다. 이 곡의 연 나누기는
+    // 나중에 '재구성'으로 채운다 — 레이아웃은 장식이고, 등록을 막을 이유가 없다.
     const geminiKey = process.env.GEMINI_API_KEY;
-    if (geminiKey && !noLyrics && lyricBody && !/^\[[^\]]+\]\s*$/m.test(lyricBody)) {
+    const skipAi = body.skipAi === true || body.skipAi === "true";
+    if (geminiKey && !skipAi && !noLyrics && lyricBody && !/^\[[^\]]+\]\s*$/m.test(lyricBody)) {
       try {
         const restanza = await restanzaBody({ title, artist, bodyText: lyricBody, key: geminiKey });
         if (restanza) lyricBody = restanza;

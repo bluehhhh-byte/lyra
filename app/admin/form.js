@@ -249,7 +249,7 @@ export default function AdminForm() {
     await autotag(song, lyrics);
   });
 
-  const save = run("save", async () => {
+  const saveWith = ({ skipAi = false } = {}) => run(skipAi ? "saveNoAi" : "save", async () => {
     if (appearance.workTitle.trim() && (!appearance.workType || !appearance.role)) {
       throw new Error("작품 정보를 저장하려면 작품 종류와 사용 방식을 선택해 주세요");
     }
@@ -288,6 +288,12 @@ export default function AdminForm() {
     setSavedSlug(slug);
     if (appearanceError) setError(`곡은 저장됐지만 작품 정보는 저장하지 못했습니다: ${appearanceError}`);
   });
+
+  const save = saveWith();
+  // AI 예산이 소진된 날에도 등록은 막히지 않아야 한다. 저장이 Gemini를 부르는
+  // 곳은 연 나누기 하나뿐이라 그것만 건너뛴다 — 나머지 칸은 이미 손으로 채운
+  // 값이고, 빈 칸은 needs.js가 대기열로 잡아 준다.
+  const saveWithoutAi = saveWith({ skipAi: true });
 
   const searchAppearance = run("appearance", async () => {
     setAppearanceSearchState("searching");
@@ -612,9 +618,21 @@ export default function AdminForm() {
               </p>
             )}
           </div>
-          <button className={btn + " mt-3"} disabled={busy} onClick={save}>
-            {busy === "save" ? "저장 중…" : "저장"}
-          </button>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            <button className={btn} disabled={busy} onClick={save}>
+              {busy === "save" ? "저장 중…" : "저장"}
+            </button>
+            {/* AI 한도가 소진된 날의 탈출구. 등록 자체를 막지 않는 것이 목적이라
+                눈에 띄되 주 버튼은 아니다 — 평소에는 위쪽 저장을 쓴다. */}
+            <button
+              className=" border border-line px-4 py-2 text-sm text-muted transition hover:border-accent hover:text-accent disabled:opacity-40"
+              disabled={busy}
+              onClick={saveWithoutAi}
+              title="Gemini를 부르지 않고 지금 값 그대로 저장합니다"
+            >
+              {busy === "saveNoAi" ? "저장 중…" : "AI 보류로 저장"}
+            </button>
+          </div>
           {/* 충돌은 상태(warn), 벗어나는 길은 행동(accent) — 색의 역할 분리 */}
           {duplicateMatch && (
             <div className="mt-3 border border-warn/60 bg-surface px-3 py-2 text-sm" role="alert">
