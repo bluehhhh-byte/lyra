@@ -86,6 +86,7 @@ Lyra 런타임은 익명 GitHub 접근에 의존하지 않는다 — 사이트�
 - **환경변수 BOM**: Vercel에 붙여넣은 값에 U+FEFF가 딸려와 `LYRA_CONTENT_STORE`와 `DATABASE_URL`이 이틀간 조용히 죽어 있었다. 코드가 이제 BOM·공백·따옴표를 다듬지만(`lib/content-db.js`의 `clean`), 새 환경변수를 추가하면 같은 함정을 의심하라.
 - **unstable_cache 2MB 한도**: 초과 시 던지지 않고 조용히 저장을 건너뛴다 — 캐시가 도는 것처럼 보이지만 매 요청 DB를 읽는다. 곡 전량은 gzip으로 넣는다(`packRows`). 압축본이 한도 90%를 넘으면 경고 로그가 뜬다 — 뜨면 분할을 검토하라.
 - **unstable_cache는 전역이다 — 인스턴스별이 아니다**: Vercel Data Cache라 TTL을 짧게 잡으면 전송량이 그대로 곱해진다. 2026-08-22에 시한 5분 때문에 곡+영화 전량 2.3MB를 하루 288번 다시 읽어(월 20GB) Neon 무료 전송 한도 5GB를 태웠다. 모든 DB 읽기가 HTTP 402를 냈고, 사이트는 캐시로 버텼지만 **빌드가 sitemap을 만들다 죽어 배포가 막혔고 관리자 페이지도 열리지 않았다**. 지금은 6시간(`CACHE_TTL_SECONDS`)이라 월 0.6GB다. **시한을 다시 줄이지 마라** — 즉시 반영이 필요한 저장 경로는 원래 태그 무효화를 부르므로 시한과 무관하다. 시한은 무효화를 놓친 경로를 위한 그물일 뿐이다.
+- **진단·일괄 작업은 DB 전량 조회로 시작하지 마라**: 2026-09-12에 402가 재발했다. `songs/*.md` 백업은 DB와 같은 내용이고(`dump-content.mjs --check`가 대조한다) 파일 읽기는 전송량을 쓰지 않는다. 진단 스크립트의 기본 입력은 백업 파일이어야 하고, 백업에 아직 없는 최신 곡까지 봐야 할 때만 `--db`로 넘어간다(`scripts/audit-song-lang.mjs`, `scripts/audit-original-leak.mjs`가 그 꼴이다). **402 중에는 배포하지 마라** — 빌드가 sitemap에서 죽는다. 전송량은 Neon 콘솔 API로만 읽을 수 있고(`scripts/quota-watch.mjs`), 그러려면 `NEON_API_KEY`·`NEON_PROJECT_ID`가 있어야 한다. 지금 `.env.local`에는 없다.
 - **Gemini 모델 변덕**: 하루 안에 latest 503→200, 3.6-flash 200→무응답으로 뒤집혔다. 특정 버전을 기본으로 박지 마라. 별칭 + `GEMINI_MODEL_FALLBACKS`가 답이다.
 - **PowerShell Out-File**: 기본으로 BOM을 붙인다. 다른 도구가 읽을 파일은 `-Encoding utf8` 명시.
 - **sr-only를 `<table>`에 직접**: width:1px이 테이블에 안 먹혀 문서 폭이 늘어난다. div로 감싼다.
