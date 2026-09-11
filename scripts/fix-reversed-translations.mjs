@@ -189,7 +189,7 @@ if (DRAFT) {
 
     const out = `---\n${m[1]}\n---\n${src.join("\n")}`;
     // 원문은 한 글자도 바뀌지 않는다
-    const originals = (text) => parseLyrics(text.match(FM)[2]).flatMap((s) => s.lines).map((l) => l.en).join(" ");
+    const originals = (text) => parseLyrics(text.match(FM)[2]).flatMap((s) => s.lines).map((l) => l.en).join(" ");
     if (originals(out) !== originals(raw)) {
       console.log(`${row.slug}: 원문이 바뀌었다 — 이 곡을 버린다`);
       continue;
