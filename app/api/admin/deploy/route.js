@@ -60,7 +60,8 @@ const IN_FLIGHT = new Set(["QUEUED", "INITIALIZING", "BUILDING"]);
 // deploymentId(그리고 장부에 SHA가 있으면 커밋까지)가 일치할 때만 완료다.
 async function liveVersion(req) {
   try {
-    const res = await fetch(new URL("/api/version", req.url), { cache: "no-store" });
+    // 자기 자신을 부르는 요청이라도 매달리면 이 함수가 함께 붙들린다
+    const res = await fetch(new URL("/api/version", req.url), { cache: "no-store", signal: AbortSignal.timeout(8000) });
     return await res.json();
   } catch {
     return null;

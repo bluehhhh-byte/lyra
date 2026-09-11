@@ -1338,7 +1338,8 @@ ${next}`;
     const url = String(body.artwork || "").trim();
     if (!/^https:\/\/\S+$/.test(url)) return Response.json({ error: "https URL이 아닙니다" }, { status: 422 });
     try {
-      const res = await fetch(url, { method: "GET", headers: { Range: "bytes=0-2047" } });
+      // 남의 이미지 서버라 언제든 매달릴 수 있다
+      const res = await fetch(url, { method: "GET", headers: { Range: "bytes=0-2047" }, signal: AbortSignal.timeout(8000) });
       const type = res.headers.get("content-type") || "";
       if (!res.ok || !/^image\//.test(type))
         return Response.json({ error: `이미지가 아닙니다 (${res.status} ${type})` }, { status: 422 });
@@ -1516,7 +1517,7 @@ JSON 배열로만:
           const term = encodeURIComponent(`${r.title} ${r.artist}`);
           const lists = await Promise.all(
             ["US", "KR"].map((c) =>
-              fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=5&country=${c}`)
+              fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=5&country=${c}`, { signal: AbortSignal.timeout(8000) })
                 .then((x) => x.json())
                 .then((x) => x.results || [])
                 .catch(() => [])
