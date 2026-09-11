@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { clearSongDraft, readSongDraft, writeSongDraft } from "../../../../lib/admin/draft";
+import { clearSongDraft, pruneSongDrafts, readSongDraft, writeSongDraft } from "../../../../lib/admin/draft";
 import { hasUnsavedChanges, warnBeforeUnload } from "../../../../lib/admin/unsaved-warning";
 import { isSaveShortcut } from "../../../../lib/admin/save-shortcut";
 import { adminSessionExpiry } from "../../../../lib/auth-token";
@@ -39,6 +39,9 @@ export default function EditForm({ slug }) {
   const nextPath = `/admin/edit/${encodeURIComponent(slug)}`;
 
   useEffect(() => {
+    // 되살릴 화면이 없는 초안(그 곡을 지웠다든지)은 아무도 읽지 않아 영원히
+    // 남는다. 편집기를 열 때 한 번 훑어 묵은 것을 버린다.
+    pruneSongDrafts(window.localStorage);
     const draft = readSongDraft(window.localStorage, slug);
     api("load", { slug }, nextPath)
       .then((d) => {
@@ -90,7 +93,10 @@ export default function EditForm({ slug }) {
       setTranslationVariants(result.translationVariants || []);
       setStatus("저장됨 ✓");
     } catch (e) {
-      if (e.sessionExpired) writeSongDraft(window.localStorage, slug, raw);
+      // 세션 만료일 때만 초안을 남기고 있었다. 하지만 편집 내용이 날아가는 길은
+      // 그것만이 아니다 — Neon이 죽어 쓰기가 실패하거나(폴백에는 쓰기가 없다)
+      // 네트워크가 끊겨도 똑같이 잃는다. 실패는 전부 남긴다.
+      writeSongDraft(window.localStorage, slug, raw);
       setStatus("");
       setError({ message: e.message, loginUrl: e.loginUrl || "" });
     }

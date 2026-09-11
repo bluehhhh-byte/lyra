@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePlayer } from "../player";
 import AdminErrorMessage from "./error-message";
 import SongAppearanceEditor from "./song-appearance-editor";
 import SongAppearanceDraft, { emptyAppearanceDraft } from "./song-appearance-draft";
+import { NEW_SONG_SLUG, clearSongDraft, pruneSongDrafts, readSongDraft, writeSongDraft } from "../../lib/admin/draft";
 
 async function api(action, body, { timeoutMs = 0 } = {}) {
   const controller = timeoutMs ? new AbortController() : null;
@@ -91,6 +92,41 @@ export default function AdminForm() {
   const [appearanceSearchState, setAppearanceSearchState] = useState("idle");
   const [researchWarning, setResearchWarning] = useState("");
 
+  // 등록 폼에는 초안 보관이 없었다. 수정 폼(edit/[slug])에는 있는데, 정작 잃을
+  // 것이 가장 많은 쪽은 여기다 — 새 곡 하나는 가사·번역·태그·코멘트가 통째로
+  // 손으로 채워진 상태고, 저장이 실패하면 그게 전부 날아간다. Neon이 죽으면
+  // 쓰기에는 폴백이 없으므로 실제로 일어나는 일이다.
+  const [restored, setRestored] = useState(null); // {savedAt} — 복원 안내
+  const snapshot = () => JSON.stringify({
+    song, lang, lyrics, translated, tags, comment, commentBasis,
+    commentSources, keywords, emotion, listenWhen, titleKo, artistKo,
+    lyricsNone, instrumental, lyricsNote,
+  });
+  const restore = (raw) => {
+    const d = JSON.parse(raw);
+    setSong(d.song ?? null); setLang(d.lang ?? "en");
+    setLyrics(d.lyrics ?? ""); setTranslated(d.translated ?? "");
+    setTags(d.tags ?? ""); setComment(d.comment ?? "");
+    setCommentBasis(d.commentBasis ?? "manual"); setCommentSources(d.commentSources ?? []);
+    setKeywords(d.keywords ?? []); setEmotion(d.emotion ?? "");
+    setListenWhen(d.listenWhen ?? ""); setTitleKo(d.titleKo ?? ""); setArtistKo(d.artistKo ?? "");
+    setLyricsNone(Boolean(d.lyricsNone)); setInstrumental(Boolean(d.instrumental));
+    setLyricsNote(d.lyricsNote ?? "");
+  };
+
+  useEffect(() => {
+    pruneSongDrafts(window.localStorage);
+    const draft = readSongDraft(window.localStorage, NEW_SONG_SLUG);
+    if (draft?.raw) {
+      try {
+        restore(draft.raw);
+        setRestored({ savedAt: draft.savedAt });
+      } catch {
+        clearSongDraft(window.localStorage, NEW_SONG_SLUG);
+      }
+    }
+  }, []);
+
   const run = (label, fn) => async () => {
     setBusy(label);
     setError("");
@@ -98,6 +134,9 @@ export default function AdminForm() {
       await fn();
     } catch (e) {
       setError(e.message);
+      // 저장 실패만 보관한다 — 검색이나 번역이 실패한 것까지 초안으로 남기면
+      // 다음에 열 때마다 쓰다 만 폼이 되살아난다.
+      if (label === "save" || label === "saveNoAi") writeSongDraft(window.localStorage, NEW_SONG_SLUG, snapshot());
     } finally {
       setBusy("");
     }
@@ -285,6 +324,10 @@ export default function AdminForm() {
         appearanceError = reason.message;
       }
     }
+    // 저장이 끝났으면 보관분은 쓸모가 없다 — 남겨 두면 다음에 열 때 이미
+    // 등록한 곡이 되살아난다.
+    clearSongDraft(window.localStorage, NEW_SONG_SLUG);
+    setRestored(null);
     setSavedSlug(slug);
     if (appearanceError) setError(`곡은 저장됐지만 작품 정보는 저장하지 못했습니다: ${appearanceError}`);
   });
@@ -618,6 +661,20 @@ export default function AdminForm() {
               </p>
             )}
           </div>
+          {restored && (
+            <p className="mt-3 border border-warn/50 px-3 py-2 text-xs text-muted" role="status">
+              <span className="font-semibold text-warn">저장하지 못한 초안을 복원했습니다</span>
+              {restored.savedAt ? ` · ${new Date(restored.savedAt).toLocaleString("ko-KR")}` : ""}
+              {" — 내용을 확인하고 다시 저장하세요. "}
+              <button
+                type="button"
+                onClick={() => { clearSongDraft(window.localStorage, NEW_SONG_SLUG); setRestored(null); }}
+                className="text-accent underline"
+              >
+                초안 버리기
+              </button>
+            </p>
+          )}
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <button className={btn} disabled={busy} onClick={save}>
               {busy === "save" ? "저장 중…" : "저장"}

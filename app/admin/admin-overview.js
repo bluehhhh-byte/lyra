@@ -15,12 +15,10 @@ export default function AdminOverview({ overview }) {
   return (
     <section className="mb-8" aria-labelledby="admin-overview-title">
       <h2 id="admin-overview-title" className="sr-only">관리 현황</h2>
-      {overview.contentFallback && (
-        <div className="mb-3  border-2 border-danger bg-danger/10 px-4 py-3 text-sm" role="alert">
-          <p className="font-bold text-danger">DB 연결 실패 · 파일 백업으로 읽는 중</p>
-          <p className="mt-1 text-xs text-muted">표시된 콘텐츠가 최신이 아닐 수 있으며, 저장은 실패할 수 있습니다.</p>
-        </div>
-      )}
+      {/* 폴백 경고는 app/admin/layout.js의 배너가 맡는다. 여기에도 두면 /admin
+          에서만 두 번 뜨고, 게다가 이건 서버 렌더 시점의 한 번뿐이라 화면을
+          열어 둔 채 장애가 시작되면 끝까지 조용하다. 아래 StatusCard의
+          "콘텐츠 저장소" 칸은 그대로 둔다 — 그건 경고가 아니라 현황이다. */}
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
         <StatusCard label="곡" value={`${overview.songCount}곡`} />
         <StatusCard label="영화" value={`${overview.movieCount}편`} />
