@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write # 무결성 검사가 백업을 막았을 때 경보 이슈를 연다
 
 concurrency:
   group: database-backup
@@ -30,7 +31,24 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: node scripts/dump-content.mjs
+
+      # 커밋 *전에* 센다. 덤프가 빈 DB를 읽었거나 콘텐츠가 대량으로 사라진 뒤였다면
+      # 그 상태를 커밋하는 순간 멀쩡한 어제 백업이 덮인다 — 복구하려고 연 백업에도
+      # 아무것도 없는 상황이 그렇게 만들어진다. 멈추면 어제 것이 그대로 남는다.
+      - name: Verify the dump against the previous backup
+        id: verify
+        continue-on-error: true
+        run: |
+          set +e
+          node scripts/verify-backup.mjs > backup-report.md
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat backup-report.md
+      - name: Attach the integrity report
+        if: always()
+        run: cat backup-report.md >> "$GITHUB_STEP_SUMMARY"
+
       - name: Preserve one atomic snapshot commit as a dated tag
+        if: steps.verify.outputs.status == '0'
         env:
           BACKUP_DAY: ${{ github.run_started_at }}
         run: |
@@ -44,3 +62,24 @@ jobs:
           git commit -m "backup: Neon content $tag"
           git tag "$tag"
           git push origin "refs/tags/$tag"
+
+      # 검사가 막았으면 A1과 같은 방식으로 알린다 — 열린 이슈가 있으면 코멘트만.
+      - name: Open or update the alert issue
+        if: steps.verify.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: 백업 무결성 경보
+        run: |
+          BODY="$(cat backup-report.md)"
+          EXISTING="$(gh issue list --state open --search "$TITLE in:title" --json number,title \
+            --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1)"
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY"
+          fi
+      - name: Fail the run when the backup was withheld
+        if: steps.verify.outputs.status != '0'
+        run: |
+          echo "무결성 검사가 exit ${{ steps.verify.outputs.status }}로 끝나 백업을 커밋하지 않았습니다."
+          exit 1
