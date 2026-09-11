@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { wrap, wrapTight } from "../../../lib/carousel-wrap";
 import { cleanListenWhen } from "../../../lib/listen-when";
+import { emotionToWash } from "../../../lib/emotion-color";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
 import InstagramCaptionPreview from "../../caption-preview";
@@ -13,6 +14,11 @@ import {
   MAX_SELECTED_LINES,
   fitCarouselNoteLayout,
   waitForCarouselFonts,
+  carouselBodyBox,
+  carouselFooterLayout,
+  CAROUSEL_CTA_PRIMARY,
+  CAROUSEL_CTA_SECONDARY,
+  CAROUSEL_TRUNCATED_NOTE,
 } from "../../../lib/carousel";
 import { carouselArtworkSrc } from "../../../lib/artwork-source";
 import {
@@ -67,8 +73,11 @@ export function drawRoundedArt(ctx, image, x, y, size, radius = 18) {
   ctx.restore();
 }
 
-export function drawArtWash(ctx, art, scrim = 0.66) {
-  ctx.fillStyle = "#181410";
+export function drawArtWash(ctx, art, scrim = 0.66, emotion = "") {
+  // 아트가 없으면 이 바탕이 그대로 보인다. 감정색을 쓰면 "검정 사각형"이
+  // 아니라 그 곡의 계열로 읽힌다.
+  const wash = emotionToWash(emotion);
+  ctx.fillStyle = wash.base;
   ctx.fillRect(0, 0, W, H);
   if (art) {
     const tiny = document.createElement("canvas");
@@ -82,6 +91,14 @@ export function drawArtWash(ctx, art, scrim = 0.66) {
   }
   ctx.fillStyle = `rgba(0,0,0,${scrim})`;
   ctx.fillRect(0, 0, W, H);
+  // scrim 위에 얇게 한 겹. 잉크 대비를 해치지 않는 선(0.15)에서 계열만 드러낸다.
+  if (wash.tint) {
+    ctx.save();
+    ctx.globalAlpha = wash.alpha;
+    ctx.fillStyle = wash.tint;
+    ctx.fillRect(0, 0, W, H);
+    ctx.restore();
+  }
 }
 
 export function drawPageNumber(ctx, position, total) {
@@ -139,6 +156,111 @@ export function drawBilingualTitleLine(ctx, {
   ctx.fillText(suffix, x + offset, y);
 }
 
+// 저장·스크린샷으로 카드가 퍼지면 출처가 증발한다. 워드마크("Lyra.")는 이미
+// 있었지만 그건 이름이지 찾아갈 주소가 아니다 — 계정을 찾으려면 핸들이 필요하다.
+// 한 곳에서 정의해 세 렌더러가 같은 문자열을 쓴다.
+export const INSTAGRAM_HANDLE = "@lyra.cyno";
+// 표지 서명 크기. 자리를 재는 쪽과 그리는 쪽이 같은 값을 봐야 겹치지 않는다.
+const SIGNATURE_MARK_SIZE = 30;
+
+// 워드마크 + 핸들을 한 덩어리로 그린다. 요소를 새로 늘리지 않고 이미 있던
+// 서명에 주소를 붙이는 쪽이, 본문을 침범하지 않으면서 출처를 남기는 길이다.
+//   chip: 앨범아트 위에 얹힐 때(표지) 페이지 칩과 같은 반투명 배경을 깐다.
+// 서명이 실제로 차지하는 폭. 표지의 태그 줄이 이만큼을 비워 둬야 한다 —
+// 워드마크만 재면 핸들 폭(30px 기준 약 100px)만큼 글자가 서명 위로 올라탄다.
+export function measureSignature(ctx, markSize = 27) {
+  const gap = Math.round(markSize * 0.4);
+  ctx.save();
+  ctx.font = `600 ${markSize}px ${SERIF}`;
+  const markW = ctx.measureText("Lyra.").width;
+  ctx.font = `500 ${Math.round(markSize * 0.68)}px ${SANS}`;
+  const handleW = ctx.measureText(INSTAGRAM_HANDLE).width;
+  ctx.restore();
+  return { markW, handleW, gap, total: markW + gap + handleW };
+}
+
+export function drawSignature(ctx, { x, y, align = "left", chip = false, markSize = 27 } = {}) {
+  const handleSize = Math.round(markSize * 0.68);
+  const { markW, gap, total: totalW } = measureSignature(ctx, markSize);
+  ctx.save();
+  ctx.textAlign = "left";
+  const left = align === "right" ? x - totalW : x;
+
+  if (chip) {
+    const padX = 16;
+    const padY = 12;
+    ctx.fillStyle = "rgba(24,20,16,0.58)";
+    ctx.beginPath();
+    ctx.rect(left - padX, y - markSize - padY + 6, totalW + padX * 2, markSize + padY * 2, 24);
+    ctx.fill();
+  }
+  ctx.fillStyle = "rgba(246,241,228,0.7)";
+  ctx.font = `600 ${markSize}px ${SERIF}`;
+  ctx.fillText("Lyra.", left, y);
+  // 핸들은 워드마크보다 한 단 옅게 — 서명이지 제목이 아니다
+  ctx.fillStyle = "rgba(246,241,228,0.52)";
+  ctx.font = `500 ${handleSize}px ${SANS}`;
+  ctx.fillText(INSTAGRAM_HANDLE, left + markW + gap, y);
+  ctx.restore();
+}
+
+// 마지막 가사 장의 푸터. 다섯 장을 다 넘긴 사람에게만 보인다 — 그 사람이
+// 저장하거나 프로필로 갈 확률이 가장 높은데, 지금까지 아무 말도 걸지 않았다.
+// 위치는 서명·진행점 위로 고정이고, 본문 예산에서 carouselFooterReserve 만큼을
+// 미리 빼 두었으므로 여기서 가사를 밀어낼 일은 없다.
+export function drawLastSlideFooter(ctx, { truncated = false, align = "left" } = {}) {
+  const x = align === "right" ? W - PAD : align === "center" ? W / 2 : PAD;
+  const { dividerY, ctaY, ctaSubY, noteY } = carouselFooterLayout();
+  ctx.save();
+  ctx.textAlign = align;
+
+  if (truncated) {
+    // 발췌라는 사실을 푸터보다 먼저 밝힌다 — 완곡으로 읽히면 안 된다
+    ctx.fillStyle = "rgba(246,241,228,0.6)";
+    ctx.font = `italic 500 24px ${SANS}`;
+    ctx.fillText(CAROUSEL_TRUNCATED_NOTE, x, noteY);
+  }
+
+  // 구분선 — 본문과 권유를 가른다. 전체 폭이 아니라 짧게 그어 잘라 붙인 티를 없앤다.
+  ctx.strokeStyle = "rgba(246,241,228,0.22)";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  const lineStart = align === "right" ? x - 120 : align === "center" ? x - 60 : x;
+  ctx.moveTo(lineStart, dividerY);
+  ctx.lineTo(lineStart + 120, dividerY);
+  ctx.stroke();
+
+  ctx.fillStyle = INK;
+  ctx.font = `600 30px ${SANS}`;
+  ctx.fillText(CAROUSEL_CTA_PRIMARY, x, ctaY);
+  ctx.fillStyle = "rgba(246,241,228,0.62)";
+  ctx.font = `500 24px ${SANS}`;
+  ctx.fillText(CAROUSEL_CTA_SECONDARY, x, ctaSubY);
+  ctx.restore();
+}
+
+export const SWIPE_CUE = "→ 넘겨서 가사 보기";
+
+// 표지에만. 인스타그램은 캐러셀에 점 표시를 달아 주지만 첫 장에서 "넘기면
+// 뭐가 나오는지"는 말해 주지 않는다 — 가사가 나온다는 걸 알면 넘길 이유가 생긴다.
+// 표지는 페이지 칩도 진행점도 안 그리므로 우상단이 통째로 비어 있다. 앨범아트
+// 중앙을 가리지 않으면서 가장 먼저 눈에 걸리는 자리다.
+export function drawSwipeCue(ctx, { x = W - PAD, y = 104 } = {}) {
+  ctx.save();
+  ctx.font = `600 25px ${SANS}`;
+  const textW = ctx.measureText(SWIPE_CUE).width;
+  const padX = 22;
+  const boxW = textW + padX * 2;
+  ctx.fillStyle = "rgba(24,20,16,0.58)";
+  ctx.beginPath();
+  ctx.rect(x - boxW, y - 40, boxW, 58, 29);
+  ctx.fill();
+  ctx.textAlign = "right";
+  ctx.fillStyle = "rgba(246,241,228,0.88)";
+  ctx.fillText(SWIPE_CUE, x - padX, y);
+  ctx.restore();
+}
+
 export function drawProgress(ctx, position, total) {
   const gap = 18;
   const dot = 7;
@@ -163,13 +285,13 @@ export function loadImage(src) {
 
 export { wrap, wrapTight };
 
-async function drawCard({ song, lines, art, align = "left", position, total }) {
+async function drawCard({ song, lines, art, align = "left", position, total, isLast = false, truncated = false }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  drawArtWash(ctx, art);
+  drawArtWash(ctx, art, 0.66, song.emotion);
 
   if (art) drawRoundedArt(ctx, art, PAD, 68, 124);
   else {
@@ -218,8 +340,9 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
     return blocks;
   };
   let blocks = build();
-  const top = 250;
-  const budget = H - 360;
+  // 푸터 높이를 본문 예산에서 먼저 뺀다. 다 그린 뒤에 얹으면 21줄 만선 곡에서
+  // 푸터가 카드 밖으로 밀려난다.
+  const { top, height: budget } = carouselBodyBox({ isLast, truncated });
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   // 비율만으로는 수렴이 느려 매번 최소 1px은 반드시 줄이고, 바닥에 닿을 만큼
   // 횟수를 준다. 바닥값은 한 장에 일곱 쌍(21줄 ÷ 3장)이 전부 두 줄로 접힌 최악의
@@ -246,10 +369,8 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
     ctx.fillText(b.t, xText, y);
   }
 
-  ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(246,241,228,0.7)";
-  ctx.font = `600 27px ${SERIF}`;
-  ctx.fillText("Lyra.", PAD, H - 56);
+  if (isLast) drawLastSlideFooter(ctx, { truncated, align });
+  drawSignature(ctx, { x: PAD, y: H - 56 });
   drawProgress(ctx, position, total);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
@@ -396,14 +517,7 @@ async function drawCoverCard({ song, art }) {
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
   // (keywords는 곡의 소재, emotion은 감정 한 낱말). 워드마크 폭만큼은 비워 둔다.
   ctx.font = `500 ${TAG_SIZE}px ${SANS}`;
-  const markW = (() => {
-    ctx.save();
-    ctx.font = "600 30px Georgia, serif";
-    const w = ctx.measureText("Lyra.").width;
-    ctx.restore();
-    return w;
-  })();
-  const room = W - pad * 2 - markW - 32;
+  const room = W - pad * 2 - measureSignature(ctx, SIGNATURE_MARK_SIZE).total - 32;
   const words = [...(song.keywords || []), song.emotion].filter(Boolean);
   let tagLine = "";
   for (const w of words) {
@@ -415,10 +529,9 @@ async function drawCoverCard({ song, art }) {
     ctx.fillStyle = "rgba(246,241,228,0.6)";
     ctx.fillText(tagLine, pad, TAG_BASELINE);
   }
-  ctx.textAlign = "right";
-  ctx.fillStyle = ink;
-  ctx.font = "600 30px Georgia, serif";
-  ctx.fillText("Lyra.", W - pad, TAG_BASELINE);
+  drawSignature(ctx, { x: W - pad, y: TAG_BASELINE, align: "right", markSize: SIGNATURE_MARK_SIZE });
+  // 표지는 좌우 여백이 pad(96)다 — 기본 PAD(84)로 그리면 큐만 12px 밖으로 나간다
+  drawSwipeCue(ctx, { x: W - pad });
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
 }
@@ -531,6 +644,7 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
   ctx.fillStyle = INK_DIM;
   ctx.font = `500 ${artistSize}px ${SANS}`;
   ctx.fillText(fitText(ctx, artistLine, maxW), PAD, H - 106);
+  drawSignature(ctx, { x: PAD, y: H - 56 });
   drawProgress(ctx, position, total);
 
   return new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
@@ -575,8 +689,15 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
     [allLines, sel]
   );
   const carousel = useMemo(
-    () => buildCarousel({ selected: selectedLines, note: song.comment || "", appearance: song.appearance || "" }),
-    [selectedLines, song.comment, song.appearance]
+    () => buildCarousel({
+      selected: selectedLines,
+      note: song.comment || "",
+      appearance: song.appearance || "",
+      // 고른 줄이 곡 전체보다 적으면 마지막 장이 "이하 생략"을 밝힌다.
+      // 빈 줄·섹션 라벨은 가사가 아니므로 세지 않는다.
+      totalLines: allLines.filter((line) => String(line?.en || "").trim()).length,
+    }),
+    [selectedLines, allLines, song.comment, song.appearance]
   );
 
   // 다섯 장을 한꺼번에 그린다. 가사 장은 전부 같은 drawCard를 지나므로
@@ -598,7 +719,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
             ? await drawCoverCard({ song, art })
             : slide.role === "about"
               ? await drawAboutCard({ song, note: slide.note, appearance: slide.appearance, art, ...page })
-              : await drawCard({ song, lines: slide.lines, art, align, ...page });
+              : await drawCard({ song, lines: slide.lines, art, align, isLast: slide.isLast, truncated: slide.truncated, ...page });
         if (!alive) return;
         if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
       }
@@ -751,7 +872,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
           </button>
           </div>
 
-          <Caption song={song} />
+          <Caption song={song} hashtagSets={hashtagSets} />
           </section>
         </div>
       </div>
@@ -762,7 +883,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
 
 // Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
 // 타임스탬프를 다시 만든다.
-function Caption({ song }) {
+function Caption({ song, hashtagSets = [] }) {
   const make = () => buildCaption(song, new Date(), [], { sets: hashtagSets });
   const [text, setText] = useState(make);
   const [copied, setCopied] = useState(false);
