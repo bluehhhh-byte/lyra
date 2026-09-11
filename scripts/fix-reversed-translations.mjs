@@ -23,6 +23,7 @@ import path from "node:path";
 import { FM, fmValue } from "../lib/admin/frontmatter.js";
 import { parseLyrics } from "../lib/songs.js";
 import { effectiveLang, wrongDirectionLines } from "../lib/admin/needs.js";
+import { replaceTranslations } from "../lib/admin/song-meta.js";
 import { geminiText } from "../lib/admin/gemini.js";
 
 dotenv.config({ path: ".env.local", quiet: true });
@@ -162,32 +163,13 @@ if (DRAFT) {
     const raw = String(row.raw).replace(/\r\n/g, "\n");
     const m = raw.match(FM);
     if (!m) continue;
-    const src = m[2].split("\n");
-    let changed = 0;
-
-    // 같은 원문이 여러 번 나오면(후렴) 전부 바꾼다. 첫 줄만 찾으면 두 번째부터는
-    // 이미 바뀐 자리를 다시 보게 되어 was가 어긋나고 조용히 건너뛴다 —
-    // 검증에서 13줄 중 5줄이 그렇게 빠졌다. 같은 원문에는 같은 번역이라는
-    // docs/TRANSLATION.md §3 규칙과도 이쪽이 맞다.
-    const byOriginal = new Map();
-    for (const item of job.lines) if (!byOriginal.has(item.en.trim())) byOriginal.set(item.en.trim(), item);
-
-    for (const [original, item] of byOriginal) {
-      let hit = 0;
-      for (let i = 0; i < src.length; i++) {
-        if (src[i].trim() !== original) continue;
-        const below = src[i + 1] || "";
-        if (!below.startsWith(">")) continue;
-        if (below.replace(/^>\s*/, "").trim() !== String(item.was).trim()) continue;
-        src[i + 1] = `> ${item.now}`;
-        hit++;
-      }
-      if (hit) changed += hit;
-      else skipped++;
-    }
+    // 치환은 lib/admin/song-meta.js의 replaceTranslations가 한다 — 후렴 반복까지
+    // 포함해 테스트가 걸려 있다(lib/retranslate.test.mjs).
+    const { body: nextBody, changed, missed } = replaceTranslations(m[2], job.lines);
+    skipped += missed.length;
     if (!changed) continue;
 
-    const out = `---\n${m[1]}\n---\n${src.join("\n")}`;
+    const out = `---\n${m[1]}\n---\n${nextBody}`;
     // 원문은 한 글자도 바뀌지 않는다
     const originals = (text) => parseLyrics(text.match(FM)[2]).flatMap((s) => s.lines).map((l) => l.en).join(" ");
     if (originals(out) !== originals(raw)) {
