@@ -3,7 +3,16 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import AdminErrorMessage from "../error-message";
 import InstagramCaptionPreview from "../../caption-preview";
-import { CAROUSEL_THEME, carouselDownloadEntries, carouselSizeReport, formatCarouselBytes, waitForCarouselFonts } from "../../../lib/carousel";
+import {
+  CAROUSEL_THEME,
+  carouselDownloadEntries,
+  carouselSizeReport,
+  formatCarouselBytes,
+  waitForCarouselFonts,
+  MOVIE_CTA_PRIMARY,
+  MOVIE_CTA_SECONDARY,
+} from "../../../lib/carousel";
+import { drawLastSlideFooter, drawSignature, measureSignature } from "../../../lib/carousel-chrome";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords, MOVIE_CAROUSEL_FONT_FACES } from "../../../lib/movie-carousel";
 import {
@@ -126,15 +135,26 @@ function base(ctx, image, opacity = 0.82) {
   ctx.fillRect(0, 0, W, H);
 }
 
+// 워드마크만으로는 이 카드가 어디서 왔는지 알아도 찾아갈 수가 없다.
+// 가사 카드와 같은 서명을 쓰되 워드마크만 Cyno.다 — 계정은 하나다.
+const MARK = "Cyno.";
+const MARK_SIZE = 34;
+
 function header(ctx, label, position) {
+  drawSignature(ctx, { x: PAD, y: 98, mark: MARK, markSize: MARK_SIZE });
   ctx.textAlign = "left";
-  ctx.fillStyle = INK;
-  ctx.font = `600 34px ${SERIF}`;
-  ctx.fillText("Cyno.", PAD, 98);
   ctx.fillStyle = ACCENT;
   ctx.font = `700 23px ${SANS}`;
   ctx.fillText(label.toUpperCase(), PAD, 142);
   drawPageNumber(ctx, position, TOTAL_SLIDES);
+}
+
+// 진행점과 마지막 장 푸터. 다섯 장을 다 넘긴 사람에게 아무 말도 걸지 않는 건
+// 가사 카드와 똑같은 낭비였다. 두 렌더러가 각자 끝맺지 않도록 여기로 모은다.
+function finish(ctx, position) {
+  if (position === TOTAL_SLIDES)
+    drawLastSlideFooter(ctx, { primary: MOVIE_CTA_PRIMARY, secondary: MOVIE_CTA_SECONDARY });
+  drawProgress(ctx, position, TOTAL_SLIDES);
 }
 
 function drawFittedParagraph(ctx, text, x, y, width, maxHeight, startSize = 46, minSize = 27, color = INK) {
@@ -203,14 +223,7 @@ async function drawSingle(slide, images, position, carousel) {
     // 하단 — 이 영화의 핵심 키워드 해시태그. Lyra 커버의 keywords·emotion과 같은 문법이다.
     // 워드마크 폭을 빼고 재서 한 줄에 들어갈 만큼만 싣는다 — 넘치면 거기서 끊는다.
     ctx.font = `500 27px ${SANS}`;
-    const markWidth = (() => {
-      ctx.save();
-      ctx.font = `600 34px ${SERIF}`;
-      const width = ctx.measureText("Cyno.").width;
-      ctx.restore();
-      return width;
-    })();
-    const room = W - PAD * 2 - markWidth - 32;
+    const room = W - PAD * 2 - measureSignature(ctx, { mark: MARK, markSize: MARK_SIZE }).total - 32;
     let tagLine = "";
     for (const word of coverKeywords(movie)) {
       const next = tagLine ? `${tagLine} #${word}` : `#${word}`;
@@ -221,10 +234,7 @@ async function drawSingle(slide, images, position, carousel) {
       ctx.fillStyle = "rgba(246,241,228,0.55)";
       ctx.fillText(tagLine, PAD, H - 74);
     }
-    ctx.textAlign = "right";
-    ctx.fillStyle = INK;
-    ctx.font = `600 34px ${SERIF}`;
-    ctx.fillText("Cyno.", W - PAD, H - 74);
+    drawSignature(ctx, { x: W - PAD, y: H - 74, align: "right", mark: MARK, markSize: MARK_SIZE });
     ctx.textAlign = "left";
   } else if (slide.role === "basic") {
     header(ctx, "FILM AT A GLANCE · 작품 개요", position);
@@ -310,10 +320,12 @@ async function drawSingle(slide, images, position, carousel) {
       ctx.fillStyle = DIM;
       ctx.font = `500 27px ${SANS}`;
       const note = wrap(ctx, `“${slide.note}”`, W - PAD * 2).slice(0, 2);
-      note.forEach((line, index) => ctx.fillText(line, PAD, 1120 + index * 38));
+      // 이 장이 마지막(5장)이라 푸터가 1120부터 시작한다. 인용은 마지막 상자가
+      // 끝나는 1035과 구분선 사이에 들어간다 — 예전 1120은 권유 문구와 겹쳤다.
+      note.forEach((line, index) => ctx.fillText(line, PAD, 1063 + index * 38));
     }
   }
-  drawProgress(ctx, position, TOTAL_SLIDES);
+  finish(ctx, position);
   return { blob: await toBlob(canvas), overflow };
 }
 
@@ -331,9 +343,7 @@ async function drawCurationCover(slide, images, carousel) {
   ctx.fillStyle = DIM;
   ctx.font = `500 28px ${SANS}`;
   ctx.fillText(`자동 선정 ${carousel.selectedCount}편${carousel.omittedCount ? ` · 외 ${carousel.omittedCount}편` : ""}`, PAD, 1080);
-  ctx.fillStyle = INK;
-  ctx.font = `600 34px ${SERIF}`;
-  ctx.fillText("Cyno.", PAD, H - 74);
+  drawSignature(ctx, { x: PAD, y: H - 74, mark: MARK, markSize: MARK_SIZE });
   drawProgress(ctx, 1, TOTAL_SLIDES);
   return toBlob(canvas);
 }
@@ -382,10 +392,12 @@ async function drawCurationNote(slide, images, position, carousel) {
   ctx.fillStyle = INK;
   ctx.font = `800 48px ${SANS}`;
   wrap(ctx, movie?.title || carousel.label, 560).slice(0, 2).forEach((line, index) => ctx.fillText(line, 450, 305 + index * 58));
+  // 선정 노트는 마지막 장이라 푸터(구분선 1120)가 붙는다. 상자를 400→330으로
+  // 줄여 1090에서 끝내고, 그 아래를 권유에 내준다.
   ctx.fillStyle = "rgba(24,20,16,0.82)";
-  ctx.beginPath(); ctx.rect(PAD, 760, W - PAD * 2, 400, 28); ctx.fill();
-  drawFittedParagraph(ctx, slide.comment, PAD + 48, 840, W - PAD * 2 - 96, 260, 46, 29);
-  drawProgress(ctx, position, TOTAL_SLIDES);
+  ctx.beginPath(); ctx.rect(PAD, 760, W - PAD * 2, 330, 28); ctx.fill();
+  drawFittedParagraph(ctx, slide.comment, PAD + 48, 840, W - PAD * 2 - 96, 200, 46, 29);
+  finish(ctx, position);
   return toBlob(canvas);
 }
 

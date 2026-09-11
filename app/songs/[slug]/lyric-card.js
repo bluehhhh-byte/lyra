@@ -15,11 +15,15 @@ import {
   fitCarouselNoteLayout,
   waitForCarouselFonts,
   carouselBodyBox,
-  carouselFooterLayout,
   CAROUSEL_CTA_PRIMARY,
   CAROUSEL_CTA_SECONDARY,
   CAROUSEL_TRUNCATED_NOTE,
 } from "../../../lib/carousel";
+import {
+  drawLastSlideFooter as drawFooter,
+  drawSignature,
+  measureSignature,
+} from "../../../lib/carousel-chrome";
 import { carouselArtworkSrc } from "../../../lib/artwork-source";
 import {
   carouselArtistLine,
@@ -156,87 +160,18 @@ export function drawBilingualTitleLine(ctx, {
   ctx.fillText(suffix, x + offset, y);
 }
 
-// 저장·스크린샷으로 카드가 퍼지면 출처가 증발한다. 워드마크("Lyra.")는 이미
-// 있었지만 그건 이름이지 찾아갈 주소가 아니다 — 계정을 찾으려면 핸들이 필요하다.
-// 한 곳에서 정의해 세 렌더러가 같은 문자열을 쓴다.
-export const INSTAGRAM_HANDLE = "@lyra.cyno";
 // 표지 서명 크기. 자리를 재는 쪽과 그리는 쪽이 같은 값을 봐야 겹치지 않는다.
 const SIGNATURE_MARK_SIZE = 30;
 
-// 워드마크 + 핸들을 한 덩어리로 그린다. 요소를 새로 늘리지 않고 이미 있던
-// 서명에 주소를 붙이는 쪽이, 본문을 침범하지 않으면서 출처를 남기는 길이다.
-//   chip: 앨범아트 위에 얹힐 때(표지) 페이지 칩과 같은 반투명 배경을 깐다.
-// 서명이 실제로 차지하는 폭. 표지의 태그 줄이 이만큼을 비워 둬야 한다 —
-// 워드마크만 재면 핸들 폭(30px 기준 약 100px)만큼 글자가 서명 위로 올라탄다.
-export function measureSignature(ctx, markSize = 27) {
-  const gap = Math.round(markSize * 0.4);
-  ctx.save();
-  ctx.font = `600 ${markSize}px ${SERIF}`;
-  const markW = ctx.measureText("Lyra.").width;
-  ctx.font = `500 ${Math.round(markSize * 0.68)}px ${SANS}`;
-  const handleW = ctx.measureText(INSTAGRAM_HANDLE).width;
-  ctx.restore();
-  return { markW, handleW, gap, total: markW + gap + handleW };
-}
-
-export function drawSignature(ctx, { x, y, align = "left", chip = false, markSize = 27 } = {}) {
-  const handleSize = Math.round(markSize * 0.68);
-  const { markW, gap, total: totalW } = measureSignature(ctx, markSize);
-  ctx.save();
-  ctx.textAlign = "left";
-  const left = align === "right" ? x - totalW : x;
-
-  if (chip) {
-    const padX = 16;
-    const padY = 12;
-    ctx.fillStyle = "rgba(24,20,16,0.58)";
-    ctx.beginPath();
-    ctx.rect(left - padX, y - markSize - padY + 6, totalW + padX * 2, markSize + padY * 2, 24);
-    ctx.fill();
-  }
-  ctx.fillStyle = "rgba(246,241,228,0.7)";
-  ctx.font = `600 ${markSize}px ${SERIF}`;
-  ctx.fillText("Lyra.", left, y);
-  // 핸들은 워드마크보다 한 단 옅게 — 서명이지 제목이 아니다
-  ctx.fillStyle = "rgba(246,241,228,0.52)";
-  ctx.font = `500 ${handleSize}px ${SANS}`;
-  ctx.fillText(INSTAGRAM_HANDLE, left + markW + gap, y);
-  ctx.restore();
-}
-
-// 마지막 가사 장의 푸터. 다섯 장을 다 넘긴 사람에게만 보인다 — 그 사람이
-// 저장하거나 프로필로 갈 확률이 가장 높은데, 지금까지 아무 말도 걸지 않았다.
-// 위치는 서명·진행점 위로 고정이고, 본문 예산에서 carouselFooterReserve 만큼을
-// 미리 빼 두었으므로 여기서 가사를 밀어낼 일은 없다.
-export function drawLastSlideFooter(ctx, { truncated = false, align = "left" } = {}) {
-  const x = align === "right" ? W - PAD : align === "center" ? W / 2 : PAD;
-  const { dividerY, ctaY, ctaSubY, noteY } = carouselFooterLayout();
-  ctx.save();
-  ctx.textAlign = align;
-
-  if (truncated) {
-    // 발췌라는 사실을 푸터보다 먼저 밝힌다 — 완곡으로 읽히면 안 된다
-    ctx.fillStyle = "rgba(246,241,228,0.6)";
-    ctx.font = `italic 500 24px ${SANS}`;
-    ctx.fillText(CAROUSEL_TRUNCATED_NOTE, x, noteY);
-  }
-
-  // 구분선 — 본문과 권유를 가른다. 전체 폭이 아니라 짧게 그어 잘라 붙인 티를 없앤다.
-  ctx.strokeStyle = "rgba(246,241,228,0.22)";
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  const lineStart = align === "right" ? x - 120 : align === "center" ? x - 60 : x;
-  ctx.moveTo(lineStart, dividerY);
-  ctx.lineTo(lineStart + 120, dividerY);
-  ctx.stroke();
-
-  ctx.fillStyle = INK;
-  ctx.font = `600 30px ${SANS}`;
-  ctx.fillText(CAROUSEL_CTA_PRIMARY, x, ctaY);
-  ctx.fillStyle = "rgba(246,241,228,0.62)";
-  ctx.font = `500 24px ${SANS}`;
-  ctx.fillText(CAROUSEL_CTA_SECONDARY, x, ctaSubY);
-  ctx.restore();
+// 마지막 가사 장의 푸터. 문구만 이 카드의 것이고, 그리는 일은 영화 카드와
+// 공유한다(lib/carousel-chrome.js).
+function drawLastSlideFooter(ctx, { truncated = false, align = "left" } = {}) {
+  drawFooter(ctx, {
+    primary: CAROUSEL_CTA_PRIMARY,
+    secondary: CAROUSEL_CTA_SECONDARY,
+    note: truncated ? CAROUSEL_TRUNCATED_NOTE : "",
+    align,
+  });
 }
 
 export const SWIPE_CUE = "→ 넘겨서 가사 보기";
@@ -517,7 +452,7 @@ async function drawCoverCard({ song, art }) {
   // 하단 — 이 곡의 키워드와 감정. 사이트가 이미 가진 어휘를 그대로 쓴다
   // (keywords는 곡의 소재, emotion은 감정 한 낱말). 워드마크 폭만큼은 비워 둔다.
   ctx.font = `500 ${TAG_SIZE}px ${SANS}`;
-  const room = W - pad * 2 - measureSignature(ctx, SIGNATURE_MARK_SIZE).total - 32;
+  const room = W - pad * 2 - measureSignature(ctx, { markSize: SIGNATURE_MARK_SIZE }).total - 32;
   const words = [...(song.keywords || []), song.emotion].filter(Boolean);
   let tagLine = "";
   for (const w of words) {
