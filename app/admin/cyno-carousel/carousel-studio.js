@@ -9,10 +9,8 @@ import {
   carouselSizeReport,
   formatCarouselBytes,
   waitForCarouselFonts,
-  MOVIE_CTA_PRIMARY,
-  MOVIE_CTA_SECONDARY,
 } from "../../../lib/carousel";
-import { drawLastSlideFooter, drawSignature, measureSignature } from "../../../lib/carousel-chrome";
+import { drawSignature, measureSignature } from "../../../lib/carousel-chrome";
 import { buildMovieCarouselCaption } from "../../../lib/caption";
 import { buildSingleMovieCarousel, buildSingleMovieDraft, coverKeywords, MOVIE_CAROUSEL_FONT_FACES } from "../../../lib/movie-carousel";
 import {
@@ -147,14 +145,6 @@ function header(ctx, label, position) {
   ctx.font = `700 23px ${SANS}`;
   ctx.fillText(label.toUpperCase(), PAD, 142);
   drawPageNumber(ctx, position, TOTAL_SLIDES);
-}
-
-// 진행점과 마지막 장 푸터. 다섯 장을 다 넘긴 사람에게 아무 말도 걸지 않는 건
-// 가사 카드와 똑같은 낭비였다. 두 렌더러가 각자 끝맺지 않도록 여기로 모은다.
-function finish(ctx, position) {
-  if (position === TOTAL_SLIDES)
-    drawLastSlideFooter(ctx, { primary: MOVIE_CTA_PRIMARY, secondary: MOVIE_CTA_SECONDARY });
-  drawProgress(ctx, position, TOTAL_SLIDES);
 }
 
 function drawFittedParagraph(ctx, text, x, y, width, maxHeight, startSize = 46, minSize = 27, color = INK) {
@@ -320,12 +310,10 @@ async function drawSingle(slide, images, position, carousel) {
       ctx.fillStyle = DIM;
       ctx.font = `500 27px ${SANS}`;
       const note = wrap(ctx, `“${slide.note}”`, W - PAD * 2).slice(0, 2);
-      // 이 장이 마지막(5장)이라 푸터가 1120부터 시작한다. 인용은 마지막 상자가
-      // 끝나는 1035과 구분선 사이에 들어간다 — 예전 1120은 권유 문구와 겹쳤다.
-      note.forEach((line, index) => ctx.fillText(line, PAD, 1063 + index * 38));
+      note.forEach((line, index) => ctx.fillText(line, PAD, 1120 + index * 38));
     }
   }
-  finish(ctx, position);
+  drawProgress(ctx, position, TOTAL_SLIDES);
   return { blob: await toBlob(canvas), overflow };
 }
 
@@ -392,12 +380,10 @@ async function drawCurationNote(slide, images, position, carousel) {
   ctx.fillStyle = INK;
   ctx.font = `800 48px ${SANS}`;
   wrap(ctx, movie?.title || carousel.label, 560).slice(0, 2).forEach((line, index) => ctx.fillText(line, 450, 305 + index * 58));
-  // 선정 노트는 마지막 장이라 푸터(구분선 1120)가 붙는다. 상자를 400→330으로
-  // 줄여 1090에서 끝내고, 그 아래를 권유에 내준다.
   ctx.fillStyle = "rgba(24,20,16,0.82)";
-  ctx.beginPath(); ctx.rect(PAD, 760, W - PAD * 2, 330, 28); ctx.fill();
-  drawFittedParagraph(ctx, slide.comment, PAD + 48, 840, W - PAD * 2 - 96, 200, 46, 29);
-  finish(ctx, position);
+  ctx.beginPath(); ctx.rect(PAD, 760, W - PAD * 2, 400, 28); ctx.fill();
+  drawFittedParagraph(ctx, slide.comment, PAD + 48, 840, W - PAD * 2 - 96, 260, 46, 29);
+  drawProgress(ctx, position, TOTAL_SLIDES);
   return toBlob(canvas);
 }
 

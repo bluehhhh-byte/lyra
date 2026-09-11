@@ -15,15 +15,9 @@ import {
   fitCarouselNoteLayout,
   waitForCarouselFonts,
   carouselBodyBox,
-  CAROUSEL_CTA_PRIMARY,
-  CAROUSEL_CTA_SECONDARY,
   CAROUSEL_TRUNCATED_NOTE,
 } from "../../../lib/carousel";
-import {
-  drawLastSlideFooter as drawFooter,
-  drawSignature,
-  measureSignature,
-} from "../../../lib/carousel-chrome";
+import { drawTruncatedNote, drawSignature, measureSignature } from "../../../lib/carousel-chrome";
 import { carouselArtworkSrc } from "../../../lib/artwork-source";
 import {
   carouselArtistLine,
@@ -163,16 +157,6 @@ export function drawBilingualTitleLine(ctx, {
 // 표지 서명 크기. 자리를 재는 쪽과 그리는 쪽이 같은 값을 봐야 겹치지 않는다.
 const SIGNATURE_MARK_SIZE = 30;
 
-// 마지막 가사 장의 푸터. 문구만 이 카드의 것이고, 그리는 일은 영화 카드와
-// 공유한다(lib/carousel-chrome.js).
-function drawLastSlideFooter(ctx, { truncated = false, align = "left" } = {}) {
-  drawFooter(ctx, {
-    primary: CAROUSEL_CTA_PRIMARY,
-    secondary: CAROUSEL_CTA_SECONDARY,
-    note: truncated ? CAROUSEL_TRUNCATED_NOTE : "",
-    align,
-  });
-}
 
 export const SWIPE_CUE = "→ 넘겨서 가사 보기";
 
@@ -304,7 +288,7 @@ async function drawCard({ song, lines, art, align = "left", position, total, isL
     ctx.fillText(b.t, xText, y);
   }
 
-  if (isLast) drawLastSlideFooter(ctx, { truncated, align });
+  if (isLast && truncated) drawTruncatedNote(ctx, { note: CAROUSEL_TRUNCATED_NOTE, align });
   drawSignature(ctx, { x: PAD, y: H - 56 });
   drawProgress(ctx, position, total);
 
