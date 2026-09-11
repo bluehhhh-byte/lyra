@@ -142,8 +142,14 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   const addTrans = async (slug) => {
     set(slug, { busy: "trans", err: "", msg: "", previousComment: "", previousListenWhen: "" });
     try {
-      await api("addTranslation", { slug });
-      set(slug, { msg: "번역 추가·저장 완료" });
+      const { reversed } = await api("addTranslation", { slug });
+      // 방향이 반대로 채워진 줄은 조용히 넘어가면 몇 달 뒤에야 눈에 띈다 —
+      // 한국어 줄에 한국어 "번역"이 붙어도 칸은 차 있기 때문이다.
+      set(slug, {
+        msg: reversed
+          ? `번역 추가·저장 완료 — ${reversed}줄이 반대 방향으로 채워졌습니다. 결손에서 확인하세요`
+          : "번역 추가·저장 완료",
+      });
     } catch (e) {
       set(slug, { err: e.message });
     } finally {

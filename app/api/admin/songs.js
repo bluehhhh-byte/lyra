@@ -14,6 +14,7 @@ import {
   needsReading, translateLyrics, normalizeInterleaved, restanzaBody,
   carryNotes, computeAuto, originalLyrics, lyricLineCount, isJaLine,
 } from "../../../lib/admin/song-meta";
+import { wrongDirectionLines } from "../../../lib/admin/needs";
 import { kstToday } from "../../../lib/kst";
 import { summarizeMusicTaste } from "../../../lib/music-taste-core";
 import { makeBasedOnCleaner } from "../../../lib/admin/based-on";
@@ -716,12 +717,13 @@ ${koText.slice(0, 2000)}`,
       lyrics: originalLyrics(bodyText),
     });
     if (!translated) return Response.json({ error: "번역 생성 실패" }, { status: 502 });
-    await writeSong(
-      body.slug,
-      `---\n${fm}\n---\n${translated.trim()}\n`,
-      `chore(song): add translation — ${body.slug}`
-    );
-    return Response.json({ ok: true });
+    const newBody = translated.trim();
+    await writeSong(body.slug, `---\n${fm}\n---\n${newBody}\n`, `chore(song): add translation — ${body.slug}`);
+    // 저장은 한다 — 대부분의 줄은 멀쩡하고, 버리면 그 줄까지 다시 만들어야 한다.
+    // 대신 방향이 반대인 줄을 세어 돌려준다. 사람이 바로 알아야 몇 달 뒤에
+    // "번역이 있는데 한국어네"를 발견하는 일이 안 생긴다.
+    const reversed = wrongDirectionLines(parseLyrics(newBody), lang);
+    return Response.json({ ok: true, reversed: reversed.length, reversedLines: reversed.slice(0, 5) });
   }
 
   // Stanza notes (`// …`). Two ways in: Gemini drafts them for the stanzas that
