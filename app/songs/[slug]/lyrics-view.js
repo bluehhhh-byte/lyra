@@ -37,7 +37,7 @@ const STORE_KEY = "lyra_read"; // { mode, size } — survives navigation between
 
 // allowNotes=false on the movie page: inline notes write to the songs store, so
 // a movie slug there would create a bogus song file — movies use `comment` only.
-export default function LyricsView({ stanzas, lang, song, allowNotes = true, missingTranslationCount = 0 }) {
+export default function LyricsView({ stanzas, lang, song, allowNotes = true, missingTranslationCount = 0, hashtagSets = [] }) {
   const [mode, setMode] = useState("both");
   // 터치에는 hover가 없다 — 탭한 줄 쌍을 잠깐 틴트해 눈이 원문↔번역을 따라가게
   // 한다 (브리프 §9-6). 스크롤 오발 방지: 8px 넘게 움직인 탭은 무시. 수백 줄에
@@ -375,7 +375,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
       </div>
 
       {card && (
-        <CardModal song={song} lines={card.lines} initial={card.initial} onClose={() => setCard(null)} />
+        <CardModal song={song} lines={card.lines} initial={card.initial} hashtagSets={hashtagSets} onClose={() => setCard(null)} />
       )}
     </div>
   );

@@ -560,7 +560,7 @@ async function downloadAll(blobs, song) {
 // `lines` is every line of the song (flattened; section set on stanza-opening
 // lines), so the picker can mix lines from anywhere. `initial` seeds the
 // selection with the stanza that was clicked.
-export default function CardModal({ song, lines: allLines, initial, onClose }) {
+export default function CardModal({ song, lines: allLines, initial, onClose, hashtagSets = [] }) {
   const [align, setAlign] = useState("left");
   // 실을 줄 — 누른 연에서 시작해 열다섯 줄이 기본이다(세 장 × 다섯 줄).
   // 체크박스로 자유롭게 바꾼다. 나누는 것은 기계가 한다.
@@ -763,7 +763,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
 // Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
 // 타임스탬프를 다시 만든다.
 function Caption({ song }) {
-  const make = () => buildCaption(song);
+  const make = () => buildCaption(song, new Date(), [], { sets: hashtagSets });
   const [text, setText] = useState(make);
   const [copied, setCopied] = useState(false);
 
