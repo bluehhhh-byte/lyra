@@ -21,16 +21,21 @@ function percent(value, limit) {
   return Math.max(0, Math.min(100, (Number(value || 0) / limit) * 100));
 }
 
+// 네 단계 모두 토큰으로 — 예전에는 팔레트를 직접 박고 dark: 변형을 달았는데,
+// 그 변형은 OS 설정을 따라가고 이 사이트의 테마는 data-theme이 정한다. OS 라이트 +
+// 사이트 다크(기본값)에서 어두운 배경에 라이트용 색이 얹혔다.
+// watch는 전용 토큰이 없다 — "아직 위험은 아니나 보고 있다"는 단계라 사이트의
+// 액센트를 쓴다. 면은 5~10% 워시까지만(상태색 규칙).
 const statusStyle = {
-  safe: { dot: "bg-emerald-500", text: "text-emerald-600 dark:text-emerald-300", panel: "border-emerald-500/25 bg-emerald-500/5" },
-  watch: { dot: "bg-sky-500", text: "text-sky-600 dark:text-sky-300", panel: "border-sky-500/25 bg-sky-500/5" },
-  warning: { dot: "bg-amber-500", text: "text-amber-600 dark:text-amber-300", panel: "border-amber-500/30 bg-amber-500/5" },
-  danger: { dot: "bg-red-500", text: "text-red-600 dark:text-red-300", panel: "border-red-500/30 bg-red-500/5" },
+  safe: { dot: "bg-ok", text: "text-ok", panel: "border-ok/25 bg-ok/5" },
+  watch: { dot: "bg-accent", text: "text-accent", panel: "border-accent/25 bg-accent/5" },
+  warning: { dot: "bg-warn", text: "text-warn", panel: "border-warn/30 bg-warn/5" },
+  danger: { dot: "bg-danger", text: "text-danger", panel: "border-danger/30 bg-danger/5" },
 };
 
 function Progress({ value, limit }) {
   const used = percent(value, limit);
-  const color = used >= 85 ? "bg-red-500" : used >= 70 ? "bg-amber-500" : "bg-emerald-500";
+  const color = used >= 85 ? "bg-danger" : used >= 70 ? "bg-warn" : "bg-ok";
   return (
     <div className="mt-4">
       <div className="h-2 overflow-hidden  bg-line/70">
@@ -59,7 +64,10 @@ function AiResearchCard({ value }) {
   const used = Number(budget.used || 0);
   const limit = Number(budget.limit || 0);
   const pending = Number(checkpoint?.pending || 0);
-  const tone = budget.exhausted ? "text-amber-600 dark:text-amber-300" : "text-emerald-600 dark:text-emerald-300";
+  // dark: 변형은 OS를 따라가는데 이 사이트의 테마는 data-theme이 정한다 — 토큰은
+  // 테마 블록에서 값이 갈리므로 변형 없이 두 테마 모두 맞는다.
+  const tone = budget.exhausted ? "text-warn" : "text-ok";
+  const canResume = !budget.exhausted && !budget.providerBlocked && pending > 0;
   const budgetMessage = budget.providerBlocked
     ? "AI 공급자 할당량이 막혀 오늘 조사를 중단했습니다. 자정 이후 재개합니다."
     : budget.exhausted
@@ -91,6 +99,30 @@ function AiResearchCard({ value }) {
       <p className="mt-3 break-all text-[11px] text-muted">
         {checkpoint?.updatedAt ? `체크포인트 ${new Date(checkpoint.updatedAt).toLocaleString("ko-KR")}` : "첫 조사 실행 후 체크포인트가 표시됩니다."}
       </p>
+      {/* 재개는 버튼이 아니라 명령이다. 전곡 조사는 수백 번의 Gemini 호출이라
+          서버리스 함수에서 돌리면 실행 시간·동시성·예산이 한꺼번에 터진다 —
+          감사 문서가 "대량 AI 작업은 로컬 스크립트로"를 원칙으로 둔 이유다.
+          그래서 화면은 "지금 이어도 되는가"와 "어디서부터"만 말해 준다. */}
+      {checkpoint && pending > 0 && (
+        <div className="mt-4 border-t border-line/70 pt-4 text-xs">
+          {canResume ? (
+            <>
+              <p className="text-muted">
+                남은 <strong className="text-ink">{integer.format(pending)}곡</strong>은 로컬에서 이어서 조사합니다. 이미 끝낸 곡은 체크포인트가 건너뜁니다.
+              </p>
+              <code className="mt-1.5 block break-all bg-bg px-2 py-1.5 text-[11px] text-ink">
+                pnpm appearances:resume
+              </code>
+            </>
+          ) : (
+            <p className="text-warn">
+              지금은 이어서 돌릴 수 없습니다 —{" "}
+              {budget.providerBlocked ? "AI 공급자가 호출을 막았습니다." : "오늘 몫을 다 썼습니다."}{" "}
+              {value.resetAt && `${new Date(value.resetAt).toLocaleString("ko-KR")} 이후 다시 가능합니다.`}
+            </p>
+          )}
+        </div>
+      )}
     </section>
   );
 }
@@ -217,8 +249,8 @@ export default function UsageDashboard() {
             {(data.cachePaths || []).map((item) => (
               <li key={item.path} className="flex items-center gap-3 py-2">
                 <code className="min-w-0 flex-1 truncate">{item.path}</code>
-                <span className="text-emerald-600 dark:text-emerald-300">HIT {integer.format(item.hit)}</span>
-                <span className="text-amber-600 dark:text-amber-300">MISS {integer.format(item.miss)}</span>
+                <span className="text-ok">HIT {integer.format(item.hit)}</span>
+                <span className="text-warn">MISS {integer.format(item.miss)}</span>
               </li>
             ))}
           </ol>
