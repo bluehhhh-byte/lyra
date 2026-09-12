@@ -3,7 +3,8 @@ import { revalidatePath } from "next/cache";
 import { getAllMoviesMeta } from "../../../lib/movies";
 import { searchMovies, movieDetail } from "../../../lib/tmdb";
 import { researchSongContext } from "../../../lib/admin/song-appearance-suggest";
-import { withReason } from "../../../lib/admin/gemini";
+import { withReason, geminiText } from "../../../lib/admin/gemini";
+import { suggestFromFreeSources } from "../../../lib/admin/appearance-search";
 import {
   appearanceIdentity,
   getSongAppearancesRuntime,
@@ -43,8 +44,31 @@ export async function handleAppearances(action, body) {
     // Quota/timeout/model failures used to become `suggestion: null`, which the
     // form described as "no appearance exists". Keep a genuine researched
     // negative distinct from a lookup that never completed.
-    if (!research)
-      return Response.json({ error: withReason("작품 정보 웹 검색을 완료하지 못했습니다") }, { status: 503 });
+    if (!research) {
+      // 그라운딩이 막혀도 기능 전체를 죽이지 않는다. 막힌 것은 검색이지 생성이
+      // 아니므로, 무료 소스(Apple Music·위키백과)로 후보를 찾아 일반 Gemini가
+      // 고르게 한다. 근거 URL은 그 소스의 응답에서 그대로 오므로 지어낼 수 없다.
+      //
+      // 이쪽이 그라운딩만큼 넓지는 않다 — 검증된 79건에 대고 재 보니 후보 안에
+      // 정답이 들어 있는 비율이 22%다(한국 OST 46%, 영어 18%, 일본 14%).
+      // 그래서 못 찾은 것을 "수록 정보 없음"이라고 말하지 않는다.
+      const free = await suggestFromFreeSources({
+        key,
+        title: body.title,
+        artist: body.artist,
+        lang: body.lang,
+        geminiText,
+      });
+      return Response.json({
+        suggestion: free.appearance,
+        appearanceState: free.state,
+        researchWarning: free.warning,
+        sources: (free.candidates || []).map((c) => ({ uri: c.uri, title: c.label })),
+        researchComment: "",
+        commentBasis: "",
+        commentSources: [],
+      });
+    }
     let suggestion = research.appearance;
     const researchMeta = {
       researchComment: research.comment,
