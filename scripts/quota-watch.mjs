@@ -9,7 +9,7 @@
 // exit: 0 정상 · 2 경보 · 1 수집 실패
 import dotenv from "dotenv";
 import { checkHealth } from "./healthcheck.mjs";
-import { evaluateQuota, renderQuotaReport, pickNeonProject } from "../lib/quota-watch.js";
+import { evaluateQuota, renderQuotaReport, pickNeonProject, scopedProjectIdFrom, projectMatchesDatabase } from "../lib/quota-watch.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -55,12 +55,23 @@ if (neonKey) {
     // 키 하나로 줄인다. 여럿이면 고르지 않고 목록을 보여 준다.
     let projectId = neonProject;
     if (!projectId) {
-      const list = await get("https://console.neon.tech/api/v2/projects", auth);
-      const picked = pickNeonProject(list?.projects);
-      if (!picked.id) throw new Error(picked.error);
-      projectId = picked.id;
+      // 프로젝트 한정 키는 목록을 거부하면서 본문에 자기 프로젝트 ID를 적어 준다.
+      const res = await fetch("https://console.neon.tech/api/v2/projects", { cache: "no-store", signal: AbortSignal.timeout(15_000), ...auth });
+      const body = await res.json().catch(() => ({}));
+      projectId = res.ok ? pickNeonProject(body?.projects).id : scopedProjectIdFrom(body?.message);
+      if (!projectId) throw new Error(res.ok ? pickNeonProject(body?.projects).error : `프로젝트를 특정하지 못했습니다: ${body?.message || `HTTP ${res.status}`}`);
     }
     const body = await get(`https://console.neon.tech/api/v2/projects/${encodeURIComponent(projectId)}`, auth);
+
+    // 읽은 프로젝트가 사이트가 실제로 쓰는 그 프로젝트인지 대조한다. 어긋나 있으면
+    // 숫자를 보고하지 않는다 — 남의 프로젝트 전송량 0GB를 "여유 있다"로 읽는 것이
+    // 못 읽는 것보다 나쁘다. 2026-09-12에 실제로 그 상태였다.
+    const endpoints = await get(`https://console.neon.tech/api/v2/projects/${encodeURIComponent(projectId)}/endpoints`, auth)
+      .then((r) => r?.endpoints || [])
+      .catch(() => []);
+    const match = projectMatchesDatabase({ endpoints, databaseUrl: clean(process.env.DATABASE_URL) });
+    if (!match.ok && !match.unknown) throw new Error(match.error);
+
     neon = { configured: true, projectId, dataTransferBytes: Number(body.project?.data_transfer_bytes || 0) };
   } catch (error) {
     // 못 읽은 것을 0으로 두지 않는다 — 0GB는 "안전하다"로 읽힌다
