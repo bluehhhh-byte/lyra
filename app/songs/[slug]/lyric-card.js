@@ -15,9 +15,8 @@ import {
   fitCarouselNoteLayout,
   waitForCarouselFonts,
   carouselBodyBox,
-  CAROUSEL_TRUNCATED_NOTE,
 } from "../../../lib/carousel";
-import { drawTruncatedNote, drawSignature, measureSignature } from "../../../lib/carousel-chrome";
+import { drawSignature, measureSignature } from "../../../lib/carousel-chrome";
 import { carouselArtworkSrc } from "../../../lib/artwork-source";
 import {
   carouselArtistLine,
@@ -204,7 +203,7 @@ export function loadImage(src) {
 
 export { wrap, wrapTight };
 
-async function drawCard({ song, lines, art, align = "left", position, total, isLast = false, truncated = false }) {
+async function drawCard({ song, lines, art, align = "left", position, total }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -261,7 +260,7 @@ async function drawCard({ song, lines, art, align = "left", position, total, isL
   let blocks = build();
   // 푸터 높이를 본문 예산에서 먼저 뺀다. 다 그린 뒤에 얹으면 21줄 만선 곡에서
   // 푸터가 카드 밖으로 밀려난다.
-  const { top, height: budget } = carouselBodyBox({ isLast, truncated });
+  const { top, height: budget } = carouselBodyBox();
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   // 비율만으로는 수렴이 느려 매번 최소 1px은 반드시 줄이고, 바닥에 닿을 만큼
   // 횟수를 준다. 바닥값은 한 장에 일곱 쌍(21줄 ÷ 3장)이 전부 두 줄로 접힌 최악의
@@ -288,7 +287,6 @@ async function drawCard({ song, lines, art, align = "left", position, total, isL
     ctx.fillText(b.t, xText, y);
   }
 
-  if (isLast && truncated) drawTruncatedNote(ctx, { note: CAROUSEL_TRUNCATED_NOTE, align });
   drawSignature(ctx, { x: PAD, y: H - 56 });
   drawProgress(ctx, position, total);
 
@@ -612,11 +610,8 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
       selected: selectedLines,
       note: song.comment || "",
       appearance: song.appearance || "",
-      // 고른 줄이 곡 전체보다 적으면 마지막 장이 "이하 생략"을 밝힌다.
-      // 빈 줄·섹션 라벨은 가사가 아니므로 세지 않는다.
-      totalLines: allLines.filter((line) => String(line?.en || "").trim()).length,
     }),
-    [selectedLines, allLines, song.comment, song.appearance]
+    [selectedLines, song.comment, song.appearance]
   );
 
   // 다섯 장을 한꺼번에 그린다. 가사 장은 전부 같은 drawCard를 지나므로
@@ -638,7 +633,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
             ? await drawCoverCard({ song, art })
             : slide.role === "about"
               ? await drawAboutCard({ song, note: slide.note, appearance: slide.appearance, art, ...page })
-              : await drawCard({ song, lines: slide.lines, art, align, isLast: slide.isLast, truncated: slide.truncated, ...page });
+              : await drawCard({ song, lines: slide.lines, art, align, ...page });
         if (!alive) return;
         if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
       }
