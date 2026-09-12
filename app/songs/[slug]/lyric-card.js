@@ -510,7 +510,10 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
   if (appearance) {
     // SONG NOTE의 원래 위치는 유지하고, 수록 정보만 본문의 우측 하단 캡션으로 둔다.
     const appearanceY = 990;
-    const appearanceMaxW = Math.floor(maxW * 0.72);
+    // 글자를 키우면 한 줄에 들어가는 글자가 줄고, 두 줄을 넘긴 나머지는 조용히
+    // 잘린다(slice(0, 2)). 아래는 비어 있으므로 폭을 같이 넓혀 같은 문장이
+    // 여전히 두 줄에 들어가게 한다.
+    const appearanceMaxW = Math.floor(maxW * 0.78);
     ctx.strokeStyle = "rgba(246,241,228,0.2)";
     ctx.lineWidth = 1;
     ctx.beginPath();
@@ -522,9 +525,9 @@ async function drawAboutCard({ song, note, appearance, art, position, total }) {
     ctx.font = `700 20px ${SANS}`;
     ctx.fillText("수록 정보", W - PAD, appearanceY);
     ctx.fillStyle = INK_DIM;
-    ctx.font = `500 23px ${SANS}`;
+    ctx.font = `500 26px ${SANS}`;
     wrap(ctx, appearance, appearanceMaxW).slice(0, 2).forEach((line, index) => {
-      ctx.fillText(line, W - PAD, appearanceY + 38 + index * 32);
+      ctx.fillText(line, W - PAD, appearanceY + 40 + index * 36);
     });
     ctx.textAlign = "left";
   }
@@ -591,7 +594,7 @@ async function downloadAll(blobs, song) {
 // `lines` is every line of the song (flattened; section set on stanza-opening
 // lines), so the picker can mix lines from anywhere. `initial` seeds the
 // selection with the stanza that was clicked.
-export default function CardModal({ song, lines: allLines, initial, onClose, hashtagSets = [] }) {
+export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [align, setAlign] = useState("left");
   // 실을 줄 — 누른 연에서 시작해 열다섯 줄이 기본이다(세 장 × 다섯 줄).
   // 체크박스로 자유롭게 바꾼다. 나누는 것은 기계가 한다.
@@ -786,7 +789,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
           </button>
           </div>
 
-          <Caption song={song} hashtagSets={hashtagSets} />
+          <Caption song={song} />
           </section>
         </div>
       </div>
@@ -797,8 +800,8 @@ export default function CardModal({ song, lines: allLines, initial, onClose, has
 
 // Instagram post caption — 이미지와 함께 붙여넣을 텍스트. 복사 시점의 시각으로
 // 타임스탬프를 다시 만든다.
-function Caption({ song, hashtagSets = [] }) {
-  const make = () => buildCaption(song, new Date(), [], { sets: hashtagSets });
+function Caption({ song }) {
+  const make = () => buildCaption(song, new Date());
   const [text, setText] = useState(make);
   const [copied, setCopied] = useState(false);
 

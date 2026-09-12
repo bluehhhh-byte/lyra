@@ -16,7 +16,6 @@ import SongBackButton from "./song-back-button";
 import YouTubeEmbed from "./youtube-embed";
 import { getMomentsForTarget } from "../../../lib/moments";
 import { readRuntimeData } from "../../../lib/store";
-import { hashtagSetsFor } from "../../../lib/caption";
 import MomentConnections from "../../moment-connections";
 import { crossMatches } from "../../../lib/cross-match";
 import {
@@ -145,7 +144,6 @@ export default async function SongPage({ params }) {
   // 역방향 연결(브리프 §9-2) — 기록에서 축으로 나가는 길. 이 곡을 인용한
   // 모티프가 있으면 그 어휘 묶음으로 건너간다. 없으면 줄 자체가 없다.
   const motifData = await readRuntimeData("motifs.json", null);
-  const hashtagData = await readRuntimeData("instagram-hashtags.json", {});
   for (const motif of motifData?.motifs || []) {
     if (motif.songs?.some((entry) => entry.slug === song.slug)) {
       position.push({
@@ -328,12 +326,7 @@ export default async function SongPage({ params }) {
           emotion: song.emotion || "",
           // 커버 카드의 "이런 순간에" 장면 한 줄
           listen_when: song.listen_when || "",
-          // 캡션의 해시태그 맥락층이 언어·장르로 태그를 고른다
-          lang: song.lang || "",
         }}
-        // 캡션의 대형 해시태그층. 곡과 무관한 고정 풀이라 서버에서 한 번 읽어
-        // 내려보낸다 — 클라이언트가 JSON을 따로 가져올 이유가 없다.
-        hashtagSets={hashtagSetsFor(hashtagData, "lyric")}
       />
 
       {/* when this entry went up — full datetime if recorded, else the date */}
