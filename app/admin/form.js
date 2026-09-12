@@ -239,6 +239,9 @@ export default function AdminForm() {
       setAppearanceSearchState(suggestion ? "found" : appearanceState === "needs_review" ? "needs_review" : "empty");
     } catch (reason) {
       setAppearanceSearchState("error");
+      // 실패 사유를 그대로 내려 준다 — 영구 차단인지 일시적 실패인지는
+      // 이 문구로만 구별되고, 그 구별이 "다시 눌러야 하나"를 가른다.
+      setResearchWarning(reason.message || "");
       setError(`작품 정보 자동 검색 실패: ${reason.message}`);
     }
     // Research failure does not block registration, but it is no longer lied

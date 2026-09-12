@@ -71,8 +71,15 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
       {searchState === "empty" && (
         <p className="mt-3 text-xs text-muted" role="status">확인할 수 있는 작품 수록 정보를 찾지 못해 빈칸으로 두었습니다.</p>
       )}
+      {/* 실패 원인이 일시적인지 영구적인지 가려서 말한다. 무료 티어에서는
+          그라운딩 검색이 아예 제공되지 않아 재시도가 영원히 실패하는데, 예전
+          문구는 무조건 "다시 시도해 주세요"라 사용자를 그 고리에 묶어 두었다. */}
       {searchState === "error" && (
-        <p className="mt-3 text-xs text-red-400" role="alert">웹 검색을 완료하지 못했습니다. 빈칸은 ‘수록 정보 없음’ 판정이 아니므로 다시 시도해 주세요.</p>
+        <p className="mt-3 text-xs text-red-400" role="alert">
+          {warning && /무료 티어/.test(warning)
+            ? warning
+            : "웹 검색을 완료하지 못했습니다. 빈칸은 ‘수록 정보 없음’ 판정이 아니므로 다시 시도해 주세요."}
+        </p>
       )}
       {searchState === "needs_review" && (
         <p className="mt-3 text-xs text-amber-300" role="alert">{warning || "출처가 충돌하거나 충분히 신뢰할 수 없어 자동 입력하지 않았습니다. 근거를 직접 검토해 주세요."}</p>
