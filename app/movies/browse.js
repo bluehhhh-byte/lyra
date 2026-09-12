@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import CoverImage from "../cover-image";
+import Stars from "../stars";
 
 // 필터를 검색·매체·정렬 필로 줄였다 — 국가·장르·별점·그룹 필터와 정렬
 // 드롭다운은 49편 규모에 과했다. 정렬은 별점순·랜덤 두 필만: 켜면 적용,

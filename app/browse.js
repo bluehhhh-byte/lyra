@@ -452,22 +452,26 @@ function Grid({ list, needle, lyrics }) {
           <h3 className="mt-3 text-sm font-semibold leading-snug group-hover:text-accent">
             {s.title}
           </h3>
-          <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted">
+          {/* 한 줄에 가두지 않는다. flex + truncate였을 때 긴 아티스트명은 말줄임으로
+              잘렸고, 잘린 자리 뒤에 있던 연도와 감정까지 같이 사라졌다 — 카드에서
+              읽어야 할 세 가지가 이름 길이 하나로 결정됐다. 이제 글이 흐르는 대로
+              두 줄이든 세 줄이든 늘어난다(카드 높이는 content-visibility가 auto다). */}
+          <p className="mt-0.5 text-xs leading-snug text-muted [overflow-wrap:anywhere]">
             {/* 감정은 아카이브 궤도·통계의 축인데 정작 목록에서는 훑을 수 없었다.
                 영화 카드가 별점으로 판단을 드러내는 자리에 곡은 아무것도 없었다.
                 점 색은 사이트가 이미 쓰는 밝기 언어(valenceColor)라 새로 배울 게 없다. */}
             {s.emotion && (
               <span
                 aria-hidden
-                className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full align-middle"
                 style={{ background: valenceColor(emotionValence(s.emotion)) }}
               />
             )}
-            <span className="truncate">
+            <span>
               {s.artist}
               {s.year ? ` · ${s.year}` : ""}
             </span>
-            {s.emotion && <span className="shrink-0">{s.emotion}</span>}
+            {s.emotion && <span className="ml-1.5">{s.emotion}</span>}
           </p>
           <Snippet song={s} needle={needle} lyrics={lyrics} />
         </Link>
