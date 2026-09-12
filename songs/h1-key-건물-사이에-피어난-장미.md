@@ -94,7 +94,7 @@ Yeah I'm only goin' up and Imma be alright
 괴롭히고 파고들어도
 > and burrowing in
 No 언제나 굴하지 않고
-> 아니, 언제나 굴하지 않고
+> No, always without yielding
 쓰러지지 않아 난
 > I won't fall
 어렵게 나왔잖아

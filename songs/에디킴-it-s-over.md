@@ -68,11 +68,11 @@ It's over It's over girl 이젠 끝났잖아
 > and try acting like nothing's wrong, but
 
 It's over 가슴아 잊어줘
-> 끝났어, 가슴아 잊어줘
+> It's over, my heart, please forget
 Forget all about that
 > 그 모든 걸 잊어버려
 아프지 않게 해줘 It's over
-> 아프지 않게 해줘, 끝났어
+> Don't let it hurt anymore, it's over
 
 It's over It's over girl 가슴아 잊어줘
 > 끝났어, 끝났어, 그녀도, 가슴아 잊어줘

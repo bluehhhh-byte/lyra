@@ -31,14 +31,14 @@ My love's so young
 (내 사랑은 너무 어려)
 > (My love's so young)
 I'm young 달콤한 나이
-> 난 어려, 달콤한 나이
+> I'm young, a sweet age
 (나는 젊어)
 > (I'm young)
 너만 바라볼 순 없어
 > I can't look only at you
 
 Cold I'm cold 깜깜한 밤
-> 차가워, 난 차가워, 깜깜한 밤
+> Cold, I'm cold in the pitch-black night
 (차가워 난 차가워)
 > (Cold, I'm cold)
 아름답긴 해도 따뜻하진 않아
@@ -59,16 +59,16 @@ Cold I'm cold 깜깜한 밤
 혼자 몰래 눈물 흘리게 돼도
 > Even if I end up crying alone in secret
 절대로 변하지 않아 you'll never know
-> 절대로 변하지 않아, 넌 결코 모를 거야
+> It will never change, you'll never know
 (넌 절대 모를거야)
 > (You'll never know)
 
 상처만 남고서 무너져 fallin
-> 상처만 남고서 무너져, 떨어져 내려
+> Left with only scars, crumbling and fallin
 떠올리고 싶지 않아 no no
-> 떠올리고 싶지 않아, 아니 아니
+> I don't want to think about it, no no
 나빠도 괜찮아 do it just for me
-> 나빠도 괜찮아, 오직 날 위해 해줘
+> It's okay if it's bad, do it just for me
 (나만을 위한 거니까)
 > (Because it's only for me)
 잘 들어둬 you gotta know that
@@ -79,7 +79,7 @@ Cold I'm cold 깜깜한 밤
 말로는 늘 모든 걸 전부 줄 것처럼 해
 > In words you always act like you'd give everything
 흔들리지 않아 I'm strong (난 강해)
-> 흔들리지 않아, 난 강해 (난 강해)
+> I won't waver, I'm strong (I'm strong)
 어설프게 다가와서 사랑인 척해
 > coming close clumsily, pretending it's love
 다시 나는 속지 않아
@@ -90,11 +90,11 @@ you know I'm so bad
 > (You know I'm really a bad person)
 
 혼자만 남겨져 눈물이 fallin
-> 혼자만 남겨져 눈물이 떨어져
+> Left all alone, tears are fallin
 기억하고 싶지 않아 no no
-> 기억하고 싶지 않아, 아니 아니
+> I don't want to remember it, no no
 아프기 싫잖아 do it just for me
-> 아프기 싫잖아, 오직 날 위해 해줘
+> I don't want to get hurt, do it just for me
 (나만을 위한 거니까)
 > (Because it's only for me)
 잘 들어둬 you gotta know that
@@ -107,13 +107,13 @@ My love's so young
 (내 사랑은 너무 어려)
 > (My love's so young)
 I'm young 달콤한 나이
-> 난 어려, 달콤한 나이
+> I'm young, a sweet age
 (나는 젊어)
 > (I'm young)
 너만 바라볼 순 없어
 > I can't look only at you
 Cold I'm cold 깜깜한 밤
-> 차가워, 난 차가워, 깜깜한 밤
+> Cold, I'm cold in the pitch-black night
 (차가워 난 차가워)
 > (Cold, I'm cold)
 아름답긴 해도 따뜻하진 않아

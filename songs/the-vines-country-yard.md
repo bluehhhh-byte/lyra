@@ -26,40 +26,40 @@ source_note:
 source_hash: 786f10fbee6f09b4778b1ba64d95342d94a66b27
 ---
 I’m tired of feeling sick and useless 나는 아프고 쓸모없다고 느끼는 게 지쳤어
-> 아프고 무력한 기분에 이제는 지쳐버렸어
+> I’m tired of feeling sick and useless
 Then speakin’ every other way 그리고 다른 방식으로 말하는 것도
-> 돌려서 이야기하는 것조차 시달려
+> Then speakin’ every other way
 Gluin’ my eyes together girl 눈을 감은 채로, 소녀여
 > 눈을 꼭 감아버리는 게, 그대여
 Might be the right escape 이게 올바른 도피일지도 몰라
-> 어쩌면 완벽한 탈출구일지도 몰라
+> Might be the right escape
 
 There’s nothin’ in the secret garden 비밀스러운 정원에는 아무것도 없어
-> 비밀의 정원엔 아무것도 남아있지 않아
+> There’s nothin’ in the secret garden
 Just images of blue and white 그저 파란색과 하얀색의 이미지들뿐
-> 그저 파랗고 하얀 잔상들만이 맴돌 뿐
+> Just images of blue and white
 Losin’ my mind forever girl 영원히 정신을 잃어가고 있어, 소녀여
-> 영원히 아득해지는 정신만이, 그대여
+> Losin’ my mind forever girl
 May be the only sign 이게 유일한 신호일지도 몰라
-> 내게 남은 유일한 신호일지도 몰라
+> May be the only sign
 
 Down in a country yard 시골 마당에서
 > 어느 시골 마당 구석에서
 I was taken by the shadows 그림자들이 나를 데려갔어
-> 어둠의 그림자에 휩싸이고 말았지
+> I was taken by the shadows
 Although we couldn’t see that far 비록 우리는 그렇게 멀리 볼 수 없었지만
-> 아득히 멀리까지 내다볼 수는 없었지만
+> Although we couldn’t see that far
 I was dreamin’ of tomorrow 나는 내일을 꿈꾸고 있었어
-> 나는 늘 내일을 꿈꾸고 있었어
+> I was dreamin’ of tomorrow
 
 I really don’t need a change 나는 정말 변화가 필요하지 않아
-> 나에게 어떤 변화도 정말 필요 없어
+> I really don’t need a change
 I really don’t need what’s mine 나는 정말 내 것이 필요하지 않아
-> 내 소유라고 하는 것조차 미련 없어
+> I really don’t need what’s mine
 Out in a country yard 시골 마당 밖에서
-> 저 한적한 시골 마당 밖으로 나가면
+> Out in a country yard
 It’ll be just fine 모든 게 괜찮을 거야
-> 모든 게 그저 괜찮아질 거야
+> It’ll be just fine
 
 Ah, Ah, Ah, Ah
 > 아, 아, 아, 아

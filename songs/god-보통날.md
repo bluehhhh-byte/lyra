@@ -61,7 +61,7 @@ source_body_hash: 6b80a6277d3c7e82183da9243a05be3756c3e95b
 지나치는 여자들 바라보기
 > watching the women who pass by
 TV에 나오는 스포츠 경기엔
-> 텔레비전에 나오는 스포츠 경기에는
+> In the sports games on TV
 목숨을 걸고 덤벼들면서 밥값 내기
 > fighting for our lives over who pays the bill
 시간이 가는 줄도 모른 채 떠들다 지쳐서

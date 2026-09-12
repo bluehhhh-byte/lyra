@@ -40,19 +40,19 @@ Shake it, shake it yo, shake it, shake it
 Do that thang on me, shake it 
 > I need you closer (I need you closer) 난 네가 더 가까이 있어야 해 (난 네가 더 가까이 있어야 해)
 Hate to be sober (hate to be sober) 정신이 맑은 건 싫어 (정신이 맑은 건 싫어)
-> 정신이 맑은 건 싫어 (정신이 맑은 건 싫어)
+> Hate to be sober (hate to be sober)
 I lost the controller (buriburi, buriburi) 난 컨트롤러를 잃었어 (부리부리, 부리부리)
-> 난 컨트롤러를 잃었어 (부리부리, 부리부리)
+> I lost the controller (buriburi, buriburi)
 You wanted this? (I wanted this, this) 넌 이걸 원했어? (난 이걸 원했어, 이걸)
-> 넌 이걸 원했어? (난 이걸 원했어, 이걸)
+> You wanted this? (I wanted this, this)
 Givin’ cold shoulder 냉담하게 대하네
-> 냉담하게 대하네
+> Givin' cold shoulder
 Yes, I am not over, you, you, you, you 그래, 난 아직 널 잊지 못했어, 너, 너, 너, 너
-> 그래, 난 아직 널 잊지 못했어, 너, 너, 너, 너
+> Yes, I am not over, you, you, you, you
 Still thinkin’ ’bout you 아직도 널 생각하고 있어
-> 아직도 널 생각하고 있어
+> Still thinkin' 'bout you
 I say, I say, booted up, booted up 난 말해, 난 말해, 부팅됐어, 부팅됐어
-> 난 말해, 난 말해, 부팅됐어, 부팅됐어
+> I say, I say, booted up, booted up
 
 유니크하다 못 해 괴상한 나의 두 볼기짝
 > My two butt cheeks, so unique they're downright bizarre

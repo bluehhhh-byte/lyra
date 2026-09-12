@@ -39,7 +39,7 @@ Don't want no riddle
 (헷갈리게 하지 말고)
 > (Don't make it confusing)
 말해줘 say it back (한번 더)
-> 말해줘, 다시 한번 말해줘 (한번 더)
+> Tell me, say it back (once more)
 
 Oh say it ditto
 > 오, 나도 그래, 라고 말해줘
@@ -61,7 +61,7 @@ So say it ditto
 어느새 여름 지나 가을
 > has passed summer into autumn already
 기다렸지 all this time (언제나)
-> 기다렸지, 이 모든 시간을 (언제나)
+> I've waited for you all this time (always)
 
 Do you want somebody
 > 누군가를 원하니
@@ -91,7 +91,7 @@ I got no time to lose
 난 보고 싶어
 > I miss you
 Ra-ta-ta-ta 울린 심장
-> 라-타-타-타, 울린 심장
+> Ra-ta-ta-ta, my beating heart
 
 I got nothing to lose
 > 잃을 게 없어
@@ -100,7 +100,7 @@ I got nothing to lose
 널 좋아한다고
 > that I like you
 Ra-ta-ta-ta 울린 심장
-> 라-타-타-타, 울린 심장
+> Ra-ta-ta-ta, my beating heart
 But I don't want to
 > 그런데 난 그러고 싶지 않아
 (내가 먼저 말하긴 싫지만)
@@ -117,7 +117,7 @@ Not just anybody
 처음 느낌 그대로 난
 > just as it felt the first time
 기다렸지 all this time (언제나)
-> 기다렸지, 이 모든 시간을 (언제나)
+> I've waited for you all this time (always)
 
 Stay in the middle
 > 가운데에 머물러줘
@@ -132,7 +132,7 @@ Don't want no riddle
 (헷갈리게 하지 말고)
 > (Don't make it confusing)
 말해줘 say it back (한번 더)
-> 말해줘, 다시 한번 말해줘 (한번 더)
+> Tell me, say it back (once more)
 
 Oh say it ditto
 > 오, 나도 그래, 라고 말해줘
@@ -158,7 +158,7 @@ Walk in this 미로
 바라던 대로
 > just as I hoped
 말해줘 Say it back (한번 더)
-> 말해줘, 다시 한번 말해줘 (한번 더)
+> Tell me, say it back (once more)
 
 Oh say it ditto
 > 오, 나도 그래, 라고 말해줘

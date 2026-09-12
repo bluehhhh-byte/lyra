@@ -10,7 +10,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/
 trackId: 1822545993
 duration: 168
 genre: K-Pop
-lang: en
+lang: ko
 tags: [한국, K-Pop, 2025]
 listen_when: 말없이 눈빛만 오가는 밤
 keywords: [긴장감, 갈증, 향기]

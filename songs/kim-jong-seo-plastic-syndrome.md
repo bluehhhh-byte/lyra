@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fc/
 trackId: 1531421617
 external_url: https://music.apple.com/us/album/plastic-syndrome/1531421616?i=1531421617&uo=4
 duration: 260
-lang: en
+lang: ko
 tags: [한국, Hard Rock, 1995]
 listen_when: 남과 비교하기를 그만두기로 한 날
 keywords: [꿈, 세상, 얼굴, 행복, 향기]

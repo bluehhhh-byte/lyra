@@ -63,7 +63,7 @@ I can't believe it
 쾌락을 좇던 악몽을 꿨어
 > I dreamed a nightmare of chasing pleasure
 그 꿈 그 꿈 Woah-!
-> 그 꿈, 그 꿈, 워-!
+> That dream, that dream Woah-!
 
 넌 내가 내가 필요해
 > You need me, need me
@@ -75,20 +75,20 @@ I can't believe it
 완전 미쳤어!
 > Completely insane!
 더 미쳤어 OH, GOD!
-> 더 미쳤어, 오, 신이시여!
+> Even more crazy OH, GOD!
 미쳤어 OH, GOD!
-> 미쳤어, 오, 신이시여!
+> Crazy OH, GOD!
 HEY-COME ON!
 > 헤이, 덤벼!
 눈이 돌고 미쳤어!!!
 > Eyes rolling, gone mad!!!
 
 갈기갈기 찢겨 상처많은 나의 FANS
-> 갈기갈기 찢겨 상처 많은 나의 팬들
+> My fans, torn to shreds and full of scars
 어머니처럼 날 걱정하던 내 Ex-Girlfriends
-> 어머니처럼 날 걱정하던 내 옛 연인들
+> My ex-girlfriends who worried about me like a mother
 Prada 구두에서 가벼워진 나의 Vans
-> 프라다 구두에서 가벼워진 나의 반스
+> My Vans, feeling lighter than Prada shoes
 I'm so sorry but I loved
 > 정말 미안해, 하지만 난 사랑했어
 20대 BIG-BANG "SAY LESS"
@@ -124,9 +124,9 @@ You Know What I'm Saying, BOY?
 > Parting with you tastes sweet, mm
 
 완전 미쳤어! HEY-COME ON!
-> 완전 미쳤어! 헤이, 덤벼!
+> Completely crazy! HEY-COME ON!
 더 미쳤어 OH,GOD! 미쳤어 OH,GOD!
-> 더 미쳤어, 오 신이시여! 미쳤어, 오 신이시여!
+> Even more crazy OH, GOD! Crazy OH, GOD!
 HEY-COME ON!
 > 헤이, 덤벼!
 눈이 돌고 미쳤어!!!

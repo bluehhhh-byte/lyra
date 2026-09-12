@@ -85,7 +85,7 @@ Please don't kill my high
 내가 나를 찾을 때
 > when I find myself
 그때가 되면 I'll be back
-> 그때가 되면 돌아올게
+> When that time comes I'll be back
 (다시 돌아올게)
 > (I'll be back)
 
@@ -111,7 +111,7 @@ I feel tipsy
 (삐삐삐삐, 난 약에 취한 것 같아)
 > (Beep beep beep beep, I think I'm high)
 폰 뒤집지 Yeah
-> 폰 뒤집지, 그래
+> Don't flip your phone Yeah
 No one with me
 > 곁엔 아무도 없어
 (여긴 아무도 없지)

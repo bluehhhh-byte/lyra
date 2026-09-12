@@ -35,9 +35,9 @@ source_body_hash: 06eacfc8b8d91145a1bab0fcfa314bce7485ad23
 뭔 파 몇 대손 뭐 그런 건 모름
 > which branch, which generation — don't know that stuff
 키 169.9cm 에 몸무게 59.4kg
-> 키 169.9센티미터에 몸무게 59.4킬로그램
+> Height 169.9 cm and weight 59.4 kg
 혈액형 O형 M.B.T.I는 INTP
-> 혈액형은 O형, 엠비티아이는 INTP
+> Blood type O, MBTI is INTP
 2005년 양덕초 졸업
 > 2005, graduated Yangdeok Elementary
 2008년 덕천중 졸업
@@ -58,17 +58,17 @@ source_body_hash: 06eacfc8b8d91145a1bab0fcfa314bce7485ad23
 2015년 와비사비룸
 > 2015, Wabi-Sabi Room
 첫 번째 EP 비밀꼴라쥬
-> 첫 번째 이피는 비밀꼴라쥬
+> First EP Secret Collage released
 두 번째 EP 물질보다 정신 발매
-> 두 번째 이피 <물질보다 정신> 발매
+> Second EP Mind Over Matter released
 2016년 정규 1집 장유석 발매
 > 2016, released the full album Jang Yu-seok
 2017년 와비사비룸
 > 2017, Wabi-Sabi Room
 세 번째 EP VIBE 발매
-> 세 번째 이피 <바이브> 발매
+> Third EP VIBE released
 2018년 정규 2집 KOKi7 발매
-> 2018년 정규 2집 <코키7> 발매
+> Released the second full-length album KOKi7 in 2018
 2020년 정규 3집 파도 발매
 > 2020, released the third full album Pado
 2022년 짱유 시바세키

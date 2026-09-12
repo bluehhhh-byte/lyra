@@ -12,7 +12,7 @@ external_url: https://music.apple.com/us/album/2-0/1885720384?i=1885720394&uo=4
 trackId: 1885720394
 duration: 170
 genre: K-Pop
-lang: en
+lang: ko
 tags: [K-Pop, 2026]
 listen_when: 새로 태어난 기분으로 나서는 아침
 keywords: [뜀틀, 불, 빚, 진실]
@@ -54,7 +54,7 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
-> 불을 붙여, 완전히 새것으로
+> Light the fire, brand new
 붙여 brand new
 > 붙여, 완전히 새것으로
 Yeah we on that brand new
@@ -65,11 +65,11 @@ You know how we do
 Ay ay ay
 > 에이 에이 에이
 그래, 기분 마치 brand new
-> 그래, 기분이 마치 새것 같아
+> Yeah, feeling just like brand new
 Spec 다른 step, 뛰지 않는 step two
-> 급이 다른 스텝, 뛰지 않는 두 번째 스텝
+> Different specs in this step, never skipping step two
 Two, two point oh 업데이트된 후
-> 둘, 2.0으로 업데이트된 뒤
+> Two, two point oh, after the update
 여기저기 또 한 번 일냈네
 10 out of 10, 10
 > 10점 만점에 10점, 10점
@@ -99,7 +99,7 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
-> 불을 붙여, 완전히 새것으로
+> Light the fire, brand new
 붙여 brand new
 > 붙여, 완전히 새것으로
 Yeah we on that brand new
@@ -150,7 +150,7 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
-> 불을 붙여, 완전히 새것으로
+> Light the fire, brand new
 붙여 brand new
 > 붙여, 완전히 새것으로
 Yeah we on that brand new
@@ -163,7 +163,7 @@ You know how I do do do do do do
 You know how I do do do do do
 > 내가 어떻게 하는지 알잖아
 불을 붙여 brand new
-> 불을 붙여, 완전히 새것으로
+> Light the fire, brand new
 붙여 brand new
 > 붙여, 완전히 새것으로
 Yeah we on that brand new

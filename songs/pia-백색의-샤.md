@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/77/90/77/779077f8-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/ce/da/e7/cedae7a9-6a5e-9eb9-f8e1-df812fb83a02/mzaf_8170083480325467975.plus.aac.p.m4a
 trackId: 1561361719
 duration: 257
-lang: en
+lang: ko
 tags: [한국, Alternative Rock, 2015]
 listen_when: 빌딩숲을 내달리고 싶은 밤
 keywords: [하늘, 빌딩숲, 자유, 사랑, 여행]

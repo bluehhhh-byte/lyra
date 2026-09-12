@@ -27,9 +27,9 @@ source_hash: f8dcd6583658fdfa1bc7e3a79c934d103aa15de4
 source_body_hash: 79509f3f2922cdfb931aef82564119a6d40a1b5c
 ---
 내 벌거벗은 모습은 TV 속에서
-> 내 벌거벗은 모습은 텔레비전 속에서
+> My naked body is inside the TV
 내 버림받은 목숨은 PD 손에서
-> 내 버림받은 목숨은 연출자 손에서
+> My abandoned life is in the hands of the PD
 여기 비 내리는 작은 세트장에 홀로 서
 > Standing alone on this small set where rain falls
 한숨을 내쉬었어 작은 꿈을 안고서
@@ -44,7 +44,7 @@ source_body_hash: 79509f3f2922cdfb931aef82564119a6d40a1b5c
 가뿐 숨을 내뿜은 새벽부터 눈을 뜬
 > breathing hard, awake since dawn
 I feel 어느새 정해져 버린 길
-> 느껴져, 어느새 정해져 버린 길
+> I feel this path was decided before I knew it
 기찻길처럼 길고 긴 끊임없는 난도질 속에
 > Inside an endless slashing, long as a railway
 삶이라는 법칙을 다시 한번 독해
@@ -92,7 +92,7 @@ I feel 어느새 정해져 버린 길
 반짝거리는 외딴섬에 등대 내 눈에 포착
 > A lighthouse on a glittering remote island catches my eye
 어금니 속 공포 또한 모두 Fake that
-> 어금니 속 공포 또한 모두 가짜야
+> Even the fear between my teeth is totally fake that
 끝까지 노를 젓자 세계 세상 속으로
 > Let's row to the end, out into the world
 
@@ -103,4 +103,4 @@ I feel 어느새 정해져 버린 길
 마음 한 구석에서 부른 노래
 > a song sung from one corner of the heart
 숙인 고개를 들어 내일을 보게 Showers
-> 숙인 고개를 들어 내일을 보게, 쏟아지는 빛
+> Lift my bowed head to see tomorrow, Showers

@@ -25,7 +25,7 @@ source_hash: c0f0778010389d5ec62f7f6c345527bbb0ff82ae
 source_body_hash: 18df7beb827550fcb7630dd416148369119f703e
 ---
 울지 말고 하늘을 봐 Little Baby 
-> 울지 말고 하늘을 봐, 아가야
+> Don't cry, look at the sky, Little Baby
 저 별빛이 환하게 노래를 하잖아 
 > Look how brightly that starlight sings
 두 눈에서 흐르는 아픔의 눈물은 
@@ -34,7 +34,7 @@ source_body_hash: 18df7beb827550fcb7630dd416148369119f703e
 > don't suit tonight
 
 내가 너를 안아줄게 Little Baby 
-> 내가 너를 안아줄게, 아가야
+> I'll hold you close, Little Baby
 두려움도 슬픔도 모두 잊어버려 
 > Forget all the fear and the sorrow
 세상의 모든 이가 등 돌려간대도 
@@ -54,7 +54,7 @@ source_body_hash: 18df7beb827550fcb7630dd416148369119f703e
 아! 사랑한다
 > Ah! I love you
 나의 사랑 Little Baby 
-> 나의 사랑, 아가야
+> My love, Little Baby
 아! 좋아한다
 > Ah! I like you
 오직 너만을 사랑해 

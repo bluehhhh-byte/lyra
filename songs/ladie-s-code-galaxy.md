@@ -29,7 +29,7 @@ source_body_hash: cfb2fc2d282386ce3a36ecf66b7ace7e909aadf4
 별이 눈뜰 때 나를 비추네
 > When the stars open their eyes they shine on me
 Oh hi you there 나를 알아줘
-> 오, 안녕 거기 너, 나를 알아줘
+> Oh hi you there, please recognize me
 언덕에 오를게 손 흔들고 미소 짓는
 > I'll climb the hill — waving and smiling
 날 제발 구해줘
@@ -64,7 +64,7 @@ To the galaxy (Mayday)
 끝없는 Emergency
 > 끝없는 비상 신호
 Here 어둠속에 빛을 내는 Universe
-> 여기 어둠속에 빛을 내는 우주
+> Here, a universe shining in the darkness
 낯선 날 부디 반겨줄래
 > will you please welcome this unfamiliar me
 
@@ -80,9 +80,9 @@ Jealousy
 From the gravity (Hurry)
 > 중력으로부터 (서둘러)
 두 손 잡아 Can you see
-> 두 손 잡아, 보이니
+> Hold my hands, can you see
 어둠 속에 빛을 내는 Universe
-> 어둠 속에 빛을 내는 우주
+> A universe shining in the darkness
 낯선 날 부디 반겨줄래
 > will you please welcome this unfamiliar me
 

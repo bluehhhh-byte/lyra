@@ -27,7 +27,7 @@ source_body_hash: 5da21f9a54cb62051539951083ee80022f9cb445
 진짜 삶에 던져진 기분 넌 어땠어? 
 > How did it feel to you, being thrown into real life?
 난 Bittersweet (달콤쌉쌀했어)
-> 난 달콤씁쓸했어 (달콤쌉쌀했어)
+> I was bittersweet
 
 설레던 난 달콤하기만을 빌었지
 > Excited, I prayed it would be nothing but sweet

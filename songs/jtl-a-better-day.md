@@ -27,9 +27,9 @@ source_hash: e768beca1bd8cc8fe16c6afce58b35d2c238eec9
 source_body_hash: d05cb0cf435a9b3a26c349a1d1308d5c350c01bc
 ---
 A better day 왜 날 떠나갔어
-> 더 나은 날, 왜 날 떠나갔어
+> A better day, why did you leave me
 Another way 아무런 말없이
-> 다른 길로, 아무런 말없이
+> Another way, without saying a word
 아름다웠던 우리들의 추억
 > Our beautiful memories
 이제 두 번 다시 돌아오지 않아
@@ -106,9 +106,9 @@ Another way 아무런 말없이
 > I'll forget you without regret, forget you
 
 A better day 왜 날 떠나갔어
-> 더 나은 날, 왜 날 떠나갔어
+> A better day, why did you leave me
 Another way 아무런 말없이
-> 다른 길로, 아무런 말없이
+> Another way, without saying a word
 아름다웠던 우리들의 추억
 > Our beautiful memories
 이제 두 번 다시 돌아오지 않아

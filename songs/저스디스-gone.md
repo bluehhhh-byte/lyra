@@ -47,7 +47,7 @@ source_body_hash: d1ccde87ff404b5d084688f45d957271e3f0a77f
 내가 사라져도 세상은 잘만 돌아가
 > The world turns just fine without me
 네 SNS에 사진도 잘만 올라가
-> 네 소셜 미디어에 사진도 잘만 올라가
+> You still upload pictures to your SNS just fine
 지금 내가 어떤지 아는 척 좀 마라
 > Don't act like you know how I am right now
 절대 아무도 몰라 날 설명할 수 없어

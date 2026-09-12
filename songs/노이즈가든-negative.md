@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/7b/70/0b7b70e5-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/3b/0e/0c3b0ed4-9a83-f5d4-a1d9-299f469399c3/mzaf_4111128555573059280.plus.aac.p.m4a
 trackId: 6782785474
 duration: 301
-lang: en
+lang: ko
 tags: [한국, Alternative Rock, 2026]
 listen_when: 대답이 정해진 대화 뒤의 어두운 방
 keywords: [질문, 대답, 의미, 후회]

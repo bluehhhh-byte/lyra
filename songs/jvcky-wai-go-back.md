@@ -25,15 +25,15 @@ source_hash: 0c0e70e2903dc3a17d3021836b38cd59fc56f341
 source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 ---
 외워 내 출신은 Seoul South Korea
-> 외워둬, 내 출신은 대한민국 서울
+> Memorize it, I'm from Seoul, South Korea
 여기 애들 가오 빼면 산송장
 > Take away the swagger and these kids are walking corpses
 정답대로 안 살았더니만 부자
 > I didn't live by the right answers and ended up rich
 됐으니까 어서 더 바쳐봐 Mulah
-> 됐으니까 어서 더 바쳐봐, 돈을
+> Enough of that, hurry up and offer up more mulah
 매일이 Vacay
-> 매일이 휴가야
+> Every day is a vacay
 부러워도 그만 부려 생떼
 > Even if you're jealous, quit throwing a fit
 난 나갈게 세계를 돌고
@@ -57,7 +57,7 @@ source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 앞에 놔줘 지폐
 > Lay the bills out in front of me
 등장만으로도 이미 Game Set
-> 등장만으로도 이미 승부 끝
+> Just by showing up, it's already game set
 다 뻔해 나도 같았다고 출발선은
 > It's all obvious — my starting line was the same
 죽었다 깨도 이해 못 해 너넨

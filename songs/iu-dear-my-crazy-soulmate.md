@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/
 trackId: 6808583619
 external_url: https://music.apple.com/us/album/dear-my-crazy-soulmate/6808583617?i=6808583619&uo=4
 duration: 156
-lang: en
+lang: ko
 tags: [한국, K-Pop, 2026]
 keywords: [소울메이트, 세상, 이상함, 이야기, 행복]
 emotion: 사랑
@@ -42,11 +42,11 @@ That's why we are the best soulmate
 여기선 흥미 없지 (Man, love)
 > We have no interest in this place (Man, love)
 다 잊어버려 (Work, hate)
-> 전부 잊어버려 (Work, hate)
+> Forget it all (Work, hate)
 같이 이상한 gramma
 > 함께 괴상한 문법으로
 둘이 되는 게 꿈이야
-> 우리 둘이 되는 게 나의 꿈이야
+> My dream is for the two of us to become that
 
 [Chorus]
 Dear my crazy soulmate, your story
@@ -68,21 +68,21 @@ Because we are the best soulmate
 
 [Verse 2]
 선물해 준 웃긴 티셔츠 입을게
-> 네가 선물해 준 웃긴 티셔츠를 입을게
+> I'll wear the funny T-shirt you gave me
 Blue moon이 그려진 목걸이도 함께
-> 푸른 달이 그려진 목걸이와 함께
+> And the necklace with the blue moon, too
 장난치는 내 모습 보며 웃을 때
-> 장난치는 내 모습을 보며 네가 웃을 때
+> When you laugh watching me goof around
 그때 널 제일 좋아해
-> 그때가 널 가장 좋아할 때야
+> That's when I like you the most
 같이 있으면 뭐든 (Perfect)
-> 함께 있으면 무엇이든 (완벽해)
+> When we're together, everything is (Perfect)
 뭐가 중요해 (Fake, real)
-> 무엇이 중요하겠어 (가짜든 진짜든)
+> What does it matter (Fake, real)
 같이 이상한 gramma
 > 함께 괴상한 문법으로
 둘이 되는 게 꿈이야
-> 우리 둘이 되는 게 나의 꿈이야
+> My dream is for the two of us to become that
 
 [Chorus]
 Dear my crazy soulmate, your story

@@ -93,7 +93,7 @@ her pussy got wet
 조금 이따 나 가니 잘 씻겨놔 빨리
 > I'm heading over in a bit, so get cleaned up, quick
 lets go 배춧잎
-> 가자, 배춧잎
+> Let's go, cabbage leaves
 cheese bread my dinero
 > 치즈, 빵, 내 돈
 어제 5천을 시계에 썼지만 달 이내로

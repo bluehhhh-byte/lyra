@@ -50,7 +50,7 @@ You are too close
 다음번에 만나면
 > When we meet next time
 못 본 척하고 지나쳐줘 Baby
-> 못 본 척하고 지나쳐줘, 그대
+> Pretend you didn't see me and pass me by, baby
 You just my happening
 > 넌 그저 내게 일어난 일일 뿐
 (넌 그저 나의 해프닝)
@@ -87,7 +87,7 @@ You are too good
 다음번에 만나면
 > When we meet next time
 못 본 척하고 지나쳐줘 Baby
-> 못 본 척하고 지나쳐줘, 그대
+> Pretend you didn't see me and pass me by, baby
 You just my happening
 > 넌 그저 내게 일어난 일일 뿐
 (넌 그저 나의 해프닝)

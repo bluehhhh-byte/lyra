@@ -51,11 +51,11 @@ source_body_hash: f85ca2fcf26ba169d18e2cfac626f00a33d3eecc
 > you embroider my heart
 
 너와 쏘아 올린 Fireworks
-> 너와 쏘아 올린 불꽃
+> Fireworks that we launched together
 쏟아지는 은하수 아래
 > Under the pouring Milky Way
 내 어두웠던 밤의 Finale
-> 내 어두웠던 밤의 피날레
+> The finale of my once-dark night
 나를 비춰줘 더 환하게
 > shine on me, brighter still
 이젠 그릴게
@@ -92,11 +92,11 @@ Let's light up the sky, yeah
 > 하늘을 밝히자, 그래
 
 너와 쏘아 올린 Fireworks
-> 너와 쏘아 올린 불꽃
+> Fireworks that we launched together
 쏟아지는 은하수 아래
 > Under the pouring Milky Way
 내 어두웠던 밤의 Finale
-> 내 어두웠던 밤의 피날레
+> The finale of my once-dark night
 나를 비춰줘 더 환하게
 > shine on me, brighter still
 이젠 그릴게

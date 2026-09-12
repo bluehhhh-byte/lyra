@@ -52,7 +52,7 @@ God is watchin’ over me
 (부정적인 뭣 같은, 난 시간이 없거든)
 > (Negative crap — I don't have the time)
 썸머소닉 to 코첼라, 글라스톤 베리가 다음
-> 썸머소닉에서 코첼라, 글라스톤 베리가 다음
+> Summer Sonic to Coachella, Glastonbury is next
 일상이 축제니까 감사하기도 바빠
 > My everyday is a festival, I'm too busy being grateful
 Middle finger to the Devil, stop fuckin’ up my vibe!
@@ -72,7 +72,7 @@ Middle finger to the Devil, stop fuckin’ up my vibe!
 > and kids learn by watching
 
 내 혼을 베어다가 아낌없이 준 내 아티스트리(Artistree)
-> 내 혼을 베어다 아낌없이 준 내 예술의 나무
+> My artistry, carved from my soul and given away without a shred of regret
 다 남을 깎아내릴 때 난 나를 깎아 나눴지
 > While everyone cut others down, I carved myself up and shared
 Cuz I am Groot mo’fucka
@@ -105,6 +105,6 @@ Baby never give a fuck about a thang
 (사절할게, 부디 내 신경 꺼주길)
 > (I'll pass — please mind your own business)
 내 걱정은 No Thanxxx
-> 내 걱정은, 노 땡큐
+> Save your worries for yourself, No Thanxxx
 신경 써줘서 고마워
 > Thanks for caring

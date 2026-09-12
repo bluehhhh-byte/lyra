@@ -27,7 +27,7 @@ source_hash: 8198a5dad6693429c9312f9f58ea0c3561291d54
 source_body_hash: 53de0dae9255bece803adf58ef798735f9cbc85e
 ---
 붉은 레인을 질주하는 Sprinter
-> 붉은 레인을 질주하는 단거리 주자
+> A sprinter dashing down the red lane
 거대한 익룡의 저 그림자처럼
 > Like the shadow of a giant pterosaur
 뜨거운 지면을 소리없이 스치는

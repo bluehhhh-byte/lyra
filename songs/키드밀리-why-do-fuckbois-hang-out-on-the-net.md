@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/3d/e5/d5/3de5d572-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/73/0f/5e/730f5eca-2643-8fa9-c8f2-654b077066e7/mzaf_2538223948840187322.plus.aac.p.m4a
 trackId: 1358618064
 duration: 147
-lang: en
+lang: ko
 tags: [한국, Hip-Hop, 2018]
 listen_when: 허세들을 비웃으며 내 걸 하는 밤
 keywords: [바보, 돈, 음원, 생각]
@@ -122,9 +122,9 @@ Damir Domar
 난 니 꿈에 살고 넌 그 dreamer
 > I live in your dreams and you're just that dreamer
 금 값 넘어 검사해, 내 baggage
-> 금값을 넘어서 검사해, 내 짐을
+> Checking my baggage, worth more than gold
 내 CD만드는건 범죄야
-> 내 CD를 만드는 건 범죄나 다름없어
+> Making my CD is a crime
 걘 돼, Pablo Escobar
 > 그는 될 수 있지, 파블로 에스코바르
 Kid corporate Espionage

@@ -29,11 +29,11 @@ source_body_hash: 51bbf5a1bd1607e99b2af2a90e651404f66939d0
 우린 무언가를 나누듯이 손바닥을 둘러
 > We put our palms together like we're sharing something
 뒷좌석에 탑승 VMC에 들려
-> 뒷좌석에 탑승 VMC에 들려
+> Get in the backseat, pull up to VMC
 들러리들에게 VISTY는 Nasty 내 스킬트리
-> 들러리들에게 비스티는 지독하지, 내 스킬 트리
+> To the sidekicks, VISTY is nasty, that's my skill tree
 Skill skill skill 작은 것들 위의 풍경
-> 스킬, 스킬, 스킬, 작은 것들 위의 풍경
+> Skill skill skill, the scenery above the little things
 
 손바닥을 쌓아 올려 페스티벌 전에
 > stacking palms up before the festival
@@ -46,24 +46,24 @@ Skill skill skill 작은 것들 위의 풍경
 미치게 해 다 비치게 해
 > Drive them crazy, make it all shine through
 물 말고 땀으로 우린 VISTY Gang
-> 물 말고 땀으로, 우린 비스티 갱
+> Not with water, but with sweat, we are VISTY Gang
 비슷한 애들 하나 없는 팀 빛을 내
 > A team with no one alike in it gives off light
 내 엉덩이 아래 래퍼들 전부 Kiss my ass
-> 내 엉덩이 아래 래퍼들 전부, 내 뒤꽁무니나 쫓아
+> All these rappers under my ass, you can kiss my ass
 
 순서가 바뀌지 악당출현 이제 Finished
-> 순서가 바뀌지, 악당 등장, 이제 끝났어
+> The order has flipped, the villains appear, now it's finished
 니들 공연 소등해라 이미 애들은 다 취침
 > Kill the lights on your show, the crowd's already asleep
 Want to get cheese 이 본능을 따라
-> 돈을 벌고 싶어, 이 본능을 따라
+> Want to get cheese, following this instinct
 지금도 작업 입을 벌려 가고 있으니
 > Even now the work is going, mouths open
 일일이 긴말할 필요 없이 We need 한 단어
-> 일일이 긴말할 필요 없이, 우린 한 단어면 돼
+> No need for a long explanation, we just need one word
 (불가항력 우리 삶은 VISTY)
-> (불가항력, 우리 삶은 비스티)
+> (Inevitable, our lives are VISTY)
 
 이빨 까는 행동 귀찮아
 > Running my mouth is a bother
@@ -75,17 +75,17 @@ Want to get cheese 이 본능을 따라
 > packed with nothing but critique, the same damn lines every time
 
 우리끼리 줘 받지 Tiki-Taka
-> 우리끼리 줘 받지 티키타카
+> We pass it back and forth among ourselves, Tiki-Taka
 끼지 마라 이건 Mic Tiki-Taka
-> 끼지 마라, 이건 마이크 티키타카
+> Don't butt in, this is Mic Tiki-Taka
 쳐 맞는 말이 너무 많아 잠깐
 > There's way too much that deserves a hit — hold on
 야 인마 내 신발의 밑창이나 닦지
 > Hey kid, why don't you wipe the soles of my shoes
 우리끼리 줘 받지 Tiki-Taka
-> 우리끼리 줘 받지 티키타카
+> We pass it back and forth among ourselves, Tiki-Taka
 끼지 마라 이건 Mic Tiki-Taka
-> 끼지 마라, 이건 마이크 티키타카
+> Don't butt in, this is Mic Tiki-Taka
 기립박수 안 쳐도 돼 넌 이미 서있잖아
 > No need for a standing ovation, you're already standing
 보채지 마라 줄게 까짓것 야 이건

@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b8/ae/aa/b8aeaa24-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/1b/c2/be/1bc2beaa-24aa-0026-9b54-e03f4d24079d/mzaf_7603145748166091174.plus.aac.p.m4a
 trackId: 1588874362
 duration: 234
-lang: en
+lang: ko
 tags: [한국, Hip-Hop, 2009]
 listen_when: 영혼의 지도를 다시 그리는 밤
 keywords: [영혼, 감옥, 사랑, 세상, 빛]

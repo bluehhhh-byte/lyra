@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/43/
 trackId: 1566413917
 external_url: https://music.apple.com/kr/album/city/1566413735?i=1566413917&uo=4
 duration: 181
-lang: ja
+lang: ko
 tags: [한국, Hip-Hop, 2016]
 keywords: [도시, 고민, 진실, 열정, 역사]
 emotion: 분노
@@ -116,7 +116,7 @@ With my homies
 그래 우리는팀 make it rain
 > Yeah, we're a team, make it rain, we break the wall
 너네는 못해 compete
-> 절대 우리와 경쟁조차 안 되지
+> You can't compete with us
 거리를 두지 병신
 > Keep your distance, you fools
 계속해서 직진
@@ -160,7 +160,7 @@ Groovy Room Groovy Room
 Then who run this rap game?
 > 그럼 누가 이 랩 게임을 지배하나?
 그룹이름 그룹이름
-> 그루비룸, 그루비룸 (그룹 이름 같지만)
+> Group name, group name
 We make it rain
 > 우린 비를 내려
 We rain on ya check out the forecast
@@ -190,7 +190,7 @@ With my homies
 그래 우리는 팀 make it rain
 > Yeah, we're a team, make it rain, standing tall
 너네는 못해 compete
-> 절대 우리와 경쟁조차 안 되지
+> You can't compete with us
 거리를 두지 병신
 > Keep your distance, you fools
 계속해서 직진

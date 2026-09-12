@@ -50,11 +50,11 @@ source_body_hash: 39c45cda45e7311dbd5d4ed704fe1e67e0f57e28
 깻잎 위에 상추
 > lettuce on top of perilla leaves
 암을 예방하는 내 FLOW는
-> 암을 예방하는 내 플로우는
+> My flow, which prevents cancer,
 화려한 제철의 봄나물
 > the splendor of spring greens in season
 기운 넘치는 내 RHYME은 탄수화물
-> 기운 넘치는 내 라임은 탄수화물
+> My energetic rhyme is like carbohydrates
 한 여름의 송진처럼 끈적이는 내 발음
 > My delivery sticky like midsummer pine resin
 두 팔 가득 솔방울이 한 아름
@@ -73,7 +73,7 @@ source_body_hash: 39c45cda45e7311dbd5d4ed704fe1e67e0f57e28
 오미자와 매실의 진한 엑기스
 > thick extract of omija and plum
 주는 풍미가 걸출한 MC
-> 주는 풍미가 걸출한 엠시
+> An MC who serves up exceptional flavor
 난 흔해 빠진 잡곡들 사이 백미
 > Among common mixed grains I'm the white rice
 농약을 치지 않은 레시피

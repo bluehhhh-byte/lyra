@@ -33,12 +33,12 @@ source_body_hash: d2a550cde9b7c9ddbba982229341c383cad80785
 닮았네 꽤 I'm a son of God 
 > 닮았네 꽤, 난 신의 아들이야
 난 조각가의 Master Piece 
-> 난 조각가의 걸작
+> I am a masterpiece crafted by the sculptor
 이 사실은 나뿐 아닌 너도 마찬가지
 > and this is true not only of me but of you
 
 I'm the One 나의 몸은 하나
-> 내가 바로 그 하나, 나의 몸은 하나
+> I am the One, and my body is one
 지음 받은 것엔 이유가 있네
 > There is a reason for what was created
 나뿐 아닌 모두 다 실수 없는 걸작 
@@ -49,7 +49,7 @@ I'm the One 나의 몸은 하나
 미움만이 채워진 녀석들은 
 > As for those filled with nothing but hate
 어디에 가나 Always 존재
-> 어디에 가나 언제나 존재해
+> Everywhere I go, I always exist
 그들 조차 축복해 
 > I bless even them
 이게 나를 만든 이의 뜻이야

@@ -31,14 +31,14 @@ source_body_hash: c2478482e4a70f2b40de10682452fedf979540dd
 등돌린 마지막 한마디도
 > even the last words you said with your back turned
 모질고 독하게 Good bye
-> 모질고 독하게, 잘 가
+> Cruel and harsh, Good bye
 
 화가 나서 난 또 이성을 잃어
 > It makes me angry and I lose my reason again
 그래 때려 쳐 오늘로 끝이라고
 > Fine, call it off, say today is the end
 I don’t know 할 만큼 했어 난
-> 모르겠어, 할 만큼 했어 난
+> I don’t know, I did as much as I could
 너 때문에 내 모든 게 무너지지만
 > Everything of mine collapses because of you, but
 

@@ -43,7 +43,7 @@ source_body_hash: 97f8f90c5dba5f81dc3fb31fe032bfb1d528ddb0
 필요하다면 날 쓰도록 해 뭐든지
 > If she needs it, let her use me for anything
 So doctor 도대체 이 병이 뭐죠?
-> 그래서 의사 선생님, 도대체 이 병이 뭐죠?
+> So doctor, what on earth is this disease?
 
 "어디가 아프죠?"
 > "Where does it hurt?"
@@ -57,7 +57,7 @@ So doctor 도대체 이 병이 뭐죠?
 자고 나면 눈물과 같이 눈을 떠요
 > and when I wake I open my eyes along with tears
 So doctor 이 병은 불치인가요
-> 그래서 의사 선생님, 이 병은 불치인가요
+> So doctor, is this illness incurable?
 그녀를 바라보는 것만이 제겐 끝인가요
 > Is just looking at her the end of it for me
 내가 혼자서 겪어야 하는 가슴앓이
@@ -83,7 +83,7 @@ I'm sorry doctor
 So I need a doctor
 > 그래서 난 의사가 필요해
 왜냐면 I'm LoveSick 너무나 아퍼
-> 왜냐면 난 상사병이거든, 너무나 아퍼
+> Because I'm lovesick and it hurts so much
 내 맘을 모르는 너도 너무 나뻐
 > and you, who don't know my heart, are so cruel
 I think I am LoveSick

@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a4/d4/a2/a4d4a2fe-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/f3/f3/a4f3f381-92fd-cec4-503c-83f1df694b44/mzaf_6765113823445045362.plus.aac.p.m4a
 trackId: 6795233512
 duration: 259
-lang: en
+lang: ko
 tags: [한국, Indie Rock, 2026]
 listen_when: 오고 가는 것들을 그저 바라보는 저녁
 keywords: [춤, 생각, 모습, 잠]

@@ -27,7 +27,7 @@ source_hash: ef5f8b9dc14f17a3c5f8768604a00e5285f316cb
 source_body_hash: 2dce206327b2ccacf4d715048f15aa1d84911650
 ---
 미안해, 사실 난 Lonely
-> 미안해, 사실 난 외로워
+> I'm sorry, to be honest, I'm lonely
 모두가 날 다 좋아한대도 의심하곤 해
 > Even if everyone says they like me, I doubt it
 이걸 듣는 너는 날 안 싫어해도 돼

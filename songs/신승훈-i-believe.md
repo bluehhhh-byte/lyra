@@ -33,7 +33,7 @@ I Believe
 이대로 이별은 아니겠죠 
 > this can't be goodbye, can it
 I Believe 나에게 오는 길은 
-> 난 믿어, 나에게 오는 길은
+> I Believe the path that leads to me
 조금 멀리 돌아올 뿐이겠죠 
 > You're only taking a longer way back
 모두 지나간 그 기억 속에서 
@@ -59,7 +59,7 @@ I Believe
 그대는 울지도 못했겠죠 
 > you couldn't even cry, could you
 I Believe 흐르는 내 눈물이 
-> 난 믿어, 흐르는 내 눈물이
+> I Believe the tears that fall from my eyes
 그댈 다시 내게 돌려주겠죠 
 > It will give you back to me
 자꾸 멈추는 내 눈길 속에서 

@@ -45,7 +45,7 @@ Fallin in love
 > Everyone will beckon, but I'm less and less afraid
 
 Think I’m sick 분홍빛의 향기
-> 내가 아픈 것 같아, 분홍빛의 향기
+> Think I’m sick, a pink-tinted fragrance
 사랑은 금방 지는 꽃과도 같지
 > Love is like a flower that wilts fast
 갑자기 찾아오는 손님과도 같이
@@ -60,7 +60,7 @@ Listen Ms. Citrus
 기댈 곳은 너이기를
 > I hope the place I lean on is you
 너가 내 Favor
-> 너가 내 취향
+> You are my favor
 걱정은 먼 뒤로 미뤘어
 > I pushed the worries far behind
 Let me tell you
@@ -82,7 +82,7 @@ I love you Ms. Citrus
 너의 눈 안엔 맑은 날의
 > and in your eyes, a clear day
 해변이 보이네 I like it
-> 해변이 보이네, 마음에 들어
+> I can see the beach, I like it
 늦게 갔음 해 너랑 있을 때는
 > I want it to go slowly when I'm with you
 난 시간이 또 빨리 갔음 해 

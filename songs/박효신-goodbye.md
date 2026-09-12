@@ -40,7 +40,7 @@ source_body_hash: f6b37b2f118306e1b61391d04f24ccda40b4f23f
 내게 여름처럼 웃고 있는 너
 > you're smiling at me like summer
 어쩌면 이번이 마지막 Goodbye
-> 어쩌면 이번이 마지막 작별
+> Perhaps this time is our final Goodbye
 오래 머물러 주어서 고마워
 > Thank you for staying so long
 이 말이 뭐라고 그렇게 어려웠을까
@@ -58,11 +58,11 @@ source_body_hash: f6b37b2f118306e1b61391d04f24ccda40b4f23f
 > are here right now
 
 손에 꼭 쥐었던 너와의 Goodbye
-> 손에 꼭 쥐었던 너와의 작별
+> The Goodbye with you that I held so tightly in my hands
 끝내 참지 못한 눈물이 나
 > I finally couldn't hold back the tears
 어쩌면 오늘이 마지막 Goodbye
-> 어쩌면 오늘이 마지막 작별
+> Perhaps today is our final Goodbye
 함께 했던 모든 날이 좋았어
 > Every day we spent together was good
 이 말이 뭐라고 그렇게 어려웠을까

@@ -49,7 +49,7 @@ source_body_hash: dd5b6847fb62309d9e7b82bd9e4d1e4dcfb27c58
 뺏는 놈보다 뺏긴 놈이 바빠
 > Busier than the one who takes is the one who got taken from
 리스펙에 목매지만 착각 Friendship의 본질은 칼 같은 배당
-> 존중에 목매지만 착각이야, 우정의 본질은 칼 같은 배당
+> Chasing respect, but under a delusion—the true essence of friendship is a cold, calculated cut.
 멀리서 봐야 희극인 이곳에 난 너무 가까이 있어
 > This place is comedy only from afar, and I'm standing too close
 때론 그 어디에도 속하고 싶지 않고 목이나 매달고 싶어
@@ -67,13 +67,13 @@ I'm just playing (x2) I'm just saying
 > 그냥 장난이야 (두 번), 그냥 하는 말이야
 
 노력보단 부모 재력 가난한 건 No 매력
-> 노력보단 부모 재력, 가난한 건 매력 없지
+> Inherited wealth beats hard work; being poor is no charm.
 무리 말아 몸 배려 뛰어봤자 유리 천장이 네 골 때려
 > Don't push it, mind your body — run all you like, the glass ceiling splits your skull
 알아들어? 돈 있으면 Don't matter
-> 알아들어? 돈만 있으면 상관없어
+> Do you get it? If you've got money, it doesn't matter.
 No matter 안 되는 건 없지 돈 먹여서
-> 상관없어, 돈 먹여서 안 되는 건 없지
+> There's nothing money can't make happen—no matter what.
 누군 답안지를 사서 그대로 베껴도
 > Some buy the answer sheet and copy it straight
 다른 누군가는 가난해서 못 배워

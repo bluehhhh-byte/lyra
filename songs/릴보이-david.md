@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fe/08/0d/fe080df6-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ba/a1/cc/baa1ccbd-14c4-b957-59f6-9c850a0a5131/mzaf_17110985275136407696.plus.aac.p.m4a
 trackId: 1445990883
 duration: 260
-lang: en
+lang: ko
 tags: [한국, Hip-Hop, 2018]
 listen_when: 아름다운 이야기에 남고 싶은 밤
 keywords: [이야기, 사랑, 친구, 음악, 시간]

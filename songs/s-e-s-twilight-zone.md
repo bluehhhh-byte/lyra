@@ -12,7 +12,7 @@ external_url: https://music.apple.com/us/album/twilight-zone/1060470756?i=106047
 trackId: 1060471721
 duration: 226
 genre: K-Pop
-lang: en
+lang: ko
 tags: [한국, K-Pop, 1999]
 listen_when: 아침이 오기 전까지만 붙잡는 새벽
 keywords: [새벽, 꿈, 향기, 눈물, 황혼]

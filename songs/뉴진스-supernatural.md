@@ -10,7 +10,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ab/ce/d6/abced6f6-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/ce/f9/41cef96a-6b48-2ddd-72a8-f479e7a1c752/mzaf_5570335600994446876.plus.aac.p.m4a
 trackId: 1750576834
 duration: 191
-lang: en
+lang: ko
 tags: [한국, K-Pop, 2024]
 listen_when: 운명 같은 이끌림을 믿어 보는 밤
 emotion: 사랑
@@ -65,7 +65,7 @@ Second chance, しょうがない
 > 두 번째 기회, 어쩔 수 없어.
 もう少し待って, 너와 내게 향하게 (ayy)
 + 모- 스코시 맛떼, 너와 내게 향하게 (에이)
-> 조금만 더 기다려 줘, 너와 나에게 향하게 (에이)
+> Wait a little longer, so it leads to you and me (ayy)
 
 [Pre-Chorus]
 My feeling's getting deeper (deeper)

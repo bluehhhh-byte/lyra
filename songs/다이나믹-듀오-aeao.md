@@ -58,7 +58,7 @@ source_body_hash: 0007b1c44e3f14fac0486b7836dcec52e5f1d402
 진짜 한 치 앞도 안 보이는 가시밭길에서도 
 > Even on a thorny path where you can't see an inch ahead
 절대 U turn 없이 살벌한 의리로 
-> 절대 되돌아가는 일 없이 살벌한 의리로
+> Never making a U-turn, with fierce loyalty
 의지하면서 둘이 딱 붙어 걷지 
 > we lean on each other and walk side by side
 비극은 지극히 아프지만 
@@ -108,11 +108,11 @@ Keep dreaming
 얼굴에 피어 난 주름은 당연해 
 > The wrinkles blooming on our faces are only natural
 마치 알파치노 Face 
-> 마치 알파치노 얼굴
+> Like Al Pacino's face
 평가는 다 끝난 담에 해 
 > Save the verdict for after it's all over
 긴 인생의 Race 
-> 긴 인생의 경주
+> The long race of life
 
 뭐 사실 조금 때가 타고 내가 타고 
 > Well, honestly, we're a little stained, a little worn

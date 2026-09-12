@@ -25,13 +25,13 @@ source_hash: 3f9f5a84167b69bef4ad2a948ed4c409f8232ce6
 source_body_hash: d54ec4c76c9f6f6cf7e4eeacff394a3feb12ca92
 ---
 Bye 인사는 민망
-> 안녕, 인사는 민망해
+> Saying bye feels awkward
 일단 모름 미뤄
 > If you don't know yet, put it off
 내일 논단 말은 말어
 > don't say let's talk tomorrow
 의심은 No
-> 의심은 없어
+> No doubts
 너를 원해 오늘 뿐요
 > I want you, today only
 나름 신사다움
@@ -42,7 +42,7 @@ Bye 인사는 민망
 > I hate the silence between you and me
 
 Oh 넌 많이 바래왔던
-> 오 넌 많이 바래왔던
+> Oh, you've wished for this so much
 그런 나의 소원
 > that's my wish
 버겁지만 다른 여자는 모두 싱거워

@@ -20,13 +20,13 @@ published: 2026-08-19T19:24:55.086Z
 comment: 오랫동안 정상을 지켜온 빅뱅의 정체성과 자부심을 당당하게 드러내는 곡이다. 과거의 히트곡을 오마주하며 여전히 건재함을 과시하는 그들의 묵직한 에너지가 돋보인다.
 ---
 B.B G, Tae, 대성이
-> B.B G, 태, 대성이
+> B.B G, Tae, Daesungie
 유행이라지 마 Been there done it
-> 유행이라지 마 다 해봤어
+> Don't call it a trend, been there, done that
 Bigbang 'B.Thxxg' Be somethin' ?!
 > 빅뱅 'B.Thxxg' 뭐라도 되겠다고?!
 Fan zone '뱅봉' 빛날 희(熙)
-> 팬 존 '뱅봉' 빛날 희(熙)
+> Fan zone, the Bangbong glowing with the Chinese character for light
 Everything big big big big
 > 모든 게 크고 크고 크고 커
 WE anything big big
@@ -44,11 +44,11 @@ Our own way, All the way up
 20 years, man 스무고개 Twerk
 > 20년이야 스무고개 트월크
 성인식 적나라하게 World-Tour
-> 성인식 적나라하게 월드 투어
+> A coming-of-age ceremony stripped bare on a World Tour
 끼가 XL 그니까 예술 하지
 > My talent's XL, that's why I make art
 빅뱅이라 읽고 써 우주 앰버서더
-> 빅뱅이라 읽고 써 우주 앰배서더
+> Read and write it as BIGBANG, the universe's ambassadors
 Would you pick me up?
 > 날 데리러 와줄래?
 Got a show live on earth
@@ -60,11 +60,11 @@ Got a show live on earth
 의식 공간도 초월하니
 > We transcend consciousness and space
 Big Shots 살바도르 달리
-> 거물들 살바도르 달리
+> Big Shots, Salvador Dalí
 We like to party after party, No sleep
 > 파티 뒤에 또 파티, 잠은 없어
 Ohhhh 다들 밖으로 나와 Go
-> Ohhhh 다들 밖으로 나와 가
+> Ohhhh, everybody step outside, Go
 
 [Pre-Chorus]
 크게 소리 질러 좋아 마침 오늘 붉은 노을
@@ -74,15 +74,15 @@ Yeah we do it Yeah we do it
 Big big big big
 > 크게 크게 크게 크게
 B.B G, Tae, 대성이
-> B.B G, 태, 대성이
+> B.B G, Tae, Daesungie
 
 [Chorus]
 유행이라지 마 Been there done it
-> 유행이라지 마 다 해봤어
+> Don't call it a trend, been there, done that
 Bigbang 'B.Thxxg' Be somethin' ?!
 > 빅뱅 'B.Thxxg' 뭐라도 되겠다고?!
 Fan zone '뱅봉' 빛날 희(熙)
-> 팬 존 '뱅봉' 빛날 희(熙)
+> Fan zone, the Bangbong glowing with the Chinese character for light
 Everything big big big big
 > 모든 게 크고 크고 크고 커
 WE anything big big
@@ -92,13 +92,13 @@ Everything big big big big
 That everything big'z me
 > 그 모든 큰 것이 나야
 양자역학 발현 쌍팔년 South-Korean
-> 양자역학 발현 쌍팔년 대한민국 사람
+> Quantum mechanics manifesting, retro 88 South-Korean
 맘마미아 깐따삐야 젊음의 도심 한가운데
 > Mamma mia, Kkanddabbiya, right in the heart of youth's city
 
 [Verse 2]
 청춘에 도취한 Boundary
-> 청춘에 도취한 경계
+> Boundaries intoxicated by youth
 Everything is big
 > 모든 게 커
 You know that I'm a G
@@ -108,7 +108,7 @@ You know that I'm a G
 Name everything is BIG
 > 이름 붙이는 모든 게 BIG
 불러 BANG of 아버지
-> 불러 BANG의 아버지
+> Call out BANG of the father
 Yeah this is how we do it
 > 그래 우린 이렇게 해
 Gettin' down to business, Big genius
@@ -118,13 +118,13 @@ Gettin' down to business, Big genius
 날아다녀 링 나비같이
 > We float around the ring like butterflies
 Big Shots 무하마드 알리
-> 거물들 무하마드 알리
+> Big Shots, Muhammad Ali
 We like to party after party, No sleep
 > 파티 뒤에 또 파티, 잠은 없어
 
 [Pre-Chorus]
 Ohhhh 하늘 밖으로 나와 Go
-> Ohhhh 하늘 밖으로 나와 가
+> Ohhhh, step beyond the skies, Go
 크게 멀리 실컷 돌아 나침반은 푸른 노을
 > Go big and far, roam all you want—the compass points to a blue sunset
 Yeah we do it Yeah we do it
@@ -134,13 +134,13 @@ Big big big big
 
 [Chorus]
 B.B G, Tae, 대성이
-> B.B G, 태, 대성이
+> B.B G, Tae, Daesungie
 유행이라지 마 Been there done it
-> 유행이라지 마 다 해봤어
+> Don't call it a trend, been there, done that
 Bigbang 'B.Thxxg' Be somethin' ?!
 > 빅뱅 'B.Thxxg' 뭐라도 되겠다고?!
 Fan zone '뱅봉' 빛날 희(熙)
-> 팬 존 '뱅봉' 빛날 희(熙)
+> Fan zone, the Bangbong glowing with the Chinese character for light
 Everything big big big big
 > 모든 게 크고 크고 크고 커
 WE anything big big

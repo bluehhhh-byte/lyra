@@ -66,9 +66,9 @@ I keep on running
 텅 빈 맘으로 밤을 새운 다음
 > After staying up all night with an empty heart
 마침표를 찍어봐도 Burn out
-> 마침표를 찍어봐도 다 타버려
+> Even if I try to put a period to it, burn out
 And 기억 속을 뒷걸음 치다
-> 그리고 기억 속을 뒷걸음 치다
+> And walking backward through my memories
 정신 차려보니 너의 집 앞
 > I come to and I'm in front of your house
 I know you know we want it

@@ -11,7 +11,7 @@ preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/
 trackId: 1495008020
 external_url: https://music.apple.com/us/album/almost-there/1495008012?i=1495008020&uo=4
 duration: 250
-lang: en
+lang: ko
 tags: [한국, Hip-Hop, 2020]
 keywords: [노래, 실패, 고집, 낭만, 플렉싱]
 emotion: 희망

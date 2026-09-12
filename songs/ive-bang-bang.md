@@ -12,7 +12,7 @@ external_url: https://music.apple.com/us/album/bang-bang/1872627662?i=1872628039
 trackId: 1872628039
 duration: 178
 genre: K-Pop
-lang: en
+lang: ko
 tags: [K-Pop, 2026]
 listen_when: 낙인 따위 비웃으며 나서는 밤거리
 keywords: [소문, 벽, 시선, 연기, 밤]
@@ -31,12 +31,12 @@ It's a new scene, it's aggressive
 > 새로운 장면이야, 거칠지
 이미 알아차렸겠지, 그치 언니?
 모든 소문 속의 problem, yeah, I'm 걔지
-> 모든 소문 속의 문제아, 그래, 내가 걔야
+> The problem in every rumor, yeah, I'm that girl
 벽에 붙은 나의 picture, 아래 wanted (아래 wanted)
-> 벽에 붙은 내 사진, 그 아래 현상수배 (아래 현상수배)
+> My picture on the wall, wanted underneath (wanted underneath)
 
 Wake up, 주저하지 말고 (말고, 말고)
-> 일어나, 주저하지 말고 (말고, 말고)
+> Wake up, don't hesitate (don't, don't)
 다른 시선들은 뭐 그리
 I don't give a 쉿, what you say
 > 네가 뭐라 하든 난 신경 안 써
@@ -82,7 +82,7 @@ It's a little bit offensive, yeah, I said it (yeah)
 > 조금 불쾌할 수도 있지, 그래, 내가 말했어 (그래)
 
 Wake up, 주저하지 말고 (말고, 말고)
-> 일어나, 주저하지 말고 (말고, 말고)
+> Wake up, don't hesitate (don't, don't)
 그냥 맘 가는 대로
 I don't give a 쉿, what you say
 > 네가 뭐라 하든 난 신경 안 써
@@ -119,12 +119,12 @@ Bang, bang
 > 쾅, 쾅
 
 Hot issue, 대체 누굴까?
-> 화제의 인물, 대체 누굴까?
+> Hot issue, just who could it be?
 다들 찾기 위해서 안달 나
 연기처럼 disappear, catch me if you can, baby
 > 연기처럼 사라져, 잡을 수 있으면 잡아봐
 조금만 더 놀아줄게 (four, three, two, one)
-> 조금만 더 놀아줄게 (넷, 셋, 둘, 하나)
+> I'll play with you a little longer (four, three, two, one)
 
 Bang, shaking my head, this is my way, ah-ya-ya
 > 쾅, 고개를 흔들며, 이게 내 방식이야, 아-야-야

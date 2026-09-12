@@ -63,18 +63,18 @@ source_body_hash: bbdc1177a268efedac6ae8d3b75581050b11a10f
 > My eyes are dazzled, my head spinning round and round
 
 나의 모든 걸 사로잡은 Energy
-> 나의 모든 걸 사로잡은 에너지
+> An energy that captures my every part
 그 눈빛 속에 강렬한 Laser Laser
-> 그 눈빛 속에 강렬한 레이저, 레이저
+> That intense laser, laser in your eyes
 내 맘 깊은 곳 증폭되는 Synergy
-> 내 맘 깊은 곳에서 증폭되는 시너지
+> Synergy amplifying deep within my heart
 대체 끝이 없는 너의 Gauge Gauge
-> 대체 끝이 없는 너의 게이지, 게이지
+> Your endless gauge, gauge, what could it be?
 
 점점 빨라지는 Beat 점점 더 크게 뛰는데
-> 점점 빨라지는 비트, 점점 더 크게 뛰는데
+> The beat is getting faster, and it's pounding louder and louder
 이미 한계를 넘어선 I'm In Shock
-> 이미 한계를 넘어선 난 충격에 빠졌어
+> Already beyond my limits, I'm in shock
 E-Electric Shock
 > 전-전기 충격
 

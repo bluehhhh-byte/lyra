@@ -61,7 +61,7 @@ source_body_hash: 74ba852b8db54b128e4792692081359eb5a11173
 내 현실이 너에겐 꿈
 > My reality is your dream
 나는 안 따르지 rule
-> 나는 안 따르지 규칙
+> I don't follow the rules
 아직 나를 따르는 운
 > Luck still follows me
 우리는 필요해 물
@@ -80,4 +80,4 @@ source_body_hash: 74ba852b8db54b128e4792692081359eb5a11173
 난 "그래 그래서 뭐 어쩌라구?"
 > I go, "Yeah, so what about it?"
 붙여 내 Woods에 불
-> 내 담배에 불을 붙여
+> Light up my Woods
