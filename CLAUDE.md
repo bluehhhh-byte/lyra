@@ -8,7 +8,22 @@
 
 **진실 공급원은 Neon Postgres다. `songs/*.md`는 백업본이다.**
 
-2026-08-22에 새 Neon 프로젝트로 이전했다(호스트 `ep-little-rain-axw7fmrs`). 곡·영화
+2026-09-12에 다시 이전했다 — `green-hat-42366326` / 호스트 `ep-holy-paper-ayr00met`.
+앞 프로젝트(`twilight-hill-43994983`, `ep-little-rain-axw7fmrs`)가 월 전송량 5.511GB로
+한도(5GB)를 넘겨 일시정지됐고, 쓰기에 폴백이 없어 곡 등록·관리자 저장이 막혔기 때문이다.
+파일 백업 968곡·영화 50·데이터 14를 올려 SHA-256 1,032건 일치를 확인했다.
+
+> **⚠ 2026-10-01 이후 할 일 — 곡 3개 회수**
+> 이전 시점에 DB에는 971곡, 파일에는 966곡이 있었다. 차이 5곡 중 2곡
+> (`iu-dear-my-crazy-soulmate`, `post-malone-take-what-you-want-…`)은 진단 중
+> 받아 둔 사본으로 복구했지만, **나머지 3곡은 slug조차 모른다** — 로컬 산출물이
+> 모두 오래됐고(needs-work 09-08, 검색인덱스 953곡) 프로덕션 목록도 이미 파일
+> 폴백이었다. 그 3곡은 옛 프로젝트 저장소(40.4MB)에 그대로 있다.
+> 한도가 풀리는 **2026-10-01** 이후 옛 DB를 읽어 `songs/*.md`와 대조하고 빠진
+> 것을 새 DB로 옮겨라. 옛 연결 문자열은 `.env.local`에 `# OLD_DATABASE_URL=`로
+> 주석 처리돼 있다.
+
+2026-08-22에도 같은 이유로 이전했다(`raspy-band-56009664` → `twilight-hill`). 곡·영화
 slug를 파일 백업과 대조해 누락 0건을 확인했다. **DB가 대답하지 못하면 파일 백업으로
 내려앉는다** — 읽기 진입점 네 곳(`lib/songs.js` `lib/movies.js` `lib/store.js`
 `lib/moments.js`)에 폴백이 있고, `/api/version`의 `contentFallback`이 그 사실을 보고한다.
