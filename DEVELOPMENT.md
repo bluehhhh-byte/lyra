@@ -233,6 +233,7 @@ Gemini에는 **원문을 주지 않는다.** 2단계에서 넘기는 건 제목�
 | `GEMINI_MODEL_LITE` | 분류·일괄용 모델 (미설정 시 `gemini-flash-lite-latest`) | 선택 |
 | `GEMINI_MODEL_FALLBACKS` | 기본 모델이 503일 때 내려갈 후보 (쉼표 구분) | 선택 |
 | `TMDB_API_KEY` | 영화 검색·상세·왓챠 임포트·추천 매칭 | 영화 기능에 필수 |
+| `BRAVE_API_KEY` | 곡의 작품 수록 정보 웹 검색 | 선택 — 없으면 Apple Music·위키백과만 |
 | `NEXT_PUBLIC_SITE_URL` | sitemap·OG 절대 URL (미설정 시 Vercel 도메인 자동 사용) | 선택 |
 
 값을 붙여넣을 때 BOM(U+FEFF)이 딸려 오면 조용히 무시된다. `LYRA_CONTENT_STORE`가

@@ -58,6 +58,9 @@ export async function handleAppearances(action, body) {
         artist: body.artist,
         lang: body.lang,
         geminiText,
+        // 있으면 일반 웹 검색까지 쓴다. 없으면 Apple Music·위키백과만으로 돈다 —
+        // 좁지만 죽지는 않는다.
+        braveKey: process.env.BRAVE_API_KEY || "",
       });
       return Response.json({
         suggestion: free.appearance,
