@@ -1219,7 +1219,11 @@ ${lyricBody}
       { path: `songs/${slug}.md`, content: md },
       ...(enrollment.added ? [{
         path: "data/song-appearance-exhaustive.json",
-        content: `${JSON.stringify(enrollment.audit, null, 1)}\n`,
+        // 이 파일만 들여쓰기 2칸이다 — scripts/backfill-song-appearances.mjs와
+        // finalize-song-appearance-exhaustive.mjs가 그렇게 쓴다. 여기서 1칸으로
+        // 쓰면 곡을 하나 넣을 때마다 117,000줄이 통째로 다시 쓰이고, 다음 번
+        // 스크립트 실행이 그걸 도로 되돌린다. 한 줄이 바뀐 커밋을 찾을 수 없게 된다.
+        content: `${JSON.stringify(enrollment.audit, null, 2)}\n`,
       }] : []),
     ], `add(song): ${slug}`);
     return Response.json({ slug });

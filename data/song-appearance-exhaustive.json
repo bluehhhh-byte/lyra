@@ -1,9 +1,9 @@
 {
   "version": 2,
   "createdAt": "2026-09-01T08:00:46.329Z",
-  "updatedAt": "2026-09-03T19:35:00.000Z",
+  "updatedAt": "2026-09-05T09:26:42.469Z",
   "corpusDigest": "34e7eb6a5580939f9eba32b20afa2069cb0774ec6c8496c89bfed558c67a525a",
-  "totalSongs": 955,
+  "totalSongs": 960,
   "baseline": [
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
@@ -58410,6 +58410,56 @@
           "note": "영화의 마지막 23분을 이루는 파도 속 슬로모션 시퀀스 전체에 Pink Floyd의 스튜디오 녹음이 사용됐다."
         }
       ]
+    },
+    "kanye-west-andre-troutman-white-lines": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-03T23:26:44.137Z",
+      "researchIdentity": {
+        "title": "WHITE LINES",
+        "artist": "Kanye West & Andre Troutman"
+      }
+    },
+    "blankey-jet-city-sweet-days": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-03T23:44:11.086Z",
+      "researchIdentity": {
+        "title": "SWEET DAYS",
+        "artist": "BLANKEY JET CITY"
+      }
+    },
+    "korn-another-brick-in-the-wall-pt-1-2-3-pink-floyd-cover": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-04T09:58:44.122Z",
+      "researchIdentity": {
+        "title": "Another Brick in the Wall, Pt. 1, 2, 3 (Pink Floyd Cover)",
+        "artist": "Korn"
+      }
+    },
+    "blankey-jet-city-pepin": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-05T04:40:33.299Z",
+      "researchIdentity": {
+        "title": "Pepin",
+        "artist": "BLANKEY JET CITY"
+      }
+    },
+    "kim-jong-seo-plastic-syndrome": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-05T09:26:42.469Z",
+      "researchIdentity": {
+        "title": "Plastic Syndrome",
+        "artist": "Kim Jong Seo"
+      }
     }
   },
   "screeningBatches": [],
