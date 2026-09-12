@@ -9,7 +9,7 @@
 // exit: 0 정상 · 2 경보 · 1 수집 실패
 import dotenv from "dotenv";
 import { checkHealth } from "./healthcheck.mjs";
-import { evaluateQuota, renderQuotaReport } from "../lib/quota-watch.js";
+import { evaluateQuota, renderQuotaReport, pickNeonProject } from "../lib/quota-watch.js";
 
 dotenv.config({ path: ".env.local", override: false, quiet: true });
 
@@ -42,23 +42,30 @@ if (version) {
 }
 
 // Neon 콘솔 API — usage-metrics.js와 같은 엔드포인트를 쓴다. 그쪽은 서버 런타임
-// 전용(getContentDb 의존)이라 여기서 직접 부른다. 프로젝트 ID는 환경변수로만
-// 받는다 — CI에는 DB 연결이 없다.
+// 전용(getContentDb 의존)이라 여기서 직접 부른다. 필요한 것은 NEON_API_KEY
+// 하나뿐이다 — 프로젝트 ID는 키로 조회한다(NEON_PROJECT_ID로 지정도 가능).
 let neon = { configured: false, error: "NEON_API_KEY 미설정" };
 const neonKey = clean(process.env.NEON_API_KEY);
 const neonProject = clean(process.env.NEON_PROJECT_ID);
-if (neonKey && neonProject) {
+if (neonKey) {
+  const auth = { headers: { Accept: "application/json", Authorization: `Bearer ${neonKey}` } };
   try {
-    const body = await get(`https://console.neon.tech/api/v2/projects/${encodeURIComponent(neonProject)}`, {
-      headers: { Accept: "application/json", Authorization: `Bearer ${neonKey}` },
-    });
-    neon = { configured: true, dataTransferBytes: Number(body.project?.data_transfer_bytes || 0) };
+    // 프로젝트 ID는 연결 문자열에 없다(거기 있는 건 엔드포인트 이름이다).
+    // 키만으로 목록을 받아 올 수 있으므로, 사람이 콘솔에서 적어 와야 하는 것은
+    // 키 하나로 줄인다. 여럿이면 고르지 않고 목록을 보여 준다.
+    let projectId = neonProject;
+    if (!projectId) {
+      const list = await get("https://console.neon.tech/api/v2/projects", auth);
+      const picked = pickNeonProject(list?.projects);
+      if (!picked.id) throw new Error(picked.error);
+      projectId = picked.id;
+    }
+    const body = await get(`https://console.neon.tech/api/v2/projects/${encodeURIComponent(projectId)}`, auth);
+    neon = { configured: true, projectId, dataTransferBytes: Number(body.project?.data_transfer_bytes || 0) };
   } catch (error) {
     // 못 읽은 것을 0으로 두지 않는다 — 0GB는 "안전하다"로 읽힌다
     neon = { configured: true, error: `Neon API 조회 실패: ${error.message}` };
   }
-} else if (neonKey && !neonProject) {
-  neon = { configured: true, error: "NEON_PROJECT_ID가 없어 전송량을 읽지 못했습니다." };
 }
 
 // 어제의 AI 호출. DATABASE_URL이 있을 때만 — 없으면 그 줄을 빼고 나머지를 보고한다.

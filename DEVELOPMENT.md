@@ -234,6 +234,8 @@ Gemini에는 **원문을 주지 않는다.** 2단계에서 넘기는 건 제목�
 | `GEMINI_MODEL_FALLBACKS` | 기본 모델이 503일 때 내려갈 후보 (쉼표 구분) | 선택 |
 | `TMDB_API_KEY` | 영화 검색·상세·왓챠 임포트·추천 매칭 | 영화 기능에 필수 |
 | `BRAVE_API_KEY` | 곡의 작품 수록 정보 웹 검색 | 선택 — 없으면 Apple Music·위키백과만 |
+| `NEON_API_KEY` | 무료티어 감시(`scripts/quota-watch.mjs`)가 읽는 월 전송량. Neon 콘솔 → Account settings → API keys | 선택 — 없으면 전송량이 '확인 불가' |
+| `NEON_PROJECT_ID` | 위 감시의 대상 프로젝트 | 선택 — 프로젝트가 하나면 키로 자동 조회 |
 | `NEXT_PUBLIC_SITE_URL` | sitemap·OG 절대 URL (미설정 시 Vercel 도메인 자동 사용) | 선택 |
 
 값을 붙여넣을 때 BOM(U+FEFF)이 딸려 오면 조용히 무시된다. `LYRA_CONTENT_STORE`가
