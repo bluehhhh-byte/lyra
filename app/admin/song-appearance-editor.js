@@ -29,6 +29,8 @@ const button =
 const blank = () => ({
   workTitle: "",
   originalTitle: "",
+  director_ko: "",
+  director: "",
   workType: "movie",
   mediaType: "movie",
   tmdbId: "",
@@ -110,6 +112,9 @@ export default function SongAppearanceEditor({ songSlug }) {
       ...current,
       workTitle: detail.title || result.title,
       originalTitle: detail.originalTitle || result.originalTitle || "",
+      // TMDB crew 이름은 원문 — 한글 표기는 사람이 고쳐 적는다
+      director: detail.director || "",
+      director_ko: "",
       workType,
       mediaType: detail.mediaType,
       tmdbId: detail.tmdbId,
@@ -218,6 +223,14 @@ export default function SongAppearanceEditor({ songSlug }) {
         <label className="text-xs text-muted sm:col-span-2">
           작품명
           <input className={input + " mt-1"} value={form.workTitle} onChange={(event) => set("workTitle", event.target.value)} placeholder="검색 결과가 없으면 직접 입력" />
+        </label>
+        <label className="text-xs text-muted">
+          감독 (한글)
+          <input className={input + " mt-1"} value={form.director_ko} onChange={(event) => set("director_ko", event.target.value)} placeholder="예: 크리스토페르 보르글리" />
+        </label>
+        <label className="text-xs text-muted">
+          감독 (원문)
+          <input className={input + " mt-1"} value={form.director} onChange={(event) => set("director", event.target.value)} placeholder="TMDB 선택 시 자동으로 채워진다" />
         </label>
         {form.tmdbId && (
           <p className="-mt-1 text-[11px] text-muted sm:col-span-2">

@@ -116,9 +116,15 @@ export default async function SongPage({ params }) {
       localMovieSlug: localMovie?.slug || item.localMovieSlug,
       poster: localMovie?.poster || item.poster,
       workTitle: localMovie?.title_ko || localMovie?.title || item.workTitle,
+      // 감독은 연결된 영화 기록이 1차 출처고, 없으면 항목에 직접 입력한 값을 쓴다
+      director_ko: item.director_ko || localMovie?.director_ko || "",
+      director: item.director || localMovie?.director || "",
     };
   });
   const carouselAppearance = carouselAppearanceSummary(appearances);
+  // 캡션은 구조화된 첫 항목을 쓴다 — 감독·유형·역할을 템플릿에 맞춰 조립해야 하므로
+  // 표시용 요약 문자열(carouselAppearance)과는 다른 형태다.
+  const captionAppearance = appearances[0] || null;
   const commentSources = (Array.isArray(song.comment_sources) ? song.comment_sources : []).flatMap((value) => {
     try {
       const url = new URL(value);
@@ -321,6 +327,8 @@ export default async function SongPage({ params }) {
           comment: song.comment || "",
           // 곡 설명 카드 하단에 검증된 작품명·연도·유형·사용 역할을 함께 싣는다.
           appearance: carouselAppearance,
+          // 캡션의 작품 사용 한 줄(& 감독, 영화 <작품> 엔딩 (연도) |)에 쓴다
+          captionAppearance,
           // 커버 카드 하단의 해시태그 — 곡의 소재(keywords)와 감정 한 낱말
           keywords: song.keywords || [],
           emotion: song.emotion || "",

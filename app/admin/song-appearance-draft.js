@@ -24,6 +24,8 @@ const input =
 export const emptyAppearanceDraft = () => ({
   workTitle: "",
   originalTitle: "",
+  director_ko: "",
+  director: "",
   workType: "",
   mediaType: "",
   tmdbId: "",
