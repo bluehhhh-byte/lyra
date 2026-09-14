@@ -4,6 +4,7 @@ import {
   ADMIN_SESSION_EXPIRED_MESSAGE,
   verifyToken,
 } from "./lib/auth-token";
+import { guardedPath, looksLikeBot } from "./lib/bot-guard";
 
 // Password-gate the admin UI and its API online. Local dev is always open.
 // 쿠키는 HMAC 서명 토큰(lib/auth-token.js) — 비밀번호 원문을 담지 않는다.
@@ -11,6 +12,17 @@ export async function middleware(req) {
   if (process.env.NODE_ENV !== "production") return NextResponse.next();
 
   const { pathname } = req.nextUrl;
+
+  // 인물 페이지는 관리자 게이트와 무관하다 — 봇만 걸러 내고 사람은 그대로 보낸다.
+  // 여기서 막으면 Neon 읽기가 아예 일어나지 않는다(lib/bot-guard.js 참조).
+  if (guardedPath(pathname)) {
+    if (!looksLikeBot(req.headers.get("user-agent"))) return NextResponse.next();
+    return new NextResponse("Disallowed by /robots.txt\n", {
+      status: 403,
+      headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" },
+    });
+  }
+
   if (pathname === "/admin/login") return NextResponse.next();
 
   const pass = process.env.ADMIN_PASSWORD;
@@ -31,5 +43,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/admin", "/admin/:path*", "/api/admin", "/api/admin/:path*"],
+  matcher: ["/admin", "/admin/:path*", "/api/admin", "/api/admin/:path*", "/people", "/people/:path*"],
 };
