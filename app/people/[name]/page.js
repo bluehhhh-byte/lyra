@@ -3,6 +3,22 @@ import { notFound } from "next/navigation";
 import { getPersonRuntime } from "../../../lib/people";
 import CoverImage from "../../cover-image";
 
+// 이 줄이 없어서 이 라우트만 ƒ(요청마다 새로 렌더)였다. 인물은 2,545명이고
+// robots.txt를 무시하는 크롤러가 계속 훑는데, 한 명을 보여 주려고 영화 전집과
+// Watcha 기록을 읽는다 — 캐시가 없으니 그 읽기가 매번 일어났다. 곡·영화·아카이브는
+// 모두 이 두 줄을 갖고 있고, 여기만 빠져 있었다.
+//
+export const revalidate = 21600;
+export const dynamicParams = true;
+
+// 빈 배열이다 — 빌드에서는 한 장도 굽지 않는다(2,545장을 구우면 빌드가 전집을
+// 다시 읽는다). 그런데 이 함수가 있어야 Next가 이 라우트를 ISR로 다룬다.
+// revalidate만 붙이면 ƒ로 남아 요청마다 새로 렌더한다 — 빌드 출력에서 확인했다.
+// 처음 열린 인물만 한 번 굽고, 그 뒤 6시간은 재사용한다.
+export async function generateStaticParams() {
+  return [];
+}
+
 export async function generateMetadata({ params }) {
   const person = await getPersonRuntime(decodeURIComponent((await params).name));
   if (!person) return {};

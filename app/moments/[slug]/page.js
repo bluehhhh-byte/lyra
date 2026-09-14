@@ -6,6 +6,7 @@ import { momentDateLabel } from "../../../lib/moments-core";
 import { getAllSongsRuntime } from "../../../lib/songs";
 import CoverImage from "../../cover-image";
 
+// 여기는 일부러 캐시하지 않는다 — 장면은 관리자가 고치는 대로 바로 보여야 한다.
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }) {

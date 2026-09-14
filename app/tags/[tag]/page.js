@@ -6,6 +6,16 @@ import CoverImage from "../../cover-image";
 
 // One tag, both collections — clicking 2004 shows that year's songs AND films
 // side by side. Static: every tag in use gets a page at build time.
+//
+// 주석은 "빌드에 굽는다"고 적혀 있었지만 revalidate가 없어 실제로는 ƒ였다 —
+// 태그 한 장이 곡 전량과 영화 전량을 읽는데 그 읽기가 요청마다 일어났다.
+export const revalidate = 21600;
+export const dynamicParams = true;
+
+// 빈 배열 + dynamicParams — 빌드에서 굽지 않고, 열린 태그만 캐시한다.
+export async function generateStaticParams() {
+  return [];
+}
 
 const tagged = async (tag) => {
   const [songs, movies] = await Promise.all([getAllSongsRuntime(), getAllMoviesRuntime()]);
