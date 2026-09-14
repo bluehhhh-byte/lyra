@@ -4,6 +4,7 @@ import { needsLyricSections } from "../../../lib/admin/needs";
 import { genreIssue, genreTagOf, GENRES } from "../../../lib/genre";
 import { readRuntimeData } from "../../../lib/store";
 import AppearanceGaps from "../appearance-gaps";
+import EnTranslationGap from "../en-translation-gap";
 import ArtworkReview from "../artwork-review";
 import Backfill from "../backfill";
 import BulkWork from "../bulk-work";
@@ -61,6 +62,13 @@ const tools = [
     title: "대량 작업",
     description: "여러 곡의 누락 데이터를 외부 AI로 한꺼번에 보완할 때 작업 JSON을 내보내고 결과를 검증해 반영합니다.",
     content: <BulkWork />,
+  },
+  {
+    // 형식 검사의 자동 수정이 이 대기열만은 줄이지 못했다 — 그쪽 규칙이 한국
+    // 곡의 한국어 줄을 통째로 제외한다. 그래서 전용 자리를 둔다.
+    title: "영어 번역 없음 채우기",
+    description: "한국 곡의 한국어 줄에 붙일 영어 번역을 AI로 채웁니다. 원문은 그대로 두고 번역 줄만 추가합니다.",
+    content: <EnTranslationGap />,
   },
   {
     title: "작품 사용 정보 결손 메우기",

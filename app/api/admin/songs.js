@@ -25,7 +25,14 @@ import {
   correctionEvidenceSummary,
 } from "../../../lib/admin/correction-evidence";
 
-import { songNeeds, summarizeNeeds, isNoteLine } from "../../../lib/admin/needs";
+import {
+  songNeeds,
+  summarizeNeeds,
+  isNoteLine,
+  effectiveLang,
+  needsEn,
+  translationFilled,
+} from "../../../lib/admin/needs";
 import { appendReportVersion } from "../../../lib/report-history";
 import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/admin/song-duplicate";
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
@@ -406,6 +413,174 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
       `fix(song): lint autofix — ${body.slug}`
     );
     return Response.json({ fixed });
+  }
+
+  // 영어 번역을 기다리는 곡 목록. 세는 규칙은 songNeeds 하나뿐이라, 화면에 뜨는
+  // "영어 번역 없음 N줄"과 여기 숫자가 갈릴 수 없다.
+  if (action === "enTranslateQueue") {
+    const songs = await getAllSongsRuntime();
+    const items = songs
+      .map((song) => ({ song, lines: songNeeds(song).enTranslation }))
+      .filter((row) => row.lines > 0)
+      .map((row) => ({
+        slug: row.song.slug,
+        title: row.song.title,
+        artist: row.song.artist,
+        lines: row.lines,
+      }));
+    return Response.json({
+      count: items.length,
+      lines: items.reduce((sum, row) => sum + row.lines, 0),
+      total: songs.length,
+      items,
+    });
+  }
+
+  // 한국 곡의 한국어 줄에 붙일 영어 번역만 채운다. 한 번에 한 곡, 한 커밋.
+  //
+  // lintFix가 이걸 못 한다. 그쪽 선택 로직에는 "이미 한글인 줄에 한국어 번역을
+  // 붙이지 않는다"는 규칙(alreadyKorean)이 있는데, 그 규칙이 외국곡 속 한국어
+  // 가사를 지키면서 동시에 한국 곡의 한국어 줄을 통째로 제외해 버린다. 그래서
+  // 영어 번역 대기열은 형식 검사를 아무리 돌려도 줄지 않았다.
+  //
+  // 무엇이 영어 번역을 기다리는 줄인가 하는 판정은 여기서 새로 만들지 않는다 —
+  // lib/admin/needs.js의 translationTarget·translationFilled을 그대로 부른다.
+  // 그 파일이 판정의 유일한 자리다.
+  if (action === "enTranslate") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const raw = song.raw.replace(/\r\n/g, "\n");
+    const matched = raw.match(FM);
+    if (!matched) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    const [, fm, bodyText] = matched;
+
+    const lines = bodyText.split("\n");
+    const isOrig = (line) => {
+      const t = line.trim();
+      return (
+        t &&
+        !t.startsWith(">") &&
+        !t.startsWith("+") &&
+        !t.startsWith("//") &&
+        !isNoteLine(t) &&
+        !(t.startsWith("[") && t.endsWith("]"))
+      );
+    };
+    // 아래쪽 `>^N`이 이 줄까지 덮고 있으면 손대지 않는다. 덮인 줄에 번역을 또
+    // 붙이면 같은 구절이 두 번 나오고 `>^N`의 범위가 어긋난다 — 실제로 그렇게 깨졌다.
+    const coveredBySpan = (index) => {
+      let gap = 0;
+      for (let j = index + 1; j < lines.length; j++) {
+        const t = lines[j].trim();
+        if (!t || /^\[.*\]$/.test(t)) return false;
+        const span = t.match(/^>\^(\d+)/);
+        if (span) return Number(span[1]) > gap + 1;
+        if (/^[>+]/.test(t) || t.startsWith("//")) return false;
+        gap++;
+      }
+      return false;
+    };
+    // 인스타 캡션에서 온 줄 일부는 `원문<U+2028>번역`으로 한 줄에 붙어 있다.
+    // 파서(lib/songs.js)가 이걸 갈라 en/ko로 넣으므로 needs.js는 번역이 있다고
+    // 본다. 여기서 안 가르면 원문 전체를 번역 없는 줄로 세어, 이미 번역이 있는
+    // 줄에 번역을 또 붙인다 — 실제로 11곡을 견줘 보니 83줄이어야 할 것이 111줄이었다.
+    // 날것으로 적지 않는다 — U+2028은 JS 소스에서 줄바꿈으로 읽힌다
+    const INLINE = /[\u2028\u2029]/;
+    const originalOf = (line) => line.trim().split(INLINE)[0].trim();
+    // 원문 바로 아래 붙은 번역(`+` 독음은 건너뛴다). 같은 줄에 붙어 있으면 그것이 번역이다.
+    const translationUnder = (index) => {
+      const inline = lines[index].trim().split(INLINE).slice(1).join(" ").trim();
+      if (inline) return inline;
+      for (let j = index + 1; j < lines.length; j++) {
+        const t = lines[j].trim();
+        if (t.startsWith("+")) continue;
+        return t.startsWith(">") ? t.replace(/^>\^?\d*\s*/, "") : "";
+      }
+      return "";
+    };
+
+    const originals = lines.map((line, index) => ({ line, index })).filter((row) => isOrig(row.line));
+
+    // 어느 줄이 영어 번역을 기다리는지는 파서에 맡긴다. 원시 텍스트로 다시
+    // 판정하면 파서가 이미 짝지어 둔 것을 놓친다 — The Vines <Winning Days>에는
+    // `> ` 없이 떠도는 번역 줄이 하나 있는데, 원시 스캔은 그것을 번역 없는
+    // 한국어 원문으로 보고 영어를 붙이려 했다. 파서는 그 줄을 앞 줄의 번역으로
+    // 짝지어 두고 있었다.
+    const parsedStanzas = parseLyrics(bodyText);
+    const lang = effectiveLang({ lang: fmValue(fm, "lang") || "en", stanzas: parsedStanzas });
+    // 텍스트별로 '몇 줄이 비어 있는지'를 센다. 집합이 아니라 개수여야 한다 —
+    // S.E.S. <Twilight Zone>은 「그대여 눈물 같은 너의 사랑」이 두 번 나오는데
+    // 파서는 한 번만 결손으로 센다(나머지 하나는 이미 짝지어져 있다). 집합으로
+    // 보면 두 줄 다 채워 같은 번역이 두 번 들어간다.
+    const wantedCount = new Map();
+    for (const line of parsedStanzas.flatMap((stanza) => stanza.lines)) {
+      if (!needsEn(line, lang)) continue;
+      const text = originalOf(String(line.en || ""));
+      wantedCount.set(text, (wantedCount.get(text) || 0) + 1);
+    }
+
+    // 파서가 고른 줄을 원시 본문에서 다시 찾는다 — 넣을 자리는 원시 줄에만 있다.
+    // 파서가 N줄이라 했으면 N줄만 채운다.
+    const wanted = originals.filter((row) => {
+      if (coveredBySpan(row.index)) return false;
+      if (translationFilled("en", translationUnder(row.index))) return false;
+      const text = originalOf(row.line);
+      const left = wantedCount.get(text) || 0;
+      if (left <= 0) return false;
+      wantedCount.set(text, left - 1);
+      return true;
+    });
+    if (!wanted.length) return Response.json({ filled: 0, lines: 0 });
+
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
+
+    const prompt = `아래 JSON 배열은 한국어 노래 가사의 줄들이다. 각 줄을 영어로 옮겨,
+같은 순서·같은 길이의 JSON 문자열 배열로만 답해라.
+규칙:
+- 노래 가사로 읽히는 자연스러운 영어. 직역 금지.
+- 줄 하나에 영어 한 줄. 설명·따옴표·번호를 붙이지 마라.
+- 원문에 이미 영어 조각이 있으면 그대로 살려라.
+곡: "${fmValue(fm, "title")}" (${fmValue(fm, "artist")})
+입력:
+${JSON.stringify(wanted.map((row) => originalOf(row.line)))}`;
+
+    let translated;
+    try {
+      translated = JSON.parse((await geminiText(key, prompt, true)).replace(/^```json\s*|\s*```$/g, "").trim());
+    } catch {
+      // 5xx·무응답은 재시도하지 않는다 — 한도만 태우고 같은 답이 온다
+      return Response.json({ error: "Gemini 응답 파싱 실패" }, { status: 502 });
+    }
+    if (!Array.isArray(translated) || translated.length !== wanted.length)
+      return Response.json({ error: `Gemini가 ${wanted.length}줄에 ${translated?.length ?? 0}줄로 답했습니다` }, { status: 502 });
+
+    let filled = 0;
+    const rejected = [];
+    // 아래에서부터 끼운다 — 위 인덱스가 밀리지 않는다
+    for (let k = wanted.length - 1; k >= 0; k--) {
+      const text = String(translated[k] ?? "").trim();
+      if (!text) continue;
+      // 영어를 달라고 했는데 한국어가 오면 넣지 않는다. 그 사고가 예전에 있었다 —
+      // 칸이 차 있으니 검사를 통과하고, 아무도 다시 묻지 않았다.
+      if (!translationFilled("en", text)) {
+        rejected.push(originalOf(wanted[k].line).slice(0, 30));
+        continue;
+      }
+      let at = wanted[k].index + 1;
+      while (at < lines.length && /^\s*\+/.test(lines[at])) at++;
+      lines.splice(at, 0, `> ${capitalizeLyricLines(text)}`);
+      filled++;
+    }
+    if (!filled) return Response.json({ filled: 0, lines: wanted.length, rejected });
+
+    // 원문과 frontmatter(= source_hash)는 그대로다. `>` 줄만 늘어난다.
+    await writeSong(
+      body.slug,
+      `---\n${fm}\n---\n${lines.join("\n").replace(/\n*$/, "\n")}`,
+      `fix(song): 영어 번역 ${filled}줄 — ${body.slug}`,
+    );
+    return Response.json({ filled, lines: wanted.length, rejected });
   }
 
   // Which songs are missing generated metadata. `artist_ko` only counts as
