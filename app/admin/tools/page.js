@@ -3,6 +3,7 @@ import { getAllSongsRuntime } from "../../../lib/songs";
 import { needsLyricSections } from "../../../lib/admin/needs";
 import { genreIssue, genreTagOf, GENRES } from "../../../lib/genre";
 import { readRuntimeData } from "../../../lib/store";
+import AppearanceGaps from "../appearance-gaps";
 import ArtworkReview from "../artwork-review";
 import Backfill from "../backfill";
 import BulkWork from "../bulk-work";
@@ -60,6 +61,11 @@ const tools = [
     title: "대량 작업",
     description: "여러 곡의 누락 데이터를 외부 AI로 한꺼번에 보완할 때 작업 JSON을 내보내고 결과를 검증해 반영합니다.",
     content: <BulkWork />,
+  },
+  {
+    title: "작품 사용 정보 결손 메우기",
+    description: "감독·연도가 빈 작품 연결을 모아, TMDB가 아는 것은 바로 채우고 남은 것만 내보내 채워 온 결과를 반영합니다.",
+    content: <AppearanceGaps />,
   },
 ];
 

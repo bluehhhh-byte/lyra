@@ -136,8 +136,8 @@ export default function SongAppearanceDraft({ value, onChange, onAiSearch, busy,
           <input type="number" min="0" className={input + " mt-1"} value={value.episode ?? ""} onChange={(event) => set("episode", event.target.value)} />
         </label>
         <label className="text-xs text-muted sm:col-span-2">
-          근거 주소
-          <input type="url" className={input + " mt-1"} value={value.evidenceUrl} onChange={(event) => set("evidenceUrl", event.target.value)} placeholder="공식 OST·제작사·음반사 페이지" />
+          근거 주소 <span className="text-muted">(선택)</span>
+          <input type="url" className={input + " mt-1"} value={value.evidenceUrl} onChange={(event) => set("evidenceUrl", event.target.value)} placeholder="있으면 넣는다 — 없어도 저장된다" />
         </label>
         <label className="text-xs text-muted sm:col-span-2">
           근거 이름

@@ -149,7 +149,7 @@ export default function SongAppearanceEditor({ songSlug }) {
     <section className="rounded-xl border border-line bg-bg/40 p-4 sm:p-5" aria-labelledby={`appearance-title-${songSlug}`}>
       <h2 id={`appearance-title-${songSlug}`} className="text-sm font-semibold">작품 사용 정보</h2>
       <p className="mt-1 text-xs leading-relaxed text-muted">
-        영화·드라마·애니메이션에서 이 곡이 어떻게 쓰였는지 연결합니다. ‘확인됨’은 근거 주소가 있어야 공개됩니다.
+        영화·드라마·애니메이션에서 이 곡이 어떻게 쓰였는지 연결합니다. ‘확인됨’으로 두면 곡 페이지에 공개됩니다.
       </p>
 
       {items.length > 0 && (
@@ -210,6 +210,11 @@ export default function SongAppearanceEditor({ songSlug }) {
                   {result.thumb ? <img src={result.thumb} alt="" className="h-14 w-10 shrink-0 rounded object-cover" /> : null}
                   <span className="min-w-0 text-sm">
                     <span className="block truncate font-medium">{result.title}</span>
+                    {/* 한국어 표기를 모르는 작품은 원제로 알아본다 — 「장송의 프리렌」과
+                        「葬送のフリーレン」이 같은 것임을 여기서 확인한다 */}
+                    {result.originalTitle && result.originalTitle !== result.title && (
+                      <span className="block truncate text-xs text-muted">{result.originalTitle}</span>
+                    )}
                     <span className="text-xs text-muted">{result.kind} · {result.year || "연도 미상"}</span>
                   </span>
                 </button>
@@ -277,8 +282,8 @@ export default function SongAppearanceEditor({ songSlug }) {
           <input type="number" min="0" className={input + " mt-1"} value={form.episode} onChange={(event) => set("episode", event.target.value)} />
         </label>
         <label className="text-xs text-muted sm:col-span-2">
-          근거 주소
-          <input type="url" className={input + " mt-1"} value={form.evidenceUrl} onChange={(event) => set("evidenceUrl", event.target.value)} placeholder="공식 OST·제작사·음반사 페이지 주소" />
+          근거 주소 <span className="text-muted">(선택)</span>
+          <input type="url" className={input + " mt-1"} value={form.evidenceUrl} onChange={(event) => set("evidenceUrl", event.target.value)} placeholder="있으면 넣는다 — 없어도 저장된다" />
         </label>
         <label className="text-xs text-muted">
           근거 이름
