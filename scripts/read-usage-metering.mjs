@@ -34,10 +34,29 @@ const bytes = series.reduce((a, r) => a + Number(r.neon_transfer_bytes || 0), 0)
 const buckets = series.length;
 const active = series.filter((r) => Number(r.neon_reads || 0) > 0).length;
 
+// 표본이 실제로 창을 채우는가. 계측을 끄면 기록이 그 시각에서 멈추는데, 그래도
+// 창 안에 버킷이 몇 개는 남아 있어 스크립트는 계속 숫자를 내놓는다. 2026-09-15에
+// 그렇게 나온 "109.3MB → 월 3.28GB"는 4.5시간치를 24시간인 양 적은 값이었다.
+// 실제 그 며칠은 하루 285~487MB였다. 숫자가 매일 줄며 개선처럼 보인다.
+//
+// Neon 감시(lib/quota-watch.js)에는 이 실패를 막는 장치를 넣어 두고 여기엔 없었다.
+// 못 읽는 것보다 나쁜 것은 틀린 값을 자신 있게 말하는 것이다.
+const first = new Date(series[0].bucket).getTime();
+const last = new Date(series.at(-1).bucket).getTime();
+const spanHours = (last - first) / 3_600_000 + 5 / 60; // 마지막 버킷의 5분을 더한다
+const staleHours = (Date.now() - last) / 3_600_000;
+const partial = spanHours < HOURS * 0.75;
+
 console.log(`# 최근 ${HOURS}시간 Neon 읽기\n`);
+if (partial) {
+  console.log(`  ⚠ 표본이 창을 채우지 않습니다 — ${spanHours.toFixed(1)}시간치뿐입니다.`);
+  console.log(`     마지막 기록이 ${staleHours.toFixed(1)}시간 전입니다. 계측(LYRA_USAGE_METRICS)이 꺼져 있는지 확인하세요.`);
+  console.log(`     아래 총계는 그 ${spanHours.toFixed(1)}시간의 값이며, 하루 환산은 내지 않습니다.\n`);
+}
 console.log(`  총 읽기      ${reads}회`);
 console.log(`  총 전송      ${mb(bytes)}  (읽기당 평균 ${mb(reads ? bytes / reads : 0)})`);
-console.log(`  하루 환산    ${mb((bytes / HOURS) * 24)} → 월 ${((bytes / HOURS) * 24 * 30 / 1e9).toFixed(2)}GB`);
+if (partial) console.log(`  하루 환산    내지 않음 — 표본이 ${spanHours.toFixed(1)}시간치다`);
+else console.log(`  하루 환산    ${mb((bytes / HOURS) * 24)} → 월 ${((bytes / HOURS) * 24 * 30 / 1e9).toFixed(2)}GB`);
 console.log(`  읽기가 있던 5분 버킷 ${active} / ${buckets}`);
 // 6시간 캐시대로면 하루 4번, 24시간이면 버킷 288개 중 4개에만 읽기가 있어야 한다.
 const expected = Math.max(1, Math.round(HOURS / 6));

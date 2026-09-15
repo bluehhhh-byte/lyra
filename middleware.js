@@ -17,9 +17,16 @@ export async function middleware(req) {
   // 여기서 막으면 Neon 읽기가 아예 일어나지 않는다(lib/bot-guard.js 참조).
   if (guardedPath(pathname)) {
     if (!looksLikeBot(req.headers.get("user-agent"))) return NextResponse.next();
-    return new NextResponse("Disallowed by /robots.txt\n", {
+    // 왜 403인지 헤더로 말한다. curl(UA가 `curl/`)도 봇으로 걸리는데, 상태 코드만
+    // 보면 페이지가 고장난 것처럼 읽힌다 — 실제로 /people 캐시를 curl로 재다가
+    // "ISR이 안 먹는다"고 잘못 짚었다. 진단하는 사람이 바로 알아야 한다.
+    return new NextResponse("Disallowed by /robots.txt — set a browser User-Agent to view this page.\n", {
       status: 403,
-      headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" },
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Lyra-Guard": "bot-user-agent",
+      },
     });
   }
 
