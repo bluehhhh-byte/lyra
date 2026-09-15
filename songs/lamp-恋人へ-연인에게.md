@@ -39,7 +39,12 @@ source_body_hash: bf73270814ea8739ea5994f9955fe311c3a6fc85
 > 나는 우두커니 서서, 당신을 생각합니다
 
 내가 좋아하는 계절은 짧습니다
+> The season I love is always so short
 나도 모르게 녹아내리기 시작하죠
+> Melting away before I even know it
 변해가는 풍경 한 가운데 서서
+> Standing in the middle of the changing scenery
 잠시나마 거기서,
+> Just for a brief moment, right there
 당신을 생각하네요
+> I find myself thinking of you

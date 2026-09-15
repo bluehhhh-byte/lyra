@@ -5,7 +5,7 @@ artist: Glen Hansard
 artist_ko: 
 album: Once (Music from the Motion Picture)
 year: 2007
-genre: Soundtrack
+genre: Folk
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/b9/ac/45/b9ac459d-73cc-d882-2c80-eedff7767565/dj.uyllvkrw.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a8/65/70/a86570fd-adfc-366e-e465-6e9470ffe858/mzaf_12346654545700029426.plus.aac.p.m4a
 trackId: 254349932

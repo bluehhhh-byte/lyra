@@ -6,7 +6,7 @@ artist: DIR EN GREY
 artist_ko: 디르 앙 그레이
 album: 脈 - Single
 year: 2000
-genre: Metal
+genre: Visual Kei
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/47/a9/21/47a92172-5be6-761d-ea26-dfeae5c5e8ca/4529123109163.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/96/40/8a/96408aca-1084-042c-841d-dc48353dbb9e/mzaf_18367802033603373968.plus.aac.p.m4a
 trackId: 1624684700

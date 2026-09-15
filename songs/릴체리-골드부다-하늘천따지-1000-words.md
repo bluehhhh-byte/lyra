@@ -48,7 +48,9 @@ Dancing in a rolls royce
 > 그 안에서 춤을 추는 거야
 
 하늘천따지 검을현 누를황 집우 집주
+> Heaven and Earth, black and yellow, time and space
 하늘천따지 검을현 누를황 집우 집주
+> Heaven and Earth, black and yellow, time and space
 
 Have you ever seen a baby deer under them tree
 > 나무 밑에서 아기 사슴 본 적 있어?
@@ -99,7 +101,9 @@ sitting sideways at the Chinese buffet
 > “야, 과일 시장에서 보자!”
 
 하늘천따지 검을현 누를황 집우 집주
+> Heaven and Earth, black and yellow, time and space
 하늘천따지 검을현 누를황 집우 집주
+> Heaven and Earth, black and yellow, time and space
 
 Dancing in a rolls royce
 > 롤스로이스에서 춤추는 거야

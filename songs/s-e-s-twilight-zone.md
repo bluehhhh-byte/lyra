@@ -34,11 +34,16 @@ Baby you can`t search thing that you want
 > 내 꿈 안에 널 가두고 싶어
 
 단념할 수는 없었어 
+> I could never just let you go
 적빛 너의 향기 끝이 없는 너의 욕망 
+> Your crimson scent, your endless desire
 그때로 되돌릴 순 없겠지 
+> I know we can never go back
 하지만 지금만큼은 오 난
+> But just for this moment, oh I
 
 그대여 눈물 같은 너의 사랑 
+> My dear, your love is like falling tears
 Would you loving in the twilight zone 
 Just once baby
 > (황혼이 질 때까지 사랑해주겠니 한 번만)
@@ -59,7 +64,9 @@ and ever fill we die together
 >^2 (우리가 죽을 때까지 영원한 사랑에 빠진 것처럼)
 
 아침이 올 때까지 
+> Until the morning comes
 내 어둠 안에 밝은 빛이 올 때까지
+> Until a bright light shines on my darkness
 Baby you can touch my lonely heart
 baby I`m yours come into my bed
 >^2 (내 외로운 마음을 만져줘, 내 침대로 와)

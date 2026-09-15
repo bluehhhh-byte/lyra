@@ -28,6 +28,7 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=ALLDAY%20PROJECT&track_name=FAMOUS
 ---
 분명 나쁜 아이는 아니어도
+> Maybe I'm not a bad kid, but
 또 틀에 가두면 we break it
 > Box us in again, we break it
 Bum no bigger than the girl nextdoor
@@ -39,6 +40,7 @@ No white collar 근데 얜 좀 쳐
 When I put mans in their places
 > 내가 남자들을 제자리에 앉힐 때
 모든 시선들은 날 따라와
+> All eyes are on me
 But we ain't even famous
 > 근데 우린 유명하지도 않아
 
@@ -75,10 +77,12 @@ I ain’t even famous
 And my kit in my whip is the latest
 > 내 차에 실린 것들은 전부 최신이지
 내 가친 조 단위 임마 불러봐
+> My worth is in the trillions, boy, call it out
 Name is “The Greatest Unfamous”
 > 이름은 '가장 위대한 무명'
 
 느껴져 내 분위기
+> You can feel my vibe
 When I walk 다 돌아봐
 > When I walk, everybody turns to look
 I be gettin what I need
@@ -92,8 +96,10 @@ Know you lookin’ when I dance
 Take a quick pic for your friend
 > 친구 보여주게 얼른 한 장 찍어
 내 이름 알아둬
+> Better know my name
 
 분명 나쁜 아이는 아니어도
+> Maybe I'm not a bad kid, but
 또 틀에 가두면 we break it
 > Box us in again, we break it
 Bum no bigger than the girl nextdoor
@@ -105,6 +111,7 @@ No white collar 근데 얜 좀 쳐
 When I put mans in their places
 > 내가 남자들을 제자리에 앉힐 때
 모든 시선들은 날 따라와
+> All eyes are on me
 But we ain't even famous
 > 근데 우린 유명하지도 않아
 
@@ -113,10 +120,13 @@ I'm stacking my dollars
 난 뿌리부터 달라, 초록 빛깔 color
 > I'm different from the roots, a bright green color
 감출 수 없어, 나잖아 빛이
+> Can't hide it, after all, I'm the light
 Not even famous but they wanna be us
 > 유명하지도 않은데 다들 우리가 되고 싶어 해
 같은 공기지만 우린 너무 다른 위치
+> We breathe the same air, but we're on different levels
 비교 말어 걔넨 전부 구려
+> Don't compare us, they all suck
 똑같은 걸 해도 I do it better
 > Even doing the same thing, I do it better
 말해 뭐해 I’m a trendsetter
@@ -125,6 +135,7 @@ All day show ‘em 끝없는 체력
 > All day show ‘em, endless stamina
 
 내 표적은 네 머리
+> My target is your head
 When I walk 다 돌아봐
 > When I walk, everybody turns to look
 I be gettin what I need
@@ -138,11 +149,14 @@ Know you lookin’ when I dance
 Take a quick pic for your friend
 > 친구 보여주게 얼른 한 장 찍어
 내 이름 알아둬
+> Better know my name
 
 분명 나쁜 아이는 아니어도
+> Maybe I'm not a bad kid, but
 또 틀에 가두면 we break it
 > Box us in again, we break it
 범 무서운지 모르고 덤벼
+> Fools rush in, fearless of the tiger
 겁 없이 I just face it
 > 겁 없이 그냥 맞서
 No white collar 근데 얜 좀 쳐
@@ -150,6 +164,7 @@ No white collar 근데 얜 좀 쳐
 When I put mans in their places
 > 내가 남자들을 제자리에 앉힐 때
 모든 시선들은 날 따라와
+> All eyes are on me
 But we ain't even famous
 > 근데 우린 유명하지도 않아
 

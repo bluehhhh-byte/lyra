@@ -28,9 +28,13 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=BTS&track_name=2.0
 ---
 그래 방탄처럼 그게 말은 쉽지
+> Yeah, like BTS, that's easy to say
 우린 뜀틀 누가 맨날 뛰어넘니
+> We're vaulting, who jumps over it every single time?
 웃기기는 한데 사실 안 웃기지
+> It's kind of funny, but honestly it's not funny at all
 10년은 말야 어림 반 푼어치
+> Ten years? That's not even worth a penny
 Stop, ride
 > 멈춰, 올라타
 
@@ -71,11 +75,15 @@ Spec 다른 step, 뛰지 않는 step two
 Two, two point oh 업데이트된 후
 > Two, two point oh, after the update
 여기저기 또 한 번 일냈네
+> Making waves everywhere, yet again
 10 out of 10, 10
 > 10점 만점에 10점, 10점
 이젠 버려, 못 쓸 폐품
+> Throw it away now, useless scrap
 수거하러 가
+> Going to collect it
 여유 있게 다시 수고하러
+> Taking it easy, going back to work
 Stop, ride
 > 멈춰, 올라타
 

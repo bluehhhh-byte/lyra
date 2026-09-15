@@ -9,7 +9,7 @@ artwork: https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/20/fe/6e20fe23-
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c2/41/e8/c241e8bd-45f1-ca58-5e26-70c850160914/mzaf_3939942542610631556.plus.aac.p.m4a
 trackId: 190094410
 duration: 331
-genre: Soundtrack
+genre: Funk
 lang: en
 tags: [영미, Funk, 2001]
 listen_when: 근심을 털어 내려 몸부터 흔드는 밤

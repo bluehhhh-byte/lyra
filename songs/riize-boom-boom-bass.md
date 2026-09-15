@@ -30,13 +30,16 @@ lyrics_source: https://lrclib.net/api/get?artist_name=RIIZE&track_name=Boom%20Bo
 My baby like to string me on
 > 내 사랑은 날 애태우는 걸 좋아해
 좀 더 내게 다가와
+> Come a little closer to me
 네게 맞춰 온 My bass
 > My bass tuned just to you
 살짝 너의 맘을 Slide
 > Gently sliding into your heart
 
 그냥 놓치긴 아쉬워 난
+> Hate to let this moment slip away
 넌 어떻게 생각해
+> Tell me what's on your mind
 자 Follow me now
 > 자, 이제 날 따라와
 이 리듬이 다시 Make me spin
@@ -49,6 +52,7 @@ Every day we play
 가볍게 Groovin'
 > Lightly groovin'
 느낀 대로 해
+> Just do what you feel
 Don't stop the music
 > 음악을 멈추지 마
 Hands up on my bass
@@ -78,6 +82,7 @@ We want that
 우리 사이 Keep going make a bassline
 > 우리 사이, 계속 가며 베이스라인을 만들어
 너도 왠지 템포가 빨라
+> Seems your tempo's speeding up too
 따라와 둘만의 Timeline
 > Follow along to a timeline just for the two of us
 Hands in the sky yeah you know what I like
@@ -90,6 +95,7 @@ Every day we play
 가볍게 Groovin'
 > Lightly groovin'
 느낀 대로 해
+> Just do what you feel
 Don't stop the music
 > 음악을 멈추지 마
 Hands up on my bass
@@ -117,6 +123,7 @@ Every day we play
 가볍게 Groovin'
 > Lightly groovin'
 느낀 대로 해
+> Just do what you feel
 Don't stop the music
 > 음악을 멈추지 마
 Hands up on my bass
@@ -129,12 +136,15 @@ We want that
 Aye alright
 > 에이 좋아
 나의 손을 잡고 떠올라
+> Take my hand and rise on up
 Aye alright
 > 에이 좋아
 너와 내가 자꾸 떠올라
+> You and I keep floating high
 Aye alright
 > 에이 좋아
 우린 계속 같이 떠올라
+> Together we just keep rising up
 지금부터 Lower lower lower
 > 지금부터 더 낮게, 낮게, 낮게
 We want that

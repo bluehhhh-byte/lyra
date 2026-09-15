@@ -6,7 +6,7 @@ artist: L'Arc-en-Ciel
 artist_ko: 라르크 앙 시엘
 album: 浸食 〜lose control〜 - Single
 year: 1998
-genre: Visual Kei
+genre: J-Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/93/24/05/9324052e-c567-eec5-88a1-fb2da6fb5784/jacket_KSCL01033B00Z_550.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4f/1c/6d/4f1c6d24-3451-5c96-69cf-a3797bf89bd4/mzaf_9547460524488252267.plus.aac.p.m4a
 trackId: 1536367740

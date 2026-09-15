@@ -44,7 +44,7 @@ That's why we are the best soulmate
 다 잊어버려 (Work, hate)
 > Forget it all (Work, hate)
 같이 이상한 gramma
-> 함께 괴상한 문법으로
+> An equally strange gramma
 둘이 되는 게 꿈이야
 > My dream is for the two of us to become that
 
@@ -80,7 +80,7 @@ Blue moon이 그려진 목걸이도 함께
 뭐가 중요해 (Fake, real)
 > What does it matter (Fake, real)
 같이 이상한 gramma
-> 함께 괴상한 문법으로
+> An equally strange gramma
 둘이 되는 게 꿈이야
 > My dream is for the two of us to become that
 

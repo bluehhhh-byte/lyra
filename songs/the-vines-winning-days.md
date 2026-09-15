@@ -43,6 +43,7 @@ I’m just seein’ it rise 난 그저 그것이 올라가는 걸 보고 있�
 (land that’s over me)
 > (내 위로 펼쳐진 땅)
 (나를 덮고 있는 땅)
+> (The ground is on my face)
 So, I just wanna let it breathe 그래서, 난 그저 그것이 숨쉬게 하고 싶어
 
 I’ve been tryin’ 난 계속 노력해왔어
@@ -59,6 +60,7 @@ Get up, don’t hide away 일어나, 숨지 마
 (get up and go outside)
 > (일어나서 밖으로 나가)
 (일어나서 밖으로 나가)
+> (Get up and go outside)
 I’ve seen you down when I was flyin’
 > 내가 날아오를 때 넌 가라앉아 있었지
 내가 날아오를 때 네가 침울해 있는 걸 봤어
@@ -67,6 +69,7 @@ I’m sinkin’ like a stone 난 돌처럼 가라앉고 있어
 (get up, don’t hide away)
 > (일어나, 숨지 마)
 (일어나, 숨지 마)
+> (Get up and do not hide)
 
 I can’t breathe 난 숨을 쉴 수 없어
 I’ve been tryin’ 난 계속 노력해왔어

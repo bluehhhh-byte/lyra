@@ -1,9 +1,9 @@
 {
   "version": 2,
   "createdAt": "2026-09-01T08:00:46.329Z",
-  "updatedAt": "2026-09-05T09:26:42.469Z",
+  "updatedAt": "2026-09-15T10:00:05.540Z",
   "corpusDigest": "34e7eb6a5580939f9eba32b20afa2069cb0774ec6c8496c89bfed558c67a525a",
-  "totalSongs": 960,
+  "totalSongs": 969,
   "baseline": [
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
@@ -58411,54 +58411,144 @@
         }
       ]
     },
-    "kanye-west-andre-troutman-white-lines": {
+    "10cc-i-m-not-in-love": {
       "status": "pending",
       "phase": "exhaustive",
       "passes": [],
-      "updatedAt": "2026-09-03T23:26:44.137Z",
+      "updatedAt": "2026-09-12T10:54:13.826Z",
       "researchIdentity": {
-        "title": "WHITE LINES",
-        "artist": "Kanye West & Andre Troutman"
+        "title": "I'm Not In Love",
+        "artist": "10cc"
       }
     },
-    "blankey-jet-city-sweet-days": {
+    "the-hollies-he-ain-t-heavy-he-s-my-brother": {
       "status": "pending",
       "phase": "exhaustive",
       "passes": [],
-      "updatedAt": "2026-09-03T23:44:11.086Z",
+      "updatedAt": "2026-09-12T12:02:52.370Z",
       "researchIdentity": {
-        "title": "SWEET DAYS",
-        "artist": "BLANKEY JET CITY"
+        "title": "He Ain't Heavy, He's My Brother",
+        "artist": "The Hollies"
       }
     },
-    "korn-another-brick-in-the-wall-pt-1-2-3-pink-floyd-cover": {
+    "moondog-do-your-thing": {
       "status": "pending",
       "phase": "exhaustive",
       "passes": [],
-      "updatedAt": "2026-09-04T09:58:44.122Z",
+      "updatedAt": "2026-09-13T02:37:22.315Z",
       "researchIdentity": {
-        "title": "Another Brick in the Wall, Pt. 1, 2, 3 (Pink Floyd Cover)",
-        "artist": "Korn"
+        "title": "Do Your Thing",
+        "artist": "Moondog"
       }
     },
-    "blankey-jet-city-pepin": {
+    "엘리워드-날자꾸나": {
       "status": "pending",
       "phase": "exhaustive",
       "passes": [],
-      "updatedAt": "2026-09-05T04:40:33.299Z",
+      "updatedAt": "2026-09-13T12:19:35.661Z",
       "researchIdentity": {
-        "title": "Pepin",
-        "artist": "BLANKEY JET CITY"
+        "title": "날자꾸나",
+        "artist": "엘리워드"
       }
     },
-    "kim-jong-seo-plastic-syndrome": {
+    "leon-thomas-iii-mutt": {
       "status": "pending",
       "phase": "exhaustive",
       "passes": [],
-      "updatedAt": "2026-09-05T09:26:42.469Z",
+      "updatedAt": "2026-09-13T12:47:22.489Z",
       "researchIdentity": {
-        "title": "Plastic Syndrome",
-        "artist": "Kim Jong Seo"
+        "title": "MUTT",
+        "artist": "Leon Thomas III"
+      }
+    },
+    "vanta01-mpt-white-speed": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-13T13:08:54.826Z",
+      "researchIdentity": {
+        "title": "WHITE SPEED",
+        "artist": "VANTA01 & MPT"
+      }
+    },
+    "tannamu-what-made-us-stay-for-all-this-time": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-13T13:37:55.015Z",
+      "researchIdentity": {
+        "title": "What made us stay for all this time?",
+        "artist": "Tannamu"
+      }
+    },
+    "choiyudam-outside": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-13T13:41:13.487Z",
+      "researchIdentity": {
+        "title": "Outside",
+        "artist": "CHOIYUDAM"
+      }
+    },
+    "oysters-those-were-the-days": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-13T13:45:03.999Z",
+      "researchIdentity": {
+        "title": "Those Were The Days",
+        "artist": "OYSTERS"
+      }
+    },
+    "저스디스-justhis-round-and-round-feat-ra-d": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-13T21:31:48.607Z",
+      "researchIdentity": {
+        "title": "Round and Round (feat. Ra.D)",
+        "artist": "저스디스 (JUSTHIS)"
+      }
+    },
+    "leon-thomas-chris-brown-mutt-cb-remix": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-14T13:57:57.541Z",
+      "researchIdentity": {
+        "title": "MUTT (CB REMIX)",
+        "artist": "Leon Thomas & Chris Brown"
+      }
+    },
+    "fkj-little-little-voice": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-14T23:10:30.171Z",
+      "researchIdentity": {
+        "title": "Little Little Voice",
+        "artist": "FKJ"
+      }
+    },
+    "the-avalanches-far-away": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-14T23:39:45.053Z",
+      "researchIdentity": {
+        "title": "Far Away",
+        "artist": "The Avalanches"
+      }
+    },
+    "effie-makgeolli-banger": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-15T10:00:05.540Z",
+      "researchIdentity": {
+        "title": "MAKGEOLLI BANGER",
+        "artist": "Effie"
       }
     }
   },

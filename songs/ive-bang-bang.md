@@ -30,6 +30,7 @@ lyrics_source: https://lrclib.net/api/get?artist_name=IVE&track_name=BANG%20BANG
 It's a new scene, it's aggressive
 > 새로운 장면이야, 거칠지
 이미 알아차렸겠지, 그치 언니?
+> You already figured it out, right sis?
 모든 소문 속의 problem, yeah, I'm 걔지
 > The problem in every rumor, yeah, I'm that girl
 벽에 붙은 나의 picture, 아래 wanted (아래 wanted)
@@ -38,6 +39,7 @@ It's a new scene, it's aggressive
 Wake up, 주저하지 말고 (말고, 말고)
 > Wake up, don't hesitate (don't, don't)
 다른 시선들은 뭐 그리
+> Why care about how they look?
 I don't give a 쉿, what you say
 > 네가 뭐라 하든 난 신경 안 써
 Yeah, I be going out with a
@@ -84,6 +86,7 @@ It's a little bit offensive, yeah, I said it (yeah)
 Wake up, 주저하지 말고 (말고, 말고)
 > Wake up, don't hesitate (don't, don't)
 그냥 맘 가는 대로
+> Just following my heart
 I don't give a 쉿, what you say
 > 네가 뭐라 하든 난 신경 안 써
 Yeah, I be going out with a
@@ -121,6 +124,7 @@ Bang, bang
 Hot issue, 대체 누굴까?
 > Hot issue, just who could it be?
 다들 찾기 위해서 안달 나
+> Everyone's dying to find it
 연기처럼 disappear, catch me if you can, baby
 > 연기처럼 사라져, 잡을 수 있으면 잡아봐
 조금만 더 놀아줄게 (four, three, two, one)

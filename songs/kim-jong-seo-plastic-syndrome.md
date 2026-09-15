@@ -5,7 +5,7 @@ artist: 김종서
 artist_ko:
 album: Kim Jong-seo's 4th Album (Thermal Island)
 year: 1995
-genre: Korean Rock
+genre: Hard Rock
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/46/5b/b0/465bb0eb-a4fd-2be5-ee0e-3760fa7c54cc/4548341040294.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fc/6e/2f/fc6e2f20-8dc7-11fd-6153-52a6d4f03b4d/mzaf_516940328496482757.plus.aac.p.m4a
 trackId: 1531421617
