@@ -199,25 +199,66 @@ export async function handleAppearances(action, body) {
     const data = await getSongAppearancesRuntime();
     const targets = data.items.filter((item) => gapsOf(item));
     const movies = await getAllMoviesMeta();
-    // tmdbId가 없는 항목은 제목으로 찾아 붙인다. 조건은 제목과 연도가 모두
-    // 맞을 때뿐이다 — 제목만 맞는 것에는 「해피 투게더」(1997 왕가위 / 2018 다른
-    // 작품)처럼 진짜 다른 작품이 섞인다. 틀린 감독을 넣느니 남겨 둔다.
-    const sameText = (a, b) =>
-      String(a || "").toLocaleLowerCase("ko-KR").replace(/[\s:·・!?,.'"()[\]-]/g, "") ===
-      String(b || "").toLocaleLowerCase("ko-KR").replace(/[\s:·・!?,.'"()[\]-]/g, "");
+    // tmdbId가 없는 항목은 제목으로 찾아 붙인다.
+    //
+    // 검색어는 원제를 먼저 쓴다. 한글 제목으로만 찾던 동안 「THE END OF
+    // EVANGELION」도 「Weak Hero Class 1」도 못 찾았다 — TMDB에 있는데 우리가
+    // 한국어 표기로만 물었기 때문이다. originalTitle은 대부분 채워져 있다.
+    //
+    // 제목은 한쪽이 다른 쪽을 품기만 해도 받아들인다(TMDB는 「약한영웅」,
+    // 우리는 「약한영웅 Class 1」). 대신 연도와 매체 종류가 둘 다 맞아야 한다 —
+    // 「해피 투게더」(1997 왕가위 / 2018 다른 작품)처럼 제목만 같은 남남이 섞이는
+    // 것을 막는 것은 연도다. 틀린 감독을 넣느니 남겨 둔다.
+    // 물결표는 문자가 여럿이다. 「再会〜Silent Truth〜」(U+301C)와 TMDB의
+    // 「再会～Silent Truth～」(U+FF5E)는 눈에 같아 보이지만 다른 글자라, 지우지
+    // 않으면 같은 작품을 남남으로 본다.
+    const norm = (value) =>
+      String(value || "").toLocaleLowerCase("ko-KR").replace(/[\s:·・!?,.'"()[\]\-~！～〜∼]/g, "");
+    const titleClose = (a, b) => {
+      const [x, y] = [norm(a), norm(b)];
+      if (!x || !y) return false;
+      return x === y || x.includes(y) || y.includes(x);
+    };
+    const wantTv = (type) => type === "drama" || type === "anime_series";
     for (const item of targets) {
-      if (item.tmdbId || !item.year) continue;
-      try {
-        const hit = (await searchMovies(item.workTitle)).find(
-          (found) =>
-            (sameText(found.title, item.workTitle) || sameText(found.originalTitle, item.workTitle)) &&
-            Number(found.year) === Number(item.year),
-        );
-        if (hit) {
-          item.tmdbId = hit.tmdbId;
-          item.mediaType = hit.mediaType;
-        }
-      } catch {}
+      if (item.tmdbId) continue;
+      const queries = [...new Set([item.originalTitle, item.workTitle].filter(Boolean))];
+      for (const query of queries) {
+        try {
+          const hits = (await searchMovies(query)).filter((found) =>
+            wantTv(item.workType) ? found.mediaType === "tv" : found.mediaType === "movie",
+          );
+          const sameYear = (found) => Number(found.year) === Number(item.year);
+          const exact = (found) => norm(found.title) === norm(query) || norm(found.originalTitle) === norm(query);
+
+          // 고르는 순서가 곧 안전장치다.
+          //   1) 제목도 연도도 맞는 것
+          //   2) 제목이 정확히 맞는 것 — TV만. 우리 연도는 그 곡이 쓰인 화의
+          //      연도라 시리즈 시작 연도와 다르다(그레이 아나토미 2009 / TMDB 2005).
+          //   3) 제목이 한쪽을 품고 연도가 맞는 것 — 1·2가 하나도 없을 때만.
+          //
+          // 3을 먼저 보면 「스몰빌」이 웹 스핀오프 「Smallville: Chloe Chronicles」에
+          // 붙는다. 본편은 2001년이라 우리 연도(2003)와 어긋나고, 스핀오프는
+          // 2003년이라 맞아떨어지기 때문이다. 실제로 그렇게 붙였다가 되돌렸다.
+          const loose = (found) =>
+            (norm(found.title).includes(norm(query)) || norm(query).includes(norm(found.title)) ||
+              norm(found.originalTitle).includes(norm(query)) || norm(query).includes(norm(found.originalTitle))) &&
+            sameYear(found);
+          // 연도를 모르는 항목(Rambo III)은 제목이 정확히 맞는 후보가 하나뿐일
+          // 때만 받는다. 둘 이상이면 고르지 않는다 — 연도가 없으면 가릴 것이 없다.
+          const exacts = hits.filter(exact);
+          const hit =
+            hits.find((found) => exact(found) && sameYear(found)) ||
+            (!item.year ? (exacts.length === 1 ? exacts[0] : null) : null) ||
+            (wantTv(item.workType) && item.year ? exacts[0] : null) ||
+            (item.year ? hits.find(loose) : null);
+          if (hit) {
+            item.tmdbId = hit.tmdbId;
+            item.mediaType = hit.mediaType;
+            break;
+          }
+        } catch {}
+      }
     }
     const filled = [];
     const failed = [];
