@@ -6,6 +6,7 @@ import { isSaveShortcut } from "../../../../lib/admin/save-shortcut";
 import { adminSessionExpiry } from "../../../../lib/auth-token";
 import AdminErrorMessage from "../../error-message";
 import SongAppearanceEditor from "../../song-appearance-editor";
+import SongTranslationFinish from "../../song-translation-finish";
 
 async function api(action, body, nextPath) {
   const res = await fetch("/api/admin", {
@@ -65,6 +66,17 @@ export default function EditForm({ slug }) {
           setStatus("");
         }
       });
+  }, [slug, nextPath]);
+
+  // 번역 채우기가 서버에서 곡을 바꾸고 나면 편집기의 본문은 낡은 것이 된다.
+  // 그대로 두고 저장을 누르면 방금 채운 번역을 도로 지운다.
+  const reload = useCallback(async () => {
+    const fresh = await api("load", { slug }, nextPath);
+    savedRaw.current = fresh.raw;
+    clearSongDraft(window.localStorage, slug);
+    setRaw(fresh.raw);
+    setTranslationVariants(fresh.translationVariants || []);
+    setStatus("번역을 반영해 다시 불러왔습니다");
   }, [slug, nextPath]);
 
   useEffect(() => {
@@ -166,6 +178,9 @@ export default function EditForm({ slug }) {
         <span className="text-sm text-muted">{status}</span>
       </div>
       <AdminErrorMessage message={error?.message} actionHref={error?.loginUrl} className="mt-3" />
+      <div className="mt-8">
+        <SongTranslationFinish slug={slug} onSaved={reload} />
+      </div>
       <div className="mt-8">
         <SongAppearanceEditor songSlug={slug} />
       </div>

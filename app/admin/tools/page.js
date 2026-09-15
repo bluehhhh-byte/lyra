@@ -4,6 +4,7 @@ import { needsLyricSections } from "../../../lib/admin/needs";
 import { genreIssue, genreTagOf, GENRES } from "../../../lib/genre";
 import { readRuntimeData } from "../../../lib/store";
 import AppearanceGaps from "../appearance-gaps";
+import GapConsole from "../gap-console";
 import EnTranslationGap from "../en-translation-gap";
 import ArtworkReview from "../artwork-review";
 import Backfill from "../backfill";
@@ -18,6 +19,13 @@ export const metadata = { title: "관리 도구 | Lyra" };
 export const dynamic = "force-dynamic";
 
 const tools = [
+  {
+    // 도구가 넷으로 흩어져 있어 무엇이 얼마나 남았는지 보려면 네 번 열어야 했다.
+    // 그래서 아무도 전체를 보지 않았다. 여기가 그 첫 화면이다.
+    title: "결손 종합",
+    description: "곡과 작품 사용 정보의 빈칸을 한 번에 세고, 자동으로 고칠 수 있는 것은 여기서 차례로 실행합니다.",
+    content: <GapConsole />,
+  },
   {
     title: "누락 항목 보정",
     description: "한글 제목·가수 독음·태그·코멘트가 비어 있는 곡만 찾아 Gemini로 한 곡씩 채웁니다.",

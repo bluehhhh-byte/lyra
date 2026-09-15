@@ -32,6 +32,7 @@ import {
   effectiveLang,
   needsEn,
   translationFilled,
+  translationTarget,
 } from "../../../lib/admin/needs";
 import { appendReportVersion } from "../../../lib/report-history";
 import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/admin/song-duplicate";
@@ -417,6 +418,25 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
 
   // 영어 번역을 기다리는 곡 목록. 세는 규칙은 songNeeds 하나뿐이라, 화면에 뜨는
   // "영어 번역 없음 N줄"과 여기 숫자가 갈릴 수 없다.
+  // 결손을 한 화면에서 본다. 새로 세지 않는다 — 각 항목의 판정은 이미 있는
+  // 곳(songNeeds, 그리고 작품 사용 정보는 자기 라우트)에서 온다. 여기가 또
+  // 세면 화면마다 숫자가 달라진다.
+  if (action === "gapOverview") {
+    const songs = await getAllSongsRuntime();
+    const tally = { enTranslation: 0, translation: 0, reading: 0, inline: 0, comment: 0, titleKo: 0, keywords: 0, emotion: 0, artwork: 0, year: 0, sections: 0 };
+    const songsWith = { ...tally };
+    for (const song of songs) {
+      const need = songNeeds(song);
+      for (const key of Object.keys(tally)) {
+        const count = Number(need[key]) || 0;
+        if (!count) continue;
+        tally[key] += count;
+        songsWith[key] += 1;
+      }
+    }
+    return Response.json({ total: songs.length, units: tally, songs: songsWith });
+  }
+
   if (action === "enTranslateQueue") {
     const songs = await getAllSongsRuntime();
     const items = songs
@@ -503,6 +523,15 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
     // 날것으로 적지 않는다 — U+2028은 JS 소스에서 줄바꿈으로 읽힌다
     const INLINE = /[\u2028\u2029]/;
     const originalOf = (line) => line.trim().split(INLINE)[0].trim();
+    // 원문 아래 붙은 번역 줄의 위치. 없으면 -1. 덮어쓰려면 자리를 알아야 한다.
+    const translationLineIndex = (index) => {
+      for (let j = index + 1; j < lines.length; j++) {
+        const t = lines[j].trim();
+        if (t.startsWith("+")) continue;
+        return t.startsWith(">") ? j : -1;
+      }
+      return -1;
+    };
     // 원문 바로 아래 붙은 번역(`+` 독음은 건너뛴다). 같은 줄에 붙어 있으면 그것이 번역이다.
     const translationUnder = (index) => {
       const inline = lines[index].trim().split(INLINE).slice(1).join(" ").trim();
@@ -553,7 +582,31 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
       wantedCount.set(text, left - 1);
       return true;
     });
-    if (!wanted.length) return Response.json({ filled: 0, lines: 0 });
+
+    // 번역 칸에 한국어가 들어 있는 줄 — 한국어 줄을 한국어로 고쳐 쓴 것이라
+    // 번역이 아니다. Effie <MAKGEOLLI BANGER>가 41줄 중 39줄은 영어인데 두 줄만
+    // 이 상태였고, 그래서 "덜 된 것처럼" 보였다.
+    //
+    // 채우기가 아니라 덮어쓰기라 일괄 도구는 이걸 건드리지 않는다. 곡 하나를 열고
+    // 사람이 무엇이 바뀌는지 본 다음에만 바꾼다(replace). `>` 줄이 둘 이상 쌓인
+    // 자리는 어느 것을 바꿔야 하는지 알 수 없어 그대로 둔다.
+    const replacing = body.replace === true ? originals.flatMap((row) => {
+      if (coveredBySpan(row.index)) return [];
+      const at = translationLineIndex(row.index);
+      if (at < 0) return [];
+      const current = lines[at].replace(/^\s*>\^?\d*\s*/, "");
+      if (translationFilled("en", current)) return [];
+      if (/^\s*>/.test(lines[at + 1] || "")) return [];
+      const line = { en: originalOf(row.line), ko: current };
+      if (translationTarget(line, lang) !== "en") return [];
+      return [{ index: row.index, at, current }];
+    }) : [];
+    // 채울 줄과 바꿀 줄을 한 번에 물어본다 — Gemini 호출 하나로 끝난다
+    const jobs = [
+      ...wanted.map((row) => ({ kind: "fill", row })),
+      ...replacing.map((item) => ({ kind: "replace", item, row: originals.find((o) => o.index === item.index) })),
+    ];
+    if (!jobs.length) return Response.json({ filled: 0, replaced: 0, lines: 0, changes: [] });
 
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
@@ -566,7 +619,7 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
 - 원문에 이미 영어 조각이 있으면 그대로 살려라.
 곡: "${fmValue(fm, "title")}" (${fmValue(fm, "artist")})
 입력:
-${JSON.stringify(wanted.map((row) => originalOf(row.line)))}`;
+${JSON.stringify(jobs.map((job) => originalOf(job.row.line)))}`;
 
     let translated;
     try {
@@ -575,35 +628,56 @@ ${JSON.stringify(wanted.map((row) => originalOf(row.line)))}`;
       // 5xx·무응답은 재시도하지 않는다 — 한도만 태우고 같은 답이 온다
       return Response.json({ error: "Gemini 응답 파싱 실패" }, { status: 502 });
     }
-    if (!Array.isArray(translated) || translated.length !== wanted.length)
-      return Response.json({ error: `Gemini가 ${wanted.length}줄에 ${translated?.length ?? 0}줄로 답했습니다` }, { status: 502 });
+    if (!Array.isArray(translated) || translated.length !== jobs.length)
+      return Response.json({ error: `Gemini가 ${jobs.length}줄에 ${translated?.length ?? 0}줄로 답했습니다` }, { status: 502 });
 
     let filled = 0;
+    let replaced = 0;
     const rejected = [];
-    // 아래에서부터 끼운다 — 위 인덱스가 밀리지 않는다
-    for (let k = wanted.length - 1; k >= 0; k--) {
+    const changes = [];
+    // 아래에서부터 다룬다 — 끼워 넣어도 위 인덱스가 밀리지 않는다
+    for (let k = jobs.length - 1; k >= 0; k--) {
+      const job = jobs[k];
       const text = String(translated[k] ?? "").trim();
       if (!text) continue;
-      // 영어를 달라고 했는데 한국어가 오면 넣지 않는다. 그 사고가 예전에 있었다 —
+      // 영어를 달라고 했는데 한국어가 오면 쓰지 않는다. 그 사고가 예전에 있었다 —
       // 칸이 차 있으니 검사를 통과하고, 아무도 다시 묻지 않았다.
       if (!translationFilled("en", text)) {
-        rejected.push(originalOf(wanted[k].line).slice(0, 30));
+        rejected.push(originalOf(job.row.line).slice(0, 30));
         continue;
       }
-      let at = wanted[k].index + 1;
-      while (at < lines.length && /^\s*\+/.test(lines[at])) at++;
-      lines.splice(at, 0, `> ${capitalizeLyricLines(text)}`);
-      filled++;
+      const next = capitalizeLyricLines(text);
+      changes.push({
+        kind: job.kind,
+        original: originalOf(job.row.line),
+        before: job.kind === "replace" ? job.item.current : "",
+        after: next,
+      });
+      if (body.preview === true) continue;
+      if (job.kind === "replace") {
+        lines[job.item.at] = `> ${next}`;
+        replaced++;
+      } else {
+        let at = job.row.index + 1;
+        while (at < lines.length && /^\s*\+/.test(lines[at])) at++;
+        lines.splice(at, 0, `> ${next}`);
+        filled++;
+      }
     }
-    if (!filled) return Response.json({ filled: 0, lines: wanted.length, rejected });
+    changes.reverse(); // 화면에는 가사 순서대로 보여 준다
 
-    // 원문과 frontmatter(= source_hash)는 그대로다. `>` 줄만 늘어난다.
+    // 미리보기는 무엇이 바뀔지만 돌려준다 — 덮어쓰기는 사람이 보고 나서 한다
+    if (body.preview === true) return Response.json({ preview: true, changes, rejected, lines: jobs.length });
+    if (!filled && !replaced) return Response.json({ filled: 0, replaced: 0, lines: jobs.length, rejected, changes });
+
+    // 원문과 frontmatter(= source_hash)는 그대로다. 바뀌는 것은 `>` 줄뿐이다.
+    const what = [filled && `채움 ${filled}줄`, replaced && `교체 ${replaced}줄`].filter(Boolean).join(" · ");
     await writeSong(
       body.slug,
       `---\n${fm}\n---\n${lines.join("\n").replace(/\n*$/, "\n")}`,
-      `fix(song): 영어 번역 ${filled}줄 — ${body.slug}`,
+      `fix(song): 영어 번역 ${what} — ${body.slug}`,
     );
-    return Response.json({ filled, lines: wanted.length, rejected });
+    return Response.json({ filled, replaced, lines: jobs.length, rejected, changes });
   }
 
   // Which songs are missing generated metadata. `artist_ko` only counts as
