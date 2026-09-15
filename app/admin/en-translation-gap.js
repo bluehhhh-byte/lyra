@@ -46,7 +46,7 @@ export default function EnTranslationGap() {
     setBusy("fill");
     setError("");
     const note = (slug, message) => setLog((current) => ({ ...current, [slug]: message }));
-    for (const item of queue.items) {
+    for (const item of queue.items.filter((row) => row.fillable > 0)) {
       note(item.slug, "생성 중…");
       try {
         const done = await api("enTranslate", { slug: item.slug });
@@ -82,10 +82,18 @@ export default function EnTranslationGap() {
       </div>
 
       {queue && (
-        <p className="text-sm text-muted">
-          전 {queue.total}곡 중 <strong className="text-ink">{queue.count}곡</strong>이 영어 번역을 기다립니다
-          {queue.count > 0 ? <> · 모두 {queue.lines}줄</> : " — 남은 줄이 없습니다 ✓"}
-        </p>
+        <>
+          <p className="text-sm text-muted">
+            전 {queue.total}곡 중 <strong className="text-ink">{queue.count}곡</strong>이 영어 번역을 기다립니다
+            {queue.count > 0 ? <> · 채울 수 있는 {queue.lines}줄</> : " — 채울 줄이 없습니다 ✓"}
+          </p>
+          {queue.blockedLines > 0 && (
+            <p className="text-sm text-muted">
+              그 밖에 {queue.blockedSongs}곡 {queue.blockedLines}줄은 번역 칸에 한국어가 들어 있습니다 —
+              지우거나 바꿔 쓰는 일이라 사람이 봐야 합니다. 여기서는 건드리지 않습니다.
+            </p>
+          )}
+        </>
       )}
 
       {queue?.count > 0 && (
@@ -97,7 +105,10 @@ export default function EnTranslationGap() {
                 <span className="text-muted"> — {item.artist}</span>
                 {log[item.slug] && <span className="block text-xs text-accent">{log[item.slug]}</span>}
               </span>
-              <span className="shrink-0 text-xs text-muted">{item.lines}줄</span>
+              <span className="shrink-0 text-xs text-muted">
+                {item.fillable > 0 ? `${item.fillable}줄` : ""}
+                {item.blocked > 0 ? `${item.fillable > 0 ? " · " : ""}사람 확인 ${item.blocked}줄` : ""}
+              </span>
             </li>
           ))}
         </ul>

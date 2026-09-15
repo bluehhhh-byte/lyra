@@ -420,17 +420,33 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
   if (action === "enTranslateQueue") {
     const songs = await getAllSongsRuntime();
     const items = songs
-      .map((song) => ({ song, lines: songNeeds(song).enTranslation }))
-      .filter((row) => row.lines > 0)
-      .map((row) => ({
-        slug: row.song.slug,
-        title: row.song.title,
-        artist: row.song.artist,
-        lines: row.lines,
-      }));
+      .map((song) => {
+        const lines = songNeeds(song).enTranslation;
+        if (!lines) return null;
+        // 같은 "영어 번역 없음"이어도 둘은 다른 일이다. 칸이 빈 줄은 채우면 되고,
+        // 한국어가 들어 있는 줄은 지우거나 바꿔 쓰는 일이라 사람이 봐야 한다
+        // (한국어→한국어 재작성 — needs.js 주석의 그 결함). 갈라 보이지 않으면
+        // 대기열이 영영 0이 되지 않아, 남은 숫자가 뜻을 잃는다.
+        const lang = effectiveLang(song);
+        const blocked = song.stanzas
+          .flatMap((stanza) => stanza.lines)
+          .filter((line) => needsEn(line, lang) && String(line.ko || "").trim()).length;
+        return {
+          slug: song.slug,
+          title: song.title,
+          artist: song.artist,
+          lines,
+          blocked,
+          fillable: Math.max(0, lines - blocked),
+        };
+      })
+      .filter(Boolean);
+    const sum = (field) => items.reduce((total, row) => total + row[field], 0);
     return Response.json({
-      count: items.length,
-      lines: items.reduce((sum, row) => sum + row.lines, 0),
+      count: items.filter((row) => row.fillable > 0).length,
+      lines: sum("fillable"),
+      blockedSongs: items.filter((row) => row.blocked > 0).length,
+      blockedLines: sum("blocked"),
       total: songs.length,
       items,
     });
@@ -523,7 +539,14 @@ ${JSON.stringify(needs.map((n) => n.text))}`;
     // 파서가 N줄이라 했으면 N줄만 채운다.
     const wanted = originals.filter((row) => {
       if (coveredBySpan(row.index)) return false;
-      if (translationFilled("en", translationUnder(row.index))) return false;
+      // 번역 칸이 비어 있는 줄에만 넣는다. 한국어가 들어 있는 줄(한국어→한국어
+      // 재작성 — 이 저장소가 오래 안고 있는 결함)은 needs.js가 "영어 번역 없음"으로
+      // 세지만, 그 위에 영어를 쌓으면 파서가 두 `>` 줄을 하나로 합쳐
+      // "Our own peculiar grammar 함께 괴상한 문법으로" 같은 반한글 번역이 된다.
+      // 실제로 IU <Dear my crazy soulmate>에서 그렇게 만들었다가 되돌렸다.
+      // 방향이 틀린 줄은 지우거나 바꿔 쓰는 일이라 여기 몫이 아니다
+      // (wrongDirectionLines가 따로 센다).
+      if (translationUnder(row.index)) return false;
       const text = originalOf(row.line);
       const left = wantedCount.get(text) || 0;
       if (left <= 0) return false;
