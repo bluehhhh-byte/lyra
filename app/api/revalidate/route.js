@@ -48,6 +48,12 @@ export async function POST(request) {
   // 곡·영화 본문은 최대 6시간 옛 HTML 그대로다. 라우트 패턴 + "page"로 넘기면
   // 그 세그먼트의 모든 slug가 한 번에 비워진다 — slug 목록을 들고 다닐 필요가 없다.
   for (const route of DETAIL_ROUTES) revalidatePath(route, "page");
+  // 목록이 실린 페이지가 어디까지인지 우리가 모른다 — 홈, 아카이브, 통계, 취향,
+  // 태그별 페이지…. 곡을 지운 뒤 상세와 검색은 즉시 비었는데 홈만 2.4시간 된
+  // HTML을 계속 내놓은 적이 있다(Mr. Big <Take Cover>). 손으로 비우러 온 사람은
+  // "전부 비우라"는 뜻이므로 루트 아래를 통째로 턴다. 배포만큼 드문 일이라
+  // 626개가 다시 렌더돼도 괜찮다.
+  revalidatePath("/", "layout");
   return Response.json(
     { ok: true, tags: CONTENT_TAGS },
     { headers: { "Cache-Control": "no-store" } }
