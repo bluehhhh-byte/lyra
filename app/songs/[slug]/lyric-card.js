@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { wrap, wrapTight } from "../../../lib/carousel-wrap";
-import { cleanListenWhen } from "../../../lib/listen-when";
+import { cleanListenWhen, retimeListenWhen } from "../../../lib/listen-when";
 import { emotionToWash } from "../../../lib/emotion-color";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
@@ -258,12 +258,12 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
     return blocks;
   };
   let blocks = build();
-  // 푸터 높이를 본문 예산에서 먼저 뺀다. 다 그린 뒤에 얹으면 21줄 만선 곡에서
+  // 푸터 높이를 본문 예산에서 먼저 뺀다. 다 그린 뒤에 얹으면 24줄 만선 곡에서
   // 푸터가 카드 밖으로 밀려난다.
   const { top, height: budget } = carouselBodyBox();
   let totalH = blocks.reduce((acc, b) => acc + b.gap, 0);
   // 비율만으로는 수렴이 느려 매번 최소 1px은 반드시 줄이고, 바닥에 닿을 만큼
-  // 횟수를 준다. 바닥값은 한 장에 일곱 쌍(21줄 ÷ 3장)이 전부 두 줄로 접힌 최악의
+  // 횟수를 준다. 바닥값은 한 장에 여덟 쌍(24줄 ÷ 3장)이 전부 두 줄로 접힌 최악의
   // 경우가 예산에 들어가는 크기다.
   for (let guard = 24; totalH > budget && guard > 0; guard--) {
     const f = budget / totalH;
@@ -315,7 +315,9 @@ async function drawCoverCard({ song, art }) {
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다.
   // 머리글을 아트 위에 얹는 카드는 그 글이 앉을 만큼 어둠막을 길게 끌어올린다.
-  const hook = cleanListenWhen(song.listen_when);
+  // 「…다짐하는 밤」을 아침에 발행하면 보는 사람의 시간과 어긋난다. 그리는
+  // 순간의 시간대로 끝 낱말만 바꾼다 — 저장된 값은 그대로다(lib/listen-when.js).
+  const hook = retimeListenWhen(cleanListenWhen(song.listen_when));
   const scrimHeight = hook ? 360 : 120;
   const fade = ctx.createLinearGradient(0, COVER_ART_HEIGHT - scrimHeight, 0, COVER_ART_HEIGHT);
   fade.addColorStop(0, "rgba(24,20,16,0)");
@@ -754,7 +756,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                 ))}
               </div>
             </div>
-          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 21줄까지 선택할 수 있습니다.</p>
+          <p className="mb-2 text-xs leading-relaxed text-muted">가사 3장에 나누어 최대 24줄까지 선택할 수 있습니다.</p>
           <ul className="max-h-72 space-y-1 overflow-y-auto overscroll-contain  border border-line p-2 lg:max-h-[44vh]">
           {allLines.map((l, i) => (
             <li key={i}>
