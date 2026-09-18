@@ -37,6 +37,7 @@ jobs:
       - run: pnpm check
       - run: node scripts/needs-work.mjs
       - name: Restore private Instagram source export
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         env:
           INSTAGRAM_EXPORT_URL: ${{ secrets.INSTAGRAM_EXPORT_URL }}
         run: |
@@ -49,10 +50,13 @@ jobs:
           export_root="$(dirname "$(dirname "$(dirname "$posts_file")")")"
           echo "INSTAGRAM_EXPORT_DIR=$export_root" >> "$GITHUB_ENV"
       - name: Verify Instagram originals
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: pnpm verify:instagram -- "$INSTAGRAM_EXPORT_DIR"
       - name: Install layout-check browser
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: pnpm exec playwright install --with-deps chromium
       - name: Verify narrow and wide layouts
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           pnpm exec next start -p 3401 > "$RUNNER_TEMP/lyra-next.log" 2>&1 &
           server_pid=$!
