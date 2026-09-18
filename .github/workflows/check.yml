@@ -33,6 +33,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm build:index
       - run: pnpm check
       - run: node scripts/needs-work.mjs
       - name: Restore private Instagram source export
