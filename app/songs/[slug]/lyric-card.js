@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { wrap, wrapTight } from "../../../lib/carousel-wrap";
-import { cleanListenWhen, retimeListenWhen } from "../../../lib/listen-when";
+import { cleanListenWhen } from "../../../lib/listen-when";
 import { emotionToWash } from "../../../lib/emotion-color";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
@@ -315,9 +315,8 @@ async function drawCoverCard({ song, art }) {
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다.
   // 머리글을 아트 위에 얹는 카드는 그 글이 앉을 만큼 어둠막을 길게 끌어올린다.
-  // 「…다짐하는 밤」을 아침에 발행하면 보는 사람의 시간과 어긋난다. 그리는
-  // 순간의 시간대로 끝 낱말만 바꾼다 — 저장된 값은 그대로다(lib/listen-when.js).
-  const hook = retimeListenWhen(cleanListenWhen(song.listen_when));
+  // 원래 곡에 담긴 정서와 고유한 표현(예: "하얀 밤")이 왜곡되지 않도록 원본 그대로 보여준다.
+  const hook = cleanListenWhen(song.listen_when);
   const scrimHeight = hook ? 360 : 120;
   const fade = ctx.createLinearGradient(0, COVER_ART_HEIGHT - scrimHeight, 0, COVER_ART_HEIGHT);
   fade.addColorStop(0, "rgba(24,20,16,0)");
