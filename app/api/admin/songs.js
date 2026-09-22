@@ -1,4 +1,4 @@
-﻿// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
+// 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
 import { readSong, writeSong, deleteSong, readRuntimeData, writeData, commitFiles } from "../../../lib/store";
 import { getAllSongsRuntime, getAllSongsMeta, capitalizeLyricLines, parseFrontmatter, parseLyrics } from "../../../lib/songs";
 import { translationVariants } from "../../../lib/translation-variants";
@@ -40,7 +40,8 @@ import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 import { appearanceIdentity } from "../../../lib/song-appearances";
 import { applySections, originalLines } from "../../../lib/admin/lyric-sections";
 import { cleanListenWhen } from "../../../lib/listen-when";
-import { applyGenre, genreStatus } from "../../../lib/admin/genre-fix";
+import { applyGenre, genreStatus, lockGenre } from "../../../lib/admin/genre-fix";
+import { checkGenreSubdividable, GENRE_LOCK_THRESHOLD } from "../../../lib/admin/jev";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
@@ -1598,6 +1599,18 @@ ${next}`;
     }
     const before = song.raw.replace(/\r\n/g, "\n");
     if (out === before) return Response.json({ slug: body.slug, genre: body.genre, changed: false });
+
+    // Rock/Pop으로 다시 확정된 경우만 Jev에게 "정말 세분화될 수 없는가"를 물어본다.
+    // 확신(세분화 불가)이 임계값을 넘으면 잠근다 — 같은 곡이 매번 "세분화
+    // 권장"으로 재판정되어 대기열에서 못 빠지는 사고가 재발하지 않게 한다. Jev가
+    // 응답을 못 주면(키 없음·프로모션 종료 등) 조용히 건너뛴다 — 이 게이트는 부가
+    // 기능이어서, 잠그지 못해도 사람이 저장한 장르는 이미 정상적으로 반영되었다.
+    if (body.genre === "Rock" || body.genre === "Pop") {
+      const { meta } = parseFrontmatter(out);
+      const p = await checkGenreSubdividable(body.genre, meta.title, meta.artist);
+      if (p !== null && p < GENRE_LOCK_THRESHOLD) out = lockGenre(out);
+    }
+
     await writeSong(body.slug, out, `chore(song): genre ${body.genre} — ${body.slug}`);
     return Response.json({ slug: body.slug, genre: body.genre, changed: true, status: genreStatus(out) });
   }
