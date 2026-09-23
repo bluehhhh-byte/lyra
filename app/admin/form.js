@@ -291,7 +291,7 @@ export default function AdminForm() {
     await autotag(song, lyrics);
   });
 
-  const saveWith = ({ skipAi = false } = {}) => run(skipAi ? "saveNoAi" : "save", async () => {
+  const saveWith = ({ skipAi = false, allowDuplicate = false } = {}) => run(skipAi ? "saveNoAi" : "save", async () => {
     if (appearance.workTitle.trim() && (!appearance.workType || !appearance.role)) {
       throw new Error("작품 정보를 저장하려면 작품 종류와 사용 방식을 선택해 주세요");
     }
@@ -314,6 +314,7 @@ export default function AdminForm() {
         lyricsNone,
         instrumental,
         lyricsNote,
+        ...(allowDuplicate ? { allowDuplicate: true } : {}),
       }));
     } catch (reason) {
       if (reason.details?.duplicate) setDuplicateMatch(reason.details.duplicate);
@@ -696,10 +697,25 @@ export default function AdminForm() {
           {/* 충돌은 상태(warn), 벗어나는 길은 행동(accent) — 색의 역할 분리 */}
           {duplicateMatch && (
             <div className="mt-3 border border-warn/60 bg-surface px-3 py-2 text-sm" role="alert">
-              <span className="font-semibold">이미 등록된 곡입니다.</span>{" "}
+              <span className="font-semibold">
+                {duplicateMatch.likely ? "같은 원곡으로 보이는 곡이 이미 있습니다." : "이미 등록된 곡입니다."}
+              </span>{" "}
               <a href={`/songs/${duplicateMatch.slug}`} className="text-accent underline">기존 곡 페이지 보기</a>
               <span className="mx-2 text-muted">·</span>
               <a href={`/admin/edit/${duplicateMatch.slug}`} className="text-accent underline">기존 기록 수정</a>
+              {duplicateMatch.likely && (
+                <>
+                  <span className="mx-2 text-muted">·</span>
+                  <button
+                    type="button"
+                    className="text-accent underline disabled:opacity-40"
+                    disabled={!!busy}
+                    onClick={saveWith({ allowDuplicate: true })}
+                  >
+                    다른 버전이 맞으니 저장
+                  </button>
+                </>
+              )}
             </div>
           )}
           {savedSlug && (

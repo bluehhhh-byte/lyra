@@ -35,13 +35,13 @@ import {
   translationTarget,
 } from "../../../lib/admin/needs";
 import { appendReportVersion } from "../../../lib/report-history";
-import { findDuplicateSong, mergeDuplicateSongDocuments } from "../../../lib/admin/song-duplicate";
+import { findDuplicateSong, mergeDuplicateSongDocuments, nearDuplicateCandidates } from "../../../lib/admin/song-duplicate";
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 import { appearanceIdentity } from "../../../lib/song-appearances";
 import { applySections, originalLines } from "../../../lib/admin/lyric-sections";
 import { cleanListenWhen } from "../../../lib/listen-when";
 import { applyGenre, genreStatus, lockGenre } from "../../../lib/admin/genre-fix";
-import { checkGenreSubdividable, GENRE_LOCK_THRESHOLD } from "../../../lib/admin/jev";
+import { checkGenreSubdividable, GENRE_LOCK_THRESHOLD, checkSameSong, SAME_SONG_THRESHOLD, scoreReportGrounding, REPORT_GROUNDING_MIN } from "../../../lib/admin/jev";
 
 const CORRECTIONS_FILE = "lyrics-corrections.json";
 const commentSourceUrls = (values) => (Array.isArray(values) ? values : [])
@@ -1422,12 +1422,29 @@ ${listed}`,
       .toLowerCase()
       .replace(/[^a-z0-9가-힣ぁ-んァ-ン一-龯]+/g, "-")
       .replace(/^-|-$/g, "");
-    const duplicate = findDuplicateSong({ title, artist, trackId }, await getAllSongsMeta());
+    const registeredMeta = await getAllSongsMeta();
+    const duplicate = findDuplicateSong({ title, artist, trackId }, registeredMeta);
     if (duplicate && body.allowDuplicate !== true) {
       return Response.json({
         error: `이미 등록된 곡입니다: ${duplicate.artist} — ${duplicate.title}`,
         duplicate,
       }, { status: 409 });
+    }
+    // findDuplicateSong은 trackId나 제목·아티스트가 똑같을 때만 잡는다. "(Live)"·
+    // "- Remastered" 같은 표기만 다른 같은 원곡은 통과하므로, 그런 후보만 골라
+    // Jev(lib/admin/jev.js의 checkSameSong)에 묻는다. 확신이 높으면 막되,
+    // 화면에 "다른 버전이 맞으니 저장"(allowDuplicate) 길을 함께 준다 — 라이브
+    // 버전을 일부러 따로 담는 경우가 있기 때문이다. Jev가 응답을 못 주면 통과.
+    if (!duplicate && body.allowDuplicate !== true) {
+      for (const near of nearDuplicateCandidates({ title, artist }, registeredMeta)) {
+        const p = await checkSameSong({ title, artist, album }, near);
+        if (p !== null && p >= SAME_SONG_THRESHOLD) {
+          return Response.json({
+            error: `같은 원곡으로 보이는 곡이 이미 있습니다: ${near.artist} — ${near.title}`,
+            duplicate: { slug: String(near.slug || ""), title: String(near.title || ""), artist: String(near.artist || ""), likely: true },
+          }, { status: 409 });
+        }
+      }
     }
     // 가사가 어디에도 없는 곡. 데이터 모델은 처음부터 lyrics_none을 읽고 있었지만
     // (needs.js가 이 표시를 보고 번역·독음·키워드 대기열에서 빼 준다) 관리자 화면에
@@ -1506,6 +1523,7 @@ ${lyricBody}
   // 넘겨 3~4문단 해석을 받아 저장한다. /songs/taste 상단에 표시되고,
   // songRecs가 추천 프롬프트에 이 리포트를 함께 넣는다.
   if (action === "musicReport") {
+    const reportStartedAt = Date.now();
     const key = process.env.GEMINI_API_KEY;
     if (!key) return Response.json({ error: "GEMINI_API_KEY 환경변수가 없습니다" }, { status: 500 });
     const songs = await getAllSongsRuntime();
@@ -1524,9 +1542,7 @@ ${lyricBody}
       `가사 키워드: ${t.keywords.slice(0, 15).map(([k]) => k).join(", ")}`,
     ].join("\n");
 
-    const text = await geminiText(
-      key,
-      `아래는 한 사람이 가사 번역 블로그에 모아온 곡들의 집계다. 별점·재생 기록은 없고
+    const reportPrompt = `아래는 한 사람이 가사 번역 블로그에 모아온 곡들의 집계다. 별점·재생 기록은 없고
 '직접 골라 담았다'는 사실 자체가 취향의 기록이다.
 이 사람의 음악 취향을 분석하는 리포트를 한국어로 써라.
 - 3~4개 문단, 각 문단 2~3문장. 소제목 없이 이어지는 산문
@@ -1536,7 +1552,10 @@ ${lyricBody}
 - 단정적 분석 톤, 평서문 '~다'체. "~습니다/~해요" 금지. 과장·아부 금지
 - 마지막 문단은 이 취향이 다음에 파고들 만한 방향을 한 문장으로 제안
 집계:
-${lines}`,
+${lines}`;
+    const text = await geminiText(
+      key,
+      reportPrompt,
       false,
       undefined,
       // 3~4문단 산문은 기본 12초 안에 안 끝난다 — 좋은 모델부터 차례로 잘려
@@ -1545,10 +1564,31 @@ ${lines}`,
     );
     if (!text) return Response.json({ error: "리포트 생성 실패 (쿼터·과부하)" }, { status: 502 });
 
-    const report = { text: text.trim(), count: t.count, at: new Date().toISOString() };
+    const reportText = text.trim();
+    // Jev(lib/admin/jev.js의 scoreReportGrounding)가 리포트가 집계를 근거로 삼는지
+    // 0~2점으로 본다. 점수는 리포트에 함께 남긴다. 첫 결과를 먼저 저장해 두므로,
+    // 아래 재작성 도중 함수 상한(180초)에 걸려도 리포트가 사라지지 않는다.
+    const quality = await scoreReportGrounding(lines, reportText);
+    const report = { text: reportText, count: t.count, at: new Date().toISOString(), ...(quality !== null ? { quality } : {}) };
     const previous = await readRuntimeData("music-report.json", null);
-    const stored = appendReportVersion(previous, report);
+    let stored = appendReportVersion(previous, report);
     await writeData("music-report.json", JSON.stringify(stored, null, 1), `data: 음악 취향 리포트 (${t.count}곡)`);
+
+    // 근거 점수가 기준 미만이면 한 번만 다시 쓰고, 점수가 더 높을 때만 새 버전으로 올린다.
+    if (quality !== null && quality < REPORT_GROUNDING_MIN && Date.now() - reportStartedAt < 100_000) {
+      const retry = (await geminiText(
+        key,
+        `${reportPrompt}\n방금 쓴 리포트는 집계 수치와 무관한 일반론이 많다는 평가를 받았다. 집계의 구체적 수치를 교차 해석하는 문장으로 다시 써라.`,
+        false,
+        undefined,
+        { timeoutMs: LONG_FORM_TIMEOUT_MS }
+      ))?.trim();
+      const retryQuality = retry ? await scoreReportGrounding(lines, retry) : null;
+      if (retry && retryQuality !== null && retryQuality > quality) {
+        stored = appendReportVersion(stored, { text: retry, count: t.count, at: new Date().toISOString(), quality: retryQuality });
+        await writeData("music-report.json", JSON.stringify(stored, null, 1), `data: 음악 취향 리포트 재작성 (${t.count}곡)`);
+      }
+    }
     return Response.json(stored);
   }
 
