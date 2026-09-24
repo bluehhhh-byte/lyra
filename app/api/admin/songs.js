@@ -354,9 +354,14 @@ export async function handleSongs(action, body) {
       const prompt = `아래 JSON 배열의 각 가사 줄에 대해, 같은 순서·같은 길이의 JSON 배열로 답해줘.
 각 원소는 { "reading": "...", "ko": "..." } 형태.
 규칙:
-- 줄의 주 언어가 한국어 → ko에 자연스러운 영어 번역, reading은 빈 문자열
-- 영어 → ko에 자연스러운 한국어 번역, reading은 빈 문자열
-- 일본어 → reading에 한글 독음, ko에 자연스러운 한국어 번역
+- 한국어 줄 → ko에 자연스러운 영어 번역, reading은 빈 문자열
+- 영어 줄 → ko에 자연스러운 한국어 번역, reading은 빈 문자열
+- 일본어 줄 → reading에 한글 독음, ko에 자연스러운 한국어 번역
+- 한 줄 안에 언어가 섞였으면 조각별로 교차한다: 한국어 조각은 영어로, 영어(일본어) 조각은
+  한국어로 옮겨 한 줄로 쓴다. 주 언어를 골라 줄 전체를 옮기지 마라 — 그러면 독자가 못 읽던
+  쪽이 그대로 남는다.
+  "가슴 안에 가득 차 커져가는 innocent" → "순수, filling up inside my chest and growing larger"
+  "All I can do is try, 우리만에 시간" → "내가 할 수 있는 건 노력뿐, the time that was only ours"
 - 시적 뉘앙스 유지, 직역 금지. JSON만 출력.
 곡: "${fmValue(fm, "title")}" (${fmValue(fm, "artist")})
 입력:

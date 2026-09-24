@@ -24,6 +24,27 @@
 한국어 가사가 3줄도 안 되는 곡은 영어 번역 대기열에 올리지 않는다 — 영어곡에 한 줄 섞인
 정도까지 세면 대기열이 의미를 잃는다.
 
+### 한 줄 안에 언어가 섞였으면 — 조각별로 교차한다
+
+주 언어를 골라 줄 전체를 한쪽으로 옮기지 않는다. **한국어 조각은 영어로, 영어·일본어 조각은
+한국어로** 각각 뒤집어 한 줄로 쓴다.
+
+| 원문 | 옳음 | 틀림 |
+|---|---|---|
+| `가슴 안에 가득 차 커져가는 innocent` | `순수, filling up inside my chest and growing larger` | `The innocence filling my chest and growing` |
+| `All I can do is try, 우리만에 시간` | `내가 할 수 있는 건 노력뿐, the time that was only ours` | `All I can do is try—the time that was only ours` |
+| `먼저 말하고 싶은 내 goodbye, 길을 잃어` | `My 작별 that I want to say first, I've lost my way` | `My goodbye that I want to say first, I've lost my way` |
+
+'틀림' 쪽의 공통점은 **독자가 원래 못 읽던 절반이 그대로 남는다**는 것이다. 주 언어로 줄
+전체를 옮기면 영어 조각은 영어 결과물 안에 그대로 얹히고, 번역이 붙었는데도 그 부분만
+읽히지 않는다. 교차하면 모든 조각이 반대편 언어로 도착한다.
+
+한국어 문장 속에 박힌 외래어 한 낱말도 뒤집는다. 영어 결과물 안에 그냥 두면 자연스럽게
+읽히기 때문에 모델이 가장 자주 빠뜨리는 자리다 — 위 표의 `goodbye` → `작별`이 그 경우다.
+
+> 규칙이 사는 곳은 두 군데다: `lib/admin/song-meta.js`(새 곡 번역)와
+> `app/api/admin/songs.js`(빠진 번역 보충). 한쪽만 고치면 경로에 따라 결과가 갈린다.
+
 ---
 
 ## 2. 비우지 않는다
