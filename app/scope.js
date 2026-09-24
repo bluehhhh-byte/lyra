@@ -20,6 +20,7 @@ export default function Scope({ audioRef }) {
     const ctx2d = canvas.getContext("2d");
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     let analyser = null;
+    let buffer = null;
     let releaseTap = null;
     let raf = 0;
     let color = accentColor();
@@ -51,10 +52,13 @@ export default function Scope({ audioRef }) {
     };
 
     const draw = () => {
-      if (dead || !analyser) return;
+      if (dead || !analyser) {
+        raf = 0;
+        return;
+      }
       raf = requestAnimationFrame(draw);
       const { clientWidth: w, clientHeight: h } = canvas;
-      const buf = new Uint8Array(analyser.fftSize);
+      const buf = buffer;
       analyser.getByteTimeDomainData(buf); // 128 = silence
 
       ctx2d.clearRect(0, 0, w, h);
@@ -72,8 +76,23 @@ export default function Scope({ audioRef }) {
     // A MediaElementSource routes the element's audio *through* the graph. If the
     // context is suspended, that route is silent — so never tap the element until
     // we know the context is running. Any failure here leaves playback untouched.
+    const start = () => {
+      if (!dead && !reduce && analyser && !raf) draw();
+    };
+
+    // 일시정지·종료 후에도 rAF 가 계속 돌면 아무것도 그리지 않으면서 60fps 를 먹는다.
+    const halt = () => {
+      cancelAnimationFrame(raf);
+      raf = 0;
+      flatline();
+    };
+
     const tap = async () => {
-      if (dead || analyser) return;
+      if (dead) return;
+      if (analyser) {
+        start(); // 두 번째 재생 — 탭은 이미 있고 루프만 다시 돌리면 된다
+        return;
+      }
       try {
         const tapped = await tapAudio(audio, { fftSize: 1024, smoothing: 0.6 });
         if (dead || !tapped) {
@@ -81,8 +100,9 @@ export default function Scope({ audioRef }) {
           return;
         }
         analyser = tapped.analyser;
+        buffer = new Uint8Array(analyser.fftSize);
         releaseTap = tapped.release;
-        if (!reduce) draw();
+        start();
       } catch {
         // no Web Audio (or element already tapped) → plain playback, no scope
       }
@@ -90,6 +110,8 @@ export default function Scope({ audioRef }) {
 
     flatline();
     audio.addEventListener("play", tap);
+    audio.addEventListener("pause", halt);
+    audio.addEventListener("ended", halt);
     if (!audio.paused) tap(); // autoplay may have fired before this effect ran
 
     return () => {
@@ -98,6 +120,8 @@ export default function Scope({ audioRef }) {
       themeWatch.disconnect();
       window.removeEventListener("resize", fit);
       audio.removeEventListener("play", tap);
+      audio.removeEventListener("pause", halt);
+      audio.removeEventListener("ended", halt);
       releaseTap?.();
     };
   }, [audioRef]);

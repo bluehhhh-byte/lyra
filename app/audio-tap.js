@@ -28,7 +28,12 @@ async function sourceFor(audio) {
   })();
   sources.set(audio, pending);
   try {
-    return await pending;
+    const resolved = await pending;
+    // null means the context never reached "running" — usually just "no user
+    // gesture yet". Caching that verdict would leave the element untappable for
+    // the rest of its life, so drop it and let the next play() try again.
+    if (!resolved) sources.delete(audio);
+    return resolved;
   } catch (error) {
     sources.delete(audio);
     throw error;
