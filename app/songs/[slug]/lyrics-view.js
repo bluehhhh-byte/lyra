@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CardModal from "./lyric-card";
 import { hasReadings, savedReadingSize, savedReadingVisibility } from "../../../lib/reading-preference";
 import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
@@ -32,7 +32,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   const [editing, setEditing] = useState(-1);
   const [owner, setOwner] = useState(false); // see lyra_admin in app/api/login
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
-  const [progress, setProgress] = useState(0);
+  const progressRef = useRef(null); // 스크롤 진행률은 state 로 두지 않는다 — 아래 주석 참고
   const [card, setCard] = useState(null); // { lines, initial } for the carousel modal
   const [expandedRepeats, setExpandedRepeats] = useState(() => new Set());
   const [copiedStanza, setCopiedStanza] = useState(-1);
@@ -91,11 +91,15 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
     setEditing(-1);
   };
 
-  // reading progress across the whole page
+  // reading progress across the whole page.
+  // 진행률을 state 로 들고 있으면 스크롤 이벤트마다 가사 전체(연 목록 포함)가
+  // 다시 렌더된다. 값을 쓰는 곳은 아래 막대 하나뿐이라 ref 로 직접 바른다.
   useEffect(() => {
     const onScroll = () => {
+      const bar = progressRef.current;
+      if (!bar) return;
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+      bar.style.transform = `scaleX(${max > 0 ? Math.min(1, window.scrollY / max) : 0})`;
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -143,8 +147,9 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
           {/* scroll-driven: transform tracks the scroll directly — a transition here
               would just lag the input, and width would re-layout on every frame */}
           <div
+            ref={progressRef}
             className="h-full w-full origin-left  bg-accent"
-            style={{ transform: `scaleX(${progress})` }}
+            style={{ transform: "scaleX(0)" }}
           />
         </div>
         <div className="flex items-center justify-between gap-2">
