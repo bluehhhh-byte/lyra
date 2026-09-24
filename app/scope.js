@@ -76,8 +76,11 @@ export default function Scope({ audioRef }) {
     // A MediaElementSource routes the element's audio *through* the graph. If the
     // context is suspended, that route is silent — so never tap the element until
     // we know the context is running. Any failure here leaves playback untouched.
+    // audio.paused 를 반드시 본다: 첫 tap 은 await 중이라, 그 사이 사용자가 멈추면
+    // halt() 가 먼저 지나가고 뒤늦게 resolve 된 tap 이 정지 상태에서 루프를 켠다.
+    // 이미 멈춘 뒤라 pause 이벤트가 다시 오지 않으므로 그대로 영구 가동이 된다.
     const start = () => {
-      if (!dead && !reduce && analyser && !raf) draw();
+      if (!dead && !reduce && analyser && !raf && !audio.paused) draw();
     };
 
     // 일시정지·종료 후에도 rAF 가 계속 돌면 아무것도 그리지 않으면서 60fps 를 먹는다.
