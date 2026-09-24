@@ -156,6 +156,7 @@ export default function PlayerProvider({ children }) {
             ref={barRef}
             onClick={(e) => seek(e.clientX)}
             onKeyDown={(event) => {
+              const audio = audioRef.current;
               if (!audio || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
               event.preventDefault();
               audio.currentTime = Math.min(audio.duration || 30, Math.max(0, audio.currentTime + (event.key === "ArrowRight" ? 5 : -5)));
