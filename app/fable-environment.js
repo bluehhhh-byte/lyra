@@ -171,32 +171,57 @@ export default function FableEnvironment() {
     let resizeTimer = 0;
     let dead = false;
 
+    let builtWidth = 0;
+    let builtHeight = 0;
+    let forcePending = false;
+
+    // 벽이 의존하는 값은 둘뿐이다: 폭(cssScale 을 정한다)과 문서 높이.
+    const measure = () => {
+      const cssScale = innerWidth / WIDTH_UNITS;
+      return Math.max(1600, Math.ceil(document.documentElement.scrollHeight / cssScale) + 80);
+    };
+
     const build = () => {
       if (dead) return;
       wall?.destroy();
-      const cssScale = innerWidth / WIDTH_UNITS;
-      const heightUnits = Math.max(1600, Math.ceil(document.documentElement.scrollHeight / cssScale) + 80);
+      const heightUnits = measure();
+      builtWidth = innerWidth;
+      builtHeight = heightUnits;
       wall = createWall(container, { widthUnits: WIDTH_UNITS, heightUnits, onError: (error) => console.error("fable mark", error) });
       drawGround(wall, pathname);
     };
-    const schedule = () => {
+
+    // 모바일 URL 바가 숨었다 나타날 때마다 resize 가 온다. 그때는 폭도 문서 높이도
+    // 그대로이므로 다시 그리지 않는다 — 안 그러면 스크롤 방향을 바꿀 때마다 배경이
+    // 지워졌다 다시 칠해진다. 색이 바뀌는 테마 전환과 폰트 로드만 강제로 다시 그린다.
+    const schedule = (force) => {
+      if (force) forcePending = true;
       clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(build, 180);
+      resizeTimer = window.setTimeout(() => {
+        if (dead) return;
+        const nextHeight = measure();
+        const unchanged = innerWidth === builtWidth && Math.abs(nextHeight - builtHeight) < 40;
+        if (!forcePending && unchanged) return;
+        forcePending = false;
+        build();
+      }, 180);
     };
 
     build();
-    document.fonts?.ready.then(schedule);
-    const observer = new ResizeObserver(schedule);
+    // 관찰자 콜백은 인자(entries/event)를 넘긴다 — 그대로 꽂으면 force 가 항상 참이 된다.
+    document.fonts?.ready.then(() => schedule(true));
+    const observer = new ResizeObserver(() => schedule());
     observer.observe(document.body);
-    const themeObserver = new MutationObserver(schedule);
+    const themeObserver = new MutationObserver(() => schedule(true));
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-    addEventListener("resize", schedule);
+    const onResize = () => schedule();
+    addEventListener("resize", onResize);
     return () => {
       dead = true;
       clearTimeout(resizeTimer);
       observer.disconnect();
       themeObserver.disconnect();
-      removeEventListener("resize", schedule);
+      removeEventListener("resize", onResize);
       wall?.destroy();
     };
   }, [pathname]);
