@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { wrap, wrapTight } from "../../../lib/carousel-wrap";
-import { cleanListenWhen } from "../../../lib/listen-when";
 import { emotionToWash } from "../../../lib/emotion-color";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
@@ -43,6 +42,14 @@ const PAD = CAROUSEL_THEME.padding;
 // 1장과 2장이 같은 상자로 사진을 자른다. 상자가 다르면 drawImageCover의
 // 잘라내기 기준이 달라져, 카드를 넘길 때 사진이 확대·이동한 것처럼 보인다.
 const COVER_ART_HEIGHT = 1000;
+
+// 1장 머리글 문구. 예전에는 AI가 만든 listen_when을 자동으로 얹었는데, 곡마다
+// 사람이 원하는 한 줄과 어긋나는 일이 잦았다. 이제는 캐러셀 창에서 사람이 가사
+// 한 줄을 고르거나 직접 쓴 문구만 얹는다. 비워 두면 머리글 없이 커버만 나간다.
+// 길이는 두 줄 머리글에 들어갈 만큼만 받는다.
+export const COVER_HOOK_MAX = 60;
+export const cleanCoverHook = (value) =>
+  String(value ?? "").replace(/\s+/g, " ").trim().slice(0, COVER_HOOK_MAX);
 
 export function drawImageCover(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.width, height / image.height);
@@ -296,7 +303,7 @@ async function drawCard({ song, lines, art, align = "left", position, total }) {
 // 1장 전용 — 앨범 커버가 주인공인 카드. 뒤의 장들은 커버를 흐려 배경으로 깔지만
 // 이 장은 그대로 크게 싣는다. 피드 썸네일이 곧 이 장이라 계정 그리드가 앨범
 // 진열장으로 읽힌다. 해설은 2장(drawAboutCard)이 맡는다.
-async function drawCoverCard({ song, art }) {
+async function drawCoverCard({ song, art, hook: hookText = "" }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -315,8 +322,8 @@ async function drawCoverCard({ song, art }) {
 
   // 커버 아래쪽에서 본문 영역으로 부드럽게 넘어가게 — 경계선이 딱 떨어지면 잘라 붙인 티가 난다.
   // 머리글을 아트 위에 얹는 카드는 그 글이 앉을 만큼 어둠막을 길게 끌어올린다.
-  // 원래 곡에 담긴 정서와 고유한 표현(예: "하얀 밤")이 왜곡되지 않도록 원본 그대로 보여준다.
-  const hook = cleanListenWhen(song.listen_when);
+  // 머리글은 캐러셀 창에서 사람이 고른 가사 한 줄이나 직접 쓴 문구다 — 자동 생성하지 않는다.
+  const hook = cleanCoverHook(hookText);
   const scrimHeight = hook ? 360 : 120;
   const fade = ctx.createLinearGradient(0, COVER_ART_HEIGHT - scrimHeight, 0, COVER_ART_HEIGHT);
   fade.addColorStop(0, "rgba(24,20,16,0)");
@@ -331,8 +338,8 @@ async function drawCoverCard({ song, art }) {
   const inkDim = INK_DIM;
   const pad = 96;
 
-  // 1장의 머리글 — 이 곡을 언제 들으면 좋은지. 제목보다 먼저 읽히라고 아트 안에
-  // 크게 앉힌다. 카드 아래 텍스트 구역은 곡 정보(제목·아티스트·태그)의 자리다.
+  // 1장의 머리글 — 사람이 고른 가사 한 줄이나 직접 쓴 문구. 제목보다 먼저 읽히라고
+  // 아트 안에 크게 앉힌다. 카드 아래 텍스트 구역은 곡 정보(제목·아티스트·태그)의 자리다.
   if (hook) {
     const barW = 8;
     const barGap = 26;
@@ -343,7 +350,8 @@ async function drawCoverCard({ song, art }) {
     // 밤"처럼 한두 글자만 넘친 줄을 조금 줄여 한 줄로 당긴다.
     let headlineSize = 42;
     let headlineLines = [];
-    for (const size of [72, 66, 60, 54, 48, 42]) {
+    // 가사 한 줄은 자동 문구(12~22자)보다 길 수 있어 38·34까지 내려간다.
+    for (const size of [72, 66, 60, 54, 48, 42, 38, 34]) {
       ctx.font = headlineFont(size);
       const tight = wrapTight(ctx, hook, headlineMax, { font: headlineFont, size, minRatio: 0.86 });
       headlineSize = tight.size;
@@ -597,6 +605,43 @@ async function downloadAll(blobs, song) {
 // selection with the stanza that was clicked.
 export default function CardModal({ song, lines: allLines, initial, onClose }) {
   const [align, setAlign] = useState("left");
+  // 1장 머리글 — 자동으로 채우지 않는다. 곡마다 이 브라우저에 기억해 두고,
+  // 다음에 캐러셀을 열면 그 문구로 시작한다.
+  const hookKey = `lyra:cover-hook:${song.slug || `${song.artist}|${song.title}`}`;
+  const [hookDraft, setHookDraft] = useState(() => {
+    try {
+      return window.localStorage.getItem(hookKey) || "";
+    } catch {
+      return "";
+    }
+  });
+  const [hook, setHook] = useState(() => cleanCoverHook(hookDraft));
+  // 글자를 칠 때마다 다섯 장을 다시 그리지 않도록 입력이 멈춘 뒤에 반영한다
+  useEffect(() => {
+    const t = setTimeout(() => setHook(cleanCoverHook(hookDraft)), 350);
+    return () => clearTimeout(t);
+  }, [hookDraft]);
+  useEffect(() => {
+    try {
+      if (hook) window.localStorage.setItem(hookKey, hook);
+      else window.localStorage.removeItem(hookKey);
+    } catch {} // 저장소가 막힌 환경 — 이번 창에서만 쓰인다
+  }, [hook, hookKey]);
+  // 고를 수 있는 문구 — 가사 원문과 번역을 줄 순서대로, 같은 문장은 한 번만
+  const hookChoices = useMemo(() => {
+    const seen = new Set();
+    const out = [];
+    for (const l of allLines) {
+      for (const [kind, text] of [["원문", l.en], ["번역", l.ko]]) {
+        // 60자를 넘는 줄은 고르는 순간 잘리므로 목록에 올리지 않는다 — 직접 입력으로 줄여 쓴다
+        const t = String(text ?? "").replace(/\s+/g, " ").trim();
+        if (!t || t.length > COVER_HOOK_MAX || seen.has(t)) continue;
+        seen.add(t);
+        out.push({ kind, text: t });
+      }
+    }
+    return out;
+  }, [allLines]);
   // 실을 줄 — 누른 연에서 시작해 열다섯 줄이 기본이다(세 장 × 다섯 줄).
   // 체크박스로 자유롭게 바꾼다. 나누는 것은 기계가 한다.
   const [sel, setSel] = useState(() => new Set(autoSelect(allLines, initial?.[0] ?? 0)));
@@ -634,7 +679,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
         const page = { position: index + 1, total: carousel.slides.length };
         const blob =
           slide.role === "cover"
-            ? await drawCoverCard({ song, art })
+            ? await drawCoverCard({ song, art, hook })
             : slide.role === "about"
               ? await drawAboutCard({ song, note: slide.note, appearance: slide.appearance, art, ...page })
               : await drawCard({ song, lines: slide.lines, art, align, ...page });
@@ -656,7 +701,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
     return () => {
       alive = false;
     };
-  }, [carousel, song, align]);
+  }, [carousel, song, align, hook]);
 
   useEffect(() => () => cards.forEach((c) => URL.revokeObjectURL(c.url)), [cards]);
 
@@ -732,6 +777,45 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
           </section>
 
           <section aria-label="가사와 내보내기 설정" className="min-w-0">
+            <div className="mb-4 border-b border-line pb-4">
+              <label htmlFor="cover-hook" className="text-sm font-medium text-ink">1페이지 문구</label>
+              <p className="mt-0.5 text-xs leading-relaxed text-muted">
+                가사 한 줄을 고르거나 직접 쓰세요. 비워 두면 문구 없이 커버만 나갑니다.
+              </p>
+              <select
+                value=""
+                onChange={(e) => {
+                  if (e.target.value) setHookDraft(e.target.value);
+                }}
+                aria-label="가사에서 1페이지 문구 고르기"
+                className="mt-2 min-h-11 w-full border border-line bg-surface px-2 text-xs text-ink outline-none focus:border-accent"
+              >
+                <option value="">가사에서 고르기…</option>
+                {hookChoices.map((c, i) => (
+                  <option key={i} value={c.text}>{c.kind} · {c.text}</option>
+                ))}
+              </select>
+              <div className="mt-2 flex gap-2">
+                <input
+                  id="cover-hook"
+                  value={hookDraft}
+                  onChange={(e) => setHookDraft(e.target.value)}
+                  maxLength={COVER_HOOK_MAX}
+                  placeholder="직접 입력"
+                  className="min-h-11 min-w-0 flex-1 border border-line bg-surface px-2 text-xs text-ink outline-none focus:border-accent"
+                />
+                {hookDraft && (
+                  <button
+                    type="button"
+                    onClick={() => setHookDraft("")}
+                    className="min-h-11 shrink-0 border border-line px-3 text-xs text-muted hover:text-accent"
+                  >
+                    지우기
+                  </button>
+                )}
+              </div>
+              <p className="mt-1 text-right text-[11px] text-muted">{hookDraft.length}/{COVER_HOOK_MAX}자</p>
+            </div>
             <div className="mb-2 flex items-center justify-between gap-3">
               <p className="text-sm font-medium text-ink">
                 가사 {sel.size}/{MAX_SELECTED_LINES}줄
