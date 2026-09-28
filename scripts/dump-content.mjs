@@ -35,8 +35,39 @@ const norm = normalizeStoredContent;
 
 const DIRS = { song: "songs", movie: "movies" };
 
-const rows = await sql`select kind, slug, raw from lyra_contents order by kind, slug`;
-const dataRows = await sql`select name, raw from lyra_data order by name`;
+// 증분 덤프(2026-09-28). 매일 전량(본문 + 데이터 행 수 MB)을 읽으면 그것만으로
+// Neon 월 전송량(무료 5GB)의 몇 %를 쓴다. 먼저 행마다 md5만 받고(수십 KB), 지난
+// 덤프 때 적어 둔 .backup-manifest.json과 다른 행만 본문을 받는다.
+// --check·--verify·--full은 예전처럼 전량을 읽는다(사람이 손으로 돌리는 확인용).
+const MANIFEST = path.join(root, ".backup-manifest.json");
+const incremental = !checkOnly && !verifyOnly && !process.argv.includes("--full");
+let manifest = {};
+if (incremental) {
+  try {
+    manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"));
+  } catch {
+    manifest = {}; // 첫 덤프 — 전량을 읽는다
+  }
+}
+const heads = await sql`select kind, slug, md5(raw) as h from lyra_contents order by kind, slug`;
+const dataHeads = await sql`select name, md5(raw) as h from lyra_data order by name`;
+const unchanged = (key, h, file) => incremental && manifest[key] === h && fs.existsSync(file);
+const needContent = heads
+  .filter((r) => DIRS[r.kind] && !unchanged(`${r.kind}/${r.slug}`, r.h, path.join(root, DIRS[r.kind], `${r.slug}.md`)))
+  .map((r) => `${r.kind}/${r.slug}`);
+const needData = dataHeads
+  .filter((r) => !unchanged(`data/${r.name}`, r.h, path.join(root, "data", r.name)))
+  .map((r) => r.name);
+const fetchedRows = needContent.length
+  ? await sql`select kind, slug, raw from lyra_contents where kind || '/' || slug = any(${needContent})`
+  : [];
+const fetchedData = needData.length ? await sql`select name, raw from lyra_data where name = any(${needData})` : [];
+const rawByKey = new Map(fetchedRows.map((r) => [`${r.kind}/${r.slug}`, r.raw]));
+const dataByName = new Map(fetchedData.map((r) => [r.name, r.raw]));
+// 바뀌지 않은 행은 raw가 null이다 — 파일이 이미 그 내용이므로 쓰지도 대조하지도 않는다
+const rows = heads.map((r) => ({ kind: r.kind, slug: r.slug, raw: rawByKey.has(`${r.kind}/${r.slug}`) ? rawByKey.get(`${r.kind}/${r.slug}`) : null }));
+const dataRows = dataHeads.map((r) => ({ name: r.name, raw: dataByName.has(r.name) ? dataByName.get(r.name) : null }));
+const fetchedCount = fetchedRows.length + fetchedData.length;
 
 // DB가 비어 있는데 덮어쓰면 저장소가 통째로 지워진다. 연결이 잘못됐거나 마이그레이션이
 // 실패한 상태일 수 있으므로, 그럴 때는 아무것도 하지 않고 멈춘다.
@@ -49,6 +80,7 @@ for (const row of rows) {
   const dir = DIRS[row.kind];
   if (!dir) continue;
   seen[row.kind].add(row.slug);
+  if (row.raw === null) continue; // 지난 덤프 이후 바뀌지 않음
   const file = path.join(root, dir, `${row.slug}.md`);
   const before = fs.existsSync(file) ? norm(fs.readFileSync(file, "utf8")) : null;
   const after = norm(row.raw);
@@ -57,6 +89,7 @@ for (const row of rows) {
 }
 
 for (const row of dataRows) {
+  if (row.raw === null) continue;
   const file = path.join(root, "data", row.name);
   const before = fs.existsSync(file) ? norm(fs.readFileSync(file, "utf8")) : null;
   const after = norm(row.raw);
@@ -92,11 +125,13 @@ for (const row of rows) {
   const dir = DIRS[row.kind];
   if (!dir) continue;
   const file = path.join(root, dir, `${row.slug}.md`);
+  if (row.raw === null) continue;
   if (!fs.existsSync(file)) hashMismatches.push(`파일 없음 ${dir}/${row.slug}.md`);
   else if (contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
     hashMismatches.push(`해시 불일치 ${dir}/${row.slug}.md`);
 }
 for (const row of dataRows) {
+  if (row.raw === null) continue;
   const file = path.join(root, "data", row.name);
   if (!fs.existsSync(file)) hashMismatches.push(`파일 없음 data/${row.name}`);
   else if (contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
@@ -124,11 +159,19 @@ if (verifyOnly) {
     const dir = DIRS[row.kind];
     if (!dir) continue;
     const file = path.join(root, dir, `${row.slug}.md`);
+    if (row.raw === null) {
+      if (!fs.existsSync(file)) bad.push(`${row.kind}:${row.slug}`);
+      continue;
+    }
     if (!fs.existsSync(file) || contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
       bad.push(`${row.kind}:${row.slug}`);
   }
   for (const row of dataRows) {
     const file = path.join(root, "data", row.name);
+    if (row.raw === null) {
+      if (!fs.existsSync(file)) bad.push(`data:${row.name}`);
+      continue;
+    }
     if (!fs.existsSync(file) || contentDigest(fs.readFileSync(file, "utf8")) !== contentDigest(row.raw))
       bad.push(`data:${row.name}`);
   }
@@ -136,6 +179,13 @@ if (verifyOnly) {
     console.error(`검증 실패 ${bad.length}건: ${bad.slice(0, 10).join(", ")}`);
     process.exitCode = 1;
   } else {
-    console.log(`검증 완료: ${rows.length + dataRows.length}개의 SHA-256이 모두 일치합니다.`);
+    console.log(`검증 완료: 새로 받은 ${fetchedCount}개의 SHA-256이 일치하고, 나머지 ${rows.length + dataRows.length - fetchedCount}개는 지난 덤프 그대로입니다.`);
+    // 다음 덤프가 바뀐 행만 받도록 이번 상태를 적어 둔다 — 검증을 통과했을 때만
+    if (incremental) {
+      const next = {};
+      for (const r of heads) if (DIRS[r.kind]) next[`${r.kind}/${r.slug}`] = r.h;
+      for (const r of dataHeads) next[`data/${r.name}`] = r.h;
+      fs.writeFileSync(MANIFEST, `${JSON.stringify(next, null, 1)}\n`);
+    }
   }
 }

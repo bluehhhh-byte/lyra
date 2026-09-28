@@ -98,19 +98,28 @@ Neon 콘솔 → 프로젝트 → Usage. API로 보려면 `NEON_API_KEY`·`NEON_P
 
 **증상** Actions에서 `database backup`이 빨갛다. 또는 "백업 무결성 경보" 이슈.
 
+**백업 위치** 비공개 저장소 `bluehhhh-byte/lyra-backup`(2026-09-28부터). 이 저장소는
+공개라 가사 전문을 매일 커밋하지 않는다. 워크플로는 그 저장소 하나에만 쓰기 권한이 있는
+배포 키(`BACKUP_DEPLOY_KEY`)로 들어가고, 덤프는 `.backup-manifest.json`과 다른 행만
+Neon에서 받는다(첫 덤프만 전량). 이 저장소의 `songs/*.md`는 DB 이전 시점 사본으로
+남아 있다 — Neon 장애 때 사이트가 파일 폴백으로 보여 주는 것이 그 사본이다.
+
 **원인 가리기**
 - **무결성 검사가 막은 것** — 덤프가 전날보다 20% 넘게 줄었다. 이건 검사가
   제 일을 한 것이다. **어제 백업은 그대로 살아 있다.**
 - **덤프 자체가 실패** — `DATABASE_URL` 문제이거나 Neon이 멈춰 있다.
+- **체크아웃 실패** — `BACKUP_DEPLOY_KEY`가 없거나 lyra-backup의 Deploy keys에서
+  지워졌다. 새 키를 만들어 두 곳(lyra Secrets, lyra-backup Deploy keys·쓰기 허용)에 넣는다.
 
 **대응**
 1. 워크플로 요약의 무결성 리포트를 읽는다 — 곡·영화가 이전/이번 몇 개인지 나온다.
 2. 줄어든 게 맞고 **의도한 것이라면**(중복 대량 정리 등) 다시 돌리되
    `node scripts/verify-backup.mjs --allow-shrink`로 한 번 통과시킨다.
 3. 의도한 게 아니라면 DB를 먼저 본다. 백업은 건드리지 않는다.
-4. 수동 덤프: `node scripts/dump-content.mjs` 후 `git add songs movies` →
-   커밋. `git add -A`는 쓰지 않는다(다른 작업 파일이 섞인다).
-5. 최근 태그 확인: `git tag --list 'db-backup-*' | tail -5`
+4. 수동 덤프: lyra-backup을 클론한 폴더에서 `node <lyra>/scripts/dump-content.mjs`
+   후 `git add songs movies data .backup-manifest.json` → 커밋.
+   전량을 다시 받으려면 `--full`. `git add -A`는 쓰지 않는다.
+5. 최근 태그 확인(lyra-backup에서): `git tag --list 'db-backup-*' | tail -5`
 
 ---
 

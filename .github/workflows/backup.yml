@@ -5,9 +5,13 @@ on:
     - cron: "17 18 * * *" # 03:17 KST
   workflow_dispatch:
 
+# 백업은 비공개 저장소 bluehhhh-byte/lyra-backup에 쌓는다(2026-09-28).
+# 이 저장소는 공개라서, 여기에 커밋하면 가사·번역 전문이 매일 공개 이력에 남는다.
+# 비공개 저장소에는 그 저장소 하나에만 쓰기 권한이 있는 배포 키(BACKUP_DEPLOY_KEY)로
+# 들어간다 — 만료가 없고, 새면 그 저장소 하나만 영향을 받는다.
 permissions:
-  contents: write
-  issues: write # 무결성 검사가 백업을 막았을 때 경보 이슈를 연다
+  contents: read
+  issues: write # 무결성 검사가 백업을 막았을 때 이 저장소에 경보 이슈를 연다
 
 concurrency:
   group: database-backup
@@ -18,8 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5 # 덤프·검사 스크립트
+      - name: Check out the private backup repository
+        uses: actions/checkout@v5
         with:
+          repository: bluehhhh-byte/lyra-backup
+          ssh-key: ${{ secrets.BACKUP_DEPLOY_KEY }}
+          path: backup
           fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
@@ -27,28 +36,36 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: Dump Neon content to repository files
+
+      # 덤프는 backup/ 안에서 돈다 — 스크립트가 현재 폴더의 songs·movies·data를 고치고,
+      # 지난 덤프가 남긴 .backup-manifest.json과 다른 행만 Neon에서 받는다.
+      - name: Dump Neon content to the backup repository
+        working-directory: backup
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: node scripts/dump-content.mjs
+        run: node ../scripts/dump-content.mjs
 
       # 커밋 *전에* 센다. 덤프가 빈 DB를 읽었거나 콘텐츠가 대량으로 사라진 뒤였다면
-      # 그 상태를 커밋하는 순간 멀쩡한 어제 백업이 덮인다 — 복구하려고 연 백업에도
-      # 아무것도 없는 상황이 그렇게 만들어진다. 멈추면 어제 것이 그대로 남는다.
+      # 그 상태를 커밋하는 순간 멀쩡한 어제 백업이 덮인다. 멈추면 어제 것이 그대로 남는다.
+      # 비교 대상(HEAD)은 비공개 저장소의 어제 백업이다.
       - name: Verify the dump against the previous backup
         id: verify
         continue-on-error: true
+        working-directory: backup
         run: |
           set +e
-          node scripts/verify-backup.mjs > backup-report.md
+          node ../scripts/verify-backup.mjs > ../backup-report.md
           echo "status=$?" >> "$GITHUB_OUTPUT"
-          cat backup-report.md
+          cat ../backup-report.md
       - name: Attach the integrity report
         if: always()
         run: cat backup-report.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Preserve one atomic snapshot commit as a dated tag
+      # 비공개 저장소의 main에 한 커밋으로 쌓고 날짜 태그를 단다. 다음 덤프가 이 커밋을
+      # 비교 대상과 manifest로 쓰므로 main에 올려야 한다. 강제 push는 하지 않는다.
+      - name: Commit one atomic snapshot and tag it
         if: steps.verify.outputs.status == '0'
+        working-directory: backup
         env:
           BACKUP_DAY: ${{ github.run_started_at }}
         run: |
@@ -57,11 +74,11 @@ jobs:
           git rev-parse "$tag" >/dev/null 2>&1 && { echo "$tag already exists"; exit 0; }
           git config user.name "lyra-backup[bot]"
           git config user.email "lyra-backup[bot]@users.noreply.github.com"
-          git add -A -- songs movies data
+          git add -A -- songs movies data .backup-manifest.json
           git diff --cached --quiet && { echo "No database changes"; exit 0; }
           git commit -m "backup: Neon content $tag"
           git tag "$tag"
-          git push origin "refs/tags/$tag"
+          git push origin HEAD "refs/tags/$tag"
 
       # 검사가 막았으면 A1과 같은 방식으로 알린다 — 열린 이슈가 있으면 코멘트만.
       - name: Open or update the alert issue
