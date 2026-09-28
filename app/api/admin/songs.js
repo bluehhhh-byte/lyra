@@ -39,7 +39,7 @@ import { findDuplicateSong, mergeDuplicateSongDocuments, nearDuplicateCandidates
 import { enrollAppearanceCheckpoint } from "../../../lib/admin/research-budget";
 import { appearanceIdentity } from "../../../lib/song-appearances";
 import { applySections, originalLines } from "../../../lib/admin/lyric-sections";
-import { cleanListenWhen } from "../../../lib/listen-when";
+import { cleanCoverHook, coverHookStorable, setCoverHookField } from "../../../lib/cover-hook";
 import { applyGenre, genreStatus, lockGenre } from "../../../lib/admin/genre-fix";
 import { checkGenreSubdividable, GENRE_LOCK_THRESHOLD, checkSameSong, SAME_SONG_THRESHOLD, scoreReportGrounding, REPORT_GROUNDING_MIN } from "../../../lib/admin/jev";
 
@@ -858,22 +858,14 @@ ${koText.slice(0, 2000)}`,
       out = setField(out, "emotion", auto.emotion, "tags");
       updated.push("emotion");
     }
-    if (auto.listenWhen) {
-      out = setField(out, "listen_when", auto.listenWhen, "tags");
-      updated.push("listen_when");
-    }
     if (!updated.length) return Response.json({ updated: [] });
     await writeSong(body.slug, out, `chore(song): regen metadata — ${body.slug}`);
     // 필드 이름만 돌려주면 코멘트가 무엇으로 바뀌었는지 화면에서 확인할 길이 없다.
     // 덮어쓰기라 되돌리려면 무엇이 사라졌는지도 보여야 한다.
-    // 문구도 같은 이유로 전후를 함께 돌려준다 — 목록은 서버가 그린 값을 들고
-    // 있어서, 여기서 안 알려주면 새로고침 전까지 옛 문구가 남아 있다.
     return Response.json({
       updated,
       comment: fmValue(out.match(FM)?.[1] || "", "comment"),
       previousComment: fmValue(fm, "comment"),
-      listenWhen: fmValue(out.match(FM)?.[1] || "", "listen_when"),
-      previousListenWhen: fmValue(fm, "listen_when"),
       keptWebComment,
     });
   }
@@ -1363,6 +1355,20 @@ ${listed}`,
     return Response.json({ ok: true, changed: out !== before, corrections: corrections.length });
   }
 
+  // 캐러셀 1장 문구(cover_hook) — 곡 페이지의 캐러셀 창에서 주인이 고르거나 쓴 한 줄.
+  // AI가 만들지 않는다. 빈 문구면 줄을 지운다.
+  if (action === "setCoverHook") {
+    const song = await readSong(body.slug);
+    if (!song) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
+    const coverHook = cleanCoverHook(body.coverHook);
+    if (!coverHookStorable(coverHook))
+      return Response.json({ error: "문구 전체를 [ ]로 감쌀 수 없습니다" }, { status: 422 });
+    const next = setCoverHookField(song.raw, coverHook);
+    if (next === null) return Response.json({ error: "frontmatter를 읽을 수 없음" }, { status: 422 });
+    await writeSong(body.slug, next, `chore(song): ${coverHook ? "set" : "clear"} cover hook — ${body.slug}`);
+    return Response.json({ coverHook });
+  }
+
   if (action === "update") {
     if (!(await readSong(body.slug)))
       return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
@@ -1420,7 +1426,6 @@ ${listed}`,
 
   if (action === "save") {
     const { title, titleKo, artist, artistKo, album, year, artwork, lang, tags, comment, lyrics, preview, trackId, duration, genre, keywords, emotion, external_url } = body;
-    const listenWhen = cleanListenWhen(body.listenWhen);
     const sourceUrls = commentSourceUrls(body.commentSources);
     const commentBasis = ["lyrics_only", "web_enriched", "manual"].includes(body.commentBasis) ? body.commentBasis : "manual";
     const slug = `${artist} ${title}`
@@ -1500,7 +1505,7 @@ lang: ${lang}
 tags: [${(tags || "").split(",").map((t) => capGenre(t.trim())).filter(Boolean).join(", ")}]
 keywords: [${parseKeywords(keywords).join(", ")}]
 emotion: ${parseEmotion(emotion)}
-${listenWhen ? `listen_when: ${listenWhen}\n` : ""}date: ${kstToday()}
+date: ${kstToday()}
 published: ${new Date().toISOString()}
 comment: ${(comment || "").replace(/\s*\n+\s*/g, " ")}
 comment_basis: ${commentBasis}

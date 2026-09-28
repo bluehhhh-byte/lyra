@@ -77,7 +77,6 @@ export default function AdminForm() {
   const [commentSources, setCommentSources] = useState([]);
   const [keywords, setKeywords] = useState([]); // 번역 가사 핵심 단어 — autotag가 채움
   const [emotion, setEmotion] = useState(""); // 감정 한 단어 — autotag가 채움
-  const [listenWhen, setListenWhen] = useState(""); // 커버 카드 장면 한 줄 — autotag가 채움
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [savedSlug, setSavedSlug] = useState("");
@@ -99,7 +98,7 @@ export default function AdminForm() {
   const [restored, setRestored] = useState(null); // {savedAt} — 복원 안내
   const snapshot = () => JSON.stringify({
     song, lang, lyrics, translated, tags, comment, commentBasis,
-    commentSources, keywords, emotion, listenWhen, titleKo, artistKo,
+    commentSources, keywords, emotion, titleKo, artistKo,
     lyricsNone, instrumental, lyricsNote,
   });
   const restore = (raw) => {
@@ -109,7 +108,7 @@ export default function AdminForm() {
     setTags(d.tags ?? ""); setComment(d.comment ?? "");
     setCommentBasis(d.commentBasis ?? "manual"); setCommentSources(d.commentSources ?? []);
     setKeywords(d.keywords ?? []); setEmotion(d.emotion ?? "");
-    setListenWhen(d.listenWhen ?? ""); setTitleKo(d.titleKo ?? ""); setArtistKo(d.artistKo ?? "");
+    setTitleKo(d.titleKo ?? ""); setArtistKo(d.artistKo ?? "");
     setLyricsNone(Boolean(d.lyricsNone)); setInstrumental(Boolean(d.instrumental));
     setLyricsNote(d.lyricsNote ?? "");
   };
@@ -203,7 +202,7 @@ export default function AdminForm() {
     setTags(baseTags(c, lg).join(", ")); // guaranteed baseline
     let commentHint = "";
     try {
-      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em, listenWhen: lw } =
+      const { tags: auto, titleKo: tko, artistKo: ako, comment: cm, keywords: kw, emotion: em } =
         await api("autotag", { ...c, lang: lg, lyrics: lyricsText }, { timeoutMs: 60_000 });
       if (auto?.length) setTags(auto.join(", ")); // server merges base + genre + moods
       if (tko) setTitleKo(tko);
@@ -216,7 +215,6 @@ export default function AdminForm() {
       // tool can always redo them later
       if (kw?.length) setKeywords(kw);
       if (em) setEmotion(em);
-      if (lw) setListenWhen(lw);
     } catch {
       // Country/year and store genre remain usable when metadata generation is
       // rate-limited. The grounded research below can still produce a comment.
@@ -309,7 +307,6 @@ export default function AdminForm() {
         commentSources: commentSources.map((source) => source.uri),
         keywords,
         emotion,
-        listenWhen,
         lyrics: translated,
         lyricsNone,
         instrumental,

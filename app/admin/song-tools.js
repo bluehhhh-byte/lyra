@@ -32,11 +32,11 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   const set = (slug, patch) => setState((s) => ({ ...s, [slug]: { ...s[slug], ...patch } }));
 
   const regenMeta = async (slug) => {
-    set(slug, { busy: "meta", err: "", msg: "", previousComment: "", previousListenWhen: "" });
+    set(slug, { busy: "meta", err: "", msg: "", previousComment: "" });
     try {
       const data = await api("regenMeta", { slug });
-      const { updated, comment, previousComment, listenWhen, previousListenWhen } = data;
-      // 메타 재생성은 코멘트와 문구를 덮어쓴다. 필드 이름만 알려주면 무엇으로
+      const { updated, comment, previousComment } = data;
+      // 메타 재생성은 코멘트를 덮어쓴다. 필드 이름만 알려주면 무엇으로
       // 바뀌었는지, 무엇이 사라졌는지 확인할 길이 없어 되돌릴지 판단할 수 없다.
       const { keptWebComment } = data;
       set(slug, {
@@ -46,9 +46,6 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
         ].filter(Boolean).join(" · "),
         comment: comment ?? undefined,
         previousComment: comment && previousComment && comment !== previousComment ? previousComment : "",
-        listenWhen: listenWhen ?? undefined,
-        previousListenWhen:
-          listenWhen && previousListenWhen && listenWhen !== previousListenWhen ? previousListenWhen : "",
       });
     } catch (e) {
       set(slug, { err: e.message });
@@ -58,7 +55,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const regen = async (slug) => {
-    set(slug, { busy: "comment", err: "", msg: "", previousComment: "", previousListenWhen: "" });
+    set(slug, { busy: "comment", err: "", msg: "", previousComment: "" });
     try {
       const { comment, previousComment, appearanceSuggestion, commentSources = [], degraded } = await api("regenComment", { slug });
       const prev = comment && previousComment && comment !== previousComment ? previousComment : "";
@@ -80,7 +77,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const notes = async (slug) => {
-    set(slug, { busy: "notes", err: "", msg: "", previousComment: "", previousListenWhen: "" });
+    set(slug, { busy: "notes", err: "", msg: "", previousComment: "" });
     try {
       const { notes: n } = await api("regenNotes", { slug });
       set(slug, { msg: `해설 ${n}개 생성·저장 완료` });
@@ -92,7 +89,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const restanza = async (slug) => {
-    set(slug, { busy: "stanza", err: "", msg: "", previousComment: "", previousListenWhen: "" });
+    set(slug, { busy: "stanza", err: "", msg: "", previousComment: "" });
     try {
       const { stanzas } = await api("restanza", { slug });
       set(slug, { msg: `연 ${stanzas}개로 재구성·저장 완료` });
@@ -140,7 +137,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
   };
 
   const addTrans = async (slug) => {
-    set(slug, { busy: "trans", err: "", msg: "", previousComment: "", previousListenWhen: "" });
+    set(slug, { busy: "trans", err: "", msg: "", previousComment: "" });
     try {
       const { reversed } = await api("addTranslation", { slug });
       // 방향이 반대로 채워진 줄은 조용히 넘어가면 몇 달 뒤에야 눈에 띈다 —
@@ -159,7 +156,7 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
 
   const mergeDuplicate = async (canonicalSlug, duplicateSlug) => {
     if (!window.confirm("대표 곡의 기존 값은 유지하고, 중복 기록은 삭제하지 않은 채 대표 곡으로 연결합니다. 계속할까요?")) return;
-    set(canonicalSlug, { busy: "merge", err: "", msg: "", previousComment: "", previousListenWhen: "" });
+    set(canonicalSlug, { busy: "merge", err: "", msg: "", previousComment: "" });
     try {
       const result = await api("mergeDuplicate", { canonicalSlug, duplicateSlug });
       setDuplicates((groups) => groups.filter((group) => !group.songs.some((song) => song.slug === duplicateSlug)));
@@ -332,18 +329,11 @@ export default function SongTools({ songs, duplicateGroups = [] }) {
                   <span className="text-muted"> ({s.artist_ko})</span>
                 )}
               </p>
-              {/* 커버 카드에 실리는 "이런 순간에" 한 줄 — 없는 곡은 조용히 비운다.
-                  가사 분석이 방금 바꿨으면 새 문구를 보여주고, 덮인 옛 문구는
-                  그 옆에 남긴다(되돌릴지 판단하려면 사라진 쪽도 보여야 한다). */}
-              {(st.listenWhen ?? s.listenWhen) && (
-                <p className="truncate text-xs text-muted" data-listen-when>
-                  「{st.listenWhen ?? s.listenWhen}」
-                  {st.previousListenWhen && (
-                    <span className="ml-1.5 text-muted">
-                      <span className="mr-1 text-[10px] font-semibold uppercase tracking-wider text-accent">이전</span>
-                      「{st.previousListenWhen}」
-                    </span>
-                  )}
+              {/* 캐러셀 1장 문구(cover_hook) — 곡 페이지의 캐러셀 창에서 사람이 고른 한 줄.
+                  목록에서 어떤 곡에 문구가 있는지 훑어보게 한다. 없는 곡은 조용히 비운다. */}
+              {s.coverHook && (
+                <p className="truncate text-xs text-muted" data-cover-hook>
+                  「{s.coverHook}」
                 </p>
               )}
               <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">

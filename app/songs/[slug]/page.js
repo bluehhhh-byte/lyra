@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { albumCompanions, getAllSongsMeta, getSongRuntime } from "../../../lib/songs";
 import { genreTagOf, COUNTRY_TAGS } from "../../../lib/genre";
 import { parseEmotion } from "../../../lib/keywords";
+import { cleanCoverHook } from "../../../lib/cover-hook";
 import { getAllMoviesMeta } from "../../../lib/movies";
 import CoverImage from "../../cover-image";
 import { InkDivider } from "../../ink-details";
@@ -125,6 +126,8 @@ export default async function SongPage({ params }) {
   // 캡션은 구조화된 첫 항목을 쓴다 — 감독·유형·역할을 템플릿에 맞춰 조립해야 하므로
   // 표시용 요약 문자열(carouselAppearance)과는 다른 형태다.
   const captionAppearance = appearances[0] || null;
+  // 캐러셀 1장 문구 — 사람이 정한 것만 있다(lib/cover-hook.js). 배열로 읽혔으면 버린다.
+  const coverHook = typeof song.cover_hook === "string" ? cleanCoverHook(song.cover_hook) : "";
   const commentSources = (Array.isArray(song.comment_sources) ? song.comment_sources : []).flatMap((value) => {
     try {
       const url = new URL(value);
@@ -261,11 +264,11 @@ export default async function SongPage({ params }) {
       <InkDivider className="mx-auto mb-12 h-3 w-full max-w-2xl text-muted" />
 
       {/* comment — 곡이 쓰인 작품은 별도 구역이 아니라 코멘트의 마지막 줄로 붙는다 */}
-      {(song.comment || song.listen_when || appearances.length > 0) && (
+      {(song.comment || coverHook || appearances.length > 0) && (
         <div className="mx-auto mb-14 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-muted">
-          {/* 이 곡을 듣기 좋은 순간 — 캐러셀 1장 문구는 여기서 가져가지 않고 캐러셀 창에서 사람이 정한다 */}
-          {song.listen_when && (
-            <p className="mb-2 font-semibold text-ink" data-listen-when>{song.listen_when}</p>
+          {/* 사람이 캐러셀 창에서 고르거나 쓴 한 줄(cover_hook) — 캐러셀 1장 머리글과 같은 문구 */}
+          {coverHook && (
+            <p className="mb-2 font-semibold text-ink" data-cover-hook>{coverHook}</p>
           )}
           {song.comment && <p>{song.comment}</p>}
           {commentSources.length > 0 && (
@@ -310,6 +313,8 @@ export default async function SongPage({ params }) {
         lang={song.lang}
         song={{
           slug: song.slug,
+          // 캐러셀 1장 문구의 시작값 — 창에서 고치고 주인이면 곡에 저장한다
+          cover_hook: coverHook,
           title: song.title,
           title_ko: song.title_ko && song.title_ko !== song.title ? song.title_ko : "",
           artist: song.artist,

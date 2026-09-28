@@ -4,6 +4,7 @@ import { wrap, wrapTight } from "../../../lib/carousel-wrap";
 import { emotionToWash } from "../../../lib/emotion-color";
 import { createPortal } from "react-dom";
 import { buildCaption } from "../../../lib/caption";
+import { COVER_HOOK_MAX, cleanCoverHook } from "../../../lib/cover-hook";
 import InstagramCaptionPreview from "../../caption-preview";
 import {
   buildCarousel,
@@ -43,13 +44,9 @@ const PAD = CAROUSEL_THEME.padding;
 // 잘라내기 기준이 달라져, 카드를 넘길 때 사진이 확대·이동한 것처럼 보인다.
 const COVER_ART_HEIGHT = 1000;
 
-// 1장 머리글 문구. 예전에는 AI가 만든 listen_when을 자동으로 얹었는데, 곡마다
-// 사람이 원하는 한 줄과 어긋나는 일이 잦았다. 이제는 캐러셀 창에서 사람이 가사
-// 한 줄을 고르거나 직접 쓴 문구만 얹는다. 비워 두면 머리글 없이 커버만 나간다.
-// 길이는 두 줄 머리글에 들어갈 만큼만 받는다.
-export const COVER_HOOK_MAX = 60;
-export const cleanCoverHook = (value) =>
-  String(value ?? "").replace(/\s+/g, " ").trim().slice(0, COVER_HOOK_MAX);
+// 1장 머리글 문구는 곡 데이터의 cover_hook이다(lib/cover-hook.js). 캐러셀 창에서
+// 가사 한 줄을 고르거나 직접 쓰고, 주인은 그 자리에서 곡에 저장한다.
+export { COVER_HOOK_MAX, cleanCoverHook };
 
 export function drawImageCover(ctx, image, x, y, width, height) {
   const scale = Math.max(width / image.width, height / image.height);
@@ -603,30 +600,38 @@ async function downloadAll(blobs, song) {
 // `lines` is every line of the song (flattened; section set on stanza-opening
 // lines), so the picker can mix lines from anywhere. `initial` seeds the
 // selection with the stanza that was clicked.
-export default function CardModal({ song, lines: allLines, initial, onClose }) {
+export default function CardModal({ song, lines: allLines, initial, onClose, owner = false, onHookSaved }) {
   const [align, setAlign] = useState("left");
-  // 1장 머리글 — 자동으로 채우지 않는다. 곡마다 이 브라우저에 기억해 두고,
-  // 다음에 캐러셀을 열면 그 문구로 시작한다.
-  const hookKey = `lyra:cover-hook:${song.slug || `${song.artist}|${song.title}`}`;
-  const [hookDraft, setHookDraft] = useState(() => {
-    try {
-      return window.localStorage.getItem(hookKey) || "";
-    } catch {
-      return "";
-    }
-  });
-  const [hook, setHook] = useState(() => cleanCoverHook(hookDraft));
+  // 1장 머리글 — 자동으로 채우지 않는다. 곡 데이터에 저장된 cover_hook으로 시작하고,
+  // 주인은 고친 문구를 곡에 저장한다(곡 페이지 코멘트 위에도 같은 문구가 선다).
+  const [savedHook, setSavedHook] = useState(() => cleanCoverHook(song.cover_hook));
+  const [hookDraft, setHookDraft] = useState(savedHook);
+  const [hook, setHook] = useState(savedHook);
+  const [hookSave, setHookSave] = useState(""); // "" | "saving" | "saved" | 오류 문구
   // 글자를 칠 때마다 다섯 장을 다시 그리지 않도록 입력이 멈춘 뒤에 반영한다
   useEffect(() => {
     const t = setTimeout(() => setHook(cleanCoverHook(hookDraft)), 350);
     return () => clearTimeout(t);
   }, [hookDraft]);
-  useEffect(() => {
+  const hookDirty = cleanCoverHook(hookDraft) !== savedHook;
+  const saveHook = async () => {
+    const next = cleanCoverHook(hookDraft);
+    setHookSave("saving");
     try {
-      if (hook) window.localStorage.setItem(hookKey, hook);
-      else window.localStorage.removeItem(hookKey);
-    } catch {} // 저장소가 막힌 환경 — 이번 창에서만 쓰인다
-  }, [hook, hookKey]);
+      const res = await fetch("/api/admin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "setCoverHook", slug: song.slug, coverHook: next }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "저장 실패 — 로그인이 만료됐을 수 있습니다");
+      setSavedHook(data.coverHook ?? next);
+      setHookSave("saved");
+      onHookSaved?.(data.coverHook ?? next);
+    } catch (e) {
+      setHookSave(e.message || "저장 실패");
+    }
+  };
   // 고를 수 있는 문구 — 가사 원문과 번역을 줄 순서대로, 같은 문장은 한 번만
   const hookChoices = useMemo(() => {
     const seen = new Set();
@@ -780,7 +785,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
             <div className="mb-4 border-b border-line pb-4">
               <label htmlFor="cover-hook" className="text-sm font-medium text-ink">1페이지 문구</label>
               <p className="mt-0.5 text-xs leading-relaxed text-muted">
-                가사 한 줄을 고르거나 직접 쓰세요. 비워 두면 문구 없이 커버만 나갑니다.
+                가사 한 줄을 고르거나 직접 쓰세요. 곡 페이지 코멘트 위에도 같은 문구가 섭니다. 비워 두면 문구 없이 커버만 나갑니다.
               </p>
               <select
                 value=""
@@ -814,7 +819,32 @@ export default function CardModal({ song, lines: allLines, initial, onClose }) {
                   </button>
                 )}
               </div>
-              <p className="mt-1 text-right text-[11px] text-muted">{hookDraft.length}/{COVER_HOOK_MAX}자</p>
+              <div className="mt-1 flex items-center justify-between gap-2">
+                {owner && song.slug ? (
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={saveHook}
+                      disabled={!hookDirty || hookSave === "saving"}
+                      className="min-h-11 shrink-0 border border-accent px-3 text-xs text-accent disabled:border-line disabled:text-muted"
+                    >
+                      {hookSave === "saving" ? "저장 중…" : "곡에 저장"}
+                    </button>
+                    <span className="text-[11px] text-muted" data-cover-hook-status>
+                      {hookSave === "saved" && !hookDirty
+                        ? "저장됨 · 곡 페이지에도 반영"
+                        : hookSave && hookSave !== "saving" && hookSave !== "saved"
+                          ? hookSave
+                          : hookDirty
+                            ? "저장 안 된 변경"
+                            : ""}
+                    </span>
+                  </div>
+                ) : (
+                  <span />
+                )}
+                <p className="text-right text-[11px] text-muted">{hookDraft.length}/{COVER_HOOK_MAX}자</p>
+              </div>
             </div>
             <div className="mb-2 flex items-center justify-between gap-3">
               <p className="text-sm font-medium text-ink">
