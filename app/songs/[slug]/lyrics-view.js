@@ -64,6 +64,8 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   const [active, setActive] = useState(-1); // stanza highlighted from #hash
   const [progress, setProgress] = useState(0);
   const [card, setCard] = useState(null); // { lines, initial } for the carousel modal
+  // 캐러셀 창에서 방금 곡에 저장한 1장 문구 — 창을 다시 열 때 옛 값으로 돌아가지 않게
+  const [savedCoverHook, setSavedCoverHook] = useState(null);
   const [expandedRepeats, setExpandedRepeats] = useState(() => new Set());
   const [copiedStanza, setCopiedStanza] = useState(-1);
 
@@ -375,7 +377,14 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
       </div>
 
       {card && (
-        <CardModal song={song} lines={card.lines} initial={card.initial} onClose={() => setCard(null)} />
+        <CardModal
+          song={savedCoverHook === null ? song : { ...song, cover_hook: savedCoverHook }}
+          lines={card.lines}
+          initial={card.initial}
+          owner={owner}
+          onHookSaved={setSavedCoverHook}
+          onClose={() => setCard(null)}
+        />
       )}
     </div>
   );
