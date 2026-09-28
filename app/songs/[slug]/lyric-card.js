@@ -462,7 +462,7 @@ async function drawCoverCard({ song, art, hook: hookText = "" }) {
 // 2장 전용 — 곡 설명 카드. 해설은 923곡 전부에 있는 자산이자 다른 가사 계정이
 // 갖지 못한 차별점이라 제 장을 준다. 배경은 가사 카드와 같은 문법(흐린 커버 + 어두운
 // 막)이라 묶음이 한 벌로 읽히고, 글은 해설 하나뿐이라 천천히 읽힌다.
-async function drawAboutCard({ song, note, appearance, hook = "", art, position, total }) {
+async function drawAboutCard({ song, note, appearance, art, position, total }) {
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
@@ -490,45 +490,6 @@ async function drawAboutCard({ song, note, appearance, hook = "", art, position,
 
   drawPageNumber(ctx, position, total);
   ctx.textAlign = "left";
-
-  // 사람이 고른 1장 문구(cover_hook)를 SONG NOTE 표기 바로 위에 한 번 더 세운다.
-  // 사진이 어두워지는 자리라 1장과 같은 문법(보라 막대 + 굵은 흰 글자 + 그림자)으로
-  // 두 줄까지, 1장보다 한 단계 작게 그린다. 비어 있으면 아무것도 그리지 않는다.
-  const aboutHook = cleanCoverHook(hook);
-  if (aboutHook) {
-    const barW = 6;
-    const barGap = 22;
-    const hookMax = W - PAD * 2 - barW - barGap;
-    const hookFont = (size) => `800 ${size}px ${SANS}`;
-    let hookSize = 32;
-    let hookLines = [];
-    for (const size of [52, 48, 44, 40, 36, 32]) {
-      ctx.font = hookFont(size);
-      const tight = wrapTight(ctx, aboutHook, hookMax, { font: hookFont, size, minRatio: 0.86 });
-      hookSize = tight.size;
-      hookLines = tight.lines;
-      if (hookLines.length <= 2) break;
-    }
-    hookLines = hookLines.slice(0, 2);
-    const hookLineHeight = Math.round(hookSize * 1.3);
-    const hookLast = 580; // SONG NOTE(630) 위로 한 줄 간격
-    const hookFirst = hookLast - (hookLines.length - 1) * hookLineHeight;
-    ctx.strokeStyle = "#c8b6ff"; // globals.css의 --color-accent
-    ctx.lineWidth = barW;
-    ctx.lineCap = "round";
-    ctx.beginPath();
-    ctx.moveTo(PAD + barW / 2, hookFirst - hookSize * 0.78);
-    ctx.lineTo(PAD + barW / 2, hookLast + hookSize * 0.14);
-    ctx.stroke();
-    ctx.save();
-    ctx.shadowColor = "rgba(0,0,0,0.6)";
-    ctx.shadowBlur = 16;
-    ctx.fillStyle = INK;
-    ctx.font = hookFont(hookSize);
-    hookLines.forEach((line, index) => ctx.fillText(line, PAD + barW + barGap, hookFirst + index * hookLineHeight));
-    ctx.restore();
-  }
-
   ctx.fillStyle = "rgba(246,241,228,0.72)";
   ctx.font = `700 24px ${SANS}`;
   ctx.fillText("SONG NOTE", PAD, 630);
@@ -652,9 +613,11 @@ export default function CardModal({ song, lines: allLines, initial, onClose, own
     const t = setTimeout(() => setHook(cleanCoverHook(hookDraft)), 350);
     return () => clearTimeout(t);
   }, [hookDraft]);
-  const hookDirty = cleanCoverHook(hookDraft) !== savedHook;
-  const saveHook = async () => {
-    const next = cleanCoverHook(hookDraft);
+  const hookDirty = hook !== savedHook;
+  // 주인이 고르거나 쓴 문구는 따로 누르지 않아도 곡에 저장된다 — 고르는 것이 곧
+  // 반영이다. 입력이 멈춘 뒤(위 350ms + 여기 900ms)에만 보내 한 글자마다 쓰지 않는다.
+  // 곡 페이지 코멘트 위 문구도 저장 직후 onHookSaved(→ router.refresh)로 바뀐다.
+  const saveHook = async (next) => {
     setHookSave("saving");
     try {
       const res = await fetch("/api/admin", {
@@ -671,6 +634,12 @@ export default function CardModal({ song, lines: allLines, initial, onClose, own
       setHookSave(e.message || "저장 실패");
     }
   };
+  useEffect(() => {
+    if (!owner || !song.slug || hook === savedHook) return;
+    const t = setTimeout(() => saveHook(hook), 900);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hook, savedHook, owner, song.slug]);
   // 고를 수 있는 문구 — 가사 원문과 번역을 줄 순서대로, 같은 문장은 한 번만
   const hookChoices = useMemo(() => {
     const seen = new Set();
@@ -725,7 +694,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, own
           slide.role === "cover"
             ? await drawCoverCard({ song, art, hook })
             : slide.role === "about"
-              ? await drawAboutCard({ song, note: slide.note, appearance: slide.appearance, hook, art, ...page })
+              ? await drawAboutCard({ song, note: slide.note, appearance: slide.appearance, art, ...page })
               : await drawCard({ song, lines: slide.lines, art, align, ...page });
         if (!alive) return;
         if (blob) made.push({ ...slide, blob, url: URL.createObjectURL(blob) });
@@ -824,7 +793,7 @@ export default function CardModal({ song, lines: allLines, initial, onClose, own
             <div className="mb-4 border-b border-line pb-4">
               <label htmlFor="cover-hook" className="text-sm font-medium text-ink">1페이지 문구</label>
               <p className="mt-0.5 text-xs leading-relaxed text-muted">
-                가사 한 줄을 고르거나 직접 쓰세요. 곡 페이지 코멘트 위에도 같은 문구가 섭니다. 비워 두면 문구 없이 커버만 나갑니다.
+                가사 한 줄을 고르거나 직접 쓰세요. 고르면 바로 곡에 저장되어 곡 페이지 코멘트 위에도 같은 문구가 섭니다. 비워 두면 문구 없이 커버만 나갑니다.
               </p>
               <select
                 value=""
@@ -860,24 +829,29 @@ export default function CardModal({ song, lines: allLines, initial, onClose, own
               </div>
               <div className="mt-1 flex items-center justify-between gap-2">
                 {owner && song.slug ? (
-                  <div className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={saveHook}
-                      disabled={!hookDirty || hookSave === "saving"}
-                      className="min-h-11 shrink-0 border border-accent px-3 text-xs text-accent disabled:border-line disabled:text-muted"
-                    >
-                      {hookSave === "saving" ? "저장 중…" : "곡에 저장"}
-                    </button>
+                  <div className="flex min-h-11 items-center gap-2">
                     <span className="text-[11px] text-muted" data-cover-hook-status>
-                      {hookSave === "saved" && !hookDirty
-                        ? "저장됨 · 곡 페이지에도 반영"
-                        : hookSave && hookSave !== "saving" && hookSave !== "saved"
-                          ? hookSave
-                          : hookDirty
-                            ? "저장 안 된 변경"
-                            : ""}
+                      {hookSave === "saving"
+                        ? "곡에 저장 중…"
+                        : hookSave === "saved" && !hookDirty
+                          ? "저장됨 · 곡 페이지 코멘트 위에 반영"
+                          : hookSave && hookSave !== "saved"
+                            ? hookSave
+                            : hookDirty
+                              ? "곧 저장됩니다"
+                              : savedHook
+                                ? "곡 페이지 코멘트 위에 표시 중"
+                                : ""}
                     </span>
+                    {hookSave && hookSave !== "saving" && hookSave !== "saved" && (
+                      <button
+                        type="button"
+                        onClick={() => saveHook(hook)}
+                        className="min-h-11 shrink-0 border border-accent px-3 text-xs text-accent"
+                      >
+                        다시 시도
+                      </button>
+                    )}
                   </div>
                 ) : (
                   <span />

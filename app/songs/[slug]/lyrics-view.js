@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import CardModal from "./lyric-card";
 import { hasReadings, savedReadingSize, savedReadingVisibility } from "../../../lib/reading-preference";
 import { repeatedStanzaDisplay } from "../../../lib/lyric-display";
@@ -66,6 +67,12 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
   const [card, setCard] = useState(null); // { lines, initial } for the carousel modal
   // 캐러셀 창에서 방금 곡에 저장한 1장 문구 — 창을 다시 열 때 옛 값으로 돌아가지 않게
   const [savedCoverHook, setSavedCoverHook] = useState(null);
+  const router = useRouter();
+  // 캐러셀 창에서 문구가 곡에 저장되면 서버가 그린 코멘트 위 문구도 곧바로 바꾼다
+  const onCoverHookSaved = (value) => {
+    setSavedCoverHook(value);
+    router.refresh();
+  };
   const [expandedRepeats, setExpandedRepeats] = useState(() => new Set());
   const [copiedStanza, setCopiedStanza] = useState(-1);
 
@@ -382,7 +389,7 @@ export default function LyricsView({ stanzas, lang, song, allowNotes = true, mis
           lines={card.lines}
           initial={card.initial}
           owner={owner}
-          onHookSaved={setSavedCoverHook}
+          onHookSaved={onCoverHookSaved}
           onClose={() => setCard(null)}
         />
       )}
