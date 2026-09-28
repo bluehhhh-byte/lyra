@@ -7,11 +7,18 @@
 //   node scripts/quota-watch.mjs --json           # 워크플로가 파싱하려고
 //
 // exit: 0 정상 · 2 경보 · 1 수집 실패
-import dotenv from "dotenv";
 import { checkHealth } from "./healthcheck.mjs";
 import { evaluateQuota, renderQuotaReport, pickNeonProject, scopedProjectIdFrom, projectMatchesDatabase } from "../lib/quota-watch.js";
 
-dotenv.config({ path: ".env.local", override: false, quiet: true });
+// .env.local은 로컬에서만 쓴다. 워크플로는 의존성을 설치하지 않으므로 dotenv가
+// 없다 — 정적으로 불러오면 모듈을 못 찾아 점검이 통째로 죽는다(2026-09-18부터
+// 매일 그렇게 실패해 전송량 경보가 한 번도 나가지 않았다).
+try {
+  const { default: dotenv } = await import("dotenv");
+  dotenv.config({ path: ".env.local", override: false, quiet: true });
+} catch {
+  // dotenv 없음 — 환경변수만 쓴다
+}
 
 const clean = (value) => String(value ?? "").replace(/^﻿/, "").trim().replace(/^(["'])([\s\S]*)\1$/, "$2").trim();
 const BASE = clean(process.env.LYRA_SITE_URL) || "https://lyracyno.vercel.app";
