@@ -1,6 +1,6 @@
 // 곡(음악) 도메인 액션 — route.js 디스패처가 호출. 처리하면 Response, 아니면 null.
 import { readSong, writeSong, deleteSong, readRuntimeData, writeData, commitFiles } from "../../../lib/store";
-import { getAllSongsRuntime, getAllSongsMeta, capitalizeLyricLines, parseFrontmatter, parseLyrics } from "../../../lib/songs";
+import { getAllSongsRuntime, getAllSongsMeta, getSongRuntime, capitalizeLyricLines, parseFrontmatter, parseLyrics } from "../../../lib/songs";
 import { translationVariants } from "../../../lib/translation-variants";
 import { GENRES, capGenre, COUNTRY_TAGS, genreTagOf, genreIssue } from "../../../lib/genre";
 import { EMOTIONS, parseEmotion, parseKeywords } from "../../../lib/keywords";
@@ -188,7 +188,9 @@ export async function handleSongs(action, body) {
   }
 
   if (action === "requalityOne") {
-    const s = (await getAllSongsRuntime()).find((x) => x.slug === body.slug);
+    // 곡 하나만 읽는다. 관리자 "재번역 검토"는 이 액션을 곡마다 부르는데, 전곡을 불러
+    // find하면 곡마다 전량(3.6MB)을 파싱하고, 직전 저장이 비운 샤드를 Neon에서 다시 받는다.
+    const s = await getSongRuntime(body.slug);
     if (!s) return Response.json({ error: "곡을 찾을 수 없음" }, { status: 404 });
     const have = s.stanzas.reduce((n, st) => n + st.lines.filter((l) => l.en?.trim()).length, 0);
     const found = await findLyrics(
@@ -892,7 +894,8 @@ ${koText.slice(0, 2000)}`,
     if (!auto.aiOk)
       return Response.json({ error: "AI 호출 실패 (쿼터·과부하) — 기존 장르 유지" }, { status: 502 });
     const newGenre = genreTagOf(auto.tags);
-    const old = genreTagOf((await getAllSongsRuntime()).find((x) => x.slug === body.slug)?.tags || []);
+    // 이전 장르는 방금 읽은 이 곡의 frontmatter에 있다 — 전곡을 불러 찾을 이유가 없다
+    const old = genreTagOf(parseTags(fmValue(fm, "tags")));
     // rewrite the whole tags line (country·genre·year) so the genre slot updates
     // in place, and sync the frontmatter genre field to match
     let out = setField(raw, "tags", `[${auto.tags.join(", ")}]`, "year");
