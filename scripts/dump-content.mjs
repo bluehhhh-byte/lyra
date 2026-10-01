@@ -73,6 +73,12 @@ const fetchedCount = fetchedRows.length + fetchedData.length;
 // 실패한 상태일 수 있으므로, 그럴 때는 아무것도 하지 않고 멈춘다.
 if (!rows.length) throw new Error("DB에 콘텐츠가 없습니다. 연결 대상을 확인하세요 — 덮어쓰지 않고 멈춥니다.");
 
+// 덤프 대상 디렉터리가 없으면 먼저 만든다 (새 백업 저장소 초기화 대응)
+for (const dir of ["songs", "movies", "data"]) {
+  const p = path.join(root, dir);
+  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
+}
+
 const planned = [];
 const seen = { song: new Set(), movie: new Set() };
 
