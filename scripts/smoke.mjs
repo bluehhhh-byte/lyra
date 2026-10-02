@@ -30,7 +30,8 @@ const CHECKS = [
   { url: "/archive", expect: null },
   { url: "/tags", expect: null },
   { url: "/recap", expect: null },
-  { url: "/moments", expect: "문화 장면" },
+  // 문화 장면은 항목 0개로 접었다 — /archive로 리다이렉트되므로 아카이브 본문이 보인다
+  { url: "/moments", expect: "문화 아카이브" },
   { url: "/people", expect: null },
   { url: `/api/search?q=${encodeURIComponent("a")}`, expect: '"groups"' },
   { url: "/api/search/lyrics?q=%EC%82%AC%EB%9E%91", expect: '"hits"' },

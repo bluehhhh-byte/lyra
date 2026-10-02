@@ -32,7 +32,6 @@ export async function GET(request) {
       ["영화·드라마", pick(db.movies, query)],
       ["평가한 영화", pick(db.watched, query)],
       ["인물", pick(db.people, query)],
-      ["문화 장면", pick(db.moments, query)],
     ].filter(([, items]) => items.length),
   });
 }

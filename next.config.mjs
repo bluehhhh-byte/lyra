@@ -38,6 +38,11 @@ const nextConfig = {
         destination: "https://lyracyno.vercel.app/:path*",
         permanent: true,
       },
+      // 문화 장면(moments)은 항목 0개의 죽은 표면이라 접었다. 데이터 모델·관리자
+      // 도구는 살려 두었으니 다시 열 때(아카이브 개편안 Track D) 이 리다이렉트를
+      // 지우면 된다 — 그 전까지는 빈 상태 페이지가 내비로 유입을 만들지 않게.
+      { source: "/moments", destination: "/archive", permanent: false },
+      { source: "/moments/:path*", destination: "/archive", permanent: false },
     ];
   },
   async headers() {
