@@ -35,6 +35,10 @@ export default async function RecapPage({ searchParams }) {
       .filter((i) => i.type === "song").map((i) => i.subtitle)
   );
   const newArtists = recap.artists.map(([a]) => a).filter((a) => a && !seenArtists.has(a));
+  // 월 선택기는 선택된 기간이 속한 해의 월만 보여준다. 연도를 직접 골랐으면 그 해,
+  // 월을 골랐으면 그 월의 해.
+  const activeYear = period.includes("-") ? period.slice(0, 4) : period;
+  const activeMonths = months.filter((value) => value.startsWith(`${activeYear}-`));
 
   return (
     <>
@@ -46,18 +50,27 @@ export default async function RecapPage({ searchParams }) {
         <RecapShare recap={serializeRecap(recap)} label={periodLabel(period)} />
       </header>
 
-      <nav className="mb-10 flex flex-wrap gap-2 border-y border-line py-3">
-        {years.map((value) => (
-          <Link key={value} href={`/recap?period=${value}`} className={` border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
-            {value}년
-          </Link>
-        ))}
-        <span className="mx-1 w-px bg-line" />
-        {months.map((value) => (
-          <Link key={value} href={`/recap?period=${value}`} className={` border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
-            {Number(value.slice(5))}월
-          </Link>
-        ))}
+      {/* 연도를 고르면 그 해의 월만 아래에 펼친다 — 42개월을 통째로 나열하면
+          "9월"이 몇 개나 반복되는지 알 수 없어 어느 해 9월인지 알기 어려웠다 */}
+      <nav className="mb-10 border-y border-line py-3" aria-label="결산 기간 선택">
+        <div className="flex flex-wrap gap-2">
+          {years.map((value) => (
+            <Link key={value} href={`/recap?period=${value}`} className={` border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
+              {value}년
+            </Link>
+          ))}
+        </div>
+        {activeMonths.length > 0 && (
+          <div className="mt-2 flex flex-wrap items-center gap-2 sm:pl-1">
+            <span className="text-[11px] text-muted">{activeYear}년</span>
+            <span className="h-4 w-px bg-line" />
+            {activeMonths.map((value) => (
+              <Link key={value} href={`/recap?period=${value}`} className={` border px-3 py-1 text-xs ${period === value ? "border-accent bg-accent text-bg" : "border-line text-muted hover:text-accent"}`}>
+                {Number(value.slice(5))}월
+              </Link>
+            ))}
+          </div>
+        )}
       </nav>
 
       <section className="grid grid-cols-2 gap-px border-y border-line bg-line sm:grid-cols-4">
