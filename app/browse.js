@@ -380,10 +380,15 @@ const sizedCover = (url, w) =>
 // 수백 MB라 탭이 "문제가 반복적으로 발생"하며 재로드됐다. content-visibility는
 // iOS 18 미만이 무시하므로 그물이 못 된다. 관찰자가 없는 환경은 항상 표시.
 function useNearScreen(ref) {
-  const [near, setNear] = useState(typeof IntersectionObserver === "undefined");
+  // 초기값은 서버와 브라우저가 같아야 한다. 예전에는 "IntersectionObserver가
+  // 없으면 참"이었는데, 서버(Node)엔 없고 브라우저엔 있어 SSR HTML과 첫 렌더가
+  // 어긋났다 — dev에서만 표면화되는 하이드레이션 오류의 원인. 이제 양쪽 다
+  // 거짓으로 시작하고, 관찰자가 없는 환경은 효과에서 참으로 푼다.
+  const [near, setNear] = useState(false);
   useEffect(() => {
     const el = ref.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") { setNear(true); return; }
     const observer = new IntersectionObserver(
       ([entry]) => setNear(entry.isIntersecting),
       { rootMargin: "150% 0px" }
