@@ -8,7 +8,7 @@ year: 2012
 artwork: https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/84/56/a6/8456a60a-5db8-2cad-8e14-c203f98f3ba1/00602537013739.rgb.jpg/600x600bb.jpg
 preview:
 trackId:
-duration:
+duration: 219
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2012]

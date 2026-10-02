@@ -13,7 +13,7 @@ trackId: 1819675765
 duration: 180
 genre: K-Pop
 lang: ko
-tags: [K-Pop, 2025]
+tags: [한국, K-Pop, 2025]
 listen_when: 누가 뭐라든 내 무대를 세우는 날
 keywords: [무대, 시선, 돈, 이름, 공기]
 emotion: 저항

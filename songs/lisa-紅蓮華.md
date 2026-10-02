@@ -14,7 +14,7 @@ trackId: 1538286723
 duration: 239
 genre: J-Pop
 lang: ja
-tags: [J-Pop, 2020]
+tags: [일본, J-Pop, 2020]
 listen_when: 얻어맞고도 다시 일어서는 아침
 keywords: [주마등, 손, 꿈, 슬픔, 연꽃]
 emotion: 저항

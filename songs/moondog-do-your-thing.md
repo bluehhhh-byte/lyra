@@ -31,6 +31,7 @@ Don't give up!
 > 포기하지 마!
 That's not the way to win a loving cup.
 > 그건 우승컵을 차지하는 법이 아니니까.
+
 Do your best,
 > 최선을 다해,
 And opportunity will do the rest.
@@ -39,6 +40,7 @@ Don't give in!
 > 굴복하지 마!
 Capitulation is the greatest sin.
 > 항복이야말로 가장 큰 죄니까.
+
 Do what's right,
 > 옳은 일을 해,
 What's right for you, to do with all your might.
@@ -47,6 +49,7 @@ Don't regret!
 > 후회하지 마!
 What might have been, you might as well forget.
 > 지나간 일들은 그냥 잊어버리는 게 좋아.
+
 Stand your ground,
 > 네 자리를 굳건히 지켜,
 And while you're standing there, be duty-bound.
@@ -55,6 +58,7 @@ Learn to wait,
 > 기다리는 법을 배워,
 And while you're waiting, learn to concentrate.
 > 기다리는 동안 집중하는 법을 익혀.
+
 Make amends!
 > 화해를 청해!
 All enemies I call potential friends,
@@ -63,6 +67,7 @@ Calm your fears,
 > 두려움을 가라앉히고,
 And hope to cope at least a hundred years.
 > 적어도 백 년은 거뜬히 이겨내길 바라봐.
+
 Make your mark!
 > 너만의 흔적을 남겨!
 If need be, even make it in the dark.

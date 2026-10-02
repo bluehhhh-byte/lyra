@@ -13,7 +13,7 @@ trackId:
 duration: 190
 genre: Hip-Hop
 lang: en
-tags: [Hip-Hop, 2023]
+tags: [영미, Hip-Hop, 2023]
 listen_when: 사랑한단 말에 영원을 싣는 밤
 keywords: [영원, 사랑, 다이아몬드, 샴페인, 눈]
 emotion: 사랑

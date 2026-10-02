@@ -15,3 +15,4 @@ skills-lock.json
 data/search-index.json
 data/playlist.json
 .shots/
+.dev-server.log

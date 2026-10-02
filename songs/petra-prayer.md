@@ -26,11 +26,13 @@ source_note:
 source_hash: 1f8ca3d2573f8a8346d0808250076ffc5005fbf9
 source_body_hash: ec908b0464f23a0ccb011ff8ce767da531efe993
 ---
-Keep the hers I love so dearly
-> 제가 정말 사랑하는 그녀를 지켜주시고
-Fill her emptiness while I am gone
-> 제가 없는 동안에 그녀의 공허함과
+Keep the ones I love so dearly
+> 제가 정말 사랑하는 이들을 지켜주시고
+Fill their emptiness while I am gone
+> 제가 없는 동안 그들의 공허함과
 And fill the loneliness in me, in me
 > 저의 외로움을 채워주세요
+
+[Chorus]
 This is my prayer
 > 이것이 나의 기도입니다

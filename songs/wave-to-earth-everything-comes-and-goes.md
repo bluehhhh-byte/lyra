@@ -12,6 +12,7 @@ trackId: 6795233512
 duration: 259
 lang: ko
 tags: [한국, Indie Rock, 2026]
+cover_hook: 또 어디쯤에 서 있던 나를 닮았나
 listen_when: 오고 가는 것들을 그저 바라보는 저녁
 keywords: [춤, 생각, 모습, 잠]
 emotion: 고독

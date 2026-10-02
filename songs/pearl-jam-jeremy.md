@@ -13,7 +13,7 @@ trackId:
 duration: 318
 genre: Grunge
 lang: en
-tags: [Grunge, 1991]
+tags: [영미, Grunge, 1991]
 listen_when: 지워지지 않는 사건을 되새기는 밤
 keywords: [그림, 태양, 교실, 아빠, 엄마]
 emotion: 분노

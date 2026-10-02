@@ -13,7 +13,7 @@ trackId: 1811506878
 duration: 175
 genre: Indie Rock
 lang: en
-tags: [Indie Rock, 2025]
+tags: [영미, Indie Rock, 2025]
 listen_when: 좋은 마음이 매번 어긋나는 요즘
 keywords: [전화, 벽, 질투, 밤, 눈]
 emotion: 불안

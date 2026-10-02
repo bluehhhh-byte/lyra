@@ -13,7 +13,7 @@ trackId: 1841769602
 duration: 217
 genre: Ballad
 lang: en
-tags: [Ballad, 2025]
+tags: [영미, Ballad, 2025]
 listen_when: 고집인 걸 알면서 자리를 지키는 밤
 keywords: [자존심, 언덕, 밤, 책, 훈장]
 emotion: 체념

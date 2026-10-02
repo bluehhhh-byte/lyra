@@ -13,7 +13,7 @@ trackId:
 duration: 161
 genre: Indie Pop
 lang: en
-tags: [Indie Pop, 2025]
+tags: [영미, Indie Pop, 2025]
 listen_when: 섬뜩한 이야기가 당기는 심야
 keywords: [칼, 비닐, 문, 밧줄, 창문]
 emotion: 불안

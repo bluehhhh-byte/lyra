@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: Electronic
 lang: en
-tags: [Electronic, 2026]
+tags: [한국, Electronic, 2026]
 listen_when: 몰락이어도 좋을 시작 앞에 선 순간
 keywords: [기차, 혁명, 별, 우주, 변화]
 emotion: 희망

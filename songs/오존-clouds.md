@@ -13,7 +13,7 @@ trackId: 1538719588
 duration: 192
 genre: Indie Pop
 lang: ko
-tags: [Indie Pop, 2020]
+tags: [한국, Indie Pop, 2020]
 listen_when: 오해였나 되짚어 보는 흐린 오후
 keywords: [구름, 오해, 마음]
 emotion: 그리움
@@ -35,6 +35,7 @@ lyrics_source: https://music.bugs.co.kr/track/32062671
 > Was it a misunderstanding covered in clouds
 아직 멀어짐이 아쉬운 마음도
 > even this heart that still regrets the drifting apart
+
 오 오늘에 갇힌 우리를 봐
 > Oh, look at us, locked inside today
 잠시 머무른 후 사라질 것들
@@ -43,10 +44,12 @@ lyrics_source: https://music.bugs.co.kr/track/32062671
 > Was it a misunderstanding covered in clouds
 아직 멀어짐이 아쉬운 마음도
 > even this heart that still regrets the drifting apart
+
 함께 Love 함께 Love
 > Together, love, together, love
 함께 Love 함께 Love
 > Together, love, together, love
+
 Maybe I'll make you feel good
 > 어쩌면 내가 널 기분 좋게 해줄지도 몰라
 Maybe I'll make you feel good

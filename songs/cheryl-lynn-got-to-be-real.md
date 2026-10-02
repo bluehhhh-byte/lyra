@@ -13,7 +13,7 @@ trackId: 410731495
 duration: 307
 genre: Disco
 lang: en
-tags: [Disco, 1978]
+tags: [영미, Disco, 1978]
 listen_when: 진심을 확인하고 춤이 나오는 밤
 keywords: [사랑, 진짜, 마음, 느낌]
 emotion: 기쁨

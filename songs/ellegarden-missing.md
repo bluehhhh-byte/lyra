@@ -13,7 +13,7 @@ trackId: 126117708
 duration: 207
 genre: J-Rock
 lang: ja
-tags: [J-Rock, 2005]
+tags: [일본, J-Rock, 2005]
 listen_when: 잃고 나서야 소중함을 세어 보는 밤
 keywords: [하늘, 노래, 기억, 보석, 금화]
 emotion: 회상

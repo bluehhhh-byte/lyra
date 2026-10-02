@@ -13,7 +13,7 @@ trackId: 1825027876
 duration: 228
 genre: Indie Rock
 lang: ko
-tags: [Indie Rock, 2025]
+tags: [한국, Indie Rock, 2025]
 listen_when: 괴물이 되어도 계속 가기로 한 길
 keywords: [도시, 가시덤불, 손, 돌, 괴물]
 emotion: 저항

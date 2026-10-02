@@ -13,7 +13,7 @@ trackId: 1681347475
 duration: 255
 genre: R&B/Soul
 lang: en
-tags: [R&B/Soul, 2019]
+tags: [영미, R&B/Soul, 2019]
 listen_when: 의심이 맞았음을 확인하고도 머무는 밤
 keywords: [의심, 계피, 머리칼, 달, 조수]
 emotion: 슬픔

@@ -13,7 +13,7 @@ trackId: 1752941377
 duration: 170
 genre: Hip-Hop
 lang: ko
-tags: [Hip-Hop, 2024]
+tags: [한국, Hip-Hop, 2024]
 listen_when: 하고 싶은 말을 더는 삼키지 않는 날
 keywords: [말, 음악, 돈, 마이크, 집세]
 emotion: 저항

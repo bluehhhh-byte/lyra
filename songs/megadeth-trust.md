@@ -13,7 +13,7 @@ trackId: 723975977
 duration: 312
 genre: Heavy Metal
 lang: en
-tags: [Heavy Metal, 1997]
+tags: [영미, Heavy Metal, 1997]
 listen_when: 거짓말이 쌓여 아무도 못 믿게 된 때
 keywords: [꿈, 눈물, 작별, 욕망, 거짓말]
 emotion: 분노

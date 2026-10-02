@@ -13,7 +13,7 @@ trackId: 1416405028
 duration: 282
 genre: Indie Rock
 lang: ko
-tags: [Indie Rock, 2017]
+tags: [한국, Indie Rock, 2017]
 listen_when: 마지막 목소리가 안에서 울리는 밤
 keywords: [자리, 눈물, 한숨, 웃음, 목소리]
 emotion: 그리움

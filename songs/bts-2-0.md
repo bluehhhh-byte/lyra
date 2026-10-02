@@ -13,7 +13,7 @@ trackId: 1885720394
 duration: 170
 genre: K-Pop
 lang: ko
-tags: [K-Pop, 2026]
+tags: [한국, K-Pop, 2026]
 listen_when: 새로 태어난 기분으로 나서는 아침
 keywords: [뜀틀, 불, 빚, 진실]
 emotion: 저항

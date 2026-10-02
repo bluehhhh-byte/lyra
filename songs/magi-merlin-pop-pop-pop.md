@@ -13,7 +13,7 @@ trackId: 1836486328
 duration: 163
 genre: Indie Pop
 lang: en
-tags: [Indie Pop, 2025]
+tags: [영미, Indie Pop, 2025]
 listen_when: 누군가의 치어리더가 되고 싶은 날
 keywords: [기쁨, 치어리더, 황소, 잉어, 미소]
 emotion: 기쁨

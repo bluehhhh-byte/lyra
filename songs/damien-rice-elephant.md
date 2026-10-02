@@ -26,12 +26,32 @@ source_note:
 source_hash: 1bbca76c1a4d4070e643b1205def8cbc255659f8
 source_body_hash: df01cea110be0b92fcf4dde3da0872e1224f2f19
 ---
-This has got to die 
-This has hot to stop 
-This has got to lie down
-Someone else on top
-
+[Verse 1]
+This has got to die
 > 이제는 사라져야 해요
-> 이제는 그만해야 해요
+I said, this has got to stop
+> 말했잖아요, 이제는 그만해야 해요
+This has got to lie down
 > 이제는 내려놓아야 해요
+With someone else on top
 > 누군가를 통해서라도
+
+[Refrain]
+And she may cry
+> 그녀는 울지도 몰라요
+Like a baby
+> 아이처럼
+And she may drive me crazy
+> 그리고 나를 미치게 할지도 몰라요
+'Cause I am lately lonely
+> 요즘의 나는 외로우니까요
+
+[Bridge]
+What's the point of this song?
+> 이 노래가 무슨 소용일까요?
+Or even singing?
+> 부르는 것조차도?
+You've already gone
+> 그대는 이미 떠났는데
+Why am I clinging?
+> 나는 왜 매달리고 있을까요?

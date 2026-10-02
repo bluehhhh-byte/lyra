@@ -13,7 +13,7 @@ trackId: 1819463880
 duration: 172
 genre: Indie Pop
 lang: ko
-tags: [Indie Pop, 2025]
+tags: [한국, Indie Pop, 2025]
 listen_when: 미안하단 말이 한없이 부족한 밤
 keywords: [날개, 어깨, 기억, 눈물, 손길]
 emotion: 고독

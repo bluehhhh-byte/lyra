@@ -13,7 +13,7 @@ trackId: 1416405024
 duration: 198
 genre: Indie Rock
 lang: en
-tags: [Indie Rock, 2015]
+tags: [한국, Indie Rock, 2015]
 listen_when: 방향 잃은 행진을 지켜보는 날
 keywords: [왕좌, 사람들, 금, 먼지, 왕관]
 emotion: 저항

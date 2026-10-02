@@ -13,7 +13,7 @@ trackId:
 duration: 200
 genre: Hip-Hop
 lang: ko
-tags: [Hip-Hop, 2025]
+tags: [한국, Hip-Hop, 2025]
 listen_when: 변해 버린 나를 마주 본 장례식장 앞
 keywords: [장례식, 눈, 야수, 전쟁, 병실]
 emotion: 분노

@@ -13,7 +13,7 @@ trackId: 1377616919
 duration: 238
 genre: Alternative Rock
 lang: en
-tags: [Alternative Rock, 2016]
+tags: [영미, Alternative Rock, 2016]
 listen_when: 혼자가 아니라고 말해 주고 싶은 겨울
 keywords: [피, 미소, 하늘, 빛, 겨울]
 emotion: 위로

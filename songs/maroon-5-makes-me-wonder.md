@@ -3,13 +3,13 @@ title: Makes Me Wonder
 title_ko: 궁금해지네
 artist: Maroon 5
 artist_ko:
-album: Kids Driving Pac
+album: It Won't Be Soon Before Long
 year: 2007
-artwork: https://cdn-images.dzcdn.net/images/cover/c673f9397dd6eca59786537172af79df/1000x1000-000000-80-0-0.jpg
-preview: 
-preview_provider: 
-external_url: https://music.apple.com/us/music-video/makes-me-wonder/1445838304?uo=4
-trackId: 1445838304
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d1/f6/02/d1f602c4-e185-4ce5-c361-23af7c857628/07UMGIM06094.rgb.jpg/600x600bb.jpg
+preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ec/e3/2c/ece32c7c-214d-fc8e-4201-beb373c855c7/mzaf_7623706184692351312.plus.aac.p.m4a
+preview_provider: itunes
+external_url: https://music.apple.com/us/album/makes-me-wonder/1440850452?i=1440850458&uo=4
+trackId: 1440850458
 duration: 211
 genre: Funk
 lang: en

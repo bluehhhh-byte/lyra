@@ -13,7 +13,7 @@ trackId: 1688020907
 duration: 245
 genre: Alternative Rock
 lang: en
-tags: [Alternative Rock, 2023]
+tags: [영미, Alternative Rock, 2023]
 listen_when: 거울 앞에서 낯선 나를 마주친 새벽
 keywords: [거울, 조명, 메아리, 자아, 피에로]
 emotion: 몽환

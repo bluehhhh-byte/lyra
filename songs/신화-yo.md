@@ -13,7 +13,7 @@ trackId:
 duration: 238
 genre: K-Pop
 lang: ko
-tags: [K-Pop, 1999]
+tags: [한국, K-Pop, 1999]
 listen_when: 후회 없이 살아 보자고 외치는 아침
 keywords: [꿈, 인생, 바보, 사랑, 자신감]
 emotion: 저항

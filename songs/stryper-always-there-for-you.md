@@ -13,7 +13,7 @@ trackId: 1444170816
 duration: 251
 genre: Heavy Metal
 lang: en
-tags: [Heavy Metal, 1988]
+tags: [영미, Heavy Metal, 1988]
 listen_when: 말뿐이 아닌 약속이 필요한 날
 keywords: [사랑, 외로움, 약속, 세상, 곁]
 emotion: 위로

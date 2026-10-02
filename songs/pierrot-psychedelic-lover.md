@@ -13,7 +13,7 @@ trackId: 1766276645
 duration: 260
 genre: Visual Kei
 lang: ja
-tags: [Visual Kei, 2002]
+tags: [일본, Visual Kei, 2002]
 listen_when: 꺾인 날개가 아직 있다고 믿게 된 아침
 keywords: [감정, 역광, 날개, 아침, 달빛]
 emotion: 사랑

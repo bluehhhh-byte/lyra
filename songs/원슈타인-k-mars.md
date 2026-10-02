@@ -13,7 +13,7 @@ trackId: 1684438860
 duration: 164
 genre: Hip-Hop
 lang: ko
-tags: [Hip-Hop, 2023]
+tags: [한국, Hip-Hop, 2023]
 listen_when: 숨 막히는 서울에서 버티는 밤
 keywords: [악마, 태양, 서울, 얼굴, 본능]
 emotion: 불안

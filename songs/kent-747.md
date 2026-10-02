@@ -32,10 +32,3 @@ but sometimes it’s impossible to breathe
 > 가끔은 도무지 숨을 쉴 수가 없어
 Maybe this time it won’t heal 
 > 아마 이번엔 낫지 않을 거야
-
-아마 나는,
-> Maybe I,
-가끔 숨을 쉴 수 없을거야
-> Sometimes I won't be able to breathe
-아마도 이번엔 치유되지 않겠지
-> Maybe this time it won't heal

@@ -13,12 +13,12 @@ external_url: https://music.apple.com/us/album/im-not-in-love/1440924535?i=14409
 duration: 367
 lang: en
 tags: [영미, Pop, 1975]
-keywords: [사랑, 사진, 벽, 얼룩, 친구]
+keywords: [사랑, 사진, 벽, 친구]
 emotion: 체념
-listen_when: 차가운 방안에 홀로 남겨진 밤
+listen_when: 벽에 걸린 사진을 바라보는 자리
 date: 2026-09-12
 published: 2026-09-12T10:54:13.591Z
-comment: 사랑에 빠지지 않았다고 거듭 부정하며 감정을 숨기려는 방어적인 태도가 돋보인다. 사진 뒤의 얼룩을 가리기 위해 벽에 사진을 걸어둔다는 비유에서 쓸쓸함이 느껴진다.
+comment: 사랑에 빠지지 않았다고 거듭 부정하며 감정을 숨기려는 방어적인 태도가 담겨 있다.
 comment_basis: lyrics_only
 comment_sources: []
 ---
@@ -52,6 +52,7 @@ I'm not in love, no, no
 
 [Verse 2]
 ♪
+> ♪
 (Be quiet)
 > (조용히 해)
 (Big boys don't cry)
@@ -71,6 +72,7 @@ I'm not in love, no, no
 (Big boys don't cry)
 > (다 큰 남자는 울지 않는 법이야)
 ♪
+> ♪
 
 [Bridge]
 I keep your picture upon the wall
@@ -98,6 +100,7 @@ Ooh, you'll wait a long time
 
 [Outro]
 ♪
+> ♪
 I'm not in love, so don't forget it
 > 난 사랑에 빠진 게 아니야, 잊지 마
 It's just a silly phase I'm going through

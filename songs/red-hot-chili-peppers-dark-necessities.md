@@ -13,7 +13,7 @@ trackId: 1109250843
 duration: 302
 genre: Funk
 lang: en
-tags: [Funk, 2016]
+tags: [영미, Funk, 2016]
 listen_when: 어둠을 친구 삼아 걷는 새벽
 keywords: [대낮, 달, 그림자, 어둠, 빛]
 emotion: 몽환

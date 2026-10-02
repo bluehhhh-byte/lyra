@@ -12,7 +12,7 @@ trackId: 1828329842
 external_url: https://music.apple.com/us/album/makgeolli-banger/1828329447?i=1828329842&uo=4
 duration: 167
 lang: en
-tags: [한국, Hip-Hop, 2025]
+tags: [한국, Electronic, 2025]
 keywords: [막걸리, 서울, 부산, 코첼라, 기침]
 emotion: 기쁨
 listen_when: 친구들과 흥겹게 술 한잔 기울이는 밤

@@ -13,7 +13,7 @@ trackId: 1449537323
 duration: 208
 genre: Ballad
 lang: ko
-tags: [Ballad, 2002]
+tags: [한국, Ballad, 2002]
 listen_when: 지난 사랑에 다친 사람을 좋아하게 된 때
 keywords: [눈빛, 사랑, 시간, 마음, 눈물]
 emotion: 이별

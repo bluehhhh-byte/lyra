@@ -13,7 +13,7 @@ trackId: 1061010226
 duration: 263
 genre: R&B/Soul
 lang: ko
-tags: [R&B/Soul, 2002]
+tags: [한국, R&B/Soul, 2002]
 listen_when: 기다림만 남은 사랑을 붙든 바닷가
 keywords: [눈물, 비, 바람, 바닷가, 기다림]
 emotion: 그리움

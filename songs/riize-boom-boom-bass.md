@@ -13,7 +13,7 @@ trackId: 1749589154
 duration: 152
 genre: K-Pop
 lang: ko
-tags: [K-Pop, 2024]
+tags: [한국, K-Pop, 2024]
 listen_when: 밀당이 리듬처럼 즐거운 요즘
 keywords: [리듬, 음악, 베이스, 박자, 손]
 emotion: 기쁨

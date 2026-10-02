@@ -13,7 +13,7 @@ trackId: 1819526318
 duration: 215
 genre: Indie Pop
 lang: en
-tags: [Indie Pop, 2025]
+tags: [영미, Indie Pop, 2025]
 listen_when: 잊겠다면서 자꾸 흥얼거리게 되는 여름
 keywords: [마음, 영혼, 여름, 사랑, 소리]
 emotion: 기쁨

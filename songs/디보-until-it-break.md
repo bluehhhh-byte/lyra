@@ -32,12 +32,14 @@ source_body_hash: ee89278fe165723f0ecbbc7990d9cf9c64d40c71
 > You look whole, alone
 달빛 속에 있는 너
 > you standing in the moonlight
+
 난 거짓말 못 해
 > I can't lie
 그건 거짓 같은 삶
 > that's a life like a lie
 그러니까 나랑 가
 > so come with me
+
 자살 행위야 내가
 > It's suicide, what I'm doing
 반드시 구해줄게

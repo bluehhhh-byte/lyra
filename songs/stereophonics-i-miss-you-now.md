@@ -13,7 +13,7 @@ trackId: 1440953617
 duration: 290
 genre: Alternative Rock
 lang: en
-tags: [Alternative Rock, 2003]
+tags: [영미, Alternative Rock, 2003]
 listen_when: 늙어 가는 친구들이 그리운 밤
 keywords: [노래, 친구, 작별]
 emotion: 그리움

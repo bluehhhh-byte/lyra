@@ -13,7 +13,7 @@ trackId: 1583958967
 duration: 316
 genre: Funk
 lang: en
-tags: [Funk, 1999]
+tags: [영미, Funk, 1999]
 listen_when: 속도를 올려 앞만 보고 가는 길
 keywords: [흰자위, 기운, 눈물, 전사]
 emotion: 몽환

@@ -13,7 +13,7 @@ trackId: 1822249999
 duration: 318
 genre: J-Rock
 lang: ja
-tags: [J-Rock, 2025]
+tags: [일본, J-Rock, 2025]
 listen_when: 정적이 시끄럽게 날뛰는 밤
 keywords: [노래, 마음, 고요함, 정적, 거리]
 emotion: 불안

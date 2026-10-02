@@ -13,7 +13,7 @@ trackId: 1850324995
 duration: 195
 genre: Synth-Pop
 lang: en
-tags: [Synth-Pop, 2025]
+tags: [영미, Synth-Pop, 2025]
 listen_when: 반짝임 속에서 문득 공허해진 새벽
 keywords: [부스, 불빛, 어둠, 조명, 스피커]
 emotion: 몽환

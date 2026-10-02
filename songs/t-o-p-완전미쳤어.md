@@ -13,7 +13,7 @@ trackId: 1889117492
 duration: 212
 genre: Hip-Hop
 lang: ko
-tags: [Hip-Hop, 2026]
+tags: [한국, Hip-Hop, 2026]
 listen_when: 무거운 구두를 벗어 던진 날
 keywords: [기억, 악몽, 자유, 이별, 구두]
 emotion: 저항

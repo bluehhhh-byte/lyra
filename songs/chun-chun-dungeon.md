@@ -13,7 +13,7 @@ trackId:
 duration: 174
 genre: Hip-Hop
 lang: en
-tags: [Hip-Hop, 2025]
+tags: [일본, Hip-Hop, 2025]
 listen_when: 게임 속 주인공이 된 기분으로 걷는 길
 keywords: [집, 무대, 클럽]
 emotion: 분노

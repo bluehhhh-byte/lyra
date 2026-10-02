@@ -30,6 +30,7 @@ source_body_hash: f5e95a4b5b67338ad1588d0999ec38a2bfd23a5e
 > Your love, faded blue
 나 그대 마음에 흘려 보내
 > I let it flow into your heart
+
 언제부터인지 모르게
 > Without knowing since when
 나의 안에 두어 온 그대의
@@ -38,6 +39,7 @@ source_body_hash: f5e95a4b5b67338ad1588d0999ec38a2bfd23a5e
 > hurt so much
 나는 견딜 수 없어
 > that I can't bear it
+
 그댄 내게 무슨 말이라도 한다면
 > If you said anything at all to me
 난 얼어버릴 거야

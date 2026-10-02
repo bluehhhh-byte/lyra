@@ -13,7 +13,7 @@ trackId: 1856541804
 duration: 355
 genre: Electronic
 lang: en
-tags: [Electronic, 2018]
+tags: [한국, Electronic, 2018]
 listen_when: 아무도 더 잃고 싶지 않은 밤
 keywords: []
 emotion:

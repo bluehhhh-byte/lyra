@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: Hip-Hop
 lang: ko
-tags: [Hip-Hop, 2014]
+tags: [한국, Hip-Hop, 2014]
 listen_when: 지갑 사정부터 세게 되는 월말
 keywords: [지갑, 주머니, 은행계좌, 돈, 잔돈]
 emotion: 기쁨

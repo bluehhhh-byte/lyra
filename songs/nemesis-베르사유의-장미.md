@@ -11,7 +11,7 @@ trackId:
 duration: 241
 genre: Heavy Metal
 lang: ko
-tags: [Heavy Metal, 2005]
+tags: [한국, Heavy Metal, 2005]
 listen_when: 화려하게 살다 가겠다고 정한 날
 keywords: [바람, 꽃, 가시, 장미, 세상]
 emotion: 저항

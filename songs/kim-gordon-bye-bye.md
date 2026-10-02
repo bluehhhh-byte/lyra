@@ -13,7 +13,7 @@ trackId: 1719712164
 duration: 254
 genre: Electronic
 lang: en
-tags: [Electronic, 2024]
+tags: [영미, Electronic, 2024]
 listen_when: 짐 목록만 늘어놓아도 슬퍼지는 밤
 keywords: [가방, 세탁소, 담배, 여권, 잠옷]
 emotion: 고독

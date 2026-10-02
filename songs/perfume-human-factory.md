@@ -13,7 +13,7 @@ trackId: 1793672551
 duration: 243
 genre: Synth-Pop
 lang: ja
-tags: [Synth-Pop, 2025]
+tags: [일본, Synth-Pop, 2025]
 listen_when: 톱니바퀴 속에서 춤추는 기분인 날
 keywords: [탑, 고양이, 위성, 톱니바퀴, 기억]
 emotion: 몽환

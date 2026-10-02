@@ -13,7 +13,7 @@ trackId: 958897212
 duration: 369
 genre: Dream Pop
 lang: en
-tags: [Dream Pop, 2015]
+tags: [유럽, Dream Pop, 2015]
 listen_when: 햇살 한 줄기 들이마시고 싶은 아침
 keywords: [햇살, 전류, 위성, 전화, 여름]
 emotion: 몽환

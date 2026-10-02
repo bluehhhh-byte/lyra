@@ -12,7 +12,7 @@ trackId: 1695666895
 duration: 273
 genre: J-Pop
 lang: ja
-tags: [J-Pop, 2023]
+tags: [일본, J-Pop, 2023]
 listen_when: 다녀오라는 목소리를 안고 떠나는 길
 keywords: [하늘, 계절, 그림자, 바람, 문]
 emotion: 회상

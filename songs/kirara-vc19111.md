@@ -13,7 +13,7 @@ trackId: 1856541214
 duration: 323
 genre: Electronic
 lang: en
-tags: [Electronic, 2021]
+tags: [한국, Electronic, 2021]
 listen_when: 상처를 핑계 삼지 않기로 한 새벽
 keywords: []
 emotion:

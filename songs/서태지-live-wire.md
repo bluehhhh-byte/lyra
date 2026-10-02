@@ -13,7 +13,7 @@ trackId: 1648230040
 duration: 232
 genre: Alternative Rock
 lang: ko
-tags: [Alternative Rock, 2024]
+tags: [한국, Alternative Rock, 2024]
 listen_when: 내 삶의 주권을 선포하는 날
 keywords: [자유, 마이크, 꿈, 기억, 경계선]
 emotion: 저항

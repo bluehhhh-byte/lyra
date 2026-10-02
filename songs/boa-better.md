@@ -13,7 +13,7 @@ trackId: 1541290648
 duration: 199
 genre: K-Pop
 lang: ko
-tags: [K-Pop, 2020]
+tags: [한국, K-Pop, 2020]
 listen_when: 망설임을 접고 걸어 나가는 순간
 keywords: [걸음, 정적, 말투, 시간, 게임]
 emotion: 설렘

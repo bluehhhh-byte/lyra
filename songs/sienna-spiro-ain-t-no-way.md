@@ -13,7 +13,7 @@ trackId:
 duration: 279
 genre: R&B/Soul
 lang: en
-tags: [R&B/Soul, 2025]
+tags: [영미, R&B/Soul, 2025]
 listen_when: 묶어 놓고 사랑을 바라는 사람 앞
 keywords: [사랑, 여자, 남자, 손]
 emotion: 슬픔

@@ -5,7 +5,7 @@ artist: Coldplay
 artist_ko:
 album: A Rush of Blood to the Head
 year: 2002
-artwork: https://cdn-images.dzcdn.net/images/cover/249fc78bd75bb8bfe2ae8c05e06650ee/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b9/b4/2a/b9b42ad1-1e25-5096-da43-497a247e69a3/190295978051.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/a6/27/aea62715-e6ae-9562-ba81-1f969a2ee2fa/mzaf_9054259057357054559.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/the-scientist/1122775993?i=1122776155&uo=4
@@ -14,12 +14,14 @@ duration: 309
 genre: Alternative Rock
 lang: en
 tags: [영미, Alternative Rock, 2002]
-listen_when: 처음으로 돌아가자고 말하고 싶은 밤
-keywords: [비밀, 처음, 말]
-emotion: 슬픔
+listen_when: 처음으로 돌아가고 싶은 밤길
+keywords: [시작, 비밀, 질문, 마음, 과학]
+emotion: 그리움
 date: 2024-11-11
 published: 2024-11-11T00:03:01.000Z
-comment: 미안하다는 말을 하러 찾아와 처음으로 돌아가자고 청한다. 아무도 쉽다고 하지 않았지만 이렇게 힘들 줄도 몰랐다는 문장이 후회의 크기를 대신한다.
+comment: 소중한 사람을 다시 만나기 위해 처음으로 돌아가고 싶어 하는 간절함을 담고 있다.
+comment_basis: lyrics_only
+comment_sources: []
 source: instagram
 source_tag: 241111_0848
 source_note: 

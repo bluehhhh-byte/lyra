@@ -13,7 +13,7 @@ trackId: 1536479079
 duration: 344
 genre: J-Rock
 lang: ja
-tags: [J-Rock, 1999]
+tags: [일본, J-Rock, 1999]
 listen_when: 떠나보내는 아이의 뒷모습을 보는 날
 keywords: [눈동자, 슬픔, 꽃, 햇살, 바다]
 emotion: 위로

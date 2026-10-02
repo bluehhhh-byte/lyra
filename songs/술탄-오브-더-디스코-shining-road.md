@@ -13,7 +13,7 @@ trackId: 1686874596
 duration: 215
 genre: Funk
 lang: ko
-tags: [Funk, 2019]
+tags: [한국, Funk, 2019]
 listen_when: 뚜껑 열린 차로 달리고 싶은 맑은 날
 keywords: [구름, 햇빛, 무지개, 바람, 고속도로]
 emotion: 기쁨

@@ -12,7 +12,7 @@ trackId:
 duration:
 genre: R&B/Soul
 lang: ko
-tags: [R&B/Soul, 2025]
+tags: [한국, R&B/Soul, 2025]
 listen_when: 쿨한 척이 파도처럼 무너지는 밤
 keywords: [인연, 사랑, 추억, 노래, 마음]
 emotion: 그리움

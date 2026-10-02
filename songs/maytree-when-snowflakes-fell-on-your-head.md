@@ -11,7 +11,7 @@ trackId:
 duration: 152
 genre: Indie Pop
 lang: en
-tags: [Indie Pop, 2021]
+tags: [한국, Indie Pop, 2021]
 listen_when: 머리 위에 눈송이가 앉던 순간
 keywords: [눈송이, 천사, 미소, 구름, 숨소리]
 emotion: 사랑

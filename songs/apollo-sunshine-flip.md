@@ -13,7 +13,7 @@ trackId: 1161607186
 duration: 255
 genre: Indie Rock
 lang: en
-tags: [Indie Rock, 2008]
+tags: [영미, Indie Rock, 2008]
 listen_when: 세상이 통째로 뒤집힌 것 같은 아침
 keywords: [세상, 태양, 빙하, 땅, 별]
 emotion: 불안
@@ -28,8 +28,11 @@ lyrics_external: true
 lyrics_source: https://lrclib.net/api/get?artist_name=Apollo%20Sunshine&track_name=Flip
 ---
 🗨 누리호 3차 발사를 보는데 어찌나 감개무량하던지. 그래서 생각난 곡. 2003년에서 2010년까지 미국 보스턴에서 활동한 인디 싸이키델릭 락밴드 아폴로 선샤인의 플립! 
+
 🗨 "우리는 어느 날 소파에 앉아 있었는데 한 명은 아폴로라고 했고 다른 한 명은 선샤인이라고 했고 그게 다였습니다. 그리고 나서 우리는 그리스 신화 책에서 아폴로를 찾았는데, 그 때 비로소 그가 음악의 신이라는 것을 알게 되었습니다." - Jesse Gallagher
+
 🗨 아폴로 선샤인의 세계관은 이름 그대로 밝고 희망적이지만, 이 곡은 긴장감을 주기에 충분한 불확실성으로 가득 차 있어요. 나만 알고 있기에는 너무 멋진 곡이라 공유합니다. 한곡에 고즈넉했다가 고양되었다가 내질렀다가 해소되었다가 각종 요소가 다 포함되어 있어요🫠
+
 Now I am on the other side of the world now,
 > 지금 난 세상의 반대편에 와 있어,
 don't know how I got here and I don't know my way
@@ -52,8 +55,10 @@ without me, whatever the hell
 > 계속될 거야, 그게 대체 무슨 뜻이든
 that means...
 > 간에...
+
 AHHHHHHHHHHHHHHH!
 > 아아아아아아아아아아!
+
 i'm scared now, so I go up and sit on
 > 이제 무서워, 그래서 산꼭대기에 올라가 앉아
 a mountains edge, and ask the stars and
@@ -64,6 +69,7 @@ and they'll say, "keep breathing",
 > 그러면 그들이 말하지, "계속 숨 쉬어",
 And you already know how to do that
 > 그리고 넌 이미 그 방법을 알고 있잖아
+
 KEEP BREATHING KEEP BREATHING
 > 계속 숨 쉬어 계속 숨 쉬어
 KEEP BREATHING it's all you can do! cause

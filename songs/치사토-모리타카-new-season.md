@@ -11,7 +11,7 @@ trackId:
 duration: 281
 genre: J-Pop
 lang: ja
-tags: [J-Pop, 1987]
+tags: [일본, J-Pop, 1987]
 listen_when: 새 계절을 믿고 혼자 내딛는 아침
 keywords: [사랑, 비디오, 조수석, 전화, 추억]
 emotion: 이별

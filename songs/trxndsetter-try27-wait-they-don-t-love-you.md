@@ -13,7 +13,7 @@ trackId: 1781344561
 duration: 125
 genre: Electronic
 lang: ko
-tags: [기타, Electronic, 2024]
+tags: [한국, 기타, Electronic, 2024]
 listen_when: 나만큼 사랑할 사람 없다고 외치는 밤
 keywords: [짐, 거리, 지도, 이메일, 마음]
 emotion: 그리움

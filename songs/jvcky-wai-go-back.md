@@ -32,6 +32,7 @@ source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 > I didn't live by the right answers and ended up rich
 됐으니까 어서 더 바쳐봐 Mulah
 > Enough of that, hurry up and offer up more mulah
+
 매일이 Vacay
 > Every day is a vacay
 부러워도 그만 부려 생떼
@@ -40,6 +41,7 @@ source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 > I'm going out, circling the world
 강남에서 터뜨려 샴페인
 > popping champagne in Gangnam
+
 탓할 건 니 신세
 > The thing to blame is your own lot
 내라 집세
@@ -50,6 +52,7 @@ source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 > You can't stop my flight
 위태위태해도 높은 내 시세
 > Shaky as it is, my market price is high
+
 드라마를 안 봐 이제
 > I don't watch dramas anymore
 막장 보다 막장인 내 인생
@@ -58,6 +61,7 @@ source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 > Lay the bills out in front of me
 등장만으로도 이미 Game Set
 > Just by showing up, it's already game set
+
 다 뻔해 나도 같았다고 출발선은
 > It's all obvious — my starting line was the same
 죽었다 깨도 이해 못 해 너넨
@@ -70,6 +74,7 @@ source_body_hash: 7939a19d832c99aa86dbfdf7432ef965d2d6eb8b
 > A success story squeezed out by the likes of you
 내 앞에서 내밀지도 못할 종이
 > paper you couldn't even hold up in front of me
+
 너무 멀리 왔어
 > I've come too far
 다신 못 돌아간다고 뒤로

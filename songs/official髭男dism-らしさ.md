@@ -14,7 +14,7 @@ trackId: 1826940240
 duration: 303
 genre: J-Pop
 lang: ja
-tags: [J-Pop, 2025]
+tags: [일본, J-Pop, 2025]
 listen_when: 나다움이 성가셔도 끌어안는 밤
 keywords: [재능, 성격, 꿈, 안대, 속도]
 emotion: 저항

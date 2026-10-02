@@ -13,7 +13,7 @@ trackId: 1842454194
 duration: 192
 genre: Indie Pop
 lang: en
-tags: [Indie Pop, 2025]
+tags: [영미, Indie Pop, 2025]
 listen_when: 혼자만 진심이었음을 깨달은 밤
 keywords: [사랑, 말, 자리, 허세]
 emotion: 이별

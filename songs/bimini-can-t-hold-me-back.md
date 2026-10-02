@@ -13,7 +13,7 @@ trackId: 1570498261
 duration: 118
 genre: Dance
 lang: en
-tags: [Dance, 2023]
+tags: [영미, Dance, 2023]
 listen_when: 누가 말려도 달리고 싶은 밤
 keywords: []
 emotion:

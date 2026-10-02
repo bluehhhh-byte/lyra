@@ -13,7 +13,7 @@ trackId: 1872628039
 duration: 178
 genre: K-Pop
 lang: ko
-tags: [K-Pop, 2026]
+tags: [한국, K-Pop, 2026]
 listen_when: 낙인 따위 비웃으며 나서는 밤거리
 keywords: [소문, 벽, 시선, 연기, 밤]
 emotion: 저항

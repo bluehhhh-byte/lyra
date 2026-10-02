@@ -13,7 +13,7 @@ trackId: 190372952
 duration: 291
 genre: Hard Rock
 lang: en
-tags: [Hard Rock, 1998]
+tags: [영미, Hard Rock, 1998]
 listen_when: 기타가 대신 울어 주는 밤
 keywords: []
 emotion:

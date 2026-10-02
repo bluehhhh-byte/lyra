@@ -13,7 +13,7 @@ trackId: 1832041690
 duration: 195
 genre: Indie Pop
 lang: en
-tags: [Indie Pop, 2025]
+tags: [영미, Indie Pop, 2025]
 listen_when: 걱정 없던 시절 여름이 떠오른 오후
 keywords: [여름, 무덤, 첫사랑, 문, 꿈]
 emotion: 회상

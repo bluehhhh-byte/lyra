@@ -13,7 +13,7 @@ trackId: 6795777148
 duration: 134
 genre: Electronic
 lang: en
-tags: [Electronic, 2024]
+tags: [한국, Electronic, 2024]
 listen_when: 겹겹이 쌓이는 소리에 잠기는 밤
 keywords: []
 emotion:

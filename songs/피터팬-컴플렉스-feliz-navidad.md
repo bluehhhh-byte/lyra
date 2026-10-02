@@ -8,7 +8,7 @@ year: 2006
 artwork: https://image.bugsm.co.kr/album/images/500/80230/8023068.jpg
 preview:
 trackId:
-duration:
+duration: 222
 genre: Indie Rock
 lang: en
 tags: [한국, Indie Rock, 2006]

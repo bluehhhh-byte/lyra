@@ -13,7 +13,7 @@ trackId: 405411114
 duration: 277
 genre: R&B/Soul
 lang: en
-tags: [R&B/Soul, 1995]
+tags: [영미, R&B/Soul, 1995]
 listen_when: 부조리에 비명이 나오려는 날
 keywords: [불의, 그림자, 빛, 영혼, 싸움]
 emotion: 분노

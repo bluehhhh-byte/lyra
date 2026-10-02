@@ -13,7 +13,7 @@ trackId: 1517526412
 duration: 330
 genre: Alternative Rock
 lang: en
-tags: [Alternative Rock, 2005]
+tags: [영미, Alternative Rock, 2005]
 listen_when: 지친 눈을 흔들어 깨우고 싶은 아침
 keywords: [하늘, 천국, 태양, 사랑, 꿈]
 emotion: 위로

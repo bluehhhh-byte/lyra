@@ -11,7 +11,7 @@ trackId:
 duration: 
 genre: Hip-Hop
 lang: ko
-tags: [Hip-Hop, 2025]
+tags: [한국, Hip-Hop, 2025]
 listen_when: 뒤돌아보지 않고 밀어붙이는 날
 keywords: [마이크, 부산, 정글, 동물, 거리]
 emotion: 저항

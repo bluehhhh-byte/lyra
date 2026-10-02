@@ -13,7 +13,7 @@ trackId: 1865062199
 duration: 117
 genre: Indie Rock
 lang: en
-tags: [Indie Rock, 2023]
+tags: [한국, Indie Rock, 2023]
 listen_when: 다시 예전처럼 얘기하고 싶은 밤
 keywords: [마음, 시간, 얼굴, 사랑]
 emotion: 그리움

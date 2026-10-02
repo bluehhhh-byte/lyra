@@ -1,9 +1,9 @@
 {
   "version": 2,
   "createdAt": "2026-09-01T08:00:46.329Z",
-  "updatedAt": "2026-09-15T10:00:05.540Z",
+  "updatedAt": "2026-10-01T14:13:59.285Z",
   "corpusDigest": "34e7eb6a5580939f9eba32b20afa2069cb0774ec6c8496c89bfed558c67a525a",
-  "totalSongs": 969,
+  "totalSongs": 998,
   "baseline": [
     {
       "id": "12926346-bfe5-4f13-8957-80ebaaf492e8",
@@ -58550,6 +58550,296 @@
         "title": "MAKGEOLLI BANGER",
         "artist": "Effie"
       }
+    },
+    "타블로-anime-feat-방예담": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-15T23:32:51.818Z",
+      "researchIdentity": {
+        "title": "anime (feat. 방예담)",
+        "artist": "타블로"
+      }
+    },
+    "lilboi-big-naughty-ph-1-woodie-gochild-ghost": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-16T01:37:06.854Z",
+      "researchIdentity": {
+        "title": "GHOST",
+        "artist": "lIlBOI, BIG Naughty, pH-1 & Woodie Gochild"
+      }
+    },
+    "allday-project-one-more-time": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-16T02:10:29.045Z",
+      "researchIdentity": {
+        "title": "ONE MORE TIME",
+        "artist": "ALLDAY PROJECT"
+      }
+    },
+    "mr-big-take-cover-2026-remastered": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-16T09:37:58.225Z",
+      "researchIdentity": {
+        "title": "Take Cover (2026 Remastered)",
+        "artist": "Mr. Big"
+      }
+    },
+    "mr-big-goin-where-the-wind-blows": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-16T09:45:02.441Z",
+      "researchIdentity": {
+        "title": "Goin' Where the Wind Blows",
+        "artist": "Mr. Big"
+      }
+    },
+    "gotthard-someday": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-16T10:03:21.892Z",
+      "researchIdentity": {
+        "title": "Someday",
+        "artist": "Gotthard"
+      }
+    },
+    "avantasia-the-final-sacrifice": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-17T09:32:05.289Z",
+      "researchIdentity": {
+        "title": "The Final Sacrifice",
+        "artist": "Avantasia"
+      }
+    },
+    "beck-ride-lonesome": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-17T23:22:45.620Z",
+      "researchIdentity": {
+        "title": "Ride Lonesome",
+        "artist": "Beck"
+      }
+    },
+    "stereophonics-no-one-s-perfect": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-17T23:44:16.133Z",
+      "researchIdentity": {
+        "title": "No-One's Perfect",
+        "artist": "Stereophonics"
+      }
+    },
+    "stereophonics-graffiti-on-the-train-stripped": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-17T23:52:21.142Z",
+      "researchIdentity": {
+        "title": "Graffiti On The Train (Stripped)",
+        "artist": "Stereophonics"
+      }
+    },
+    "alice-phoebe-lou-lover-over-the-moon": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-18T12:21:51.470Z",
+      "researchIdentity": {
+        "title": "Lover / Over the Moon",
+        "artist": "Alice Phoebe Lou"
+      }
+    },
+    "pia-storm-is-coming-instrumental": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-18T18:50:22.590Z",
+      "researchIdentity": {
+        "title": "Storm Is Coming (Instrumental)",
+        "artist": "PIA"
+      }
+    },
+    "lee-seung-hwan-white-night": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-19T23:35:15.110Z",
+      "researchIdentity": {
+        "title": "White Night",
+        "artist": "Lee Seung Hwan"
+      }
+    },
+    "starsailor-silence-is-easy": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-20T23:15:44.281Z",
+      "researchIdentity": {
+        "title": "Silence Is Easy",
+        "artist": "Starsailor"
+      }
+    },
+    "stereophonics-the-bartender-and-the-thief": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-21T09:10:35.293Z",
+      "researchIdentity": {
+        "title": "The Bartender and the Thief",
+        "artist": "Stereophonics"
+      }
+    },
+    "audioslave-original-fire": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-21T09:26:55.164Z",
+      "researchIdentity": {
+        "title": "Original Fire",
+        "artist": "Audioslave"
+      }
+    },
+    "skid-row-monkey-business": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-21T09:55:41.446Z",
+      "researchIdentity": {
+        "title": "Monkey Business",
+        "artist": "Skid Row"
+      }
+    },
+    "pierrot-agitator": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-21T23:26:15.168Z",
+      "researchIdentity": {
+        "title": "Agitator",
+        "artist": "PIERROT"
+      }
+    },
+    "plastic-tree-ツメタイヒカリ": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-21T23:39:25.460Z",
+      "researchIdentity": {
+        "title": "ツメタイヒカリ",
+        "artist": "Plastic Tree"
+      }
+    },
+    "janne-da-arc-dolls": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-22T09:55:25.876Z",
+      "researchIdentity": {
+        "title": "DOLLS",
+        "artist": "Janne Da Arc"
+      }
+    },
+    "hedwig-and-the-angry-inch-midnight-radio": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-22T12:20:46.123Z",
+      "researchIdentity": {
+        "title": "Midnight Radio",
+        "artist": "Hedwig and the Angry Inch"
+      }
+    },
+    "leellamarz-choice-feat-ez-kim": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-23T23:38:56.499Z",
+      "researchIdentity": {
+        "title": "CHOICE (feat. EZ Kim)",
+        "artist": "Leellamarz"
+      }
+    },
+    "tvxq-rising-sun": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-24T11:55:32.948Z",
+      "researchIdentity": {
+        "title": "Rising Sun",
+        "artist": "TVXQ!"
+      }
+    },
+    "wonjin-candy": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-25T10:47:43.514Z",
+      "researchIdentity": {
+        "title": "Candy",
+        "artist": "Wonjin"
+      }
+    },
+    "ポ-ティスヘッド-sour-times": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-27T10:30:39.866Z",
+      "researchIdentity": {
+        "title": "Sour Times",
+        "artist": "ポーティスヘッド"
+      }
+    },
+    "speed-all-my-true-love": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-27T11:13:55.298Z",
+      "researchIdentity": {
+        "title": "ALL MY TRUE LOVE",
+        "artist": "SPEED"
+      }
+    },
+    "thee-michelle-gun-elephant-smokin-billy-remastered": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-09-27T23:06:40.018Z",
+      "researchIdentity": {
+        "title": "SMOKIN' BILLY (Remastered)",
+        "artist": "thee michelle gun elephant"
+      }
+    },
+    "ek-fly": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-10-01T13:19:49.347Z",
+      "researchIdentity": {
+        "title": "FLY",
+        "artist": "EK"
+      }
+    },
+    "권기백-갈길-feat-남궁만": {
+      "status": "pending",
+      "phase": "exhaustive",
+      "passes": [],
+      "updatedAt": "2026-10-01T14:13:59.285Z",
+      "researchIdentity": {
+        "title": "갈길 (feat. 남궁만)",
+        "artist": "권기백"
+      }
     }
   },
   "screeningBatches": [],
@@ -58792,5 +59082,6 @@
     }
   ],
   "mergedAt": "2026-09-03T19:35:00.000Z",
-  "mergedItems": 79
+  "mergedItems": 79,
+  "items": []
 }

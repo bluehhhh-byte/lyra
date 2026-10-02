@@ -1,11 +1,11 @@
 ---
 title: somewhere
-title_ko: 어딘가
+title_ko: 어딘가에서
 artist: the neverminds
 artist_ko:
 album: somewhere - Single
 year: 2023
-artwork: https://cdn-images.dzcdn.net/images/cover/96e97b013989547f7ffb5684847a7b0f/1000x1000-000000-80-0-0.jpg
+artwork: https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6a/cb/24/6acb2493-b8a1-9b53-3b64-e21c58614157/1278079.jpg/600x600bb.jpg
 preview: https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b0/6f/a9/b06fa914-0b7d-cd7e-4c3a-fbfe3b13334f/mzaf_14742261476664016876.plus.aac.p.m4a
 preview_provider: itunes
 external_url: https://music.apple.com/us/album/somewhere/1698766610?i=1698766611&uo=4
@@ -14,12 +14,14 @@ duration: 240
 genre: Indie Rock
 lang: en
 tags: [영미, Indie Rock, 2023]
-listen_when: 오지 않는 기차를 기다리는 7월 끝
-keywords: [7월, 기차, 날짜]
+listen_when: 막차를 기다리는 밤
+keywords: [여름, 기차, 기억, 사랑]
 emotion: 그리움
 date: 2024-06-10
 published: 2024-06-09T23:38:05.000Z
-comment: 7월 말까지 날짜를 세며 오지 않는 기차를 기다린다. 붙잡을 수 없다는 걸 알면서도 네가 가는 길 어딘가에 있겠다고 약속하는 곡이다.
+comment: 7월의 끝을 세며 다가올 이별과 불확실한 여정을 기다리는 화자의 모습이 담겨 있다. 떠나더라도 필요할 때는 언제든 곁에 있겠다는 약속과 변함없는 사랑을 전한다.
+comment_basis: lyrics_only
+comment_sources: []
 source: instagram
 source_tag: 240610_0832
 source_note: 
